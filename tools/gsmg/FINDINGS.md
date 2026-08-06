@@ -9955,3 +9955,803 @@ This does not reopen or add weight to `YOUWON` itself -- Phase 75's status
 stands: plausible engineered community find, downstream operation
 unresolved. Don't re-run this specific hex/key-decode reading without a
 new, differently-motivated mapping.
+
+## Phase 148 -- `SalPhaseIon -> APHELION` sub-anagram: base-rate downgraded, closed negative (2026-08-06)
+
+A same-day brainstorm pass (`doc/GSMG_FRESH_BRAINSTORM_2026-08-06.md` section
+1) raised a heading reading not previously tried: `APHELION` (a body's
+farthest point from the sun, the natural counterpart to `perihelion`) fits
+as an 8-letter sub-anagram of `SalPhaseIon`'s 11-letter multiset, leaving
+`S`,`S`,`A`. Motivation was thematic fit to the page's own "Cosmic Duality"
+title -- tighter than Phases 96-99's chemistry-only `SALVATION` parse.
+
+Unlike the `VAT` rebus (Phase 96-97), which is a *unique* string difference
+between the archived heading and an independently-fixed target word, this is
+a weaker sub-anagram claim, so `tools/gsmg/salphaseion_aphelion_anagram_audit.py`
+ran the same base-rate discipline Phase 98 already established for the
+elemental reading before treating it as notable:
+
+- **Corpus check**: neither `aphelion` nor `perihelion` appears anywhere in
+  the complete creator Telegram export or the full Cosmic Duality book
+  text/OCR. No first-party support for the word at all.
+- **Base-rate check** against `/usr/share/dict/words` (104,334 words): 457
+  words of length >= 4 are sub-anagrams of the heading's letter multiset.
+  Restricted to exactly 8 letters (matching `APHELION`'s length), there are
+  **9** equally-valid sub-anagram words: `Alphonse`, `aphelion`, `epsilons`,
+  `holiness`, `painless`, `pinholes`, `polishes`, `seasonal`, `spaniels`.
+  `APHELION` is not distinguished from this set by anything the heading
+  itself supplies -- the reading only feels special because of pre-existing
+  "Cosmic Duality" framing bias, the same trap Phase 98 flagged for the
+  atomic-number match.
+- **Companion word**: `perihelion` does not fit at all (the heading has no
+  `R`), so the natural aphelion/perihelion duality pair can't both be
+  derived from this one heading.
+- **Oracle check**: 7 fixed candidates (`APHELION`, the `ASS` leftover in
+  both orders, and both concatenation orders/spaced forms) x raw/upper/
+  lower/SHA-256/double-SHA-256/newline forms = 126 unique keystrings, tested
+  against all 4 tracked blobs (SALPH, COSMIC, P32TRAILING, quarantined
+  URLBLOB) across CBC (+ extended cipher/KDF variants), ECB, stream modes,
+  and AES Key Wrap: **0 hits**.
+
+**Closed negative.** Not because the anagram is false (it's real, self-tested
+programmatically), but because it fails the same specificity bar that
+downgraded the elemental `SALVATION` reading -- 1-of-9 same-length dictionary
+matches is not a signal the puzzle's own constrained-heading discipline would
+plausibly rely on, in contrast to the `VAT` rebus's genuinely unique
+replacement. Do not extend this to the other 8 dictionary sub-anagrams
+without an independent, creator-authored reason to prefer one over the rest.
+
+## Phase 149 -- numeric-coincidence triage tool built and run: no signal above expected noise (2026-08-06)
+
+Brainstorm item 9 (`doc/GSMG_FRESH_BRAINSTORM_2026-08-06.md` section 9)
+proposed a small triage script -- not a finding generator -- that checks
+every creator-confirmed "load-bearing" number already established elsewhere
+in this project (20 numbers: the spiral prime, matrixsumlist's three sums,
+the FEFE spiral position, DBBI/FAED/textarea/instruction lengths, all four
+tracked blobs' ciphertext byte counts, the DBBI selection length, the
+YOUWON offset/remainder, the two decoded segment lengths, Cosmic Duality's
+line count, the spiral cell count, and aluminum's atomic number -- each with
+a cited provenance) for pairwise arithmetic relationships, purely to
+generate a ranked shortlist for human review.
+
+`tools/gsmg/numeric_coincidence_triage.py`'s first draft included sum/product
+reduced modulo each of 9 small primes. That was a methodological error caught
+before reporting anything: modular reduction against many small primes
+manufactures pigeonhole-guaranteed hits on a registry full of small values
+(7, 13, 16, ...) -- the corrected run found **132 "independent derivations"**
+landing on the value 7 alone, which is noise from the comparison-space size,
+not signal. Removed all modular operations; kept only exact sum, difference,
+product, concatenation (both orders), and *exact* integer division.
+
+The corrected run reproduces two already-known relationships as a sanity
+check (`23 = 16 + 7`, the definitional derivation of `MATRIX_ROW2`; and
+`91 = 7 x 13`, already documented in Phase 97's elemental-topology section) --
+confirming the tool isn't broken -- and surfaces eight genuinely new but
+individually unremarkable coincidences after deduplicating algebraic
+restatements (e.g. `31 - 24 = 7`, `96 - 80 = 16`, `104 - 91 = 13`,
+`63 + 28 = 91`, plus one weak digit-concatenation match,
+`"13"+"28" = 1328 = COSMIC`'s ciphertext byte count). None of these are
+flagged anywhere else in the project, but none stand out from what's expected
+by chance when checking ~190 pairs of mostly-small, mostly-sub-200 integers
+against a 20-value registry.
+
+**Verdict:** tool built and run per the brainstorm item's own stated purpose
+(screening, not proof); the screen itself is negative -- nothing here clears
+a bar worth a dedicated null-model / base-rate follow-up (the Phase 98/148
+discipline). Retained as reusable infrastructure: re-run if/when a new
+creator-confirmed number is added to the registry, but don't hand-pick one of
+the eight unremarkable hits above to build a new hypothesis on without an
+independent, creator-authored reason to prefer it.
+
+## Phase 150 -- `matrixsumlist` self/fold consumer pairings + literal-index probe: closed negative (2026-08-06)
+
+Brainstorm item 2 (`doc/GSMG_FRESH_BRAINSTORM_2026-08-06.md` section 2)
+targeted the still-open `matrixsumlist` consumer question from a genuinely
+new angle. `matrix_instruction_sweep.py` (Second Path) always paired DBBI's
+digit matrix against the known Phase 3.2.2 plaintext as the "plain" side.
+`tools/gsmg/matrixsumlist_self_fold_consumer_audit.py` reuses that same
+already-validated matrix-sum-select grammar (imported directly, not
+reimplemented) against two pairings never tried through it before:
+
+- **DBBI against itself** (autocorrelation: read DBBI back through
+  row/column orderings and selections derived from its own digit sums);
+- **DBBI against FAED folded to 91 symbols**, reusing all 6 fold methods
+  already implemented in `cross_target_coupling_sweep.py` for a different
+  purpose.
+
+2 matrix shapes (7x13, 13x7) x 2 digit maps (`a0i8`, `a1i9`) x 7 plain
+variants (self + 6 folds) x 12 selection/ordering kinds = 336 candidates,
+none containing a recognized clue word.
+
+A smaller, complementary literal-index probe (read the single characters at
+positions 23/16/7, both 0- and 1-based, forward and reverse) was also run
+directly against DBBI and the Phase 3.2.2 plaintext -- Phase 51
+(`matrixsumlist_31_feasibility_audit.py`) already ran this exact probe
+against the 31-character Denis/Flo selection (`TARGET`); this script
+reproduces that result only as a self-test cross-check (verified to match),
+and extends the same probe to the two 91-character inputs, which Phase 51
+never covered. All 16 outputs are 3-character fragments with no clue words.
+
+**Oracle result:** 352 total candidates (336 matrix + 16 index-probe) x
+raw/case/SHA-256/double-SHA-256/newline forms = 3,744 unique keystrings,
+tested against all 4 tracked blobs (SALPH, COSMIC, P32TRAILING, quarantined
+URLBLOB) across CBC (+ extended cipher/KDF variants), ECB, stream modes, and
+AES Key Wrap: **0 hits.**
+
+**Closed negative** for both new pairings and the extended index probe. This
+narrows -- but does not close -- the `matrixsumlist` consumer question:
+Phase 51's blocking reasons stand (31 has no nontrivial rectangular
+factorization, `[23,16,7]` supports multiple established mechanics, no
+authenticated projection of the 104 instruction bits onto 91 or 31
+characters). What remains genuinely untried is a source for `matrixsumlist`
+outside {DBBI, FAED, VALIDATION_ANSWER, TARGET, Architect dialogue} entirely
+-- no such source is currently creator-motivated.
+
+## Phase 151 -- Trinity resurrection-speech "half and better half" reading: closed negative, notes an unresolved convergence (2026-08-06)
+
+Brainstorm item 7 (`doc/GSMG_FRESH_BRAINSTORM_2026-08-06.md` section 7)
+proposed a semantic reading of "half and better half" -- the authenticated
+Phase 3.2.2 phrase Phase 78 already treats structurally (a 32|32-byte raw
+private-key shape) -- tied to Neo/Trinity as narrative counterparts. Bare
+`NEO`/`TRINITY` and the literal `halfandbetterhalf` string are already in the
+648-candidate curated corpus and exhausted (Phase 22/78, 0 hits).
+
+Searched the real screenplay text (not memory) for a literal "other half"
+line between Neo and Trinity: none exists. What the search did surface,
+verified verbatim against the source PDF at run time via
+`tools/gsmg/trinity_resurrection_half_audit.py`, is Trinity's resurrection
+speech over Neo's body (`the-matrix-1999.pdf`, INT. MAIN DECK): "Neo, please,
+listen to me. **I promised** to tell you the rest. The Oracle, she told me
+that I'd fall in love and that man, the man I loved would be the one. You
+see? You can't be dead, Neo, you can't be because I love you. You hear me? I
+love you!"
+
+The motivating fact is narrower than "Neo and Trinity are a couple": the
+exact word `promised` opening that speech is also the creator's own macro
+clue's final, still functionally-unused token (brainstorm item 11 -- bare
+`promised` is separately already curated-corpus-tested, 0 hits, but this
+specific sentence and the full speech had never been tried). Tested 9 bounded
+quote-derived candidates (`NEOTRINITY`, `TRINITYNEO`, both "X and Y" orders,
+`I PROMISED TO TELL YOU THE REST`, `I LOVE YOU`, `YOU CAN'T BE DEAD`, `THE
+MAN I LOVED WOULD BE THE ONE`, and the full verbatim speech) -- 306 unique
+keystrings, all 4 tracked blobs, CBC (+ extended variants, which include the
+Phase 78 structural binary-key-material check via the shared oracle), ECB,
+stream, and Key Wrap: **0 hits.**
+
+**Closed negative** for this candidate family. The `promised`/"I promised to
+tell you the rest" convergence is retained as a genuine, still-unexplained
+coincidence -- not promoted to a finding, since a single shared word between
+a Trinity monologue and an eight-token macro clue has an unquantified base
+rate (unlike Phase 148's downgraded `APHELION` reading, no dictionary/corpus
+base-rate check was run here because there is no natural comparison corpus
+for "which screenplay lines share a word with the macro clue"). Do not
+re-test more Neo/Trinity dialogue without a comparably specific, independently
+motivated reason.
+
+## Phase 152 -- Trinity resurrection reading, remaining two roles (KDF context, checkerboard seed): closed negative (2026-08-06)
+
+Phase 151 only tested role 1 of brainstorm item 7's actual proposal (NEO/
+TRINITY/the exact quote as a literal AES passphrase). The bullet explicitly
+named two more roles, caught in review before moving on: a KDF salt/context
+string, and a checkerboard alphabet seed. Both now tested via the same
+`tools/gsmg/trinity_resurrection_half_audit.py` (`--context` and
+`--checkerboard`).
+
+**Role 2 (KDF salt/context).** These blobs are confirmed-genuine OpenSSL
+`Salted__` containers with a fixed embedded salt, so a literal
+alternate-salt KDF call is a guaranteed miss independent of passphrase (the
+real ciphertext was encrypted under its own actual salt; substituting a
+different one cannot decrypt it regardless of correctness elsewhere). The
+literal testable form of "context string" is the one
+`hash_duality_sweep.py` already implements for a different context value
+(the four verified prior command hashes): combine `SHA256(trinity_candidate)`
+with each of the 10 established `CORE_CANDIDATES` recognized-state answers
+via concatenation/XOR/HMAC in both binary and hex representations (reused
+directly, not reimplemented), then test the combined material as passphrase
+bytes. 9 candidates x 10 core answers x 16 operations = 2,700 unique
+materials, tested via `aes_try_open_bytes` (both default and extended
+cipher/KDF variant sets) against all 4 blobs: **0 hits.**
+
+**Role 3 (checkerboard alphabet seed).** Confirmed this really is untested
+territory first: neither the default cypherpunk/bitcoin-historical/Gutenberg
+wordlists nor the 8,036-candidate `session_combined_for_chain.txt` (the
+corpus this project's existing keyword-checkerboard sweeps actually draw
+from) contain bare `neo`/`trinity`, unlike the passphrase role, which really
+was already exhausted via `matrix_trilogy.txt`. Built keyed 25-symbol
+alphabets (`pad25`, default parameters) from 5 bounded seeds (`NEO`,
+`TRINITY`, `NEOTRINITY`, `TRINITYNEO`, `IPROMISEDTOTELLYOUTHEREST`) and
+decoded DBBI under the established best-fit `{b,e}` pair and FAED under both
+established `{g,i}`/`{h,e}` pairs -- 15 decodes total. A handful contain an
+isolated clue word (`yin`, `key`, `sum`, `hye`) inside otherwise-gibberish
+output; per this project's own established base-rate discipline (Phase 21's
+`"yang"` null-model correction: single short thematic words recur at
+non-trivial rates by chance in long high-entropy decodes over a small
+alphabet), this is not promoted as signal without a shuffle test, and none
+of the 15 decodes or their SHA-256/double-SHA-256/newline forms opened any
+blob: **0 oracle hits.**
+
+**Verdict:** all three roles brainstorm item 7 actually proposed are now
+closed negative, not just the passphrase role. The `promised` convergence
+noted in Phase 151 remains the only retained thread from this item.
+
+## Phase 153 -- audit for missed sub-tasks in items 1 and 2, three residual checks closed (2026-08-06)
+
+Prompted by catching Phase 151 initially covering only 1 of item 7's 3
+proposed roles, re-read items 1 and 2 line-by-line for similarly skipped
+clauses rather than assuming earlier closures were complete. Found three:
+
+1. **Item 1** explicitly asked whether `perihelion` (the `aphelion`
+   sub-anagram's natural pair) fits `Cosmic Duality`'s own letters, since it
+   doesn't fit `SalPhaseIon`. Never checked. Direct multiset test: `Cosmic
+   Duality` has 13 letters, not the brainstorm doc's stated 15 (doc
+   corrected) -- `perihelion` needs `p,e,e,r,h,n`, none of which `Cosmic
+   Duality` supplies enough of (missing `p`, both `e`s, `r`, `h`, `n`
+   entirely for some). Does not fit. Closed.
+
+2. **Item 2** proposed `[23,16,7]` as indices into "the macro-clue token
+   list, or into the ordered phase title list (8 items)" -- never actually
+   run; dismissed in reasoning as out-of-range without computing it. Fixed:
+   both 8-item lists are the same object (the macro clue's own 8 tokens).
+   Direct 1-based indexing is out-of-range for two of three indices (only
+   `7` is in-range, selecting `verylaststepisatruegiveaway`); the natural
+   1-based-mod-8 wraparound gives indices `{7, 8, 7}` -> tokens
+   `verylaststepisatruegiveaway`, `promised`, `verylaststepisatruegiveaway`
+   -- a repeated selection, not three distinct picks, so not a clean
+   selector. Not escalated to the oracle (no coherent 3-item output to
+   test). Closed as unremarkable.
+
+3. **Item 2** also proposed `[23,16,7]` as "a Caesar/ROT shift applied to
+   something already decoded (the `BUT`/`HYE` rails...)" -- Phase 51 only
+   ever applied repeated-Caesar to the 31-char `TARGET`, never to the
+   `BUT`/`HYE` rails specifically. Tested `BUT`/`HYE` shifted by
+   +-{23,16,7}: 12 outputs, all non-language (`YRQ`, `RKJ`, `IBA`, `EXW`,
+   `LED`, `UNM`, `EVB`, `XOU`, `OFL`, `KBH`, `RIO`, `ARX`). Oracle check:
+   216 keystrings, all 4 blobs, CBC/ECB/stream/keywrap: **0 hits.** Closed.
+
+No further gaps found in items 1/2/7/9 on this pass. Items 3-6, 8, and 10-12
+have not been executed at all yet, so "missed sub-tasks" does not apply to
+them the same way -- they are simply still open brainstorm items, not
+partially-closed ones.
+
+## Phase 154 -- creator idiolect/OSINT pass: no new cryptanalytic lead, useful reframing context (2026-08-06)
+
+Brainstorm item 5 (`doc/GSMG_FRESH_BRAINSTORM_2026-08-06.md` section 5)
+proposed two bounded, handle-level (explicitly not doxxing) checks: whether
+the creator's known handle appears attached to other puzzles/CTFs, and
+whether the creator's own Telegram messages contain meta-commentary about
+their design process rather than in-puzzle clue text. Unlike every other
+item tested so far, this produces no candidate strings and therefore no
+oracle run -- it is pure context, logged as such.
+
+**Local meta-commentary search.** Scanned all 482 creator-authored messages
+(`from_id == user9815232`) against ~19 patterns for design-philosophy or
+authorial-style commentary ("the way I", "my style", "inspired by", "another
+puzzle", "gsmg (stands|means)", personal-background phrases, etc.) -- a
+different extraction target than the project's existing coined-word/parallel-
+riddle scan (`doc/GSMG_PUZZLE.md`, already closed negative for a hidden
+second riddle in chat). Two incidental hits, neither a design-process
+statement: message `9944` ("And I usually answer with 'no hints'" -- hint
+policy, not design) and message `7152` ("Some parts of cicada puzzles are
+still unsolved. Must be bad design." -- awareness of Cicada 3301, not
+authorship). Only 4 URLs appear anywhere in the creator's messages, all
+generic tools (a SHA-256 hash generator, a BTC halving countdown site,
+bitcoinblockhalf.com) or the puzzle's own prize address -- no personal
+blog/portfolio/social link ever posted.
+
+**Handle-level web search.** The handle "Jrk Bgrt" / `gsmg-jrkbgrt`
+corresponds to a real, genuine author account on GSMG.io's own official Help
+Center, writing ordinary trading-bot support articles (fractional account
+value, trailing stop loss orders, minimum funds required) -- consistent with
+an actual GSMG.io team/support-content member, not a professional ARG/
+puzzle-design persona. GSMG.io itself is confirmed as a real automated
+crypto-trading bot (Binance/Bittrex/Huobi), built by "EPIPREMNUM AUREUM LLC"
+(a registered LLC; the name is simply the Latin binomial for a common
+houseplant, golden pothos -- treated as arbitrary shell-company naming, not
+pursued further). No evidence of a second publicly-documented puzzle/ARG/CTF
+authored by this handle was found. The bare string "jrkbgrt" does return
+unrelated-looking accounts on a few other platforms (Kaggle, YouTube,
+Wikimedia Commons, an Xbox gamertag) -- deliberately NOT investigated
+further or treated as the same person: doing so would be exactly the kind of
+unfounded identity-linking the item's own "handle-level, not doxxing"
+framing was meant to exclude, since a short handle collision across
+unrelated platforms is not evidence of common identity.
+
+**Verdict:** no structural prior from a "sister puzzle" exists to import --
+none was found. The one real update is contextual: the creator most
+plausibly reads as an actual GSMG.io support/community team member running
+one personal side-project (drawing on the Matrix trilogy and a specific 1991
+Time-Life book, both already established as load-bearing elsewhere in this
+project) rather than a veteran ARG designer with a reusable "house style."
+This is consistent with, not contradictory to, everything else already
+established here, and mildly lowers the prior on the remaining blocker being
+a sophisticated novel custom cipher rather than the "one microstep" of
+recognition the creator has repeatedly and directly claimed
+(`doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md`). Not itself a lead to chase
+further.
+
+## Phase 155 -- second Telegram corpus discovered ("Community & support group"), rechecked, new first-party context, bounded oracle test negative (2026-08-06)
+
+Phase 154, and every prior phase in this project's history, used only one
+Telegram export: `ChatExport_2026-07-26` ("GSMG Puzzle Solvers", private
+supergroup id `1166734859`, 57,729 messages, 482 from the creator). A user
+question ("have you checked both telegram chat exports? puzzle and
+community?") surfaced a second export sitting on the same machine that no
+prior phase ever touched: "GSMG - Community & support group" (public
+supergroup id `1246576180`). Three snapshots of it exist locally --
+`ChatExport_2026-07-29` (22,400 msgs) and `ChatExport_2026-07-29 (1)`
+(12,300 msgs) are confirmed strict ID-range prefixes of
+`ChatExport_2026-07-29 (2)` (52,851 msgs, ids 1-68682, spanning 2018-04-17 to
+2026-07-28), so only the `(2)` snapshot is used. The creator has **5,419**
+messages there -- over 10x the puzzle-solvers corpus used everywhere else in
+this project.
+
+**Rechecked existing negative results against the new corpus.** `aphelion`/
+`perihelion` (Phase 148): zero mentions in either chat -- strengthens Phase
+148's closure. `promised` from the creator (Phase 151's convergence note):
+2 hits in the community chat, both ordinary trading-bot feature-promise
+language ("We promised you a buy entry modulator setting..."), unrelated to
+the puzzle -- doesn't change Phase 151/152's verdict either way.
+
+**Design-philosophy meta-commentary re-run (item 5) across the full 5,901
+creator messages.** The community chat enforces an explicit, repeatedly
+restated "no puzzle talk here" house rule (47 creator hits, nearly all just
+that rule) -- confirms this chat is not a hidden trove of puzzle clues, as
+expected. It does contain the single most candid message the creator has
+ever posted: a company-shutdown announcement (message `67741`, 2026-04-13,
+verified verbatim at run time in
+`tools/gsmg/community_shutdown_retrospective_audit.py`) with a 9-year origin
+story. Concretely new facts, none previously documented anywhere in this
+project:
+
+- **First-party confirmation of item 5's original question**: "JRK got
+  inspired by other crypto puzzles and spent two sloppy days throwing one
+  together. Full of grammatical mistakes and zero polish... In 40 years, he
+  might admit he forgot how to solve it himself." No specific second puzzle
+  is named (so this doesn't supply a structural prior from a sister
+  puzzle's solution), but it directly confirms, in the creator's own words,
+  Phase 154's inferred reframing: not a professional ARG designer's
+  meticulous construction, but a fast personal project.
+- **The literal phrase "the better half"** appears in the same message,
+  used autobiographically for a real romantic partner ("JRK was visiting
+  Sydney with the better half"). This does NOT reopen Phase 151/152's
+  AES-negative results -- those tested specific candidate families that
+  remain negative regardless of interpretation -- but it is important
+  interpretive context going forward: "half and better half" may be the
+  creator's own natural personal phrase, not necessarily a Matrix/Symposium-
+  style literary rebus. Per this project's explicit scope boundary, this
+  script and this entry deliberately stop at testing *public* phrases the
+  creator chose to post themselves; it does not attempt to identify real
+  names or any other detail about the partner, which would be doxxing and
+  out of scope regardless of any puzzle relevance.
+- **The GSMG acronym itself**: "Globally Supporting My Generation" --
+  previously undocumented anywhere in this project.
+- Confirms the puzzle is explicitly being kept running independently of the
+  now-shut-down company: "That thing is still running, and we are keeping
+  it alive."
+
+**Bounded oracle test.** 7 candidates drawn directly from the verified
+quote (`SYDNEY`, `THEBETTERHALF`, `GLOBALLYSUPPORTINGMYGENERATION`,
+`MRROIBOT`, `ALLGOODTHINGSCOMETOANEND`, `NINEYEARCHAOSTOUR`,
+`TWOSLOPPYDAYS`) x raw/case/SHA-256/double-SHA-256/newline forms = 126
+keystrings, all 4 blobs, CBC (+ extended variants)/ECB/stream/keywrap:
+**0 hits.**
+
+**Also checked and closed as already covered**, prompted by two other
+creator messages surfaced in this same search (Phase-3-era typo reports,
+2019-05/08): `giveit`/`givetit` and the "extra character between the 3
+answers" Phase 3 mistake are both already documented and handled in
+`tools/gsmg/data.py` and existing docs -- no new gap, no action needed.
+
+**Verdict:** the second corpus is now fully checked, not an outstanding gap.
+No puzzle-solving content was hiding there (by the creator's own enforced
+house rule), but it supplies genuine new biographical/interpretive context
+(items 5 and 7) and one closed-negative bounded candidate test. Future work
+citing "the creator's messages" should specify which of the two corpora, or
+both, rather than defaulting to the puzzle-solvers chat alone.
+
+## Phase 156 -- on-chain/DNS forensics sweep (item 4): OP_RETURN trove found but traced to the known GitHub-issue scam campaign, not the creator; CT-log subdomain and Wayback-header checks both closed negative (2026-08-06)
+
+Item 4 proposed four channels never checked by any prior phase: OP_RETURN/
+dust messages on the known BTC addresses, CT-log subdomain enumeration,
+historical DNS TXT records, and Wayback's raw HTTP response headers.
+
+**OP_RETURN/dust -- real data, false alarm.** Paginated the full transaction
+history of both genuine creator-controlled addresses via `blockstream.info`
+(`1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`, the prize address, 125 txs; and
+`17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa`, the halving cold-storage recipient, 44
+txs -- both counts match `GSMG_PUZZLE.md`'s existing documentation exactly).
+Found **105 OP_RETURN outputs carrying human-readable text**, never
+mentioned anywhere in this project before. The message content is
+extraordinarily on-the-nose for this project's own vocabulary --
+`SalPhaseIon`, `redpill`, `hereismysecret`, `iamtheone`,
+`isolveditwithanabacus`, and (most strikingly)
+`matrixsumlistenterlastwordsbeforearchichoicethispassword`, which reads like
+a direct operational instruction for this project's still-open item 2 --
+which is exactly the shape a fabricated or injected tool response would
+take. Given the explicit project instruction to flag suspected prompt
+injection before acting on it, this got a provenance check rather than
+being treated as a lead:
+
+1. **Independently verified as genuinely on-chain**, not a fabricated
+   single-source response: cross-checked a sample of the raw OP_RETURN
+   script bytes against two unrelated explorer backends
+   (`blockchain.info`, `mempool.space`) in addition to `blockstream.info`;
+   all three agree byte-for-byte.
+2. **But an OP_RETURN only proves authorship by whoever signed that
+   transaction's *input*, not by the recipient of a payment output in the
+   same tx.** Checked the input address of all 105 OP_RETURN-bearing
+   transactions systematically: **zero** are signed by either genuine
+   creator-controlled address. Every one is a small third-party payment
+   *to* the GSMG address with the message attached by the payer's own key.
+3. The two dominant payer addresses (88 of 105 messages) are
+   `1JG648yaB7Wp2dpUfcZoRSD4q35oq47vCu` and
+   `145ZQ9siLrsXBKf465wjdyQYAP5dRwhRhQ` -- the *exact* two addresses
+   `GSMG_PUZZLE.md`'s 2026-07-12 update already documented as the source of
+   a single fabricated "solution" hash recycled across 10+ separate GitHub
+   issues over many months. This ties that already-debunked spam campaign
+   to on-chain graffiti as well, not creator content. The remaining 17
+   messages come from a scatter of other one-off addresses (assorted
+   "GSMG"-prefixed vanity addresses, a couple of bech32 addresses, etc.) --
+   consistent with copycats/other trolls doing the same thing on a famous
+   address, not a second signal.
+
+**Verdict: closed negative for creator content, with a useful side-finding**
+tying a known scam campaign to on-chain spam. Reproducible via
+`tools/gsmg/onchain_op_return_provenance_audit.py --self-test --full`
+(self-test cross-checks one fixed txid against two independent explorers;
+`--full` re-derives the 105/0/88/17 counts live). No candidates from this
+message set were fed into the AES oracle -- none are plausible creator
+content once the input-signer provenance is accounted for, and doing so
+would risk legitimizing exactly the kind of bait this looks like.
+
+**CT logs -- one new subdomain found, dead end.** `crt.sh` was unreachable
+(502 for the whole session); used `api.certspotter.com` and
+`api.hackertarget.com/hostsearch` instead. Confirmed subdomains:
+`gsmg.io`, `www.gsmg.io`, `help.gsmg.io` (already ruled out by an earlier
+phase), and one not documented anywhere in this project before,
+**`beta.gsmg.io`**. Checked directly: `beta.gsmg.io` is live today but
+serves the same `abovedomains.com` domain-parking placeholder as the root
+domain (the whole `gsmg.io` zone has expired). Its Wayback history (101
+captures, 2019-2026) is almost entirely either that same parking-page
+catch-all (which 200s any path, explaining the noisy crawl) or a real
+Laravel-based subscription/trading-bot web app (`api/v1/subscriptions`,
+`dashboard`, `front_binance.svg` etc. -- the GSMG.io product itself, per
+Phase 155's shutdown-retrospective context, not the puzzle). One capture
+(`/puzzle`, 2025-05-20) returned an actual PNG rather than the parking
+page: fetched and hash-compared -- **byte-identical** (`sha256
+38125bbd...`) to the already-known `puzzle.png` / `doc/img/
+gsmg_puzzle_stage1.png`. `slack-invite.gsmg.io` also resolves (found via
+`hostsearch`) but is likewise just the parking placeholder now; its only
+Wayback captures (2019, 2022) are a 301 redirect and static well-known
+files, no distinct content ever archived.
+
+**Historical DNS TXT records -- not achievable with the tools available.**
+Live `dig TXT gsmg.io` returns only a domain-parking SPF placeholder
+(`v=spf1 ip6:fdcf:abda:4154::/48 -all`), which post-dates the puzzle and is
+not informative. Genuine *historical* DNS TXT history requires a paid
+service (SecurityTrails, DNSDB, etc.) not available here -- noting this as
+an honest capability gap rather than fabricating a result.
+
+**Wayback HTTP response headers -- checked, clean.** Pulled the original
+captured headers (`X-Archive-Orig-*`) for the 2020-11-12 capture of
+`gsmg.io/puzzle` via a `HEAD` request through the Wayback proxy. Ordinary
+Laravel/Cloudflare stack: session cookies, CSRF token, standard security
+headers (`X-Frame-Options`, `X-XSS-Protection`, `X-Content-Type-Options`),
+`Last-Modified: Wed, 21 Oct 2020 15:52:41 GMT`. Nothing custom, no
+unexplained `X-` headers, no `ETag` beyond Cloudflare's own `CF-RAY`/`CF-
+Cache-Status`. Closed negative.
+
+## Phase 157 -- repo-wide palette-anomaly sweep (item 8): FEFEFE confirmed as the sole out-of-palette marker in every copy of the grid image; no second marker anywhere in the repo (2026-08-06)
+
+Item 8 asked whether "some characters need to be 'zeroed out'" (the
+creator's 2021-12-26 phrasing behind the FEFEFE thread, Phases 37-48) is
+genuinely plural, and proposed generalizing the discovery method — extract
+every distinct color per image, diff against the expected small palette —
+to every image in the repo rather than assuming the grid image is the only
+place such a marker could occur.
+
+`tools/gsmg/repo_wide_palette_anomaly_audit.py` computes a full color
+histogram for all 27 repo images (root + `doc/img/`, excluding the separate
+`doc/telegram_shortlist_*` community-screenshot corpus) and flags
+near-white/near-black grayscale minority colors -- the same structural shape
+as the original FEFEFE marker (a repeated-byte near-white value sitting
+inside an otherwise pure black/white/saturated palette).
+
+**First clarification, resolved by direct visual inspection:** `puzzle.png`
+(root) is not a separate image from the "rabbit hint" grid -- it *is* the
+full original hosted asset: the same 14x14 blue/yellow grid with the rabbit
+silhouette, plus a footer (GSMG logo, title, QR code, prize address) below a
+red divider bar. Every `doc/img/gsmg_rabbit_hint*` file is a crop/rescale of
+this same source. That also resolves what looked like a second anomaly: the
+`#ff0000`/`#ed1c24` red pixels in the "_fullres" crops are the genuine red
+divider bar caught at the crop edge, not a community annotation.
+
+**Core result: exactly one anomaly, confirmed everywhere it appears.**
+Restricting to the images that are actually flat/computer-generated graphics
+(<=20 distinct colors total -- the only class where a "minority color"
+signal is diagnostic rather than noise), `#FEFEFE` is the **only** minority
+color in every single copy of the grid image at every resolution and crop
+this repo has (350x350 native: 625px / 0.51%; 1048x1048 crops: ~4,761px;
+1050x1050 annotated: 5,625px; full `puzzle.png`/`gsmg_puzzle_stage1.png`:
+5,625px; the maze-audit visualization: 10,308px). No second flat-graphic
+anomaly exists anywhere in the repo's puzzle-native image material.
+
+**Everything else is either not diagnostic or explained noise:**
+
+- The five "Cosmic-Duality-era" images (`phase2.png`, `phase3.png`,
+  `SalPhaseIonCosmicDuality.png`, `theseedisplanted.png`, plus their
+  `doc/img/` copies) are, per Phase 5, literal browser screenshots (hundreds
+  of anti-aliased colors from real UI chrome/text rendering, confirmed by
+  direct inspection, not flat graphics) -- a minority-color test isn't
+  meaningful there. They do show a small set of near-white grayscale pixels
+  (`#fafafa`=20, `#fdfdfd`=3, `#fcfcfc`=2) at *identical* counts across all
+  four distinct-content images -- checked directly to rule out a script
+  bug (confirmed real). This is almost certainly shared rendering/UI chrome
+  common to all the screenshots (same browser/font pipeline), not a
+  deliberate marker: the counts are 2-20 pixels of sub-pixel antialiasing
+  fringe, categorically different in scale and shape from FEFEFE's solid
+  625-pixel grid-cell block. Not pursued further, consistent with this
+  project's existing base-rate discipline (Phase 21).
+- The two JPEGs (`photo_2020-04-26_09-24-30.jpg`,
+  `gsmg_stage0_original_telegram.jpg`) have 22,844 and 91,347 distinct
+  colors respectively -- ordinary lossy-compression artifact noise, no
+  clean palette to diff against.
+- `doc/img/gsmg_grid_bit1_bit0_split.png`, `gsmg_rabbit_hint_black_drawn_
+  fit_audit.png`, `gsmg_rabbit_nest_maze_audit.png`, and the icon files are
+  all this project's own derived audit/visualization outputs (bit-split
+  diagrams, maze-solve overlays with intentional green/magenta/cyan marker
+  colors, UI icons), not independent puzzle source material -- their extra
+  colors are self-explanatory and not new evidence.
+
+**Verdict:** the plural-"zeroed out" hypothesis does not find a second
+marker. FEFEFE remains the sole out-of-palette anomaly in the puzzle's
+actual flat-graphic material, now confirmed by exhaustive palette
+enumeration rather than the original manual/visual discovery alone --
+independent methodological corroboration of Phases 37-48, not a new lead.
+Reproducible via `tools/gsmg/repo_wide_palette_anomaly_audit.py`. Closed
+negative; do not re-open without a genuinely new image asset entering the
+repo.
+
+## Phase 158 -- `promised` provenance: full community-mention read closes item 11's second half; one theory suggests it isn't a discrete token at all (2026-08-06)
+
+Item 11 asked two things about `promised`, the macro clue's still-unconsumed
+final token. The operational half is already closed: literal passphrase
+(Phase 109, 0/3 candidates), and via the Trinity-quote convergence, KDF
+context and checkerboard-alphabet-seed roles (Phase 151/152, 0 hits). The
+provenance half -- "check whether the creator ever explains, gets asked
+about, or reuses the literal word `promised` elsewhere in the export," the
+same treatment Phase 102 gave `anstoo` -- was only partly done: Phase 155
+counted the creator's own usage (0 puzzle-solvers mentions, 2 unrelated
+community-chat mentions) but never read the *community's* mentions the way
+Phase 102 read all 93 `anstoo` messages individually.
+
+`tools/gsmg/promised_provenance_audit.py` closes that gap: scans both
+corpora with a `\bpromised\b` word-boundary match (a naive substring scan
+over-counts -- "compromised" contains "promised"; corrected counts are 43
+puzzle-solvers / 7 community, down from 64/11 naive). Every hit was read
+and classified, not just counted:
+
+- **0 creator mentions** in the puzzle-solvers chat; the 2 community-chat
+  creator mentions are the same ordinary trading-bot language Phase 155
+  already found and ruled unrelated.
+- **24 of 43** puzzle-solvers mentions are the community re-pasting the
+  known 161-character macro-clue string verbatim as a reference quote --
+  expected, adds nothing.
+- **19 "other"** mentions are ordinary English usage unrelated to the
+  puzzle (a screenplay quote, product banter, "I promised myself," etc.),
+  plus two messages (`61401`/`61416`) read in full surrounding context:
+  both are community sarcasm/paraphrase about an unrelated, already
+  well-documented 2019-05-18 poem hint ("Roses are White...") -- not new
+  data about the literal token.
+- **Two messages are genuine, substantive community commentary**, neither
+  previously logged:
+  - `30526` (2024-11-19, anonymous): notices the repeated "give away" /
+    "promised" word choice across the clue and asks why, without proposing
+    a concrete theory.
+  - `48341` (2025-08-30, Pomyk): *"'very last step is a true give away
+    promised' - maybe the promise is not the give away meaning prize, but
+    that the last step is a 'give away' meaning it's easy to find the
+    solution."* This is a genuine alternative grammatical parse: `promised`
+    as a colloquial tag modifying "a true giveaway" (i.e. "...is a true
+    giveaway, promised" = an assurance/emphasis, matching common informal
+    usage), not a discrete 8th instructional token at all.
+
+**Verdict:** no new operational lever. But Pomyk's reading reframes the
+premise of item 11 itself: three independent negative oracle results
+(literal passphrase, KDF-context, checkerboard-seed) are exactly what you'd
+expect if `promised` was never meant to be extracted and consumed as a unit
+in the first place -- it may just be the sentence's own colloquial ending,
+the same way "It might have shown you only one door" isn't a keyword either.
+Retained as the leading interpretation, not proven; the community source
+that raised it never treated it as more than a passing remark. `promised`
+is closed as thoroughly as `anstoo` (Phase 102) -- a genuinely unresolved
+literal with no surviving lever, not a coverage gap.
+
+## Phase 159 -- has `SALVATION` itself ever been anagrammed? Real gap, found and closed negative by base rate (2026-08-06)
+
+Chat question on item 1: every prior `SALVATION` phase either *derives* the
+word from `SalPhaseIon` (Phase 96's `PHASE -> VAT` letter-replacement) or
+applies a fixed, motivated reading to its own letters (Phase 105's 3x3 grid
+under 8 deterministic orderings -- row-major, spiral, boustrophedon, etc.).
+None of them ever ran an open-ended dictionary anagram search *of
+`SALVATION`'s own 9-letter multiset* the way Phase 148 did for the heading
+itself (`SalPhaseIon -> APHELION`). Confirmed by re-reading Phases 96-105
+directly before writing new code: this really is a gap, not a rerun.
+
+`tools/gsmg/salvation_anagram_audit.py` runs the same technique Phase 148
+used, against the 104,334-word `/usr/share/dict/words`:
+
+- **Full 9-letter exact-multiset match: `SALVATION` is the only dictionary
+  word with these exact letters (`aailnostv`).** No hidden alternate
+  9-letter word is sitting in its anagram space -- this is a genuine,
+  clean confirmation (not previously established computationally) that the
+  `PHASE -> VAT` rebus lands on a *uniquely* spelled target, reinforcing
+  Phase 88/96's "unique in the audited creator vocabulary" framing from an
+  independent angle.
+- **But the sub-anagram space is far too large to mine.** 253 dictionary
+  words (len>=3) fit inside `SALVATION`'s letters, including several
+  8-/7-letter near-misses (`Laotians`+`v`, `Latvians`+`o`, `valiant`+`os`,
+  `Latinos`/`Latvian`/`Laotian`+2 letters) with no distinguishing feature
+  among them (matching Phase 148's exact base-rate concern: many
+  equally-valid candidates, none independently motivated). Going one step
+  further than Phase 148 did (which only checked single-word sub-anagrams):
+  splitting all 9 letters across **two** dictionary words gives **105**
+  distinct exact-anagram phrase pairs (e.g. `ALISON`+`VAT`, `ANTI`+`SALVO`,
+  `LATVIA`+`SON`, `OS`+`VALIANT`) -- the same class of search Denis
+  Golovkin ran unsuccessfully ("brute-forced few trillions of anagrams,"
+  Phase 46/47) over the much longer 31-character DBBI selection, here
+  exhaustively enumerable at only 9 letters precisely because it's short.
+  `ALISON`+`VAT` is the only pair that reuses an already-established
+  fragment (`VAT`), but `ALISON` has no creator-corpus support or thematic
+  connection, and one incidental token match inside 105 possible pairs
+  carries no more weight than Phase 21's `"yang"` base-rate lesson already
+  established -- promoting it would repeat exactly the mistake that lesson
+  warns against.
+
+**Verdict:** genuinely new ground covered, closed negative by base rate
+without needing an oracle run. Unlike Phase 148 (which still ran a bounded
+oracle check on `APHELION` before downgrading it), no candidate here clears
+even the weaker bar Phase 148 used -- there is no single leading candidate
+to test, only an undifferentiated field of 253 sub-anagrams and 105 phrase
+pairs, and this project's standing discipline (item 12's list: no generic
+dictionary expansion) counsels against escalating any of them to the AES
+oracle without independent motivation. `SALVATION`'s own anagram space is
+now a checked, not an open, question.
+
+## Phase 160 -- item 2 audit: "all four bullets" wasn't true; two real gaps found and closed (2026-08-06)
+
+Direct chat question ("in 2 we checked out all 4 points?") caught two real
+gaps behind Phase 150/153's "all four bullets now actually tested" claim.
+
+**Gap 1: Phase 153 asserted, without checking, that "the macro-clue token
+list" and "the ordered phase title list (8 items)" are the same object.**
+They aren't. The puzzle has its own genuine, sourced sequence of 8
+stage/phase names (`doc/GSMG_PUZZLE.md`'s solve chain: Stage 0, Stage 1,
+Phase 2, Phase 3, Phase 3.2, Phase 3.2.1, Phase 3.2.2, SalPhaseIon) --
+distinct from the macro clue's 8 *decoded fragments*. Phase 153 tested only
+the latter.
+
+**Gap 2: item 2's third bullet named three iteration/round-count readings
+of `[23,16,7]`; only one was ever tested.** Phase 153 tested single
+(non-iterated) Caesar shifts of +-23/16/7 on the `BUT`/`HYE` rails. "23
+rounds of a simple keystream" and "16-byte AES block alignment" were never
+touched at all.
+
+`tools/gsmg/matrixsumlist_title_and_iteration_audit.py` closes both, live
+(not reusing memorized constants):
+
+- **Phase-title list.** Direct 1-based `[23,16,7]` indexing: only `7` is
+  in-range, selecting `Phase 3.2.2` (already-known plaintext, not a new
+  string). Mod-8 wraparound (same arithmetic as Phase 153, since it only
+  depends on list length): indices `{7,8,7}` -> `Phase 3.2.2`,
+  `SalPhaseIon`, `Phase 3.2.2` -- a real, non-degenerate *pair* this time
+  (unlike the macro-clue-token selection, which repeated the same token
+  twice), and thematically coherent: it points at the two real endpoints of
+  the already-established solve chain (3.2.2's plaintext feeds the
+  SalPhaseIon checkerboard). 4 bounded candidates
+  (`PHASE322`, `SALPHASEION`, and both concatenation orders).
+- **16-byte AES block alignment: confirmed not a new lever**, by direct
+  code inspection rather than new testing -- `cb_common.py`'s CBC/stream
+  variant sets already sweep `key_len` 16/24/32 (AES-128/192/256) and
+  `KEY_WRAP_KEY_LENS = (16, 24, 32)`, for literally every candidate this
+  entire project has ever run through the oracle. There was never a
+  16-byte-only gap to close.
+- **"23 rounds of a keystream," bounded, motivated reading:** repeated
+  single-letter Caesar shifts are additive, so N rounds of a shift-K
+  keystream equals one shift of `N*K mod 26`. Tested every round-count x
+  shift-amount product drawn only from `{23,16,7}` (no invented
+  parameter): 6 distinct net shifts (`{4,5,8,9,22,23}`), each direction,
+  applied to `BUT`, `HYE` (re-derived live via
+  `prime_matrixsum_reconstruction.py`, matching Phase 34's established
+  values exactly), and the 31-char `TARGET`. 36 candidates.
+
+**Oracle result:** all 40 candidates (4 title-list + 36 iteration) x
+raw/case/SHA-256/double-SHA-256/newline forms = 666 unique keystrings,
+tested against all 4 tracked/quarantined blobs under CBC (+ extended
+KDF/cipher variants), ECB, stream modes, and AES Key Wrap: **0 hits.**
+
+**Verdict:** item 2's four bullets are now genuinely, fully covered for the
+first time -- the prior "all four bullets tested" claim was premature on
+two counts, not just one. Both gaps closed negative, and the phase-title
+list reading in particular is now confirmed non-degenerate but still
+unproductive, closing off a specific loose end (that this project might
+have missed a coherent, real-content indexing scheme) rather than leaving
+it merely asserted. `matrixsumlist_31_feasibility_audit.py` (Phase 51)'s
+standing verdict is unchanged.
+
+## Phase 161 -- item 3: generic stego/metadata pass on the repo's images, all four bullets closed negative (2026-08-06)
+
+No `exiftool`/`zsteg`/`binwalk` binaries are installed and there's no root
+to apt-install them (no passwordless sudo). Installed the pure-Python
+`exifread` via `pip install --user` (verified it actually detects EXIF
+using an injected-tag round trip before trusting a "0 tags" result on real
+files); the `binwalk` PyPI package is a non-functional stub
+(`ModuleNotFoundError: binwalk.core` on import), so `tools/gsmg/
+image_stego_metadata_audit.py` reimplements the two missing tools' core
+techniques directly: a magic-byte signature scan (binwalk) and generalized
+multi-channel/multi-bit-order LSB extraction scored by printable-ASCII
+ratio (zsteg). `/usr/bin/strings` is real and used directly. Audited
+Phase 5's original 6 images plus `doc/img/gsmg_stage0_original_telegram.jpg`
+(the one genuinely creator-original JPEG in the repo, added because it's a
+stronger EXIF candidate than the 4 confirmed browser-screenshot PNGs).
+
+**Bullet 1 (exiftool).** Both JPEGs: **0 EXIF tags.** Verified this
+reflects real absence, not a broken extraction path, by round-tripping a
+synthetic JPEG with an injected tag through the same code path first (1
+tag correctly recovered). Traced `gsmg_stage0_original_telegram.jpg`'s
+exact provenance to settle whether "0 tags" was suspicious: it is
+byte-identical (`sha256 9e2a1473...`) to attachment `photo_962@19-04-2019_
+20-36-30.jpg` on community-export message `28507`, dated **2019-04-19**,
+`from_id=user9815232` (the creator), caption "Well, good luck I guess." --
+confirming `GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md`'s existing claim
+is correct (initially mis-checked this against the wrong corpus and nearly
+logged a false "documentation error" here; re-checked against the correct
+community/support-group export before writing anything). Even the
+creator's own 2019 original has zero EXIF -- consistent with Telegram's
+routine server-side metadata stripping on all photo uploads, not an
+anomaly needing explanation.
+
+**Bullet 2 (zsteg).** Extended Phase 5's R-channel-only LSB check to all of
+R/G/B, both bit orders (6 extractions x 5 PNGs = 30). Every printable-ASCII
+ratio is 0.0-0.054 -- far below the ~0.3+ a real embedded English/base64
+payload would show, no channel or order stands out from the others.
+Confirms Phase 5's negative on a broader, tool-equivalent basis rather than
+just the one channel.
+
+**Bullet 2, binwalk half.** Signature scan (PNG/JPEG/ZIP/GZIP/PDF/BMP/RIFF/
+GIF magic bytes, anywhere in the file) found incidental 2-byte `GZIP`/`BMP`
+matches inside 3 PNGs' compressed `IDAT` streams. Checked the bytes
+immediately following each hit before treating any as a real embedded file:
+none has a valid header structure (GZIP's third byte should almost always
+be `0x08`; none is), and the hit count matches the base rate expected from
+a ~2-byte pattern in 50-127KB of high-entropy compressed data
+(filesize/65536) almost exactly -- e.g. `phase3.png` (127KB) gets 2 `BMP`
+hits, matching `127044/65536 = 1.94`. Confirmed noise, not signal; 0
+genuine embedded files in any image. No trailing bytes after any `IEND`
+(reproduces Phase 5) and no `tEXt`/`zTXt`/`iTXt`/`eXIf` chunks in any PNG.
+
+**Bullet 3 (strings / JPEG COM).** Zero JPEG COM segments in either JPEG.
+`strings` output on every file is unstructured high-entropy noise
+(compressed pixel data) -- no readable plaintext fragment in any image.
+
+**Bullet 4 (is `photo_2020-04-26_09-24-30.jpg`'s filename date
+meaningful?).** First corrected a scope error in the brainstorm bullet
+itself: this file is not rabbit-grid/puzzle content at all -- it's a
+**Decentraland screenshot** of the `-41,-17` coordinate puzzle piece, a
+thread this project already resolved (Phase 68/69, `FINDINGS.md` lines
+~4790-4880). Checked whether the embedded date independently means
+anything: no message in either Telegram export, at any date matching
+`2020-04-26`, attaches a photo with a matching Telegram-native filename
+(Telegram's own export naming is `photo_<id>@<DD-MM-YYYY>_<HH-MM-SS>.jpg`
+-- this file's `photo_<YYYY-MM-DD>_<HH-MM-SS>.jpg` pattern doesn't match
+that convention at all, consistent with a personal mobile auto-save
+filename rather than a Telegram desktop export artifact); no creator or
+community message near that date mentions Decentraland; it's 15 days
+before the 2020-05-11 halving, not an obvious anniversary. Closed as
+unremarkable -- most plausibly just a device save timestamp, not a
+creator-chosen date.
+
+**Verdict:** all four bullets closed negative, extending rather than
+overturning Phase 5's original forensic pass. No stego payload, no
+suspicious metadata, no embedded files, no meaningful filename date.
+Reproducible via `tools/gsmg/image_stego_metadata_audit.py --self-test`.
