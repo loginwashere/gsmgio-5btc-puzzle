@@ -1,0 +1,25 @@
+yellowblueprimematrixsumlist
+yellowblueprimesmatrixsumlist
+matrixsumlistyellowblueprime
+matrixsumlistyellowblueprimes
+yellowblueprime matrixsumlist
+yellowblueprimes matrixsumlist
+matrixsumlist yellowblueprime
+matrixsumlist yellowblueprimes
+yellow_blue_prime_matrix_sum_list
+yellow_blue_primes_matrix_sum_list
+yellow-blue-prime-matrix-sum-list
+yellow-blue-primes-matrix-sum-list
+YellowBluePrimeMatrixSumList
+YellowBluePrimesMatrixSumList
+yellowBluePrimeMatrixSumList
+yellowBluePrimesMatrixSumList
+YELLOWBLUEPRIMEMATRIXSUMLIST
+YELLOWBLUEPRIMESMATRIXSUMLIST
+5,16,24,35,46,57,87,98,117,125,128,162,169,184,192,13,65,76,80,95,110,132,147,177
+6,17,25,36,47,58,88,99,118,126,129,163,170,185,193,14,66,77,81,96,111,133,148,178
+5162435465787981171251281621691841921365768951101321477
+2340
+2364
+5,13
+17,47,163,193

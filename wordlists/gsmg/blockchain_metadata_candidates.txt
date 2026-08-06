@@ -1,0 +1,87 @@
+# Blockchain-derived candidate passphrases, added 2026-07-24 in response to
+# "could the puzzle address or funding transaction hash be the passphrase?"
+# Every value below is a real, independently re-verified on-chain fact (fetched
+# live via mempool.space's public API this session), not chat speculation.
+# Distinct from the ALREADY-TESTED entry hash: SHA256("GSMGIO5BTCPUZZLECHALLENGE"
+# + address) is the confirmed real preimage/hash pair for the SalPhaseIon page
+# URL slug (see doc/GSMG_PUZZLE.md, VERIFIED_PRIOR_COMMAND_HASHES in data.py),
+# and both the raw concatenation and its sha256 are already in
+# last_command.txt/keystr_forms() coverage -- these are the SAME identifiers
+# tried BARE (no fixed prefix, no forced concatenation), a genuinely different
+# passphrase hypothesis for the still-unsolved SALPH/COSMIC/P32TRAILING/urlblob
+# blobs.
+
+# Primary puzzle funding address (1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe) -- 125 txs,
+# ~1.256 BTC still unclaimed, per doc/GSMG_PUZZLE.md "Prize address mechanics".
+1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe
+
+# External recipient of both self-spends (2020-05-11, 2024-04-24) -- pure cold
+# storage, 43 incoming txs, 0 ever spent. Referred to in chat as "half"/
+# "the other half" holding a private key.
+17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa
+
+# Exposed uncompressed public key for 1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe,
+# extracted from both spends' scriptSig (same key both times) -- doc/GSMG_PUZZLE.md.
+04f4d1bbd91e65e2a019566a17574e97dae908b784b388891848007e4f55d5a4649c73d25fc5ed8fd7227cab0be4e576c0c6404db5aa546286563e4be12bf33559
+
+# The two self-spend txids, re-fetched and confirmed live this session via
+# mempool.space/api/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe/txs/chain --
+# each transaction sends ~half the balance to 17ucy1K9... and the remainder
+# back to the GSMG address itself, matching doc/GSMG_PUZZLE.md exactly:
+# 2020-05-11 01:59... (block_time 2020-05-11T20:02:50Z): 2.5 BTC out, 2.498 BTC change.
+2aa9a4a90be819d5122d70c993280785a0508f163521e7b38cebb4db0b071b13
+# 2024-04-24T21:47:27Z: 1.25 BTC out, 1.253 BTC change.
+88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3
+
+# Address with its "1GSMG1" vanity-mined prefix stripped -- identical to
+# splitting the address on every literal '1' character, since the only other
+# '1' anywhere in the 34-char address is the one right after "GSMG" (the
+# leading '1' is the mandatory P2PKH Base58Check version byte, not part of
+# the vanity mining). Not previously tried as its own standalone candidate
+# (only ever appeared as a substring of the full address/concatenated form).
+JC9wtdSwfwApgj2xcmJPAwx7prBe
+
+# BOUNDED ADDRESS-SPLIT FOLLOW-UP (2026-07-24). The full puzzle address is
+# already proven to participate in the real SalPhaseIon entry-path preimage,
+# so its deliberately vanity-mined prefix is stronger evidence than generic
+# blockchain metadata. "1GSMG1" naturally parses as 1 | GSMG | 1: the first
+# `1` is the P2PKH version marker in Base58Check, while the second was part of
+# the chosen vanity prefix. Test the deliberate visible units directly.
+1GSMG1
+GSMG
+GSMG1
+GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe
+
+# Both relevant addresses are exactly 34 Base58 characters, giving an exact
+# 17+17 split. This is a bounded reading of the verified Phase 3.2 plaintext
+# "THE PRIVATE KEYS BELONG TO HALF AND BETTER HALF"; include each half and
+# the single swapped-half order, but no arbitrary split positions.
+1GSMG1JC9wtdSwfwA
+pgj2xcmJPAwx7prBe
+pgj2xcmJPAwx7prBe1GSMG1JC9wtdSwfwA
+17ucy1K9ZUAaoY6JV
+tM932W9jUp5LXfyHa
+tM932W9jUp5LXfyHa17ucy1K9ZUAaoY6JV
+
+# Exact Base58Check components, independently recomputed. These are lower
+# confidence than the visible split above, but are the only canonical binary
+# components of the addresses: HASH160 payload then four-byte checksum.
+# Prize address:
+a9553269572a317e39f0f518cb87c1a0ee1dbae4
+b6fcbf65
+# Repeated "half" recipient:
+4bc468447fe1b048ad030a2f9a125478eabc4ed6
+86aa25d1
+
+# LOW CONFIDENCE, included only for completeness: two GSMG-prefixed vanity
+# addresses ("3GSMG24TujqfMJG1kQoBX18DzJHQLeJYMK", "1GSMG1ABC95GES4k9UZCLtz6CYCUL8LUV2")
+# surfaced in a single unverified chat speculation (wordlists/gsmg/chat_mined_lines.txt
+# line 62530: "Or could half and better half refer to..."). Both ARE real
+# addresses with real (dust-level, ~0.0002-0.0009 BTC) on-chain activity, but
+# neither has any confirmed link to the actual puzzle prize chain -- this
+# matches doc/GSMG_PUZZLE.md's own documented pattern of fake "proof" vanity
+# addresses circulated by non-solvers. Included anyway since sweep cost is
+# near-zero and the alternative (fabricating a reason to exclude real
+# on-chain data) is worse than a few extra free attempts.
+3GSMG24TujqfMJG1kQoBX18DzJHQLeJYMK
+1GSMG1ABC95GES4k9UZCLtz6CYCUL8LUV2

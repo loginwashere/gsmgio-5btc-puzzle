@@ -1,0 +1,126 @@
+# Jacque Fresco's broader body of work, beyond the single book already
+# covered by looking_forward_candidates.txt (Looking Forward, 1969, with
+# Kenneth S. Keyes Jr.). Same status as that file: Fresco is CONFIRMED
+# relevant to this puzzle -- "jacquefresco" is one of three normalized clue
+# answers concatenated into the verified Phase 3.2 AES password (see
+# data.py VERIFIED_PRIOR_COMMAND_HASHES / PHASE32_BLOB_B64) -- but that is a
+# solved, already-consumed artifact for a DIFFERENT, earlier stage. Nothing
+# here is creator-confirmed as relevant to the still-unsolved SALPH/COSMIC/
+# P32TRAILING/URLBLOB endgame blobs. Bounded exploratory coverage only, not
+# a fishing expedition: exact titles/names/coined terms sourced and cited
+# below, not free-form generation from his writing.
+#
+# Sourced 2026-07-27 via direct web lookup (WebSearch/WebFetch), cross-
+# checked across en.wikipedia.org/wiki/Jacque_Fresco, goodreads.com/author/
+# list/1080140.Jacque_Fresco, goodreads.com/author/show/1080140.Jacque_Fresco,
+# thevenusproject.com/jacque-fresco/, and frescofoundation.org/library. Two
+# sources disagree on one title's exact wording ("...Redesign of a Culture"
+# vs "...Redesign of Culture"); both forms are included rather than
+# guessing -- thevenusproject.com's own page uses "...of a Culture".
+#
+# Reviewed 2026-07-27: an independent review of the first version of this
+# file and its audit script caught two real gaps, both confirmed by
+# re-fetching the cited pages directly rather than trusting the report --
+# thevenusproject.com/jacque-fresco/ lists five titles this file was
+# missing entirely (only two of which the review named; the other three
+# were found while re-verifying), and two Goodreads titles had been
+# shortened rather than copied exactly. Both fixed below.
+
+# Standalone name -- already known significant (Phase 3.2), never
+# previously tested standalone against the unsolved blobs.
+Jacque Fresco
+
+# Books authored or co-authored by Fresco (excluding Looking Forward,
+# already in looking_forward_candidates.txt). Titles verified via Wikipedia,
+# Goodreads' Jacque Fresco author page, and thevenusproject.com/jacque-fresco/
+# (the official page, and the source of the five titles below the first
+# blank-line-separated group -- missed in the first version of this file).
+Introduction to Sociocyberneering
+The Venus Project: The Redesign of a Culture
+The Venus Project: The Redesign of Culture
+The Best That Money Can't Buy
+The Best That Money Can't Buy: Beyond Politics, Poverty & War
+The Best That Money Can't Buy: Beyond Politics, Poverty and War
+Designing the Future
+The Zeitgeist Movement: Observations and Responses
+The Zeitgeist Movement: Observations and Responses - Activist Orientation Guide
+Transforming The Global Biosphere
+Transforming The Global Biosphere: Twelve Futuristic Strategies
+Do You Speak Future?
+Do You Speak Future
+Do You Speak Future?: Jacque Fresco Book of Insights
+Engineering a New Vision of Tomorrow
+
+# thevenusproject.com/jacque-fresco/ only -- not on Wikipedia or Goodreads.
+Structural Systems and Systems of Structure
+And The World Will Be One
+Designing the Future: A Cybernetic City for the Next Century
+Science in 1980
+Project Americana: Man in the World of Tomorrow
+
+# Co-authors/collaborators (Goodreads author-page credits), exact names.
+Roxanne Meadows
+Peter Joseph
+Elliott Maynard
+Janet Jaz
+
+# Documentary titles about Fresco / The Venus Project (Wikipedia
+# "Jacque Fresco" article's documentaries list).
+Future by Design
+Paradise or Oblivion
+The Choice is Ours
+A World Worth Imagining
+A World Worth Imagining: Jacque Fresco - The Man with the Plan
+Future My Love
+Zeitgeist Addendum
+
+# Fresco's own coined terms/core concepts (Wikipedia, thevenusproject.com).
+resource-based economy
+resource based economy
+sociocyberneering
+
+# Quote fragments. Lower confidence than the titles/terms above -- these
+# are as commonly cited by secondary sources (search aggregators, not a
+# primary transcript/page scan), except the first, which Wikipedia presents
+# in direct quotation marks attributed to Fresco.
+Because I can't get to anybody
+Study the meaning of science and apply its methods to the social system
+Earth is abundant with plentiful resources
+The earth's resources must be declared as the common heritage of all the world's people
+common heritage of all the world's people
+
+# Added 2026-07-27, 14 candidates -- each independently re-fetched and
+# confirmed directly against its cited page (not taken on the strength of
+# the request alone) before being added.
+
+# thevenusproject.com/jacque-fresco/ -- films/screenplays featuring Fresco,
+# not caught by the first two passes over that same page (that page's
+# "films" listings, as opposed to its "books authored" section).
+The Future and Beyond
+Welcome To The Future
+Cities In The Sea
+Self-erecting Structures
+Self-Erecting Structures
+Zeitgeist: Addendum
+Zeitgeist: Moving Forward
+
+# thevenusproject.com/the-venus-project/roxanne-meadows/ -- her
+# filmography page, credited productions not listed on the Fresco page.
+The Venus Project Tour
+A Conversation with Social Innovator & Futurist Jacque Fresco
+
+# thevenusproject.com/board-of-directors/ -- the named term for his core
+# concept, as opposed to the lowercase "resource-based economy" phrase
+# above (already covered, kept separate: capitalized as a proper term here).
+Global Resource Based Economy
+global resource-based economy
+
+# thevenusproject.com/multimedia/tvps_greatest_hits/ -- direct attributed
+# quote and the refrain of a named poetic section on the same page.
+The choice is ours, my friend
+If you do nothing, I can assure you nothing will happen
+
+# thevenusproject.com/major-motion-picture-history-progress-report/ --
+# Fresco's lost 1950s screenplay and its own quoted subtitle.
+Bright Tomorrow
+a documentary history of the future

@@ -1,0 +1,18 @@
+# Bounded candidates from Phase 41's "the seed is Fe-plated" rebus.
+#
+# Object: the literal word SEED. Coating means FE tokens occur only outside
+# that object; no product names, metal synonyms, atomic numbers, or arbitrary
+# blockchain fields are admitted.
+
+# Minimal symmetric Fe coating. Uses one Fe token on each side.
+FESEEDFE
+
+# Consume all three observed FE channels while keeping at least one coating
+# token on each side. These are the only two positive splits of 3: 1+2, 2+1.
+FESEEDFEFE
+FEFESEEDFE
+
+# Treat the complete RGB hex value as one coating unit on each side. This
+# duplicates the observed unit, so it is weaker than the three forms above,
+# but is the only literal full-color symmetric interpretation.
+FEFEFESEEDFEFEFE

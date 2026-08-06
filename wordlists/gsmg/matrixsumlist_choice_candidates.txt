@@ -1,0 +1,23 @@
+# Exact `574061 -> 23,16,7 -> Architect words before choice` reconstruction.
+both ultimately the
+bothultimatelythe
+
+# Yin/yang edge-letter poles of the selected words.
+but
+hye
+but hye
+hye but
+buthye
+hyebut
+
+# End rail HYE ordered by the beginning rail BUT (classical keyed-column order).
+hey
+
+# H | YE | BUT: H appears in front of the initials of "your eyes", then BUT.
+h
+
+# Last letters HYE + direct matrix-sum shifts 23,16,7.
+eol
+end of line
+endofline
+end-of-line

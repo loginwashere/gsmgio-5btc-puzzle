@@ -1,0 +1,82 @@
+# Historical SafeNet/Luna terminology audit.
+#
+# Sources:
+# - SafeNet Network HSM 6.3 documentation, Rev. A, 14 July 2017:
+#   https://thalesdocs.com/gphsm/luna/6.3/docs/network/
+# - Gemalto rebranding table preserved in the 2020 integration guide:
+#   https://cpl.thalesgroup.com/sites/default/files/content/integration_guides/field_document/2020-06/MyCodeSigner-Thales-IntegrationGuide.pdf
+# - Thales acquisition of Gemalto, completed 2 April 2019:
+#   https://www.thalesgroup.com/en/print/pdf/node/11216
+#
+# This is a closed exact-phrase list. Do not generate role/color/product
+# cross-products from it without a creator-authored selector.
+
+# Product and company identifiers.
+SafeNet
+Luna
+HSM
+Hardware Security Module
+SafeNet Luna HSM
+Luna SA HSM
+SafeNet Network HSM
+Luna PCI-E HSM
+SafeNet PCI-E HSM
+Luna G5 HSM
+SafeNet USB HSM
+Luna Client
+SafeNet HSM Client
+SafeNet PED
+Gemalto
+Thales
+Thales Luna HSM
+
+# Historical authentication and key-management terminology.
+PED
+PED Key
+MofN
+M of N
+dual control
+split knowledge
+split secret
+cloning domain
+domain string
+key cloning vector
+KCV
+partition
+challenge secret
+trusted path
+key wrapping
+key unwrapping
+private key wrapping
+private key cloning
+secret key wrapping
+secret key cloning
+key masking
+key unmasking
+high availability
+HA group
+backup restore
+reuse existing keyset
+
+# Historical roles and vectors.
+HSM SO
+Security Officer
+Partition Owner
+Crypto Officer
+Crypto User
+Auditor
+Remote PED
+Secure Recovery
+Remote PED Vector
+Secure Recovery Vector
+RPV
+SRV
+
+# Exact PED role-color labels.
+blue PED Key
+red PED Key
+black PED Key
+gray PED Key
+white PED Key
+orange PED Key
+purple PED Key

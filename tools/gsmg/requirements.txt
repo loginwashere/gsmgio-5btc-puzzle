@@ -1,0 +1,22 @@
+# tools/gsmg has otherwise relied entirely on apt-installed system packages
+# (see cb_common.py's own docstring: "Uses the cryptography package (already
+# present via apt's python3-cryptography)... this environment has no pip").
+# That assumption no longer holds -- pip works fine with
+# --break-system-packages (PEP 668's externally-managed-environment guard),
+# and no apt package (python3-coincurve or similar) exists for this one.
+#
+# coincurve wraps Bitcoin Core's own libsecp256k1, used only by
+# nopad_window_sweep.py (Phase 91) to replace the `cryptography` package's
+# generic OpenSSL EC_POINT_mul for privkey->pubkey derivation -- ~9x faster
+# for this one curve, needed because the -nopad hypothesis has no cheap
+# structural pre-filter and so calls this on every window/combo candidate of
+# every decrypt, unconditionally (see that script's module docstring).
+#
+# Install with:
+#   pip3 install --user --break-system-packages -r tools/gsmg/requirements.txt
+#
+# Version is also fingerprinted (version + compiled-backend .so hash) into
+# nopad_window_sweep.py's checkpoint, so an upgrade past this pin still can't
+# silently reuse a checkpoint computed under different EC-math code even if
+# this file isn't consulted at run time.
+coincurve==21.0.0
