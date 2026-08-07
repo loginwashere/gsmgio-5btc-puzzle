@@ -139,6 +139,23 @@ change *what* is fed in, not just how it's read:
 
 ## 3. Steganography / metadata pass on the repo's own image files
 
+**2026-08-06 follow-up (Phase 162): a direct question ("did you fetch from
+Wayback first?") caught a real gap for 4 of the 7 files.** `phase2.png`/
+`phase3.png`/`SalPhaseIonCosmicDuality.png`/`theseedisplanted.png` were
+never independently re-verified against Wayback (Phase 5 pulled them from
+a community fork repo) -- but re-fetching wouldn't have helped: they're
+browser screenshots of HTML pages, not served image assets, so there's
+nothing standalone for Wayback to have archived. `puzzle.png` and
+`gsmg_rabbit_hint.png` *are* now confirmed byte-identical to genuinely
+served/mirrored copies. More usefully, the question prompted checking the
+local Wayback mirror's `img/` directory for real served assets never
+examined at all: found 7 (`background-full.jpg`, `background-full-1440.jpg`,
+`bg-tablet-left.jpg`, `logo_medium.png`, `background-center.png`,
+`favicon_small.png`, `popup_img_error.png`). Two contain a real (not just
+theoretical) `iTXt` chunk -- the first non-empty metadata anywhere in this
+project's image history -- but both are the identical, completely empty
+generic Adobe XMP export boilerplate. All closed negative; see Phase 162.
+
 **Status update (2026-08-06): all four bullets tested, all closed
 negative.** See `tools/gsmg/FINDINGS.md` Phase 161 and
 `tools/gsmg/image_stego_metadata_audit.py`. No `exiftool`/`zsteg`/`binwalk`

@@ -214,12 +214,15 @@ def append_jsonl(path, record, sensitive=False):
         os.close(descriptor)
 
 
-def normalized_keystrings(candidates):
+def normalized_keystrings(candidates, whitespace_variants=False):
+    """`whitespace_variants`: see cb_common.keystr_forms -- off by default so
+    every existing caller's keystring count/fingerprint is unchanged."""
     seen = set()
     records = []
     for candidate in candidates:
         for form in sorted(answer_forms(candidate)):
-            for keystr in keystr_forms(form, newline_variants=True):
+            for keystr in keystr_forms(form, newline_variants=True,
+                                        whitespace_variants=whitespace_variants):
                 if keystr in seen:
                     continue
                 seen.add(keystr)

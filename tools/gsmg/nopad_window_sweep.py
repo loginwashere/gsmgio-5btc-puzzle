@@ -570,14 +570,17 @@ def _file_sha256(module):
     return hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest()[:16]
 
 
-def run_fingerprint(candidates, keystrings, bloom):
+def run_fingerprint(candidates, keystrings, bloom, whitespace_variants=False):
     """`bloom` is the live BloomCache (or None for --no-bloom) actually used
     for this run. Behavior depends on more than the driver + cb_common: it
     also depends on binary_key_material_backfill.py and aes_key_wrap_sweep.py
     (imported for private_key_details/ALL_CBC_VARIANTS), the known-address
     set, and whether/which Bloom cache is active -- all of those must be
     fingerprinted too, or a change to any of them could silently reuse a
-    checkpoint produced under different behavior."""
+    checkpoint produced under different behavior. `whitespace_variants`
+    (Phase 163) changes keystring content for the same candidate list, so
+    it's an explicit field rather than relying on keystring_count alone to
+    catch a mismatch -- version bumped 3 -> 4 accordingly."""
     blob_digest = hashlib.sha256()
     for tag, (salt, ciphertext) in TARGET_BLOBS.items():
         blob_digest.update(tag.encode() + b"\0" + salt + ciphertext)
@@ -585,10 +588,11 @@ def run_fingerprint(candidates, keystrings, bloom):
         "\0".join(sorted(KNOWN_GSMG_ADDRESSES)).encode()
     ).hexdigest()[:16]
     return {
-        "version": 3,
+        "version": 4,
         "candidate_digest": candidate_list_digest(candidates),
         "candidate_count": len(candidates),
         "keystring_count": len(keystrings),
+        "whitespace_variants": whitespace_variants,
         "blob_digest": blob_digest.hexdigest()[:16],
         "window_offsets": list(WINDOW_OFFSETS),
         "combo_offsets": list(COMBO_OFFSETS),
@@ -1625,7 +1629,7 @@ def sweep(args):
     lock_file = acquire_run_lock(args.checkpoint, args.hits, args.queue)
     try:
         candidates = load_candidates(args.candidate_file)
-        keystrings = normalized_keystrings(candidates)
+        keystrings = normalized_keystrings(candidates, whitespace_variants=args.whitespace_variants)
         if args.limit is not None:
             keystrings = keystrings[: args.limit]
         # Bloom must exist before fingerprinting: which cache (or none, under
@@ -1634,7 +1638,8 @@ def sweep(args):
         # silently reused under a different one.
         bloom = None if args.no_bloom else BloomCache(args.bloom_cache)
         try:
-            fingerprint = run_fingerprint(candidates, keystrings, bloom)
+            fingerprint = run_fingerprint(candidates, keystrings, bloom,
+                                           whitespace_variants=args.whitespace_variants)
             completed = load_checkpoint(args.checkpoint, fingerprint)
             ensure_checkpoint_header(args.checkpoint, fingerprint)
             # Idempotency across resumes: a crash between writing a hit and
@@ -2723,6 +2728,15 @@ def parse_args():
     parser.add_argument("--queue", type=Path, default=DEFAULT_QUEUE)
     parser.add_argument("--bloom-cache", type=Path, default=DEFAULT_BLOOM)
     parser.add_argument("--no-bloom", action="store_true")
+    parser.add_argument(
+        "--whitespace-variants", action="store_true",
+        help=(
+            "also include each keystring form with a trailing plain space "
+            "(cb_common.keystr_forms whitespace_variants; see FINDINGS.md "
+            "Phase 163). Off by default so existing checkpoints/fingerprints "
+            "are unaffected."
+        ),
+    )
     parser.add_argument("--limit", type=int)
     parser.add_argument(
         "--workers", type=int, default=1,

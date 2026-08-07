@@ -788,7 +788,7 @@ def raw_key_try_open(key: bytes, blobs=None):
     return hits
 
 
-def keystr_forms(form: str, newline_variants: bool = False):
+def keystr_forms(form: str, newline_variants: bool = False, whitespace_variants: bool = False):
     """Passphrase forms to try for a decoded/candidate answer: raw, single SHA-256
     hex digest, and double SHA-256 hex (hash of the hex digest) -- the last one
     added per the "sha256 ans too" reading of the trailing shabefanstoo fragment
@@ -799,8 +799,25 @@ def keystr_forms(form: str, newline_variants: bool = False):
     before use -- the "enter" reading of the abba-encoded word buried in the AES
     blob (an `echo "password" | sha256sum`-style terminal session includes the
     newline from pressing Enter; `echo -n` does not). Off by default since it
-    triples the passphrase-form count for every candidate in every sweep."""
-    bases = (form, form + "\n", form + "\r\n") if newline_variants else (form,)
+    triples the passphrase-form count for every candidate in every sweep.
+
+    `whitespace_variants`: also try each form with a single trailing plain
+    space appended. Found 2026-08-07 (FINDINGS.md Phase 163): message 234 in
+    the creator-only Telegram export (2019-04-23) is the creator personally
+    linking `passwordsgenerator.net/sha256-hash-generator/` in direct reply to
+    "how to check a password with a hash?", i.e. their own recommended tool
+    for exactly the operation this whole project's oracle performs. Its
+    archived (Wayback, 2019-04-25) client-side source strips a literal "\\r"
+    from the input textarea before hashing and does nothing else -- no
+    leading/trailing whitespace trim of any kind. A stray trailing space
+    typed or pasted into that box becomes part of the hashed string with no
+    warning. Independent of newline_variants (a real trailing space has no
+    newline); off by default for the same cost reason."""
+    bases = [form]
+    if newline_variants:
+        bases += [form + "\n", form + "\r\n"]
+    if whitespace_variants:
+        bases.append(form + " ")
     out = []
     for b in bases:
         h1 = hashlib.sha256(b.encode()).hexdigest()
