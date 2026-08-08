@@ -15,6 +15,7 @@ import matrixsum_cumulative_stride_audit
 import matrixsum_dbbi_faed_position_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
+import phase32_column_calibration_audit
 import promised_standalone_audit
 import remaining_structural_avenues_audit
 import safenet_luna_hsm_audit
@@ -52,6 +53,24 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(
             module.candidate_list_digest(candidates), "2d233645ef49a141"
         )
+
+    def test_phase32_column_calibration(self):
+        report = phase32_column_calibration_audit.audit()
+        cosmic, phase32 = report["cosmic"], report["phase32"]
+        self.assertEqual(phase32["row_count"], 51)
+        self.assertEqual(phase32["bytes_per_column"], 38)
+        self.assertEqual(phase32["md5_columns"], ())
+        self.assertEqual(len(phase32["fe_columns"]), 8)
+        self.assertFalse(phase32["last_column_has_fe"])
+        self.assertEqual(cosmic["row_count"], 28)
+        self.assertTrue(cosmic["last_column_hex"].startswith("7a20fe"))
+        self.assertTrue(cosmic["last_column_has_fe"])
+        # Both blobs' observed FE-column counts are within one column of
+        # their uniform-random-byte expectation -- neither is anomalous.
+        for entry in (cosmic, phase32):
+            self.assertLess(
+                abs(len(entry["fe_columns"]) - entry["expected_fe_columns"]), 1.0
+            )
 
     def test_stage0_even_sequence_convergence(self):
         report = stage0_even_sequence_convergence_audit.audit()
