@@ -12510,3 +12510,180 @@ specifically to `matrixsumlist` or `[23,16,7]` would be the kind of
 post-hoc parameter growth this project avoids. That movement-language gap
 -- not more selector variants -- is the actual blocker on this avenue.
 `test_recent_audits.py` grew to 17 tests, all passing.
+
+## Phase 186 -- Stage-0 footer `#383838` layer: reported four-line "second code" reproduced exactly, but exact-color null family shows it is not self-authenticating (2026-08-08)
+
+A newly surfaced claim attributed these four lines to the first puzzle image:
+
+```
+GSGO5BCPUCG
+41442111214
+GMGC9g2cPBe
+21221311122
+```
+
+The strings do not occur textually anywhere in the repository or mined chat.
+They are nevertheless a real, exactly reproducible raster extraction from
+the lossless 1048x1556 Stage-0 PNG.  `puzzle.png` and
+`doc/img/gsmg_puzzle_stage1.png` are byte-identical (SHA-256
+`38125bbdf1ea58b9b30b075bc6bf71e4089d04bba37098317e47097e2f2a1830`).
+Inside the normalized visible footer sources
+`GSMGIO5BTCPUZZLECHALLENGE` and
+`1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`, retain each glyph containing an
+exact RGB `(56,56,56)` / `#383838` pixel and write that glyph's count.  The
+result is exactly the four supplied lines.  Banner counts sum to 25,
+address counts to 18.  There are exactly 43 `#383838` pixels in the whole
+PNG, all in the footer, bounding box `(229,1170)` through `(989,1426)`.
+
+This also corrects the scope of Phase 157.  Its FEFEFE-shaped structural
+filter only admitted grayscale values within 8 of black or white, so it
+never tested a mid-gray layer such as `#383838`.  Phase 157 did not close
+this observation.
+
+`tools/gsmg/stage0_footer_palette_layer_audit.py` fixes the glyph boxes and
+applies those same boxes to
+**every** exact RGB layer touching either normalized line.  The bounded
+comparison gives:
+
+- 75 exact colors touch at least one normalized glyph;
+- 61 touch at least one glyph in both lines;
+- 41 touch both lines with 2..100 total pixels (the declared sparse-layer
+  family);
+- 11 of those sparse layers select at least 10 glyphs from each line;
+- `#383838` is the only layer selecting exactly 11 glyphs from each line;
+- but it is not the only balanced layer: four other sparse chromatic
+  antialias colors select equal smaller counts (three at 1/1, one at 4/4);
+- the only other sparse *grayscale* layer is `#d2d2d2`, producing
+  `GGO5BPG / 1112111` and `9 / 1`.
+
+The footer crops use a conspicuously quantized browser/raster palette: every
+channel value is one of `0,56,98,138,175,210,245`, producing many sparse
+chromatic subpixel-antialias layers.  The `#383838` coordinates themselves
+cluster on glyph top/bottom edge rows (`y=1170/1204` in the banner and
+`y=1395/1419` plus a few curved/descender rows in the address), exactly the
+geometry expected from font antialiasing.  Its alphanumeric output is
+automatic because the carrier text is alphanumeric, and its number strings
+are automatic per-glyph pixel counts.  The equal 11/11 length is genuinely
+the strongest unusual property, but that property was noticed after choosing
+the color/output and therefore is not an independent selector or checksum.
+
+One potentially tempting coincidence is that decimal 56 is the value of
+each channel in `#383838` and also occurs among the authenticated Phase-53
+guide row sums.  Nothing creator-authored currently says to interpret an RGB
+channel as a row-sum selector, and 56 occurs three times in that 14-row list;
+recorded as a possible future cross-check, not promoted as a chain edge.
+
+**Verdict:** the extraction is authentic as an image fact and should remain
+recorded, but intention is unproven.  The null family demonstrates that
+sparse character/count streams are a routine consequence of exact-color
+filtering this antialiased footer.  Do not AES-test or decode the four lines
+as puzzle material unless a creator-authored clue independently selects
+gray, `#383838`, decimal 56, or the equal-11 property.  The regression suite
+grew to 18 tests, all passing.
+
+**Addendum -- routine oracle due diligence, not an escalation past the above
+verdict (2026-08-08):** independently re-verified every claim in this phase
+from scratch (extraction, totals, the 11/11 uniqueness, and specifically the
+"other balanced layers" and `#d2d2d2` figures -- all reproduce exactly) using
+the same lossless PNG. Also ran the two `#383838` strings, their two
+concatenation orders, and both raw digit-count strings through the
+project's standard `material_family()`/`BLOBS` oracle
+(`ORACLE_CANDIDATES` in `stage0_footer_palette_layer_audit.py`) -- this is
+the same cheap, no-parameter-growth check every other phase runs on any
+extracted string, not a decision to treat the four lines as confirmed
+puzzle material: 8 candidates -> 81 materials -> 0 hits against
+SALPH/COSMIC/P32TRAILING. Consistent with, not contradicting, the verdict
+above.
+
+## Phase 187 -- repeated-byte grayscale claim (`CECECE -> CE`, `FEFEFE -> FE`): exact extraction confirmed, but CE is a rendered non-unique logo shade (2026-08-08)
+
+The annotator clarified the intended rule in plain language: find a pixel
+whose RGB hex consists of the same byte three times (as with `FEFEFE`), then
+collapse the triplet to one byte -- specifically `CECECE -> CE` and
+`FEFEFE -> FE`.  This makes the image annotations' proposed raw output
+`CE FE`, naturally concatenated in stated order as `CEFE` (`0xCEFE = 52990`).
+
+`tools/gsmg/stage0_repeated_grayscale_audit.py` reproduces both exact image
+facts from the pinned lossless Stage-0 PNG:
+
+- `#CECECE` occurs exactly 9 times, all in one solid 3x3 component at
+  absolute coordinates `(102,1250)` through `(104,1252)`, at the bottom of
+  the displayed GSMG logo;
+- `#FEFEFE` occurs exactly 5,625 times, all in the known single 75x75 grid
+  cell at `(300,525)` through `(374,599)`.
+
+The null-family result is decisive for how much weight to give the pairing.
+The logo contains **34** intermediate exact grayscale bytes after excluding
+black, the `#F5F5F5` page background, and white:
+
+```
+CC CD CE CF D0 D1 D2 D3 D4 D5 D8 D9 DB DC DD DF E0 E1 E2 E3
+E4 E5 E7 EA EB EC ED EE EF F0 F1 F2 F3 F4
+```
+
+Every component of every one of these intermediate logo shades is 3x3 --
+the direct signature of enlarging a 48x48 raster asset threefold with
+nearest-neighbor sampling.  `CE` is not even unique under the narrower
+"exactly one 3x3 block" property: ten bytes qualify (`CE D3 D5 DB DF E1 EC
+ED F1 F2`).
+
+The source-provenance comparison makes the cause explicit.  The actual
+served 48x48 `favicon_small.png` in the Wayback mirror contains **zero**
+opaque/source RGB `#CECECE` pixels.  Enlarging it exactly 3x and alpha-
+compositing it over the page's `#F5F5F5` background at `(33,1112)` recreates
+the displayed logo, including the 9 rendered CE pixels.  Across the full
+144x144 reconstruction, the only discrepancies are 1-unit rounding
+differences (maximum channel difference 1); CE is generated from one
+semi-transparent source edge pixel, not stored as a creator-authored CE
+constant in the favicon.
+
+The chemical-symbol continuation is recorded but does not rescue the
+selection: `Ce` is cerium (58) and `Fe` is iron (26), but the same logo
+family also contains `CD`, `CF`, and `DB`, all readable as valid element
+symbols (`Cd`, `Cf`, `Db`) before pairing with `Fe`.  Choosing Ce because it
+makes a thematic elemental pair is therefore post-hoc unless the annotator
+has an independent position rule that selects the exact bottom logo pixel.
+
+**Verdict:** `CEFE` is a faithfully reproduced output of the annotator's
+stated selection, but the image alone does not select CE.  FE is a genuine
+flat-graphic cell anomaly; CE is one member of a large, mechanically
+explained alpha-compositing family.  Keep `CEFE` as externally supplied
+candidate material, not an authenticated chain edge, and do not expand to
+`5826`, `206254`, reversals, or cryptographic consumers without an
+independent selector for CE.  The focused CE/FE plus footer-palette
+regressions pass (2/2); the repeated-grayscale test is also part of the
+late-stage suite.
+
+## Phase 188 -- annotator's "G in the shadows and the text" clarification: a real selector for `#383838`, but a checksum rather than a G-only mask (2026-08-08)
+
+The annotator added: *"He hid the letters G in the shadows and the text."*
+Read as a mechanical selection rule over the two marked text carriers, this
+suggests choosing an exact shadow/grayscale layer that touches every literal
+`G` in both the banner and address.  The footer-palette audit now evaluates
+that predicate across its already-declared 75-color family.
+
+There are five visible Gs: three in
+`GSMGIO5BTCPUZZLECHALLENGE` and two in the prize address.  Results:
+
+- 35 of all 75 exact RGB layers touch all five Gs -- unsurprising once the
+  chromatic subpixel-antialias layers are admitted;
+- after imposing the comment's *shadow* reading as exact grayscale and
+  excluding the black foreground and `#F5F5F5` page background,
+  **`#383838` is the sole survivor**;
+- its per-G pixel counts are exactly `(4,4,4)` in the large banner font and
+  `(2,2)` in the smaller address font, so every same-font G reproduces the
+  same count;
+- it is not a G-only mask: the layer selects 22 glyphs total, hence 17
+  non-G glyphs in addition to the five Gs.  Those additional glyphs are the
+  supplied `GSGO5BCPUCG` / `GMGC9g2cPBe` streams.
+
+**Verdict:** this comment materially strengthens the `38` choice.  It gives
+an externally supplied predicate under which `#383838` is unique among the
+nontrivial grayscale text-shadow layers, addressing Phase 186's main
+selection objection.  It does not establish that the complete 22-character
+stream is an encoded message: the Gs function as a color-layer checksum,
+not as an exclusive mask, and exact shadow pixels remain a normal product of
+font rasterization.  Promote `#383838 -> 38` from an unselected post-hoc
+palette layer to a specifically annotated candidate mechanism; keep the
+downstream character/count strings provisional until the annotator explains
+how their non-G characters are consumed.

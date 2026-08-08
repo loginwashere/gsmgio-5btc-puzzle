@@ -21,6 +21,8 @@ import safenet_luna_hsm_audit
 import salphaseion_salvation_role_audit
 import salphaseion_wayback_history_audit
 import spi_cd_initials_audit
+import stage0_footer_palette_layer_audit
+import stage0_repeated_grayscale_audit
 import synthesis_action_paths_audit
 import telegram_yellow_blue_matrix_direction_audit
 import triangular_matrixsumlist_audit
@@ -29,6 +31,28 @@ from telegram_export_manifest import DEFAULT_EXPORT_DIR
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_stage0_repeated_grayscale(self):
+        report = stage0_repeated_grayscale_audit.audit()
+        self.assertEqual(report["collapsed_claim"], ("CE", "FE"))
+        self.assertEqual(report["ce"]["pixel_count"], 9)
+        self.assertEqual(report["fe"]["pixel_count"], 5625)
+        self.assertEqual(len(report["logo_bytes"]), 34)
+        self.assertEqual(len(report["logo_single_3x3_bytes"]), 10)
+
+    def test_stage0_footer_palette_layer(self):
+        report = stage0_footer_palette_layer_audit.audit()
+        self.assertEqual(report["target"]["selected_counts"], (11, 11))
+        self.assertEqual(report["target"]["pixel_count"], 43)
+        self.assertEqual(report["balanced_11_colors"], ((56, 56, 56),))
+        self.assertEqual(report["sparse_count"], 41)
+        self.assertEqual(report["oracle"]["candidate_count"], 8)
+        self.assertEqual(report["oracle"]["hits"], [])
+        self.assertEqual(
+            report["intermediate_grayscale_all_g"],
+            (((56, 56, 56), (4, 4, 4, 2, 2)),),
+        )
+        self.assertEqual(report["target_non_g_selected_count"], 17)
+
     def test_neo_choice_last_words(self):
         module = neo_choice_last_words_audit
         self.assertEqual(len(module.CANDIDATES), 7)
