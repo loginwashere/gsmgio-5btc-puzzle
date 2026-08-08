@@ -12101,3 +12101,93 @@ filter cannot flag, or a passage the hand-transcription from the source
 photos genuinely missed -- both remain open caveats, not evidence of a gap
 in this specific check. `dbbi`/`faed`'s construction rule still requires new
 primary evidence, not another local-text pattern search of this same book.
+
+## Phase 179 -- remaining structural avenues: atomic strings, selected-text keystream, and narrow P32/book probes (2026-08-08)
+
+Four proposed avenues were narrowed before execution.  The chemical relation
+already established in Phases 97--99 is:
+
+```text
+V = 23, P + H = 16, V - (P + H) = 7
+```
+
+Reading the same numbers as `V=23, S=16, N=7` selects and reorders different
+letters; it is not the title transition that produced the triple, and there
+is still no independent creator-authored chemistry instruction.  The exact
+names and compact spellings were nevertheless cheap enough to isolate.
+Likewise, P32TRAILING has been an ordinary target of the shared blob oracle
+since Phase 25 rather than an overlooked blob.  The useful residue was an
+explicit recheck of the few named Phase-3.2 strings against that blob alone.
+
+Implemented `tools/gsmg/remaining_structural_avenues_audit.py` with fixed
+bounds and no candidate growth after inspecting outputs.
+
+### Exact passphrase families
+
+The atomic family was exactly:
+
+```text
+Vanadium
+Sulfur
+Nitrogen
+VSN
+23167
+V16S7N
+VanadiumSulfurNitrogen
+```
+
+Exact/case/letters-only and established key-string forms deduplicate to 54
+materials.  The full CBC, stream, ECB, and AES Key Wrap passphrase oracles
+against SALPH, COSMIC, and P32TRAILING returned **0 hits**.
+
+The P32-only bound used the known validation answer plus exactly the three
+named forms `incaseyoumanagetocrackthis`,
+`theprivatekeysbelongtohalfandbetterhalf`, and `halfandbetterhalf`: four
+candidates, 24 unique materials, **0 hits** against P32TRAILING.
+
+The page-vocabulary bound used exactly `Mother Goddess`, `Virgin Mary`, and
+`Divine Feminine`: three candidates, 54 unique materials, **0 hits** against
+all three open blobs.  This closes those guessed labels, not the unobserved
+contents of pages 57--58.
+
+### Exact 31-character selection as a 9-ary keystream
+
+The raw selection
+`ncsyangcahiriasogaleafayanestve` was converted by the project's existing
+numeric-seed convention, A1Z26 modulo 9.  It was applied to both DBBI and FAED
+through
+the three repeating transforms `C-K`, `C+K`, and `K-C`, plus ciphertext- and
+plaintext-autokey de-chaining under both signs.  Each result was decoded under
+both native escape orders and both existing board topologies, using the fixed
+classic-J selected-text `pad25` alphabet already isolated in Phase 178.
+Eight of 56 attempted configurations ended in an incomplete escape, leaving
+48 complete decodes.
+
+The best result was DBBI, ciphertext autokey with sign `-1`, `{b,e}` and
+`top_first`:
+
+```text
+GGNINSKSEANGONFSCASSRSDYINGSCAAHYAEHCGSAASTMAZGYGYADGNHHNLAGBNNGGMSBLSZC
+sha256 d5c9fe5f5c34162c068ec709497bdd03c087a2af362ddbfeac11c2b558e8347f
+normalized quadgram score -6.61008477624387
+```
+
+There were no occurrences of the predeclared markers
+`private/bitcoin/password/matrix/choice/salvation`.  A deterministic
+2,000-trial control shuffled the same 31 seed digits and took the maximum
+English score across the entire declared family on every trial.  Its
+familywise upper-tail result was `149/2001 = 0.0744627686`, well above the
+predeclared `p < 0.005` AES-escalation gate.  Consequently no decoded text was
+post-hoc promoted into passphrase material.
+
+The proposed constant rotations add no separate base-9 family: 23, 16, and 7
+collapse modulo 9 to only 5 and 7.  Rotating the escape labels consistently
+with the alphabet is a code-label permutation; holding the escape labels fixed
+instead would introduce an unsupported mismatch, so neither was expanded.
+
+**Verdict:** close the exact atomic-name family, the named P32TRAILING phrases,
+the three guessed page labels, and this fixed 31-character repeating/autokey
+keystream construction.  The physical pages 57--58 remain genuinely open as
+missing evidence, but their unknown content cannot be replaced by an expanding
+synonym list.  The atomic triple remains an authenticated structural echo in
+its original `V, P+H, difference` form, not a demonstrated AES instruction.

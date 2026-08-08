@@ -12,6 +12,7 @@ import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import dual_channel_consistency_audit
 import promised_standalone_audit
+import remaining_structural_avenues_audit
 import safenet_luna_hsm_audit
 import salphaseion_salvation_role_audit
 import salphaseion_wayback_history_audit
@@ -24,6 +25,18 @@ from telegram_export_manifest import DEFAULT_EXPORT_DIR
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_remaining_structural_avenues(self):
+        module = remaining_structural_avenues_audit
+        self.assertEqual(module.keyword_to_seed("AI", 9), [1, 0])
+        self.assertEqual(
+            module.rotation_scope()["distinct_mod9_rotations"],
+            (5, 7),
+        )
+        self.assertEqual(
+            module.repeat_transform("abc", (1,), "cipher_minus_key"),
+            "iab",
+        )
+
     def test_synthesis_action_paths(self):
         module = synthesis_action_paths_audit
         self.assertEqual(module.base9_integer("bi"), 17)
