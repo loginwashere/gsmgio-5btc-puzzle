@@ -22,6 +22,7 @@ import salphaseion_salvation_role_audit
 import salphaseion_wayback_history_audit
 import spi_cd_initials_audit
 import stage0_footer_palette_layer_audit
+import stage0_g_shadow_consumer_audit
 import stage0_repeated_grayscale_audit
 import synthesis_action_paths_audit
 import telegram_yellow_blue_matrix_direction_audit
@@ -31,6 +32,23 @@ from telegram_export_manifest import DEFAULT_EXPORT_DIR
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_stage0_g_shadow_consumer(self):
+        report = stage0_g_shadow_consumer_audit.audit()
+        self.assertEqual(report["payload"], "OCBe")
+        self.assertEqual(report["residue_count"], 13)
+        self.assertEqual(report["atomic_numbers"], (8, 6, 4))
+        self.assertEqual(report["constant_step"], (-2, -2))
+        sensitive = {
+            row["marker"]: row for row in report["case_sensitive_marker_null"]
+        }
+        self.assertEqual(sensitive["G"]["element_parses"], (("O", "C", "Be"),))
+        self.assertFalse(
+            next(row for row in report["casefold_marker_null"] if row["marker"] == "g")[
+                "valid"
+            ]
+        )
+        self.assertEqual(report["oracle"]["hits"], [])
+
     def test_stage0_repeated_grayscale(self):
         report = stage0_repeated_grayscale_audit.audit()
         self.assertEqual(report["collapsed_claim"], ("CE", "FE"))

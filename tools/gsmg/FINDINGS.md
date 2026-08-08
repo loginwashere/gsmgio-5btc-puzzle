@@ -12687,3 +12687,91 @@ font rasterization.  Promote `#383838 -> 38` from an unselected post-hoc
 palette layer to a specifically annotated candidate mechanism; keep the
 downstream character/count strings provisional until the annotator explains
 how their non-G characters are consumed.
+
+## Phase 189 -- exploratory G-shadow-count consumer: `OCBe -> O/C/Be -> 8/6/4`, objective internal checkpoint but no blob hit (2026-08-08)
+
+The open Phase-188 question was whether all 17 selected non-uppercase-G
+glyphs need an invented cipher.  A narrower consumer follows directly from
+the annotator's emphasis on G and the supplied per-glyph counts: within each
+font row, use the invariant G shadow count as the selector and retain only
+non-G glyphs having that same count.
+
+`tools/gsmg/stage0_g_shadow_consumer_audit.py` reproduces:
+
+```
+banner:  G counts 4,4,4; all count-4 glyphs GGOG  -> non-G payload O
+address: G counts 2,2;   all count-2 glyphs GGCBe -> non-G payload CBe
+combined: OCBe
+```
+
+This consumes the 17-character question as a filter rather than a transform:
+four characters survive and the other 13 selected shadow glyphs
+(`S5BCPUC` + `M9g2cP`) fail the G-count predicate.  Case is consequential and
+is preserved from the actual address: its lowercase `g` has count 3, not the
+uppercase-G reference count 2, so it correctly remains in the residue.
+
+`OCBe` has a clean, case-preserving chemical parse using ordinary element
+symbols:
+
+```
+O / C / Be -> oxygen 8 / carbon 6 / beryllium 4 -> 864
+```
+
+The constant atomic-number step `8,6,4` (`-2,-2`) is an objective internal
+checkpoint substantially better than a merely printable string, and the
+chemical interpretation is already native to the authenticated
+SALPHATION/SALVATION branch.  It is nevertheless an inferred consumer, not
+an operation stated by the annotator: "same count as G" was proposed here
+after seeing the count rows.  The 13-character rejection also has no
+external confirmation yet.
+
+Bounded oracle due diligence declared only the direct output and its direct
+atomic form: `OCBe`, `864` -> 15 unique `material_family()` forms -> 0 hits
+against SALPH/COSMIC/P32TRAILING.  No reversal to `468`, no CE/FE
+concatenation, and no larger permutation family was run.
+
+**Verdict:** best current candidate consumer for the non-G material.  It
+reduces a 17-character arbitrary-transform problem to one deterministic
+row-local equality rule and lands on a structured chemical checkpoint, but
+the zero blob result and post-observation rule mean it remains exploratory.
+Ask the annotator specifically whether non-G characters with the **same
+shadow count as G** are intended; that single yes/no confirmation would
+materially change its evidentiary status.
+
+## Phase 190 -- G-consumer comparison without annotator confirmation: case-sensitive G uniquely yields an elemental payload; casefold G fails its own invariant (2026-08-08)
+
+Phase 189 can be compared against internal alternatives without asking the
+annotator.  The audit now treats every character shared by both selected
+shadow strings as if it were the emphasized marker, derives its row-local
+same-count payload identically, and tests exact-case periodic-table
+segmentation.  This fixes the null family at four case-sensitive markers:
+
+```
+marker B: references 1/2 -> SCPCGGCe -> no complete element parse
+marker C: references 1/2 -> SBPGGBe  -> no complete element parse
+marker G: references 4/2 -> OCBe     -> unique O / C / Be parse
+marker P: references 1/1 -> SBCCM92c -> no complete element parse
+```
+
+Thus G is not merely the annotator's named choice: among every character
+that could play the same role in both rows, it is the only marker whose
+consumer output fully parses into correctly-cased element symbols.  The
+resulting atomic numbers remain the clean `8,6,4` constant-step sequence.
+
+The case-insensitive comparison is also decisive.  Shared folded markers
+are `b,c,g,p`, but folded `g` is **not a valid row-local invariant**: the
+banner has G counts `(4,4,4)`, while the address has uppercase/lowercase
+G/g counts `(2,2,3)`.  Folded `c` similarly mixes unequal C/c counts.
+Only folded `b` and `p` remain mechanically valid, and neither produces an
+element-parsable payload.  The preserved case of the Bitcoin address is
+therefore not cosmetic; it selects uppercase G and supplies the lowercase
+`e` needed for `Be`.
+
+**Verdict:** internal comparison favors the exact case-sensitive Phase-189
+consumer even without further annotator input.  This does not prove author
+intent -- the marker family and element-parse checkpoint are evaluated
+after the `#383838` extraction, albeit with the puzzle's already-grounded
+chemical vocabulary -- but it rules out the obvious casefold alternative
+and shows that B/C/P do not offer rival structured outputs under the same
+operation.  No new password candidates or oracle attempts were added in
+this comparison.
