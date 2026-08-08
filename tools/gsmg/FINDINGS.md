@@ -11734,3 +11734,67 @@ own blob. This does not prove that no imaginable salt-dependent program exists;
 it does mean that another bit choice, chunking scheme, offset, arithmetic
 operator, or cross-blob binding would introduce a new unfixed parameter and
 should not be appended without a creator-backed selector.
+
+## Phase 175 -- complementary color masks over full DBBI/FAED streams (2026-08-08)
+
+A coverage audit confirmed a narrow gap in Phase 169-170. The authenticated
+first-piece masks `F73D92` and `08C26D` had been repeated over the 31-character
+selection and Phase 3.2 control material, while full DBBI/FAED had received only
+the literal SALT/PHRASE/ION word-key XORs. The original proposal to apply the
+binary color masks themselves to both complete symbolic streams had not run.
+
+Implemented `tools/gsmg/color_mask_full_stream_audit.py`. It operates on the
+exact ASCII bytes of the 91-character DBBI and 570-character FAED strings, using
+only repeating XOR with the two fixed three-byte masks:
+
+```text
+sources x masks:                 2 x 2 = 4 full-stream transforms
+consumers per transform:         exact stream, SHA-256, first 32, last 32
+derived 32-byte materials:       4 x 3 = 12
+```
+
+The four exact streams were tried verbatim as binary passphrases. Their hashes
+and first/last 32 bytes were tried verbatim as passphrases, raw keys, and
+secp256k1 scalars against the existing blob/address oracles. No symbol remapping,
+hex/Base64 rendering, shifts, offsets, source mixing, mask arithmetic, case
+forms, or extra derivation was introduced.
+
+Phase 3.2 was evaluated first. Its established AES password still opens the
+known blob. Neither repeated mask converts its ciphertext to the known plaintext
+prefix, and the observed ciphertext/plaintext XOR stream is not either periodic
+mask. Applying the same exact/hash/edge consumers to both its ciphertext and
+known plaintext also produces no known password, passphrase opening, or raw-key
+opening.
+
+The open-stream outputs are reproducibly fixed by these hashes:
+
+```text
+DBBI / F73D92:  87bfe002b2ea39083e1c28939549e6f7d99b54c8ae56671dc53829484bf112c1
+DBBI / 08C26D:  6b049076f93c195cde6c0e7862f9dc64bdad1365f400099246a409648a4bf7e4
+FAED / F73D92:  e4bb5b54742e8b4d2ce9355b104f05c5f2b90c7ba38e9a42c78175241bf780ad
+FAED / 08C26D:  78c044fd2a2068f23eb618bdd8356341caeb263a6f62571d283cf6db430b5bff
+```
+
+Their printable ratios are respectively `0.329670`, `0.384615`, `0.333333`,
+and `0.414035`; the longest printable run is only one byte for each `F73D92`
+stream and two bytes for each `08C26D` stream. No fixed marker occurs. Because
+the masks XOR to `FFFFFF`, the two output streams for a given source are exact
+bytewise complements; they are not two independent candidate channels.
+
+```text
+Phase 3.2 AES positive control:          true
+Phase 3.2 direct mask decoder matches:  0
+recognizable marker hits:                0
+whole-stream passphrase openings:        0
+derived passphrase openings:             0
+raw-key openings:                        0
+known-address scalar hits:               0
+```
+
+**Verdict:** close the exact complementary-color repeating-XOR path over full
+DBBI/FAED. The missing four transforms have now run through the same bounded
+consumers as Phase 170's literal XOR family, with a direct known-plaintext check
+on Phase 3.2 and zero results throughout. A different encoding of `a-i`, mask
+alignment, arithmetic operation, or cross-stream construction would be a new
+model requiring an additional selecting clue rather than a continuation of this
+closed gap.
