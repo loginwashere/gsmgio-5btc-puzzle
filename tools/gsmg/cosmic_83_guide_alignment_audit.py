@@ -56,6 +56,12 @@ from telegram_23167_operation_audit import guide_endpoint_profile  # noqa: E402
 
 KNOWN_ADDRESSES = {PRIZE_ADDRESS, HALVING_ADDRESS}
 
+# The historical 6/84/6 observation is specifically the two 80-byte-body
+# artifacts flanking COSMIC, not a claim about every future oracle target.
+# URLBLOB still participates in BLOBS-based cryptographic evaluations below,
+# but its seven-block envelope must not silently redefine that premise.
+GEOMETRY_BLOB_NAMES = ("SALPH", "COSMIC", "P32TRAILING")
+
 
 def blocks16(data):
     if len(data) % 16:
@@ -496,6 +502,7 @@ def audit():
     full_block_counts = {
         tag: len(blocks16(b"Salted__" + salt + ciphertext))
         for tag, (salt, ciphertext) in BLOBS.items()
+        if tag in GEOMETRY_BLOB_NAMES
     }
     return {
         "guide_token_count": len(guide["tokens"]),

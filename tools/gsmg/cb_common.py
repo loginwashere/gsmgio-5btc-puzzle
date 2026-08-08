@@ -405,21 +405,24 @@ BLOBS = {
     # 80-byte blob in the same fast inner loop every sweep already runs) --
     # unlike the cipher/KDF variant expansion, this isn't the expensive axis.
     "P32TRAILING": _load_blob(P32_TRAILING_BLOB_B64),
+    # Provenance-labeled but included by default as of Phase 192. The exact
+    # bytes were independently recovered from a real gsmg.io Wayback URL and
+    # the target adds little marginal cost to ordinary candidate checks.
+    "URLBLOB": _load_blob(URLBLOB_B64),
 }
 
 # "urlblob", added 2026-07-24 -- see data.URLBLOB_B64 for full provenance,
 # including this project's own independent re-verification directly against
 # the live Wayback CDX API (not just the HosterjackAGV fork's docs), which
 # also caught and corrected a truncated-capture/timestamp error in that
-# fork's own citation. Deliberately kept OUT of the default BLOBS: unlike
-# SALPH/COSMIC/P32TRAILING, no official-README or solved-plaintext source
-# corroborates this blob as a genuine puzzle artifact -- the fork that
-# surfaced it calls it "orphaned" and reports no tested key decrypts it.
-# Sweep scripts that want to include it pass
-# `blobs={**BLOBS, **QUARANTINED_BLOBS}` (or an equivalent opt-in flag)
-# explicitly, rather than it silently joining every default run.
+# fork's own citation. Unlike SALPH/COSMIC/P32TRAILING, no official-README or
+# solved-plaintext source corroborates this blob as a genuine puzzle artifact;
+# the fork that surfaced it calls it "orphaned". Phase 192 nevertheless moved
+# it into BLOBS so new general checks cannot omit one of only four targets.
+# This compatibility/provenance view remains for older opt-in code; merging it
+# with BLOBS is harmless because the key and value are identical.
 QUARANTINED_BLOBS = {
-    "URLBLOB": _load_blob(URLBLOB_B64),
+    "URLBLOB": BLOBS["URLBLOB"],
 }
 
 

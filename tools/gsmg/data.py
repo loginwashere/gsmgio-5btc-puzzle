@@ -80,10 +80,10 @@ P32_TRAILING_BLOB_B64 = (
 # embeds the same blob as a UI-demo literal). Unlike SALPH/COSMIC/
 # P32TRAILING, there is no official-README or solved-plaintext corroboration
 # of this blob's authenticity as a genuine puzzle artifact (the fork's own
-# docs call it "orphaned" and report no tested key decrypts it) -- so this
-# is tracked separately as a QUARANTINED target (see
-# cb_common.QUARANTINED_BLOBS), not folded into the default BLOBS every
-# sweep already touches.
+# docs call it "orphaned" and report no tested key decrypts it). It retains a
+# QUARANTINED provenance label (see cb_common.QUARANTINED_BLOBS), while Phase
+# 192 also folds it into default BLOBS so subsequent general-purpose checks
+# cover all four known targets. Inclusion does not imply equal corroboration.
 URLBLOB_B64 = (
     "U2FsdGVkX190yXTj+S5ktZ9+oipQ3LDUKJ0XbUzp26f5mmlbjQeXtcd5HmWo0raK"
     "WHn10xrl6KJjUgXeMbhRz0OyU09YdlaW08KgH386QfcoT7vMg2UXy/e6YTxDqRnZ"

@@ -267,7 +267,8 @@ def add_salt_candidates(registry, salt_reports):
 
     # The solved Phase 3.2 artifact is a calibration control, not another
     # unsolved-target candidate generator.  Still report its fourth known salt
-    # beside the three open blobs so cross-salt structure claims cannot omit it.
+    # beside the four open/default blobs so cross-salt structure claims cannot
+    # omit the solved control.
     phase32_salt, _phase32_body = _load_blob(PHASE32_BLOB_B64)
     rows, cols = bit_matrix_sums(phase32_salt)
     salt_reports["PHASE32_SOLVED"] = {
@@ -593,7 +594,7 @@ def self_test():
     assert report["title_mutation"] == SALT_TITLE
     assert report["evaluation"]["candidate_count"] > 100
     assert set(report["salt_reports"]) == {
-        "SALPH", "COSMIC", "P32TRAILING", "PHASE32_SOLVED"
+        "SALPH", "COSMIC", "P32TRAILING", "URLBLOB", "PHASE32_SOLVED"
     }
     assert set(report["matrix_reports"]) == {"SALPH", "P32TRAILING"}
     assert len(report["title_passphrases"]["forms"]) == 5
@@ -606,8 +607,12 @@ def self_test():
         for item in report["phase32_calibration"]["xor_reports"]
     )
     assert report["arithmetic_spine"]["570_remainders_by_triple"] == (18, 10, 3)
-    assert tuple(report["arithmetic_spine"]["open_blob_aes_blocks"].values()) == (5, 83, 5)
-    assert tuple(report["arithmetic_spine"]["open_blob_block_prime_ranks"].values()) == (3, 23, 3)
+    assert tuple(report["arithmetic_spine"]["open_blob_aes_blocks"].values()) == (
+        5, 83, 5, 6
+    )
+    assert tuple(
+        report["arithmetic_spine"]["open_blob_block_prime_ranks"].values()
+    ) == (3, 23, 3, None)
     assert report["title_eyes"][TITLE]["flanks"] == ("eo",)
     print(
         "[*] self-test OK: exact title/color/length identities, salt matrices, "

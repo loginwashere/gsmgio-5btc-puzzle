@@ -88,8 +88,10 @@ def salted_targets():
     phase32 = _load_blob(PHASE32_BLOB_B64)
     result = dict(BLOBS)
     result["PHASE32_SOLVED"] = phase32
-    if len(result) != 4:
-        raise AssertionError(f"expected four authenticated salts, found {len(result)}")
+    if len(result) != 5:
+        raise AssertionError(
+            f"expected four open/default salts plus solved calibration, found {len(result)}"
+        )
     return result
 
 
@@ -295,14 +297,14 @@ def self_test():
         "selection31_chars": 31,
         "matrix_scene1326_words": 1326,
     }
-    assert report["salt_count"] == 4
+    assert report["salt_count"] == 5
     assert report["structural_spec_count"] == 12
-    assert report["structural_output_count"] == 192
+    assert report["structural_output_count"] == 240
     assert 0.0 < report["minimum_null_upper_tail_p"] <= 1.0
     assert report["minimum_null_upper_tail_p"] <= report["bonferroni_minimum_p"] <= 1.0
     assert report["phase32_oracle_positive"]
     assert not report["phase32_selector_known_password_hits"]
-    print("[*] self-test OK: selector mechanics, cached source, 192-case scope, and Phase 3.2 oracle control")
+    print("[*] self-test OK: selector mechanics, cached source, 240-case scope, and Phase 3.2 oracle control")
 
 
 def main():
@@ -330,7 +332,8 @@ def main():
     print(f"[*] random-salt null trials per rule: {report['null_trials_per_rule']}")
     print(
         f"[*] best uncorrected null tail={report['minimum_null_upper_tail_p']:.6f}; "
-        f"Bonferroni across 192 outputs={report['bonferroni_minimum_p']:.6f}"
+        f"Bonferroni across {report['structural_output_count']} outputs="
+        f"{report['bonferroni_minimum_p']:.6f}"
     )
     for row in report["best_rows"]:
         printable = row["forms"].get("compact", row["forms"].get("exact"))

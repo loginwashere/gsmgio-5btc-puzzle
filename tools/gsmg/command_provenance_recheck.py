@@ -15,7 +15,7 @@ command reconstructions, this greps that raw archive for real
 hash pipelines, extracts their EXACT literal arguments (preserving whatever
 quoting/spacing/typos the original poster actually used -- including at
 least one real missing-dash typo, see COMMAND_LINES below), and tests them
-against every open blob (cb_common.BLOBS, now three -- see below) under the
+against every open/default blob (cb_common.BLOBS, now four -- see below) under the
 full cipher/KDF coverage (KDF_VARIANTS + EXTENDED_CIPHER_VARIANTS from
 path 1).
 
@@ -40,7 +40,7 @@ where it's called "p32_trailing" -- an 80-byte OpenSSL blob embedded at the
 end of the already-solved Phase 3.2 plaintext, genuinely distinct from SALPH/
 COSMIC by salt). Added to cb_common.BLOBS as "P32TRAILING" -- see
 data.P32_TRAILING_BLOB_B64. Every sweep in this module now runs against all
-three open blobs automatically.
+four open/default blobs automatically.
 
 Usage:
     python3 tools/gsmg/command_provenance_recheck.py

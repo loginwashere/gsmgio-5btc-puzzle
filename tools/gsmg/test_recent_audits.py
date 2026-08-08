@@ -30,9 +30,16 @@ import telegram_yellow_blue_matrix_direction_audit
 import triangular_matrixsumlist_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
+from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_urlblob_is_a_default_provenance_labeled_target(self):
+        self.assertEqual(
+            tuple(BLOBS), ("SALPH", "COSMIC", "P32TRAILING", "URLBLOB")
+        )
+        self.assertEqual(QUARANTINED_BLOBS["URLBLOB"], BLOBS["URLBLOB"])
+
     def test_stage0_even_sequence_convergence(self):
         report = stage0_even_sequence_convergence_audit.audit()
         self.assertTrue(report["overlap"])

@@ -57,6 +57,8 @@ def audit():
         "palette_base_bits": palette_base_bits,
         "fefe_value_shared_with": fefe_value_shared_with,
         "oracle": material_family((candidate,), BLOBS),
+        # Provenance-specific view retained even though URLBLOB is now also
+        # part of the default registry.
         "quarantined_oracle": material_family((candidate,), QUARANTINED_BLOBS),
     }
 
