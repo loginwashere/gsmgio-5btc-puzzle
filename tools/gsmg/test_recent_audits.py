@@ -28,6 +28,7 @@ import stage0_repeated_grayscale_audit
 import synthesis_action_paths_audit
 import telegram_yellow_blue_matrix_direction_audit
 import triangular_matrixsumlist_audit
+import urlblob_keywrap_backfill
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
 from cb_common import BLOBS, QUARANTINED_BLOBS
@@ -39,6 +40,18 @@ class CorrectedClaimTests(unittest.TestCase):
             tuple(BLOBS), ("SALPH", "COSMIC", "P32TRAILING", "URLBLOB")
         )
         self.assertEqual(QUARANTINED_BLOBS["URLBLOB"], BLOBS["URLBLOB"])
+
+    def test_urlblob_keywrap_backfill_scope(self):
+        # The full sweep (~17k KEK-deriving attempts) is too slow for this
+        # regression suite; this checks the module's scope/plumbing instead
+        # of re-running Phase 193's already-recorded negative result.
+        module = urlblob_keywrap_backfill
+        self.assertEqual(tuple(module.TARGET_BLOBS), ("URLBLOB",))
+        candidates = module.load_curated_candidates()
+        self.assertGreaterEqual(len(candidates), 568)
+        self.assertEqual(
+            module.candidate_list_digest(candidates), "2d233645ef49a141"
+        )
 
     def test_stage0_even_sequence_convergence(self):
         report = stage0_even_sequence_convergence_audit.audit()
