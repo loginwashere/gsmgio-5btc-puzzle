@@ -11177,3 +11177,284 @@ correct next move is not another transform guess at any existing node --
 it's new primary evidence (the physical book's pages 57-58, or any
 not-yet-surfaced creator message), which this project has already
 identified and has no code-side substitute for.
+
+## Phase 167 -- bare literal `sha256` as a standalone candidate: never tested before, now closed negative (2026-08-07)
+
+Direct question while reviewing `wordlists/gsmg/medium_curated_all.txt`
+(a community message discussing `SHA256(causality) = ...`): has the bare
+word `sha256` itself ever been tried as a candidate passphrase, distinct
+from being the *hashing operation* every candidate is already put through?
+
+**Checked, not assumed.** `sha256`/`SHA256`/`Sha256` only appear embedded
+inside full mined chat-line sentences in `chat_mined_lines.txt` (lowest
+priority, never oracle-tested per this project's standing discipline).
+Confirmed absent as a standalone token everywhere else that matters:
+`load_curated_candidates()` (the 648-file curated tier), `medium_curated_
+tier1/2/3` and their `medium_curated_all.txt` union (66,433 candidates),
+and even `chat_mined_words.txt` (the token-level mining pass). No prior
+phase or script name references it as a candidate either. A real,
+previously-unexamined gap, not a redundant recheck -- and thematically
+motivated: the creator's own recommended tool (Phase 163) is literally a
+"SHA-256 hash generator," and `cb_common.keystr_forms`'s own docstring
+already names a `"sha256 ans too"` reading of the `shabefanstoo` fragment.
+
+**Closed cleanly.** Tested `sha256`, `SHA256`, `Sha256`, `sha-256`,
+`SHA-256`, `sha_256` (the bare word plus its natural hyphen/underscore
+formatting variants -- no invented suffixes) against every current oracle:
+
+```text
+padded EXTENDED_CIPHER_VARIANTS (+newline):            234 attempts, 0 hits
+padded EXTENDED_CIPHER_VARIANTS (+newline+whitespace):  312 attempts, 0 hits
+literal raw-key (zero-transformation, Phase 164):        40 attempts, 0 hits
+nopad EC-scalar/address oracle (+whitespace_variants):  120 keystrings,
+                                                          0 errors, 0 classifications
+```
+
+**Verdict:** closed negative. The bare word `sha256` is not itself a
+passphrase or raw key for SALPH/COSMIC/P32TRAILING under any cipher/KDF
+variant, hash form, or raw-key interpretation this project currently
+tests.
+
+**Same-day follow-up:** user-directed check of the descriptive phrases
+`"sha256 the password"` and `"sha256 password"` (not creator-grounded,
+just a plausible literal instruction-style phrase given how many community
+messages describe the operation this way -- see the `SHA256(causality)`/
+`sha256(password)` chat lines quoted above). Confirmed absent as
+standalone candidates everywhere (raw with spaces, and the natural
+no-space joined form matching this project's existing `chat_theme_lines_
+raw.txt`/joined-companion convention). Tested `sha256 the password`,
+`sha256thepassword`, `sha256 password`, `sha256password` (each through
+`answer_forms()` case variants automatically) against every current
+oracle:
+
+```text
+padded EXTENDED_CIPHER_VARIANTS (+newline):            144 attempts, 0 hits
+padded EXTENDED_CIPHER_VARIANTS (+newline+whitespace):  192 attempts, 0 hits
+literal raw-key (zero-transformation):                   48 attempts, 0 hits
+nopad EC-scalar/address oracle (+whitespace_variants):  144 keystrings,
+                                                          0 errors, 0 classifications
+```
+
+Closed negative, same as bare `sha256`.
+
+## Phase 168 -- has `COSMIC DUALITY` itself ever been anagrammed? Real gap, found and closed by base rate, same discipline as Phase 159 (2026-08-08)
+
+Direct question: `salphaseion_aphelion_anagram_audit.py` (Phase 148) checked
+whether `APHELION` fits `SalPhaseIon`'s letters, and `salvation_anagram_
+audit.py` (Phase 159) ran a full open-ended dictionary anagram search of
+`SALVATION`'s own 9-letter multiset. Neither ever searched `Cosmic
+Duality`'s own 13-letter multiset the same way -- Phase 153's only touch on
+it was checking whether one specific *other* word (`perihelion`) fits
+(it doesn't). Genuinely never run, confirmed by grepping every `*.py` for a
+`cosmic`+`anagram` script before writing one.
+
+New `cosmic_duality_anagram_audit.py` reuses `salvation_anagram_audit.py`'s
+exact functions (full/sub/two-word-pair anagram search) against
+`cosmicduality`'s 13-letter multiset (`c:2, i:2`, all others `x1`):
+
+```text
+full 13-letter dictionary anagrams (exact multiset match): []
+sub-anagram dictionary words (len>=3): 648 total
+exact two-word full-anagram phrase pairs: 8 total:
+  (acidity, slocum), (acoustic, dimly), (camus, docility),
+  (claudio, mystic), (comas, lucidity), (comics, duality),
+  (cosmic, duality), (docility, sumac)
+```
+
+No single 13-letter word reproduces the heading (expected at this length).
+648 sub-anagram words is a larger, more undifferentiated base rate than
+Phase 159 found for `SALVATION` (253 at 9 letters, already judged too large
+to mine). The two-word pair list is much shorter (8 vs. `SALVATION`'s 105)
+but that reflects combinatorics at greater length, not new selectivity --
+and of the 8, one pair *is* the identity itself (`cosmic`, `duality`,
+trivially reproducing the input) and none of the remaining seven carry any
+thematic connection to astronomy, duality, yin-yang, or anything else
+established elsewhere in this project (unlike `APHELION`'s now-downgraded
+astronomical-duality resonance, Phase 148). `claudio` superficially recalls
+a name (`GalloClaudio64`) noted elsewhere in this project's provenance work
+as a non-credible solution submitter (`doc/GSMG_PUZZLE.md`), but that's an
+unrelated community GitHub handle with no textual link to this heading --
+noted only to rule it out, not treated as a lead. None of the sub-anagram
+words carry thematic resonance either (`custodial`, `diastolic`,
+`mystical`, `solidity`, etc. -- no astronomy/duality-adjacent hits).
+
+**Verdict:** closed negative without an oracle run, same bar Phase 159
+applied to `SALVATION` -- no single candidate here clears the "distinct
+signal + thematic grounding" threshold needed to justify testing it
+against the AES oracle. `Cosmic Duality`'s own letters are now confirmed
+searched, not merely used as a check-target for other words' anagrams.
+
+## Phase 169 -- `SalPhaseIon + T -> SaltPhaseIon`: exact new synthesis; bounded first constructions negative, structural branch remains open (2026-08-08)
+
+Fresh breadth-first observation: inserting exactly one `T` after the visible
+`Sal` in the authenticated title produces an exact new segmentation:
+
+```text
+SalPhaseIon + T -> SaltPhaseIon -> Salt | Phase | Ion
+```
+
+The creator's authenticated macro tail supplies a conspicuous candidate `T`
+through "a **T**rue giveaway." This differs from Phase 96's `VAT` reading:
+that phase replaced the whole inner word `PHASE` to form `SALVATION`; this
+reading preserves every title letter and adds one letter to expose three
+literal concepts. Confirmed absent from every prior doc/script by a repo-wide
+search for `SaltPhaseIon`, `salt phase ion`, and salt-as-operand language.
+
+The reading produces a coherent clue cluster worth preserving:
+
+- every authenticated encrypted target visibly starts with Base64
+  `U2FsdGVkX1...`, whose decoded envelope begins literal `Salted__` -- a
+  plausible concrete referent for "it's in front of your eyes";
+- salt is made from oppositely charged ions, connecting Phase One's "seed is
+  planted when opposites attract" to a physical seed-crystal/phase-change
+  metaphor rather than another password phrase;
+- the two independently reconstructed first-piece colors are exact 24-bit
+  complements: `F73D92 XOR 08C26D = FFFFFF`, and their integer sum is also
+  `FFFFFF`;
+- the 31-byte prime-walk selection is exactly one byte short of a raw Bitcoin
+  private scalar;
+- `len(DBBI)=91` and `len(FAED)=570`, whose sum `661` and difference `479`
+  are both prime -- a previously unlogged literal `sum list`/duality
+  relationship;
+- SALPH and P32TRAILING each have an 80-byte ciphertext body, supporting four
+  exact rectangular layouts (`5x16`, `8x10`, `10x8`, `16x5`) with equal
+  40/40 checkerboard channels. A correctly decrypted 64-byte payload would
+  additionally admit the especially natural 32/32 split, but cannot be
+  assumed before a key is found.
+
+Implemented `salt_phase_ion_audit.py` as a finite first-pass construction
+audit. It generated and deduplicated 230 exact 32-byte materials from:
+
+- `SaltPhaseIon` title hashes;
+- the 31-byte selection plus one grounded byte (`T/t`, `H/h`, FEFE's `n`,
+  NUL, LF, CR, or space), on either edge and in fixed case/orientation forms;
+- repeating complementary color masks using XOR/AND;
+- each blob's literal 8-byte salt, its 8x8 bit-matrix row/column sums, and
+  salt/selection combinations;
+- direct/string-hash forms of the length primes `661` and `479`;
+- four exact 80-byte matrix checker partitions and facing 40/40 halves,
+  combined only by XOR/add/subtract and SHA-256.
+
+Every result was tested as a compressed and uncompressed secp256k1 scalar
+against the genuine prize/halving addresses and as a literal raw AES/3DES key
+against all authenticated blobs:
+
+```text
+unique 32-byte constructions: 230
+outside secp256k1 scalar range: 1
+exact known-address hits:       0
+literal raw-key blob openings:  0
+```
+
+Separately tested five exact title passphrase forms (`SaltPhaseIon`,
+case variants, and spaced forms) through all current CBC/legacy/PBKDF2/3DES,
+stream-mode, ECB, and AES-Key-Wrap oracle families: **0 hits**.
+
+**Verdict:** the literal title as a passphrase and the first bounded direct-key
+family are closed negative. The `Salt | Phase | Ion` synthesis itself is not
+closed: the most interesting readings use the salt as an ordering/KDF operand,
+carry both complementary color channels forward, or operate on the expected
+64-byte post-decryption body. Those require a specifically designed staged
+model, not another expansion of the 230 direct constructions above.
+
+## Phase 170 -- Phase 3.2 calibration gate + literal SALT/PHRASE/ION XOR audit (2026-08-08)
+
+Correction to Phase 169 before extending it: the repository contains a fourth
+known OpenSSL salt, `eefc4c5befc1656a`, in the already-solved Phase 3.2 blob
+(`data.py:PHASE32_BLOB_B64`). Its password and plaintext prefix are known, so it
+is the project's strongest available control for any claim that salts or a
+simple XOR/matrix transform carry hidden semantics. The four salts are now all
+reported by `salt_phase_ion_audit.py`; Phase 3.2 is deliberately used as a
+control rather than added indiscriminately to the open-target candidate family.
+
+The same audit now decrypts Phase 3.2 end-to-end as a positive control and then
+applies the proposed first mechanical steps to its real salt/ciphertext/plaintext
+triple:
+
+```text
+Phase 3.2 salt:                         eefc4c5befc1656a
+ciphertext / unpadded plaintext:       2432 / 2422 bytes
+known OpenSSL password path:           positive
+salt-derived password/raw-key opens:   0
+repeating salt/color/word XOR matches: 0
+```
+
+The salt trials were the literal salt bytes, its hex text, repeated salt, and
+SHA-256 of the salt or its 8x8 bit-matrix row/column sums. The XOR controls used
+the salt, both complementary color masks, and the seven bounded literal word
+keys below. None turns Phase 3.2 ciphertext into its known prefix, and the actual
+`ciphertext XOR plaintext` overlap is not any of those repeating operands. This
+does not disprove every possible staged use of a salt; it does remove empirical
+support for treating a raw salt or simple repeating XOR as an independently
+meaningful decoder.
+
+Important provenance correction: the literal three-part reading was not new in
+Phase 169. The flattened community transcript preserves the exact earlier lines
+`Salt (AES+SALT)`, `Phrase(PASSWORD)`, `ION(XOR)`, immediately followed by the
+`<H1> SalPhaseIon </H1>` versus `<h1> Cosmic Duality </h1>` case observation and
+the reply `I find it far-fetched as hard as possible`
+(`wordlists/gsmg/chat_mined_lines.txt`, around lines 57825-57831). The flattened
+file does not retain sender/date metadata, so the reported WILL / 2026-01-23
+attribution cannot be independently reconstructed from that artifact alone.
+
+That distinct community proposal has now actually been executed rather than
+dismissed. Tested repeating XOR keys `spi`, `SPI`, `salt`, `phrase`, `ion`,
+`saltphraseion`, and `saltpassphraseiteration` over DBBI, FAED, and the three
+open ciphertext bodies. For each result the audit checks recognizable fixed
+markers, hashes the whole result, and tests the first/last 32 bytes as exact
+scalar/raw-key candidates. Together with the earlier constructions:
+
+```text
+literal XOR keys / sources:            7 / 5
+recognizable marker hits:              0
+total unique 32-byte constructions:    335
+known-address hits:                    0
+literal raw-key blob openings:         0
+```
+
+The 31-character hand extraction `ncsyangcahiriasogaleafayanestve` is present
+only as its own logged result in the wordlists; repository-wide exact-line
+search finds none of its 32-byte `+T`, `+H`, `+NUL`, etc. completions in the
+Phase 164 swept corpora. Therefore the explicit completions tested in Phase 169
+were a real coverage addition and are not implied by Phase 164's broad counts.
+
+Two small structural checks were also made:
+
+- extending `[23,16,7]` gives sum `46`; `661-46=615`, `479-46=433`, and
+  `570 mod [23,16,7] = [18,10,3]`. The obvious direct arithmetic does not land
+  cleanly, but `7` is shared exactly between the authenticated triple and
+  `91=7x13`, which is the narrowest connection worth retaining;
+- literal case-insensitive `i` counting finds one eye in `SalPhaseIon`, flanked
+  by `e/o`, not two. `Cosmic Duality` contains two, flanked by `m/c` and `l/t`.
+  Thus the fixed heading-level extraction is `EO | MC | LT`; any proposed
+  two-eye reading belongs specifically to `Cosmic Duality`, not to
+  `SalPhaseIon` alone.
+
+Reframing the ciphertext lengths in native AES units exposes a substantially
+cleaner relationship than the raw byte counts. SALPH, COSMIC, and P32TRAILING
+contain exactly `5, 83, 5` sixteen-byte blocks respectively. Both numbers are
+prime: `5` is the 3rd prime and `83` is the **23rd prime**, giving prime ranks
+`[3,23,3]`. This is an exact symmetric short/long/short structure, and its
+central rank reconnects COSMIC directly to the established `[23,16,7]` spine.
+Unlike the coincidental-looking 661/479 branch, it uses the encryption's native
+block size, respects the two equal outer artifacts, and recovers an already
+authenticated number. It should be treated as the leading new structural clue,
+not as a password candidate by itself.
+
+**Best constructive continuation:** use SALPH and P32TRAILING as two equal
+80-byte ciphertext inputs and reserve reshape/checkerboard work for the
+2,422-byte known Phase 3.2 plaintext or a future decrypted COSMIC body. COSMIC's
+1,328-byte ciphertext is not shape-equivalent to the two short blobs; forcing
+all three through the same pre-decryption matrix operation discards the strongest
+length signal. In particular, reshape COSMIC only into its native `83x16` AES
+block matrix: authenticated `[23,16,7]` then has a literal bounded reading as
+`row/block 23, width 16, byte/column 7`. Under one-based indexing that byte is
+`0x33` (`3`); under zero-based conventions the corresponding bounded variants
+are `0x38`, `0xb1`, and `0x00`, so only one convention is immediately printable
+and that is not yet evidence of intent. Because 83 is odd, Cosmic Duality also
+defines 41 mirrored row pairs plus row 42 as a fixed center; row 23's mirror is
+row 61. This gives the next audit a very small scope: row 23, row 61, center row
+42, columns 7/10, and the two five-block outer artifacts -- no arbitrary matrix
+sweep. A useful model should specify how those short channels produce or select
+a COSMIC password, then validate the same selection rule on the solved Phase 3.2
+triple before expanding it.
