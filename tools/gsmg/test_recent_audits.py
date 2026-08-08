@@ -22,6 +22,7 @@ import salphaseion_salvation_role_audit
 import salphaseion_wayback_history_audit
 import spi_cd_initials_audit
 import stage0_footer_palette_layer_audit
+import stage0_even_sequence_convergence_audit
 import stage0_g_shadow_consumer_audit
 import stage0_repeated_grayscale_audit
 import synthesis_action_paths_audit
@@ -32,6 +33,19 @@ from telegram_export_manifest import DEFAULT_EXPORT_DIR
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_stage0_even_sequence_convergence(self):
+        report = stage0_even_sequence_convergence_audit.audit()
+        self.assertTrue(report["overlap"])
+        self.assertEqual(report["joined"], (8, 6, 4, 2, 0))
+        self.assertEqual(report["steps"], (-2, -2, -2, -2))
+        self.assertEqual(report["candidate"], "86420")
+        self.assertEqual(report["oracle"]["hits"], [])
+        self.assertEqual(report["quarantined_oracle"]["hits"], [])
+        self.assertEqual(
+            report["fefe_value_shared_with"], ("fefefe", "white", "yellow")
+        )
+        self.assertEqual(report["quarantined_oracle"]["hits"], [])
+
     def test_stage0_g_shadow_consumer(self):
         report = stage0_g_shadow_consumer_audit.audit()
         self.assertEqual(report["payload"], "OCBe")

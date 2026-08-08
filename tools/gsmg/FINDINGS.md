@@ -12775,3 +12775,65 @@ chemical vocabulary -- but it rules out the obvious casefold alternative
 and shows that B/C/P do not offer rival structured outputs under the same
 operation.  No new password candidates or oracle attempts were added in
 this comparison.
+
+## Phase 191 -- bounded Stage-0 convergence: `864` overlaps G counts `4,2`, then FEFE supplies `0`, yielding `86420` (2026-08-08)
+
+Phase 189's `8,6,4` progression has one non-arbitrary continuation available
+inside the same authenticated image measurements.  The two row-local
+uppercase-G reference counts are `4,2`; their first value exactly overlaps
+the final atomic number rather than merely being appended.  The separately
+established FEFE grid cell has binary value `0`.  Joining those measured
+streams at their common value therefore gives:
+
+```
+O / C / Be atomic numbers:  8, 6, 4
+uppercase-G row counts:           4, 2
+FEFE base bit:                        0
+joined sequence:              8, 6, 4, 2, 0
+```
+
+`tools/gsmg/stage0_even_sequence_convergence_audit.py` reproduces every
+operand from the existing image audits and verifies four identical `-2`
+steps.  This is stronger than simply predicting `2,0` after observing
+`8,6,4`: the image independently supplies the two values, and the shared `4`
+acts as an exact join checkpoint.  It also keeps the annotator's two claims
+in one chain: shadow Gs provide `4,2`, while the originally marked FEFE cell
+provides `0`.
+
+The evidentiary limitation remains that the *decision to join* these streams
+was made after observing their values.  The operands are objective, but no
+creator or annotator instruction yet says to concatenate atomic numbers,
+shadow-pixel counts, and a color bit.  Accordingly the bounded oracle tests
+only the direct forward result `86420`: 1 candidate, 6 unique normalized
+materials, 0 hits against SALPH/COSMIC/P32TRAILING.  Reversal (`02468`),
+separators, permutations, and mixed symbolic forms were deliberately not
+added.  The same exact six materials were also checked separately against
+quarantined URLBLOB: 0 hits.  URLBLOB remains reported separately because its
+provenance is weaker; this check does not promote it into the authenticated
+default target set.
+
+**Verdict:** `86420` is the strongest remaining finite continuation of the
+G-shadow thread and a genuine multi-measurement convergence, but not a blob
+key and not yet an authenticated instruction.  With its direct oracle closed,
+this branch is now at an evidence boundary: further transforms should wait
+for an external instruction or a new creator-authored artifact.
+
+**Addendum -- the final `0` digit is a palette base rate, not a FEFE-specific
+measurement (2026-08-08):** `base_bit()` (`first_piece_color_reconstruction.py`)
+is a two-way split -- `1` for `BLACK`/`BLUE`, `0` for everything else -- not a
+per-color fingerprint. Checking it against all five established grid colors
+gives `black=1, blue=1, white=0, yellow=0, fefefe=0`: three of the five
+palette colors, including *both* of the grid's ordinary background colors,
+already map to `0`. So the joined sequence's trailing `0` is not evidence
+about the FEFE anomaly specifically -- any non-ink marker pixel, including a
+plain white or yellow one, would have supplied the same digit. This does not
+overturn `86420`: the harder-to-explain part of the convergence is still the
+`8,6,4,2` overlap between the atomic-number payload and the row-local G
+counts, which is unaffected. But the "notably clean convergence" framing
+should be read as three informative measurements (`8,6,4,2`) plus one
+near-default plug (`0`), not five independent digits of equal weight.
+`stage0_even_sequence_convergence_audit.py` now reports `palette_base_bits`
+and `fefe_value_shared_with = ('fefefe', 'white', 'yellow')` and asserts both
+in its self-test; `test_recent_audits.py` checks the same field. This is a
+scope note, not a retraction -- the oracle result (0 hits, both blob sets) is
+unchanged.
