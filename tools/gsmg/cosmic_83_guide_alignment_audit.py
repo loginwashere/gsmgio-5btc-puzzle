@@ -16,6 +16,10 @@ It also tests the full-envelope geometry's next fixed consumer: divide COSMIC's
 select one surviving block using either ``row_sum % 6`` or the guide output's
 own zero-based alphabet code modulo six.  The 14 selected blocks are evaluated
 directly, by SHA-256, by total XOR, and as fixed odd/even dual XOR rails.
+Finally, it mirrors the historical guide's actual 14-character output shape:
+XOR-fold each six-block strip to one representative block, select one byte by
+the corresponding row value modulo 16, and test only the resulting 14-byte
+ordered string as a passphrase.
 
 All three documented color profiles are retained: the historical guide colors,
 the first-piece colors (which disagree at endpoints 21 and 23), and the
@@ -183,6 +187,42 @@ def derived_strip_selections(blocks, guide):
     return {
         name: select_one_per_strip(blocks, selectors)
         for name, selectors in strip_selector_specs(guide).items()
+    }
+
+
+def representative_byte_selector_specs(guide):
+    return {
+        "row_sum_mod16": tuple(value % 16 for value in guide["row_sums"]),
+        "output_A0Z25_mod16": tuple(
+            (ord(char) - ord("A")) % 16 for char in guide["output"]
+        ),
+    }
+
+
+def representative_string(blocks, selectors):
+    strips = six_block_strips(blocks)
+    representatives = tuple(xor_many(strip) for strip in strips)
+    candidate = bytes(
+        representative[index]
+        for representative, index in zip(representatives, selectors)
+    )
+    printable_count = sum(
+        byte in (9, 10, 13) or 32 <= byte <= 126 for byte in candidate
+    )
+    return {
+        "selectors": tuple(selectors),
+        "representatives": representatives,
+        "candidate": candidate,
+        "candidate_hex": candidate.hex(),
+        "printable_count": printable_count,
+        "printable_ratio": printable_count / len(candidate),
+    }
+
+
+def derived_representative_strings(blocks, guide):
+    return {
+        name: representative_string(blocks, selectors)
+        for name, selectors in representative_byte_selector_specs(guide).items()
     }
 
 
@@ -359,6 +399,46 @@ def evaluate_strip_selections(selections):
     }
 
 
+def calibrate_representative_strings(guide):
+    salt, ciphertext, plaintext, _correct_key = decrypt_phase32_ground_truth()
+    full_envelope = b"Salted__" + salt + ciphertext
+    sources = {
+        "ciphertext_prefix84": blocks16(full_envelope)[:84],
+        "plaintext_prefix84": blocks16(plaintext[:84 * 16]),
+    }
+    phase_blobs = {"PHASE32": (salt, ciphertext)}
+    reports = {}
+    for source_name, source_blocks in sources.items():
+        reports[source_name] = {}
+        for selector_name, result in derived_representative_strings(
+            source_blocks, guide
+        ).items():
+            reports[source_name][selector_name] = {
+                **result,
+                "phase32_passphrase_hits": len(
+                    aes_try_open_bytes(
+                        result["candidate"],
+                        kdf_variants=KDF_VARIANTS,
+                        blobs=phase_blobs,
+                    ) or ()
+                ),
+            }
+    return reports
+
+
+def evaluate_representative_strings(results):
+    hits = []
+    for selector_name, result in results.items():
+        for hit in aes_try_open_bytes(
+            result["candidate"], kdf_variants=KDF_VARIANTS
+        ) or ():
+            hits.append((selector_name, repr(hit)))
+    return {
+        "candidate_count": len(results),
+        "passphrase_hits": hits,
+    }
+
+
 def evaluate_cosmic_folds(folds):
     address_hits = []
     decrypt_hits = []
@@ -410,6 +490,9 @@ def audit():
     }
     folds = derived_folds(cosmic_data, guide)
     strip_selections = derived_strip_selections(blocks16(full_envelope), guide)
+    representative_strings = derived_representative_strings(
+        blocks16(full_envelope), guide
+    )
     full_block_counts = {
         tag: len(blocks16(b"Salted__" + salt + ciphertext))
         for tag, (salt, ciphertext) in BLOBS.items()
@@ -432,6 +515,12 @@ def audit():
         "strip_selections": strip_selections,
         "strip_selection_calibration": calibrate_strip_selections(guide),
         "strip_selection_evaluation": evaluate_strip_selections(strip_selections),
+        "representative_byte_selectors": representative_byte_selector_specs(guide),
+        "representative_strings": representative_strings,
+        "representative_string_calibration": calibrate_representative_strings(guide),
+        "representative_string_evaluation": evaluate_representative_strings(
+            representative_strings
+        ),
     }
 
 
@@ -453,6 +542,10 @@ def self_test():
         "row_sum_mod6": (4, 3, 1, 0, 0, 2, 2, 2, 1, 0, 5, 3, 2, 1),
         "output_A0Z25_mod6": (2, 1, 5, 4, 4, 0, 4, 4, 3, 4, 3, 3, 4, 1),
     }
+    assert report["representative_byte_selectors"] == {
+        "row_sum_mod16": (2, 3, 5, 4, 14, 12, 8, 8, 7, 10, 9, 15, 8, 13),
+        "output_A0Z25_mod16": (8, 9, 11, 10, 4, 2, 4, 4, 3, 0, 15, 15, 4, 13),
+    }
     assert len(report["folds"]) == 12
     assert all(
         fold["blue_count"] == 16 and fold["yellow_count"] == 7
@@ -468,6 +561,12 @@ def self_test():
         for source in report["calibration"].values()
         for item in source.values()
     )
+    assert not any(
+        item["phase32_passphrase_hits"]
+        for source in report["representative_string_calibration"].values()
+        for item in source.values()
+    )
+    assert not report["representative_string_evaluation"]["passphrase_hits"]
     assert not any(
         item["matches_correct_derived_key"]
         or item["matches_password_hash_bytes"]
@@ -556,6 +655,30 @@ def print_report(report):
     ):
         for hit in strip_result[kind]:
             print(f"[+++ strip {kind}] {hit}")
+    representative_calibration_hits = sum(
+        item["phase32_passphrase_hits"]
+        for source in report["representative_string_calibration"].values()
+        for item in source.values()
+    )
+    print(
+        f"[*] representative-byte selectors: "
+        f"{report['representative_byte_selectors']}"
+    )
+    for name, result in report["representative_strings"].items():
+        print(
+            f"[*] {name}: candidate_hex={result['candidate_hex']} "
+            f"printable={result['printable_count']}/14 "
+            f"repr={result['candidate']!r}"
+        )
+    representative_result = report["representative_string_evaluation"]
+    print(
+        f"[*] representative-string Phase 3.2 calibration hits="
+        f"{representative_calibration_hits}; "
+        f"COSMIC candidates={representative_result['candidate_count']}; "
+        f"passphrase openings={len(representative_result['passphrase_hits'])}"
+    )
+    for hit in representative_result["passphrase_hits"]:
+        print(f"[+++ representative passphrase_hits] {hit}")
 
 
 def main():

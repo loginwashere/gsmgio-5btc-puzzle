@@ -11601,3 +11601,52 @@ two already-authenticated per-strip selectors supplies the missing transition
 under the minimal direct/hash/XOR/odd-even consumers. Any further operation on
 the frame now needs an additional clue specifying how the six blocks interact;
 the row sums alone no longer leave an untested deterministic selection rule.
+
+## Phase 173 -- final shape-preserving consumer: one byte per folded COSMIC strip (2026-08-08)
+
+The previous consumers all assumed the 14 selected/folded blocks should become
+key-shaped material. The historical guide's only proven precedent instead
+produces a 14-character row output. One final zero-parameter consumer therefore
+remained: XOR-fold each of COSMIC's fourteen six-block strips into one 16-byte
+representative, then select one byte from representative row `i` using that
+guide row's already-authenticated value:
+
+```text
+row_sum % 16:
+  [2,3,5,4,14,12,8,8,7,10,9,15,8,13]
+
+output A0Z25 code % 16:
+  [8,9,11,10,4,2,4,4,3,0,15,15,4,13]
+```
+
+This produces exactly two ordered 14-byte candidate strings. Per the stated
+hypothesis, neither was padded, hashed, coerced into a raw key, subjected to
+alternate indexing, or expanded through another modulus. Each was inspected
+for printability and tried only as the exact binary passphrase through the
+established KDF oracle:
+
+```text
+row_sum_mod16:
+  b3fb04cfe6d046711af062f305a7       printable 3/14
+
+output_A0Z25_mod16:
+  16d9775045eda9ee4edab4f3d8a7       printable 4/14
+
+Phase 3.2 calibration hits:            0
+COSMIC passphrase candidates:          2
+blob openings:                         0
+```
+
+The Phase 3.2 control was run over both its first 84 full-envelope ciphertext
+blocks and the corresponding first 84 known-plaintext blocks. Those four
+control strings were also non-language (`6/14`, `6/14`, `7/14`, and `6/14`
+printable) and produced zero openings.
+
+**Verdict:** close the specific vein of forcing the guide's row/chunk labels to
+reduce COSMIC's `6/84/6` geometry into a password or AES-key-shaped value. The
+geometry remains an exact, reproducible coincidence worth preserving, but all
+zero-parameter consumers named by the verified guide have now failed. A new
+modulus, offset, rotation, alternate fold, or key-length conversion would be a
+leaf expansion without a selecting clue. Further work on this frame should wait
+for new primary evidence, especially the missing physical book pages or an
+unrecovered creator-authored transition instruction.
