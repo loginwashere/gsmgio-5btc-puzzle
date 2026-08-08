@@ -11458,3 +11458,88 @@ row 61. This gives the next audit a very small scope: row 23, row 61, center row
 sweep. A useful model should specify how those short channels produce or select
 a COSMIC password, then validate the same selection rule on the solved Phase 3.2
 triple before expanding it.
+
+## Phase 171 -- COSMIC's exact 83/84 guide alignment and 6/84/6 salted-envelope geometry (2026-08-08)
+
+The raw `83x16` observation from Phase 170 is not itself new to the community:
+the recent flattened transcript explicitly says `1328 gives 83 blocks as
+expected` and `the ciphertext is 1328 bytes, that's 83 AES blocks` (around
+lines 59245 and 59283). What had not been connected anywhere in the repository
+is that **83 is already the exact token count of the recovered historical
+yellow/blue guide** (Phases 53/61), while splitting its final `be` produces 84
+tokens. COSMIC has precisely the corresponding two native counts:
+
+```text
+recovered guide:                  83 tokens
+guide with final BE split:        84 tokens
+COSMIC ciphertext:                83 AES blocks
+COSMIC full Salted__ envelope:    84 AES-sized blocks
+```
+
+`Salted__` plus the eight-byte salt is exactly one 16-byte block. Thus the
+title's literal `Salt`/“in front” reading supplies exactly the difference
+between the two counts. The 83-to-83 mapping is order-preserving without an
+extra convention; the 84-to-84 mapping is weaker because the added envelope
+block is at the front while the guide's extra `e` is created at the end. Both
+are preserved, but they are not assigned equal evidentiary weight.
+
+Implemented `cosmic_83_guide_alignment_audit.py` to test the two smallest XOR
+consumers fixed by the recovered guide:
+
+1. partition the 83/84 COSMIC blocks by the guide's 23 historical chunk
+   lengths, XOR-fold each chunk, then XOR the chunk results into color rails;
+2. more faithfully, select only the 23 cumulative endpoint blocks and XOR-fold
+   those selected blocks into the color rails.
+
+The audit retains all three already-documented endpoint profiles rather than
+repairing their disagreement: historical guide colors (`15/8`), first-piece
+colors (`15/8`), and Denis's split-final-BE profile (`16/7`). Each operation
+produces exact 16-byte blue/yellow halves and their two 32-byte concatenation
+orders. It checks those as scalars, literal raw AES keys, established
+passphrases, and the natural AES key/IV pairings (`B` key / `Y` IV, the reverse,
+and both 32-byte concatenations with either half as IV).
+
+The identical prefix mechanics were run first against both the known Phase 3.2
+ciphertext and its known plaintext:
+
+```text
+Phase 3.2 calibration hits:       0
+unique COSMIC-derived materials: 52
+known-address hits:               0
+raw-key blob openings:            0
+passphrase blob openings:         0
+blue/yellow key-IV openings:      0
+```
+
+So the exact size alignment remains a real structural clue, but these first two
+XOR consumers are closed negative. In particular, the result does not rescue
+the Phase 170 row-23/column-7 coordinate: Phase 3.2 still supplies no reason to
+prefer that indexing convention.
+
+A second exact geometry emerged by counting all three complete OpenSSL
+envelopes rather than discarding their one-block headers:
+
+```text
+                         SALPH    COSMIC    P32TRAILING
+ciphertext blocks:          5        83          5
+full-envelope blocks:       6        84          6
+six-block strips:           1        14          1
+
+combined full envelopes: 6 + 84 + 6 = 96 = 16 x 6 blocks
+```
+
+This is materially tighter than the earlier generic matrix suggestions.
+COSMIC supplies exactly 14 six-block strips, matching the recovered guide's
+`14x14` dimension and 14 row-sum letters; SALPH and P32TRAILING supply one
+equal six-block strip on either side, producing exactly 16 strips. It explains
+why the two short ciphertexts look one block short until the literal salt/front
+block is retained. Repository-wide search found no previous `6/84/6`,
+`84=14x6`, or 16-six-block-strip observation.
+
+**Leading constructive path:** treat the full blobs as a fixed 16-by-6 block
+frame with the two short artifacts as equal boundaries and COSMIC as the 14
+interior strips. The guide's 14 row sums/output letters are the only currently
+grounded labels for those interior strips. The next operation must state how a
+guide row labels or consumes one six-block strip and must retain Phase 3.2 as a
+negative/positive control; merely trying both orientations or mining printable
+bytes would throw away the selectivity of this convergence.
