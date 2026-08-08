@@ -11887,3 +11887,64 @@ shuffle noise, none reaches an oracle, and the title's incidental `OCT` rail
 does not frame both source streams as octal. A wider neighbor radius, selective
 `i` subset, filtering rule, checkerboard keyword, or cross-source splice would
 add an unfixed parameter and needs new primary evidence.
+
+## Phase 177 -- triangular DBBI / `matrixsumlist` square audit (2026-08-08)
+
+A new length identity is exact:
+
+```text
+len(DBBI)                         = 91  = T13
+len(ABBA("matrixsumlist"))       = 104
+104 + one binary zero            = 105 = T14
+91 + 104 + 1                     = 196 = 14^2
+```
+
+This is especially suggestive because the recovered yellow/blue guide already
+places DBBI-derived tokens in a 14x14 matrix.  It does not, however, identify
+where the extra zero belongs.  Implemented
+`tools/gsmg/triangular_matrixsumlist_audit.py` so that this ambiguity cannot be
+resolved after seeing an attractive result: insert the literal zero symbol
+`a` at every one of the 105 positions, use both transpose-related assignments
+of the 91-cell strict triangle and 105-cell diagonal-inclusive triangle, and
+treat all 210 layouts as one fitted family.
+
+Three zero-parameter meanings for the paired off-diagonal cells were tested
+without invoking AES:
+
+1. bit zero keeps each DBBI character and bit one applies the native `a`-`i`
+   mirror9 operation;
+2. sum all DBBI A1Z26 values and binary values by physical row, then reduce
+   modulo 26 with A=0, exactly matching the recovered guide's output convention;
+3. ask whether paired bits distinguish the eight historical within-chunk `be`
+   merges from the two literal `be` pairs split by prime-chunk boundaries.
+
+The merge detail is sharper than the initial brainstorm suggested.  DBBI has
+ten literal `be` adjacencies at zero-based offsets
+`10,17,19,23,30,49,64,71,84,89`; the authenticated 23 chunks merge eight and
+split offsets 17 and 19.  Thus the guide supplies a real binary label rather
+than merely asking whether bits happen to land on `be`.
+
+A deterministic 2,000-trial null shuffled the original 104 instruction bits,
+preserved their `a=48, b=56` profile, inserted one additional `a` at all 105
+positions, and rescanned both orientations in every trial.  The resulting
+familywise upper-tail probabilities were:
+
+```text
+best mirror9-output English score:             0.339330
+best 14-letter row-output English score:       0.311844
+most matches to historical IZLKESEEDQPPEN:     0.853073
+largest merged-vs-split BE bit-rate gap:        0.592704
+four-metric Bonferroni minimum:                 1.000000
+```
+
+The real family produced no exact marker hit.  Its best guide comparison
+matched only one of fourteen positions.  The 210 layouts yield 24 distinct
+14-bit diagonals; their sorted sequence-set SHA-256 is
+`b5191279b09b2600be449d1ed9c2817152995618d54aeaaa53934589040d1874`.
+The diagonal is recorded, not decoded through an invented 14-bit convention.
+
+**Verdict:** retain `91 + 104 + 1 = 14^2` as an exact but underdetermined shape
+coincidence; close these direct transpose consumers.  The instruction bits do
+not select mirror9 states, reproduce the historical guide rows, or explain the
+guide's merge/split boundary choices beyond a matched familywise null.  No
+candidate passed the structural gate, so none was promoted to AES material.

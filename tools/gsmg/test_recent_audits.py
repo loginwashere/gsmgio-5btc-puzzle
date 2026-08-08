@@ -17,11 +17,22 @@ import salphaseion_salvation_role_audit
 import salphaseion_wayback_history_audit
 import spi_cd_initials_audit
 import telegram_yellow_blue_matrix_direction_audit
+import triangular_matrixsumlist_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_triangular_matrixsumlist_geometry(self):
+        module = triangular_matrixsumlist_audit
+        self.assertEqual(len(module.DBBI), module.triangular(13))
+        self.assertEqual(len(module.BITS) + 1, module.triangular(14))
+        self.assertEqual(len(module.DBBI) + len(module.BITS) + 1, 14 ** 2)
+        self.assertEqual(len(module.MERGE_STARTS), 8)
+        rows = module.candidate_rows(module.BITS, module.load_quadgrams())
+        self.assertEqual(len(rows), 210)
+        self.assertTrue(all(len(row["diagonal_bits"]) == 14 for row in rows))
+
     def test_ic_ranking_uses_distance_from_english(self):
         reference = checkerboard_code_ic_oracle.ENGLISH_PROSE_IC
         ic_map = {
