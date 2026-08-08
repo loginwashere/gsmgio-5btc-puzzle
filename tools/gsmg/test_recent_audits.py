@@ -12,6 +12,7 @@ import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import dual_channel_consistency_audit
 import neo_choice_last_words_audit
+import neo_smith_equation_audit
 import promised_standalone_audit
 import remaining_structural_avenues_audit
 import safenet_luna_hsm_audit
@@ -39,6 +40,18 @@ class CorrectedClaimTests(unittest.TestCase):
             {"MATRIX_1999": 13, "RELOADED_2003": 19, "REVOLUTIONS_2003": 19},
         )
         self.assertEqual(sum(module.EXPECTED_CHOICE_LEXEMES.values()), 51)
+
+    def test_neo_smith_equation_scene(self):
+        module = neo_smith_equation_audit
+        self.assertEqual(len(module.CANDIDATES), 4)
+        self.assertEqual(
+            module.letters_only("Nothing this weak is meant to survive."),
+            "nothingthisweakismeanttosurvive",
+        )
+        report = module.audit()
+        self.assertEqual(report["source"]["what_do_you_want_occurrences"], 3)
+        self.assertEqual(report["oracle"]["candidate_count"], 4)
+        self.assertEqual(report["oracle"]["hits"], [])
 
     def test_remaining_structural_avenues(self):
         module = remaining_structural_avenues_audit
