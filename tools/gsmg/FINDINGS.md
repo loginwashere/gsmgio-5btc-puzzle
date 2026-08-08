@@ -12192,6 +12192,44 @@ missing evidence, but their unknown content cannot be replaced by an expanding
 synonym list.  The atomic triple remains an authenticated structural echo in
 its original `V, P+H, difference` form, not a demonstrated AES instruction.
 
+## Phase 180 -- trilogy-wide major Neo-choice boundary phrases (2026-08-08)
+
+The token `lastwordsbeforearchichoice` need not mean only the literal
+Architect scene.  Denis Golovkin's later narration explicitly paraphrases it
+as “last words before huge choice,” and `archi-` can carry a chief/paramount
+sense.  This does not erase the literal scene's objective `23,16,7 -> BOTH,
+ULTIMATELY, THE -> BUT` checkpoint, but it motivates a small direct check of
+other major Neo decisions across the three screenplay PDFs now committed to
+the repository.
+
+Implemented `tools/gsmg/neo_choice_last_words_audit.py`.  Before invoking any
+oracle, it verifies the SHA-256 of all three PDFs and nine normalized scene
+anchors binding the short phrases to the intended red-pill, Morpheus-rescue,
+subway-fight, Architect, Machine-City, peace, and final-Smith scenes.  The
+candidate family was frozen to the seven strings declared in advance:
+
+```text
+the truth nothing more
+what choice
+run neo run
+what
+what do you want
+why do you persist
+it was inevitable
+```
+
+Established exact/case/letters-only forms, followed by raw, single-SHA-256,
+and double-SHA-256 key-string forms, deduplicate to 78 materials.  Tested
+against SALPH, COSMIC, and P32TRAILING through the full CBC, stream, ECB, and
+AES Key Wrap passphrase oracles: **0 hits**.
+
+**Verdict:** close these seven exact major-choice boundary phrases as direct
+blob passphrases.  This does not close every possible screenplay window: the
+word count in “last words” remains unspecified outside the literal Architect
+extraction, and growing dialogue on either side after seeing results would
+create an unconstrained phrase family.  The Architect scene remains stronger
+because it alone currently supplies the independent `BUT` next-word check.
+
 ## Phase 181 -- movie-transcript-vs-shooting-script check on the `[23,16,7]` source text (2026-08-08)
 
 This project's only local Architect-scene source

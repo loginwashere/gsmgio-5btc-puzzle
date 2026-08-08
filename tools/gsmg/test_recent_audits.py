@@ -11,6 +11,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import dual_channel_consistency_audit
+import neo_choice_last_words_audit
 import promised_standalone_audit
 import remaining_structural_avenues_audit
 import safenet_luna_hsm_audit
@@ -25,6 +26,15 @@ from telegram_export_manifest import DEFAULT_EXPORT_DIR
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_neo_choice_last_words(self):
+        module = neo_choice_last_words_audit
+        self.assertEqual(len(module.CANDIDATES), 7)
+        self.assertEqual(
+            module.letters_only("Run, Neo. Run."),
+            "runneorun",
+        )
+        self.assertEqual(set(module.SCENE_ANCHORS), set(module.PDFS))
+
     def test_remaining_structural_avenues(self):
         module = remaining_structural_avenues_audit
         self.assertEqual(module.keyword_to_seed("AI", 9), [1, 0])
