@@ -11,6 +11,12 @@ block.  This audit tests the narrow XOR consumer implied by those exact sizes:
 3. XOR-fold those chunk results into the documented blue/yellow 16/7 rails;
 4. concatenate the two 16-byte rails into a native 32-byte material.
 
+It also tests the full-envelope geometry's next fixed consumer: divide COSMIC's
+84 blocks into fourteen six-block strips and let each historical guide row
+select one surviving block using either ``row_sum % 6`` or the guide output's
+own zero-based alphabet code modulo six.  The 14 selected blocks are evaluated
+directly, by SHA-256, by total XOR, and as fixed odd/even dual XOR rails.
+
 All three documented color profiles are retained: the historical guide colors,
 the first-piece colors (which disagree at endpoints 21 and 23), and the
 split-final-BE endpoint profile that produces 16 blue / 7 yellow.  The solved Phase 3.2 artifact is run
@@ -19,6 +25,7 @@ material is evaluated against the established scalar and decryption oracles.
 """
 
 import argparse
+import hashlib
 import sys
 from pathlib import Path
 
@@ -134,6 +141,51 @@ def derived_folds(data_by_mapping, guide):
     return reports
 
 
+def six_block_strips(blocks):
+    if len(blocks) != 84:
+        raise ValueError(f"six-block strip selector requires 84 blocks, got {len(blocks)}")
+    return tuple(tuple(blocks[offset:offset + 6]) for offset in range(0, 84, 6))
+
+
+def strip_selector_specs(guide):
+    row_sum_mod6 = tuple(value % 6 for value in guide["row_sums"])
+    # output_from_row_sums() renders sum%26 as A=0 ... Z=25.  Preserve that
+    # exact historical encoding; calling this A1Z26 would be off by one.
+    output_code_mod6 = tuple((ord(char) - ord("A")) % 6 for char in guide["output"])
+    return {
+        "row_sum_mod6": row_sum_mod6,
+        "output_A0Z25_mod6": output_code_mod6,
+    }
+
+
+def select_one_per_strip(blocks, selectors):
+    strips = six_block_strips(blocks)
+    if len(selectors) != len(strips):
+        raise ValueError("selector count does not match six-block strip count")
+    selected = tuple(strip[index] for strip, index in zip(strips, selectors))
+    odd = xor_many(selected[0::2])
+    even = xor_many(selected[1::2])
+    stream = b"".join(selected)
+    return {
+        "selectors": tuple(selectors),
+        "selected_blocks": selected,
+        "selected_stream": stream,
+        "sha256_selected_stream": hashlib.sha256(stream).digest(),
+        "xor_all": xor_many(selected),
+        "odd": odd,
+        "even": even,
+        "odd_even": odd + even,
+        "even_odd": even + odd,
+    }
+
+
+def derived_strip_selections(blocks, guide):
+    return {
+        name: select_one_per_strip(blocks, selectors)
+        for name, selectors in strip_selector_specs(guide).items()
+    }
+
+
 def calibration(guide):
     salt, ciphertext, plaintext, correct_key = decrypt_phase32_ground_truth()
     full_envelope = b"Salted__" + salt + ciphertext
@@ -211,6 +263,102 @@ def evaluate_color_key_iv_pairs(fold, blobs, known_prefix=None):
     return hits
 
 
+def selection_materials(selection):
+    return {
+        "selected_stream": selection["selected_stream"],
+        "sha256_selected_stream": selection["sha256_selected_stream"],
+        "xor_all": selection["xor_all"],
+        "odd_even": selection["odd_even"],
+        "even_odd": selection["even_odd"],
+    }
+
+
+def selection_as_color_fold(selection):
+    return {
+        "blue": selection["odd"],
+        "yellow": selection["even"],
+    }
+
+
+def calibrate_strip_selections(guide):
+    salt, ciphertext, plaintext, correct_key = decrypt_phase32_ground_truth()
+    full_envelope = b"Salted__" + salt + ciphertext
+    sources = {
+        "ciphertext_prefix84": blocks16(full_envelope)[:84],
+        "plaintext_prefix84": blocks16(plaintext[:84 * 16]),
+    }
+    phase_blobs = {"PHASE32": (salt, ciphertext)}
+    password_hash_bytes = bytes.fromhex(PHASE32_PASSWORD)
+    reports = {}
+    for source_name, source_blocks in sources.items():
+        reports[source_name] = {}
+        for selector_name, selection in derived_strip_selections(source_blocks, guide).items():
+            materials = selection_materials(selection)
+            reports[source_name][selector_name] = {
+                "selectors": selection["selectors"],
+                "matches_correct_derived_key": any(
+                    material == correct_key for material in materials.values()
+                ),
+                "matches_password_hash_bytes": any(
+                    material == password_hash_bytes for material in materials.values()
+                ),
+                "phase32_passphrase_hits": sum(
+                    bool(aes_try_open_bytes(material, blobs=phase_blobs))
+                    for material in materials.values()
+                ),
+                "phase32_raw_key_hits": sum(
+                    bool(raw_key_try_open(material, blobs=phase_blobs))
+                    for material in materials.values()
+                    if len(material) in (16, 24, 32)
+                ),
+                "phase32_odd_even_key_iv_hits": len(
+                    evaluate_color_key_iv_pairs(
+                        selection_as_color_fold(selection),
+                        phase_blobs,
+                        known_prefix=b"I've been waiting for you.",
+                    )
+                ),
+            }
+    return reports
+
+
+def evaluate_strip_selections(selections):
+    address_hits = []
+    raw_key_hits = []
+    passphrase_hits = []
+    odd_even_key_iv_hits = []
+    attempt_count = 0
+    for selector_name, selection in selections.items():
+        odd_even_key_iv_hits.extend(
+            (selector_name,) + hit
+            for hit in evaluate_color_key_iv_pairs(selection_as_color_fold(selection), BLOBS)
+        )
+        for form, material in selection_materials(selection).items():
+            attempt_count += 1
+            if len(material) == 32:
+                details = private_key_details(material)
+                if details:
+                    for address_type, address_data in details.items():
+                        if address_data["address"] in KNOWN_ADDRESSES:
+                            address_hits.append(
+                                (selector_name, form, address_type, address_data["address"])
+                            )
+            if len(material) in (16, 24, 32):
+                for tag, cipher, plaintext, z_score in raw_key_try_open(material):
+                    raw_key_hits.append(
+                        (selector_name, form, tag, cipher, z_score, plaintext[:120])
+                    )
+            for result in aes_try_open_bytes(material, kdf_variants=KDF_VARIANTS) or ():
+                passphrase_hits.append((selector_name, form, repr(result)))
+    return {
+        "material_attempts": attempt_count,
+        "address_hits": address_hits,
+        "raw_key_hits": raw_key_hits,
+        "passphrase_hits": passphrase_hits,
+        "odd_even_key_iv_hits": odd_even_key_iv_hits,
+    }
+
+
 def evaluate_cosmic_folds(folds):
     address_hits = []
     decrypt_hits = []
@@ -261,6 +409,7 @@ def audit():
         "full_envelope84": blocks16(full_envelope),
     }
     folds = derived_folds(cosmic_data, guide)
+    strip_selections = derived_strip_selections(blocks16(full_envelope), guide)
     full_block_counts = {
         tag: len(blocks16(b"Salted__" + salt + ciphertext))
         for tag, (salt, ciphertext) in BLOBS.items()
@@ -279,6 +428,10 @@ def audit():
         "folds": folds,
         "calibration": calibration(guide),
         "evaluation": evaluate_cosmic_folds(folds),
+        "strip_selectors": strip_selector_specs(guide),
+        "strip_selections": strip_selections,
+        "strip_selection_calibration": calibrate_strip_selections(guide),
+        "strip_selection_evaluation": evaluate_strip_selections(strip_selections),
     }
 
 
@@ -296,6 +449,10 @@ def self_test():
     assert tuple(report["full_envelope_block_counts"].values()) == (6, 84, 6)
     assert tuple(report["six_block_strip_counts"].values()) == (1, 14, 1)
     assert report["combined_full_envelope_blocks"] == 16 * 6
+    assert report["strip_selectors"] == {
+        "row_sum_mod6": (4, 3, 1, 0, 0, 2, 2, 2, 1, 0, 5, 3, 2, 1),
+        "output_A0Z25_mod6": (2, 1, 5, 4, 4, 0, 4, 4, 3, 4, 3, 3, 4, 1),
+    }
     assert len(report["folds"]) == 12
     assert all(
         fold["blue_count"] == 16 and fold["yellow_count"] == 7
@@ -311,9 +468,19 @@ def self_test():
         for source in report["calibration"].values()
         for item in source.values()
     )
+    assert not any(
+        item["matches_correct_derived_key"]
+        or item["matches_password_hash_bytes"]
+        or item["phase32_passphrase_hits"]
+        or item["phase32_raw_key_hits"]
+        or item["phase32_odd_even_key_iv_hits"]
+        for source in report["strip_selection_calibration"].values()
+        for item in source.values()
+    )
     print(
         "[*] self-test OK: exact 83/84 guide-to-envelope alignments, 23-chunk "
-        "XOR folds, Phase 3.2 calibration, and bounded oracles verified"
+        "XOR folds, six-block row selectors, Phase 3.2 calibration, and bounded "
+        "oracles verified"
     )
 
 
@@ -358,6 +525,37 @@ def print_report(report):
     for kind in ("address_hits", "raw_key_hits", "passphrase_hits", "color_pair_hits"):
         for hit in result[kind]:
             print(f"[+++ {kind}] {hit}")
+    strip_calibration_hits = sum(
+        item["matches_correct_derived_key"]
+        + item["matches_password_hash_bytes"]
+        + item["phase32_passphrase_hits"]
+        + item["phase32_raw_key_hits"]
+        + item["phase32_odd_even_key_iv_hits"]
+        for source in report["strip_selection_calibration"].values()
+        for item in source.values()
+    )
+    print(f"[*] six-block selectors: {report['strip_selectors']}")
+    for name, selection in report["strip_selections"].items():
+        print(
+            f"[*] {name}: selected_stream_sha256="
+            f"{selection['sha256_selected_stream'].hex()} "
+            f"xor_all={selection['xor_all'].hex()} "
+            f"odd||even={selection['odd_even'].hex()}"
+        )
+    strip_result = report["strip_selection_evaluation"]
+    print(
+        f"[*] six-block selector Phase 3.2 calibration hits={strip_calibration_hits}; "
+        f"materials={strip_result['material_attempts']}; "
+        f"address hits={len(strip_result['address_hits'])}; "
+        f"raw-key openings={len(strip_result['raw_key_hits'])}; "
+        f"passphrase openings={len(strip_result['passphrase_hits'])}; "
+        f"odd/even key-IV openings={len(strip_result['odd_even_key_iv_hits'])}"
+    )
+    for kind in (
+        "address_hits", "raw_key_hits", "passphrase_hits", "odd_even_key_iv_hits"
+    ):
+        for hit in strip_result[kind]:
+            print(f"[+++ strip {kind}] {hit}")
 
 
 def main():
