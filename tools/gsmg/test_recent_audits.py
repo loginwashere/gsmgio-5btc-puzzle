@@ -11,6 +11,8 @@ sys.path.insert(0, str(SCRIPT_DIR))
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import dual_channel_consistency_audit
+import matrixsum_cumulative_stride_audit
+import matrixsum_dbbi_faed_position_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import promised_standalone_audit
@@ -51,6 +53,21 @@ class CorrectedClaimTests(unittest.TestCase):
         report = module.audit()
         self.assertEqual(report["source"]["what_do_you_want_occurrences"], 3)
         self.assertEqual(report["oracle"]["candidate_count"], 4)
+        self.assertEqual(report["oracle"]["hits"], [])
+
+    def test_matrixsum_dbbi_faed_position_selector(self):
+        module = matrixsum_dbbi_faed_position_audit
+        self.assertEqual(module.INDICES, (23, 16, 7))
+        report = module.audit()
+        self.assertEqual(report["oracle"]["candidate_count"], 8)
+        self.assertEqual(report["oracle"]["hits"], [])
+
+    def test_matrixsum_cumulative_stride(self):
+        module = matrixsum_cumulative_stride_audit
+        self.assertEqual(module.CYCLE, (23, 16, 7))
+        report = module.audit()
+        self.assertEqual(report["results"]["DBBI"]["string"], "hebgb")
+        self.assertEqual(len(report["results"]["FAED"]["positions"]), 36)
         self.assertEqual(report["oracle"]["hits"], [])
 
     def test_remaining_structural_avenues(self):
