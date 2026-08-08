@@ -11948,3 +11948,156 @@ coincidence; close these direct transpose consumers.  The instruction bits do
 not select mirror9 states, reproduce the historical guide rows, or explain the
 guide's merge/split boundary choices beyond a matched familywise null.  No
 candidate passed the structural gate, so none was promoted to AES material.
+
+## Phase 178 -- synthesis action paths: selected-text FAED keyword and raw base-9 scalar sum (2026-08-08)
+
+A new external synthesis proposed four actions.  Three required coverage
+corrections before testing:
+
+- its `1 in 493 million` figure for `yang`/`leaf`/`nest` is the uncorrected,
+  post-inspection Phase-131 statistic; Phase 132's broad-word familywise control
+  gives approximately `p=0.0055`, so the cluster is preserve-only rather than
+  confirmation of creator placement;
+- placing the 31-character selection in `5x6+1` or padding it to `4x8` is not
+  a fixed matrix rule.  Phase 51 already establishes that 31 is prime and that
+  no authenticated 32nd cell exists;
+- `Not if I can help it` does not occur in the repository's sourced *Matrix
+  Reloaded* screenplay.  Neo gives no spoken reply between the Architect's
+  final sentence and taking the left door in that source.
+
+Implemented `tools/gsmg/synthesis_action_paths_audit.py` for the narrow pieces
+that were genuinely absent.
+
+### Final sourced Architect sentence
+
+The exact last spoken sentence before the left-door action is present in the
+PDF-derived script corpus:
+
+```text
+she is going to die and there is nothing you can do to stop it
+```
+
+Its exact/case/letters-only and raw/SHA-256/double-SHA-256 forms deduplicate to
+12 materials.  Tested through the established CBC, stream, ECB, and AES Key
+Wrap passphrase oracles against the three open blobs: **0 hits**.  The unsourced
+Neo sentence was recorded as a provenance correction and deliberately not
+promoted into the oracle.
+
+### Exact selected text as a FAED `pad25` keyword
+
+This was a real coverage gap.  The exact Phase-48 selection had been tested as
+text, key material, and through matrix consumers, but had not been supplied to
+the native 9-ary checkerboard's keyed-alphabet construction.  Classic-J
+`pad25`, with the established forward tail fill, produces exactly:
+
+```text
+ncsyangcahiriasogaleafayanestve
+  -> NCSYAGHIROLEFTVBDKMPQUWXZ
+```
+
+Decoded FAED under both orders of its own `{g,i}` pair and the historical
+`{b,e}` pair, retaining both existing board topologies: eight outputs, lengths
+436 or 469.  All are visibly non-language, contain none of the fixed markers
+`private/bitcoin/password/matrix/choice/salvation`, and have normalized English
+quadgram scores from `-9.686493` to `-7.039081`.  Their exact/case/hash families
+deduplicate to 48 unique materials.  Full passphrase-oracle result: **0 hits**.
+
+The eight output SHA-256 values, in `{g,i}`, `{i,g}`, `{b,e}`, `{e,b}` order
+and `top_first`, `escapes_first` order within each pair, are:
+
+```text
+31ab9130a57a9fa24b3cb8141cf458110ba8a59f9b83de6a6d11a263015f5e10
+61fddea195ad7a18865f7dc47667e455613f1855a02ec2e9b8414a1f5dd02ff3
+ba2affbc6ec99b119c4396ee854f57809817348c91d9bb30dc17e643cc5c2254
+e08f84438b19266b3809ec311c669678a1a6d58d9dcd5ce1b50836ba5542f21a
+301980619a3bc47d9ea3145bdf047c7705966d534e45291d143927c6ef23e1fc
+e4676a78f80b81ee1b9d7358839fe191eb0b306bf5073c4da5906602fc226e8c
+39233ed6d3c600b711d4cb3885cce65b8fd6a697c9d5c396cda05246b99644d4
+7ca73283f3f84e9704ce511b79812d7fd7b5ec58eabfd4c4b00259dab5303ccf
+```
+
+### Canonical raw-symbol scalar addition
+
+The proposal to interpret both raw streams as integers was under-specified if
+it admitted alternate digit maps, byte orders, hashes, or truncation.  One
+form is parameter-free: map `a=0,...,i=8`, read source order as a big-endian
+base-9 numeral, and reduce/add modulo the secp256k1 group order.  The resulting
+scalars are:
+
+```text
+DBBI mod n:
+  f1175809cb90c3de865ad5551bb66292033a40686ba796c87c4aa0fd8f8ff2bb
+FAED mod n:
+  60f5c9cc99f3f2c66e608d462b5a1d415df2ad0980027812ad37982456056ab2
+(DBBI + FAED) mod n:
+  520d21d66584b6a4f4bb629b47107fd4a67e108b3c616e9f69afda95155f1c2c
+```
+
+Neither individual scalar nor their sum produces the prize or halving address
+under compressed or uncompressed P2PKH.  The sum's addresses are
+`1w2crgmzdgcU8uvtNupSYYQC7YG6SMTuS` and
+`15E8N1Sen7TwrFSdTqW2TSLBHjcKw1MQLA`.
+
+**Verdict:** close the exact selected-text `pad25` seed, sourced last-door
+sentence, and canonical raw-base-9 scalar-addition forms.  Path A needs an
+unprovided padding rule, the proposed Neo reply is not in the source, and
+expanding Path D into alternate radices/orders/hashes would add a free
+parameter.  None of these actions changes the evidence-first priority on
+physical *Cosmic Duality* pages 57-58 or a new creator-authored transition.
+
+## Phase 178 -- searched the Cosmic Duality book for a second `fubcd-king`-style riddle: closed negative (2026-08-08)
+
+`dbbi`/`faed`'s construction rule is still unknown after 176 phases. The one
+confirmed instance of the creator hiding a checkerboard alphabet inside a
+disguised riddle sentence is the solved 3.2.2 alphabet
+(`FUBCDORA.LETHINGKYMVPS.JQZXW`), built from *"A fubcd-king & oracle-queen,
+thingky mvps, on a sad board but as wide as the first one seen"* -- two
+hyphenated nonsense/duality-suffixed compounds (`fubcd-king`,
+`oracle-queen`) plus two more invented tokens (`thingky`, `mvps`), disguised
+inside an otherwise natural sentence. Nobody had checked whether the local
+Cosmic Duality book transcript (`wordlists/gsmg/cosmic_duality_book_full_text.txt`,
+1,404 lines, front matter through the p.144 colophon and full index --
+confirmed complete against its own header, not a partial fragment) contains
+a second riddle built the same way, for `dbbi`/`faed` specifically.
+
+Implemented `tools/gsmg/cosmic_duality_book_second_riddle_audit.py` with
+three fixed, zero-parameter checks, run over the complete book text
+(sha256 `1e462c4afb5807357aeed84a8a80232019fc41813e3441b71e25a1af535f9a7f`):
+
+1. every hyphenated word-word token, checked for the real riddle's own
+   chess/duality/king-queen vocabulary;
+2. every token absent from three standard system dictionaries (104k+ words
+   each), checked for a short invented-looking fragment resembling
+   `fubcd`/`thingky`/`mvps` rather than a genuine proper noun or technical
+   term;
+3. direct literal search for `board`/`chess`/`checker`/`king`/`queen`
+   anywhere in the book, independent of the other two filters.
+
+```text
+hyphenated tokens:        141 (21 unique)
+non-dictionary tokens:    371 unique (195 appear exactly once)
+"board"/"chess"/"checker": 0 occurrences anywhere in the book
+"king"/"queen":             5 / 2 occurrences, all ordinary prose
+```
+
+All 141 hyphenated tokens are legitimate real terms (`time-life` x9,
+`yin-yang`, Dane Rudhyar's `day-force`/`night-force`, `chakra-puja`, index
+century-compounds) -- none pair up as an "X-king & Y-queen" riddle, and none
+sit near chess/board vocabulary. All 371 non-dictionary tokens are genuine
+proper nouns or specialist terms the book's actual subject matter (Gnostic/
+Zoroastrian/Tantric religious history) would produce (`Gnostics`, `Tantra`,
+`Ohrmazd`, `Eliade`, `Eurynome`, `Shakti`, `Zurvanism`, ...) -- none resemble
+a short invented fragment the way `fubcd`/`thingky` do, including all 195
+that appear only once (the frequency a single riddle sentence's tokens would
+have). `king`/`queen` occur only in ordinary historical/mythological
+references (King Robert of France, the King of Persia, Queen Thalestris of
+the Amazons, the King of the Dead) -- never hyphenated, never paired.
+`board`/`chess`/`checker` do not occur at all.
+
+**Verdict:** close this specific search. There is no second `fubcd-king`-type
+riddle sentence anywhere in this transcribed book text. This does not rule
+out a riddle built entirely from ordinary vocabulary that a dictionary
+filter cannot flag, or a passage the hand-transcription from the source
+photos genuinely missed -- both remain open caveats, not evidence of a gap
+in this specific check. `dbbi`/`faed`'s construction rule still requires new
+primary evidence, not another local-text pattern search of this same book.
