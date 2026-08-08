@@ -12195,9 +12195,11 @@ its original `V, P+H, difference` form, not a demonstrated AES instruction.
 ## Phase 180 -- trilogy-wide major Neo-choice boundary phrases (2026-08-08)
 
 The token `lastwordsbeforearchichoice` need not mean only the literal
-Architect scene.  Denis Golovkin's later narration explicitly paraphrases it
-as “last words before huge choice,” and `archi-` can carry a chief/paramount
-sense.  This does not erase the literal scene's objective `23,16,7 -> BOTH,
+Architect scene.  As already recorded in Phase 54, Denis Golovkin's later
+narration explicitly paraphrases it as “last words before huge choice,” and
+`archi-` can carry a chief/paramount sense.  The new contribution here is the
+systematic trilogy-wide enumeration, not that interpretation.  This does not
+erase the literal scene's objective `23,16,7 -> BOTH,
 ULTIMATELY, THE -> BUT` checkpoint, but it motivates a small direct check of
 other major Neo decisions across the three screenplay PDFs now committed to
 the repository.
@@ -12222,6 +12224,20 @@ Established exact/case/letters-only forms, followed by raw, single-SHA-256,
 and double-SHA-256 key-string forms, deduplicate to 78 materials.  Tested
 against SALPH, COSMIC, and P32TRAILING through the full CBC, stream, ECB, and
 AES Key Wrap passphrase oracles: **0 hits**.
+
+A post-run attribution audit also fixed the scope without rewriting the
+executed family.  The exact choice-family lexeme counts are 13 in *The
+Matrix*, 19 in *Reloaded*, and 19 in *Revolutions*: 51 total.  Morpheus's
+single `What?` before the Machine-City announcement is real but far too common
+to act as an independent marker; it remains listed only because it was part of
+the frozen 78-material run.  In the Machine-City bargain, both disputed lines
+exist: Deus Ex Machina says `SPEAK!` before Neo presents the Smith threat, then
+later asks `WHAT DO YOU WANT?` immediately before Neo answers `Peace`.
+Therefore `what do you want` has the stated outcome-choice attribution;
+`speak` marks the start of the pitch instead.  `Because I choose to` is Neo's
+choice statement itself, whereas the clue's before-boundary candidate is
+Smith's preceding `Why do you persist?`.  Neither alternate is promoted
+without a rule selecting its boundary.
 
 **Verdict:** close these seven exact major-choice boundary phrases as direct
 blob passphrases.  This does not close every possible screenplay window: the

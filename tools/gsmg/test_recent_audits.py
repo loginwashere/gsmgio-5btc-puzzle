@@ -34,6 +34,11 @@ class CorrectedClaimTests(unittest.TestCase):
             "runneorun",
         )
         self.assertEqual(set(module.SCENE_ANCHORS), set(module.PDFS))
+        self.assertEqual(
+            module.EXPECTED_CHOICE_LEXEMES,
+            {"MATRIX_1999": 13, "RELOADED_2003": 19, "REVOLUTIONS_2003": 19},
+        )
+        self.assertEqual(sum(module.EXPECTED_CHOICE_LEXEMES.values()), 51)
 
     def test_remaining_structural_avenues(self):
         module = remaining_structural_avenues_audit

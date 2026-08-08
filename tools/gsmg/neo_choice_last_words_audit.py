@@ -49,6 +49,28 @@ CANDIDATES = (
     "it was inevitable",
 )
 
+CHOICE_PATTERN = re.compile(
+    r"\b(?:choice|choices|choose|chooses|chose|chosen|decision|decide|decides|decided)\b",
+    re.IGNORECASE,
+)
+EXPECTED_CHOICE_LEXEMES = {
+    "MATRIX_1999": 13,
+    "RELOADED_2003": 19,
+    "REVOLUTIONS_2003": 19,
+}
+
+BOUNDARY_NOTES = {
+    "what": "real Machine-City announcement boundary, but non-discriminating",
+    "what do you want": (
+        "Deus Ex Machina prompt immediately before Neo answers 'Peace'; "
+        "'SPEAK!' occurs earlier, before Neo presents the Smith threat"
+    ),
+}
+UNPROMOTED_ALTERNATES = {
+    "speak": "start-of-pitch boundary, not the prompt immediately before 'Peace'",
+    "because i choose to": "Neo's choice statement itself, not words before it",
+}
+
 # These longer normalized fragments bind each short candidate to its intended
 # scene rather than merely proving that common words occur somewhere in a PDF.
 SCENE_ANCHORS = {
@@ -90,16 +112,23 @@ def source_provenance():
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         if digest != expected_sha256:
             raise AssertionError(f"unexpected {label} PDF SHA-256: {digest}")
-        normalized = letters_only(pdf_text(path))
+        text = pdf_text(path)
+        normalized = letters_only(text)
         missing = tuple(
             anchor for anchor in SCENE_ANCHORS[label] if anchor not in normalized
         )
         if missing:
             raise AssertionError(f"missing {label} scene anchors: {missing}")
+        choice_lexemes = len(CHOICE_PATTERN.findall(text))
+        if choice_lexemes != EXPECTED_CHOICE_LEXEMES[label]:
+            raise AssertionError(
+                f"unexpected {label} choice-lexeme count: {choice_lexemes}"
+            )
         reports[label] = {
             "path": str(path),
             "sha256": digest,
             "scene_anchor_count": len(SCENE_ANCHORS[label]),
+            "choice_lexeme_count": choice_lexemes,
         }
     return reports
 
@@ -109,6 +138,8 @@ def audit():
         "scope": "seven predeclared Neo-choice boundary phrases; no window growth",
         "sources": source_provenance(),
         "candidates": CANDIDATES,
+        "boundary_notes": BOUNDARY_NOTES,
+        "unpromoted_alternates": UNPROMOTED_ALTERNATES,
         "oracle": material_family(CANDIDATES, BLOBS),
     }
 
@@ -118,14 +149,19 @@ def self_test():
     assert len(set(CANDIDATES)) == 7
     assert letters_only("Run, Neo. Run.") == "runneorun"
     assert set(SCENE_ANCHORS) == set(PDFS)
-    print("[*] self-test OK: seven fixed candidates and three bound PDF sources")
+    assert sum(EXPECTED_CHOICE_LEXEMES.values()) == 51
+    print(
+        "[*] self-test OK: seven fixed candidates, three bound PDFs, "
+        "and expected 13/19/19 choice-lexeme counts"
+    )
 
 
 def print_report(report):
     oracle = report["oracle"]
     print(
         f"[*] source PDFs: {len(report['sources'])}; "
-        f"scene anchors: {sum(row['scene_anchor_count'] for row in report['sources'].values())}"
+        f"scene anchors: {sum(row['scene_anchor_count'] for row in report['sources'].values())}; "
+        f"choice lexemes: {sum(row['choice_lexeme_count'] for row in report['sources'].values())}"
     )
     print(
         f"[*] Neo-choice phrases: {oracle['candidate_count']} candidates / "
