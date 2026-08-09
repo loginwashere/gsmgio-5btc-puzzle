@@ -46,6 +46,7 @@ import prime_sum_fefe_mask_composition_audit
 import remaining_structural_avenues_audit
 import safenet_luna_hsm_audit
 import salphaseion_salvation_role_audit
+import salphaseion_presentation_binding_audit
 import salphaseion_wayback_history_audit
 import spi_cd_initials_audit
 import stage0_footer_palette_layer_audit
@@ -831,6 +832,24 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(len(report["known_incomplete_compute"]), 1)
         self.assertEqual(report["admitted_clue_supported_open_models"], ())
         self.assertIn("binding/provenance", report["verdict"])
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists(),
+        "sibling GSMG page mirror is unavailable",
+    )
+    def test_salphaseion_presentation_has_no_segment_binding(self):
+        report = salphaseion_presentation_binding_audit.audit()
+        self.assertEqual(report["headings"], ("SalPhaseIon", "Cosmic Duality"))
+        self.assertEqual(report["salphaseion"]["authored_line_breaks"], 0)
+        self.assertEqual(
+            len(report["salphaseion"]["segment_boundaries"]),
+            12,
+        )
+        self.assertEqual(
+            report["cosmic_duality_control"]["line_lengths"],
+            (64,) * 28,
+        )
+        self.assertEqual(report["binding_candidates_found"], ())
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

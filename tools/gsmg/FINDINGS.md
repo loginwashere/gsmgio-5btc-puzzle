@@ -14338,3 +14338,31 @@ exhausted. It identifies the actual missing evidence: an authenticated
 binding that selects a FAED transform/alphabet or a definite DBBI/FAED
 relationship. More broad brute force before recovering that binding would
 increase coverage without resolving the ambiguity.
+
+## Phase 220 -- authenticated presentation layer contains no DBBI/FAED binding (2026-08-10)
+
+`tools/gsmg/salphaseion_presentation_binding_audit.py` checks the actual HTML
+presentation rather than interpreting a screenshot's browser-generated line
+wraps. It pins the capture at SHA-256
+`b13cbc5c2935dc3e9ff8bf71681f2ef61317fefdce04159129877244a92a3947`.
+
+The entire normalized 1,075-character SalPhaseIon stream is one textarea text
+node. Its 2,149 source characters are exactly one ASCII space between every
+logical character, with zero authored newlines. All twelve recovered segment
+boundaries have the same single-space separator as ordinary within-segment
+positions. There are no spans, classes, IDs, names, `wrap`/`rows`/`cols`,
+data attributes, colors, event handlers, or boundary-specific styles. Both
+puzzle textareas share only `width: 100%; height: 200px`; the document's sole
+authored CSS rule sets Arial on the body.
+
+The adjacent Cosmic Duality textarea is a decisive internal control: it has
+27 literal source newlines and exactly 28 authored lines of 64 characters.
+The creator preserved fixed columns there when intended. SalPhaseIon's
+visible rows instead depend on percentage width, viewport, font metrics, and
+browser wrapping, so they cannot select a grid, alignment, or segment pair.
+
+**Verdict:** presentation supplies no DBBI/FAED, FAED/`thispassword`, or
+internal segment binding. Phase 218's page-order relationship survives, but
+cannot be promoted into a decoder via DOM grouping, color, whitespace, or
+rendered alignment. The next binding search must use a different
+authenticated artifact, not the textarea's soft wraps.
