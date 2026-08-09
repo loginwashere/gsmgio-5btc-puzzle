@@ -14256,3 +14256,51 @@ excluded and should not anchor further investigation. The next open
 question is what, if anything, connects the now-stress-tested `BUT/HYE`
 state to DBBI/FAED or the half/better-half material -- not another
 `matrixsumlist` transform.
+
+## Phase 218 -- post-yinyang dataflow ranking: FAED is the nearest live undecoded payload to `thispassword`; two more direct-password families closed (2026-08-09)
+
+Given Phase 217's corrected checkpoint (the six-digit prime route consumes
+`matrixsumlist` and `lastwordsbeforearchichoice`, reaching `BUT/HYE`
+without needing DBBI or FAED as their operand), `tools/gsmg/
+post_yinyang_dataflow_audit.py` asks what that changes about the page's
+remaining decoded segments. The authenticated SalPhaseIon segment order
+(`page_structure_audit.py`, independently re-verified against the live
+mirror) is exactly:
+
+```text
+dbbi -> [binary matrixsumlist] -> faed -> [decimal lastwordsbeforearchichoice]
+-> [decimal thispassword] -> [sha256 "our first hint is your last command"]
+-> SALPH-prefix -> [binary enter] -> SALPH-suffix -> [sha256 + unresolved anstoo]
+```
+
+With the two macro instructions now treated as consumed clue steps rather
+than local operators, FAED becomes the nearest preceding *undecoded*
+payload to `thispassword`; DBBI/FAED jointly is the next-nearest
+alternative if yin-yang names a relationship between the two a-i streams
+rather than a single decode.
+
+Two further direct-password families were re-tested fresh rather than
+assumed still closed:
+
+- the literal seven words before `choice` (Phase 216's candidates):
+  rerun live, 36 keystrings, four blobs, zero hits;
+- the nine source-grounded first-hint/last-command operands
+  (`binary_hint_operand_audit.py`: macro transport in three forms, decoded
+  macro, first formal hint in three forms, the solved first-hint prime, and
+  the selected-31 string): 162 unique literal/SHA/double-SHA/newline
+  materials, four blobs, zero hits.
+
+The historical Phase 33 rail-family result (BUT/HYE/EOL and related literal
+forms: 216 CBC keystrings, 306 Key-Wrap attempts, four blobs, zero hits;
+confirmed against `doc/GSMG_MATRIXSUMLIST_CHECKPOINT.md:193-194`) is carried
+forward as frozen, not rerun. The circular `H | YE | BUT` construction and
+the post-hoc Phase 96 `VAT/SALVATION` rebus remain explicitly excluded, per
+Phase 217, and are not counted as evidence either way.
+
+**Verdict:** every currently-defined direct literal-password reading at this
+boundary is now closed negative. The two live roles -- FAED alone, or
+DBBI/FAED jointly -- have page-order support but no authenticated decoder or
+combining operation; neither is upgraded by elimination of the others. No
+further password-format variants are warranted at this boundary; the next
+useful evidence must constrain the FAED, or joint DBBI/FAED, decoding
+relationship itself.

@@ -39,6 +39,7 @@ import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import onchain_op_return_provenance_audit
 import phase32_column_calibration_audit
+import post_yinyang_dataflow_audit
 import promised_standalone_audit
 import prime_sum_fefe_mask_composition_audit
 import remaining_structural_avenues_audit
@@ -790,6 +791,34 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertNotIn("post_yinyang_checks", report)
         self.assertIn("deliberately excluded", report["verdict"])
         self.assertIn("post-hoc", report["verdict"])
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists()
+        and Path(DEFAULT_HTML).exists(),
+        "Telegram export or page mirror is unavailable",
+    )
+    def test_post_yinyang_dataflow_keeps_only_live_roles(self):
+        report = post_yinyang_dataflow_audit.audit(
+            Path(DEFAULT_EXPORT_DIR) / "result.json"
+        )
+        self.assertEqual(
+            report["most_local_live_role"],
+            "faed_plaintext_is_password",
+        )
+        self.assertEqual(
+            report["routes"]["first_hint_or_last_command_is_password"][
+                "unique_material_count"
+            ],
+            162,
+        )
+        self.assertEqual(
+            report["routes"]["dbbi_faed_joint_result_is_password"]["status"],
+            "live_but_operator_unknown",
+        )
+        self.assertEqual(
+            set(report["excluded_anchors"]),
+            {"h_ye_but", "vat_salvation"},
+        )
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),
