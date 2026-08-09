@@ -12515,12 +12515,22 @@ post-hoc parameter growth this project avoids. That movement-language gap
 
 A newly surfaced claim attributed these four lines to the first puzzle image:
 
-```
-GSGO5BCPUCG
-41442111214
-GMGC9g2cPBe
-21221311122
-```
+> Has anyone seen the second code?
+>
+> ```text
+> GSGO5BCPUCG
+> 41442111214
+> GMGC9g2cPBe
+> 21221311122
+> ```
+
+This exact text was preserved in the investigator's contemporaneous Codex
+session at `2026-08-08T16:37:42Z` (19:37:42 Europe/Kyiv). At 16:46:26Z the
+investigator added, *"he says it is from the first image"*, and at 17:03:59Z,
+*"the user who wrote about it suggests there is second part could be
+somewhere"*. The first block is treated as a user-relayed quotation; the two
+later statements are the investigator's contemporaneous attribution and
+paraphrase, not independently recovered Telegram text.
 
 The strings do not occur textually anywhere in the repository or mined chat.
 They are nevertheless a real, exactly reproducible raster extraction from
@@ -12597,10 +12607,16 @@ above.
 
 ## Phase 187 -- repeated-byte grayscale claim (`CECECE -> CE`, `FEFEFE -> FE`): exact extraction confirmed, but CE is a rendered non-unique logo shade (2026-08-08)
 
-The annotator clarified the intended rule in plain language: find a pixel
-whose RGB hex consists of the same byte three times (as with `FEFEFE`), then
-collapse the triplet to one byte -- specifically `CECECE -> CE` and
-`FEFEFE -> FE`.  This makes the image annotations' proposed raw output
+The investigator relayed the annotator's comment in the contemporaneous Codex
+session at `2026-08-08T17:25:19Z`:
+
+> in short, find three identical hexs in a pixel, like FEFEFE in the picture,
+> exactly the same as CECECE, and so on, then reduce to CE and FE
+
+The user explicitly followed this text with *"his comment"*. Read literally,
+the rule is to find a pixel whose RGB hex consists of the same byte three
+times (as with `FEFEFE`), then collapse the triplet to one byte -- specifically
+`CECECE -> CE` and `FEFEFE -> FE`. This makes the image annotations' proposed raw output
 `CE FE`, naturally concatenated in stated order as `CEFE` (`0xCEFE = 52990`).
 
 `tools/gsmg/stage0_repeated_grayscale_audit.py` reproduces both exact image
@@ -12656,7 +12672,14 @@ late-stage suite.
 
 ## Phase 188 -- annotator's "G in the shadows and the text" clarification: a real selector for `#383838`, but a checksum rather than a G-only mask (2026-08-08)
 
-The annotator added: *"He hid the letters G in the shadows and the text."*
+The investigator relayed another annotator comment in the contemporaneous
+Codex session at `2026-08-08T17:43:09Z`, explicitly labeling it *"another
+comment"*:
+
+> He hid the letters G in the shadows
+>
+> and the text
+
 Read as a mechanical selection rule over the two marked text carriers, this
 suggests choosing an exact shadow/grayscale layer that touches every literal
 `G` in both the banner and address.  The footer-palette audit now evaluates
@@ -12990,3 +13013,778 @@ already-negative oracle result, and it does not rule out that COSMIC's
 version is intentional -- it narrows the prior toward "generic byproduct."
 Do not re-run row/column operations on any blob's Base64 wrapping without a
 new clue specifically selecting one.
+
+## Phase 195 -- first-piece Hamming/control-language audit: exact FE LSB mask and nibble structure verified; gray-weight match calibrated (2026-08-09)
+
+The first formal verification pass over
+`doc/GSMG_FIRST_PIECE_PIXEL_BRAINSTORM.md` started at its strongest,
+least-interpretive layer. `tools/gsmg/first_piece_hamming_control_audit.py`
+composes the existing authenticated first-piece and footer-palette extractors;
+it does not resample coordinates, choose a new color, or run a password/cipher
+oracle.
+
+Exact 24-bit facts:
+
+```text
+08C26D popcount = 9
+F73D92 popcount = 15
+08C26D XOR F73D92 = FFFFFF
+08C26D +   F73D92 = FFFFFF
+
+nibble popcount matrices:
+08C / 26D -> [[0,1,2],[1,2,3]] -> columns [1,3,5], total 9
+F73 / D92 -> [[4,3,2],[3,2,1]] -> columns [7,5,3], total 15
+```
+
+The complementary 9/15 totals are forced by the source color populations;
+they are not independent confirmation. The ordered staircase is a real extra
+property. Exactly 2,304 of `C(24,9)=1,307,504` fixed-weight masks have the
+specific ordered nibble profile `(0,1,2,1,2,3)`, a descriptive conditional
+rate `144/81719 ~= 0.001762`. This is not a discovery p-value because the
+profile was recognized post hoc and no orientation/profile family was
+preregistered.
+
+The repeated-gray identities also reproduce:
+
+```text
+383838 weight = 9
+C7C7C7 weight = 15 (computed complement, not an observed selected layer)
+FEFEFE weight = 21 with three zero LSBs
+```
+
+Their base rate limits the claim: 56 of 256 repeated byte values have
+three one-bits and therefore 24-bit weight 9; another 56 have weight 15.
+The `#383838` match is exact but not rare on its own. Its relevance depends on
+the independently supplied G-shadow selector from Phase 188.
+
+The strongest new mechanical result is FEFEFE's operator role:
+
+```text
+08C26D AND FEFEFE = 08C26C = 574060
+FEFEFE OR 010101  = FFFFFF
+```
+
+`FE` is the unique byte mask that preserves the upper seven bits and clears
+only the LSB. Since only the final byte of `08C26D` is odd, applying the mask
+decrements the recovered prime by exactly one. This creates a concrete bridge
+among the colored URL LSB plane, the FEFE anomaly, the creator's plural
+zeroing language, and the independently observed off-by-one motif. Intention
+is not yet proven; the audit promotes the identity, not the downstream AND
+operation.
+
+The same module freezes the exact structural-21 cluster: FEFE popcount 21,
+FEFE at source character 21 (`n`), URL positions `{1,4,21}` spelling `ggn`,
+and removal of one LSB from each of 24 ASCII bytes leaving 168 bits/21 bytes.
+The `G,G,n` secp256k1 interpretation remains an unverified semantic hypothesis.
+
+Full writeup:
+`doc/GSMG_FIRST_PIECE_HAMMING_CONTROL_AUDIT.md`. The permanent late-stage
+suite grows to 25 tests and passes in full. **Verdict:** promote the Hamming
+matrices, gray weights, FE LSB-mask behavior, exact decrement, `ggn`, and
+21-byte residual as structural facts. Retain “control language,” secp256k1,
+and `igecabdfh` as hypotheses pending independent operational checks.
+
+## Phase 196 -- independent `400/401/73` reconstruction and selector-free FE composition: exact `144/144/72`, but no independent confirmation (2026-08-09)
+
+Before composing the color-prime sums with Phase 195's FE mask, this phase
+treated the values as untrusted and reconstructed them without importing the
+existing Flo/Denis or color-prime sum audits.
+`tools/gsmg/first_piece_prime_sum_reconstruction.py` freezes the exact rule:
+
+1. sort the 24 authenticated colored endpoints plus FEFE by spiral position;
+2. assign successive primes by event ordinal, following the sourced community
+   rule;
+3. consume `b` for blue/FEFE and `be` for yellow at `prime + prior-yellow-count`;
+4. stop at the complete prefix fitting the 91-symbol DBBI stream.
+
+The spatial event sequence is
+`BBBBYBBBYYBBBBYBBYYBFYYBY`. All first 23 events match DBBI. Event 23
+occupies positions 90-91; event 24 begins at 97, so the boundary is fixed by
+DBBI exhaustion rather than selected for balance. The exact fitted groups are:
+
+```text
+B: 2,3,5,7,13,17,19,31,37,41,43,53,59,71 -> 401
+Y: 11,23,29,47,61,67,79,83                -> 400
+F: 73                                      -> 73
+```
+
+FEFE is event 21, hence receives the 21st prime, 73. Prefix 23 is the only
+prefix of the complete 25-event sequence with `|B-Y|<=1`. Keeping FEFE fixed
+and shuffling the observed 14 blue/eight yellow labels over the remaining 22
+prime positions gives the existing exact descriptive rate
+`813/C(22,8)=271/106590 ~= 0.002542452`. Folding FEFE into blue changes the
+sums to `474/400`; including all 25 events gives `490/497/73`. The result is
+therefore real but load-bearing on the sourced `b`/`be` grammar, the DBBI
+boundary, and FEFE's separate class.
+
+`tools/gsmg/prime_sum_fefe_mask_composition_audit.py` then applies the one
+operation established by Phase 195 uniformly to all three values -- repeated
+`FE` over every byte, with no selected value or byte:
+
+```text
+401 & FEFE = 144
+400 & FEFE = 144
+ 73 & FEFE =  72
+```
+
+The result `144/144/72` is invariant under minimal versus fixed two-/three-byte
+width and big- versus little-endian order. It equalizes the two color rails and
+makes the separate FEFE channel exactly half either rail. A scalar-only LSB
+clear gives `400/400/72`, confirming that `144/144/72` specifically uses the
+repeated-byte FE semantics rather than generic parity rounding.
+
+Calibration prevents over-counting. With FEFE fixed at 73, the uniform-mask
+relation succeeds for exactly the same 813 assignments as the original
+near-balance: all yield sums `400/401` in either order and therefore mask to
+`144/144`, while 73 masks to 72. The composition adds no independent
+statistical evidence. In an expanded descriptive family that lets FEFE occupy
+any of the 23 prime positions, only prime 73 admits the relation (813 of
+7,354,710 assignments), but this is not the primary null because the image
+already fixes FEFE's position.
+
+Full report: `doc/GSMG_FIRST_PIECE_PRIME_SUM_VERIFICATION.md`.
+**Verdict:** promote `400/401/73` and the selector-free `144/144/72`
+normalization as exact mechanics. Do not promote the latter as a password or
+second confirmation; conditioned correctly, it is a deterministic restatement
+of the same balance.
+
+## Phase 197 -- complete URL bit-plane audit: 21-byte residual verified but length-forced; prime/staircase unique to the colored plane, Hamming weight is not (2026-08-09)
+
+`tools/gsmg/first_piece_bitplane_audit.py` transposes all 192 bits of the
+authenticated 24-byte plaintext `gsmg.io/theseedisplanted` into its complete
+8x24 matrix. It verifies that bit 0 exactly equals the image-derived
+`F73D92` color mask and that its complement is `08C26D`. The complete plane
+inventory is:
+
+```text
+bit  direct  weight   complement  weight
+ 7   000000     0     FFFFFF        24
+ 6   F6FFFF    22     090000         2
+ 5   FFFFFF    24     000000         0
+ 4   4090C4     6     BF6F3B        18
+ 3   2F4128     9     D0BED7        15
+ 2   BBAE2F    16     4451D0         8
+ 1   DB1088     9     24EF77        15
+ 0   F73D92    15     08C26D         9
+```
+
+Across the bounded 16-member direct/complement family, only bit 0's
+complement is prime (`574061`), and only bit 0 direct/complement has the exact
+unit nibble-weight staircase. Hamming weight 9 is not unique: bit 3 direct,
+bit 1 direct, and bit 0 complement share it; the corresponding three opposite
+polarities share weight 15. Therefore `#383838 -> weight 9` cannot itself
+select the colored plane. The visible colored endpoints independently select
+bit 0; prime/staircase structure then distinguishes its complementary roles.
+
+Removing bit 0 leaves exactly `7x24=168` bits or 21 bytes. The two natural
+traversals are fixed and non-text:
+
+```text
+plane-major:     000000F6FFFFFFFFFF4090C42F4128BBAE2FDB1088
+                  5/21 printable, longest run 3
+character-major: 66E5B332ED1B9774D193964C993472E1B306EE9932
+                  7/21 printable, longest run 2
+```
+
+Both reconstruct the original URL losslessly when combined with the LSB, but
+they are different serializations of the same residual matrix. The 21-byte
+length is algebraically forced by the 24-character source and seven retained
+bits; it is a genuine convergence with FEFE popcount/character index 21, not
+an independent random hit. The residual inventory also weakens the “seven
+passwords” framing: one plane is all zero, another all one, a third has 22/24
+ones, none supplies another prime, and neither packed traversal is plaintext.
+
+Full report: `doc/GSMG_FIRST_PIECE_BITPLANE_VERIFICATION.md`.
+**Verdict:** promote the full inventory, exact 21-byte dimension, and bounded
+prime/staircase uniqueness. Do not promote a packed residual key, independent
+21 significance, or seven-password reading. Next: calibrate `{1,4,21} -> ggn`
+before applying secp256k1 semantics.
+
+## Phase 198 -- `{1,4,21} -> ggn` distinctiveness audit: exact and uniquely located, but curve semantics remain hindsight-sensitive (2026-08-09)
+
+`tools/gsmg/first_piece_ggn_distinctiveness_audit.py` verifies the tuple's
+independent provenance before auditing its flat reading. The unique FEFE cell
+still supplies the exact hierarchical descriptor `(one cell, one-based bit
+position 4, one-based character position 21)`. Flattening those quantities as
+peer URL indices gives:
+
+```text
+one-based:  ggn / BBY / blue bits 110
+zero-based: s.t / BYY / blue bits 100
+```
+
+Enumerating all `C(24,3)=2,024` increasing position triples from
+`gsmg.io/theseedisplanted` finds one exact `ggn`, at `{1,4,21}`. That exact
+`1/2,024` fixed-target rate is not a valid post-hoc discovery p-value: 519 of
+the 2,024 triples (25.64%) emit a subsequence that occurs at only one triple.
+The broader first-pair-equal/distinct-third pattern occurs 85 times (4.20%);
+allowing the equal pair in any position gives 271 (13.39%). Requiring the
+third character to be globally unique gives 36 (1.78%), but this too is a
+retrospective filter. The color channel does not select the convention: `BBY`
+occurs 546 times and `BYY` 311 times in the same triple family.
+
+The proposed curve reading additionally requires flattening the hierarchical
+tuple, choosing one-based indexing, changing `g` to conventional `G`, parsing
+the repeated glyph as two operations, assigning `n` to generator order,
+introducing an absent scalar `k`, and selecting secp256k1. The identity
+`(n-k)G=-kG` is mathematically correct but generic to every cyclic group with
+generator order `n`; verifying it would not verify that `ggn` encodes it.
+
+Full report: `doc/GSMG_FIRST_PIECE_GGN_DISTINCTIVENESS_AUDIT.md`.
+**Verdict:** retain the creator-grounded tuple, exact `ggn`, its unique
+location, and the bounded calibration as facts. Do not promote `ggn` to a
+secp256k1 instruction or run a key oracle from it without an independent clue
+supplying `k` or selecting order/negation arithmetic.
+
+## Phase 199 -- first-piece matrix-product audit: exact `[255,103] -> FF67`, distinctive in fixed order but no selected consumer (2026-08-09)
+
+`tools/gsmg/first_piece_matrix_product_audit.py` independently composes the
+existing authenticated `matrixsumlist` objects:
+
+```text
+[[5,7,4], [0,6,1]] @ [23,16,7]^T = [255,103]^T
+255 = FF; 103 = 67 hex = ASCII g; byte serialization = FF67
+```
+
+The identities are exact. `g` returns to the first character of
+`gsmg.io/theseedisplanted`, while `FF` is full white and one above the FE
+anomaly. With the matrix fixed, all six vector orders give:
+
+```text
+(23,16,7) -> (255,103)    (23,7,16) -> (228,58)
+(16,23,7) -> (269,145)    (16,7,23) -> (221,65)
+(7,23,16) -> (260,154)    (7,16,23) -> (239,119)
+```
+
+The authenticated order is the only one yielding `255` plus an ASCII letter,
+although four of six yield two unsigned-byte values with a printable second
+byte. Crossing the four rectangle symmetries with six vector orders produces
+24 raw rows but only 12 ordered/six unordered output pairs; `{103,255}` is one
+of six. The duplication is forced: reversing both matrix columns and vector
+order preserves dot products, while reversing rows swaps outputs.
+
+A deliberately expanded digit-reassignment control has 4,320 raw arrangements
+or 720 operation classes after quotienting simultaneous column relabeling.
+Exact ordered `(255,103)` occurs in one class, either order in two, and
+`255 + any ASCII letter` in six (`1/720`, `1/360`, and `1/120`). These are
+descriptive, not discovery p-values: digit order is fixed and the semantic
+targets were recognized post hoc.
+
+The dependency is load-bearing. `[23,16,7]` has external puzzle provenance,
+but numerically it is also the total and row sums of this same matrix. Feeding
+it back as a column vector, choosing multiplication, aligning total/row sums
+with columns, and interpreting/serializing the outputs as `FF67` are additional
+steps not selected by `matrixsumlist`. No blob/key oracle was run.
+
+Full report: `doc/GSMG_FIRST_PIECE_MATRIX_PRODUCT_AUDIT.md`.
+**Verdict:** promote the exact product and its bounded calibration as a strong
+recognition checkpoint. Do not promote `FF67` as a key prefix, salt, IV, or
+password until an independent instruction selects multiplication and a
+consumer.
+
+## Phase 200 -- second `matrixsumlist` audit: `[43,25,18]` and `[20,9,11]` verified; reversed `KIT` is thematic but unselected (2026-08-09)
+
+`tools/gsmg/first_piece_second_matrixsumlist_audit.py` resamples the fixed
+Stage-0 `#383838` footer layer and reconstructs its complete 2x11 count matrix:
+
+```text
+4 1 4 4 2 1 1 1 2 1 4 -> 25
+2 1 2 2 1 3 1 1 1 2 2 -> 18
+                            total 43
+```
+
+Applying the established total-followed-by-row-sums grammar gives the exact
+second list `[43,25,18]`. Comparing it componentwise with the independently
+authenticated decimal-digit list produces:
+
+```text
+[43,25,18] - [23,16,7] = [20,9,11]
+direct A1Z26:  TIK
+reversed:      KIT
+```
+
+The unreversed numbers have exact source-internal counterparts: 20 colored
+events precede FEFE at event 21, there are nine yellow endpoints, and each
+shadow count row has 11 selected glyphs. This is coherent but not independent:
+the first two reuse properties of the first-piece source, while 11 reuses the
+shadow source. Likewise `20=9+11` is algebraically forced because both input
+lists already have form `[a+b,a,b]`.
+
+Keeping totals first, allowing native/swapped row orders for both lists, and
+reading direct/reverse gives eight outputs (`TIK/KIT`, `TBR/RBT`, `TRB/BRT`,
+`TKI/IKT`); exact `KIT` appears once. This is descriptive, not a discovery
+p-value. `KIT` is a correct young-rabbit term, but componentwise subtraction,
+A1Z26, and reversal are not locally selected operations. No oracle was run.
+
+Full report: `doc/GSMG_FIRST_PIECE_SECOND_MATRIXSUMLIST_AUDIT.md`.
+**Verdict:** promote the literal 2x11 count matrix, `[43,25,18]`, the exact
+`[20,9,11]` difference, and its internal source correspondences. Retain `KIT`
+as a strong recognition hypothesis, not a password or downstream instruction,
+until another clue explicitly selects subtraction/reversal or asks for a young
+rabbit.
+
+## Phase 201 -- 14/8/1 event-rail audit: token boundaries verified; one-blue-per-row and literal dual-stream MUX rejected (2026-08-09)
+
+`tools/gsmg/first_piece_event_rail_preservation_audit.py` separates two source
+objects that the brainstorm had begun to conflate. All 24 URL endpoints give
+the `15 blue / 9 yellow` mask and character rails
+`gsmgio/eseeisae` / `.thdplntd`. The DBBI-fitting prime-walk prefix instead
+contains 23 events with profile `14 blue / 8 yellow / 1 FEFE`:
+
+```text
+B: gsmgio/eseeisa -> fourteen singleton b tokens
+Y: .thdplnt       -> eight digraph be tokens (16 symbols)
+F: n              -> one singleton b token
+```
+
+The flattened token length 31 is forced (`14+2*8+1`) and loses the B/F
+distinction because both classes emit `b`. The prefix represents 22 distinct
+URL endpoint objects plus the internal FEFE cell; FEFE and a yellow endpoint
+both occur inside source character `n`. Therefore 14/8/1 is an event inventory,
+not a flat character partition.
+
+The proposed 14-blue-to-14-row mapping fails on native coordinates. Blue event
+rows are `8,14,14,9,1,5,13,2,2,10,12,3,7,4`: only 12 distinct rows, with
+2/14 duplicated and 6/11 missing. Under all `C(22,8)=319,770` fixed-position
+color profiles, 256 assignments cover all 14 rows (`~0.000801`), but the
+observed assignment does not; its 12-row coverage occurs 65,856 times
+(`~0.20595`). Zipping blue event order to rows 1-14 would invent a traversal.
+
+All 23 fitted events together do cover every native row, with bucket sizes
+`2,2,1,1,2,1,2,3,1,2,1,1,2,2`; full coverage is first reached at event 20.
+This preserves a valid spatial structure but does not specify a within-row
+consumer.
+
+The literal Point-2 next-character MUX over the complete 24 mask gives:
+
+```text
+B->DBBI/Y->FAED: dbbifbfbaehccbdegggbeeid
+B->FAED/Y->DBBI: faeddggebbedfcibdbfabhbc
+```
+
+Both copy the assigned blue stream's four-letter name because the mask begins
+`BBBB`; neither continues as plaintext or selects polarity. A two-stream MUX
+also cannot preserve the third FEFE class without a new rail or explicit fold.
+No oracle was run.
+
+Full report: `doc/GSMG_FIRST_PIECE_EVENT_RAIL_PRESERVATION_AUDIT.md`.
+**Verdict:** promote the exact 15/9-versus-14/8/1 distinction, token-preserving
+inventories, and all-event row buckets. Reject one-blue-per-row and the literal
+two-stream MUX as FEFE-preserving consumers. Do not flatten away event metadata.
+
+## Phase 202 -- FEFE PNG palette/alpha provenance: source is opaque RGBA8 truecolor; no palette index exists (2026-08-09)
+
+`tools/gsmg/first_piece_png_palette_provenance_audit.py` parses the raw full
+Stage-0 PNG and 350x350 rabbit asset, verifying all chunk CRCs, boundaries,
+IHDR fields, IDAT decompression, scanline filters, terminal IEND, and decoded
+RGBA samples. Both files have chunk sequence:
+
+```text
+IHDR, sRGB, gAMA, pHYs, IDAT, IEND
+```
+
+Both are non-interlaced 8-bit color type 6 (RGBA truecolor), not indexed color.
+Neither contains `PLTE`, `tRNS`, text/EXIF chunks, trailing bytes, or CRC errors.
+The decoded marker sample is direct `FE FE FE FF`; no palette lookup occurs.
+
+The alpha channel is structurally present but uniformly `FF` across all
+1,630,688 full-image pixels and all 122,500 rabbit-asset pixels. FEFE therefore
+has no transparency/alpha anomaly. Its geometry remains exact:
+
+```text
+full:   bbox (300,525)..(374,599), 75x75, 5,625 pixels
+rabbit: bbox (100,175)..(124,199), 25x25,   625 pixels
+```
+
+Coordinates/dimensions scale by exactly three and count by nine, supporting
+the explicit RGB/location marker provenance. The repository-root `puzzle.png`
+is byte-identical to the authenticated full copy.
+
+Full report: `doc/GSMG_FIRST_PIECE_PNG_PALETTE_PROVENANCE_AUDIT.md`.
+**Verdict:** close Point 9 negative. FEFE has no source palette index or alpha
+coordinate. Any index obtained by converting the image to indexed color would
+be converter-generated, not authored puzzle data. Retain only the explicit RGB,
+geometry, and already-verified positional descriptors.
+
+## Phase 203 -- two 11-item shadow rails: bounded column operations are non-language; alignment is ordinal, not spatial (2026-08-09)
+
+`tools/gsmg/first_piece_shadow_column_rail_audit.py` resamples the two exact
+`#383838` streams and exhausts only the predeclared rank-wise operations:
+larger/smaller count choice, explicit ties, equality/comparison masks, sums,
+and signed/absolute differences.
+
+The equal-length streams are not physical vertical columns. Zero of 11 paired
+glyph x-boxes overlap, center offsets range from 21.5 to 214 pixels, and there
+is no constant translation. Thus the pairing is selected-glyph ordinal rank,
+not raster geometry.
+
+Strict unequal-column choices produce:
+
+```text
+larger:  GGO5gUBG     template with ties: G=GO5g==UBG
+smaller: GGC9BPCe     template with ties: G=GC9B==PCe
+```
+
+Ties at columns 2/7/8 are `S/M`, `C/2`, `P/c`, leaving eight variants per
+rail and no selected breaker. Numeric outputs are:
+
+```text
+sums:      62663422336 -> FBFFCDBBCCF under A1Z26
+signed:    2,0,2,2,1,-2,0,0,1,-1,2
+absolute:  20221200112
+equality:  01000011000 = 536
+profile:   6 upper wins / 2 lower / 3 ties
+```
+
+Sum total43 and signed total7 are forced by `25+18` and `25-18`. Absolute
+total13 matches the prior G-consumer residue count, but under all 2,772 unique
+reassignments of the lower count multiset over fixed upper columns it occurs
+900 times (`25/77`); three ties occur 840 times (`10/33`). Their conjunction
+occurs 340 times, while the full recognized aggregate profile occurs 20
+(`5/693`). All rates are descriptive/post hoc; no oracle was run.
+
+Full report: `doc/GSMG_FIRST_PIECE_SHADOW_COLUMN_RAIL_AUDIT.md`.
+**Verdict:** close Point 17 absent a clue explicitly zipping rows, breaking
+ties, or naming rail consumers. Retain the row-local invariant-G `OCBe ->
+8,6,4` consumer as better grounded than ordinal cross-row pairing.
+
+## Phase 204 -- `86420/13579/a-i` gate audit: all values measurable but heterogeneous; zero and alphabet gates fail (2026-08-09)
+
+`tools/gsmg/first_piece_even_odd_alphabet_gate_audit.py` reconstructs every
+proposed operand without extrapolating the visible progression:
+
+```text
+OCBe atomic numbers:       8,6,4
+uppercase-G references:        4,2
+FEFE base bit:                    0
+joined values:              8,6,4,2,0
+```
+
+The overlapping4 and measured2 are real. The Architect rail separately gives
+`hye -> he` under the established a-i filter, then `He -> 2` after chemical
+case promotion. FEFE is genuinely an independently located zero-valued bit,
+but its value is not marker-specific: white, yellow, and FEFE all map to zero
+under the binary ink/non-ink rule.
+
+The strict gate therefore fails despite all five values being measurable. The
+source types are three atomic numbers, one pixel count, and one binary class
+bit; no clue selects their concatenation, and terminal zero is a near-default
+palette value. The `-2` progression is exact but predicts2/0 once864 is seen.
+
+Conditional arithmetic reproduces:
+
+```text
+86420 nine's complement -> 13579
+pair sums -> 99999
+interleave -> 8163452709
+```
+
+Under `a=0`, `86420 -> igeca`, `1357 -> bdfh`, and9 is out of range;
+discarding9 gives `igecabdfh`. Under `a=1`, zero is out of range instead,
+`8642 -> hfdb`, `13579 -> acegi`, giving `hfdbacegi`. Once either invalid
+terminal is dropped, exact a-i permutation coverage is forced. Rail order and
+independent directions give eight equally natural permutations, with no
+selected winner or evidence that the invalid terminal means Enter/delimiter.
+
+Phase 191's already-negative direct `86420` oracle was not rerun. Full report:
+`doc/GSMG_FIRST_PIECE_EVEN_ODD_ALPHABET_GATE_AUDIT.md`.
+**Verdict:** retain `864`/`4,2`/FE-zero provenance and conditional arithmetic,
+but do not promote `86420` as an instruction, `13579` as a second rail, or `igecabdfh`
+as an alphabet. Reopen only with a clue selecting the heterogeneous join,
+decimal complement, indexing convention, or terminal control role.
+
+## Phase 205 -- `BaTcH`/BATCH gate: exact rebus, native chemistry vocabulary, but inverse/order/H operators remain unselected (2026-08-09)
+
+`tools/gsmg/first_piece_batch_rebus_gate_audit.py` reconstructs both source
+quantities and the Architect rail independently:
+
+```text
+#383838 channel: 0x38 = 56 -> Ba
+#383838 pixels:  25+18 = 43 -> Tc
+Architect rails: BUT / HYE -> initial H
+Ba + Tc + H = BaTcH -> batch under casefolding
+```
+
+The construction is exact. Among all six symbol permutations, only `BaTcH`
+spells `batch` (fixed-target rate `1/6`, not a post-hoc p-value). If stage order
+is allowed to put H last, two pixel-symbol orders remain and only one works;
+no authenticated clue chooses channel value before pixel count.
+
+Phase 190's exact-case `OCBe -> O,C,Be -> 8,6,4` result materially improves
+the context: element symbols are native puzzle vocabulary. It does not select
+the reverse operation needed here. Once inverse atomic lookup is chosen, every
+integer 1-118 necessarily returns a symbol. The remaining informative choice
+is the word-forming order, together with taking only H from the wider `HYE/BUT`
+rebus.
+
+The established `HYE + [23,16,7] -> EOL` and decoded `enter` instruction make
+BATCH semantically coherent, but the authenticated decoded instruction
+vocabulary contains no literal `batch`, and no resolved operand grammar tells
+the solver to execute one.
+
+Full report: `doc/GSMG_FIRST_PIECE_BATCH_REBUS_GATE_AUDIT.md`.
+**Verdict:** retain `BaTcH/BATCH` as a strong recognition/checkpoint rebus, but
+close Point 14 as an executable instruction. Reopen only if another clue
+selects inverse element lookup, value-before-count ordering, singleton H, or
+batch/command execution.
+
+## Phase 206 -- `Ce/Fe` arithmetic and element checkerboard seed: exact numbers, render-generated CE, underdetermined board (2026-08-09)
+
+`tools/gsmg/first_piece_cefe_checkerboard_gate_audit.py` reproduces Point 16's
+atomic arithmetic and two additional role matches:
+
+```text
+Ce/Fe -> 58/26; difference = 32
+[Ce+Fe,Ce,Fe]       = [84,58,26]
+halved              = [42,29,13]
+574061              = 0x08C26D = 3 minimal bytes
+32-byte scalar pad  = 29 zero bytes = Ce/2
+len(matrixsumlist)  = 13 = Fe/2
+```
+
+Both half tails are prime. The `42=29+13` checksum is forced by halving an
+additive list, and the 29-byte role requires the unselected decision to encode
+the first-piece prime as a 32-byte private scalar. Bytewise `FE-CE` and
+`FE XOR CE` both remain `0x30`/ASCII zero, but count once: CE's set bits are a
+subset of FE's, so the agreement is forced.
+
+The source gate is decisive. The original 48x48 favicon contains zero CE
+pixels; CE appears as one 3x3 block only after enlargement and alpha
+compositing into the captured page. It belongs to a ten-byte family of such
+single-source-pixel render grays. Only CE/Ce and DB/Db title-case into element
+symbols; selecting Ce because its atomic number is even uses the desired
+halving result as a post-hoc selector.
+
+Point 18's proposed native concatenation reproduces:
+
+```text
+BaTcH | OCBeHe | CeFe | PHV -> BaTcHOCBeHeCeFePHV
+first-occurrence uppercase dedupe        -> BATCHOEFPV
+```
+
+The four fragment orders have 24 permutations and produce 24 distinct seeds.
+Across the already-declared 26 dropped letters, three tail presets, and two
+merge directions, these give 3,744 parameter rows and 2,430 unique 25-letter
+boards. Fixing `BATCHOEFPV` still leaves 105 unique boards. A conventional
+J-drop/forward-tail candidate is `BATCHOEFPVDGIKLMNQRSUWXYZ`, but no clue
+selects it; arbitrary order of its 15 unused letters alone gives `15!` tails.
+The known-real Phase-3.2 board explicitly does not supply a reusable tail rule.
+
+Full report: `doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md`.
+**Verdict:** retain `[84,58,26] -> [42,29,13]` and the 29/13 role matches as a
+recognition hypothesis. Close Point 16 as a source/consumer chain and Point 18
+as an alphabet. Reopen only with a native/explicit CE selector and complete
+fragment, dedupe, missing-letter, tail, escape, and topology instructions.
+
+## Phase 207 -- final overlay/DNA/RGB gates: no native overlay registration, 72 DNA conventions, inconsistent NIQ mapping (2026-08-09)
+
+`tools/gsmg/first_piece_overlay_dna_rgb_gate_audit.py` closes the last three
+items in the ranked first-piece pixel queue using bounded convention families.
+
+**Point 3, overlay.** The yellow/FEFE/union aperture sets contain 9/1/10 cells
+and each has eight distinct D4 orientations. The proposed target dimensions
+are `812x415`, `812x893`, and `668x619`; none is divisible by14 on both axes,
+so none supplies native equal-cell registration. One normalized full-image fit
+already gives 72 target/aperture/orientation variants, before crop, offset,
+sampler, channel, or visual-feature decoding choices. Closed pending an
+explicit target and registration/consumer rule.
+
+**Point 5, DNA.** The 24 endpoint colors contain only B/Y and therefore carry
+24 bits = 3 bytes. Even a four-state two-bit encoding would be 48 bits = 6
+bytes, not the claimed 12; the full grid also contains FEFE as a fifth state.
+All `4P2=12` distinct B/Y base assignments x two directions x three circular
+codon frames produce 72 distinct DNA and 72 distinct amino sequences. The
+proposed G/T forward frame-zero route is
+`GGG GTG GGT TGG GGT GGT TGT TGT -> GVGWGGCC`, with no selector. Closed.
+
+**Point 6, RGB vector.** Signed anomaly-minus-rose is exactly `(7,193,108)`;
+7 matches `[23,16,7]`, 193 is prime, and 108 is ASCII `l`. FE is the sole gray
+byte among 0-255 giving fixed signed red difference7 from the rose, but the
+other channel predicates and ASCII use are post-hoc, and subtraction has no
+consumer. The brainstorm's modulo read is incorrect: `(247,61,146) mod26 =
+(13,9,16)` gives `NJQ` under A=0 or `MIP` under A=1, not `NIQ`. Difference,
+plus-list, and minus-list A=0 reads are `HLE/KZX/QTJ`, none selected.
+
+Full report: `doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md`.
+**Verdict:** close all three gates and the ranked queue. Retain only the exact
+RGB difference/red-channel7 as a recognition coincidence. No visual,
+checkerboard, password, or cryptographic oracle was run.
+
+## Phase 208 -- border/raster grid-scan audit: closed negative, no side-based reading rivals the spiral (2026-08-09)
+
+`tools/gsmg/first_piece_border_raster_scan_audit.py` tests whether reading
+the authenticated 14x14 grid from its four sides -- instead of the
+established counterclockwise spiral -- produces anything comparable.
+
+**Border-only** (literal outer row/column per side) carries almost no
+signal: each edge has only one or two colored cells, and the 24 informative
+cells are interior, not edge-concentrated.
+
+**Nearest-inward** (first colored cell scanning in from each side, per
+row/column) gives `blue/yellow` counts of `12/2` (left), `6/8` (right),
+`9/5` (top), `8/5` plus one FEFE (bottom). The only notable fact: FEFE
+(grid row 8, column 5, one-based) is the nearest colored cell to the bottom
+edge in its own column -- a single positional fact, not flagged as rare.
+
+**Full-raster** (whole grid read top-down/bottom-up/left-right/right-left,
+keeping only colored cells, exactly as the spiral reading keeps only
+colored cells along its own path) gives four 24-bit blue=1 values:
+
+```text
+top_to_bottom: 0xBE2B9B  bottom_to_top: 0xEAE8BE
+left_to_right: 0xFFCA51  right_to_left: 0x4A63FF
+```
+
+None matches or reverses into the authenticated spiral answer
+`BBBBYBBBYYBBBBYBBYYBYYBY`. `left_to_right` is prime (16763473), but with
+four directions tried and a roughly 1-in-16 base rate for a random 24-bit
+prime, one hit in four is unremarkable and not treated as a discovery
+p-value -- unlike `574061`, which is independently anchored by the
+`yellowblueprime` clue text rather than selected after the fact from a
+small ordering family.
+
+Full report: `doc/GSMG_FIRST_PIECE_BORDER_RASTER_SCAN_AUDIT.md`.
+**Verdict:** close all three readings as negative controls. No side-based or
+raster traversal of this grid reproduces or rivals the spiral construction.
+Reopen only if another clue explicitly names one.
+
+## Phase 209 -- recovered VoVaM annotation images and deleted-thread provenance (2026-08-09)
+
+Three JPEGs downloaded through Telegram Desktop on 2026-08-08 were recovered
+from the downloads root and preserved byte-for-byte in
+`doc/telegram_vovam_deleted_thread/`:
+
+```text
+dacd8675a1d14c303fc908a7c934d0f514f9d8903b67fb60e3b196404d9fabb4  vovam_key_channels_green_annotated.jpg
+deee629eaef67fafe1f943b16cf72c24d07f617f072791e0e5d7e6ec52cd2327  vovam_key_channels_numbered_annotated.jpg
+48582be263cb5d98246b73ceeee8182271c30e80c0b0609444edf064bb767276  vovam_fefe_hex_dec_annotated.jpg
+```
+
+All three are progressive JFIF JPEGs at 862x1280. Their filesystem download
+times are 20:09:12, 20:09:19, and 20:19:31 respectively. They show the same
+Stage-0 board with successive hand annotations:
+
+- green paths connect the marked grid/rabbit region with both footer rails;
+- the second image circles the GSMG logo/title and Bitcoin address, labels
+  the two footer carriers `1` and `2`, and points both back toward the marked
+  grid region;
+- the third retains the green routing and adds the legible labels `EC`,
+  `FEFEFE`, `HEX`, and `DEC` around the logo, title, QR, and address regions.
+
+The current Telegram export no longer contains the source posts or their
+media. The solver who supplied these files remembers that they were posted by
+VoVaM (`user5450026673`) together with explanations of the color markings.
+That eyewitness attribution is recorded, but it is not independently encoded
+in the JPEG metadata or recoverable from the surviving export and therefore
+must not be upgraded to export-proven authorship.
+
+The surviving reply graph strongly associates the files with the deleted
+color-annotation thread:
+
+- messages 68200, 68201, and 68203 reply to missing message 68192 with
+  `That's from "GSMG.IO 5 BTC PUZZLE IMAGE"`, `That's from address`, and
+  `Or may be not`;
+- message 68207 replies to missing message 68206 with the Russian comment
+  `В этом пазле всё через FEFEFE` (approximately, `Everything in this puzzle
+  goes through FEFEFE`);
+- message 68211 replies to missing message 68209 with `Good thing you used
+  colors to circle around each part`;
+- message 68232 replies to missing message 68223 with `Yellow / Blue + 10 /
+  Why?`;
+- later messages 68256 and 68265 reply to missing message 68248, asking why it
+  is interesting and disputing its `85,87` grid count. Messages 68267-68280
+  then establish the corrected 14x14 inventory as 85 ordinary white, one
+  FEFEFE, 86 black, 15 blue, and 9 yellow cells.
+
+The first two recovered-file timestamps fall four minutes after message
+68211's explicit reference to colored circles. The third precedes message
+68214 by less than a minute. This is a strong temporal and visual match to
+the gaps, but Telegram exports do not retain deleted-message ownership or
+attachment mappings; no exact JPEG-to-message-ID assignment is claimed.
+
+The local Codex session
+`019fe0ae-4307-76a0-9fe0-fed1d1caeb60` preserves the investigator's
+contemporaneous relay of the otherwise deleted comments. Its UTC timestamps,
+converted to Europe/Kyiv (`UTC+3` on this date), give this sequence:
+
+```text
+19:37:42  "Has anyone seen the second code?" plus the four code/count lines
+19:46:26  investigator attribution: "he says it is from the first image"
+20:03:59  investigator paraphrase: a second part "could be somewhere"
+20:10:23  first two recovered arrow images shared with Codex
+20:19:56  third recovered image shared with Codex
+20:25:19  repeated-hex reduction comment relayed as "his comment"
+20:43:09  "He hid the letters G in the shadows / and the text"
+```
+
+The 19:37 quotation immediately precedes the export's 19:39 replies to
+missing message 68192, while the 20:43 quotation immediately precedes
+message 68232's 20:44 reply to missing message 68223. This makes the session
+record strong recovery evidence for the deleted discussion's content and
+chronology. It still cannot prove which missing Telegram ID carried each
+comment, or prove the speaker's identity independently of the investigator's
+eyewitness attribution supplied on 2026-08-09.
+
+A second, independent local session --
+`31e01c35-2eff-45b7-85b1-c30ef9c8c951` -- preserves the same 2026-08-08
+relay to this project's own Claude session, run in parallel with the Codex
+session above. Its UTC timestamps (Europe/Kyiv `UTC+3`) give:
+
+```text
+19:41:03  raw code strings, no attribution yet:
+          "GSGO5BCPUCG / 41442111214 / GMGC9g2cPBe / 21221311122"
+19:45:56  "he says it is from the first image"
+19:50:35  "also the comment was / everything through FEFEFE"
+20:10:37  first recovered images shared with this session
+20:27:48  repeated-hex reduction comment relayed as "his comment"
+21:28:06  "He hid the letters G in the shadows / and the text"
+```
+
+This independently corroborates five of the Codex-session quotations almost
+verbatim, adds two artifacts the Codex log does not contain, and explains
+the one apparent conflict:
+
+- the 19:41:03 raw code strings predate any "he says" framing and are the
+  literal source data Phases 188-190 were built from -- more primary than
+  either session's paraphrase;
+- "everything through FEFEFE" is independently relayed here in English,
+  giving that theme two independent channels instead of resting solely on
+  the surviving Russian reply at message 68207;
+- the "G in the shadows" quotation lands 45 minutes later in this session
+  (21:28 versus the Codex session's 20:43). The investigator confirms this
+  is real relay-timing (the same comment posted to this session 45 minutes
+  after the Codex session), not a factual inconsistency between sources.
+
+This session is also the literal origin of Phases 188-191: the `OCBe ->
+8,6,4` and `86420` derivations were produced here, live, from these same
+images and comments -- so the claim that the recovered artifacts explain
+the Phase-186-to-188 hypotheses is confirmed firsthand, not only inferred
+from timing and reply-graph correlation.
+
+These artifacts restore the provenance of the externally supplied annotation
+family audited in Phases 186-188, but they do not supersede those audits:
+
+- the recovered files visually substantiate the two-carrier routing and the
+  proposed repeated-gray/hex/decimal reading vocabulary;
+- the supplied accompanying-comment reading -- `#383838` text shadows,
+  collapse repeated RGB bytes (`CECECE -> CE`, `FEFEFE -> FE`), and `G in the
+  shadows and the text` -- remains a community-supplied hypothesis because
+  its deleted wording cannot now be checked against the export;
+- exact palette claims must be measured on the pinned lossless Stage-0 PNG,
+  not these recompressed JPEGs. Those checks already reproduce `#383838`'s
+  footer extraction, the genuine FEFEFE grid cell, and the rendered CE block;
+- the same checks also preserve the limiting evidence: CE is generated by
+  favicon alpha compositing and is not uniquely selected, while #383838 is
+  uniquely selected only after applying the externally supplied grayscale-G
+  predicate. Neither recovered artwork nor surviving replies make the
+  resulting CEFE/footer streams creator-authored puzzle instructions.
+
+**Verdict:** preserve the three images as primary evidence of the deleted
+community analysis and treat the user's VoVaM attribution as strong
+eyewitness provenance, now corroborated by two independent contemporaneous
+sessions (Codex and this project's own Claude session) rather than one.
+Promote no new chain edge solely from the recovery. The artifacts confirm,
+firsthand in the Claude session's case, where the Phase-186-to-188
+hypotheses came from and make their graphical routing inspectable, while
+all exact-color and consumer claims retain their existing
+verified/provisional status.

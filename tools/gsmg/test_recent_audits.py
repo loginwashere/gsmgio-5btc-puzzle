@@ -11,12 +11,27 @@ sys.path.insert(0, str(SCRIPT_DIR))
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import dual_channel_consistency_audit
+import first_piece_hamming_control_audit
+import first_piece_bitplane_audit
+import first_piece_ggn_distinctiveness_audit
+import first_piece_prime_sum_reconstruction
+import first_piece_matrix_product_audit
+import first_piece_second_matrixsumlist_audit
+import first_piece_event_rail_preservation_audit
+import first_piece_png_palette_provenance_audit
+import first_piece_shadow_column_rail_audit
+import first_piece_even_odd_alphabet_gate_audit
+import first_piece_batch_rebus_gate_audit
+import first_piece_cefe_checkerboard_gate_audit
+import first_piece_overlay_dna_rgb_gate_audit
+import first_piece_border_raster_scan_audit
 import matrixsum_cumulative_stride_audit
 import matrixsum_dbbi_faed_position_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import phase32_column_calibration_audit
 import promised_standalone_audit
+import prime_sum_fefe_mask_composition_audit
 import remaining_structural_avenues_audit
 import safenet_luna_hsm_audit
 import salphaseion_salvation_role_audit
@@ -36,6 +51,65 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_first_piece_overlay_dna_rgb_gates(self):
+        report = first_piece_overlay_dna_rgb_gate_audit.audit()
+        self.assertEqual(report["overlay"]["minimum_target_aperture_orientation_family"], 72)
+        self.assertFalse(report["overlay"]["pass"])
+        self.assertEqual(report["dna"]["endpoint_packed_bytes"], 3)
+        self.assertEqual(report["dna"]["family_size"], 72)
+        self.assertEqual(report["dna"]["unique_amino_sequences"], 72)
+        self.assertEqual(report["dna"]["proposed_mapping"]["amino"], "GVGWGGCC")
+        self.assertFalse(report["dna"]["pass"])
+        self.assertEqual(report["rgb"]["difference"], (7, 193, 108))
+        self.assertEqual(report["rgb"]["rose_mod26_a0"], "NJQ")
+        self.assertEqual(report["rgb"]["rose_mod26_a1"], "MIP")
+        self.assertFalse(report["rgb"]["claimed_niq_consistent"])
+        self.assertFalse(report["rgb"]["pass"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_cefe_checkerboard_gate(self):
+        report = first_piece_cefe_checkerboard_gate_audit.audit()
+        self.assertEqual(report["atomic_arithmetic"]["atomic_numbers"], (58, 26))
+        self.assertEqual(report["atomic_arithmetic"]["half_sum_list"], (42, 29, 13))
+        self.assertEqual(report["role_matches"]["zero_pad_bytes_to_scalar"], 29)
+        self.assertTrue(report["role_matches"]["fe_half_matches_instruction_length"])
+        self.assertEqual(report["byte_identity"]["subtraction"], 0x30)
+        self.assertEqual(report["byte_identity"]["independent_confirmations"], 1)
+        self.assertEqual(report["checkerboard_seed"]["native_deduped_seed"], "BATCHOEFPV")
+        self.assertEqual(report["checkerboard_seed"]["unique_boards"], 2430)
+        self.assertFalse(report["point16_gate"]["pass"])
+        self.assertFalse(report["point18_gate"]["pass"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_batch_rebus_gate(self):
+        report = first_piece_batch_rebus_gate_audit.audit()
+        self.assertEqual(report["source"]["shadow_rgb"], (56, 56, 56))
+        self.assertEqual(report["source"]["shadow_pixel_count"], 43)
+        self.assertEqual(report["source"]["pixel_atomic_symbols"], ("Ba", "Tc"))
+        self.assertEqual(report["candidate"]["exact_case"], "BaTcH")
+        self.assertEqual(report["candidate"]["casefolded"], "batch")
+        self.assertEqual(report["ordering_calibration"]["family_size"], 6)
+        self.assertEqual(report["ordering_calibration"]["batch_count"], 1)
+        self.assertTrue(report["chemical_context"]["element_vocabulary_established"])
+        self.assertFalse(report["strict_gate"]["pass"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_border_raster_scan(self):
+        report = first_piece_border_raster_scan_audit.audit()
+        self.assertEqual(report["border"]["top"]["cells"], "WWKKWBWWKWKKWY")
+        self.assertEqual(
+            report["nearest_inward"]["from_left"],
+            {"blue": 12, "yellow": 2, "fefe": 0},
+        )
+        self.assertEqual((report["fefe"]["row0"], report["fefe"]["col0"]), (7, 4))
+        self.assertTrue(report["fefe"]["nearest_from_bottom_in_its_column"])
+        self.assertEqual(report["raster"]["left_to_right"]["value"], 16763473)
+        self.assertTrue(report["raster"]["left_to_right"]["is_prime"])
+        self.assertFalse(report["raster"]["top_to_bottom"]["is_prime"])
+        self.assertFalse(any(report["matches_spiral"].values()))
+        self.assertEqual(report["prime_directions"], ["left_to_right"])
+        self.assertFalse(report["posthoc_valid_p_value"])
+
     def test_urlblob_is_a_default_provenance_labeled_target(self):
         self.assertEqual(
             tuple(BLOBS), ("SALPH", "COSMIC", "P32TRAILING", "URLBLOB")
@@ -123,6 +197,227 @@ class CorrectedClaimTests(unittest.TestCase):
             (((56, 56, 56), (4, 4, 4, 2, 2)),),
         )
         self.assertEqual(report["target_non_g_selected_count"], 17)
+
+    def test_first_piece_hamming_control_language(self):
+        report = first_piece_hamming_control_audit.audit()
+        masks = report["color_masks"]
+        gray = report["gray_controls"]
+        self.assertEqual(masks["prime_matrix"], ((0, 1, 2), (1, 2, 3)))
+        self.assertEqual(masks["rose_matrix"], ((4, 3, 2), (3, 2, 1)))
+        self.assertEqual(masks["prime_matrix_sums"]["columns"], (1, 3, 5))
+        self.assertEqual(masks["rose_matrix_sums"]["columns"], (7, 5, 3))
+        self.assertEqual(gray["shadow_popcount"], 9)
+        self.assertEqual(gray["shadow_complement_popcount"], 15)
+        self.assertEqual(gray["fefe_popcount"], 21)
+        self.assertEqual(gray["fefe_zero_count"], 3)
+        self.assertEqual(gray["fefe_and_prime_value"], 574060)
+        self.assertEqual(report["structural_21"]["flat_1_4_21"], "ggn")
+        self.assertEqual(report["structural_21"]["residual_byte_count"], 21)
+
+    def test_first_piece_complete_bitplanes(self):
+        report = first_piece_bitplane_audit.audit()
+        self.assertTrue(report["lsb_matches_image_blue_one"])
+        self.assertEqual(report["source_bit_count"], 192)
+        self.assertEqual(report["residual_dimensions"], (7, 24))
+        self.assertEqual(report["residual_byte_count"], 21)
+        self.assertEqual(report["plane_reconstruction"], report["source"])
+        self.assertEqual(report["character_major_reconstruction"], report["source"])
+        self.assertEqual(report["prime_members"], ((0, "complement", 574061),))
+        self.assertEqual(
+            tuple((bit, polarity) for bit, polarity, _ in report["staircase_members"]),
+            ((0, "direct"), (0, "complement")),
+        )
+
+    def test_first_piece_ggn_distinctiveness(self):
+        report = first_piece_ggn_distinctiveness_audit.audit()
+        flat = report["flat_extractions"]
+        family = report["text_triple_family"]
+        self.assertTrue(report["tuple_provenance"]["hierarchical_match"])
+        self.assertEqual(flat["one_based_text"], "ggn")
+        self.assertEqual(flat["zero_based_text"], "s.t")
+        self.assertEqual(flat["one_based_colors"], "BBY")
+        self.assertEqual(family["family_size"], 2024)
+        self.assertEqual(family["uniquely_emitted_rows"], 519)
+        self.assertEqual(family["first_pair_equal_then_distinct"], 85)
+        self.assertEqual(family["first_pair_equal_unique_third"], 36)
+        self.assertEqual(report["exact_ggn"]["indices_1"], ((1, 4, 21),))
+        self.assertFalse(report["exact_ggn"]["posthoc_valid_p_value"])
+        self.assertFalse(report["curve_identity_scope"]["secp256k1_specific"])
+
+    def test_first_piece_matrix_product(self):
+        report = first_piece_matrix_product_audit.audit()
+        fixed = report["fixed_operation"]
+        permutations_report = report["fixed_matrix_vector_permutations"]
+        geometry = report["geometric_family"]
+        expanded = report["expanded_digit_assignment_control"]
+        self.assertEqual(report["source"]["matrix"], ((5, 7, 4), (0, 6, 1)))
+        self.assertEqual(report["source"]["sum_list"], (23, 16, 7))
+        self.assertEqual(fixed["output"], (255, 103))
+        self.assertEqual(fixed["serialized_hex_if_bytes"], "FF67")
+        self.assertEqual(permutations_report["property_counts"]["exact_255_103"], 1)
+        self.assertEqual(geometry["distinct_unordered_output_count"], 6)
+        self.assertEqual(expanded["operation_class_count"], 720)
+        self.assertEqual(expanded["exact_ordered_rate"].numerator, 1)
+        self.assertEqual(expanded["exact_ordered_rate"].denominator, 720)
+        self.assertFalse(expanded["primary_null"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_second_matrixsumlist(self):
+        report = first_piece_second_matrixsumlist_audit.audit()
+        source = report["source"]
+        delta = report["difference"]
+        family = report["row_alignment_traversal_family"]
+        self.assertEqual(source["shadow_matrixsumlist"], (43, 25, 18))
+        self.assertEqual(source["prime_matrixsumlist"], (23, 16, 7))
+        self.assertEqual(delta["direct"], (20, 9, 11))
+        self.assertEqual(delta["direct_a1z26"], "TIK")
+        self.assertEqual(delta["reverse_a1z26"], "KIT")
+        self.assertTrue(delta["additive_checksum_forced"])
+        self.assertEqual(
+            report["event_cross_checks"],
+            {
+                "events_before_fefe": 20,
+                "yellow_endpoint_count": 9,
+                "shadow_row_widths": (11, 11),
+            },
+        )
+        self.assertTrue(report["cross_check_match"])
+        self.assertEqual(family["kit_count"], 1)
+        self.assertEqual(family["family_size"], 8)
+        self.assertFalse(family["posthoc_valid_p_value"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_event_rail_preservation(self):
+        report = first_piece_event_rail_preservation_audit.audit()
+        endpoint = report["endpoint_mask"]
+        fitted = report["fitted_event_inventory"]
+        blue = report["blue_to_grid_rows"]
+        buckets = report["all_event_row_buckets"]
+        mux = report["literal_24_endpoint_mux"]
+        self.assertEqual((endpoint["blue_count"], endpoint["yellow_count"]), (15, 9))
+        self.assertEqual(fitted["profile_BYF"], (14, 8, 1))
+        self.assertEqual(fitted["flattened_symbol_length"], 31)
+        self.assertEqual(fitted["distinct_url_objects"], 22)
+        self.assertFalse(blue["one_per_row"])
+        self.assertEqual(blue["actual_distinct_rows"], 12)
+        self.assertEqual(blue["missing_rows"], (6, 11))
+        self.assertEqual(blue["duplicated_rows"], (2, 14))
+        self.assertTrue(buckets["all_rows_nonempty"])
+        self.assertEqual(buckets["first_full_coverage_event"], 20)
+        self.assertEqual(
+            mux["blue_to_dbbi_yellow_to_faed"]["output"],
+            "dbbifbfbaehccbdegggbeeid",
+        )
+        self.assertEqual(
+            mux["blue_to_faed_yellow_to_dbbi"]["output"],
+            "faeddggebbedfcibdbfabhbc",
+        )
+        self.assertFalse(
+            report["architecture_constraints"][
+                "dual_stream_mux_preserves_distinct_fefe_class"
+            ]
+        )
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_png_palette_provenance(self):
+        report = first_piece_png_palette_provenance_audit.audit()
+        full, rabbit = report["full"], report["rabbit"]
+        verdict = report["format_verdict"]
+        self.assertTrue(report["root_copy_byte_identical"])
+        self.assertEqual(full["ihdr"]["color_type"], 6)
+        self.assertEqual(rabbit["ihdr"]["color_type"], 6)
+        self.assertFalse(full["plte_present"])
+        self.assertFalse(rabbit["plte_present"])
+        self.assertFalse(full["trns_present"])
+        self.assertFalse(rabbit["trns_present"])
+        self.assertEqual(full["pixels"]["fe_bbox_inclusive"], (300, 525, 374, 599))
+        self.assertEqual(rabbit["pixels"]["fe_bbox_inclusive"], (100, 175, 124, 199))
+        self.assertTrue(full["pixels"]["all_pixels_opaque"])
+        self.assertTrue(rabbit["pixels"]["all_pixels_opaque"])
+        self.assertFalse(verdict["palette_index_exists"])
+        self.assertFalse(verdict["fe_has_distinct_alpha"])
+        self.assertEqual(verdict["decoded_fe_sample_hex"], "FEFEFEFF")
+        self.assertTrue(report["marker_scaling"]["full_bbox_equals_scaled_rabbit_bbox"])
+
+    def test_first_piece_shadow_column_rails(self):
+        report = first_piece_shadow_column_rail_audit.audit()
+        larger = report["larger_count_selection"]
+        smaller = report["smaller_count_selection"]
+        numeric = report["numeric_operations"]
+        calibration = report["alignment_calibration"]
+        geometry = report["spatial_alignment"]
+        self.assertEqual(larger["strict_unequal_text"], "GGO5gUBG")
+        self.assertEqual(larger["tie_template"], "G=GO5g==UBG")
+        self.assertEqual(smaller["strict_unequal_text"], "GGC9BPCe")
+        self.assertEqual(numeric["column_sum_digits"], "62663422336")
+        self.assertEqual(numeric["absolute_difference_digits"], "20221200112")
+        self.assertEqual(numeric["equality_mask_bits"], "01000011000")
+        self.assertEqual(
+            (numeric["upper_win_count"], numeric["lower_win_count"], numeric["tie_count"]),
+            (6, 2, 3),
+        )
+        self.assertEqual(calibration["family_size"], 2772)
+        self.assertEqual(calibration["absolute_total_rate"].numerator, 25)
+        self.assertEqual(calibration["absolute_total_rate"].denominator, 77)
+        self.assertFalse(calibration["posthoc_valid_p_value"])
+        self.assertEqual(geometry["ordinal_pair_x_overlap_count"], 0)
+        self.assertFalse(geometry["constant_x_offset"])
+        self.assertFalse(geometry["physical_vertical_columns"])
+        self.assertFalse(report["verdict"]["column_alignment_yields_selected_consumer"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_even_odd_alphabet_gate(self):
+        report = first_piece_even_odd_alphabet_gate_audit.audit()
+        provenance = report["provenance"]
+        gate = report["strict_gate"]
+        complement = report["conditional_nines_complement"]
+        mapping = report["conditional_a_i_mapping"]
+        self.assertEqual(report["even_sequence"]["digits"], (8, 6, 4, 2, 0))
+        self.assertEqual(report["even_sequence"]["steps"], (-2, -2, -2, -2))
+        self.assertEqual(provenance["fefe_value_shared_with"], ("fefefe", "white", "yellow"))
+        self.assertEqual(provenance["architect_he_route"]["a_i_filtered_end_rail"], "he")
+        self.assertEqual(provenance["architect_he_route"]["atomic_number"], 2)
+        self.assertFalse(gate["same_operation_or_value_type"])
+        self.assertFalse(gate["terminal_zero_unique_to_fefe"])
+        self.assertFalse(gate["independent_five_digit_recovery"])
+        self.assertFalse(gate["pass"])
+        self.assertEqual(complement["string"], "13579")
+        self.assertEqual(mapping["zero_based_join_after_dropping_invalid"], "igecabdfh")
+        self.assertEqual(mapping["one_based_join_after_dropping_invalid"], "hfdbacegi")
+        self.assertEqual(mapping["orientation_family_size"], 8)
+        self.assertFalse(mapping["invalid_terminal_as_delimiter_selected"])
+        self.assertFalse(report["prior_direct_86420_oracle"]["rerun"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_prime_sum_reconstruction(self):
+        report = first_piece_prime_sum_reconstruction.audit()
+        self.assertEqual(report["fitted_event_count"], 23)
+        self.assertTrue(report["all_fitted_match"])
+        self.assertEqual(report["fitted_sums"], {"B": 401, "Y": 400, "F": 73})
+        self.assertEqual(report["all_sums"], {"B": 490, "Y": 497, "F": 73})
+        self.assertEqual(report["near_balance_prefixes"], (23,))
+        self.assertEqual(report["fefe_record"]["ordinal"], 21)
+        self.assertEqual(report["fefe_record"]["prime"], 73)
+        self.assertEqual(report["first_outside"]["position_1"], 97)
+        self.assertEqual(report["same_prefix_consumer_lengths"], tuple(range(91, 97)))
+
+    def test_prime_sum_fefe_mask_composition(self):
+        report = prime_sum_fefe_mask_composition_audit.audit()
+        self.assertEqual(report["input_values_BYF"], (401, 400, 73))
+        self.assertEqual(report["repeated_fe_outputs_BYF"], (144, 144, 72))
+        self.assertTrue(report["equal_halves"])
+        self.assertTrue(report["fefe_is_half"])
+        self.assertEqual(report["scalar_lsb_only_control_BYF"], (400, 400, 72))
+        fixed = report["fixed_fefe_calibration"]
+        self.assertEqual(fixed["successes"], fixed["near_balances"])
+        self.assertEqual(fixed["rate"].numerator, 271)
+        self.assertEqual(fixed["rate"].denominator, 106_590)
+        floating = report["floating_fefe_calibration"]
+        self.assertEqual(floating["successes"], 813)
+        self.assertEqual(
+            tuple(row["fefe_prime"] for row in floating["successful_fefe_rows"]),
+            (73,),
+        )
 
     def test_neo_choice_last_words(self):
         module = neo_choice_last_words_audit
