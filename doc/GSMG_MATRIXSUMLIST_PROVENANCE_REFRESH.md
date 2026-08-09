@@ -143,6 +143,80 @@ There are zero creator-authored relevant messages in this export window.
 3. Reopen computation only if one of those sources reduces the surviving G3
    alternatives to exactly one.
 
+## Targeted Telegram provenance request
+
+The following message is deliberately phrased as a request for an old source,
+not an invitation to invent a new solution. It should preferably be posted as
+a reply to Nik's guide or Denis's 31-character extraction so the Telegram
+reply graph preserves the context.
+
+> @Nik @Denis — provenance question, not asking for a new theory. Does anyone
+> have an original message, image, guide, or code that predates Denis's
+> 2026-03-04 extraction and explicitly says what `matrixsumlist` does after
+> `yellowblueprimes`, especially whether it consumes
+> `ncsyangcahiriasogaleafayanestve`? If yes, please share the original artifact
+> or Telegram message ID/date—not a reconstructed explanation. The source
+> needs to fix the exact input, matrix dimensions/placement, traversal,
+> character values, the precise sum/index operation, and what the output feeds
+> next. It would also help to know if the 31-character string was intended as a
+> terminal recognition result rather than another transform input. We already
+> have Nik's 14×14 row-sum guide and the 2024 row-plus-column community code;
+> those use different inputs, so links to either alone do not resolve this
+> question.
+
+### How to classify replies
+
+| Reply type | Worksheet effect |
+|---|---|
+| Original creator message or contemporaneous guide fixing every parameter | Re-evaluate G1–G3 and reproduce it before inspecting output |
+| Dated pre-2026 code with the exact 31-character input and all parameters fixed | Community provenance upgrade; bounded structural audit may become admissible |
+| “I think,” newly written derivation, thematic interpretation, or candidate password | No gate change |
+| Repost of the 2025 guide or 2024 attachment without a bridge to the 31 characters | No gate change |
+| Claim of success without original source or authenticated next-stage artifact | No gate change |
+
+Record the posted message ID and every direct reply ID before interpreting the
+content. Silence is not confirmation and does not close the row; it only leaves
+G3 unchanged.
+
+## Page-syntax scope test
+
+Because neither external evidence path is immediately available, the remaining
+source-native possibility was tested without executing a transform: does the
+placement of binary ASCII `matrixsumlist` fix its operand scope by analogy with
+binary ASCII `enter`?
+
+```text
+DBBI(91)  [matrixsumlist: 104 binary symbols]  FAED(570)
+AES(64)   [enter: 40 binary symbols]           AES(64)
+```
+
+This is an exact and potentially intentional layout parallel. It is not a
+complete grammatical equivalence:
+
+- removing `enter` joins two equal 64-character Base64 pieces into an
+  independently valid 96-byte OpenSSL object;
+- DBBI and FAED have unequal lengths, are separately named streams, and have
+  no authenticated join result;
+- the same page uses mixed instruction positions: before payload, after
+  payload, and between payload-like regions.
+
+Therefore all three previously registered roles survive:
+
+1. postfix instruction applied to DBBI;
+2. prefix instruction applied to FAED;
+3. infix relationship between DBBI and FAED.
+
+The recovered guide makes the postfix reading more historically concrete, but
+cannot select it as creator intent because it is community-authored, fitted to
+prime positions, and produces no authenticated transition. Page syntax alone
+does not reduce the family to one, so G3 remains **FAIL**.
+
+Reproduce this narrow result with:
+
+```bash
+python3 tools/gsmg/matrixsumlist_page_scope_audit.py --self-test
+```
+
 ## Reproduction
 
 ```bash

@@ -29,6 +29,8 @@ import first_piece_border_raster_scan_audit
 import matrixsum_cumulative_stride_audit
 import matrixsum_dbbi_faed_position_audit
 import matrixsumlist_provenance_refresh_audit
+import matrixsumlist_page_scope_audit
+import matrixsumlist_historical_code_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import onchain_op_return_provenance_audit
@@ -677,6 +679,34 @@ class CorrectedClaimTests(unittest.TestCase):
         )
         self.assertEqual(report["creator"]["literal_matrixsumlist_message_ids"], ())
         self.assertEqual(report["gates"]["G3_operation"][:4], "FAIL")
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists()
+        and (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "page mirror or Telegram export is unavailable",
+    )
+    def test_matrixsumlist_page_scope(self):
+        report = matrixsumlist_page_scope_audit.self_test()
+        self.assertEqual(
+            tuple(report["surviving_roles"]),
+            ("postfix_to_dbbi", "prefix_to_faed", "infix_dbbi_faed"),
+        )
+        self.assertFalse(report["matrix_neighbors"]["validated_join"])
+        self.assertEqual(report["strictly_supported_binding_models"], ())
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "Telegram export is unavailable",
+    )
+    def test_matrixsumlist_historical_code(self):
+        report = matrixsumlist_historical_code_audit.self_test()
+        self.assertEqual(report["cutoff"]["message_id"], 60333)
+        self.assertEqual(
+            report["prime_sum_tool"]["row_letters"], "ANTLGHQESHKTPG"
+        )
+        self.assertFalse(report["prime_sum_tool"]["sum_depends_on_grid_bits"])
+        self.assertEqual(report["attachment_scan"]["selected31_hits"], ())
+        self.assertFalse(report["gate_result"]["historical_code_fixes_transition"])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

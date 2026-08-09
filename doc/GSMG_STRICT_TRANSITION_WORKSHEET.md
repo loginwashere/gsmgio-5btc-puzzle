@@ -132,7 +132,7 @@ community accounts is not a reopening condition.
 
 | Candidate transition | G1 source | G2 input | G3 operation | G4 output | G5 controls | Current disposition | Reopen trigger |
 |---|---|---|---|---|---|---|---|
-| 31-character DBBI selection -> `matrixsumlist` consumer | **PASS** for the literal instruction; proposed mechanics remain community-only | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no source fixes dimensions, traversal, values, or sum/index semantics | **FAIL**: no next-stage artifact | **PARTIAL**: many bounded consumers negative | **Evidence refreshed through 2026-08-09; live but blocked at G3** | Primary evidence fixing the complete operation, including the missing book pages 57–58 |
+| 31-character DBBI selection -> `matrixsumlist` consumer | **PASS** for the literal instruction; proposed mechanics remain community-only | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no source binds the input to dimensions, traversal, values, and sum/index semantics | **FAIL**: no next-stage artifact | **PARTIAL**: many bounded consumers negative | **Evidence and historical-code audit refreshed through 2026-08-09; live but blocked at G3** | Primary evidence fixing the complete operation, including the missing book pages 57–58 |
 | Historical 14x14 DBBI row sums -> `IZLKESEEDQPPEN` | **PASS**: recovered Telegram guide | **PASS**: exact matrix/token chunks | **PASS** for historical row-major sums | **FAIL**: non-language; opens no target | **PASS**: directions and Caesar family calibrated; `p≈0.119`/`0.713` | **Closed negative** | New clue selecting a distinct consumer, not another direction |
 | Prime lists -> `401/400/73` | **PARTIAL**: exact prime walk and literal list grammar, but alternative to historical guide | **PASS**: 14 blue, 8 yellow, 1 FEFE lists | **PASS**: partition and sums are fixed | **FAIL**: no instruction/key or downstream consumer | **PASS**: fixed-profile rate documented; FE normalization shown dependent | **Structural checkpoint only** | Explicit clue consuming the three sums |
 | Decimal matrix -> `[23,16,7]` -> Architect words | **PASS** for matrix sums and sourced dialogue | **PASS**: fixed matrix/list and scene | **PARTIAL**: word indexing fixed; beginnings/endings and polarity are not | **PARTIAL**: `BUT/HYE` thematic, no authenticated consumer | **PASS**: associated FAED `{h,e}` model negative | **Recognition checkpoint; parked** | Clue selecting beginnings/endings or B↔H operation |
@@ -181,7 +181,28 @@ The 2026-08-09 provenance refresh is recorded in
 export, the newest incremental export, the recovered guide neighborhood, a
 2024 community code attachment, the walkthrough history, and the transcribed
 *Cosmic Duality* book. None fixes G3. The only genuine uninspected source in
-that set is the physical book's pages 57–58 gatefold.
+that set is the physical book's pages 57–58 gatefold. A source-only Telegram
+request, with explicit reply-classification rules, is prepared in that report;
+posting it does not change any gate until a qualifying artifact is recovered.
+
+The page-syntax fallback was also checked. Binary ASCII `matrixsumlist` between
+DBBI/FAED exactly parallels binary ASCII `enter` between the two AES pieces,
+but only the latter has equal operands and an independently validated join.
+The page uses mixed prefix/postfix/infix instruction placement elsewhere, so
+postfix-to-DBBI, prefix-to-FAED, and infix DBBI/FAED roles all survive. This
+parallel is structural evidence, not enough to change G3.
+
+The chronological code audit in
+`doc/GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md` used Denis's first exact
+31-character publication on 2026-03-04 as its cutoff. Across the public
+walkthrough/notebook history, the pre-cutoff fork delta, and 83 Telegram code
+or text attachments, zero pre-cutoff artifact contains the selected string.
+An early 2025 14x14 explorer exposes ten competing traversals. A later 14x14
+tool fixes a top-left counterclockwise positional spiral and row/column prime
+sums, but its calculation ignores the grid bits and displayed letters, yielding
+the fixed constants `ANTLGHQESHKTPG` and `OQOJWHCJPHZ-US`. It therefore cannot
+serve as the missing consumer without a new source explicitly binding that
+historical tool to the later input.
 
 ## Candidate submission template
 
