@@ -41,6 +41,7 @@ import neo_smith_equation_audit
 import onchain_op_return_provenance_audit
 import phase32_column_calibration_audit
 import post_yinyang_dataflow_audit
+import post_phase217_consistency_audit
 import promised_standalone_audit
 import prime_sum_fefe_mask_composition_audit
 import remaining_structural_avenues_audit
@@ -850,6 +851,12 @@ class CorrectedClaimTests(unittest.TestCase):
             (64,) * 28,
         )
         self.assertEqual(report["binding_candidates_found"], ())
+
+    def test_phase217_circular_rebus_correction_is_propagated(self):
+        report = post_phase217_consistency_audit.audit()
+        self.assertEqual(report["forbidden_rebus_forms_present"], ())
+        self.assertEqual(len(report["corrected_legacy_documents"]), 6)
+        self.assertIn("no post-yinyang operator", report["verdict"])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

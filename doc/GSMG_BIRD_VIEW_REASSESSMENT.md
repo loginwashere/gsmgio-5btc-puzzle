@@ -1,5 +1,10 @@
 # GSMG Bird-View Reassessment
 
+> **Superseded in part by Phases 216–217:** BUT/HYE survives the
+> film-versus-screenplay boundary test, and `b <-> h` with fixed `e` remains a
+> bounded mirror observation. Any downstream rebus formed by selecting the
+> initials of “your eyes” was circular and is excluded.
+
 Date: 2026-07-27
 
 ## Executive conclusion

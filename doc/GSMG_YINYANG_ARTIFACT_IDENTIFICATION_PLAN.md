@@ -1,5 +1,10 @@
 # GSMG Yin-Yang Artifact Identification Plan
 
+> **Historical plan; corrected by Phase 217:** the proposed `H` plus the
+> initials of “your eyes” plus `BUT` construction below is circular. Retain
+> BUT/HYE and the `b <-> h`, `e`-fixed mirror state only; do not use that rebus
+> to identify or rank an artifact.
+
 ## Objective
 
 Identify the concrete artifact or state meant by the creator's repeated

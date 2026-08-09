@@ -51,7 +51,7 @@ specific variable that remains unresolved.
 | 2022-12-11; 2023-01-08 | A missing post is “very specific”; `@barrystyle` “provided a very specific hint already.” | The raw transcript identifies `semaj` as `@barrystyle`: he says he Googled a phrase assumed to belong to a hint (`chat_transcript.txt:20027`); the creator names barrystyle (`:20070`); later a participant asks what he searched “to get to the book” (`:71524`) and `semaj` answers `cosmic duality: mysteries of the unknown` (`:71527`). The missing post is therefore the book discovery, not an unknown prime diagram. | Exact media bytes remain absent, but semantic content is recovered. The pages 57-58 gap is independently established by the screenshot inventory and page-56 cross-reference, not inferred from chat. | **Evidence gap substantially closed** |
 | 2023-01-09 | “At least prime number is very important to get any further.” | Reconfirms prime use after the book clue. | Singular “prime number” supports a derived prime but does not distinguish the 24-color complement `574061` from other constructions without further validation. | Strong confirmation |
 | 2023-01-12; 2023-01-25 | “Focussing on the theory of everything is also still a valid path…”; replies `42` when asked how much math is in the puzzle. | At most supports connecting puzzle components; `42` is creator-authored but occurs as a humorous answer. | No bounded operation follows from these statements alone. | Low-priority/meta |
-| 2023-02-23 | Reversed full-bitstream message decodes to `yellowblueprimes matrixsumlist lastwordsbeforearchichoice yinyang ...` | Gives an ordered dependency chain. It reconstructs as `574061 -> [23,16,7] -> BOTH/ULTIMATELY/THE -> BUT/HYE`; in the `a-i` alphabet, `B <-> H` are mirror opposites around fixed `E`, and `HYE BUT` can be segmented as `H | YE | BUT`. This is a plausible construction, not a creator-confirmed yin-yang state. | Which operation or lock follows `lastwordsbeforearchichoice`. `BUT/HYE` remains an unconfirmed recognition-state interpretation. Its derived `{h,e}` FAED decryption hypothesis is strongly deprioritized: rank 16/36 by corrected code-IC (Phase 112), single-layer monoalphabetic recovery at null median (`p=0.634`, Phase 43), and bounded `{h,e}` autokey/chain-addition checks negative. | **Ordered clue; rail interpretation unconfirmed** |
+| 2023-02-23 | Reversed full-bitstream message decodes to `yellowblueprimes matrixsumlist lastwordsbeforearchichoice yinyang ...` | Gives an ordered dependency chain. The cross-source-stable forward-one indexing reconstructs `574061 -> [23,16,7] -> BOTH/ULTIMATELY/THE -> BUT/HYE`; in the `a-i` alphabet, `B <-> H` are mirror opposites while `E` is fixed. This bounded mirror state is a plausible construction, not a creator-confirmed yin-yang state. | Which operation or lock follows `lastwordsbeforearchichoice`. `BUT/HYE` remains an unconfirmed recognition-state interpretation. The former `H`/initials-of-“your eyes”/`BUT` rebus was removed in Phase 217 as circular. Its derived `{h,e}` FAED decryption hypothesis is strongly deprioritized: rank 16/36 by corrected code-IC (Phase 112), single-layer monoalphabetic recovery at null median (`p=0.634`, Phase 43), and bounded `{h,e}` autokey/chain-addition checks negative. | **Ordered clue; rail interpretation unconfirmed** |
 | 2023-08-06 | “Once you hit a ‘ying yang’, you'll be able to solve it the same day”; asked “hit or hint?”, replies “Both?”; “You have all the info.” | Yin-yang is a recognizable reached state or next-stage artifact, not evidence that the literal words are a password. | What artifact or realization counts as reaching it. | **Recognition cue** |
 | 2024-11-29 | “1 microstep further” would likely solve the puzzle the same day. | The remaining blocker is probably one local interpretation/transition, not another broad cipher family. | Which unresolved edge in the creator's chain is the microstep. | Search-priority guidance |
 | 2025-04-28 | “when yingyang is reached, 2 hours max”; “It’s the next phase.” | Explicitly classifies yin-yang as the next phase and again predicts rapid completion after reaching it. | Which lock follows the reconstructed rails. | Strong confirmation |
@@ -74,8 +74,8 @@ first/zero puzzle piece
     -> matrix sum/list
     -> last words before "archi" choice
     -> beginning/end rails BUT / HYE
-    -> B <-> H around fixed E: mirrored {b,e}/{h,e}
-    -> H | YE | BUT rebus
+    -> B <-> H while E is fixed: bounded mirror9 state
+    -> UNKNOWN operation after the recognition checkpoint
     -> short final solve
 ```
 
@@ -152,7 +152,9 @@ In particular:
 
 The creator chain is reconstructed through
 `F73D92/574061 -> [23,16,7] -> BUT/HYE`, but the resulting
-`B<->H around E -> H|YE|BUT` rail remains unconfirmed. *Looking Forward*
+`B<->H` with fixed `E` remains an unconfirmed recognition state; the former
+rebus built from `H` plus the initials of “your eyes” was circular and is
+excluded. *Looking Forward*
 is also unconfirmed: it is a thematically fitting community suggestion
 that received a hedged creator response. Only the “in front of your eyes”
 phrase itself has the later `Bingo` confirmation.

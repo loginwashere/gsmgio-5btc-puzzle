@@ -1,5 +1,9 @@
 # GSMG Yin-Yang Artifact Inventory
 
+> **Phase-217 interpretation guard:** references below to the historical
+> `H`/“your eyes”/`BUT` family record bounded negative coverage only. That
+> construction was circular and cannot identify the yin-yang artifact.
+
 ## Scope
 
 This is the assertion-backed first pass defined by

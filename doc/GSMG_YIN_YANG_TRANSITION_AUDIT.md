@@ -1,5 +1,10 @@
 # GSMG Yin-Yang Transition Audit
 
+> **Phase-217 correction:** the creator-confirmed phrase evidence in this
+> audit remains valid, but the later `H` plus initials-of-“your eyes” plus
+> `BUT` reading is circular and excluded. It is not an independent algebraic
+> confirmation of BUT/HYE.
+
 ## Primary result
 
 The creator confirms that **“it is in front of your eyes but you are not

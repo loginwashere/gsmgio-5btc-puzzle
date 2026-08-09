@@ -1,5 +1,11 @@
 # GSMG Non-Blob Lock Audit
 
+> **Superseded construction notice (Phase 217):** this historical audit's
+> `H` + initials-of-“your eyes” + `BUT` rebus is circular and must not be used
+> as a transition anchor. Its bounded non-blob negatives remain historical
+> coverage only; the corrected live checkpoint is BUT/HYE plus the limited
+> `b <-> h`, `e`-fixed mirror state.
+
 ## Scope
 
 This audit followed the reconstructed Architect rails:

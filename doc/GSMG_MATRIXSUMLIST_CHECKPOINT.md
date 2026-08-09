@@ -1,5 +1,11 @@
 # GSMG `matrixsumlist` Reconstruction Checkpoint
 
+> **Supersession note (Phases 216–217):** the film/screenplay-stable result is
+> BUT/HYE and the bounded `b <-> h`, `e`-fixed mirror state. This document's
+> later `H` + initials-of-“your eyes” + `BUT` rebus was removed as circular and
+> must not anchor subsequent work. VAT/SALVATION is likewise post-hoc and
+> oracle-negative.
+
 ## Strong finding
 
 The creator's raw binary message decodes exactly to:
