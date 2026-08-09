@@ -24,6 +24,7 @@ import first_piece_second_matrixsumlist_audit
 import first_piece_event_rail_preservation_audit
 import first_piece_png_palette_provenance_audit
 import first_piece_shadow_column_rail_audit
+import faed_decoder_coverage_audit
 import first_piece_even_odd_alphabet_gate_audit
 import first_piece_batch_rebus_gate_audit
 import first_piece_cefe_checkerboard_gate_audit
@@ -819,6 +820,17 @@ class CorrectedClaimTests(unittest.TestCase):
             set(report["excluded_anchors"]),
             {"h_ye_but", "vat_salvation"},
         )
+
+    def test_faed_coverage_requires_a_binding_not_more_bruteforce(self):
+        report = faed_decoder_coverage_audit.audit()
+        checkpoint = report["faed_checkpoint"]
+        self.assertEqual(checkpoint["raw_length"], 570)
+        self.assertEqual(checkpoint["best_escape_pair"], ("g", "i"))
+        self.assertEqual(checkpoint["segmented_code_count"], 436)
+        self.assertEqual(checkpoint["distinct_code_count"], 25)
+        self.assertEqual(len(report["known_incomplete_compute"]), 1)
+        self.assertEqual(report["admitted_clue_supported_open_models"], ())
+        self.assertIn("binding/provenance", report["verdict"])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

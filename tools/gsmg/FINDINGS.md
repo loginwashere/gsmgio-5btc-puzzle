@@ -14304,3 +14304,37 @@ combining operation; neither is upgraded by elimination of the others. No
 further password-format variants are warranted at this boundary; the next
 useful evidence must constrain the FAED, or joint DBBI/FAED, decoding
 relationship itself.
+
+## Phase 219 -- FAED decoder coverage map: the open gap is binding, not compute (2026-08-10)
+
+`tools/gsmg/faed_decoder_coverage_audit.py` turns Phase 218's next question
+into a mechanical coverage/provenance check. It reproduces the exact FAED
+stream (570 symbols; SHA-256
+`066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2`) and
+the corrected Phase-112 structural checkpoint: `{g,i}` ranks first of all 36
+escape pairs by distance to English code IC, yielding 436 tokens and all 25
+code types.
+
+The audit keeps unlike historical results separate rather than calling the
+whole cipher space exhausted: calibrated negatives for plain monoalphabetic,
+standard digraphic, nonstandard escape-count, and short-period fractionation
+models; a completed registered VIC chain-addition scope; a screen-negative
+lag-1 adjacent-difference family; and bounded negatives for exact
+clue-derived masks, keywords, keystreams, and positions.
+
+There is exactly one historically registered incomplete computation: the
+large-dictionary autokey continuation over `[54,250,338,905)` (4,839,135
+pairs), carried forward from Phases 18/144/146. It is genuinely unrun, but no
+authenticated local clue selects its dictionary, autokey convention, or
+range. The audit therefore records it as `partial_compute_unjustified`, not
+as the next admitted experiment. Circular/larger-lag differences, arbitrary
+new alphabets/periods/transpositions, and unspecified DBBI/FAED operators are
+also left open in the ordinary logical sense, but are not finite coverage
+gaps without a sourced parameter choice.
+
+**Verdict:** no clue-supported decoder model remains untested in the
+registered FAED coverage. This is not a claim that every imaginable cipher is
+exhausted. It identifies the actual missing evidence: an authenticated
+binding that selects a FAED transform/alphabet or a definite DBBI/FAED
+relationship. More broad brute force before recovering that binding would
+increase coverage without resolving the ambiguity.
