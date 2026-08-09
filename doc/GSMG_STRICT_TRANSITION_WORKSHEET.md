@@ -204,6 +204,20 @@ the fixed constants `ANTLGHQESHKTPG` and `OQOJWHCJPHZ-US`. It therefore cannot
 serve as the missing consumer without a new source explicitly binding that
 historical tool to the later input.
 
+The creator/operator vocabulary inventory in
+`doc/GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md` adds a separate source-only
+constraint. Sixteen solved-stage operator families were retained only when
+they lead to a recognizable or authenticated result. GSMG normally supplies
+local parameter selectors (`reverse`, Caesar, `BASE64`, case/whitespace
+syntax, “in front,” EBCDIC 1141, a fixed Beaufort key, or an exact hash
+preimage). At the current boundary, those precedents fix **0/7** required G3
+fields: dimensions, placement, traversal, value mapping, aggregation,
+serialization, and target all remain unbound. XOR and beginnings/endings do
+not qualify as demonstrated creator operators. The macro also permits a
+competing `yellow/blue prime lists -> sum list` grammar, matching the existing
+`400/401/73` checkpoint; that ambiguity weakens, rather than fixes, the claim
+that the 31-character string must be the matrix operand.
+
 ## Candidate submission template
 
 Copy this block before implementing a new transition:

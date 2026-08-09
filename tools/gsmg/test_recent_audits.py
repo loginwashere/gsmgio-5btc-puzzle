@@ -11,6 +11,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import cosmic_raw_digest_checkpoint_audit
+import creator_operator_vocabulary_audit
 import dual_channel_consistency_audit
 import first_piece_hamming_control_audit
 import first_piece_bitplane_audit
@@ -707,6 +708,24 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertFalse(report["prime_sum_tool"]["sum_depends_on_grid_bits"])
         self.assertEqual(report["attachment_scan"]["selected31_hits"], ())
         self.assertFalse(report["gate_result"]["historical_code_fixes_transition"])
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists()
+        and (
+            creator_operator_vocabulary_audit.SUPPORT_EXPORT_DIR / "result.json"
+        ).exists()
+        and Path(DEFAULT_HTML).exists(),
+        "solver/support exports or page mirror are unavailable",
+    )
+    def test_creator_operator_vocabulary(self):
+        report = creator_operator_vocabulary_audit.self_test()
+        self.assertEqual(report["solved_operator_count"], 16)
+        self.assertEqual(report["g3_fixed_field_count"], 0)
+        self.assertEqual(report["g3_total_field_count"], 7)
+        excluded = {item["term"] for item in report["excluded_terms"]}
+        self.assertIn("XOR", excluded)
+        self.assertIn("beginnings/endings", excluded)
+        self.assertFalse(report["g3_pass"])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

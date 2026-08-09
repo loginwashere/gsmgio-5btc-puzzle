@@ -14110,3 +14110,60 @@ community mechanics. G2 remains **PASS** for the selected input; G3 and G4
 remain **FAIL**. Do not import the April positional-prime sums as the intended
 transition unless new primary evidence explicitly selects that old tool and
 binds it to the 31-character input.
+
+## Phase 215 -- creator/operator vocabulary inventory: genuine precedents fix 0/7 `matrixsumlist` fields (2026-08-09)
+
+Implemented `tools/gsmg/creator_operator_vocabulary_audit.py` and recorded the
+source analysis in `doc/GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md`. No cipher,
+password, or blob combinations were tested.
+
+The inventory admits an operator only when it produces an independently
+recognizable result or opens a verified solved stage. Sixteen families survive:
+ordered concatenation, MSB-first binary ASCII, clue-selected Caesar, whole-stream
+reverse, Base64, color-to-bit mapping, top-left counterclockwise spiral,
+enter/submit, ordered field concatenation, explicit case/whitespace handling,
+literal prefixing, SHA-256, OpenSSL AES-256-CBC, EBCDIC-1141 plus Beaufort,
+keyed straddling-checkerboard decoding, and hashing concatenated visible text.
+
+The common design property is stronger than any particular operation: earlier
+parameter-changing steps have local selectors. `reverse` is itself decoded;
+Caesar and `BASE64` are named; `aBa/connected enf` fixes byte normalization;
+“add giveit in front” fixes direction and operand; `1141` and
+`THEMATRIXHASYOU` select encoding/cipher details; each successful SHA-256 has
+an exact assembled preimage.
+
+Authenticated current vocabulary includes `yellowblueprimes`,
+`matrixsumlist`, `lastwordsbeforearchichoice`, `yinyang`, `zeroed out`, `first
+or zero`, `sha256 our first hint is your last command`, and `enter`. These are
+real source tokens, but—with the narrow exception that `enter` demonstrably
+separates two equal AES halves—none supplies a complete current consumer.
+`XOR`, beginnings/endings, subtraction/difference, and `BATCH`/execution were
+excluded from the precedent inventory: they are spam-linked or community
+side-readings, not verified solved-stage operators.
+
+Applying the inventory to the exact 31-character transition leaves every G3
+field missing:
+
+```text
+matrix dimensions          MISSING
+input placement            MISSING
+traversal/orientation       MISSING
+symbol-to-number mapping   MISSING
+aggregation                MISSING
+list serialization         MISSING
+next artifact/target       MISSING
+```
+
+The audit also exposes a real grammar ambiguity in creator macro `8446`.
+The current model reads sequential stages—`yellowblueprimes` creates the
+31-character input, then `matrixsumlist` consumes it. An equally economical
+compound reading is “yellow/blue prime lists -> sum list,” naturally matching
+the already verified `400/401/73` checkpoint without making the 31 letters a
+matrix operand. It leaves `matrix` as grid/theme and supplies no downstream
+consumer, so it does not promote that checkpoint. The survival of both
+grammars is itself evidence that G3 is not fixed.
+
+**Verdict:** solved-stage vocabulary constrains style but fixes **0/7** fields
+needed for `matrixsumlist`. Keep the 31-character selection as the priority
+input hypothesis, not as a proven operand binding. A future source must provide
+a local selector comparable to the explicit parameter clues used earlier.
