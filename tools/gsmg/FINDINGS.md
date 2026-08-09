@@ -13924,3 +13924,40 @@ self-derived, and the exact output addresses/token vocabulary are tied to the
 known GitHub/on-chain spam campaign. Keep this as a reproducible negative
 control, not an open solution lead, absent creator provenance or an independent
 validation target.
+
+## Phase 211 -- strict transition worksheet: five mandatory gates freeze promotion and reopening rules (2026-08-09)
+
+Created `doc/GSMG_STRICT_TRANSITION_WORKSHEET.md` to prevent exact but
+underdetermined side-readings from silently becoming instructions, passwords,
+or oracle candidates. Every proposed transition must now record:
+
+1. exact creator/community source justification and provenance class;
+2. one uniquely reconstructible input;
+3. a complete operation with zero remaining orientation/indexing/serialization
+   choices;
+4. a recognizable or independently authenticated output condition;
+5. matched controls, family-wise calibration, threshold, and stop rule.
+
+The worksheet distinguishes structural-audit admission from expensive
+blob/address-oracle admission and defines explicit reopening triggers. New
+primary evidence, a changed load-bearing artifact, a demonstrated historical
+implementation error, or a predating independent target can reopen a row;
+thematic appeal and another exact identity cannot.
+
+Applying the gates leaves one important live boundary: the exact
+31-character DBBI selection is fixed and reaches the authenticated
+`matrixsumlist` clue, but no uniquely sourced consumer operation exists. The
+historical 14x14 row-sum implementation is fully specified and calibrated
+negative. `401/400/73`, `[23,16,7]`, and `yinyang` remain structural/semantic
+checkpoints without executable consumers.
+
+The worksheet explicitly parks or closes `FF67`, `KIT`, `ggn`/secp256k1,
+`BATCH`, `igecabdfh`, `Ce/Fe`, 14/8/1 row mapping, shadow-rail zipping,
+Cardan overlays, DNA translations, and RGB-vector consumers. The reproducible
+COSMIC raw32/MD5 branch is recorded as a negative control that fails source
+and independent-output gates because its keys and vocabulary are mechanically
+linked to the known spam campaign.
+
+**Verdict:** future computation must begin with a completed worksheet row.
+Absent a fixed G3 operation, the correct action is evidence recovery rather
+than transform expansion.

@@ -587,11 +587,20 @@ yellowblueprimes
 - A new creator hint that selects an operation, rather than another large
   unconstrained transform family.
 
+All proposed transitions are now governed by the five-gate admission and
+promotion rules in `doc/GSMG_STRICT_TRANSITION_WORKSHEET.md`. In particular,
+the worksheet keeps the exact 31-character DBBI selection live while parking
+`KIT`, `ggn`, `BATCH`, `igecabdfh`, overlays, DNA, and RGB-vector consumers
+until new evidence fixes their missing operations.
+
 ---
 
 ## Primary Project References
 
 - [`doc/GSMG_PUZZLE.md`](GSMG_PUZZLE.md) — main verified solve record.
+- [`doc/GSMG_STRICT_TRANSITION_WORKSHEET.md`](GSMG_STRICT_TRANSITION_WORKSHEET.md) —
+  five-gate admission, promotion, calibration, and reopening rules for every
+  proposed transition.
 - [`doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md`](GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md) —
   creator-only clues and their current interpretation.
 - [`doc/GSMG_PHASE_BOUNDARY_REAUDIT.md`](GSMG_PHASE_BOUNDARY_REAUDIT.md) —
