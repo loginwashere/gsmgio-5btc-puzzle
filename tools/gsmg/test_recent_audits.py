@@ -8,6 +8,8 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
+import architect_choice_boundary_audit
+import architect_choice_literal_password_audit
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import cosmic_raw_digest_checkpoint_audit
@@ -32,6 +34,7 @@ import matrixsum_dbbi_faed_position_audit
 import matrixsumlist_provenance_refresh_audit
 import matrixsumlist_page_scope_audit
 import matrixsumlist_historical_code_audit
+import minimal_macro_chain_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import onchain_op_return_provenance_audit
@@ -726,6 +729,67 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertIn("XOR", excluded)
         self.assertIn("beginnings/endings", excluded)
         self.assertFalse(report["g3_pass"])
+
+    def test_architect_choice_boundary(self):
+        report = architect_choice_boundary_audit.audit()
+        film = report["sources"]["film"]["moment_to_choice"]
+        screenplay = report["sources"]["screenplay"]["moment_to_choice"]
+        self.assertEqual(film["word_count"], 69)
+        self.assertEqual(screenplay["word_count"], 72)
+        self.assertEqual(
+            report["boundary_checks"]["forward_one_tokens"],
+            ("both", "ultimately", "the"),
+        )
+        self.assertEqual(report["boundary_checks"]["forward_one_edges"], ("but", "hye"))
+        self.assertTrue(report["boundary_checks"]["initials_equal_next_word"])
+        self.assertTrue(
+            report["cross_source"]["moment_to_choice"]["shared_indexed_outputs"][
+                "forward_one"
+            ]
+        )
+        self.assertFalse(report["cross_source"]["moment_to_choice"]["identical_full_scope"])
+
+    def test_architect_choice_literal_password_negative(self):
+        candidates = architect_choice_literal_password_audit.candidates()
+        self.assertEqual(
+            candidates,
+            (
+                "as you adequately put the problem is",
+                "asyouadequatelyputtheproblemis",
+            ),
+        )
+        result = architect_choice_literal_password_audit.oracle_check(
+            candidates, dict(BLOBS, **QUARANTINED_BLOBS)
+        )
+        self.assertEqual(result["tested_keystrings"], 36)
+        self.assertEqual(sum(len(v) for v in result["hits"].values()), 0)
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "Telegram export is unavailable",
+    )
+    def test_minimal_macro_chain_excludes_circular_and_posthoc_steps(self):
+        report = minimal_macro_chain_audit.audit(Path(DEFAULT_EXPORT_DIR) / "result.json")
+        self.assertEqual(report["prime"], 574061)
+        self.assertEqual(report["sum_list"], (23, 16, 7))
+        self.assertEqual(report["edge_rails"], ("but", "hye"))
+        self.assertEqual(
+            report["mirror_state"],
+            {
+                "beginning_a_i": "b",
+                "ending_a_i": "he",
+                "b_mirrors_h": True,
+                "e_is_fixed": True,
+            },
+        )
+        self.assertTrue(report["scope_comparison"]["minimal_prime_operand"]["reaches_macro_yinyang"])
+        self.assertFalse(report["scope_comparison"]["selected_31_operand"]["reaches_macro_yinyang"])
+        # The circular H|YE|BUT construction and the post-hoc VAT/SALVATION
+        # rebus were removed after review -- assert they stay out rather than
+        # silently reappearing in a future edit.
+        self.assertNotIn("post_yinyang_checks", report)
+        self.assertIn("deliberately excluded", report["verdict"])
+        self.assertIn("post-hoc", report["verdict"])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

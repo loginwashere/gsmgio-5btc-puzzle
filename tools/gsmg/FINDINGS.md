@@ -14167,3 +14167,92 @@ grammars is itself evidence that G3 is not fixed.
 needed for `matrixsumlist`. Keep the 31-character selection as the priority
 input hypothesis, not as a proven operand binding. A future source must provide
 a local selector comparable to the explicit parameter clues used earlier.
+
+## Phase 216 -- `BUT/HYE` survives a film-vs-screenplay stress test; literal seven-word boundary phrase is oracle-negative (2026-08-09)
+
+`tools/gsmg/architect_choice_boundary_audit.py` compares the performed film
+subtitles (`the-matrix-reloaded-2003.en.srt`) against the frozen draft
+screenplay (`the-matrix-reloaded-2003.pdf`) for the Architect's speech
+immediately preceding the literal word `choice`. The two sources differ in
+full wording and length (69 words in the film, 72 in the screenplay,
+verified via `pdftotext -layout`), yet forward one-based `[23,16,7]` word
+indexing selects the identical triple in both: `BOTH / ULTIMATELY / THE`,
+giving beginnings `BUT` and endings `HYE`. Independently confirmed directly
+against the SRT: cue 1128 ends `"...the problem is choice."` and the very
+next cue (1129) begins `"But we already know..."` -- `BUT` is the literal
+next spoken word, not an artifact of the extraction. `forward_zero` is also
+stable across both sources but does not hit that boundary; `backward_one`
+and `backward_zero` differ between sources. No other tested convention has
+both properties.
+
+The exact seven-word sentence immediately before `choice`
+(`AS YOU ADEQUATELY PUT THE PROBLEM IS`, source-stable in both film and
+screenplay) was tested as a literal password because seven is the last
+member of `[23,16,7]`:
+`tools/gsmg/architect_choice_literal_password_audit.py` generates 36
+keystrings (spaced/joined forms x `answer_forms`/`keystr_forms`) and tests
+them against all four tracked blobs under CBC (original and extended KDF
+variants), ECB, stream, and AES Key Wrap. **Zero hits.**
+
+**Verdict:** `BUT/HYE` is now a materially stronger reconstruction than
+before -- it survives a real source-drift stress test the single-source
+version could not test, and its `BUT` beginning has an external, source-
+native boundary check unavailable to any other indexing convention. It does
+not yet identify a deterministic consumer, and the literal seven-word
+alternative is closed negative as a direct password.
+
+## Phase 217 -- minimal creator-macro chain reaches `yinyang` via the six-digit prime; VAT/SALVATION and an invented "H|YE|BUT" reading removed after review (2026-08-09)
+
+`tools/gsmg/minimal_macro_chain_audit.py` tests whether the creator macro's
+four-token prefix (`yellowblueprimes -> matrixsumlist ->
+lastwordsbeforearchichoice -> yinyang`, verified against creator message
+`8446`) can be consumed end-to-end by the short six-digit yellow/blue prime
+reconstruction, without importing the 31-character DBBI selection
+(`ncsyangcahiriasogaleafayanestve`) as `matrixsumlist`'s operand:
+
+```text
+yellow=1/blue=0 -> 574061 -> [[5,7,4],[0,6,1]] -> [23,16,7]
+-> BOTH/ULTIMATELY/THE -> BUT/HYE (Phase 216's stress-tested boundary)
+-> a-i symbols b / he -> mirror9: b<->h, e fixed
+```
+
+This reaches the macro's next named state (`yinyang`) using a short,
+mechanically-verified sequence. The 31-character operand does not: it still
+lacks sourced matrix dimensions, placement, letter-value mapping,
+aggregation, or serialization, so it stops before `matrixsumlist` produces
+anything to compare.
+
+**Self-correction during review.** An earlier version of this audit added
+two further steps to make the chain "check itself" after `yinyang`: reading
+`H | YE | BUT` out of the macro's `itsinfrontofyoureyesbut` clause by taking
+the first letters of the words `your`/`eyes`, and reusing the pre-existing
+Phase 96 `PHASE -> VAT -> SALVATION` title rebus as confirmation. Both were
+removed on review:
+
+- the `H | YE | BUT` construction was circular -- the code hardcoded exactly
+  the two words (`your`, `eyes`) whose initials complete the already-known
+  string `HYE`, so the resulting equality was guaranteed by construction and
+  could not fail; it tested nothing independent of the string it was built
+  from.
+- Phase 96's `VAT` reading already documents itself as motivated after
+  noticing the `SalPhaseIon`/`SALVATION` title difference (dropping 3 of 7
+  words from `verylaststepisatruegiveaway` with no independent selection
+  rule) and is oracle-negative (117 keystrings, zero hits). Citing it here
+  as if it were a second, independent confirmation overstated what Phase 96
+  itself already claims.
+
+**Verdict:** the defensible comparison is narrower than first drafted:
+
+```text
+six-digit prime operand -> reaches the BUT/HYE yin-yang recognition state
+31-character DBBI operand -> stops at matrixsumlist, consumer unspecified
+```
+
+The six-digit-prime route is the better current default explanation of the
+macro prefix and should not be displaced by the 31-character selection
+merely because that selection was recovered more recently. This does not
+fix the next instruction: VAT/SALVATION and `H | YE | BUT` are deliberately
+excluded and should not anchor further investigation. The next open
+question is what, if anything, connects the now-stress-tested `BUT/HYE`
+state to DBBI/FAED or the half/better-half material -- not another
+`matrixsumlist` transform.
