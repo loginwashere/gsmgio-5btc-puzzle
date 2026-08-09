@@ -10,6 +10,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
+import cosmic_raw_digest_checkpoint_audit
 import dual_channel_consistency_audit
 import first_piece_hamming_control_audit
 import first_piece_bitplane_audit
@@ -29,6 +30,7 @@ import matrixsum_cumulative_stride_audit
 import matrixsum_dbbi_faed_position_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
+import onchain_op_return_provenance_audit
 import phase32_column_calibration_audit
 import promised_standalone_audit
 import prime_sum_fefe_mask_composition_audit
@@ -51,6 +53,51 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_cosmic_raw_digest_checkpoint_correction(self):
+        report = cosmic_raw_digest_checkpoint_audit.audit()
+        self.assertEqual(
+            report["xor_digest_hex"],
+            cosmic_raw_digest_checkpoint_audit.EXPECTED_XOR_HEX,
+        )
+        self.assertEqual(report["password_lengths"], {"raw32": 32, "hex64": 64})
+        decryptions = report["decryptions"]
+        self.assertTrue(decryptions["raw32_md5"]["valid_padding"])
+        self.assertEqual(decryptions["raw32_md5"]["padding_length"], 1)
+        self.assertEqual(
+            decryptions["raw32_md5"]["payload_sha256"],
+            cosmic_raw_digest_checkpoint_audit.EXPECTED_PAYLOAD_SHA256,
+        )
+        self.assertFalse(decryptions["raw32_sha256"]["valid_padding"])
+        self.assertFalse(decryptions["hex64_md5"]["valid_padding"])
+        self.assertFalse(decryptions["hex64_sha256"]["valid_padding"])
+        matrix = report["matrix"]
+        self.assertEqual(matrix["unused_bits"], "0111010")
+        self.assertEqual(
+            (matrix["S"], matrix["Wr_one_based"], matrix["Wc_one_based"]),
+            (5193, 268603, 268828),
+        )
+        self.assertEqual(
+            (matrix["padding_big_endian"], matrix["padding_little_endian"]),
+            (58, 46),
+        )
+        downstream = report["downstream"]
+        self.assertEqual(downstream["shift_from_unused_bit_count"], 7)
+        self.assertTrue(downstream["all_digits_valid"])
+        self.assertEqual(downstream["decoded_length"], 68)
+        self.assertEqual(
+            downstream["compressed_p2pkh"],
+            cosmic_raw_digest_checkpoint_audit.EXPECTED_ADDRESSES,
+        )
+        self.assertEqual(
+            downstream["compressed_p2pkh"],
+            onchain_op_return_provenance_audit.KNOWN_SCAM_ADDRESSES,
+        )
+        self.assertEqual(downstream["fixed_base38_full_span_offsets"], (7,))
+        uniqueness = report["published_uniqueness_family"]
+        self.assertEqual(uniqueness["attempts"], 210)
+        self.assertEqual(len(uniqueness["padding_valid_hits"]), 1)
+        self.assertEqual(report["calibration"]["valid_padding_forms"], 1)
+
     def test_first_piece_overlay_dna_rgb_gates(self):
         report = first_piece_overlay_dna_rgb_gate_audit.audit()
         self.assertEqual(report["overlay"]["minimum_target_aperture_orientation_family"], 72)

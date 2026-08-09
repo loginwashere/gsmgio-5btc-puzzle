@@ -511,7 +511,7 @@ Direct SALVATION-derived passphrases were negative.
 | Target | Provenance | Current status |
 |---|---|---|
 | `SALPH` | Embedded in the authenticated SalPhaseIon page, with binary `enter` between its halves | **Open** |
-| `COSMIC` | Embedded in the authenticated Cosmic Duality page | **Open** |
+| `COSMIC` | Embedded in the authenticated Cosmic Duality page | **Open**; complete community raw-digest/MD5/103x103/base-38 construction reproducible, but spam-linked and not creator-authenticated |
 | `P32TRAILING` | OpenSSL `Salted__` blob appended to the solved Phase-3.2 plaintext and corroborated by the official puzzle repository | **Open** |
 | `URLBLOB` | Complete Wayback-recovered OpenSSL blob, but described by its source as orphaned and lacking equivalent official corroboration | **Quarantined / open** |
 

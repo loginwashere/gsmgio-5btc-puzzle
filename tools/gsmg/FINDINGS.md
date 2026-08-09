@@ -13788,3 +13788,139 @@ firsthand in the Claude session's case, where the Phase-186-to-188
 hypotheses came from and make their graphical routing inspectable, while
 all exact-color and consumer claims retain their existing
 verified/provisional status.
+
+## Phase 210 -- `4f7a1e4e` COSMIC correction: complete raw32/MD5/103x103/base-38 community pipeline reproduces (2026-08-09)
+
+The latest Telegram export contains an important same-day falsification and
+retraction. In message `68249`, MrNobody reported that the seven-token XOR
+digest failed to open COSMIC under MD5 or SHA-256. In message `68259`, after
+Rick Luminari supplied code, he identified the mistake: the failed command
+passed the 64-character digest hex as password text, whereas the published
+construction passes the 32 raw digest bytes to the KDF.
+
+`tools/gsmg/cosmic_raw_digest_checkpoint_audit.py` now freezes that distinction
+against this project's authenticated COSMIC blob. XORing SHA-256 digests of:
+
+```text
+matrixsumlist
+enter
+lastwordsbeforearchichoice
+thispassword
+matrixsumlist
+yourlastcommand
+secondanswer
+```
+
+reproduces the 32-byte value:
+
+```text
+a795de117e472590e572dc193130c763e3fb555ee5db9d34494e156152e50735
+```
+
+The complete immediate four-form control is:
+
+```text
+raw32 + md5     valid PKCS7 01 -> 1327 bytes -> 4f7a1e4e...c081
+raw32 + sha256  invalid terminal 66
+hex64 + md5     invalid terminal d9 -> raw hash 5654a394...a1c2
+hex64 + sha256  invalid terminal f8 -> raw hash 4edce289...1b7
+```
+
+The two hex-text raw hashes reproduce message `68249`'s failed results,
+diagnosing the earlier project's mistake directly. Raw32+MD5 produces the
+full checkpoint:
+
+```text
+4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081
+```
+
+The first 10,609 payload bits, MSB-first and row-major in a 103x103 matrix,
+leave seven bits `0111010` and independently reproduce three quoted
+invariants:
+
+```text
+S  = 5193
+Wr = 268603  (one-based; zero-based 263410)
+Wc = 268828  (one-based; zero-based 263635)
+```
+
+The original public repository was fetched at commit
+`8f47839251a8b49e67a41ecb8d964fddd5e9270c` (2025-09-15). Its
+`solver_salphasion_cosmic.py` explicitly applies `unhexlify()` before MD5
+EVP_BytesToKey, proving that the raw-byte representation was in the published
+implementation. Its 210-member `p5 x p6 x p7` validation family has exactly
+one padding-valid tuple, the published one; a random family this large expects
+about `210/255 = 0.824` such members, so this is reproducibility rather than a
+strong statistical authentication.
+
+GitHub issue `puzzlehunt/gsmgio-5btc-puzzle#81` supplies the previously missing
+downstream definition. The seven unused bits give `p_big=58` and, reversed,
+`p_little=46`. Then:
+
+```text
+s[i] = row_sum[i] + col_sum[(i+7) mod 103]
+digit[i] = s[i] - 80
+103 base-38 digits -> one fixed 68-byte big-endian integer
+```
+
+This reproduces a full `0..37` digit range and the complete split:
+
+```text
+half        0423d9115a1dc756d5d08d2de880ab508bd4745fc97709f4fcb513f2cb8fcc35
+better_half 48cc46e66bdd36b09ae344552f606a761f9d90681f20dfefe2b43db18b623971
+tail        fc0c1b02
+```
+
+Compressed-mainnet P2PKH derivation reproduces the two claimed addresses
+`1JG648yaB7Wp2dpUfcZoRSD4q35oq47vCu` and
+`145ZQ9siLrsXBKf465wjdyQYAP5dRwhRhQ`. Neither is the GSMG prize address.
+Among all 103 cyclic row/column offsets, 15 stay within the fixed `80..117`
+base-38 interval; shift 7 is uniquely the one spanning both endpoints. That is
+a real internal property, but shift 7 is the mechanically available leftover
+bit count and the offset/base may have been chosen after viewing the range.
+
+This materially corrects only `doc/GSMG_PUZZLE.md`'s 2026-07-12 technical
+claim that the checkpoint could not be regenerated. It does not reverse the
+separately established fabrication provenance. The same hash, XOR result, and
+two addresses recur through at least nine GitHub issues plus bitcointalk in a
+mutually citing network; issue #88's six participating accounts supplied no
+derivation code in that thread; and issue #17's `pawel-mar` independently
+warned that much of the shared code was LLM-produced and that the AES stage had
+not actually been solved. Reproducibility and fabrication are not opposites:
+a post-hoc construction selected for padding validity should reproduce once
+its exact byte representation and KDF are supplied.
+
+Calibration prevents the opposite overcorrection. The unpadded output has
+Shannon entropy `7.870209989` bits/byte and strict ASCII ratio `0.388847`.
+Random PKCS#7 validity has exact probability `sum(256^-k, k=1..16)`, about
+`0.003921569` or one in 255. The checkpoint hash and matrix invariants were
+published from the same output and are consistency checks, not independent
+authentication. MD5 also differs from the SHA-256 KDF used by the verified
+Phase-3.2 positive control.
+
+Most importantly, the addresses are not merely unrelated outputs. Phase 156's
+independent on-chain audit identifies these exact two addresses as the
+dominant input signers behind 88 of 105 human-readable OP_RETURN/dust messages
+sent to the genuine GSMG addresses. Zero of all 105 transactions was signed by
+a creator-controlled input. The graffiti includes the literal string
+`matrixsumlistenterlastwordsbeforearchichoicethispassword`, mechanically
+linking the spam campaign's keys and vocabulary to this checkpoint
+construction. This evidence predates and is independent of the corrected
+raw-versus-hex decryption.
+
+The entire advertised community pipeline is therefore mechanically verified,
+including `p_big/p_little`, base 38, 68-byte output, split, and address
+derivation. What remains unverified is its interpretation: no independent
+creator clue selects the matrix consumer or authenticates those two fields as
+private keys, and no branch reaches the real prize address.
+
+Full report: `doc/GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md`.
+
+**Verdict:** promote exact reproducibility of the complete published branch and
+retract only the project's representation-based claim that its checkpoint was
+unreproducible. Preserve the stronger overall fabrication judgment: the
+payload is random-shaped, padding is weak, all downstream checks are
+self-derived, and the exact output addresses/token vocabulary are tied to the
+known GitHub/on-chain spam campaign. Keep this as a reproducible negative
+control, not an open solution lead, absent creator provenance or an independent
+validation target.

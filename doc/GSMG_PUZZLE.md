@@ -290,39 +290,57 @@ correction below)
   fabricated terminology that good-faith researchers (marcofortina, ektemfg) have been
   chasing in good faith. Not recommended as a lead.**
 
-  **Update (2026-07-12): traced the root of this fabrication to a specific, directly
-  disproven claim — no longer just circumstantial.** Issue #88 (opened 2026-03-29, most
-  recent comment 2026-07-11 — still actively growing) is the continuation of this same
-  thread, now with **six** mutually-citing accounts (`andersonbig`, `WabiLipa`,
-  `marcofortina`, `valleytainment`, `robotixcoder`, `zemnovodnuy`) layering ever more
-  jargon on top (`Chain4`, `row1-4`, `Door-2 LCP7`, etc.) — but not one of them ever
-  posts actual derivation code; every message is some form of "I've confirmed X, how did
-  you get Y?" The very first "confirmed" claim in the thread —
-  `cosmic_correct.bin SHA256 = 4f7a1e4e... (via XOR_KEY a795de11...)` — is the **exact
-  same hash and XOR key** as the `jackdevs66/GSMG5_CDuality` repo (linked from a separate
-  fake "SOLVED" issue, #55) that this project independently tested and disproved this
-  session: recomputing the described 7-password XOR-of-SHA256-digests key reproduces
-  their claimed hex key exactly (confirming the arithmetic is internally consistent), but
-  actually decrypting the real Cosmic blob with it fails PKCS7 padding under every
-  reasonable interpretation, and the two forms that superficially pass produce obvious
-  binary garbage (~37-39% printable, nowhere near the real >85% bar). So this entire
-  six-account thread rests on a root claim we've directly falsified with working code —
-  not merely suspicious jargon and amplification patterns as before. On-chain balance
-  re-confirmed unchanged (1.2563451 BTC) same session. Don't re-investigate this thread
-  again without a genuinely new, independently-reproducible artifact (real derivation
-  code, not another citation of the same unverifiable hash).
+  **The fabrication-provenance evidence remains material.** Issue #88 grew into a
+  six-account mutually-citing thread (`andersonbig`, `WabiLipa`, `marcofortina`,
+  `valleytainment`, `robotixcoder`, `zemnovodnuy`) layering `Chain4`, `row1-4`,
+  `Door-2 LCP7`, and similar terms onto the same root. Within that thread nobody
+  supplied derivation code; the recurring pattern was “I've confirmed X, how did you
+  get Y?” The same checkpoint hash, XOR result, and two claimed addresses recur across
+  at least issues #55, #69, #72, #79, #80, #81, #88, #91, #92 and the associated
+  bitcointalk post. That is one dependent citation network, not independent
+  convergence. In issue #17, `pawel-mar` independently warned that “a lot of the code
+  shared here was implemented by LLMs” and that “no one has actually decrypted the
+  AES.” Those observations are not negated merely because one published construction
+  can regenerate its own checkpoint.
 
-  **Update (2026-07-12): full issue-tracker sweep confirms this is one fabrication, not
-  several.** The same fake hash and the same two recycled-but-unrelated Bitcoin
-  addresses (`1JG648yaB7Wp2dpUfcZoRSD4q35oq47vCu` / `145ZQ9siLrsXBKf465wjdyQYAP5dRwhRhQ`)
-  appear across at least 10 separate issues/threads over many months (#55, #69, #72,
-  #79, #80, #81, #88, #91, #92, plus the bitcointalk post above) — one single fabricated
-  root propagating through repeated mutual citation, not independent convergence. A
-  comment on issue #17 (`pawel-mar`) independently corroborates two of this project's
-  own findings without prompting: "a lot of the code shared here was implemented by
-  LLMs" and "no one has actually decrypted the AES... the key phases are still
-  unresolved." Any future issue citing this hash or these addresses can be dismissed on
-  this consolidated pattern alone.
+  **Correction (2026-08-09): the checkpoint is reproducible; the 2026-07-12
+  falsification was a password-representation error.** The earlier audit passed the
+  64-character hexadecimal rendering of `a795de11...e50735` as password text. The
+  published construction uses those 32 values as raw binary password bytes and the
+  legacy MD5 `EVP_BytesToKey` KDF. Re-running the authenticated 1,344-byte COSMIC
+  envelope under that exact interpretation gives valid one-byte PKCS#7 padding, a
+  1,327-byte payload, and the quoted SHA-256
+  `4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081`.
+  Its first 10,609 bits, read MSB-first into a 103x103 matrix, also reproduce the
+  published `S=5193`, one-based `Wr=268603`, and `Wc=268828`. Telegram messages
+  `68249`/`68259` exposed the raw-versus-hex mistake; this project then reproduced it
+  independently in `tools/gsmg/cosmic_raw_digest_checkpoint_audit.py`. Full report:
+  `doc/GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md`. The original public commit
+  `8f47839251a8b49e67a41ecb8d964fddd5e9270c` explicitly uses `unhexlify()` before
+  MD5, confirming that raw bytes were part of the published implementation rather
+  than a later repair.
+
+  This retracts **only** “the checkpoint cannot be reproduced.” Reproducibility does
+  not rebut fabrication: a construction selected for a padding-valid result should
+  reproduce once its exact bytes and KDF are known. Here the output is high-entropy
+  binary garbage (7.87 bits/byte; 38.8847% strict ASCII), valid padding occurs about
+  once per 255 random decryptions, MD5 conflicts with the SHA-256 KDF used by the
+  verified phase, and every later hash/invariant descends from that same output rather
+  than an independent target.
+
+  The complete public downstream construction also reproduces: seven leftover bits
+  give `p_big=58`/`p_little=46`; shift-7 row-plus-column sums fill base-38 digits
+  `0..37`; the 68-byte result splits into two 32-byte values plus four trailing bytes;
+  and those values reproduce `1JG648ya...` and `145ZQ9si...`. Crucially, Phase 156
+  independently identifies those exact addresses as the dominant input signers behind
+  88 of 105 third-party OP_RETURN spam transactions sent to the genuine GSMG addresses.
+  The spam includes the literal bait
+  `matrixsumlistenterlastwordsbeforearchichoicethispassword`, mechanically linking the
+  campaign to this construction's token vocabulary. Zero of those transactions was
+  signed by a creator-controlled key. Thus the corrected overall verdict is:
+  **mechanically reproducible, but still strongly supported as a fabricated/community
+  spam construction rather than a creator-authenticated puzzle solution.** The actual
+  prize address remains untouched.
 
 ---
 
