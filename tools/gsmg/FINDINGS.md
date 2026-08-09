@@ -13961,3 +13961,59 @@ linked to the known spam campaign.
 **Verdict:** future computation must begin with a completed worksheet row.
 Absent a fixed G3 operation, the correct action is evidence recovery rather
 than transform expansion.
+
+## Phase 212 -- `matrixsumlist` provenance refresh: no unique consumer through the 2026-08-09 export (2026-08-09)
+
+Implemented `tools/gsmg/matrixsumlist_provenance_refresh_audit.py` and recorded
+the source-by-source result in
+`doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md`. This is an evidence audit, not
+another transform sweep.
+
+The complete 57,729-message Telegram export contains 294 ordinary-text hits
+for `matrixsumlist`, but zero are creator-authored. The creator's message
+`8446` remains decisive provenance for the *literal instruction*: reversing
+the full 1,288-bit stream reproduces the continuous macro clue beginning
+`yellowblueprimesmatrixsumlist...`. Neither that bitstream nor any creator
+message supplies matrix dimensions, traversal, indexing, character values,
+sum type, or the exact scope between DBBI and FAED. The creator also never
+posts Denis's exact 31-character selection.
+
+The recovered guide does supply one complete historical mechanic for its own
+DBBI construction, but the direct reply evidence limits it sharply. Its author
+admits the segmentation was chosen “To match all prime positions,” says he
+does not have the corresponding FAED pattern, and later reports “nothing
+more.” Its 14x14 row-sum output `IZLKESEEDQPPEN` does not consume
+`ncsyangcahiriasogaleafayanestve` or open an authenticated stage.
+
+A distinct community artifact was recovered from Telegram message `33950`
+(2024-12-10), attachment `files/696783482-puzzle-1.txt`, SHA-256
+`b6cbab2b55a83e1bbd993c33596b4d732155a8fe9e26c1a922cb8db3de63f0c5`.
+It explicitly defines a matrix sum list as `row_sums + col_sums`. This is real
+provenance for a community interpretation, but it uses a different large
+input, contains none of the selected 31 characters, differs from the later
+guide's row-only operation, and has no creator selection.
+
+The Phase-3.2.1 plaintext remains the source of “YOUR LIFE IS THE SUM”: one
+`SUM`, zero `MATRIX`, zero `CHOICE`. The transcribed *Cosmic Duality* book has
+zero relevant phrase hits and retains the genuine physical pages 57–58 gap.
+Direct inspection of source photograph `Screenshot from 2026-07-12
+14-44-39.png` (SHA-256
+`19c3ccfd31257d9832884d1d7a1011cf44423e2903c6c51bb5f831a761cbeaa8`)
+shows printed p.56 beside printed p.59, confirming that p.57–58 are the
+unphotographed inner faces of the closed gatefold rather than an OCR omission.
+That gatefold is still worth recovering, but missing evidence cannot be filled
+with a guessed operation.
+
+Finally, the valid incremental export through 2026-08-09 12:35:14 adds five
+relevant community messages: multipart password assembly (`67787`),
+`we won't -> we will -> rockyou.txt` (`67789`), an unspecified pairing of
+`matrixsumlist` with `enter` (`68021`), a joke (`68057`), and the disputed
+COSMIC checkpoint pipeline (`68249`). None is creator-authored or fixes a
+complete consumer.
+
+**Verdict:** G1 passes for the literal instruction and G2 passes for the exact
+31-character input. G3 and G4 still fail; G5 remains partial. Keep this as the
+only important live transition, but do not run another transform or oracle
+until primary evidence leaves exactly one operation. Highest-value next
+actions are recovery of book pages 57–58 and a targeted request for a
+pre-output source fixing dimensions, traversal, values, and sum semantics.

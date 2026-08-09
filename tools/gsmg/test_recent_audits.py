@@ -28,6 +28,7 @@ import first_piece_overlay_dna_rgb_gate_audit
 import first_piece_border_raster_scan_audit
 import matrixsum_cumulative_stride_audit
 import matrixsum_dbbi_faed_position_audit
+import matrixsumlist_provenance_refresh_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import onchain_op_return_provenance_audit
@@ -659,6 +660,23 @@ class CorrectedClaimTests(unittest.TestCase):
             tuple(row["id"] for row in report["inventory"]),
             binary_message_export_audit.EXPECTED_MESSAGE_IDS,
         )
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists()
+        and (
+            matrixsumlist_provenance_refresh_audit.LATEST_EXPORT_DIR
+            / "result.json"
+        ).exists(),
+        "full or incremental Telegram export is unavailable",
+    )
+    def test_matrixsumlist_provenance_refresh(self):
+        report = matrixsumlist_provenance_refresh_audit.self_test()
+        self.assertEqual(
+            report["latest_export"]["relevant_ids"],
+            matrixsumlist_provenance_refresh_audit.EXPECTED_LATEST_RELEVANT_IDS,
+        )
+        self.assertEqual(report["creator"]["literal_matrixsumlist_message_ids"], ())
+        self.assertEqual(report["gates"]["G3_operation"][:4], "FAIL")
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

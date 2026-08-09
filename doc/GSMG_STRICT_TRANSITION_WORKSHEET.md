@@ -132,7 +132,7 @@ community accounts is not a reopening condition.
 
 | Candidate transition | G1 source | G2 input | G3 operation | G4 output | G5 controls | Current disposition | Reopen trigger |
 |---|---|---|---|---|---|---|---|
-| 31-character DBBI selection -> `matrixsumlist` consumer | **PASS**: authenticated clue boundary plus recovered prime/color construction | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no selected consumer operation | **FAIL**: no next-stage artifact | **PARTIAL**: many bounded consumers negative | **Only important live transition; no computation yet** | Creator/community primary evidence naming the operation |
+| 31-character DBBI selection -> `matrixsumlist` consumer | **PASS** for the literal instruction; proposed mechanics remain community-only | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no source fixes dimensions, traversal, values, or sum/index semantics | **FAIL**: no next-stage artifact | **PARTIAL**: many bounded consumers negative | **Evidence refreshed through 2026-08-09; live but blocked at G3** | Primary evidence fixing the complete operation, including the missing book pages 57–58 |
 | Historical 14x14 DBBI row sums -> `IZLKESEEDQPPEN` | **PASS**: recovered Telegram guide | **PASS**: exact matrix/token chunks | **PASS** for historical row-major sums | **FAIL**: non-language; opens no target | **PASS**: directions and Caesar family calibrated; `p≈0.119`/`0.713` | **Closed negative** | New clue selecting a distinct consumer, not another direction |
 | Prime lists -> `401/400/73` | **PARTIAL**: exact prime walk and literal list grammar, but alternative to historical guide | **PASS**: 14 blue, 8 yellow, 1 FEFE lists | **PASS**: partition and sums are fixed | **FAIL**: no instruction/key or downstream consumer | **PASS**: fixed-profile rate documented; FE normalization shown dependent | **Structural checkpoint only** | Explicit clue consuming the three sums |
 | Decimal matrix -> `[23,16,7]` -> Architect words | **PASS** for matrix sums and sourced dialogue | **PASS**: fixed matrix/list and scene | **PARTIAL**: word indexing fixed; beginnings/endings and polarity are not | **PARTIAL**: `BUT/HYE` thematic, no authenticated consumer | **PASS**: associated FAED `{h,e}` model negative | **Recognition checkpoint; parked** | Clue selecting beginnings/endings or B↔H operation |
@@ -175,6 +175,13 @@ The following do **not** fill that gap:
 The next valid evidence would look like a recovered guide step, creator reply,
 code predating the output, or another authenticated artifact that uniquely
 fixes matrix dimensions, traversal, and operation.
+
+The 2026-08-09 provenance refresh is recorded in
+`doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md`. It checked the full Telegram
+export, the newest incremental export, the recovered guide neighborhood, a
+2024 community code attachment, the walkthrough history, and the transcribed
+*Cosmic Duality* book. None fixes G3. The only genuine uninspected source in
+that set is the physical book's pages 57–58 gatefold.
 
 ## Candidate submission template
 

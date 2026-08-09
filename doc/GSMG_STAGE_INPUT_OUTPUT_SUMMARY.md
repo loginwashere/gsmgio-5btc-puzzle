@@ -593,6 +593,14 @@ the worksheet keeps the exact 31-character DBBI selection live while parking
 `KIT`, `ggn`, `BATCH`, `igecabdfh`, overlays, DNA, and RGB-vector consumers
 until new evidence fixes their missing operations.
 
+The dedicated provenance refresh in
+`doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md` extends that evidence check
+through the 2026-08-09 Telegram export. It found no creator-authored fixing
+instruction: the recovered guide uses row sums on a different DBBI object, a
+2024 community attachment defines row-plus-column sums on a different input,
+and the newest posts add only incompatible community theories. The transition
+therefore remains blocked specifically at G3.
+
 ---
 
 ## Primary Project References
@@ -601,6 +609,8 @@ until new evidence fixes their missing operations.
 - [`doc/GSMG_STRICT_TRANSITION_WORKSHEET.md`](GSMG_STRICT_TRANSITION_WORKSHEET.md) —
   five-gate admission, promotion, calibration, and reopening rules for every
   proposed transition.
+- [`doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md`](GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md) —
+  source-by-source audit of the remaining G3 operation gap through 2026-08-09.
 - [`doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md`](GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md) —
   creator-only clues and their current interpretation.
 - [`doc/GSMG_PHASE_BOUNDARY_REAUDIT.md`](GSMG_PHASE_BOUNDARY_REAUDIT.md) —
