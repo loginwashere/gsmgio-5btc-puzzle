@@ -108,7 +108,7 @@ chain; it is not a transcript of every creator message.
 | Reversed 1,288-bit message | Fixes the macro order from `yellowblueprimes` through `promised` |
 | “Yin-yang” is the next/reached phase | Supports a state or relationship, not necessarily a literal password |
 | “It's in front of your eyes but you're not seeing it” | Authenticated endgame instruction; exact operand remains unresolved |
-| “Very last step is a true giveaway” | Supplies `VAT` for the title rebus and says the final operation should become obvious |
+| “Very last step is a true giveaway” | Final-ease/recognition cue. The former `VAT` subset was post-hoc (Phase 217), while `T -> SaltPhaseIon` is independently resonant but not source-unique among literal `true`-letter insertions (Phase 222). |
 | “Regular Bitcoin Private key” | Fixes the final output type |
 
 ### Stage 0 — Follow the White Rabbit
@@ -489,7 +489,7 @@ native-symbol complement alignment of DBBI against FAED is negative
 (`p=0.459`, replicated at `p=0.455`), and `SALON` has no creator-confirmed
 referent or operation.
 
-The title supports the exact textual rebus:
+The title admits the following historical textual rebus:
 
 ```text
 SalPhaseIon
@@ -498,7 +498,9 @@ replace PHASE with VAT
 -> SALVATION
 ```
 
-`VAT` is supplied by “Very [last step is] A True giveaway.” The creator typo
+Phase 217 corrected the evidentiary status: `VAT` drops three of the seven
+words with no source-selected subset and was motivated after the title target
+was noticed, so it is not treated as supplied by the clue. The creator typo
 `salphation` can also be element-parsed so that `PH -> V` yields the familiar
 `[23,16,7]` atomic-number relation, but chemistry lacks an independent
 creator clue. Treat the atomic-number reading as suggestive, not established.

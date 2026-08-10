@@ -11286,6 +11286,13 @@ searched, not merely used as a check-target for other words' anagrams.
 
 ## Phase 169 -- `SalPhaseIon + T -> SaltPhaseIon`: exact new synthesis; bounded first constructions negative, structural branch remains open (2026-08-08)
 
+**Later evidentiary correction (Phase 222):** the decoded macro is lowercase,
+so the capital `T` described below is editorial. A complete 48-member
+`true`-letter/insertion-position family produces six dictionary-valid
+three-word titles (including two at the original `Sal|Phase` boundary).
+Retain SaltPhaseIon as independently resonant with `Salted__`, but not as a
+uniquely instructed letter extraction.
+
 Fresh breadth-first observation: inserting exactly one `T` after the visible
 `Sal` in the authenticated title produces an exact new segmentation:
 
@@ -14391,3 +14398,42 @@ a Phase-217/circularity notice in its opening lines.
 **Verdict:** BUT/HYE remains a robust recognition checkpoint and mirror9
 supplies a limited `b/h`, fixed-`e` relation. Neither supplies a post-yinyang
 operator. The repository's active evidence chain now says this consistently.
+
+## Phase 222 -- macro tail does not uniquely supply `T`; SaltPhaseIon retained as bounded recognition (2026-08-10)
+
+Revisited Phase 169's `SalPhaseIon + T -> SaltPhaseIon` observation under the
+same anti-circularity standard applied in Phase 217. The creator's reversed
+binary macro is entirely lowercase, including `atruegiveaway`; the capital
+`T` in the former explanation was editorial rather than authored.
+
+`tools/gsmg/macro_tail_title_insertion_audit.py` gives all four distinct
+letters of literal `true` equal treatment at every one of the twelve insertion
+positions in `salphaseion` (48 fixed candidates), then enumerates every exact
+three-word segmentation in the frozen 104,334-line system dictionary. Six
+survive:
+
+```text
+salt | phase  | ion
+sal  | phrase | ion
+sal  | phase  | iron
+saul | phase  | ion
+seal | phase  | ion
+sale | phase  | ion
+```
+
+Even the original `Sal | Phase` boundary leaves two readings: `Salt` from `t`
+and `Sale` from `e`. Therefore neither the letter nor insertion point is
+source-unique. Choosing the initial of `true` would add the same kind of
+unspoken initial-letter rule that the corrected chain now refuses to import.
+
+The salt reading remains stronger than its five rivals after enumeration:
+all authenticated OpenSSL envelopes provide an independent, concrete
+`Salted__` referent at their decoded front. This supports recognition, not an
+operation. Phases 169–175 already found no working literal salt password/key,
+simple XOR, selector, or fixed guide/frame consumer.
+
+**Verdict:** retain `Salt | Phase | Ion` as a bounded and independently
+resonant recognition clue, but downgrade “a True giveaway gives T” from an
+exact instruction to a post-enumeration selection. It does not bind FAED,
+DBBI, or a blob decoder without a new rule choosing the letter/position and a
+specific salt consumer.

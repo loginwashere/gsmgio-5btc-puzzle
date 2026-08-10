@@ -35,6 +35,7 @@ import matrixsum_dbbi_faed_position_audit
 import matrixsumlist_provenance_refresh_audit
 import matrixsumlist_page_scope_audit
 import matrixsumlist_historical_code_audit
+import macro_tail_title_insertion_audit
 import minimal_macro_chain_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
@@ -857,6 +858,25 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(report["forbidden_rebus_forms_present"], ())
         self.assertEqual(len(report["corrected_legacy_documents"]), 6)
         self.assertIn("no post-yinyang operator", report["verdict"])
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists()
+        and macro_tail_title_insertion_audit.DEFAULT_DICTIONARY.exists(),
+        "page mirror or frozen system dictionary is unavailable",
+    )
+    def test_macro_tail_does_not_uniquely_give_t_to_title(self):
+        report = macro_tail_title_insertion_audit.audit()
+        self.assertEqual(report["macro_authored_case"], "lowercase")
+        self.assertEqual(report["family_size"], 48)
+        self.assertEqual(report["valid_reading_count"], 6)
+        self.assertEqual(len(report["original_camel_boundary_readings"]), 2)
+        self.assertEqual(len(report["salt_readings"]), 1)
+        self.assertEqual(len(report["authenticated_envelope_tags"]), 3)
+        self.assertEqual(report["quarantined_envelope_tags"], ("URLBLOB",))
+        self.assertEqual(
+            report["selection_status"],
+            "recognizable_after_enumeration_but_not_source_unique",
+        )
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

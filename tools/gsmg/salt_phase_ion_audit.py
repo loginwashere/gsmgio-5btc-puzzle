@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Bounded audit of the ``SalPhaseIon + T -> SaltPhaseIon`` hypothesis.
 
-This is a clue-driven construction audit, not a dictionary search.  It keeps
+This is a clue-driven construction audit, not a dictionary search. Phase 222
+later established that the lowercase source word ``true`` does not uniquely
+select either ``T`` or its insertion point; the SaltPhaseIon reading below is
+therefore a bounded recognition hypothesis, not an exact creator instruction.
+It keeps
 six exact observations together:
 
-* ``SalPhaseIon`` becomes ``SaltPhaseIon`` by receiving the ``T`` from the
-  creator's "a True giveaway" wording;
-* every authenticated encrypted target visibly starts with OpenSSL's
-  ``Salted__`` envelope;
+* ``SalPhaseIon`` becomes ``SaltPhaseIon`` under the candidate ``T`` reading
+  of the creator's lowercase "a true giveaway" wording;
+* every authenticated encrypted target's visible Base64 prefix decodes to
+  OpenSSL's ``Salted__`` envelope;
 * the first-piece color values are exact complementary 24-bit masks;
 * SALPH/P32 have 80-byte ciphertext bodies with natural matrix layouts;
 * the prime-walk output is 31 bytes, one byte short of a Bitcoin scalar; and
