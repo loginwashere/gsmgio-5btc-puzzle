@@ -14785,3 +14785,39 @@ text around `password` supplies only grammatical pointer words, not a
 non-placeholder password value or independent consumer binding. No oracle
 expansion follows. Reopen only if primary evidence fixes how many characters
 or words “in front” selects, or identifies the pointed-to object.
+
+## Phase 232 -- full endings rail partially mirrors from HYE to BYE (2026-08-10)
+
+Found and calibrated one compact consequence missed by the earlier rail
+audits. Apply the established mirror9 involution to `a-i` symbols in the full
+endings rail while passing the out-of-alphabet `Y` unchanged:
+
+```text
+HYE -> BYE
+```
+
+This avoids simply discarding `Y`. Across all 48 cross-source-stable ordered
+triples whose initials are `BUT`, the partial-mirror finals produce 18 distinct
+values. Exactly five rows produce a dictionary word, and the only distinct
+dictionary output is `BYE`; all five have original finals `HYE`. The fixed
+`[23,16,7] -> BOTH/ULTIMATELY/THE` row is one of them. Across all 35,904 stable
+triples, 36 produce `BYE`, and only one of the six permutations of the fixed
+three positions produces any dictionary word—the authored order.
+
+The result is therefore a strong recognition candidate, not arbitrary word
+spotting. It is still not transition proof: preserving `Y` while mirroring only
+`a-i`, and transforming the non-English endings rail while leaving the already
+validated `BUT` rail intact, are natural but unauthenticated conventions.
+`BYE` fits “your last command” as termination language, and the authenticated
+Phase 3.2.1 text ends `CIAO BELLA O`, but neither supplies a creator-selected
+command environment or operator. The creator's nearby 2026 sign-off predates
+the extraction and is not confirmation.
+
+The rarity gate authorized one bounded oracle family: 18 established raw,
+SHA-256, double-SHA-256, case, LF, and CRLF keystrings for `BYE` against all
+four tracked blobs under CBC, ECB, stream modes, and Key Wrap. Result: zero
+hits.
+
+**Verdict:** retain `HYE -> BYE` as the strongest new use of the full rail.
+It improves the recognition model but does not authenticate the polarity rule,
+open a blob, or establish a DBBI/FAED decoder.

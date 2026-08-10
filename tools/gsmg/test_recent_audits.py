@@ -10,6 +10,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 import architect_choice_boundary_audit
 import architect_choice_literal_password_audit
+import architect_hye_bye_audit
 import architect_yinyang_distinctiveness_audit
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
@@ -72,6 +73,20 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_architect_hye_partial_mirror_gives_bye_but_no_blob_hit(self):
+        report = architect_hye_bye_audit.audit()
+        controls = report["structural"]["controls"]
+        self.assertEqual(
+            report["structural"]["fixed"]["partial_mirror_finals"],
+            "bye",
+        )
+        self.assertEqual(controls["but_rows"], 48)
+        self.assertEqual(controls["distinct_partial_mirror_outputs_given_but"], 18)
+        self.assertEqual(controls["dictionary_outputs_given_but"], ("bye",))
+        self.assertFalse(report["structural"]["operation_authored"])
+        self.assertEqual(report["oracle"]["keystring_count"], 18)
+        self.assertEqual(report["oracle"]["total_hits"], 0)
+
     @unittest.skipUnless(
         Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
         "complete puzzle-solvers export is unavailable",

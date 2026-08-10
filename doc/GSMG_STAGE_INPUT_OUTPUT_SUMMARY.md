@@ -437,6 +437,13 @@ Beginnings give `BUT`; endings give `HYE`. A B↔H mirror around E resembles a
 yin-yang/polarity checkpoint, but no creator-authored operation confirms it,
 and the associated FAED `{h,e}` monoalphabetic hypothesis is negative.
 
+Phase 232 preserves rather than drops the endings rail's out-of-alphabet
+letter: mirror `a-i` symbols and pass `Y` unchanged, giving `HYE -> BYE`.
+`BYE` is the sole dictionary output among all 48 cross-source-stable `BUT`
+controls, so it is a real recognition improvement. It is not promoted to a
+transition: the selective pass-through/endings-only convention is not authored,
+and 18 bounded direct/SHA keystrings produce zero hits across all four blobs.
+
 The immediate unresolved question remains:
 
 > What exact, creator-supported operation does `matrixsumlist` apply to the
