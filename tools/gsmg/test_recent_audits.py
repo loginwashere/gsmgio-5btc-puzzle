@@ -11,6 +11,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 import architect_choice_boundary_audit
 import architect_choice_literal_password_audit
 import architect_hye_bye_audit
+import architect_passage_residual_audit
 import architect_yinyang_distinctiveness_audit
 import binary_message_export_audit
 import bye_ciao_provenance_audit
@@ -129,6 +130,31 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertFalse(report["structural"]["operation_authored"])
         self.assertEqual(report["oracle"]["keystring_count"], 18)
         self.assertEqual(report["oracle"]["total_hits"], 0)
+
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists()
+        and architect_passage_residual_audit.SUPPORT_RESULT.exists(),
+        "one or both pinned Telegram exports are unavailable",
+    )
+    def test_architect_passage_residual_checks_stay_negative(self):
+        report = architect_passage_residual_audit.audit()
+        provenance = report["screenplay_provenance"]
+        self.assertTrue(provenance["temporary"]["in_screenplay"])
+        self.assertFalse(provenance["temporary"]["in_film_dialogue"])
+        self.assertFalse(provenance["now_to_word_order"]["matches_screenplay"])
+        self.assertTrue(provenance["now_to_word_order"]["matches_film"])
+        self.assertFalse(
+            report["creator_tone_search"]["passage_specific_commentary_found"]
+        )
+        self.assertTrue(
+            report["coverage_census"]["keynote"]["checkerboard_keyword_dictionary_sweep"]
+        )
+        self.assertFalse(
+            report["coverage_census"]["selfself"]["checkerboard_keyword_dictionary_sweep"]
+        )
+        self.assertEqual(report["bounded_direct_password_check"]["blob_count"], 4)
+        self.assertEqual(report["bounded_direct_password_check"]["grand_total_hits"], 0)
+        self.assertFalse(report["promoted"])
 
     @unittest.skipUnless(
         Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
