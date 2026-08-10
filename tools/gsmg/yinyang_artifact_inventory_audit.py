@@ -83,10 +83,11 @@ QUALIFICATION = {
         "visible": True,
         "dual": True,
         "correct_boundary": True,
-        "independent_discriminator": True,
+        "independent_discriminator": False,
         "reason": (
-            "Mechanically derived at the Architect choice boundary; BUT matches "
-            "the next screenplay word and B/H mirror around fixed E."
+            "Mechanically derived at the Architect choice boundary and BUT matches "
+            "the next screenplay word, but Phase 223 found the partial B/H+fixed-E "
+            "mirror non-distinctive and the set closure permutation-invariant."
         ),
     },
     "selected_complement": {
@@ -563,7 +564,7 @@ def build_inventory(export_dir=DEFAULT_EXPORT_DIR):
         for item in artifacts
         if item["qualification"]["qualifies_for_local_mechanics"]
     ]
-    if qualifying != ["but_hye_rails"]:
+    if qualifying:
         raise AssertionError(f"pre-registered qualification result drifted: {qualifying}")
 
     return {
@@ -575,9 +576,9 @@ def build_inventory(export_dir=DEFAULT_EXPORT_DIR):
         "promotion_result": {
             "promoted": [],
             "reason": (
-                "BUT/HYE alone clears the inventory gates, but its bounded local "
-                "mechanics were already audited and yield no unique next object, "
-                "lock, route, passphrase, or output shape. No artifact is promoted."
+                "Phase 223 retains BUT/HYE as a robust boundary reconstruction but "
+                "removes its independent yin-yang discriminator. No artifact clears "
+                "all gates, and no artifact is promoted."
             ),
         },
         "stop_rule": (
@@ -621,7 +622,7 @@ def print_report(report):
 def self_test(export_dir=DEFAULT_EXPORT_DIR):
     report = build_inventory(export_dir)
     assert report["frozen_artifact_count"] == 7
-    assert report["qualifying_artifacts"] == ["but_hye_rails"]
+    assert report["qualifying_artifacts"] == []
     assert report["promotion_result"]["promoted"] == []
     assert all(
         len(artifact["content_hashes"]) >= 2

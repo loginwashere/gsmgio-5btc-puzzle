@@ -60,6 +60,7 @@ import synthesis_action_paths_audit
 import telegram_yellow_blue_matrix_direction_audit
 import triangular_matrixsumlist_audit
 import urlblob_keywrap_backfill
+import yinyang_cosmic_phase_label_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
 from cb_common import BLOBS, QUARANTINED_BLOBS
@@ -858,6 +859,29 @@ class CorrectedClaimTests(unittest.TestCase):
             (64,) * 28,
         )
         self.assertEqual(report["binding_candidates_found"], ())
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists()
+        and Path(DEFAULT_EXPORT_DIR, "result.json").exists()
+        and yinyang_cosmic_phase_label_audit.BOOK_PATH.exists(),
+        "page mirror, complete export, or book transcript is unavailable",
+    )
+    def test_yinyang_does_not_redirect_salphaseion_to_cosmic(self):
+        report = yinyang_cosmic_phase_label_audit.audit()
+        gates = report["gates"]
+        self.assertFalse(gates["1_structural_binding"]["pass"])
+        self.assertTrue(gates["2_book_semantics"]["pass"])
+        self.assertFalse(gates["3_creator_usage_precedent"]["pass"])
+        self.assertEqual(
+            gates["4_dom_adjacency"]["weight"],
+            "necessary_but_trivial",
+        )
+        self.assertTrue(gates["5_contamination_guard"]["pass"])
+        self.assertEqual(
+            report["creator_usage"]["next_page_or_section_rows"],
+            (),
+        )
+        self.assertFalse(report["promotion"]["promoted"])
 
     def test_phase217_circular_rebus_correction_is_propagated(self):
         report = post_phase217_consistency_audit.audit()

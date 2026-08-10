@@ -3,6 +3,11 @@
 > **Phase-217 interpretation guard:** references below to the historical
 > `H`/“your eyes”/`BUT` family record bounded negative coverage only. That
 > construction was circular and cannot identify the yin-yang artifact.
+>
+> **Phases 223-224 update:** `BUT/HYE` remains an exact boundary result, but
+> its partial mirror is not independently distinctive. The semantic
+> `yinyang`/Cosmic Duality match is retained without promoting a cross-textarea
+> consumer edge.
 
 ## Scope
 
@@ -30,7 +35,7 @@ before local mechanics may be considered.
 
 | Artifact | P | V | D | B | I | Local mechanics eligible |
 |---|---:|---:|---:|---:|---:|---:|
-| `BUT/HYE` boundary rails | yes | yes | yes | yes | yes | **yes** |
+| `BUT/HYE` boundary rails | yes | yes | yes | yes | no | no |
 | Selected/complementary Architect text | yes | yes | yes | no | yes | no |
 | Paired SalPhaseIon/Cosmic page objects | yes | yes | no | no | no | no |
 | First-piece yellow/blue/FEFE polarity | yes | yes | yes | no | yes | no |
@@ -40,7 +45,7 @@ before local mechanics may be considered.
 
 ## Result
 
-Only the `BUT/HYE` rails clear the inventory gates:
+No artifact clears every inventory gate. The strongest boundary result remains:
 
 ```text
 BOTH / ULTIMATELY / THE
@@ -50,10 +55,13 @@ endings    -> HYE
 
 They are the immediate mechanical output of
 `lastwordsbeforearchichoice`; `BUT` is also the first screenplay word after
-the fixed choice boundary. In the native `a-i` alphabet, `B` mirrors `H`
-around fixed `E`.
+the fixed choice boundary. The later native-`a-i` interpretation maps `B` to
+`H` and separately retains fixed `E`, but Phase 223 showed that this partial
+rule is not distinctive: it occurs in 10 of 48 comparable source-stable `BUT`
+rows, while set closure survives all six permutations of the fixed words.
 
-That does **not** promote the rails as the solved yin-yang artifact. Their
+The rails therefore do **not** independently identify the solved yin-yang
+artifact. Their
 closed local family has already been tested: row/column alignment, native
 `a-i` filtering, `H | YE | BUT`, direct password/route/hash forms, and the
 `{h,e}` monoalphabetic/autokey/chain-addition interpretations. None yields
@@ -83,7 +91,9 @@ DBBI and FAED remains possible, but the completed FAED `{g,i}` chain-addition
 negative does not support simultaneous readability and cannot establish that
 interpretation.
 
-The next useful input must be new primary transition evidence: a missing
-physical page, missing creator-linked media, or a creator clarification that
-selects the consumer of `BUT/HYE`. Recombining the same seven artifacts under
-new transforms would violate this audit's stop rule.
+The next useful input must either be new primary transition evidence or a
+deterministic consumer edge recovered from the existing authenticated
+artifacts. A missing physical page, missing creator-linked media, or creator
+clarification could supply that edge, but is not assumed necessary.
+Recombining the same seven artifacts under new transforms would violate this
+audit's stop rule.
