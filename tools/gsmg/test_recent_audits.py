@@ -15,6 +15,7 @@ import architect_yinyang_distinctiveness_audit
 import binary_message_export_audit
 import bye_ciao_provenance_audit
 import checkerboard_code_ic_oracle
+import ciao_selection_coverage_audit
 import cosmic_raw_digest_checkpoint_audit
 import creator_feasibility_envelope_audit
 import creator_yingyang_faed_pair_audit
@@ -92,6 +93,28 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertFalse(report["gates"]["creator_selected_ciao_as_yinyang"])
         self.assertFalse(report["gates"]["deterministic_bye_to_ciao_operation"])
         self.assertFalse(report["oracle_authorized"])
+
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists()
+        and ciao_selection_coverage_audit.SUPPORT_RESULT.exists(),
+        "one or both pinned Telegram exports are unavailable",
+    )
+    def test_ciao_selection_coverage_finds_no_selection_and_closes_direct_password_gap(self):
+        report = ciao_selection_coverage_audit.audit()
+        self.assertFalse(
+            report["two_corpus_creator_search"]["creator_selection_found"]
+        )
+        self.assertTrue(
+            report["two_corpus_creator_search"][
+                "support_corpus_adds_no_ciao_or_yinyang_mention"
+            ]
+        )
+        self.assertTrue(report["coverage_census"]["ciaobellao"]["checkerboard_keyword_pad28"])
+        self.assertFalse(report["coverage_census"]["ciao"]["checkerboard_keyword_pad28"])
+        self.assertFalse(report["coverage_census"]["obellaciao"]["checkerboard_keyword_pad28"])
+        self.assertEqual(report["bounded_direct_password_check"]["blob_count"], 4)
+        self.assertEqual(report["bounded_direct_password_check"]["grand_total_hits"], 0)
+        self.assertFalse(report["promoted"])
 
     def test_architect_hye_partial_mirror_gives_bye_but_no_blob_hit(self):
         report = architect_hye_bye_audit.audit()
