@@ -14749,3 +14749,39 @@ simple already-present, hint-selected operation, but do not convert that
 preference into an unsupported transform or a hard layer limit. Responsive
 wrapping remains a real browser property with no creator-selected geometry,
 and broad brute force remains unauthorized.
+
+## Phase 231 -- literal macro adjacency confirms BUT, but exposes no password value (2026-08-10)
+
+Tested the simplest consequence of the verified “in front of your eyes” clue:
+whether immediate source order around `password`, `your eyes`, `but`, the
+“very last” clause, and `promised` directly selects a value. The audit uses the
+byte-exact 161-character creator macro, unique contiguous anchors, and both
+already-registered word segmentations. No cipher or blob oracle was run.
+
+Raw source order is unambiguous:
+
+```text
+...thepassworditsinfrontofyoureyesbutyourenotseeingit...
+```
+
+The span after `password` and before `youreyes` is `itsinfrontof`; extending to
+literal `eyes` adds `your`. The immediate word neighbors are
+`the -> password -> its`, `your -> eyes -> but`, and
+`eyes -> but -> youre`. Both word segmentations agree. The literal initials
+of `your eyes but` are `YEB`, not HYE or `HYEBUT`.
+
+One useful boundary check survives: `but` occurs exactly once in the macro and
+is literally the word immediately after `your eyes`, independently resonating
+with the Architect checkpoint's exact next spoken word `BUT`. But neither
+`hye` nor `hyebut` occurs anywhere in the macro. The Phase-217-retracted
+`H | YE | BUT` construction therefore cannot be recovered through literal
+adjacency; it still needs a target-driven split and initials rule.
+
+`promised` is mechanically the final fragment after `truegiveaway`, but its
+standalone direct-password family is already negative and is not retried.
+
+**Verdict:** literal adjacency confirms BUT and PROMISED placement, yet the
+text around `password` supplies only grammatical pointer words, not a
+non-placeholder password value or independent consumer binding. No oracle
+expansion follows. Reopen only if primary evidence fixes how many characters
+or words “in front” selects, or identifies the pointed-to object.

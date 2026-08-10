@@ -39,6 +39,7 @@ import matrixsumlist_provenance_refresh_audit
 import matrixsumlist_page_scope_audit
 import matrixsumlist_historical_code_audit
 import macro_tail_title_insertion_audit
+import macro_literal_adjacency_audit
 import minimal_macro_chain_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
@@ -71,6 +72,29 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
+        "complete puzzle-solvers export is unavailable",
+    )
+    def test_macro_literal_adjacency_does_not_supply_password(self):
+        report = macro_literal_adjacency_audit.audit()
+        self.assertEqual(
+            report["raw"]["after_password_before_youreyes"],
+            "itsinfrontof",
+        )
+        self.assertEqual(report["raw"]["immediately_after_youreyes"], "but")
+        self.assertEqual(report["raw"]["hye_count"], 0)
+        self.assertEqual(
+            report["stable_local_syntax"]["literal_your_eyes_but"],
+            ("your", "eyes", "but"),
+        )
+        self.assertEqual(
+            report["stable_local_syntax"]["initials_your_eyes_but"],
+            "yeb",
+        )
+        self.assertFalse(report["gates"]["non_placeholder_password_value"])
+        self.assertFalse(report["oracle_authorized"])
+
     @unittest.skipUnless(
         Path(DEFAULT_EXPORT_DIR, "result.json").exists()
         and creator_feasibility_envelope_audit.SUPPORT_RESULT.exists(),
