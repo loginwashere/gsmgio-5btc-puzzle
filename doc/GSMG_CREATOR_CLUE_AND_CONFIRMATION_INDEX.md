@@ -1,5 +1,12 @@
 # GSMG Creator Clue and Confirmation Index
 
+> **Update (2026-08-10):** added a "Later Solver-Derived Recognition
+> Checkpoint" section below covering the `BUT/HYE -> BYE -> CIAO BELLA O`
+> chain established in Phases 223-234. That work is solver inference, not
+> creator evidence, and is kept in its own section rather than extending the
+> "Current High-Confidence Boundary" below, which remains creator-evidence
+> only and unchanged.
+
 ## Purpose
 
 This is the single lookup document for puzzle-relevant Telegram messages
@@ -265,6 +272,52 @@ It does **not** currently select:
 - a specific AES/KDF family;
 - a broad new transform family for DBBI/FAED;
 - the July “close friends” phrase as a textual cipher key.
+
+## Later Solver-Derived Recognition Checkpoint (Phases 223-234)
+
+This section is **solver inference, not creator evidence**. It exists
+because Phases 223-234 (2026-08-10) built a further recognition chain past
+"yin-yang next phase" using only already-authenticated primary artifacts
+(the film/screenplay Architect text, the `mirror9` involution, and the
+solved Phase 3.2.1 plaintext) — no new creator statement selects any of it,
+and it is kept separate from the boundary above for that reason.
+
+- The cross-source-stable forward-one indexing of `[23,16,7]` into the
+  Architect film/screenplay text gives beginning/ending rails `BUT`/`HYE`
+  (Phase 223).
+- Applying the existing `mirror9` map to `HYE` while passing the non-`a-i`
+  symbol `Y` through unchanged gives `BYE` — the *only* dictionary word
+  produced by this operation among the 48-row cross-source-stable `BUT`
+  control family, and the only word among the six permutations of the fixed
+  `[23,16,7]` ordering itself (Phase 232).
+- `BYE` bridges to the authenticated solved Phase 3.2.1 plaintext's literal
+  closing words, `CIAO BELLA O`, which has independent, pre-Phase-232
+  community precedent (including a 2025 reply connecting "bye" to "beauty
+  o" in both DBBI and FAED) and page-tail adjacency, not merely thematic
+  resemblance (Phase 233).
+- **Neither creator corpus selects this interpretation.** The complete
+  creator `ciao` inventory (3 messages, both corpora) and complete `ying
+  yang`/`yinyang` inventory (2 messages, solver corpus only) are all
+  ordinary sign-offs or the already-indexed `9599`/`39224` entries above;
+  none replies to or endorses the `BUT/HYE/BYE/CIAO` chain (Phase 233,
+  Phase 234).
+- Phase 234 withdrew a related `BELLA -> {b,e}` reading as post-hoc: `BELLA`
+  filters to three native-alphabet letters (`b`, `e`, `a`), not a mechanical
+  pair, and selecting `{b,e}` specifically because it matches DBBI's
+  already-known best escape pair is a selection made after seeing the
+  result, not an independent convergence.
+- No deterministic operation, consumer, password, or successful blob result
+  follows from any of this. Bounded direct-password checks against all four
+  tracked blobs are negative for `bye`, `ciao`, `bella`, `ciaobellao`,
+  `obellaciao`, `bellaciao`, `key`, `note`, `self`, `keynote`, and the
+  literal `selfself` run (Phases 232, 234, 235). Treat `CIAO BELLA O` as the
+  strongest currently-available recognition target for whatever follows
+  yin-yang, not as a recovered password or operation.
+
+See `tools/gsmg/FINDINGS.md` Phases 223, 224, 225, 232, 233, and 234 for the
+full derivations, and `doc/GSMG_ARCHITECT_HYE_BYE_AUDIT.md` /
+`doc/GSMG_BYE_CIAO_PROVENANCE_AUDIT.md` /
+`doc/GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md` for the individual audits.
 
 ## Maintenance Rule
 
