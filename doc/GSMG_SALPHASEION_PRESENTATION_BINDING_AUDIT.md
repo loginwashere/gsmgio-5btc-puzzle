@@ -1,5 +1,12 @@
 # SalPhaseIon presentation-binding audit
 
+> **Phase-229 responsive-wrap correction:** absence of authored line breaks
+> does not prove rendered wrapping is irrelevant in principle. The historical
+> screenshot mechanically recovers a 45-column state, but widths 51 and 85
+> share its FAED-end alignment, and the complete 20–100 vertical/diagonal
+> macro-vocabulary family is empty (`p=1.0`). See
+> `GSMG_SALPHASEION_RESPONSIVE_WRAP_AUDIT.md`.
+
 Phase 219 found that the missing evidence is a binding to a FAED decoder or a
 specific DBBI/FAED relationship. The page's presentation layer was therefore
 checked before proposing another content transform.

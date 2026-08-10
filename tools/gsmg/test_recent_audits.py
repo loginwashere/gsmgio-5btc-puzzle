@@ -52,6 +52,7 @@ import remaining_structural_avenues_audit
 import safenet_luna_hsm_audit
 import salphaseion_salvation_role_audit
 import salphaseion_presentation_binding_audit
+import salphaseion_responsive_wrap_audit
 import salphaseion_wayback_history_audit
 import spi_cd_initials_audit
 import stage0_footer_palette_layer_audit
@@ -916,6 +917,32 @@ class CorrectedClaimTests(unittest.TestCase):
             (64,) * 28,
         )
         self.assertEqual(report["binding_candidates_found"], ())
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists()
+        and salphaseion_responsive_wrap_audit.DEFAULT_SCREENSHOT.exists(),
+        "page mirror or historical SalPhaseIon screenshot is unavailable",
+    )
+    def test_responsive_wrap_has_no_deterministic_second_layer(self):
+        report = salphaseion_responsive_wrap_audit.audit()
+        self.assertEqual(
+            report["historical_screenshot"]["recovered_logical_symbols_per_row"],
+            45,
+        )
+        self.assertEqual(report["screenshot_grid"]["row_count"], 24)
+        self.assertEqual(report["screenshot_grid"]["last_row_length"], 40)
+        self.assertEqual(report["screenshot_grid"]["aligned_segment_ends"], ("faed",))
+        self.assertEqual(
+            report["boundary_controls"]["faed_end_aligned_widths"],
+            (45, 51, 85),
+        )
+        self.assertEqual(report["responsive_vocabulary"]["real_score"], (0, 0, 0))
+        self.assertEqual(report["responsive_vocabulary"]["screenshot_width_hits"], ())
+        self.assertEqual(
+            report["responsive_vocabulary"]["calibration"]["empirical_p"],
+            1.0,
+        )
+        self.assertFalse(report["promotion"]["promoted"])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists()

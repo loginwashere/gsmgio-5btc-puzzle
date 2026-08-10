@@ -14357,6 +14357,12 @@ increase coverage without resolving the ambiguity.
 
 ## Phase 220 -- authenticated presentation layer contains no DBBI/FAED binding (2026-08-10)
 
+**Phase-229 scope correction:** this phase correctly found no *authored fixed*
+columns, but its statement that soft wraps cannot select any grid was too
+categorical. A historical screenshot fixes one real 45-column rendering. The
+responsive-grid consequence has now been tested separately and is negative;
+see Phase 229.
+
 `tools/gsmg/salphaseion_presentation_binding_audit.py` checks the actual HTML
 presentation rather than interpreting a screenshot's browser-generated line
 wraps. It pins the capture at SHA-256
@@ -14656,3 +14662,47 @@ fails because it lies after `thispassword`/SHA rather than immediately after
 **Verdict:** the Phase-227 zero-qualifier result stands. P32TRAILING and COSMIC
 strengthen rather than weaken it: ordinary equal length or 64-column wrapping
 cannot be promoted into a second dual object without a local selector.
+
+## Phase 229 -- responsive SalPhaseIon wrapping: historical 45-column grid is real, bounded second-layer read negative (2026-08-10)
+
+Reopened one narrow part of Phase 220 after the user correctly distinguished
+source newlines from intentional responsive presentation. The SalPhaseIon
+textarea contains exactly one ASCII space between every logical symbol, uses
+`width:100%`, and has no `cols`, `wrap`, fixed viewport, or explicit textarea
+font. Browser-default monospace form rendering therefore produces visual grids
+whose width changes with viewport, font metrics, zoom, or resizing.
+
+The retained 668x619 historical screenshot supplies one concrete rendered
+state. An OCR-free pixel audit of its first three textarea rows recovers 45
+evenly pitched glyph positions in each row. The 1,075-symbol stream consequently
+forms 23 complete 45-symbol rows plus a final 40-symbol row. FAED ends exactly
+at offset `765 = 17x45`, putting the following `z` at row 18, column 1.
+
+That alignment is not a unique width selector. Across the predeclared 20–100
+logical-symbol family, FAED ends on a row boundary at widths 45, 51, and 85.
+The screenshot entered the public solver repository in 2021 commit `99bd811`;
+it records a historical community viewport, not a creator-authored one.
+
+The bounded second-layer test froze 25 length-at-least-four words from the
+authenticated creator macro before inspecting output. At every width 20–100 it
+searched vertical, diagonal-down-right, and diagonal-down-left lines in both
+orientations. Horizontal reads were excluded. The matched null shuffled
+characters independently inside each of the thirteen authenticated page
+segments and repeated the complete width/direction family for 500 trials.
+
+```text
+real score (max length, distinct targets, hits): (0,0,0)
+width-45 target hits:                            0
+all-width target hits:                           0
+null maximum:                                    (5,3,7)
+null >= real:                                    500/500
+empirical p:                                     1.0
+```
+
+**Verdict:** responsive layout is a real presentation property and Phase 220's
+broader dismissal is corrected, but no deterministic second-layer read is
+recovered. Width 45 lacks creator provenance and has two boundary-alignment
+rivals; the complete bounded vertical/diagonal macro-vocabulary family is
+strictly weaker than its controls. No decoder or blob oracle follows. Reopen
+only with primary evidence fixing a viewport, width, resize action, read
+direction, or independent output target.
