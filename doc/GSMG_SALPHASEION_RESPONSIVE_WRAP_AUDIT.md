@@ -118,6 +118,12 @@ column count, resize action, or a different exact read direction/output target.
 Merely resizing until a word appears would select both the width and result
 post hoc.
 
+Phase 230 subsequently searched a frozen presentation vocabulary across both
+complete creator-message corpora. It found zero puzzle instructions involving
+resize, wrapping, rows/columns, viewport, font, textarea, zoom, or screen
+geometry. This does not make responsive layout impossible, but supplies no
+primary evidence with which to select one of its variable renderings.
+
 ## Reproduction
 
 ```bash

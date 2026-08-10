@@ -14549,10 +14549,16 @@ independent FAED statistic prefers `{g,i}`, but do not promote it to a recovered
 binding. It selects neither a decoder nor a rule combining `IG` and `AG`, so it
 does not authorize an `{a,g}` or dual-pair brute-force run.
 
-## Phase 226 -- exact creator feasibility envelope: offline/visible confirmed; moderate-bruteforce and two-day claims not found (2026-08-10)
+## Phase 226 -- exact creator feasibility envelope: offline/visible confirmed; one-chat brute-force/construction inventory superseded (2026-08-10)
+
+> **Phase-230 correction:** the offline, no-new-URL, visible-phrase, and
+> near-completion findings below remain valid. The brute-force and construction-
+> duration negatives searched only the puzzle-solvers chat and are superseded
+> by Phase 230's pinned two-chat audit.
 
 Audited four constraints that had been driving the proposed restart from
-scratch against the complete raw creator-message inventory.
+scratch against the complete puzzle-solvers-chat creator inventory. Phase 226
+did not include the separate support-group corpus.
 
 Two are strong first-party facts. Message 16624 asks whether internet remains
 necessary “given the available knowledge” and answers `Nope`; message 9639
@@ -14570,15 +14576,10 @@ says `Bingo`. This confirms that the phrase matters; it does not transfer the
 confirmation to *Looking Forward*, the Cosmic Duality book, BUT/HYE, or any
 other proposed expansion.
 
-Two stronger recollections do not reproduce. There are zero creator-authored
-`brute`/`bruteforce` mentions anywhere in the complete export. Community
-members discuss brute force, including in the question answered by “You have
-all the info,” but the creator never endorses a moderate brute-force method.
-Likewise, messages 66559/66561 confirm a spur-of-the-moment idea and a general
-frenzied work style where a day later he can barely understand what he did;
-they do not state that this puzzle was completed in one day, two days, or a
-couple of days. Rushed construction supports tolerance for mistakes, not a
-formal cap on layer count.
+Within that one chat, there are zero creator-authored `brute`/`bruteforce`
+mentions and no explicit construction duration. Those bounded counts reproduce,
+but they were not valid cross-corpus negatives. Phase 230 finds three creator
+brute-force uses and the exact two-day retrospective in the support group.
 
 One more exact constraint survives: message 32579 says a single further
 “microstep” would likely lead to same-day completion. That bounds the tail
@@ -14586,9 +14587,9 @@ after the missing realization, not the difficulty of finding the microstep.
 
 **Verdict:** require already-present/authenticated operands, offline
 reproducibility, and an explicit binding or rare controlled structural match.
-Reject necessary new-URL/web-archaeology branches. Do not admit brute force on
-an attributed creator endorsement that does not exist, and do not reject a
-layered interpretation solely from an unstated two-day construction bound.
+Reject necessary new-URL/web-archaeology branches. Phase 230 retains the
+no-endgame-bruteforce-endorsement conclusion while replacing the incorrect
+construction-duration negative.
 
 ## Phase 227 -- visible-referent delta: two complementary near-misses, zero qualifiers (2026-08-10)
 
@@ -14706,3 +14707,45 @@ rivals; the complete bounded vertical/diagonal macro-vocabulary family is
 strictly weaker than its controls. No decoder or blob oracle follows. Reopen
 only with primary evidence fixing a viewport, width, resize action, read
 direction, or independent output target.
+
+## Phase 230 -- corrected two-chat feasibility and presentation-vocabulary envelope (2026-08-10)
+
+Corrected Phase 226's false use of “complete export.” That audit covered the
+57,729-message private `GSMG Puzzle Solvers` chat only. The corrected audit
+also requires the distinct 52,851-message public `GSMG - Community & support
+group` export, specifically the largest `(2)` snapshot.
+
+Both `result.json` files are pinned. The support file has SHA-256
+`6e616bfe72d81c9d9134c0631781b594d9abf9bc7d2f6de3518f9e75b5dad9fd`,
+chat ID `1246576180`, 52,851 total messages, and 5,419 creator records. A
+different snapshot or re-export now fails before any negative inventory is
+reported.
+
+Support message 67741, creator-authored on 2026-04-13, explicitly says JRK was
+inspired by other crypto puzzles and spent “two sloppy days” throwing one
+together, with grammatical mistakes and zero polish; the following wording
+identifies the still-running puzzle. The precise duration is therefore
+verified, contrary to Phase 226. It is labeled as a 2026 first-party
+retrospective rather than contemporaneous 2019 evidence. It favors short,
+clue-selected mechanics and tolerance for roughness but cannot formally cap
+the number of layers.
+
+The cross-corpus brute-force inventory contains exactly three creator messages:
+12697 is an unrelated iCloud anecdote, 54419 is trading backtesting, and 28703
+is puzzle-specific but says the changing token protected against brute-forcing
+and tells solvers to find the right next hint. Message 28703 has no reply edge;
+28704 directly replies to the adjacent stage-count question at 28702. Thus
+“zero mentions” is corrected while “no moderate-endgame-bruteforce endorsement”
+survives.
+
+Finally, a frozen presentation vocabulary across both creator corpora returns
+27 raw matches: two puzzle-chat uses (`display of words` in the typo caveat and
+`monitor progress` as a verb) and twenty-five ordinary product/device/support uses.
+Zero instruct solvers to resize, wrap, align, use rows/columns, or select a
+viewport, font, textarea, zoom, or screen geometry.
+
+**Verdict:** the user's rapid-construction recollection was real. Prefer a
+simple already-present, hint-selected operation, but do not convert that
+preference into an unsupported transform or a hard layer limit. Responsive
+wrapping remains a real browser property with no creator-selected geometry,
+and broad brute force remains unauthorized.

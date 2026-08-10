@@ -72,8 +72,9 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 class CorrectedClaimTests(unittest.TestCase):
     @unittest.skipUnless(
-        Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
-        "complete Telegram export is unavailable",
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists()
+        and creator_feasibility_envelope_audit.SUPPORT_RESULT.exists(),
+        "one or both pinned Telegram exports are unavailable",
     )
     def test_creator_feasibility_envelope_separates_exact_claims(self):
         report = creator_feasibility_envelope_audit.audit()
@@ -84,12 +85,40 @@ class CorrectedClaimTests(unittest.TestCase):
             "phrase_verified_referent_unknown",
         )
         self.assertEqual(
-            report["moderate_bruteforce"]["creator_brute_mentions"],
-            (),
+            report["moderate_bruteforce"]["status"],
+            "not_endgame_endorsed",
         )
         self.assertEqual(
-            report["rapid_construction"]["explicit_creation_duration_rows"],
-            (),
+            tuple(
+                row["message_id"]
+                for row in report["moderate_bruteforce"]["support_group_mentions"]
+            ),
+            (12697, 28703, 54419),
+        )
+        self.assertEqual(
+            report["moderate_bruteforce"]["stage_count_reply_edge"],
+            (28704, 28702),
+        )
+        self.assertEqual(
+            report["rapid_construction"]["status"],
+            "two_sloppy_days_verified_retrospectively",
+        )
+        self.assertFalse(
+            report["rapid_construction"]["support_group_retrospective"][
+                "contemporaneous"
+            ]
+        )
+        self.assertEqual(
+            report["corpus_scope"]["support"]["sha256"],
+            creator_feasibility_envelope_audit.EXPECTED_SUPPORT_SHA256,
+        )
+        self.assertEqual(
+            report["corpus_scope"]["support"]["message_count"],
+            52851,
+        )
+        self.assertEqual(
+            report["presentation_vocabulary"]["puzzle_geometry_instruction_count"],
+            0,
         )
         self.assertEqual(
             report["near_completion"]["status"],
