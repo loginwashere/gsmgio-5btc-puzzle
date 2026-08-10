@@ -13,6 +13,7 @@ import architect_choice_literal_password_audit
 import architect_hye_bye_audit
 import architect_yinyang_distinctiveness_audit
 import binary_message_export_audit
+import bye_ciao_provenance_audit
 import checkerboard_code_ic_oracle
 import cosmic_raw_digest_checkpoint_audit
 import creator_feasibility_envelope_audit
@@ -73,6 +74,25 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
+        "complete puzzle-solvers export is unavailable",
+    )
+    def test_bye_ciao_bridge_is_prior_but_not_creator_selected(self):
+        report = bye_ciao_provenance_audit.audit()
+        self.assertEqual(report["authenticated_tail"]["value"], "CIAO BELLA O")
+        self.assertEqual(
+            report["independent_prior"]["direct_bye_beauty_o_dbbi_faed_reply"],
+            37921,
+        )
+        self.assertEqual(
+            tuple(row["message_id"] for row in report["creator_ciao_inventory"]),
+            (9632, 32773, 66609),
+        )
+        self.assertFalse(report["gates"]["creator_selected_ciao_as_yinyang"])
+        self.assertFalse(report["gates"]["deterministic_bye_to_ciao_operation"])
+        self.assertFalse(report["oracle_authorized"])
+
     def test_architect_hye_partial_mirror_gives_bye_but_no_blob_hit(self):
         report = architect_hye_bye_audit.audit()
         controls = report["structural"]["controls"]

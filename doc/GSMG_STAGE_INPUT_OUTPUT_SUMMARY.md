@@ -444,6 +444,14 @@ controls, so it is a real recognition improvement. It is not promoted to a
 transition: the selective pass-through/endings-only convention is not authored,
 and 18 bounded direct/SHA keystrings produce zero hits across all four blobs.
 
+Phase 233 identifies the strongest already-visible semantic referent for that
+output: the authenticated earlier plaintext ends `CIAO BELLA O`, and community
+messages from 2020–2025 independently connect that tail with goodbye/hello
+duality and, explicitly, “bye to beauty O” in DBBI/FAED. The provenance is
+genuinely prior to Phase 232, but all such bridge claims are community-authored;
+the complete creator `ciao` inventory contains only three ordinary sign-offs.
+No deterministic `BYE -> CIAO` operation or downstream consumer is fixed.
+
 The immediate unresolved question remains:
 
 > What exact, creator-supported operation does `matrixsumlist` apply to the
