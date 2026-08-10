@@ -14542,3 +14542,44 @@ the `IG`/`AG` word halves; reassigning it would be post-hoc.
 independent FAED statistic prefers `{g,i}`, but do not promote it to a recovered
 binding. It selects neither a decoder nor a rule combining `IG` and `AG`, so it
 does not authorize an `{a,g}` or dual-pair brute-force run.
+
+## Phase 226 -- exact creator feasibility envelope: offline/visible confirmed; moderate-bruteforce and two-day claims not found (2026-08-10)
+
+Audited four constraints that had been driving the proposed restart from
+scratch against the complete raw creator-message inventory.
+
+Two are strong first-party facts. Message 16624 asks whether internet remains
+necessary “given the available knowledge” and answers `Nope`; message 9639
+clarifies that internet is technically needed only to claim the prize at the
+end. Separately, message 9607 directly answers a request for another URL with
+`No need. You have all the info.` The remaining derivation was therefore
+intended to be offline from material already available by 2023, with no
+necessary undiscovered URL.
+
+The visibility constraint is also real but stops short of identifying its
+referent. The authenticated binary macro contains
+`itsinfrontofyoureyesbutyourenotseeingit`. In the exact 60309–60312 sequence,
+the creator points at gnomad, gnomad repeats only that phrase, and the creator
+says `Bingo`. This confirms that the phrase matters; it does not transfer the
+confirmation to *Looking Forward*, the Cosmic Duality book, BUT/HYE, or any
+other proposed expansion.
+
+Two stronger recollections do not reproduce. There are zero creator-authored
+`brute`/`bruteforce` mentions anywhere in the complete export. Community
+members discuss brute force, including in the question answered by “You have
+all the info,” but the creator never endorses a moderate brute-force method.
+Likewise, messages 66559/66561 confirm a spur-of-the-moment idea and a general
+frenzied work style where a day later he can barely understand what he did;
+they do not state that this puzzle was completed in one day, two days, or a
+couple of days. Rushed construction supports tolerance for mistakes, not a
+formal cap on layer count.
+
+One more exact constraint survives: message 32579 says a single further
+“microstep” would likely lead to same-day completion. That bounds the tail
+after the missing realization, not the difficulty of finding the microstep.
+
+**Verdict:** require already-present/authenticated operands, offline
+reproducibility, and an explicit binding or rare controlled structural match.
+Reject necessary new-URL/web-archaeology branches. Do not admit brute force on
+an attributed creator endorsement that does not exist, and do not reject a
+layered interpretation solely from an unstated two-day construction bound.

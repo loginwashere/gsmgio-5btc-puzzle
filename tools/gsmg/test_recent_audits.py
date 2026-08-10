@@ -14,6 +14,7 @@ import architect_yinyang_distinctiveness_audit
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import cosmic_raw_digest_checkpoint_audit
+import creator_feasibility_envelope_audit
 import creator_yingyang_faed_pair_audit
 import creator_operator_vocabulary_audit
 import dual_channel_consistency_audit
@@ -68,6 +69,31 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
+        "complete Telegram export is unavailable",
+    )
+    def test_creator_feasibility_envelope_separates_exact_claims(self):
+        report = creator_feasibility_envelope_audit.audit()
+        self.assertEqual(report["offline_solvability"]["status"], "verified")
+        self.assertTrue(report["no_new_url"]["reply_edge"])
+        self.assertEqual(
+            report["visible_referent"]["status"],
+            "phrase_verified_referent_unknown",
+        )
+        self.assertEqual(
+            report["moderate_bruteforce"]["creator_brute_mentions"],
+            (),
+        )
+        self.assertEqual(
+            report["rapid_construction"]["explicit_creation_duration_rows"],
+            (),
+        )
+        self.assertEqual(
+            report["near_completion"]["status"],
+            "verified_conditionally",
+        )
+
     @unittest.skipUnless(
         Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
         "complete Telegram export is unavailable",
