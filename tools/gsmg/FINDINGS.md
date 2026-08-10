@@ -14586,7 +14586,7 @@ layered interpretation solely from an unstated two-day construction bound.
 
 ## Phase 227 -- visible-referent delta: two complementary near-misses, zero qualifiers (2026-08-10)
 
-Updated the original seven-family yin-yang artifact inventory with five later
+Updated the original seven-family yin-yang artifact inventory with seven later
 discoveries or page-local structures that had not been separately subjected
 to the same gate. No password, cipher, address, or blob oracle was run.
 
@@ -14596,11 +14596,11 @@ deterministically recovered, genuinely dual, located at the immediate
 fixed consumer or an independent discriminator. The original inventory's
 frozen table still has seven families and zero qualifiers.
 
-The five delta candidates also produce zero qualifiers:
+The seven delta candidates also produce zero qualifiers:
 
-- both authenticated page blobs decode from their visible Base64 fronts to
-  `Salted__`, but that is a shared container marker rather than a dual state
-  or password binding;
+- the authenticated SALPH, COSMIC, and P32TRAILING blobs decode from their
+  visible Base64 fronts to `Salted__`, but that is a shared container marker
+  rather than a dual state or password binding;
 - `Salt|Phase|Ion` remains one of six dictionary-valid insertions in the
   complete 48-member lowercase-`true` family and is not source-unique;
 - creator `YING/YANG -> IG/AG` is genuinely dual, sits at the semantic
@@ -14612,7 +14612,10 @@ The five delta candidates also produce zero qualifiers:
 - literal `enter` separates SALPH into two visible 64-character halves and
   deterministically reconstructs the known envelope. This is a real positive
   control for visible dual structure, but it occurs downstream of the
-  unresolved password/SHA region rather than at the Architect boundary.
+  unresolved password/SHA region rather than at the Architect boundary;
+- P32TRAILING has the same 128-character/64+64 mechanical shape as SALPH but
+  no authored midpoint separator, while COSMIC's 28 authored 64-character
+  lines show that width 64 is a page-wide Base64 layout convention.
 
 The last two strong candidates therefore fail on complementary axes: IG/AG
 has boundary/discriminator support without deterministic authorship, while
@@ -14624,3 +14627,32 @@ no password, FAED decoder, IG/AG combination, or blob-oracle expansion is
 authorized. Reopen only if primary evidence fixes the IG/AG spelling/operator
 or binds a deterministic visible dual object directly to the Architect
 boundary.
+
+## Phase 228 -- 64-column matched-control correction: SALPH `enter` is unique; width 64 is not (2026-08-10)
+
+Phase 227 initially described SALPH's `64 -> enter -> 64` structure without
+explicitly including the two closest length/layout controls. That omission is
+now corrected mechanically.
+
+P32TRAILING is also exactly 128 Base64 characters and decodes to the same
+96-byte full OpenSSL envelope / 80-byte ciphertext body as SALPH. It therefore
+admits an equal 64+64 midpoint split, but no authenticated local instruction or
+separator selects that midpoint. Treating it as two halves requires importing
+SALPH's rule after noticing the equal length; the pieces have no independently
+established opposition or consumer.
+
+COSMIC supplies an authored-width control: its textarea has exactly 28 source
+lines of 64 characters. It is a real 28x64 rectangle, not a two-half object,
+and contains no midpoint `enter`. All three authenticated blobs decode to the
+same front `Salted__` header, so neither the header nor width 64 distinguishes
+a yin-yang transition.
+
+The corrected seven-candidate delta retains exactly one deterministic visible
+dual construction: SALPH's two halves separated by literal decoded `enter`.
+That makes `enter`—not 64—the load-bearing fact. Its transition position still
+fails because it lies after `thispassword`/SHA rather than immediately after
+`lastwordsbeforearchichoice`.
+
+**Verdict:** the Phase-227 zero-qualifier result stands. P32TRAILING and COSMIC
+strengthen rather than weaken it: ordinary equal length or 64-column wrapping
+cannot be promoted into a second dual object without a local selector.

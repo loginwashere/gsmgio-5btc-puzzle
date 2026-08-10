@@ -950,7 +950,7 @@ class CorrectedClaimTests(unittest.TestCase):
         report = visible_referent_delta_audit.audit()
         self.assertEqual(report["baseline"]["artifact_count"], 7)
         self.assertEqual(report["baseline"]["qualifying_artifacts"], ())
-        self.assertEqual(len(report["candidates"]), 5)
+        self.assertEqual(len(report["candidates"]), 7)
         self.assertEqual(report["qualifying_candidates"], ())
         self.assertFalse(report["new_compute_authorized"])
         by_id = {
@@ -968,6 +968,19 @@ class CorrectedClaimTests(unittest.TestCase):
         )
         self.assertFalse(
             by_id["creator_ying_ig_ag"]["gates"]["deterministic_recovery"]
+        )
+        self.assertEqual(
+            by_id["p32_equal_length_halves"]["evidence"]["mechanical_half_lengths"],
+            (64, 64),
+        )
+        self.assertFalse(
+            by_id["p32_equal_length_halves"]["evidence"][
+                "authored_midpoint_separator"
+            ]
+        )
+        self.assertEqual(
+            by_id["cosmic_64_column_layout"]["evidence"]["line_lengths"],
+            (64,) * 28,
         )
 
     def test_phase217_circular_rebus_correction_is_propagated(self):

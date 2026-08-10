@@ -20,7 +20,7 @@ import creator_yingyang_faed_pair_audit
 import macro_tail_title_insertion_audit
 import salphaseion_presentation_binding_audit
 import yinyang_artifact_inventory_audit
-from data import COSMIC_BLOB_B64, SALPHASEION_BLOB_B64
+from data import COSMIC_BLOB_B64, P32_TRAILING_BLOB_B64, SALPHASEION_BLOB_B64
 from page_structure_audit import DEFAULT_HTML, audit as page_audit
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
 
@@ -92,6 +92,7 @@ def audit(
     authenticated_blobs = {
         "SALPH": SALPHASEION_BLOB_B64,
         "COSMIC": COSMIC_BLOB_B64,
+        "P32TRAILING": P32_TRAILING_BLOB_B64,
     }
     decoded_fronts = {
         name: base64.b64decode(value, validate=True)[:8]
@@ -175,6 +176,34 @@ def audit(
             },
             "This is a real deterministic dual construction and positive control, but it occurs after thispassword/SHA and is not the state immediately produced by lastwordsbeforearchichoice.",
         ),
+        candidate(
+            "p32_equal_length_halves",
+            "P32TRAILING is also 128 Base64 characters and therefore admits an equal 64+64 midpoint split.",
+            dict(zip(GATE_NAMES, (True, False, False, False, False))),
+            {
+                "base64_length": len(P32_TRAILING_BLOB_B64),
+                "mechanical_half_lengths": (
+                    len(P32_TRAILING_BLOB_B64[:64]),
+                    len(P32_TRAILING_BLOB_B64[64:]),
+                ),
+                "decoded_envelope_bytes": len(base64.b64decode(P32_TRAILING_BLOB_B64, validate=True)),
+                "ciphertext_body_bytes": len(base64.b64decode(P32_TRAILING_BLOB_B64, validate=True)) - 16,
+                "authored_midpoint_separator": False,
+            },
+            "The equal midpoint is selected only by importing SALPH's layout: P32TRAILING contains no local enter instruction, and equal Base64 length does not make its pieces opposed or independently meaningful.",
+        ),
+        candidate(
+            "cosmic_64_column_layout",
+            "COSMIC has 28 authored lines of 64 Base64 characters, providing the page's line-width control.",
+            dict(zip(GATE_NAMES, (True, True, False, False, False))),
+            {
+                "authored_line_count": len(presentation["cosmic_duality_control"]["line_lengths"]),
+                "line_lengths": presentation["cosmic_duality_control"]["line_lengths"],
+                "authored_midpoint_separator": False,
+                "two_half_structure": False,
+            },
+            "The 64-column layout is authored, but it is a 28-row rectangle rather than two opposed halves and supplies no Architect-boundary consumer.",
+        ),
     )
 
     qualifying = tuple(row["candidate_id"] for row in rows if row["qualifies"])
@@ -199,9 +228,11 @@ def audit(
             "hypothetical SALPH plaintext key halves",
         ),
         "verdict": (
-            "The post-baseline delta contains one genuine deterministic visible "
+            "The corrected post-baseline delta contains one genuine deterministic visible "
             "dual construction (SALPH's enter-separated halves), but it is at the "
-            "wrong transition position. YING->IG/AG has the strongest boundary "
+            "wrong transition position. P32TRAILING confirms that 64+64 alone is "
+            "not sufficient because it has no authored separator; COSMIC confirms "
+            "that 64 is also the page's general Base64 line width. YING->IG/AG has the strongest boundary "
             "and FAED-specific support but fails deterministic authorship. No "
             "candidate passes all five gates, so no password, decoder, or oracle "
             "expansion is authorized."
@@ -213,7 +244,7 @@ def self_test(export_dir=DEFAULT_EXPORT_DIR, html_path=DEFAULT_HTML, dictionary_
     report = audit(export_dir, html_path, dictionary_path)
     assert report["baseline"]["artifact_count"] == 7
     assert report["baseline"]["qualifying_artifacts"] == ()
-    assert len(report["candidates"]) == 5
+    assert len(report["candidates"]) == 7
     assert report["qualifying_candidates"] == ()
     assert not report["new_compute_authorized"]
     by_id = {row["candidate_id"]: row for row in report["candidates"]}
@@ -221,8 +252,11 @@ def self_test(export_dir=DEFAULT_EXPORT_DIR, html_path=DEFAULT_HTML, dictionary_
     assert not by_id["salph_enter_halves"]["gates"]["correct_transition_position"]
     assert by_id["creator_ying_ig_ag"]["gates"]["fixed_consumer_or_independent_discriminator"]
     assert not by_id["creator_ying_ig_ag"]["gates"]["deterministic_recovery"]
+    assert by_id["p32_equal_length_halves"]["evidence"]["mechanical_half_lengths"] == (64, 64)
+    assert not by_id["p32_equal_length_halves"]["evidence"]["authored_midpoint_separator"]
+    assert by_id["cosmic_64_column_layout"]["evidence"]["line_lengths"] == (64,) * 28
     print(json.dumps(report, indent=2))
-    print("[*] self-test OK: five delta candidates, zero qualifiers, no oracle authorized")
+    print("[*] self-test OK: seven delta candidates, zero qualifiers, no oracle authorized")
     return report
 
 

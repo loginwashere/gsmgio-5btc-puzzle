@@ -9,12 +9,13 @@
 > `yinyang`/Cosmic Duality match is retained without promoting a cross-textarea
 > consumer edge.
 >
-> **Phase 227 delta:** five later or previously ungated visible candidates
+> **Phases 227-228 delta:** seven later or previously ungated visible candidates
 > were checked separately in `GSMG_VISIBLE_REFERENT_DELTA_AUDIT.md`. None
 > qualifies. SALPH's `enter`-separated halves are a genuine deterministic
 > dual structure at the wrong boundary; creator `YING -> IG / YANG -> AG` is
 > boundary-specific and FAED-discriminating but not a deterministic authored
-> operator.
+> operator. P32TRAILING's unseparated 64+64 shape and COSMIC's authored 28x64
+> lines confirm that width 64 alone is only a layout convention.
 
 ## Scope
 

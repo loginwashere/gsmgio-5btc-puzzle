@@ -1,5 +1,10 @@
 # GSMG visible-referent delta audit
 
+> **Phase-228 matched-control correction:** P32TRAILING's equal 64+64
+> mechanical split and COSMIC's authored 28x64 layout are now explicit delta
+> controls. They confirm that SALPH's locally authored `enter`, rather than
+> the common width 64 by itself, is the load-bearing structural fact.
+
 ## Scope
 
 Phase 227 updates the original seven-family yin-yang artifact inventory with
@@ -26,12 +31,14 @@ families and zero qualifiers after the Phase-223/224 corrections.
 | creator `YING/YANG -> IG/AG` | yes | no | yes | yes | yes | FAED-specific, but typo-derived operator is not authenticated |
 | `thispassword -> sha256 -> SALPH` sequence | yes | no | no | no | no | Page order does not fix operand scope |
 | SALPH `64 chars -> enter -> 64 chars` | yes | yes | yes | no | yes | Genuine positive control at the wrong boundary |
+| P32TRAILING mechanical `64+64` | yes | no | no | no | no | Same length as SALPH, but no authored separator |
+| COSMIC authored `28x64` layout | yes | yes | no | no | no | Width control, not a two-half structure |
 
 ### OpenSSL front marker
 
-The visible authenticated SALPH and COSMIC Base64 strings begin respectively
-with `U2FsdGVkX186` and `U2FsdGVkX18t`. Demonstrated Base64 decoding recovers
-literal `Salted__` as the first eight bytes of both. This is exact and does
+The visible authenticated SALPH, COSMIC, and P32TRAILING Base64 strings begin
+with encodings of the same OpenSSL header. Demonstrated Base64 decoding
+recovers literal `Salted__` as the first eight bytes of all three. This is exact and does
 fit the idea of something encoded at the front, but it identifies an OpenSSL
 container—not a dual state, password, KDF, mode, or operand binding.
 
@@ -76,6 +83,21 @@ can recognize an intentional dual page structure. It does not identify
 yin-yang because it occurs after the unresolved password/SHA region rather
 than immediately after `lastwordsbeforearchichoice`.
 
+### P32TRAILING and COSMIC width controls
+
+P32TRAILING is exactly 128 Base64 characters, decoding to the same 96-byte
+full-envelope / 80-byte ciphertext-body shape as SALPH. It therefore admits a
+mechanical midpoint split of 64+64. Unlike SALPH, however, no local instruction
+or authenticated separator selects that midpoint. Importing SALPH's split
+would be the rule choice the audit is designed to reject, and equal length
+alone does not make the resulting pieces opposed or independently meaningful.
+
+COSMIC supplies the complementary presentation control: its authenticated
+textarea contains 28 authored lines, all exactly 64 characters. It proves that
+64 is the page's general Base64 display width, not sufficient evidence for a
+two-half yin-yang object. COSMIC has no midpoint `enter` and is a 28-row
+rectangle rather than two selected components.
+
 ## Verdict
 
 No delta candidate passes all five gates. The two strongest failures are
@@ -85,6 +107,9 @@ complementary:
   but is not a deterministic authored operator.
 - the SALPH halves are deterministic, visible, dual, and consumed, but occur
   at the wrong transition boundary.
+
+P32TRAILING and COSMIC sharpen the latter finding: SALPH's authored `enter` is
+unique among the controls, while the number 64 is ordinary shared layout.
 
 No password, decoder, or oracle expansion follows from Phase 227. A candidate
 can reopen only if new primary evidence fixes the missing spelling/operator
