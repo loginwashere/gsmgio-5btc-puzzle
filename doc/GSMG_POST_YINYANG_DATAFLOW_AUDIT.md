@@ -1,5 +1,10 @@
 # GSMG Post-Yin-Yang Dataflow Audit
 
+> **Phase-223 condition:** BUT/HYE remains exact, but its partial mirror9
+> reading does not independently establish that `yinyang` has been reached.
+> The FAED role ranking below is therefore conditional on a transition still
+> lacking mechanical validation.
+
 ## Question
 
 Given the corrected working checkpoint

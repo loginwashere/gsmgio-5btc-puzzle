@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Audit what can supply ``thispassword`` after the BUT/HYE checkpoint.
+"""Conditionally audit what can supply ``thispassword`` after BUT/HYE.
 
-This audit assumes only the corrected Phase-217 working hypothesis: the
+This audit assumes the Phase-217 working hypothesis: the
 six-digit prime route consumes ``matrixsumlist`` and
 ``lastwordsbeforearchichoice`` and reaches the BUT/HYE yin-yang recognition
-state.  It then applies page order and existing negative coverage to rank the
+state. Phase 223 later showed that the mirror interpretation does not
+mechanically establish yin-yang, so the resulting ranking is conditional. It
+then applies page order and existing negative coverage to rank the
 remaining operand roles.  It does not invent a FAED decoder or select a
 password by AES outcome.
 """
@@ -123,6 +125,7 @@ def audit(export_path, html_path=DEFAULT_HTML):
     }
 
     return {
+        "premise_status": "conditional_unverified_after_phase223",
         "macro_prefix": MACRO_PREFIX,
         "macro_checkpoint": {
             "sum_list": macro["sum_list"],
@@ -157,7 +160,8 @@ def audit(export_path, html_path=DEFAULT_HTML):
             "literal meaning of trailing anstoo",
         ),
         "verdict": (
-            "After carrying forward the direct negatives, the page does not "
+            "Conditional on treating BUT/HYE as the yin-yang transition, and "
+            "after carrying forward the direct negatives, the page does not "
             "supply a working literal password. The most local live dataflow is "
             "FAED -> decoded result -> thispassword -> the adjacent SHA/SALPH "
             "region, with DBBI/FAED joint output a less-local alternative. This "

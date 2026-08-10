@@ -48,9 +48,13 @@ The exact 31-character DBBI selection
 of `matrixsumlist` is not the only macro grammar. That branch still lacks
 matrix dimensions, placement, letter values, aggregation, and serialization.
 
-By contrast, the six-digit-prime branch reaches the macro's next named state,
-`yinyang`, using a short sequence and no ciphertext oracle. It is therefore the
-better current explanation of the macro prefix. The selected 31 characters
+By contrast, the six-digit-prime branch reaches the robust BUT/HYE checkpoint
+using a short sequence and no ciphertext oracle. Phase 223 subsequently showed
+that the partial mirror9 reading is not distinctive enough to establish the
+macro's next named state, `yinyang`: its strict positional form fails, and its
+set form is invariant under all six word permutations. The branch remains the
+better current explanation of the path through `lastwordsbeforearchichoice`,
+but not of `yinyang` itself. The selected 31 characters
 should not remain the default operand merely because they were recovered more
 recently.
 
@@ -71,7 +75,8 @@ The narrow supported comparison is:
 
 ```text
 six-digit prime operand
--> reaches the BUT/HYE yin-yang recognition state
+-> reaches the BUT/HYE boundary checkpoint
+-> yinyang interpretation remains unverified
 
 31-character DBBI operand
 -> stops at matrixsumlist because its consumer is unspecified

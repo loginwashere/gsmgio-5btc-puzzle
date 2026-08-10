@@ -10,6 +10,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 import architect_choice_boundary_audit
 import architect_choice_literal_password_audit
+import architect_yinyang_distinctiveness_audit
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import cosmic_raw_digest_checkpoint_audit
@@ -787,7 +788,8 @@ class CorrectedClaimTests(unittest.TestCase):
                 "e_is_fixed": True,
             },
         )
-        self.assertTrue(report["scope_comparison"]["minimal_prime_operand"]["reaches_macro_yinyang"])
+        self.assertTrue(report["scope_comparison"]["minimal_prime_operand"]["reaches_but_hye_checkpoint"])
+        self.assertFalse(report["scope_comparison"]["minimal_prime_operand"]["reaches_macro_yinyang"])
         self.assertFalse(report["scope_comparison"]["selected_31_operand"]["reaches_macro_yinyang"])
         # The circular H|YE|BUT construction and the post-hoc VAT/SALVATION
         # rebus were removed after review -- assert they stay out rather than
@@ -804,6 +806,10 @@ class CorrectedClaimTests(unittest.TestCase):
     def test_post_yinyang_dataflow_keeps_only_live_roles(self):
         report = post_yinyang_dataflow_audit.audit(
             Path(DEFAULT_EXPORT_DIR) / "result.json"
+        )
+        self.assertEqual(
+            report["premise_status"],
+            "conditional_unverified_after_phase223",
         )
         self.assertEqual(
             report["most_local_live_role"],
@@ -877,6 +883,14 @@ class CorrectedClaimTests(unittest.TestCase):
             report["selection_status"],
             "recognizable_after_enumeration_but_not_source_unique",
         )
+
+    def test_architect_mirror_does_not_independently_reach_yinyang(self):
+        report = architect_yinyang_distinctiveness_audit.audit()
+        self.assertFalse(report["fixed_selection"]["strict_positional_mirror"])
+        self.assertEqual(report["control_counts"]["but_initial_rows"], 48)
+        self.assertEqual(report["control_counts"]["but_and_partial_rule_rows"], 10)
+        self.assertEqual(report["permutation_invariance"]["mirror_closed_passes"], 6)
+        self.assertIn("not yet mechanically reached", report["verdict"])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

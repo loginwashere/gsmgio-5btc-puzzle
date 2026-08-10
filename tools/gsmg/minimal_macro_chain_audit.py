@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit the shortest creator-macro path from yellow/blue to yin-yang.
+"""Audit the shortest creator-macro path to the BUT/HYE checkpoint.
 
 This is a dependency audit, not a password or cipher sweep.  It tests whether
 the creator-authored macro prefix can already be consumed by the six-digit
@@ -85,8 +85,9 @@ def audit(export_path, image_path=DEFAULT_IMAGE):
         },
         "scope_comparison": {
             "minimal_prime_operand": {
-                "reaches_macro_yinyang": True,
-                "unconsumed_prefix_tokens": (),
+                "reaches_but_hye_checkpoint": True,
+                "reaches_macro_yinyang": False,
+                "unconsumed_prefix_tokens": ("yinyang",),
                 "remaining_judgment_calls": (
                     "read six decimal digits as a forward 2x3 matrix",
                     "take total followed by row sums",
@@ -104,9 +105,10 @@ def audit(export_path, image_path=DEFAULT_IMAGE):
             "path: yellow/blue -> 574061 -> [23,16,7] -> BOTH/ULTIMATELY/THE "
             "-> BUT/HYE -> the bounded b<->h, e-fixed mirror9 state. This does "
             "not prove every intermediate convention was creator-selected, but "
-            "it reaches the macro's yinyang checkpoint while the 31-character "
+            "it reaches the BUT/HYE checkpoint while the 31-character "
             "operand hypothesis still stops before it. The next unresolved "
-            "instruction is not fixed by this audit. VAT/SALVATION and the "
+            "instruction, including whether this counts as yinyang, is not "
+            "fixed by this audit. VAT/SALVATION and the "
             "H|YE|BUT reading are deliberately excluded: the former is an "
             "already-known post-hoc, oracle-negative rebus and the latter has no "
             "source-selected initial-letter rule."

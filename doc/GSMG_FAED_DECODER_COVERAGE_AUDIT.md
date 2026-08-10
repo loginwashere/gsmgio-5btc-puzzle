@@ -1,5 +1,9 @@
 # FAED decoder coverage audit
 
+> **Phase-223 condition:** the FAED-as-`thispassword` role is a page-order
+> hypothesis, not a proven post-yinyang step. BUT/HYE survives, but the mirror
+> interpretation that placed it after `yinyang` is not distinctive.
+
 Phase 218 made FAED plaintext the nearest live local role before
 `thispassword`; it did not identify a decoder. This audit separates a real
 untested hypothesis from the unlimited ability to add cipher parameters.

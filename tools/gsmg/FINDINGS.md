@@ -14210,6 +14210,11 @@ alternative is closed negative as a direct password.
 
 ## Phase 217 -- minimal creator-macro chain reaches `yinyang` via the six-digit prime; VAT/SALVATION and an invented "H|YE|BUT" reading removed after review (2026-08-09)
 
+**Later correction (Phase 223):** the route robustly reaches BUT/HYE, but the
+partial `b <-> h`, fixed-`e` mirror is not distinctive enough to establish
+that `yinyang` is reached. Read this phase's stronger wording as historical;
+the corrected live boundary leaves `yinyang` unconsumed.
+
 `tools/gsmg/minimal_macro_chain_audit.py` tests whether the creator macro's
 four-token prefix (`yellowblueprimes -> matrixsumlist ->
 lastwordsbeforearchichoice -> yinyang`, verified against creator message
@@ -14265,6 +14270,10 @@ state to DBBI/FAED or the half/better-half material -- not another
 `matrixsumlist` transform.
 
 ## Phase 218 -- post-yinyang dataflow ranking: FAED is the nearest live undecoded payload to `thispassword`; two more direct-password families closed (2026-08-09)
+
+**Phase-223 condition:** this ranking remains valid only if a future binding
+establishes that BUT/HYE is the intended yin-yang transition. Page order and
+the direct-password negatives remain exact; the post-yinyang premise does not.
 
 Given Phase 217's corrected checkpoint (the six-digit prime route consumes
 `matrixsumlist` and `lastwordsbeforearchichoice`, reaching `BUT/HYE`
@@ -14437,3 +14446,30 @@ resonant recognition clue, but downgrade “a True giveaway gives T” from an
 exact instruction to a post-enumeration selection. It does not bind FAED,
 DBBI, or a blob decoder without a new rule choosing the letter/position and a
 specific salt consumer.
+
+## Phase 223 -- BUT/HYE survives, but its partial mirror does not mechanically establish `yinyang` (2026-08-10)
+
+Separated the exact Architect boundary result from the later mirror9
+interpretation. `[23,16,7]` forward-one remains stable across film and
+screenplay, selects `BOTH/ULTIMATELY/THE`, and produces initials `BUT`, exactly
+the next spoken word after `choice`. None of that is weakened.
+
+The proposed yin-yang step filters `BUT/HYE` to `B/HE`. A strict positional
+mirror is impossible because the retained rails have unequal lengths. The
+historical interpretation instead maps `b -> h` and treats the extra `e` as a
+fixed point. `tools/gsmg/architect_yinyang_distinctiveness_audit.py` measures
+that special rule over all 35,904 ordered triples of the 34 word positions
+that are identical in both sources. Of 48 triples whose initials spell `BUT`,
+18 have a mirror-closed filtered symbol set, 10 satisfy the exact partial
+pair-plus-fixed-`e` rule, and five have literal finals `HYE`.
+
+All six permutations of the fixed three words retain a mirror-closed set;
+three retain the partial rule; none passes a strict positional mirror. Mirror
+closure therefore adds no ordering evidence to the independently strong BUT
+boundary.
+
+**Verdict:** retain BUT/HYE as a robust reconstruction, but downgrade
+`yinyang reached` to an unverified interpretation. The minimal macro audit now
+ends at BUT/HYE with `yinyang` unconsumed. Phases 218–220 remain useful
+conditional audits, but their FAED dataflow ranking is not proof that FAED is
+the actual post-yinyang operand.
