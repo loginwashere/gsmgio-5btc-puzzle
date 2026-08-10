@@ -14583,3 +14583,44 @@ reproducibility, and an explicit binding or rare controlled structural match.
 Reject necessary new-URL/web-archaeology branches. Do not admit brute force on
 an attributed creator endorsement that does not exist, and do not reject a
 layered interpretation solely from an unstated two-day construction bound.
+
+## Phase 227 -- visible-referent delta: two complementary near-misses, zero qualifiers (2026-08-10)
+
+Updated the original seven-family yin-yang artifact inventory with five later
+discoveries or page-local structures that had not been separately subjected
+to the same gate. No password, cipher, address, or blob oracle was run.
+
+The predeclared gates require an artifact to be authenticated/visible,
+deterministically recovered, genuinely dual, located at the immediate
+`lastwordsbeforearchichoice -> yinyang` boundary, and connected to either a
+fixed consumer or an independent discriminator. The original inventory's
+frozen table still has seven families and zero qualifiers.
+
+The five delta candidates also produce zero qualifiers:
+
+- both authenticated page blobs decode from their visible Base64 fronts to
+  `Salted__`, but that is a shared container marker rather than a dual state
+  or password binding;
+- `Salt|Phase|Ion` remains one of six dictionary-valid insertions in the
+  complete 48-member lowercase-`true` family and is not source-unique;
+- creator `YING/YANG -> IG/AG` is genuinely dual, sits at the semantic
+  boundary, and retains its independent FAED-specific rank result, but the
+  spelling differs from authenticated macro `yinyang` and cannot become an
+  authored operator contrary to the creator's typo caveat;
+- the literal `thispassword -> sha256 -> SALPH` page order supplies no operand
+  scope because the authenticated presentation has uniform boundaries;
+- literal `enter` separates SALPH into two visible 64-character halves and
+  deterministically reconstructs the known envelope. This is a real positive
+  control for visible dual structure, but it occurs downstream of the
+  unresolved password/SHA region rather than at the Architect boundary.
+
+The last two strong candidates therefore fail on complementary axes: IG/AG
+has boundary/discriminator support without deterministic authorship, while
+the SALPH halves have deterministic dual structure and a fixed consumer at
+the wrong boundary. Their strengths cannot be combined into one transition.
+
+**Verdict:** no newly inventoried visible referent passes all five gates, so
+no password, FAED decoder, IG/AG combination, or blob-oracle expansion is
+authorized. Reopen only if primary evidence fixes the IG/AG spelling/operator
+or binds a deterministic visible dual object directly to the Architect
+boundary.

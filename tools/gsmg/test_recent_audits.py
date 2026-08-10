@@ -62,6 +62,7 @@ import synthesis_action_paths_audit
 import telegram_yellow_blue_matrix_direction_audit
 import triangular_matrixsumlist_audit
 import urlblob_keywrap_backfill
+import visible_referent_delta_audit
 import yinyang_cosmic_phase_label_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
@@ -938,6 +939,36 @@ class CorrectedClaimTests(unittest.TestCase):
             (),
         )
         self.assertFalse(report["promotion"]["promoted"])
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists()
+        and Path(DEFAULT_EXPORT_DIR, "result.json").exists()
+        and macro_tail_title_insertion_audit.DEFAULT_DICTIONARY.exists(),
+        "page mirror, complete export, or frozen dictionary is unavailable",
+    )
+    def test_visible_referent_delta_has_no_qualifier(self):
+        report = visible_referent_delta_audit.audit()
+        self.assertEqual(report["baseline"]["artifact_count"], 7)
+        self.assertEqual(report["baseline"]["qualifying_artifacts"], ())
+        self.assertEqual(len(report["candidates"]), 5)
+        self.assertEqual(report["qualifying_candidates"], ())
+        self.assertFalse(report["new_compute_authorized"])
+        by_id = {
+            row["candidate_id"]: row
+            for row in report["candidates"]
+        }
+        self.assertTrue(by_id["salph_enter_halves"]["gates"]["genuine_dual"])
+        self.assertFalse(
+            by_id["salph_enter_halves"]["gates"]["correct_transition_position"]
+        )
+        self.assertTrue(
+            by_id["creator_ying_ig_ag"]["gates"][
+                "fixed_consumer_or_independent_discriminator"
+            ]
+        )
+        self.assertFalse(
+            by_id["creator_ying_ig_ag"]["gates"]["deterministic_recovery"]
+        )
 
     def test_phase217_circular_rebus_correction_is_propagated(self):
         report = post_phase217_consistency_audit.audit()
