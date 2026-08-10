@@ -14508,3 +14508,37 @@ hash, and two derived addresses, not COSMIC itself.
 is supportive and DOM adjacency is necessary-but-trivial, but both promotion
 gates fail: the nearer SALPH-self binding remains unexplained and creator usage
 does not equate solve progression with document order.
+
+## Phase 225 -- creator `YING/YANG` exactly fits FAED's `{g,i}` pair, but the typo is not an authenticated operator (2026-08-10)
+
+Revisited the `{g,i}` versus `{h,e}` discrepancy using only creator-authored
+visible wording. The complete export contains exactly two plain-language
+creator messages naming the state (9599 and 39224), and both use the
+nonstandard equal-length spelling `ying yang`/`yingyang`. Native `a-i`
+filtering gives an exact two-rail form:
+
+```text
+YING -> IG
+YANG -> AG
+```
+
+`I ↔ A` are mirror9 endpoints and `G` is shared. Independently, FAED's
+alphabet-free code-IC ranking places `{g,i}` first and `{a,g}` fifth. Across
+the bounded controls `(I,s)/(A,s)` for shared `s` in `b..h`, `G` is uniquely
+best among suffixes whose two pairs both segment FAED: ranks `1+5`, versus the
+next-best `8+18` for `E`. The same comparison is not generic to either raw
+stream: on DBBI the `G` pairs rank 13th/10th and shared `B` wins the control.
+
+The alignment is therefore exact and unusually target-specific, but it fails
+the authorship gate. Creator message 1806 predates both later spellings and
+explicitly says there are no clues in the puzzle's typos. More importantly,
+the authenticated creator binary macro itself uses standard `yinyang`, proving
+the extra `G` is not consistent across first-party clue channels. The shared
+`G` is also not a mirror fixed point (`G ↔ C`). Finally, creator “Both?” follows
+the direct community question “hit or hint?” and has no reply edge selecting
+the `IG`/`AG` word halves; reassigning it would be post-hoc.
+
+**Verdict:** retain `YING -> IG` as a compact possible explanation for why the
+independent FAED statistic prefers `{g,i}`, but do not promote it to a recovered
+binding. It selects neither a decoder nor a rule combining `IG` and `AG`, so it
+does not authorize an `{a,g}` or dual-pair brute-force run.

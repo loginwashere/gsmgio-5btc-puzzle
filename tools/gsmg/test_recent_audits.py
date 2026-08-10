@@ -14,6 +14,7 @@ import architect_yinyang_distinctiveness_audit
 import binary_message_export_audit
 import checkerboard_code_ic_oracle
 import cosmic_raw_digest_checkpoint_audit
+import creator_yingyang_faed_pair_audit
 import creator_operator_vocabulary_audit
 import dual_channel_consistency_audit
 import first_piece_hamming_control_audit
@@ -67,6 +68,35 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
+        "complete Telegram export is unavailable",
+    )
+    def test_creator_yingyang_faed_pair_is_not_promoted(self):
+        report = creator_yingyang_faed_pair_audit.audit()
+        self.assertEqual(
+            report["lexical_mechanics"]["native_filtered"],
+            ("ig", "ag"),
+        )
+        self.assertEqual(
+            report["observed_pair_ranks"]["faed_ranks"]["gi"]["rank"],
+            1,
+        )
+        self.assertEqual(
+            report["observed_pair_ranks"]["faed_ranks"]["ag"]["rank"],
+            5,
+        )
+        self.assertEqual(
+            report["shared_suffix_controls"]["faed"]["best_joint_suffix"]["shared_symbol"],
+            "g",
+        )
+        self.assertEqual(
+            report["shared_suffix_controls"]["dbbi"]["best_joint_suffix"]["shared_symbol"],
+            "b",
+        )
+        self.assertFalse(report["gates"]["authored_spelling_operator"])
+        self.assertFalse(report["promotion"]["new_compute_authorized"])
+
     def test_cosmic_raw_digest_checkpoint_correction(self):
         report = cosmic_raw_digest_checkpoint_audit.audit()
         self.assertEqual(
