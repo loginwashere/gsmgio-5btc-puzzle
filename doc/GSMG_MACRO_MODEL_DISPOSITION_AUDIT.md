@@ -1,3 +1,26 @@
+---
+type: audit
+phase: 236
+date: 2026-08-11
+status: verified
+disposition: active
+topics:
+  - macro-chain
+  - matrixsumlist
+  - architect
+related_phases:
+  - 217
+  - 223
+  - 232
+  - 233
+  - 234
+  - 235
+script: tools/gsmg/macro_model_disposition_audit.py
+aliases:
+  - Phase 236
+  - Macro Model Disposition Audit
+---
+
 # GSMG Macro-Model and Checkpoint-Disposition Audit
 
 Phase 236 compares the two surviving readings of the authenticated macro
@@ -42,7 +65,7 @@ structural checkpoint; parked
 ```text
 yellowblueprimes
 -> 574061
--> [[5,7,4],[0,6,1]]
+-> `[[5,7,4],[0,6,1]]`
 -> matrixsumlist = [23,16,7]
 -> lastwordsbeforearchichoice
 -> BOTH / ULTIMATELY / THE

@@ -1,3 +1,22 @@
+---
+type: audit
+phase: 235
+date: 2026-08-10
+status: closed-negative
+disposition: recognition-only
+topics:
+  - architect
+  - macro-chain
+related_phases:
+  - 118
+  - 232
+  - 233
+  - 234
+script: tools/gsmg/architect_passage_residual_audit.py
+aliases:
+  - Phase 235
+---
+
 # GSMG Architect-Passage Residual Audit
 
 > **Phase-237 closure note:** the legacy checkerboard-keyword route for the

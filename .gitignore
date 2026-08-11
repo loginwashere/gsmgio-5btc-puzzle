@@ -1,2 +1,8 @@
 __pycache__/
 *.pyc
+
+# Obsidian: keep shared vault config, ignore personal workspace/UI state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/*.log

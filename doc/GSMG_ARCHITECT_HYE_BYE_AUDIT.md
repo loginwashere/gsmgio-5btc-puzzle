@@ -1,3 +1,24 @@
+---
+type: audit
+phase: 232
+date: 2026-08-10
+status: partial
+disposition: recognition-only
+topics:
+  - architect
+  - macro-chain
+  - bye
+related_phases:
+  - 216
+  - 217
+  - 233
+  - 234
+  - 236
+script: tools/gsmg/architect_hye_bye_audit.py
+aliases:
+  - Phase 232
+---
+
 # GSMG Architect HYE → BYE Audit
 
 ## Result

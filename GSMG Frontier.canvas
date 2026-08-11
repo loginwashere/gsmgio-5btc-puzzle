@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {"id": "n-title", "type": "text", "text": "# GSMG Frontier\nLoad-bearing recognition chain. Solid edges = mechanically verified. Dashed = semantic/structural, not creator-selected. See [[GSMG_HOME]] and [[GSMG_STRICT_TRANSITION_WORKSHEET]] for full gate detail.", "x": -200, "y": -400, "width": 640, "height": 120, "color": "6"},
+
+    {"id": "n-ybp", "type": "text", "text": "**yellowblueprimes**\n24-cell grid -> 574061 (prime)\nAuthenticated creator macro token 1/4", "x": 0, "y": -220, "width": 300, "height": 100, "color": "4"},
+
+    {"id": "n-msl", "type": "text", "text": "**matrixsumlist**\n574061 -> `[[5,7,4],[0,6,1]]` -> `[23,16,7]`\n\n*Alt: 31-char DBBI selection*\n`ncsyangcahiriasogaleafayanestve`\n-> **Structural checkpoint; parked** (Phase 236)\n7 G3 fields unbound", "x": 0, "y": -60, "width": 320, "height": 160, "color": "3"},
+
+    {"id": "n-lwba", "type": "text", "text": "**lastwordsbeforearchichoice**\n[23,16,7] -> Architect film/screenplay\n-> BOTH / ULTIMATELY / THE\n\nOnly BOTH has mirror9 endpoints (B..H)\n[[GSMG_ARCHITECT_CHOICE_BOUNDARY_AUDIT|Architect Choice Boundary Audit]]", "x": 0, "y": 160, "width": 320, "height": 140, "color": "4"},
+
+    {"id": "n-buthye", "type": "text", "text": "**BUT / HYE**\nInitials/endings of BOTH/ULTIMATELY/THE\nfits DBBI {b,e}; mirror predicts FAED {h,e}\n(actual FAED best fit is {g,i} -- unresolved)\n[[GSMG_ARCHITECT_HYE_BYE_AUDIT|HYE/BYE Audit]]", "x": 0, "y": 360, "width": 320, "height": 140, "color": "5"},
+
+    {"id": "n-bye", "type": "text", "text": "**BYE**\npartial_mirror9(HYE), Y preserved\nunique dict. word, 5/48 BUT rows\n**Recognition checkpoint; parked**\n90 keystrings x 4 blobs: 0 hits", "x": 0, "y": 560, "width": 320, "height": 140, "color": "5"},
+
+    {"id": "n-ciao", "type": "text", "text": "**CIAO BELLA O**\nauthenticated page text; *Bella Ciao*\nhistorical precedent (not creator-selected)\n[[GSMG_BYE_CIAO_PROVENANCE_AUDIT|BYE-CIAO Provenance]]\n[[GSMG_CIAO_SELECTION_COVERAGE_AUDIT|CIAO Selection Coverage]]", "x": 0, "y": 760, "width": 320, "height": 140, "color": "5"},
+
+    {"id": "n-unknown", "type": "text", "text": "**yinyang / DBBI+FAED joint state**\nUNKNOWN CONSUMER\nNo operator selected; live semantic\nboundary, not executable.\nThis is the open frontier.", "x": 0, "y": 960, "width": 320, "height": 140, "color": "1"},
+
+    {"id": "n-shadow", "type": "text", "text": "**#383838 shadow layer**\nStage-0 footer G-checksum\nC9 native favicon shadow -> CE\nContour-bound, non-spatial (Phase 239-242)\n**Closed: provenance only, no payload**", "x": 420, "y": -60, "width": 300, "height": 150, "color": "1"}
+  ],
+  "edges": [
+    {"id": "e1", "fromNode": "n-ybp", "toNode": "n-msl", "fromSide": "bottom", "toSide": "top", "label": "authenticated macro order"},
+    {"id": "e2", "fromNode": "n-msl", "toNode": "n-lwba", "fromSide": "bottom", "toSide": "top", "label": "Model B (default)"},
+    {"id": "e3", "fromNode": "n-lwba", "toNode": "n-buthye", "fromSide": "bottom", "toSide": "top", "label": "sourced dialogue"},
+    {"id": "e4", "fromNode": "n-buthye", "toNode": "n-bye", "fromSide": "bottom", "toSide": "top", "label": "partial_mirror9, unauthenticated"},
+    {"id": "e5", "fromNode": "n-bye", "toNode": "n-ciao", "fromSide": "bottom", "toSide": "top", "label": "structural, not creator-selected"},
+    {"id": "e6", "fromNode": "n-ciao", "toNode": "n-unknown", "fromSide": "bottom", "toSide": "top", "label": "no fixed consumer"},
+    {"id": "e7", "fromNode": "n-msl", "toNode": "n-shadow", "fromSide": "right", "toSide": "left", "label": "checked, unrelated"}
+  ]
+}

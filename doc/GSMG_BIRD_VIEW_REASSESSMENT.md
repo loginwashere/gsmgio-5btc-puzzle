@@ -261,7 +261,7 @@ does not generalize from position or binary transport alone. With Model B as
 the current external macro default, the 54-model Phase-101 family can be
 conditionally projected to 18 residual password/SHA/tail models, but this is
 not creator-authenticated and still yields zero strict model. Full report:
-`doc/GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md`.
+[doc/GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md](GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md).
 
 **Phase 102 (complete): `anstoo`/SHA-operand provenance recovered -- genuinely
 unresolved, not a coverage gap.** `tools/gsmg/anstoo_provenance_audit.py`
@@ -387,7 +387,7 @@ result.
    the independently best-supported FAED pair, while Phase 113 closed only a
    single-layer monoalphabetic model. Harden the driver with fingerprinted,
    exact checkpoint/resume before running. See
-   `doc/GSMG_PHASE_REOPENING_REASSESSMENT.md`.
+   [doc/GSMG_PHASE_REOPENING_REASSESSMENT.md](GSMG_PHASE_REOPENING_REASSESSMENT.md).
 5. Keep `-nopad` Tier 2 and the large autokey continuation as background
    coverage only; the former is bounded and cheap, while the latter remains
    weakly motivated.

@@ -1,3 +1,13 @@
+---
+type: index
+status: live
+topics:
+  - solved-chain
+  - stage-map
+aliases:
+  - Stage Input Output Summary
+---
+
 # GSMG Puzzle — Compact Stage, Clue, Input, and Output Ledger
 
 ## Scope
@@ -420,7 +430,7 @@ One exact numerical reconstruction is:
 
 ```text
 574061
--> [[5,7,4],[0,6,1]]
+-> `[[5,7,4],[0,6,1]]`
 -> matrix sums/list
 -> [23,16,7]
 ```
@@ -619,13 +629,13 @@ no longer the default operand of `matrixsumlist`.
   unconstrained transform family.
 
 All proposed transitions are now governed by the five-gate admission and
-promotion rules in `doc/GSMG_STRICT_TRANSITION_WORKSHEET.md`. In particular,
+promotion rules in [doc/GSMG_STRICT_TRANSITION_WORKSHEET.md](GSMG_STRICT_TRANSITION_WORKSHEET.md). In particular,
 the worksheet parks the exact 31-character DBBI selection while also parking
 `KIT`, `ggn`, `BATCH`, `igecabdfh`, overlays, DNA, and RGB-vector consumers
 until new evidence fixes their missing operations.
 
 The dedicated provenance refresh in
-`doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md` extends that evidence check
+[doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md](GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md) extends that evidence check
 through the 2026-08-09 Telegram export. It found no creator-authored fixing
 instruction: the recovered guide uses row sums on a different DBBI object, a
 2024 community attachment defines row-plus-column sums on a different input,

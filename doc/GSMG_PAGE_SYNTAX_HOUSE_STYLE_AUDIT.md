@@ -1,3 +1,21 @@
+---
+type: audit
+phase: 238
+date: 2026-08-11
+status: closed-negative
+disposition: active
+topics:
+  - macro-chain
+  - matrixsumlist
+  - page-structure
+related_phases:
+  - 101
+  - 236
+script: tools/gsmg/page_syntax_house_style_audit.py
+aliases:
+  - Phase 238
+---
+
 # GSMG Page-Syntax House-Style Audit
 
 Phase 238 tests whether the other authenticated SalPhaseIon instruction slots

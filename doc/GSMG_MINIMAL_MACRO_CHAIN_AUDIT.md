@@ -13,7 +13,7 @@ That prefix can already be consumed by the short prime-digit reconstruction:
 ```text
 yellow=1 / blue=0
 -> 574061
--> [[5,7,4],[0,6,1]]
+-> `[[5,7,4],[0,6,1]]`
 -> total and row sums [23,16,7]
 -> Architect words BOTH / ULTIMATELY / THE
 -> beginnings BUT; endings HYE

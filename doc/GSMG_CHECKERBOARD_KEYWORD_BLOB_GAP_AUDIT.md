@@ -1,3 +1,24 @@
+---
+type: audit
+phase: 237
+date: 2026-08-11
+status: closed-negative
+disposition: recognition-only
+topics:
+  - checkerboard
+  - bye
+  - ciao
+  - p32trailing
+  - urlblob
+related_phases:
+  - 232
+  - 234
+  - 235
+script: tools/gsmg/checkerboard_keyword_blob_gap_audit.py
+aliases:
+  - Phase 237
+---
+
 # GSMG Checkerboard-Keyword New-Blob Gap Audit
 
 Phase 237 closes the explicitly retained Phase-234/235 coverage gap: the

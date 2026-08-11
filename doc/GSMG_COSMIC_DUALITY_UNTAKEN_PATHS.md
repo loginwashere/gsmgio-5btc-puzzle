@@ -571,7 +571,7 @@ The real screenplay PDFs (`wordlists/matrix/the-matrix-1999.pdf`,
 `the-matrix-reloaded-2003.pdf`, `the-matrix-revolutions-2003.pdf`, 80,695 words total
 via `pdftotext -layout`) were already on disk from an earlier, unrelated, already-
 negative test (the 2026-07-12 verbatim-riddle-excerpt sliding-window sweep — see
-`doc/GSMG_PUZZLE.md`) but had never been fed into this instruction pipeline.
+[doc/GSMG_PUZZLE.md](GSMG_PUZZLE.md)) but had never been fed into this instruction pipeline.
 
 The AES-check stage was single-threaded and could not finish against a real 25-28k-
 word-per-script corpus in reasonable time (timed out at 100s even capped to
@@ -654,7 +654,7 @@ hash, and subsequent OpenSSL use:
 | Phase 2 `causality` | `eb3efb5151e6255994711fe8f2264427ceeebf88109e1d7fad5b0a8b6d07e5bf` | `SHA256("causality")`, explicitly used as the Phase 2 AES password |
 | Phase 3 seven parts | `1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5` | SHA-256 of the documented exact-case seven-part concatenation, explicitly used for Phase 3 |
 | Phase 3.2 clue answers | `250f37726d6862939f723edc4f993fde9d33c6004aab4f2203d9ee489d61ce4c` | SHA-256 of the documented normalized three-answer concatenation, explicitly used for Phase 3.2 |
-| SalPhaseIon page-entry command | `89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32` | `SHA256("GSMGIO5BTCPUZZLECHALLENGE" + puzzle BTC address)` — the literal URL slug used to reach this page, recomputed and confirmed byte-for-byte against `doc/GSMG_PUZZLE.md`'s site-map |
+| SalPhaseIon page-entry command | `89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32` | `SHA256("GSMGIO5BTCPUZZLECHALLENGE" + puzzle BTC address)` — the literal URL slug used to reach this page, recomputed and confirmed byte-for-byte against [doc/GSMG_PUZZLE.md](GSMG_PUZZLE.md)'s site-map |
 
 The `89727...` value is the strongest literal reading of `your last command` (it IS
 the hash-as-command used to navigate here). The other three are earlier real hash
@@ -724,7 +724,7 @@ python3 tools/gsmg/page_structure_audit.py
 python3 tools/gsmg/page_structure_audit.py --json
 ```
 
-The default capture is the local Wayback mirror documented in `doc/GSMG_PUZZLE.md`;
+The default capture is the local Wayback mirror documented in [doc/GSMG_PUZZLE.md](GSMG_PUZZLE.md);
 another capture can be supplied with `--html`.
 
 ### Exact Structure
@@ -1163,7 +1163,7 @@ extensions are **not warranted** and should not be built.
 
 ## Local References
 
-- `doc/GSMG_PUZZLE.md`
+- [doc/GSMG_PUZZLE.md](GSMG_PUZZLE.md)
 - `tools/gsmg/FINDINGS.md`
 - `tools/gsmg/cb_common.py`
 - `tools/gsmg/chain_sweep.py`

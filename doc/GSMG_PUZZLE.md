@@ -315,7 +315,7 @@ correction below)
   published `S=5193`, one-based `Wr=268603`, and `Wc=268828`. Telegram messages
   `68249`/`68259` exposed the raw-versus-hex mistake; this project then reproduced it
   independently in `tools/gsmg/cosmic_raw_digest_checkpoint_audit.py`. Full report:
-  `doc/GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md`. The original public commit
+  [doc/GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md](GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md). The original public commit
   `8f47839251a8b49e67a41ecb8d964fddd5e9270c` explicitly uses `unhexlify()` before
   MD5, confirming that raw bytes were part of the published implementation rather
   than a later repair.
@@ -1181,4 +1181,4 @@ small SalPhaseIon AES blob into two exact 64-character halves. This strongly ide
 rather than evidence for appending a newline to the password. Removing it reproduces
 the already-known valid OpenSSL `Salted__` blob, so this clarifies the page grammar but
 does not provide a new decryption key. Exact offsets and the reproducible command are
-recorded in `doc/GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md`.
+recorded in [doc/GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md](GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md).

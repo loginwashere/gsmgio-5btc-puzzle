@@ -218,7 +218,7 @@ happened since on the wider community's GitHub activity:
 - The main community repo (`puzzlehunt/gsmgio-5btc-puzzle`) has a burst of new issues
   in the last month, several from the last few days. On inspection, **all of the
   "solved"/"breakthrough" ones are fabricated or spam**, matching the exact pattern
-  already documented in `doc/GSMG_PUZZLE.md`'s "What's been tried" section:
+  already documented in [doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md)'s "What's been tried" section:
   - **#97 "Prize Claim" (2026-07-02)**: "proves" ownership of two addresses
     (`1JG648y...`, `145ZQ9s...`) that are **not the actual puzzle address**
     (`1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`), then asks for the prize to be sent to a
@@ -247,7 +247,7 @@ happened since on the wider community's GitHub activity:
     Nothing has actually been solved.
   - **#92 "Seeking reproducible definition of ca / cosmic_A..." (2026-06-04,
     marcofortina)** looked like the one genuine, serious thread — a well-defined
-    `cosmic_A`/`ca` XOR-operand gap, already flagged in `doc/GSMG_PUZZLE.md`'s "still
+    `cosmic_A`/`ca` XOR-operand gap, already flagged in [doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md)'s "still
     open" section. Follow-up comments (through 2026-06-11) show marcofortina ran a
     broad OSINT sweep (65 forks, 82 issues, Wayback CDX) and found **no public
     reproducible definition** of `ca`/`cosmic_A`/`row1-row4`/`K_I1`. A second
@@ -257,7 +257,7 @@ happened since on the wider community's GitHub activity:
     repo — one of them on issue #69, already flagged above as a fake "SOLVED" post)
     making unverifiable, hand-wavy claims with no code or artifact ever shown, then
     amplified verbatim by other accounts months apart. Naddiseo (a credible source
-    cited elsewhere in `doc/GSMG_PUZZLE.md`) publicly dismissed a closely related post
+    cited elsewhere in [doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md)) publicly dismissed a closely related post
     in the same thread as *"soup. Complete Nonsense"* and warned *"Large Language
     Models like ChatGPT and Claude cannot solve this puzzle."* A separate, carefully
     hedged post (issue #82) independently found no transformation over the public
@@ -648,7 +648,7 @@ tail-fill preset is functionally identical, exactly as observed for 3.2.2 itself
 
 ## Phase 10 — full OCR transcription of the physical "Cosmic Duality" book (2026-07-15)
 
-The 2026-07-12 book review (see `doc/GSMG_PUZZLE.md`) was a manual visual scan for
+The 2026-07-12 book review (see [doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md)) was a manual visual scan for
 hidden/planted content (anomalies, marginalia) across 73 photographed pages and
 concluded negative. It never produced a machine-readable transcript, so the book's
 *normal* text had never been mechanically mined for candidate riddle phrases the way
@@ -1014,7 +1014,7 @@ hash-literals + AES-blob-split-around-abba(enter)`, 1,075 characters, exact matc
 
 ## Phase 17 — independent verification of a second, deeper code-review pass (2026-07-24)
 
-Another agent ran a broader review (`doc/GSMG_SCRIPT_CODE_REVIEW.md`) covering all
+Another agent ran a broader review ([doc/GSMG_SCRIPT_CODE_REVIEW.md](../../doc/GSMG_SCRIPT_CODE_REVIEW.md)) covering all
 25 scripts and fixed 7 categories of issue: dangling-escape silent truncation,
 explicit-empty-scope-expands-to-default (same class as the Phase 15 KDF bug),
 invalid-option silent fallbacks, fork-vs-spawn global-mutation fragility, an
@@ -1126,7 +1126,7 @@ significant, so the rough old Friedman estimate near 9 is not evidence for more
 autokey/Vigenère expansion.
 
 Detailed scopes, null-model requirements, and stopping conditions are recorded in
-`doc/GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md`. No new AES hit was found in this
+[doc/GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md](../../doc/GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md). No new AES hit was found in this
 planning/statistical phase.
 
 ### Phase 19 implementation audit and corrected result
@@ -2178,7 +2178,7 @@ Corrected a provenance-count error in earlier documentation: the export has
 stated 444-message count was incorrect.
 
 The resulting ledger is in
-`doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md`. Its central finding is that the
+[doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md](../../doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md). Its central finding is that the
 creator's statements form a dependency chain rather than a wordlist:
 
 ```
@@ -2240,7 +2240,7 @@ URL's ASCII LSBs, but the creator-clued polarity interpretation is not.
 
 Added assertion-backed
 `tools/gsmg/first_piece_color_reconstruction.py` and the complete provenance
-table in `doc/GSMG_FIRST_PIECE_COLOR_RECONSTRUCTION.md`. Directly applying
+table in [doc/GSMG_FIRST_PIECE_COLOR_RECONSTRUCTION.md](../../doc/GSMG_FIRST_PIECE_COLOR_RECONSTRUCTION.md). Directly applying
 `{1,4,21}` to the 24 objects gives `ggn`/`BBY` (one-based) or `s.t`/`BYY`
 (zero-based), neither self-validating; that later hint's indexed object
 remains unresolved.
@@ -2281,7 +2281,7 @@ This is a strong checkpoint, not yet a complete solve. The next operation,
 `lastwordsbeforearchichoice`, still needs the exact Architect transcript frozen
 and a bounded forward/backward, zero/one-based extraction with indices
 `23,16,7`. Full checkpoint and next-test rules:
-`doc/GSMG_MATRIXSUMLIST_CHECKPOINT.md`.
+[doc/GSMG_MATRIXSUMLIST_CHECKPOINT.md](../../doc/GSMG_MATRIXSUMLIST_CHECKPOINT.md).
 
 ## Phase 33 -- Architect-choice extraction: `BUT/HYE -> EOL` (2026-07-25)
 
@@ -2410,7 +2410,7 @@ project-wide multiple-testing burden is unaccounted for, and there is no
 semantic or cryptographic validation. No AES escalation.
 
 Full reasoning and exact scopes:
-`doc/GSMG_NON_BLOB_LOCK_AUDIT.md`.
+[doc/GSMG_NON_BLOB_LOCK_AUDIT.md](../../doc/GSMG_NON_BLOB_LOCK_AUDIT.md).
 
 **Verdict:** local creator-grounded interpretations of `H` are exhausted
 without a new lock. At this point primary-evidence recovery of the purportedly
@@ -2909,7 +2909,7 @@ claimed -- `{g,i}` (already separately tested and negative via chain-
 addition/autokey, Phase 16/38) is the one clear exception.
 
 By this project's own escape-*character*-density heuristic (target 47%,
-`doc/GSMG_PUZZLE.md:452-458`, itself a raw-character-frequency metric,
+[doc/GSMG_PUZZLE.md:452-458](../../doc/GSMG_PUZZLE.md), itself a raw-character-frequency metric,
 confirmed from source -- not the same thing as the 21.54% escape-*code*-
 fraction figure, which is a related but distinct statistic): `{b,e}`
 matches DBBI almost exactly (47.3%); FAED's best pair `{g,i}` only reaches
@@ -4324,7 +4324,7 @@ not present in the dialogue/count clue. No AES escalation follows.
 ## Phase 59 -- Stage 3 OCR pass over the Stage 2 media shortlist (2026-07-26)
 
 `tools/gsmg/telegram_shortlist_ocr.py` processed all 50 items frozen in
-`doc/GSMG_TELEGRAM_MEDIA_SHORTLIST.md` (40 images OCR'd via the same
+[doc/GSMG_TELEGRAM_MEDIA_SHORTLIST.md](../../doc/GSMG_TELEGRAM_MEDIA_SHORTLIST.md) (40 images OCR'd via the same
 grayscale/autocontrast/invert-if-dark preprocessing as
 `extract_cosmic_duality_screenshots.py`, 7 text attachments read directly, 3
 MIDI/video files logged out of scope). No item supplies a creator-authored
@@ -4511,7 +4511,7 @@ should be migrated to JSON message IDs/from IDs when revisited.
 
 ## Phase 63 -- consolidated creator clue, confirmation, and praise index (2026-07-26)
 
-The existing `doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md` is an analytical
+The existing [doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md](../../doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md) is an analytical
 dependency ledger, not a complete message-ID lookup. In particular, it does
 not centrally list creator replies such as `Good point`, `very specific`,
 `getting close`, `Bingo`, explicit refutations, or the creator's July 2026
@@ -4519,7 +4519,7 @@ return after the old transcript cutoff.
 
 Added:
 
-- `doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md`;
+- [doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md](../../doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md);
 - `tools/gsmg/telegram_creator_clue_index_audit.py`.
 
 The JSON-backed audit starts from the stable creator ID `user9815232` and
@@ -4668,7 +4668,7 @@ bit plane, or expand into ciphers without new creator evidence.
 
 A systematic review of all 395 creator text messages not covered by Phase
 63's index (out of 482 total) added eight further records and one
-correction to `doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md` and
+correction to [doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md](../../doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md) and
 `tools/gsmg/telegram_creator_clue_index_audit.py` (71 -> 80 records). Most
 promising-looking candidates did not survive reading their surrounding
 conversation and were excluded: `"Only -41,-17 matters"` (an unrelated
@@ -5146,7 +5146,7 @@ Audited `gsmg-archive.org` and HosterjackAGV's
   independent evidence.
 
 Full provenance, caveats, and source-inventory results are in
-`doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md`. Mechanical assertions are encoded in
+[doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md](../../doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md). Mechanical assertions are encoded in
 `tools/gsmg/external_archive_lead_audit.py`.
 
 **Verdict:** external-archive recovery is complete and yielded no missing
@@ -5522,7 +5522,7 @@ At the measured 72-operation throughput, those boundaries are approximately
 can use its own checkpoint/hit/API-queue files without modifying the
 648-candidate loader or colliding with Phase 78's completed checkpoint.
 Full methodology and exact hashes are in
-`doc/GSMG_MEDIUM_CANDIDATE_CURATION.md`.
+[doc/GSMG_MEDIUM_CANDIDATE_CURATION.md](../../doc/GSMG_MEDIUM_CANDIDATE_CURATION.md).
 
 **Verdict:** this is a bounded expansion plan, not evidence that all 66,441
 strings are equally plausible. Tier 1 is the next defensible unattended
@@ -5927,7 +5927,7 @@ Phase 3.2 AES password (`data.py` `VERIFIED_PRIOR_COMMAND_HASHES
 ["phase32_clues"]` / `PHASE32_BLOB_B64`) -- while only his one specific
 book, *Looking Forward*, had ever gotten a dedicated candidate list
 (`wordlists/gsmg/looking_forward_candidates.txt`, 19 candidates, itself an
-unconfirmed community lead per `doc/GSMG_YIN_YANG_TRANSITION_AUDIT.md`).
+unconfirmed community lead per [doc/GSMG_YIN_YANG_TRANSITION_AUDIT.md](../../doc/GSMG_YIN_YANG_TRANSITION_AUDIT.md)).
 His other books, documentaries, and coined terms had never been turned into
 candidates at all -- confirmed by grepping the whole repo for "fresco"
 before starting, which found real mentions only inside raw community-chat
@@ -8385,7 +8385,7 @@ corroboration it was initially described as.
 The creator's own messages (`9599`: "Once you hit a 'ying yang', you'll be
 able to solve it the same day"; `39224`: "when yingyang is reached, 2 hours
 max" / "It's the next phase" -- both already in
-`doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md`) establish only that reaching
+[doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md](../../doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md)) establish only that reaching
 yin-yang is a recognizable milestone shortly before completion. Neither
 message, nor any other creator text found so far, connects yin-yang to
 jointly solving DBBI and FAED specifically -- that link is the community's
@@ -8394,7 +8394,7 @@ jointly solving DBBI and FAED specifically -- that link is the community's
 ## Phase 123 -- FAED `{g,i}` VIC-style chain-addition reopening: full scope run, CLOSED NEGATIVE (2026-07-28)
 
 Executed the highest-priority reopening identified in
-`doc/GSMG_PHASE_REOPENING_REASSESSMENT.md`: whether FAED, segmented under its
+[doc/GSMG_PHASE_REOPENING_REASSESSMENT.md](../../doc/GSMG_PHASE_REOPENING_REASSESSMENT.md): whether FAED, segmented under its
 own best-fit escape pair `{g,i}` (Phase 112: rank 1/36 by corrected code-IC),
 carries a VIC-cipher-style additive keystream layered on top of the
 checkerboard decode -- independent of, and in addition to, guessing the
@@ -8501,7 +8501,7 @@ priority still, motivated only thematically.
 ## Phase 124 -- bounded yin-yang artifact inventory: no promotable artifact (2026-07-28)
 
 Implemented Phases 1-2 of
-`doc/GSMG_YINYANG_ARTIFACT_IDENTIFICATION_PLAN.md` as
+[doc/GSMG_YINYANG_ARTIFACT_IDENTIFICATION_PLAN.md](../../doc/GSMG_YINYANG_ARTIFACT_IDENTIFICATION_PLAN.md) as
 `tools/gsmg/yinyang_artifact_inventory_audit.py`. The script runs no cipher
 oracle and freezes exactly seven pre-registered families: `BUT/HYE`,
 selected/complement text, paired page objects, first-piece polarity, the
@@ -8546,7 +8546,7 @@ solved. The inventory therefore stops under its declared rule: **no retained
 artifact currently satisfies both the full evidence qualification and a
 surviving deterministic downstream operation.** No new cipher sweep follows.
 Full output and boundaries are recorded in
-`doc/GSMG_YINYANG_ARTIFACT_INVENTORY.md`.
+[doc/GSMG_YINYANG_ARTIFACT_INVENTORY.md](../../doc/GSMG_YINYANG_ARTIFACT_INVENTORY.md).
 
 ## Phase 125 -- black-rabbit negative-space audit: corrected adjacent pattern (2026-07-28)
 
@@ -9737,7 +9737,7 @@ This one is thematically closer to home than an arbitrary word would be --
 `md5` is a real KDF digest option this project's own oracle has always
 tested (`cb_common.KDF_VARIANTS`, `sha256`/`md5`/`sha1`), because `openssl
 enc`'s default digest was MD5 until OpenSSL 1.1.0, before this puzzle's 2019
-launch (`doc/GSMG_SCRIPT_CODE_REVIEW.md:66-68`). It still does not clear the
+launch ([doc/GSMG_SCRIPT_CODE_REVIEW.md:66-68](../../doc/GSMG_SCRIPT_CODE_REVIEW.md)). It still does not clear the
 bar for a lead, for two independent reasons: (1) unlike `EOL`->column 63,
 which was selected by an independent derivation chain before anyone looked
 at the data, column 32 has no such justification -- it was noticed only
@@ -9753,7 +9753,7 @@ choice this observation unlocks that was not already being tested.
 ## Phase 144 -- `-nopad` Tier-2 binary-key-material sweep: completed, clean negative (2026-08-05)
 
 Executes the one remaining bounded coverage item from
-`doc/GSMG_PHASE_REOPENING_REASSESSMENT.md` ("Secondary Background Coverage"):
+[doc/GSMG_PHASE_REOPENING_REASSESSMENT.md](../../doc/GSMG_PHASE_REOPENING_REASSESSMENT.md) ("Secondary Background Coverage"):
 the `-nopad` fixed-window sweep over the frozen Tier-2 puzzle-derived
 candidate set, which had completed only Tier 1 (Phase 100).
 
@@ -9795,7 +9795,7 @@ window/offset rule.
 Remaining unrun compute after this phase: only the FAED `{g,i}` large-
 dictionary autokey continuation `[54,250,338,905)`, which stays deprioritized
 (thematic motivation only; driver still lacks fingerprinted exact-resume
-hardening per `doc/GSMG_PHASE_REOPENING_REASSESSMENT.md`).
+hardening per [doc/GSMG_PHASE_REOPENING_REASSESSMENT.md](../../doc/GSMG_PHASE_REOPENING_REASSESSMENT.md)).
 
 ## Phase 145 -- non-standard N-escape checkerboard topology (N=3, N=4): calibrated, closed negative (2026-08-06)
 
@@ -9892,7 +9892,7 @@ target's own symbols, best-of-14-periods each): dbbi p=0.7785, faed p=0.4680
 
 This is also a clean result on independent logical grounds, matching this
 project's existing precedent for ruling out VIC-style additive keystreams on
-`dbbi` via IC smoothing (`doc/GSMG_PUZZLE.md`'s Kasiski/Friedman work): a
+`dbbi` via IC smoothing ([doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md)'s Kasiski/Friedman work): a
 genuinely fractionated ciphertext should show a *degraded/scrambled* code-IC
 relative to a clean one, and both targets' raw code-IC is already
 essentially optimal under their established escape pairs (Phase 106/112) --
@@ -9916,7 +9916,7 @@ book's pages 57-58 (a copy has been ordered as of this writing, ETA
 
 ## Phase 147 -- `YOUWON` tail direct-key decode: external-catalog reading tested, closed negative (2026-08-06)
 
-An external write-up re-raised `doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md`'s
+An external write-up re-raised [doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md](../../doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md)'s
 `YOUWON` finding (Phase 74/75), proposing that the 64-character tail after
 `YOUWON` is a raw private key under an unspecified "custom 16-character
 alphabetic hex mapping (A-P or A-Z mod 16)" -- without running the
@@ -10228,7 +10228,7 @@ oracle run -- it is pure context, logged as such.
 authorial-style commentary ("the way I", "my style", "inspired by", "another
 puzzle", "gsmg (stands|means)", personal-background phrases, etc.) -- a
 different extraction target than the project's existing coined-word/parallel-
-riddle scan (`doc/GSMG_PUZZLE.md`, already closed negative for a hidden
+riddle scan ([doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md), already closed negative for a hidden
 second riddle in chat). Two incidental hits, neither a design-process
 statement: message `9944` ("And I usually answer with 'no hints'" -- hint
 policy, not design) and message `7152` ("Some parts of cicada puzzles are
@@ -10266,7 +10266,7 @@ This is consistent with, not contradictory to, everything else already
 established here, and mildly lowers the prior on the remaining blocker being
 a sophisticated novel custom cipher rather than the "one microstep" of
 recognition the creator has repeatedly and directly claimed
-(`doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md`). Not itself a lead to chase
+([doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md](../../doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md)). Not itself a lead to chase
 further.
 
 ## Phase 155 -- second Telegram corpus discovered ("Community & support group"), rechecked, new first-party context, bounded oracle test negative (2026-08-06)
@@ -10626,7 +10626,7 @@ gaps behind Phase 150/153's "all four bullets now actually tested" claim.
 **Gap 1: Phase 153 asserted, without checking, that "the macro-clue token
 list" and "the ordered phase title list (8 items)" are the same object.**
 They aren't. The puzzle has its own genuine, sourced sequence of 8
-stage/phase names (`doc/GSMG_PUZZLE.md`'s solve chain: Stage 0, Stage 1,
+stage/phase names ([doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md)'s solve chain: Stage 0, Stage 1,
 Phase 2, Phase 3, Phase 3.2, Phase 3.2.1, Phase 3.2.2, SalPhaseIon) --
 distinct from the macro clue's 8 *decoded fragments*. Phase 153 tested only
 the latter.
@@ -10845,7 +10845,7 @@ incidental URL; previously it only existed in this project's wordlists as
 the literal candidate string `"passwordsgenerator"` (`chat_mined_words.txt`),
 never analyzed as a tool whose behavior might matter. (Phase 1 itself is
 already publicly solved -- `theflowerblossomsthroughwhatseemstobeaconcrete
-surface`, `doc/GSMG_PUZZLE.md` -- so this is a methodological find, not a
+surface`, [doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md) -- so this is a methodological find, not a
 live phase-1 gap.)
 
 **What the tool actually does.** The domain no longer resolves (`SERVFAIL`
@@ -11053,7 +11053,7 @@ answered from the actual code and corpus rather than from inference:
 2. **Does a genuine creator typo actually survive into a wordlist, or is
    this theoretical?** Checked with a concrete, already-known example:
    `salphation` -- the creator's own real chat misspelling of
-   `SalPhaseIon` (see `doc/GSMG_STAGE_INPUT_OUTPUT_SUMMARY.md`'s element-
+   `SalPhaseIon` (see [doc/GSMG_STAGE_INPUT_OUTPUT_SUMMARY.md](../../doc/GSMG_STAGE_INPUT_OUTPUT_SUMMARY.md)'s element-
    parse note) -- is present as a bare standalone token in
    `chat_mined_words.txt`, `chat_mined_lines.txt`, and (surviving into the
    curated tier) `medium_curated_tier1_primary.txt`/`medium_curated_all.
@@ -11107,7 +11107,7 @@ the creator... When a leaf variant fails, it may be worth questioning an
 upstream link instead of just trying more variants at the same depth."*
 Unlike items 1-3, this isn't a code gap to close -- it's a question about
 where this project's own compute has actually been going, checked against
-`doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md`.
+[doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md](../../doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md).
 
 **Checked the two most plausible upstream "prune points" concretely.**
 
@@ -11272,7 +11272,7 @@ thematic connection to astronomy, duality, yin-yang, or anything else
 established elsewhere in this project (unlike `APHELION`'s now-downgraded
 astronomical-duality resonance, Phase 148). `claudio` superficially recalls
 a name (`GalloClaudio64`) noted elsewhere in this project's provenance work
-as a non-credible solution submitter (`doc/GSMG_PUZZLE.md`), but that's an
+as a non-credible solution submitter ([doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md)), but that's an
 unrelated community GitHub handle with no textual link to this heading --
 noted only to rule it out, not treated as a lead. None of the sub-anagram
 words carry thematic resonance either (`custodial`, `diastolic`,
@@ -13024,7 +13024,7 @@ new clue specifically selecting one.
 ## Phase 195 -- first-piece Hamming/control-language audit: exact FE LSB mask and nibble structure verified; gray-weight match calibrated (2026-08-09)
 
 The first formal verification pass over
-`doc/GSMG_FIRST_PIECE_PIXEL_BRAINSTORM.md` started at its strongest,
+[doc/GSMG_FIRST_PIECE_PIXEL_BRAINSTORM.md](../../doc/GSMG_FIRST_PIECE_PIXEL_BRAINSTORM.md) started at its strongest,
 least-interpretive layer. `tools/gsmg/first_piece_hamming_control_audit.py`
 composes the existing authenticated first-piece and footer-palette extractors;
 it does not resample coordinates, choose a new color, or run a password/cipher
@@ -13085,7 +13085,7 @@ and removal of one LSB from each of 24 ASCII bytes leaving 168 bits/21 bytes.
 The `G,G,n` secp256k1 interpretation remains an unverified semantic hypothesis.
 
 Full writeup:
-`doc/GSMG_FIRST_PIECE_HAMMING_CONTROL_AUDIT.md`. The permanent late-stage
+[doc/GSMG_FIRST_PIECE_HAMMING_CONTROL_AUDIT.md](../../doc/GSMG_FIRST_PIECE_HAMMING_CONTROL_AUDIT.md). The permanent late-stage
 suite grows to 25 tests and passes in full. **Verdict:** promote the Hamming
 matrices, gray weights, FE LSB-mask behavior, exact decrement, `ggn`, and
 21-byte residual as structural facts. Retain “control language,” secp256k1,
@@ -13149,7 +13149,7 @@ any of the 23 prime positions, only prime 73 admits the relation (813 of
 7,354,710 assignments), but this is not the primary null because the image
 already fixes FEFE's position.
 
-Full report: `doc/GSMG_FIRST_PIECE_PRIME_SUM_VERIFICATION.md`.
+Full report: [doc/GSMG_FIRST_PIECE_PRIME_SUM_VERIFICATION.md](../../doc/GSMG_FIRST_PIECE_PRIME_SUM_VERIFICATION.md).
 **Verdict:** promote `400/401/73` and the selector-free `144/144/72`
 normalization as exact mechanics. Do not promote the latter as a password or
 second confirmation; conditioned correctly, it is a deterministic restatement
@@ -13201,7 +13201,7 @@ an independent random hit. The residual inventory also weakens the “seven
 passwords” framing: one plane is all zero, another all one, a third has 22/24
 ones, none supplies another prime, and neither packed traversal is plaintext.
 
-Full report: `doc/GSMG_FIRST_PIECE_BITPLANE_VERIFICATION.md`.
+Full report: [doc/GSMG_FIRST_PIECE_BITPLANE_VERIFICATION.md](../../doc/GSMG_FIRST_PIECE_BITPLANE_VERIFICATION.md).
 **Verdict:** promote the full inventory, exact 21-byte dimension, and bounded
 prime/staircase uniqueness. Do not promote a packed residual key, independent
 21 significance, or seven-password reading. Next: calibrate `{1,4,21} -> ggn`
@@ -13237,7 +13237,7 @@ introducing an absent scalar `k`, and selecting secp256k1. The identity
 `(n-k)G=-kG` is mathematically correct but generic to every cyclic group with
 generator order `n`; verifying it would not verify that `ggn` encodes it.
 
-Full report: `doc/GSMG_FIRST_PIECE_GGN_DISTINCTIVENESS_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_GGN_DISTINCTIVENESS_AUDIT.md](../../doc/GSMG_FIRST_PIECE_GGN_DISTINCTIVENESS_AUDIT.md).
 **Verdict:** retain the creator-grounded tuple, exact `ggn`, its unique
 location, and the bounded calibration as facts. Do not promote `ggn` to a
 secp256k1 instruction or run a key oracle from it without an independent clue
@@ -13283,7 +13283,7 @@ it back as a column vector, choosing multiplication, aligning total/row sums
 with columns, and interpreting/serializing the outputs as `FF67` are additional
 steps not selected by `matrixsumlist`. No blob/key oracle was run.
 
-Full report: `doc/GSMG_FIRST_PIECE_MATRIX_PRODUCT_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_MATRIX_PRODUCT_AUDIT.md](../../doc/GSMG_FIRST_PIECE_MATRIX_PRODUCT_AUDIT.md).
 **Verdict:** promote the exact product and its bounded calibration as a strong
 recognition checkpoint. Do not promote `FF67` as a key prefix, salt, IV, or
 password until an independent instruction selects multiplication and a
@@ -13323,7 +13323,7 @@ reading direct/reverse gives eight outputs (`TIK/KIT`, `TBR/RBT`, `TRB/BRT`,
 p-value. `KIT` is a correct young-rabbit term, but componentwise subtraction,
 A1Z26, and reversal are not locally selected operations. No oracle was run.
 
-Full report: `doc/GSMG_FIRST_PIECE_SECOND_MATRIXSUMLIST_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_SECOND_MATRIXSUMLIST_AUDIT.md](../../doc/GSMG_FIRST_PIECE_SECOND_MATRIXSUMLIST_AUDIT.md).
 **Verdict:** promote the literal 2x11 count matrix, `[43,25,18]`, the exact
 `[20,9,11]` difference, and its internal source correspondences. Retain `KIT`
 as a strong recognition hypothesis, not a password or downstream instruction,
@@ -13374,7 +13374,7 @@ Both copy the assigned blue stream's four-letter name because the mask begins
 also cannot preserve the third FEFE class without a new rail or explicit fold.
 No oracle was run.
 
-Full report: `doc/GSMG_FIRST_PIECE_EVENT_RAIL_PRESERVATION_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_EVENT_RAIL_PRESERVATION_AUDIT.md](../../doc/GSMG_FIRST_PIECE_EVENT_RAIL_PRESERVATION_AUDIT.md).
 **Verdict:** promote the exact 15/9-versus-14/8/1 distinction, token-preserving
 inventories, and all-event row buckets. Reject one-blue-per-row and the literal
 two-stream MUX as FEFE-preserving consumers. Do not flatten away event metadata.
@@ -13407,7 +13407,7 @@ Coordinates/dimensions scale by exactly three and count by nine, supporting
 the explicit RGB/location marker provenance. The repository-root `puzzle.png`
 is byte-identical to the authenticated full copy.
 
-Full report: `doc/GSMG_FIRST_PIECE_PNG_PALETTE_PROVENANCE_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_PNG_PALETTE_PROVENANCE_AUDIT.md](../../doc/GSMG_FIRST_PIECE_PNG_PALETTE_PROVENANCE_AUDIT.md).
 **Verdict:** close Point 9 negative. FEFE has no source palette index or alpha
 coordinate. Any index obtained by converting the image to indexed color would
 be converter-generated, not authored puzzle data. Retain only the explicit RGB,
@@ -13450,7 +13450,7 @@ reassignments of the lower count multiset over fixed upper columns it occurs
 occurs 340 times, while the full recognized aggregate profile occurs 20
 (`5/693`). All rates are descriptive/post hoc; no oracle was run.
 
-Full report: `doc/GSMG_FIRST_PIECE_SHADOW_COLUMN_RAIL_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_SHADOW_COLUMN_RAIL_AUDIT.md](../../doc/GSMG_FIRST_PIECE_SHADOW_COLUMN_RAIL_AUDIT.md).
 **Verdict:** close Point 17 absent a clue explicitly zipping rows, breaking
 ties, or naming rail consumers. Retain the row-local invariant-G `OCBe ->
 8,6,4` consumer as better grounded than ordinal cross-row pairing.
@@ -13494,7 +13494,7 @@ independent directions give eight equally natural permutations, with no
 selected winner or evidence that the invalid terminal means Enter/delimiter.
 
 Phase 191's already-negative direct `86420` oracle was not rerun. Full report:
-`doc/GSMG_FIRST_PIECE_EVEN_ODD_ALPHABET_GATE_AUDIT.md`.
+[doc/GSMG_FIRST_PIECE_EVEN_ODD_ALPHABET_GATE_AUDIT.md](../../doc/GSMG_FIRST_PIECE_EVEN_ODD_ALPHABET_GATE_AUDIT.md).
 **Verdict:** retain `864`/`4,2`/FE-zero provenance and conditional arithmetic,
 but do not promote `86420` as an instruction, `13579` as a second rail, or `igecabdfh`
 as an alphabet. Reopen only with a clue selecting the heterogeneous join,
@@ -13529,7 +13529,7 @@ BATCH semantically coherent, but the authenticated decoded instruction
 vocabulary contains no literal `batch`, and no resolved operand grammar tells
 the solver to execute one.
 
-Full report: `doc/GSMG_FIRST_PIECE_BATCH_REBUS_GATE_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_BATCH_REBUS_GATE_AUDIT.md](../../doc/GSMG_FIRST_PIECE_BATCH_REBUS_GATE_AUDIT.md).
 **Verdict:** retain `BaTcH/BATCH` as a strong recognition/checkpoint rebus, but
 close Point 14 as an executable instruction. Reopen only if another clue
 selects inverse element lookup, value-before-count ordering, singleton H, or
@@ -13577,7 +13577,7 @@ J-drop/forward-tail candidate is `BATCHOEFPVDGIKLMNQRSUWXYZ`, but no clue
 selects it; arbitrary order of its 15 unused letters alone gives `15!` tails.
 The known-real Phase-3.2 board explicitly does not supply a reusable tail rule.
 
-Full report: `doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md](../../doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md).
 **Verdict:** retain `[84,58,26] -> [42,29,13]` and the 29/13 role matches as a
 recognition hypothesis. Close Point 16 as a source/consumer chain and Point 18
 as an alphabet. Reopen only with a native/explicit CE selector and complete
@@ -13612,7 +13612,7 @@ consumer. The brainstorm's modulo read is incorrect: `(247,61,146) mod26 =
 (13,9,16)` gives `NJQ` under A=0 or `MIP` under A=1, not `NIQ`. Difference,
 plus-list, and minus-list A=0 reads are `HLE/KZX/QTJ`, none selected.
 
-Full report: `doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md](../../doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md).
 **Verdict:** close all three gates and the ranked queue. Retain only the exact
 RGB difference/red-channel7 as a recognition coincidence. No visual,
 checkerboard, password, or cryptographic oracle was run.
@@ -13650,7 +13650,7 @@ p-value -- unlike `574061`, which is independently anchored by the
 `yellowblueprime` clue text rather than selected after the fact from a
 small ordering family.
 
-Full report: `doc/GSMG_FIRST_PIECE_BORDER_RASTER_SCAN_AUDIT.md`.
+Full report: [doc/GSMG_FIRST_PIECE_BORDER_RASTER_SCAN_AUDIT.md](../../doc/GSMG_FIRST_PIECE_BORDER_RASTER_SCAN_AUDIT.md).
 **Verdict:** close all three readings as negative controls. No side-based or
 raster traversal of this grid reproduces or rivals the spiral construction.
 Reopen only if another clue explicitly names one.
@@ -13886,7 +13886,7 @@ base-38 interval; shift 7 is uniquely the one spanning both endpoints. That is
 a real internal property, but shift 7 is the mechanically available leftover
 bit count and the offset/base may have been chosen after viewing the range.
 
-This materially corrects only `doc/GSMG_PUZZLE.md`'s 2026-07-12 technical
+This materially corrects only [doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md)'s 2026-07-12 technical
 claim that the checkpoint could not be regenerated. It does not reverse the
 separately established fabrication provenance. The same hash, XOR result, and
 two addresses recur through at least nine GitHub issues plus bitcointalk in a
@@ -13921,7 +13921,7 @@ derivation. What remains unverified is its interpretation: no independent
 creator clue selects the matrix consumer or authenticates those two fields as
 private keys, and no branch reaches the real prize address.
 
-Full report: `doc/GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md`.
+Full report: [doc/GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md](../../doc/GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md).
 
 **Verdict:** promote exact reproducibility of the complete published branch and
 retract only the project's representation-based claim that its checkpoint was
@@ -13934,7 +13934,7 @@ validation target.
 
 ## Phase 211 -- strict transition worksheet: five mandatory gates freeze promotion and reopening rules (2026-08-09)
 
-Created `doc/GSMG_STRICT_TRANSITION_WORKSHEET.md` to prevent exact but
+Created [doc/GSMG_STRICT_TRANSITION_WORKSHEET.md](../../doc/GSMG_STRICT_TRANSITION_WORKSHEET.md) to prevent exact but
 underdetermined side-readings from silently becoming instructions, passwords,
 or oracle candidates. Every proposed transition must now record:
 
@@ -13973,7 +13973,7 @@ than transform expansion.
 
 Implemented `tools/gsmg/matrixsumlist_provenance_refresh_audit.py` and recorded
 the source-by-source result in
-`doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md`. This is an evidence audit, not
+[doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md](../../doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md). This is an evidence audit, not
 another transform sweep.
 
 The complete 57,729-message Telegram export contains 294 ordinary-text hits
@@ -14061,7 +14061,7 @@ transform or oracle is admitted. The transition remains evidence-blocked.
 
 Implemented `tools/gsmg/matrixsumlist_historical_code_audit.py` and recorded
 the source worksheet in
-`doc/GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md`. The audit freezes Telegram
+[doc/GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md](../../doc/GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md). The audit freezes Telegram
 message `60333` (2026-03-04 03:39:06), Denis's first publication of
 `ncsyangcahiriasogaleafayanestve`, as the historical cutoff. Later code is a
 control, not independent provenance.
@@ -14121,7 +14121,7 @@ binds it to the 31-character input.
 ## Phase 215 -- creator/operator vocabulary inventory: genuine precedents fix 0/7 `matrixsumlist` fields (2026-08-09)
 
 Implemented `tools/gsmg/creator_operator_vocabulary_audit.py` and recorded the
-source analysis in `doc/GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md`. No cipher,
+source analysis in [doc/GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md](../../doc/GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md). No cipher,
 password, or blob combinations were tested.
 
 The inventory admits an operator only when it produces an independently
@@ -14308,7 +14308,7 @@ assumed still closed:
 
 The historical Phase 33 rail-family result (BUT/HYE/EOL and related literal
 forms: 216 CBC keystrings, 306 Key-Wrap attempts, four blobs, zero hits;
-confirmed against `doc/GSMG_MATRIXSUMLIST_CHECKPOINT.md:193-194`) is carried
+confirmed against [doc/GSMG_MATRIXSUMLIST_CHECKPOINT.md:193-194](../../doc/GSMG_MATRIXSUMLIST_CHECKPOINT.md)) is carried
 forward as frozen, not rerun. The circular `H | YE | BUT` construction and
 the post-hoc Phase 96 `VAT/SALVATION` rebus remain explicitly excluded, per
 Phase 217, and are not counted as evidence either way.
@@ -14894,7 +14894,7 @@ algorithm/normalization first); and checkerboard-keyword coverage of
 `ciaobella`/`ciaobellao` against P32TRAILING/URLBLOB (Phase 2 predates those
 blobs -- flagged as a residual gap, not closed).
 
-Full report: `doc/GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md`.
+Full report: [doc/GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md](../../doc/GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md).
 **Verdict:** no creator selection on either corpus; the `{b,e}` semantic
 argument is withdrawn; the direct-password gap for all five CIAO/BELLA
 candidates is now closed and negative. No decoder or autokey oracle is
@@ -14933,7 +14933,7 @@ jokes, an unrelated bitconnect-parody idea). The brainstorm report's
 general anti-bruteforce guidance (Phase 226/230), not a documented creator
 statement about this specific passage.
 
-Full report: `doc/GSMG_ARCHITECT_PASSAGE_RESIDUAL_AUDIT.md`.
+Full report: [doc/GSMG_ARCHITECT_PASSAGE_RESIDUAL_AUDIT.md](../../doc/GSMG_ARCHITECT_PASSAGE_RESIDUAL_AUDIT.md).
 **Verdict:** provenance split confirmed but inconclusive; KEY/NOTE/SELF
 family's direct-password gap closed and negative; theatrical-misdirection
 reading correctly stays inference-only. No decoder or oracle expansion is
@@ -15015,7 +15015,7 @@ This is a real descriptive asymmetry, not a decoder selector; completed
 structural checkpoint; `BUT/HYE -> BYE` remains a parked recognition
 checkpoint. No credential, DBBI/FAED decoder, autokey/chain-addition run, or
 blob oracle is authorized. Full report:
-`doc/GSMG_MACRO_MODEL_DISPOSITION_AUDIT.md`.
+[doc/GSMG_MACRO_MODEL_DISPOSITION_AUDIT.md](../../doc/GSMG_MACRO_MODEL_DISPOSITION_AUDIT.md).
 
 ## Phase 237 -- legacy checkerboard-keyword gap closed on P32TRAILING/URLBLOB (2026-08-11)
 
@@ -15054,7 +15054,7 @@ cleanly and negatively. This does not refute the `BYE -> CIAO BELLA O`
 recognition checkpoint; it rules out one inherited consumer path. No
 password, plaintext, or authenticated consumer was found, and the row remains
 **Recognition checkpoint; parked**. Full report:
-`doc/GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md`.
+[doc/GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md](../../doc/GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md).
 
 ## Phase 238 -- page-syntax house-style audit: mixed grammar, no directional selector (2026-08-11)
 

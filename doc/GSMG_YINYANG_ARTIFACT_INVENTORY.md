@@ -20,7 +20,7 @@
 ## Scope
 
 This is the assertion-backed first pass defined by
-`doc/GSMG_YINYANG_ARTIFACT_IDENTIFICATION_PLAN.md`. It inventories exactly
+[doc/GSMG_YINYANG_ARTIFACT_IDENTIFICATION_PLAN.md](GSMG_YINYANG_ARTIFACT_IDENTIFICATION_PLAN.md). It inventories exactly
 seven pre-registered artifact families. It does not run a cipher oracle,
 generate passwords, add transforms, or treat the phrase `yinyang` as a key.
 

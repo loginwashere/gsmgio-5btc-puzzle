@@ -78,7 +78,7 @@ character rules.
 
 **Status:** close pending an explicit target, registration, orientation,
 sampler, and feature decoder. Full audit:
-`doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md`.
+[doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md](GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md).
 
 **Brainstorming Applications**:
 - **Spatial Stencil**: Treat the 14×14 grid not as a 1D sequence, but as a physical 2D mask (Cardan Grille).
@@ -133,7 +133,7 @@ outputs. The proposed `blue=G/yellow=T`, forward frame zero route gives
 
 **Status:** close pending an explicit base map, FEFE rule, direction/frame, and
 amino/byte consumer. Full audit:
-`doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md`.
+[doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md](GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md).
 
 **Brainstorming Applications**:
 - **4-Color Palette Mapping**: The first image relies on 4 discrete color states:
@@ -170,7 +170,7 @@ above is also inconsistent: `(13,9,16)` gives `NJQ` under `A=0` or `MIP` under
 **Status:** retain the exact difference and red-channel 7 as a recognition
 coincidence; close letter/shift consumers pending direction, indexing, and
 role instructions. Full audit:
-`doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md`.
+[doc/GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md](GSMG_FIRST_PIECE_OVERLAY_DNA_RGB_GATE_AUDIT.md).
 
 ---
 
@@ -354,7 +354,7 @@ the decoded instruction vocabulary contains no literal `batch`.
 **Status:** retain as a strong recognition/checkpoint rebus, but close it as an
 executable instruction pending an explicit inverse-element, ordering,
 singleton-H, or batch/command clue. Full audit:
-`doc/GSMG_FIRST_PIECE_BATCH_REBUS_GATE_AUDIT.md`.
+[doc/GSMG_FIRST_PIECE_BATCH_REBUS_GATE_AUDIT.md](GSMG_FIRST_PIECE_BATCH_REBUS_GATE_AUDIT.md).
 
 **Brainstorming Applications**:
 - Read `BaTcH` as the literal instruction **BATCH**.
@@ -401,7 +401,7 @@ properties uses the desired result as selector.
 **Status:** retain the arithmetic as a recognition hypothesis, but close it as
 a source/consumer chain pending a native or explicitly selected CE and an
 instruction choosing difference, halving, or scalar serialization. Full audit:
-`doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md`.
+[doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md](GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md).
 
 **Brainstorming Applications**:
 - Their difference is `58-26=32`, exactly the byte length of a regular Bitcoin private scalar.
@@ -478,7 +478,7 @@ tails; the known Phase-3.2 board supplies no reusable tail formula.
 **Status:** close as underdetermined. `BATCHOEFPV` is a reproducible provisional
 seed, not a selected alphabet. Reopen only with explicit fragment order,
 deduplication, missing-letter/merge, tail-order, escape, and topology rules.
-Full audit: `doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md`.
+Full audit: [doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md](GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md).
 
 **Brainstorming Applications**:
 - Preserve element symbols and their case/order instead of immediately reducing everything to atomic numbers.
@@ -517,7 +517,7 @@ Full audit: `doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md`.
 
 ### 21. Bit-plane transposition — verification complete: LSB is uniquely prime and staircase-bearing, but weight-9 and "seven passwords" don't hold up
 > [!TIP]
-> **Verified in Phase 197** (`doc/GSMG_FIRST_PIECE_BITPLANE_VERIFICATION.md`). All 8 bit-planes of the 24-byte URL, plus their complements, were computed and inventoried:
+> **Verified in Phase 197** ([doc/GSMG_FIRST_PIECE_BITPLANE_VERIFICATION.md](GSMG_FIRST_PIECE_BITPLANE_VERIFICATION.md)). All 8 bit-planes of the 24-byte URL, plus their complements, were computed and inventoried:
 > ```text
 > bit  direct  weight   complement  weight
 >  7   000000     0     FFFFFF        24
@@ -554,7 +554,7 @@ Full audit: `doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md`.
 
 ### 23. `400/401/73` independently reconstructed, with the cutoff externally fixed
 > [!IMPORTANT]
-> **Verified in Phase 196** (`tools/gsmg/first_piece_prime_sum_reconstruction.py`, `doc/GSMG_FIRST_PIECE_PRIME_SUM_VERIFICATION.md`). Assigning the first 25 sequential primes to the 24 color events plus FEFE in spiral order, under the sourced `b`/`be` DBBI token grammar, gives blue sum `401`, yellow sum `400`, and FEFE (the 21st prime) `73`. The 23-event cutoff isn't a balance chosen after the fact — event 23 is the last one that fits inside the 91-symbol DBBI stream before event 24 overruns it, and prefix 23 is independently the *only* prefix with `|blue−yellow| ≤ 1`.
+> **Verified in Phase 196** (`tools/gsmg/first_piece_prime_sum_reconstruction.py`, [doc/GSMG_FIRST_PIECE_PRIME_SUM_VERIFICATION.md](GSMG_FIRST_PIECE_PRIME_SUM_VERIFICATION.md)). Assigning the first 25 sequential primes to the 24 color events plus FEFE in spiral order, under the sourced `b`/`be` DBBI token grammar, gives blue sum `401`, yellow sum `400`, and FEFE (the 21st prime) `73`. The 23-event cutoff isn't a balance chosen after the fact — event 23 is the last one that fits inside the 91-symbol DBBI stream before event 24 overruns it, and prefix 23 is independently the *only* prefix with `|blue−yellow| ≤ 1`.
 
 **Brainstorming Applications**:
 - Treat `400/401/73` as load-bearing rather than speculative going forward — it survived independent re-derivation without importing the original color-prime sum audit.
@@ -601,7 +601,7 @@ Full audit: `doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md`.
   selected after the fact from a small ordering family.
 - **Status:** close all three readings as negative controls. Reopen only if
   another clue explicitly names a side-based or raster traversal of this
-  grid. Full audit: `doc/GSMG_FIRST_PIECE_BORDER_RASTER_SCAN_AUDIT.md`.
+  grid. Full audit: [doc/GSMG_FIRST_PIECE_BORDER_RASTER_SCAN_AUDIT.md](GSMG_FIRST_PIECE_BORDER_RASTER_SCAN_AUDIT.md).
 
 ---
 

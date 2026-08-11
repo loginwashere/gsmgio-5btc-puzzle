@@ -1,8 +1,18 @@
+---
+type: index
+status: live
+topics:
+  - creator-provenance
+  - telegram
+aliases:
+  - Creator-Authored Clue Ledger
+---
+
 # GSMG Creator-Authored Clue Ledger
 
 For the complete Telegram message-ID index—including direct confirmations,
 praise/progress reactions, caveats, reply parents, and the July 2026 creator
-messages—see `doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md`. This ledger
+messages—see [doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md](GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md). This ledger
 remains the analytical dependency-chain view.
 
 ## Scope and source discipline
@@ -32,7 +42,7 @@ specific variable that remains unresolved.
 > separate inserted event before color object 21, not a replacement/removal
 > of that object. The exact 25-event prime walk now recovers Denis/Flo's
 > 31-position mask and crosses into the following binary `matrixsumlist`
-> segment. See `doc/GSMG_PHASE_BOUNDARY_REAUDIT.md`; the old adjacent-swap and
+> segment. See [doc/GSMG_PHASE_BOUNDARY_REAUDIT.md](GSMG_PHASE_BOUNDARY_REAUDIT.md); the old adjacent-swap and
 > two-channel-removal conclusions are historical, not current.
 
 ## Creator-only dependency ledger

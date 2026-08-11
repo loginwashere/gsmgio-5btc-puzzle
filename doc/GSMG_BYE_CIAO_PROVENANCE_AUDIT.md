@@ -1,3 +1,23 @@
+---
+type: audit
+phase: 233
+date: 2026-08-10
+status: partial
+disposition: recognition-only
+topics:
+  - architect
+  - macro-chain
+  - bye
+  - ciao
+related_phases:
+  - 232
+  - 234
+  - 237
+script: tools/gsmg/bye_ciao_provenance_audit.py
+aliases:
+  - Phase 233
+---
+
 # GSMG BYE → CIAO Provenance Audit
 
 ## Question

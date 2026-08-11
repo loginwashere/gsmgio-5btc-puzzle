@@ -1,3 +1,13 @@
+---
+type: index
+status: live
+topics:
+  - creator-provenance
+  - telegram
+aliases:
+  - Creator Clue and Confirmation Index
+---
+
 # GSMG Creator Clue and Confirmation Index
 
 > **Update (2026-08-10):** added a "Later Solver-Derived Recognition
@@ -321,10 +331,10 @@ and it is kept separate from the boundary above for that reason.
   not change the recognition-checkpoint disposition.
 
 See `tools/gsmg/FINDINGS.md` Phases 223, 224, 225, and 232-237 for the
-full derivations, and `doc/GSMG_ARCHITECT_HYE_BYE_AUDIT.md` /
-`doc/GSMG_BYE_CIAO_PROVENANCE_AUDIT.md` /
-`doc/GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md` /
-`doc/GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md` for the individual audits.
+full derivations, and [doc/GSMG_ARCHITECT_HYE_BYE_AUDIT.md](GSMG_ARCHITECT_HYE_BYE_AUDIT.md) /
+[doc/GSMG_BYE_CIAO_PROVENANCE_AUDIT.md](GSMG_BYE_CIAO_PROVENANCE_AUDIT.md) /
+[doc/GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md](GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md) /
+[doc/GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md](GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md) for the individual audits.
 
 ## Maintenance Rule
 

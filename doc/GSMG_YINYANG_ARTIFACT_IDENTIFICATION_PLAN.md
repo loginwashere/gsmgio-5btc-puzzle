@@ -320,7 +320,7 @@ The intended deliverable is not another candidate wordlist. It is either:
 
 Phases 1-2 are implemented by
 `tools/gsmg/yinyang_artifact_inventory_audit.py` and recorded in
-`doc/GSMG_YINYANG_ARTIFACT_INVENTORY.md`.
+[doc/GSMG_YINYANG_ARTIFACT_INVENTORY.md](GSMG_YINYANG_ARTIFACT_INVENTORY.md).
 
 Only `BUT/HYE` clears the four core gates plus the independent-discriminator
 gate. It is not promoted: its already-audited local mechanic family produces

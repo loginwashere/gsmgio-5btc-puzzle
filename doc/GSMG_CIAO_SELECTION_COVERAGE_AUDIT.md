@@ -1,3 +1,23 @@
+---
+type: audit
+phase: 234
+date: 2026-08-10
+status: closed-negative
+disposition: recognition-only
+topics:
+  - architect
+  - macro-chain
+  - bye
+  - ciao
+related_phases:
+  - 232
+  - 233
+  - 237
+script: tools/gsmg/ciao_selection_coverage_audit.py
+aliases:
+  - Phase 234
+---
+
 # GSMG CIAO Selection-and-Coverage Audit
 
 > **Phase-237 closure note:** the checkerboard-keyword gap this historical

@@ -1,3 +1,15 @@
+---
+type: worksheet
+status: live
+date: 2026-08-09
+topics:
+  - gates
+  - evidence-discipline
+aliases:
+  - Strict Transition Worksheet
+  - Transition Worksheet
+---
+
 # GSMG Strict Transition Worksheet
 
 **Date:** 2026-08-09  
@@ -190,7 +202,7 @@ the selected text cannot be promoted to a recognition checkpoint. Its exact
 disposition is **Structural checkpoint; parked**.
 
 The 2026-08-09 provenance refresh is recorded in
-`doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md`. It checked the full Telegram
+[doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md](GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md). It checked the full Telegram
 export, the newest incremental export, the recovered guide neighborhood, a
 2024 community code attachment, the walkthrough history, and the transcribed
 *Cosmic Duality* book. None fixes G3. The only genuine uninspected source in
@@ -216,7 +228,7 @@ is not creator-authenticated and zero source-strict model results. Page syntax
 therefore supplies no reopen evidence for this row.
 
 The chronological code audit in
-`doc/GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md` used Denis's first exact
+[doc/GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md](GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md) used Denis's first exact
 31-character publication on 2026-03-04 as its cutoff. Across the public
 walkthrough/notebook history, the pre-cutoff fork delta, and 83 Telegram code
 or text attachments, zero pre-cutoff artifact contains the selected string.
@@ -228,7 +240,7 @@ serve as the missing consumer without a new source explicitly binding that
 historical tool to the later input.
 
 The creator/operator vocabulary inventory in
-`doc/GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md` adds a separate source-only
+[doc/GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md](GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md) adds a separate source-only
 constraint. Sixteen solved-stage operator families were retained only when
 they lead to a recognizable or authenticated result. GSMG normally supplies
 local parameter selectors (`reverse`, Caesar, `BASE64`, case/whitespace

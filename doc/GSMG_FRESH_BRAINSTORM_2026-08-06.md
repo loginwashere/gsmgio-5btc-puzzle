@@ -9,8 +9,8 @@ this pass could tell), `[NEW ANGLE]` (touches a known object but from an angle n
 yet tried), or `[REVISIT]` (previously closed, but worth a narrow reopen for a stated
 reason).
 
-Source context for this pass: `doc/GSMG_BIRD_VIEW_REASSESSMENT.md`,
-`doc/GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md`, and a research-agent summary of the
+Source context for this pass: [doc/GSMG_BIRD_VIEW_REASSESSMENT.md](GSMG_BIRD_VIEW_REASSESSMENT.md),
+[doc/GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md](GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md), and a research-agent summary of the
 remaining docs + `tools/gsmg/FINDINGS.md` (147 phases) + wordlists/tooling inventory.
 
 ## 1. The `SalPhaseIon` heading — a new anagram, not yet pursued
