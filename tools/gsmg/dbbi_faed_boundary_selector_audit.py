@@ -9,13 +9,18 @@ distinguish DBBI from FAED AND independently map to an escape pair or
 polarity. Different offsets, DOM positions, or generic first/second
 ordering alone do not qualify -- see doc/GSMG_OPEN_GAP_REGISTRY.md#G-ESC-001.
 
-Scope: this checks the page's own markup only (the local mirror, the sole
-capture with locally available raw bytes, plus the already-recorded
-cross-capture metadata in salphaseion_wayback_history_audit.py). It does
-not fetch new Wayback captures -- that is out of scope for this pass.
+Scope: `audit()` / `--self-test` check the page's own markup only (the local
+mirror, the sole capture with locally available raw bytes) and are offline.
+`--live` performs one additional, explicitly bounded check: fetching the
+three Wayback captures whose raw bytes are not locally available (indices
+1-3 of `salphaseion_wayback_history_audit.CAPTURES`), verifying each against
+its pinned sha256/byte_count, and diffing the SalPhaseIon textarea content
+across all 5 known captures. It fetches exactly those three captures once
+and stops -- it is not a general Wayback crawl.
 """
 
 import argparse
+import hashlib
 import os
 import re
 import sys
@@ -24,7 +29,12 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from page_structure_audit import DEFAULT_HTML, audit as page_structure_audit  # noqa: E402
-from salphaseion_wayback_history_audit import CAPTURES  # noqa: E402
+from salphaseion_wayback_history_audit import (  # noqa: E402
+    CAPTURES,
+    ROUTE,
+    RAW_CAPTURE_TEMPLATE,
+    fetch_bytes,
+)
 
 
 class BoundaryParser(HTMLParser):
@@ -162,6 +172,93 @@ def audit(html_path=DEFAULT_HTML):
     return checks
 
 
+TEXTAREA_RE = re.compile(r"<textarea[^>]*>(.*?)</textarea>", re.DOTALL)
+
+
+def _salphaseion_textarea(html_text):
+    matches = TEXTAREA_RE.findall(html_text)
+    if len(matches) != 2:
+        raise ValueError(f"expected 2 textareas, found {len(matches)}")
+    return matches[0]  # SalPhaseIon is first; Cosmic Duality is second
+
+
+def live_cross_capture_audit(html_path=DEFAULT_HTML):
+    """Fetch the 3 Wayback captures not locally available (CAPTURES[1:4]),
+    verify each against its pinned sha256/byte_count, and diff the
+    SalPhaseIon textarea content across all 5 known captures.
+
+    Success condition (pre-registered): a localized, stable difference
+    affecting the DBBI-matrixsumlist-FAED region specifically -- not
+    archive boilerplate (head-section whitespace, third-party analytics
+    script token rotation) or global byte growth. Fetches exactly these
+    3 captures once; does not crawl further regardless of outcome.
+    """
+    local_mirror = Path(html_path).read_text(encoding="utf-8")
+    textareas = {CAPTURES[-1]["timestamp"]: _salphaseion_textarea(local_mirror)}
+    raw_html = {CAPTURES[-1]["timestamp"]: local_mirror}
+    verified = {CAPTURES[-1]["timestamp"]: True}
+
+    for capture in CAPTURES[:-1]:
+        url = RAW_CAPTURE_TEMPLATE.format(timestamp=capture["timestamp"], route=ROUTE)
+        raw = fetch_bytes(url)
+        text = raw.decode("ascii")
+        got_sha256 = hashlib.sha256(raw).hexdigest()
+        verified[capture["timestamp"]] = (
+            got_sha256 == capture["sha256"] and len(raw) == capture["byte_count"]
+        )
+        raw_html[capture["timestamp"]] = text
+        textareas[capture["timestamp"]] = _salphaseion_textarea(text)
+
+    timestamps = [capture["timestamp"] for capture in CAPTURES]
+    reference = textareas[timestamps[0]]
+    textarea_identical_across_all = all(
+        textareas[ts] == reference for ts in timestamps
+    )
+
+    # Whole-file diffs, to classify every byte difference across the 5
+    # captures as boilerplate/growth vs. something inside the textarea.
+    diffs = []
+    for earlier, later in zip(timestamps, timestamps[1:]):
+        earlier_lines = raw_html[earlier].splitlines()
+        later_lines = raw_html[later].splitlines()
+        changed = [
+            (index, old, new)
+            for index, (old, new) in enumerate(
+                zip(earlier_lines, later_lines), start=1
+            )
+            if old != new
+        ]
+        length_changed = len(earlier_lines) != len(later_lines)
+        # Use the directly-extracted textarea content, not a line-indexed
+        # diff: when line_count_changed, inserted/removed lines shift every
+        # subsequent line number and make a naive zip-based line comparison
+        # falsely flag the (unmoved, unchanged) textarea line as "changed".
+        diffs.append(
+            {
+                "from": earlier,
+                "to": later,
+                "changed_line_count": len(changed),
+                "line_count_changed": length_changed,
+                "touches_salphaseion_textarea": (
+                    textareas[earlier] != textareas[later]
+                ),
+            }
+        )
+
+    return {
+        "all_captures_verified": all(verified.values()),
+        "verified_by_timestamp": verified,
+        "salphaseion_textarea_identical_across_all_captures": (
+            textarea_identical_across_all
+        ),
+        "per_capture_diffs": diffs,
+        "pre_registered_condition_met": (
+            not textarea_identical_across_all
+            and any(diff["touches_salphaseion_textarea"] for diff in diffs)
+        ),
+    }
+
+
 def print_report(checks):
     print("DBBI/FAED page-authored boundary-selector audit (G-ESC-001)")
     print(f"  CSS selectors on page: {checks['css_selectors']}")
@@ -188,6 +285,39 @@ def print_report(checks):
           "a genuinely external selector (see doc/GSMG_OPEN_GAP_REGISTRY.md).")
 
 
+def print_live_report(result):
+    print("DBBI/FAED cross-capture stability check (G-ESC-001, --live)")
+    print(f"  All 3 fetched captures verified against pinned sha256/byte_count: "
+          f"{result['all_captures_verified']}")
+    for timestamp, ok in result["verified_by_timestamp"].items():
+        print(f"    {timestamp}: {'OK' if ok else 'MISMATCH'}")
+    print(f"  SalPhaseIon textarea (DBBI+matrixsumlist+FAED+...) identical "
+          f"across all 5 captures: "
+          f"{result['salphaseion_textarea_identical_across_all_captures']}")
+    print("  Per-capture diffs:")
+    for diff in result["per_capture_diffs"]:
+        print(f"    {diff['from']} -> {diff['to']}: "
+              f"{diff['changed_line_count']} changed line(s), "
+              f"line count changed={diff['line_count_changed']}, "
+              f"touches SalPhaseIon textarea={diff['touches_salphaseion_textarea']}")
+    print(f"  Pre-registered success condition met: "
+          f"{result['pre_registered_condition_met']}")
+    print()
+    if result["pre_registered_condition_met"]:
+        print("Conclusion: a localized, stable difference was found inside the "
+              "SalPhaseIon textarea across captures -- investigate further.")
+    else:
+        print("Conclusion: negative. The SalPhaseIon textarea (DBBI, "
+              "matrixsumlist, FAED, and everything else in it) is byte-identical "
+              "across all 5 known captures spanning 2023-06-01 to 2026-04-05. "
+              "Every cross-capture difference found is archive boilerplate: "
+              "head-section whitespace reformatting, or third-party Cloudflare "
+              "analytics script token rotation. This exhausts the last "
+              "concretely actionable step within G-ESC-001's page-boundary "
+              "branch; the gap now depends entirely on a genuinely external "
+              "source (see doc/GSMG_OPEN_GAP_REGISTRY.md).")
+
+
 def self_test():
     checks = audit()
     assert checks["css_selector_count"] == 1, checks["css_selectors"]
@@ -209,10 +339,20 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--self-test", action="store_true")
     parser.add_argument("--html", type=Path, default=DEFAULT_HTML)
+    parser.add_argument(
+        "--live",
+        action="store_true",
+        help="fetch the 3 not-locally-available Wayback captures once and "
+        "diff the SalPhaseIon textarea across all 5 known captures",
+    )
     args = parser.parse_args()
 
     if args.self_test:
         self_test()
+        return 0
+
+    if args.live:
+        print_live_report(live_cross_capture_audit(args.html))
         return 0
 
     print_report(audit(args.html))

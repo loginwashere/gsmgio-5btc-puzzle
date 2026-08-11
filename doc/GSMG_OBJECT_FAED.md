@@ -45,10 +45,12 @@ string (see `tools/gsmg/data.py`'s header comment).
   mirror9 image (`{a,c}` / `{c,g}`) validly segments its own origin stream
   — `{c,g}` cannot even segment FAED at all (dangling final escape). Page
   markup supplies no third selector either — DBBI and FAED share one
-  `<textarea>` text node with no DOM boundary, identical attributes, and no
-  distinguishing CSS/JS/comments/whitespace at the join
+  `<textarea>` text node with no DOM boundary, identical attributes, no
+  distinguishing CSS/JS/comments/whitespace at the join, and this holds
+  byte-for-byte across all 5 known Wayback captures spanning 2023-06-01 to
+  2026-04-05
   ([GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md),
-  Phase 243). See fact `F-OBJ-003` in the [Fact Ledger](GSMG_FACT_LEDGER.md).
+  Phase 243/244). See fact `F-OBJ-003` in the [Fact Ledger](GSMG_FACT_LEDGER.md).
 - Width 38 (from the `#383838`/macro-token-length nesting coincidence) is
   **not** a geometrically exceptional dimension for FAED under any of 3
   null models after correction across all 16 divisor widths — checked
@@ -82,7 +84,7 @@ rg -il '\bFAED\b' doc tools/gsmg/FINDINGS.md
   authorship-rejected explanation for the `{g,i}` preference.
 - Phase 236 — [GSMG_MACRO_MODEL_DISPOSITION_AUDIT](GSMG_MACRO_MODEL_DISPOSITION_AUDIT.md), formalizes the complete mirror-orbit table.
 - Phase 240 — [GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT](GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT.md), full-divisor geometric calibration, width 38 rejected.
-- Phase 243 — [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md), page-markup escape-pair selector branch closed negative.
+- Phase 243/244 — [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md), page-markup escape-pair selector branch closed negative, confirmed byte-identical across all 5 known Wayback captures.
 
 ## Related objects
 

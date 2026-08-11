@@ -18,9 +18,11 @@ related_phases:
   - 225
   - 236
   - 238
+  - 244
 script: tools/gsmg/dbbi_faed_boundary_selector_audit.py
 aliases:
   - Phase 243
+  - Phase 244
 ---
 
 # GSMG DBBI/FAED Boundary Page-Selector Audit
@@ -34,6 +36,7 @@ Reproduce with:
 
 ```bash
 python3 tools/gsmg/dbbi_faed_boundary_selector_audit.py --self-test
+python3 tools/gsmg/dbbi_faed_boundary_selector_audit.py --live   # Phase 244, network required
 ```
 
 ## Pre-registered success condition
@@ -74,9 +77,36 @@ The entire page is 54 lines: a `<title>`, five `<meta>` tags, one generic
 | DOM boundary between DBBI and FAED | **None** — both are consecutive substrings of the *same* `<textarea>`'s text content, joined only by the binary-ASCII `matrixsumlist` span (confirmed via `page_structure_audit.py`'s segmentation: `dbbi -> abba_matrix_instruction -> faed`) |
 | Whitespace | Uniform single-character separation (`raw == " ".join(logical)`) across the entire textarea; no double-space, tab, or pattern break at the DBBI/FAED join |
 | Capitalization | The page's only case anomaly is the `H1`/`h1` heading pair, which distinguishes the *SalPhaseIon* textarea from the *Cosmic Duality* textarea — not DBBI from FAED, which sit inside the same SalPhaseIon textarea under the same heading. Already closed negative (Phase 109, `h_marker_selector_audit.py`: "no single, well-defined `h` to promote") |
-| Cross-capture stability | The only markup diff established across all 5 known Wayback captures is that same `H1`/`h1` case change, between captures 1 and 2 (`assert_initial_heading_only_change`). Captures 2→3 (+32 bytes) and 3→4 (+504 bytes) are not sub-region-diffed locally in this pass — their raw bytes are not present outside the CDX/sha256 metadata, and fetching them was out of scope for this bounded static-page check |
+| Cross-capture stability | The only markup diff established across all 5 known Wayback captures is that same `H1`/`h1` case change, between captures 1 and 2 (`assert_initial_heading_only_change`). Captures 2→3 (+32 bytes) and 3→4 (+504 bytes) were not sub-region-diffed locally in this pass — see Phase 244 below, which completes exactly this step |
 
 **Pre-registered condition: not met.**
+
+## Cross-capture stability (Phase 244)
+
+Phase 243 explicitly left one step unfetched: whether the byte-count growth
+across the 5 known captures (4556 → 4556 → 4588 → 5092 → 5092) is a
+localized, stable difference inside the DBBI-matrixsumlist-FAED region, or
+archive boilerplate elsewhere. `--live` fetches the 3 captures whose raw
+bytes were not yet locally available (a single bounded fetch, not a Wayback
+crawl — fetched once, diffed, stopped regardless of outcome), verifies each
+against its pinned sha256/byte_count, and diffs the SalPhaseIon textarea
+directly across all 5 captures.
+
+**Result:** all 3 fetched captures verified exactly. The SalPhaseIon
+textarea's full content — DBBI, `matrixsumlist`, FAED, the decimal
+instructions, the hash prefix/suffix, both AES blob halves — is
+**byte-identical across all 5 captures**, spanning 2023-06-01 to 2026-04-05.
+Every byte difference across the 5 captures is boilerplate: the
+already-closed `H1`/`h1` case change, `<head>` whitespace/indentation
+reformatting (+32 bytes), and a third-party Cloudflare analytics `<script>`
+tag with a rotating version token (+504 bytes, then same-size token
+rotation). None touch the SalPhaseIon textarea. **Pre-registered condition:
+not met.**
+
+This exhausts the last concretely actionable, locally-executable step in
+G-ESC-001's page-boundary branch. [G-ESC-001](GSMG_OPEN_GAP_REGISTRY.md)'s
+state moves from `open` to `parked`: the gap now depends entirely on a
+genuinely external source.
 
 ## Interpretation
 
@@ -99,8 +129,10 @@ scope note rather than given a new row.
 
 ## Reopen condition
 
-A new Wayback capture, a creator source, or any primary artifact supplying a
-page-authored (or otherwise independent) feature that selects between
-`{g,i}` and `{h,e}` would reopen this specific branch. Byte-level diffing of
-captures 2-4 against capture 1/5, if their raw HTML becomes available, is the
-most direct concrete next step within this same branch.
+A new Wayback capture (beyond the 5 now known and fully diffed), a creator
+source, or any primary artifact supplying a page-authored (or otherwise
+independent) feature that selects between `{g,i}` and `{h,e}` would reopen
+this branch. The byte-level diffing of captures 2-4 against 1/5 that this
+section originally proposed as the next concrete step was completed by
+Phase 244 above and came back negative — no further locally-executable step
+remains within G-ESC-001's page-boundary branch.
