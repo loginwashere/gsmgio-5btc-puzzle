@@ -2,8 +2,10 @@
 type: audit
 phase: 237
 date: 2026-08-11
-status: closed-negative
+status: closed
+result: negative
 disposition: recognition-only
+evidence_level: authenticated-artifact
 topics:
   - checkerboard
   - bye

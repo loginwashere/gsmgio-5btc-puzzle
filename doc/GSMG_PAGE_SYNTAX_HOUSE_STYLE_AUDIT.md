@@ -2,8 +2,10 @@
 type: audit
 phase: 238
 date: 2026-08-11
-status: closed-negative
-disposition: active
+status: closed
+result: negative
+disposition: structural-only
+evidence_level: authenticated-artifact
 topics:
   - macro-chain
   - matrixsumlist

@@ -81,7 +81,9 @@ all 243 phases. Most recent:
 ## Canonical documents
 
 - [GSMG_STRICT_TRANSITION_WORKSHEET](GSMG_STRICT_TRANSITION_WORKSHEET.md) — the 5-gate evidence-discipline worksheet; start here for any new candidate.
+- [GSMG_FACT_LEDGER](GSMG_FACT_LEDGER.md) — what claims are currently accepted, with exact scope.
 - [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) — generated index of all FINDINGS.md phases.
+- [GSMG_PHASE_TEMPLATE](GSMG_PHASE_TEMPLATE.md) — standard fields for new phase entries.
 - [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md) — full chronological research log (243 phases).
 - [GSMG_STAGE_INPUT_OUTPUT_SUMMARY](GSMG_STAGE_INPUT_OUTPUT_SUMMARY.md) — solved-chain input/output map.
 - [GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX](GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md) — indexed creator Telegram messages.

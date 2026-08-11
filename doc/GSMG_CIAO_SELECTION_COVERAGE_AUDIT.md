@@ -2,8 +2,10 @@
 type: audit
 phase: 234
 date: 2026-08-10
-status: closed-negative
+status: closed
+result: negative
 disposition: recognition-only
+evidence_level: creator-primary
 topics:
   - architect
   - macro-chain

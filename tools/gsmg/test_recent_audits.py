@@ -34,6 +34,8 @@ import first_piece_png_palette_provenance_audit
 import first_piece_shadow_column_rail_audit
 import faed_decoder_coverage_audit
 import favicon_wayback_chronology_audit
+import generate_phase_index
+import validate_vault_metadata
 import first_piece_even_odd_alphabet_gate_audit
 import first_piece_batch_rebus_gate_audit
 import first_piece_cefe_checkerboard_gate_audit
@@ -1311,6 +1313,24 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(report["forbidden_rebus_forms_present"], ())
         self.assertEqual(len(report["corrected_legacy_documents"]), 6)
         self.assertIn("no post-yinyang operator", report["verdict"])
+
+    def test_vault_frontmatter_matches_controlled_vocabulary(self):
+        report = validate_vault_metadata.run()
+        self.assertGreaterEqual(report["checked"], 15)
+        self.assertEqual(report["errors"], {})
+
+    def test_duplicate_phase_numbers_have_explicit_stable_ids(self):
+        text = generate_phase_index.FINDINGS.read_text(encoding="utf-8")
+        rows = generate_phase_index.parse_phases(text)
+        rows = generate_phase_index.assign_stable_ids(rows)  # raises if unstable
+        stable_ids = [row["stable_id"] for row in rows]
+        self.assertEqual(len(stable_ids), len(set(stable_ids)))
+        duplicated_numbers = {"8", "19"}
+        marked = {
+            row["number"] for row in rows
+            if row["number"] in duplicated_numbers and row["explicit_id"]
+        }
+        self.assertEqual(marked, duplicated_numbers)
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists()

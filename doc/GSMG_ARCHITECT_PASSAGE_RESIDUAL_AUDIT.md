@@ -2,8 +2,10 @@
 type: audit
 phase: 235
 date: 2026-08-10
-status: closed-negative
+status: closed
+result: mixed
 disposition: recognition-only
+evidence_level: authenticated-artifact
 topics:
   - architect
   - macro-chain

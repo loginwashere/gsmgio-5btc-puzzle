@@ -311,6 +311,7 @@ poem, "another door"/prime/passport, the repeated "no hints" refrain) or non-tec
 chatter (holidays, personal life, trolling). This closes out the "read every message"
 lever as thoroughly as it can be closed.
 
+<!-- phase_id: P008-A -->
 ## Phase 8 — chasing the alphabet directly: raw text, chat structure, and the
 Decentraland audio (2026-07-04)
 
@@ -368,6 +369,7 @@ as-yet-unrecognized riddle sentence for Cosmic Duality, analogous to 3.2.2's) th
 nobody — community or this project — has found. GSMG stays parked; there is no cheap
 lever left to pull.
 
+<!-- phase_id: P008-B -->
 ## Phase 8 — Architect/Gnostic synonym sweep (2026-07-15)
 
 Prompted by a user question: since the creator's own Telegram export has him saying,
@@ -1098,6 +1100,7 @@ scope for the same remaining region would have measured ~257 pairs/s -> ~5.24h
 **Not yet launched** -- recording the boundary and workload first, per
 instruction, before committing to either the backfill or continuation run.
 
+<!-- phase_id: P019-A -->
 ## Phase 19 — model-changing paths after coverage saturation (2026-07-24)
 
 Reviewed the now-exhausted branches specifically to find mechanisms not equivalent
@@ -1251,6 +1254,7 @@ exact complements against the same list, no out-of-order-chunk ambiguity like
 the original mid-run stop. Queue as unattended/overnight compute after the
 matrixsumlist permutation path is resolved, not before.
 
+<!-- phase_id: P019-B -->
 ## Phase 19 — `matrixsumlist` self-derived permutation: implemented, CLOSED NEGATIVE (2026-07-24)
 
 Prioritized over the autokey continuation per instruction (cheaper, and a

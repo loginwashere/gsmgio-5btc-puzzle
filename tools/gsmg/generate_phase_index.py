@@ -24,6 +24,7 @@ OUTPUT = REPO_ROOT / "doc" / "GSMG_PHASE_INDEX.md"
 
 HEADING_RE = re.compile(r"^## Phase (\S+)\s+[—-]{1,2}\s*(.+)$")
 DATE_RE = re.compile(r"\((\d{4}-\d{2}-\d{2})[^)]*\)\s*$")
+PHASE_ID_MARKER_RE = re.compile(r"^<!--\s*phase_id:\s*(\S+)\s*-->\s*$")
 
 
 def github_slug(heading_text):
@@ -35,7 +36,8 @@ def github_slug(heading_text):
 
 def parse_phases(text):
     rows = []
-    for line in text.splitlines():
+    lines = text.splitlines()
+    for index, line in enumerate(lines):
         match = HEADING_RE.match(line)
         if not match:
             continue
@@ -46,6 +48,11 @@ def parse_phases(text):
         subject, _, result = body.partition(":")
         subject = subject.strip().rstrip(":")
         result = result.strip()
+        explicit_id = None
+        if index > 0:
+            marker = PHASE_ID_MARKER_RE.match(lines[index - 1])
+            if marker:
+                explicit_id = marker.group(1)
         rows.append(
             {
                 "number": number,
@@ -55,6 +62,7 @@ def parse_phases(text):
                 "result": result,
                 "date": date,
                 "slug": github_slug(line[3:]),
+                "explicit_id": explicit_id,
             }
         )
     return rows
@@ -73,6 +81,52 @@ def find_audit_doc(subject_and_result, doc_dir):
     return best if best_score >= 2 else None
 
 
+class PhaseIdError(Exception):
+    pass
+
+
+def assign_stable_ids(rows):
+    """Stable IDs must not depend on document order, because inserting or
+    reordering another same-numbered phase would silently change existing
+    IDs. Rules:
+
+    1. An explicit `<!-- phase_id: P008-A -->` marker on the line before the
+       heading is always used as-is.
+    2. A phase number that occurs exactly once gets the ordinary `P<NNN>`
+       form automatically -- there is nothing for reordering to disturb.
+    3. A phase number that occurs more than once and lacks an explicit
+       marker on every occurrence is a hard error: auto-suffixing by
+       occurrence order is exactly the non-stable behavior this replaces.
+    4. Any two rows resolving to the same stable ID (a typo'd explicit
+       marker, or an explicit marker colliding with an auto-generated one)
+       is a hard error.
+    """
+    counts = Counter(row["number"] for row in rows)
+    unmarked_duplicates = sorted({
+        row["number"] for row in rows
+        if counts[row["number"]] > 1 and not row["explicit_id"]
+    })
+    if unmarked_duplicates:
+        raise PhaseIdError(
+            "duplicate phase number(s) without an explicit phase_id marker "
+            f"on every occurrence: {', '.join(unmarked_duplicates)}. Add "
+            "`<!-- phase_id: P0NN-A -->` (and -B, -C, ...) immediately above "
+            "each occurrence's heading in FINDINGS.md."
+        )
+
+    seen_ids = {}
+    for row in rows:
+        stable_id = row["explicit_id"] or f"P{row['number'].replace('.', '_').zfill(3)}"
+        if stable_id in seen_ids:
+            raise PhaseIdError(
+                f"stable ID collision: {stable_id!r} assigned to both "
+                f"Phase {seen_ids[stable_id]} and Phase {row['number']}"
+            )
+        seen_ids[stable_id] = row["number"]
+        row["stable_id"] = stable_id
+    return rows
+
+
 def build_index(rows, doc_dir):
     duplicate_numbers = sorted(
         number for number, count in Counter(row["number"] for row in rows).items()
@@ -81,6 +135,7 @@ def build_index(rows, doc_dir):
     lines = [
         "---",
         "type: index",
+        "status: live",
         "generated_from: tools/gsmg/FINDINGS.md",
         "generator: tools/gsmg/generate_phase_index.py",
         "---",
@@ -103,12 +158,14 @@ def build_index(rows, doc_dir):
             "> [!warning] Duplicate phase numbers",
             "> These phase numbers are reused with different subjects in "
             "FINDINGS.md and have not been renumbered: "
-            + ", ".join(duplicate_numbers) + ".",
+            + ", ".join(duplicate_numbers) + ". Each row still has a unique "
+            "**Stable ID** (e.g. `P008-A`, `P008-B`) for citation from other "
+            "documents instead of the bare phase number.",
             "",
         ]
     lines += [
-        "| Phase | Date | Subject | Result | FINDINGS | Audit doc |",
-        "|---|---|---|---|---|---|",
+        "| Phase | Stable ID | Date | Subject | Result | FINDINGS | Audit doc |",
+        "|---|---|---|---|---|---|---|",
     ]
     for row in rows:
         findings_link = f"[link](../tools/gsmg/FINDINGS.md#{row['slug']})"
@@ -118,8 +175,8 @@ def build_index(rows, doc_dir):
         result = row["result"] or "—"
         date = row["date"] or "—"
         lines.append(
-            f"| {row['number']} | {date} | {subject} | {result} | "
-            f"{findings_link} | {audit_link} |"
+            f"| {row['number']} | {row['stable_id']} | {date} | {subject} | "
+            f"{result} | {findings_link} | {audit_link} |"
         )
     lines.append("")
     return "\n".join(lines)
@@ -135,6 +192,11 @@ def main():
     rows = parse_phases(text)
     if not rows:
         print("[!] no phase headings found", file=sys.stderr)
+        return 1
+    try:
+        rows = assign_stable_ids(rows)
+    except PhaseIdError as error:
+        print(f"[!] {error}", file=sys.stderr)
         return 1
     content = build_index(rows, REPO_ROOT / "doc")
 

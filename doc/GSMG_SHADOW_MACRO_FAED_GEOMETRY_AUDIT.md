@@ -2,8 +2,10 @@
 type: audit
 phase: 240
 date: 2026-08-11
-status: closed-negative
-disposition: provenance-only
+status: closed
+result: negative
+disposition: structural-only
+evidence_level: authenticated-artifact
 topics:
   - favicon
   - raster-analysis
