@@ -22,6 +22,7 @@ import cosmic_raw_digest_checkpoint_audit
 import creator_feasibility_envelope_audit
 import creator_yingyang_faed_pair_audit
 import creator_operator_vocabulary_audit
+import dbbi_faed_boundary_selector_audit
 import dual_channel_consistency_audit
 import first_piece_hamming_control_audit
 import first_piece_bitplane_audit
@@ -1369,6 +1370,24 @@ class CorrectedClaimTests(unittest.TestCase):
             report["sha256"],
             salphaseion_wayback_history_audit.CAPTURES[-1]["sha256"],
         )
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists(),
+        "sibling GSMG page mirror is unavailable",
+    )
+    def test_dbbi_faed_boundary_selectors_exhausted(self):
+        checks = dbbi_faed_boundary_selector_audit.audit()
+        self.assertEqual(checks["css_selector_count"], 1)
+        self.assertFalse(checks["css_has_textarea_specific_rule"])
+        self.assertTrue(checks["textarea_attrs_identical"])
+        self.assertTrue(checks["single_script_tag"])
+        self.assertTrue(checks["script_is_external_analytics_beacon"])
+        self.assertFalse(checks["script_references_textarea"])
+        self.assertEqual(checks["comment_count"], 0)
+        self.assertTrue(checks["dbbi_faed_share_one_textarea"])
+        self.assertTrue(checks["whitespace_is_single_character_separation"])
+        self.assertEqual(checks["known_captures"], 5)
+        self.assertFalse(checks["pre_registered_condition_met"])
 
     def test_favicon_wayback_authenticates_bytes_but_not_pre_puzzle_origin(self):
         report = favicon_wayback_chronology_audit.audit()

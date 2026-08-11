@@ -40,6 +40,7 @@ and everything that traces to the Matrix Reloaded Architect scene. See
 - [GSMG_BYE_CIAO_PROVENANCE_AUDIT](GSMG_BYE_CIAO_PROVENANCE_AUDIT.md) — Phase 233, BYE -> CIAO BELLA O bridge.
 - [GSMG_CIAO_SELECTION_COVERAGE_AUDIT](GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md) — Phase 234, no creator selection; direct-password gap closed.
 - [GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT](GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md) — Phase 237, closes the P32TRAILING/URLBLOB checkerboard-keyword gap for this family.
+- [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) — Phase 243, closes the page-markup branch of the `{g,i}`/`{h,e}` escape-pair gap; DBBI/FAED share one text node with no DOM boundary.
 
 ## Yin-yang state
 

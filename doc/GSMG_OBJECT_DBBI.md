@@ -70,6 +70,7 @@ rg -il '\bDBBI\b' doc tools/gsmg/FINDINGS.md
 - Phase 132 — 31-character selection's broad-word statistical control.
 - Phase 236 — [GSMG_MACRO_MODEL_DISPOSITION_AUDIT](GSMG_MACRO_MODEL_DISPOSITION_AUDIT.md), reclassifies the 31-char selection to structural-only.
 - Phase 240 — [GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT](GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT.md), notes `91 = 7×13` in the divisor-legs comparison against FAED.
+- Phase 243 — [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md), confirms DBBI and FAED share one text node with no markup boundary between them.
 
 ## Related objects
 

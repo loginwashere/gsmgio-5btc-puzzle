@@ -75,13 +75,13 @@ all 243 phases. Most recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 243 | DBBI/FAED boundary page-selector audit | Textarea markup/CSS/JS branch of G-ESC-001 closed negative; gap stays open for external selectors |
 | 242 | SVG/PNG edge geometry | C9 channel closed: contour-bound, zero residue |
 | 241 | Favicon Wayback chronology | Bytes authenticated to 2019-04-28; chronology unresolved |
 | 240 | Shadow/macro length + FAED factor calibration | Nesting real but dependency-dense; width 38 not selected |
 | 239 | Native favicon shadow audit | C9->CE provenance verified; no consumer |
 | 238 | Page-syntax house-style audit | Mixed grammar, no directional selector |
 | 237 | Checkerboard-keyword blob gap | Closed negative on P32TRAILING/URLBLOB |
-| 236 | Macro-model disposition | Model B is default; selected-31 reclassified |
 
 ## Canonical documents
 

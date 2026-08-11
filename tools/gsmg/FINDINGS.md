@@ -15262,3 +15262,68 @@ decode, credential, or blob oracle is authorized. Reopen only with stable
 off-contour residue in an independently sourced rendering or primary evidence
 selecting raster-edge traversal. Full report:
 [doc/GSMG_SVG_PNG_EDGE_GEOMETRY_AUDIT.md](../../doc/GSMG_SVG_PNG_EDGE_GEOMETRY_AUDIT.md).
+
+## Phase 243 -- DBBI/FAED boundary page-selector audit: textarea markup and CSS/JS boundary selectors exhausted, gap stays open for external selectors (2026-08-11)
+
+**Question:** does any page-authored markup feature -- CSS, JavaScript, DOM
+structure, comments, whitespace, capitalization, or nearby labels -- supply a
+third, independent selector between FAED's IC-oracle-best `{g,i}` escape
+pair and the Architect-mirror-predicted `{h,e}` pair, per
+[G-ESC-001](../../doc/GSMG_OPEN_GAP_REGISTRY.md)? Pre-registered success
+condition: a stable page-authored feature must distinguish DBBI from FAED
+*and* independently map to an escape pair or polarity -- offsets, DOM
+position, or generic ordering alone do not qualify.
+
+**Frozen inputs:** the local site mirror (2026-04-05 capture, the sole raw
+HTML present locally); the 5-capture Wayback metadata table already
+established in `tools/gsmg/salphaseion_wayback_history_audit.py`. No new
+Wayback fetch was performed -- this is a bounded static-page audit, not a
+Wayback hunt.
+
+**Method:** `tools/gsmg/dbbi_faed_boundary_selector_audit.py` parses the raw
+HTML and checks: every CSS selector actually present (only a generic `body`
+rule); whether the two `<textarea>` elements carry identical attributes;
+whether the sole `<script>` tag is inline/textarea-referencing or an
+unrelated external beacon; HTML comment count; whether DBBI and FAED occupy
+separate DOM nodes at all (via `page_structure_audit.py`'s segmentation);
+whitespace uniformity across the DBBI/FAED join; and the already-recorded
+cross-capture markup diff.
+
+**Result:** the whole page is 54 lines. Both textareas share byte-identical
+attributes (`style="width: 100%; height: 200px"`, no `id`/`class`/`rows`/
+`cols`); the only CSS rule targets `body` generically; the only `<script>` is
+an external, deferred, third-party Cloudflare analytics beacon with no inline
+code and no textarea reference; zero HTML comments exist anywhere on the
+page. Critically, DBBI and FAED are not separate elements at all -- they are
+consecutive substrings of the *same* `<textarea>`'s text content, joined only
+by the binary-ASCII `matrixsumlist` span (`dbbi -> abba_matrix_instruction ->
+faed`), with uniform single-character whitespace separation throughout and no
+pattern break at the join. The page's only capitalization anomaly, the
+`H1`/`h1` heading pair, distinguishes the *SalPhaseIon* textarea from the
+*Cosmic Duality* textarea, not DBBI from FAED, which share one heading and
+one textarea -- and that anomaly is already closed negative (Phase 109). The
+only markup diff established across all 5 known Wayback captures is that
+same heading-case change between captures 1 and 2; captures 2-3 (+32 bytes)
+and 3-4 (+504 bytes) growth is not sub-region-diffed locally in this pass
+(raw bytes for those captures are not present outside CDX/sha256 metadata).
+Pre-registered condition: **not met**.
+
+**Disposition:** rejected (for this specific branch of G-ESC-001).
+
+**Facts affected:** extends `F-OBJ-003`'s scope note in
+[GSMG_FACT_LEDGER](../../doc/GSMG_FACT_LEDGER.md) rather than adding a new
+row.
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `tools/gsmg/dbbi_faed_boundary_selector_audit.py` (self-test);
+full report:
+[doc/GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md](../../doc/GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md).
+
+**Reopen condition:** because DBBI and FAED share one text node with no DOM
+boundary between them, the entire class of CSS ancestry/sibling/`:nth-*`
+selectors is inapplicable by construction, not merely empirically negative --
+no future check within this same branch can reverse that. Reopens only with
+a new Wayback capture, a creator source, or any primary artifact supplying a
+genuinely external (not page-markup) selector between `{g,i}` and `{h,e}`.
+G-ESC-001 itself remains open for exactly that class of evidence.
