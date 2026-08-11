@@ -452,10 +452,16 @@ genuinely prior to Phase 232, but all such bridge claims are community-authored;
 the complete creator `ciao` inventory contains only three ordinary sign-offs.
 No deterministic `BYE -> CIAO` operation or downstream consumer is fixed.
 
+Phase 237 closes the retained legacy checkerboard-keyword coverage gap for
+the CIAO/BELLA/BYE and KEY/NOTE/SELF families against P32TRAILING/URLBLOB.
+The frozen Phase-2 `pad28` route produced zero strong or weak hits across
+2,160 decoder configurations and 171,936 blob/KDF decryptions. This is a
+route-specific negative, not a rejection of the recognition checkpoint.
+
 The immediate unresolved question remains:
 
-> What exact, creator-supported operation does `matrixsumlist` apply to the
-> recovered 31-character DBBI selection?
+> What exact, creator-supported operation carries the parked `BYE -> CIAO`
+> recognition checkpoint into the promised yin-yang state or a consumer?
 
 ### `lastwordsbeforearchichoice`
 
@@ -558,6 +564,7 @@ is meaningless:
 | Fixed-window no-padding Tier-1 search | All 23 queued Bloom/vanity classifications were externally checked: six Bloom false positives and 17 unfunded vanity-shaped addresses; no known/funded hit |
 | Padded binary-key-material Tier 1 and Tier 2 | 733,264 unique normalized keystrings and 52,795,008 unique CBC/ECB operations; no hit |
 | DBBI single-layer monoalphabetic/checkerboard and bounded digraphic families | Negative under calibrated models |
+| CIAO/BELLA/BYE and KEY/NOTE/SELF as legacy `pad28` checkerboard keywords against P32TRAILING/URLBLOB | 2,160 decoder configurations; 171,936 blob/KDF decryptions; zero strong or weak hits |
 | FAED `{h,e}` monoalphabetic recovery | Negative, `p=0.634` |
 | FAED `{g,i}` monoalphabetic recovery | Negative at the registered threshold, `p=0.0396` versus `p<0.005` |
 | FAED `{g,i}` VIC chain-addition reopening | 5,761,385 candidate pairs, zero hits |

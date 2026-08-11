@@ -15016,3 +15016,42 @@ structural checkpoint; `BUT/HYE -> BYE` remains a parked recognition
 checkpoint. No credential, DBBI/FAED decoder, autokey/chain-addition run, or
 blob oracle is authorized. Full report:
 `doc/GSMG_MACRO_MODEL_DISPOSITION_AUDIT.md`.
+
+## Phase 237 -- legacy checkerboard-keyword gap closed on P32TRAILING/URLBLOB (2026-08-11)
+
+`tools/gsmg/checkerboard_keyword_blob_gap_audit.py` closes the explicit
+Phase-234/235 residual gap without adding a new hypothesis. The route was
+frozen to the original Phase-2 `cosmic_sweep.py` semantics:
+
+```text
+keyword -> pad28 -> {DBBI,FAED}
+        x {a0i8,a1i9} x 45 decimal escape pairs
+        -> answer_forms -> keystr_forms
+        -> legacy AES-CBC x six inherited KDF/key-size variants
+        -> {P32TRAILING,URLBLOB}
+```
+
+The 12 exact candidates were `bye`, `ciao`, `bella`, `ciaobella`,
+`ciaobellao`, `obellaciao`, `bellaciao`, `key`, `note`, `self`, `keynote`,
+and `selfself`. Case, spaces, and punctuation do not create distinct `pad28`
+alphabets, so the authenticated spaced tail is covered by `ciaobellao`.
+`goodbye` was excluded because it was only a generic corpus-search synonym,
+not the authenticated structural output.
+
+The bounded run comprised 24 keyword/stream tests, 2,160 decoder
+configurations, 1,776 valid decodes, 14,328 normalized keystring calls, and
+171,936 blob/KDF primitive decryptions. Result: **zero strong hits and zero
+weak telemetry records**. The script independently verifies the known-good
+Phase-3.2.2 checkerboard vector and known Phase-3.2 AES password/plaintext
+vector before running the open-target scope.
+
+SALPH/COSMIC were not rerun. Native base-9 boards, transforms, newline or
+whitespace variants, extended cipher modes/KDFs, autokey, and chain addition
+were excluded. URLBLOB retains its provenance label.
+
+**Verdict:** the named P32TRAILING/URLBLOB checkerboard-keyword gap is closed
+cleanly and negatively. This does not refute the `BYE -> CIAO BELLA O`
+recognition checkpoint; it rules out one inherited consumer path. No
+password, plaintext, or authenticated consumer was found, and the row remains
+**Recognition checkpoint; parked**. Full report:
+`doc/GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md`.

@@ -1,5 +1,10 @@
 # GSMG Architect-Passage Residual Audit
 
+> **Phase-237 closure note:** the legacy checkerboard-keyword route for the
+> KEY/NOTE/SELF family (including previously uncovered `selfself`) is now also
+> negative against P32TRAILING/URLBLOB. See
+> `GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md`.
+
 Phase 235 closes three small, bounded items left open by the Phase 3.2.1
 brainstorm thread (Phase 118, 232-234): where the custom passage's wording
 actually traces to (screenplay vs. film), whether `key`/`note`/`self`/

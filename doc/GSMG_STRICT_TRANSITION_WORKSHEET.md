@@ -135,7 +135,7 @@ community accounts is not a reopening condition.
 | 31-character DBBI selection -> proposed `matrixsumlist` consumer | **PARTIAL**: the selection and following macro token are real, but their operand relationship is not | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no source binds the input to dimensions, traversal, values, and sum/index semantics | **FAIL**: no next-stage artifact; its broad-word cluster misses the promotion threshold (`p=0.005469995`) | **PASS** for disposition: seven G3 fields remain unbound and many bounded consumers are negative | **Structural checkpoint; parked (Phase 236)** | Primary evidence fixing the complete operation, including the missing book pages 57–58 |
 | Historical 14x14 DBBI row sums -> `IZLKESEEDQPPEN` | **PASS**: recovered Telegram guide | **PASS**: exact matrix/token chunks | **PASS** for historical row-major sums | **FAIL**: non-language; opens no target | **PASS**: directions and Caesar family calibrated; `p≈0.119`/`0.713` | **Closed negative** | New clue selecting a distinct consumer, not another direction |
 | Prime lists -> `401/400/73` | **PARTIAL**: exact prime walk and literal list grammar, but alternative to historical guide | **PASS**: 14 blue, 8 yellow, 1 FEFE lists | **PASS**: partition and sums are fixed | **FAIL**: no instruction/key or downstream consumer | **PASS**: fixed-profile rate documented; FE normalization shown dependent | **Structural checkpoint only** | Explicit clue consuming the three sums |
-| Decimal matrix -> `[23,16,7]` -> Architect words | **PASS** for matrix sums and sourced dialogue | **PASS**: fixed matrix/list and scene | **PARTIAL**: word indexing fixed; beginnings/endings and polarity are not. Phase 232's bounded `partial_mirror9` (B↔H/D↔F/C↔G) audit found `HYE -> BYE` as the unique dictionary output (5/48 `BUT` rows; 36/35,904 stable triples; 1/6 fixed-word permutations). Phase 236 adds that only selected `BOTH`, among the three eligible B-initial words, has mirror endpoints B/H. This is real structural evidence, not a creator-selected operation | **PARTIAL**: `CIAO BELLA O` is authenticated page text; the `BYE -> Bella Ciao` association has genuine historical community precedent; their linkage is structurally supported, but not creator-selected. Phase 234 confirmed neither creator corpus ever selects CIAO, BELLA, or BYE as the yin-yang state. Still no authenticated consumer | **PASS**: associated FAED `{h,e}` model negative; Phase 234 withdrew the post-hoc `BELLA -> {b,e}` reading and ran a bounded direct-password check (90 keystrings x 4 blobs, 0 hits) for the ciao/bella family; Phase 235 ran a separate bounded direct-password check (its own 90 keystrings x 4 blobs, 0 hits) for the unrelated key/note/self/keynote family | **Recognition checkpoint; parked** | Clue selecting beginnings/endings or B↔H operation — approached structurally by Phases 232/236, but remains evidentially unmet: no creator clue selects this operation or this output |
+| Decimal matrix -> `[23,16,7]` -> Architect words | **PASS** for matrix sums and sourced dialogue | **PASS**: fixed matrix/list and scene | **PARTIAL**: word indexing fixed; beginnings/endings and polarity are not. Phase 232's bounded `partial_mirror9` (B↔H/D↔F/C↔G) audit found `HYE -> BYE` as the unique dictionary output (5/48 `BUT` rows; 36/35,904 stable triples; 1/6 fixed-word permutations). Phase 236 adds that only selected `BOTH`, among the three eligible B-initial words, has mirror endpoints B/H. This is real structural evidence, not a creator-selected operation | **PARTIAL**: `CIAO BELLA O` is authenticated page text; the `BYE -> Bella Ciao` association has genuine historical community precedent; their linkage is structurally supported, but not creator-selected. Phase 234 confirmed neither creator corpus ever selects CIAO, BELLA, or BYE as the yin-yang state. Still no authenticated consumer | **PASS**: associated FAED `{h,e}` model negative; direct-password checks for the CIAO/BELLA and KEY/NOTE/SELF families were negative (Phases 234-235); Phase 237 closed their legacy `pad28` checkerboard-keyword gap against P32TRAILING/URLBLOB (2,160 decoder configurations, 171,936 blob/KDF decryptions, zero strong or weak hits) | **Recognition checkpoint; parked** | Clue selecting beginnings/endings or B↔H operation — approached structurally by Phases 232/236, but remains evidentially unmet: no creator clue selects this operation or this output |
 | DBBI/FAED -> creator's `yinyang` state | **PASS**: creator describes yin-yang as reached state | **PASS**: authenticated DBBI and FAED streams | **FAIL**: no relationship/operator selected | **FAIL**: state is recognizable only semantically | **PASS** for several specific negative coupling families | **Live semantic boundary, not executable** | Creator evidence defining how the streams interact |
 | FAED `{g,i}` monoalphabetic/VIC chain-addition | **PARTIAL**: cipher-family precedent plus calibrated escape-pair ranking | **PASS**: fixed FAED and `{g,i}` orders | **PASS** for each registered model | **NEGATIVE** | **PASS**: monoalphabetic `p=0.0396`; 5,761,385 chain pairs, zero hits | **Specific models closed** | New keystream/operator evidence, not a larger dictionary |
 | COSMIC raw32/MD5/103x103/base-38 construction | **FAIL** as creator transition: community code, mutually citing network, spam-linked keys | **PASS**: exact COSMIC envelope and token tuple | **PASS**: complete published algorithm reproduced | **FAIL** independently: random-shaped payload and claimant-controlled spam addresses | **PASS**: four representations, 210-family, offsets, entropy/padding, on-chain provenance | **Reproducible negative control; fabrication strongly supported** | Creator-authenticated pre-2025 anchor or output tied to real prize key |
@@ -258,6 +258,15 @@ direct-password check — its own 90 keystring forms x 4 tracked blobs,
 raised by the same Architect-passage brainstorm. These are two independent
 negative-control families, not one combined candidate set.
 
+Phase 237 then froze the original Phase-2 legacy route—`pad28`, both decimal
+`a-i` mappings, all 45 escape pairs, DBBI and FAED, inherited answer/keystring
+normalization, and legacy AES-CBC—and changed only the blob scope to
+P32TRAILING/URLBLOB. Across 12 exact candidates the audit ran 2,160 decoder
+configurations and 171,936 blob/KDF primitive decryptions: zero strong hits
+and zero weak records. This closes the explicitly retained checkerboard-
+keyword coverage gap. It does not authenticate a consumer or weaken the
+recognition evidence; the row remains parked for the same G3/G4 reasons.
+
 The row's **Reopen trigger** — a clue selecting beginnings/endings or the
 B↔H operation — is approached structurally (Phase 232 ran exactly a
 B↔H-family operation), but remains evidentially unmet: no creator clue
@@ -276,10 +285,12 @@ the endings-rail transform or a consumer; a simpler mixed-edge rule produces
 Full detail: `tools/gsmg/architect_hye_bye_audit.py`,
 `tools/gsmg/bye_ciao_provenance_audit.py`,
 `tools/gsmg/ciao_selection_coverage_audit.py`,
-`tools/gsmg/architect_passage_residual_audit.py`; docs
+`tools/gsmg/architect_passage_residual_audit.py`,
+`tools/gsmg/checkerboard_keyword_blob_gap_audit.py`; docs
 `GSMG_ARCHITECT_HYE_BYE_AUDIT.md`, `GSMG_BYE_CIAO_PROVENANCE_AUDIT.md`,
 `GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md`,
-`GSMG_ARCHITECT_PASSAGE_RESIDUAL_AUDIT.md`; FINDINGS.md Phases 232-235.
+`GSMG_ARCHITECT_PASSAGE_RESIDUAL_AUDIT.md`,
+`GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md`; FINDINGS.md Phases 232-237.
 
 ## Candidate submission template
 

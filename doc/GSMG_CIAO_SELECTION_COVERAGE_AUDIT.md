@@ -1,5 +1,10 @@
 # GSMG CIAO Selection-and-Coverage Audit
 
+> **Phase-237 closure note:** the checkerboard-keyword gap this historical
+> Phase-234 report leaves open for P32TRAILING/URLBLOB is now closed and
+> negative for the combined CIAO/BELLA/BYE and KEY/NOTE/SELF families. See
+> `GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md`.
+
 Phase 234 asks two narrow questions about the `HYE -> BYE -> CIAO BELLA O`
 recognition chain (Phases 232-233): did the creator ever select this reading,
 and which CIAO/BELLA-family candidates are actually untested? It replaces an

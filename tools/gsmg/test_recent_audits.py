@@ -15,6 +15,7 @@ import architect_passage_residual_audit
 import architect_yinyang_distinctiveness_audit
 import binary_message_export_audit
 import bye_ciao_provenance_audit
+import checkerboard_keyword_blob_gap_audit
 import checkerboard_code_ic_oracle
 import ciao_selection_coverage_audit
 import cosmic_raw_digest_checkpoint_audit
@@ -77,6 +78,28 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_checkerboard_keyword_new_blob_gap_is_closed_without_promotion(self):
+        report = checkerboard_keyword_blob_gap_audit.audit()
+        scope = report["scope"]
+        counts = report["counts"]
+        self.assertEqual(
+            tuple(scope["blobs"]),
+            ("P32TRAILING", "URLBLOB"),
+        )
+        self.assertEqual(counts["candidates"], 12)
+        self.assertEqual(counts["keyword_stream_tests"], 24)
+        self.assertEqual(counts["decoder_configurations"], 2160)
+        self.assertEqual(counts["valid_decodes"], 1776)
+        self.assertEqual(counts["normalized_keystring_calls"], 14328)
+        self.assertEqual(counts["primitive_blob_kdf_decryptions"], 171936)
+        self.assertEqual(counts["strong_hits"], 0)
+        self.assertEqual(counts["weak_records"], 0)
+        self.assertTrue(
+            report["gates"]["residual_checkerboard_keyword_gap_closed"]
+        )
+        self.assertFalse(report["gates"]["consumer_authenticated"])
+        self.assertFalse(report["promoted"])
+
     @unittest.skipUnless(
         Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
         "complete puzzle-solvers export is unavailable",
