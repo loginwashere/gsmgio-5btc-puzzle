@@ -50,7 +50,7 @@ REQUIRED_BY_TYPE = {
     "worksheet": ("status",),
     "moc": ("topics",),
     "source": ("status",),
-    "object": ("status",),
+    "object": ("status", "object_id"),
     "synthesis": ("status",),
     "hypothesis": ("status",),
 }
@@ -136,6 +136,7 @@ def run(doc_dir=DOC_DIR):
     skipped = 0
     all_errors = {}
     all_warnings = {}
+    object_ids = {}
     for path in sorted(doc_dir.glob("*.md")):
         frontmatter = load_frontmatter(path)
         if frontmatter is None:
@@ -147,6 +148,18 @@ def run(doc_dir=DOC_DIR):
             all_errors[path.name] = errors
         if warnings:
             all_warnings[path.name] = warnings
+        object_id = frontmatter.get("object_id")
+        if frontmatter.get("type") == "object" and object_id:
+            object_ids.setdefault(object_id, []).append(path.name)
+
+    for object_id, names in object_ids.items():
+        if len(names) > 1:
+            for name in names:
+                all_errors.setdefault(name, []).append(
+                    f"object_id={object_id!r} is not unique -- also used by "
+                    f"{sorted(set(names) - {name})}"
+                )
+
     return {
         "checked": checked,
         "skipped": skipped,

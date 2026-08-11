@@ -55,12 +55,17 @@ Full table with G1–G5 gate detail:
 
 ## Highest-value missing evidence
 
+See [GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md) for the full,
+per-gap table. Highest-ranked:
+
 - The physical *Cosmic Duality* book's pages 57–58 gatefold — the only
-  genuinely uninspected primary source for `matrixsumlist`'s operation.
+  genuinely uninspected primary source for `matrixsumlist`'s operation
+  ([G-MSL-001](GSMG_OPEN_GAP_REGISTRY.md)).
 - A creator clue selecting the B↔H mirror or beginnings/endings operation
-  for the Architect-words row.
+  for the Architect-words row ([G-ARCH-001](GSMG_OPEN_GAP_REGISTRY.md)).
 - A source reconciling FAED's independently-best `{g,i}` escape pair with
-  the Architect-mirror-predicted `{h,e}` pair (open since
+  the Architect-mirror-predicted `{h,e}` pair
+  ([G-ESC-001](GSMG_OPEN_GAP_REGISTRY.md); open since
   [GSMG_ARCHITECT_CHOICE_BOUNDARY_AUDIT](GSMG_ARCHITECT_CHOICE_BOUNDARY_AUDIT.md)).
 
 ## Recently completed phases
@@ -82,8 +87,10 @@ all 243 phases. Most recent:
 
 - [GSMG_STRICT_TRANSITION_WORKSHEET](GSMG_STRICT_TRANSITION_WORKSHEET.md) — the 5-gate evidence-discipline worksheet; start here for any new candidate.
 - [GSMG_FACT_LEDGER](GSMG_FACT_LEDGER.md) — what claims are currently accepted, with exact scope.
+- [GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md) — what specific evidence would unblock progress, per gap.
 - [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) — generated index of all FINDINGS.md phases.
 - [GSMG_PHASE_TEMPLATE](GSMG_PHASE_TEMPLATE.md) — standard fields for new phase entries.
+- [GSMG_OBJECT_DBBI](GSMG_OBJECT_DBBI.md), [GSMG_OBJECT_FAED](GSMG_OBJECT_FAED.md) — pilot per-artifact reference pages.
 - [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md) — full chronological research log (243 phases).
 - [GSMG_STAGE_INPUT_OUTPUT_SUMMARY](GSMG_STAGE_INPUT_OUTPUT_SUMMARY.md) — solved-chain input/output map.
 - [GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX](GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md) — indexed creator Telegram messages.

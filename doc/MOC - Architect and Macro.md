@@ -9,6 +9,11 @@ topics:
 
 # MOC — Architect and Macro
 
+## Objects
+
+- [GSMG_OBJECT_DBBI](GSMG_OBJECT_DBBI.md)
+- [GSMG_OBJECT_FAED](GSMG_OBJECT_FAED.md)
+
 The authenticated creator macro chain
 (`yellowblueprimes -> matrixsumlist -> lastwordsbeforearchichoice -> yinyang`)
 and everything that traces to the Matrix Reloaded Architect scene. See
