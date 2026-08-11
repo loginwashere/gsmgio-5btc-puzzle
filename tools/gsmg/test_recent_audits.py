@@ -44,6 +44,7 @@ import matrixsumlist_page_scope_audit
 import matrixsumlist_historical_code_audit
 import macro_tail_title_insertion_audit
 import macro_literal_adjacency_audit
+import macro_model_disposition_audit
 import minimal_macro_chain_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
@@ -993,6 +994,55 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertNotIn("post_yinyang_checks", report)
         self.assertIn("deliberately excluded", report["verdict"])
         self.assertIn("post-hoc", report["verdict"])
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "Telegram export is unavailable",
+    )
+    def test_macro_model_disposition_changes_without_decoder_promotion(self):
+        report = macro_model_disposition_audit.audit(
+            Path(DEFAULT_EXPORT_DIR) / "result.json"
+        )
+        comparison = report["model_comparison"]
+        self.assertEqual(
+            comparison["models"]["A_selected_31_operand"]["completed_macro_edges"],
+            1,
+        )
+        self.assertEqual(
+            comparison["models"]["B_six_digit_prime"]["completed_macro_edges"],
+            3,
+        )
+        self.assertEqual(
+            comparison["selected_31_disposition"],
+            "structural checkpoint; parked",
+        )
+        self.assertFalse(comparison["selected_31_recognition_promoted"])
+
+        both = report["both_endpoint_control"]
+        self.assertEqual(
+            both["clause_polarity"],
+            "affirmative, not negated or conditional",
+        )
+        self.assertEqual(
+            both["first_word_counts"],
+            {"beginning": 16, "both": 16, "brings": 16},
+        )
+        self.assertEqual(both["first_words_with_mirror9_endpoints"], ("both",))
+        self.assertEqual(both["partial_mirror_bye_rows"], 5)
+        self.assertEqual(both["mixed_edge_bye_rows"], 15)
+
+        roles = report["output_role_inventory"]
+        self.assertEqual(roles["pure_terminal_recognition_word_precedents"], ())
+        self.assertFalse(roles["bingo_control"]["comparable_to_bye"])
+        self.assertTrue(
+            roles["bingo_control"]["present_in_tier1_candidate_corpus"]
+        )
+
+        dbbi_case, faed_case = report["mirror_orbit_table"]["cases"]
+        self.assertEqual(dbbi_case["mirror_pair_results"]["faed"]["rank"], 16)
+        self.assertEqual(faed_case["mirror_pair_results"]["dbbi"]["rank"], 24)
+        self.assertIsNone(faed_case["mirror_pair_results"]["faed"])
+        self.assertFalse(report["promotion"]["new_decoder_or_oracle_authorized"])
 
     @unittest.skipUnless(
         (Path(DEFAULT_EXPORT_DIR) / "result.json").exists()

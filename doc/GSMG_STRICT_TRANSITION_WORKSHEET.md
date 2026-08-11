@@ -132,10 +132,10 @@ community accounts is not a reopening condition.
 
 | Candidate transition | G1 source | G2 input | G3 operation | G4 output | G5 controls | Current disposition | Reopen trigger |
 |---|---|---|---|---|---|---|---|
-| 31-character DBBI selection -> `matrixsumlist` consumer | **PASS** for the literal instruction; proposed mechanics remain community-only | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no source binds the input to dimensions, traversal, values, and sum/index semantics | **FAIL**: no next-stage artifact | **PARTIAL**: many bounded consumers negative | **Evidence and historical-code audit refreshed through 2026-08-09; live but blocked at G3** | Primary evidence fixing the complete operation, including the missing book pages 57–58 |
+| 31-character DBBI selection -> proposed `matrixsumlist` consumer | **PARTIAL**: the selection and following macro token are real, but their operand relationship is not | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no source binds the input to dimensions, traversal, values, and sum/index semantics | **FAIL**: no next-stage artifact; its broad-word cluster misses the promotion threshold (`p=0.005469995`) | **PASS** for disposition: seven G3 fields remain unbound and many bounded consumers are negative | **Structural checkpoint; parked (Phase 236)** | Primary evidence fixing the complete operation, including the missing book pages 57–58 |
 | Historical 14x14 DBBI row sums -> `IZLKESEEDQPPEN` | **PASS**: recovered Telegram guide | **PASS**: exact matrix/token chunks | **PASS** for historical row-major sums | **FAIL**: non-language; opens no target | **PASS**: directions and Caesar family calibrated; `p≈0.119`/`0.713` | **Closed negative** | New clue selecting a distinct consumer, not another direction |
 | Prime lists -> `401/400/73` | **PARTIAL**: exact prime walk and literal list grammar, but alternative to historical guide | **PASS**: 14 blue, 8 yellow, 1 FEFE lists | **PASS**: partition and sums are fixed | **FAIL**: no instruction/key or downstream consumer | **PASS**: fixed-profile rate documented; FE normalization shown dependent | **Structural checkpoint only** | Explicit clue consuming the three sums |
-| Decimal matrix -> `[23,16,7]` -> Architect words | **PASS** for matrix sums and sourced dialogue | **PASS**: fixed matrix/list and scene | **PARTIAL**: word indexing fixed; beginnings/endings and polarity are not | **PARTIAL**: `BUT/HYE` thematic, no authenticated consumer | **PASS**: associated FAED `{h,e}` model negative | **Recognition checkpoint; parked** | Clue selecting beginnings/endings or B↔H operation |
+| Decimal matrix -> `[23,16,7]` -> Architect words | **PASS** for matrix sums and sourced dialogue | **PASS**: fixed matrix/list and scene | **PARTIAL**: word indexing fixed; beginnings/endings and polarity are not. Phase 232's bounded `partial_mirror9` (B↔H/D↔F/C↔G) audit found `HYE -> BYE` as the unique dictionary output (5/48 `BUT` rows; 36/35,904 stable triples; 1/6 fixed-word permutations). Phase 236 adds that only selected `BOTH`, among the three eligible B-initial words, has mirror endpoints B/H. This is real structural evidence, not a creator-selected operation | **PARTIAL**: `CIAO BELLA O` is authenticated page text; the `BYE -> Bella Ciao` association has genuine historical community precedent; their linkage is structurally supported, but not creator-selected. Phase 234 confirmed neither creator corpus ever selects CIAO, BELLA, or BYE as the yin-yang state. Still no authenticated consumer | **PASS**: associated FAED `{h,e}` model negative; Phase 234 withdrew the post-hoc `BELLA -> {b,e}` reading and ran a bounded direct-password check (90 keystrings x 4 blobs, 0 hits) for the ciao/bella family; Phase 235 ran a separate bounded direct-password check (its own 90 keystrings x 4 blobs, 0 hits) for the unrelated key/note/self/keynote family | **Recognition checkpoint; parked** | Clue selecting beginnings/endings or B↔H operation — approached structurally by Phases 232/236, but remains evidentially unmet: no creator clue selects this operation or this output |
 | DBBI/FAED -> creator's `yinyang` state | **PASS**: creator describes yin-yang as reached state | **PASS**: authenticated DBBI and FAED streams | **FAIL**: no relationship/operator selected | **FAIL**: state is recognizable only semantically | **PASS** for several specific negative coupling families | **Live semantic boundary, not executable** | Creator evidence defining how the streams interact |
 | FAED `{g,i}` monoalphabetic/VIC chain-addition | **PARTIAL**: cipher-family precedent plus calibrated escape-pair ranking | **PASS**: fixed FAED and `{g,i}` orders | **PASS** for each registered model | **NEGATIVE** | **PASS**: monoalphabetic `p=0.0396`; 5,761,385 chain pairs, zero hits | **Specific models closed** | New keystream/operator evidence, not a larger dictionary |
 | COSMIC raw32/MD5/103x103/base-38 construction | **FAIL** as creator transition: community code, mutually citing network, spam-linked keys | **PASS**: exact COSMIC envelope and token tuple | **PASS**: complete published algorithm reproduced | **FAIL** independently: random-shaped payload and claimant-controlled spam addresses | **PASS**: four representations, 210-family, offsets, entropy/padding, on-chain provenance | **Reproducible negative control; fabrication strongly supported** | Creator-authenticated pre-2025 anchor or output tied to real prize key |
@@ -151,10 +151,12 @@ community accounts is not a reopening condition.
 | DNA/genetic decoding | **FAIL**: no genetic-code clue | **PASS** for packed endpoint bytes only | **FAIL**: 72 translations before downstream choices | **NEGATIVE** | **PASS**: complete declared convention family | **Closed** | Explicit DNA/codon/frame clue |
 | RGB-vector geometry | **FAIL**: no consumer selects vector arithmetic | **PASS**: exact source colors and `(7,193,108)` difference | **FAIL**: channel, modulus, ordering, and alphabet choices | **NEGATIVE** | **PASS**: proposed mappings audited, `NIQ` inconsistency exposed | **Closed; retain exact vector only** | Explicit RGB arithmetic and output alphabet |
 
-## Priority row: `matrixsumlist`
+## Parked structural row: selected 31 -> proposed `matrixsumlist`
 
-This row is different from the attractive side-readings because its source and
-input are already strong. The missing object is narrowly defined:
+The selection and following macro token are both real, but Phase 236 shows
+that treating the selection as `matrixsumlist`'s operand is not the default
+macro grammar. The missing object under this still-possible model is narrowly
+defined:
 
 ```text
 input:
@@ -175,6 +177,17 @@ The following do **not** fill that gap:
 The next valid evidence would look like a recovered guide step, creator reply,
 code predating the output, or another authenticated artifact that uniquely
 fixes matrix dimensions, traversal, and operation.
+
+Phase 236 formally compares this model with the six-digit-prime grammar. The
+selected-31 model consumes only `yellowblueprimes` before stopping at seven
+unbound G3 fields. The prime model consumes `yellowblueprimes ->
+matrixsumlist -> lastwordsbeforearchichoice` and reaches the cross-source
+`BUT/HYE` boundary with three visible judgment calls. Neither establishes
+`yinyang`, but the prime model is the default working grammar. Phase 132's
+load-bearing broad-word control for the selected text (`gale`, `leaf`, `nest`,
+`yang`) gives `p=0.005469995`, just outside the fixed `p<0.005` threshold, so
+the selected text cannot be promoted to a recognition checkpoint. Its exact
+disposition is **Structural checkpoint; parked**.
 
 The 2026-08-09 provenance refresh is recorded in
 `doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md`. It checked the full Telegram
@@ -217,6 +230,56 @@ not qualify as demonstrated creator operators. The macro also permits a
 competing `yellow/blue prime lists -> sum list` grammar, matching the existing
 `400/401/73` checkpoint; that ambiguity weakens, rather than fixes, the claim
 that the 31-character string must be the matrix operand.
+
+## Recognition-checkpoint row: Architect words -> BYE -> CIAO BELLA O
+
+Phases 232-235 (2026-08-10) extended this row's structural audit without
+changing its disposition.
+
+Phase 232 ran the B↔H/D↔F/C↔G involution (`partial_mirror9`) as one
+fully-declared operation over the complete 48-row `but`-family and found
+`HYE -> BYE` as the unique dictionary-word output (5/48 `BUT` rows; 36 of
+35,904 stable triples; 1/6 fixed-word permutations). Phase 233 traced an
+adjacency from `BYE` to sourced
+`CIAO BELLA O` page text and the historically-attested *Bella Ciao*
+farewell-song precedent already circulating in the solver corpus.
+`CIAO BELLA O` is authenticated page text; the `BYE -> Bella Ciao`
+association has genuine historical community precedent; their linkage is
+structurally supported, but not creator-selected — neither corpus ever
+names CIAO, BELLA, or BYE as the yin-yang state (Phase 234).
+
+Phase 234 also withdrew an earlier `BELLA -> {b,e}` reading as post-hoc
+(filtering `BELLA` to the page's native alphabet gives three letters,
+`bea`, not a pair) and ran a bounded direct-password check — 90 keystring
+forms x 4 tracked blobs, 0 hits — for the `ciao`/`bella`/`ciaobellao`/
+`obellaciao`/`bellaciao` family. Phase 235 ran a separate bounded
+direct-password check — its own 90 keystring forms x 4 tracked blobs,
+0 hits — for the unrelated `key`/`note`/`self`/`keynote`/`selfself` family
+raised by the same Architect-passage brainstorm. These are two independent
+negative-control families, not one combined candidate set.
+
+The row's **Reopen trigger** — a clue selecting beginnings/endings or the
+B↔H operation — is approached structurally (Phase 232 ran exactly a
+B↔H-family operation), but remains evidentially unmet: no creator clue
+selects this operation or this output. Disposition stays
+**Recognition checkpoint; parked**.
+
+Phase 236 adds one internal control: the three eligible first words in the 48
+`BUT` rows are `BRINGS`, `BOTH`, and `BEGINNING` (16 rows each), and only
+`BOTH` has mirror9 endpoints (`B...H`). Every one of the five partial-mirror
+`BYE` rows starts with `BOTH`. The exact source clause is affirmative—“the
+anomaly revealed as both beginning and end”—not a negated impossible-`both`
+construction. This strengthens the edge reading but still does not authenticate
+the endings-rail transform or a consumer; a simpler mixed-edge rule produces
+`BYE` in 15/48 rows.
+
+Full detail: `tools/gsmg/architect_hye_bye_audit.py`,
+`tools/gsmg/bye_ciao_provenance_audit.py`,
+`tools/gsmg/ciao_selection_coverage_audit.py`,
+`tools/gsmg/architect_passage_residual_audit.py`; docs
+`GSMG_ARCHITECT_HYE_BYE_AUDIT.md`, `GSMG_BYE_CIAO_PROVENANCE_AUDIT.md`,
+`GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md`,
+`GSMG_ARCHITECT_PASSAGE_RESIDUAL_AUDIT.md`; FINDINGS.md Phases 232-235.
 
 ## Candidate submission template
 
@@ -262,8 +325,9 @@ Decision:
 
 ## Working conclusion
 
-No current side-reading passes all five gates. The exact 31-character DBBI
-selection remains the only high-priority transition input, but it fails G3
-because `matrixsumlist` has no uniquely sourced consumer. Work should focus on
-recovering that missing instruction, not expanding transforms around already
-parked outputs.
+No current side-reading passes all five gates. The six-digit-prime grammar is
+the default macro model through `BUT/HYE`; it still does not establish
+`yinyang`. The exact 31-character DBBI selection remains a real structural
+checkpoint but is parked, not the sole priority transition input. Reopen it
+only with primary evidence fixing all seven consumer fields, not another
+transform over the already-exhausted output.

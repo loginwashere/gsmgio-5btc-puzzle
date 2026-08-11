@@ -578,15 +578,22 @@ that were run.
 
 ```text
 yellowblueprimes
--> ordered colors + FEFE + sequential primes
--> exact 31-position DBBI selection
--> ncsyangcahiriasogaleafayanestve
--> boundary contact with matrixsumlist
+-> prime 574061
+-> decimal 2x3 matrix and sum list [23,16,7]
+-> last words before Architect choice
+-> BOTH / ULTIMATELY / THE
+-> BUT / HYE
 ```
+
+This is the default macro grammar after Phase 236, not a completed transition:
+the matrix orientation, sum-list convention, and word-edge read remain visible
+judgment calls, and `yinyang` is not authenticated. The separate exact
+31-position DBBI selection remains preserved as a structural checkpoint but is
+no longer the default operand of `matrixsumlist`.
 
 ### What is still missing
 
-1. The operation that consumes the 31 selected characters.
+1. Whether the default `BUT/HYE` recognition actually reaches `yinyang`.
 2. The relationship that makes DBBI and FAED jointly recognizable as the
    creator's “yin-yang” state.
 3. The correct passphrase/key material and cipher interpretation for the open
@@ -606,7 +613,7 @@ yellowblueprimes
 
 All proposed transitions are now governed by the five-gate admission and
 promotion rules in `doc/GSMG_STRICT_TRANSITION_WORKSHEET.md`. In particular,
-the worksheet keeps the exact 31-character DBBI selection live while parking
+the worksheet parks the exact 31-character DBBI selection while also parking
 `KIT`, `ggn`, `BATCH`, `igecabdfh`, overlays, DNA, and RGB-vector consumers
 until new evidence fixes their missing operations.
 
