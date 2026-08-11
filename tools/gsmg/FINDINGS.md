@@ -15095,4 +15095,166 @@ creator-authenticated.
 style. It does not fix `matrixsumlist`, `thispassword`, the SHA operand, or
 `anstoo`; it supplies no reopen evidence for selected-31 and authorizes no
 transform or blob oracle. Full report:
-`doc/GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md`.
+[doc/GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md](../../doc/GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md).
+
+## Phase 239 -- native favicon shadow audit: C9 source of rendered CE verified; G-layer and alpha consumers remain unselected (2026-08-11)
+
+`tools/gsmg/native_favicon_shadow_audit.py` closes the native-asset question
+left implicit by Phases 162/187 and recovers the relevant Telegram context.
+Messages 47334-47368 show that VoVaM—the community annotator behind the later
+G-shadow clarification—explicitly responded to the native 48x48
+`favicon_small.png` comparison with “BINGO!”, “You're getting close,” “Take a
+... look at this,” `FEFEFE`, and “no one sees beyond FEFEFE.” This selects the
+asset within that community hypothesis; it is not creator evidence.
+
+The pinned favicon has 233 visible RGB values but exactly one visible
+grayscale byte, C9. There are 264 stored C9 RGB pixels, 96 with nonzero alpha,
+zero opaque, and 72 distinct visible alpha values across bbox
+`(4,12)..(42,46)`. The 32x32 favicon and 500x620 branding logo carry the same
+C9 edge/material family, so it is a stable export ingredient rather than a
+unique FE-style flat-color anomaly.
+
+Alpha-compositing the native favicon over the authenticated Stage-0 F5
+background identifies exactly one source pixel for the rendered CE block:
+
+```text
+(x,y)=(27,26), RGBA=C9C9C9E0 -> RGB=CECECE
+```
+
+Nearest-neighbor 3x rendering produces the exact nine CE pixels observed in
+the Stage-0 crop; the full reconstruction remains within one channel unit.
+The native C9 alpha family produces 37 rendered gray bytes spanning 204-245,
+so CE is a uniquely traceable opacity slice, not an independent authored
+constant.
+
+Controls block a wider promotion. The served SVG contains only two blue
+gradient paths, no C9/filter/shadow literal. In `logo_medium.png`, 116 exact
+RGBA layers touch both Gs, 42 touch both Gs but neither S nor M, and 36 of
+those give equal G counts. C9 itself touches all four letters. Thus a third
+“clean G layer” would be routine within this raster, not reinforcing evidence.
+
+The finite row-major alpha sequence was recorded only as a stop check: one
+LSB gives `a1639090a78be66e3d74f366` and two give
+`e603162f6102e12a6ebf48c5fcb69edca7dbbf12f5071e16`; neither is text or a
+recognized signature. No reversal, traversal expansion, decryptor, or blob
+oracle was run because the alpha/LSB suggestion came from a different
+community member and has no selected consumer.
+
+Finally, the discussed `2017/07/13-01:06:39` is corrected: it belongs to the
+generic `Adobe XMP Core` toolkit version string repeated byte-for-byte in both
+branding PNGs, not an asset creation timestamp. It does not authenticate
+`7x13` or other date arithmetic.
+
+**Verdict:** promote native C9 and the exact C9/E0-to-CE composition path as
+structural provenance. Do not promote C9/CE, coordinate `(27,26)`, alpha E0,
+or its LSBs as operands or credentials. Reopen only with a source selecting
+alpha/traversal or an independently recognizable output. Full report:
+[doc/GSMG_NATIVE_FAVICON_SHADOW_AUDIT.md](../../doc/GSMG_NATIVE_FAVICON_SHADOW_AUDIT.md).
+
+## Phase 240 -- shadow/macro length and FAED factor calibration: nesting real but dependency-dense; width 38 not geometrically selected (2026-08-11)
+
+`tools/gsmg/shadow_macro_faed_geometry_audit.py` tests the proposed
+`#383838`/macro-length ruler and the direct 15x38 FAED geometry without a
+decoder or oracle.
+
+The four authenticated token lengths are `13/5/26/12`. Their ten contiguous
+span lengths are all distinct, and four of five shadow measurements hit them:
+`18=len(M+E)`, `38=len(L+T)`, `43=len(E+L+T)`, and `56=len(M+E+L+T)`; upper
+row sum 25 misses. Dependencies prevent treating these as four confirmations:
+38/56 are two representations of one color, 43 is forced by 25+18, and 56 is
+the token total. Across all 24 token-length permutations, eight retain at
+least four span hits and two (`1/12`) retain the exact unlabeled
+prefix18/suffix38/suffix43/total56 nesting.
+
+Extending Phase 36's pre-registered small-number methodology with only the
+new token/span/shadow values produces 44 pairwise-sum hits among 325 pairs
+(`13.54%`), versus the already-unremarkable `12/153` base pool. This confirms
+that isolated equations in this family have a high coincidence rate.
+
+The factor legs are asymmetric. `91` is semiprime with sole nontrivial pair
+`7x13`; `570` has eight factor pairs. Among primitive token lengths, `enter=5`
+also divides FAED (`5x114`), so 38 is not the only token-length divisor.
+
+The geometry pass tests all 16 oriented divisors of 570 under full-symbol and
+combined-`{g,i}` row/column χ²: 64 cells per null. Controls are 2,000 exact
+raw-symbol shuffles, 2,000 shuffles preserving all 436 `{g,i}` tokens, and all
+570 cyclic origins preserving the circular symbol/digram sequence.
+
+Width 38's row-symbol χ² is nominal under raw (`p=0.03848`) and token
+(`p=0.04398`) shuffles, but both fail the 64-cell correction and its cyclic
+origin is ordinary (`p=0.26316`). Width 5 gives a comparable raw nominal
+`p=0.04298`. Width 38 is not the family winner: width 30 is strongest under
+both shuffle nulls (`p=0.004998/0.006497`, corrected `0.31984/0.41579`), while
+width 285 leads cyclic origins (`p=0.007018`, corrected `0.44912`). No cell
+survives correction.
+
+**Verdict:** retain the nested lengths as dependency-qualified recognition
+texture. Do not call the DBBI/FAED factor legs symmetric or promote 38 as
+FAED's operational width: it is family-wise negative, phase-ordinary, and not
+the best divisor. No decode, transform, credential, or blob oracle is
+authorized. Full report:
+[doc/GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT.md](../../doc/GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT.md).
+
+## Phase 241 -- favicon Wayback chronology: sole post-launch capture authenticates bytes but cannot establish pre-puzzle origin (2026-08-11)
+
+`tools/gsmg/favicon_wayback_chronology_audit.py` tests the highest-value
+chronology control left by Phase 239: whether the native favicon and its C9
+edge/alpha family existed before the puzzle or changed across archived
+versions.
+
+An exact Wayback CDX query for `www.gsmg.io/img/favicon_small.png` returns one
+successful PNG capture, timestamped `20190428234709`, with CDX digest
+`JFMWHJ3SIABMV4CKU4BIJ3GHRLV7MCXM`. The raw payload is 2,677 bytes with
+SHA-256
+`934f46d6a0a168a7ca2af725604d7e1dab8ee825ad0d7c682dbb252cc2be1423`.
+It is byte-for-byte identical to both the site's local Wayback mirror and the
+repository's pinned `doc/img/icons/favicon_small.png`. A non-`www` exact query
+canonicalizes to the same row rather than adding another capture.
+
+Consequently all Phase-239 native measurements reproduce in the archived
+payload: 233 visible RGB values; C9 as the sole visible grayscale byte; 264
+stored and 96 visible C9 pixels; zero opaque C9 pixels; 72 distinct visible
+alpha values; and bbox `(4,12)..(42,46)`. This authenticates the current bytes
+and C9 properties to April 2019 and rules out a later repository mutation.
+
+The chronology hypothesis itself remains unresolved. The documented puzzle
+launch is 2019-04-20, while the sole capture is 2019-04-28, eight days later.
+There is no pre-puzzle capture and no alternate archived payload, so Wayback
+cannot distinguish inherited branding from a puzzle-era export or measure C9
+evolution. The generic Adobe XMP toolkit version remains non-chronological.
+
+**Verdict:** payload provenance strengthened; chronology unresolved. The
+archive neither selects C9/CE as an operand nor supplies an alpha traversal or
+consumer, and no oracle is authorized. Reopen only with an independently
+dated pre-launch asset or an alternate historical version. Full report:
+[doc/GSMG_FAVICON_WAYBACK_CHRONOLOGY_AUDIT.md](../../doc/GSMG_FAVICON_WAYBACK_CHRONOLOGY_AUDIT.md).
+
+## Phase 242 -- SVG/PNG edge geometry: all 96 native C9 pixels lie on ordinary registered contours; zero residue (2026-08-11)
+
+`tools/gsmg/svg_png_edge_geometry_audit.py` runs the bounded geometric test
+left by Phase 239. The served SVG and PNG have different canvases, so it parses
+the SVG's two linear paths (19 segments) and registers them to the PNG using
+only the opaque body. Zero C9 pixels enter that fit because all visible C9
+alphas are below 255.
+
+The independently registered body matches at binary IoU `0.971756`
+(`1101/1133` intersection/union pixels). The PNG's 135 ordinary visible
+non-C9 silhouette-edge pixels define the matched contour envelope: their
+maximum center-to-SVG-segment distance is `1.321956` pixels. All 96 C9 pixels
+fall inside that envelope, with a smaller maximum distance of `1.004656`
+pixels. **Off-contour C9 residue is zero.** Every C9 pixel also directly
+touches a non-C9 pixel by four-neighborhood and the opaque body by
+eight-neighborhood; 85 map nearest to the main SVG path and 11 to the inset.
+
+The separately served 32x32 favicon repeats the topology: all 48 visible C9
+pixels touch both the non-C9 image and opaque core, and all remain within
+`1.266629` pixels of a registered SVG segment. Thus contour-bound C9 is stable
+across two raster sizes rather than unique to the native 48x48/Stage-0 route.
+
+**Verdict:** close C9 as a hidden spatial channel. Retain C9 and the exact
+C9/E0-to-CE composition as raster provenance, but do not promote the C9
+layout, components, coordinates, alphas, or CE slice as payload. No traversal,
+decode, credential, or blob oracle is authorized. Reopen only with stable
+off-contour residue in an independently sourced rendering or primary evidence
+selecting raster-edge traversal. Full report:
+[doc/GSMG_SVG_PNG_EDGE_GEOMETRY_AUDIT.md](../../doc/GSMG_SVG_PNG_EDGE_GEOMETRY_AUDIT.md).

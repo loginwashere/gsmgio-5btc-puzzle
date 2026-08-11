@@ -33,6 +33,7 @@ import first_piece_event_rail_preservation_audit
 import first_piece_png_palette_provenance_audit
 import first_piece_shadow_column_rail_audit
 import faed_decoder_coverage_audit
+import favicon_wayback_chronology_audit
 import first_piece_even_odd_alphabet_gate_audit
 import first_piece_batch_rebus_gate_audit
 import first_piece_cefe_checkerboard_gate_audit
@@ -49,6 +50,7 @@ import macro_model_disposition_audit
 import minimal_macro_chain_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
+import native_favicon_shadow_audit
 import onchain_op_return_provenance_audit
 import page_syntax_house_style_audit
 import phase32_column_calibration_audit
@@ -62,12 +64,14 @@ import salphaseion_salvation_role_audit
 import salphaseion_presentation_binding_audit
 import salphaseion_responsive_wrap_audit
 import salphaseion_wayback_history_audit
+import shadow_macro_faed_geometry_audit
 import spi_cd_initials_audit
 import stage0_footer_palette_layer_audit
 import stage0_even_sequence_convergence_audit
 import stage0_g_shadow_consumer_audit
 import stage0_repeated_grayscale_audit
 import synthesis_action_paths_audit
+import svg_png_edge_geometry_audit
 import telegram_yellow_blue_matrix_direction_audit
 import triangular_matrixsumlist_audit
 import urlblob_keywrap_backfill
@@ -464,6 +468,56 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(report["fe"]["pixel_count"], 5625)
         self.assertEqual(len(report["logo_bytes"]), 34)
         self.assertEqual(len(report["logo_single_3x3_bytes"]), 10)
+
+    def test_native_favicon_shadow_has_c9_to_ce_provenance_but_no_consumer(self):
+        report = native_favicon_shadow_audit.audit()
+        favicon = report["favicon"]
+        self.assertEqual(favicon["visible_gray_bytes"], (201,))
+        self.assertEqual(favicon["c9_visible_pixels"], 96)
+        self.assertEqual(favicon["c9_opaque_pixels"], 0)
+        self.assertEqual(
+            report["composite"]["ce_source_pixels"],
+            ((27, 26, (201, 201, 201, 224)),),
+        )
+        self.assertEqual(report["composite"]["reconstructed_ce_pixels"], 9)
+        self.assertEqual(report["logo_glyph_control"]["g_only_rgba_layers"], 42)
+        self.assertFalse(report["gates"]["logo_g_checksum_distinctive"])
+        self.assertFalse(report["gates"]["alpha_or_lsb_consumer_selected"])
+        self.assertFalse(report["promoted"])
+
+    def test_svg_geometry_accounts_for_all_native_c9_pixels(self):
+        report = svg_png_edge_geometry_audit.audit()
+        native = report["native_48"]
+        self.assertGreater(native["body_registration"]["binary_iou"], 0.971)
+        self.assertEqual(native["c9_pixels"], 96)
+        self.assertEqual(native["c9_adjacent_non_c9_4_neighbor"], 96)
+        self.assertEqual(native["c9_adjacent_opaque_8_neighbor"], 96)
+        self.assertLess(
+            native["c9_max_svg_segment_distance"],
+            native["ordinary_edge_max_svg_segment_distance"],
+        )
+        self.assertEqual(native["c9_within_ordinary_edge_envelope"], 96)
+        self.assertEqual(native["c9_residue"], ())
+        self.assertEqual(native["nearest_svg_path_counts"], ((0, 85), (1, 11)))
+        self.assertFalse(report["gates"]["off_contour_c9_residue_found"])
+        self.assertFalse(report["gates"]["decode_or_oracle_authorized"])
+        self.assertFalse(report["promoted"])
+
+    def test_shadow_macro_nesting_does_not_select_faed_width_38(self):
+        report = shadow_macro_faed_geometry_audit.audit(trials=200, seed=240)
+        numeric = report["numeric"]
+        geometry = report["geometry"]
+        self.assertEqual(numeric["shadow_measurement_span_hits"], (18, 38, 43, 56))
+        self.assertEqual(numeric["permutations_with_at_least_four_hits"], 8)
+        self.assertEqual(len(numeric["exact_unlabeled_nested_permutations"]), 2)
+        self.assertEqual(numeric["extended_pool"]["hits"], 44)
+        self.assertEqual(len(numeric["factor_pairs_570"]), 8)
+        self.assertEqual(numeric["faed_token_divisors"], (("enter", 5, 114),))
+        self.assertEqual(geometry["family_size_per_null"], 64)
+        self.assertFalse(geometry["width_38_exceptional"])
+        self.assertFalse(geometry["any_family_corrected_hit"])
+        self.assertFalse(report["gates"]["decode_or_oracle_authorized"])
+        self.assertFalse(report["promoted"])
 
     def test_stage0_footer_palette_layer(self):
         report = stage0_footer_palette_layer_audit.audit()
@@ -1295,6 +1349,23 @@ class CorrectedClaimTests(unittest.TestCase):
             report["sha256"],
             salphaseion_wayback_history_audit.CAPTURES[-1]["sha256"],
         )
+
+    def test_favicon_wayback_authenticates_bytes_but_not_pre_puzzle_origin(self):
+        report = favicon_wayback_chronology_audit.audit()
+        self.assertEqual(report["archive"]["exact_200_png_capture_count"], 1)
+        self.assertEqual(report["archive"]["distinct_cdx_digests"], 1)
+        self.assertEqual(report["chronology"]["days_after_launch"], 8)
+        self.assertFalse(report["chronology"]["predates_puzzle"])
+        self.assertFalse(report["chronology"]["version_comparison_possible"])
+        self.assertEqual(report["c9_properties"]["visible_gray_bytes"], (201,))
+        self.assertEqual(report["c9_properties"]["c9_visible_pixels"], 96)
+        self.assertTrue(
+            report["gates"]["repository_copy_authenticated_to_2019_04_28"]
+        )
+        self.assertFalse(
+            report["gates"]["pre_puzzle_branding_provenance_established"]
+        )
+        self.assertFalse(report["promoted"])
 
 
 if __name__ == "__main__":
