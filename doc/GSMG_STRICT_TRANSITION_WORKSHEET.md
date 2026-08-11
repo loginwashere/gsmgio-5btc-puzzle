@@ -205,6 +205,16 @@ The page uses mixed prefix/postfix/infix instruction placement elsewhere, so
 postfix-to-DBBI, prefix-to-FAED, and infix DBBI/FAED roles all survive. This
 parallel is structural evidence, not enough to change G3.
 
+Phase 238 extends that comparison across every decoded instruction slot. Six
+candidate house rules—uniform prefix, uniform postfix, between-means-join,
+transport-fixes-role, nearest-neighbor operand, and complete SHA bracketing—
+all fail an internal control. `enter` remains the sole locally fixed slot
+because its equal 64-character neighbors independently reconstitute an
+authenticated blob. Under working Model B, Phase 101's 54 models can be
+conditionally projected to 18 password/SHA/tail models, but this projection
+is not creator-authenticated and zero source-strict model results. Page syntax
+therefore supplies no reopen evidence for this row.
+
 The chronological code audit in
 `doc/GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md` used Denis's first exact
 31-character publication on 2026-03-04 as its cutoff. Across the public

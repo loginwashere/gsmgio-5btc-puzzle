@@ -50,6 +50,7 @@ import minimal_macro_chain_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import onchain_op_return_provenance_audit
+import page_syntax_house_style_audit
 import phase32_column_calibration_audit
 import post_yinyang_dataflow_audit
 import post_phase217_consistency_audit
@@ -923,6 +924,37 @@ class CorrectedClaimTests(unittest.TestCase):
         )
         self.assertFalse(report["matrix_neighbors"]["validated_join"])
         self.assertEqual(report["strictly_supported_binding_models"], ())
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists()
+        and (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "page mirror or Telegram export is unavailable",
+    )
+    def test_page_syntax_has_no_uniform_house_style(self):
+        report = page_syntax_house_style_audit.audit()
+        self.assertEqual(report["rules_tested"], 6)
+        self.assertEqual(report["rules_surviving"], ())
+        self.assertTrue(report["roles"]["enter"]["local_page_direction_fixed"])
+        self.assertFalse(
+            report["roles"]["matrixsumlist"]["local_page_direction_fixed"]
+        )
+        self.assertEqual(
+            report["phase101_model_family"]["conditional_model_b_projection"],
+            18,
+        )
+        self.assertEqual(
+            report["phase101_model_family"][
+                "conditionally_total_only_with_answer_too"
+            ],
+            9,
+        )
+        self.assertFalse(
+            report["phase101_model_family"]["projection_is_creator_authenticated"]
+        )
+        self.assertFalse(
+            report["gates"]["empirical_uniform_house_style_found"]
+        )
+        self.assertFalse(report["gates"]["new_transform_or_oracle_authorized"])
 
     @unittest.skipUnless(
         (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),

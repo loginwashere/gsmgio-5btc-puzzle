@@ -1,5 +1,11 @@
 # GSMG `matrixsumlist` Provenance Refresh
 
+> **Phase-238 closure note:** a full comparison across the other authenticated
+> page-syntax slots finds no uniform prefix/postfix/infix, transport, or
+> nearest-neighbor house style. `enter` remains the sole locally fixed slot
+> because it has an independently valid equal-half consumer. See
+> `GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md`.
+
 **Date:** 2026-08-09  
 **Question:** does any recovered primary source uniquely specify what
 `matrixsumlist` does to `ncsyangcahiriasogaleafayanestve`?

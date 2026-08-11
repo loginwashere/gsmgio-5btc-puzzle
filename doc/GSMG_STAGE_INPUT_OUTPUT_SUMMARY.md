@@ -81,8 +81,8 @@ first-piece colors + FEFE marker + sequential primes
   -> final two events touch the opening of matrixsumlist
 
 CURRENT BOUNDARY
-  -> determine what matrixsumlist does with the 31 selected characters
-  -> solve DBBI and FAED together / recognize the yin-yang state
+  -> determine whether BUT/HYE -> BYE reaches the promised yin-yang state
+  -> identify the creator-selected DBBI/FAED relationship or consumer
   -> open the remaining encrypted private-key material
 ```
 
@@ -631,6 +631,16 @@ instruction: the recovered guide uses row sums on a different DBBI object, a
 2024 community attachment defines row-plus-column sums on a different input,
 and the newest posts add only incompatible community theories. The transition
 therefore remains blocked specifically at G3.
+
+Phase 238 tests the page-syntax fallback across every decoded instruction
+slot. None of six uniform rules survives: the page mixes before, after, and
+between placement; binary and raw transports do not fix roles; nearest-page-
+neighbor scope fails against the external Architect selector. `enter` is the
+sole locally fixed slot because removing it independently reconstructs one
+authenticated 64+64 Base64 object. Under working Model B the historical 54
+local grammar models conditionally project to 18 residual password/SHA/tail
+models, still with zero source-strict solution. Page syntax therefore does not
+reopen the selected-31 operand or authorize a transform.
 
 ---
 

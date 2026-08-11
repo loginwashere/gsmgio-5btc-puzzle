@@ -251,6 +251,18 @@ recover first-party evidence for the meaning of `anstoo` and for whether the
 explicit SHA operand aliases or overrides `thispassword`. Do not choose one of
 the 54 models by AES outcome.
 
+**Phase 238 house-style result:** the other authenticated slots do not supply
+a missing directional convention. Six declared rules—uniform prefix,
+uniform postfix, between-means-join, transport-fixes-role, nearest-neighbor
+operand, and complete SHA bracketing—each has an internal counterexample.
+`enter` is the only locally fixed operator because it independently rejoins
+two equal 64-character halves into the authenticated SALPH blob; its success
+does not generalize from position or binary transport alone. With Model B as
+the current external macro default, the 54-model Phase-101 family can be
+conditionally projected to 18 residual password/SHA/tail models, but this is
+not creator-authenticated and still yields zero strict model. Full report:
+`doc/GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md`.
+
 **Phase 102 (complete): `anstoo`/SHA-operand provenance recovered -- genuinely
 unresolved, not a coverage gap.** `tools/gsmg/anstoo_provenance_audit.py`
 found the creator never uses `anstoo` anywhere in the complete export and
