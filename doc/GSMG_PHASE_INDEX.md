@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **245** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **246** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -261,3 +261,4 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 242 | P242 | 2026-08-11 | SVG/PNG edge geometry | all 96 native C9 pixels lie on ordinary registered contours; zero residue | [link](../tools/gsmg/FINDINGS.md#phase-242----svgpng-edge-geometry-all-96-native-c9-pixels-lie-on-ordinary-registered-contours-zero-residue-2026-08-11) | [GSMG_SVG_PNG_EDGE_GEOMETRY_AUDIT](GSMG_SVG_PNG_EDGE_GEOMETRY_AUDIT.md) |
 | 243 | P243 | 2026-08-11 | DBBI/FAED boundary page-selector audit | textarea markup and CSS/JS boundary selectors exhausted, gap stays open for external selectors | [link](../tools/gsmg/FINDINGS.md#phase-243----dbbifaed-boundary-page-selector-audit-textarea-markup-and-cssjs-boundary-selectors-exhausted-gap-stays-open-for-external-selectors-2026-08-11) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
 | 244 | P244 | 2026-08-11 | DBBI/FAED cross-capture stability | SalPhaseIon textarea byte-identical across all 5 known Wayback captures, G-ESC-001 page-boundary branch closed | [link](../tools/gsmg/FINDINGS.md#phase-244----dbbifaed-cross-capture-stability-salphaseion-textarea-byte-identical-across-all-5-known-wayback-captures-g-esc-001-page-boundary-branch-closed-2026-08-11) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
+| 245 | P245 | 2026-08-12 | creator personal-disclosures audit | Netherlands residency and substance-use references, both provenance-only | [link](../tools/gsmg/FINDINGS.md#phase-245----creator-personal-disclosures-audit-netherlands-residency-and-substance-use-references-both-provenance-only-2026-08-12) | [GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT](GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md) |

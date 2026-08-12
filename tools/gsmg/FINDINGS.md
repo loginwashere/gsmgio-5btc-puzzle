@@ -15390,3 +15390,67 @@ from `open` to `parked`; with this change, no P0 gap in
 [GSMG_OPEN_GAP_REGISTRY](../../doc/GSMG_OPEN_GAP_REGISTRY.md) remains both
 `open` and locally actionable -- the frontier is honestly exhausted pending
 new primary evidence.
+
+## Phase 245 -- creator personal-disclosures audit: Netherlands residency and substance-use references, both provenance-only (2026-08-12)
+
+**Question:** a chat-log review noticed the creator mentioning
+mind-altering substances several times, and separately noted a prior,
+undocumented suspicion that the creator might be Netherlands-based. Are
+either of these real, reproducible, creator-authored patterns rather than
+isolated or misremembered impressions?
+
+**Frozen inputs:** both raw Telegram exports (solver-group
+`ChatExport_2026-07-26`, 57,729 messages; support-group
+`ChatExport_2026-07-29 (2)`, 52,851 messages), filtered to the stable
+creator ID `user9815232` (`Jrk Bgrt` / `@SoWut`, established as the same
+identity across both corpora by Phase 115 and by `support_group_export_
+delta_audit.py`'s shared `CREATOR_ID`).
+
+**Method:** an initial keyword sweep (substance names; Dutch-language tells
+and geography terms) located candidate messages; each was then read in
+conversational context and either promoted into a frozen `{message_id:
+(export, required_fragment)}` index -- verified against the raw export at
+run time, not trusted from a summary -- or explicitly excluded as
+ambiguous/weak. `tools/gsmg/creator_personal_disclosures_audit.py` codifies
+both indices and their exclusions.
+
+**Result:** **Netherlands residency/nationality** — 20 creator-authored
+messages, 2018-2026 (19 support-group, 1 solver-group), including direct
+first-person statements ("I'm in the Netherlands even," msg `41557`;
+"Currently back in the NL," msg `59061`), repeated offers to converse in
+Dutch by PM, an unprompted Dutch grammar note, and locally-specific detail
+(Albert Heijn/Jumbo supermarkets, an `abnamro.nl` link, "utc not cet").
+Supporting but non-indexed: the Dutch-English "ofcourse" spelling tell
+appears in 28 support-group and 2 solver-group creator messages. One
+message ("not everybody is Dutch but most of us are indeed," msg `52684`)
+uses team framing, so what's established without qualification is that the
+Telegram identity itself is Netherlands-based in its own words, not
+necessarily that the individual designer personally is. Two weaker
+candidates (a PimEyes-search comment, Dutch carrot-history trivia) were
+deliberately excluded as ambiguous, not folded in as supporting evidence.
+
+**Substance references** — 7 creator-authored messages, solver-group export
+only (2 support-group keyword hits were false positives: "took a hit"
+about BTC price, "high on the to-do list"). Three are isolated one-off
+jokes (2021, 2024, 2026-07-13); the other four cluster inside one late-night
+session (2026-07-17, 01:16-02:47) where the creator candidly discusses
+regular drug use, including a specific proposed combination ("70mq lsd,
+100 mg mdma and bit of ket," msg `66969`) and the Dutch slang term
+`geestveruimend` ("mind-expanding"). None of the 7 are framed as clues,
+hints, or puzzle-design commentary.
+
+**Disposition:** provenance-only (both facts).
+
+**Facts affected:** establishes `F-CREATOR-001` and `F-CREATOR-002` in
+[GSMG_FACT_LEDGER](../../doc/GSMG_FACT_LEDGER.md).
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `tools/gsmg/creator_personal_disclosures_audit.py`
+(self-test); full report:
+[doc/GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md](../../doc/GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md).
+
+**Reopen condition:** a creator statement directly tying either fact to
+puzzle content -- a Dutch-language clue, a substance-referenced hint --
+would reopen this into an operative question. Neither currently exists;
+this closes as background/provenance only, not a chain step.

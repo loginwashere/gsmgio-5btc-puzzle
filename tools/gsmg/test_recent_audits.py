@@ -22,6 +22,7 @@ import cosmic_raw_digest_checkpoint_audit
 import creator_feasibility_envelope_audit
 import creator_yingyang_faed_pair_audit
 import creator_operator_vocabulary_audit
+import creator_personal_disclosures_audit
 import dbbi_faed_boundary_selector_audit
 import dual_channel_consistency_audit
 import first_piece_hamming_control_audit
@@ -1388,6 +1389,22 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertTrue(checks["whitespace_is_single_character_separation"])
         self.assertEqual(checks["known_captures"], 5)
         self.assertFalse(checks["pre_registered_condition_met"])
+
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists()
+        and Path(
+            creator_personal_disclosures_audit.SUPPORT_EXPORT_DIR, "result.json"
+        ).exists(),
+        "both Telegram exports are unavailable",
+    )
+    def test_creator_personal_disclosures_verified_against_raw_export(self):
+        report = creator_personal_disclosures_audit.audit()
+        self.assertEqual(len(report["substance"]), 7)
+        self.assertEqual(len(report["dutch_location"]), 20)
+        for message_id, result in report["substance"].items():
+            self.assertTrue(result["found"], (message_id, result))
+        for message_id, result in report["dutch_location"].items():
+            self.assertTrue(result["found"], (message_id, result))
 
     def test_favicon_wayback_authenticates_bytes_but_not_pre_puzzle_origin(self):
         report = favicon_wayback_chronology_audit.audit()

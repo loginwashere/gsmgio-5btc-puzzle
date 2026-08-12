@@ -26,6 +26,10 @@ that do that separation explicitly.
 - [GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT](GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md) — inventory of operators the creator has demonstrably used elsewhere.
 - [GSMG_CREATOR_YINGYANG_FAED_PAIR_AUDIT](GSMG_CREATOR_YINGYANG_FAED_PAIR_AUDIT.md) — the creator's own `YING/YANG` typo vs. FAED's statistical fit.
 
+## Personal disclosures (provenance-only, not puzzle mechanics)
+
+- [GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT](GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md) — Phase 245, Netherlands residency/nationality and casual substance-use references; neither is clue-framed.
+
 ## Provenance corpora referenced throughout
 
 - Solver-group export: `ChatExport_2026-07-26`
