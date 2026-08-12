@@ -77,17 +77,17 @@ for lack of trying — see each gap's row for exactly what was checked.
 ## Recently completed phases
 
 See [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) for the full generated table of
-all 246 phases. Most recent:
+all 248 phases. Most recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 247 | Architect mirror-selector audit | Three targeted lanes (newer-export coverage, keyword sweep, reply/reaction check) all negative; G-ARCH-001 exhausted for this narrower question |
+| 246 | Telegram creator-media completeness audit | All declared media present; deleted-parent gap isolated to 39 replies, not a missing-file lead |
 | 245 | Creator personal-disclosures audit | Netherlands residency and substance-use references verified, both provenance-only |
 | 244 | DBBI/FAED cross-capture stability | SalPhaseIon textarea byte-identical across all 5 known Wayback captures; G-ESC-001 page-boundary branch fully closed |
 | 243 | DBBI/FAED boundary page-selector audit | Textarea markup/CSS/JS branch of G-ESC-001 closed negative |
 | 242 | SVG/PNG edge geometry | C9 channel closed: contour-bound, zero residue |
 | 241 | Favicon Wayback chronology | Bytes authenticated to 2019-04-28; chronology unresolved |
-| 240 | Shadow/macro length + FAED factor calibration | Nesting real but dependency-dense; width 38 not selected |
-| 238 | Page-syntax house-style audit | Mixed grammar, no directional selector |
 
 ## Canonical documents
 

@@ -15437,7 +15437,10 @@ session (2026-07-17, 01:16-02:47) where the creator candidly discusses
 regular drug use, including a specific proposed combination ("70mq lsd,
 100 mg mdma and bit of ket," msg `66969`) and the Dutch slang term
 `geestveruimend` ("mind-expanding"). None of the 7 are framed as clues,
-hints, or puzzle-design commentary.
+hints, or puzzle-design commentary. The Matrix's real white-rabbit-to-
+mescaline scene adjacency makes altered consciousness a plausible background
+motif, but supplies no creator-selected password, operator, or artifact link;
+it remains recognition-only context inside this provenance audit.
 
 **Disposition:** provenance-only (both facts).
 
@@ -15451,6 +15454,131 @@ hints, or puzzle-design commentary.
 [doc/GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md](../../doc/GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md).
 
 **Reopen condition:** a creator statement directly tying either fact to
-puzzle content -- a Dutch-language clue, a substance-referenced hint --
-would reopen this into an operative question. Neither currently exists;
+puzzle content -- a Dutch-language clue, a substance-referenced hint -- or an
+authenticated puzzle artifact explicitly selecting an altered-consciousness
+term would reopen this into an operative question. Neither currently exists;
 this closes as background/provenance only, not a chain step.
+
+## Phase 246 -- Telegram creator-media completeness audit: zero missing declared files; deleted-parent gap isolated (2026-08-12)
+
+**Question:** does either raw Telegram export contain a creator-authored or
+directly creator-connected media reference whose native bytes are absent,
+providing a concrete acquisition target for `G-MSL-001`?
+
+**Frozen inputs:** solver-group `ChatExport_2026-07-26` (57,729 records) and
+support-group `ChatExport_2026-07-29 (2)` (52,851 records), using the stable
+creator ID `user9815232`. The check is structural across every surviving
+`photo`, `file`, `thumbnail`, and `reply_to_message_id` field; it is not a
+caption-keyword search.
+
+**Method:** `tools/gsmg/telegram_creator_media_completeness_audit.py` resolves
+every declared media path against its export directory, then separately
+inventories creator-authored media, media replying directly to a creator
+record, creator replies to surviving media, and creator replies whose parent
+record is absent. Surviving replies sharing each absent parent ID were inspected
+to recover topic where possible without inventing the deleted proposition.
+
+**Result:** all **6,504 primary media paths** (4,231 solver, 2,273 support) and
+all **1,396 thumbnail paths** (1,089 solver, 307 support) exist locally.
+Creator-connected subsets are also complete: all 88 creator-authored media
+records (18/70), all 47 media replies to creator records (18/29), and all 86
+media parents of creator replies (5/81) have their native files. There are 39
+creator replies to absent parents (8/31), but a deleted parent leaves no media
+field and therefore is not a missing-file reference. Context identifies the
+seemingly promising support replies as Decentraland (`39526`) and product
+Insights (`59889`); solver parent `8988` is recoverable in substance from two
+surviving replies giving the same GSMG expansion. The ambiguous creator reply
+`28548` to missing parent `28547` was already preserved, with the same limit, in
+`GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md`.
+
+**Disposition:** rejected (for the current-export missing-media branch).
+
+**Facts affected:** tests the external-source route for `F-CHAIN-011`; no fact
+row changes because the deleted-parent uncertainty remains and no new
+`matrixsumlist` evidence was found.
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `tools/gsmg/telegram_creator_media_completeness_audit.py`
+(self-test plus frozen-count assertions); full report:
+[GSMG_TELEGRAM_CREATOR_MEDIA_COMPLETENESS_AUDIT](../../doc/GSMG_TELEGRAM_CREATOR_MEDIA_COMPLETENESS_AUDIT.md);
+exploratory context and E2 stopping rule in
+[2026-08-12 - What Evidence Could Define Matrixsumlist](../../doc/Brainstorms/2026-08-12%20-%20What%20Evidence%20Could%20Define%20Matrixsumlist.md).
+
+**Reopen condition:** an independent Telegram export restores one of the 39
+deleted parent records (especially support parent `28547`), exposes edit
+history unavailable here, or contains a creator-connected message/media record
+not represented in either frozen export. Re-running keyword or file-existence
+searches over these same two exports does not reopen E2.
+
+## Phase 247 -- Architect beginnings/endings/B<->H mirror selector audit: three targeted lanes, all negative, G-ARCH-001 closes to parked (2026-08-12)
+
+**Question:** a brainstorm session re-scoped `G-ARCH-001` by asking what a
+creator-authored selector for the beginnings/endings extraction (`BUT`
+initials vs. `HYE` endings from `BOTH/ULTIMATELY/THE`) or the
+`partial_mirror9` (B↔H/D↔F/C↔G) operation would actually look like, since
+`partial_mirror9` is a generic checkerboard transform reused by
+pattern-match, not a creator-named operation. Three narrower, previously
+untried lanes emerged: newer-export coverage, a targeted keyword sweep, and
+a selector-candidate/reply check.
+
+**Frozen inputs:** the two indexed corpora (solver-group
+`ChatExport_2026-07-26`, support-group `ChatExport_2026-07-29 (2)`), plus a
+newer partial solver-group export discovered during this session
+(`ChatExport_2026-08-09 (1)`, message ids beyond the indexed cutoff `67263`)
+that was not previously checked for any gap. (`ChatExport_2026-08-07` is an
+unrelated personal chat, not GSMG; `ChatExport_2026-08-09`'s `result.json`
+is malformed.)
+
+**Method:** `tools/gsmg/architect_mirror_selector_audit.py` runs three
+independent checks: (1) does the newer export contain any creator-authored
+messages beyond the indexed cutoff; (2) do creator messages contain
+`mirror`/`reflect`/`flip`/`opposite`/`backwards`/`beginning`/`ending`/
+`reverse`/`invert` -- terms the existing `matrixsumlist`-focused
+operator-vocabulary inventory never searched; (3) does any message combine
+"architect" with mirror/reflect/`bye`/a both-ultimately phrase, is any such
+message creator-authored, and did the creator ever reply to one -- plus a
+standalone check for the low-false-positive word `HYE`.
+
+**Result:** all three lanes negative. (1) 952 new messages exist in the
+newer export's uncovered window, zero creator-authored. (2) 3 solver-group
+and 24 support-group creator hits, essentially all unrelated trading-bot
+chatter ("in the beginning," "mirrored sell order"); the two hits that
+looked relevant were checked and are already fully documented elsewhere
+(msg `26108`: the unrelated pre-rabbit `esrever` mechanic; msg `67741`: the
+GSMG bot-shutdown announcement, not new). (3) Zero genuine standalone `HYE`
+occurrences in any export (one 2018 false positive, a casual "Hye" greeting
+three years before this project derived `HYE`). 13 messages combine
+"architect" with selector-adjacent language, all solver-authored, zero
+creator-authored, zero creator replies to any of them. The strongest textual
+coincidence among those 13 -- the source passage's own "revealed as both
+beginning, and end" -- is already fully incorporated into the existing
+analysis (`GSMG_MATRIXSUMLIST_CHECKPOINT.md`; worksheet: "strengthens the
+edge reading but still does not authenticate the endings-rail transform or
+a consumer"); this lane confirms no creator ever engaged with any message
+raising it.
+
+**Disposition:** rejected (for the creator-clue-selector question this row
+depends on).
+
+**Facts affected:** none promoted to the Fact Ledger -- this is a negative
+result about absence of a selector, not a new established claim; recorded
+directly in the gap registry instead.
+
+**Supersedes/corrects:** narrows and confirms `G-ARCH-001`'s existing
+"corpus-blocked" framing, which was accurate for the general creator-clue
+sweep but had not been tested against this specific, narrower question
+until now.
+
+**Artifacts:** `tools/gsmg/architect_mirror_selector_audit.py` (self-test);
+full report:
+[doc/GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT.md](../../doc/GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT.md).
+
+**Reopen condition:** a creator statement -- in a future export, or found
+in already-indexed material by a different search -- naming the
+beginnings/endings extraction, the B↔H pairing, or singling out `BOTH`
+specifically, would reopen this. So would a creator reply or reaction on
+any solver message proposing the `HYE`/`BYE`/mirror reading. Neither
+currently exists in any available export. `G-ARCH-001` moves from `open`
+to `parked` in
+[GSMG_OPEN_GAP_REGISTRY](../../doc/GSMG_OPEN_GAP_REGISTRY.md).

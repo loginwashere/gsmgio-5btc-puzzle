@@ -117,6 +117,26 @@ enjoying the project, not clue language — treat any connection as
 recognition-only at best, same caution as `F-CHAIN-009`'s community-echo
 distinction.
 
+### Thematic boundary: *The Matrix* and altered consciousness
+
+A real source-level association exists, but it does not promote the chat
+references into puzzle mechanics. The puzzle's creator-authenticated “Follow
+the white rabbit” clue quotes *The Matrix*; shortly afterward in the film's
+opening sequence, Choi answers Neo's waking-versus-dreaming question with
+“It's called mescaline.” The wider film vocabulary also includes red/blue
+pills, altered consciousness, perception, reality, and choice, while the
+later Architect scene explicitly says the process has altered Neo's
+consciousness.
+
+This makes substances and altered perception a plausible **background motif**
+or recognition association. It does not select `mescaline`, `lsd`, `dmt`,
+`geestveruimend`, or any related word as a password, operand, cipher, or search
+instruction. The creator's seven substance references are later ordinary chat
+and never point back to the rabbit image, Matrix dialogue, Architect passage,
+or another authenticated puzzle object. Community drug theories and jokes add
+no creator selection. Preserve this distinction so the genuine film adjacency
+is neither ignored nor repeatedly mistaken for an operative lead.
+
 ## Verdict
 
 Both facts are real, creator-primary, and reproducible, but neither is
@@ -129,4 +149,6 @@ wordlist, transform, or oracle run is authorized by this audit alone.
 
 A creator statement directly tying either fact to puzzle content (a
 Dutch-language clue, a substance-referenced hint) would reopen this into an
-operative question. None currently exists.
+operative question. An authenticated puzzle artifact explicitly selecting a
+substance or altered-consciousness term would also reopen it. None currently
+exists.

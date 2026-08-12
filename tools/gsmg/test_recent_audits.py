@@ -11,6 +11,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 import architect_choice_boundary_audit
 import architect_choice_literal_password_audit
 import architect_hye_bye_audit
+import architect_mirror_selector_audit
 import architect_passage_residual_audit
 import architect_yinyang_distinctiveness_audit
 import binary_message_export_audit
@@ -76,6 +77,7 @@ import stage0_g_shadow_consumer_audit
 import stage0_repeated_grayscale_audit
 import synthesis_action_paths_audit
 import svg_png_edge_geometry_audit
+import telegram_creator_media_completeness_audit
 import telegram_yellow_blue_matrix_direction_audit
 import triangular_matrixsumlist_audit
 import urlblob_keywrap_backfill
@@ -1405,6 +1407,44 @@ class CorrectedClaimTests(unittest.TestCase):
             self.assertTrue(result["found"], (message_id, result))
         for message_id, result in report["dutch_location"].items():
             self.assertTrue(result["found"], (message_id, result))
+
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists()
+        and Path(
+            creator_personal_disclosures_audit.SUPPORT_EXPORT_DIR, "result.json"
+        ).exists()
+        and Path(
+            architect_mirror_selector_audit.SOLVER_RECENT_EXPORT_DIR, "result.json"
+        ).exists(),
+        "not all three Telegram exports are available",
+    )
+    def test_architect_mirror_selector_lanes_are_negative(self):
+        report = architect_mirror_selector_audit.audit()
+        coverage = report["newer_export_coverage"]
+        self.assertEqual(coverage["new_message_count"], 952)
+        self.assertEqual(coverage["creator_new_count"], 0)
+        self.assertEqual(
+            report["targeted_keyword_sweep"],
+            {"solver": 3, "support": 24, "solver_recent": 0},
+        )
+        self.assertEqual(
+            report["hye_word"], {"solver": 0, "support": 1, "solver_recent": 0}
+        )
+        candidates = report["architect_selector_candidates"]
+        self.assertEqual(candidates["solver"]["hit_count"], 13)
+        self.assertEqual(candidates["solver"]["creator_authored_count"], 0)
+        self.assertEqual(candidates["solver"]["creator_reply_pairs"], [])
+        self.assertEqual(candidates["support"]["hit_count"], 0)
+
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists()
+        and Path(
+            telegram_creator_media_completeness_audit.DEFAULT_SUPPORT, "result.json"
+        ).exists(),
+        "both Telegram exports are unavailable",
+    )
+    def test_creator_media_completeness(self):
+        telegram_creator_media_completeness_audit.self_test()
 
     def test_favicon_wayback_authenticates_bytes_but_not_pre_puzzle_origin(self):
         report = favicon_wayback_chronology_audit.audit()

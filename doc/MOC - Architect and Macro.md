@@ -41,6 +41,7 @@ and everything that traces to the Matrix Reloaded Architect scene. See
 - [GSMG_CIAO_SELECTION_COVERAGE_AUDIT](GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md) — Phase 234, no creator selection; direct-password gap closed.
 - [GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT](GSMG_CHECKERBOARD_KEYWORD_BLOB_GAP_AUDIT.md) — Phase 237, closes the P32TRAILING/URLBLOB checkerboard-keyword gap for this family.
 - [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) — Phase 243/244, closes the entire page-boundary branch of the `{g,i}`/`{h,e}` escape-pair gap: no DOM boundary between DBBI/FAED, and their shared textarea is byte-identical across all 5 known Wayback captures.
+- [GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT](GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT.md) — Phase 247, three targeted lanes for a creator-authored beginnings/endings or B↔H selector, all negative.
 
 ## Yin-yang state
 
