@@ -78,10 +78,11 @@ for lack of trying — see each gap's row for exactly what was checked.
 ## Recently completed phases
 
 See [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) for the full generated table of
-all 250 phase entries. Most recent:
+all 251 phase entries. Most recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 250 | Designing the Future source audit | Page-10 `salvation`/`damnation` echoes `F-CHAIN-002`'s `SALVATION`; word-boundary keyword sweep zero across both Fresco books; recognition-only |
 | 249 | SalPhaseIon urlscan history audit | 11 successful captures exactly match 3 authenticated Wayback variants; one scan is HTTP 503; no new puzzle content |
 | 248 | Architect visual/precedent selector audit | All 88 creator-media records (83 unique payloads) and direct operation-transfer language negative; residual brainstorm lanes exhausted |
 | 247 | Architect mirror-selector audit | Three targeted lanes (newer-export coverage, keyword sweep, reply/reaction check) all negative; G-ARCH-001 exhausted for this narrower question |

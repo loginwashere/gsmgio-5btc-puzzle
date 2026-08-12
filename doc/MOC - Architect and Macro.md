@@ -28,6 +28,7 @@ and everything that traces to the Matrix Reloaded Architect scene. See
 - [GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH](GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md) — why `matrixsumlist` still fails G3.
 - [GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT](GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md) — pre-cutoff code search, zero hits.
 - [GSMG_MATRIXSUMLIST_CHECKPOINT](GSMG_MATRIXSUMLIST_CHECKPOINT.md)
+- [GSMG_DESIGNING_THE_FUTURE_SOURCE_AUDIT](GSMG_DESIGNING_THE_FUTURE_SOURCE_AUDIT.md) — Phase 250, primary-text `salvation`/`damnation` echo of `F-CHAIN-002`'s `SALVATION` state in Fresco's *Designing the Future*; recognition-only.
 - [GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT](GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md) — Phase 238, the page has mixed syntax, no directional rule.
 - [GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT](GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT.md) — Phase 240, nested macro-length/`#383838` calibration; FAED width 38 not selected.
 

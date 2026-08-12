@@ -15677,3 +15677,44 @@ date and completes its previously unrun content comparison.
 authenticated Wayback variants, or an external creator/primary source that
 selects between `{g,i}` and `{h,e}`. More dates carrying the same hashes do
 not reopen this branch.
+
+## Phase 250 -- Designing the Future source audit: real primary-text echo, recognition-only (2026-08-12)
+
+Phase-3's decrypted instruction ("Definitely look into his works might you
+have time," README.md) and the already-established `F-CHAIN-002` `SALVATION`
+state motivate a content-level check of Jacque Fresco's 2007 *Designing the
+Future*, alongside a corrected re-check of *Looking Forward* (Phase 44).
+
+`tools/gsmg/designing_the_future_source_audit.py --download` verifies the
+frozen official Venus Project source (SHA-256
+`6e002f41a5907eccf9004b77195b7688259659b6be5e99b705629da5fd208a28`) and
+confirms PDF page 10 reads, verbatim: "The future of the world is our
+responsibility and it depends upon decisions we make today. We are our own
+salvation or damnation."
+
+A word-boundary-matched keyword sweep (naive substring counting is invalid
+here -- it flags "yin" inside "buying" and "architect" inside
+"architecture") across the complete text of both books finds zero
+occurrences of `matrix`, `matrixsumlist`, `yin`, `yang`, `duality`, `cipher`,
+`hash`, `password`, `checkerboard`, or `architect` in either. `salvation`
+and `damnation` each occur exactly once, both in *Designing the Future*
+only, exactly at the quoted sentence.
+
+**Result:** real, reproducible, primary-text confirmation that the puzzle's
+own "look into his works" instruction leads to language echoing the
+independently-derived `SALVATION` state, paired with its duality opposite
+`damnation`. This is recognition evidence, not a selector: it does not pick
+an operator, password, or textarea, does not reopen `G-ARCH-001` or
+`G-YIN-001` (neither gap's closure condition is a thematic echo), and is
+distinct from Phase 103's still-open, still-unresolved `checksum` role for
+`SALVATION`. A search-index snippet suggesting the same phrase also appears
+in Fresco's paid *The Best That Money Can't Buy* was not pursued (no
+authorized free source located) and is logged as an access limitation, not
+a negative result. Full report:
+[GSMG_DESIGNING_THE_FUTURE_SOURCE_AUDIT](../../doc/GSMG_DESIGNING_THE_FUTURE_SOURCE_AUDIT.md).
+
+**Facts affected:** extends `F-CHAIN-002`'s provenance; no new fact row.
+
+**Reopen condition:** a creator source, or an exhausted structural rule for
+either named gap, that uses this pairing to select an operator, textarea, or
+password.
