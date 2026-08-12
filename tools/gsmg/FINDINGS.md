@@ -15632,3 +15632,48 @@ media-ID regression); full report:
 the edge/mirror operation, or a creator statement explicitly transfers a
 prior operation to this boundary. Re-reviewing the same 83 payloads or the
 same transfer vocabulary in these exports does not reopen the gap.
+
+## Phase 249 -- SalPhaseIon urlscan history audit: 11 successful captures add no new HTML variant (2026-08-12)
+
+**Question:** the bounded non-Wayback archive search found 12 urlscan records
+for the SalPhaseIon route. Do any contain a page variant that changes DBBI,
+`matrixsumlist`, FAED, or otherwise reopens G-ESC-001's page-boundary branch?
+
+**Frozen inputs:** the exact urlscan query
+`page.url:"89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32"`;
+its 12 result UUIDs; and the 5 raw-HTML SHA-256 values already pinned and
+byte-verified by `salphaseion_wayback_history_audit.py` and Phase 244. The
+check fetched exactly those result pages and stopped.
+
+**Method:** `salphaseion_urlscan_history_audit.py --live` verifies the exact
+12-row search result set, then reads each result page's main-document
+`Resource Hash`. urlscan's resource hashes are compared directly with the
+authenticated raw-HTML SHA-256 values; matching therefore establishes whole
+response identity, not merely equal length or visual similarity.
+
+**Result:** 11 scans are successful puzzle-page responses; the 2026-05-05
+scan is HTTP 503 and is excluded from puzzle-content counts. Every successful
+response exactly matches one of the first 3 Wayback variants: 1 matches
+`18a8369d…6308b`, 3 match `ed6c3958…59af`, and 7 match
+`0eeb42e3…c4d0`. No new HTML variant exists. The earliest urlscan record is
+2023-05-31 02:49:16 UTC (not 2024-04-12 as initially summarized), about 43
+hours before the earliest Wayback capture; it exactly matches that earliest
+Wayback HTML. Combined coverage is 16 successful capture events (5 Wayback +
+11 urlscan), spanning 2023-05-31 to 2026-04-05.
+
+**Disposition:** rejected for puzzle mechanics. The new archive surface
+triggered G-ESC-001's explicit reopen condition, was tested, and is negative;
+the gap returns to `parked`.
+
+**Facts affected:** extends `F-OBJ-003`'s archive scope; no new fact row.
+
+**Supersedes/corrects:** corrects the brainstorm ledger's earliest-urlscan
+date and completes its previously unrun content comparison.
+
+**Artifacts:** `tools/gsmg/salphaseion_urlscan_history_audit.py`; full report:
+[GSMG_SALPHASEION_URLSCAN_HISTORY_AUDIT](../../doc/GSMG_SALPHASEION_URLSCAN_HISTORY_AUDIT.md).
+
+**Reopen condition:** a capture whose main-document hash differs from all 5
+authenticated Wayback variants, or an external creator/primary source that
+selects between `{g,i}` and `{h,e}`. More dates carrying the same hashes do
+not reopen this branch.

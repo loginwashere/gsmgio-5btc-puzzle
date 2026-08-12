@@ -66,7 +66,8 @@ already on hand:
 - A source reconciling FAED's independently-best `{g,i}` escape pair with
   the Architect-mirror-predicted `{h,e}` pair
   ([G-ESC-001](GSMG_OPEN_GAP_REGISTRY.md); `parked` — the page-markup branch
-  and all 5 known Wayback captures are exhausted as of Phase 243/244).
+  and 16 successful Wayback/urlscan capture events are exhausted as of
+  Phase 243/244/249).
 - Creator evidence defining the DBBI/FAED operator itself
   ([G-YIN-001](GSMG_OPEN_GAP_REGISTRY.md); `parked` — the Telegram corpora
   and every decoded-slot page-syntax rule are already exhausted).
@@ -77,10 +78,11 @@ for lack of trying — see each gap's row for exactly what was checked.
 ## Recently completed phases
 
 See [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) for the full generated table of
-all 249 phase entries. Most recent:
+all 250 phase entries. Most recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 249 | SalPhaseIon urlscan history audit | 11 successful captures exactly match 3 authenticated Wayback variants; one scan is HTTP 503; no new puzzle content |
 | 248 | Architect visual/precedent selector audit | All 88 creator-media records (83 unique payloads) and direct operation-transfer language negative; residual brainstorm lanes exhausted |
 | 247 | Architect mirror-selector audit | Three targeted lanes (newer-export coverage, keyword sweep, reply/reaction check) all negative; G-ARCH-001 exhausted for this narrower question |
 | 246 | Telegram creator-media completeness audit | All declared media present; deleted-parent gap isolated to 39 replies, not a missing-file lead |
@@ -98,7 +100,7 @@ all 249 phase entries. Most recent:
 - [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) — generated index of all FINDINGS.md phases.
 - [GSMG_PHASE_TEMPLATE](GSMG_PHASE_TEMPLATE.md) — standard fields for new phase entries.
 - [GSMG_OBJECT_DBBI](GSMG_OBJECT_DBBI.md), [GSMG_OBJECT_FAED](GSMG_OBJECT_FAED.md) — pilot per-artifact reference pages.
-- [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md) — full chronological research log (243 phases).
+- [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md) — full chronological research log.
 - [GSMG_STAGE_INPUT_OUTPUT_SUMMARY](GSMG_STAGE_INPUT_OUTPUT_SUMMARY.md) — solved-chain input/output map.
 - [GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX](GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md) — indexed creator Telegram messages.
 - [GSMG_CREATOR_AUTHORED_CLUE_LEDGER](GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md) — ledger of creator-authored clues only.

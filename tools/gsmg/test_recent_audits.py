@@ -62,6 +62,7 @@ import phase32_column_calibration_audit
 import post_yinyang_dataflow_audit
 import post_phase217_consistency_audit
 import promised_standalone_audit
+import salphaseion_urlscan_history_audit
 import prime_sum_fefe_mask_composition_audit
 import remaining_structural_avenues_audit
 import safenet_luna_hsm_audit
@@ -1373,6 +1374,21 @@ class CorrectedClaimTests(unittest.TestCase):
             report["sha256"],
             salphaseion_wayback_history_audit.CAPTURES[-1]["sha256"],
         )
+
+    def test_urlscan_captures_add_no_new_page_variant(self):
+        scans = salphaseion_urlscan_history_audit.SCANS
+        successful = [scan for scan in scans if scan[2] == 200]
+        self.assertEqual(len(scans), 12)
+        self.assertEqual(len(successful), 11)
+        self.assertEqual(
+            {scan[3] for scan in successful},
+            {
+                salphaseion_wayback_history_audit.CAPTURES[0]["sha256"],
+                salphaseion_wayback_history_audit.CAPTURES[1]["sha256"],
+                salphaseion_wayback_history_audit.CAPTURES[2]["sha256"],
+            },
+        )
+        self.assertEqual(scans[-1][2:], (503, None))
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

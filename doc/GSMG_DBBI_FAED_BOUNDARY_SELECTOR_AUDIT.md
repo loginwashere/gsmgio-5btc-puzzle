@@ -19,6 +19,7 @@ related_phases:
   - 236
   - 238
   - 244
+  - 249
 script: tools/gsmg/dbbi_faed_boundary_selector_audit.py
 aliases:
   - Phase 243
@@ -129,10 +130,13 @@ scope note rather than given a new row.
 
 ## Reopen condition
 
-A new Wayback capture (beyond the 5 now known and fully diffed), a creator
-source, or any primary artifact supplying a page-authored (or otherwise
-independent) feature that selects between `{g,i}` and `{h,e}` would reopen
-this branch. The byte-level diffing of captures 2-4 against 1/5 that this
-section originally proposed as the next concrete step was completed by
-Phase 244 above and came back negative — no further locally-executable step
-remains within G-ESC-001's page-boundary branch.
+A new archive capture whose main-document hash differs from the 5
+authenticated Wayback variants, a creator source, or any primary artifact
+supplying a page-authored (or otherwise independent) feature that selects
+between `{g,i}` and `{h,e}` would reopen this branch. The byte-level diffing
+of captures 2-4 against 1/5 that this section originally proposed as the next
+concrete step was completed by Phase 244 above and came back negative — no
+further locally-executable step remains within G-ESC-001's page-boundary
+branch. Phase 249 later checked 11 successful urlscan captures: every
+main-document hash exactly matches one of the first 3 Wayback variants, so
+those dates add no new content variant.
