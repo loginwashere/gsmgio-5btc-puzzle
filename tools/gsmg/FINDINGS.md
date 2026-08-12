@@ -15582,3 +15582,53 @@ any solver message proposing the `HYE`/`BYE`/mirror reading. Neither
 currently exists in any available export. `G-ARCH-001` moves from `open`
 to `parked` in
 [GSMG_OPEN_GAP_REGISTRY](../../doc/GSMG_OPEN_GAP_REGISTRY.md).
+
+## Phase 248 -- Architect visual and precedent-transfer selector audit: 88 creator media records and direct reuse language negative (2026-08-12)
+
+**Question:** Phase 247 completed three of the five lanes pre-registered by the
+`G-ARCH-001` brainstorm. Do the two residual lanes—creator-authored visual
+media and creator language transferring a prior trick—select either the
+beginnings/endings extraction or the B↔H mirror operation?
+
+**Frozen inputs:** the complete solver and support exports used by Phases
+245–247; all creator-ID (`user9815232`) media records and all creator messages
+containing `same`/`again`/`repeat`/`reuse`/`as before`/`like before`/`once
+more`/`similar`/`likewise`. Success required a literal visual mirror/edge/B-H
+instruction, or creator language explicitly applying the same prior operation
+to an Architect/DBBI/FAED/`matrixsumlist`/`yinyang` object.
+
+**Method:** `tools/gsmg/architect_mirror_selector_audit.py` now freezes all 88
+creator-media message IDs, verifies every native file and hashes each payload.
+Static images and stickers were reviewed in labeled contact sheets; four
+time-distributed frames from each of 16 videos were reviewed, with native
+message context for every superficially relevant item. The precedent lane
+checks creator text plus its direct reply parent, followed by a deliberately
+looser ±10-record stress control whose hits are classified explicitly.
+
+**Result:** the 88 records represent 83 unique payloads and contain **zero
+visual selectors**. The apparently relevant media are known/ordinary Matrix,
+Alice, rabbit, Decentraland, or reaction objects. Most notably, creator video
+`32561` is a Merovingian action/reaction clip posted immediately after “There
+is no hint”; it supplies no mirror, edge, B/H, or reuse instruction. The
+precedent-transfer lane has **zero direct hits**. Its three proximity-only
+hits are unrelated Bittrex instructions (`13669`), the already-known “same
+day” microstep timing statement (`32579`), and “good luck again” (`60327`).
+Existing direct `matrixsumlist`/macro/yin-yang replies (`6509`, `8483`,
+`39237`) add no transfer rule and retain their prior bounded interpretations.
+
+**Disposition:** rejected (for the remaining visual/precedent selector lanes).
+
+**Facts affected:** none; `G-ARCH-001` remains parked.
+
+**Supersedes/corrects:** completes, without changing, Phase 247's negative
+conclusion by exhausting brainstorm lanes 4 and 5.
+
+**Artifacts:** extended
+`tools/gsmg/architect_mirror_selector_audit.py` (five-lane self-test and frozen
+media-ID regression); full report:
+[GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT](../../doc/GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT.md).
+
+**Reopen condition:** a new creator-authored media payload visually selects
+the edge/mirror operation, or a creator statement explicitly transfers a
+prior operation to this boundary. Re-reviewing the same 83 payloads or the
+same transfer vocabulary in these exports does not reopen the gap.

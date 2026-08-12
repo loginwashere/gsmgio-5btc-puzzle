@@ -1435,6 +1435,13 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(candidates["solver"]["creator_authored_count"], 0)
         self.assertEqual(candidates["solver"]["creator_reply_pairs"], [])
         self.assertEqual(candidates["support"]["hit_count"], 0)
+        visual = report["visual_media_inventory"]
+        self.assertEqual(visual["total_records"], 88)
+        self.assertEqual(visual["unique_payloads"], 83)
+        self.assertEqual(visual["visual_selector_ids"], ())
+        precedent = report["precedent_transfer"]
+        self.assertEqual(precedent["solver"]["direct_transfer_ids"], ())
+        self.assertEqual(precedent["support"]["direct_transfer_ids"], ())
 
     @unittest.skipUnless(
         Path(DEFAULT_EXPORT_DIR, "result.json").exists()

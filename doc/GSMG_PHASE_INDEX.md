@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **248** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **249** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -264,3 +264,4 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 245 | P245 | 2026-08-12 | creator personal-disclosures audit | Netherlands residency and substance-use references, both provenance-only | [link](../tools/gsmg/FINDINGS.md#phase-245----creator-personal-disclosures-audit-netherlands-residency-and-substance-use-references-both-provenance-only-2026-08-12) | [GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT](GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md) |
 | 246 | P246 | 2026-08-12 | Telegram creator-media completeness audit | zero missing declared files; deleted-parent gap isolated | [link](../tools/gsmg/FINDINGS.md#phase-246----telegram-creator-media-completeness-audit-zero-missing-declared-files-deleted-parent-gap-isolated-2026-08-12) | [GSMG_TELEGRAM_CREATOR_MEDIA_COMPLETENESS_AUDIT](GSMG_TELEGRAM_CREATOR_MEDIA_COMPLETENESS_AUDIT.md) |
 | 247 | P247 | 2026-08-12 | Architect beginnings/endings/B<->H mirror selector audit | three targeted lanes, all negative, G-ARCH-001 closes to parked | [link](../tools/gsmg/FINDINGS.md#phase-247----architect-beginningsendingsb-h-mirror-selector-audit-three-targeted-lanes-all-negative-g-arch-001-closes-to-parked-2026-08-12) | [GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT](GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT.md) |
+| 248 | P248 | 2026-08-12 | Architect visual and precedent-transfer selector audit | 88 creator media records and direct reuse language negative | [link](../tools/gsmg/FINDINGS.md#phase-248----architect-visual-and-precedent-transfer-selector-audit-88-creator-media-records-and-direct-reuse-language-negative-2026-08-12) | [GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT](GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT.md) |

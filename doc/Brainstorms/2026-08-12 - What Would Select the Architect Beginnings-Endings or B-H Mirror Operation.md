@@ -177,17 +177,25 @@ Rank later by impact, confidence, effort, and reversibility. First read:
 
 ## Experiments and next actions
 
-- [ ] Confirm whether `ChatExport_2026-08-07`/`2026-08-09` add any creator
+- [x] Confirm whether `ChatExport_2026-08-07`/`2026-08-09` add any creator
       messages beyond the two indexed exports (Lane 6).
-- [ ] Run a bounded keyword sweep (`mirror`, `reflect`, `flip`, `opposite`,
+- [x] Run a bounded keyword sweep (`mirror`, `reflect`, `flip`, `opposite`,
       `backwards`, `beginning`, `ending`) against creator messages in both
       indexed exports, plus any new ones from Lane 6, with reply-context
       inspection for each hit (Lanes 1-3).
-- [ ] Separately check whether any solver message proposing `HYE`, `BYE`,
+- [x] Separately check whether any solver message proposing `HYE`, `BYE`,
       or a mirror/reflection reading for the Architect words received a
       creator reply or reaction (Lane 2), using the existing
       `telegram_reaction_signal_audit.py` machinery if it already covers
       reactions on arbitrary message IDs.
+- [x] Review all 88 creator-authored media records (83 unique payloads) for a
+      literal visual mirror/edge/B↔H/reuse selector (Lane 4).
+- [x] Check direct reply edges and a bounded nearby-context control for creator
+      language transferring a prior trick or operation to this boundary
+      (Lane 5).
+
+**Outcome:** Phases 247–248 completed all five evidence lanes; all were
+negative. `G-ARCH-001` is parked pending genuinely new creator evidence.
 
 ## Open questions
 
