@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Validate YAML frontmatter across doc/*.md against the controlled vocabulary
-in doc/GSMG_FACT_LEDGER.md.
+"""Validate YAML frontmatter across Markdown notes under doc/ against the
+controlled vocabulary in doc/GSMG_FACT_LEDGER.md.
 
 This is deliberately partial: only files that already carry frontmatter are
 checked. The ~48 not-yet-migrated documents are silently skipped rather than
@@ -137,7 +137,8 @@ def run(doc_dir=DOC_DIR):
     all_errors = {}
     all_warnings = {}
     object_ids = {}
-    for path in sorted(doc_dir.glob("*.md")):
+    for path in sorted(doc_dir.rglob("*.md")):
+        display_name = path.relative_to(doc_dir).as_posix()
         frontmatter = load_frontmatter(path)
         if frontmatter is None:
             skipped += 1
@@ -145,12 +146,12 @@ def run(doc_dir=DOC_DIR):
         checked += 1
         errors, warnings = validate_file(path, frontmatter, phase_numbers)
         if errors:
-            all_errors[path.name] = errors
+            all_errors[display_name] = errors
         if warnings:
-            all_warnings[path.name] = warnings
+            all_warnings[display_name] = warnings
         object_id = frontmatter.get("object_id")
         if frontmatter.get("type") == "object" and object_id:
-            object_ids.setdefault(object_id, []).append(path.name)
+            object_ids.setdefault(object_id, []).append(display_name)
 
     for object_id, names in object_ids.items():
         if len(names) > 1:

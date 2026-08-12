@@ -1,6 +1,9 @@
 __pycache__/
 *.pyc
 
+# Runtime checkpoints: lock sentinels are transient; keep the JSONL data itself.
+tools/gsmg/*.jsonl.lock
+
 # Obsidian: keep shared vault config, ignore personal workspace/UI state
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
