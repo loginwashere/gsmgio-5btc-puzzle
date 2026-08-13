@@ -156,6 +156,19 @@ run was bounded directly by file semantics, active-line count, and prior
 coverage. Revisit classification only if a future expensive cipher hypothesis
 has a stronger local selector.
 
+**What this run does and does not establish.** It improved candidate-selection
+methodology and documented coverage of the highest-value known excluded
+sources; it did not improve the selected wordlist itself, and it does not
+show that wordlist contains "all high-value candidates." The 648-candidate
+corpus stays deliberately frozen; Phase 253's two SEED leads and this run's
+563 net-new candidates were tested but never merged into it; "high value" is
+undefined at candidate level (file tiers are non-ordinal, see
+[GSMG_648_WORDLIST_PROVENANCE_REVIEW](GSMG_648_WORDLIST_PROVENANCE_REVIEW.md));
+and some potentially valuable material (physical-book gatefold, historical
+DNS TXT) remains externally unavailable. The defensible statement: all
+currently known, locally available, bounded high-value candidate sources
+received the intended Blowfish/Camellia/SEED menu-gap check, with zero hits.
+
 ## Reproduction
 
 ```bash

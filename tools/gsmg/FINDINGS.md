@@ -15933,3 +15933,18 @@ lists. The remaining excluded volume does not warrant a broad menu sweep under
 the current weak Blowfish/Camellia prior and already-addressed SEED clues. Full
 matrix and reproduction commands:
 [GSMG_EXCLUDED_WORDLIST_COVERAGE_MATRIX](../../doc/GSMG_EXCLUDED_WORDLIST_COVERAGE_MATRIX.md).
+
+**Scope clarification.** The original 648-candidate corpus remains
+reproducibly frozen (`extended_cipher_recheck.CURATED_FILES` is untouched;
+none of the six Phase 255 sources or the two Phase 253 SEED-specific leads
+were merged into it). Phase 255 improved *candidate-selection methodology and
+coverage documentation*, not the base wordlist itself, and "high value" is
+still undefined at the candidate level — the old file-level tiers are
+explicitly non-ordinal ([GSMG_648_WORDLIST_PROVENANCE_REVIEW](../../doc/GSMG_648_WORDLIST_PROVENANCE_REVIEW.md)).
+Some potentially valuable material also remains externally unavailable
+(the physical-book gatefold, historical DNS TXT records), and large
+raw/generated sources stay intentionally excluded. The defensible claim is:
+the two SEED-specific leads and the 563 net-new candidates from six small,
+relevant excluded lists received the previously missing
+Blowfish/Camellia/SEED coverage, with zero hits — not that all high-value
+candidates now live in one wordlist.
