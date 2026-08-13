@@ -26,6 +26,35 @@ import itertools
 from collections import defaultdict
 
 # name -> (value, provenance)
+#
+# The first 20 entries are the Phase-149 registry.  The final two are the
+# independently authenticated repeated-gray channel values queued by Point 7
+# of GSMG_FIRST_PIECE_PIXEL_BRAINSTORM.md.  Keep the boundary explicit so the
+# Point-251 byte-value control can compare each new channel against the fixed
+# pre-extension registry rather than calibrating it against itself.
+PHASE_149_NAMES = (
+    "SPIRAL_PRIME",
+    "MATRIX_TOTAL",
+    "MATRIX_ROW1",
+    "MATRIX_ROW2",
+    "FEFE_SPIRAL_POS",
+    "DBBI_LEN",
+    "FAED_LEN",
+    "SALPHASEION_TEXTAREA_LEN",
+    "MATRIXSUMLIST_BITS",
+    "SALPH_CIPHERTEXT_BYTES",
+    "COSMIC_CIPHERTEXT_BYTES",
+    "URLBLOB_CIPHERTEXT_BYTES",
+    "DBBI_SELECTION_LEN",
+    "YOUWON_OFFSET",
+    "YOUWON_REMAINDER",
+    "LASTWORDS_LEN",
+    "THISPASSWORD_LEN",
+    "COSMIC_LINES",
+    "SPIRAL_CELLS",
+    "AL_ATOMIC_NUMBER",
+)
+
 NUMBERS = {
     "SPIRAL_PRIME": (574061, "prime formed from the yellow/blue Phase-0 spiral complement (first-piece reconstruction)"),
     "MATRIX_TOTAL": (23, "matrixsumlist total row+col sum, selects BOTH/ULTIMATELY/THE in the Architect speech"),
@@ -47,6 +76,8 @@ NUMBERS = {
     "COSMIC_LINES": (28, "authored newline-delimited lines in the Cosmic Duality textarea"),
     "SPIRAL_CELLS": (24, "yellow/blue spiral cell count = byte boundaries reconstructed in Phase 0"),
     "AL_ATOMIC_NUMBER": (13, "aluminum atomic number, used in the SALPHATION/SALVATION element-count check"),
+    "FEFE_CHANNEL": (254, "channel byte of the unique #FEFEFE Stage-0 rabbit-grid marker"),
+    "SHADOW_CHANNEL": (56, "channel byte of the exact #383838 Stage-0 footer selector"),
 }
 
 def digit_sum(n):
@@ -174,6 +205,10 @@ def print_report(pairwise, singles):
 
 def self_test():
     by_value = registry_lookup()
+    assert tuple(NUMBERS)[: len(PHASE_149_NAMES)] == PHASE_149_NAMES
+    assert len(PHASE_149_NAMES) == 20
+    assert NUMBERS["FEFE_CHANNEL"][0] == 254
+    assert NUMBERS["SHADOW_CHANNEL"][0] == 56
     assert NUMBERS["SPIRAL_PRIME"][0] == 574061
     assert digit_sum(574061) == 23
     assert 23 in by_value  # the already-known digit-sum match

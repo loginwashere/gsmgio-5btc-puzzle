@@ -222,6 +222,15 @@ available here (noted as a capability gap, not tested-negative).
 Wayback's original HTTP headers for the 2020 puzzle-page capture are
 ordinary Laravel/Cloudflare boilerplate, nothing hidden.
 
+**Status update (2026-08-13): capability gap narrowed, not closed.** A live
+`dig TXT gsmg.io` now returns only Dynadot mail-hosting SPF; the two known
+CT-log subdomains (`beta` and `slack-invite`) and a wildcard-owner query return
+no TXT records. A free WhoisFreaks result exposes one 2026-04-21 snapshot with
+Microsoft domain-verification/SPF values, both post-puzzle administrative
+records. Earlier TXT history remains account-gated, so puzzle-era TXT history
+is still an external capability gap rather than a tested negative. See
+`tools/gsmg/FINDINGS.md` Phase 252.
+
 `[FRESH]`
 
 - **OP_RETURN / dust transactions** on the puzzle's known BTC addresses (the prize
@@ -283,6 +292,17 @@ from handle-level research into unfounded identity-linking.
   clue-relevant lines, not authorial-style lines).
 
 ## 6. `SalPhaseIon` / spiral-image CSS and page-source micro-structure
+
+**Status update (2026-08-13): completed, closed negative.**
+`tools/gsmg/salphaseion_heading_metadata_audit.py` verifies all five pinned
+Wayback captures. Both headings are bare text-only `<h1>` elements with no
+attributes or nested spans; the only class is the generic `html.no-js`; the
+only authored CSS is the uniform `body { font-family: 'arial'; }`; there is no
+letter spacing, color rule, external stylesheet, or explicit favicon link.
+`<title>` and the meta description are both the generic `GSMG Puzzle`. The
+sole heading-source variation is the already-known `h1`/`H1` capitalization
+change. The browser-default root favicon remains covered separately by Phases
+239-242. See Phase 252.
 
 `[NEW ANGLE]` The spiral-image color-order trick (Phase 0) proves this creator does
 hide sub-channel information in per-pixel/per-character styling. That technique has
@@ -397,6 +417,10 @@ ad hoc noticing (like the `574061` digit-sum match in section 2) into a repeatab
 triage step instead of one-off pattern spotting.
 
 ## 10. Physical book — widen beyond content search once the replacement copy arrives
+
+**Status update (2026-08-13): explicitly queued in the primary-evidence
+arrival checklist; still externally blocked.** These fields are a separate
+capture pass alongside, not a synonym for, pages 57-58 photography.
 
 `[NEW ANGLE]` The completed review found no *readable* hidden content in the 1991
 Time-Life "Cosmic Duality" book, but that pass was a content/OCR sweep. Physical

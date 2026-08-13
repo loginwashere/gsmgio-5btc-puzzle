@@ -1,7 +1,7 @@
 # GSMG First-Piece Color Pixels — Creative Brainstorming & Cross-Phase Integration
 
 **Date**: 2026-08-09  
-**Status**: Creative Brainstorm (Postponed Verification)  
+**Status**: Fully dispositioned through Phase 251
 **Objective**: Explore imaginative, structural, and cross-phase hypotheses connecting the **24 yellow/blue color pixels**, the **#FEFEFE anomaly**, and **574061** from the first image (`puzzle.png` / Stage 0) to downstream puzzle phases.
 
 ---
@@ -176,25 +176,37 @@ role instructions. Full audit:
 
 ### 7. Marker-color channel values as literal data, not just booleans
 > [!NOTE]
-> `#FEFEFE` (`0xFE` = 254) and the G-shadow selector `#383838` (`0x38` = 56, Phase 189) are both "repeat one byte three times" grayscale constants used as exact-match selectors on two regions/layers of the **same** Stage-0 PNG — the embedded grid vs. the footer below the red divider bar — not two unrelated images (corrected 2026-08-09; see point 21). Neither 254 nor 56 has been fed into the numeric-coincidence triage tool's registry (`574061`, `23`, `16`, `7`, `163`, `91`, `570`, `1075`, `104`, `80`, `31`, `21`).
+> **Audited in Phase 251; closed negative.** `#FEFEFE` (`0xFE` = 254)
+> and `#383838` (`0x38` = 56) are now in the numeric registry. Deduplicated
+> exact relations are `91+163=254`, `7+56=63`, and `24+56=80`. Against all
+> 256 possible byte values, the corresponding tail rates are `147/256` for
+> at least one relation and `70/256` for at least two. Exact, but ordinary.
 
 **Brainstorming Applications**:
-- Add `254` and `56` (and hex/ASCII forms) to the triage registry and let the existing null-model-gated pairwise sweep run, rather than hand-picking relationships.
-- One cheap arithmetic fact worth queuing, flagged as likely numerology until gated: `254 − 163` (FEFE's own zero-based spiral position) `= 91`, already load-bearing (`91 = 7×13`).
+- `254` and `56` were added to the registry; hex/ASCII are representations of
+  the same byte values, not independent numbers.
+- `254 − 163 = 91` is retained as an exact arithmetic identity, not promoted
+  as evidence. Full audit:
+  [doc/GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md](GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md).
 
 ---
 
 ### 8. A second, image-native reading of `matrixsumlist`
 > [!NOTE]
-> **Partly verified in Phase 200.** The literal 14x14 row/column-popcount idea
-> remains untested, but a separate image-native matrix is now verified in point
-> 11: the two exact `#383838` count rows reproduce `[43,25,18]` directly.
+> **Completed in Phase 251; closed pending a consumer.** The literal 14x14
+> ink matrix gives row sums `6,10,8,7,6,6,5,4,9,9,7,8,7,9`, column sums
+> `8,10,8,10,8,7,3,6,7,5,9,6,6,8`, and total `101`. Direct A1Z26 gives
+> `FJHGFFEDIIGHGI` / `HJHJHGCFGEIFFH`. Eight D4 orientations only swap or
+> reverse four directed lists; no plaintext or selected consumer results.
 >
 > The current strongest `matrixsumlist` chain reshapes `574061`'s *decimal digits* into a 2×3 matrix to get `23,16,7`. That's a derived surrogate matrix. The puzzle also handed us an actual 14×14 matrix directly — the grid itself — and the ink/non-ink bit rule is now cleanly established (black/blue=1, white/yellow/fefefe=0).
 
 **Brainstorming Applications**:
 - Take the 14×14 ink-bit matrix as-is (no reverse/invert, distinct from the unpromoted full-mask-reverse-invert transform) and compute plain row-popcounts and column-popcounts — two literal 14-item "sum lists" from the actual matrix.
 - Given the puzzle's repeated paired dualities (direct vs. complementary polarity giving rose color vs. prime), a *numeric* matrixsumlist (23/16/7) and an *image* matrixsumlist (row/column sums of the literal grid) may both be intended.
+- The exact lists remain source facts, but this alternative route is closed
+  absent an explicit consumer. Full audit:
+  [doc/GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md](GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md).
 
 ---
 
@@ -366,7 +378,12 @@ singleton-H, or batch/command clue. Full audit:
 
 ### 15. `G` as the Bitcoin Elliptic-Curve Generator
 > [!NOTE]
-> In Bitcoin/secp256k1 notation, `G` conventionally denotes the elliptic-curve generator point, with a public key derived as `private scalar x G`.
+> **Audited in Phase 251; closed negative.** In Bitcoin/secp256k1 notation,
+> `G` is the generator, but the selected operands after removing uppercase G
+> are `SO5BCPUC` and `MC9g2cPBe`, neither a decimal nor hexadecimal scalar.
+> The bounded 4/2 selector/chunk/stride family yields no instruction. Literal
+> scalars `2G` and `4G` yield four ordinary Bitcoin addresses, none equal to
+> the Stage-0 address.
 
 **Brainstorming Applications**:
 - Read “G in the shadows and the text” simultaneously as a raster selector and a cryptographic operator clue.
@@ -374,6 +391,9 @@ singleton-H, or batch/command clue. Full audit:
 - Use the invariant G-shadow counts `4` and `2` as coefficients, strides, chunk sizes, or selectors rather than plaintext digits.
 - Assign the banner and Bitcoin-address rows to two key halves, two private scalars, or SALPH/COSMIC channels.
 - Consider removing G from a candidate stream as removing the operator after it has specified how the remaining operand should be consumed.
+- No consistent scalar syntax exists in G adjacency, and arbitrary text-to-
+  scalar folding would introduce the missing operation. Full audit:
+  [doc/GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md](GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md).
 
 ---
 
@@ -680,28 +700,14 @@ deferred until a candidate earns them:
    only the exact `(7,193,108)` difference/red-channel 7; correct the DNA byte
    count and the inconsistent `NIQ` mapping.
 
-**22 of 25 points dispositioned as of Phase 208** (verified structural fact,
-audited and rejected/parked, or — for point 10 — a followed research-strategy
-recommendation rather than a testable hypothesis). Phase 208 (point 25) ran
-one unranked supplementary check — border/raster readings of the 14x14
-grid — and closed negative. **Three points still lack the specific checks
-they themselves proposed and remain genuinely open:**
-
-- **Point 7** — `254` and `56` have never been added to
-  `numeric_coincidence_triage.py`'s registry (still the original 20 values);
-  the proposed pairwise sweep including them has not run.
-- **Point 8** — the literal 14x14 ink-matrix row/column popcounts remain
-  untested; Phase 200 verified a different, separate matrix (the `#383838`
-  2x11 shadow-count grid), not this one.
-- **Point 15** — no dedicated audit exists for `G` as a secp256k1
-  generator/operator anchor. Phase 198 checked only the narrower
-  `{1,4,21} -> ggn` distinctiveness question (point 22) and correctly parked
-  it; point 15's broader shadow-stream/coefficient proposals were not
-  exhausted by that audit.
+**All 25 points dispositioned as of Phase 251.** Phase 208 closed the
+supplementary border/raster readings; Phase 251 then completed the three
+previously missed executions: Point 7's byte-value numeric control, Point 8's
+literal 14x14 sum lists, and Point 15's bounded G/operator gate. All three are
+negative and select no oracle candidate.
 
 Several already-audited points still have unselected consumers (`FF67`,
 `KIT`, RGB difference `(7,193,108)`, `BaTcH`, `Ce/Fe`), but those are
-properly parked pending an external clue, not missing computations — unlike
-points 7, 8, and 15 above. No first-piece pixel-data idea currently selects
-an oracle test; any further work here needs either a new external clue or
-the three targeted audits above, not another internal-structure sweep.
+properly parked pending an external clue rather than missing computations.
+No first-piece pixel-data idea currently selects an oracle test; any further
+work here needs a new external clue, not another internal-structure sweep.

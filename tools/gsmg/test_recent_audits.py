@@ -38,12 +38,16 @@ import first_piece_shadow_column_rail_audit
 import faed_decoder_coverage_audit
 import favicon_wayback_chronology_audit
 import generate_phase_index
+import gameoflogic_source_audit
 import validate_vault_metadata
 import first_piece_even_odd_alphabet_gate_audit
 import first_piece_batch_rebus_gate_audit
 import first_piece_cefe_checkerboard_gate_audit
 import first_piece_overlay_dna_rgb_gate_audit
 import first_piece_border_raster_scan_audit
+import first_piece_marker_numeric_control_audit
+import first_piece_native_matrixsumlist_audit
+import first_piece_g_operator_gate_audit
 import matrixsum_cumulative_stride_audit
 import matrixsum_dbbi_faed_position_audit
 import matrixsumlist_provenance_refresh_audit
@@ -70,6 +74,7 @@ import salphaseion_salvation_role_audit
 import salphaseion_presentation_binding_audit
 import salphaseion_responsive_wrap_audit
 import salphaseion_wayback_history_audit
+import salphaseion_heading_metadata_audit
 import shadow_macro_faed_geometry_audit
 import spi_cd_initials_audit
 import stage0_footer_palette_layer_audit
@@ -90,6 +95,48 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists(),
+        "sibling GSMG page mirror is unavailable",
+    )
+    def test_salphaseion_headings_and_metadata_have_no_hidden_channel(self):
+        report = salphaseion_heading_metadata_audit.audit()
+        self.assertEqual(report["title"], "GSMG Puzzle")
+        self.assertEqual(report["meta_description"], ["GSMG Puzzle"])
+        self.assertEqual(
+            [heading["text"] for heading in report["headings"]],
+            ["SalPhaseIon", "Cosmic Duality"],
+        )
+        self.assertTrue(
+            all(not heading["attrs"] and not heading["nested_tags"]
+                for heading in report["headings"])
+        )
+        self.assertEqual(
+            report["class_attributes"],
+            [{"tag": "html", "class": "no-js"}],
+        )
+        self.assertEqual(report["explicit_favicon_count"], 0)
+        self.assertFalse(report["css_mentions_letter_spacing"])
+        self.assertFalse(report["css_mentions_color"])
+
+    @unittest.skipUnless(
+        gameoflogic_source_audit.DEFAULT_OCR.exists(),
+        "commit-pinned Game of Logic OCR is unavailable",
+    )
+    def test_gameoflogic_is_structural_recognition_not_a_puzzle_binding(self):
+        report = gameoflogic_source_audit.audit()
+        self.assertEqual(report["bytes"], 90139)
+        self.assertFalse(any(report["puzzle_specific_counts"].values()))
+        self.assertEqual(report["structural_counts"]["diagram"], 50)
+        self.assertEqual(
+            report["structural_counts"]["counter"]
+            + report["structural_counts"]["counters"],
+            37,
+        )
+        self.assertFalse(report["creator_selected"])
+        self.assertTrue(report["recognition_only"])
+        self.assertFalse(report["promoted"])
+
     def test_checkerboard_keyword_new_blob_gap_is_closed_without_promotion(self):
         report = checkerboard_keyword_blob_gap_audit.audit()
         scope = report["scope"]
@@ -627,6 +674,52 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(family["kit_count"], 1)
         self.assertEqual(family["family_size"], 8)
         self.assertFalse(family["posthoc_valid_p_value"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_marker_numeric_control(self):
+        report = first_piece_marker_numeric_control_audit.audit()
+        fefe = report["markers"]["FEFE_CHANNEL"]
+        shadow = report["markers"]["SHADOW_CHANNEL"]
+        self.assertEqual(report["legacy_registry_size"], 20)
+        self.assertEqual(report["extended_registry_size"], 22)
+        self.assertEqual(fefe["deduplicated_relation_count"], 1)
+        self.assertEqual(fefe["byte_family_tail_count"], 147)
+        self.assertEqual(shadow["deduplicated_relation_count"], 2)
+        self.assertEqual(shadow["byte_family_tail_count"], 70)
+        self.assertFalse(report["promoted"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_native_matrixsumlist(self):
+        report = first_piece_native_matrixsumlist_audit.audit()
+        self.assertEqual(
+            report["row_sums"],
+            (6, 10, 8, 7, 6, 6, 5, 4, 9, 9, 7, 8, 7, 9),
+        )
+        self.assertEqual(
+            report["column_sums"],
+            (8, 10, 8, 10, 8, 7, 3, 6, 7, 5, 9, 6, 6, 8),
+        )
+        self.assertEqual(report["total"], 101)
+        self.assertEqual(report["row_a1z26"], "FJHGFFEDIIGHGI")
+        self.assertEqual(report["column_a1z26"], "HJHJHGCFGEIFFH")
+        self.assertEqual(report["d4_orientation_count"], 8)
+        self.assertEqual(report["d4_unique_list_count"], 4)
+        self.assertFalse(report["consumer_selected"])
+        self.assertFalse(report["oracle_run"])
+
+    def test_first_piece_g_operator_gate(self):
+        report = first_piece_g_operator_gate_audit.audit()
+        banner, address = report["rails"]
+        self.assertEqual(banner["operand_after_removing_G"], "SO5BCPUC")
+        self.assertEqual(address["operand_after_removing_G"], "MC9g2cPBe")
+        self.assertFalse(banner["whole_operand_is_decimal"])
+        self.assertFalse(address["whole_operand_is_decimal"])
+        self.assertEqual(report["combined_stride_output_count"], 64)
+        self.assertEqual(report["combined_stride_term_hits"], ())
+        self.assertFalse(report["all_G_anchors_have_numeric_neighbor"])
+        self.assertEqual(tuple(report["scalar_addresses"]), (2, 4))
+        self.assertFalse(report["any_scalar_address_match"])
+        self.assertFalse(report["curve_semantics_selected"])
         self.assertFalse(report["oracle_run"])
 
     def test_first_piece_event_rail_preservation(self):

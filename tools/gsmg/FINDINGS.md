@@ -15718,3 +15718,90 @@ a negative result. Full report:
 **Reopen condition:** a creator source, or an exhausted structural rule for
 either named gap, that uses this pairing to select an operator, textarea, or
 password.
+
+## Phase 251 -- first-piece missed-points audit: numeric bytes, native matrix sums, and G/operator gate all close negative (2026-08-13)
+
+The first-piece pixel brainstorm's final status audit found three proposed
+executions that earlier Phases 195–208 had not actually run. Their families
+were fixed before output inspection and are now closed by three regression-
+tested scripts.
+
+**Point 7 — marker bytes.** The Phase-149 numeric registry now includes the
+authenticated repeated-gray channel values `254` (`FE`) and `56` (`38`, ASCII
+`8`). The unchanged exact-operation screen yields the deduplicated additive
+triangles `91+163=254`, `7+56=63`, and `24+56=80`. Calibrating against every
+possible byte value `0..255`, at least one relation occurs for 147/256 bytes
+and at least two for 70/256. The anticipated `254-163=91` is exact but not
+distinctive. No numeric relation is promoted.
+
+**Point 8 — native matrix.** Applying the already-fixed black/blue=`1`,
+white/yellow/FEFE=`0` rule directly to the 14x14 grid gives:
+
+```text
+rows:    6,10,8,7,6,6,5,4,9,9,7,8,7,9  -> FJHGFFEDIIGHGI
+columns: 8,10,8,10,8,7,3,6,7,5,9,6,6,8 -> HJHJHGCFGEIFFH
+total:   101
+```
+
+All eight D4 orientations merely swap/reverse four directed lists. The total
+is the popcount of the already-decoded URL, not independent evidence. The
+lists are promoted as exact source facts, but the alternative
+`matrixsumlist` consumer is closed absent an explicit instruction.
+
+**Point 15 — G/operator.** The exact `#383838` rails become `SO5BCPUC` and
+`MC9g2cPBe` after removing uppercase G; neither is a complete decimal or hex
+scalar. G adjacency supplies no consistent scalar grammar. The predeclared
+4/2 selector, chunk, and stride family produces 64 unique joined stride
+outputs and zero established clue-term hits. Literal secp256k1 scalars `2G`
+and `4G` produce four ordinary P2PKH addresses, none matching the Stage-0
+address. No arbitrary text-to-scalar fold, blob oracle, or key search ran.
+
+**Verdict:** all 25 numbered brainstorm points now have a bounded
+disposition. These final three checks are negative and produce no candidate
+that earns an oracle. Reopen only with a new external clue selecting a byte
+relation, native-matrix consumer, or scalar/curve grammar.
+
+Artifacts:
+
+- `tools/gsmg/first_piece_marker_numeric_control_audit.py`
+- `tools/gsmg/first_piece_native_matrixsumlist_audit.py`
+- `tools/gsmg/first_piece_g_operator_gate_audit.py`
+- [GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT](../../doc/GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md)
+
+## Phase 252 -- fresh-brainstorm residual audit: heading channel closed, Game of Logic recovered, historical TXT still gated (2026-08-13)
+
+Three residuals from `GSMG_FRESH_BRAINSTORM_2026-08-06.md` were checked
+without widening into background brute force.
+
+**Heading/head metadata.** `salphaseion_heading_metadata_audit.py` fetched and
+hash-verified the five registered Wayback captures. Both headings are bare
+text-only `<h1>` elements with no attributes or nested tags. The only class is
+generic `html.no-js`; the only authored CSS is the uniform Arial body rule;
+there is no color, letter spacing, external stylesheet, or explicit favicon
+link. Title and meta description are both `GSMG Puzzle`. These facts are
+identical across all five captures; only the already-known raw `h1`/`H1`
+capitalization varies. Brainstorm item 6 closes negative.
+
+**Historical TXT.** Live apex TXT is now ordinary Dynadot mail SPF; `www`, the
+two known CT-log subdomains, and a wildcard-owner query return no TXT. A free
+WhoisFreaks history surface exposes a 2026-04-21 Microsoft verification token
+and Microsoft 365 SPF, both administrative and post-puzzle, while earlier TXT
+rows remain account-gated. The puzzle-era history therefore remains a
+capability gap, not a negative.
+
+**Game of Logic.** The supposedly missing `_work/gameoflogic_ocr.txt` was
+recovered from its actual upstream fork commit `8d043ad1` (90,139 bytes,
+SHA-256 `e269153e...a002`). It has genuine structural resonance: nine counters,
+four red/five grey, and repeated half/smaller/larger diagrams. But it contains
+zero `matrix` instances and zero registered puzzle-specific terms; no creator
+source selects the book. `gameoflogic_source_audit.py` therefore retains the
+resemblance as recognition-only and authorizes no decoder or oracle.
+
+The physical-book arrival checklist now explicitly separates paratextual
+identifiers and copy-specific markings from the pages 57-58 gatefold capture.
+That lane remains externally blocked.
+
+**Verdict:** the locally executable heading and OCR residuals are disposed.
+Historical puzzle-era TXT and the physical-copy inspection remain explicit
+external gaps. Full report:
+[GSMG_FRESH_BRAINSTORM_RESIDUAL_AUDIT](../../doc/GSMG_FRESH_BRAINSTORM_RESIDUAL_AUDIT.md).

@@ -709,6 +709,15 @@ opinion. `gameoflogic_ocr.txt` is untested, not previously-vetted-and-abandoned;
 pursued, treat it as a fresh idea (this project's own, same as the Cosmic Duality book
 detour), not a lead someone already tried and gave up on.
 
+**Update (2026-08-13): recovered and boundedly triaged.** The exact file was
+recovered from upstream commit `8d043ad1` (90,139 bytes; SHA-256
+`e269153ec9d502dc25986e54169a1c211841a4f7256b460e4a017bae3242a002`).
+It genuinely contains the visually suggestive mechanics “nine counters,” “four
+red and five grey,” and repeated half/smaller/larger diagrams, but contains zero
+instances of the registered puzzle-specific vocabulary. No creator source selects
+the book. Phase 252 therefore retains it as thematic/structural recognition only,
+not as a decoder or candidate-string source.
+
 **Update (2026-07-12): full audit of the fork's `_work/` scripts, ~9,000 more
 keystr-tests, all negative.** Cloned the fork locally (`/home/loginwashere/projects/
 gsmgio-5btc-puzzle`) and read every script. Found several (`cosmic_attack.py`,

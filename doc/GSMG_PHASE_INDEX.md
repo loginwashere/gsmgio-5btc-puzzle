@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **251** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **253** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -267,3 +267,5 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 248 | P248 | 2026-08-12 | Architect visual and precedent-transfer selector audit | 88 creator media records and direct reuse language negative | [link](../tools/gsmg/FINDINGS.md#phase-248----architect-visual-and-precedent-transfer-selector-audit-88-creator-media-records-and-direct-reuse-language-negative-2026-08-12) | [GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT](GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT.md) |
 | 249 | P249 | 2026-08-12 | SalPhaseIon urlscan history audit | 11 successful captures add no new HTML variant | [link](../tools/gsmg/FINDINGS.md#phase-249----salphaseion-urlscan-history-audit-11-successful-captures-add-no-new-html-variant-2026-08-12) | [GSMG_SALPHASEION_URLSCAN_HISTORY_AUDIT](GSMG_SALPHASEION_URLSCAN_HISTORY_AUDIT.md) |
 | 250 | P250 | 2026-08-12 | Designing the Future source audit | real primary-text echo, recognition-only | [link](../tools/gsmg/FINDINGS.md#phase-250----designing-the-future-source-audit-real-primary-text-echo-recognition-only-2026-08-12) | [GSMG_DESIGNING_THE_FUTURE_SOURCE_AUDIT](GSMG_DESIGNING_THE_FUTURE_SOURCE_AUDIT.md) |
+| 251 | P251 | 2026-08-13 | first-piece missed-points audit | numeric bytes, native matrix sums, and G/operator gate all close negative | [link](../tools/gsmg/FINDINGS.md#phase-251----first-piece-missed-points-audit-numeric-bytes-native-matrix-sums-and-goperator-gate-all-close-negative-2026-08-13) | [GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT](GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md) |
+| 252 | P252 | 2026-08-13 | fresh-brainstorm residual audit | heading channel closed, Game of Logic recovered, historical TXT still gated | [link](../tools/gsmg/FINDINGS.md#phase-252----fresh-brainstorm-residual-audit-heading-channel-closed-game-of-logic-recovered-historical-txt-still-gated-2026-08-13) | [GSMG_FRESH_BRAINSTORM_RESIDUAL_AUDIT](GSMG_FRESH_BRAINSTORM_RESIDUAL_AUDIT.md) |

@@ -185,6 +185,13 @@ and coverage across gaps.
       needed for ambiguous detail. **Success condition:** another researcher
       can verify every visible mark, layout relationship, and relevant edition
       detail from the preserved files. **Owner:** book recipient.
+- [ ] **Paratext pass on the same physical copy:** photograph the title and
+      copyright pages, spine, boards, dust-jacket front/back/flaps, price, ISBN,
+      LCCN, Dewey number, edition/printing code, and every inscription, stamp,
+      underline, dog-ear, or loose insert. Transcribe each identifier exactly
+      before normalizing it or trying it as a candidate string. **Stopping
+      rule:** every listed surface/field is either captured or explicitly
+      recorded as absent/not applicable. **Owner:** book recipient.
 - [ ] Before arrival, turn the seven missing G3 fields for `G-MSL-001` into a
       neutral observation worksheet with explicit positive, negative, and
       ambiguous outcomes. Prepared in
