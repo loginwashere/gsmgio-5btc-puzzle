@@ -15816,7 +15816,10 @@ therefore added as a separate opt-in set:
 - Blowfish-CBC with OpenSSL's 128-bit EVP key size;
 - Camellia-CBC with 128-, 192-, and 256-bit keys;
 - SEED-CBC with its fixed 128-bit key size, now specifically admitted because
-  the authenticated Stage-0 output is `gsmg.io/theseedisplanted`;
+  the authenticated Stage-0 output is `gsmg.io/theseedisplanted`, and because
+  the recovered historical 14x14 DBBI row-sum construction outputs
+  `IZLKESEEDQPPEN` with literal centered `SEED` (community evidence, not a
+  creator-confirmed transition, and only weakly exceptional under its null);
 - each under legacy EVP_BytesToKey with MD5, SHA-1, and SHA-256, plus
   PBKDF2-HMAC-SHA256 at OpenSSL's default 10,000 iterations.
 
@@ -15831,14 +15834,16 @@ per passphrase/salt/KDF and splits it at each variant's key boundary; existing
 known-positive AES/3DES tests confirm that this performance change preserves
 the prior derivations.
 
-The bounded run used the existing 648 curated candidates from 23 files plus
-seed lists, digest `2d233645ef49a141`, with no new candidate generation:
+The bounded run used the existing curated corpus plus the two exact SEED leads
+`SEED` and `IZLKESEEDQPPEN`, which were found to be absent from those files.
+This is a provenance-selected addition, not dictionary candidate generation:
 
 ```text
 python3 tools/gsmg/extended_cipher_recheck.py --openssl-menu-gaps
-17,037 passphrase-form attempts
+650 candidates; ordered-list digest ab8252005a8388f5
+17,073 passphrase-form attempts
 20 cipher/KDF variants x 4 tracked blobs
-1,362,960 concrete decryptions
+1,365,840 concrete decryptions
 0 hits
 ```
 

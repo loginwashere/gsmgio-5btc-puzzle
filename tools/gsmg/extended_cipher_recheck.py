@@ -80,6 +80,15 @@ CURATED_FILES = [
     "full_macro_clue_chain_candidates.txt",
 ]
 
+# Exact, independently reproducible SEED-specific leads that were absent from
+# CURATED_FILES: the literal cipher name and the recovered historical 14x14
+# DBBI row-sum output containing it. These are added only for the opt-in
+# OpenSSL-menu-gap run; they do not silently alter the older AES/3DES corpus.
+OPENSSL_MENU_GAP_EXACT_CANDIDATES = (
+    "SEED",
+    "IZLKESEEDQPPEN",
+)
+
 
 def load_curated_candidates():
     """Every non-empty, non-comment line from CURATED_FILES, plus the small
@@ -159,8 +168,14 @@ def main():
     args = ap.parse_args()
 
     candidates = load_curated_candidates()
+    if args.openssl_menu_gaps:
+        candidates.extend(
+            candidate for candidate in OPENSSL_MENU_GAP_EXACT_CANDIDATES
+            if candidate not in candidates
+        )
     print(f"[*] loaded {len(candidates)} curated candidates from "
-          f"{len(CURATED_FILES)} files + seed lists")
+          f"{len(CURATED_FILES)} files + seed lists"
+          f"{' + exact SEED leads' if args.openssl_menu_gaps else ''}")
     print(f"[*] candidate-list digest: {candidate_list_digest(candidates)}")
 
     blobs = {**BLOBS, **QUARANTINED_BLOBS} if args.include_quarantined else None
