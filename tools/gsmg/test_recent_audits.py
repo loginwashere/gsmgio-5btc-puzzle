@@ -78,6 +78,7 @@ import promised_standalone_audit
 import salphaseion_urlscan_history_audit
 import prime_sum_fefe_mask_composition_audit
 import remaining_structural_avenues_audit
+import roman_rail_prime_sum_audit
 import safenet_luna_hsm_audit
 import salphaseion_salvation_role_audit
 import salphaseion_presentation_binding_audit
@@ -104,6 +105,32 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_roman_rail_prime_sum_bounded_family(self):
+        roman_rail_prime_sum_audit.self_test()
+        report = roman_rail_prime_sum_audit.audit()
+        self.assertEqual(len(report["rail_rows"]), 14)
+        self.assertEqual(len(report["rail_match_rows"]), 1)
+        match = report["rail_match_rows"][0]
+        self.assertEqual(
+            (
+                match["blue_token"], match["yellow_token"],
+                match["blue_numeral"], match["yellow_numeral"],
+                match["blue_value"], match["yellow_value"],
+            ),
+            ("DBBI", "FAED", "CDI", "CD", 401, 400),
+        )
+        # Independent sensitivity check: the broader disclosed token family
+        # has a second construction, so DBBI/FAED is not globally unique.
+        self.assertEqual(
+            [
+                (row["blue_token"], row["yellow_token"], row["title_fragment"])
+                for row in report["control_match_rows"]
+            ],
+            [("DBBI", "FAED", "C"), ("yinyang", "FEFE", "CD")],
+        )
+        self.assertIsNone(roman_rail_prime_sum_audit.parse_canonical_roman("IC"))
+        self.assertEqual(report["fefe_projection"], "")
+
     def test_phase1_icon_symbol_layer_scope(self):
         phase1_icon_symbol_layer_audit.self_test()
         report = phase1_icon_symbol_layer_audit.scope_report()
