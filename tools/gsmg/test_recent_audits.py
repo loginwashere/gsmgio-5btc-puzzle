@@ -23,6 +23,8 @@ import curated_candidate_registry
 import curated_v2_bounded_promotion_backfill
 import curated_v2_residual_oracle_backfill
 import cosmic_duality_title_initials_yinyang_audit
+import cosmic_duality_chapter2_yin_lead_audit
+import cosmic_duality_dropcap_inventory
 import ciao_selection_coverage_audit
 import cosmic_raw_digest_checkpoint_audit
 import creator_feasibility_envelope_audit
@@ -310,6 +312,55 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(report["a1z26_sum_cd"], 7)
         self.assertEqual(report["fitted_sums"], {"B": 401, "Y": 400, "F": 73})
         self.assertTrue(report["cd_matches_yellow_sum"])
+
+    @unittest.skipUnless(
+        cosmic_duality_chapter2_yin_lead_audit.DEFAULT_P48.exists()
+        and cosmic_duality_chapter2_yin_lead_audit.DEFAULT_P50.exists()
+        and cosmic_duality_chapter2_yin_lead_audit.DEFAULT_P55.exists(),
+        "user's local book Chapter 2 page screenshots are unavailable",
+    )
+    def test_cosmic_duality_chapter2_yin_lead(self):
+        report = cosmic_duality_chapter2_yin_lead_audit.analyze()
+        self.assertEqual(report["sequence"], "YIN")
+        for row in report["rows"]:
+            self.assertGreater(row["gold_pixel_count"], 0)
+            self.assertEqual(
+                row["gold_pixel_count"],
+                cosmic_duality_chapter2_yin_lead_audit.EXPECTED_GOLD_PIXELS[row["label"]],
+            )
+
+    def test_cosmic_duality_dropcap_inventory_no_yang_anywhere(self):
+        cosmic_duality_dropcap_inventory.self_test()
+        # Independent re-derivation (separately written, not calling the
+        # module's own chapter_sequence/transform helpers) that the full
+        # 39-entry inventory transforms to the reported per-chapter output
+        # and that YANG does not appear anywhere in it.
+        def a1z26(c):
+            return ord(c) - ord("A") + 1
+
+        def transform(page, letter):
+            value = (page - a1z26(letter)) % 26
+            return chr((value - 1 if value else 25) + ord("A"))
+
+        by_chapter = {}
+        for item in cosmic_duality_dropcap_inventory.DROP_CAPS:
+            by_chapter.setdefault(item.chapter, []).append((item.page, item.letter))
+        transformed = {
+            chapter: "".join(transform(p, l) for p, l in rows)
+            for chapter, rows in by_chapter.items()
+        }
+        self.assertEqual(
+            transformed,
+            {1: "VYVWXKALOH", 2: "YINJMNNJMV", 3: "IJSCNJVPL", 4: "THYRRWWQWV"},
+        )
+        full = "".join(transformed[c] for c in sorted(transformed))
+        self.assertIn("YIN", full)
+        self.assertNotIn("YANG", full)
+        self.assertNotIn("YANG", full[::-1])
+        # The three Chapter-2 entries this session photo-verified must match
+        # the shared inventory exactly, or the two modules have drifted apart.
+        ch2 = by_chapter[2][:3]
+        self.assertEqual(ch2, [(48, "W"), (50, "O"), (55, "O")])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

@@ -136,7 +136,10 @@ QUALIFICATION = {
             "(pixel-confirmed) decorates the title's C/D initials AND ordinary "
             "body paragraphs book-wide -- a house style, not title-unique. Roman "
             "CD=400 matches the yellow prime sum, but as corroboration/possible "
-            "coincidence rather than an independent echo; still no operation."
+            "coincidence rather than an independent echo. Phase 262: "
+            "(page-A1Z26(letter)) mod 26 over Chapter 2's first three drop caps "
+            "spells YIN exactly (pixel-confirmed); no YANG counterpart found, "
+            "bounded lead only. Still no operation."
         ),
     },
     "one_two_guides": {
