@@ -27,6 +27,7 @@ import creator_operator_vocabulary_audit
 import creator_personal_disclosures_audit
 import dbbi_faed_boundary_selector_audit
 import dual_channel_consistency_audit
+import excluded_wordlist_coverage_audit
 import first_piece_hamming_control_audit
 import first_piece_bitplane_audit
 import first_piece_ggn_distinctiveness_audit
@@ -96,6 +97,29 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_excluded_wordlist_coverage_matrix_and_menu_gap_scope(self):
+        report = excluded_wordlist_coverage_audit.audit()
+        scope = report["menu_gap_scope"]
+        self.assertEqual(report["excluded_wordlist_count"], 23)
+        self.assertEqual(
+            (scope["candidate_count"], scope["candidate_digest"]),
+            (625, "854bffab41ecb1ef"),
+        )
+        self.assertEqual(scope["candidate_form_evaluations"], 17163)
+        self.assertEqual(scope["unique_generated_passphrases"], 16101)
+        self.assertEqual(scope["cipher_kdf_variants"], 20)
+        self.assertEqual(tuple(scope["blobs"]), tuple(BLOBS))
+        self.assertEqual(scope["concrete_decryptions"], 1373040)
+        selected = {
+            row["source"]
+            for row in report["coverage_rows"]
+            if row["openssl_menu_gap"] == "selected for bounded run"
+        }
+        self.assertEqual(
+            selected,
+            set(excluded_wordlist_coverage_audit.MENU_GAP_FILES),
+        )
+
     def test_curated_candidate_corpus_identity_and_provenance(self):
         base = curated_candidate_corpus_audit.build(False)
         seed = curated_candidate_corpus_audit.build(True)

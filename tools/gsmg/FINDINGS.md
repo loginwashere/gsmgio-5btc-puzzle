@@ -15893,3 +15893,34 @@ The Phase-253 SEED scope is separately fixed at 650 candidates, digest
 94 multi-source candidates, bucket totals, overlap metrics, evaluation totals,
 and both scope identities. Full report:
 [GSMG_648_WORDLIST_PROVENANCE_REVIEW](../../doc/GSMG_648_WORDLIST_PROVENANCE_REVIEW.md).
+
+## Phase 255 -- excluded-wordlist coverage matrix: six small menu-gap lists closed negative (2026-08-13)
+
+Phase 254's 23-file exclusion manifest was audited against actual consumers
+and recorded runs rather than treating “excluded” as synonymous with
+“untested.” Medium Tier-1/Tier-2 sources have padded binary CBC/ECB, nopad
+window, and literal-raw-key coverage; Fresco and SafeNet/Luna have dedicated
+legacy/extended CBC, AES-ECB, AES-CFB/OFB/CTR, and AES-Key-Wrap coverage;
+Looking Forward has dedicated CBC/Key-Wrap plus medium-tier coverage; and the
+one-line Architect scene is a 1,326-word selector cache, not one password.
+Raw chat/OCR/full-text inputs and generated outputs remain explicitly distinct
+from exact candidate lists.
+
+One real shared gap remained: no excluded-source consumer imports Phase 253's
+opt-in 20-variant Blowfish/Camellia/SEED CBC family. A predeclared bounded run
+therefore used six candidate-like excluded files of at most 236 active lines:
+`content_word_filtered`, Cosmic book p6–11 candidates, Cosmic book p8–9,
+Jacque Fresco, Looking Forward, and SafeNet/Luna HSM.
+
+Their fixed-order exact union is 625 candidates, digest `854bffab41ecb1ef`.
+Newline-aware expansion scheduled 17,163 evaluations (16,101 unique
+passphrases) across 20 variants and all four current blobs: 1,373,040 concrete
+decryptions, **zero hits**. The scene cache, raw corpora, large generated
+combination sets, and 66,433-candidate medium union were deliberately not
+promoted by this run.
+
+**Verdict:** the new menu-gap family is closed for the six small excluded
+lists. The remaining excluded volume does not warrant a broad menu sweep under
+the current weak Blowfish/Camellia prior and already-addressed SEED clues. Full
+matrix and reproduction commands:
+[GSMG_EXCLUDED_WORDLIST_COVERAGE_MATRIX](../../doc/GSMG_EXCLUDED_WORDLIST_COVERAGE_MATRIX.md).
