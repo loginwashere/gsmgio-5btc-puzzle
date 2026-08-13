@@ -49,17 +49,31 @@ files:                    6
 active source lines:      627
 ordered exact candidates: 625
 candidate digest:         854bffab41ecb1ef
+already in Phase 253:      62 exact candidates
+net-new exact candidates:  563 (digest a5a3c95b8d8bb594)
 scheduled evaluations:    17,163
 unique passphrases:        16,101
+prior passphrase overlap:  2,358
+net-new passphrases:       13,743
 cipher/KDF variants:       20
 tracked blobs:             4
-concrete decryptions:      1,373,040
+gross decryptions:         1,373,040
+net-new scheduled work:    1,184,400 decryptions
+net-new unique coverage:   1,099,440 passphrase/variant/blob tuples
 strong hits:               0
 ```
 
 This closes the new menu-gap family for the six selected lists. It does not
 promote raw chat/OCR/screenplay corpora or generated medium outputs into a new
 large sweep.
+
+The gross run count is intentionally separated from novelty. Exclusion is a
+file-level property, so 62 exact strings from `content_word_filtered.txt`
+already occurred in Phase 253's 650-candidate scope. Representation overlap
+extends further: 2,358 of this run's 16,101 unique generated passphrases were
+already in Phase 253, leaving 13,743 net-new passphrases. The rerun is harmless
+and the zero-hit result remains valid; it simply must not be described as
+1,373,040 wholly new decryptions.
 
 ## Coverage matrix
 
@@ -121,11 +135,17 @@ The passphrase expansion exactly matches Phase 253:
 20 variants are Blowfish-128, Camellia-128/192/256, and SEED-128, each under
 legacy MD5/SHA-1/SHA-256 and PBKDF2-HMAC-SHA256 at 10,000 iterations. Every
 evaluation targeted current `BLOBS`: SALPH, COSMIC, P32TRAILING, and URLBLOB.
+Comparing generated passphrase sets—not merely exact candidate strings—pins
+the net-new coverage at 13,743 passphrases × 20 variants × 4 blobs = 1,099,440
+unique passphrase/variant/blob tuples. Counting the actual scheduled loop,
+which repeats representation-equivalent forms within the selected scope,
+14,805 evaluations were new relative to Phase 253, or 1,184,400 decryptions.
 
 ## Judgment
 
 The six-list negative is worth recording because it closes a real code-level
-coverage gap at essentially the same scale as Phase 253. It does not justify a
+coverage gap at essentially the same gross scale as Phase 253, with 1,099,440
+net-new unique passphrase/variant/blob checks. It does not justify a
 full medium-corpus menu sweep. Most remaining volume is generated expansion or
 raw community/screenplay/OCR material, and Blowfish/Camellia remain weakly
 motivated while SEED's clue support has already received the strongest exact

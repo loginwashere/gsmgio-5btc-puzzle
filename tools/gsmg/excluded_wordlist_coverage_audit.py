@@ -20,7 +20,12 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
 from cb_common import BLOBS, OPENSSL_MENU_GAP_CIPHER_VARIANTS, answer_forms, keystr_forms  # noqa: E402
-from curated_candidate_corpus_audit import EXCLUDED_WORDLISTS, active_lines, wordlist_manifest  # noqa: E402
+from curated_candidate_corpus_audit import (  # noqa: E402
+    EXCLUDED_WORDLISTS,
+    active_lines,
+    build as build_curated_corpus,
+    wordlist_manifest,
+)
 from extended_cipher_recheck import WORDLIST_DIR, candidate_list_digest, sweep  # noqa: E402
 
 
@@ -66,6 +71,10 @@ EXPECTED_MENU_GAP_CANDIDATES = 625
 EXPECTED_MENU_GAP_DIGEST = "854bffab41ecb1ef"
 EXPECTED_MENU_GAP_EVALUATIONS = 17163
 EXPECTED_MENU_GAP_UNIQUE_PASSPHRASES = 16101
+EXPECTED_NET_NEW_EXACT_CANDIDATES = 563
+EXPECTED_NET_NEW_EXACT_DIGEST = "a5a3c95b8d8bb594"
+EXPECTED_PRIOR_PASSPHRASE_OVERLAP = 2358
+EXPECTED_NET_NEW_UNIQUE_PASSPHRASES = 13743
 
 
 def menu_gap_candidates():
@@ -88,12 +97,12 @@ def menu_gap_candidates():
     return tuple(ordered), tuple(source_rows)
 
 
-def generated_accounting(candidates):
+def generated_passphrases(candidates):
     generated = []
     for candidate in candidates:
         for form in answer_forms(candidate):
             generated.extend(keystr_forms(form, newline_variants=True))
-    return len(generated), len(set(generated))
+    return tuple(generated)
 
 
 def audit():
@@ -116,7 +125,21 @@ def audit():
         })
 
     candidates, selected_sources = menu_gap_candidates()
-    evaluations, unique_passphrases = generated_accounting(candidates)
+    generated = generated_passphrases(candidates)
+    selected_passphrases = set(generated)
+    prior_candidates = tuple(
+        row["candidate"] for row in build_curated_corpus(True)["candidates"]
+    )
+    prior_candidate_set = set(prior_candidates)
+    prior_passphrases = set(generated_passphrases(prior_candidates))
+    net_new_candidates = tuple(
+        candidate for candidate in candidates if candidate not in prior_candidate_set
+    )
+    prior_scheduled_evaluations = sum(
+        passphrase in prior_passphrases for passphrase in generated
+    )
+    net_new_passphrases = selected_passphrases - prior_passphrases
+    operation_factor = len(OPENSSL_MENU_GAP_CIPHER_VARIANTS) * len(BLOBS)
     return {
         "excluded_wordlist_count": len(rows),
         "coverage_rows": tuple(rows),
@@ -125,11 +148,24 @@ def audit():
             "source_rows": selected_sources,
             "candidate_count": len(candidates),
             "candidate_digest": candidate_list_digest(candidates),
-            "candidate_form_evaluations": evaluations,
-            "unique_generated_passphrases": unique_passphrases,
+            "prior_scope_candidate_count": len(prior_candidates),
+            "prior_scope_candidate_digest": candidate_list_digest(prior_candidates),
+            "prior_exact_candidate_overlap": len(candidates) - len(net_new_candidates),
+            "net_new_exact_candidates": len(net_new_candidates),
+            "net_new_exact_candidate_digest": candidate_list_digest(net_new_candidates),
+            "candidate_form_evaluations": len(generated),
+            "unique_generated_passphrases": len(selected_passphrases),
+            "prior_scheduled_evaluations": prior_scheduled_evaluations,
+            "net_new_scheduled_evaluations": len(generated) - prior_scheduled_evaluations,
+            "prior_unique_passphrase_overlap": len(selected_passphrases & prior_passphrases),
+            "net_new_unique_passphrases": len(net_new_passphrases),
             "cipher_kdf_variants": len(OPENSSL_MENU_GAP_CIPHER_VARIANTS),
             "blobs": tuple(BLOBS),
-            "concrete_decryptions": evaluations * len(OPENSSL_MENU_GAP_CIPHER_VARIANTS) * len(BLOBS),
+            "concrete_decryptions": len(generated) * operation_factor,
+            "net_new_scheduled_decryptions": (
+                len(generated) - prior_scheduled_evaluations
+            ) * operation_factor,
+            "net_new_unique_passphrase_decryptions": len(net_new_passphrases) * operation_factor,
         },
     }
 
@@ -143,9 +179,19 @@ def self_test():
     )
     assert scope["candidate_form_evaluations"] == EXPECTED_MENU_GAP_EVALUATIONS
     assert scope["unique_generated_passphrases"] == EXPECTED_MENU_GAP_UNIQUE_PASSPHRASES
+    assert scope["prior_exact_candidate_overlap"] == 62
+    assert (
+        scope["net_new_exact_candidates"], scope["net_new_exact_candidate_digest"]
+    ) == (EXPECTED_NET_NEW_EXACT_CANDIDATES, EXPECTED_NET_NEW_EXACT_DIGEST)
+    assert scope["prior_unique_passphrase_overlap"] == EXPECTED_PRIOR_PASSPHRASE_OVERLAP
+    assert scope["net_new_unique_passphrases"] == EXPECTED_NET_NEW_UNIQUE_PASSPHRASES
+    assert scope["prior_scheduled_evaluations"] == 2358
+    assert scope["net_new_scheduled_evaluations"] == 14805
     assert scope["cipher_kdf_variants"] == 20
     assert len(scope["blobs"]) == 4
     assert scope["concrete_decryptions"] == 1373040
+    assert scope["net_new_scheduled_decryptions"] == 1184400
+    assert scope["net_new_unique_passphrase_decryptions"] == 1099440
     print("[*] self-test OK: 23-source coverage matrix and bounded 625-candidate menu-gap scope")
 
 

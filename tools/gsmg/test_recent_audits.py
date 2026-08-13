@@ -107,9 +107,20 @@ class CorrectedClaimTests(unittest.TestCase):
         )
         self.assertEqual(scope["candidate_form_evaluations"], 17163)
         self.assertEqual(scope["unique_generated_passphrases"], 16101)
+        self.assertEqual(scope["prior_exact_candidate_overlap"], 62)
+        self.assertEqual(
+            (scope["net_new_exact_candidates"], scope["net_new_exact_candidate_digest"]),
+            (563, "a5a3c95b8d8bb594"),
+        )
+        self.assertEqual(scope["prior_unique_passphrase_overlap"], 2358)
+        self.assertEqual(scope["net_new_unique_passphrases"], 13743)
+        self.assertEqual(scope["prior_scheduled_evaluations"], 2358)
+        self.assertEqual(scope["net_new_scheduled_evaluations"], 14805)
         self.assertEqual(scope["cipher_kdf_variants"], 20)
         self.assertEqual(tuple(scope["blobs"]), tuple(BLOBS))
         self.assertEqual(scope["concrete_decryptions"], 1373040)
+        self.assertEqual(scope["net_new_scheduled_decryptions"], 1184400)
+        self.assertEqual(scope["net_new_unique_passphrase_decryptions"], 1099440)
         selected = {
             row["source"]
             for row in report["coverage_rows"]

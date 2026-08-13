@@ -15919,6 +15919,15 @@ decryptions, **zero hits**. The scene cache, raw corpora, large generated
 combination sets, and 66,433-candidate medium union were deliberately not
 promoted by this run.
 
+File exclusion does not imply candidate novelty. Comparing against Phase
+253's exact 650-candidate/generated-passphrase sets shows that 62 exact
+candidates and 2,358 unique passphrases were repeats. The run therefore added
+563 exact candidates (digest `a5a3c95b8d8bb594`) and 13,743 unique
+passphrases: 1,099,440 net-new passphrase/variant/blob tuples. At the actual
+scheduled-loop level, 14,805 of 17,163 evaluations were new, accounting for
+1,184,400 of the gross decryptions. The repeated work is harmless, but the
+gross 1,373,040 figure is not presented as wholly novel coverage.
+
 **Verdict:** the new menu-gap family is closed for the six small excluded
 lists. The remaining excluded volume does not warrant a broad menu sweep under
 the current weak Blowfish/Camellia prior and already-addressed SEED clues. Full
