@@ -21,7 +21,7 @@ from telegram_export_manifest import DEFAULT_EXPORT_DIR, load_export, plain_text
 
 ROOT = Path(__file__).resolve().parents[2]
 BOOK_PATH = ROOT / "wordlists/gsmg/cosmic_duality_book_full_text.txt"
-BOOK_SHA256 = "d9aff68ab6666eb46155867b0b9c62e13c033e30aea3bed6e3bbbbc6345efd0e"
+BOOK_SHA256 = "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d"
 CREATOR_ID = "user9815232"
 TERM_IDS = (231, 660, 866, 874, 879, 898, 2024, 3348, 4694, 4771, 6497, 39237, 60314)
 NEXT_IDS = (3348, 4694, 4771, 39237, 60314)

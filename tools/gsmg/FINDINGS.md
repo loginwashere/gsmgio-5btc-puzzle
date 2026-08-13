@@ -16147,12 +16147,31 @@ up, confirming the two pages fit seamlessly and this was a photography gap,
 not a bound-in gatefold as the earlier indirect (56-flows-to-59) observation
 had hypothesized.
 
-**No matrix, dimension, traversal, aggregation, or numeric content of any
-kind appears on either page.** Checked directly, not inferred: neither page
-contains "matrix," a grid/table, row/column language, or any number besides
-ordinary historical dates and page-index citations. `G-MSL-001`'s seven G3
-fields (dimensions, placement, traversal, value mapping, aggregation,
-serialization, target) remain 0/7 fixed after review.
+**No operational numeric schema appears on either page.** Checked directly,
+not inferred: neither page contains "matrix," a grid/table, or row/column
+language. The pages do contain numbers -- `1893` (the painting's date),
+`1656` ("queen of Poland" since), `585` and "fifty-nine bishops" (the
+Council of Macon), "a majority of only one vote" -- but each is ordinary
+historical narrative, not a value selected, transformed, or consumed by any
+stated operation. `G-MSL-001`'s seven G3 fields (dimensions, placement,
+traversal, value mapping, aggregation, serialization, target) remain 0/7
+fixed after review.
+
+Independent review (2026-08-13) cross-checked this transcription against two
+already-existing sources and found it consistent, catching two OCR errors in
+prior partial coverage of this same content: `doc/telegram_shortlist_fullsize/60353.txt:1133`
+already contained most of page 58's text (imperfectly -- "166" for `1656`,
+"188" for `585`, and a garbled, duplicated Muhammad quote), and
+`wordlists/gsmg/cosmic_duality_book_screenshot_ocr.txt:2841` already had the
+page-57 *Sin* caption. The new photographs mainly confirm exact placement and
+correct the OCR; independently re-verified directly against both files. The
+Muhammad quote -- "Or as the prophet Muhammad put it more succinctly in the
+seventh century, 'When Eve was created, Satan rejoiced'" -- was visible in
+the source photo but dropped from this file's first condensed pass; added
+here for completeness (present in the book's own back-of-book index at
+"Muhammad, 58"). Neither "Black Madonna" nor the *Sin* painting/caption is
+new V2 candidate material, since both were already known from the prior OCR
+before this phase.
 
 Both pages were transcribed into the book file in the file's existing
 condensed-summary style (matching `## p.56`/`## p.59`'s convention, not a

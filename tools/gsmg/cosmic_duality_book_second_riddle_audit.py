@@ -38,7 +38,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
 
 BOOK_PATH = REPO_ROOT / "wordlists/gsmg/cosmic_duality_book_full_text.txt"
-EXPECTED_BOOK_SHA256 = "d9aff68ab6666eb46155867b0b9c62e13c033e30aea3bed6e3bbbbc6345efd0e"
+EXPECTED_BOOK_SHA256 = "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d"
 DICTIONARY_PATHS = (
     Path("/usr/share/dict/american-english"),
     Path("/usr/share/dict/british-english"),
