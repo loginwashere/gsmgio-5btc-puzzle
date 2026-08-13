@@ -279,7 +279,8 @@ class CorrectedClaimTests(unittest.TestCase):
 
     @unittest.skipUnless(
         cosmic_duality_title_initials_yinyang_audit.DEFAULT_TITLE_PAGE.exists()
-        and cosmic_duality_title_initials_yinyang_audit.DEFAULT_COVER.exists(),
+        and cosmic_duality_title_initials_yinyang_audit.DEFAULT_COVER.exists()
+        and cosmic_duality_title_initials_yinyang_audit.DEFAULT_BODY_SAMPLE.exists(),
         "user's local book title-page/cover screenshots are unavailable",
     )
     def test_cosmic_duality_title_initials_yinyang(self):
@@ -292,6 +293,12 @@ class CorrectedClaimTests(unittest.TestCase):
             report["cover_sha256"],
             cosmic_duality_title_initials_yinyang_audit.EXPECTED_COVER_SHA256,
         )
+        self.assertEqual(
+            report["body_sample_sha256"],
+            cosmic_duality_title_initials_yinyang_audit.EXPECTED_BODY_SAMPLE_SHA256,
+        )
+        self.assertGreater(report["body_sample_gold_pixel_count"], 0)
+        self.assertTrue(report["design_is_book_wide_not_title_unique"])
         self.assertGreater(report["cosmic_word_gold_pixel_count"], 0)
         self.assertGreater(report["duality_word_gold_pixel_count"], 0)
         self.assertEqual(report["gold_outside_either_initial_count"], 0)

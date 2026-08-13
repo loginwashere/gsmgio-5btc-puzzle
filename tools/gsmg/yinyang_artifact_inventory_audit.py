@@ -132,10 +132,11 @@ QUALIFICATION = {
         "reason": (
             "Creator-confirmed physical clue with explicit yin/yang content, but "
             "no established operation connects it to the Architect boundary. "
-            "Phase 260: interior title page's C/D initials are pixel-confirmed "
-            "miniature yin-yang glyphs (absent from the front cover), and Roman "
-            "CD=400 matches the independently-derived yellow prime sum -- "
-            "reinforces this entry's yin/yang content, still no operation."
+            "Phase 260/261: the book's gold/black yin-yang drop-cap design "
+            "(pixel-confirmed) decorates the title's C/D initials AND ordinary "
+            "body paragraphs book-wide -- a house style, not title-unique. Roman "
+            "CD=400 matches the yellow prime sum, but as corroboration/possible "
+            "coincidence rather than an independent echo; still no operation."
         ),
     },
     "one_two_guides": {
