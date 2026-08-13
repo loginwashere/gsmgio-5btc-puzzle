@@ -16517,3 +16517,52 @@ the established SafeNet result instead uses one global character reversal to
 produce one standard physical coordinate. No new password, selector, or
 transition follows. Full evidence and reproducible endpoints are recorded in
 `GSMG_PHASE2_DECENTRALAND_COORDINATE_AUDIT.md`.
+
+## Phase 265 -- Phase 3.2 monologue's own residual vocabulary against all four blobs: 19 disclosed candidates, 105 key materials, 0 hits (2026-08-13)
+
+Following up on P32TRAILING (the `U2FsdGVkX1+0Wl49...` blob appended to the
+already-solved Phase 3.2 plaintext): the coverage matrix shows the
+monologue's own vocabulary -- "return to the source codes", "reinserting the
+prime basics", "twenty-three ciphers sixteen encryptions and or seven
+intertwined passwords", "find the actual private keynote", "brute forcing
+might be required", "take the private key youve earned it" -- only ever
+reached padded-binary/literal-raw-key coverage (used directly as AES key
+bytes), never the standard `openssl -pass pass:X` passphrase-to-KDF pipeline
+that every other solved stage in this puzzle actually used. The 149-digit
+`VALIDATION_NUM` decimal stream (independently confirmed byte-for-byte
+identical to the README's decimal stream by direct string comparison, not
+eyeballing -- it's 149 digits, not the "155" it looks like on a casual
+read) is used everywhere else in this project only as the checkerboard
+*ciphertext* that decodes to the half/better-half sentence; it had never been
+tried as a password in its own right. The bare `23`/`16`/`7` tokens the
+monologue names explicitly were also untested standalone (only the combined
+`23167` reading, from an unrelated Vanadium/Sulfur/Nitrogen atomic-number
+avenue, had prior coverage).
+
+`phase32_monologue_residual_audit.py` runs exactly these 19 candidates --
+each a verbatim substring of the disclosed README plaintext, none invented
+-- through `answer_forms`/`keystr_forms` (105 unique key materials) and the
+full standard oracle (`passphrase_hits`: CBC with all KDF+extended-cipher
+variants, stream, ECB, key-wrap) against all four tracked blobs (SALPH,
+COSMIC, P32TRAILING, URLBLOB). Result: **0 hits**. This does not repeat
+Phase 179's `remaining_structural_avenues_audit.py`, which already closed
+the VIC-cipher output itself (`VALIDATION_ANSWER`,
+"incaseyoumanagetocrackthis", "theprivatekeysbelongtohalfandbetterhalf",
+"halfandbetterhalf") through the same pipeline, also negative.
+
+A structural note on P32TRAILING's size, checked directly rather than taken
+on assertion: the blob is 96 raw bytes (`Salted__` + 8-byte salt + 80-byte
+ciphertext, confirmed via base64-decode). Under AES-CBC/PKCS#7, 80 bytes of
+ciphertext is consistent with any real plaintext length from 64 to 79 bytes,
+depending on the padding amount (1-16 bytes) -- 64 bytes (two raw 32-byte
+keys, matching "half and better half") is one clean point in that range, but
+the byte count alone does not privilege it over any of the other 15
+equally-consistent lengths; it's a thematically appealing reading, not a
+byte-count-forced one.
+
+**Verdict:** the monologue's own vocabulary is now exhausted as a standard-
+passphrase candidate source for all four blobs, closing the specific gap
+flagged when this thread was opened. P32TRAILING remains open with no known
+password; the two-raw-keys plaintext-length hypothesis remains a live but
+unproven possibility. No files beyond this audit, its test, and this entry
+were needed.

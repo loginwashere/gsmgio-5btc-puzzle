@@ -77,6 +77,7 @@ import post_phase217_consistency_audit
 import promised_standalone_audit
 import salphaseion_urlscan_history_audit
 import prime_sum_fefe_mask_composition_audit
+import phase32_monologue_residual_audit
 import remaining_structural_avenues_audit
 import roman_rail_prime_sum_audit
 import safenet_luna_hsm_audit
@@ -105,6 +106,29 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_phase32_monologue_residual_zero_hits(self):
+        phase32_monologue_residual_audit.self_test()
+        report = phase32_monologue_residual_audit.audit()
+        self.assertEqual(report["candidate_count"], 19)
+        self.assertEqual(report["validation_num_length"], 149)
+        self.assertEqual(
+            report["blob_names"], ("COSMIC", "P32TRAILING", "SALPH", "URLBLOB")
+        )
+        self.assertEqual(report["hits"], [])
+        # Independent check that the "two 32-byte keys" reading is only one
+        # of 16 padding-consistent plaintext lengths, not byte-count-forced.
+        import base64
+
+        from data import P32_TRAILING_BLOB_B64
+
+        raw = base64.b64decode(P32_TRAILING_BLOB_B64)
+        self.assertEqual(len(raw), 96)
+        ciphertext_len = len(raw) - 16
+        self.assertEqual(ciphertext_len, 80)
+        consistent_lengths = {ciphertext_len - pad for pad in range(1, 17)}
+        self.assertEqual(consistent_lengths, set(range(64, 80)))
+        self.assertIn(64, consistent_lengths)
+
     def test_roman_rail_prime_sum_bounded_family(self):
         roman_rail_prime_sum_audit.self_test()
         report = roman_rail_prime_sum_audit.audit()
