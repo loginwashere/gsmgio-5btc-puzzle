@@ -21,6 +21,7 @@ import checkerboard_code_ic_oracle
 import curated_candidate_corpus_audit
 import curated_candidate_registry
 import curated_v2_bounded_promotion_backfill
+import curated_v2_residual_oracle_backfill
 import ciao_selection_coverage_audit
 import cosmic_raw_digest_checkpoint_audit
 import creator_feasibility_envelope_audit
@@ -99,6 +100,32 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_v2_residual_oracle_backfill_scope(self):
+        report = curated_v2_residual_oracle_backfill.scope_report()
+        self.assertEqual(
+            (len(report["seed_candidates"]), report["seed_candidate_digest"]),
+            (2, "10da6a91233b3292"),
+        )
+        self.assertEqual(
+            (
+                len(report["looking_forward_candidates"]),
+                report["looking_forward_candidate_digest"],
+            ),
+            (19, "bf5116a99829c05f"),
+        )
+        self.assertEqual(
+            (report["all_candidate_count"], report["all_candidate_digest"]),
+            (21, "537635ec6fa1ce0f"),
+        )
+        self.assertEqual(report["seed_unique_passphrases"], 36)
+        self.assertEqual(report["looking_forward_unique_passphrases"], 792)
+        self.assertEqual(report["all_unique_passphrases"], 828)
+        self.assertEqual(report["cbc_decryptions"], 3456)
+        self.assertEqual(report["ecb_decryptions"], 39744)
+        self.assertEqual(report["stream_decryptions"], 119232)
+        self.assertEqual(report["keywrap_effective_unwrap_attempts"], 158976)
+        self.assertEqual(report["effective_operations"], 321408)
+
     def test_excluded_wordlist_coverage_matrix_and_menu_gap_scope(self):
         report = excluded_wordlist_coverage_audit.audit()
         scope = report["menu_gap_scope"]

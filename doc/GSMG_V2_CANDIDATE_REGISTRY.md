@@ -103,13 +103,8 @@ content.
 ## Backfill: CBC-cipher-family coverage for the 136 net-new bounded candidates
 
 The 136 candidates promoted to bounded from outside the base 650 (Fresco 55,
-SafeNet/Luna HSM 62, Looking Forward 19) already had dedicated-audit coverage
-from Phases 88-90/116/44 respectively -- but those phases predate this
-project's current 4-blob default (`P32TRAILING` added Phase 77, `URLBLOB`
-promoted to default Phase 192), and Phase 192 explicitly declined to silently
-re-run every historical dedicated-audit corpus after that promotion.
-`curated_v2_bounded_promotion_backfill.py` closes the CBC-cipher-family part
-of that gap:
+SafeNet/Luna HSM 62, Looking Forward 19) received a conservative consolidated
+CBC-family rerun in `curated_v2_bounded_promotion_backfill.py`:
 
 ```
 python3 tools/gsmg/curated_v2_bounded_promotion_backfill.py --self-test
@@ -127,18 +122,25 @@ concrete decryptions:      1,113,552
 strong hits:                0
 ```
 
-**Explicitly out of scope for this backfill:** stream ciphers (AES-CFB/OFB/
-CTR) and AES Key Wrap against these 136 candidates under the current 4
-blobs. Phase 255's Blowfish/Camellia/SEED family already covers all 625
-menu-gap candidates (including these 136) against the current 4 blobs, so
-that specific family is not re-listed as a gap.
+**Post-run coverage correction (Phase 257):** the initial rationale overstated
+the gap. P32TRAILING entered the project in Phase 25, not Phase 77. Fresco and
+SafeNet/Luna were already recorded as newline-aware, all-four-blob negatives
+under CBC, ECB, stream, and Key Wrap. Looking Forward's Phase-44 run used all
+four blobs and CBC/Key-Wrap, but omitted newline forms and predated the stream
+oracle. Thus the 136-candidate CBC result remains valid, but most of it repeats
+prior work; its useful addition is old-family CBC over Looking Forward's
+newline forms. Phase 257 closes the actual remaining 21-candidate residual:
+the two SEED leads plus 19 Looking Forward candidates. See
+[GSMG_V2_RESIDUAL_ORACLE_BACKFILL](GSMG_V2_RESIDUAL_ORACLE_BACKFILL.md).
 
 ## Judgment
 
 `curated_v2_full` (508 candidates) contains every currently known, locally
 available candidate this project's own recorded provenance judges core or
 bounded under the documented rules above, and now has CBC-family coverage
-across every currently-supported cipher. This is a scope claim bounded by
+across every currently-supported cipher. After Phase 257 it also has complete
+current ECB, stream, and Key-Wrap coverage for the candidates newly introduced
+by V2. This is a scope claim bounded by
 what this registry actually classified, not a completeness claim over the
 whole universe of possible candidates: unavailable physical-book paratext/
 gatefold pages and historical DNS TXT records could introduce new candidates
@@ -152,4 +154,6 @@ python3 tools/gsmg/curated_candidate_registry.py --self-test
 python3 tools/gsmg/curated_candidate_registry.py --write
 python3 tools/gsmg/curated_v2_bounded_promotion_backfill.py --self-test
 python3 tools/gsmg/curated_v2_bounded_promotion_backfill.py --run
+python3 tools/gsmg/curated_v2_residual_oracle_backfill.py --self-test
+python3 tools/gsmg/curated_v2_residual_oracle_backfill.py --run
 ```

@@ -3,25 +3,24 @@
 excluded to bounded (Fresco/SafeNet-Luna/Looking-Forward lines not in the
 historical 648/650 corpus; see curated_candidate_registry.py).
 
-Their original dedicated audits (jacque_fresco_wordlist_audit.py, Phases
-88-90; safenet_luna_hsm_audit.py, Phase 116; yin_yang_transition_audit.py,
-Phase 44) already covered legacy/extended CBC, AES ECB, AES CFB/OFB/CTR, and
-AES Key Wrap -- but Phase 192 (URLBLOB promoted to a default target,
-2026-08-08) explicitly declined to silently re-run every historical
-dedicated-audit corpus, and Phase 44 predates even P32TRAILING (Phase 77,
-2026-07-24). So neither blob's current-default coverage against these exact
-136 strings is confirmed. Phase 255 already covered the Blowfish/Camellia/
-SEED family for the full menu-gap run (which included these 136) against all
-4 current blobs.
+The post-run Phase-257 review corrected this module's original historical
+rationale. P32TRAILING was already added in Phase 25, not Phase 77, and the
+recorded dedicated Fresco and SafeNet/Luna runs already covered newline-aware
+CBC/ECB/stream/Key-Wrap against all four tracked blobs. Phase 44's Looking
+Forward run also used all four blobs, but omitted newline forms and predated
+the stream oracle. This 136-candidate CBC rerun is therefore valid but mostly
+consolidating/repeated coverage; its net addition is the old AES/3DES CBC
+families over Looking Forward's newline forms. Phase 255 separately covered
+the Blowfish/Camellia/SEED family for all 136 against all four blobs.
 
 This module closes the CBC-family part of that specific gap: legacy KDF_VARIANTS
 (AES-128/256-CBC) + EXTENDED_CIPHER_VARIANTS (AES-192-CBC, 3DES-CBC) +
-OPENSSL_MENU_GAP_CIPHER_VARIANTS (Blowfish/Camellia/SEED-CBC) = 47 CBC
+OPENSSL_MENU_GAP_CIPHER_VARIANTS (Blowfish/Camellia/SEED-CBC) = 44 CBC
 cipher/KDF combinations, against the current 4-blob BLOBS default. Stream
-ciphers (CFB/OFB/CTR) and AES Key Wrap are explicitly NOT covered here --
-recorded as a separate, still-open backfill item, following this project's
-established practice of not silently claiming broader coverage than what was
-actually run (Phase 192's own scoping note).
+ciphers (CFB/OFB/CTR) and AES Key Wrap are not covered by this module. Their
+true residual scope was later narrowed and closed by
+curated_v2_residual_oracle_backfill.py (Phase 257), rather than rerunning all
+136 candidates.
 """
 
 import argparse

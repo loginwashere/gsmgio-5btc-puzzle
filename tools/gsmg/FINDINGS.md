@@ -16018,19 +16018,19 @@ scratch with separately-written classification/digest logic (not calling the
 module's own functions) before being pinned as regression tests.
 
 **Backfill.** The 136 net-new-to-650 candidates promoted to bounded (Fresco
-55, SafeNet/Luna 62, Looking Forward 19) came from dedicated per-file audits
-(Phases 88-90/116/44) that predate this project's current 4-blob default
-(`P32TRAILING` added Phase 77, `URLBLOB` promoted Phase 192) -- Phase 192
-explicitly declined to silently re-run every historical dedicated-audit
-corpus after that promotion. `curated_v2_bounded_promotion_backfill.py`
-closes the CBC-cipher-family part of that gap: legacy `KDF_VARIANTS` (6) +
+55, SafeNet/Luna 62, Looking Forward 19) received a conservative consolidated
+CBC rerun through `curated_v2_bounded_promotion_backfill.py`: legacy
+`KDF_VARIANTS` (6) +
 `EXTENDED_CIPHER_VARIANTS` (18) + `OPENSSL_MENU_GAP_CIPHER_VARIANTS` (20) =
 44 CBC cipher/KDF combinations against the current 4 blobs. 136 candidates,
 digest `8db6659bc547569a`, 6,327 evaluations, 1,113,552 decryptions, **zero
-hits**. Stream ciphers (CFB/OFB/CTR) and AES Key Wrap remain explicitly
-out of scope for this backfill -- an open item, not silently claimed covered
-(Phase 255's Blowfish/Camellia/SEED family already covers all 625 menu-gap
-candidates, including these 136, against the current 4 blobs).
+hits**. Phase 257's post-run history review corrects the initial rationale:
+P32TRAILING was added in Phase 25, not Phase 77; Fresco and SafeNet/Luna
+already had newline-aware four-blob CBC/ECB/stream/Key-Wrap coverage; and
+Looking Forward had four-blob CBC/Key-Wrap coverage without newline forms.
+The run remains valid but mostly repeats prior work; its useful addition is
+old-family CBC over Looking Forward's newline forms. Phase 257 narrows and
+closes the true remaining residual rather than rerunning all 136 again.
 
 **Verdict:** `curated_v2_full` (508 candidates) contains every currently
 known, locally available candidate this project's own recorded provenance
@@ -16044,3 +16044,38 @@ candidate-level, rule-derived classification, not with human judgment of
 each string's individual merit. Full registry, rule table, promotion
 accounting, and backfill detail:
 [GSMG_V2_CANDIDATE_REGISTRY](../../doc/GSMG_V2_CANDIDATE_REGISTRY.md).
+
+## Phase 257 -- V2 residual oracle backfill: 21-candidate targeted closure, zero hits (2026-08-13)
+
+Auditing Phase 256's stated stream/Key-Wrap gap against the actual phase
+records showed that a full 508-candidate rerun—and even a 136-candidate
+non-CBC rerun—was unnecessary. Fresco's 55 candidates (Phases 88-90) and
+SafeNet/Luna's 62 (Phase 116) already had newline-aware all-four-blob CBC,
+ECB, stream, and Key-Wrap negatives. Looking Forward's 19 candidates had
+all-four-blob CBC and Key-Wrap coverage in Phase 44, but without newline
+forms and before stream-mode support. Separately, the permanent V2-core
+`SEED`/`IZLKESEEDQPPEN` leads were absent from the historical 648 and Phase
+253 tested them only under the menu-gap CBC family.
+
+`curated_v2_residual_oracle_backfill.py` therefore fixes two scopes:
+
+- two SEED leads, 36 unique newline-aware passphrases: 24 older AES/3DES CBC
+  variants plus AES-ECB, AES-CFB/OFB/CTR, and AES Key Wrap;
+- 19 Looking Forward candidates, 792 unique newline-aware passphrases:
+  AES-ECB, AES-CFB/OFB/CTR, and AES Key Wrap.
+
+The combined 21-candidate scope has digest `537635ec6fa1ce0f` and 828 unique
+passphrases. Against SALPH, COSMIC, P32TRAILING, and URLBLOB it performed
+3,456 CBC decryptions, 39,744 ECB decryptions, 119,232 stream decryptions,
+and 158,976 effective RFC3394/RFC5649 default/OpenSSL-IV unwrap attempts:
+321,408 effective operations in 3m22.96s, **zero hits in every family**.
+
+Two Phase-256 documentation errors are corrected: the CBC-family arithmetic
+is 44 variants, not the helper docstring's 47, and P32TRAILING entered in
+Phase 25, not Phase 77. The Phase-256 CBC zero remains valid; only its novelty
+and rationale narrow.
+
+**Verdict:** every candidate V2 newly adds to the historical corpus now has
+current direct passphrase-oracle coverage across CBC, ECB, stream, and Key
+Wrap. No broad V2 rerun is needed. Full scope and reproduction:
+[GSMG_V2_RESIDUAL_ORACLE_BACKFILL](../../doc/GSMG_V2_RESIDUAL_ORACLE_BACKFILL.md).
