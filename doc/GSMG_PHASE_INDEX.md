@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **266** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **267** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -282,3 +282,4 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 263 | P263 | 2026-08-13 | first-piece Roman-rail prime-sum audit | `C+DI=CDI=401` and `C+D=CD=400` exactly reproduce the ordered color sums, but a second control hit and unresolved FEFE/73 prevent promotion | [link](../tools/gsmg/FINDINGS.md#phase-263----first-piece-roman-rail-prime-sum-audit-cdicdi401-and-cdcd400-exactly-reproduce-the-ordered-color-sums-but-a-second-control-hit-and-unresolved-fefe73-prevent-promotion-2026-08-13) | [GSMG_ROMAN_RAIL_PRIME_SUM_AUDIT](GSMG_ROMAN_RAIL_PRIME_SUM_AUDIT.md) |
 | 264 | P264 | 2026-08-13 | `X2SH4Y0QB15` Decentraland coordinate audit | real scene correspondences, but an authored route remains unverified | [link](../tools/gsmg/FINDINGS.md#phase-264----x2sh4y0qb15-decentraland-coordinate-audit-real-scene-correspondences-but-an-authored-route-remains-unverified-2026-08-13) | [GSMG_PHASE2_DECENTRALAND_COORDINATE_AUDIT](GSMG_PHASE2_DECENTRALAND_COORDINATE_AUDIT.md) |
 | 265 | P265 | 2026-08-13 | Phase 3.2 monologue's own residual vocabulary against all four blobs | 19 disclosed candidates, 105 key materials, 0 hits | [link](../tools/gsmg/FINDINGS.md#phase-265----phase-32-monologues-own-residual-vocabulary-against-all-four-blobs-19-disclosed-candidates-105-key-materials-0-hits-2026-08-13) | — |
+| 266 | P266 | 2026-08-13 | Phase 3's seven-part construction reused as a P32 password candidate | negative | [link](../tools/gsmg/FINDINGS.md#phase-266----phase-3s-seven-part-construction-reused-as-a-p32-password-candidate-negative-2026-08-13) | — |

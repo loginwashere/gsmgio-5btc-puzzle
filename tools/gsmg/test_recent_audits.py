@@ -78,6 +78,7 @@ import promised_standalone_audit
 import salphaseion_urlscan_history_audit
 import prime_sum_fefe_mask_composition_audit
 import phase32_monologue_residual_audit
+import phase3_sevenpart_p32_reuse_audit
 import remaining_structural_avenues_audit
 import roman_rail_prime_sum_audit
 import safenet_luna_hsm_audit
@@ -128,6 +129,32 @@ class CorrectedClaimTests(unittest.TestCase):
         consistent_lengths = {ciphertext_len - pad for pad in range(1, 17)}
         self.assertEqual(consistent_lengths, set(range(64, 80)))
         self.assertIn(64, consistent_lengths)
+
+    def test_phase3_sevenpart_p32_reuse_negative(self):
+        phase3_sevenpart_p32_reuse_audit.self_test()
+        report = phase3_sevenpart_p32_reuse_audit.audit()
+        self.assertEqual(report["concat_length"], 227)
+        self.assertEqual(
+            report["concat_sha256"],
+            "1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5",
+        )
+        self.assertEqual(report["hits"], [])
+        # Independent re-derivation, not a re-check of the module's own math.
+        import hashlib
+
+        parts = (
+            "causality", "Safenet", "Luna", "HSM", "11110",
+            "0x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E69"
+            "7262206E6F20726F6C6C65636E61684320393030322F6E614A2F3330207365"
+            "6D695420656854",
+            "B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1",
+        )
+        concat = "".join(parts)
+        self.assertEqual(len(concat), 227)
+        self.assertEqual(
+            hashlib.sha256(concat.encode()).hexdigest(),
+            "1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5",
+        )
 
     def test_roman_rail_prime_sum_bounded_family(self):
         roman_rail_prime_sum_audit.self_test()
