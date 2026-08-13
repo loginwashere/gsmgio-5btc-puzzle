@@ -18,6 +18,7 @@ import binary_message_export_audit
 import bye_ciao_provenance_audit
 import checkerboard_keyword_blob_gap_audit
 import checkerboard_code_ic_oracle
+import curated_candidate_corpus_audit
 import ciao_selection_coverage_audit
 import cosmic_raw_digest_checkpoint_audit
 import creator_feasibility_envelope_audit
@@ -95,6 +96,53 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_curated_candidate_corpus_identity_and_provenance(self):
+        base = curated_candidate_corpus_audit.build(False)
+        seed = curated_candidate_corpus_audit.build(True)
+        self.assertEqual(
+            (base["candidate_count"], base["digest"]),
+            (648, "2d233645ef49a141"),
+        )
+        self.assertEqual(
+            (seed["candidate_count"], seed["digest"]),
+            (650, "ab8252005a8388f5"),
+        )
+        self.assertEqual(base["active_source_lines"], 765)
+        self.assertEqual(base["source_count"], 25)
+        self.assertEqual(base["multi_source_candidate_count"], 94)
+        self.assertEqual(base["cross_source_tier_candidate_count"], 64)
+        self.assertEqual(
+            base["first_source_tier_counts"],
+            {"direct": 98, "bounded": 243, "thematic": 225, "mixed": 82},
+        )
+        self.assertEqual(
+            (base["included_wordlist_count"], base["excluded_wordlist_count"]),
+            (23, 23),
+        )
+        self.assertEqual(base["oracle_overlap_groups"], 104)
+        self.assertEqual(base["oracle_overlap_candidates"], 245)
+        self.assertEqual(base["shared_generated_passphrases"], 1973)
+        self.assertEqual(base["candidate_form_evaluations"], 17037)
+        self.assertEqual(base["unique_generated_passphrases"], 14551)
+        self.assertEqual(base["duplicate_generated_evaluations"], 2486)
+        self.assertEqual(seed["candidate_form_evaluations"], 17073)
+        self.assertEqual(seed["unique_generated_passphrases"], 14587)
+        self.assertEqual(seed["duplicate_generated_evaluations"], 2486)
+        oracle = next(
+            row for row in base["source_rows"]
+            if row["source"] == "oracle_coded.txt"
+        )
+        self.assertEqual(oracle["new_exact"], 0)
+        validation = next(
+            row for row in base["candidates"]
+            if row["candidate"]
+            == "INCASEYOUMANAGETOCRACKTHISTHEPRIVATEKEYSBELONGTOHALFANDBETTERHALFANDTHEYALSONEEDFUNDSTOLIVE"
+        )
+        self.assertEqual(validation["first_source_tier"], "mixed")
+        self.assertEqual(validation["source_tiers"], ("mixed", "control"))
+        self.assertEqual(seed["candidates"][-2]["candidate"], "SEED")
+        self.assertEqual(seed["candidates"][-1]["candidate"], "IZLKESEEDQPPEN")
+
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),
         "sibling GSMG page mirror is unavailable",

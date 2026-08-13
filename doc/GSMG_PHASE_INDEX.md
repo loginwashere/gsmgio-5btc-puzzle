@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **254** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **255** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -105,7 +105,7 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 86 | P086 | 2026-07-27 | `-nopad` sweep | checkpoint fingerprint gap closed + terminology correction | [link](../tools/gsmg/FINDINGS.md#phase-86-----nopad-sweep-checkpoint-fingerprint-gap-closed-terminology-correction-2026-07-27) | — |
 | 87 | P087 | 2026-07-27 | `-nopad` sweep | profiled speed investigation, two validated levers found, not yet applied | [link](../tools/gsmg/FINDINGS.md#phase-87-----nopad-sweep-profiled-speed-investigation-two-validated-levers-found-not-yet-applied-2026-07-27) | — |
 | 88 | P088 | 2026-07-27 | Jacque Fresco's broader body of work | sourced, bounded wordlist built and swept, clean negative | [link](../tools/gsmg/FINDINGS.md#phase-88----jacque-frescos-broader-body-of-work-sourced-bounded-wordlist-built-and-swept-clean-negative-2026-07-27) | — |
-| 89 | P089 | 2026-07-27 | Fresco wordlist | review caught real coverage gaps and titles; corrected re-run still negative | [link](../tools/gsmg/FINDINGS.md#phase-89----fresco-wordlist-review-caught-real-coverage-gaps-and-titles-corrected-re-run-still-negative-2026-07-27) | — |
+| 89 | P089 | 2026-07-27 | Fresco wordlist | review caught real coverage gaps and titles; corrected re-run still negative | [link](../tools/gsmg/FINDINGS.md#phase-89----fresco-wordlist-review-caught-real-coverage-gaps-and-titles-corrected-re-run-still-negative-2026-07-27) | [GSMG_648_WORDLIST_PROVENANCE_REVIEW](GSMG_648_WORDLIST_PROVENANCE_REVIEW.md) |
 | 90 | P090 | 2026-07-27 | Fresco wordlist | 14 more sourced candidates added and swept, still negative; Tier-2 completes clean | [link](../tools/gsmg/FINDINGS.md#phase-90----fresco-wordlist-14-more-sourced-candidates-added-and-swept-still-negative-tier-2-completes-clean-2026-07-27) | — |
 | 91 | P091 | 2026-07-27 | `-nopad` sweep | Phase 87's speed levers implemented (single-threaded only, per explicit scope) | [link](../tools/gsmg/FINDINGS.md#phase-91-----nopad-sweep-phase-87s-speed-levers-implemented-single-threaded-only-per-explicit-scope-2026-07-27) | — |
 | 92 | P092 | 2026-07-27 | `-nopad` sweep | multiprocessing implemented, benchmarked, parity-verified | [link](../tools/gsmg/FINDINGS.md#phase-92-----nopad-sweep-multiprocessing-implemented-benchmarked-parity-verified-2026-07-27) | — |
@@ -270,3 +270,4 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 251 | P251 | 2026-08-13 | first-piece missed-points audit | numeric bytes, native matrix sums, and G/operator gate all close negative | [link](../tools/gsmg/FINDINGS.md#phase-251----first-piece-missed-points-audit-numeric-bytes-native-matrix-sums-and-goperator-gate-all-close-negative-2026-08-13) | [GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT](GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md) |
 | 252 | P252 | 2026-08-13 | fresh-brainstorm residual audit | heading channel closed, Game of Logic recovered, historical TXT still gated | [link](../tools/gsmg/FINDINGS.md#phase-252----fresh-brainstorm-residual-audit-heading-channel-closed-game-of-logic-recovered-historical-txt-still-gated-2026-08-13) | [GSMG_FRESH_BRAINSTORM_RESIDUAL_AUDIT](GSMG_FRESH_BRAINSTORM_RESIDUAL_AUDIT.md) |
 | 253 | P253 | 2026-08-13 | bounded Blowfish/Camellia/SEED OpenSSL-container recheck | curated candidates clean | [link](../tools/gsmg/FINDINGS.md#phase-253----bounded-blowfishcamelliaseed-openssl-container-recheck-curated-candidates-clean-2026-08-13) | — |
+| 254 | P254 | 2026-08-13 | curated-candidate corpus provenance audit | 648 is an accumulated union, not a ranked shortlist | [link](../tools/gsmg/FINDINGS.md#phase-254----curated-candidate-corpus-provenance-audit-648-is-an-accumulated-union-not-a-ranked-shortlist-2026-08-13) | [GSMG_648_WORDLIST_PROVENANCE_REVIEW](GSMG_648_WORDLIST_PROVENANCE_REVIEW.md) |

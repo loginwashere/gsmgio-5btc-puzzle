@@ -15853,3 +15853,43 @@ modern `openssl enc -list` (which also includes provider- and era-dependent
 families such as ARIA, CAST, SM4, RC2/RC4, and ChaCha20). Those remain
 unsupported by creator clues and are not promoted into an open-ended cipher-menu
 sweep.
+
+## Phase 254 -- curated-candidate corpus provenance audit: 648 is an accumulated union, not a ranked shortlist (2026-08-13)
+
+`curated_candidate_corpus_audit.py` reconstructs the exact loader behind the
+frequently cited “648 curated candidates” and attributes every string to every
+source in which it appears.
+
+The base corpus is the ordered exact-string union of 765 active lines from 23
+files, `CORE_ALPHABET_SEEDS`, and `VALIDATION_ANSWER`: 648 candidates, digest
+`2d233645ef49a141`. By descriptive first-introducing-source bucket, 98 are
+direct, 243 bounded, 225 thematic, and 82 mixed. These file-level labels are
+not one ordinal candidate-priority scale; each candidate now reports all of
+its source buckets, and 64 candidates touch more than one label. The largest
+source contribution is the broad
+`matrix_trilogy.txt` list (103); `oracle_coded.txt` contributes zero new exact
+strings in current load order.
+
+The audit now contains a machine-checked scope manifest for all 46 on-disk
+wordlists: 23 included and 23 explicitly excluded as broad/medium inputs,
+generated outputs, or dedicated-audit sources. This is not explained by a
+freeze date: four reviewed small exclusions coexisted with the loader from
+commit `6aaa220`, while the cached Architect scene arrived later. Fresco, Looking
+Forward, SafeNet/Luna, and the scene cache have named dedicated consumers.
+
+Exact-string deduplication understates representation overlap. The earlier
+alphanumeric normalization proxy disagreed with `answer_forms()` on digits, so
+the corrected audit derives overlap from the actual generated passphrase byte
+strings. There are 104 connected oracle-overlap groups containing 245
+candidates, and 1,973 passphrases are shared across candidates. The 17,037
+scheduled newline-aware candidate/form evaluations contain 14,551 unique
+passphrase byte strings, so 2,486 evaluations are repeats. This does not weaken
+the zero-hit oracle result, but it corrects the interpretation of its search
+breadth.
+
+The Phase-253 SEED scope is separately fixed at 650 candidates, digest
+`ab8252005a8388f5`, by appending literal `SEED` and historical
+`IZLKESEEDQPPEN`. The self-test now pins the full source accounting, manifest,
+94 multi-source candidates, bucket totals, overlap metrics, evaluation totals,
+and both scope identities. Full report:
+[GSMG_648_WORDLIST_PROVENANCE_REVIEW](../../doc/GSMG_648_WORDLIST_PROVENANCE_REVIEW.md).
