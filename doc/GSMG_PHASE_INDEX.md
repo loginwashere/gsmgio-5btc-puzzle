@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **256** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **257** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -272,3 +272,4 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 253 | P253 | 2026-08-13 | bounded Blowfish/Camellia/SEED OpenSSL-container recheck | curated candidates clean | [link](../tools/gsmg/FINDINGS.md#phase-253----bounded-blowfishcamelliaseed-openssl-container-recheck-curated-candidates-clean-2026-08-13) | — |
 | 254 | P254 | 2026-08-13 | curated-candidate corpus provenance audit | 648 is an accumulated union, not a ranked shortlist | [link](../tools/gsmg/FINDINGS.md#phase-254----curated-candidate-corpus-provenance-audit-648-is-an-accumulated-union-not-a-ranked-shortlist-2026-08-13) | [GSMG_648_WORDLIST_PROVENANCE_REVIEW](GSMG_648_WORDLIST_PROVENANCE_REVIEW.md) |
 | 255 | P255 | 2026-08-13 | excluded-wordlist coverage matrix | six small menu-gap lists closed negative | [link](../tools/gsmg/FINDINGS.md#phase-255----excluded-wordlist-coverage-matrix-six-small-menu-gap-lists-closed-negative-2026-08-13) | [GSMG_EXCLUDED_WORDLIST_COVERAGE_MATRIX](GSMG_EXCLUDED_WORDLIST_COVERAGE_MATRIX.md) |
+| 256 | P256 | 2026-08-13 | candidate-level V2 registry | core/bounded/excluded classification replaces file-level tiers | [link](../tools/gsmg/FINDINGS.md#phase-256----candidate-level-v2-registry-coreboundedexcluded-classification-replaces-file-level-tiers-2026-08-13) | [GSMG_V2_CANDIDATE_REGISTRY](GSMG_V2_CANDIDATE_REGISTRY.md) |

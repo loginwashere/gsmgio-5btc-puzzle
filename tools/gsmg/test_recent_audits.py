@@ -19,6 +19,8 @@ import bye_ciao_provenance_audit
 import checkerboard_keyword_blob_gap_audit
 import checkerboard_code_ic_oracle
 import curated_candidate_corpus_audit
+import curated_candidate_registry
+import curated_v2_bounded_promotion_backfill
 import ciao_selection_coverage_audit
 import cosmic_raw_digest_checkpoint_audit
 import creator_feasibility_envelope_audit
@@ -100,7 +102,7 @@ class CorrectedClaimTests(unittest.TestCase):
     def test_excluded_wordlist_coverage_matrix_and_menu_gap_scope(self):
         report = excluded_wordlist_coverage_audit.audit()
         scope = report["menu_gap_scope"]
-        self.assertEqual(report["excluded_wordlist_count"], 23)
+        self.assertEqual(report["excluded_wordlist_count"], 26)
         self.assertEqual(
             (scope["candidate_count"], scope["candidate_digest"]),
             (625, "854bffab41ecb1ef"),
@@ -152,7 +154,7 @@ class CorrectedClaimTests(unittest.TestCase):
         )
         self.assertEqual(
             (base["included_wordlist_count"], base["excluded_wordlist_count"]),
-            (23, 23),
+            (23, 26),
         )
         self.assertEqual(base["oracle_overlap_groups"], 104)
         self.assertEqual(base["oracle_overlap_candidates"], 245)
@@ -177,6 +179,63 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(validation["source_tiers"], ("mixed", "control"))
         self.assertEqual(seed["candidates"][-2]["candidate"], "SEED")
         self.assertEqual(seed["candidates"][-1]["candidate"], "IZLKESEEDQPPEN")
+
+    def test_curated_candidate_registry_v2_classification(self):
+        rep = curated_candidate_registry.report()
+        self.assertEqual(rep["pool_count"], 1213)
+        self.assertEqual(
+            (rep["core_count"], rep["core_digest"]),
+            (70, "5fb87296c1f04c2b"),
+        )
+        self.assertEqual(
+            (rep["bounded_count"], rep["bounded_digest"]),
+            (438, "62885ff021a92b07"),
+        )
+        self.assertEqual(
+            (rep["full_count"], rep["full_digest"]),
+            (508, "67e389aa7e6a63a9"),
+        )
+        self.assertEqual(rep["excluded_count"], 705)
+        self.assertEqual(rep["full_candidate_form_evaluations"], 16056)
+        self.assertEqual(rep["full_unique_generated_passphrases"], 14272)
+        promo = rep["promotion_accounting"]
+        self.assertEqual(promo["promoted_count"], 167)
+        self.assertEqual(promo["demoted_count"], 34)
+        self.assertEqual(promo["rejected_count"], 705)
+        self.assertEqual(promo["retained_historical_only_count"], 278)
+        self.assertEqual(
+            promo["transitions"],
+            {
+                "bounded->bounded": 243,
+                "bounded->core": 2,
+                "core->bounded": 34,
+                "core->core": 64,
+                "excluded->bounded": 161,
+                "excluded->core": 4,
+                "excluded->excluded": 705,
+            },
+        )
+        core_candidates = {e["candidate"] for e in rep["entries"] if e["class"] == "core"}
+        self.assertIn("SEED", core_candidates)
+        self.assertIn("IZLKESEEDQPPEN", core_candidates)
+        # The historical 648/650-candidate corpus is never merged or mutated:
+        # the two SEED leads and the 563 Phase-255 net-new candidates were
+        # classified, not written into extended_cipher_recheck.CURATED_FILES.
+        base = curated_candidate_corpus_audit.build(False)
+        self.assertEqual((base["candidate_count"], base["digest"]), (648, "2d233645ef49a141"))
+
+    def test_v2_bounded_promotion_backfill_scope_and_result(self):
+        candidates = curated_v2_bounded_promotion_backfill.net_new_bounded_candidates()
+        self.assertEqual(len(candidates), 136)
+        self.assertEqual(
+            curated_v2_bounded_promotion_backfill.candidate_list_digest(candidates),
+            "8db6659bc547569a",
+        )
+        self.assertEqual(len(curated_v2_bounded_promotion_backfill.CBC_FAMILY_VARIANTS), 44)
+        # Live sweep result, independently reproducible via --run: 6,327
+        # evaluations x 44 CBC-family variants x 4 blobs = 1,113,552
+        # decryptions, 0 hits. Not re-executed on every test run (~90s), same
+        # convention as excluded_wordlist_coverage_audit's --menu-gap-sweep.
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),

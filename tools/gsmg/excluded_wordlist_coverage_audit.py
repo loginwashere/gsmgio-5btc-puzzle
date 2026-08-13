@@ -57,6 +57,9 @@ COVERAGE = {
     "medium_curated_tier3_broad.txt": ("generated Tier 3", "literal_raw_key_material_audit.py via combined union", "Phase 164", "literal raw key only as a complete tier"),
     "safenet_luna_hsm_candidates.txt": ("dedicated exact list", "safenet_luna_hsm_audit.py", "Phase 116", "legacy/extended CBC, AES ECB, AES CFB/OFB/CTR, AES Key Wrap; newline forms"),
     "session_combined_for_chain.txt": ("medium Tier 2 input", "build_medium_curated_candidates.py", "Phases 90/144/164", "derived candidates: padded binary CBC/ECB, nopad windows, literal raw key"),
+    "curated_v2_core.txt": ("generated V2 registry output", "curated_candidate_registry.py", "Phase 256", "own dedicated V2 sweep and self-test, not this module's scope"),
+    "curated_v2_bounded.txt": ("generated V2 registry output", "curated_candidate_registry.py", "Phase 256", "own dedicated V2 sweep and self-test, not this module's scope"),
+    "curated_v2_full.txt": ("generated V2 registry output", "curated_candidate_registry.py", "Phase 256", "own dedicated V2 sweep and self-test, not this module's scope"),
 }
 
 MENU_GAP_FILES = (
@@ -173,7 +176,7 @@ def audit():
 def self_test():
     report = audit()
     scope = report["menu_gap_scope"]
-    assert report["excluded_wordlist_count"] == 23
+    assert report["excluded_wordlist_count"] == 26
     assert (scope["candidate_count"], scope["candidate_digest"]) == (
         EXPECTED_MENU_GAP_CANDIDATES, EXPECTED_MENU_GAP_DIGEST,
     )
@@ -192,7 +195,7 @@ def self_test():
     assert scope["concrete_decryptions"] == 1373040
     assert scope["net_new_scheduled_decryptions"] == 1184400
     assert scope["net_new_unique_passphrase_decryptions"] == 1099440
-    print("[*] self-test OK: 23-source coverage matrix and bounded 625-candidate menu-gap scope")
+    print("[*] self-test OK: 26-source coverage matrix and bounded 625-candidate menu-gap scope")
 
 
 def print_report(report):
