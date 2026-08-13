@@ -468,8 +468,20 @@ KDF_VARIANTS = [
 
 # cipher name -> (cryptography class, block/IV size in bytes). CBC mode's IV size
 # always equals the cipher's block size, so one table covers both.
-CIPHER_CLASSES = {"aes": algorithms.AES, "3des": algorithms.TripleDES}
-CIPHER_BLOCK_SIZES = {"aes": 16, "3des": 8}
+CIPHER_CLASSES = {
+    "aes": algorithms.AES,
+    "3des": algorithms.TripleDES,
+    "blowfish": algorithms.Blowfish,
+    "camellia": algorithms.Camellia,
+    "seed": algorithms.SEED,
+}
+CIPHER_BLOCK_SIZES = {
+    "aes": 16,
+    "3des": 8,
+    "blowfish": 8,
+    "camellia": 16,
+    "seed": 16,
+}
 
 # Broadened cipher/KDF coverage beyond this project's original AES+legacy-KDF-only
 # assumption -- found 2026-07-24 to be the strongest genuinely untested premise
@@ -498,6 +510,32 @@ EXTENDED_CIPHER_VARIANTS = [
     for cipher, key_len in (
         ("aes", 32), ("aes", 16), ("aes", 24),
         ("3des", 24), ("3des", 16), ("3des", 8),
+    )
+]
+
+# Historically plausible CBC cipher families in OpenSSL ``enc``'s named menu
+# that are implemented by this project's cryptography backend but were not
+# covered above. Kept separate and opt-in: this is a bounded menu-gap recheck,
+# not permission for every existing candidate sweep to grow by 20 variants.
+# OpenSSL's BF-CBC EVP uses a 128-bit key; Camellia mirrors AES's 128/192/256-bit
+# sizes; SEED uses 128 bits. Blowfish and SEED moved to OpenSSL 3's legacy
+# provider, but were ordinary ``enc`` functionality in the OpenSSL 1.1.x era
+# of the 2019 puzzle. SEED has a puzzle-specific lexical selector in the exact
+# authenticated Stage-0 output ``gsmg.io/theseedisplanted``.
+OPENSSL_MENU_GAP_CIPHER_VARIANTS = [
+    ("legacy", digest, cipher, key_len)
+    for digest in ("sha256", "md5", "sha1")
+    for cipher, key_len in (
+        ("blowfish", 16),
+        ("camellia", 16), ("camellia", 24), ("camellia", 32),
+        ("seed", 16),
+    )
+] + [
+    ("pbkdf2", ("sha256", 10000), cipher, key_len)
+    for cipher, key_len in (
+        ("blowfish", 16),
+        ("camellia", 16), ("camellia", 24), ("camellia", 32),
+        ("seed", 16),
     )
 ]
 
@@ -952,17 +990,43 @@ def aes_try_open_bytes(passwd: bytes, kdf_variants=None, blobs=None):
     key_len) form used by EXTENDED_CIPHER_VARIANTS -- see _normalize_variant()."""
     selected_kdfs = KDF_VARIANTS if kdf_variants is None else kdf_variants
     selected_blobs = BLOBS if blobs is None else blobs
-    for variant in selected_kdfs:
-        kdf_kind, kdf_param, cipher, key_len = _normalize_variant(variant)
+    normalized_kdfs = [_normalize_variant(variant) for variant in selected_kdfs]
+
+    # EVP_BytesToKey and PBKDF2 both produce one prefix-stable byte stream that
+    # is subsequently split at ``key_len``. Multiple cipher sizes under the
+    # same KDF/salt therefore need one maximum-length derivation, not one full
+    # derivation per variant. This matters especially for PBKDF2's 10,000
+    # iterations in the opt-in OpenSSL-menu closure.
+    max_derived_lengths = {}
+    for kdf_kind, kdf_param, cipher, key_len in normalized_kdfs:
+        group = (kdf_kind, kdf_param)
+        max_derived_lengths[group] = max(
+            max_derived_lengths.get(group, 0),
+            key_len + CIPHER_BLOCK_SIZES[cipher],
+        )
+    derived_cache = {}
+
+    for kdf_kind, kdf_param, cipher, key_len in normalized_kdfs:
         block = CIPHER_BLOCK_SIZES[cipher]
         for tag, (salt, ct) in selected_blobs.items():
             if len(ct) % block != 0 or not ct:
                 continue
-            if kdf_kind == "legacy":
-                key, iv = evp_bytes_to_key(passwd, salt, kdf_param, key_len, block)
-            else:
-                digest_name, iterations = kdf_param
-                key, iv = pbkdf2_bytes_to_key(passwd, salt, iterations, digest_name, key_len, block)
+            cache_key = (kdf_kind, kdf_param, salt)
+            material = derived_cache.get(cache_key)
+            if material is None:
+                derived_len = max_derived_lengths[(kdf_kind, kdf_param)]
+                if kdf_kind == "legacy":
+                    material, _ = evp_bytes_to_key(
+                        passwd, salt, kdf_param, derived_len, 0,
+                    )
+                else:
+                    digest_name, iterations = kdf_param
+                    material, _ = pbkdf2_bytes_to_key(
+                        passwd, salt, iterations, digest_name, derived_len, 0,
+                    )
+                derived_cache[cache_key] = material
+            key = material[:key_len]
+            iv = material[key_len:key_len + block]
             decryptor = Cipher(CIPHER_CLASSES[cipher](key), modes.CBC(iv)).decryptor()
             try:
                 pt = decryptor.update(ct) + decryptor.finalize()
@@ -1147,7 +1211,7 @@ def _self_test_extended_ciphers():
         ("legacy", "sha256", "3des", 8),
         ("pbkdf2", ("sha256", 10000), "aes", 32),
         ("pbkdf2", ("sha256", 10000), "3des", 24),
-    ]
+    ] + OPENSSL_MENU_GAP_CIPHER_VARIANTS
     for kdf_kind, kdf_param, cipher, key_len in checks:
         variant = (kdf_kind, kdf_param, cipher, key_len)
         block = CIPHER_BLOCK_SIZES[cipher]

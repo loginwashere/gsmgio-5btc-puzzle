@@ -38,6 +38,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from cb_common import (  # noqa: E402
     BLOBS,
     EXTENDED_CIPHER_VARIANTS,
+    OPENSSL_MENU_GAP_CIPHER_VARIANTS,
     QUARANTINED_BLOBS,
     aes_try_open,
     answer_forms,
@@ -117,9 +118,10 @@ def candidate_list_digest(candidates):
     return hashlib.sha256("\n".join(candidates).encode()).hexdigest()[:16]
 
 
-def sweep(candidates, newline_variants=True, blobs=None):
+def sweep(candidates, newline_variants=True, blobs=None,
+          kdf_variants=EXTENDED_CIPHER_VARIANTS):
     """Every candidate line, through answer_forms() x keystr_forms() x
-    EXTENDED_CIPHER_VARIANTS, against `blobs` (aes_try_open's BLOBS default,
+    `kdf_variants`, against `blobs` (aes_try_open's BLOBS default,
     unless the caller opts a quarantined target in -- see
     cb_common.QUARANTINED_BLOBS). Returns (attempts, hits)."""
     attempts = 0
@@ -128,7 +130,7 @@ def sweep(candidates, newline_variants=True, blobs=None):
         for form in answer_forms(candidate):
             for keystr in keystr_forms(form, newline_variants=newline_variants):
                 attempts += 1
-                result = aes_try_open(keystr, kdf_variants=EXTENDED_CIPHER_VARIANTS, blobs=blobs)
+                result = aes_try_open(keystr, kdf_variants=kdf_variants, blobs=blobs)
                 if result:
                     tag, body, kdf_label, key_len = result
                     hits.append({
@@ -151,6 +153,9 @@ def main():
                      help="also sweep cb_common.QUARANTINED_BLOBS (e.g. urlblob) "
                           "-- opt-in since their puzzle provenance is weaker than "
                           "the default BLOBS")
+    ap.add_argument("--openssl-menu-gaps", action="store_true",
+                    help="test only the bounded Blowfish-, Camellia-, and SEED-CBC "
+                         "variant set, rather than the earlier AES/3DES extensions")
     args = ap.parse_args()
 
     candidates = load_curated_candidates()
@@ -160,6 +165,8 @@ def main():
 
     blobs = {**BLOBS, **QUARANTINED_BLOBS} if args.include_quarantined else None
     active_blobs = blobs if blobs is not None else BLOBS
+    variants = (OPENSSL_MENU_GAP_CIPHER_VARIANTS
+                if args.openssl_menu_gaps else EXTENDED_CIPHER_VARIANTS)
 
     if args.self_test:
         assert len(candidates) > 500, (
@@ -169,14 +176,17 @@ def main():
         assert "salphaseion" in candidates, (
             "self-test FAILED: expected seed candidate 'salphaseion' not found"
         )
-        attempts, hits = sweep(candidates[:5], newline_variants=False, blobs=blobs)
+        attempts, hits = sweep(
+            candidates[:5], newline_variants=False, blobs=blobs,
+            kdf_variants=variants,
+        )
         assert attempts > 0, "self-test FAILED: sweep() produced zero attempts"
         print(f"[*] self-test OK ({attempts} attempts on 5 candidates, "
               f"{len(hits)} hits)")
         return
 
-    attempts, hits = sweep(candidates, blobs=blobs)
-    print(f"[*] {attempts:,} attempts across {len(EXTENDED_CIPHER_VARIANTS)} "
+    attempts, hits = sweep(candidates, blobs=blobs, kdf_variants=variants)
+    print(f"[*] {attempts:,} attempts across {len(variants)} "
           f"extended cipher/KDF variants x {len(active_blobs)} blobs "
           f"({', '.join(active_blobs)})")
     if not hits:
