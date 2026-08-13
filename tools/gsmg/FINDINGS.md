@@ -16368,7 +16368,7 @@ regression.
 39-entry page/letter inventory (`cosmic_duality_dropcap_inventory.py`,
 reconstructed from all 73 photos plus the Phase 259 pages) became available:
 applying the same formula to all 39 book-wide drop caps and concatenating by
-chapter reproduces the reported `VYVWXKALOH` / `YINJMNNJMV` / `IJSCNJVPL` /
+chapter reproduces the corrected `VYVWXKALOH` / `YINJMNNJMV` / `GHSQYJVPL` /
 `THYRRWWQWV` output exactly (independently re-derived with separately-
 written code, not the inventory module's own helpers), and neither `YANG`
 nor its reverse appears anywhere in the 39-letter concatenation. This is a
@@ -16378,6 +16378,14 @@ Chapter-2 entries used for the `YIN` hit itself were independently checked
 against the raw photographs; the inventory's other 36 letters are taken on
 its own internal consistency (self-test, and exact agreement with this
 session's photo-verified Chapter-2 entries) rather than re-photographed.
+
+**Inventory correction (2026-08-13):** a closer user review corrected
+Chapter 3 from `S80 T82 M84 D85 T86 C91 S93 Z94 F96` to
+`S78 T80 M84 P85 I86 C91 S93 Z94 F96`. Under the same transform, Chapter
+3 therefore reads `GHSQYJVPL`, not `IJSCNJVPL`. This correction does not
+affect Chapter 2's independently photo-verified `YIN`, and the corrected
+full output still contains neither `YANG` nor its reverse.
+
 The reported reverse/odd-even/column/concatenated reading tests and the
 other negative controls (page+letter, reversed subtraction, page mod 26,
 digit sums, gaps, parity, prime/composite) were not independently re-run.

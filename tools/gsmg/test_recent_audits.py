@@ -351,7 +351,7 @@ class CorrectedClaimTests(unittest.TestCase):
         }
         self.assertEqual(
             transformed,
-            {1: "VYVWXKALOH", 2: "YINJMNNJMV", 3: "IJSCNJVPL", 4: "THYRRWWQWV"},
+            {1: "VYVWXKALOH", 2: "YINJMNNJMV", 3: "GHSQYJVPL", 4: "THYRRWWQWV"},
         )
         full = "".join(transformed[c] for c in sorted(transformed))
         self.assertIn("YIN", full)

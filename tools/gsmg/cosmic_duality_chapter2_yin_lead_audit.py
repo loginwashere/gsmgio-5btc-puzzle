@@ -24,7 +24,7 @@ visual read.
 (self-consistent, and its own three Chapter-2 entries match this module's
 photo-verified page 48/50/55 W/O/O exactly): applying the same formula to
 all 39 book-wide drop caps and concatenating by chapter reproduces the
-reported `VYVWXKALOH` / `YINJMNNJMV` / `IJSCNJVPL` / `THYRRWWQWV` output
+reported `VYVWXKALOH` / `YINJMNNJMV` / `GHSQYJVPL` / `THYRRWWQWV` output
 exactly, and neither `YANG` nor its reverse appears anywhere in the
 39-letter concatenation. This is a logical/arithmetic re-derivation from the
 inventory's claimed letters, not a fresh photo-by-photo re-verification of

@@ -45,11 +45,11 @@ DROP_CAPS = (
     DropCap(2, 66, "A"),
     DropCap(2, 68, "T"),
     # Chapter 3
-    DropCap(3, 80, "S"),
-    DropCap(3, 82, "T"),
+    DropCap(3, 78, "S"),
+    DropCap(3, 80, "T"),
     DropCap(3, 84, "M"),
-    DropCap(3, 85, "D"),
-    DropCap(3, 86, "T"),
+    DropCap(3, 85, "P"),
+    DropCap(3, 86, "I"),
     DropCap(3, 91, "C"),
     DropCap(3, 93, "S"),
     DropCap(3, 94, "Z"),
@@ -70,10 +70,10 @@ DROP_CAPS = (
 EXPECTED_CHAPTER_SEQUENCES = {
     1: "TSAAAODTTD",
     2: "WOOTTTWBAT",
-    3: "STMDTCSZF",
+    3: "STMPICSZF",
     4: "HWHSTSTAWA",
 }
-EXPECTED_FULL_SEQUENCE = "TSAAAODTTDWOOTTTWBATSTMDTCSZFHWHSTSTAWA"
+EXPECTED_FULL_SEQUENCE = "TSAAAODTTDWOOTTTWBATSTMPICSZFHWHSTSTAWA"
 
 
 def chapter_sequence(chapter):
