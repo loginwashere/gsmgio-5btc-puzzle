@@ -56,13 +56,17 @@ Full table with G1–G5 gate detail:
 ## Highest-value missing evidence
 
 See [GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md) for the full,
-per-gap table. All three P0 gaps are now locally exhausted — each depends
+per-gap table. The remaining P0 gaps are locally exhausted — each depends
 entirely on new primary evidence, not further re-derivation from what is
 already on hand:
 
-- The physical *Cosmic Duality* book's pages 57–58 gatefold — the only
-  genuinely uninspected primary source for `matrixsumlist`'s operation
-  ([G-MSL-001](GSMG_OPEN_GAP_REGISTRY.md); `external`).
+- The physical *Cosmic Duality* book's pages 57–58 were photographed and
+  transcribed 2026-08-13 (Phase 259), closing the last genuinely
+  uninspected primary source for `matrixsumlist`'s operation — with a
+  negative result: no matrix/dimension/traversal content, only a
+  continuation of the Eve/goddess-worship narrative and a Black Madonna
+  sidebar. [G-MSL-001](GSMG_OPEN_GAP_REGISTRY.md) stays `Structural
+  checkpoint; parked`, now with its source reviewed rather than pending.
 - A source reconciling FAED's independently-best `{g,i}` escape pair with
   the Architect-mirror-predicted `{h,e}` pair
   ([G-ESC-001](GSMG_OPEN_GAP_REGISTRY.md); `parked` — the page-markup branch

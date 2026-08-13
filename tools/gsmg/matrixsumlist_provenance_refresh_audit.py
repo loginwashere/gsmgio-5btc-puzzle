@@ -249,7 +249,7 @@ def self_test(
         "phase_matrix_count": 0,
         "phase_choice_count": 0,
         "book_matrix_phrase_hits": 0,
-        "book_has_57_58_gap": True,
+        "book_has_57_58_gap": False,
         "gap_screenshot": str(BOOK_GAP_SCREENSHOT),
         "gap_screenshot_sha256": BOOK_GAP_SCREENSHOT_SHA256,
     }

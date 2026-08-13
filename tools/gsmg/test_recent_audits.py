@@ -67,6 +67,7 @@ import neo_smith_equation_audit
 import native_favicon_shadow_audit
 import onchain_op_return_provenance_audit
 import page_syntax_house_style_audit
+import phase1_icon_symbol_layer_audit
 import phase32_column_calibration_audit
 import post_yinyang_dataflow_audit
 import post_phase217_consistency_audit
@@ -100,6 +101,17 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_phase1_icon_symbol_layer_scope(self):
+        phase1_icon_symbol_layer_audit.self_test()
+        report = phase1_icon_symbol_layer_audit.scope_report()
+        self.assertEqual(
+            (report["candidate_count"], report["candidate_digest"]),
+            (16, "11a7607d7b59242a"),
+        )
+        self.assertEqual(report["unique_passphrases"], 504)
+        self.assertEqual(report["effective_operations"], 282240)
+        self.assertEqual(report["raw_key_attempts"], 220)
+
     def test_v2_residual_oracle_backfill_scope(self):
         report = curated_v2_residual_oracle_backfill.scope_report()
         self.assertEqual(

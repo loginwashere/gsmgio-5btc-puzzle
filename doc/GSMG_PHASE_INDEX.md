@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **258** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **260** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -274,3 +274,5 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 255 | P255 | 2026-08-13 | excluded-wordlist coverage matrix | six small menu-gap lists closed negative | [link](../tools/gsmg/FINDINGS.md#phase-255----excluded-wordlist-coverage-matrix-six-small-menu-gap-lists-closed-negative-2026-08-13) | [GSMG_EXCLUDED_WORDLIST_COVERAGE_MATRIX](GSMG_EXCLUDED_WORDLIST_COVERAGE_MATRIX.md) |
 | 256 | P256 | 2026-08-13 | candidate-level V2 registry | core/bounded/excluded classification replaces file-level tiers | [link](../tools/gsmg/FINDINGS.md#phase-256----candidate-level-v2-registry-coreboundedexcluded-classification-replaces-file-level-tiers-2026-08-13) | [GSMG_V2_CANDIDATE_REGISTRY](GSMG_V2_CANDIDATE_REGISTRY.md) |
 | 257 | P257 | 2026-08-13 | V2 residual oracle backfill | 21-candidate targeted closure, zero hits | [link](../tools/gsmg/FINDINGS.md#phase-257----v2-residual-oracle-backfill-21-candidate-targeted-closure-zero-hits-2026-08-13) | [GSMG_V2_RESIDUAL_ORACLE_BACKFILL](GSMG_V2_RESIDUAL_ORACLE_BACKFILL.md) |
+| 258 | P258 | 2026-08-13 | Phase-1 icon symbol layer | “opposites attract” confirmed as instruction/illustration, no second key | [link](../tools/gsmg/FINDINGS.md#phase-258----phase-1-icon-symbol-layer-opposites-attract-confirmed-as-instructionillustration-no-second-key-2026-08-13) | [GSMG_PHASE1_ICON_SYMBOL_LAYER_AUDIT](GSMG_PHASE1_ICON_SYMBOL_LAYER_AUDIT.md) |
+| 259 | P259 | 2026-08-13 | physical Cosmic Duality book pages 57-58 recovered | G-MSL-001's last uninspected source reviewed, negative | [link](../tools/gsmg/FINDINGS.md#phase-259----physical-cosmic-duality-book-pages-57-58-recovered-g-msl-001s-last-uninspected-source-reviewed-negative-2026-08-13) | [GSMG_COSMIC_DUALITY_UNTAKEN_PATHS](GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md) |

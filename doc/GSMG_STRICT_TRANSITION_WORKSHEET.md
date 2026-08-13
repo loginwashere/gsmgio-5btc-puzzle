@@ -144,7 +144,7 @@ community accounts is not a reopening condition.
 
 | Candidate transition | G1 source | G2 input | G3 operation | G4 output | G5 controls | Current disposition | Reopen trigger |
 |---|---|---|---|---|---|---|---|
-| 31-character DBBI selection -> proposed `matrixsumlist` consumer | **PARTIAL**: the selection and following macro token are real, but their operand relationship is not | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no source binds the input to dimensions, traversal, values, and sum/index semantics | **FAIL**: no next-stage artifact; its broad-word cluster misses the promotion threshold (`p=0.005469995`) | **PASS** for disposition: seven G3 fields remain unbound and many bounded consumers are negative | **Structural checkpoint; parked (Phase 236)** | Primary evidence fixing the complete operation, including the missing book pages 57–58 |
+| 31-character DBBI selection -> proposed `matrixsumlist` consumer | **PARTIAL**: the selection and following macro token are real, but their operand relationship is not | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no source binds the input to dimensions, traversal, values, and sum/index semantics (book pages 57–58, the only remaining uninspected primary source, reviewed Phase 259: no matrix content, 0/7 G3 fields fixed) | **FAIL**: no next-stage artifact; its broad-word cluster misses the promotion threshold (`p=0.005469995`) | **PASS** for disposition: seven G3 fields remain unbound and many bounded consumers are negative | **Structural checkpoint; parked (Phase 236, reviewed Phase 259)** | Primary evidence fixing the complete operation — a creator clue, recovered guide step, or pre-cutoff code artifact; the book's pages 57–58 no longer qualify as unexamined |
 | Historical 14x14 DBBI row sums -> `IZLKESEEDQPPEN` | **PASS**: recovered Telegram guide | **PASS**: exact matrix/token chunks | **PASS** for historical row-major sums | **FAIL**: non-language; opens no target | **PASS**: directions and Caesar family calibrated; `p≈0.119`/`0.713` | **Closed negative** | New clue selecting a distinct consumer, not another direction |
 | Prime lists -> `401/400/73` | **PARTIAL**: exact prime walk and literal list grammar, but alternative to historical guide | **PASS**: 14 blue, 8 yellow, 1 FEFE lists | **PASS**: partition and sums are fixed | **FAIL**: no instruction/key or downstream consumer | **PASS**: fixed-profile rate documented; FE normalization shown dependent | **Structural checkpoint only** | Explicit clue consuming the three sums |
 | Decimal matrix -> `[23,16,7]` -> Architect words | **PASS** for matrix sums and sourced dialogue | **PASS**: fixed matrix/list and scene | **PARTIAL**: word indexing fixed; beginnings/endings and polarity are not. Phase 232's bounded `partial_mirror9` (B↔H/D↔F/C↔G) audit found `HYE -> BYE` as the unique dictionary output (5/48 `BUT` rows; 36/35,904 stable triples; 1/6 fixed-word permutations). Phase 236 adds that only selected `BOTH`, among the three eligible B-initial words, has mirror endpoints B/H. This is real structural evidence, not a creator-selected operation | **PARTIAL**: `CIAO BELLA O` is authenticated page text; the `BYE -> Bella Ciao` association has genuine historical community precedent; their linkage is structurally supported, but not creator-selected. Phase 234 confirmed neither creator corpus ever selects CIAO, BELLA, or BYE as the yin-yang state. Still no authenticated consumer | **PASS**: associated FAED `{h,e}` model negative; direct-password checks for the CIAO/BELLA and KEY/NOTE/SELF families were negative (Phases 234-235); Phase 237 closed their legacy `pad28` checkerboard-keyword gap against P32TRAILING/URLBLOB (2,160 decoder configurations, 171,936 blob/KDF decryptions, zero strong or weak hits) | **Recognition checkpoint; parked** | Clue selecting beginnings/endings or B↔H operation — approached structurally by Phases 232/236, but remains evidentially unmet: no creator clue selects this operation or this output |
@@ -205,10 +205,16 @@ The 2026-08-09 provenance refresh is recorded in
 [doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md](GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md). It checked the full Telegram
 export, the newest incremental export, the recovered guide neighborhood, a
 2024 community code attachment, the walkthrough history, and the transcribed
-*Cosmic Duality* book. None fixes G3. The only genuine uninspected source in
-that set is the physical book's pages 57–58 gatefold. A source-only Telegram
-request, with explicit reply-classification rules, is prepared in that report;
-posting it does not change any gate until a qualifying artifact is recovered.
+*Cosmic Duality* book. None fixes G3. At that time the only genuine
+uninspected source in that set was the physical book's pages 57–58 (bound
+past the previously-photographed spread). Phase 259 (2026-08-13) closes that
+gap: photographed and transcribed, they contain page 57 (a full-page repeat
+of the already-known Franz Stuck "Sin" plate) and page 58 (Eve/Tertullian/
+Council-of-Mâcon narrative continuation plus a Black Madonna sidebar) — no
+matrix, dimension, or traversal content. G3 remains 0/7 fixed. A source-only
+Telegram request, with explicit reply-classification rules, is prepared in
+that report; posting it does not change any gate until a qualifying artifact
+is recovered.
 
 The page-syntax fallback was also checked. Binary ASCII `matrixsumlist` between
 DBBI/FAED exactly parallels binary ASCII `enter` between the two AES pieces,

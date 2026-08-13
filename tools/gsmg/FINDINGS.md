@@ -16079,3 +16079,110 @@ and rationale narrow.
 current direct passphrase-oracle coverage across CBC, ECB, stream, and Key
 Wrap. No broad V2 rerun is needed. Full scope and reproduction:
 [GSMG_V2_RESIDUAL_ORACLE_BACKFILL](../../doc/GSMG_V2_RESIDUAL_ORACLE_BACKFILL.md).
+
+## Phase 258 -- Phase-1 icon symbol layer: “opposites attract” confirmed as instruction/illustration, no second key (2026-08-13)
+
+Reopened the exact Telegram JPEG from message `670`
+(`photo_15@08-05-2019_17-54-34.jpg`, 189x323, SHA-256
+`8d0f0e9346d78f39da0e5a2d2fb0b84394ede34d965468e8d9bb2c165e7db16e`)
+to address the symbols left over after Phase 71's song-name solution.
+Maintained the provenance boundary: Alex added the montage borders and wrote
+“Not sure if the sequence is right ..” (`672`/`673`), so only the eight
+source PNGs—not the four-row layout—are creator evidence.
+
+The source symbols form three natural contrasts: closed/open lock, `+/-`,
+and banking/crypto. The red/blue split supplies conventional magnet-pole
+imagery. This positively explains the song's Phase-One “opposites attract”
+line and why pieces from the two groups must be brought together. It does not
+produce a second text matching: the banking/crypto and closed/open semantic
+pairs are crossed by the word solution (`WAR`+`NING`, `CRYPTO`+`LO`+`GIC`),
+while the plus/minus pair merely accompanies the already-consumed `DIG I`+`T`.
+
+Forensics close the proposed hidden channel. The eight PNGs are only
+506–1,642 bytes; two are RGB and six RGBA, but every RGBA alpha byte is 255.
+Blue `#3F48CC` and red `#ED1C24` are ordinary Paint colors and are not RGB or
+hue complements. The prior container/LSB/overlap/band-width negatives stand.
+
+A narrowly bounded candidate set (exact lyric plus natural labels of the
+visible contrasts: magnet/polarity, signs, colors, lock states, and
+banking/crypto) contained 16 candidates, digest `11a7607d7b59242a`, and 504
+unique normalized/newline passphrases. The complete current four-blob
+CBC/ECB/stream/Key-Wrap menu performed 282,240 effective operations with
+**zero hits**; 220 literal raw-key attempts were also **zero-hit**. These 16
+strings are outside V2, but are now directly covered without pretending that
+an already-consumed Stage-1 illustration is a newly selected endgame output.
+
+**Verdict:** positive interpretive layer, negative second-payload/key claim.
+The most defensible new noun is `magnet`, but no creator-authored step selects
+it as output. Full provenance, artifact facts, scope, and reproduction:
+[GSMG_PHASE1_ICON_SYMBOL_LAYER_AUDIT](../../doc/GSMG_PHASE1_ICON_SYMBOL_LAYER_AUDIT.md).
+
+## Phase 259 -- physical Cosmic Duality book pages 57-58 recovered: G-MSL-001's last uninspected source reviewed, negative (2026-08-13)
+
+The user photographed and supplied both pages of the *Cosmic Duality:
+Mysteries of the Unknown* book's long-standing physical gap. Since the
+2026-07-15 transcription-gap audit, `wordlists/gsmg/cosmic_duality_book_full_text.txt`
+jumped directly from `## p.56` to `## p.59`; the worksheet, the open-gap
+registry (`G-MSL-001`), and `GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md` all
+named these two pages as the only genuinely uninspected primary source for
+the 31-character DBBI selection's `matrixsumlist` consumer.
+
+**Page 57** is a full-page plate reprint of Franz Stuck's 1893 painting
+"Sin" -- already captioned on p.56 (Eve with a serpent coiled about her
+shoulders). No body text of its own.
+
+**Page 58** continues p.56's Eve narrative and adds a sidebar, "The Mystery
+of the Black Madonna": dark-skinned Madonna images across European
+shrines/crypts/cathedrals, explained as renamed pre-Christian Mother
+Goddess icons (e.g. Our Lady of Czestochowa, "queen of Poland" since 1656,
+later a Solidarity-movement badge). Main text: Tertullian's "Do you not
+know that each of you is also an Eve? ... you are the devil's gateway";
+Adam as an "almost equally poor showing," his defects "remedied" by
+Abraham/Isaac/Jacob; the sixth-century Council of Macon (585, 59 bishops)
+voting that women have souls by a majority of only one vote; a closing
+mention of the Gnostic Christians "who believed that God could be
+experienced directly through personal [revelation]" -- which is exactly
+where the already-transcribed p.59 entry ("Reality of the Rulers") picks
+up, confirming the two pages fit seamlessly and this was a photography gap,
+not a bound-in gatefold as the earlier indirect (56-flows-to-59) observation
+had hypothesized.
+
+**No matrix, dimension, traversal, aggregation, or numeric content of any
+kind appears on either page.** Checked directly, not inferred: neither page
+contains "matrix," a grid/table, row/column language, or any number besides
+ordinary historical dates and page-index citations. `G-MSL-001`'s seven G3
+fields (dimensions, placement, traversal, value mapping, aggregation,
+serialization, target) remain 0/7 fixed after review.
+
+Both pages were transcribed into the book file in the file's existing
+condensed-summary style (matching `## p.56`/`## p.59`'s convention, not a
+verbatim OCR). Every consumer with a pinned file digest was updated and
+re-run, not just the constant: `cosmic_duality_book_second_riddle_audit.py`
+(sha256 `d9aff68ab6666eb46155867b0b9c62e13c033e30aea3bed6e3bbbbc6345efd0e`;
+hyphenated-token/unknown-token counts recomputed to 149/699/374/195; the
+actual security-relevant check -- no `-king`/`-queen` hyphenated riddle
+pairing anywhere in the book, matching the solved 3.2.2 `fubcd-king &
+oracle-queen` construction -- still holds with the new content included),
+`yinyang_cosmic_phase_label_audit.py` (same file digest, self-test re-run
+clean), `matrixsumlist_provenance_refresh_audit.py` (`book_has_57_58_gap`
+flipped `True` -> `False`; full self-test re-run against the live Telegram
+export, clean), `telegram_matrix_sum_passage_audit.py` (book phrase-hit
+counts confirmed still 0), and `prefix_boundary_sweep.py` (letter-count
+floor, unaffected). `yinyang_artifact_inventory_audit.py`'s book-hash
+constant and stale "except physical pages 57-58" provenance string were
+also corrected, though that script itself isn't part of the canonical suite
+(it depends on a companion-repo file this environment doesn't have).
+
+No new candidate material was added to any wordlist: neither page contains
+a creator quote, an exact numeric match to an existing puzzle artifact, or
+a hyphenated-riddle-style construction -- the same bar this project has
+applied to the rest of the book's thematic prose throughout Phases 7, 44,
+83-90, and 164.
+
+**Verdict:** `G-MSL-001` stays **Structural checkpoint; parked** -- the
+finding does not change, but its evidentiary basis does: the last
+genuinely uninspected primary source named in the worksheet, the open-gap
+registry, and the provenance-refresh report is now reviewed, not merely
+pending. `GSMG_STRICT_TRANSITION_WORKSHEET.md`, `GSMG_OPEN_GAP_REGISTRY.md`,
+and `GSMG_HOME.md` are updated accordingly; the reopen trigger for this row
+no longer names these two pages.

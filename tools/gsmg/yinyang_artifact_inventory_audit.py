@@ -38,7 +38,7 @@ EXPECTED_FILE_HASHES = {
     "rabbit_image": "5e8d84b88f8f829428df5d2a8bf36c7268346f169b799ac7570b6223990d204f",
     "architect_pdf": "2b9d43c9bb32fe85b1ed7651b095855e6ea7a25a236853d7823ea92b211d0db4",
     "salphaseion_page": "b13cbc5c2935dc3e9ff8bf71681f2ef61317fefdce04159129877244a92a3947",
-    "book_ocr": "1e462c4afb5807357aeed84a8a80232019fc41813e3441b71e25a1af535f9a7f",
+    "book_ocr": "d9aff68ab6666eb46155867b0b9c62e13c033e30aea3bed6e3bbbbc6345efd0e",
     "book_cover": "3a9b0a6ecacef83e1ef9f688303105570b3dcae95fd82be75f1fcbd2f5fddd04",
     "guide_one": "475456f9ecf8fd56ef6247f081ba8ee0796eef3f6ed3be0ca01c4a5ee0bfb85a",
     "guide_two": "efdf08b8268f883eafb136a5a37a9e04d236374ebcf95900f71b99d0c1172671",
@@ -494,7 +494,7 @@ def build_inventory(export_dir=DEFAULT_EXPORT_DIR):
             None,
             "Creator-confirmed clue artifact, but no operation reaches it from lastwords",
             True,
-            "creator-confirmed book-cover lead; retained OCR complete except physical pages 57-58",
+            "creator-confirmed book-cover lead; retained OCR complete, including previously-missing physical pages 57-58 (recovered 2026-08-13)",
             [
                 "complete retained-page OCR keyword sweep",
                 "book-motivated transforms",

@@ -38,7 +38,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
 
 BOOK_PATH = REPO_ROOT / "wordlists/gsmg/cosmic_duality_book_full_text.txt"
-EXPECTED_BOOK_SHA256 = "1e462c4afb5807357aeed84a8a80232019fc41813e3441b71e25a1af535f9a7f"
+EXPECTED_BOOK_SHA256 = "d9aff68ab6666eb46155867b0b9c62e13c033e30aea3bed6e3bbbbc6345efd0e"
 DICTIONARY_PATHS = (
     Path("/usr/share/dict/american-english"),
     Path("/usr/share/dict/british-english"),
@@ -130,22 +130,23 @@ def audit():
 def self_test():
     report = audit()
     assert report["book_sha256"] == EXPECTED_BOOK_SHA256
-    assert report["hyphenated_token_count"] == 141
-    assert report["unknown_token_count"] == 371 or report["unknown_unique_count"] == 371
+    assert report["hyphenated_token_count"] == 149
+    assert report["unknown_token_count"] == 699
+    assert report["unknown_unique_count"] == 374
     assert report["unknown_singleton_count"] == 195
     assert report["direct_term_counts"]["board"] == 0
     assert report["direct_term_counts"]["chess"] == 0
     assert report["direct_term_counts"]["checker"] == 0
     assert report["direct_term_counts"]["king"] == 5
-    assert report["direct_term_counts"]["queen"] == 2
+    assert report["direct_term_counts"]["queen"] == 3
     # Every king/queen occurrence is ordinary historical/mythological prose,
     # never hyphenated into a fubcd-king-style riddle pairing.
     for term, contexts in report["king_queen_context"].items():
         for context in contexts:
             assert f"-{term}" not in context.lower()
     print(
-        "[*] self-test OK: book provenance hash, 141 hyphenated tokens, "
-        "371 unknown tokens (195 singleton), zero board/chess/checker hits"
+        "[*] self-test OK: book provenance hash, 149 hyphenated tokens, "
+        "699 unknown tokens/374 unique (195 singleton), zero board/chess/checker hits"
     )
 
 
