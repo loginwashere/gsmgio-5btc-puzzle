@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **260** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **261** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -276,3 +276,4 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 257 | P257 | 2026-08-13 | V2 residual oracle backfill | 21-candidate targeted closure, zero hits | [link](../tools/gsmg/FINDINGS.md#phase-257----v2-residual-oracle-backfill-21-candidate-targeted-closure-zero-hits-2026-08-13) | [GSMG_V2_RESIDUAL_ORACLE_BACKFILL](GSMG_V2_RESIDUAL_ORACLE_BACKFILL.md) |
 | 258 | P258 | 2026-08-13 | Phase-1 icon symbol layer | “opposites attract” confirmed as instruction/illustration, no second key | [link](../tools/gsmg/FINDINGS.md#phase-258----phase-1-icon-symbol-layer-opposites-attract-confirmed-as-instructionillustration-no-second-key-2026-08-13) | [GSMG_PHASE1_ICON_SYMBOL_LAYER_AUDIT](GSMG_PHASE1_ICON_SYMBOL_LAYER_AUDIT.md) |
 | 259 | P259 | 2026-08-13 | physical Cosmic Duality book pages 57-58 recovered | G-MSL-001's last uninspected source reviewed, negative | [link](../tools/gsmg/FINDINGS.md#phase-259----physical-cosmic-duality-book-pages-57-58-recovered-g-msl-001s-last-uninspected-source-reviewed-negative-2026-08-13) | [GSMG_COSMIC_DUALITY_UNTAKEN_PATHS](GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md) |
+| 260 | P260 | 2026-08-13 | Cosmic Duality title page's C/D initials | pixel-confirmed miniature yin-yang glyphs, Roman CD=400 independently echoes the yellow prime sum | [link](../tools/gsmg/FINDINGS.md#phase-260----cosmic-duality-title-pages-cd-initials-pixel-confirmed-miniature-yin-yang-glyphs-roman-cd400-independently-echoes-the-yellow-prime-sum-2026-08-13) | [GSMG_COSMIC_DUALITY_UNTAKEN_PATHS](GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md) |

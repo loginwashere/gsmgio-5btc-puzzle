@@ -22,6 +22,7 @@ import curated_candidate_corpus_audit
 import curated_candidate_registry
 import curated_v2_bounded_promotion_backfill
 import curated_v2_residual_oracle_backfill
+import cosmic_duality_title_initials_yinyang_audit
 import ciao_selection_coverage_audit
 import cosmic_raw_digest_checkpoint_audit
 import creator_feasibility_envelope_audit
@@ -275,6 +276,33 @@ class CorrectedClaimTests(unittest.TestCase):
         # evaluations x 44 CBC-family variants x 4 blobs = 1,113,552
         # decryptions, 0 hits. Not re-executed on every test run (~90s), same
         # convention as excluded_wordlist_coverage_audit's --menu-gap-sweep.
+
+    @unittest.skipUnless(
+        cosmic_duality_title_initials_yinyang_audit.DEFAULT_TITLE_PAGE.exists()
+        and cosmic_duality_title_initials_yinyang_audit.DEFAULT_COVER.exists(),
+        "user's local book title-page/cover screenshots are unavailable",
+    )
+    def test_cosmic_duality_title_initials_yinyang(self):
+        report = cosmic_duality_title_initials_yinyang_audit.analyze()
+        self.assertEqual(
+            report["title_page_sha256"],
+            cosmic_duality_title_initials_yinyang_audit.EXPECTED_TITLE_PAGE_SHA256,
+        )
+        self.assertEqual(
+            report["cover_sha256"],
+            cosmic_duality_title_initials_yinyang_audit.EXPECTED_COVER_SHA256,
+        )
+        self.assertGreater(report["cosmic_word_gold_pixel_count"], 0)
+        self.assertGreater(report["duality_word_gold_pixel_count"], 0)
+        self.assertEqual(report["gold_outside_either_initial_count"], 0)
+        self.assertEqual(report["cover_title_gold_pixel_count"], 0)
+        self.assertEqual(report["roman_cd"], 400)
+        self.assertEqual(report["roman_dc"], 600)
+        self.assertEqual(report["hex_cd"], 205)
+        self.assertEqual(report["ascii_sum_cd"], 135)
+        self.assertEqual(report["a1z26_sum_cd"], 7)
+        self.assertEqual(report["fitted_sums"], {"B": 401, "Y": 400, "F": 73})
+        self.assertTrue(report["cd_matches_yellow_sum"])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists(),
