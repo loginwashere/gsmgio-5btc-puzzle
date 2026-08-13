@@ -680,9 +680,28 @@ deferred until a candidate earns them:
    only the exact `(7,193,108)` difference/red-channel 7; correct the DNA byte
    count and the inconsistent `NIQ` mapping.
 
-**Ranked queue complete as of Phase 207.** Every item above is verified,
-closed, or explicitly retained as a recognition-only hypothesis; nothing on
-this list remains open. Phase 208 (point 25) ran one unranked supplementary
-check — border/raster readings of the 14x14 grid — and also closed negative.
-No first-piece pixel-data idea currently selects an oracle test; any further
-work here needs a new external clue, not another internal-structure sweep.
+**22 of 25 points dispositioned as of Phase 208** (verified structural fact,
+audited and rejected/parked, or — for point 10 — a followed research-strategy
+recommendation rather than a testable hypothesis). Phase 208 (point 25) ran
+one unranked supplementary check — border/raster readings of the 14x14
+grid — and closed negative. **Three points still lack the specific checks
+they themselves proposed and remain genuinely open:**
+
+- **Point 7** — `254` and `56` have never been added to
+  `numeric_coincidence_triage.py`'s registry (still the original 20 values);
+  the proposed pairwise sweep including them has not run.
+- **Point 8** — the literal 14x14 ink-matrix row/column popcounts remain
+  untested; Phase 200 verified a different, separate matrix (the `#383838`
+  2x11 shadow-count grid), not this one.
+- **Point 15** — no dedicated audit exists for `G` as a secp256k1
+  generator/operator anchor. Phase 198 checked only the narrower
+  `{1,4,21} -> ggn` distinctiveness question (point 22) and correctly parked
+  it; point 15's broader shadow-stream/coefficient proposals were not
+  exhausted by that audit.
+
+Several already-audited points still have unselected consumers (`FF67`,
+`KIT`, RGB difference `(7,193,108)`, `BaTcH`, `Ce/Fe`), but those are
+properly parked pending an external clue, not missing computations — unlike
+points 7, 8, and 15 above. No first-piece pixel-data idea currently selects
+an oracle test; any further work here needs either a new external clue or
+the three targeted audits above, not another internal-structure sweep.
