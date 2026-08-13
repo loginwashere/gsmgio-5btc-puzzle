@@ -16603,3 +16603,70 @@ passwords" is now closed negative. P32TRAILING remains open with no known
 password. Further pursuit of this specific thread would require either a new
 selector for which seven values to combine, or abandoning the "reuse Phase
 3's construction" framing entirely.
+
+## Phase 267 -- Full Phase 2/3/3.2 decrypted-text sentence sweep against all four blobs: 48 candidates, 2,196 key materials, 0 hits (2026-08-13)
+
+Phase 265 tested only a hand-picked subset of the Phase 3.2 monologue; Phase
+266 tested only reuse of Phase 3's seven password parts. Neither covers the
+much larger body of ordinary prose in this same decrypted chain: the Phase 2
+result, the Phase 3 result that leads into 3.2, and the rest of the Phase
+3.2 Architect monologue. This closes that gap with a non-cherry-picked
+sweep: every sentence, split mechanically (`.`/`?`/`!`) rather than hand-
+selected, from all three decrypted texts.
+
+The Beaufort-decoded Architect speech has no punctuation at all in the
+README -- classical-cipher decodes typically drop it -- so a punctuation
+split alone would have silently collapsed the entire ~1,000-word block
+(exactly the section with "source codes"/"prime basics"/"23 ciphers") into
+one candidate. Caught this before it produced a false "exhaustive" claim:
+the self-test's own candidate-count assertion failed first (30 instead of
+the expected 40+), which is what surfaced the bug. Fixed by splitting that
+block on its own original README line breaks instead -- still a mechanical,
+source-defined boundary, just a different one dictated by the absence of
+punctuation.
+
+`phase3_chain_full_text_p32_sweep_audit.py` re-reads README.md directly in
+its self-test (five anchor strings checked live, not retyped from memory)
+and produces 48 deduplicated candidates -- 30 from punctuation-split
+Phase 2/Phase 3/Phase 3.2-plain text, 18 more from the Architect speech's
+own lines. Run through the standard oracle (case/alpha-only forms, SHA-256
+and double-SHA-256 hex, newline variants -- 2,196 unique key materials)
+against SALPH/COSMIC/P32TRAILING/URLBLOB. **0 hits.**
+
+**Verdict:** the entire Phase 2/3/3.2 decrypted-text chain is now exhausted
+as a standard-passphrase source at the sentence level, for all four blobs.
+Combined with Phase 265/266, this closes the readily-available P32 password
+material in this puzzle's own solved-chain prose. P32TRAILING remains open.
+
+## Phase 268 -- X2SH4Y0QB15's own text (literal, substituted, coordinate, and three reversal scopes) against all four blobs: 24 candidates, 588 key materials, 0 hits (2026-08-13)
+
+A distinct hypothesis from Phase 265-267: X2SH4Y0QB15 sits in the Phase 2
+decrypted text, explicitly flagged "unclear how to use" and bypassed by the
+canonical Phase 2->3 solve. The monologue's "RETURN TO THE SOURCE CODES...
+THE CODE YOU HOPEFULLY CARRY" line reads as a possible pointer back to this
+earlier unconsumed "code." Weaker precedent than Phase 265/266 (not
+narratively adjacent to P32), tested because it's cheap, bounded, and
+disclosed.
+
+Candidate family: literal source text (3 forms), numerically-substituted
+text using the already-established S=32/H=-42/B=-16/Q=82 (3 forms),
+coordinate-serialized text (2 forms), and three additional "worst gear" =
+reverse scopes beyond plain character reversal -- whole-token-sequence
+reversal, per-row reversal (X/Y rows reversed independently, label first),
+and coordinate-pair X/Y swap (turns `(4,15)` into `(15,4)`). All 12 base
+forms are also character-reversed on top, for 24 total.
+
+Checked directly against both raw Telegram exports before trusting a
+solver's claim about it: a 2025 repost (message 38301, "k1ng") appends
+eight literal `\b` text characters after "worst gear.", but the earliest
+preserved 2020 repost (message 2834, Legik, 2020-03-24) does not -- so
+those are not treated as authenticated puzzle bytes here.
+
+`x2sh4y0qb15_p32_candidate_audit.py`: 24 candidates, 588 unique key
+materials, full standard oracle against all four blobs. **0 hits.**
+
+**Verdict:** the bounded, disclosed X2SH4Y0QB15-as-P32-password family is
+exhausted. This does not resolve whether X2SH4Y0QB15 has any intended use
+at all (it may simply be an unconsumed side-riddle, as the earlier
+Decentraland-coordinate investigation found no creator selector for it
+either) -- only that this specific route to P32 is closed.

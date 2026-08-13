@@ -78,6 +78,7 @@ import promised_standalone_audit
 import salphaseion_urlscan_history_audit
 import prime_sum_fefe_mask_composition_audit
 import phase32_monologue_residual_audit
+import phase3_chain_full_text_p32_sweep_audit
 import phase3_sevenpart_p32_reuse_audit
 import remaining_structural_avenues_audit
 import roman_rail_prime_sum_audit
@@ -100,6 +101,7 @@ import telegram_yellow_blue_matrix_direction_audit
 import triangular_matrixsumlist_audit
 import urlblob_keywrap_backfill
 import visible_referent_delta_audit
+import x2sh4y0qb15_p32_candidate_audit
 import yinyang_cosmic_phase_label_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
@@ -155,6 +157,48 @@ class CorrectedClaimTests(unittest.TestCase):
             hashlib.sha256(concat.encode()).hexdigest(),
             "1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5",
         )
+
+    def test_phase3_chain_full_text_p32_sweep_negative(self):
+        phase3_chain_full_text_p32_sweep_audit.self_test()
+        report = phase3_chain_full_text_p32_sweep_audit.audit()
+        self.assertEqual(report["candidate_count"], 48)
+        self.assertEqual(report["hits"], [])
+        candidates = report["candidates"]
+        self.assertTrue(any("keymakers" in c for c in candidates))
+        self.assertTrue(any("merovingian" in c.lower() for c in candidates))
+        self.assertTrue(any("SIXTEEN ENCRYPTIONS" in c for c in candidates))
+        self.assertTrue(any("CIAO BELLA O" in c for c in candidates))
+
+    def test_x2sh4y0qb15_p32_candidate_negative(self):
+        x2sh4y0qb15_p32_candidate_audit.self_test()
+        report = x2sh4y0qb15_p32_candidate_audit.audit()
+        self.assertEqual(report["candidate_count"], 24)
+        self.assertEqual(report["hits"], [])
+        # Independent check of the backspace-provenance claim: the earliest
+        # 2020 repost lacks the trailing \b's a 2025 repost has.
+        import json
+        from pathlib import Path
+
+        def flatten(value):
+            if isinstance(value, str):
+                return value
+            return "".join(
+                item if isinstance(item, str) else item.get("text", "")
+                for item in value
+            )
+
+        export_path = Path(
+            "/home/loginwashere/Downloads/Telegram Desktop/"
+            "ChatExport_2026-07-26/result.json"
+        )
+        if export_path.exists():
+            payload = json.loads(export_path.read_text(encoding="utf-8"))
+            messages = {m["id"]: m for m in payload["messages"]}
+            earliest_text = flatten(messages[2834]["text"])
+            self.assertTrue(earliest_text.endswith("worst gear."))
+            self.assertNotIn("\\b", earliest_text)
+            later_text = flatten(messages[38301]["text"])
+            self.assertEqual(later_text.count("\\b"), 8)
 
     def test_roman_rail_prime_sum_bounded_family(self):
         roman_rail_prime_sum_audit.self_test()
