@@ -153,6 +153,11 @@ one global operation -- reverse the complete character stream -- and produces
 one standard geographic coordinate. The Decentraland reading changes its
 matching rule between points and contains a material chronology problem.
 
+Tracked as `G-X2SH-001` in the
+[Open Gap Registry](GSMG_OPEN_GAP_REGISTRY.md) so this fragment isn't
+re-litigated from scratch: parked, P2, closes only on a creator statement
+selecting this reading or a resolution of the chronology conflict.
+
 Disposition: **recognition-only, unverified secondary route**. Calling it an
 authored Easter egg would overstate the evidence. It explains why the row
 resembles XY data and why several later solvers found striking virtual-world
