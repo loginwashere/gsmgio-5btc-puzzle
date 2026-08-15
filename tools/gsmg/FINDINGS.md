@@ -18100,3 +18100,58 @@ registry and the two declared zero-based selector modes. Reopening requires a
 new independently authenticated target or an authored indexing/boundary rule;
 adding strings or shifting indices after seeing fragments would recreate the
 unbounded textual search this model was designed to avoid.
+
+## Phase 290 -- P1A: canonical-sentinel oracle backfill for the DBBI/FAED brainstorm's already-materialized outputs (2026-08-15)
+
+`p1a_sentinel_backfill.py`. Closes the gap identified in
+`doc/Brainstorms/2026-08-15 - Passphrase Oracle False-Negative Surface.md`:
+several of the sixteen fresh DBBI/FAED brainstorm models (Phases 273-289)
+compute deterministic, fully-defined strings that were only ever checked
+against their own source data (self-referential equality, exact-target
+lookup, etc.) and never run through this project's actual AES blob oracle
+(`cb_common.aes_try_open_bytes`). A model's statistical gate correctly blocks
+promoting an *interpreted* result, but it does not by itself constitute an
+oracle check of the raw materialized bytes.
+
+`doc/Brainstorms/2026-08-15 - Canonical Sentinel Inventory (P0A).md` audited
+all sixteen models' report objects and found 40 strings/digests, across
+three models, that are fully materialized without any unauthored index,
+alphabet, or gap choice, are not self-flagged degenerate or tautological,
+and were not selected by picking the best score among several computed
+options:
+
+- **Model 9** (arithmetic/range coding, Phase 279) -- 8 a-i strings: 4x
+  `decoded_text` and 4x `canonical_codeword` across {static histogram,
+  first-order Markov} x {DBBI-length, FAED-length}.
+- **Model 15** (continued fractions, Phase 288) -- 12 SHA-256 hex digests:
+  numerator and denominator for each of 6 (source, digit-map) rows.
+- **Model 16** (authenticated-string selectors, Phase 289) -- 20 printable
+  ASCII strings: 2 sources x 5 authenticated targets x 2 index modes.
+
+Each of the 40 was tried in exactly two forms, fixed in advance and
+identical for every candidate: the literal string, and the hex SHA-256
+digest of that literal (the project's standard "hash as password"
+hypothesis). No case-folding or alpha-stripping was applied -- several
+candidates are hex digests or pure a-i strings where that transform would
+alter rather than merely reformat the material. Both forms of every
+candidate were tried against all four tracked blobs (`SALPH`, `COSMIC`,
+`P32TRAILING`, `URLBLOB`) under the oracle's default six KDF variants: 80
+passphrase attempts, 1,920 effective decrypt attempts.
+
+**Result: 0/80 hits, 0 weak candidates logged (z >= 5) at any of the 1,920
+effective decrypt attempts.** `weak_candidates_log.txt` shows no new entries
+from this run.
+
+A self-test pins the exact 40-candidate list and order
+(`candidate_list_digest` = `4e69ae768b9fd800`) so a future rerun or review
+can confirm the frozen manifest hasn't silently drifted.
+
+**Verdict:** P1A is closed negative. This does not reopen any of the
+sixteen models -- it closes a specific, narrow coverage gap (raw oracle
+exposure for already-materialized outputs) that existed independently of
+each model's own statistical verdict. Reopening any of the three
+contributing models still requires what their own Phase entries already
+require; reopening P1A itself would require a new eligible output appearing
+in one of the sixteen models' reports (none is expected without a new
+model) or model 11's FSM output being fully exposed in its report (tracked
+separately, not yet done).
