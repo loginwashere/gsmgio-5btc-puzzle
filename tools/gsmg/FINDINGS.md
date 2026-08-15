@@ -16670,3 +16670,1433 @@ exhausted. This does not resolve whether X2SH4Y0QB15 has any intended use
 at all (it may simply be an unconsumed side-riddle, as the earlier
 Decentraland-coordinate investigation found no creator selector for it
 either) -- only that this specific route to P32 is closed.
+
+## Phase 269 -- Phase 268 corrective closure: complete X2SH4Y0QB15 source block, reversed route, and CBC menu gaps: 42 candidates, 1,362 key materials, 0 hits (2026-08-13)
+
+A review found that Phase 268 was sound for its disclosed 24 candidates but
+its closing language was too broad in three concrete ways. First, the audit
+tested the X2SH4Y0QB15 header but not the complete authenticated six-line
+riddle block; Phase 267's Phase-2 excerpt also stopped immediately before
+that block. Second, per-row reversal existed only as a row-labelled string,
+not as the natural reversed coordinate-route serialization
+`(4,15)(-42,-16)(32,82)(2,0)`. Third, the shared `passphrase_hits()` helper's
+CBC branch intentionally omitted the opt-in 20-variant Blowfish/Camellia/SEED
+menu-gap family, despite the report's broad "full standard oracle" wording.
+
+The corrected `x2sh4y0qb15_p32_candidate_audit.py` adds the exact README
+source block (with a live source anchor), its space-joined and whitespace-
+concatenated forms, literal and solved numeric headers joined to the
+authenticated "Ok kid...worst gear" instruction, and two reversed-route
+serializations. Every base form is also character-reversed uniformly. Empty
+letters-only normalizations from numeric candidates are now discarded rather
+than counted as password material. The candidate family and accounting are
+regression-pinned: **42 candidates**, SHA-256
+`509bfbf096af656567d1bfc6a58824a9ca41c2ea7c4876d1bbd74ce1504954f7`,
+and **1,362 non-empty unique key materials**.
+
+The full corrected family was run against SALPH/COSMIC/P32TRAILING/URLBLOB
+through CBC (including all 20 menu-gap variants), AES stream modes, AES-ECB,
+and AES Key Wrap. **0 hits.** This preserves Phase 268's negative outcome
+while making the bounded closure self-contained. It still does not claim that
+every imaginative interpretation of "worst gear" has been exhausted; it
+closes the explicit authenticated-block/header/coordinate serialization
+family recorded above.
+
+## Phase 270 -- P32 trailing blob as the Phase 3.2 sibling-output payload: role-separation hypothesis tested, 0 hits (2026-08-14)
+
+Filed from
+[doc/Brainstorms/2026-08-14 - P32 Trailing Sibling-Output Password Path.md](../../doc/Brainstorms/2026-08-14%20-%20P32%20Trailing%20Sibling-Output%20Password%20Path.md).
+Phases 265/266/267-269 tested individual sentences/fragments/reuse from the
+Phase 2/3/3.2 decrypted chain as direct `P32_TRAILING` passwords. None of
+those audits treated the Phase 3.2.1 Beaufort speech and the Phase 3.2.2
+VIC/checkerboard answer as a *sibling-composition* problem -- both objects
+are decrypted from the same authenticated Phase 3.2 plaintext, in source
+order, immediately before `P32_TRAILING` itself, mirroring the established
+grammar where one stage's clue material supplies password content for a
+following object.
+
+`p32_sibling_password_audit.py` re-derives Phase 3.2's plaintext directly
+from its own AES ciphertext and password (not from README transcription),
+locates the 3.2.1/3.2.2/P32 components by authenticated delimiter, and
+independently reconstructs both sibling answers via a real Beaufort decrypt
+(CP1141-transcoded ciphertext, key `THEMATRIXHASYOU`) and the project's own
+straddling-checkerboard decoder (`ALPHA_322`, escapes `(1,4)`) -- both
+re-derivations are asserted equal to the README/`VALIDATION_ANSWER`
+ground truth before any candidate is built, closing the exact-byte-fidelity
+gap those earlier audits left open.
+
+20 disclosed candidates were tested: the complete 3.2.1 and 3.2.2 texts
+alone and concatenated in both orders (whole-text family); the established
+23-event/31-character prime walk over the 3.2.2 answer, alone and
+concatenated with each sibling, plus a pure zero-based and one-based
+prime-index selection over the 3.2.2 answer as an unfitted control
+(operator-plus-data family); five literal readings of the Stage-0
+prime-colored cells projected onto/prepended to the 3.2.2 answer
+(stage0-primes family); four sibling cipher-parameter concatenations
+(`THEMATRIXHASYOU`+`FUBCDORA.LETHINGKYMVPS.JQZXW`+`14` and three variants);
+and the exact parent plaintext bytes immediately preceding `P32_TRAILING`
+in the authenticated Phase 3.2 payload, with and without its trailing
+`\r\n\r\n` separator (parent-byte-prefix family). Each candidate was tried
+raw and as its SHA-256 hex digest, across six KDF/cipher-size specs (40
+unique password materials x 6 = 240 trials), against the true structural
+oracle for this specific blob: P32 has exactly 80 ciphertext bytes (five
+AES blocks), so a correct two-private-key plaintext (64 bytes) is uniquely
+identified by a complete trailing block of sixteen `0x10` PKCS7 bytes
+(false-positive probability 2^-128) -- no printable-text heuristic is used,
+so a genuinely binary hit would not be missed the way earlier
+prose-oriented sweeps could miss one.
+
+**0 hits.**
+
+A secondary, useful side-result: the audit's `interpretation_checks` cross-
+references the Architect speech's "twenty-three ciphers / sixteen
+encryptions / seven intertwined passwords" against two independently
+falsifiable candidate referents. The established first-piece prime walk
+profiles as 23 events / 15 single-character / 8 two-character selections --
+*not* an exact 23/16/7 match. The pre-existing "split-final-BE guide"
+endpoint profile (`telegram_23167_operation_audit.py`), by contrast, *is* an
+exact 23/16/7 match (23 endpoints, 16 blue, 7 yellow). This resolves the
+open question of whether the 23/16/7 recurrence is real or coincidental: it
+is real, but it belongs to the split-final-BE guide, not the prime walk this
+audit's operator-plus-data candidates were built from -- so those specific
+candidates draw on the wrong structural referent even though the numeral
+match that motivated testing them is genuine elsewhere.
+
+A tertiary check on secp256k1 scalar validity was deliberately not treated as
+meaningful signal: a uniformly random 256-bit value is a valid scalar with
+probability (n / 2^256) ~ 1, so "both halves are valid scalars" filters
+almost nothing on its own. The 2^-128 padding-block match remains the sole
+decisive oracle; scalar validity and address derivation are only computed
+*after* a structural hit, never used to promote a candidate.
+
+**Verdict:** the role-separation hypothesis (3.2.1 = operator, 3.2.2 = data
+and expected-plaintext description, P32 = the encrypted two-key payload) is
+not yet supported by any tested construction. This closes the 20-candidate
+family declared in the brainstorm document's Family B/C, the two grounded
+Family A readings (established prime walk and literal Stage-0 projection)
+plus an unfitted pure-prime-index control, and the exact parent-byte prefix
+immediately preceding P32 in the decrypted stream -- it does not close
+Family A's undeclared alternative indexing/event-count variants, nor does it
+retarget the operator-plus-data construction onto the split-final-BE guide's
+endpoints instead of the prime walk, which the side-result above suggests as
+the better-grounded next
+step.
+
+### Follow-up — split-final-`be` retarget
+
+The exact `23/16/7` referent was consumed directly. Splitting the recovered
+guide's final `be` into `b`,`e` reproduces 23 endpoints / 16 blue / 7 yellow.
+Replaying those colors through the established sequential-prime plus
+prior-yellow-position rule selects:
+
+```text
+NCSYANGCAHIRIASOGALEAFAYANESTV
+```
+
+This is the established 31-character result minus its terminal `E`, explaining
+the historical “30 or 31” description. To avoid silently choosing a coordinate
+system, two literal endpoint controls were also retained: cumulative split-
+guide token endpoints select `NCSYAAORTERKBLTATRNEAED`; cumulative raw DBBI-
+character endpoints select `NCSYNGCAIIASOGLEAAANETE`.
+
+Five guide-derived preimages were added: those three strings, the 30-character
+selection followed by the complete 3.2.2 answer, and the complete 3.2.1 answer
+followed by the selection. Final live scope: **25 candidates / 50 raw-or-
+SHA256-hex password materials / 6 KDF specs = 300 structural trials. 0 exact
+full-padding/two-key hits.**
+
+**Follow-up verdict:** the split-final-`be` guide retarget is closed for its
+direct prime-rule, token-endpoint, raw-endpoint, and parity sibling-composition
+readings. The exact count recurrence is a genuine structural checkpoint, but
+does not yield the P32 password through these consumers. Reopening requires a
+new authenticated selector, not additional unbounded endpoint arithmetic.
+
+## Phase 271 -- external fork re-audit (family 6, blob-literal/code-context archaeology): independent ~35,000-combination salt/cross-blob sweep and chess-board-construction lead both closed by a third party; several genuinely unexhausted leads surfaced (2026-08-14)
+
+Filed from
+[doc/Brainstorms/2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md](../../doc/Brainstorms/2026-08-14%20-%20P32%20New%20Attack%20Surfaces%20Beyond%20Text%20Recombination.md),
+family 6 (exact blob-literal and code-context archaeology). Phase 25 first
+confirmed `P32TRAILING`'s and `URLBLOB`'s provenance against the
+independently-maintained `HosterjackAGV/gsmg-5btc-puzzle` fork's
+`docs/ATTEMPTS.md`/`WALKTHROUGH.md` and its `/tried` view (2026-07-24). That
+fork is still actively pushed three weeks later; this phase re-pulled its
+full current tree via `gh api` (not re-scraping the same two documents) and
+found five documents never previously read by this project:
+`docs/BLOB-COMBINATION-ANALYSIS.md`, `docs/ENDGAME-ANALYSIS.md`,
+`docs/LOOSE-ENDS.md`, `docs/CREATOR-INTEL.md`, `docs/VERIFIED-SOLUTIONS.md`,
+plus `assets/js/labs/chess-vic-lab.js` and the raw `content/demos.js` /
+`content/attempts.js` sources. This is exactly the family-6 question --
+authored code/analysis *context* around the same blobs, not another
+self-generated password guess.
+
+**Cross-validation (not new, but confirms this project's own ground truth
+independently):** the fork's exact salt/length table for all four blobs
+(`cosmic` 2d3f6fe0..., `salph_inner` 3ab58534..., `p32_trailing`
+b45a5e3d..., `urlblob` 74c974e3...) matches `tools/gsmg/data.py` byte-for-
+byte, as does its chain-key table (`eb3efb51...`, `1a57c572...`,
+`250f3772...`, `89727c59...`) against `VERIFIED_PRIOR_COMMAND_HASHES`.
+
+**Family 1 (cross-blob salt relations) is superseded, not merely
+supplemented.** `docs/BLOB-COMBINATION-ANALYSIS.md` reports the fork
+independently ran a much broader salt/cross-blob sweep than this project's
+own residual-relation table proposed: all 24 orderings of the four salts as
+a direct 32-byte AES key (with IV in {0, salt‖salt, key[:16]}), as an EVP
+passphrase (raw and hex), and as SHA-256(key); 3- and 2-salt concatenations
+in the same forms; salt XOR, byte-sum mod 256, and SHA-256(concat) as key
+material; each blob's own ciphertext (and its SHA-256, first 32 bytes, and
+base64) used as the passphrase/key for every *other* blob; all 24 orderings
+of ciphertext concatenation decrypted as one blob under each blob's own
+salt plus the known chain keys; XOR of the two equal-length blobs
+(`salph_inner`/`p32_trailing`, both 80 bytes: printable ratio 0.48, pure
+noise); and a full 16-byte repeated-ciphertext-block scan across all four
+blobs (none found). Total: **~35,000 structured combinations, 0 real
+hits** (4 candidates opened >=2 blobs simultaneously -- the specific
+"scattered-secret" signature this project would also treat as
+decisive -- but all 4 decrypted to printable-ratio 0.30-0.49 chance noise,
+consistent with ~3 expected false alarms at this test volume). This closes
+the pairwise-relation residual this project's own brainstorm document had
+ranked as family 1 far beyond what the pre-registered comparison table
+there proposed; that family's enumerated construction set is now closed by
+an independent, cross-checked result rather than merely deprioritized.
+This is a claim about that specific ~35,000-item construction set, not a
+proof that no conceivable salt relationship could ever be probative --
+consistent with how every other closed family in this project is scoped.
+
+**The literal chess-board-construction lead for P32 is independently
+dead-ended, with an internal inconsistency worth recording.**
+`docs/ENDGAME-ANALYSIS.md` section 8b states this lead "CLOSED": the
+Architect speech's chess sentence ("fubcd-king & oracle-queen... on a sad
+board but as wide as the first one seen") was tested as 288 phase-3.2-
+derived answer strings, the raw pre-Beaufort EBCDIC letters, the VIC digit
+string (forward/reversed), the Phase 2 chess FEN, the chain keys, and a
+370k-word dictionary against `p32_trailing` -- 0 hits -- with the explicit
+conclusion "no specific board position is given to construct a key from."
+Reading `assets/js/labs/chess-vic-lab.js` directly confirms why: the only
+FEN the fork's own interactive tooling associates with "Phase 3.2" is
+literally the **Phase 2** FEN (`B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/`
+`1P2P2P/3N1N2`), reused for illustration because the chess sentence never
+names or displays an actual distinct Phase-3.2 board -- its only real
+function is teaching the VIC alphabet mnemonic (`FUBCDORA.LETHINGKYMVPS.`
+`JQZXW`), already fully consumed by this project's own checkerboard
+decoder. Curiously, the same document's own section 9 ("honest assessment,
+remaining threads") still lists "decode the chess clue as an actual board/
+coordinate construction" as its #1 remaining priority -- a direct internal
+contradiction with section 8b's closure, most likely stale text left over
+from an earlier draft that a later session didn't reconcile. Recorded here
+so this project does not treat that specific ranked-list line as a live,
+untried lead: per the same document's own more specific closure and this
+project's independent code-context read, it is not.
+
+**Corroboration, not new information, on two settled points:** the fork's
+own §8c independently confirms the prize address is a mined vanity prefix
+(private key must be random, not phrase-derived) and reports 86,310
+brainwallet-derivation and 1,204 split-key-derivation attempts against the
+prize/split-off/donation addresses, all negative -- consistent with this
+project's own standing decision to treat address/scalar validity only as a
+post-hit confirmation, never a promotion signal (Phase 270). Its QR-code
+read of the genesis image (`https://www.blockchain.com/btc/address/`
+`1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`, a public explorer link, no payload)
+matches this project's own prior QR findings.
+
+**Genuinely new, unexhausted leads surfaced by `docs/LOOSE-ENDS.md`** (not
+yet tested by either project; each requires the same fabrication/
+provenance discipline this project already applies to third-party claims
+before being run, and none is promoted here):
+
+- the Bitcoin genesis-block coinbase hex (main.cpp line 1616), reversed-
+  byte, decodes to the well-known "The Times 03/Jan/2009..." headline; only
+  the raw hex string has been hashed as password material in either
+  project -- the *decoded* headline text, and adjacent unused data (the
+  date, block height, `nBits` 486604799), have not;
+- the digit-glued Safenet/Luna/HSM fragments' numbers, read as an
+  *ordering* key for already-known password parts (the same mechanism
+  already established for a different Phase 3 clue), rather than as
+  fixed narrative digits -- not tried in either project;
+- the orphan trailing "O" in the Architect speech's "CIAO BELLA O" sign-
+  off, never analyzed as a discrete token/index/terminator rather than
+  read as part of the phrase;
+- the VIC alphabet's own reconstruction ambiguity (`...JQZXW` vs
+  `...ZJQWX.`) as an *alternate* monoalphabetic key over `dbbi`/`faed`/
+  `p32_trailing`, distinct from the already-fully-tested single canonical
+  reading.
+
+**Verdict:** family 6 executed as designed -- it produced an authored
+label/context read rather than another guessed password. Net effect on the
+brainstorm document: family 1 (salt relations) is fully closed rather than
+merely reprioritized; the literal chess-board-construction path for P32 is
+closed with a documented reason, forestalling a plausible-looking but
+already-dead lead; and four new, narrowly scoped, source-grounded
+candidate strings are added to the backlog, gated behind the same
+provenance discipline as every other third-party-sourced item in this
+project.
+
+## Phase 272 -- FAED hexadecimal-nibble packing: eight exact 285-byte streams, no signatures/decompression/blob hits; DBBI remains odd-nibble-gated (2026-08-14)
+
+`tools/gsmg/nibble_packing_audit.py` closes a representation gap left by the
+earlier raw-radix work. Prior audits covered `a=0..i=8` / `a=1..i=9` as ASCII
+digits, one byte per value, whole-base-9 integer conversion to bytes and hex,
+base-9 scalar reductions, dual-ternary, and checkerboard/base-25 packings. They
+did not test the distinct operation in which every mapped symbol is one
+hexadecimal nibble and consecutive symbols are paired into bytes.
+
+The family was fixed before output inspection:
+
+```text
+2 maps:          a=0..i=8, a=1..i=9
+2 orientations:  forward, reverse
+2 nibble orders: first symbol high, first symbol low
+```
+
+FAED's even 570-symbol length gives exactly **8 variants x 285 bytes**. DBBI's
+91 symbols give 45 bytes plus one unpaired nibble under every variant. The
+audit reports those eight DBBI diagnostics but does not invent a leading/trailing
+zero, borrow a nibble from the following `matrixsumlist` island, or promote a
+partial byte into password material. Reopening DBBI under this representation
+requires an authenticated rule for that leftover nibble.
+
+Each FAED body was checked for prefix/embedded file signatures and exact
+zlib/gzip/bzip2/xz-LZMA decompression. Results: **0 signatures, 0 successful
+decompressions**. All variants have 75 distinct byte values and entropy
+`5.998418` bits/byte. Printable ratios range `0.656140..0.705263`, with a
+longest run of 25, but this is representation-forced: nibbles restricted to
+`0..9` place many byte pairs in the ASCII range. It is not promoted as a text
+signal.
+
+For the blob check, each of the eight packed bodies supplied three exact
+password materials: literal packed bytes, binary SHA-256, and lowercase
+SHA-256 hex. All **24 materials** were tested against all four tracked blobs
+through 44 CBC cipher/KDF specs, 36 AES stream specs, 12 AES-ECB specs, and 12
+AES-Key-Wrap KDF specs under all four registered wrap/integrity modes: **13,440
+concrete cryptographic evaluations, 0 hits**. The solved Phase 3.2
+password/container remains a positive end-to-end implementation control.
+
+The canonical forward/zero-based/high-first packed-body checkpoint is:
+
+```text
+sha256 c352749704479ef054a6afa1a7a6262c1fea5d646704ffd7db7eb6d7ccc59265
+```
+
+**Verdict:** hexadecimal-nibble packing is closed negative for the two
+conventional maps, both orientations, both nibble orders, three declared
+password forms, byte-signature/decompression screen, and full standard blob
+oracle. Do not add arbitrary alphabet rotations or a DBBI padding nibble
+without a new selector; those are different, currently unsupported families.
+
+## Phase 273 -- DBBI/FAED through the page's exact decimal transport inverse: calibrated, binary-noise outputs, 0 blob hits (2026-08-14)
+
+`tools/gsmg/decimal_transport_inverse_audit.py` closes a distinct direct-
+analogy gap. The two known post-FAED instructions are not ordinary decimal
+ASCII groups. `page_structure_audit.py` proves their authored transport is:
+
+```text
+ASCII -> hex -> one base-10 integer -> 1234567890 mapped to abcdefghio
+```
+
+No prior DBBI/FAED audit applied this exact inverse. The new implementation
+round-trips both ground-truth controls byte-for-byte:
+`lastwordsbeforearchichoice` and `thispassword`. It then maps `a..i,o` back
+to `1..9,0`, reads the complete decimal integer, converts it to minimal hex,
+and accepts it only when the recovered hex length is even. Two bounded reversal
+scopes were declared: reverse the encoded source before inversion and reverse
+the recovered byte stream afterward.
+
+All four variants per source serialize without repair:
+
+```text
+DBBI: 91 decimal digits -> 76 hex digits -> 38 bytes
+FAED: 570 decimal digits -> 474 hex digits -> 237 bytes
+```
+
+The direct forward checkpoints are:
+
+```text
+DBBI sha256 7270ed152fa64b85f144f99b49352ecabeb01c0f0b624fb71cb648f91d1d8b80
+FAED sha256 7f14db2d90301b8e1d16ff014ad3e84ba75350ef828ad9b8a8a26b1e69302de9
+```
+
+No variant starts with or embeds a registered file/container signature, and
+none decompresses exactly under zlib/gzip/bzip2/xz-LZMA. DBBI's best printable
+run is five bytes and its forward printable ratio is `0.447368`; FAED's best
+run is four bytes, printable ratio `0.341772`, and entropy `7.037849` bits/byte
+(forward). No readable marker is present.
+
+The alphabet mismatch is also material. The known transported instructions
+contain `o` as decimal zero (3 and 7 occurrences respectively); both DBBI and
+FAED contain zero `o` symbols. The inverse is still mechanically valid, but a
+570-digit transported integer avoiding decimal zero entirely is evidence
+against shared generation grammar, not for it.
+
+Eight decoded bodies x three exact password forms (raw bytes, binary SHA-256,
+lowercase SHA-256 hex) produce **24 unique materials**. Across all four blobs,
+the same full standard scope as Phase 272 performs **13,440 concrete
+cryptographic evaluations**: 44 CBC specs, 36 AES stream specs, 12 AES-ECB
+specs, and 12 AES-Key-Wrap KDF specs under four wrap/integrity modes. Result:
+**0 hits**. The solved Phase 3.2 password/container remains a positive
+end-to-end oracle control.
+
+**Verdict:** the exact page-native decimal-transport analogy is now closed
+negative for both sources, both source orientations, both byte orientations,
+the declared signature/compression screen, and full standard blob oracle.
+Do not add alternate digit assignments, chunked decimal ASCII, or leading-zero
+repairs under this family: those abandon the very known transport precedent
+that made the test source-grounded.
+
+## Phase 274 -- Exact six-lane FAED/DBBI geometry and 24-symbol endpoint tail: profile-calibrated negative (2026-08-14)
+
+`tools/gsmg/dbbi_faed_six_lane_audit.py` executes model 1 from the fresh
+DBBI/FAED brainstorm. The motivating identity is exact and was not previously
+tested as its own structural object:
+
+```text
+len(FAED) = 570 = 6 * len(DBBI) + 24 = 6 * 91 + 24
+```
+
+The audit treats `FAED[:546]` as six non-overlapping 91-symbol lanes and keeps
+the final 24 symbols separate. It does not permute lanes, select one lane per
+column, generate plaintext, or invoke any password/blob oracle. Eight body
+statistics were fixed before calibration: maximum direct lane matches,
+maximum direct-match run, columns containing DBBI's corresponding symbol in
+any lane, unique-column-mode matches, maximum mod-9 residual bin, total column
+collision excess, maximum lane-pair matches, and maximum lane-pair match run.
+
+The observed direct DBBI/lane match counts are:
+
+```text
+lane 1..6: 7, 11, 11, 8, 14, 9
+```
+
+Twenty thousand deterministic null trials independently shuffle the exact
+DBBI and 546-symbol FAED-body multisets, preserving both frequency profiles
+while destroying alignment. The results are uniformly null-like:
+
+| statistic | observed | null median | raw upper-tail p | 8-test Bonferroni p |
+|---|---:|---:|---:|---:|
+| maximum lane matches | 14 | 14 | 0.548073 | 1.000000 |
+| maximum lane match run | 2 | 2 | 0.998050 | 1.000000 |
+| any-lane match columns | 51 | 45 | 0.119194 | 0.953552 |
+| unique-mode matches | 2 | 6 | 0.989351 | 1.000000 |
+| maximum residual bin | 19 | 17 | 0.251237 | 1.000000 |
+| column collision excess | 128 | 138 | 0.910704 | 1.000000 |
+| maximum lane-pair matches | 15 | 16 | 0.861007 | 1.000000 |
+| maximum lane-pair match run | 4 | 3 | 0.210089 | 1.000000 |
+
+Thus the conservative body-family p-bound is **0.953552**, far from the
+pre-registered 0.01 promotion threshold. In particular, the superficially
+largest direct lane match (14/91) is exactly the null median after taking the
+best of six lanes, while only 2 of 50 columns with a unique mode match DBBI.
+
+The tail test uses the authenticated 24-endpoint colour mask
+`BBBBYBBBYYBBBBYBBYYBYYBY` (15 blue, 9 yellow). For each of the seven symbols
+actually present in the FAED tail `ibibbibdcbahaidhfahiihic`, it assigns the
+single blue/yellow value that maximizes agreement. This is the complete best
+symbol-consistent binary projection, not a hand-selected threshold. It reaches
+only **17/24** matches, has seven conflicts, and therefore cannot reproduce the
+mask. Across 20,000 shuffles of the endpoint mask preserving the exact 15/9
+profile, 17 is the null median and the empirical upper-tail p-value is
+**0.676466**.
+
+Synthetic controls verify exact lane recovery and an exact symbol-consistent
+tail mapping; a focused permanent regression verifies the real geometry,
+metric registry, authenticated endpoint profile, and the fact that no
+plaintext/password oracle runs.
+
+**Verdict:** model 1 is closed negative for the exact six aligned lanes, the
+eight declared equality/consensus/residual/repetition measures, and the
+symbol-consistent 24-tail-to-endpoint projection. This does not close an
+indel-tolerant relationship: by the brainstorm's own rule, model 12 sequence
+alignment is now eligible as a distinct follow-up. It also does not authorize
+the prohibited 6^91 adaptive lane-selector search.
+
+## Phase 275 -- Canonical 9x9 DBBI/FAED transition matrices: no profile-calibrated structure or cross-stream relation (2026-08-14)
+
+`tools/gsmg/dbbi_faed_transition_matrix_audit.py` executes model 2 from the
+fresh DBBI/FAED brainstorm. Unlike earlier spatial reshapes, the construction
+has no width, padding, or route choice: each adjacent `a-i` pair increments
+one cell of a directed 9x9 matrix. DBBI supplies 90 transitions and FAED 569.
+
+The literal `matrixsumlist` outputs are the row and column sums:
+
+```text
+DBBI rows:    3 25  8 4 17 10  10 8  5
+DBBI columns: 3 25  8 3 18 10  10 8  5
+FAED rows:   54 49 51 49 69 57 107 58 75
+FAED columns:54 49 52 49 69 56 107 58 75
+```
+
+These lists are not independent decoded data. For any directed-transition
+matrix, row sums are the original unigram counts minus the final symbol and
+column sums are the same counts minus the initial symbol. Their near equality
+is therefore a boundary identity, not evidence of a hidden message.
+
+Nine adjacency statistics were pre-registered: mutual information, fixed-
+multiset residual energy, directional asymmetry, and self-transition count for
+each stream, plus the maximum absolute DBBI/FAED residual-matrix correlation
+under only identity, transpose, reversed alphabet, and reversed-plus-transpose.
+Twenty thousand deterministic null trials independently shuffle each real
+stream, preserving its exact symbol profile. A tenth, literal degree-sum
+profile statistic is calibrated exactly over all 362,880 FAED alphabet
+relabelings, taking the better of identity and reversed-alphabet orientation.
+
+| statistic | observed | null median | raw p | 10-test Bonferroni p |
+|---|---:|---:|---:|---:|
+| DBBI mutual information | 0.663010 | 0.543451 | 0.053247 | 0.532473 |
+| FAED mutual information | 0.093724 | 0.083739 | 0.257837 | 1.000000 |
+| DBBI residual energy | 77.647614 | 63.790283 | 0.122544 | 1.000000 |
+| FAED residual energy | 74.428448 | 63.607673 | 0.175891 | 1.000000 |
+| DBBI asymmetry | 33 | 30 | 0.668567 | 1.000000 |
+| FAED asymmetry | 113 | 92 | 0.139993 | 1.000000 |
+| DBBI self-transitions | 15 | 13 | 0.741563 | 1.000000 |
+| FAED self-transitions | 74 | 67 | 0.401080 | 1.000000 |
+| maximum cross-residual correlation | 0.140692 | 0.173379 | 0.686716 | 1.000000 |
+| degree-profile identity/reversal | 0.081587 | exact permutation null | 0.969224 | 1.000000 |
+
+DBBI's mutual-information value is the only superficially close result, but it
+does not cross 0.05 even before correction and is wholly ordinary once the
+declared family is accounted for. The four actual residual correlations are
+`0.140692` (identity), `0.029052` (transpose), `-0.043680` (reverse), and
+`0.084499` (reverse-transpose). Thus neither same-sign nor complementary
+transition structure is present under the source-grounded relations.
+
+Synthetic controls verify transition counts, row/column orientation, and
+transpose semantics. Permanent regression coverage fixes the 9x9 geometry,
+90/569 totals, nine-statistic registry, exhaustive 9! profile null, and the
+fact that the audit generates no candidate text and runs no password oracle.
+
+**Verdict:** model 2 is closed negative for canonical directed-bigram matrices,
+the declared within-stream statistics, four cross-stream matrix relations, and
+literal row-plus-column degree profiles. Reopening requires a source-selected
+matrix operation not reducible to adjacency or unigram counts; these sums must
+not be mined as passwords merely because `matrixsumlist` names them.
+
+## Phase 276 -- GF(9) linear complexity, recurrence transfer, and seven-row rank: six natural presentations are null-like (2026-08-14)
+
+`tools/gsmg/dbbi_faed_gf9_audit.py` executes model 3 from the fresh DBBI/FAED
+brainstorm. The implementation treats each `a-i` symbol as a point in a 3x3
+trit grid and enumerates the complete small family selected before output
+inspection:
+
+```text
+three monic irreducible quadratics over GF(3):
+    x^2 + 1
+    x^2 + x + 2
+    x^2 + 2x + 2
+
+times two coordinate orders:
+    (row, column)
+    (column, row)
+
+= six GF(9) presentations
+```
+
+No arbitrary permutation of `a-i` into the field is admitted. The field
+implementation independently verifies that these are exactly the three monic
+irreducible quadratics over GF(3), constructs addition/multiplication/inverse
+tables, and recovers a known GF(3) Fibonacci sequence as linear complexity 2
+with 18/18 recurrence checks.
+
+Eight statistics were fixed before null calibration:
+
+1. minimum full-stream GF(9) Berlekamp-Massey complexity for DBBI and FAED;
+2. minimum GF(3) complexity of each stream's two coordinate components;
+3. maximum held-out recurrence-satisfaction z-score after fitting only the
+   first half of each stream;
+4. maximum z-score obtained by applying DBBI's complete recurrence to any of
+   the six aligned 91-symbol FAED lanes; and
+5. minimum GF(9) rank of the seven 91-symbol rows (DBBI plus six FAED lanes).
+
+Every null trial independently shuffles the exact DBBI and FAED symbol
+multisets and takes the best result across all six field presentations inside
+that trial. One thousand trials give raw p-value resolution `1/1001`, adequate
+for the pre-registered eight-test family threshold.
+
+| statistic | observed | null median | raw p | 8-test Bonferroni p |
+|---|---:|---:|---:|---:|
+| minimum GF(9) DBBI complexity | 45 | 46 | 0.267732 | 1.000000 |
+| minimum GF(9) FAED complexity | 284 | 285 | 0.043956 | 0.351648 |
+| minimum GF(3) DBBI component complexity | 45 | 46 | 0.425574 | 1.000000 |
+| minimum GF(3) FAED component complexity | 285 | 285 | 0.940060 | 1.000000 |
+| maximum GF(9) DBBI holdout z | 0.417029 | 0.886186 | 0.800200 | 1.000000 |
+| maximum GF(9) FAED holdout z | 1.193734 | 0.816765 | 0.347652 | 1.000000 |
+| DBBI-to-FAED-lane maximum z | 2.293659 | 1.897367 | 0.333666 | 1.000000 |
+| minimum joint seven-row rank | 7 | 7 | 1.000000 | 1.000000 |
+
+FAED's minimum complexity of 284 is the only raw value below 0.05, but a
+random length-570 sequence over GF(9) is expected near complexity 285. It is
+not exceptional after selecting the best of six presentations and correcting
+the declared family. The winning DBBI-to-lane transfer is 10 recurrence hits
+in 46 opportunities on lane 4 under `x^2+x+2/(row,column)` (the isomorphic
+paired presentation repeats the result); its `z=2.293659` is common after
+best-of-six/best-of-lane selection (`p=0.333666`). All presentations give full
+row rank 7, excluding an exact linear parity relation among DBBI and the six
+FAED lanes under this mapping family.
+
+Permanent regression coverage fixes the three-polynomial/two-coordinate
+registry, exact six-lane-plus-tail geometry, eight-statistic registry, and the
+absence of text/password oracles.
+
+**Verdict:** model 3 is closed negative for the six natural GF(9)
+presentations, GF(3) coordinate recurrences, full and held-out linear
+complexity, DBBI recurrence transfer, and exact seven-row dependence. An
+authored alternate field-element mapping or source-selected nonlinear field
+operation could reopen a different family; an arbitrary 9! mapping sweep does
+not follow from this result.
+
+## Phase 277 -- Three-trit base-27 decoding: genuine prior gap, exact bounded family is null-like (2026-08-14)
+
+`tools/gsmg/dbbi_faed_base27_audit.py` executes model 4 from the fresh
+DBBI/FAED brainstorm. It first inspects the actual decoder in
+`dual_ternary_sweep.py`, confirming a real representation gap: that prior
+family includes five-trit base-243 packing, whole-stream base-3 conversion,
+and ternary-derived binary masks, but no three-trit grouping or base-27
+alphabet.
+
+The residual family was fixed before output inspection:
+
+```text
+8 D4 symmetries of the established 3x3 a-i square
+x 2 within-symbol trit orders
+x 2 conventional alphabets: [space,A-Z] and [A-Z,space]
+= 32 declarations per source
+```
+
+The pair-order swap duplicates the effect of a diagonal D4 symmetry, so these
+32 declarations collapse to **16 exact unique outputs per source**. No stream
+reversal, grouping offset, alphabet rotation, or padding is included. FAED's
+570 symbols yield 1,140 trits, consumed exactly as 380 base-27 characters.
+DBBI's 91 symbols yield 182 trits, decoded as 60 characters while its final
+two trits remain explicitly unconsumed.
+
+Every output is scored as uppercase English with spaces removed only for the
+existing normalized quadgram model. The success statistic is the single
+maximum score across both streams and the complete declared family. Five
+thousand null trials independently shuffle the exact DBBI and FAED symbol
+multisets and rerun that whole family, so symmetry/alphabet selection and the
+shorter DBBI output's greater score variance are both included in the null.
+
+The top real outputs are visibly non-language:
+
+```text
+DBBI (60 characters, identity/first-second/[space,A-Z]):
+IJXNEKFMRQUALMZJNFNDDJEDWMEPOIDUUMPTIJOTHAOMNFLSMBXNDWTXDMLA
+
+FAED (380 characters, rot180/first-second/[A-Z,space], prefix):
+LWPUNOLHRZDLIIRDNXHFILA ZOGSZIOCDUT ANFTXTAYMDIMHMISLZBIIWHRSZWRHCHNG...
+```
+
+| gate | real normalized score | null median | empirical p |
+|---|---:|---:|---:|
+| DBBI family maximum | -7.618365 | -7.624075 | 0.488502 |
+| FAED family maximum | -7.824160 | -7.825993 | 0.493901 |
+| combined DBBI/FAED family maximum | -7.618365 | -7.615890 | 0.503699 |
+
+Thus the apparent fragments in the score-selected leaders are exactly what
+ordinary shuffled controls produce. Neither source is even directionally
+unusual, and the combined family result sits at the null median.
+
+Self-tests fix the prior-coverage finding, direct values `0,1,26 -> A,B,space`
+under `[A-Z,space]`, and rejection-by-preservation of an incomplete final
+trit group. Permanent regression coverage fixes the 32-declaration boundary,
+60/380 output lengths, DBBI's two residual trits, FAED's zero residual, and
+the fact that no password oracle runs.
+
+**Verdict:** model 4 is closed negative for boundary-aligned three-trit
+regrouping under all D4 coordinate symmetries, both trit orders, and the two
+natural 27-character alphabets. Reopening requires an authored grouping
+offset, alternate alphabet, or explicit consumer for DBBI's two residual
+trits. Invented padding and short fragment selection are not supported.
+
+## Phase 278 -- Move-to-front structural gate: no BWT-like run/compression signal, primary-index scan prohibited (2026-08-14)
+
+`tools/gsmg/dbbi_faed_mtf_gate_audit.py` executes the first, mandatory stage of
+model 5 from the fresh DBBI/FAED brainstorm. A repository-wide coverage check
+found no earlier move-to-front or Burrows-Wheeler audit outside the brainstorm
+itself, so this is a genuinely new object model rather than another encoding
+variant.
+
+The source letters are interpreted as MTF ranks `a=0` through `i=8`. The
+canonical initial alphabet is ascending `abcdefghi`; decoding under the reverse
+alphabet is also performed as a control. The implementation proves their
+structural statistics are identical: changing the initial order only globally
+relabels the decoded symbols, so it cannot create or destroy equality patterns,
+runs, information, or compression. It is therefore not counted as another
+search dimension.
+
+The direct decoded streams begin:
+
+```text
+DBBI: dadidedgedeacahbbhehcfgfeabghehahacgdfafbegeegdbhbefgebebdebd...
+FAED: ffdbgefdgadaffahcegcchgfehgdchahfigggafdcbbggfbihdchiiegcffb...
+```
+
+Five structure measures per source were declared: adjacent repeats, longest
+run, index of coincidence, transition mutual information, and level-9 zlib
+length. The first four use a high-tail alternative; compressed length uses the
+low tail. Twenty thousand null trials independently shuffle the exact MTF-rank
+multisets before decoding and preserve the complete ten-metric family inside
+each trial.
+
+| statistic | observed | null median | raw p | 10-test Bonferroni p |
+|---|---:|---:|---:|---:|
+| DBBI adjacent repeats | 3 | 3 | 0.970351 | 1.000000 |
+| DBBI longest run | 2 | 2 | 1.000000 | 1.000000 |
+| DBBI index of coincidence | 0.121856 | 0.114286 | 0.128894 | 1.000000 |
+| DBBI transition mutual information | 0.637540 | 0.672394 | 0.666617 | 1.000000 |
+| DBBI zlib length | 61 | 62 | 0.216089 | 1.000000 |
+| FAED adjacent repeats | 54 | 54 | 0.908555 | 1.000000 |
+| FAED longest run | 3 | 3 | 0.996200 | 1.000000 |
+| FAED index of coincidence | 0.110289 | 0.110684 | 0.778261 | 1.000000 |
+| FAED transition mutual information | 0.083307 | 0.085160 | 0.547173 | 1.000000 |
+| FAED zlib length | 290 | 286 | 0.994900 | 1.000000 |
+
+No measure is individually unusual, and every corrected p-value is exactly
+1.0. In particular, the decoded streams do not exhibit the long equal-symbol
+runs expected when MTF is applied to clustered BWT output. FAED is four bytes
+*less* compressible than the null median, in the wrong direction for the model.
+
+The module includes independently tested MTF encode/decode and conventional
+zero-based BWT transform/inverse controls. Those controls prove the machinery
+exists and works, but the real-data report records `authorized=False` and
+`primary_indices_scanned=0`. This follows the brainstorm's precommitted rule:
+without an MTF structural signal, scanning 91+570 possible BWT rows and keeping
+the best language score would be an unsupported second-stage search.
+
+Permanent regression coverage fixes the rank mapping, ten-metric registry,
+initial-alphabet relabel invariance, zero primary-index scans, and absence of
+candidate/password oracles.
+
+**Verdict:** model 5 fails at its MTF gate for both streams under exact-profile
+calibration. BWT inversion is not claimed negative in isolation; it is
+deliberately unexecuted because its stated prerequisite failed. Reopening
+requires an authenticated primary index or a new source clue independently
+authorizing BWT rather than selecting it from the output.
+
+## Phase 279 -- Natural base-81 digraph tokens: DBBI pair dependence is a raw near-signal but fails the family gate (2026-08-14)
+
+`tools/gsmg/dbbi_faed_base81_token_audit.py` executes model 6 from the fresh
+DBBI/FAED brainstorm. This is distinct from prior “digraphic” cipher work,
+which pairs already-segmented checkerboard codes inside Playfair/Two-square/
+Four-square/Bifid families. Here the raw source itself is partitioned into
+non-overlapping pairs and mapped losslessly:
+
+```text
+token = 9 * first + second, with a=0 ... i=8
+
+DBBI: 91 symbols -> 45 tokens + literal unpaired final e
+FAED: 570 symbols -> 285 tokens, no remainder
+```
+
+Reversing high/low digit order maps token `9x+y` bijectively to `9y+x`.
+The implementation verifies that all declared statistics are invariant under
+that relabeling, so it is not counted as another orientation search. No ASCII
+offset is meaningful or attempted.
+
+Six statistics per source were declared: mutual information between the first
+and second coordinates of each pair, token index of coincidence, maximum token
+multiplicity, adjacent equal-token count, token-transition mutual information,
+and the maximum equal-token rate across lags 1 through `min(40,n/2)`. Twenty
+thousand null trials independently shuffle each raw symbol stream before
+pairing, preserving exact unigram profiles while destroying pairing/order.
+
+The basic inventories are:
+
+```text
+DBBI: 45 tokens, 27 distinct; top 14=bf (5), 13=be (4), 58=ge (4)
+FAED: 285 tokens, 75 distinct; top 60=gg (13), 59=gf (10), 54=ga (9)
+```
+
+| statistic | observed | null median | raw p | 12-test Bonferroni p |
+|---|---:|---:|---:|---:|
+| DBBI pair mutual information | 1.183110 | 0.889738 | 0.005450 | 0.065397 |
+| DBBI token IC | 0.031313 | 0.022222 | 0.049398 | 0.592770 |
+| DBBI maximum multiplicity | 5 | 4 | 0.369782 | 1.000000 |
+| DBBI adjacent token repeats | 2 | 1 | 0.257487 | 1.000000 |
+| DBBI token-transition MI | 3.596382 | 3.981715 | 0.956302 | 1.000000 |
+| DBBI maximum lag repeat rate | 0.114286 | 0.080000 | 0.107745 | 1.000000 |
+| FAED pair mutual information | 0.205895 | 0.177655 | 0.190690 | 1.000000 |
+| FAED token IC | 0.014430 | 0.013912 | 0.188091 | 1.000000 |
+| FAED maximum multiplicity | 13 | 11 | 0.227189 | 1.000000 |
+| FAED adjacent token repeats | 9 | 4 | 0.019649 | 0.235788 |
+| FAED token-transition MI | 3.927043 | 3.987026 | 0.813559 | 1.000000 |
+| FAED maximum lag repeat rate | 0.031690 | 0.031373 | 0.475626 | 1.000000 |
+
+DBBI's pair-coordinate dependence is the strongest raw statistic produced by
+models 1-6. It is real as a descriptive property of this fixed pairing, but it
+does not pass the predeclared twelve-test gate (`corrected p=0.065397`) and has
+no selected consumer. Its most common tokens also expose why pair dependence
+can arise from already-known raw structure: the established `b/e`-heavy DBBI
+profile contributes several repeated `b?` and `?e` combinations. FAED's nine
+adjacent token repeats likewise correspond partly to visible repeated raw
+digraphs such as `gg`; they do not survive family correction.
+
+The audit therefore performs zero source-selected lookups, crib placements,
+homophonic substitutions, or password tests. Positive controls fix exact token
+values, remainder preservation, high/low relabel invariance, and detection of
+a deliberately dependent pair distribution. Permanent regression coverage
+fixes 45/285 token counts, leftover `e`, the twelve-statistic registry, and the
+zero-consumer boundary.
+
+**Verdict:** model 6's structural gate fails after whole-family correction.
+Natural base-81 tokenization is closed as a self-authenticating decode, while
+DBBI's raw pair-MI value remains a narrow recorded observation. Reopening a
+consumer requires an authenticated 9x9 lookup, fixed crib placement, or other
+source-selected token semantics; adding 32 to obtain printable ASCII is not a
+valid continuation.
+
+## Phase 280 -- Factoradic/Lehmer records at n=6 and n=9: specification correction and null-like incidence (2026-08-14)
+
+`tools/gsmg/dbbi_faed_factoradic_gate_audit.py` executes model 7 from the fresh
+DBBI/FAED brainstorm. It first corrects a technical flaw in the proposed stop
+rule: a standard Lehmer code is **not self-delimiting**. The permutation size
+and record boundary must be supplied externally. Rather than infer either from
+readability, the audit admits only the two sizes already present in the puzzle:
+
+```text
+n=6  — six FAED lanes
+n=9  — nine symbols / 9x9 matrix
+```
+
+For each size it tests both standard serializations: all `n` digits including
+the mandatory final zero, and the conventional `n-1` form with that known zero
+omitted. A valid record obeys decreasing digit bounds:
+
+```text
+n=6 full:   d <= 5,4,3,2,1,0
+n=6 omit0: d <= 5,4,3,2,1
+n=9 full:   d <= 8,7,6,5,4,3,2,1,0
+n=9 omit0: d <= 8,7,6,5,4,3,2,1
+```
+
+For every source/grammar, the audit records both the total valid sliding-window
+count and the greatest number of valid non-overlapping blocks under any fixed
+phase. These 16 statistics are calibrated over 20,000 independent shuffles
+preserving the exact DBBI and FAED symbol profiles.
+
+No valid full record exists in either stream for either size. The omitted-zero
+grammar finds only five isolated regions:
+
+```text
+DBBI n=6  start 52: digits 5,2,3,1,1 -> permutation 5,2,4,1,3,0
+DBBI n=9  start 49: digits 1,4,5,5,2,3,1,1 -> 1,5,7,8,3,6,2,4,0
+FAED n=6  start 10: digits 2,1,3,0,1 -> 2,1,5,0,4,3
+FAED n=6 start 552: digits 1,3,2,1,0 -> 1,4,3,2,0,5
+FAED n=9   start 7: digits 4,3,5,2,1,3,0,1 -> 4,3,7,2,1,8,0,6,5
+```
+
+The fact that these windows decode mathematically is not evidence. Their
+incidence is ordinary or below expectation:
+
+| source/grammar | sliding valid | null median | best fixed-phase valid | raw p range |
+|---|---:|---:|---:|---:|
+| DBBI n=6 full | 0 | 0 | 0 | 1.000000 |
+| DBBI n=6 omit0 | 1 | 2 | 1 | 0.824309 |
+| DBBI n=9 full | 0 | 0 | 0 | 1.000000 |
+| DBBI n=9 omit0 | 1 | 1 | 1 | 0.722664 |
+| FAED n=6 full | 0 | 0 | 0 | 1.000000 |
+| FAED n=6 omit0 | 2 | 2 | 1 | 0.711214–0.903205 |
+| FAED n=9 full | 0 | 0 | 0 | 1.000000 |
+| FAED n=9 omit0 | 1 | 2 | 1 | 0.775961 |
+
+Every sixteen-test Bonferroni value is exactly 1.0. No fixed phase contains
+more than one valid record, excluding a repeated permutation schedule under
+these grammars.
+
+Positive controls verify decreasing-radix validity, Lehmer decoding, and exact
+factoradic rank on a known `n=4` record. Permanent regression coverage fixes
+the non-self-delimiting correction, sizes `(6,9)`, sixteen-statistic registry,
+zero permutation consumers, and absence of text/password oracles.
+
+**Verdict:** model 7's record-validity gate is closed negative for `n=6` and
+`n=9`, with and without the terminal zero. The isolated valid windows are
+ordinary combinatorial accidents and must not be used to reorder lanes,
+alphabets, rows, or endpoints. Reopening requires an authenticated alternate
+record size or explicit authored boundary and consumer.
+
+## Phase 281 -- Crib-solved low-order recurrences: fitted prefixes do not predict withheld or aligned material (2026-08-14)
+
+`tools/gsmg/dbbi_faed_crib_recurrence_audit.py` executes model 8 from the fresh
+DBBI/FAED brainstorm. Unlike the existing checkerboard repetition-pattern crib
+drag and keyword-seeded VIC recurrence audits, this family treats each crib as
+numeric plaintext for a tiny algebraic ciphertext operator.
+
+The candidate set is fixed before scoring:
+
+```text
+cribs (A1Z26 modulo 9 through cb_common.keyword_to_seed):
+  yinyang      -> 7,0,5,7,1,5,7
+  thispassword -> 2,8,0,1,7,1,1,1,5,6,0,4
+  seed         -> 1,5,5,4
+
+algebras:
+  Z/9Z
+  canonical GF(9) = GF(3)[x] / (x^2 + 1)
+
+operators:
+  affine lag-1:      P[i] = C[i] - alpha*C[i-1] - beta
+  homogeneous lag-2: P[i] = C[i] - alpha*C[i-1] - beta*C[i-2]
+```
+
+At every legal forward placement in DBBI and FAED, the first two crib digits
+solve/enumerate the coefficient pair `(alpha,beta)`. Those two fitted digits
+are never counted as evidence. The audit scores only (1) the remaining crib
+suffix, (2) the complete same crib under the same coefficients at the identical
+index in the other stream when in range, and (3) their joint surprisal. This
+directly enforces the brainstorm's rule that a solved coefficient set must
+explain withheld material or both streams rather than reproduce its fitting
+equations.
+
+The real family contains 7,582 coefficient candidates after the two-digit fit.
+Its leaders demonstrate why selection-aware calibration is necessary:
+
+- `Z/9Z` affine lag-1 fitted on DBBI `thispassword` at index 31 with
+  `(alpha,beta)=(3,8)` matches **0/10** own-stream holdout digits but **7/12**
+  digits at the aligned FAED position;
+- canonical GF(9) homogeneous lag-2 on FAED `thispassword` at index 205 with
+  `(6,2)` matches **6/10** held-out digits, but that index lies beyond DBBI and
+  supplies no aligned confirmation;
+- a `seed` fit reaches 4/4 in the other stream only after fitting a different
+  source/position and searching the complete family; its two-digit own-stream
+  holdout is not independently rare.
+
+Five hundred null trials independently shuffle the exact DBBI and FAED symbol
+profiles and rerun all cribs, placements, algebras, models, and coefficient
+solutions. With four family statistics, the minimum resolvable corrected p is
+`4/501 = 0.007984`, sufficient for the predeclared `0.01` gate.
+
+| statistic | observed | null median | raw p | 4-test Bonferroni p |
+|---|---:|---:|---:|---:|
+| maximum own-stream holdout surprisal | 3.576490 | 3.158429 | 0.471058 | 1.000000 |
+| maximum aligned-other surprisal | 4.002254 | 3.019035 | 0.055888 | 0.223553 |
+| maximum joint surprisal | 4.002254 | 3.576490 | 0.263473 | 1.000000 |
+| longest crib with perfect holdout | 4 | 4 | 1.000000 | 1.000000 |
+
+Thus the visually strongest `7/12` aligned match is expected in roughly one of
+18 complete null families before correction and does not coexist with any
+own-stream holdout support. The `6/10` held-out match is even more ordinary
+after selection. No operator explains either a long withheld crib or both
+streams unusually well.
+
+Positive controls construct a synthetic `Z/9Z` affine stream with known
+`alpha=2,beta=3`, recover those coefficients from two digits, and predict 4/4
+withheld digits. Permanent regression coverage fixes the two-digit fit, three
+cribs, four operator specifications, four-statistic family, and absence of
+text/password oracles.
+
+**Verdict:** model 8 is closed negative for `yinyang`, `thispassword`, and
+`seed` under A1Z26-mod-9, both declared low-order forms, `Z/9Z` and canonical
+GF(9), and every legal forward placement. Reopening requires a newly
+authenticated crib, authored placement, or independently selected operator;
+post-selecting more placements or coefficient forms is not warranted.
+
+## Phase 282 -- DBBI probability model / FAED arithmetic code: exact canonical family fails and source lacks termination (2026-08-14)
+
+`tools/gsmg/dbbi_faed_arithmetic_model_audit.py` executes model 9 from the fresh
+DBBI/FAED brainstorm. The implementation begins with a necessary specification
+finding: an arithmetic probability model does not by itself define a finite
+decode. The source supplies none of the following:
+
+- an end-of-stream symbol or termination rule;
+- the number of output symbols;
+- the arithmetic/range coder's normalization and digit-emission convention.
+
+Therefore there is no unique general “arithmetic decode FAED” operation. The
+audit does not fill that gap with a library lottery. It fixes the smallest
+four-declaration exact-rational family from values already present:
+
+```text
+input code point: FAED as forward base-9 fraction 0.<570 digits>
+
+DBBI models:
+  1. static nine-symbol histogram
+  2. first-order Markov table (histogram for symbol 1, DBBI bigram row after)
+
+externally imposed output lengths:
+  91  (len DBBI)
+  570 (len FAED)
+```
+
+For each declaration, exact `Fraction` arithmetic tracks the final half-open
+interval. Re-encoding uses one deterministic convention: the shortest, then
+lexicographically first, base-9 cylinder wholly contained in that interval.
+This supplies a mechanical round-trip oracle. Merely observing that the input
+FAED fraction lies in the final interval is tautological—it is true for every
+correct arithmetic decode and is explicitly not a hit.
+
+| model | imposed output length | canonical base-9 length | information bits | exact FAED codeword | decoded source hit |
+|---|---:|---:|---:|---|---|
+| static DBBI histogram | 91 | 81 | 253.870 | no | no |
+| static DBBI histogram | 570 | 516 | 1634.393 | no | no |
+| first-order DBBI model | 91 | 62 | 194.179 | no | no |
+| first-order DBBI model | 570 | 392 | 1240.973 | no | no |
+
+The length-570 canonical codewords are prefixes of FAED: only its first 516
+digits under the static model and first 392 under the Markov model are needed
+to lock the selected 570-symbol decode. The remaining 54 or 178 digits are
+redundant under those declarations. That is a normal property of supplying an
+over-precise code point, not an exact encoder round-trip. Neither canonical
+codeword equals the authored 570-symbol input.
+
+The decoded sequences are also non-identifying. Their prefixes are:
+
+```text
+static n=91: eehebbegbcgdafcgebcffedebghgecegecgbbebceiehibebche...
+Markov n=91: efcccdhhhabegebihcihcdhccccbfbefbegehbgbfdhhbfgbf...
+```
+
+Neither length-91 output equals DBBI and neither length-570 output equals FAED.
+No language score, lookup, or password oracle is applied.
+
+A synthetic binary-frequency control builds a known arithmetic interval,
+selects its canonical base-9 codeword, decodes it exactly, and recovers the
+same canonical codeword. Permanent regression coverage fixes all four
+declarations, missing-termination finding, input-in-interval tautology, zero
+canonical/source hits, and no promotion.
+
+**Verdict:** model 9 is closed negative for exact-rational decoding under
+DBBI's static histogram and first-order transition model, imposed lengths 91
+and 570, and the declared shortest base-9 codeword convention. This does not
+claim every custom integer range coder is negative; those are unselected
+families. Reopening requires an authored EOS/output length and normalization/
+emission convention rather than another decoder chosen after output inspection.
+
+## Phase 283 -- `anstoo` / asymmetric-numeral-system feasibility: only the universal-zero sink round-trips (2026-08-14)
+
+`tools/gsmg/dbbi_faed_rans_feasibility_audit.py` executes model 10 from the
+fresh DBBI/FAED brainstorm. Provenance remains deliberately weak: Phase 102
+found no creator-authored use or explanation of literal `anstoo`, so parsing it
+as “ANS too” is new wordplay, not recovered instruction text.
+
+The audit fixes only the minimal unnormalized static-rANS core whose inputs
+come directly from the streams:
+
+```text
+alphabet:       a,b,c,d,e,f,g,h,i
+DBBI counts:    3,25,8,4,18,10,10,8,5       (total 91)
+cumulative:     0,3,28,36,40,58,68,78,86
+final state:    whole forward FAED base-9 integer
+diagnostics:    terminal 0, terminal 1, whole-DBBI base-9 terminal
+fixed lengths:  91 and 570
+```
+
+The decoder reaches state zero after 618 output symbols and exactly re-encodes
+the input from it. This is not a hit: zero is an absorbing universal sink for
+this unnormalized recurrence, so every positive final state eventually obtains
+the same endpoint. Terminal one is undershot at zero, while the whole-DBBI
+terminal is undershot after 521 symbols.
+
+Imposing the two lengths already present does not repair termination. At 91
+symbols the residual state still occupies 489 base-9 digits; at 570 symbols it
+occupies 46. Re-encoding either decoded prefix from its recovered residual
+reproduces FAED exactly, but this is an inverse-function tautology and is
+explicitly marked as such. Neither fixed-length decode equals its same-length
+source. Their shared diagnostic prefix is:
+
+```text
+dcegbgfhcebhcfeebaibibcebeebibeibbigbbbdchbhfffbgfebbgbfgheiebibhh...
+```
+
+No text scoring is applied to this still-nine-symbol output, and no candidate
+or password oracle is run.
+
+A general renormalized rANS or tANS decoder remains undefined because the
+source selects none of the required normalization lower bound, radix/digit
+direction, normalized table size, tANS symbol spread, initial/terminal state,
+or decoded length/EOS. Trying combinations after inspecting output would be a
+codec lottery rather than a falsifiable test.
+
+Positive controls encode and fixed-length-decode a known symbol sequence and
+recover both the sequence and initial state. Permanent regression coverage
+fixes the three endpoint diagnostics, identifies zero as the sole degenerate
+round-trip, requires zero nondegenerate hits, and preserves the no-candidate/
+no-password boundary.
+
+**Verdict:** model 10 is feasibility-negative under the uniquely source-derived
+unnormalized static-rANS core. Reopening requires an authenticated normalized
+table/spread, renormalization convention, nondegenerate terminal state, and
+decoded length/EOS. The unsupported “ANS too” expansion alone supplies none of
+them.
+
+## Phase 284 -- Canonical DBBI `81+10` finite-state machine: full state/edge coverage and null-like output (2026-08-14)
+
+`tools/gsmg/dbbi_faed_fsm_audit.py` executes model 11 from the fresh DBBI/FAED
+brainstorm. The attractive identity `len(DBBI)=91=81+10` does not uniquely
+specify a transducer, so the audit registers one convention that consumes
+every symbol without padding or an unused control:
+
+```text
+DBBI[0:81]    row-major 9-state x 9-input next-state table
+DBBI[81]      initial state
+DBBI[82:91]   one Moore output label for each state
+FAED          570-symbol input tape
+emission      output label of the state reached after each transition
+```
+
+The exact trailer is `gigbeeeabe`: initial state `g` (6), followed by output
+labels `(i,g,b,e,e,e,a,b,e)`. No column-major orientation, pre-transition
+emission, Mealy rule, reversed tape, alternate initial state, or reinterpretation
+of the trailer is searched.
+
+The real machine is not constrained into a small or cyclic component. It
+visits all nine states, uses 79 of the 81 possible `(state,input)` edges, and
+finishes at state 4 rather than returning to its initial state 6. Duplicate
+trailer labels reduce the emitted stream to five distinct symbols, with prefix:
+
+```text
+bebeeeggabebebgibeeeegebaebebeeeebebegabeiegbbeeeeeegbaabaeagbag...
+```
+
+That output is neither FAED nor prefixed by/containing DBBI. It is retained as
+a diagnostic, not promoted as candidate plaintext.
+
+Nine preregistered table, driven-path, and emitted-output statistics were
+calibrated over 20,000 trials that independently shuffle the exact DBBI and
+FAED symbol profiles before reconstructing and driving the same serialization:
+
+| statistic | observed | null median | raw p | 9-test Bonferroni p |
+|---|---:|---:|---:|---:|
+| permutation rows | 0 | 0 | 1.000000 | 1.000000 |
+| reachable states | 9 | 9 | 1.000000 | 1.000000 |
+| driven states | 9 | 9 | 1.000000 | 1.000000 |
+| used state/input edges | 79 | 77 | 0.832258 | 1.000000 |
+| output entropy (bits) | 2.066160 | 2.055041 | 0.515024 | 1.000000 |
+| adjacent output repeats | 165 | 159 | 0.465377 | 1.000000 |
+| longest output run | 9 | 7 | 0.303785 | 1.000000 |
+| zlib output bytes | 208 | 210 | 0.474776 | 1.000000 |
+| final state returns to initial | 0 | 0 | 1.000000 | 1.000000 |
+
+Thus the superficially structured five-letter output and its runs are expected
+from a random placement with the same highly duplicated trailer profile. The
+predeclared corrected `p<0.01` structural gate fails, so no output remapping,
+language scoring, or password oracle is run.
+
+A synthetic control uses a table whose next state equals its input and identity
+state labels, recovering the input tape exactly. Permanent regression coverage
+fixes the single serialization, exact trailer, nine-test family, failed gate,
+three exact source-string negatives, and no-candidate/no-password boundary.
+
+**Verdict:** model 11 is closed negative for the single complete row-major
+`81+10` Moore interpretation above. This does not close every possible finite-
+state transducer; reopening requires a source-authenticated selector for a
+different orientation, emission role, or trailer meaning rather than searching
+those choices after seeing the output.
+
+## Phase 285 -- Indel-tolerant DBBI/FAED sequence alignment: best searched window is null-like (2026-08-14)
+
+`tools/gsmg/dbbi_faed_sequence_alignment_audit.py` executes model 12 from the
+fresh DBBI/FAED brainstorm, now eligible because Phase 274's exact six-lane
+model failed its own structural gate. This test asks whether the exact lanes
+missed a DBBI-like copy because a few insertions or deletions shifted it.
+
+The cost model and search family were fixed before scoring:
+
+```text
+alignment:       global Needleman-Wunsch / unit-cost Levenshtein
+match:           0
+substitution:    1
+insertion:       1
+deletion:        1
+pattern:         forward DBBI only
+targets:         all 480 length-91 windows of FAED
+fixed controls:  starts 0, 91, 182, 273, 364, 455
+```
+
+No reverse orientation, local alignment, affine gap cost, alternate mismatch
+weight, or variable-width window is searched. Exact Myers bit-vector distances
+perform the full scan; a conventional dynamic-programming traceback is used
+only after selecting the observed best window and is asserted to reproduce its
+distance.
+
+The six original non-overlapping lane distances are:
+
+```text
+71, 73, 64, 70, 68, 69     (sum 415)
+```
+
+The best among all 480 overlapping windows starts at zero-based FAED offset
+112 and has distance 62. Its deterministic traceback contains 36 exact
+matches, 48 substitutions, seven deletions, and seven insertions. With equal
+91-symbol endpoints, the insertion and deletion counts must balance; the mere
+existence of seven pairs is not evidence of seven deliberate edits.
+
+Selection-aware calibration independently shuffles the complete DBBI and FAED
+streams while preserving each exact unigram profile, then repeats all 480
+sliding comparisons and six fixed comparisons in each of 2,000 trials:
+
+| family statistic | observed | null median | raw p | 3-test Bonferroni p |
+|---|---:|---:|---:|---:|
+| minimum sliding distance | 62 | 63 | 0.282359 | 0.847076 |
+| minimum fixed-lane distance | 64 | 67 | 0.086457 | 0.259370 |
+| sum of six fixed distances | 415 | 420 | 0.181409 | 0.544228 |
+
+The strongest-looking fixed-lane distance occurs in roughly one of twelve
+complete null families even before correcting for the three registered
+statistics. Nothing approaches the predeclared corrected `p<0.01` gate.
+
+Positive controls embed an exact DBBI copy at a known offset and recover both
+distance zero and the offset; separate standard edit pairs verify the bit-
+parallel distance against full traceback. Permanent regression coverage fixes
+the 480-window family, single cost model, six distances, best offset/distance,
+failed gate, and no-gap-interpretation/no-candidate/no-password boundaries.
+
+**Verdict:** model 12 is closed negative for forward DBBI under unit-cost
+global alignment against every equal-width FAED window and the original six
+lanes. Per its preregistered stop rule, the observed gap positions are not
+interpreted. Reopening requires an authenticated alternate cost, direction, or
+boundary rather than tuning alignment parameters after seeing this output.
+
+## Phase 286 -- DBBI/FAED canonical tone renders: spectrograms contain note ridges, not a hidden visual layer (2026-08-14)
+
+`tools/gsmg/dbbi_faed_audio_spectrogram_audit.py` executes model 13 from the
+fresh DBBI/FAED brainstorm. The motivation is puzzle-native: the established
+Decentraland clue was solved by splitting stereo, inverting one channel,
+mixing, and viewing a spectrogram, producing the community answer
+`HASHTHETEXT`.
+
+There is an important reproducibility boundary. Phase 8 records an independent
+from-scratch NumPy STFT confirmation of that historical audio, but neither its
+script nor authenticated `puzzlepiece.mp3` is present in the repository now.
+Consequently this phase reuses the documented core operation—waveform to NumPy
+STFT—not unknown historical FFT/display parameters. It does not claim an exact
+rerun of the missing renderer.
+
+The family was fixed to three mappings before rendering:
+
+```text
+chromatic_a_root:     MIDI 60,61,62,63,64,65,66,67,68
+major_a_root:         MIDI 60,62,64,65,67,69,71,72,74
+major_i_root_cyclic:  MIDI 62,64,65,67,69,71,72,74,60
+
+sample rate:          8000 Hz
+symbol duration:      0.08 seconds
+amplitude:            constant, with a 40-sample squared-sine edge ramp
+STFT:                 512-point Hann window, hop 128
+display band:         180-700 Hz
+```
+
+Each mapping was applied independently to DBBI and FAED, producing six
+deterministic mono WAVs and six grayscale spectrogram PNGs under
+`/tmp/gsmg-dbbi-faed-audio` (the audit recreates them on demand rather than
+committing derived binary artifacts). DBBI renders are 7.28 seconds; FAED
+renders are 45.60 seconds. Representative reproducibility checkpoints are:
+
+| source / mapping | WAV SHA-256 | PNG SHA-256 |
+|---|---|---|
+| DBBI / chromatic | `64856d6a7e0c0a24976419fefebd3b9468c8b24e31005db882084d6a05d1ed9b` | `0ab833e9cd8e06681e7507cb6ac3b1c92687013f9f16a30ff6cc8d9cc87545a2` |
+| DBBI / major-a | `08020d77f00234adee997e4197d3555ff3c510b3b287cae97b7f35316b7c7d39` | `8d5d2b9ea777a70edb106eaa503fa91e9c86703092eaa715d792a15af7145a35` |
+| FAED / chromatic | `78d7147e58e819eab3bb174271aff1fa034635c26e94dc9256a432376c9a174e` | `d6b035545d78fdbb0ebc58157329a9e6828d65ce8a1f2f40323712ad36dc87ab` |
+| FAED / major-a | `95464b129f96c11885f95cf2cd49186c6dd30050bd57431ba3bb5f0225a693b2` | `90de23c7367d2b30c83f055c197849a00216255feb83135553abfc4742b4b1dc` |
+
+Direct visual review of all six full-resolution renders finds the same object
+in each: a single pitch ridge stepping among the declared note levels, plus
+vertical transition/leakage stripes caused by finite STFT windows. There is no
+letter baseline, repeated glyph geometry, simultaneous multi-band drawing, or
+independent shape layer analogous to the Decentraland artifact.
+
+Tesseract was run under page segmentation modes 6, 7, and 11 as a secondary
+diagnostic. It hallucinates short fragments from the dense stripes—examples
+include `LMU`, `HNN`, `VIA WAN`, and `Unlinautt ... KWAN`—and sometimes repeats
+them between modes 6 and 7. These outputs disagree across mappings and with
+mode 11, have no stable visual glyph source, and demonstrate that OCR presence
+is not a valid promotion oracle for tonal ridge images. None is treated as
+plaintext.
+
+A renderer control verifies exact sample counts, amplitude bounds, six output
+artifacts, hashes, and image creation. Permanent regression coverage fixes the
+three mappings/two sources and the explicit no-OCR-promotion/no-candidate
+boundary.
+
+**Verdict:** model 13 is closed negative for the six registered constant-
+duration pitch renders and the declared NumPy-STFT view. No arbitrary tempo,
+duration, scale, amplitude, harmonics, stereo construction, or display tuning
+is attempted after visual inspection. Reopening requires an authenticated
+mapping rule or recovery of the missing historical source/script and its exact
+parameters.
+
+## Phase 287 -- DBBI/FAED matrix-barcode rendering: unit correction and 84 finder-negative grids (2026-08-14)
+
+`tools/gsmg/dbbi_faed_matrix_barcode_audit.py` executes model 14 from the fresh
+DBBI/FAED brainstorm. It begins with a material correction to the proposal:
+the established dual-ternary representation yields `91*2=182` and
+`570*2=1140` **trits**, not bits. Nine symbols cannot be represented losslessly
+by two bits, so the brainstorm's raw-bitmap premise did not define a binary
+module stream.
+
+Rather than silently choose a ternary threshold, the audit uses the only
+canonical lossless binary bridge already established in this project: interpret
+the complete forward a=0..i=8 stream as one base-9 integer and serialize its
+minimal binary expansion. This gives:
+
+```text
+DBBI: 91 symbols = 182 trits -> 287 binary bits
+FAED: 570 symbols = 1140 trits -> 1807 binary bits
+```
+
+The nearest standard module grids large enough to hold each expansion are:
+
+| source | QR | square Data Matrix ECC200 | Aztec |
+|---|---|---|---|
+| DBBI | Version 1, 21x21 | 18x18 | compact layer 2 and full layer 1, both 19x19 |
+| FAED | Version 7, 45x45 | 44x44 | full layer 7, 45x45 |
+
+Because no representation-provided length exactly fills these grids, the audit
+explicitly labels zero extension as a *generous fixed-width control*, not as
+barcode-authored padding. Both leading and trailing extension are tested,
+together with row-major, column-major, and row-boustrophedon fill and both
+polarities. The complete registered family is 48 DBBI candidates plus 36 FAED
+candidates = **84**. No rotation, crop, arbitrary mask, nonstandard size, or
+interior offset is searched.
+
+Every candidate is first tested against mandatory format geometry: three exact
+7x7 QR finders, Data Matrix's solid/alternating L borders, or the appropriate
+central Aztec bullseye. The best match ratios remain partial:
+
+| source / format | best matched finder cells | ratio |
+|---|---:|---:|
+| DBBI / QR | 93/147 | 0.632653 |
+| DBBI / Data Matrix | 48/72 | 0.666667 |
+| DBBI / Aztec | 100/169 | 0.591716 |
+| FAED / QR | 84/147 | 0.571429 |
+| FAED / Data Matrix | 110/176 | 0.625000 |
+| FAED / Aztec | 92/169 | 0.544379 |
+
+**Zero of 84 candidates passes an exact finder gate.** OpenCV's real
+`QRCodeDetector` is nevertheless run on all 24 QR candidates. It reports a
+quadrilateral on four noisy grids (two DBBI, two FAED) but returns an empty
+payload for all four: zero valid format/ECC decodes. No Data Matrix or Aztec
+decoder library is installed, but this does not block the result because no
+candidate passes the necessary finder geometry that would trigger such a
+decoder. The report exposes this condition explicitly as
+`non_qr_decoder_needed=False`.
+
+Positive controls generate and successfully decode a real Version-1 QR payload
+`GSMG`, and construct exact Data Matrix border and Aztec bullseye fixtures.
+Permanent regression coverage fixes the 287/1807-bit correction, 84-candidate
+family, zero finder/decoder hits, and no-candidate/no-password boundary.
+
+**Verdict:** model 14 is negative for the whole-forward-base9 binary bridge,
+the nearest fitting standard grids, and the 84 declared extension/fill/polarity
+renders. More fundamentally, the original two-bit premise is invalid. Reopening
+requires an authenticated binary projection or standard-format padding rule,
+not a post hoc trit threshold, crop, mask, or grid size.
+
+## Phase 288 -- DBBI/FAED continued fractions: six distinguished rationals miss the closed constant registry (2026-08-14)
+
+`tools/gsmg/dbbi_faed_continued_fraction_audit.py` executes model 15 from the
+fresh DBBI/FAED brainstorm. Each a-i symbol must become a positive partial
+quotient, so the family contains exactly three puzzle-grounded bijections fixed
+before computation:
+
+```text
+direct 1-9:             1,2,3,4,5,6,7,8,9
+transposed 3x3 + 1:     1,4,7,2,5,8,3,6,9
+positive mirror-9:      9,8,7,6,5,4,3,2,1
+```
+
+The first is the canonical positive map; the second reuses the two established
+3x3 coordinate orders; the third reuses the project's mirror-9 involution while
+avoiding forbidden zero quotients. No stream reversal, rotation, arbitrary
+alphabet permutation, or zero repair is searched.
+
+Before computing any convergent, the comparison set was closed at 17 exact
+rationals: authenticated structural integers `7,16,23,24,31,91,140,149,196,
+570,2149,11110,574061`, plus literal `23/16`, `16/7`, `23/7`, and stream-length
+ratio `91/570`. A near-match threshold was fixed at absolute error `10^-12`.
+Decimal substring matches do not count and are not searched.
+
+Exact arbitrary-precision recurrence produces:
+
+| source / map | decimal prefix | numerator/denominator digits | nearest registry value | absolute difference |
+|---|---:|---:|---|---:|
+| DBBI / direct | 4.404055092385462851 | 58/57 | 23/7 | 1.118340806671177137 |
+| DBBI / transpose | 2.235659198062782799 | 63/63 | 16/7 | 0.050055087651502916 |
+| DBBI / mirror | 6.123267125135203627 | 64/63 | 7 | 0.876732874864796373 |
+| FAED / direct | 6.839783169357868268 | 393/392 | 7 | 0.160216830642131732 |
+| FAED / transpose | 8.844586273992636731 | 375/374 | 7 | 1.844586273992636731 |
+| FAED / mirror | 4.108768386579259868 | 353/352 | 23/7 | 0.823054100864974154 |
+
+Thus even the nearest result is about five hundredths away, ten orders of
+magnitude outside the preregistered tolerance. Across all six convergents there
+are **zero exact rational hits, zero near hits, and zero cases where the complete
+numerator or denominator equals a registered integer**. Numerator and denominator
+decimal SHA-256 checkpoints are retained by the machine-readable report, but
+their digits are not mined for fragments.
+
+Positive controls reproduce `[1;2]=3/2`, the classic `[3;7,16]=355/113`, and an
+exact registry match for `23/16`. Permanent regression coverage fixes all three
+maps, 17 targets, six rows, three zero-hit classes, and the no-substring/no-
+candidate/no-password boundary.
+
+**Verdict:** model 15 is closed negative for the three declared positive maps
+and complete 17-value registry. Reopening requires an authenticated alternate
+map or new pre-existing numeric target; searching more permutations or decimal
+substrings after seeing these values would violate the model's stop rule.
+
+## Phase 289 -- DBBI/FAED as authenticated-string selectors: 20 outputs are selection-aware null-like (2026-08-14)
+
+`tools/gsmg/dbbi_faed_authenticated_selector_audit.py` executes model 16, the
+last ranked model in the fresh DBBI/FAED brainstorm. It reverses the direction
+of earlier indexing work: DBBI/FAED values select characters *from* already-
+authenticated strings rather than external indices selecting from DBBI/FAED.
+
+The registry was frozen before output generation at five exact strings in the
+four categories named by the brainstorm:
+
+```text
+solved URL:          gsmg.io/theseedisplanted
+prize address:       1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe
+native row sums:     610876654997879
+native column sums:  8108108736759668
+validation answer:   incaseyoumanagetocrackthistheprivatekeysbelongtohalf...
+```
+
+The row/column strings are direct delimiter-free decimal serializations of the
+authenticated 14x14 native popcount lists. No generic wordlist, clue-text
+expansion, hash, or newly noticed string is admitted.
+
+Two zero-based selector modes are registered:
+
+1. each symbol selects its value `0..8` modulo target length;
+2. each boundary-aligned pair selects `9*first+second` (`0..80`) modulo target
+   length.
+
+All targets exceed nine characters, so modulo is vacuous in mode 1: it can
+only expose each target's first nine characters. Mode 2 consumes all 570 FAED
+symbols but only 90 of 91 DBBI symbols; the final DBBI symbol is left unconsumed
+rather than padded or paired across another artifact. The complete family is
+`2 streams * 5 targets * 2 modes = 20` diagnostic outputs.
+
+Four family-level statistics were fixed before scoring: maximum normalized
+English quadgram score, longest substring from the authenticated target-word
+registry, maximum adjacent-repeat rate, and minimum zlib ratio. Every one of
+5,000 null trials independently shuffles the exact DBBI and FAED profiles,
+rebuilds all 20 outputs, and reselects each family leader:
+
+| family statistic | observed | null median | raw p | 4-test Bonferroni p |
+|---|---:|---:|---:|---:|
+| maximum normalized quadgram score | -5.990137 | -5.607971 | 0.976205 | 1.000000 |
+| longest authenticated word | 4 | 4 | 0.509098 | 1.000000 |
+| maximum adjacent-repeat rate | 0.344444 | 0.300000 | 0.179964 | 0.719856 |
+| minimum zlib ratio | 0.401754 | 0.410526 | 0.046391 | 0.185563 |
+
+The sole recognizable registered word is `GSMG` in the FAED/prize-address
+single-symbol output. It is not evidence: that mode is restricted to the first
+nine address characters, `1GSMG1JC9`, and an equal-or-longer registered fragment
+appears in roughly half of complete shuffled families. Likewise, every DBBI
+single-mode output has length 91, matching `VALIDATION_ANSWER` only because DBBI
+itself has length 91; all five such length-only matches have different content
+and are explicitly excluded from promotion.
+
+There are **zero exact target-string hits**, no family statistic passes the
+corrected `p<0.01` gate, and no diagnostic output is promoted to candidate
+plaintext or a password oracle.
+
+Positive controls verify identity selection over a nine-character target and
+base-81 pair selection with an explicitly reported odd-symbol remainder.
+Permanent regression coverage fixes the four categories/five strings, two
+modes, 20 outputs, vacuous-single-index finding, four-test family, zero exact
+hits, failed gate, and no-promotion/no-password boundary.
+
+**Verdict:** model 16 is closed negative for the exact authenticated target
+registry and the two declared zero-based selector modes. Reopening requires a
+new independently authenticated target or an authored indexing/boundary rule;
+adding strings or shifting indices after seeing fragments would recreate the
+unbounded textual search this model was designed to avoid.

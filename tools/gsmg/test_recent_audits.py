@@ -32,6 +32,23 @@ import creator_yingyang_faed_pair_audit
 import creator_operator_vocabulary_audit
 import creator_personal_disclosures_audit
 import dbbi_faed_boundary_selector_audit
+import dbbi_faed_six_lane_audit
+import dbbi_faed_transition_matrix_audit
+import dbbi_faed_gf9_audit
+import dbbi_faed_base27_audit
+import dbbi_faed_mtf_gate_audit
+import dbbi_faed_base81_token_audit
+import dbbi_faed_factoradic_gate_audit
+import dbbi_faed_crib_recurrence_audit
+import dbbi_faed_arithmetic_model_audit
+import dbbi_faed_rans_feasibility_audit
+import dbbi_faed_fsm_audit
+import dbbi_faed_sequence_alignment_audit
+import dbbi_faed_audio_spectrogram_audit
+import dbbi_faed_matrix_barcode_audit
+import dbbi_faed_continued_fraction_audit
+import dbbi_faed_authenticated_selector_audit
+import decimal_transport_inverse_audit
 import dual_channel_consistency_audit
 import excluded_wordlist_coverage_audit
 import first_piece_hamming_control_audit
@@ -68,7 +85,9 @@ import minimal_macro_chain_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import native_favicon_shadow_audit
+import nibble_packing_audit
 import onchain_op_return_provenance_audit
+import p32_sibling_password_audit
 import page_syntax_house_style_audit
 import phase1_icon_symbol_layer_audit
 import phase32_column_calibration_audit
@@ -109,6 +128,195 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_dbbi_faed_exact_six_lane_geometry_and_tail_are_bounded(self):
+        report = dbbi_faed_six_lane_audit.audit(trials=100)
+        self.assertEqual(report["geometry"]["dbbi_length"], 91)
+        self.assertEqual(report["geometry"]["faed_length"], 570)
+        self.assertEqual(report["geometry"]["lane_count"], 6)
+        self.assertEqual(report["geometry"]["tail_length"], 24)
+        self.assertEqual(len(report["body"]["lane_match_counts"]), 6)
+        self.assertEqual(
+            tuple(report["body_calibration"]["rows"]),
+            dbbi_faed_six_lane_audit.BODY_METRIC_NAMES,
+        )
+        self.assertEqual(report["tail"]["endpoint_mask"].count("B"), 15)
+        self.assertEqual(report["tail"]["endpoint_mask"].count("Y"), 9)
+        self.assertFalse(report["plaintext_or_password_oracle_run"])
+        self.assertFalse(report["promotion"]["any"])
+
+    def test_dbbi_faed_transition_matrix_family_is_canonical_and_bounded(self):
+        report = dbbi_faed_transition_matrix_audit.audit(trials=25)
+        self.assertEqual(report["matrix_shape"], (9, 9))
+        self.assertEqual(report["transition_totals"], {"DBBI": 90, "FAED": 569})
+        self.assertEqual(sum(report["DBBI"]["row_sums"]), 90)
+        self.assertEqual(sum(report["FAED"]["column_sums"]), 569)
+        self.assertEqual(
+            tuple(report["sequence_calibration"]["rows"]),
+            tuple(dbbi_faed_transition_matrix_audit.SEQUENCE_METRIC_ALTERNATIVES),
+        )
+        self.assertEqual(
+            report["degree_profile_test"]["permutation_count"], 362_880
+        )
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_gf9_family_has_six_presentations_and_no_text_oracle(self):
+        report = dbbi_faed_gf9_audit.audit(trials=3)
+        self.assertEqual(report["presentation_count"], 6)
+        self.assertEqual(
+            report["irreducible_quadratics"], ((0, 1), (1, 2), (2, 2))
+        )
+        self.assertEqual(
+            report["lane_geometry"], {"count": 6, "width": 91, "unused_tail": 24}
+        )
+        self.assertEqual(
+            tuple(report["calibration"]["rows"]),
+            tuple(dbbi_faed_gf9_audit.METRIC_ALTERNATIVES),
+        )
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_base27_is_exact_gap_and_preserves_leftover_trits(self):
+        report = dbbi_faed_base27_audit.audit(trials=5)
+        self.assertFalse(report["prior_coverage"]["base27_present"])
+        self.assertEqual(report["family"]["declarations_per_source"], 32)
+        self.assertEqual(report["source_geometry"]["DBBI"]["output_characters"], 60)
+        self.assertEqual(report["source_geometry"]["DBBI"]["leftover_trits"], 2)
+        self.assertEqual(report["source_geometry"]["FAED"]["output_characters"], 380)
+        self.assertEqual(report["source_geometry"]["FAED"]["leftover_trits"], 0)
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_mtf_gate_keeps_bwt_conditional(self):
+        report = dbbi_faed_mtf_gate_audit.audit(trials=10)
+        self.assertEqual(report["rank_mapping"], "a=0 through i=8")
+        self.assertTrue(report["initial_alphabet_structural_relabel_invariant"])
+        self.assertEqual(report["calibration"]["metric_count"], 10)
+        self.assertEqual(report["bwt"]["primary_indices_scanned"], 0)
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_base81_keeps_odd_symbol_and_consumer_conditional(self):
+        report = dbbi_faed_base81_token_audit.audit(trials=10)
+        self.assertEqual(report["sources"]["DBBI"]["token_count"], 45)
+        self.assertEqual(report["sources"]["DBBI"]["leftover_symbol"], "e")
+        self.assertEqual(report["sources"]["FAED"]["token_count"], 285)
+        self.assertEqual(report["sources"]["FAED"]["leftover_symbol"], "")
+        self.assertEqual(report["calibration"]["metric_count"], 12)
+        self.assertEqual(report["homophonic_or_lookup_stage"]["operations_run"], 0)
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_factoradic_gate_uses_only_fixed_sizes_and_no_consumer(self):
+        report = dbbi_faed_factoradic_gate_audit.audit(trials=10)
+        self.assertFalse(
+            report["specification_correction"]["standard_lehmer_is_self_delimiting"]
+        )
+        self.assertEqual(report["specification_correction"]["externally_fixed_sizes"], (6, 9))
+        self.assertEqual(report["calibration"]["metric_count"], 16)
+        self.assertEqual(report["permutation_consumer"]["operations_run"], 0)
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_crib_recurrence_fits_two_and_scores_only_holdout(self):
+        report = dbbi_faed_crib_recurrence_audit.audit(trials=3)
+        self.assertEqual(report["fit_digits"], 2)
+        self.assertEqual(report["specification_count"], 4)
+        self.assertEqual(report["calibration"]["metric_count"], 4)
+        self.assertEqual(
+            tuple(report["cribs"]), ("yinyang", "thispassword", "seed")
+        )
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_arithmetic_model_requires_termination_and_exact_roundtrip(self):
+        report = dbbi_faed_arithmetic_model_audit.audit()
+        self.assertEqual(report["declaration_count"], 4)
+        self.assertTrue(report["missing_required_source_fields"]["termination_or_eos"])
+        self.assertEqual(report["exact_canonical_hits"], ())
+        self.assertEqual(report["source_plaintext_hits"], ())
+        self.assertTrue(all(
+            row["input_codepoint_inside_final_interval"] for row in report["rows"]
+        ))
+        self.assertFalse(report["promotion"]["promoted"])
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_rans_requires_terminal_state_and_marks_residual_roundtrip_tautology(self):
+        report = dbbi_faed_rans_feasibility_audit.audit()
+        self.assertEqual(report["model"]["total"], 91)
+        self.assertEqual(len(report["terminal_rows"]), 3)
+        self.assertEqual(len(report["fixed_length_rows"]), 2)
+        self.assertTrue(all(
+            row["reencode_with_residual_is_tautological"]
+            for row in report["fixed_length_rows"]
+        ))
+        self.assertEqual(report["provenance"]["literal_anstoo_creator_explanations"], 0)
+        self.assertEqual(report["exact_terminal_roundtrip_hits"], ("zero",))
+        self.assertEqual(report["nondegenerate_terminal_roundtrip_hits"], ())
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_fsm_uses_one_canonical_81_plus_10_serialization(self):
+        report = dbbi_faed_fsm_audit.audit()
+        self.assertEqual(report["serialization"]["alternate_conventions_tested"], 0)
+        self.assertEqual(report["trailer_text"], "gigbeeeabe")
+        self.assertEqual(len(report["statistic_rows"]), 9)
+        self.assertEqual(report["corrected_minimum"], 1.0)
+        self.assertFalse(report["gate_passed"])
+        self.assertFalse(report["output_equals_faed"])
+        self.assertFalse(report["output_prefix_equals_dbbi"])
+        self.assertFalse(report["output_contains_dbbi"])
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_sequence_alignment_is_selection_calibrated(self):
+        report = dbbi_faed_sequence_alignment_audit.audit()
+        self.assertEqual(report["model"]["sliding_window_count"], 480)
+        self.assertEqual(report["model"]["alternate_cost_models_tested"], 0)
+        self.assertEqual(len(report["fixed_distances"]), 6)
+        self.assertEqual(len(report["statistic_rows"]), 3)
+        self.assertEqual(report["fixed_distances"], (71, 73, 64, 70, 68, 69))
+        self.assertEqual(report["best_start"], 112)
+        self.assertEqual(report["best_alignment"]["distance"], 62)
+        self.assertFalse(report["gate_passed"])
+        self.assertFalse(report["gap_positions_interpreted"])
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_audio_family_is_exactly_three_mappings(self):
+        with self.subTest("deterministic renderer"):
+            dbbi_faed_audio_spectrogram_audit.self_test()
+
+    def test_dbbi_faed_matrix_barcode_family_requires_real_finders(self):
+        dbbi_faed_matrix_barcode_audit.self_test()
+
+    def test_dbbi_faed_continued_fractions_use_closed_constant_registry(self):
+        report = dbbi_faed_continued_fraction_audit.audit()
+        self.assertEqual(len(report["maps"]), 3)
+        self.assertEqual(report["target_registry"]["count"], 17)
+        self.assertEqual(len(report["rows"]), 6)
+        self.assertEqual(report["exact_value_hits"], ())
+        self.assertEqual(report["near_value_hits"], ())
+        self.assertEqual(report["numerator_or_denominator_hits"], ())
+        self.assertFalse(report["promotion"])
+        self.assertFalse(report["decimal_substring_search_run"])
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_authenticated_selector_family_is_closed(self):
+        report = dbbi_faed_authenticated_selector_audit.audit()
+        self.assertEqual(report["target_category_count"], 4)
+        self.assertEqual(report["target_string_count"], 5)
+        self.assertEqual(report["candidate_count"], 20)
+        self.assertTrue(report["single_modulo_is_vacuous_for_all_targets"])
+        self.assertEqual(len(report["statistic_rows"]), 4)
+        self.assertEqual(report["exact_target_hits"], ())
+        self.assertFalse(report["gate_passed"])
+        self.assertTrue(report["diagnostic_outputs_generated"])
+        self.assertFalse(report["candidate_text_promoted"])
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
     def test_phase32_monologue_residual_zero_hits(self):
         phase32_monologue_residual_audit.self_test()
         report = phase32_monologue_residual_audit.audit()
@@ -170,9 +378,22 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertTrue(any("CIAO BELLA O" in c for c in candidates))
 
     def test_x2sh4y0qb15_p32_candidate_negative(self):
-        x2sh4y0qb15_p32_candidate_audit.self_test()
-        report = x2sh4y0qb15_p32_candidate_audit.audit()
-        self.assertEqual(report["candidate_count"], 24)
+        report = x2sh4y0qb15_p32_candidate_audit.self_test()
+        self.assertEqual(report["candidate_count"], 42)
+        self.assertEqual(report["unique_material_count"], 1362)
+        self.assertEqual(
+            report["candidate_digest"],
+            "509bfbf096af656567d1bfc6a58824a9ca41c2ea7c4876d1bbd74ce1504954f7",
+        )
+        self.assertEqual(report["cbc_menu_gap_variant_count"], 20)
+        self.assertFalse(report["empty_material_present"])
+        self.assertIn(
+            "(4,15)(-42,-16)(32,82)(2,0)", report["candidates"]
+        )
+        self.assertIn(
+            x2sh4y0qb15_p32_candidate_audit.SOURCE_BLOCK,
+            report["candidates"],
+        )
         self.assertEqual(report["hits"], [])
         # Independent check of the backspace-provenance claim: the earliest
         # 2020 repost lacks the trailing \b's a 2025 repost has.
@@ -199,6 +420,107 @@ class CorrectedClaimTests(unittest.TestCase):
             self.assertNotIn("\\b", earliest_text)
             later_text = flatten(messages[38301]["text"])
             self.assertEqual(later_text.count("\\b"), 8)
+
+    def test_p32_sibling_password_negative(self):
+        p32_sibling_password_audit.self_test()
+        report = p32_sibling_password_audit.audit()
+        self.assertEqual(report["phase32_plaintext_bytes"], 2422)
+        self.assertEqual(
+            report["phase32_plaintext_sha256"],
+            "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+        )
+        self.assertEqual(report["answer_321_length"], 1539)
+        self.assertEqual(report["answer_322_length"], 91)
+        self.assertEqual(
+            report["construction"]["established_selection"],
+            "NCSYANGCAHIRIASOGALEAFAYANESTVE",
+        )
+        split_guide = report["construction"]["split_final_be_guide"]
+        self.assertEqual(
+            split_guide["prime_rule_selection"],
+            "NCSYANGCAHIRIASOGALEAFAYANESTV",
+        )
+        self.assertEqual(
+            split_guide["token_endpoint_projection"],
+            "NCSYAAORTERKBLTATRNEAED",
+        )
+        self.assertEqual(
+            split_guide["raw_endpoint_projection"],
+            "NCSYNGCAIIASOGLEAAANETE",
+        )
+        self.assertEqual(report["candidate_count"], 25)
+        self.assertEqual(report["password_material_count"], 50)
+        structural = report["structural_oracle"]
+        self.assertEqual(structural["ciphertext_bytes"], 80)
+        self.assertEqual(structural["ciphertext_blocks"], 5)
+        self.assertEqual(
+            structural["trial_count"],
+            report["password_material_count"] * len(
+                p32_sibling_password_audit.KDF_SPECS
+            ),
+        )
+        self.assertEqual(structural["hits"], [])
+        # The 23/16/7 triple belongs to the split-final-BE guide's endpoint
+        # profile, not the established prime walk (23/15/8) -- independent
+        # re-check of the module's own falsification claim.
+        self.assertFalse(report["interpretation"]["prime_walk_matches_23_16_7"])
+        self.assertTrue(
+            report["interpretation"]["split_final_be_guide_matches_23_16_7"]
+        )
+
+    def test_faed_hex_nibble_packing_negative(self):
+        nibble_packing_audit.self_test()
+        report = nibble_packing_audit.audit()
+        self.assertEqual(report["source_lengths"], {"DBBI": 91, "FAED": 570})
+        self.assertEqual(report["variant_count"], 8)
+        self.assertEqual(report["faed_packed_byte_length"], 285)
+        self.assertEqual(report["unique_password_material_count"], 24)
+        self.assertTrue(report["phase32_positive_control"])
+        self.assertTrue(all(
+            row["leftover_nibble"] is not None
+            for row in report["dbbi_diagnostic_rows"]
+        ))
+        self.assertTrue(all(
+            not row["prefix_signatures"] and not row["compression_results"]
+            for row in report["faed_rows"]
+        ))
+        by_label = {row["label"]: row for row in report["faed_rows"]}
+        self.assertEqual(
+            by_label["a0i8/forward/high_low"]["sha256"],
+            "c352749704479ef054a6afa1a7a6262c1fea5d646704ffd7db7eb6d7ccc59265",
+        )
+        self.assertEqual(report["hits"], [])
+
+    def test_dbbi_faed_decimal_transport_inverse_negative(self):
+        decimal_transport_inverse_audit.self_test()
+        report = decimal_transport_inverse_audit.audit()
+        self.assertEqual(report["source_lengths"], {"DBBI": 91, "FAED": 570})
+        self.assertEqual(report["source_zero_symbol_counts"], {"DBBI": 0, "FAED": 0})
+        self.assertEqual(
+            report["known_transport_controls"],
+            {
+                "lastwordsbeforearchichoice": "lastwordsbeforearchichoice",
+                "thispassword": "thispassword",
+            },
+        )
+        self.assertEqual(report["variant_count"], 8)
+        self.assertEqual(report["rejected_variants"], ())
+        self.assertEqual(report["unique_password_material_count"], 24)
+        self.assertTrue(report["phase32_positive_control"])
+        self.assertTrue(all(
+            not row["prefix_signatures"] and not row["compression_results"]
+            for row in report["rows"]
+        ))
+        by_label = {row["label"]: row for row in report["rows"]}
+        self.assertEqual(
+            by_label["DBBI/forward/bytes_forward"]["sha256"],
+            "7270ed152fa64b85f144f99b49352ecabeb01c0f0b624fb71cb648f91d1d8b80",
+        )
+        self.assertEqual(
+            by_label["FAED/forward/bytes_forward"]["sha256"],
+            "7f14db2d90301b8e1d16ff014ad3e84ba75350ef828ad9b8a8a26b1e69302de9",
+        )
+        self.assertEqual(report["hits"], [])
 
     def test_roman_rail_prime_sum_bounded_family(self):
         roman_rail_prime_sum_audit.self_test()

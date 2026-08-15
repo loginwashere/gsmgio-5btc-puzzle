@@ -33,31 +33,58 @@ The candidate family (disclosed in full, nothing added after seeing a
 result):
   1. Literal source text, three forms.
   2. Numerically substituted text, three forms.
-  3. Coordinate-serialized text, two forms.
+  3. Coordinate-serialized text, including the reversed route in the same
+     two source-defined serializations.
   4. Three additional "worst gear" = reverse scopes beyond plain character
      reversal: whole-token-sequence reversal, per-row reversal (X and Y
      rows reversed independently, label first), and coordinate-pair X/Y
      swap (the last of which turns (4,15) into (15,4)).
-  5. Every one of the 12 forms above, character-reversed on top -- so the
+  5. The complete authenticated six-line riddle block, whitespace-collapsed
+     forms, and literal/solved headers joined to the "worst gear" instruction.
+  6. Every base form above, character-reversed on top -- so the
      structural reversals in (4) also get character-reversed, without
      hand-picking which combination "matters".
 A 2025 solver repost (Telegram message 38301) appends eight literal `\b`
 text characters after "worst gear.", but the earliest preserved 2020 repost
 (message 2834) does not -- confirmed directly against both raw exports, not
 assumed -- so those are not treated as authenticated puzzle bytes here.
-`answer_forms`/`keystr_forms` then supply case variants, alpha-only forms,
-SHA-256 hex, and double-SHA-256 hex for every one of these; raw SHA-256
-digest bytes are added explicitly as separate key material.
+`answer_forms`/`keystr_forms` then supply case variants, non-empty alpha-only
+forms, SHA-256 hex, and double-SHA-256 hex for every one of these; raw
+SHA-256 digest bytes are added explicitly as separate key material.  The CBC
+oracle also opts into the 20 historically plausible Blowfish/Camellia/SEED
+menu-gap variants, rather than inheriting the narrower default helper silently.
 """
 
 import argparse
 import hashlib
 import json
+from pathlib import Path
 
-from cb_common import BLOBS, answer_forms, keystr_forms
+from cb_common import (
+    BLOBS,
+    OPENSSL_MENU_GAP_CIPHER_VARIANTS,
+    aes_try_open_bytes,
+    answer_forms,
+    keystr_forms,
+)
 from color_mask_full_stream_audit import passphrase_hits
 
 RESOLVED = {"S": 32, "H": -42, "B": -16, "Q": 82}
+REPO_ROOT = Path(__file__).resolve().parents[2]
+README_PATH = REPO_ROOT / "README.md"
+
+SOURCE_LINES = (
+    "# X 2 S H 4 Y 0 Q B 15 #",
+    "Q -> extend the name of a hackers' swordless fish, the I and W are below.",
+    "B -> ((BV80605001911AP)- (sqrt(-1)))^2",
+    "H -> (Answer to only this puzzle but nothing else) * -1",
+    "S -> cha' + (vagh * jav)",
+    "Ok kid, on the highway, let put it in the worst gear.",
+)
+SOURCE_BLOCK = "\n".join(SOURCE_LINES)
+INSTRUCTION = SOURCE_LINES[-1]
+LITERAL_HEADER = SOURCE_LINES[0]
+SOLVED_HEADER = "# X 2 32 -42 4 Y 0 82 -16 15 #"
 
 BASE_FORMS = (
     # 1. Literal source text.
@@ -82,6 +109,19 @@ BASE_FORMS = (
     #        (notably turns (4,15) into the historically meaningful (15,4)).
     "(0,2)(82,32)(-16,-42)(15,4)",
     "0,2|82,32|-16,-42|15,4",
+    #    (d) reverse the route/point order while preserving each (X,Y) pair.
+    "(4,15)(-42,-16)(32,82)(2,0)",
+    "4,15|-42,-16|32,82|2,0",
+    # 5. The complete authenticated source block and the instruction joined
+    #    directly to both its literal and solved header.  Phase 267 stopped
+    #    before this block, so sentence-level coverage there did not test it.
+    SOURCE_BLOCK,
+    " ".join(SOURCE_LINES),
+    "".join(SOURCE_LINES),
+    f"{LITERAL_HEADER}\n{INSTRUCTION}",
+    f"{LITERAL_HEADER} {INSTRUCTION}",
+    f"{SOLVED_HEADER}\n{INSTRUCTION}",
+    f"{SOLVED_HEADER} {INSTRUCTION}",
 )
 
 # Character-level reversal of every base form (the fourth, most literal
@@ -90,18 +130,34 @@ BASE_FORMS = (
 # form also gets tested character-reversed, without hand-selecting which
 # combinations "matter."
 CANDIDATES = BASE_FORMS + tuple(form[::-1] for form in BASE_FORMS)
+CANDIDATE_DIGEST = hashlib.sha256("\n".join(CANDIDATES).encode()).hexdigest()
+
+
+def complete_passphrase_hits(material, blobs):
+    """Run the shared standard oracle plus its opt-in CBC menu-gap slice."""
+    hits = list(passphrase_hits(material, blobs))
+    result = aes_try_open_bytes(
+        material,
+        kdf_variants=OPENSSL_MENU_GAP_CIPHER_VARIANTS,
+        blobs=blobs,
+    )
+    if result:
+        hits.append({"family": "cbc-menu-gap", "result": repr(result)})
+    return hits
 
 
 def material_family(candidates, blobs):
     materials = {}
     for candidate in candidates:
         for form in answer_forms(candidate):
+            if not form:
+                continue
             for keystr in keystr_forms(form, newline_variants=True, whitespace_variants=True):
                 materials.setdefault(keystr.encode("utf-8"), set()).add(candidate)
         materials.setdefault(hashlib.sha256(candidate.encode()).digest(), set()).add(candidate)
     hits = []
     for material, sources in sorted(materials.items()):
-        for hit in passphrase_hits(material, blobs):
+        for hit in complete_passphrase_hits(material, blobs):
             hits.append({
                 "sources": tuple(sorted(sources)),
                 "material_hex": material.hex(),
@@ -110,6 +166,7 @@ def material_family(candidates, blobs):
     return {
         "candidate_count": len(candidates),
         "unique_material_count": len(materials),
+        "empty_material_present": b"" in materials,
         "hits": hits,
     }
 
@@ -119,24 +176,38 @@ def audit():
     return {
         "candidates": CANDIDATES,
         "resolved_values": RESOLVED,
+        "candidate_digest": CANDIDATE_DIGEST,
+        "cbc_menu_gap_variant_count": len(OPENSSL_MENU_GAP_CIPHER_VARIANTS),
         "blob_names": tuple(sorted(BLOBS)),
         **report,
     }
 
 
 def self_test():
+    readme_text = README_PATH.read_text(encoding="utf-8")
+    assert SOURCE_BLOCK in readme_text
     report = audit()
-    assert report["candidate_count"] == len(BASE_FORMS) * 2 == 24
+    assert report["candidate_count"] == len(BASE_FORMS) * 2
     assert report["resolved_values"] == {"S": 32, "H": -42, "B": -16, "Q": 82}
     assert report["blob_names"] == ("COSMIC", "P32TRAILING", "SALPH", "URLBLOB")
-    assert report["unique_material_count"] > 0
+    assert report["cbc_menu_gap_variant_count"] == 20
+    assert "(4,15)(-42,-16)(32,82)(2,0)" in report["candidates"]
+    assert SOURCE_BLOCK in report["candidates"]
+    assert report["empty_material_present"] is False
+    # Phase 269 pins the disclosed family and its material accounting.
+    assert report["candidate_digest"] == (
+        "509bfbf096af656567d1bfc6a58824a9ca41c2ea7c4876d1bbd74ce1504954f7"
+    )
+    assert report["unique_material_count"] == 1362
     assert report["hits"] == []
     print(
         f"[*] self-test OK: {report['candidate_count']} X2SH4Y0QB15-derived "
-        f"candidates (literal/substituted/coordinate x forward+reversed) / "
+        f"candidates (source block/literal/substituted/coordinate x "
+        f"forward+reversed) / "
         f"{report['unique_material_count']} unique key materials against "
         f"all 4 tracked blobs, 0 hits"
     )
+    return report
 
 
 def main():

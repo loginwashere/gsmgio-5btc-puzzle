@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"n-title","type":"text","text":"# GSMG Puzzle Walkthrough\nPorted from the project Miro board (5 frames, chronological). Covers the whole publicly-solved chain plus the still-open SalPhaseIon/Cosmic Duality endgame and the creator's post-3.2.2 meta hints. See [[GSMG Frontier.canvas]] for the live macro/recognition-chain frontier that continues past the open blobs, and [[GSMG_HOME]] for the current verified state.","x":-200,"y":-420,"width":700,"height":130,"color":"6"},
+		{"id":"n-splash","type":"text","text":"**Initial image — gsmg.io splash**\n5 BTC Puzzle Challenge poster: logo, QR code, BTC prize wallet address, decorative grid pattern.\nEntry point of the whole challenge, pre-Stage-1.","x":-180,"y":-220,"width":320,"height":140,"color":"4"},
+		{"id":"n-stage1","type":"text","text":"**Stage 1 — the seed is planted**\n`gsmg.io/theseedisplanted`\n8 rebus images: WAR+NING, LO+CRYPTO/GIC -> \"The Warning\" by Logic; remainder spells CAN YOU DIG IT.\nHidden POST form, dev-tools only.\nPassword: `theflowerblossomsthroughwhatseemstobeaconcretesurface`","x":-180,"y":0,"width":320,"height":170,"color":"4"},
+		{"id":"n-phase23","type":"text","text":"**Phase 2 & 3 — riddle + ciphertext**\nPhase 2: Matrix Reloaded \"causality\" quote -> password `causality` -> SHA256 -> AES-256-CBC decrypt.\nPhase 3: 7-part concatenation (causality/Safenet/Luna/HSM/11110/genesis-coinbase-hex/chess-FEN via the X2SH4Y0QB15 riddle) -> SHA256 `1a57c572...` -> decrypts to Phase 3.2 ciphertext + \"giveit\" prefix hint.\nSee [[GSMG_PHASE_INDEX]] for the full phase-by-phase record.","x":-180,"y":240,"width":340,"height":210,"color":"4"},
+		{"id":"n-endgame","type":"text","text":"**SalPhaseIon + Cosmic Duality — the endgame**\nRaw stream parses into 8 segments:\n`dbbi` (91 syms, undecoded) -> `matrixsumlist` -> `faed` (570 syms, undecoded) -> `lastwordsbeforearchichoice`/`thispassword` -> `shabefourfirsthintisyourlastcommand` -> inline AES blob (unopened) -> `enter` -> `shabefanstoo`.\nTwo unopened OpenSSL blobs: SalPhaseIon inline + Cosmic Duality (28-line).\n[[GSMG_FACT_LEDGER]] for accepted claims; [[GSMG_HOME]] for the current frontier.","x":-180,"y":520,"width":360,"height":220,"color":"1"},
+		{"id":"n-hints","type":"text","text":"**CREATOR HINTS (post-3.2.2)**\nMeta clues from a fork README, explicitly outside the main AES decrypt chain.\nHint 1 — Decentraland audio: split/invert/mix stereo -> spectrogram -> `HASHTHETEXT`\nHint 2 — poem -> hash the text found at `gsmg.io/puzzle` (the first piece)","x":260,"y":520,"width":340,"height":170,"color":"5"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"n-splash","toNode":"n-stage1","fromSide":"bottom","toSide":"top","label":"puzzle entry"},
+		{"id":"e2","fromNode":"n-stage1","toNode":"n-phase23","fromSide":"bottom","toSide":"top","label":"password chain"},
+		{"id":"e3","fromNode":"n-phase23","toNode":"n-endgame","fromSide":"bottom","toSide":"top","label":"AES chain continues"},
+		{"id":"e4","fromNode":"n-hints","toNode":"n-endgame","fromSide":"left","toSide":"right","label":"post-3.2.2 meta clue, not in AES chain"}
+	]
+}
