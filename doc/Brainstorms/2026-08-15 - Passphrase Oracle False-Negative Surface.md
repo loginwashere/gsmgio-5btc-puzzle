@@ -957,6 +957,72 @@ enormous adaptive padding-oracle search. A future correct COSMIC decryption
 should, however, be inspected explicitly for localized corruption in plaintext
 blocks 8-11 rather than rejected solely because that region is noisy.
 
+### Broader structural sweep, all seven tracked blobs: no additional anomaly
+
+Five structural/statistical channels (charset, repeated ciphertext blocks,
+salt bytes, base64 formatting, and bit-level randomness) were run against
+all seven blobs -- Phase 2, Phase 3, and Phase 3.2 (solved; Phase 2/3 pulled
+directly from the archived
+`doc/html/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself.html`
+mirror, not previously in `data.py`) alongside SALPH, P32-trailing, COSMIC,
+and URLBLOB. None surfaces anything beyond the row-4 case-count texture
+already documented above; several double as positive controls confirming
+the methodology doesn't false-positive on known-genuine ciphertext.
+
+| Blob | B64 len | Full 64-char rows | CT bytes | Entropy (bits/B) | Chi2 (255 dof) | Max upper | Dup 16B blocks |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Phase 2 (solved) | 896 | 14 | 656 | 7.667 | 256.4 | 32 | 0 |
+| Phase 3 (solved) | 5484 | 85 | 4096 | 7.954 | 266.9 | 37 | 0 |
+| Phase 3.2 (solved) | 3264 | 51 | 2432 | 7.931 | 224.6 | 36 | 0 |
+| SALPH (unresolved) | 128 | 2 | 80 | 5.972 | 278.4 | 32 | 0 |
+| P32-trailing (unresolved) | 128 | 2 | 80 | 5.928 | 284.8 | 22 | 0 |
+| COSMIC (unresolved) | 1792 | 28 | 1328 | 7.864 | 249.3 | **41** | 0 |
+| URLBLOB (quarantined) | 152 | 2 | 96 | 6.285 | 240.0 | 24 | 0 |
+
+- **Charset/homoglyph.** All 7 blobs are pure ASCII and strictly within the
+  base64 alphabet (`A-Za-z0-9+/=`). No visually-substituted Unicode
+  lookalikes anywhere.
+- **Repeated 16-byte ciphertext blocks.** Zero within any single blob and
+  zero across all seven combined (83 + 5 + 5 + 6 + 41 + 256 + 152 blocks
+  checked pairwise). Rules out shared plaintext blocks or IV/key reuse
+  linking any two artifacts, solved or unsolved.
+- **Salt bytes** (the 8 bytes following `Salted__`). All 7 salts are
+  distinct. Byte diversity (7-8 unique bytes of 8) and printable-ASCII
+  counts (2-5 of 8) are both consistent with ordinary random bytes; the two
+  salts with one repeated byte (SALPH, URLBLOB) match birthday-paradox
+  expectations at n=8 (~10% chance per salt) and are not individually
+  meaningful.
+- **Base64 formatting.** Every blob's ciphertext is cleanly 16-byte
+  block-aligned. Phase 2/3's *source* HTML line-wrapping (read directly
+  from the textarea, not the repo's re-wrapped constant) is uniform 64-char
+  rows plus the expected short final row (44 chars for Phase 3). Padding
+  (`=`) counts match each blob's byte length exactly. Nothing irregular.
+- **Entropy is bias-explained, not suspicious.** SALPH/P32-trailing/URLBLOB's
+  low raw entropy (5.9-6.3 bits/byte) tracks the theoretical finite-sample
+  bias curve for genuinely random bytes almost exactly (expected ~5.70 at
+  n=80, ~6.08 at n=96) -- confirmed by solved Phase 2 (656 bytes, unquestionably
+  genuine) landing on the same curve at 7.667 vs. a ~7.72 prediction. Small
+  blobs looking less random is a sample-size artifact common to solved and
+  unsolved blobs alike, not a marker of tampering.
+- **Chi-square (byte-value uniformity), monobit, and runs tests** (255 dof;
+  bit-level NIST-style tests on ciphertext bytes) are non-significant for
+  all 7 blobs, including the large, unquestionably genuine Phase 3 (4096
+  bytes) and Phase 3.2 (2432 bytes). Phase 2's runs-test p-value (0.032) is
+  the one borderline value in the set -- and it belongs to solved, genuine
+  ciphertext, which is a useful reminder that occasional p<0.05 noise is
+  expected and not itself informative without correction. COSMIC's own
+  runs-test p-value (0.56) is unremarkable. Lag-1 byte autocorrelation is
+  near zero for all seven (-0.09 to +0.09).
+
+**Conclusion:** none of these five channels adds anything to the row-4 case
+observation, and several strengthen confidence that the observation is
+narrowly scoped. COSMIC's salt, block structure, formatting, and bit/byte-level
+statistics are statistically indistinguishable from the solved controls --
+the anomaly stays confined to the base64-character-case mapping of one
+48-byte ciphertext span, not a broader property of the blob. This leaves the
+bounded next test above (find and diff an authenticated earlier COSMIC copy)
+as the only avenue that could actually move this lead forward.
+
 ## Suggested wording for future findings
 
 Prefer:
