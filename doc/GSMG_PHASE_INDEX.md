@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **291** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **293** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -307,3 +307,5 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 288 | P288 | 2026-08-14 | DBBI/FAED continued fractions | six distinguished rationals miss the closed constant registry | [link](../tools/gsmg/FINDINGS.md#phase-288----dbbifaed-continued-fractions-six-distinguished-rationals-miss-the-closed-constant-registry-2026-08-14) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
 | 289 | P289 | 2026-08-14 | DBBI/FAED as authenticated-string selectors | 20 outputs are selection-aware null-like | [link](../tools/gsmg/FINDINGS.md#phase-289----dbbifaed-as-authenticated-string-selectors-20-outputs-are-selection-aware-null-like-2026-08-14) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
 | 290 | P290 | 2026-08-15 | P1A | canonical-sentinel oracle backfill for the DBBI/FAED brainstorm's already-materialized outputs | [link](../tools/gsmg/FINDINGS.md#phase-290----p1a-canonical-sentinel-oracle-backfill-for-the-dbbifaed-brainstorms-already-materialized-outputs-2026-08-15) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
+| 291 | P291 | 2026-08-15 | Bounded primary-source delta search for DBBI/FAED | negative, branch formally parked | [link](../tools/gsmg/FINDINGS.md#phase-291----bounded-primary-source-delta-search-for-dbbifaed-negative-branch-formally-parked-2026-08-15) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
+| 292 | P292 | 2026-08-15 | Candidate family 10 executed | four fork-surfaced residual leads against all four blobs, negative | [link](../tools/gsmg/FINDINGS.md#phase-292----candidate-family-10-executed-four-fork-surfaced-residual-leads-against-all-four-blobs-negative-2026-08-15) | — |

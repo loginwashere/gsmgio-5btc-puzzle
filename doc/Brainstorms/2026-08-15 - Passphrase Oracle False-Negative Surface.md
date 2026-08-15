@@ -10,6 +10,8 @@ topics:
   - false-negatives
   - cryptography
   - coverage
+  - cosmic-duality
+  - base64
 ---
 
 # Oracle Pipeline False-Negative Surfaces
@@ -770,6 +772,191 @@ testing surface grows faster than the evidence.
   source corpus can be exhausted under a contract; the unknown password space
   cannot.
 
+## New reopening lead: COSMIC Base64 row 4 case imbalance
+
+### The observation is exact and locally unusual
+
+The fourth authored 64-character row of the Cosmic Duality blob is:
+
+```text
+SATSFO7IFBiAMz7dDqIETKuGlTAP4EmMQUZrQNtfbJsURATW6V5VSbtZB5RFk0O+
+```
+
+Its complete Base64-category counts are:
+
+| Category | Observed | Uniform-Base64 expectation in 64 characters |
+|---|---:|---:|
+| `A-Z` | 41 | 26 |
+| `a-z` | 15 | 26 |
+| `0-9` | 7 | 10 |
+| `+` | 1 | 1 |
+| `/` | 0 | 1 |
+
+The user-supplied `41/15/7` count is therefore correct, with the omitted 64th
+character being one `+`. No other COSMIC row is close: the next-largest
+uppercase count is 33. The known-solved Phase-3.2 control has 51 complete
+64-character rows and a maximum uppercase count of 36.
+
+### Cross-blob controls: unique maximum, weaker global evidence
+
+A follow-up scan applied the identical fixed 64-character chunking and
+category count to every authenticated solved AES blob and every tracked
+unresolved blob available locally. Phase 2 and Phase 3 were extracted from
+the authenticated archived `choice...` HTML; Phase 3.2 is the known-positive
+README vector; SALPH, P32-trailing, and COSMIC are authenticated unresolved
+artifacts; URLBLOB is retained separately as quarantined/unresolved.
+
+| Blob | Status | Complete 64-char rows | Maximum uppercase | Row | Counts `U/L/D/+//` |
+|---|---|---:|---:|---:|---|
+| Phase 2 | solved | 14 | 32 | 1 | `32/22/10/0/0` |
+| Phase 3 | solved | 85 | 37 | 25 | `37/19/5/2/1` |
+| Phase 3.2 | solved | 51 | 36 | 5 | `36/21/5/2/0` |
+| SALPH | unresolved | 2 | 32 | 1 | `32/21/10/1/0` |
+| P32 trailing | unresolved | 2 | 22 | 2 | `22/25/15/0/2` |
+| COSMIC | unresolved | 28 | **41** | **4** | **`41/15/7/1/0`** |
+| URLBLOB | quarantined/unresolved | 2 | 24 | 2 | `24/25/14/0/1` |
+
+Across all 184 complete rows, COSMIC row 4 is the **only** row with at least
+41 uppercase characters. This confirms that the same directional event does
+not recur in any solved control or other tracked unresolved target. Expanding
+the directional look-elsewhere family from COSMIC's 28 rows to all 184 rows,
+however, raises the uniform-row calibration for at least one `U >= 41` row to
+`0.023688` (Bonferroni `0.023972`). Excluding each envelope's non-random first
+`Salted__` row leaves 177 ciphertext-only rows and almost the same values:
+Sidak `0.022797`, Bonferroni `0.023060`. It is unique but no longer below a
+conventional `0.01` global gate.
+
+The symmetric case-imbalance control is also important. The second-smallest
+raw conditional case p-value occurs naturally in solved Phase 3, row 31:
+
+```text
+Phase 3 row 31: U=14, L=36, two-sided conditional p=0.002602
+COSMIC row 4:   U=41, L=15, two-sided conditional p=0.0006856
+```
+
+Phase 3's event is not unusual after its 85-row family is counted
+(`Sidak ~= 0.199`). COSMIC remains the strongest individual case split, but a
+conservative correction of its two-sided p-value over all 184 inspected rows
+is about `0.126`. This demonstrates directly that pronounced-looking case
+imbalance can occur in a correctly generated, solved ciphertext.
+
+Nor does the solved-versus-unresolved split currently distinguish the
+classes. There are 34 complete rows among the four unresolved/quarantined
+targets and 150 among the three solved controls. Conditional on exactly one
+`U >= 41` event among 184 exchangeable rows, its chance of landing in the
+unresolved group is `34/184 = 0.1848`. This is only a descriptive allocation
+check—the first envelope rows are not identically distributed—but one event is
+in any case too little evidence for a modification process specific to
+unresolved blobs.
+
+The scope deliberately excludes the many OpenSSL strings pasted or generated
+inside community-chat logs: most are guesses, demonstrations, malformed
+fragments, or newly encrypted examples rather than authenticated puzzle
+artifacts. URLBLOB was never authored as wrapped Base64 (its source was a hex
+URL path), so its 64-character chunks are analytical controls rather than a
+claim about visual line layout. Phase 3 also has a final 44-character tail and
+URLBLOB a final 24-character tail; incomplete rows are excluded from this
+fixed-length comparison.
+
+**Updated interpretation:** row 4 is the unique uppercase maximum in the
+relevant local corpus, so the observation should not be discarded. The
+expanded solved controls materially weaken a count-only intention claim,
+because solved Phase 3 contains a comparably conspicuous opposite-direction
+case split and the all-row corrections fail. The Bitcoin-relevant literal
+`SATS` prefix and any authenticated evidence of manual edits—not the category
+count alone—must carry the reopening case.
+
+For a ciphertext-only interior row, treating each Base64 sextet as uniform is
+the natural cryptographic null. Under that null:
+
+- `P(U >= 41)` for one fixed row, with `U ~ Binomial(64, 26/64)`, is
+  `0.00013028` (about 1 in 7,676);
+- scanning all 28 COSMIC rows gives a Sidak family probability of `0.003641`
+  (Bonferroni `0.003648`);
+- conditional on the observed 56 letters, the one-sided case split
+  `P(Binomial(56, 1/2) >= 41)` is `0.00034278`;
+- making that case test two-sided and correcting over 28 rows gives about
+  `0.0190` (Bonferroni `0.0192`).
+
+These are descriptive calibrations, not a clean discovery p-value. Row 4,
+uppercase direction, category count, case imbalance, runs, columns, and other
+Base64 textures were not registered in advance. The true retrospective search
+family is therefore larger than 28 rows and cannot be honestly reconstructed
+from this observation alone. Conversely, if independently sourced evidence
+really establishes that the author manually altered COSMIC's displayed
+Base64, the directional uppercase test becomes much better motivated and the
+observation deserves more weight.
+
+### The conspicuous `SATS` prefix is separate evidence, but post hoc
+
+Row 4 begins with the literal uppercase token `SATS`, a Bitcoin-relevant
+abbreviation. That makes the row more interesting than a count-only outlier.
+It must not be multiplied into the count p-value as though the token had been
+specified in advance: it was recognized in the same inspected string, and the
+space of potentially meaningful short tokens is large. Record it as semantic
+texture and a possible selector, not independent confirmation.
+
+Minimal secondary-channel readings do not immediately decode to text:
+
+```text
+uppercase positions over all 64 chars: FD D8 BD 75 EC 5F 59 B2
+lowercase positions over all 64 chars: 00 25 42 82 13 A0 06 08
+uppercase/lowercase over letters only: FF B2 F5 EF 62 FF 3D
+```
+
+The extracted uppercase-letter subsequence and lowercase-letter subsequence
+also show no immediate plaintext. This rules out only the most literal bitmap
+and case-bit readings; it does not justify searching arbitrary rotations,
+transpositions, alphabets, or bit packings.
+
+### Why manual Base64 editing is cryptographically possible
+
+The row decodes to 48 bytes at full-envelope offsets `144..191`, equivalently
+COSMIC ciphertext offsets `128..175`: zero-based ciphertext blocks 8, 9, and
+10. In unauthenticated AES-CBC, changing those Base64 characters changes the
+ciphertext but does not invalidate the envelope or necessarily disturb its
+final PKCS#7 padding. If blocks 8-10 were edited, plaintext blocks 8-10 would
+be garbled and block 11 would receive the corresponding CBC XOR delta; later
+blocks, including the final padding block, would remain unaffected.
+
+That yields two important consequences:
+
+1. A deliberately modified early ciphertext can carry a visible Base64-side
+   channel while still producing valid final padding under the correct key.
+2. The padding sentinel should still discover the correct key. For a long,
+   mostly textual 1,328-byte plaintext, corrupting at most four 16-byte blocks
+   would probably still clear the shared printability gate as well. The row-4
+   anomaly therefore does not by itself create a likely password-oracle false
+   negative; it chiefly raises the possibility that a correct decryption may
+   contain a localized damaged region or that the displayed ciphertext has a
+   second channel.
+
+If the manual changes instead happened before encryption, the ciphertext case
+imbalance has no direct relation to the modification; proper encryption should
+remove that structure. The precise provenance of the claimed manual changes is
+therefore load-bearing.
+
+### Bounded next test
+
+Retain this as a **live, medium-priority reopening lead** and avoid a general
+case-pattern transform sweep. The next admissible packet should be:
+
+1. authenticate an older or alternate copy of the COSMIC Base64 from a
+   primary archive, source file, or creator post;
+2. byte-diff it against the current authenticated textarea;
+3. test whether changes concentrate in row 4 and whether they are specifically
+   case substitutions;
+4. map any changed sextets to exact ciphertext and CBC plaintext-block effects;
+5. predeclare at most the literal changed-position mask, its complement, and
+   the changed characters as sentinel materials before querying any oracle.
+
+Without an earlier version, freeze only the obvious diagnostics above. Do not
+case-normalize row 4 and call the result a repaired ciphertext: there are many
+possible original case assignments, and an oracle-guided repair would be an
+enormous adaptive padding-oracle search. A future correct COSMIC decryption
+should, however, be inspected explicitly for localized corruption in plaintext
+blocks 8-11 rather than rejected solely because that region is noisy.
+
 ## Suggested wording for future findings
 
 Prefer:
@@ -824,6 +1011,7 @@ self-validating structure makes that statement warranted.
 | First model replay | Canonical-output sentinel backfill, then small Phase 265–270 P32 materials |
 | First broader replay | Curated-648 SALPH retention run |
 | Large corpus action | Estimate and authorize separately after wrapper unification |
+| COSMIC row-4 uppercase anomaly | Retain as a real descriptive outlier; seek an authenticated earlier ciphertext before any repair/search |
 
 ## Reopening rules
 
