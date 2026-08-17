@@ -18270,3 +18270,660 @@ running the full 120-permutation sweep as its own newly-declared family (a
 materially larger, not-yet-authorized scope). Reopening lead 2 requires an
 independently-sourced non-identity reordering rule. Leads 3 and 4 are
 closed outright barring a new primary-source variant of either artifact.
+
+## Phase 293 -- `mirror9` direct substitution on full DBBI/FAED: negative (2026-08-16)
+
+`dbbi_faed_mirror9_direct_substitution_audit.py` executes idea 3 from
+`doc/Brainstorms/2026-08-15 - DBBI FAED FEFE Fresh Divergence.md`, against
+the full raw `DBBI`/`FAED` streams (idea 1's "remainder" framing was checked
+first in that same brainstorm session and found unexecutable -- no
+authenticated mapping exists from DBBI's raw positions to characters
+consumed by `matrixsumlist`, so there is no principled "leftover" operand to
+compute). `mirror9` (`a<->i, b<->h, c<->g, d<->f, e` fixed) is the exact
+involution already authenticated elsewhere in this project on this same
+`a`-`i` alphabet -- the operation that turned `HYE` into `BYE` in the solved
+Architect-choice chain. This audit applies it as a plain substitution cipher
+directly to the raw text, rather than as part of the heavier GF(9)
+arithmetic already closed in Phase 276.
+
+Three independent binary toggles per stream (`mirror9`, `reverse`,
+`halfswap` -- the last swaps a string's first/second halves, the same
+"yin/yang halves" cut used elsewhere in this project's book-transform
+sweep) give 8 combinations x 2 streams = 16 labels, 32 candidate strings
+after `answer_forms()`. Tested against all four tracked blobs under the
+standard six-KDF-variant CBC oracle: 96 passphrase attempts.
+
+**Result: 0/96 hits, 0 weak candidates logged (z >= 5).** A self-test pins
+the exact 16-label/32-candidate set.
+
+**Verdict:** closed negative. This was the last unexecuted idea in the FEFE
+divergence brainstorm's original ranking besides idea 2 (see Phase 296
+notes below); idea 6 (the `lastwordsbeforearchichoice`-specific framing of
+the same transform) is subsumed by this run -- the `faed/mirror9` row is
+exactly that test. Reopening requires a different, independently-motivated
+transform on this alphabet, not a parameter variant of `mirror9`/`reverse`/
+`halfswap`.
+
+## Phase 294 -- Cosmic Duality colophon/copyright-page identifiers: negative (2026-08-16)
+
+`cosmic_duality_paratext_colophon_audit.py` executes the paratext pass
+pre-registered in the 2026-08-12 acquisition worksheet (its "Result" section
+had stayed blank) using the physical book's p.144 colophon page, already
+photographed (`Screenshot from 2026-07-12 14-48-32.png`) rather than waiting
+on a new capture. Transcribed directly from the (re-checked, sharper) photo:
+
+  ISBN (trade):   0-8094-6516-7
+  ISBN (library): 0-8094-6517-5
+  LCCN: 90-28806, CIP
+  LC call number: BF1999.C6975 1991
+  Dewey: 147'.4--dc20
+  Copyright: 1991. Colophon page number: 144.
+
+The ISBN digits were checksum-verified (ISBN-10 mod-11 check passes for the
+corrected transcription, fails for an earlier lower-resolution misread).
+Each identifier tried in its literal printed forms (hyphenated, digits-only,
+sub-groupings) via `answer_forms()`/`keystr_forms()`: 13 raw identifiers, 32
+candidate strings, against all four tracked blobs under the standard CBC
+oracle: 96 passphrase attempts.
+
+**Result: 0/96 hits, 0 weak candidates logged (z >= 5).** A self-test pins
+the exact 13-identifier/32-candidate set.
+
+**Verdict:** closed negative. This closes the 2026-08-12 Primary Evidence
+Acquisition worksheet's paratext-pass item for the identifiers visible on
+this specific colophon page. Reopening requires either a newly-photographed
+paratext source (dust-jacket flaps, spine, inscriptions -- still queued and
+owned by the book recipient in that worksheet) or a creator-sourced
+operation on these identifiers beyond "try them literally."
+
+## Phase 295 -- Full Phase 3.2.1 plaintext reversal: negative (2026-08-16)
+
+`phase321_full_text_reversal_audit.py` extends the authenticated `CIAO
+BELLA O` -> `O BELLA CIAO` tail reversal (`doc/GSMG_BYE_CIAO_PROVENANCE_AUDIT.md`)
+to the full Phase 3.2.1 monologue, per the open item flagged in
+`doc/Brainstorms/2026-08-15 - Phase 3 Part 5-6 Riddle Close Read.md`. The
+"reverse the whole stream" trick is itself precedented in this project
+(Phase 7's 2023-02-23 binary message was only crackable reversed as one
+unit). The exact 331-word block is extracted mechanically from `README.md`
+between the same two anchors `p32_sibling_password_audit.py`'s
+`readme_architect_letters()` already uses, removing transcription risk.
+
+Because the word-boundary choice is itself arbitrary, four independent
+tokenizations were built rather than one: `full_char_reverse` (whole
+normalized string, whitespace collapsed, reversed character-by-character --
+no word-boundary assumption at all), `word_reverse_spaced`/
+`word_reverse_nospace` (word order reversed, each word still spelled
+forward -- the direct extension of the tail's own pattern), and
+`line_reverse` (the ~10 newline-delimited display lines reversed in order,
+each line's word order intact). `answer_forms()` (raw/upper/lower and
+letters-only variants) plus `keystr_forms()` (raw/sha256/double-sha256): 16
+candidate strings, 48 passphrase attempts against all four tracked blobs.
+
+**Result: 0/48 hits, 0 weak candidates logged (z >= 5).** A self-test
+confirms the 331-word extraction and that `word_reverse_spaced` starts
+`O BELLA CIAO`, matching the known tail pattern.
+
+**Verdict:** closed negative. The only already-authenticated instance of
+this trick (the 3-word tail) does not extend to the full message under any
+of the four disclosed tokenizations. Reopening requires a different,
+independently-motivated tokenization or a partial-block variant with its
+own authenticated boundary, not another arbitrary word/line split.
+
+## Phase 296 -- QR finder-ring texture: reindex/dither/JPEG-origin trio, negative but sharpens the picture (2026-08-16)
+
+`qr_finder_ring_texture_reindex_dither_audit.py` executes ideas 3, 6, and 7
+from `doc/Brainstorms/2026-08-16 - QR Finder-Pattern Ring Texture
+Investigation.md` against the real pixel data in
+`doc/img/gsmg_puzzle_stage1.png`. This is image forensics on a
+non-cryptographic artifact (the QR code's finder-pattern "eye" rings show a
+structured gray antialiasing-like texture of uncertain origin), not an AES
+blob attempt -- no oracle involved, exact pixel-level structural comparison
+is the bar instead.
+
+The three 48x49px/1092-black-pixel finder squares were independently
+relocated by flood-filling pure-black connected components (confirmed
+byte-identical across all three, reproducing the prior session's finding).
+
+- **Idea 7 (phase-drift reindexing).** Compared the top ring band (rows
+  7-13 relative to the bounding box) against the bottom ring band (rows
+  35-41) at the same band-relative offset, exact byte level, full
+  36-column width. **5 of 7 rows are byte-for-byte identical.** Of the
+  remaining 2: one has its gray-value positions in exactly the same
+  columns in both bands, only the background level differs (255 vs 252) --
+  structurally identical, intensity-shifted only. Only one row is
+  genuinely different in content (different highlight-column periodicity
+  between top and bottom). No cyclic column shift reconciles that one row.
+  Negative as a full-reconciliation theory, but corrects the prior
+  session's "diverges across the full width" framing -- it's one
+  anomalous row, not a general tiling failure.
+- **Idea 3 (1D row-only ordered dither).** Falsified directly from the
+  pixel data, no synthetic rendering needed: every one of the 14 measured
+  ring rows contains 2+ distinct non-black pixel values at different
+  columns in the same row, which a threshold model depending only on row
+  index (uniform value per row) cannot produce by construction.
+- **Idea 6 (JPEG block-origin sweep).** Closed by argument, confirmed
+  empirically rather than by literally running the 64-combination sweep:
+  shifting the assumed block-grid origin only cyclically relabels the
+  mod-8 residue histogram of the gray-pixel population, so it cannot
+  reveal a spike the unshifted histogram doesn't already have. Confirmed
+  on the real 3,801-pixel gray population within the QR region: the
+  histogram's max-min spread (529 for x, 512 for y) is bit-for-bit
+  identical across all 8 possible origins.
+
+**Result:** all three ideas closed negative; a self-test pins the finder-
+square relocation, the 5/7 exact-row-match count, the multi-valued-row
+count, and the origin-invariance check.
+
+**Verdict:** none of the three mechanisms produced or fully explained the
+texture. The near-total row-level exactness found by idea 7 (5/7 exact, a
+6th positionally exact) further favors the brainstorm doc's ideas 1/2 (a
+fixed stamped/composited asset, e.g. a free QR-generator watermark) over
+its ideas 4/5 (a per-instance rasterizer/hinting quirk), which would not be
+expected to reproduce this much cross-band, cross-instance exactness.
+Reopening any of the three closed ideas requires new evidence contradicting
+the falsification arguments above, not a parameter variant.
+
+## Phase 297 -- Joint DBBI x FAED positional co-occurrence matrix: negative (2026-08-16)
+
+`dbbi_faed_joint_positional_matrix_audit.py` executes idea 2 from
+`doc/Brainstorms/2026-08-15 - DBBI FAED FEFE Fresh Divergence.md`, unblocked
+by that same brainstorm's dedup check (the closed six-lane audit's 8
+statistics are per-lane/per-column equality/residual measures, none of
+which build or sum a joint matrix -- this is a genuinely different
+statistic). A literal reading of "matrixsumlist" is executed: walk `DBBI`
+and `FAED` in lockstep, treat each symbol pair as a `(row, col)` coordinate
+into a 9x9 grid over the canonical `a`-`i` index alphabet, and literally sum
+the resulting matrix's rows, columns, and both diagonals.
+
+No authenticated rule fixes exactly how DBBI (91 symbols) and FAED (570 =
+6x91+24) pair index-for-index, so two -- and only two -- pre-registered,
+mechanically distinct pairings were tried: `wrap_full` (DBBI cycles against
+the full 570-symbol FAED, one matrix over 570 pairs) and `pool_lanes` (DBBI
+paired index-for-index against each of FAED's six 91-symbol lanes, all 546
+pairs pooled into one matrix, tail excluded -- matching the six-lane audit's
+own scope). Six candidate strings per matrix by a fixed rule (row sums
+concatenated, column sums concatenated, main-diagonal sum, anti-diagonal
+sum, their concatenation, row+column concatenation): 12 candidates, each
+run through `keystr_forms()` (raw/SHA-256/double-SHA-256): 36 passphrase
+attempts against all four tracked blobs.
+
+**Result: 0/36 hits, 0 weak candidates logged (z >= 5).** A self-test pins
+both matrices' pair-coverage totals (570 and 546) and the 12-candidate/
+36-attempt count.
+
+**Verdict:** closed negative. This closes the last unexecuted idea in the
+2026-08-15 FEFE divergence brainstorm's idea list (1 corrected-and-
+superseded, 3/6 closed Phase 293, 4/5 addressed inline in that doc, 7 a
+pre-registration note). Reopening requires a different, independently-
+motivated pairing rule between DBBI and FAED, or a different, pre-declared
+candidate-derivation rule from the matrix -- not a parameter variant of
+`wrap_full`/`pool_lanes` or the six candidate forms already tried.
+
+## Phase 298 -- QR finder-ring texture: real free-generator comparison, mixed result (2026-08-16)
+
+`qr_finder_ring_texture_generator_comparison_audit.py` executes ideas 1/2
+(the last open item) from `doc/Brainstorms/2026-08-16 - QR Finder-Pattern
+Ring Texture Investigation.md`: fetch the puzzle's exact payload
+(`https://www.blockchain.com/btc/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`)
+through real free QR-generator services and check whether any reproduces
+the eyes-only gray antialiasing texture found in `gsmg_puzzle_stage1.png`'s
+finder squares. Output PNGs from 3 services were saved locally
+(`doc/img/qr_generator_comparison_*.png`) so the analysis is reproducible
+without a live network dependency.
+
+- **`api.qrserver.com`/goqr.me**: 1-bit indexed PNG output -- structurally
+  incapable of antialiasing. Ruled out outright.
+- **`quickchart.io/qr`**: 8-bit RGBA output, but zero non-black/white
+  pixels anywhere. No antialiasing in this generator's default path.
+- **`api.qrcode-monkey.com`** (default style, no custom eye request):
+  8-bit RGB output with 528 gray pixels, and -- checked precisely, not
+  estimated -- every one of them falls inside the three finder-square
+  regions, none in the data body. A real, independently-observed instance
+  of a free generator confining antialiasing to the eyes, matching this
+  investigation's framing-question fact (a). But the texture itself is a
+  simple single-pixel-wide antialiased outline tracing each rectangle
+  edge -- nothing like the puzzle's 7-row-deep, period-4 banded texture
+  found in Phase 296's idea 7. Not the source generator, or at least not
+  its default style.
+
+**Result:** confirms the general mechanism class (a real free QR
+generator's default rendering path can confine AA to the eyes only) without
+identifying the specific generator, asset, or matching the puzzle's actual
+texture. A self-test pins the exact gray-pixel counts and eyes-only
+confinement result for all three saved images.
+
+**Verdict:** partial/inconclusive, not promotable as a source
+identification. This closes the QR ring-texture doc's queued feasibility
+check for its default-style form. Reopening (or continuing) requires trying
+QR Code Monkey's custom eye-style options (`square`/`rounded`/`circle`/
+`leaf`), a new, not-yet-executed experiment noted in that doc's "Open
+questions" -- not assumed to match, and not run here to avoid scope creep
+past what was pre-registered for this pass.
+
+## Phase 299 -- QR Code Monkey full eye-style catalog sweep: negative (2026-08-16)
+
+Follow-up to Phase 298's explicitly-noted open item. `api.qrcode-monkey.com/qr/custom`
+was queried live with the puzzle's exact payload for the **full, pre-
+registered eye-style catalog**, extracted directly from the generator's own
+client-side asset bundle (`www.qrcode-monkey.com/dist/website.dist.js`,
+grepped for `"frame[0-9]+"`/`"ball[0-9]+"` literals) rather than guessed or
+picked after seeing results: 16 valid `eye` (frame) values (`frame0`-
+`frame14`, `frame16` -- `frame15` does not exist) and 20 valid `eyeBall`
+values (`ball0`-`ball19`). A one-factor-at-a-time sweep was run (16 frame
+values with `eyeBall` held at the default `ball0`, then 20 `eyeBall` values
+with `eye` held at the default `frame0` -- 36 renders total, not the full
+16x20=320 cross product) and each render's top-left finder-square region
+inspected via the same row/column pixel-grid dump method used throughout
+this investigation.
+
+**Result:** every one of the 36 configurations produces only thin (1-2px)
+vector-edge antialiasing tracing each shape's outline -- never the puzzle's
+distinctive 7-row-deep, period-4 banded texture. This includes visually
+distinct styles (square-with-cut-corners, rounded, circular, and a
+"dotted border" style where the frame is drawn as separate disconnected
+segments each with their own thin edge AA). An initial automated sweep used
+a flawed "gray pixel count within the auto-detected finder bounding box"
+heuristic that mis-reported the dotted-border style (`frame16`) as having
+zero antialiasing (its border is disconnected into many small components,
+which the size/aspect-ratio component filter missed); direct pixel
+inspection corrected this -- it has ordinary edge AA like every other
+config, just distributed across more, smaller shapes. Three renders are
+saved as reproducible exemplars: `doc/img/qr_generator_comparison_qrcode_monkey_frame3_ball0.png`,
+`..._frame8_ball0.png`, `..._frame16_ball0.png`.
+`qr_finder_ring_texture_eye_style_sweep_audit.py` pins the 16/20-value
+catalog and the three exemplars' non-zero gray counts.
+
+**Verdict:** closed negative. This exhausts QR Code Monkey's entire declared
+eye-style catalog (not just its default style, per Phase 298), so the
+generator-comparison thread for this specific service is fully closed, not
+just deprioritized. Combined with Phase 298's finding that two other free
+generators (`api.qrserver.com`, `quickchart.io`) show no eyes-region
+antialiasing at all, none of the three services tested reproduce the
+puzzle's texture. Reopening ideas 1/2 requires either a different free
+generator entirely (not yet identified) or direct recovery of the original
+design source (per the QR ring-texture doc's still-open "Open questions"
+item) -- not another parameter sweep of this generator's style catalog.
+
+## Phase 300 -- QR finder-ring texture: one-shot categorical-palette render, negative (2026-08-16)
+
+`qr_finder_ring_texture_categorical_render_audit.py` executes idea 4 of
+"Divergence pass 2" in `doc/Brainstorms/2026-08-16 - QR Finder-Pattern
+Ring Texture Investigation.md` -- a new framing distinct from Phases
+296/298/299 (which all asked what *mechanism* produced the texture): does
+the already-measured pixel data encode anything if rendered and inspected
+as a picture, on the same theory as the puzzle's already-solved genesis
+image containing a real embedded QR code.
+
+The 8 exact grayscale values already documented in this investigation's
+"Known facts" (`0, 15, 16, 234, 236, 250, 252, 255`) were mapped to 8
+maximally distinct categorical colors, fixed *before* inspecting any
+output (any value outside this set would render magenta, flagging an
+incomplete palette rather than mis-rendering silently). Nearest-neighbor
+upscale only, applied identically to all three finder squares. This was a
+single pre-declared render, explicitly not iterated with different
+palettes/contrast after looking, per this brainstorm pass's own stated
+discipline against pareidolia-driven fishing.
+
+**Result:** zero unmapped values (the palette covered everything present)
+and no recognizable glyph, letter, digit, or symbol. All three eyes render
+pixel-identically. The finer palette did make two already-explained
+details visually obvious rather than revealing anything new: the ring's
+left edge consistently uses the 234/236 value pair and the right edge
+consistently uses the 15/16 pair (a boundary-antialiasing asymmetry
+between edges, not a distinct shape), and the one cyan stripe is exactly
+the row-41 anomaly Phase 296 already found. A self-test pins the palette
+completeness, cross-eye identity, and the saved reference render
+(`doc/img/gsmg_puzzle_stage1_qr_finder_categorical_palette_render.png`).
+
+**Verdict:** closed negative, one-shot as designed. This is the first
+result from "Divergence pass 2" (reading the texture as data rather than
+explaining its rendering) -- three ideas from that pass (perimeter-unroll
+bitstream, row-tick position/gap sequence, full intensity-alphabet
+sequence) remain unexecuted. Reopening idea 4 specifically would require a
+new, independently-motivated rendering parameter (not a retried contrast
+sweep), which this pass's own discipline discourages absent a concrete
+reason.
+
+## Phase 301 -- QR finder-ring texture: full intensity-alphabet sequence, negative (2026-08-16)
+
+`qr_finder_ring_texture_intensity_alphabet_audit.py` executes idea 3 of
+"Divergence pass 2" (same doc as Phase 300): read the ring's exact
+intensity values off as a symbol sequence, instead of the collapsed
+black/white/gray bucketing the mechanism-focused phases used.
+
+Reused the exact top/bottom ring-band geometry already codified in Phase
+296/297's script (`qr_finder_ring_texture_reindex_dither_audit.py`: rows
+7-13 and 35-41, cols 6-41 of the first located 48x49px finder square) --
+left/right bands were explicitly excluded, since their pixel geometry was
+only ever established ad hoc in this session's prose, not preserved in a
+reproducible script, and idea 3's own discipline requires the region to be
+pre-declared rather than judgment-called during implementation. These two
+bands contain exactly 7 distinct grayscale values (15, 16, 234, 236, 250,
+252, 255 -- no pure black/white pixels in this specific sub-region),
+mapped to base-7 digits in ascending order, reusing Phase 300's PALETTE
+ordering convention rather than inventing a new one. Six candidate strings
+were fixed before any oracle run: top/bottom bands each read forward and
+reversed (row-major, standard reading order), plus both concatenation
+orders (top+bottom, bottom+top) -- 252/252/504 digits respectively. Each
+run through the standard `keystr_forms()` (raw/SHA-256/double-SHA-256)
+against all four tracked blobs.
+
+**Result:** 18 passphrase attempts, 0 hits.
+
+**Verdict:** closed negative, per the fixed pre-declared candidate set --
+not reopened by trying a different scan order or digit mapping. Two ideas
+from "Divergence pass 2" remain: idea 2 (row-tick position/gap sequence,
+can reuse this same band geometry) and idea 1 (perimeter unroll), which
+the brainstorm doc now flags as not yet executable as specified -- the
+ring is a 7px-deep band, not a single-pixel path, so "the perimeter" has
+no unambiguous route without a pre-declared depth-offset choice, which
+hasn't been made yet.
+
+## Phase 302 -- QR finder-ring texture: row-tick position/gap sequence, negative (2026-08-16)
+
+`qr_finder_ring_texture_tick_gap_sequence_audit.py` executes idea 2 of
+"Divergence pass 2" (same doc as Phases 300/301): extract just the "tick"
+rows -- ring rows whose interior mixes two intensity values instead of one
+uniform background -- and read the minority value's column positions and
+gaps as a number sequence, a different derived object than Phase 301's
+flat symbol read.
+
+Tick-row selection used a mechanical, pre-declared rule (interior columns
+7-40 of each ring row, excluding the two edge columns that carry the
+already-documented boundary-antialiasing value, contain 2+ distinct
+values), not a manually chosen row list. This rule finds exactly 6 rows:
+9, 10, 13 (top band), 37, 38, 41 (bottom band) -- matching the doc's own
+earlier "rows 9/10/13" example exactly. Six candidate strings were fixed
+before any oracle run: concatenated gaps across all 6 rows, concatenated
+absolute positions, the two irregular rows' (9 and 37) gap sequences
+individually, the sorted distinct-gap alphabet, and a pipe-delimited
+per-row form. Each run through the standard `keystr_forms()` against all
+four tracked blobs.
+
+**Result:** 18 passphrase attempts, 0 hits.
+
+Independent of the oracle result, the extracted data itself is
+informative: **4 of the 6 tick rows (10, 13, 38, 41) share the exact
+identical gap sequence `3,4,3,4,3,4,3,4`** -- a clean period-~3.5 tiling
+signature. The other two (9, 37) each open with `2,7` before settling into
+their own regular repeat (`1,3,3,...` and `7,7,7,7`). This is the
+characteristic output of a tiling/dither algorithm with a non-integer
+period, not what a hand-placed or hashed message would look like.
+
+**Verdict:** closed negative. This result also weighs in on the broader
+mechanism question (Phases 296-299): the observed regularity is more
+consistent with an automated tiling/dither artifact than with encoded
+data, reinforcing the standing "artifact, unidentified specific generator"
+characterization rather than the "hidden message" framing this Divergence
+pass 2 exists to test. Only idea 1 (perimeter unroll) remains from this
+pass, and it is blocked on its own unresolved design gap: the ring is a
+7px-deep band, not a single-pixel path, so no depth-offset for tracing
+"the perimeter" has been pre-declared or justified yet. With ideas 2, 3,
+and 4 all negative, "Divergence pass 2" is effectively exhausted pending
+either that resolution or a new idea.
+
+## Phase 303 -- QR finder-ring texture: 3-symbol line-type sequence, negative (2026-08-16)
+
+`qr_finder_ring_texture_line_type_alphabet_audit.py` executes idea 5 of
+"Divergence pass 2" (same doc as Phases 300-302), raised directly by the
+user after visually inspecting the Phase 300 categorical-palette render:
+classify each *whole row* into one of a small number of types (not
+individual pixels or tick positions, a coarser derived object than
+Phases 301/302) and read the row-type sequence as a symbol string.
+
+Classification rule (mechanical, pre-declared, exactly 3 types): among
+the 14 already-established ring rows (top band 7-13, bottom band 35-41),
+a row's interior (cols 7-40) is type `W` if uniformly 255, `G` if
+uniformly 250, else `T` (textured/tick row). Applied to the real pixel
+data this gives `WGTTWGTWGTTWGT` -- confirming, exactly as the user
+observed by eye, that there are precisely 3 line types and that the
+14-row sequence is the already-known 7-row tile (rows 7-13) repeated
+twice, byte-for-byte identical. Six candidate strings (digit-mapped and
+literal-letter forms, full-sequence and tile-only, forward and reversed)
+were fixed before any oracle run and run through the standard
+`keystr_forms()` against all four tracked blobs.
+
+**Result:** 18 passphrase attempts, 0 hits.
+
+**Verdict:** closed negative. Numerically confirms the user's visual
+read was correct -- there really are exactly 3 line types and they do
+repeat -- but like every other granularity tried in this pass (pixel-level
+Phase 301, tick-gap Phase 302), the reading carries no oracle-verifiable
+content. Separately, on request, a hypothetical (explicitly not real
+pixel data) visualization was produced extrapolating the top band's real
+7-row tile through the actual solid-black 21x21px center square (21 rows
+= exactly 3x the 7-row tile) via
+`qr_finder_ring_texture_center_square_continuation_render.py` --
+saved as
+`doc/img/gsmg_puzzle_stage1_qr_finder_center_square_pattern_continuation.png`,
+filled region outlined in magenta and self-tested to confirm no real
+pixels were altered. The pattern continues with no new shape or
+discontinuity, mildly reinforcing the periodic-tiling-artifact reading;
+this was not itself run through the oracle. With idea 5 also negative and
+idea 1 (perimeter unroll) still blocked on its unresolved depth-offset
+design gap, "Divergence pass 2" remains effectively exhausted pending
+either that resolution or a new idea.
+
+## Phase 304 -- QR finder-ring texture: textured-block type sequence, negative (2026-08-16)
+
+`qr_finder_ring_texture_block_type_sequence_audit.py` executes idea 6 of
+"Divergence pass 2" -- a user-proposed refinement of idea 5 (Phase 303):
+instead of scoring every row as a content symbol, treat solid-white and
+solid-green rows as separators and read only the textured rows, grouped
+into contiguous blocks, as content.
+
+Block identification (mechanical): a maximal contiguous run of
+Phase-303's `T`-classified rows is one block. This finds exactly 4 blocks
+in row order: `[9,10]` (height 2), `[13]` (height 1), `[37,38]` (height
+2), `[41]` (height 1) -- confirming the user's visual read of "2 types
+that are 2 cells tall, one type that is 1 cell tall" on height alone.
+Block *type* was then assigned mechanically (not by eye): two blocks
+share a type iff their per-row minority-pixel counts (Phase 302's
+methodology) match exactly, row-for-row. This gives signatures `(12,9)`,
+`(9,)`, `(6,9)`, `(9,)` -- exactly 3 distinct signatures, letters assigned
+in first-appearance order: block sequence **A, B, C, B**. This
+independently reproduces the user's observation from a fully mechanical
+rule: the two height-1 blocks (rows 13 and 41) really do have identical
+signatures, distinct from either height-2 block, and the two height-2
+blocks (rows 9-10 vs. 37-38) really are distinct from each other -- both
+consistent with, and a natural restatement of, Phase 296's finding that
+only the "offset 2" row (9/37) is genuinely divergent between bands while
+the others repeat exactly or near-exactly.
+
+Six candidates were fixed before any oracle run: the type-letter sequence
+forward and reversed, a digit-mapped version, the block-height sequence,
+per-block textured-cell-count sums (2-digit zero-padded, concatenated),
+and per-row textured-cell counts (same padding). Each run through the
+standard `keystr_forms()` against all four tracked blobs.
+
+**Result:** 18 passphrase attempts, 0 hits.
+
+**Verdict:** closed negative. The user's visual model was correct and is
+now backed by a mechanical, reproducible rule -- but as with every other
+granularity tried in this pass (Phases 300-303), it carries no
+oracle-verifiable content. All 5 executable ideas from "Divergence pass
+2" (2, 3, 4, 5, 6) are now negative; only idea 1 (perimeter unroll)
+remains, still blocked on its unresolved depth-offset design gap.
+
+## Phase 305 -- QR finder-ring texture: the two irregular rows in isolation, negative (2026-08-16)
+
+`qr_finder_ring_texture_irregular_rows_only_audit.py` executes idea 7 of
+"Divergence pass 2", raised by the user after independently re-deriving
+(via the block-type analysis, Phase 304, and a direct visual comparison)
+that the 1-row textured block always looks like a continuation of the
+preceding 2-row block's second row, regardless of which 2-row block
+precedes it.
+
+Verified directly before building anything: rows 10, 13, and 38 are
+byte-for-byte identical to each other (not merely same-shaped), and row
+41 shares their exact tick positions (only its background level differs,
+the already-known Phase 296 anomaly). Every solid separator row is
+trivially uniform by definition. That leaves rows 9 and 37 -- the
+"irregular" rows -- as the *only* place across the entire measured ring
+texture where any content ever varies at all; everywhere else is provably
+deterministic repetition of one fixed tile. Both rows were confirmed to
+use only 2 distinct intensity values each (250, 255), making each a
+natural 34-bit binary string (255 -> `1`, 250 -> `0`, disclosed
+convention). Eight candidates were fixed before any oracle run: each
+row's bits forward and reversed, both concatenation orders, the 6-bit
+difference mask between the two rows, and the 6 differing positions
+themselves as digits. Each run through the standard `keystr_forms()`
+against all four tracked blobs.
+
+**Result:** 24 passphrase attempts, 0 hits.
+
+**Verdict:** closed negative. This is the sharpest possible test of the
+"hidden data" framing for this artifact: rows 9 and 37 are, by direct
+proof, the only pixels in the whole texture capable of carrying any
+non-redundant content, and testing them in isolation -- alone, reversed,
+concatenated both ways, and as a difference mask -- still produced
+nothing. Combined with Phases 300-304 (pixel-level, tick-gap, and
+row/block-level reads all negative) and the earlier Game of Life and
+Morse code checks (also negative), "Divergence pass 2" is now
+comprehensively exhausted for every idea except idea 1 (perimeter
+unroll), which remains blocked on its own unresolved depth-offset design
+gap. The standing recommendation is to treat this artifact as a
+rendering/generator mechanism question (Phases 296-299, still open only
+as to which specific tool) rather than a hidden-message one, absent a
+genuinely new angle.
+
+## Phase 306 -- QR finder-ring texture: user-specified color-to-binary reading, negative (2026-08-16)
+
+`qr_finder_ring_texture_color_binary_reading_audit.py` executes idea 8 of
+"Divergence pass 2", a color-to-bit mapping specified directly by the
+user: green (250), dark red (15), and orange (234) read as `1`; white
+(255), red (16), yellow (236), and cyan (252) read as `0`. Unlike Phases
+301/302/305, this reading covers the *full* 36-column ring width
+(cols 6-41), including the two edge boundary-antialiasing columns, since
+the user's mapping explicitly assigns bits to those colors too.
+
+Two readings were run, both explicitly requested: "without continuation"
+(the 14 real, measured ring rows only, row-major, 504 bits) and "with
+continuation" (all 35 rows spanning 7-41 inclusive, using the earlier
+hypothetical center-square fill from
+`qr_finder_ring_texture_center_square_continuation_render.py` for the
+otherwise solid-black gap, 1260 bits). A self-test confirms the two
+readings agree exactly on every real, non-extrapolated row before either
+was used as a candidate. 4 candidates (both readings, forward and
+reversed) run through the standard `keystr_forms()` against all four
+tracked blobs.
+
+**Result:** 12 passphrase attempts, 0 hits.
+
+**Verdict:** closed negative. This was the last remaining not-yet-tried
+bit-assignment scheme raised in this investigation; combined with Phase
+305, every color/value grouping proposed so far (250/255 binary,
+this 7-value binary, the 8-value categorical alphabet, and the 3-symbol
+row/block types) has been tested against the oracle with no hits. Idea 1
+(perimeter unroll) remains the only unexecuted idea in "Divergence pass
+2", still blocked on its own depth-offset design gap.
+
+## Phase 307 -- Architect monologue, forward, as one unbroken block against all four blobs: negative (2026-08-16)
+
+Follow-up close read of the Phase 3.2.1 Architect monologue (the same
+331-word passage covered by Phases 118/235/265-267/295) found the
+passage's many film/screenplay substitutions (`the One` -> `the you`,
+`prime program` -> `prime basics`, `23 individuals/16 female/7 male` ->
+`23 ciphers/16 encryptions/7 passwords`, `Zion`/`entire human race` ->
+personal `your will to live`/`entireness of yourself self`, etc.) are the
+same already-documented "neo is replaced with you" device the README's own
+walkthrough names for the puzzle's very first clue (`README.md:289`) --
+not a new mechanism, and every substituted word is already inside the
+candidate pools Phases 118/265/267 tested (all negative). Two apparent
+small anomalies (a doubled "YOU", a floating "ME", neither present in
+either the film SRT or the official screenplay PDF) were checked directly
+against both primary sources and attributed to the same "two sloppy days"
+manual-transcription construction already established for the passage's
+screenplay/film word blend (Phase 235) -- not a new signal.
+
+That review did surface one genuine, concrete, previously-unexecuted gap:
+this exact 331-word block, read **forward, as a single unbroken string**,
+has never actually been submitted as its own oracle candidate. Phase 267's
+own write-up explicitly treated a punctuation split collapsing this block
+into one candidate as a bug to fix, deliberately replacing it with 18
+line-based candidates instead. Phase 295's reversal audit extracts the
+identical block via the identical two anchors but its code explicitly
+labels the un-reversed forward reading `"already-known plaintext, not a
+new candidate"` and skips it. So the plain forward whole-block reading
+was twice adjacent to being tested and both times deliberately excluded.
+
+`architect_monologue_whole_block_forward_audit.py` closes that specific
+gap: the same mechanical extraction (`YOUR LIFE IS THE SUM OF A REMAINDER`
+.. `HOPE YOURE THE ONE CIAO BELLA O`, 331 words, self-test-pinned to match
+Phase 295's own count) run forward, whitespace-normalized, through
+`answer_forms()` (raw/upper/lower/letters-only, 4 forms) and
+`keystr_forms()` (raw/SHA-256/double-SHA-256) against all four tracked
+blobs under the standard CBC oracle -- the same bounded scope Phase 295
+used, so this is a direct, apples-to-apples completion of that closed
+phase rather than a new, broader hypothesis.
+
+**Result:** 12 passphrase attempts, 0 hits.
+
+**Verdict:** closed negative. Combined with Phases 118 (word-level diff +
+prime extraction), 265 (residual vocabulary), 266 (seven-part reuse), 267
+(every sentence), and 295 (every reversal), the Architect monologue is now
+exhausted as a standard-passphrase source in every disclosed reading this
+project has proposed: sentence-level, word-level, vocabulary-level,
+reversed, and now whole-block-forward. Reopening requires either a
+genuinely new derived reading (not a resubmission of text already covered
+by one of these six phases) or new evidence that the passage's role is
+something other than a direct passphrase source.
+
+## Phase 308 -- Architect monologue "wiseman"/"140" identity research and token-level oracle closure: negative (2026-08-16)
+
+Read the monologue for embedded *directions/pointers* rather than literal
+password text, per the user's explicit request. Two candidates surfaced as
+possibly-directional (not flavor): "select from over twenty-three ciphers
+sixteen encryptions and or seven intertwined passwords" and "what a
+wiseman above hinted at is worth hundred fourty of the investment." The
+former already just restates the already-adopted `[23,16,7]` macro-chain
+selector (Phase 236); it is not a new pointer. The latter -- specifically,
+*who* "a wiseman" refers to -- had never been directly researched anywhere
+in this project despite the adjacent number "140" being chased for months.
+
+**Identity research (checked directly, not assumed):**
+- Neither creator Telegram export (`ChatExport_2026-07-29 (2)`,
+  `ChatExport_2026-08-09 (1)`, ~53k + supplementary messages) contains the
+  word "wiseman" at all; "wise" appears only as the ordinary adverbial
+  suffix ("network wise", "tax wise", "btc wise") in routine trading-bot
+  support chat. This independently reconfirms the creator's real-world
+  identity as GSMG.io's actual trading-bot team (already established,
+  Phase 154) rather than surfacing a new lead.
+- The solver/community corpus's two "wise man" hits (messages `41271`,
+  `65814`) are unrelated banter, neither referencing this riddle line.
+- The *Cosmic Duality* book's one "wise old man" mention (a Nantes
+  Cathedral statue description, young-woman/wise-old-man duality) is
+  thematically adjacent to the book's duality motif but carries no numeric
+  or investment framing -- not pursued further, to avoid exactly the kind
+  of keyword-coincidence fishing this project's discipline warns against.
+- Page 140 of the book is simply where its back-of-book index begins --
+  an unremarkable coincidence, not a hidden pointer.
+- "140" itself already has an established, tracked home: a 2025 community
+  tool's 14x14=196-cell `matrixsumlist` grid minus 56 already-known
+  password letters = 140, explicitly echoing this exact phrase
+  (`GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md`; `FINDINGS.md` Phase
+  214). Real, but Phase 214's own verdict already stands: nothing selects
+  that specific tool/traversal as creator-intended (G3/G4 fail); it
+  remains parked under `G-MSL-001`, not reopened here.
+
+**Token-level oracle closure:** Phase 265's residual-vocabulary sweep
+tested this monologue's other phrasing as standalone substrings but never
+isolated "wiseman" or "hundred fourty"/"140" this way -- only the full
+14-word README line got tested as one unit (Phase 267's line-based sweep).
+`architect_monologue_wiseman_140_audit.py` closes that specific gap: 6
+verbatim-substring candidates (`wiseman`, `wisemanabove`, `hundredfourty`,
+`hundredfourtyoftheinvestment`, the full sentence letters-only, and bare
+`140`) through `answer_forms()`/`keystr_forms()` (36 unique key materials)
+against all four tracked blobs.
+
+**Result:** 0 hits.
+
+**Verdict:** closed negative at the token level; the identity question
+itself remains genuinely unresolved, not merely untested -- a thorough,
+multi-source search (both creator export corpora, the solver corpus, and
+the physical book's own text) found no evidence identifying who "a
+wiseman above" is. This is a real, honest gap, not a solved thread: it
+stays open pending new primary evidence (a creator statement, a
+community-sourced identification, or new book content), consistent with
+this project's other parked P0 gaps. Does not reopen `G-MSL-001`'s
+"140" branch, which remains parked on its own established terms.

@@ -141,18 +141,34 @@ of an operation still requires the worksheet's G1–G5 gates.
 
 ## Result
 
-- Arrival/capture date:
-- Capture completeness:
-- Field 1 — dimensions:
-- Field 2 — placement:
-- Field 3 — traversal:
-- Field 4 — value mapping:
-- Field 5 — aggregation:
-- Field 6 — serialization:
-- Field 7 — target:
-- Overall verdict:
-- New FINDINGS phase:
-- Reopen or follow-up condition:
+- Arrival/capture date: 2026-08-13 (photographed and supplied by the book
+  recipient).
+- Capture completeness: pages 57–58 photographed and reviewed. Not a bound-in
+  gatefold as originally hypothesized — this was a transcription gap in the
+  existing book-text file; the pages fit seamlessly with the already-known
+  p.56/p.59 content once filled in.
+- Field 1 — dimensions: absent. No matrix, grid, or row/column language on
+  either page.
+- Field 2 — placement: absent. No placement/starting-point instruction.
+- Field 3 — traversal: absent. No ordering/traversal selector.
+- Field 4 — value mapping: absent. No legend or value-conversion rule.
+- Field 5 — aggregation: absent. No named or demonstrated operation.
+- Field 6 — serialization: absent. No output-format rule.
+- Field 7 — target: absent. No downstream consumer named or forced.
+- Overall verdict: **Relevant negative.** The complete target artifact
+  (pages 57–58) was authenticated and legibly captured, but it fixes 0/7
+  fields. Page 57 is a full-page plate reprint of Franz Stuck's "Sin"
+  (already known from its p.56 caption); page 58 continues the Eve/
+  Tertullian/Council-of-Mâcon narrative and a Black Madonna sidebar. The
+  page's own numbers (1893, 1656, 585, "fifty-nine bishops," "a majority of
+  only one vote") are ordinary historical narrative, not values selected or
+  consumed by any stated operation.
+- New FINDINGS phase: `tools/gsmg/FINDINGS.md` Phase 259 (2026-08-13).
+- Reopen or follow-up condition: a creator clue, recovered guide step, or
+  pre-cutoff code artifact that fixes the 7 G3 fields against the
+  31-character selection — matches `G-MSL-001`'s registry closure condition
+  exactly, since obtaining and reviewing this artifact does not by itself
+  prove the proposed consumer (per this worksheet's own scoping note above).
 
 ## Related notes
 

@@ -173,29 +173,41 @@ and coverage across gaps.
 
 ## Decisions
 
--
+- **2026-08-16:** all three pre-registered experiments are closed. The
+  physical *Cosmic Duality* copy's interior (including pages 57–58) and
+  colophon identifiers were captured and reviewed negative (Phases 259,
+  294); the book recipient confirmed no dust jacket, spine markings,
+  inscriptions, or inserts exist beyond what the interior scan already
+  shows, so the paratext pass needs no further physical photography. No new
+  physical-book acquisition is planned. `G-MSL-001` stays `parked`, per
+  `GSMG_OPEN_GAP_REGISTRY`; the web-archive and creator-communication lanes
+  below remain open only if a genuinely new lead surfaces, not as a
+  standing task.
 
 ## Experiments and next actions
 
-- [ ] **Target:** the arriving *Cosmic Duality* copy, especially pages 57–58.
-      **Method:** document the copy and capture the closed pages, full opened
-      spread/gatefold, page edges, and detailed straight-on images before
-      interpreting content. **Stopping rule:** one complete provenance set and
-      one legible, uncropped capture set, with additional close-ups only where
-      needed for ambiguous detail. **Success condition:** another researcher
-      can verify every visible mark, layout relationship, and relevant edition
-      detail from the preserved files. **Owner:** book recipient.
-- [ ] **Paratext pass on the same physical copy:** photograph the title and
-      copyright pages, spine, boards, dust-jacket front/back/flaps, price, ISBN,
-      LCCN, Dewey number, edition/printing code, and every inscription, stamp,
-      underline, dog-ear, or loose insert. Transcribe each identifier exactly
-      before normalizing it or trying it as a candidate string. **Stopping
-      rule:** every listed surface/field is either captured or explicitly
-      recorded as absent/not applicable. **Owner:** book recipient.
-- [ ] Before arrival, turn the seven missing G3 fields for `G-MSL-001` into a
+- [x] **Target:** the arriving *Cosmic Duality* copy, especially pages 57–58.
+      **Closed 2026-08-13/2026-08-16.** Interior fully covered: pages 57–58
+      photographed and transcribed (`tools/gsmg/FINDINGS.md` Phase 259,
+      negative — plate reprint + Eve/Black-Madonna narrative continuation, no
+      matrix/operational content), and the complete book interior (front
+      matter through the p.144 colophon and index, 1,404 lines) is already in
+      `wordlists/gsmg/cosmic_duality_book_full_text.txt`.
+- [x] **Paratext pass on the same physical copy.** **Closed 2026-08-16.**
+      Colophon identifiers (ISBN trade/library, LCCN, LC call number, Dewey,
+      copyright year) transcribed from an existing p.144 photo,
+      checksum-verified, tried literally against all four blobs (Phase 294,
+      negative). Exterior surfaces (dust-jacket, spine, boards, inscriptions,
+      stamps, loose inserts) confirmed by the book recipient (2026-08-16) to
+      carry nothing beyond what the interior scan already shows — no dust
+      jacket, no markings, no inserts. Nothing left to photograph; this item
+      is closed as checked/not-applicable, not merely skipped.
+- [x] Before arrival, turn the seven missing G3 fields for `G-MSL-001` into a
       neutral observation worksheet with explicit positive, negative, and
       ambiguous outcomes. Prepared in
       [[2026-08-12 - Cosmic Duality Gatefold Observation Worksheet]].
+      **Closed 2026-08-16.** Worksheet's "Result" section backfilled from
+      Phase 259: overall verdict **relevant negative**, 0/7 fields fixed.
 
 ## Waiting-period backlog
 

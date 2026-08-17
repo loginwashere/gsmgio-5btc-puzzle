@@ -135,6 +135,26 @@ produced or defended a specific, evidenced identification. The only
 adjacent real fact surfaced: Andrew Johnson is a well-known visual lookalike
 for actor **Tommy Lee Jones**, not Jim Carrey -- a near-miss, not a hit.
 
+**New lead, 2026-08-16, unverified:** a thematic (not visual) reading.
+"Carrey" -> Jim Carrey's defining "is my reality even real?" role, *The
+Truman Show*; "James Gates" -> the physicist popularly (if often
+over-stated) tied to the "we might be living in a simulation" claim;
+"Simulacra and Simulation" -> Baudrillard's thesis that a copy can
+displace or become indistinguishable from "the real." All three converge
+on one theme: an authenticity/reality dispute. **John Tyler** -- one of
+the three still-unassigned rulers in the set (John Adams, John Quincy
+Adams, Andrew Johnson, Tyler; JFK and LBJ already assigned to the two
+adjacent sentences) -- was nicknamed **"His Accidency"** by contemporaries
+(including John Quincy Adams himself, also in this set) who disputed
+whether he was really President or merely "Acting President" after
+Harrison's death in office, independently confirmed via live web search
+(presidents.website, whitehousehistory.org). A president whose own
+legitimacy was publicly disputed is a tighter fit for Baudrillard's "copy
+without an original" than a face-resemblance reading ever was. **Not
+confirmed** -- no extraction mechanism is attached to this sentence
+either way (see below), so this remains a candidate identification, not a
+result.
+
 No extraction mechanism (no "compute X" instruction, unlike X2SH4Y0QB15's
 sub-clues) is attached to this sentence, so even a correct identification
 may not yield password material. Two live possibilities, not distinguished:
@@ -151,4 +171,56 @@ sentence text (and its no-whitespace/lowercase mechanical variants, plus
 blobs (SALPH, COSMIC, P32_TRAILING, URLBLOB). Zero interpretation required,
 cheap, and closes out whether this specific disclosed-but-unused fragment
 has ever actually been tried -- it hasn't, in any form, per repo-wide grep.
-Not yet built or run; pending approval.
+**Explicitly deprioritized 2026-08-16** (user call): this sentence has no
+attached extraction instruction, so testing its raw text is a low-prior
+sanity check, not a result backed by real derivation -- not worth the
+attempt budget over genuinely open threads. Not built.
+
+## "Wiseman"/"140" identity research -- executed, negative but genuinely still open (2026-08-16)
+
+At the user's request, re-read the monologue for directions/pointers
+rather than literal password text. "Select from over twenty-three
+ciphers..." just restates the already-adopted `[23,16,7]` macro-chain
+selector (Phase 236) -- not new. "What a wiseman above hinted at is worth
+hundred fourty of the investment" is more interesting: "140" already has
+an established, tracked home (a 2025 community tool's 14x14=196-cell
+`matrixsumlist` grid minus 56 known password letters = 140 -- see
+`GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md`, `FINDINGS.md` Phase 214,
+parked under `G-MSL-001`), but *who* "a wiseman" refers to had never been
+researched at all.
+
+Checked directly: neither creator Telegram export corpus contains the word
+"wiseman" (only the ordinary "-wise" suffix, routine trading-bot chat);
+the solver corpus's two "wise man" hits are unrelated banter; the *Cosmic
+Duality* book's one "wise old man" mention (Nantes Cathedral statue,
+duality motif) carries no numeric/investment framing; page 140 of the book
+is just where its index begins, an unremarkable coincidence. No
+identification found. `architect_monologue_wiseman_140_audit.py` also
+closed a narrow token-level gap Phase 265 left (it tested this passage's
+other phrasing as standalone substrings but never isolated "wiseman" or
+"hundred fourty"/"140" this way): 6 candidates, 36 key materials, 0 hits.
+Full write-up: `tools/gsmg/FINDINGS.md` Phase 308.
+
+**This is a genuine, honest open gap, not a closed thread**: the identity
+question was researched thoroughly (both creator corpora, the solver
+corpus, the book) and came up empty, not merely untested. Stays open
+pending new primary evidence -- a creator statement, a community
+identification, or new book content.
+
+## Whole-passage forward reading -- executed, negative (2026-08-16)
+
+A separate, better-motivated gap: this whole 331-word monologue, read
+**forward as one unbroken string** (not reversed, not split into
+sentences/lines), had never actually been submitted as its own oracle
+candidate -- Phase 267 deliberately split it into 18 line-based candidates
+to avoid exactly this, and Phase 295's reversal audit explicitly skips the
+un-reversed forward form as "already-known plaintext, not a new
+candidate." `architect_monologue_whole_block_forward_audit.py` closed
+this: 4 candidate forms (raw/upper/lower/letters-only) x 3 keystr forms =
+12 passphrase attempts against all four blobs. **0 hits.** See
+`tools/gsmg/FINDINGS.md` Phase 307. Combined with Phases 118/265/266/267/295,
+the monologue is now exhausted at the sentence, word, vocabulary, reversed,
+and whole-block-forward levels -- every disclosed reading this project has
+proposed for this passage as a whole. The one thread that survives is the
+Carrey/James Gates/Simulacra identity question above, which was never
+about the passage's role as a passphrase source in the first place.
