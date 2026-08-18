@@ -139,6 +139,77 @@ cryptanalytic log, not textual/media reference). Everything below is new.
 | Extended Fresco/Venus Project bibliography and filmography (*The Venus Project: The Redesign of a Culture*, "Zeitgeist: Addendum", "Zeitgeist: Moving Forward", *Bright Tomorrow* screenplay, "Engineering the Impossible" (2002 doc), "sociocyberneering", etc.) | Books/documentaries | Expands the already-listed generic "Fresco's wider bibliography" entry with the individual titles actually swept | Speculative/tested negative -- same bucket as the existing Fresco entry above, all 0 hits | `tools/gsmg/FINDINGS.md:5925-6109` (Phases 88, 90) |
 | "Sabaton" (Swedish power-metal band) | Band name | User-proposed phonetic reading of "SalPhaseIon" as "Sa VAT on" | Speculative/tested negative -- 0 hits | `tools/gsmg/FINDINGS.md:7408-7437` (Phase 107 follow-up) |
 
+## Additional findings, round 3 (2026-08-17): creator-era cultural context, broadened candidate survey
+
+> [!caution] Pure ideation -- nothing in this section has been tested
+> Every row below is a candidate for future wordlist/keyword sweeps, not a
+> traced puzzle connection. Confirmed against the full corpus (`FINDINGS.md`,
+> every `doc/*.md`, every `doc/Brainstorms/*.md`) on 2026-08-17: none of
+> these titles/terms appear anywhere in this project's history except the
+> already-covered Cosmic Duality book itself. This closes the "has this
+> already been tried" question for each row; it does not open a new oracle
+> run by itself.
+
+### Grounding: established creator-profile facts used to bound this survey
+
+Pulled only from already-verified primary-source material, not invented:
+
+- **Timeframe.** Puzzle created 2019 (`doc/GSMG_PUZZLE.md:11`); creator's own
+  2026 retrospective says it was built in "two sloppy days," inspired by
+  other crypto puzzles (message `67741`, `doc/GSMG_CREATOR_FEASIBILITY_ENVELOPE_AUDIT.md`).
+  Bounds the relevant cultural window to roughly **2016-2019**, not the
+  puzzle's later multi-year solving period.
+- **Nationality/base.** Netherlands-based, in his own words, repeatedly
+  2018-2022 (`doc/GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md`).
+- **Profession.** Part of the team building GSMG.io, a real automated
+  crypto-trading bot (Binance/Bittrex/Huobi), under "EPIPREMNUM AUREUM LLC"
+  (Phase 154, `tools/gsmg/FINDINGS.md`) -- a working crypto-industry
+  professional in 2019, not a hobbyist outsider.
+  He explicitly names *Cicada 3301* by category ("cicada puzzles ... bad
+  design", message `7152`) -- confirms direct awareness of the ARG/crypto-puzzle
+  genre he was "inspired by."
+- **Established tastes** (already in the "Established/verified" table
+  above): deep, detail-level familiarity with *The Matrix* trilogy
+  (shooting-script-level, not just the films); *Mr. Robot* (hacker-culture
+  TV, "Qwerty" the fish); Baudrillard's *Simulacra and Simulation*;
+  Jacque Fresco/Venus Project futurism; a physical 1991 Time-Life
+  *Mysteries of the Unknown* volume; casual chess-forum puzzles; Star Trek
+  Klingon trivia; classic-meme fluency (multi-year Rick Astley Rickroll).
+- **Personality signal.** Self-effacing about the puzzle's sloppiness;
+  candid about recreational substance use; casual, joke-heavy chat style;
+  builds things fast rather than meticulously (Phase 154/155).
+
+### Candidate categories
+
+| Title / reference | Type | Era | Why it fits the established profile | Status |
+|---|---|---|---|---|
+| QuadrigaCX collapse ("Gerald Cotten died with the only keys to ~$190M CAD") | Real-world crypto news event | Dec 2018-Feb 2019, exactly contemporaneous with puzzle construction | Uncannily close thematic parallel to the puzzle's own "hidden laptop... on that thing is the actual answer" framing and general "the secret might die with me" energy -- a working crypto-industry professional in the Netherlands/EU would have followed this story closely as it broke in real time, right when this puzzle was being built. Not proposed as password-text source (it's an event, not a work with quotable lines) -- flagged as design-mindset context, same evidentiary class as the already-noted "two sloppy days" retrospective | Untested, no clear mechanism to test yet -- record only |
+| "Proof of Keys" movement (Trace Mayer, launched 3 Jan 2019) | Crypto-culture event/slogan | Jan 2019 | Same exact date (3 Jan, Bitcoin genesis-block anniversary) and same *Times* headline the puzzle already uses for Phase 3 part 6 (`main.cpp` line 1616) -- "Proof of Keys" was the loudest public campaign built around that anniversary the same month the puzzle likely entered construction. Candidate slogan/phrase text (`"Not your keys, not your coins"`, `"Proof of Keys"`) never tried against any blob | Untested |
+| Cypherpunk Manifesto (Eric Hughes, 1993) | Foundational crypto-culture text | Pre-dates puzzle but a canonical read for anyone in the space by 2019 | Standard reading for a crypto-industry founder; short, quotable, thematically on-genre for a puzzle built around privacy/cryptography | Untested |
+| Nick Bostrom, "Are You Living in a Computer Simulation?" (2003) / the "Simulation Argument" | Philosophy paper | Popularized in mainstream tech culture 2016 (Elon Musk's public comments reignited interest) | The puzzle's Architect-monologue framing ("you are the eventuality of an anomaly," simulated control) plus its own explicit Baudrillard citation put it squarely in simulation-theory territory; Bostrom's argument was the dominant secular version of that idea circa 2016-2019 tech culture, unlike Baudrillard's (already used) more academic framing | Untested |
+| *Black Mirror*, esp. "Bandersnatch" (Netflix interactive film, Dec 2018) | TV/film | Dec 2018, ~months before puzzle construction | Interactive branching-choice structure built explicitly around "choice is an illusion"-style themes (free will, an observer manipulating the protagonist's choices) -- close thematic sibling to the puzzle's own Merovingian/Architect "choice" framing, released right as the puzzle was likely being designed | Untested |
+| *Ready Player One* (film, March 2018; novel 2011) | Film/book | March 2018, ~1 year before construction | Mainstream pop-culture-Easter-egg-hunt narrative, released the year before construction -- thematically the closest "ARG as pop culture" touchstone of the era, plausible direct inspiration alongside Cicada | Untested |
+| *Westworld* seasons 1-2 (HBO, 2016-2018) | TV | 2016-2018 | Simulated-consciousness/free-will themes, contemporaneous and high-profile in tech circles | Untested, weaker fit than Black Mirror/RPO -- lower priority |
+| "Galaxy brain" / expanding-brain meme | Meme format | Popularized 2017-2018 | Escalating-tiers-of-enlightenment format matches the puzzle's own escalating-cipher-layer structure; representative of the meme literacy already established (Rickroll) | Untested, weak/format-only fit -- lowest priority, record only |
+| Other Time-Life *Mysteries of the Unknown* volumes (the series ran ~33 titles, e.g. *Mystic Places*, *Cosmic Connections*, *Mind over Matter*, *The UFO Phenomenon*) | Book series | Published 1987-1991, same house style/design as the confirmed *Cosmic Duality* volume | If the creator owns/owned one volume (confirmed, physical copy referenced), household ownership of others from the same shelf/series is plausible -- a genuinely different question from Phase 261's typography-only cross-volume check above (that tested drop-cap *design reuse*; this asks whether a *different volume's content* could be an unexamined source, the same way *Cosmic Duality* itself was) | Untested, no specific volume identified -- needs a narrower lead (e.g. a creator mention of a specific title) before this is actionable |
+| Neal Stephenson, *Cryptonomicon* (1999) / *Snow Crash* (1992) | Novels | Pre-dates puzzle; standard "canon" reading in Bitcoin/crypto circles throughout the 2010s | *Cryptonomicon* in particular is the most commonly cited "crypto bible" novel among Bitcoin-era cypherpunks; a working crypto-industry founder is a very plausible reader | Untested, generic fit -- lower priority than the QuadrigaCX/Proof-of-Keys/Bostrom rows above, which have a specific dated/thematic anchor rather than genre plausibility alone |
+
+### Assessment
+
+The two standout candidates are **QuadrigaCX** and **"Proof of Keys"** --
+both real, dated, crypto-industry-specific events from the exact
+construction window, both thematically resonant with material the puzzle
+already demonstrably uses (the genesis-block *Times* headline is literally
+the Proof-of-Keys anniversary date), and neither previously considered
+anywhere in this project. Everything else here is genre-plausible but
+weaker -- closer to "what a person like this probably also consumed" than
+"why would this specific work be encoded here."
+
+None of this is promoted. Per this project's brainstorm discipline, the
+next step for any row above -- if pursued -- is defining a concrete,
+falsifiable test (what candidate strings, against which blob, under what
+oracle) before any sweep is run, not broadening the wordlist speculatively.
+
 ## Not media, listed only for completeness
 
 - Heisenberg's uncertainty principle, Norton's theorem -- physics/engineering

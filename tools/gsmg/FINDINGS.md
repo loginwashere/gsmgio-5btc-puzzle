@@ -18927,3 +18927,378 @@ stays open pending new primary evidence (a creator statement, a
 community-sourced identification, or new book content), consistent with
 this project's other parked P0 gaps. Does not reopen `G-MSL-001`'s
 "140" branch, which remains parked on its own established terms.
+
+## Phase 309 -- Legik's "Bacon cipher" observation on DBBI: reconstructed and closed negative, three years unchecked (2026-08-17)
+
+Message `17790` (2023-12-19, solver "Legik",
+`doc/telegram_shortlist_fullsize/17790.txt`), captioned "it turned out
+something like the Bacon cipher" against DBBI, sat in the Stage-2 media
+shortlist triage (`doc/GSMG_TELEGRAM_MEDIA_SHORTLIST.md`) flagged by keyword
+but never actually reproduced or checked -- `grep -i bacon` over the whole
+of this file returned zero hits before this phase.
+
+`tools/gsmg/legik_bacon_base9_reconstruction_audit.py` reconstructs Legik's
+attached derivation exactly (verified byte-for-byte against the raw
+attachment via `--self-test`): DBBI's raw symbols get mapped per-character
+to digits `a=0,b=1,...,i=8` (his own zero-indexed convention, distinct from
+the puzzle's own established `a1i9` used elsewhere), the resulting 91-digit
+string is read as one giant base-9 integer and converted whole to binary,
+and that binary is relabeled `0->a,1->b` to produce the Baconian-looking
+`oneAB` string.
+
+**Result: closed negative for both DBBI and FAED.** A real Baconian cipher
+requires fixed 5-bit letter groups. DBBI's derived bit length is 287
+(`287 mod 5 = 2`); FAED's is 1807 (`1807 mod 5 = 2`) -- neither divides
+evenly, and the identical remainder on both independently confirms this is
+a property of the conversion method itself, not either ciphertext's
+specific length: treating all digits as one giant base-9 integer is
+positional arithmetic across the whole number at once, and since 9 is not
+a power of 2 there is no bit offset that maps back to a single original
+character -- the operation destroys per-symbol correspondence rather than
+preserving it, unlike a real per-character encoding.
+
+**Verdict:** the surface resemblance Legik noticed (an A/B-only output
+string) was real, but the underlying math is a numeral-base curiosity, not
+a structurally sound encoding. Legik himself never followed up or resolved
+this in the raw chat (checked directly: his only other flagged message,
+`19507`, three and a half weeks later, is an unrelated base-10 re-encoding
+attempt that got a shrug and a different reinterpretation from another
+solver, not a confirmation). Closes cleanly; does not reopen `G-ESC-001`
+or any other DBBI/FAED gap, none of which were blocked on this lead.
+
+## Phase 310 -- Nihilist-cipher additive-key hypothesis on DBBI/FAED: bounded exploratory pass, no signal (2026-08-17)
+
+Motivated by a chapter-by-chapter review pass of David Kahn's *The
+Codebreakers* this session: Chapter 18 ("Russian Cryptology") covers the
+Nihilist cipher in the same chapter as the "Hayhanen System" -- the real
+historical name for the straddling checkerboard/VIC-style technique this
+puzzle already demonstrably uses (confirmed at Phase 3.2.2). Unlike a
+brand-new cipher family, Nihilist *extends* the checkerboard model DBBI/FAED
+already show a real signal for (the `{b,e}` escape pair, uniquely rank 1 of
+36 candidate pairs) rather than replacing it -- a repeating numeric key
+added to the checkerboard's own code-slot sequence before final assembly.
+No textual anchor in the puzzle itself points at Nihilist specifically;
+this is book-source plausibility only, tested because it was the most
+structurally compatible untried idea this session's broader cipher survey
+produced.
+
+`tools/gsmg/dbbi_faed_nihilist_additive_audit.py` segments DBBI/FAED into
+their intrinsic 0-24 checkerboard code-slot sequence (reusing
+`natural_code_index`/`segment_codes` from `matrixsum_permutation_sweep.py`
+directly, independent of any guessed alphabet), adds a repeating numeric key
+(mod 25, both signs) derived from each of the 11 `CORE_ALPHABET_SEEDS`
+keywords, and hill-climbs the best 25-slot-to-letter assignment for the
+shifted sequence with the same quadgram-fitness search this project already
+uses for the unshifted baseline -- across all escape-pair/topology variants
+for both objects (12 variant baselines, 11 keywords x 2 signs x 12 variants
+= 264 shifted searches). Bounded exploratory budget (800 iters/30 restarts
+per search, below the canonical full-scale hillclimb budget used elsewhere
+in this project) to check whether the idea was worth a full run before
+committing to one.
+
+**Result: no signal.** Best shifted score across every keyword/sign/variant
+combination (`-295.4`, DBBI `e/b escapes_first`, key=`architect`) beats the
+best unshifted baseline (`-302.1`) by only ~7 points out of a ~300-point
+scale, and baseline and shifted scores are interleaved throughout the top-15
+ranking rather than separating into distinct bands -- the signature of
+ordinary hill-climb-to-hill-climb noise across different random restarts,
+not a real decode surfacing. A genuine English-plaintext hit would be
+expected to score dramatically higher, not marginally.
+
+**Verdict:** the Nihilist additive-key hypothesis does not hold up for the
+closed `CORE_ALPHABET_SEEDS` keyword set under this bounded pass. Does not
+close the idea in full rigor (a canonical full-restart-budget run with a
+proper shuffled-null control, matching this project's own established
+discipline for promoting a positive result, was not run here since nothing
+here cleared even the bounded pass's bar to justify that cost) -- but
+provides no reason to escalate it either. Reopening requires either a new,
+differently-motivated keyword candidate or a specific reason the bounded
+budget was insufficient, not a re-run of the same closed set at larger
+scale on spec.
+
+## Phase 311 -- Cosmic Duality book text as a running key over DBBI/FAED: bounded exploratory pass, no signal (2026-08-17)
+
+Extends Phase 310's mechanism with better-grounded key material: instead of
+a short repeating keyword, uses the actual OCR'd prose of the *confirmed*
+physical *Cosmic Duality* book (`wordlists/gsmg/cosmic_duality_book_full_text.txt`,
+transcribed from the user's own photographs of the physical copy -- a real
+artifact, not a plausibility guess, unlike Kahn's *The Codebreakers*) as a
+running (non-repeating) additive key over DBBI/FAED's checkerboard
+code-slot sequence. The book has only ever been searched for a hidden
+riddle *sentence* before now (`doc/Brainstorms/2026-08-15 - GSMG Media and
+Citation Inventory.md`); this tests a structurally different question --
+the prose as raw key material, not as a source of a quotable line.
+
+`tools/gsmg/dbbi_faed_cosmic_duality_running_key_audit.py` reuses Phase
+310's `slot_sequence`/`apply_shift`/`hillclimb_slots` directly. Candidate
+starting points are closed and bounded to the book's own explicit
+structure, not an arbitrary offset sweep: the start of real prose (the
+front-matter essay) and the start of each of the book's 4 named chapters
+per its own table of contents -- 5 points, both shift signs, all
+escape-pair/topology variants for both objects. Same bounded exploratory
+budget as Phase 310 (800 iters/30 restarts).
+
+**Result: no signal**, same signature as Phase 310. Best score (`-294.1`,
+DBBI `b/e escapes_first`, start=chapter3_p78, subtractive) beats Phase
+310's unshifted baseline (`-302.1`) by only ~8 points on a ~300-point
+scale -- consistent with ordinary hill-climb noise, not a decode. No FAED
+variant placed in the top 15 at all; every FAED score under this key
+material stayed at or below its own already-established unshifted
+baseline range.
+
+**Verdict:** the running-key hypothesis, tested against the one genuinely
+book-grounded key source this project has, does not hold up either. This
+was the strongest-grounded of the three cipher-family ideas tried this
+session (Bacon, Nihilist, running-key) precisely because it didn't require
+a book-ownership guess -- and it still produced nothing. Reopening requires
+a different key source or a specific reason to believe one of the 5
+starting points was wrong, not a wider blind offset sweep through the same
+text.
+
+## Phase 312 -- Bellaso 1553 reciprocal cipher as a "Ciao Bella" lead: parked, not testable from available sources (2026-08-17)
+
+Prompted by the "Ciao Bella" text at the end of Phase 3.2.1's Beaufort-decoded
+output: Giovan Battista Bellaso is the true historical originator of what's
+popularly misattributed as the "Vigenere cipher," and his construction is a
+*reciprocal* table system -- mechanically closer to Beaufort (the cipher
+this exact stage actually uses) than to the standard non-reciprocal Vigenere
+square. That technical link, on top of the wordplay, made this worth
+checking before dismissing it as flavor text.
+
+Researched via WebSearch/WebFetch (general construction, Wikipedia's Bellaso
+page, historyofinformation.com, a targeted search on countersign-letter
+mapping, and ciphermysteries.com) to pin down the exact 1553 mechanism
+before writing any test code, per this project's discipline against testing
+an invented mechanism under a real cipher's name.
+
+**Result: not reliably reconstructable from available sources.** The 11-letter
+table index (`A,E,I,O,V,C,G,M,Q,S,Y`) and one worked example are attested,
+but no accessible source states the rule for what happens when a countersign
+letter falls *outside* that 11-letter set (most letters do -- the worked
+example's own countersign "VIRTVTIOMNIAPARENT" is full of them). Worse,
+ciphermysteries.com surfaces what appears to be a *different* Bellaso system
+(from his 1555 challenge ciphers) with a 22-letter index and its own distinct
+worked example -- raising doubt about which construction, if either found so
+far, is actually "the" 1553 cipher. A faithful reconstruction likely requires
+the primary academic source (a 2019 Cryptologia paper on Bellaso's reciprocal
+ciphers), which is paywalled and wasn't pursued further this session.
+
+**Verdict: parked, not closed.** Building and running a test under a guessed
+completion of the missing rule would mean testing an invented cipher under
+Bellaso's name -- indistinguishable from noise if negative, and not a real
+confirmation of the "Ciao Bella" wordplay if positive. No code was written
+and nothing was run against DBBI/FAED/P32TRAILING. Reopening requires either
+locating the primary source's exact rule for out-of-index countersign
+letters, or an independent confirmation that the ciphermysteries.com 22-letter
+system (not the 11-letter one) is the correct 1553 target.
+
+## Phase 313 -- "The Warning" (Logic) unused remainder: lexical test negative, structural fork-selection review inconclusive (2026-08-17)
+
+Follow-up to `doc/Brainstorms/2026-08-17 - The Warning (Logic) Phase 2-3
+Meaning Close Read.md`, which established that Logic's "The Warning" is a
+*confirmed* creator source (its opening lines are the verified Stage 0/1 URL,
+icon-rebus answer, and Phase 1 form password -- `doc/GSMG_PUZZLE.md` lines
+78/91), and that the remainder of the song -- past that first Phase Two line
+-- has never been tried as password/key material anywhere in this project.
+Two independent readings were proposed and both were pursued per instruction.
+
+**Lexical test (negative).** `tools/gsmg/warning_song_remainder_keyword_audit.py`
+builds an 18-candidate closed set (7 full remaining lines normalized exactly
+like the already-verified Phase 1 password, plus 11 short/compound-word forms
+in the same style as this project's existing `CORE_ALPHABET_SEEDS`), and
+tests each two ways: (1) as a checkerboard alphabet seed against DBBI/FAED
+(`pad25`/`decode_9ary`, scored with `matrixsum_permutation_sweep.text_score`
+-- the same `COMMON_WORDS`-bonus scoring that script's own shuffle-gate run
+established a real null-model baseline for: real-vs-null was `57.5` vs
+`63.85` for dbbi and `125` vs `128.93` for faed, both clearly negative, see
+Phase 19 above); (2) as an AES password candidate against
+SALPH/COSMIC/P32TRAILING/URLBLOB (`answer_forms`/`keystr_forms`/`aes_try_open`).
+
+Result: best checkerboard score across all 18 candidates was `65.0`
+(`faed i/g`, the full "red rose or black rose, no in between" line) --
+comfortably *below* that same scoring function's own established faed null
+mean (`128.93`), not above it. No dbbi candidate even reached the top 15.
+Zero AES hits. Closes cleanly under this project's existing negative-result
+bar; no residual signal to escalate.
+
+**Structural fork-selection review (inconclusive, closes as non-actionable).**
+The alternative reading proposed in the close-read doc -- that the song's
+forced red/black binary might be a *directional* hint about which side of an
+already-known open fork to take, rather than new password text -- was
+checked against every open binary parameter this project currently tracks on
+the Cosmic Duality endgame: the `a0i8`/`a1i9` digit mapping, escape-pair order
+(`b/e` vs `e/b`, etc.), `top_first`/`escapes_first` topology, and DBBI-first
+vs FAED-first sequencing. None of these carry any inherent red/black,
+positive/negative, or otherwise colored/ranked labeling anywhere in this
+project's own code or data (`data.py`, `cb_common.py`,
+`matrixsum_permutation_sweep.py` all confirmed via direct grep) -- they're
+arbitrary technical parameter names, not a labeled pair the song's imagery
+could naturally map onto. The one real qualitative asymmetry that does exist
+-- dbbi documented as "structured/key-like" vs faed as "~uniform/high-entropy
+encrypted payload" (`data.py:11`) -- already matches this project's existing
+working assumption (dbbi as the key, faed as the payload) rather than adding
+anything new. This reading doesn't resolve to an actionable choice; it isn't
+wrong so much as there being no labeled fork for it to attach to.
+
+**Verdict:** both halves of the "both" follow-up are closed *at the scope they
+tested* -- literal password/key material, and a literal color-labeled fork
+match. That is narrower than "the song is irrelevant beyond Phase 1": it rules
+out those two specific mechanical uses of the unused remainder, not every
+possible way the confirmed source could still matter (e.g. as
+interpretive/thematic support for how to read already-decoded text like
+"half and better half," rather than as new cipher input -- not tested here).
+Reopening either tested mechanism needs a new, specifically-motivated reason
+-- not a wider sweep of the same closed candidate set, and not a re-check of
+the same fork list absent some new labeled asymmetry to hang the rose imagery
+on. The broader interpretive question stays open.
+
+## Phase 314 -- Architect monologue's "no film equivalent" rows (6/7/14) as password material: negative (2026-08-18)
+
+Follow-up to `doc/Brainstorms/2026-08-17 - Architect Monologue vs Film
+Substitution Table.md`, which identifies rows 6, 7, 14, and 15 as the only
+sentences in the Phase 3.2 Architect monologue with zero counterpart
+anywhere in *The Matrix Reloaded* source -- pure creator voice layered onto
+the film's borrowed skeleton, as opposed to the substituted or verbatim
+rows. A gap check against prior coverage found this specific material had
+never actually been run: Phase 265 (`phase32_monologue_residual_audit.py`)
+tested a hand-picked vocabulary subset that included only a *truncated*
+version of row 6 (missing its leading "please"), and never touched row 7 or
+row 14 at all; Phase 267's line-based sweep split the punctuation-free
+monologue on raw README transcription line breaks, not on the logical
+sentence boundaries these rows reconstruct; Phase 307 tested the entire
+block as one unit, including the four verbatim film-match rows this gap
+deliberately excludes; Phase 308 isolated only the "wiseman"/"hundred
+fourty" tokens inside row 7, not the row in full. Row 15 ("ciao bella o")
+alone is already closed elsewhere (`ciao_selection_coverage_audit.py`,
+`bye_ciao_provenance_audit.py`) and was not re-tested standalone here, only
+as the tail of two multi-row joins below.
+
+`architect_puzzle_original_rows_audit.py` runs a closed, pre-declared set of
+6 candidates: rows 6, 7, and 14 each as a complete logical sentence; the
+"appeal" sub-grouping (row 6 + row 7); the "sign-off" sub-grouping (row 14 +
+row 15); and the full four-row join (row 6 + row 7 + row 14 + row 15) --
+i.e. every sentence in the monologue with no film counterpart at all,
+concatenated in original order. Each candidate was expanded through the
+standard `answer_forms`/`keystr_forms` normalization (case and
+no-space/letters-only variants -- 72 unique key materials total) and run
+through the full standard oracle (CBC with all KDF and extended-cipher
+variants, stream, ECB, key-wrap) against all four tracked blobs (SALPH,
+COSMIC, P32TRAILING, URLBLOB). **0 hits.**
+
+**Verdict:** closes this specific, narrow gap -- none of the puzzle's four
+purely-original Architect-monologue sentences, individually or in either of
+their two natural groupings or their full concatenation, function as a
+standard passphrase against any tracked blob. Does not reopen Phase
+265/267/307/308's own closed scopes, and does not claim to exhaust every
+possible boundary choice over this text (e.g. word-level or partial-phrase
+subsets were not enumerated) -- reopening would need a new, separately
+motivated reason for a different boundary, not a wider mechanical sweep of
+the same four sentences.
+
+## Phase 315 -- Mr. Robot identity-theme show terms as password material: negative (2026-08-18)
+
+Follow-up to `doc/Brainstorms/2026-08-18 - Two Sloppy Days x Creator
+Background Profile Brainstorm.md` ideas 11-15, which established the
+creator's *Mr. Robot* engagement is personal and confirmed (msg `9592`'s
+direct 2023 quote hoping "the last scene of mr. Robot becomes a reality"),
+not just a source of two already-consumed puzzle citations (Qwerty->Q=82;
+Safenet/Luna/HSM from the Angela-hacks-an-HSM scene). Six specific,
+well-known show elements that had never been checked against any tracked
+blob (confirmed via grep against this file): the "red wheelbarrow"
+security-question poem (used as a literal password-recovery answer in the
+show), the show's recurring "Hello, friend"/"Hello, Elliot" dialogue, the
+"Mastermind" persona name, the "who are you" tagline question, and the
+"5/9" hack designation.
+
+`mr_robot_identity_terms_audit.py` runs these 6 candidates through the
+standard `answer_forms`/`keystr_forms` normalization (60 unique key
+materials) and the full standard oracle (CBC with all KDF and
+extended-cipher variants, stream, ECB, key-wrap) against all four tracked
+blobs (SALPH, COSMIC, P32TRAILING, URLBLOB). **0 hits.**
+
+**Verdict:** closes this specific, narrow gap. Does not close *Mr. Robot*
+as a thematic source more broadly -- the "constructed self vs. authentic
+self" resonance with this puzzle's Cosmic Duality framing (brainstorm idea
+14) remains a live interpretive thread, distinct from these six literal
+strings, which were the concrete candidates the theme concretely produced
+so far.
+
+## Phase 316 -- anti-banking-theme candidates as password material: negative (2026-08-18)
+
+Follow-up to brainstorm ideas 15/17-19. Reading the *full* text of msg
+`67741` (previously only quoted in fragments anywhere in this project)
+surfaced a direct, first-person creator statement that anti-banking
+sentiment is literally GSMG's founding motivation: "That disrespect for the
+old banking system? Still burns to this day... Give the power back to the
+little guy." A second, independently-dated creator quote inside the
+construction window, msg `25493` (2019-03-28): "Printing money is changing
+numbers with a keyboard, so is deleting money(debt)" -- closely echoing
+*Mr. Robot*'s "5/9" debt-erasure hack premise in the creator's own words,
+predating this project's awareness of that thematic connection entirely.
+Combined with two already-catalogued-but-previously-unmotivated candidates
+from `doc/Brainstorms/2026-08-15 - GSMG Media and Citation Inventory.md`'s
+"round 3" section -- "Proof of Keys" (Trace Mayer's campaign, launched 3
+Jan 2019, the same date as the already-confirmed *Times* headline this
+puzzle uses for Phase 3 part 6) and the QuadrigaCX collapse (Gerald Cotten
+died holding the only keys to ~$190M CAD, Dec 2018-Feb 2019) -- neither
+tested before (confirmed via grep against this file).
+
+`anti_bank_theme_audit.py` runs 8 candidates (`disrespect for the old
+banking system`, `give the power back to the little guy`, `printing money
+is changing numbers with a keyboard`, `deleting money debt`, `proof of
+keys`, `not your keys not your coins`, `quadriga`, `gerald cotten`) through
+the standard `answer_forms`/`keystr_forms` normalization (90 unique key
+materials) and the full standard oracle (CBC with all KDF and
+extended-cipher variants, stream, ECB, key-wrap) against all four tracked
+blobs. **0 hits.**
+
+**Verdict:** closes these 8 specific candidates. Does not close the
+anti-banking theme itself as interpretive context -- msg 67741 and msg
+25493 remain the strongest evidence yet found in this project that
+anti-establishment/anti-central-bank sentiment is genuinely core to this
+creator's motivation for the whole GSMG project (bot and puzzle alike), not
+just background flavor -- useful for weighing future ambiguous readings
+(e.g. brainstorm idea 14's still-open question about the *Mr. Robot* "last
+scene" quote), even though it produced no password hit here.
+
+## Phase 317 -- all 5040 orderings of Phase 3's seven-part password: negative (2026-08-18)
+
+Prompted by a close read of the Phase 3.2 monologue's "seven intertwined
+passwords" line (row 12 of `2026-08-17 - Architect Monologue vs Film
+Substitution Table.md`): the film original is "23 individuals -- 16 female,
+7 male" (one noun, two bare adjectives); the puzzle rewrites this into three
+separate noun phrases (ciphers / encryptions / passwords), and only the
+third gets a descriptive adjective at all. "Intertwined" specifically means
+woven-together, not "extra" or "additional" -- read as a claim about
+*relationship/order*, not just count.
+
+Phase 266 already tested the seven known Phase 3 parts (`causality |
+Safenet | Luna | HSM | 11110 | <hex> | <chess FEN>`) concatenated in their
+one canonical solved order, plus that concatenation's SHA-256 -- 0 hits.
+That leaves every *other* ordering of the same seven parts untested. Since
+7! = 5040, this is small enough to brute-force exhaustively rather than
+guess at.
+
+`phase3_sevenpart_permutation_audit.py` generates all 5040 permutations of
+the same seven parts (no new values, no separators, no case variants --
+deliberately not reopening the arbitrary-construction problem already
+closed for the "and/or" idea in the substitution-table brainstorm). Each
+ordering tested in the same two forms Phase 266 used for the canonical
+order: raw concatenation, and its SHA-256 hex digest (the exact
+`SHA256(concat)` -> `openssl -pass pass:<hex>` mechanism already confirmed
+at every other phase transition in this puzzle). Self-test regression-
+checks that the canonical order's SHA-256 still matches the known Phase 3
+hash (`1a57c572...`) before brute-forcing every other order of it. 10,080
+materials run through the full standard oracle (CBC with all KDF and
+extended-cipher variants, stream, ECB, key-wrap) against all four tracked
+blobs (~41 minutes runtime). **0 hits.**
+
+**Verdict:** closes the "seven known Phase 3 parts, any order, plain
+concatenation or its SHA-256" hypothesis completely -- not just the one
+canonical order Phase 266 covered, but the full permutation space.
+"Intertwined" as literally-reordered-concatenation is now a dead end.
+Untested and not scopable without a new non-arbitrary rule: character-level
+interleaving (braiding the seven strings rather than reordering whole
+blocks) -- no canonical length/position rule identifies a single interleave
+scheme, same problem that already closed the "and/or" union-reading idea.
+P32TRAILING and SALPH remain open with no known password.

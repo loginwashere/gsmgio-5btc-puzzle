@@ -29,6 +29,8 @@ that do that separation explicitly.
 ## Personal disclosures (provenance-only, not puzzle mechanics)
 
 - [GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT](GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md) — Phase 245, Netherlands residency/nationality and casual substance-use references; neither is clue-framed.
+- [Creator Profile Synthesis](Brainstorms/2026-08-17%20-%20Creator%20Profile%20Synthesis.md) — consolidates the above with the 2017 Sydney/GSMG origin story and a technical-background category read (puzzle-design priors only; explicit scope boundary against identity inference).
+- [Close Friends Hint — Full Context Close Read](Brainstorms/2026-08-17%20-%20Close%20Friends%20Hint%20Full%20Context%20Close%20Read.md) — full verbatim 2026-07-13 exchange behind the indexed hint.
 
 ## Provenance corpora referenced throughout
 
