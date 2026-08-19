@@ -19016,6 +19016,19 @@ differently-motivated keyword candidate or a specific reason the bounded
 budget was insufficient, not a re-run of the same closed set at larger
 scale on spec.
 
+**Methodological addendum (2026-08-19, found while building Phase 321):**
+this script's per-search seed (`hash((name, e1, e2, topo, kw, sign)) & 0xffff`)
+uses Python's built-in `hash()` on a str/tuple, which is randomized per
+process (`PYTHONHASHSEED`) -- so which keyword's hillclimb happens to land
+best is not reproducible across separate runs of this script. Confirmed
+directly: two independent re-runs of the structurally identical Phase 321
+script (before that script's own seeding fix) produced different top
+keywords under the same procedure. Does not change this phase's verdict
+(the result here was a uniform, close-to-baseline negative across the
+board, not a narrow spike a seeding artifact could manufacture) -- but the
+specific "best keyword" this entry's output printed is not a reproducible
+attribution if anyone reruns `dbbi_faed_nihilist_additive_audit.py` as-is.
+
 ## Phase 311 -- Cosmic Duality book text as a running key over DBBI/FAED: bounded exploratory pass, no signal (2026-08-17)
 
 Extends Phase 310's mechanism with better-grounded key material: instead of
@@ -19302,3 +19315,170 @@ interleaving (braiding the seven strings rather than reordering whole
 blocks) -- no canonical length/position rule identifies a single interleave
 scheme, same problem that already closed the "and/or" union-reading idea.
 P32TRAILING and SALPH remain open with no known password.
+
+## Phase 318 -- DBBI/FAED as raw base-9 bignums (no checkerboard at all): negative (2026-08-19)
+
+Radical-fallback idea from this session's DBBI-cipher-options brainstorm:
+what if the `a`-`i` alphabet is just base-9 positional digits forming one
+large number, and the checkerboard/escape-pair framework every other
+hypothesis assumes is wrong entirely? DBBI's IoC (0.151, "structured/
+key-like") is reported relative to exactly 9 symbols, and DBBI's raw length
+(91 symbols) is close to a 256-bit key's natural size in base 9 (~289 bits
+max), unlike FAED (570 symbols, ~1807 bits -- far too large to be a direct
+key without an unmotivated truncation choice).
+
+`tools/gsmg/dbbi_base9_bignum_audit.py` tests the closed set implied by
+this project's own already-documented "four unknowns" list
+(`doc/GSMG_PUZZLE.md`), which names the a-i digit mapping (a0i8 vs a1i9) as
+a genuine open ambiguity: 2 digit mappings x 2 read directions = 4 base
+integers for DBBI. Each is checked as (1) a direct secp256k1 private key
+(reduced mod curve order, packed to 32 bytes) against both known project
+addresses, and (2) decimal/hex/raw-byte passphrase forms through the
+standard AES oracle against all four tracked blobs. FAED's 4 equivalent
+integers get only the coarse mod-N address check, not full symmetric
+treatment, given the size mismatch. **0 hits/matches on every check.**
+DBBI's natural byte length (36 bytes) also doesn't land on 32 bytes either
+way, a secondary strike against the framing even before the oracle result.
+
+**Verdict:** closes the "DBBI is just a base-9 bignum" hypothesis for this
+closed 4-integer set. Does not resolve DBBI/FAED -- narrows the search back
+toward the checkerboard framework this project already has real structural
+signal for (`{b,e}` escape pair, rank 1/36).
+
+## Phase 319 -- spiral/boustrophedon route transposition on DBBI/FAED's established grid factorizations: negative, shuffle-gate clean (2026-08-19)
+
+Creative idea from the same brainstorm: this puzzle's own Stage 0 already
+uses a spiral-read grid extraction (the "seed is planted" image decode,
+`doc/GSMG_PUZZLE.md` Stage 0) -- a device the creator is independently
+confirmed to reach for. `matrixsum_permutation_sweep.py` already fixes the
+only clue-supported bounded shapes this material may be reshaped into (raw
+DBBI 91=7x13/13x7; `{b,e}`-segmented DBBI 63=7x9/9x7; raw FAED 570=15x38/
+38x15) and already tests row/column sort-by-sum permutations on them -- but
+never a route-order read (spiral, boustrophedon) of the same cells, which
+is a different operation (how cells are read out, not which order they're
+sorted into).
+
+`tools/gsmg/dbbi_faed_spiral_route_audit.py` reads all 6 established shapes
+via 5 route geometries (clockwise-inward spiral, counter-clockwise-inward
+spiral, boustrophedon/snake, plus top-right-start mirrors), both forward
+and reversed, feeding each permuted stream through the same two paths
+`matrixsum_permutation_sweep.py` already uses (checkerboard decode_9ary +
+real AES oracle; direct-byte/signature path) -- same content, no invented
+characters, per that script's own constraint. 60 route-orderings total
+(dbbi's 4 shapes + faed's 2 shapes), 4,488 dbbi keystrings + 4,620 faed
+keystrings through the full oracle. **0 AES hits.** No printable-signature
+or notable near-misses -- top-ranked outputs for both paths are ordinary
+gibberish, entropy/diversity-driven, no `COMMON_WORDS` matches.
+
+Cleared this project's required shuffle null-model gate at 2,000 trials
+each (well above the minimum): DBBI real_best=63.35 vs. null_mean=63.39
+(p=0.359, 717/2000 shuffles scored as well or better); FAED real_best=115
+vs. null_mean=127.8 -- the real route family actually *underperforms* the
+typical shuffle (p=0.868, 1736/2000 at least as good). Both far from any
+significance threshold -- the cleanest possible "no signal" result, not
+borderline.
+
+**Verdict:** closes the spiral/boustrophedon route-transposition hypothesis
+for all 6 established shapes, both directions, all 5 geometries. The route
+family is statistically indistinguishable from (DBBI) or worse than (FAED)
+random shuffling of the same content -- reusing the puzzle's own spiral
+motif does not carry over to this material. P32TRAILING and SALPH remain
+open with no known password.
+
+## Phase 320 -- Gronsfeld pre-segmentation shift, progressive shift, and extra Nihilist keywords on DBBI/FAED: bounded exploratory pass, no signal (2026-08-19)
+
+Three more ideas from this session's DBBI-cipher-options brainstorm, each a
+genuinely different mechanism from Phase 310's already-closed post-
+segmentation Nihilist shift, run via `tools/gsmg/dbbi_faed_gronsfeld_progressive_audit.py`
+with the same bounded exploratory budget (800 iters/30 restarts) and the
+same score()/hillclimb_slots() quadgram-fitness harness Phase 310/311
+established:
+
+(a) **Gronsfeld pre-segmentation shift**: unlike Phase 310 (which shifted
+the already-segmented 0-24 code slots), this shifts the raw a-i digit
+stream *before* checkerboard segmentation, using the same 11-item
+CORE_ALPHABET_SEEDS keyword set (letter-position-mod-9 digit key, both
+signs) -- changes where escape-pair boundaries themselves fall, not just
+the values inside them. Confirmed via self-test to actually alter
+segmentation vs. baseline, not a no-op.
+
+(b) **Progressive (non-repeating, incrementing) shift**: shift(i) = (start
++ i*step) mod 9 on the same raw digit stream, all 72 start/step
+combinations (no keyword, pure brute force).
+
+(c) **Five extra keyword candidates** fed into the already-existing Phase
+310 post-segmentation mechanism: `zebras`/`russian` (the Wikipedia Nihilist-
+cipher article's own worked-example pair -- verified via direct WebFetch
+this is *not* attributed to Kahn's "The Codebreakers" specifically, it's an
+unattributed generic textbook pairing, disclosed honestly rather than
+oversold as "Kahn's own example") and `10june`/`june10`/`2019` (the
+confirmed 2017 MR ROIbot first-Poloniex-order date and puzzle-build year
+from msg 67741).
+
+1,040 hillclimbs across all 12 DBBI/FAED escape-pair/topology variants (26m
+runtime -- FAED's longer slot sequences dominate cost far more than the
+Phase 310 benchmark suggested). **Result: no signal, same character as
+Phase 310/311.** (a) and (c) both stay within the established ~5-8 point
+noise band. (b) produced one configuration (`start6step6`, DBBI b/e
+escapes_first) with a larger ~15-point gap -- re-run with 40 fresh seeds
+(best -282.8) and inspected directly: `UDTHEPRSMYFASTAINIKELUSCELOVERMSBROUDOTORUPSINJANOTHERTMONEEDMA`,
+scattered common fragments (THE/LOVER/ANOTHER/NEED) in otherwise unreadable
+noise -- the known signature of quadgram-hillclimb local optima on random
+substitutions, not a real decode. The larger gap is fully explained by (b)
+testing 72 combinations per variant versus (a)/(c)'s ~20-40 -- ordinary
+multiple-comparisons selection bias from a bigger search, not evidence of
+signal.
+
+**Verdict:** closes all three sub-hypotheses under this bounded pass. No
+escalation to a full canonical-budget run warranted for any of them.
+P32TRAILING and SALPH remain open with no known password.
+
+## Phase 321 -- ADFGVX-style keyed columnar transposition on DBBI/FAED: borderline result traced to a multiple-comparisons artifact via shuffle-gate, closed negative (2026-08-19)
+
+Distinct mechanism from Phase 310/311 (which ADD a numeric key to the
+checkerboard code-slot sequence): this PERMUTES the same sequence via a
+keyed columnar transposition -- the real second stage of the historical
+WWI ADFGVX cipher, making concrete `doc/GSMG_PUZZLE.md`'s "unknown #4"
+(a transposition/over-encryption layer) as a specific historical recipe
+rather than an unspecified one. `tools/gsmg/dbbi_faed_adfgvx_transposition_audit.py`
+segments DBBI/FAED into their intrinsic 0-24 code-slot sequence (reusing
+Phase 310's `slot_sequence()`), writes each into a grid of
+`len(keyword)` columns for each of the 11 `CORE_ALPHABET_SEEDS` keywords,
+reads columns out in alphabetical rank order (both the transpose and
+untranspose directions, since it's unknown which the puzzle would need),
+then hill-climbs each reordering with Phase 310's same quadgram harness
+(276 searches per run, 800 iters/30 restarts).
+
+Initial runs surfaced a genuine reproducibility bug: the seed formula used
+Python's built-in `hash()` on a str/tuple, randomized per process, so two
+independent runs landed on different top keywords (`lastwordsbeforearchichoice`/
+untranspose at +22.4, vs. `yinyang`/transpose at +31.5) purely from that
+non-determinism -- itself early evidence pointing toward "artifact of a
+many-way search," not a stable key. Fixed with an `hashlib.md5`-based
+deterministic seed (documented in the script; the same bug exists,
+unfixed, in the already-logged Phase 310 script -- see that phase's
+addendum above). Two re-runs with the fix produced byte-identical output:
+top result **DBBI, `b/e` escapes_first, keyword `yinyang`, transpose
+direction, score -279.6** vs. that variant's baseline -302.1 -- a
+reproducible **+22.5** gap, roughly 3x Phase 310/311's established ~7-8
+point noise band. The decoded text itself
+(`JPICTONSGRACTORBOADITHFRIELLWAYSESRIRANTARISPEALCOORAISTITEDALA`) is
+plain gibberish, no coherent language -- so the gap needed a proper null
+model rather than either dismissal or promotion on inspection alone.
+
+`tools/gsmg/dbbi_adfgvx_shuffle_null_model.py`: 100 trials, each shuffling
+the DBBI `b/e` escapes_first slot sequence's values (same multiset, same
+length, destroys real structure) and running the identical 22-search
+pipeline (11 keywords x 2 directions) on the shuffled copy, recording its
+own best delta over its own baseline. **Result: mean delta +12.0, median
++12.8, max +25.9.** 5/100 shuffle trials matched or beat the real +22.4
+top delta outright (one shuffle trial scored +25.9, higher than the real
+result); 21/100 matched or beat the real top-15 average of ~+17.
+
+**Verdict:** closed negative -- a multiple-comparisons artifact, not
+signal. Searching 22 reorderings of *any* input this length reliably
+produces ~+12-point average gains and occasional +20+ point spikes purely
+from having that many chances, independent of the input's actual content.
+Same disposition as Phase 310 (Nihilist additive-key) and Phase 311
+(running-key): no signal. P32TRAILING and SALPH remain open with no known
+password.
