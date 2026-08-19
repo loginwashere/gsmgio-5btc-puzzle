@@ -57,7 +57,7 @@ What genuinely new source or artifact would this route obtain?
 
 If all three boxes are checked, create a new phase in
 `tools/gsmg/FINDINGS.md` using
-[GSMG_PHASE_TEMPLATE](../GSMG_PHASE_TEMPLATE.md), and link that phase here.
+[GSMG_PHASE_TEMPLATE](../../GSMG_PHASE_TEMPLATE.md), and link that phase here.
 A dedicated audit document and Fact Ledger change remain separate later
 promotion decisions; this hypothesis note never becomes canonical by itself.
 

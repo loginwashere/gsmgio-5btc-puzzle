@@ -131,6 +131,6 @@ or object) without new creator evidence.
 - Existing index: `GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md` (July 2026
   Creator Return section), `tools/gsmg/FINDINGS.md` (Phase ~79-80 region,
   telegram creator clue index audit).
-- Related open thread: [[P32 Trailing — Sibling-Output Password Path]] --
+- Related open thread: [[2026-08-14 - P32 Trailing Sibling-Output Password Path|P32 Trailing — Sibling-Output Password Path]] --
   this hint does not supply new P32 material, so it doesn't reopen that
   document's parked status.

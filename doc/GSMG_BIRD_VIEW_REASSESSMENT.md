@@ -4,6 +4,13 @@
 > film-versus-screenplay boundary test, and `b <-> h` with fixed `e` remains a
 > bounded mirror observation. Any downstream rebus formed by selecting the
 > initials of “your eyes” was circular and is excluded.
+>
+> **Further note (2026-08-19):** this doc is a historical 2026-07-27
+> snapshot; its own "Completed first-priority hypothesis" section was itself
+> updated in place as Phases 96-97 landed. For the current live frontier
+> (now well past this doc's scope, through Phase 321), see
+> [GSMG_HOME](GSMG_HOME.md) and [GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md)
+> rather than treating this page's priority list as still-open guidance.
 
 Date: 2026-07-27
 

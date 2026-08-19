@@ -40,7 +40,7 @@ topics:
 | GSMG = "**G**lobally **S**upporting **M**y **G**eneration," reused from an old friend's group name | msg `67741` | `tools/gsmg/FINDINGS.md` Phase 155 |
 | "Half and better half" / "the better half is hungry" are the creator's own ordinary idiom for his real romantic partner, used twice independently (2025, 2026) | msgs, 2 separate occasions | `tools/gsmg/FINDINGS.md` Phase 133, Phase 155 |
 | Dutch drinking-culture proverb, used unprompted: *"'s avonds een vent, 's ochtends een vent"* ("a man at night, a man in the morning" -- can drink hard and still function), which he jokes he fails ("...'s ochtends absent") | msg `16978`, 2019-01-28 | this session, raw export |
-| Genuine, explicitly-flagged hint (2026-07-13): close friends have the best social/physical access to him but "don't have the skills some of you do" | msgs `66568`/`66571`/`66573`/`66574` | [[Close Friends Hint — Full Context Close Read]] |
+| Genuine, explicitly-flagged hint (2026-07-13): close friends have the best social/physical access to him but "don't have the skills some of you do" | msgs `66568`/`66571`/`66573`/`66574` | [[2026-08-17 - Close Friends Hint Full Context Close Read\|Close Friends Hint — Full Context Close Read]] |
 | No creator endorsement of brute force; explicitly anti-bruteforce design intent; "you have all the info," no further URL needed; one more "microstep" would likely finish it | msgs `9607`/`9639`/`16624`/`28703`/`32579` | `GSMG_CREATOR_FEASIBILITY_ENVELOPE_AUDIT.md` |
 
 ## Full text: the 2017 Sydney origin story (msg `67741`, 2026-04-13)
@@ -184,14 +184,14 @@ It deliberately does **not**:
 - treat any of the above as password/cipher material without an
   independent, authenticated selector (per every existing closed thread on
   "half and better half," `SYDNEY`, etc. -- see
-  [[GSMG Media and Citation Inventory]] and `GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md`
+  [[2026-08-15 - GSMG Media and Citation Inventory|GSMG Media and Citation Inventory]] and `GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md`
   for what's already been tested and closed).
 
 ## Connections
 
-- [[Close Friends Hint — Full Context Close Read]]
-- [[GSMG Media and Citation Inventory]]
-- [[Architect Monologue vs Film Substitution Table]]
+- [[2026-08-17 - Close Friends Hint Full Context Close Read|Close Friends Hint — Full Context Close Read]]
+- [[2026-08-15 - GSMG Media and Citation Inventory|GSMG Media and Citation Inventory]]
+- [[2026-08-17 - Architect Monologue vs Film Substitution Table|Architect Monologue vs Film Substitution Table]]
 - `GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md`
 - `GSMG_CREATOR_FEASIBILITY_ENVELOPE_AUDIT.md`
 - `GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md`

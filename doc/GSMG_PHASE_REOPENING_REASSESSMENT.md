@@ -1,5 +1,15 @@
 # GSMG Phase Reopening Reassessment
 
+> **Status update (2026-08-19):** this doc's "Recommended Order" has been
+> executed. (1) Physical book pages 57-58 were recovered and transcribed —
+> Phase 259, negative. (2) FAED `{g,i}` chain addition was hardened and run
+> at full scope — Phase 123, closed negative. (3) `-nopad` Tier 2 completed —
+> Phase 144, clean negative. (4) The large autokey continuation
+> (`[54,250,338,905)`) does not appear to have been run under this doc's own
+> "only if the first three add nothing" condition, which is now met; if that
+> branch still has open value it needs a fresh, explicitly-scoped phase
+> rather than reading this doc as still-pending guidance.
+
 ## Purpose
 
 This note asks a narrow question: after later corrections and newly recovered

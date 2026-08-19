@@ -1,7 +1,7 @@
 ---
 type: index
 status: live
-date: 2026-08-11
+date: 2026-08-19
 ---
 
 # GSMG 5 BTC Puzzle — Home
@@ -76,26 +76,41 @@ already on hand:
   ([G-YIN-001](GSMG_OPEN_GAP_REGISTRY.md); `parked` — the Telegram corpora
   and every decoded-slot page-syntax rule are already exhausted).
 
+Between Phase 271 and Phase 321, ~50 further phases ran a broad
+cryptanalytic/structural sweep directly against this pair of gaps —
+transition matrices, mirror9 substitution, positional co-occurrence, GF(9),
+base-27/81, an FSM model, sequence alignment, audio-spectrogram and
+matrix-barcode renders, continued fractions, Bacon and Nihilist ciphers, a
+Cosmic-Duality-text running key, Bellaso's 1553 reciprocal cipher, ADFGVX
+transposition, and Gronsfeld/progressive shifts — all negative or null-like
+(see [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md)
+and FINDINGS.md Phases 271-321). This does not change either gap's `parked`
+disposition; it further supports that the blocker is missing primary
+evidence, not an untried technique.
+
 The frontier is honestly exhausted pending new primary evidence, not stalled
 for lack of trying — see each gap's row for exactly what was checked.
 
 ## Recently completed phases
 
 See [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) for the full generated table of
-all 251 phase entries. Most recent:
+all 322 phase entries (re-run `generate_phase_index.py` any time this count
+looks stale). Most recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 321 | ADFGVX-style keyed columnar transposition on DBBI/FAED | Borderline result traced to a multiple-comparisons artifact via shuffle-gate, closed negative |
+| 320 | Gronsfeld pre-segmentation/progressive shift + extra Nihilist keywords on DBBI/FAED | Bounded exploratory pass, no signal |
+| 319 | Spiral/boustrophedon route transposition on DBBI/FAED's grid factorizations | Negative, shuffle-gate clean |
+| 318 | DBBI/FAED as raw base-9 bignums (no checkerboard) | Negative |
+| 317 | All 5040 orderings of Phase 3's seven-part password | Negative |
+| 316 | Anti-banking-theme candidates as password material | Negative |
+| 315 | Mr. Robot identity-theme show terms as password material | Negative |
+| 314 | Architect monologue's "no film equivalent" rows (6/7/14) as password material | Negative |
+| 309-313 | Bacon cipher, Nihilist additive-key, Cosmic Duality running-key, Bellaso 1553, "The Warning" remainder | All negative or parked, not testable from available sources |
+| 271-308 | Extended DBBI/FAED structural/cryptanalytic sweep (GF(9), base-27/81, FSM, sequence alignment, spectrogram, matrix-barcode, continued-fraction, mirror9, co-occurrence matrix, QR finder-ring texture x11, Architect-monologue exhaustive passes) | All negative or null-like; see [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
+| 259 | Physical Cosmic Duality book pages 57-58 recovered | G-MSL-001's last uninspected source reviewed, negative |
 | 250 | Designing the Future source audit | Page-10 `salvation`/`damnation` echoes `F-CHAIN-002`'s `SALVATION`; word-boundary keyword sweep zero across both Fresco books; recognition-only |
-| 249 | SalPhaseIon urlscan history audit | 11 successful captures exactly match 3 authenticated Wayback variants; one scan is HTTP 503; no new puzzle content |
-| 248 | Architect visual/precedent selector audit | All 88 creator-media records (83 unique payloads) and direct operation-transfer language negative; residual brainstorm lanes exhausted |
-| 247 | Architect mirror-selector audit | Three targeted lanes (newer-export coverage, keyword sweep, reply/reaction check) all negative; G-ARCH-001 exhausted for this narrower question |
-| 246 | Telegram creator-media completeness audit | All declared media present; deleted-parent gap isolated to 39 replies, not a missing-file lead |
-| 245 | Creator personal-disclosures audit | Netherlands residency and substance-use references verified, both provenance-only |
-| 244 | DBBI/FAED cross-capture stability | SalPhaseIon textarea byte-identical across all 5 known Wayback captures; G-ESC-001 page-boundary branch fully closed |
-| 243 | DBBI/FAED boundary page-selector audit | Textarea markup/CSS/JS branch of G-ESC-001 closed negative |
-| 242 | SVG/PNG edge geometry | C9 channel closed: contour-bound, zero residue |
-| 241 | Favicon Wayback chronology | Bytes authenticated to 2019-04-28; chronology unresolved |
 
 ## Canonical documents
 
@@ -111,6 +126,8 @@ all 251 phase entries. Most recent:
 - [GSMG_CREATOR_AUTHORED_CLUE_LEDGER](GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md) — ledger of creator-authored clues only.
 - [../README.md](../README.md) — historical community walkthrough (Phases 1–3, solved).
 - [../doc/GSMG_PUZZLE.md](GSMG_PUZZLE.md) — narrative solved-chain writeup.
+- [GSMG_FRESH_BRAINSTORM_2026-08-06](GSMG_FRESH_BRAINSTORM_2026-08-06.md) / [GSMG_FRESH_BRAINSTORM_RESIDUAL_AUDIT](GSMG_FRESH_BRAINSTORM_RESIDUAL_AUDIT.md) — a breadth-first brainstorm pass and its later residual-closure audit (Phase 252).
+- [doc/Brainstorms/](Brainstorms/README.md) — dated ideation sessions, incubation-only until promoted to a `tools/gsmg/FINDINGS.md` phase.
 
 ## Topic indexes
 

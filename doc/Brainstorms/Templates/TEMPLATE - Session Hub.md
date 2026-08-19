@@ -42,7 +42,7 @@ How might we obtain new primary evidence for the selected open gap?
 ## Gaps in scope
 
 - Gap ID: `G-...`
-- Registry: [GSMG_OPEN_GAP_REGISTRY](../GSMG_OPEN_GAP_REGISTRY.md)
+- Registry: [GSMG_OPEN_GAP_REGISTRY](../../GSMG_OPEN_GAP_REGISTRY.md)
 
 ## Ideas
 
@@ -90,7 +90,7 @@ Rank by impact, confidence, effort, and reversibility.
   promote them.
 - When an idea produces a concrete experiment, record that experiment as a new
   phase in `tools/gsmg/FINDINGS.md`, using
-  [GSMG_PHASE_TEMPLATE](../GSMG_PHASE_TEMPLATE.md). Link the phase back to the
+  [GSMG_PHASE_TEMPLATE](../../GSMG_PHASE_TEMPLATE.md). Link the phase back to the
   originating idea and session.
 - Create a dedicated `doc/GSMG_*_AUDIT.md` only when the phase has substantial
   reusable methodology, controls, code, or conclusions.

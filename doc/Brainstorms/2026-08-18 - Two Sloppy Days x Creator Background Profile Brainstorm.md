@@ -580,7 +580,7 @@ pinned corpora, no new hypothesis-generation risk) if a next step is wanted.
 
 ## Connections
 
-- [[Creator Profile Synthesis]]
-- [[Architect Monologue vs Film Substitution Table]]
+- [[2026-08-17 - Creator Profile Synthesis|Creator Profile Synthesis]]
+- [[2026-08-17 - Architect Monologue vs Film Substitution Table|Architect Monologue vs Film Substitution Table]]
 - `GSMG_CREATOR_FEASIBILITY_ENVELOPE_AUDIT.md`
 - `GSMG_CREATOR_PERSONAL_DISCLOSURES_AUDIT.md`
