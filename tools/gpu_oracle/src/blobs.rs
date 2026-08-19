@@ -123,6 +123,13 @@ pub const CIPHER_ECB: i32 = 1;
 pub const CIPHER_CFB: i32 = 2;
 pub const CIPHER_OFB: i32 = 3;
 pub const CIPHER_CTR: i32 = 4;
+/// SEED-CBC (Phase 253's thematically-motivated, opt-in cipher family --
+/// gsmg.io/theseedisplanted, DBBI's IZLKESEEDQPPEN). Fixed 128-bit key, CBC
+/// chaining only (no creator clue supports ECB/stream SEED). Deliberately
+/// NOT part of `variant_table()`'s default cross-product, same "opt-in, not
+/// silently expanding existing sweeps" discipline Phase 253 itself used --
+/// see `seed_variant_table()`.
+pub const CIPHER_SEED_CBC: i32 = 5;
 
 pub fn variant_table() -> Vec<(i32, i32, i32)> {
     let mut v = Vec::new();
@@ -136,6 +143,16 @@ pub fn variant_table() -> Vec<(i32, i32, i32)> {
     v
 }
 
+/// Opt-in SEED-CBC variant set (4 variants: one per KDF kind, key_len fixed
+/// at 16 -- SEED's only key size). Selected via `--seed-cbc` instead of
+/// being merged into `variant_table()`.
+pub fn seed_variant_table() -> Vec<(i32, i32, i32)> {
+    [KDF_LEGACY_MD5, KDF_LEGACY_SHA1, KDF_LEGACY_SHA256, KDF_PBKDF2_SHA256]
+        .iter()
+        .map(|&kdf| (kdf, 16, CIPHER_SEED_CBC))
+        .collect()
+}
+
 pub fn variant_label(kdf: i32, key_len: i32, mode: i32) -> String {
     let kdf_name = match kdf {
         KDF_LEGACY_MD5 => "legacy-md5",
@@ -144,6 +161,9 @@ pub fn variant_label(kdf: i32, key_len: i32, mode: i32) -> String {
         KDF_PBKDF2_SHA256 => "pbkdf2-sha256-10000",
         _ => "unknown",
     };
+    if mode == CIPHER_SEED_CBC {
+        return format!("{kdf_name}/seed-128-cbc");
+    }
     let mode_name = match mode {
         CIPHER_CBC => "cbc",
         CIPHER_ECB => "ecb",

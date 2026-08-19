@@ -19597,3 +19597,97 @@ with this run.
 (re-generation via `build_medium_curated_candidates.py` with new sources), or
 if this candidate set is later run under the GPU tool's still-deferred
 ECB/CFB/OFB/CTR/3DES/Blowfish/Camellia/SEED/Key-Wrap scope.
+
+## Phase 325 -- genesis-block adjacent unused fields (timestamp/nBits/height/nonce) as password material: negative (2026-08-19)
+
+**Question:** Phase 292's Lead 3 tested the genesis coinbase's *decoded
+headline text* (raw/upper/letters-only forms) and closed it negative. That
+lead's own description also named "adjacent unused data (the date, block
+height, `nBits` 486604799)" as untested, but Phase 292's implementation
+(`p32_family10_fork_leads_audit.py`) never actually executed that sub-item --
+it only decoded and tested the headline string itself. Does the genesis
+block header's own timestamp/`nBits`/height/nonce fields, as literal
+password material, open any of the 4 tracked blobs?
+
+**Frozen inputs:** the genesis block (block 0) header's well-known public
+values: `timestamp=1231006505` (2009-01-03T18:15:05Z), `nBits=486604799`
+(`0x1d00ffff`), `height=0`, `nonce=2083236893`. All four tracked blobs.
+
+**Method:** `tools/gsmg/genesis_adjacent_fields_audit.py` (new script, does
+not modify Phase 292's own script/self-test, which remains an exact record
+of that phase). 8 literal forms (decimal/hex/ISO-date renderings of each
+field) x 2 forms each (literal, sha256-hex) = 16 passphrase attempts against
+the standard CBC oracle across all 4 blobs, matching Lead 3's own bounded
+discipline (no ECB/stream/keywrap, no combination with other clue
+fragments -- no independently-sourced rule exists for that).
+
+**Result:** 8 candidates, 16 passphrase attempts. **0/16 hits**, 0 weak
+candidates (z >= 5). A self-test pins the exact 8-candidate set.
+
+**Disposition:** rejected (this candidate set).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none -- closes the one genuinely unexecuted
+sub-item of Phase 292's Lead 3 description.
+
+**Artifacts:** `tools/gsmg/genesis_adjacent_fields_audit.py`.
+
+**Reopen condition:** only if a new primary-source genesis-block-adjacent
+artifact surfaces, or if a creator-authored rule for combining these fields
+with other clue fragments is independently sourced.
+
+## Phase 326 -- SEED-CBC ported to the GPU oracle; closes the medium-curated 66,433-candidate SEED gap: negative (2026-08-19)
+
+**Question:** Phase 253/255 gave SEED-CBC (Phase 253's thematically-motivated
+family -- `gsmg.io/theseedisplanted`, DBBI's `IZLKESEEDQPPEN`) coverage over
+the 648-candidate core corpus and six small excluded lists (625 candidates),
+but Phase 255 explicitly declined to run it against "the 66,433-candidate
+medium union" due to Python/CPU cost. `tools/gpu_oracle`'s Phase-1 scope was
+also explicitly AES-CBC-only (Phase 322's reopen condition lists
+3DES/Blowfish/Camellia/SEED/Key-Wrap as still deferred). Does SEED-CBC open
+any of the 4 tracked blobs against the full medium-curated union, now that
+GPU throughput removes the cost objection that deferred this?
+
+**Method:** Ported OpenSSL's `crypto/seed/{seed_local.h,seed.c}` (Apache-2.0,
+fetched directly from the upstream repo, not hand-transcribed) to both a Rust
+CPU reference (`src/seed_cipher.rs`, correctness pinned against all four RFC
+4269 Appendix B known-answer vectors) and a CUDA device port appended to
+`kernels/aes_kdf_oracle.cu` (S-box table extracted programmatically from the
+fetched source, not retyped). Added `CIPHER_SEED_CBC` as a new cipher-mode
+value alongside the existing AES CBC/ECB/CFB/OFB/CTR set, reusing the same
+KDF/PKCS7/structural/z-score gate; wired as an opt-in 4-variant table
+(`blobs::seed_variant_table()`, one per KDF kind, fixed 128-bit key) selected
+via `--seed-cbc`, deliberately not merged into the default 60-variant AES
+table (same "opt-in, don't silently expand existing sweeps" discipline Phase
+253 itself used). GPU/CPU cross-check extended (`selftest.rs`): a
+self-constructed synthetic SEED-CBC positive vector must recover as
+Structural on GPU, and a 12-candidate x 4-variant x 4-blob negative grid must
+agree between GPU and CPU -- both passed on the real RTX 5070 before the real
+sweep ran. Ran `wordlists/gsmg/medium_curated_all.txt` (66,433 base
+candidates, the same corpus Phase 323 swept under AES-CBC) against all 4
+blobs under SEED-CBC.
+
+**Result:** 588,942 expanded passphrase forms x 4 SEED-CBC variants x 4
+blobs = 9,423,072 decrypt attempts in 40s (~235,600 attempts/sec). **Zero
+hits** -- no weak, strong, or structural hit anywhere. Closes the specific
+gap Phase 255 named and declined to run for cost reasons; the six small
+excluded lists (625 candidates) and the 648-candidate core corpus already had
+SEED-CBC coverage from Phase 253/255 and were not re-run here.
+
+**Disposition:** rejected (this candidate universe, under SEED-CBC).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none -- extends Phase 253/255's SEED-CBC coverage to
+the one corpus they explicitly deferred; extends Phase 322's GPU oracle scope
+by one cipher family (Blowfish/Camellia/3DES/Key-Wrap remain deferred).
+
+**Artifacts:** `tools/gpu_oracle/src/seed_cipher.rs`;
+`tools/gpu_oracle/kernels/aes_kdf_oracle.cu` (SEED device port);
+`tools/gpu_oracle/src/blobs.rs::seed_variant_table()`; `--seed-cbc` CLI flag.
+
+**Reopen condition:** only if a new SEED-specific clue surfaces, or if
+SEED-ECB/stream modes gain creator-clue support (none currently exists --
+Phase 253 admitted SEED-CBC specifically because CBC is what the project's
+existing oracle already models for every other cipher family).

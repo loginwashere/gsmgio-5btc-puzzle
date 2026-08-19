@@ -161,3 +161,16 @@ Ran the full union against all 4 blobs in one sweep: 588,942 expanded forms,
 URLBLOB for the whole union; SALPH + P32TRAILING for Tier 3 specifically) and
 confirms (does not newly close) SALPH/P32TRAILING for Tier 1+2, already
 covered by Phase 83/90.
+
+## SEED-CBC cipher family, GPU-ported
+
+See FINDINGS.md Phase 326. Ported OpenSSL's SEED cipher
+(`crypto/seed/{seed_local.h,seed.c}`) to both a Rust CPU reference
+(`src/seed_cipher.rs`, pinned against all 4 RFC 4269 known-answer vectors)
+and a CUDA device port in `kernels/aes_kdf_oracle.cu`, as `CIPHER_SEED_CBC`
+-- an opt-in 4-variant table (`--seed-cbc`), not merged into the default
+60-variant AES table. Closes the one gap Phase 255 explicitly declined to
+run for cost reasons: `medium_curated_all.txt`'s 66,433 candidates had never
+had SEED-CBC coverage. 588,942 forms x 4 variants x 4 blobs = 9.4M decrypt
+attempts in 40s. **Zero hits.** Blowfish/Camellia/3DES/AES-Key-Wrap remain
+deferred (not GPU-ported).

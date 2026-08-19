@@ -12,9 +12,10 @@ use sha1::Sha1;
 use sha2::{Digest, Sha256};
 
 use crate::blobs::{
-    CIPHER_CBC, CIPHER_CFB, CIPHER_CTR, CIPHER_ECB, CIPHER_OFB, KDF_LEGACY_MD5, KDF_LEGACY_SHA1,
-    KDF_LEGACY_SHA256, KDF_PBKDF2_SHA256,
+    CIPHER_CBC, CIPHER_CFB, CIPHER_CTR, CIPHER_ECB, CIPHER_OFB, CIPHER_SEED_CBC, KDF_LEGACY_MD5,
+    KDF_LEGACY_SHA1, KDF_LEGACY_SHA256, KDF_PBKDF2_SHA256,
 };
+use crate::seed_cipher::{seed_cbc_decrypt, seed_set_key};
 
 type Aes128CbcDec = cbc::Decryptor<aes::Aes128>;
 type Aes192CbcDec = cbc::Decryptor<aes::Aes192>;
@@ -234,12 +235,13 @@ pub fn stream_decrypt_unconditional(candidate: &[u8], kdf: i32, key_len: usize, 
 }
 
 /// Full try-open for one (candidate, variant, blob) triple, `mode` one of
-/// CIPHER_CBC/ECB/CFB/OFB/CTR. CBC/ECB mirror aes_try_open_bytes()/
-/// aes_try_open_ecb_bytes()'s gate exactly (structural bypass checked before
-/// the z-score, weak/strong thresholds at 5.0/8.0, PKCS7-valid required),
-/// broadened beyond cb_common.py's original `body_len == 64`-pinned
-/// structural check to any full-dummy-pad body (see the comment at the
-/// `pad == 16` check below).
+/// CIPHER_CBC/ECB/CFB/OFB/CTR/SEED_CBC. CBC/ECB/SEED_CBC mirror
+/// aes_try_open_bytes()/aes_try_open_ecb_bytes()'s gate exactly (structural
+/// bypass checked before the z-score, weak/strong thresholds at 5.0/8.0,
+/// PKCS7-valid required), broadened beyond cb_common.py's original
+/// `body_len == 64`-pinned structural check to any full-dummy-pad body (see
+/// the comment at the `pad == 16` check below). SEED_CBC uses the same PKCS7/
+/// structural/z-score gate, just a different 16-byte block primitive.
 /// CFB/OFB/CTR mirror aes_try_open_stream_bytes(): no padding, whole body
 /// straight to the printable gate, no structural bypass.
 pub fn try_open(candidate: &[u8], kdf: i32, key_len: usize, mode: i32, salt: &[u8; 8], ct: &[u8]) -> (HitKind, Option<Vec<u8>>) {
@@ -249,12 +251,22 @@ pub fn try_open(candidate: &[u8], kdf: i32, key_len: usize, mode: i32, salt: &[u
     let (key, iv) = derive_key_iv(kdf, candidate, salt, key_len, mode);
 
     match mode {
-        CIPHER_CBC | CIPHER_ECB => {
+        CIPHER_CBC | CIPHER_ECB | CIPHER_SEED_CBC => {
             if ct.len() % 16 != 0 {
                 return (HitKind::None, None);
             }
             let pt = if mode == CIPHER_CBC {
                 aes_cbc_decrypt(&key, &iv, ct)
+            } else if mode == CIPHER_SEED_CBC {
+                if key.len() != 16 || iv.len() != 16 {
+                    return (HitKind::None, None);
+                }
+                let mut key16 = [0u8; 16];
+                let mut iv16 = [0u8; 16];
+                key16.copy_from_slice(&key);
+                iv16.copy_from_slice(&iv);
+                let ks = seed_set_key(&key16);
+                Some(seed_cbc_decrypt(&ks, &iv16, ct))
             } else {
                 aes_ecb_decrypt(&key, ct)
             };
@@ -446,5 +458,52 @@ mod tests {
             let pt = aes_ctr_decrypt(&key, &iv, &buf).unwrap();
             assert_eq!(&pt[..], &plaintext[..]);
         }
+    }
+
+    #[test]
+    fn seed_cbc_round_trip_through_try_open() {
+        // End-to-end plumbing check: derive_key_iv -> seed_set_key ->
+        // seed_encrypt_block (CBC, hand-chained) -> try_open's own
+        // seed_cbc_decrypt path -> PKCS7 unpad -> printable gate. Independent
+        // cross-implementation correctness is already pinned by
+        // seed_cipher::tests' RFC 4269 KAT vectors; this proves the oracle's
+        // own KDF/CBC/PKCS7 wiring around that primitive is correct.
+        let salt = [0x77u8; 8];
+        let candidate = b"seedplantedcandidate";
+        let (key, iv) = derive_key_iv(KDF_LEGACY_SHA256, candidate, &salt, 16, CIPHER_SEED_CBC);
+        let mut key16 = [0u8; 16];
+        let mut iv16 = [0u8; 16];
+        key16.copy_from_slice(&key);
+        iv16.copy_from_slice(&iv);
+        let ks = seed_set_key(&key16);
+
+        // 32 bytes of printable plaintext + 16-byte PKCS7 pad block (2
+        // blocks) -> should score Strong, not Structural (pad != 16).
+        let plaintext = b"the seed is planted right here!!"; // 32 bytes
+        assert_eq!(plaintext.len(), 32);
+        let mut padded = plaintext.to_vec();
+        padded.extend(std::iter::repeat(16u8).take(16)); // full pad block
+
+        let mut ct = Vec::new();
+        let mut prev = iv16;
+        for chunk in padded.chunks_exact(16) {
+            let mut block_in = [0u8; 16];
+            for i in 0..16 {
+                block_in[i] = chunk[i] ^ prev[i];
+            }
+            let block_out = crate::seed_cipher::seed_encrypt_block(&ks, &block_in);
+            ct.extend_from_slice(&block_out);
+            prev = block_out;
+        }
+
+        let (kind, body) = try_open(candidate, KDF_LEGACY_SHA256, 16, CIPHER_SEED_CBC, &salt, &ct);
+        // Full dummy pad block (pad == 16) is Structural regardless of body
+        // printability -- matches the AES-CBC gate exactly.
+        assert_eq!(kind, HitKind::Structural);
+        assert_eq!(body.unwrap(), plaintext);
+
+        // Wrong candidate must not decrypt to valid PKCS7.
+        let (wrong_kind, _) = try_open(b"not_the_seed", KDF_LEGACY_SHA256, 16, CIPHER_SEED_CBC, &salt, &ct);
+        assert_eq!(wrong_kind, HitKind::None);
     }
 }

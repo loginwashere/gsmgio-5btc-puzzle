@@ -7,6 +7,7 @@ mod forms;
 mod gtable;
 mod keyshape;
 mod output;
+mod seed_cipher;
 mod stream_key_check;
 
 #[cfg(feature = "cuda")]
@@ -98,6 +99,15 @@ struct Cli {
     /// positions) per candidate x variant x blob -- see stream_key_check.rs.
     #[arg(long, default_value_t = false)]
     stream_half_check: bool,
+
+    /// Run the opt-in SEED-CBC variant family (4 variants: one per KDF kind,
+    /// fixed 128-bit key) instead of the default 60-variant AES table.
+    /// Thematically motivated by Phase 253 (gsmg.io/theseedisplanted,
+    /// IZLKESEEDQPPEN) but never merged into the default sweep -- same
+    /// "opt-in, don't silently expand existing sweeps" discipline. See
+    /// blobs::seed_variant_table().
+    #[arg(long, default_value_t = false)]
+    seed_cbc: bool,
 }
 
 fn main() {
@@ -150,7 +160,7 @@ fn run_sweep(gpu: &gpu::GpuOracle, cli: &Cli) -> Result<(), Box<dyn std::error::
     let (candidates, sources) = expand_wordlist_candidates(cli)?;
 
     let blobs = blobs::load_blobs();
-    let variants = blobs::variant_table();
+    let variants = if cli.seed_cbc { blobs::seed_variant_table() } else { blobs::variant_table() };
 
     if let Some(dir) = cli.output.parent() {
         if !dir.as_os_str().is_empty() {

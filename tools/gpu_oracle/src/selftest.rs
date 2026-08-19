@@ -10,9 +10,10 @@
 //! A subtly wrong AES/KDF port would silently produce false negatives across
 //! a whole sweep -- this is the safety net against that, not a formality.
 
-use crate::blobs::{self, Blob};
+use crate::blobs::{self, Blob, CIPHER_SEED_CBC};
 use crate::cpu_oracle::{self, HitKind};
 use crate::gpu::{DecryptHit, GpuOracle};
+use crate::seed_cipher::{seed_encrypt_block, seed_set_key};
 use std::collections::HashSet;
 
 const NEGATIVE_PROBE_CANDIDATES: &[&str] = &[
@@ -38,6 +39,7 @@ pub fn run(gpu: &GpuOracle) -> Result<(), Box<dyn std::error::Error>> {
 
     run_known_positive(gpu, &blobs)?;
     run_negative_cross_check(gpu, &blobs, &variants)?;
+    run_seed_cross_check(gpu, &blobs)?;
 
     println!("[selftest] PASSED -- GPU kernel output matches the CPU reference oracle.");
     Ok(())
@@ -153,6 +155,123 @@ fn run_negative_cross_check(
         "[selftest] Negative cross-check: {} candidates x {} variants x {} blobs, GPU and CPU agree \
          ({} shared hits, expected mostly/all zero).",
         candidates.len(), variants.len(), blobs_list.len(), cpu_hits.len()
+    );
+    Ok(())
+}
+
+/// SEED-CBC gate: no real puzzle blob has ever opened under SEED-CBC (it's a
+/// Phase-253-motivated, thematically-supported but unconfirmed cipher
+/// family), so there's no known-positive real vector to cross-check against
+/// the way run_known_positive() does for AES. Instead, this builds a
+/// synthetic SEED-encrypted blob from scratch (own key schedule, own CBC
+/// chaining, independent of both cpu_oracle.rs and the CUDA port under
+/// test) and confirms GPU and CPU agree on recovering it -- the same
+/// "would a subtly wrong port silently produce a false negative" risk the
+/// AES self-test guards against, just with a self-supplied positive vector
+/// instead of a real one. Also negative-cross-checks the probe candidates
+/// against SEED-CBC across all 4 real blobs (expected: no hits).
+fn run_seed_cross_check(gpu: &GpuOracle, blobs_list: &[Blob]) -> Result<(), Box<dyn std::error::Error>> {
+    let seed_variants = blobs::seed_variant_table();
+    let kdf = seed_variants[0].0; // legacy-md5, key_len=16, CIPHER_SEED_CBC
+
+    let salt: [u8; 8] = *b"seedgate";
+    let candidate = "theseedisplanted";
+    let (key, iv) = cpu_oracle::derive_key_iv(kdf, candidate.as_bytes(), &salt, 16, CIPHER_SEED_CBC);
+    let mut key16 = [0u8; 16];
+    let mut iv16 = [0u8; 16];
+    key16.copy_from_slice(&key);
+    iv16.copy_from_slice(&iv);
+    let ks = seed_set_key(&key16);
+
+    let plaintext = b"gsmgio the seed is planted here!"; // 32 printable bytes
+    let mut padded = plaintext.to_vec();
+    padded.extend(std::iter::repeat(16u8).take(16)); // full dummy pad block -> Structural
+
+    let mut ct = Vec::new();
+    let mut prev = iv16;
+    for chunk in padded.chunks_exact(16) {
+        let mut block_in = [0u8; 16];
+        for i in 0..16 {
+            block_in[i] = chunk[i] ^ prev[i];
+        }
+        let block_out = seed_encrypt_block(&ks, &block_in);
+        ct.extend_from_slice(&block_out);
+        prev = block_out;
+    }
+
+    let (cpu_kind, _) = cpu_oracle::try_open(candidate.as_bytes(), kdf, 16, CIPHER_SEED_CBC, &salt, &ct);
+    if !matches!(cpu_kind, HitKind::Structural) {
+        return Err(format!("CPU reference itself failed on the synthetic SEED-CBC vector: {cpu_kind:?}").into());
+    }
+
+    let seed_blob = Blob { tag: "SEED_SELFTEST", salt, ciphertext: ct };
+    let candidates = vec![candidate.to_string()];
+    let mut gpu_hits: Vec<DecryptHit> = Vec::new();
+    gpu.scan(
+        &candidates,
+        &HashSet::new(),
+        std::slice::from_ref(&seed_blob),
+        std::slice::from_ref(&seed_variants[0]),
+        None,
+        |hit| gpu_hits.push(*hit),
+        |_| {},
+        |_, _, _| {},
+        |_| {},
+        &std::sync::atomic::AtomicBool::new(false),
+    )?;
+
+    let structural = gpu_hits.iter().find(|h| h.hit_kind == 3);
+    if structural.is_none() {
+        return Err(format!(
+            "GPU kernel produced NO Structural hit for the synthetic SEED-CBC vector -- SEED CUDA port is broken. Hits: {gpu_hits:?}"
+        )
+        .into());
+    }
+
+    // Negative cross-check: probe candidates x all 4 SEED-CBC KDF variants x
+    // all 4 real blobs -- expected all-miss, same as the AES negative grid.
+    let candidates: Vec<String> = NEGATIVE_PROBE_CANDIDATES.iter().map(|s| s.to_string()).collect();
+    let mut cpu_hits: HashSet<(usize, usize, usize)> = HashSet::new();
+    for (ci, cand) in candidates.iter().enumerate() {
+        for (vi, &(kdf, key_len, mode)) in seed_variants.iter().enumerate() {
+            for (bi, blob) in blobs_list.iter().enumerate() {
+                let (kind, _) = cpu_oracle::try_open(cand.as_bytes(), kdf, key_len as usize, mode, &blob.salt, &blob.ciphertext);
+                if !matches!(kind, HitKind::None) {
+                    cpu_hits.insert((ci, vi, bi));
+                }
+            }
+        }
+    }
+
+    let mut gpu_hits: HashSet<(usize, usize, usize)> = HashSet::new();
+    gpu.scan(
+        &candidates,
+        &HashSet::new(),
+        blobs_list,
+        &seed_variants,
+        None,
+        |hit| {
+            gpu_hits.insert((hit.candidate_idx as usize, hit.variant_idx as usize, hit.blob_idx as usize));
+        },
+        |_| {},
+        |_, _, _| {},
+        |_| {},
+        &std::sync::atomic::AtomicBool::new(false),
+    )?;
+
+    if cpu_hits != gpu_hits {
+        return Err(format!(
+            "GPU/CPU disagree on the SEED-CBC negative probe grid. CPU-only: {:?}, GPU-only: {:?}",
+            cpu_hits.difference(&gpu_hits).collect::<Vec<_>>(),
+            gpu_hits.difference(&cpu_hits).collect::<Vec<_>>()
+        )
+        .into());
+    }
+
+    println!(
+        "[selftest] SEED-CBC cross-check: synthetic positive vector recovered (Structural), \
+         negative probe grid ({} candidates x {} variants x {} blobs) GPU/CPU agree.",
+        candidates.len(), seed_variants.len(), blobs_list.len()
     );
     Ok(())
 }
