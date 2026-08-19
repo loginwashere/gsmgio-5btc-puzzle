@@ -1,0 +1,57 @@
+# Adapted from ../../../key-seeker/Dockerfile.cuda (same builder/runtime split,
+# same sm_120-for-RTX-5070 default) -- see the approved plan for why this
+# tool has its own Dockerfile rather than reusing key-seeker's image: this is
+# a different crate entirely (no secp256k1/kangaroo deps).
+
+# ── Stage 1: build (CUDA toolkit + Rust) ──────────────────────────────────────
+FROM nvidia/cuda:13.0.0-devel-ubuntu22.04 AS builder
+
+RUN echo 'Acquire::ForceIPv4 "true";' > /etc/apt/apt.conf.d/99force-ipv4; \
+    rm -f /etc/apt/sources.list.d/cuda*.list /etc/apt/sources.list.d/nvidia*.list 2>/dev/null; \
+    apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    gcc \
+    pkg-config \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+WORKDIR /build
+
+# Cache dependencies first.
+COPY Cargo.toml Cargo.lock* ./
+RUN mkdir -p src \
+    && echo 'fn main(){}' > src/main.rs \
+    && cargo build --release --features cuda --bin gpu_oracle \
+    && rm -rf src
+
+# Native RTX 50-series PTX target (compute capability 12.0, confirmed via
+# `nvidia-smi --query-gpu=compute_cap` on the dev machine). Override for a
+# different card; local non-Docker builds retain build.rs's own sm_120 default.
+ARG GO_CUDA_ARCH=sm_120
+
+COPY src ./src
+COPY kernels ./kernels
+COPY build.rs ./
+RUN touch src/main.rs && GO_CUDA_ARCH="${GO_CUDA_ARCH}" \
+    cargo build --release --features cuda --bin gpu_oracle
+
+# ── Stage 2: runtime ──────────────────────────────────────────────────────────
+FROM nvidia/cuda:13.0.0-runtime-ubuntu22.04
+
+RUN echo 'Acquire::ForceIPv4 "true";' > /etc/apt/apt.conf.d/99force-ipv4; \
+    rm -f /etc/apt/sources.list.d/cuda*.list /etc/apt/sources.list.d/nvidia*.list 2>/dev/null; \
+    apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /build/target/release/gpu_oracle /usr/local/bin/gpu_oracle
+
+RUN mkdir -p /data/output /data/checkpoints /data/wordlists
+
+WORKDIR /data
+
+ENTRYPOINT ["gpu_oracle"]
+CMD ["--help"]
