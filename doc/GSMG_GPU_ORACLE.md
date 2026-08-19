@@ -52,8 +52,11 @@ Blowfish/Camellia/SEED), plus ECB, CFB/OFB/CTR, and AES Key-Wrap (RFC
 - 12 variants x 4 tracked blobs (SALPH/COSMIC/P32TRAILING/URLBLOB) = 48
   (variant, blob) pairs per candidate keystring
 - Gate: PKCS7 pad check → `printable_z_score` (weak ≥5.0 logged only, strong
-  ≥8.0 = hit) → `is_structural_binary_plaintext` bypass (SALPH/P32TRAILING's
-  64-byte-body/full-pad case), matching `cb_common.py` exactly
+  ≥8.0 = hit) → `is_structural_binary_plaintext` bypass (full dummy PKCS7
+  pad block, `pad == 16`, any body length -- broadened from
+  `cb_common.py`'s original `body_len == 64`-pinned SALPH/P32TRAILING-only
+  check once COSMIC/URLBLOB joined the tracked-blob set; see
+  `cpu_oracle.rs::try_open`)
 
 **Explicitly out of scope, not abandoned:** AES-ECB/CFB/OFB/CTR (cheap
 follow-up -- same AES core, different chaining) and 3DES/Blowfish/Camellia/

@@ -1,15 +1,26 @@
 // GSMG.IO puzzle AES/KDF oracle -- CUDA port of tools/gsmg/cb_common.py's
-// aes_try_open_bytes() (legacy EVP_BytesToKey + PBKDF2-HMAC-SHA256 KDFs,
-// AES-128/192/256-CBC decrypt, PKCS7 + printable-z-score gate).
+// aes_try_open_bytes() / aes_try_open_ecb_bytes() / aes_try_open_stream_bytes()
+// (legacy EVP_BytesToKey + PBKDF2-HMAC-SHA256 KDFs, AES-128/192/256 decrypt
+// across CBC/ECB/CFB/OFB/CTR, PKCS7 + printable-z-score gate).
 //
-// Phase 1 scope only: AES-CBC across {legacy-MD5, legacy-SHA1, legacy-SHA256,
-// PBKDF2-SHA256/10000} x {128,192,256}-bit keys. ECB/CFB/OFB/CTR, 3DES/
-// Blowfish/Camellia/SEED, and AES Key-Wrap are deliberately out of scope --
-// see doc/ plan notes. Every constant/threshold here must match cb_common.py
-// bit-for-bit; see selftest.rs / cpu_oracle.rs for the cross-check harness
-// that verifies that.
+// Scope: the AES portion of this project's oracle across 5 chaining modes x
+// {legacy-MD5, legacy-SHA1, legacy-SHA256, PBKDF2-SHA256/10000} x
+// {128,192,256}-bit keys = 60 variants. 3DES/Blowfish/Camellia/SEED and AES
+// Key-Wrap remain out of scope (different cipher algorithms entirely, lower
+// historical hit priority per this project's own docs). Every constant/
+// threshold here must match cb_common.py bit-for-bit; see selftest.rs /
+// cpu_oracle.rs for the cross-check harness that verifies that.
 
 #include <stdint.h>
+#include "secp256k1_device.cuh"
+
+// secp256k1_device.cuh's own SHA256_K (round constants for a fixed-size
+// pubkey-hashing helper, unrelated to this file's general-purpose
+// sha256_transform/sha256_digest below) was renamed SECP_SHA256_K to avoid a
+// duplicate-definition error -- the two aren't merged because they have
+// different call conventions (word-block vs arbitrary-length byte message)
+// and this file's version predates the header; not worth the churn/risk of
+// unifying them just to save one small constant table.
 
 // ---------------------------------------------------------------------------
 // Fixed sizing. Candidate passphrases (raw form, or the hex digests keystr_forms
@@ -19,13 +30,19 @@
 #define MAX_CANDIDATE_LEN 512
 #define MAX_BLOB_CT_LEN 2432   // PHASE32_SELFTEST (2432) > COSMIC (1328, the largest of the 4 tracked blobs)
 #define MAX_BLOBS 4
-#define MAX_VARIANTS 12        // 4 KDF kinds x 3 key sizes (Phase 1 scope)
+#define MAX_VARIANTS 60        // 4 KDF kinds x 3 key sizes x 5 cipher modes
 #define MAX_PLAINTEXT_LEN MAX_BLOB_CT_LEN
 
 #define KDF_LEGACY_MD5 0
 #define KDF_LEGACY_SHA1 1
 #define KDF_LEGACY_SHA256 2
 #define KDF_PBKDF2_SHA256 3
+
+#define CIPHER_CBC 0
+#define CIPHER_ECB 1
+#define CIPHER_CFB 2
+#define CIPHER_OFB 3
+#define CIPHER_CTR 4
 
 // ============================================================================
 // MD5 (RFC 1321)
@@ -496,6 +513,99 @@ __device__ void aes_cbc_decrypt(const uint32_t* round_keys, int Nr, const uint8_
     }
 }
 
+// Decrypts ct_len bytes (must be a multiple of 16) block-by-block, no
+// chaining, no IV -- matches cb_common.py's aes_try_open_ecb_bytes.
+__device__ void aes_ecb_decrypt(const uint32_t* round_keys, int Nr,
+                                 const uint8_t* ct, uint32_t ct_len, uint8_t* out) {
+    uint32_t nblocks = ct_len / 16;
+    for (uint32_t b = 0; b < nblocks; b++) {
+        aes_decrypt_block(round_keys, Nr, ct + b * 16, out + b * 16);
+    }
+}
+
+// ============================================================================
+// AES-128/192/256 forward cipher (FIPS-197 Cipher) -- needed only to generate
+// the E(K, .) keystream blocks that drive CFB/OFB/CTR. Uses the same forward
+// round-key schedule (`aes_key_expansion`) already used by the InvCipher path
+// above; no separate key schedule required.
+// ============================================================================
+
+__device__ void aes_sub_bytes(uint8_t state[16]) {
+    for (int i = 0; i < 16; i++) state[i] = AES_SBOX[state[i]];
+}
+
+__device__ void aes_shift_rows(uint8_t state[16]) {
+    uint8_t tmp[16];
+    for (int c = 0; c < 4; c++)
+        for (int r = 0; r < 4; r++)
+            tmp[c*4+r] = state[((c + r) % 4) * 4 + r];
+    for (int i = 0; i < 16; i++) state[i] = tmp[i];
+}
+
+__device__ void aes_mix_columns(uint8_t state[16]) {
+    for (int c = 0; c < 4; c++) {
+        uint8_t a0 = state[c*4+0], a1 = state[c*4+1], a2 = state[c*4+2], a3 = state[c*4+3];
+        state[c*4+0] = gmul(a0,0x02) ^ gmul(a1,0x03) ^ a2 ^ a3;
+        state[c*4+1] = a0 ^ gmul(a1,0x02) ^ gmul(a2,0x03) ^ a3;
+        state[c*4+2] = a0 ^ a1 ^ gmul(a2,0x02) ^ gmul(a3,0x03);
+        state[c*4+3] = gmul(a0,0x03) ^ a1 ^ a2 ^ gmul(a3,0x02);
+    }
+}
+
+__device__ void aes_encrypt_block(const uint32_t* round_keys, int Nr, const uint8_t in[16], uint8_t out[16]) {
+    uint8_t state[16];
+    for (int i = 0; i < 16; i++) state[i] = in[i];
+
+    aes_add_round_key(state, round_keys, 0);
+    for (int round = 1; round < Nr; round++) {
+        aes_sub_bytes(state);
+        aes_shift_rows(state);
+        aes_mix_columns(state);
+        aes_add_round_key(state, round_keys, round);
+    }
+    aes_sub_bytes(state);
+    aes_shift_rows(state);
+    aes_add_round_key(state, round_keys, Nr);
+
+    for (int i = 0; i < 16; i++) out[i] = state[i];
+}
+
+// CFB/OFB/CTR keystream-XOR decrypt, arbitrary ct_len (no padding in these
+// modes -- matches cb_common.py's aes_try_open_stream_bytes, which passes
+// the whole decrypted body straight to the printable gate). `mode` is one of
+// CIPHER_CFB/CIPHER_OFB/CIPHER_CTR.
+__device__ void aes_stream_decrypt(const uint32_t* round_keys, int Nr, const uint8_t iv[16], int mode,
+                                    const uint8_t* ct, uint32_t ct_len, uint8_t* out) {
+    uint8_t reg[16];
+    for (int i = 0; i < 16; i++) reg[i] = iv[i];
+
+    uint32_t nblocks = (ct_len + 15) / 16;
+    for (uint32_t b = 0; b < nblocks; b++) {
+        uint8_t keystream[16];
+        aes_encrypt_block(round_keys, Nr, reg, keystream);
+
+        uint32_t offset = b * 16;
+        uint32_t take = (offset + 16 <= ct_len) ? 16 : (ct_len - offset);
+        const uint8_t* cblock = ct + offset;
+        for (uint32_t i = 0; i < take; i++) out[offset + i] = cblock[i] ^ keystream[i];
+
+        if (mode == CIPHER_CFB) {
+            // Full-block ciphertext feedback (CFB128). Only matters when
+            // there's a next block, i.e. take == 16.
+            for (int i = 0; i < 16; i++) reg[i] = cblock[i];
+        } else if (mode == CIPHER_OFB) {
+            for (int i = 0; i < 16; i++) reg[i] = keystream[i];
+        } else if (mode == CIPHER_CTR) {
+            // 128-bit big-endian counter increment, matching the `cryptography`
+            // library's default CTR mode (IV used directly as the initial
+            // full-width counter block).
+            for (int i = 15; i >= 0; i--) {
+                if (++reg[i] != 0) break;
+            }
+        }
+    }
+}
+
 // ============================================================================
 // PKCS7 validity + printable z-score gate (must match cb_common.py exactly).
 // ============================================================================
@@ -531,9 +641,19 @@ __device__ float printable_z_score(const uint8_t* body, uint32_t n) {
     return (count - mean) / sqrtf(var);
 }
 
-// SALPH/P32TRAILING's known structural-hit shape: aes/block16/pad16/body64.
+// Full dummy PKCS7 block (pad == block size): 256^-16 = 2^-128 chance a wrong
+// password's decrypt reproduces sixteen 0x10 bytes by accident, independent
+// of body_len -- which is fully determined by this blob's fixed ciphertext
+// length once pad is known, so it adds no further specificity. Originally
+// also required body_len == 64 (mirrors cb_common.py's
+// is_structural_binary_plaintext, written when only the two 80-byte blobs
+// SALPH/P32TRAILING were swept), which silently excluded URLBLOB (body_len
+// 80) and COSMIC (body_len 1312) from ever reporting this signal -- see the
+// matching comment in cpu_oracle.rs::try_open. body_len is kept as a
+// parameter for host-side struct/logging symmetry, not used in the gate.
 __device__ int is_structural_binary_plaintext(uint32_t pad, uint32_t body_len) {
-    return pad == 16 && body_len == 64;
+    (void)body_len;
+    return pad == 16;
 }
 
 // ============================================================================
@@ -549,17 +669,38 @@ struct DecryptHit {
     uint8_t _pad[12];    // keep struct size a clean 32 bytes for alignment
 };
 
-// Variant table: kdf_kind (KDF_LEGACY_* / KDF_PBKDF2_SHA256), key_len bytes (16/24/32).
-// Uploaded once via variant_init(); a fixed MAX_VARIANTS-sized __device__ array.
+// Host layout must match gpu.rs's #[repr(C)] StreamKeyHit exactly. Emitted
+// only for a CFB/OFB/CTR candidate whose decrypted half/better_half chunk's
+// derived hash160 (compressed or uncompressed) is a Bloom-filter hit -- see
+// aes_kdf_scan's stream-mode branch below and stream_key_check.rs, which is
+// what a Bloom hit here is still Bloom-only for: the host does the mandatory
+// live API confirmation before treating anything here as real, same as
+// every other Bloom hit in this project (keyshape::record_precomputed_hit).
+struct StreamKeyHit {
+    uint32_t candidate_idx;
+    uint32_t variant_idx;
+    uint32_t blob_idx;
+    uint32_t chunk_index;    // 0 = half, 1 = better_half
+    uint32_t address_type;   // 0 = compressed, 1 = uncompressed
+    uint8_t  private_key[32];
+    uint8_t  hash160[20];
+    uint8_t  _pad[8];        // pad to a clean 72-byte, 8-aligned struct
+};
+
+// Variant table: kdf_kind (KDF_LEGACY_* / KDF_PBKDF2_SHA256), key_len bytes
+// (16/24/32), cipher_mode (CIPHER_CBC/ECB/CFB/OFB/CTR). Uploaded once via
+// variant_init(); a fixed MAX_VARIANTS-sized __device__ array.
 __device__ int g_variant_kdf[MAX_VARIANTS];
 __device__ int g_variant_keylen[MAX_VARIANTS];
+__device__ int g_variant_mode[MAX_VARIANTS];
 __device__ uint32_t g_variant_count;
 
-extern "C" __global__ void variant_init(const int* kdf_kinds, const int* key_lens, uint32_t count) {
+extern "C" __global__ void variant_init(const int* kdf_kinds, const int* key_lens, const int* modes, uint32_t count) {
     if (threadIdx.x == 0 && blockIdx.x == 0) {
         for (uint32_t i = 0; i < count; i++) {
             g_variant_kdf[i] = kdf_kinds[i];
             g_variant_keylen[i] = key_lens[i];
+            g_variant_mode[i] = modes[i];
         }
         g_variant_count = count;
     }
@@ -595,7 +736,18 @@ extern "C" __global__ void aes_kdf_scan(
     uint32_t candidate_count,
     DecryptHit* hits,
     uint32_t* hit_count,
-    uint32_t hit_capacity
+    uint32_t hit_capacity,
+    // Stream-mode (CFB/OFB/CTR) Bloom/API key-shape check -- see
+    // secp256k1_device.cuh's derive_hash160_both/bloom_check and the branch
+    // below. bloom_m == 0 disables the check entirely (host's
+    // --no-bloom-verify or a missing Bloom cache file), matching the
+    // structural-hit path's "still derived, never checked" behavior.
+    const uint64_t* bloom_bits,
+    uint64_t bloom_m,
+    uint32_t bloom_k,
+    StreamKeyHit* stream_hits,
+    uint32_t* stream_hit_count,
+    uint32_t stream_hit_capacity
 ) {
     uint32_t idx = blockIdx.x * blockDim.x + threadIdx.x;
     if (idx >= candidate_count) return;
@@ -607,7 +759,9 @@ extern "C" __global__ void aes_kdf_scan(
     for (uint32_t v = 0; v < g_variant_count; v++) {
         int kdf_kind = g_variant_kdf[v];
         int key_len = g_variant_keylen[v];
-        uint32_t material_len = (uint32_t)key_len + 16; // + IV (AES block size)
+        int mode = g_variant_mode[v];
+        uint32_t iv_len = (mode == CIPHER_ECB) ? 0 : 16;
+        uint32_t material_len = (uint32_t)key_len + iv_len;
 
         for (uint32_t b = 0; b < g_blob_count; b++) {
             uint8_t material[32 + 16];
@@ -622,7 +776,7 @@ extern "C" __global__ void aes_kdf_scan(
             uint8_t key[32];
             uint8_t iv[16];
             for (int i = 0; i < key_len; i++) key[i] = material[i];
-            for (int i = 0; i < 16; i++) iv[i] = material[key_len + i];
+            for (uint32_t i = 0; i < iv_len; i++) iv[i] = material[key_len + i];
 
             int Nk = key_len / 4;
             uint32_t round_keys[60];
@@ -630,23 +784,72 @@ extern "C" __global__ void aes_kdf_scan(
             aes_key_expansion(key, Nk, round_keys, &Nr);
 
             uint32_t ct_len = g_blob_ct_len[b];
-            if (ct_len == 0 || ct_len % 16 != 0 || ct_len > MAX_BLOB_CT_LEN) continue;
-
-            uint8_t plaintext[MAX_PLAINTEXT_LEN];
-            aes_cbc_decrypt(round_keys, Nr, iv, g_blob_ct[b], ct_len, plaintext);
-
-            uint32_t body_len;
-            if (!pkcs7_check(plaintext, ct_len, &body_len)) continue;
-            uint32_t pad = ct_len - body_len;
+            if (ct_len == 0 || ct_len > MAX_BLOB_CT_LEN) continue;
 
             uint32_t hit_kind = 0;
             float z = 0.0f;
-            if (is_structural_binary_plaintext(pad, body_len)) {
-                hit_kind = 3;
+
+            if (mode == CIPHER_CBC || mode == CIPHER_ECB) {
+                if (ct_len % 16 != 0) continue;
+                uint8_t plaintext[MAX_PLAINTEXT_LEN];
+                if (mode == CIPHER_CBC) {
+                    aes_cbc_decrypt(round_keys, Nr, iv, g_blob_ct[b], ct_len, plaintext);
+                } else {
+                    aes_ecb_decrypt(round_keys, Nr, g_blob_ct[b], ct_len, plaintext);
+                }
+
+                uint32_t body_len;
+                if (!pkcs7_check(plaintext, ct_len, &body_len)) continue;
+                uint32_t pad = ct_len - body_len;
+
+                if (is_structural_binary_plaintext(pad, body_len)) {
+                    hit_kind = 3;
+                } else {
+                    z = printable_z_score(plaintext, body_len);
+                    if (z >= PRINTABLE_Z_STRONG) hit_kind = 2;
+                    else if (z >= PRINTABLE_Z_WEAK) hit_kind = 1;
+                }
             } else {
-                z = printable_z_score(plaintext, body_len);
+                // CFB/OFB/CTR: no padding, whole body goes straight to the
+                // printable gate -- matches aes_try_open_stream_bytes exactly
+                // (no structural bypass for these modes).
+                uint8_t plaintext[MAX_PLAINTEXT_LEN];
+                aes_stream_decrypt(round_keys, Nr, iv, mode, g_blob_ct[b], ct_len, plaintext);
+                z = printable_z_score(plaintext, ct_len);
                 if (z >= PRINTABLE_Z_STRONG) hit_kind = 2;
                 else if (z >= PRINTABLE_Z_WEAK) hit_kind = 1;
+
+                // Independent of hit_kind above: raw binary key material
+                // will essentially never pass the printable gate, so there's
+                // no shared signal between "looks like text" and "looks like
+                // a key" -- check the first two 32-byte chunks
+                // (half/better_half) against the Bloom filter directly,
+                // regardless of what z came out to. A candidate can be BOTH
+                // a z-score None and a stream-key Bloom hit at once.
+                if (bloom_m > 0) {
+                    uint32_t chunk_bound = ct_len < 64u ? ct_len : 64u;
+                    for (uint32_t chunk_index = 0; chunk_index * 32u + 32u <= chunk_bound; chunk_index++) {
+                        uint8_t compressed[20], uncompressed[20];
+                        derive_hash160_both(plaintext + chunk_index * 32u, compressed, uncompressed);
+                        for (int at = 0; at < 2; at++) {
+                            const uint8_t* h160 = (at == 0) ? compressed : uncompressed;
+                            if (bloom_check(bloom_bits, bloom_m, bloom_k, h160)) {
+                                uint32_t slot = atomicAdd(stream_hit_count, 1);
+                                if (slot < stream_hit_capacity) {
+                                    stream_hits[slot].candidate_idx = idx;
+                                    stream_hits[slot].variant_idx = v;
+                                    stream_hits[slot].blob_idx = b;
+                                    stream_hits[slot].chunk_index = chunk_index;
+                                    stream_hits[slot].address_type = (uint32_t)at;
+                                    for (int bi = 0; bi < 32; bi++) {
+                                        stream_hits[slot].private_key[bi] = plaintext[chunk_index * 32u + bi];
+                                    }
+                                    for (int bi = 0; bi < 20; bi++) stream_hits[slot].hash160[bi] = h160[bi];
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             if (hit_kind != 0) {

@@ -18,6 +18,18 @@ const GRID_SIZE: u32 = 256;
 const BATCH_CANDIDATES: u32 = GRID_SIZE * BLOCK_SIZE; // 65,536 candidates/launch
 const MAX_HITS: u32 = 100_000;
 
+// Empirically measured against this project's real db/addresses.hash160.bloom
+// (m=958,505,856 bits, k=14, ~27% of bits set -- k wasn't re-optimized down
+// for this file's actual, smaller-than-"optimal-tuning-assumes" entry count):
+// zero false positives in 500,000 random 20-byte queries, true positive
+// confirmed on the known genesis-address hash160. Implied real FP rate
+// ~1e-8, not the ~1e-4 a naive "optimal k for this m/n" calculation would
+// suggest -- so even at this kernel's full-corpus query volume (order 1e8),
+// a few tens of thousands of expected false positives never materializes;
+// expected count is closer to single digits. 10,000 capacity is generous
+// headroom over that, not a tight bound.
+const MAX_STREAM_HITS: u32 = 10_000;
+
 // Layout must match struct DecryptHit in kernels/aes_kdf_oracle.cu exactly.
 #[repr(C)]
 #[derive(Debug, Default, Clone, Copy)]
@@ -33,6 +45,27 @@ pub struct DecryptHit {
 // SAFETY: DecryptHit is a plain-data, fixed-layout struct; all bit patterns are valid.
 unsafe impl cudarc::driver::DeviceRepr for DecryptHit {}
 unsafe impl cudarc::driver::ValidAsZeroBits for DecryptHit {}
+
+// Layout must match struct StreamKeyHit in kernels/aes_kdf_oracle.cu exactly.
+// Bloom-only, same as every other Bloom hit in this project: the host still
+// runs the mandatory live API confirmation (keyshape::record_precomputed_hit)
+// before treating anything here as real.
+#[repr(C)]
+#[derive(Debug, Default, Clone, Copy)]
+pub struct StreamKeyHit {
+    pub candidate_idx: u32,
+    pub variant_idx: u32,
+    pub blob_idx: u32,
+    pub chunk_index: u32,  // 0 = half, 1 = better_half
+    pub address_type: u32, // 0 = compressed, 1 = uncompressed
+    pub private_key: [u8; 32],
+    pub hash160: [u8; 20],
+    pub _pad: [u8; 8],
+}
+
+// SAFETY: StreamKeyHit is a plain-data, fixed-layout struct; all bit patterns are valid.
+unsafe impl cudarc::driver::DeviceRepr for StreamKeyHit {}
+unsafe impl cudarc::driver::ValidAsZeroBits for StreamKeyHit {}
 
 pub(crate) fn checked_hit_count(raw_count: u32, capacity: u32) -> Result<usize, Box<dyn std::error::Error>> {
     if raw_count > capacity {
@@ -66,20 +99,31 @@ impl GpuOracle {
     /// -- caller is responsible for CPU-side re-verification before treating
     /// anything as real, matching this project's house rule that the GPU
     /// tool is a finder, not a source of truth.
+    ///
+    /// `bloom`, when `Some`, is also checked entirely on-device against every
+    /// CFB/OFB/CTR candidate's decrypted half/better_half chunks (see
+    /// aes_kdf_oracle.cu's stream-mode branch) -- `on_stream_key_hit` fires
+    /// for each Bloom hit (same "Bloom pre-filters, host does the mandatory
+    /// live API confirmation" contract as every other Bloom hit in this
+    /// project; see keyshape::record_precomputed_hit). `None` (no local
+    /// Bloom cache) skips this check entirely, same as `--no-bloom-verify`.
     #[allow(clippy::too_many_arguments)]
-    pub fn scan<F>(
+    pub fn scan<F, G>(
         &self,
         candidates: &[String],
         skip_indices: &std::collections::HashSet<u64>,
         blobs: &[Blob],
-        variants: &[(i32, i32)],
+        variants: &[(i32, i32, i32)],
+        bloom: Option<&crate::checker::BloomChecker>,
         mut on_hit: F,
+        mut on_stream_key_hit: G,
         mut on_progress: impl FnMut(u64, u64, f64),
         mut on_batch_done: impl FnMut(&[u32]),
         interrupted: &std::sync::atomic::AtomicBool,
     ) -> Result<(), Box<dyn std::error::Error>>
     where
         F: FnMut(&DecryptHit),
+        G: FnMut(&StreamKeyHit),
     {
         let ptx_bytes = include_bytes!(env!("AES_KDF_ORACLE_PTX_PATH"));
         let ptx = Ptx::from_src(std::str::from_utf8(ptx_bytes)?);
@@ -120,10 +164,12 @@ impl GpuOracle {
 
         // Upload the fixed variant table once.
         {
-            let kdf_kinds: Vec<i32> = variants.iter().map(|(k, _)| *k).collect();
-            let key_lens: Vec<i32> = variants.iter().map(|(_, l)| *l).collect();
+            let kdf_kinds: Vec<i32> = variants.iter().map(|(k, _, _)| *k).collect();
+            let key_lens: Vec<i32> = variants.iter().map(|(_, l, _)| *l).collect();
+            let modes: Vec<i32> = variants.iter().map(|(_, _, m)| *m).collect();
             let kdf_dev: CudaSlice<i32> = stream.clone_htod(&kdf_kinds)?;
             let keylen_dev: CudaSlice<i32> = stream.clone_htod(&key_lens)?;
+            let mode_dev: CudaSlice<i32> = stream.clone_htod(&modes)?;
             let count = variants.len() as u32;
 
             let init_fn = module.load_function("variant_init")?;
@@ -132,11 +178,42 @@ impl GpuOracle {
                     .launch_builder(&init_fn)
                     .arg(&kdf_dev)
                     .arg(&keylen_dev)
+                    .arg(&mode_dev)
                     .arg(&count)
                     .launch(cudarc::driver::LaunchConfig { grid_dim: (1, 1, 1), block_dim: (1, 1, 1), shared_mem_bytes: 0 })?;
             }
             stream.synchronize()?;
         }
+
+        // Populate the precomputed G-table required by scalar_mul_G (see
+        // secp256k1_device.cuh) -- needed even when `bloom` is None, since
+        // the stream-mode branch always derives hash160s before checking
+        // bloom_m > 0; gtable_init just wouldn't matter functionally if it
+        // weren't called, but skipping it isn't worth a special case.
+        {
+            let (gtable_x, gtable_y) = crate::gtable::compute_gtable();
+            let gtable_x_dev: CudaSlice<u32> = stream.clone_htod(&gtable_x)?;
+            let gtable_y_dev: CudaSlice<u32> = stream.clone_htod(&gtable_y)?;
+            let init_fn = module.load_function("gtable_init")?;
+            unsafe {
+                stream
+                    .launch_builder(&init_fn)
+                    .arg(&gtable_x_dev)
+                    .arg(&gtable_y_dev)
+                    .launch(cudarc::driver::LaunchConfig { grid_dim: (1, 1, 1), block_dim: (256, 1, 1), shared_mem_bytes: 0 })?;
+            }
+            stream.synchronize()?;
+        }
+
+        // Upload the Bloom filter bits once, kept resident for the whole
+        // scan. `bloom_m == 0` tells the kernel to skip the stream-mode
+        // Bloom check entirely (see aes_kdf_oracle.cu) -- used for both
+        // `bloom.is_none()` and as the harmless value passed alongside a
+        // required-but-then-unused dummy device slice.
+        let (bloom_bits_dev, bloom_m, bloom_k): (CudaSlice<u64>, u64, u32) = match bloom {
+            Some(b) => (stream.clone_htod(b.raw_bits())?, b.num_bits(), b.num_hashes()),
+            None => (stream.alloc_zeros(1)?, 0, 0),
+        };
 
         let func = module.load_function("aes_kdf_scan")?;
 
@@ -148,6 +225,8 @@ impl GpuOracle {
 
         let mut hits_dev: CudaSlice<DecryptHit> = stream.alloc_zeros(MAX_HITS as usize)?;
         let mut hit_count_dev: CudaSlice<u32> = stream.alloc_zeros(1)?;
+        let mut stream_hits_dev: CudaSlice<StreamKeyHit> = stream.alloc_zeros(MAX_STREAM_HITS as usize)?;
+        let mut stream_hit_count_dev: CudaSlice<u32> = stream.alloc_zeros(1)?;
 
         let total = pending.len() as u64;
         let mut done: u64 = 0;
@@ -176,6 +255,7 @@ impl GpuOracle {
             let lens_dev: CudaSlice<u32> = stream.clone_htod(&cand_lens)?;
 
             stream.memset_zeros(&mut hit_count_dev)?;
+            stream.memset_zeros(&mut stream_hit_count_dev)?;
             let grid_needed = (batch + BLOCK_SIZE - 1) / BLOCK_SIZE;
             let cfg = cudarc::driver::LaunchConfig {
                 grid_dim: (grid_needed, 1, 1),
@@ -191,6 +271,12 @@ impl GpuOracle {
                 builder.arg(&mut hits_dev);
                 builder.arg(&mut hit_count_dev);
                 builder.arg(&MAX_HITS);
+                builder.arg(&bloom_bits_dev);
+                builder.arg(&bloom_m);
+                builder.arg(&bloom_k);
+                builder.arg(&mut stream_hits_dev);
+                builder.arg(&mut stream_hit_count_dev);
+                builder.arg(&MAX_STREAM_HITS);
                 builder.launch(cfg)?;
             }
             self.ctx.synchronize()?;
@@ -206,6 +292,17 @@ impl GpuOracle {
                     let mut h_fixed = *h;
                     h_fixed.candidate_idx = chunk[h.candidate_idx as usize];
                     on_hit(&h_fixed);
+                }
+            }
+
+            let stream_hit_count_host = stream.clone_dtoh(&stream_hit_count_dev)?;
+            let n_stream_hits = checked_hit_count(stream_hit_count_host[0], MAX_STREAM_HITS)?;
+            if n_stream_hits > 0 {
+                let stream_hits_host = stream.clone_dtoh(&stream_hits_dev)?;
+                for h in &stream_hits_host[..n_stream_hits] {
+                    let mut h_fixed = *h;
+                    h_fixed.candidate_idx = chunk[h.candidate_idx as usize];
+                    on_stream_key_hit(&h_fixed);
                 }
             }
 

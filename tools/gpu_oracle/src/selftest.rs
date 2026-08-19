@@ -54,7 +54,7 @@ fn run_known_positive(gpu: &GpuOracle, _blobs: &[Blob]) -> Result<(), Box<dyn st
 
     // CPU reference: must be a Strong hit with a large z-score (~22 per
     // cb_common.py's own comments -- assert a generous but meaningful floor).
-    let (cpu_kind, _) = cpu_oracle::try_open(password.as_bytes(), blobs::KDF_LEGACY_SHA256, 32, &salt, &ct);
+    let (cpu_kind, _) = cpu_oracle::try_open(password.as_bytes(), blobs::KDF_LEGACY_SHA256, 32, blobs::CIPHER_CBC, &salt, &ct);
     let cpu_z = match cpu_kind {
         HitKind::Strong(z) => z,
         other => return Err(format!("CPU reference itself failed on the known-positive vector: {other:?}").into()),
@@ -71,8 +71,10 @@ fn run_known_positive(gpu: &GpuOracle, _blobs: &[Blob]) -> Result<(), Box<dyn st
         &candidates,
         &HashSet::new(),
         std::slice::from_ref(&phase32_blob),
-        &[(blobs::KDF_LEGACY_SHA256, 32)],
+        &[(blobs::KDF_LEGACY_SHA256, 32, blobs::CIPHER_CBC)],
+        None,
         |hit| gpu_hits.push(*hit),
+        |_| {},
         |_, _, _| {},
         |_| {},
         &std::sync::atomic::AtomicBool::new(false),
@@ -103,16 +105,16 @@ fn run_known_positive(gpu: &GpuOracle, _blobs: &[Blob]) -> Result<(), Box<dyn st
 fn run_negative_cross_check(
     gpu: &GpuOracle,
     blobs_list: &[Blob],
-    variants: &[(i32, i32)],
+    variants: &[(i32, i32, i32)],
 ) -> Result<(), Box<dyn std::error::Error>> {
     let candidates: Vec<String> = NEGATIVE_PROBE_CANDIDATES.iter().map(|s| s.to_string()).collect();
 
     // CPU reference: full (candidate, variant, blob) grid.
     let mut cpu_hits: HashSet<(usize, usize, usize)> = HashSet::new();
     for (ci, cand) in candidates.iter().enumerate() {
-        for (vi, &(kdf, key_len)) in variants.iter().enumerate() {
+        for (vi, &(kdf, key_len, mode)) in variants.iter().enumerate() {
             for (bi, blob) in blobs_list.iter().enumerate() {
-                let (kind, _) = cpu_oracle::try_open(cand.as_bytes(), kdf, key_len as usize, &blob.salt, &blob.ciphertext);
+                let (kind, _) = cpu_oracle::try_open(cand.as_bytes(), kdf, key_len as usize, mode, &blob.salt, &blob.ciphertext);
                 if !matches!(kind, HitKind::None) {
                     cpu_hits.insert((ci, vi, bi));
                 }
@@ -126,9 +128,11 @@ fn run_negative_cross_check(
         &HashSet::new(),
         blobs_list,
         variants,
+        None,
         |hit| {
             gpu_hits.insert((hit.candidate_idx as usize, hit.variant_idx as usize, hit.blob_idx as usize));
         },
+        |_| {},
         |_, _, _| {},
         |_| {},
         &std::sync::atomic::AtomicBool::new(false),

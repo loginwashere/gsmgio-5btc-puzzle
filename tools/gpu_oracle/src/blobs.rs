@@ -106,25 +106,37 @@ pub fn load_blobs() -> Vec<Blob> {
     ]
 }
 
-/// Phase-1 variant table: 4 KDF kinds x 3 AES key sizes = 12 variants.
-/// Order/contents must match `EXPECTED_VARIANTS` used by the checkpoint
-/// fingerprint (kdf_kind, key_len_bytes).
+/// Variant table: 4 KDF kinds x 3 AES key sizes x 5 cipher modes = 60
+/// variants (kdf_kind, key_len_bytes, cipher_mode). Order/contents must match
+/// what the checkpoint fingerprint hashes and kernels/aes_kdf_oracle.cu's
+/// MAX_VARIANTS sizing.
 pub const KDF_LEGACY_MD5: i32 = 0;
 pub const KDF_LEGACY_SHA1: i32 = 1;
 pub const KDF_LEGACY_SHA256: i32 = 2;
 pub const KDF_PBKDF2_SHA256: i32 = 3;
 
-pub fn variant_table() -> Vec<(i32, i32)> {
+/// AES-CBC (Phase 1 scope). AES-ECB (no IV, same PKCS7+structural gate as
+/// CBC). AES-CFB/OFB/CTR (no padding, whole body goes to the printable gate
+/// -- matches cb_common.py's STREAM_CIPHER_VARIANTS / ECB_CIPHER_VARIANTS).
+pub const CIPHER_CBC: i32 = 0;
+pub const CIPHER_ECB: i32 = 1;
+pub const CIPHER_CFB: i32 = 2;
+pub const CIPHER_OFB: i32 = 3;
+pub const CIPHER_CTR: i32 = 4;
+
+pub fn variant_table() -> Vec<(i32, i32, i32)> {
     let mut v = Vec::new();
     for &kdf in &[KDF_LEGACY_MD5, KDF_LEGACY_SHA1, KDF_LEGACY_SHA256, KDF_PBKDF2_SHA256] {
         for &key_len in &[16, 24, 32] {
-            v.push((kdf, key_len));
+            for &mode in &[CIPHER_CBC, CIPHER_ECB, CIPHER_CFB, CIPHER_OFB, CIPHER_CTR] {
+                v.push((kdf, key_len, mode));
+            }
         }
     }
     v
 }
 
-pub fn variant_label(kdf: i32, key_len: i32) -> String {
+pub fn variant_label(kdf: i32, key_len: i32, mode: i32) -> String {
     let kdf_name = match kdf {
         KDF_LEGACY_MD5 => "legacy-md5",
         KDF_LEGACY_SHA1 => "legacy-sha1",
@@ -132,7 +144,15 @@ pub fn variant_label(kdf: i32, key_len: i32) -> String {
         KDF_PBKDF2_SHA256 => "pbkdf2-sha256-10000",
         _ => "unknown",
     };
-    format!("{kdf_name}/aes-{}", key_len * 8)
+    let mode_name = match mode {
+        CIPHER_CBC => "cbc",
+        CIPHER_ECB => "ecb",
+        CIPHER_CFB => "cfb",
+        CIPHER_OFB => "ofb",
+        CIPHER_CTR => "ctr",
+        _ => "unknown",
+    };
+    format!("{kdf_name}/aes-{}-{mode_name}", key_len * 8)
 }
 
 /// Known-positive Phase 3.2 vector (data.PHASE32_BLOB_B64 / PHASE32_PASSWORD)
@@ -231,8 +251,8 @@ mod tests {
     }
 
     #[test]
-    fn variant_table_has_twelve_entries() {
-        assert_eq!(variant_table().len(), 12);
+    fn variant_table_has_sixty_entries() {
+        assert_eq!(variant_table().len(), 60);
     }
 
     #[test]

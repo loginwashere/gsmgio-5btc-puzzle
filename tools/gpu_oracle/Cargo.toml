@@ -25,9 +25,20 @@ hmac = "0.12"
 pbkdf2 = { version = "0.12", features = ["hmac"] }
 aes = "0.8"
 cbc = { version = "0.1", features = ["std"] }
+ecb = "0.1"
+ctr = "0.9"
+ofb = "0.6"
+cfb-mode = "0.8"
+# Bloom/API key-shape checking (Phase 324) -- ported from ../../../key-seeker's
+# src/checker/{bloom,api,verified}.rs and src/crypto/mod.rs, same versions.
+secp256k1 = "0.29"
+ripemd = "0.1"
+bs58 = "0.5"
+ureq = { version = "2.10", features = ["json"] }
 
 [dev-dependencies]
 tempfile = "3"
+mockito = "1"
 
 [profile.release]
 opt-level = 3

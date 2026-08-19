@@ -1,11 +1,18 @@
 mod blobs;
+mod checker;
 mod checkpoint;
 mod cpu_oracle;
+mod crypto;
 mod forms;
+mod gtable;
+mod keyshape;
 mod output;
+mod stream_key_check;
 
 #[cfg(feature = "cuda")]
 mod gpu;
+#[cfg(feature = "cuda")]
+mod secp256k1_gpu;
 #[cfg(feature = "cuda")]
 mod selftest;
 
@@ -18,9 +25,14 @@ use std::path::PathBuf;
 use std::sync::Arc;
 
 /// GSMG.IO puzzle AES/KDF oracle -- GPU-accelerated Phase-1 (AES-CBC) port of
-/// tools/gsmg/cb_common.py's aes_try_open_bytes(). See doc/ for scope notes;
-/// any hit here still needs re-verification through the Python oracle before
-/// being treated as real.
+/// tools/gsmg/cb_common.py's aes_try_open_bytes(). See doc/ for scope notes.
+/// A structural hit (a full dummy PKCS7 pad block, any body length that's a
+/// multiple of 32 bytes -- not just SALPH/P32TRAILING's 64-byte case) is now
+/// automatically address-derived and Bloom/API-checked inline (see
+/// `keyshape.rs`, ported from ../../key-seeker's checker module) -- no
+/// manual Python re-run needed for that case. A strong (printable) hit still needs
+/// `tools/gsmg/key_shape_sweep.py` to check whether its text is itself a
+/// key (hex64/WIF/BIP39 mnemonic); that classifier isn't duplicated here.
 #[derive(Parser, Debug)]
 #[command(name = "gpu_oracle")]
 struct Cli {
@@ -47,6 +59,24 @@ struct Cli {
     #[arg(long, default_value = "output/hits.jsonl")]
     output: PathBuf,
 
+    /// Sensitive (mode-0600) JSONL file for structural hits' derived
+    /// private keys/addresses -- see `keyshape::KeyShapeHit`.
+    #[arg(long, default_value = "output/keyshape_hits.jsonl")]
+    keyshape_hits: PathBuf,
+
+    /// BLMCACHE-format Bloom cache of funded/used address hash160s. Default
+    /// is this repo's copy of key-seeker's `db/addresses.hash160.bloom`
+    /// (gitignored -- see .gitignore's `db/*.bloom`). Missing file is a
+    /// warning, not an error: structural hits are still derived and logged,
+    /// just never Bloom/API-checked.
+    #[arg(long)]
+    bloom_cache: Option<PathBuf>,
+
+    /// Disable Bloom/API checking of structural hits entirely (addresses are
+    /// still derived and written to --keyshape-hits).
+    #[arg(long, default_value_t = false)]
+    no_bloom_verify: bool,
+
     /// Run only the mandatory correctness self-test (known-positive vector +
     /// negative cross-check against the CPU reference oracle) and exit.
     #[arg(long, default_value_t = false)]
@@ -56,6 +86,18 @@ struct Cli {
     /// re-running a sweep you've already validated this session.
     #[arg(long, default_value_t = false)]
     skip_self_test: bool,
+
+    /// Also (or instead, if built without --features cuda) run every
+    /// CFB/OFB/CTR stream-mode candidate's decrypt through Bloom/API address
+    /// checking unconditionally -- bypassing the printable/z-score gate that
+    /// would otherwise silently drop a correct password whose plaintext is
+    /// raw binary key material rather than text (stream modes have no PKCS7
+    /// padding, so there's no structural signal to bypass it with the way
+    /// CBC/ECB's full-dummy-pad-block check does). CPU-only, does not need a
+    /// GPU. Bounded to each blob's first 64 bytes (the half/better_half
+    /// positions) per candidate x variant x blob -- see stream_key_check.rs.
+    #[arg(long, default_value_t = false)]
+    stream_half_check: bool,
 }
 
 fn main() {
@@ -67,8 +109,14 @@ fn main() {
 
 #[cfg(not(feature = "cuda"))]
 fn run() -> Result<(), Box<dyn std::error::Error>> {
-    let _cli = Cli::parse();
-    Err("this binary was built without --features cuda; rebuild via Dockerfile.cuda".into())
+    let cli = Cli::parse();
+    if cli.stream_half_check {
+        return run_stream_half_check(&cli);
+    }
+    Err("this binary was built without --features cuda; rebuild via Dockerfile.cuda \
+         (or pass --stream-half-check alone for the CPU-only stream-cipher Bloom \
+         check, which needs no GPU)"
+        .into())
 }
 
 #[cfg(feature = "cuda")]
@@ -85,51 +133,38 @@ fn run() -> Result<(), Box<dyn std::error::Error>> {
         return Ok(());
     }
 
-    let wordlist_path = cli.wordlist.ok_or("--wordlist is required for a real run (or pass --self-test alone)")?;
-    run_sweep(&gpu, &wordlist_path, cli.newline_variants, cli.whitespace_variants, cli.checkpoint, &cli.output)?;
+    if cli.wordlist.is_none() {
+        return Err("--wordlist is required for a real run (or pass --self-test alone)".into());
+    }
+    run_sweep(&gpu, &cli)?;
+
+    if cli.stream_half_check {
+        run_stream_half_check(&cli)?;
+    }
 
     Ok(())
 }
 
 #[cfg(feature = "cuda")]
-fn run_sweep(
-    gpu: &gpu::GpuOracle,
-    wordlist_path: &PathBuf,
-    newline_variants: bool,
-    whitespace_variants: bool,
-    checkpoint_path: Option<PathBuf>,
-    output_path: &PathBuf,
-) -> Result<(), Box<dyn std::error::Error>> {
-    let base_lines = read_wordlist(wordlist_path)?;
-    println!("[main] {} base candidates from {}", base_lines.len(), wordlist_path.display());
-
-    // Expand every base line into its answer_forms x keystr_forms passphrase
-    // set, keeping a parallel "source" label for the hit record.
-    let mut candidates: Vec<String> = Vec::new();
-    let mut sources: Vec<String> = Vec::new();
-    for line in &base_lines {
-        for form in forms::expand_candidate(line, newline_variants, whitespace_variants) {
-            candidates.push(form);
-            sources.push(line.clone());
-        }
-    }
-    println!(
-        "[main] expanded to {} passphrase forms (newline_variants={newline_variants}, whitespace_variants={whitespace_variants})",
-        candidates.len()
-    );
+fn run_sweep(gpu: &gpu::GpuOracle, cli: &Cli) -> Result<(), Box<dyn std::error::Error>> {
+    let (candidates, sources) = expand_wordlist_candidates(cli)?;
 
     let blobs = blobs::load_blobs();
     let variants = blobs::variant_table();
 
-    if let Some(dir) = output_path.parent() {
+    if let Some(dir) = cli.output.parent() {
         if !dir.as_os_str().is_empty() {
             std::fs::create_dir_all(dir)?;
         }
     }
-    let writer = Arc::new(output::OutputWriter::new(output_path.to_str().ok_or("bad --output path")?)?);
+    let writer = Arc::new(output::OutputWriter::new(cli.output.to_str().ok_or("bad --output path")?)?);
+
+    let (secp, bloom_checker, keyshape_writer) = setup_keyshape(cli)?;
+    let bloom_checker_ref: Option<&dyn checker::Checker> =
+        bloom_checker.as_ref().map(|c| c as &dyn checker::Checker);
 
     // Checkpoint: fingerprint-bound, refuses to resume against a different run.
-    let (skip_indices, checkpoint) = if let Some(cp_path) = &checkpoint_path {
+    let (skip_indices, checkpoint) = if let Some(cp_path) = &cli.checkpoint {
         let kernel_path = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("kernels/aes_kdf_oracle.cu");
         let driver_src_dir = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("src");
         let fingerprint = checkpoint::compute_fingerprint(&candidates, &blobs, &variants, &kernel_path, &driver_src_dir);
@@ -159,36 +194,119 @@ fn run_sweep(
     let candidates_ref = &candidates;
     let sources_ref = &sources;
     let variants_ref = &variants;
+    let blobs_ref = &blobs;
 
     gpu.scan(
         &candidates,
         &skip_indices,
         &blobs,
         &variants,
+        bloom_checker.as_ref().map(|vc| vc.bloom()),
         |hit| {
-            let (kdf, key_len) = variants_ref[hit.variant_idx as usize];
+            let (kdf, key_len, mode) = variants_ref[hit.variant_idx as usize];
             let kind_str = match hit.hit_kind {
                 1 => "weak",
                 2 => "strong",
                 3 => "structural",
                 _ => "unknown",
             };
+            let candidate = candidates_ref[hit.candidate_idx as usize].clone();
+            let blob = &blobs_ref[hit.blob_idx as usize];
+
+            // Recompute the exact (candidate, variant, blob) decrypt on the
+            // CPU reference oracle for strong/structural hits: the CUDA
+            // kernel deliberately never copies the plaintext body back (see
+            // output.rs), so this is the only way to get real bytes to
+            // classify. Rare by construction -- only fires once the kernel's
+            // own z-score/structural gate already passed -- so the CPU
+            // recompute cost here is negligible.
+            let body = if hit.hit_kind == 2 || hit.hit_kind == 3 {
+                cpu_oracle::try_open(candidate.as_bytes(), kdf, key_len as usize, mode, &blob.salt, &blob.ciphertext).1
+            } else {
+                None
+            };
+
             let record = output::Hit {
-                candidate: candidates_ref[hit.candidate_idx as usize].clone(),
+                candidate: candidate.clone(),
                 candidate_source: sources_ref[hit.candidate_idx as usize].clone(),
-                keystring_form: candidates_ref[hit.candidate_idx as usize].clone(),
-                kdf: blobs::variant_label(kdf, key_len),
+                keystring_form: candidate.clone(),
+                kdf: blobs::variant_label(kdf, key_len, mode),
                 key_bits: (key_len * 8) as u32,
-                blob_tag: blobs[hit.blob_idx as usize].tag.to_string(),
+                blob_tag: blob.tag.to_string(),
                 hit_kind: kind_str.to_string(),
                 z_score: hit.z_score as f64,
-                body_preview: String::new(),
+                body_preview: body
+                    .as_deref()
+                    .map(|b| String::from_utf8_lossy(&b[..b.len().min(64)]).into_owned())
+                    .unwrap_or_default(),
             };
             writer_ref.write_hit(&record);
-            if hit.hit_kind == 2 || hit.hit_kind == 3 {
+
+            match (hit.hit_kind, &body) {
+                (3, Some(body)) => {
+                    // Structural shape (complete PKCS7 padding block; any
+                    // body length that's a multiple of 32 bytes) is
+                    // guaranteed by the kernel already -- no further
+                    // classification needed, straight to chunked address
+                    // derivation + Bloom/API. See keyshape.rs.
+                    let variant_label = blobs::variant_label(kdf, key_len, mode);
+                    let confirmed = keyshape::process_structural_hit(
+                        &secp, bloom_checker_ref, &keyshape_writer, blob.tag, &variant_label, &candidate, body,
+                    );
+                    if confirmed > 0 {
+                        eprintln!(
+                            "[main] *** {confirmed} CONFIRMED FUNDED ADDRESS(ES) from a structural hit -- see {} ***",
+                            cli.keyshape_hits.display()
+                        );
+                    } else {
+                        eprintln!("[main] structural hit, Bloom/API-checked, 0 funded: {record:?}");
+                    }
+                }
+                (2, Some(_)) => {
+                    // Readable body: could itself be a hex64/WIF/BIP39
+                    // mnemonic private key, but that classifier lives in
+                    // tools/gsmg/key_shape_sweep.py, not duplicated here.
+                    eprintln!(
+                        "[main] strong hit -- check body_preview for key-shaped text via \
+                         tools/gsmg/key_shape_sweep.py: {record:?}"
+                    );
+                }
+                (2, None) | (3, None) => {
+                    eprintln!(
+                        "[main] STRONG/STRUCTURAL hit but the CPU reference oracle did not \
+                         reproduce it -- kernel/CPU disagreement, needs investigation: {record:?}"
+                    );
+                }
+                _ => {}
+            }
+        },
+        |stream_hit| {
+            let (kdf, key_len, mode) = variants_ref[stream_hit.variant_idx as usize];
+            let variant_label = blobs::variant_label(kdf, key_len, mode);
+            let blob_tag = blobs_ref[stream_hit.blob_idx as usize].tag;
+            let candidate = &candidates_ref[stream_hit.candidate_idx as usize];
+            let address_type = if stream_hit.address_type == 0 { "compressed" } else { "uncompressed" };
+            let confirmed = keyshape::record_gpu_stream_hit(
+                bloom_checker_ref,
+                &keyshape_writer,
+                blob_tag,
+                &variant_label,
+                candidate,
+                stream_hit.chunk_index as usize,
+                address_type,
+                stream_hit.private_key,
+                stream_hit.hash160,
+            );
+            if confirmed > 0 {
                 eprintln!(
-                    "[main] STRONG/STRUCTURAL hit -- re-verify through the Python oracle before trusting this: {:?}",
-                    record
+                    "[main] *** {confirmed} CONFIRMED FUNDED ADDRESS(ES) from a stream-mode Bloom hit -- see {} ***",
+                    cli.keyshape_hits.display()
+                );
+            } else {
+                eprintln!(
+                    "[main] stream-mode Bloom hit (false positive after API check): {blob_tag} {variant_label} \
+                     candidate={candidate:?} chunk={} type={address_type}",
+                    stream_hit.chunk_index
                 );
             }
         },
@@ -220,6 +338,67 @@ fn run_sweep(
     Ok(())
 }
 
+/// Where to look for the Bloom cache when `--bloom-cache` isn't passed. Two
+/// deployments need two different defaults, since `env!("CARGO_MANIFEST_DIR")`
+/// is baked in at *compile* time and means nothing at *run* time in a
+/// container built from Dockerfile.cuda (there it's `/build`, a path that
+/// doesn't exist in the runtime stage at all):
+///
+/// * Docker (the documented deployment, see Dockerfile.cuda): WORKDIR is
+///   `/data`, and `docker run -v host/db:/data/db:ro` mounts the cache at
+///   `/data/db/addresses.hash160.bloom` -- a path relative to the *runtime*
+///   working directory, checked first.
+/// * Local `cargo run --features cuda` from `tools/gpu_oracle/`: falls back
+///   to the compile-time-known path from the crate to the repo-root `db/`
+///   this project's own copy of key-seeker's Bloom cache lives in (see
+///   .gitignore's `db/*.bloom`).
+fn default_bloom_cache_path() -> PathBuf {
+    let cwd_relative = PathBuf::from("db/addresses.hash160.bloom");
+    if cwd_relative.exists() {
+        return cwd_relative;
+    }
+    PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../db/addresses.hash160.bloom")
+}
+
+#[cfg(test)]
+mod default_bloom_cache_path_tests {
+    use super::*;
+
+    /// Falls back to the repo-root path when no `db/addresses.hash160.bloom`
+    /// exists relative to cwd (true for `cargo test`'s cwd, the crate root)
+    /// -- and that fallback must resolve to the real file this project
+    /// copied from key-seeker (see .gitignore's `db/*.bloom`), not just any
+    /// path.
+    #[test]
+    fn falls_back_to_repo_root_path_when_no_cwd_relative_file() {
+        assert!(!PathBuf::from("db/addresses.hash160.bloom").exists());
+        let resolved = default_bloom_cache_path();
+        assert!(resolved.ends_with("db/addresses.hash160.bloom"));
+        assert!(resolved.exists(), "{resolved:?} should be this repo's copied Bloom cache");
+    }
+
+    /// Docker's case: WORKDIR is a plain directory with `db/` mounted under
+    /// it -- a `db/addresses.hash160.bloom` relative to cwd must be found
+    /// and preferred over the compile-time repo-root fallback. Single test
+    /// that touches the process cwd; every other test in this binary uses
+    /// absolute paths (tempfile, or CARGO_MANIFEST_DIR-derived), so this
+    /// doesn't race with them.
+    #[test]
+    fn prefers_cwd_relative_file_when_present() {
+        let dir = tempfile::tempdir().unwrap();
+        std::fs::create_dir(dir.path().join("db")).unwrap();
+        let fake_bloom = dir.path().join("db/addresses.hash160.bloom");
+        std::fs::write(&fake_bloom, b"not a real bloom file, just needs to exist").unwrap();
+
+        let original_cwd = std::env::current_dir().unwrap();
+        std::env::set_current_dir(dir.path()).unwrap();
+        let resolved = default_bloom_cache_path();
+        std::env::set_current_dir(original_cwd).unwrap();
+
+        assert_eq!(resolved, PathBuf::from("db/addresses.hash160.bloom"));
+    }
+}
+
 fn read_wordlist(path: &PathBuf) -> Result<Vec<String>, Box<dyn std::error::Error>> {
     let f = std::fs::File::open(path)?;
     let reader = std::io::BufReader::new(f);
@@ -233,4 +412,81 @@ fn read_wordlist(path: &PathBuf) -> Result<Vec<String>, Box<dyn std::error::Erro
         out.push(trimmed.to_string());
     }
     Ok(out)
+}
+
+/// Reads `--wordlist` and expands every base line into its answer_forms x
+/// keystr_forms passphrase set, keeping a parallel "source" label for the
+/// hit record. Shared by `run_sweep` (GPU) and `run_stream_half_check`
+/// (CPU-only) so both operate over the exact same candidate set for a given
+/// `--wordlist`/`--newline-variants`/`--whitespace-variants` combination.
+fn expand_wordlist_candidates(cli: &Cli) -> Result<(Vec<String>, Vec<String>), Box<dyn std::error::Error>> {
+    let wordlist_path = cli.wordlist.as_ref().ok_or("--wordlist is required")?;
+    let base_lines = read_wordlist(wordlist_path)?;
+    println!("[main] {} base candidates from {}", base_lines.len(), wordlist_path.display());
+
+    let mut candidates: Vec<String> = Vec::new();
+    let mut sources: Vec<String> = Vec::new();
+    for line in &base_lines {
+        for form in forms::expand_candidate(line, cli.newline_variants, cli.whitespace_variants) {
+            candidates.push(form);
+            sources.push(line.clone());
+        }
+    }
+    println!(
+        "[main] expanded to {} passphrase forms (newline_variants={}, whitespace_variants={})",
+        candidates.len(), cli.newline_variants, cli.whitespace_variants
+    );
+    Ok((candidates, sources))
+}
+
+/// Sets up the pieces shared by both Bloom/API consumers (`keyshape::
+/// process_structural_hit` via `run_sweep`'s structural hits, and
+/// `stream_key_check::run`): the keyshape JSONL writer, the secp256k1
+/// context, and the Bloom checker (`None` if `--no-bloom-verify` or the
+/// cache failed to load -- a warning, not a hard error, in either case).
+fn setup_keyshape(
+    cli: &Cli,
+) -> Result<(secp256k1::Secp256k1<secp256k1::All>, Option<checker::VerifiedBloomChecker>, keyshape::KeyShapeWriter), Box<dyn std::error::Error>>
+{
+    if let Some(dir) = cli.keyshape_hits.parent() {
+        if !dir.as_os_str().is_empty() {
+            std::fs::create_dir_all(dir)?;
+        }
+    }
+    let keyshape_writer =
+        keyshape::KeyShapeWriter::new(cli.keyshape_hits.to_str().ok_or("bad --keyshape-hits path")?)?;
+
+    let secp = secp256k1::Secp256k1::new();
+    let bloom_checker: Option<checker::VerifiedBloomChecker> = if cli.no_bloom_verify {
+        None
+    } else {
+        let bloom_path = cli.bloom_cache.clone().unwrap_or_else(default_bloom_cache_path);
+        match checker::BloomChecker::load_from_file(bloom_path.to_string_lossy().as_ref()) {
+            Ok(bloom) => {
+                println!("[main] Bloom cache loaded: {}", bloom_path.display());
+                Some(checker::VerifiedBloomChecker::new(bloom))
+            }
+            Err(e) => {
+                eprintln!(
+                    "[main] WARNING: could not load Bloom cache at {} ({e}) -- structural/stream hits \
+                     will still be derived and logged, but never Bloom/API-checked. Pass \
+                     --bloom-cache <path> or --no-bloom-verify to silence this.",
+                    bloom_path.display()
+                );
+                None
+            }
+        }
+    };
+    Ok((secp, bloom_checker, keyshape_writer))
+}
+
+/// CPU-only (no `--features cuda` needed): see `stream_key_check.rs`.
+fn run_stream_half_check(cli: &Cli) -> Result<(), Box<dyn std::error::Error>> {
+    let (candidates, _sources) = expand_wordlist_candidates(cli)?;
+    let blobs = blobs::load_blobs();
+    let (secp, bloom_checker, keyshape_writer) = setup_keyshape(cli)?;
+    let bloom_checker_ref: Option<&dyn checker::Checker> =
+        bloom_checker.as_ref().map(|c| c as &dyn checker::Checker);
+    stream_key_check::run(&candidates, &blobs, &secp, bloom_checker_ref, &keyshape_writer);
+    Ok(())
 }

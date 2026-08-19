@@ -48,7 +48,7 @@ pub fn blob_digest(blobs: &[crate::blobs::Blob]) -> String {
     hex::encode(h.finalize())[..16].to_string()
 }
 
-pub fn variant_digest(variants: &[(i32, i32)]) -> String {
+pub fn variant_digest(variants: &[(i32, i32, i32)]) -> String {
     sha256_hex_truncated16(format!("{variants:?}").as_bytes())
 }
 
@@ -63,7 +63,7 @@ fn file_sha256_truncated16(path: &Path) -> io::Result<String> {
 pub fn compute_fingerprint(
     candidates: &[String],
     blobs: &[crate::blobs::Blob],
-    variants: &[(i32, i32)],
+    variants: &[(i32, i32, i32)],
     kernel_path: &Path,
     driver_source_dir: &Path,
 ) -> Fingerprint {

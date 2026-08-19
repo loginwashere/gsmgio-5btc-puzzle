@@ -1,7 +1,13 @@
 # Adapted from ../../../key-seeker/Dockerfile.cuda (same builder/runtime split,
 # same sm_120-for-RTX-5070 default) -- see the approved plan for why this
 # tool has its own Dockerfile rather than reusing key-seeker's image: this is
-# a different crate entirely (no secp256k1/kangaroo deps).
+# a different crate entirely, though as of Phase 324 it does depend on
+# secp256k1/ripemd/bs58/ureq too (ported checker/crypto modules, see
+# src/checker/ and src/crypto.rs) -- gcc/pkg-config/libssl-dev below already
+# cover secp256k1-sys's and ring's native builds; no image changes were
+# needed for those. ureq resolved to rustls+webpki-roots (bundled root CA
+# store), not native-tls/openssl, so the runtime stage needs no TLS runtime
+# package either.
 
 # ── Stage 1: build (CUDA toolkit + Rust) ──────────────────────────────────────
 FROM nvidia/cuda:13.0.0-devel-ubuntu22.04 AS builder
@@ -49,7 +55,19 @@ RUN echo 'Acquire::ForceIPv4 "true";' > /etc/apt/apt.conf.d/99force-ipv4; \
 
 COPY --from=builder /build/target/release/gpu_oracle /usr/local/bin/gpu_oracle
 
-RUN mkdir -p /data/output /data/checkpoints /data/wordlists
+# /data/db is where --bloom-cache's default looks for
+# addresses.hash160.bloom (see main.rs's default_bloom_cache_path) -- mount
+# the repo's db/ there read-only:
+#   docker run --gpus all \
+#     -v $(pwd)/db:/data/db:ro \
+#     -v $(pwd)/wordlists:/data/wordlists:ro \
+#     -v $(pwd)/output:/data/output \
+#     gpu_oracle --wordlist /data/wordlists/x.txt
+# Bloom cache is optional: a missing/unmounted /data/db/addresses.hash160.bloom
+# is a warning, not a failure -- structural hits are still derived and
+# logged, just never Bloom/API-checked (pass --no-bloom-verify to silence
+# the warning intentionally).
+RUN mkdir -p /data/output /data/checkpoints /data/wordlists /data/db
 
 WORKDIR /data
 

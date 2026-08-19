@@ -9,3 +9,8 @@ tools/gsmg/*.jsonl.lock
 .obsidian/workspace-mobile.json
 .obsidian/cache
 .obsidian/*.log
+
+# Large external asset: funded/used-address Bloom filter copied from
+# ../key-seeker/db/addresses.hash160.bloom (BLMCACHE v1 format). Not
+# reproducible from anything else in this repo -- see binary_key_material_backfill.py.
+db/*.bloom
