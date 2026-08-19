@@ -1,5 +1,12 @@
 # GSMG Medium Candidate Curation
 
+> **Superseded (Phase 256, 2026-08-13):** the file-level tiering this doc
+> describes was replaced by candidate-level `core`/`bounded`/`excluded`
+> classification. See [GSMG_V2_CANDIDATE_REGISTRY](GSMG_V2_CANDIDATE_REGISTRY.md)
+> for the current registry; this doc is kept for the provenance/volume
+> reasoning behind the original 648-candidate default, which is still
+> accurate.
+
 ## Purpose
 
 The existing direct-blob rechecks use 648 deliberately small, previously

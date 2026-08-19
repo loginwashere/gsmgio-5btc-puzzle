@@ -2,6 +2,13 @@
 
 Date: 2026-07-24
 
+> **Scope note (2026-08-19):** "all Python programs" below means all ~25
+> that existed on 2026-07-24 (Phase 16), re-verified once more by Phase 17
+> the same day and given one narrower correction by Phase 112 (2026-07-28).
+> `tools/gsmg/` now holds 285+ scripts — this is a one-time historical
+> review of the shared `cb_common`/AES-oracle machinery from that date, not
+> a claim that every later script has been reviewed.
+
 Scope: all Python programs under `tools/gsmg`, with emphasis on shared
 checkerboard decoding, AES candidate detection, multiprocessing configuration,
 candidate validity, result accounting, and statistical claims.

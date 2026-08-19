@@ -4,7 +4,13 @@
 > BUT/HYE and the bounded `b <-> h`, `e`-fixed mirror state. This document's
 > later `H` + initials-of-“your eyes” + `BUT` rebus was removed as circular and
 > must not anchor subsequent work. VAT/SALVATION is likewise post-hoc and
-> oracle-negative.
+> oracle-negative *as a password/decoding target* — that verdict is about the
+> word itself, not about the numeric fact below it. The `SALPHATION ->
+> SALVATION` letter-count route independently reproducing the exact `[23,16,7]`
+> list (Phase 97, 250) is a separate, still-valid structural echo — see
+> [GSMG_FACT_LEDGER#F-CHAIN-002](GSMG_FACT_LEDGER.md), whose `structural-only`
+> disposition already reflects that this is corroborating numerology, not a
+> password/consumer claim.
 
 ## Strong finding
 

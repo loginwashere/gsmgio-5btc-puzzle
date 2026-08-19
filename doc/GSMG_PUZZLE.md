@@ -1,7 +1,18 @@
 # GSMG.io 5 BTC Puzzle — Research Summary (2026-07-03)
 
+> **Status update (2026-08-19): superseded.** The "parked, not pursued"
+> verdict below and the "No" in
+> [Assessment](#assessment-worth-diverting-the-rig) were the 2026-07-03
+> starting judgment, overridden the same day once the dictionary-scale sweep
+> actually ran (see the inline "Update" a few lines into that section) and by
+> every phase since — this project is still actively pursued through Phase
+> 321 as of this update. Treat this document as a historical snapshot of the
+> initial survey, not a current recommendation; see
+> [GSMG_HOME](GSMG_HOME.md) for the live frontier.
+
 Survey + hands-on cryptanalysis of the GSMG.io puzzle, done while scanning for viable
-new targets alongside puzzles #71/#135. **Conclusion: parked, not pursued** — see
+new targets alongside puzzles #71/#135. **Original conclusion (superseded same day,
+see banner above): parked, not pursued** — see
 [Assessment](#assessment-worth-diverting-the-rig) at the bottom.
 
 ---
@@ -361,7 +372,9 @@ correction below)
 
 ## Assessment: worth diverting the rig?
 
-**No.** This isn't an ECDLP/keyspace-search problem — no kangaroo or brute-force GPU
+**No** *(this was the 2026-07-03 starting judgment — reversed the same day
+below and by every phase since; see the status banner at the top of this
+document)*. This isn't an ECDLP/keyspace-search problem — no kangaroo or brute-force GPU
 advantage applies at any stage. It's pure classical cryptanalysis (small discrete
 alphabet-parameter space, cipher-family guessing), CPU-only, and already exhaustively
 attempted by a large, technically serious community for 5+ years (thousands of Telegram

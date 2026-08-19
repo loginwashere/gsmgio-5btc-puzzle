@@ -1,5 +1,15 @@
 # GSMG Phase-Boundary Re-audit
 
+> **Status note (2026-08-19):** this doc's own coverage stops around Phase
+> 61-66. Its stated purpose — tracking conclusions rejected/moved/altered by
+> later phases — has continued being served inline in
+> [GSMG_FACT_LEDGER](GSMG_FACT_LEDGER.md) (the "Supersedes/corrects" field)
+> and each phase's own "Facts affected" note per
+> [GSMG_PHASE_TEMPLATE](GSMG_PHASE_TEMPLATE.md), not by further edits here.
+> Treat this file as a historical snapshot through ~Phase 66, not a live
+> tracker; see [GSMG_HOME](GSMG_HOME.md) and
+> [GSMG_FACT_LEDGER](GSMG_FACT_LEDGER.md) for current dispositions.
+
 ## Purpose
 
 This re-audit tracks conclusions that were rejected, moved, or altered by
