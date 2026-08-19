@@ -172,7 +172,9 @@ impl BloomChecker {
         Ok(Self { bits, m, k })
     }
 
-    #[cfg(test)]
+    /// Tiny in-memory Bloom filter over an exact hash160 list -- used by
+    /// tests and by selftest.rs's synthetic-vector GPU/CPU cross-checks
+    /// (no real Bloom cache file needed for a one-entry known-positive).
     pub fn from_hash160_list(entries: &[[u8; 20]]) -> Self {
         let mut checker = Self::new(entries.len().max(1));
         for h in entries {

@@ -10,9 +10,11 @@
 //! A subtly wrong AES/KDF port would silently produce false negatives across
 //! a whole sweep -- this is the safety net against that, not a formality.
 
-use crate::blobs::{self, Blob, CIPHER_SEED_CBC};
+use crate::blobs::{self, Blob, CIPHER_CBC, CIPHER_SEED_CBC, KDF_LEGACY_SHA256};
+use crate::checker::BloomChecker;
 use crate::cpu_oracle::{self, HitKind};
-use crate::gpu::{DecryptHit, GpuOracle};
+use crate::crypto::privkey_to_addresses;
+use crate::gpu::{DecryptHit, GpuOracle, StreamKeyHit};
 use crate::seed_cipher::{seed_encrypt_block, seed_set_key};
 use std::collections::HashSet;
 
@@ -40,6 +42,7 @@ pub fn run(gpu: &GpuOracle) -> Result<(), Box<dyn std::error::Error>> {
     run_known_positive(gpu, &blobs)?;
     run_negative_cross_check(gpu, &blobs, &variants)?;
     run_seed_cross_check(gpu, &blobs)?;
+    run_cbc_bloom_chunk_check(gpu, &blobs)?;
 
     println!("[selftest] PASSED -- GPU kernel output matches the CPU reference oracle.");
     Ok(())
@@ -272,6 +275,90 @@ fn run_seed_cross_check(gpu: &GpuOracle, blobs_list: &[Blob]) -> Result<(), Box<
         "[selftest] SEED-CBC cross-check: synthetic positive vector recovered (Structural), \
          negative probe grid ({} candidates x {} variants x {} blobs) GPU/CPU agree.",
         candidates.len(), seed_variants.len(), blobs_list.len()
+    );
+    Ok(())
+}
+
+/// Gate for `bloom_check_key_chunks` (kernels/aes_kdf_oracle.cu): a CBC/ECB/
+/// SEED_CBC candidate whose decrypt is PKCS7-valid but neither structural
+/// (full dummy pad) nor printable can still, in principle, have real key
+/// bytes in its first 32-byte chunk -- previously only stream-mode (CFB/OFB/
+/// CTR) candidates got Bloom-checked unconditionally; CBC/ECB/SEED_CBC did
+/// not. Builds a synthetic AES-256-CBC blob whose body is [private key
+/// bytes (32, non-printable) | 8 filler bytes (non-printable) | PKCS7 pad=8
+/// (not 16, so NOT structural)], confirms the CPU reference sees no hit at
+/// all (z-score gate correctly rejects it), then confirms the GPU kernel
+/// still recovers the embedded key via the Bloom path.
+fn run_cbc_bloom_chunk_check(gpu: &GpuOracle, _blobs_list: &[Blob]) -> Result<(), Box<dyn std::error::Error>> {
+    use aes::cipher::{BlockEncryptMut, KeyIvInit};
+    type Aes256CbcEnc = cbc::Encryptor<aes::Aes256>;
+
+    let secp = secp256k1::Secp256k1::new();
+    let mut private_key = [0u8; 32];
+    private_key[31] = 1; // scalar 1 -- known address, already covered by crypto::tests
+    let addresses = privkey_to_addresses(&secp, &private_key)
+        .ok_or("scalar 1 must be a valid private key")?;
+
+    let salt: [u8; 8] = *b"blmchunk";
+    let candidate = "bloomchunkcandidate";
+    let (key, iv) = cpu_oracle::derive_key_iv(KDF_LEGACY_SHA256, candidate.as_bytes(), &salt, 32, CIPHER_CBC);
+
+    let mut body = Vec::with_capacity(48);
+    body.extend_from_slice(&private_key); // chunk 0: the raw key, non-printable (mostly 0x00)
+    body.extend_from_slice(&[0xffu8; 8]); // filler, also non-printable
+    body.extend_from_slice(&[8u8; 8]); // valid PKCS7 pad=8 (NOT 16 -- must not be Structural)
+    assert_eq!(body.len(), 48);
+
+    let mut buf = body.clone();
+    let ct_len = buf.len();
+    let ct = Aes256CbcEnc::new_from_slices(&key, &iv)
+        .map_err(|e| format!("CBC init failed: {e}"))?
+        .encrypt_padded_mut::<aes::cipher::block_padding::NoPadding>(&mut buf, ct_len)
+        .map_err(|e| format!("CBC encrypt failed: {e}"))?
+        .to_vec();
+
+    let (cpu_kind, _) = cpu_oracle::try_open(candidate.as_bytes(), KDF_LEGACY_SHA256, 32, CIPHER_CBC, &salt, &ct);
+    if !matches!(cpu_kind, HitKind::None) {
+        return Err(format!(
+            "test vector construction bug: expected the CPU reference to see no z-score/structural \
+             hit at all (this test exists specifically to prove the Bloom path catches what the \
+             printable gate misses), got {cpu_kind:?}"
+        )
+        .into());
+    }
+
+    let bloom = BloomChecker::from_hash160_list(&[addresses.compressed_hash160]);
+    let blob = Blob { tag: "BLOOM_CHUNK_SELFTEST", salt, ciphertext: ct };
+    let candidates = vec![candidate.to_string()];
+    let variant = (KDF_LEGACY_SHA256, 32, CIPHER_CBC);
+
+    let mut stream_hits: Vec<StreamKeyHit> = Vec::new();
+    gpu.scan(
+        &candidates,
+        &HashSet::new(),
+        std::slice::from_ref(&blob),
+        std::slice::from_ref(&variant),
+        Some(&bloom),
+        |_| {},
+        |hit| stream_hits.push(*hit),
+        |_, _, _| {},
+        |_| {},
+        &std::sync::atomic::AtomicBool::new(false),
+    )?;
+
+    let found = stream_hits.iter().find(|h| h.chunk_index == 0 && h.private_key == private_key);
+    if found.is_none() {
+        return Err(format!(
+            "GPU kernel did NOT recover the embedded key via bloom_check_key_chunks on a non-\
+             printable, non-structural CBC body -- the CBC/ECB/SEED_CBC Bloom-chunk path is broken. \
+             stream_hits: {stream_hits:?}"
+        )
+        .into());
+    }
+
+    println!(
+        "[selftest] CBC Bloom-chunk check: GPU recovered a raw key embedded in a non-printable, \
+         non-structural CBC body (CPU z-score gate correctly saw no hit at all)."
     );
     Ok(())
 }

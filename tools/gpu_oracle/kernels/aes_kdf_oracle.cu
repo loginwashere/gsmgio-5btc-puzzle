@@ -991,6 +991,42 @@ extern "C" __global__ void blob_init(const uint8_t* salts, const uint8_t* cts,
     }
 }
 
+// Bloom-checks the first two 32-byte chunks (half/better_half) of a
+// decrypted buffer as raw private-key material, regardless of what the
+// printable/structural gate made of it -- a wrong-looking (non-printable,
+// non-full-dummy-pad) body can still happen to BE a real key. Shared by the
+// CBC/ECB/SEED_CBC branch (weak/strong/no-hit bodies -- structural hits are
+// excluded by the caller, see below) and the stream-mode branch, so there is
+// exactly one on-device "raw bytes -> hash160 -> Bloom" code path.
+__device__ __forceinline__ void bloom_check_key_chunks(
+    const uint8_t* plaintext, uint32_t buf_len, uint32_t idx, uint32_t v, uint32_t b,
+    const uint64_t* bloom_bits, uint64_t bloom_m, uint32_t bloom_k,
+    StreamKeyHit* stream_hits, uint32_t* stream_hit_count, uint32_t stream_hit_capacity) {
+    if (bloom_m == 0) return;
+    uint32_t chunk_bound = buf_len < 64u ? buf_len : 64u;
+    for (uint32_t chunk_index = 0; chunk_index * 32u + 32u <= chunk_bound; chunk_index++) {
+        uint8_t compressed[20], uncompressed[20];
+        derive_hash160_both(plaintext + chunk_index * 32u, compressed, uncompressed);
+        for (int at = 0; at < 2; at++) {
+            const uint8_t* h160 = (at == 0) ? compressed : uncompressed;
+            if (bloom_check(bloom_bits, bloom_m, bloom_k, h160)) {
+                uint32_t slot = atomicAdd(stream_hit_count, 1);
+                if (slot < stream_hit_capacity) {
+                    stream_hits[slot].candidate_idx = idx;
+                    stream_hits[slot].variant_idx = v;
+                    stream_hits[slot].blob_idx = b;
+                    stream_hits[slot].chunk_index = chunk_index;
+                    stream_hits[slot].address_type = (uint32_t)at;
+                    for (int bi = 0; bi < 32; bi++) {
+                        stream_hits[slot].private_key[bi] = plaintext[chunk_index * 32u + bi];
+                    }
+                    for (int bi = 0; bi < 20; bi++) stream_hits[slot].hash160[bi] = h160[bi];
+                }
+            }
+        }
+    }
+}
+
 // ============================================================================
 // Main kernel: one thread per candidate keystring; loops over every
 // (variant, blob) pair, exactly mirroring aes_try_open_bytes()'s inner loop.
@@ -1081,6 +1117,19 @@ extern "C" __global__ void aes_kdf_scan(
                     z = printable_z_score(plaintext, body_len);
                     if (z >= PRINTABLE_Z_STRONG) hit_kind = 2;
                     else if (z >= PRINTABLE_Z_WEAK) hit_kind = 1;
+
+                    // Independent of hit_kind above (including hit_kind==0,
+                    // "not even weak"): a PKCS7-valid-but-non-printable,
+                    // non-full-dummy-pad body still might BE real key bytes
+                    // in the first two 32-byte chunks -- same Bloom check
+                    // stream-mode candidates already get unconditionally.
+                    // Structural hits (pad==16, hit_kind==3, handled in the
+                    // branch above) are deliberately excluded here: they
+                    // already get Bloom/API-checked host-side over their
+                    // FULL body via keyshape::process_structural_hit, so
+                    // this would just be a redundant duplicate check.
+                    bloom_check_key_chunks(plaintext, ct_len, idx, v, b, bloom_bits, bloom_m, bloom_k,
+                                            stream_hits, stream_hit_count, stream_hit_capacity);
                 }
             } else {
                 // CFB/OFB/CTR: no padding, whole body goes straight to the
@@ -1099,30 +1148,8 @@ extern "C" __global__ void aes_kdf_scan(
                 // (half/better_half) against the Bloom filter directly,
                 // regardless of what z came out to. A candidate can be BOTH
                 // a z-score None and a stream-key Bloom hit at once.
-                if (bloom_m > 0) {
-                    uint32_t chunk_bound = ct_len < 64u ? ct_len : 64u;
-                    for (uint32_t chunk_index = 0; chunk_index * 32u + 32u <= chunk_bound; chunk_index++) {
-                        uint8_t compressed[20], uncompressed[20];
-                        derive_hash160_both(plaintext + chunk_index * 32u, compressed, uncompressed);
-                        for (int at = 0; at < 2; at++) {
-                            const uint8_t* h160 = (at == 0) ? compressed : uncompressed;
-                            if (bloom_check(bloom_bits, bloom_m, bloom_k, h160)) {
-                                uint32_t slot = atomicAdd(stream_hit_count, 1);
-                                if (slot < stream_hit_capacity) {
-                                    stream_hits[slot].candidate_idx = idx;
-                                    stream_hits[slot].variant_idx = v;
-                                    stream_hits[slot].blob_idx = b;
-                                    stream_hits[slot].chunk_index = chunk_index;
-                                    stream_hits[slot].address_type = (uint32_t)at;
-                                    for (int bi = 0; bi < 32; bi++) {
-                                        stream_hits[slot].private_key[bi] = plaintext[chunk_index * 32u + bi];
-                                    }
-                                    for (int bi = 0; bi < 20; bi++) stream_hits[slot].hash160[bi] = h160[bi];
-                                }
-                            }
-                        }
-                    }
-                }
+                bloom_check_key_chunks(plaintext, ct_len, idx, v, b, bloom_bits, bloom_m, bloom_k,
+                                        stream_hits, stream_hit_count, stream_hit_capacity);
             }
 
             if (hit_kind != 0) {
