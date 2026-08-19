@@ -11,7 +11,7 @@ topics:
   - oracle
   - tooling
   - openssl
-related_phases: [322]
+related_phases: [322, 323]
 ---
 
 # GSMG GPU AES/KDF Oracle
@@ -142,3 +142,19 @@ combinations, expanded via `answer_forms()`/`keystr_forms(newline_variants=
 True)` to 1,247,040 passphrase forms, swept against all 48 (variant, blob)
 pairs (~59.9M decrypt attempts) in 9m27s. **Zero hits** -- not one weak,
 strong, or structural hit anywhere in the space.
+
+## Second sweep: medium-curated Tier 1-3 union, all 4 blobs
+
+See FINDINGS.md Phase 323. Before running anything, audited which oracle(s)
+`wordlists/gsmg/medium_curated_all.txt` (66,433 base candidates, the Tier
+1+2+3 union) had actually already been tested under: Phase 83/90's
+`binary_key_material_backfill.py` covered Tier 1+2 (35,144 candidates)
+against SALPH/P32TRAILING only, using this same 12-variant AES-CBC/KDF scope
+-- but never touched COSMIC/URLBLOB, and Tier 3 (31,297 candidates) had only
+ever been tested under a *different* hypothesis (Phase 164's raw-key oracle,
+no KDF derivation at all), never the password/KDF oracle against any blob.
+Ran the full union against all 4 blobs in one sweep: 588,942 expanded forms,
+~28.3M decrypt attempts, 3m16s. **Zero hits.** Closes real gaps (COSMIC +
+URLBLOB for the whole union; SALPH + P32TRAILING for Tier 3 specifically) and
+confirms (does not newly close) SALPH/P32TRAILING for Tier 1+2, already
+covered by Phase 83/90.
