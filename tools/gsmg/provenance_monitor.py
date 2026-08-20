@@ -31,9 +31,9 @@ Frozen per the user's explicit 2026-08-20 scope:
     URL for the baseline, matching Phase 329's own established safety
     boundary ("all inspection was read-only... nothing from the live
     host was added to the repository").
-  - One-shot only: this writes a single baseline snapshot
-    (provenance_baseline.json). Making it recurring (a scheduled
-    re-check) is explicitly deferred until requested.
+  - Phase 349 adds repeat-safe operation: `--check` compares without writing;
+    `--run` atomically accepts successful observations as the new baseline.
+    Failed queries never erase the last-known-good live or archive state.
 
 Not stored: raw response bytes. Only hashes/metadata are persisted, same
 as Phase 329's own convention.
@@ -84,7 +84,6 @@ ARCHIVE_SOURCE_LABEL = "authentic observation, not proof of creator operation"
 HOSTERJACK_KNOWN_HEAD = "28d33cc"  # FINDINGS Phase 330 (2026-08-01), the
 # most recent of the two commits this project has recorded (supersedes the
 # older 1a27856... reference in doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md).
-HOSTERJACK_KNOWN_HEAD_DATE = "2026-08-01"
 
 USER_AGENT = "gsmg-puzzle-research-provenance-monitor/1.0 (read-only GET; no JS/forms/downloads executed)"
 
@@ -193,10 +192,9 @@ def check_salphaseion_archives():
 
 
 def check_gsmg_root_wayback():
-    """First-ever Wayback CDX check for the bare gsmg.io root (unlike the
-    SalPhaseIon route or the favicon, this project has no prior tracker for
-    it) -- this run establishes the reference set, it cannot yet alert on
-    'newly discovered' since there is nothing earlier to compare against."""
+    """Fetch the collapsed Wayback capture set for the bare gsmg.io root.
+    Comparison with last-known-good state is deliberately handled centrally
+    by assemble_report(), rather than hidden inside this network function."""
     cdx_url = "https://web.archive.org/cdx/search/cdx"
     query = urllib.parse.urlencode({
         "url": FROZEN_URLS["gsmg_io_root"],
@@ -212,13 +210,11 @@ def check_gsmg_root_wayback():
         return {"ok": False, "alert": False, "detail": f"query failed: {exc!r}", "captures": []}
 
     if not rows:
-        return {"ok": True, "alert": False, "first_observation": True, "captures": []}
+        return {"ok": True, "captures": []}
     header, *data = rows
     captures = [dict(zip(header, row)) for row in data]
     return {
-        "ok": True, "alert": False,
-        "first_observation": True,
-        "note": "no prior tracker exists for this exact route; this run establishes the reference set",
+        "ok": True,
         "capture_count": len(captures),
         "captures": captures,
     }
@@ -226,9 +222,8 @@ def check_gsmg_root_wayback():
 
 def check_hosterjack_repo():
     """GitHub's commit history is the passive, content-addressed archive
-    index for a git repo -- read-only API call, nothing executed. Compares
-    current HEAD against the most recent already-known reference
-    (HOSTERJACK_KNOWN_HEAD, FINDINGS Phase 330)."""
+    index for a git repo -- read-only API call, nothing executed. Fetch only;
+    assemble_report() compares HEAD with last-known-good state."""
     api_url = "https://api.github.com/repos/HosterjackAGV/gsmg-5btc-puzzle/commits?per_page=1"
     request = urllib.request.Request(api_url, headers={
         "User-Agent": USER_AGENT,
@@ -245,19 +240,10 @@ def check_hosterjack_repo():
 
     head_sha = commits[0]["sha"]
     head_date = commits[0]["commit"]["committer"]["date"]
-    changed = not head_sha.startswith(HOSTERJACK_KNOWN_HEAD)
     return {
         "ok": True,
-        "alert": changed,
-        "known_head": HOSTERJACK_KNOWN_HEAD,
-        "known_head_date": HOSTERJACK_KNOWN_HEAD_DATE,
         "current_head": head_sha[:12],
         "current_head_date": head_date,
-        "detail": (
-            f"new commits since Phase 330's {HOSTERJACK_KNOWN_HEAD} ({HOSTERJACK_KNOWN_HEAD_DATE})"
-            if changed else
-            f"HEAD unchanged since Phase 330's review ({HOSTERJACK_KNOWN_HEAD})"
-        ),
     }
 
 
@@ -265,60 +251,154 @@ def check_hosterjack_repo():
 # Orchestration
 # ---------------------------------------------------------------------------
 
-def run_baseline(previous=None):
+def _previous_live(previous, name):
+    """Read both Phase-347's complete-report schema and a bare baseline map.
+    The old implementation incorrectly queried the complete report at its top
+    level, causing every repeat run to miss changed bytes."""
+    if not previous:
+        return None
+    baseline = previous.get("baseline", previous)
+    return baseline.get(name, {}).get("live")
+
+
+def _previous_archive(previous, name):
+    if not previous:
+        return None
+    state = previous.get("archive_baseline", {})
+    if name in state:
+        return state[name]
+    # Backward-compatible migration from a successful Phase-347 report.
+    old = previous.get("archive_checks", {}).get(name)
+    return old if old and old.get("ok") else None
+
+
+def _capture_id(capture):
+    return tuple(capture.get(field) for field in ("timestamp", "digest", "statuscode", "mimetype"))
+
+
+def assemble_report(live_checks, archive_checks, previous=None):
+    """Pure state transition used by both the live driver and offline tests.
+
+    `baseline` and `archive_baseline` are last-known-good state. `checks`
+    records this attempt. An operational failure is never interpreted as a
+    content change and never replaces a successful reference.
+    """
     baseline = {}
-    for name, url in FROZEN_URLS.items():
-        try:
-            baseline[name] = {
-                "url": url,
-                "attribution": ATTRIBUTION[name],
-                "attribution_note": ARCHIVE_SOURCE_LABEL if name != "hosterjack_repo" else "community-sourced, not creator-authenticated",
-                "live": fetch_live(url),
-            }
-        except Exception as exc:  # noqa: BLE001 -- network failure is operational, not a finding
-            baseline[name] = {
-                "url": url, "attribution": ATTRIBUTION[name],
-                "live": None, "fetch_error": repr(exc),
-            }
-
-    archive = {
-        "salphaseion_route": check_salphaseion_archives(),
-        "gsmg_io_root": check_gsmg_root_wayback(),
-        "hosterjack_repo": check_hosterjack_repo(),
-    }
-
     changed_bytes_alerts = []
-    if previous:
-        for name, entry in baseline.items():
-            if entry.get("live") is None:
-                continue
-            prior = previous.get(name, {}).get("live")
-            if prior and prior.get("raw_sha256") != entry["live"]["raw_sha256"]:
-                changed_bytes_alerts.append({
-                    "target": name,
-                    "prior_sha256": prior["raw_sha256"],
-                    "current_sha256": entry["live"]["raw_sha256"],
-                    "prior_observed_at": prior["observed_at"],
+    informational_changes = []
+    operational_errors = []
+    for name, url in FROZEN_URLS.items():
+        current = live_checks.get(name)
+        prior = _previous_live(previous, name)
+        entry = {
+            "url": url,
+            "attribution": ATTRIBUTION[name],
+            "attribution_note": ARCHIVE_SOURCE_LABEL if name != "hosterjack_repo" else "community-sourced, not creator-authenticated",
+            "live": current if current is not None else prior,
+            "last_attempt": {"ok": current is not None, "attempted_at": _utcnow_iso()},
+        }
+        if current is None:
+            error = archive_checks.get("live_errors", {}).get(name, "live fetch failed")
+            entry["last_attempt"]["error"] = error
+            operational_errors.append({"target": name, "source": "live_fetch", "detail": error})
+        elif prior and prior.get("raw_sha256") != current.get("raw_sha256"):
+            change = {
+                "target": name,
+                "prior_sha256": prior["raw_sha256"],
+                "current_sha256": current["raw_sha256"],
+                "prior_normalized_sha256": prior.get("normalized_sha256"),
+                "current_normalized_sha256": current.get("normalized_sha256"),
+                "prior_observed_at": prior["observed_at"],
+            }
+            if name == "hosterjack_repo":
+                # github.com repository HTML carries dynamic presentation
+                # state. The passive commit API below is content-addressed and
+                # authoritative for repository movement; HTML drift alone is
+                # retained for diagnosis but is not puzzle evidence/an alert.
+                informational_changes.append({
+                    **change,
+                    "reason": "dynamic GitHub HTML; repository movement is gated by commit HEAD",
                 })
+            else:
+                changed_bytes_alerts.append(change)
+        baseline[name] = entry
 
-    new_capture_alerts = [
-        {"target": target, **detail}
-        for target, detail in {
-            "salphaseion_route_wayback": archive["salphaseion_route"]["wayback"],
-            "salphaseion_route_urlscan": archive["salphaseion_route"]["urlscan"],
-            "hosterjack_repo": archive["hosterjack_repo"],
-        }.items()
-        if detail and detail.get("alert")
-    ]
+    archive_state = {}
+    new_capture_alerts = []
+
+    root_current = archive_checks["gsmg_io_root"]
+    root_prior = _previous_archive(previous, "gsmg_io_root")
+    if root_current.get("ok"):
+        current_ids = {_capture_id(row) for row in root_current.get("captures", [])}
+        prior_ids = ({_capture_id(row) for row in root_prior.get("captures", [])}
+                     if root_prior and root_prior.get("ok") else None)
+        new_ids = sorted(current_ids - prior_ids) if prior_ids is not None else []
+        root_state = {**root_current, "alert": bool(new_ids), "new_capture_count": len(new_ids)}
+        if prior_ids is None:
+            root_state["first_successful_observation"] = True
+        if new_ids:
+            new_capture_alerts.append({
+                "target": "gsmg_io_root_wayback",
+                "new_capture_count": len(new_ids),
+                "new_capture_ids": [list(row) for row in new_ids],
+            })
+        archive_state["gsmg_io_root"] = root_state
+    else:
+        archive_state["gsmg_io_root"] = root_prior
+        operational_errors.append({
+            "target": "gsmg_io_root", "source": "wayback",
+            "detail": root_current.get("detail", "Wayback query failed"),
+        })
+
+    host_current = archive_checks["hosterjack_repo"]
+    host_prior = _previous_archive(previous, "hosterjack_repo")
+    if host_current.get("ok"):
+        known_head = ((host_prior or {}).get("current_head")
+                      or (host_prior or {}).get("known_head") or HOSTERJACK_KNOWN_HEAD)
+        changed = not host_current["current_head"].startswith(known_head)
+        host_state = {
+            **host_current,
+            "previous_head": known_head,
+            "alert": changed,
+            "detail": (f"new commits since accepted HEAD {known_head}"
+                       if changed else f"HEAD unchanged from accepted reference {known_head}"),
+        }
+        if changed:
+            new_capture_alerts.append({"target": "hosterjack_repo", **host_state})
+        archive_state["hosterjack_repo"] = host_state
+    else:
+        archive_state["hosterjack_repo"] = host_prior
+        operational_errors.append({
+            "target": "hosterjack_repo", "source": "github_commits",
+            "detail": host_current.get("detail", "GitHub query failed"),
+        })
+
+    salph = archive_checks["salphaseion_route"]
+    for source in ("wayback", "urlscan"):
+        detail = salph.get(source)
+        if detail and detail.get("alert"):
+            new_capture_alerts.append({"target": f"salphaseion_route_{source}", **detail})
+        elif detail and not detail.get("ok"):
+            operational_errors.append({
+                "target": "salphaseion_route", "source": source,
+                "detail": detail.get("detail", "archive query failed"),
+            })
 
     report = {
+        "schema_version": 2,
         "generated_at": _utcnow_iso(),
         "frozen_urls": FROZEN_URLS,
         "baseline": baseline,
-        "archive_checks": archive,
+        "archive_baseline": archive_state,
+        "checks": {
+            "live": live_checks,
+            "archive": {k: v for k, v in archive_checks.items() if k != "live_errors"},
+        },
         "alerts": {
             "changed_bytes": changed_bytes_alerts,
             "newly_discovered_captures": new_capture_alerts,
+            "informational_changes": informational_changes,
+            "operational_errors": operational_errors,
         },
         # Per the user's explicit success bar: new content, a new historical
         # variant, or creator-authenticated attribution -- not merely a
@@ -328,8 +408,29 @@ def run_baseline(previous=None):
     return report
 
 
+def run_baseline(previous=None):
+    live_checks = {}
+    live_errors = {}
+    for name, url in FROZEN_URLS.items():
+        try:
+            live_checks[name] = fetch_live(url)
+        except Exception as exc:  # noqa: BLE001 -- operational, not a finding
+            live_checks[name] = None
+            live_errors[name] = repr(exc)
+    archive_checks = {
+        "salphaseion_route": check_salphaseion_archives(),
+        "gsmg_io_root": check_gsmg_root_wayback(),
+        "hosterjack_repo": check_hosterjack_repo(),
+        "live_errors": live_errors,
+    }
+    return assemble_report(live_checks, archive_checks, previous=previous)
+
+
 def write_baseline(report, path=BASELINE_PATH):
-    Path(path).write_text(json.dumps(report, indent=2, default=repr))
+    path = Path(path)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(report, indent=2, default=repr) + "\n")
+    temporary.replace(path)
     return path
 
 
@@ -443,7 +544,103 @@ def self_test():
     finally:
         urllib.request.urlopen = original_urlopen
 
-    # 8. No candidate literal or WIF-shaped string anywhere in this
+    # 8. End-to-end repeat-state controls. These use the complete on-disk
+    #    report shape (baseline nested under the report), specifically
+    #    preventing Phase 347's wrong-level previous.get(name) regression.
+    def live_result(name, digest):
+        return {
+            "requested_url": FROZEN_URLS[name], "final_url": FROZEN_URLS[name],
+            "status": 200, "redirect_chain": [], "raw_sha256": digest,
+            "normalized_sha256": digest, "content_length": 10,
+            "observed_at": "2026-08-20T00:00:00Z", "source_class": "live_fetch",
+        }
+
+    capture_1 = {"timestamp": "20200101000000", "digest": "A", "statuscode": "200", "mimetype": "text/html"}
+    capture_2 = {"timestamp": "20210101000000", "digest": "B", "statuscode": "200", "mimetype": "text/html"}
+    prior = {
+        "schema_version": 2,
+        "baseline": {
+            name: {"live": live_result(name, character * 64)}
+            for name, character in zip(FROZEN_URLS, "abc")
+        },
+        "archive_baseline": {
+            "gsmg_io_root": {"ok": True, "captures": [capture_1]},
+            "hosterjack_repo": {"ok": True, "current_head": "28d33ccba517"},
+        },
+    }
+    same_live = {
+        name: live_result(name, character * 64)
+        for name, character in zip(FROZEN_URLS, "abc")
+    }
+    quiet_archives = {
+        "salphaseion_route": {
+            "wayback": {"ok": True, "alert": False},
+            "urlscan": {"ok": True, "alert": False},
+        },
+        "gsmg_io_root": {"ok": True, "captures": [capture_1]},
+        "hosterjack_repo": {"ok": True, "current_head": "28d33ccba517", "current_head_date": "2026-08-01"},
+        "live_errors": {},
+    }
+    unchanged = assemble_report(same_live, quiet_archives, previous=prior)
+    assert unchanged["alerts"]["changed_bytes"] == []
+    assert unchanged["alerts"]["newly_discovered_captures"] == []
+    assert unchanged["alerts"]["operational_errors"] == []
+
+    changed_live = dict(same_live)
+    changed_live["gsmg_io_root"] = live_result("gsmg_io_root", "d" * 64)
+    changed = assemble_report(changed_live, quiet_archives, previous=prior)
+    assert [row["target"] for row in changed["alerts"]["changed_bytes"]] == ["gsmg_io_root"]
+
+    dynamic_github_live = dict(same_live)
+    dynamic_github_live["hosterjack_repo"] = live_result("hosterjack_repo", "e" * 64)
+    dynamic_github = assemble_report(dynamic_github_live, quiet_archives, previous=prior)
+    assert dynamic_github["alerts"]["changed_bytes"] == []
+    assert [row["target"] for row in dynamic_github["alerts"]["informational_changes"]] == ["hosterjack_repo"]
+    assert not dynamic_github["new_evidence_found"]
+
+    new_capture_archives = {**quiet_archives, "gsmg_io_root": {"ok": True, "captures": [capture_1, capture_2]}}
+    new_capture = assemble_report(same_live, new_capture_archives, previous=prior)
+    root_alert = next(row for row in new_capture["alerts"]["newly_discovered_captures"]
+                      if row["target"] == "gsmg_io_root_wayback")
+    assert root_alert["new_capture_count"] == 1
+
+    failed_live = dict(same_live)
+    failed_live["gsmg_io_root"] = None
+    failed_archives = {
+        **quiet_archives,
+        "gsmg_io_root": {"ok": False, "detail": "planted 503", "captures": []},
+        "hosterjack_repo": {"ok": False, "detail": "planted timeout"},
+        "live_errors": {"gsmg_io_root": "planted fetch failure"},
+    }
+    failed = assemble_report(failed_live, failed_archives, previous=prior)
+    assert failed["baseline"]["gsmg_io_root"]["live"] == prior["baseline"]["gsmg_io_root"]["live"]
+    assert failed["archive_baseline"]["gsmg_io_root"] == prior["archive_baseline"]["gsmg_io_root"]
+    assert failed["archive_baseline"]["hosterjack_repo"] == prior["archive_baseline"]["hosterjack_repo"]
+    assert len(failed["alerts"]["operational_errors"]) == 3
+    assert not failed["new_evidence_found"], "transport failure is not puzzle evidence"
+
+    host_changed_archives = {
+        **quiet_archives,
+        "hosterjack_repo": {"ok": True, "current_head": "ffffffffffff", "current_head_date": "2026-09-01"},
+    }
+    host_changed = assemble_report(same_live, host_changed_archives, previous=prior)
+    assert any(row["target"] == "hosterjack_repo"
+               for row in host_changed["alerts"]["newly_discovered_captures"])
+    # Once that report is explicitly accepted as the baseline, the same HEAD
+    # is quiet on the next check rather than alerting forever.
+    host_quiet = assemble_report(same_live, host_changed_archives, previous=host_changed)
+    assert not any(row["target"] == "hosterjack_repo"
+                   for row in host_quiet["alerts"]["newly_discovered_captures"])
+
+    # 9. Atomic write/load round-trip leaves no temporary file behind.
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmpdir:
+        test_path = Path(tmpdir) / "baseline.json"
+        write_baseline(unchanged, test_path)
+        assert load_baseline(test_path) == unchanged
+        assert not test_path.with_suffix(".json.tmp").exists()
+
+    # 10. No candidate literal or WIF-shaped string anywhere in this
     #    module's own text content -- same mechanical scan as every
     #    sibling phase this session.
     import re
@@ -458,31 +655,44 @@ def self_test():
     print("[*] self-test OK (fully offline, no network call): frozen 3-URL scope verified against real "
           "commit/doc citations; attribution policy fixed and non-vacuous; whitespace normalization "
           "matches page_structure_audit's own convention; redirect-chain recorder proven; changed-bytes "
-          "alert logic proven with planted match/mismatch controls; Hosterjack HEAD-comparison logic "
-          "proven; network-isolation of self_test() confirmed by an exploding urlopen guard; no "
-          "candidate literal or WIF-shaped string in this module's own source")
+          "alert logic proven with complete nested-report unchanged/changed controls; root new-capture "
+          "detection proven; live/root/Hosterjack failures preserve last-known-good state; accepted "
+          "Hosterjack HEAD advances without repeat alerts while dynamic GitHub HTML stays informational; "
+          "atomic write/load proven; network-isolation "
+          "of self_test() confirmed by an exploding urlopen guard; no candidate literal or WIF-shaped "
+          "string in this module's own source")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--self-test", action="store_true")
-    parser.add_argument("--run", action="store_true", help="Perform the one-shot live baseline capture.")
+    action = parser.add_mutually_exclusive_group()
+    action.add_argument("--run", action="store_true",
+                        help="Compare live state and atomically accept successful observations as baseline.")
+    action.add_argument("--check", action="store_true",
+                        help="Compare live state read-only; never write or accept a new baseline.")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
 
     if args.self_test:
         self_test()
         return
-    if args.run:
+    if args.run or args.check:
         previous = load_baseline()
         report = run_baseline(previous=previous)
-        write_baseline(report)
+        if args.run:
+            write_baseline(report)
         if args.json:
             print(json.dumps(report, indent=2, default=repr))
         else:
-            print(f"[*] baseline written to {BASELINE_PATH}")
+            if args.run:
+                print(f"[*] baseline atomically written to {BASELINE_PATH}")
+            else:
+                print("[*] read-only check complete; baseline not modified")
             print(f"[*] alerts: {len(report['alerts']['changed_bytes'])} changed-bytes, "
-                  f"{len(report['alerts']['newly_discovered_captures'])} newly-discovered-capture")
+                  f"{len(report['alerts']['newly_discovered_captures'])} newly-discovered-capture, "
+                  f"{len(report['alerts']['informational_changes'])} informational-change, "
+                  f"{len(report['alerts']['operational_errors'])} operational-error")
         return
     parser.print_help()
 

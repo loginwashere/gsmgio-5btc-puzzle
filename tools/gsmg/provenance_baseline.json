@@ -1,5 +1,6 @@
 {
-  "generated_at": "2026-08-20T14:26:05Z",
+  "schema_version": 2,
+  "generated_at": "2026-08-20T15:35:29Z",
   "frozen_urls": {
     "gsmg_io_root": "https://gsmg.io/",
     "salphaseion_route": "https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32",
@@ -18,8 +19,12 @@
         "raw_sha256": "2f896807a859e2f71a2f6e1e8277986af73b80dc0dd79a685a67c7f7f8c3303b",
         "normalized_sha256": "5a3e6521f5f932878de7e3833d3b39df886f49f22c028854ba84a1d723f5036c",
         "content_length": 35785,
-        "observed_at": "2026-08-20T14:24:53Z",
+        "observed_at": "2026-08-20T15:34:31Z",
         "source_class": "live_fetch"
+      },
+      "last_attempt": {
+        "ok": true,
+        "attempted_at": "2026-08-20T15:35:29Z"
       }
     },
     "salphaseion_route": {
@@ -34,8 +39,12 @@
         "raw_sha256": "a83d3de7810f26b19b4965339b76d403e44f6b6877e5d7de2555480ca1779d77",
         "normalized_sha256": "5a6a1d41f82bbfeb9d8e850a7a660a919a4e1678e16d6c5a6a108bdfad66446d",
         "content_length": 4536,
-        "observed_at": "2026-08-20T14:24:54Z",
+        "observed_at": "2026-08-20T15:34:31Z",
         "source_class": "live_fetch"
+      },
+      "last_attempt": {
+        "ok": true,
+        "attempted_at": "2026-08-20T15:35:29Z"
       }
     },
     "hosterjack_repo": {
@@ -47,48 +56,1796 @@
         "final_url": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
         "status": 200,
         "redirect_chain": [],
-        "raw_sha256": "3d4276583926e403912dbf4d3e0d994c53e8caa8d6e97ab7ff199d4747756b6d",
-        "normalized_sha256": "e1a6186b954b0f22fa7bdb576013b5f1f2b6a42042ccd106cf4bc733cfe8de0d",
-        "content_length": 290663,
-        "observed_at": "2026-08-20T14:24:54Z",
+        "raw_sha256": "d1e6151fb423f67451941723a59d3e63469a26a9213a66516bdc4091b16decb6",
+        "normalized_sha256": "226b01ea7f1142f4f3dfd5bac7549138fb862c59c628d320ad9b3b2ec8a9136f",
+        "content_length": 291961,
+        "observed_at": "2026-08-20T15:34:32Z",
         "source_class": "live_fetch"
+      },
+      "last_attempt": {
+        "ok": true,
+        "attempted_at": "2026-08-20T15:35:29Z"
       }
     }
   },
-  "archive_checks": {
-    "salphaseion_route": {
-      "wayback": {
-        "ok": true,
-        "alert": false,
-        "known_capture_count": 5,
-        "detail": "Wayback CDX history unchanged from the 5 already-authenticated captures"
-      },
-      "urlscan": {
-        "ok": true,
-        "alert": false,
-        "known_scan_count": 12,
-        "detail": "urlscan search result set unchanged from the 12 already-authenticated scans"
-      }
-    },
+  "archive_baseline": {
     "gsmg_io_root": {
-      "ok": false,
+      "ok": true,
+      "capture_count": 140,
+      "captures": [
+        {
+          "timestamp": "20190422131627",
+          "digest": "XTIVARJWXJN3YBQY5XBYFVDJBIUVB73M",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20190826064914",
+          "digest": "EO5W4FQAYWD4I2RGYKQS7KXHVV5HMPSD",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20191021120855",
+          "digest": "Z2MFJQSULSTXKJDUVAZI6KGJBDYWDMI5",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20191118211712",
+          "digest": "L3EUVFJZDEIJXOHJK5MOLRNTFGRPTJ7M",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20200808004015",
+          "digest": "ESF5XJ2SXSPJVB7QJ32UA676MOOPLLL4",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20200924190218",
+          "digest": "I6VZJAJMWPNRIWTHWEDARAV2PRPVBJPV",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20200926005213",
+          "digest": "CUAU66277MWR3KEY2XFJR4VLYJ4UMVMU",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20200928082611",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20201021064350",
+          "digest": "PVRP3FKPGOSJARUU3GEC7XEYC3DCBMPI",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20201028130318",
+          "digest": "MTYIGC3VCPL6T3QIAQ33V3MMAXQBJ3LY",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20201029230724",
+          "digest": "WDGB7AXEYSGQS6EGGMUQJDWVENL25WVG",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20201106121455",
+          "digest": "HQWJCNMN3LUL3EEAVFIOS3LGZNYLFB4K",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20201106121456",
+          "digest": "AYOWRN36XU2VMFU6JKGNKGYCFFB72COL",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20201106121459",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20201128214958",
+          "digest": "ZF5QJCLAXCY7B5X3NCO7HIIDJ3M4DYTR",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20201204143931",
+          "digest": "74PFCLHZEQ6UBXPB3Z5T2PQ7EYV6HRVM",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210120182620",
+          "digest": "OJDYBHFG4QCZGL7AZWAAQYCWUFU6CH5T",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210124161540",
+          "digest": "DRHHMDCGCHHSYJEGWY3BMALRGWCNGJZW",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210227162102",
+          "digest": "CNU5U6UGCLLCPXIGM7ZPE5R6F2GHJABB",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210423105710",
+          "digest": "WK3VF76D2W36Q7HJCLUZKTB7TGTETHTJ",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210430085219",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20210430085219",
+          "digest": "2OMA5YUUC7MMDR2PONJXVMFFWORUZPO5",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210508105317",
+          "digest": "WAUF772YJD6B7ZB4GASILNUOODKAY6TK",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210509183534",
+          "digest": "Y7XWFWIRPN5DTSFV5ESOVYBA537SVKN4",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210613115323",
+          "digest": "3EUZBJQKLQN7EUJJMZP24D3HDN2WESLN",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210615084548",
+          "digest": "64NYEPKALOSEGMRENSJNLXTGUC3MMT2Z",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210701101011",
+          "digest": "IUFAPXIDLSXYM3DFMZ3GJPJHUQCE573S",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210724051151",
+          "digest": "TP5DYL5MC26TV2VUI7T76ZSZLB2YU2LY",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210805162432",
+          "digest": "Y5WRYH2HYM4KEQQN4IKK7Q4G3G4GFUQT",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210820193943",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20210924202105",
+          "digest": "S7DNMEGCSELON25MJ55X3GVOPHPSR56L",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20210926222834",
+          "digest": "YJ3BB56WECHIGHXD7RCBNQJWHWICYCJD",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20211027103318",
+          "digest": "MG3TVUYH4CJ6M4755SJFNA5B2CTRGQ2P",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20211203013427",
+          "digest": "6QTMPKYRPSJDCLSDZFAE6EECBI2W5FL5",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20211205065234",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20211208144827",
+          "digest": "3UIMIPZABVALS4AXAHGBRJJRMV4QJLNO",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220119051337",
+          "digest": "QIA5QL6SVE2BSMQVHQ76QVTD25O6FZ52",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220125010225",
+          "digest": "HI323MVIZSCT4CH3RWZS5YRJXETOGJIA",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220126094004",
+          "digest": "TPCNUASAOPHFN2MCR3FK2HNJIJLDXP55",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220127133311",
+          "digest": "NXZBQKGQGWOM6HDKHSVP6R5AMAWBRUAL",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220418105210",
+          "digest": "YPGWDK2ZV3O2XQ7YHGVRY7Y7GL7ZJ525",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220523011655",
+          "digest": "JMUYNOCY6BRQJVWZHYDCIKVJHXZIRFGC",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220524222051",
+          "digest": "H3USJRHBOGSRATGG2RCXQK7I5T7K6F2M",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220704032901",
+          "digest": "TDF2MKZKIPYAKVE2AOIWYUMA6MVVCQG5",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220814071533",
+          "digest": "I2YJP2JBWAZ6IUUZYC32MNJHY24HCGZP",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220815210358",
+          "digest": "I7JU4RQFBWE5DLSDDFHSMCN3WZZDHANU",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220821211814",
+          "digest": "E7LVJLINDVMMMBDZNRTCT7PTPHELYV6L",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20220921125640",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20220929213156",
+          "digest": "GHI24JECJTK5FMZUJUWIXWGNSKE27NXX",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20221005092537",
+          "digest": "QAKKZ5JWC434AKD2N3O2MXRLV5GDTERU",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20221005104252",
+          "digest": "VE5SJJAMMDIMVCNWQYR4Q2O2DKFNCXLZ",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20221118035443",
+          "digest": "TQCYBBUBF57OCXAYYLSAV4RZ7VZKYOJ2",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20221127162029",
+          "digest": "FVWTHROZKCU4GCGTKMGXQ5WLLTBJIMU7",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20221206161905",
+          "digest": "CQ5JQUP6SITINLDU57TH3O7AHDWNXHA6",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20221223013850",
+          "digest": "CCCYAA7M5RNU4HMJSBOCQHYEMTOHIAXZ",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230118092412",
+          "digest": "7NNBZIX5O7GWBB4UR7TH2ZBCDZO5UOFZ",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230203235558",
+          "digest": "7XB3QN4M3TY4B3T5VRLZDK2KGFQ3ENK5",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230321131932",
+          "digest": "RTKRS4VICX4ZBQRLLATP55I73IH4JSOK",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230327093428",
+          "digest": "UGY6EDRD6WWPI4WPUY3SKJYGXDL46XKO",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230329201732",
+          "digest": "4ZOSAGBIFOWPLB44EPRQ7HREJOBLWEO4",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230401161801",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20230404121115",
+          "digest": "AT5WW56K2ME337ABXROQ4I3LPX6ZYLAY",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230503105150",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20230517021127",
+          "digest": "Y7SA2AVCZBXUZDUH2YBLEZL6U3RWROL4",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230609220625",
+          "digest": "7R4QDGC6MRKEQXH5QH2DVQLM6SS5URN2",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230922223140",
+          "digest": "P5DRPJQAPUSDX74I5IN2WVZOMQBB7WNB",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20230923095735",
+          "digest": "BHEI4XHJUHL2KQ6XAQZE4BBKZC5ABP6E",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20231011221458",
+          "digest": "BSDLZONZNV5SLEOKSF35SOMCN7QC3EFA",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20231128233612",
+          "digest": "KPW4HF4RMAQ4AJPOIUGVCGUGO7NAY5WW",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240201013745",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20240205104834",
+          "digest": "IJWRG5SLJ2DEXGLKZZKSZDP3NYFLGR74",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240226183209",
+          "digest": "EZ2STP36SM5WID5IDH43SC5CLU5Q7ZDH",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240301063222",
+          "digest": "QXVZ4LCHMSR6SADTE4CJK3V45YV424ML",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240330211510",
+          "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+          "statuscode": "301",
+          "mimetype": "unk"
+        },
+        {
+          "timestamp": "20240330211510",
+          "digest": "MDXCDOTUIZWJLN6VUNQEU5GSRXLBGQHL",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240413035027",
+          "digest": "7IKEFVOB4UHS7MJBAS2UQX25FJORTSYP",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240518140248",
+          "digest": "G7Z4K4TXWQUIWDB4C5GZ2626SRKR5ZPA",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240528153749",
+          "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+          "statuscode": "301",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240528155929",
+          "digest": "YVDV5CCTEZP667RHCJ67IRNFZGLD6LGQ",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240622025133",
+          "digest": "JGG7NFEG7UWGMAQVEQ6MEGLVBOIMMZON",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240719084256",
+          "digest": "G5SJMQTDLYZ5PMN4PQ4EADXWQDR3BNHB",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240804080037",
+          "digest": "6E3OCT6Z4FHY57JPOFBQVLPJVNOWQQHE",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240917110917",
+          "digest": "QYQX45QBNNEJZ2IULHKC53MGW5OKBFMZ",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240923124826",
+          "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+          "statuscode": "301",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240923124826",
+          "digest": "VHURL7DK5TA56WD4DQ6CAD6S6FTHRNAW",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240923124827",
+          "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+          "statuscode": "301",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240923124828",
+          "digest": "2MPU3S67VIG2IBDXW7IPUT5AJDYRCDOR",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20240923124835",
+          "digest": "C22WLKTSQ3TOCCFAH6SZ25BWK4WSZAO7",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20241002160519",
+          "digest": "U72IE4VQ3NAZ2DSSNGB23KGSXZZ4ZZQW",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20241012122704",
+          "digest": "KQJUC42RPMRVEWAMLBBASO6VDH37GVKN",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20241121123349",
+          "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+          "statuscode": "301",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20241121123349",
+          "digest": "W7DZ6R7TBON3PESSKCK7YDFIVV6UTFPV",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20241122004432",
+          "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+          "statuscode": "-",
+          "mimetype": "warc/revisit"
+        },
+        {
+          "timestamp": "20241123031716",
+          "digest": "AB5LBTKLFRH6MNMTXZQBGANGC3OGMP3Y",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20241209191118",
+          "digest": "52GUVYRBUQ3D4NUFSB4UBJI665SNPP3E",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250114023950",
+          "digest": "JLIPSDF3CO5CMFYEATUTYIK3ICOJDK4E",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250206164236",
+          "digest": "IXARMCYLKCMDOEEYUAKZJ35NKICUXIGX",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250211092119",
+          "digest": "FK2QZS6BWZPNLLEM76SQRDSXEWDPHTDA",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250212160701",
+          "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+          "statuscode": "301",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250212160701",
+          "digest": "3HGBAUERA6XPZB3227FZNVLX2A5TS3RL",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250319133109",
+          "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+          "statuscode": "301",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250319133109",
+          "digest": "7LYDL3C3UHAXBUJC7TWBM5KXAO3UBKCM",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250319212208",
+          "digest": "ZYPVX5BAM6WYRAQIG2J7DZJH2S3CW4QD",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250320022553",
+          "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+          "statuscode": "301",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250320022553",
+          "digest": "IP2OOBKM3CJMI567FJ3BJEBIXEUPZ7ZK",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250321011943",
+          "digest": "YFRFPDIPOLLB45YFSR3RXQLCI7FBFUET",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250326133350",
+          "digest": "J25AWF35NRC7JMJSI2U2CVJUXYYACB7U",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250329184353",
+          "digest": "HSH5HNTAGSRWAZ43BTFLPJI6CT7OSQNP",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250407015711",
+          "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+          "statuscode": "301",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250410224406",
+          "digest": "J6RL36BZFEJDT23MCEUQMCWTFHMCRLFT",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250421120213",
+          "digest": "G5YDPTVOPBIT2GEKH4BU4C63VD4FVPCQ",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250519153235",
+          "digest": "P7I745JT7KSCPGSTRJEY4EMZH42MQ7R3",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250617234751",
+          "digest": "ILASNYX3MHON5M55OATSJCWYC5ZY7NIW",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250710112609",
+          "digest": "QB32G5EZWYQLK3QV7N22ADNGCR2WYJEK",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250814210454",
+          "digest": "GDWAFDSXSHZ4LFCM3TH3EE45VB3PTX3P",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250827070647",
+          "digest": "XIWN72BD7QMIMI5QRSDLYV2XC6ALM4G2",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250828214209",
+          "digest": "QUNEG4ILFR6HLSWOBYNXHQYNXOHE4RKE",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250908234308",
+          "digest": "V3T3RGUQ6R6AULBIUBQR5VJ6ZNQAQY5R",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250912164642",
+          "digest": "GXLMNQSBKVNU25YMWMOM375HDDOIZ3G7",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20250922214034",
+          "digest": "Z6APNMKJITEYWWQDAWO2OSYF2HYWBD5M",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20251002130143",
+          "digest": "DQQVSIIYTHVTJ3VF6PJN6RWCHDHENEYK",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20251011200549",
+          "digest": "MVPOMDFYCKFMXSM6BAZP5FHFND2SIFNJ",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20251109013424",
+          "digest": "5TVC2NMOTH2D7SK4FMFSRKABDMYIK4FO",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20251112094552",
+          "digest": "3XZ4QYZDFYHAHTY4JAHOYYOKSHTCXT7M",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20251206064616",
+          "digest": "SKEE5KND75254X46EHBFL4AP6X7JLQA2",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260110051955",
+          "digest": "FUN35FQYAABYCXH5X2BRUJNGOP6VNAUV",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260114003828",
+          "digest": "M3OUF3IQLUAZ53UBRXH5KOS2OFZXORRN",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260118143401",
+          "digest": "S76DQF25FRNJLINMMCSPLS5LXEZLLVDH",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260208053702",
+          "digest": "GH5BYHW4SEKFOIZRFVZIHGM2V722JEH7",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260210045759",
+          "digest": "6RLFWQ44WEDMHL3GO3VAKWFJUYWR3QHD",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260210185518",
+          "digest": "JPV3X73OM7AVDUYLJ3EUJZE2XYGHHCP2",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260307062551",
+          "digest": "ZRKQUFYEGLSXHVMTKRQFMGLKQH2T75B3",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260310174927",
+          "digest": "DV2PPUAD6RGZ662OJD4NQXRWA7IQQVYC",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260311015828",
+          "digest": "SSI7HKNJR7ARHLJU2HLXRA7F4WOJ23UX",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260315011745",
+          "digest": "75EBEOLQG2FHKNQWA3ZAFCFWOWOZRU6V",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260412232338",
+          "digest": "NTDWRY3ZO643LDMWYOEQFAFTB2PIBWX3",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260418153956",
+          "digest": "OXW4WVMJ5LDCQJLGQHEZNZIETFH3TMVT",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260418154043",
+          "digest": "EXB235OUIV2AGLLMB56PV4T5ZTM4MT3V",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260707104216",
+          "digest": "2L6OF7AJLC3L5UXBVB5YKTHJV6NVFYBR",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        },
+        {
+          "timestamp": "20260819124622",
+          "digest": "UTODXVAEOTO5B674PRG5LY6EXVOIKGAW",
+          "statuscode": "200",
+          "mimetype": "text/html"
+        }
+      ],
       "alert": false,
-      "detail": "query failed: <HTTPError 503: 'Service Unavailable'>",
-      "captures": []
+      "new_capture_count": 0,
+      "first_successful_observation": true
     },
     "hosterjack_repo": {
       "ok": true,
-      "alert": false,
-      "known_head": "28d33cc",
-      "known_head_date": "2026-08-01",
       "current_head": "28d33ccba517",
       "current_head_date": "2026-08-01T16:56:09Z",
-      "detail": "HEAD unchanged since Phase 330's review (28d33cc)"
+      "previous_head": "28d33ccba517",
+      "alert": false,
+      "detail": "HEAD unchanged from accepted reference 28d33ccba517"
+    }
+  },
+  "checks": {
+    "live": {
+      "gsmg_io_root": {
+        "requested_url": "https://gsmg.io/",
+        "final_url": "https://gsmg.io/",
+        "status": 200,
+        "redirect_chain": [],
+        "raw_sha256": "2f896807a859e2f71a2f6e1e8277986af73b80dc0dd79a685a67c7f7f8c3303b",
+        "normalized_sha256": "5a3e6521f5f932878de7e3833d3b39df886f49f22c028854ba84a1d723f5036c",
+        "content_length": 35785,
+        "observed_at": "2026-08-20T15:34:31Z",
+        "source_class": "live_fetch"
+      },
+      "salphaseion_route": {
+        "requested_url": "https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32",
+        "final_url": "https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32",
+        "status": 200,
+        "redirect_chain": [],
+        "raw_sha256": "a83d3de7810f26b19b4965339b76d403e44f6b6877e5d7de2555480ca1779d77",
+        "normalized_sha256": "5a6a1d41f82bbfeb9d8e850a7a660a919a4e1678e16d6c5a6a108bdfad66446d",
+        "content_length": 4536,
+        "observed_at": "2026-08-20T15:34:31Z",
+        "source_class": "live_fetch"
+      },
+      "hosterjack_repo": {
+        "requested_url": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
+        "final_url": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
+        "status": 200,
+        "redirect_chain": [],
+        "raw_sha256": "d1e6151fb423f67451941723a59d3e63469a26a9213a66516bdc4091b16decb6",
+        "normalized_sha256": "226b01ea7f1142f4f3dfd5bac7549138fb862c59c628d320ad9b3b2ec8a9136f",
+        "content_length": 291961,
+        "observed_at": "2026-08-20T15:34:32Z",
+        "source_class": "live_fetch"
+      }
+    },
+    "archive": {
+      "salphaseion_route": {
+        "wayback": {
+          "ok": true,
+          "alert": false,
+          "known_capture_count": 5,
+          "detail": "Wayback CDX history unchanged from the 5 already-authenticated captures"
+        },
+        "urlscan": {
+          "ok": true,
+          "alert": false,
+          "known_scan_count": 12,
+          "detail": "urlscan search result set unchanged from the 12 already-authenticated scans"
+        }
+      },
+      "gsmg_io_root": {
+        "ok": true,
+        "capture_count": 140,
+        "captures": [
+          {
+            "timestamp": "20190422131627",
+            "digest": "XTIVARJWXJN3YBQY5XBYFVDJBIUVB73M",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20190826064914",
+            "digest": "EO5W4FQAYWD4I2RGYKQS7KXHVV5HMPSD",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20191021120855",
+            "digest": "Z2MFJQSULSTXKJDUVAZI6KGJBDYWDMI5",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20191118211712",
+            "digest": "L3EUVFJZDEIJXOHJK5MOLRNTFGRPTJ7M",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20200808004015",
+            "digest": "ESF5XJ2SXSPJVB7QJ32UA676MOOPLLL4",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20200924190218",
+            "digest": "I6VZJAJMWPNRIWTHWEDARAV2PRPVBJPV",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20200926005213",
+            "digest": "CUAU66277MWR3KEY2XFJR4VLYJ4UMVMU",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20200928082611",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20201021064350",
+            "digest": "PVRP3FKPGOSJARUU3GEC7XEYC3DCBMPI",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20201028130318",
+            "digest": "MTYIGC3VCPL6T3QIAQ33V3MMAXQBJ3LY",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20201029230724",
+            "digest": "WDGB7AXEYSGQS6EGGMUQJDWVENL25WVG",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20201106121455",
+            "digest": "HQWJCNMN3LUL3EEAVFIOS3LGZNYLFB4K",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20201106121456",
+            "digest": "AYOWRN36XU2VMFU6JKGNKGYCFFB72COL",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20201106121459",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20201128214958",
+            "digest": "ZF5QJCLAXCY7B5X3NCO7HIIDJ3M4DYTR",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20201204143931",
+            "digest": "74PFCLHZEQ6UBXPB3Z5T2PQ7EYV6HRVM",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210120182620",
+            "digest": "OJDYBHFG4QCZGL7AZWAAQYCWUFU6CH5T",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210124161540",
+            "digest": "DRHHMDCGCHHSYJEGWY3BMALRGWCNGJZW",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210227162102",
+            "digest": "CNU5U6UGCLLCPXIGM7ZPE5R6F2GHJABB",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210423105710",
+            "digest": "WK3VF76D2W36Q7HJCLUZKTB7TGTETHTJ",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210430085219",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20210430085219",
+            "digest": "2OMA5YUUC7MMDR2PONJXVMFFWORUZPO5",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210508105317",
+            "digest": "WAUF772YJD6B7ZB4GASILNUOODKAY6TK",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210509183534",
+            "digest": "Y7XWFWIRPN5DTSFV5ESOVYBA537SVKN4",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210613115323",
+            "digest": "3EUZBJQKLQN7EUJJMZP24D3HDN2WESLN",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210615084548",
+            "digest": "64NYEPKALOSEGMRENSJNLXTGUC3MMT2Z",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210701101011",
+            "digest": "IUFAPXIDLSXYM3DFMZ3GJPJHUQCE573S",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210724051151",
+            "digest": "TP5DYL5MC26TV2VUI7T76ZSZLB2YU2LY",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210805162432",
+            "digest": "Y5WRYH2HYM4KEQQN4IKK7Q4G3G4GFUQT",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210820193943",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20210924202105",
+            "digest": "S7DNMEGCSELON25MJ55X3GVOPHPSR56L",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20210926222834",
+            "digest": "YJ3BB56WECHIGHXD7RCBNQJWHWICYCJD",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20211027103318",
+            "digest": "MG3TVUYH4CJ6M4755SJFNA5B2CTRGQ2P",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20211203013427",
+            "digest": "6QTMPKYRPSJDCLSDZFAE6EECBI2W5FL5",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20211205065234",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20211208144827",
+            "digest": "3UIMIPZABVALS4AXAHGBRJJRMV4QJLNO",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220119051337",
+            "digest": "QIA5QL6SVE2BSMQVHQ76QVTD25O6FZ52",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220125010225",
+            "digest": "HI323MVIZSCT4CH3RWZS5YRJXETOGJIA",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220126094004",
+            "digest": "TPCNUASAOPHFN2MCR3FK2HNJIJLDXP55",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220127133311",
+            "digest": "NXZBQKGQGWOM6HDKHSVP6R5AMAWBRUAL",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220418105210",
+            "digest": "YPGWDK2ZV3O2XQ7YHGVRY7Y7GL7ZJ525",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220523011655",
+            "digest": "JMUYNOCY6BRQJVWZHYDCIKVJHXZIRFGC",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220524222051",
+            "digest": "H3USJRHBOGSRATGG2RCXQK7I5T7K6F2M",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220704032901",
+            "digest": "TDF2MKZKIPYAKVE2AOIWYUMA6MVVCQG5",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220814071533",
+            "digest": "I2YJP2JBWAZ6IUUZYC32MNJHY24HCGZP",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220815210358",
+            "digest": "I7JU4RQFBWE5DLSDDFHSMCN3WZZDHANU",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220821211814",
+            "digest": "E7LVJLINDVMMMBDZNRTCT7PTPHELYV6L",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20220921125640",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20220929213156",
+            "digest": "GHI24JECJTK5FMZUJUWIXWGNSKE27NXX",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20221005092537",
+            "digest": "QAKKZ5JWC434AKD2N3O2MXRLV5GDTERU",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20221005104252",
+            "digest": "VE5SJJAMMDIMVCNWQYR4Q2O2DKFNCXLZ",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20221118035443",
+            "digest": "TQCYBBUBF57OCXAYYLSAV4RZ7VZKYOJ2",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20221127162029",
+            "digest": "FVWTHROZKCU4GCGTKMGXQ5WLLTBJIMU7",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20221206161905",
+            "digest": "CQ5JQUP6SITINLDU57TH3O7AHDWNXHA6",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20221223013850",
+            "digest": "CCCYAA7M5RNU4HMJSBOCQHYEMTOHIAXZ",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230118092412",
+            "digest": "7NNBZIX5O7GWBB4UR7TH2ZBCDZO5UOFZ",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230203235558",
+            "digest": "7XB3QN4M3TY4B3T5VRLZDK2KGFQ3ENK5",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230321131932",
+            "digest": "RTKRS4VICX4ZBQRLLATP55I73IH4JSOK",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230327093428",
+            "digest": "UGY6EDRD6WWPI4WPUY3SKJYGXDL46XKO",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230329201732",
+            "digest": "4ZOSAGBIFOWPLB44EPRQ7HREJOBLWEO4",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230401161801",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20230404121115",
+            "digest": "AT5WW56K2ME337ABXROQ4I3LPX6ZYLAY",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230503105150",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20230517021127",
+            "digest": "Y7SA2AVCZBXUZDUH2YBLEZL6U3RWROL4",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230609220625",
+            "digest": "7R4QDGC6MRKEQXH5QH2DVQLM6SS5URN2",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230922223140",
+            "digest": "P5DRPJQAPUSDX74I5IN2WVZOMQBB7WNB",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20230923095735",
+            "digest": "BHEI4XHJUHL2KQ6XAQZE4BBKZC5ABP6E",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20231011221458",
+            "digest": "BSDLZONZNV5SLEOKSF35SOMCN7QC3EFA",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20231128233612",
+            "digest": "KPW4HF4RMAQ4AJPOIUGVCGUGO7NAY5WW",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240201013745",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20240205104834",
+            "digest": "IJWRG5SLJ2DEXGLKZZKSZDP3NYFLGR74",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240226183209",
+            "digest": "EZ2STP36SM5WID5IDH43SC5CLU5Q7ZDH",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240301063222",
+            "digest": "QXVZ4LCHMSR6SADTE4CJK3V45YV424ML",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240330211510",
+            "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+            "statuscode": "301",
+            "mimetype": "unk"
+          },
+          {
+            "timestamp": "20240330211510",
+            "digest": "MDXCDOTUIZWJLN6VUNQEU5GSRXLBGQHL",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240413035027",
+            "digest": "7IKEFVOB4UHS7MJBAS2UQX25FJORTSYP",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240518140248",
+            "digest": "G7Z4K4TXWQUIWDB4C5GZ2626SRKR5ZPA",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240528153749",
+            "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+            "statuscode": "301",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240528155929",
+            "digest": "YVDV5CCTEZP667RHCJ67IRNFZGLD6LGQ",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240622025133",
+            "digest": "JGG7NFEG7UWGMAQVEQ6MEGLVBOIMMZON",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240719084256",
+            "digest": "G5SJMQTDLYZ5PMN4PQ4EADXWQDR3BNHB",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240804080037",
+            "digest": "6E3OCT6Z4FHY57JPOFBQVLPJVNOWQQHE",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240917110917",
+            "digest": "QYQX45QBNNEJZ2IULHKC53MGW5OKBFMZ",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240923124826",
+            "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+            "statuscode": "301",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240923124826",
+            "digest": "VHURL7DK5TA56WD4DQ6CAD6S6FTHRNAW",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240923124827",
+            "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+            "statuscode": "301",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240923124828",
+            "digest": "2MPU3S67VIG2IBDXW7IPUT5AJDYRCDOR",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20240923124835",
+            "digest": "C22WLKTSQ3TOCCFAH6SZ25BWK4WSZAO7",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20241002160519",
+            "digest": "U72IE4VQ3NAZ2DSSNGB23KGSXZZ4ZZQW",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20241012122704",
+            "digest": "KQJUC42RPMRVEWAMLBBASO6VDH37GVKN",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20241121123349",
+            "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+            "statuscode": "301",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20241121123349",
+            "digest": "W7DZ6R7TBON3PESSKCK7YDFIVV6UTFPV",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20241122004432",
+            "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+            "statuscode": "-",
+            "mimetype": "warc/revisit"
+          },
+          {
+            "timestamp": "20241123031716",
+            "digest": "AB5LBTKLFRH6MNMTXZQBGANGC3OGMP3Y",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20241209191118",
+            "digest": "52GUVYRBUQ3D4NUFSB4UBJI665SNPP3E",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250114023950",
+            "digest": "JLIPSDF3CO5CMFYEATUTYIK3ICOJDK4E",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250206164236",
+            "digest": "IXARMCYLKCMDOEEYUAKZJ35NKICUXIGX",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250211092119",
+            "digest": "FK2QZS6BWZPNLLEM76SQRDSXEWDPHTDA",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250212160701",
+            "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+            "statuscode": "301",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250212160701",
+            "digest": "3HGBAUERA6XPZB3227FZNVLX2A5TS3RL",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250319133109",
+            "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+            "statuscode": "301",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250319133109",
+            "digest": "7LYDL3C3UHAXBUJC7TWBM5KXAO3UBKCM",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250319212208",
+            "digest": "ZYPVX5BAM6WYRAQIG2J7DZJH2S3CW4QD",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250320022553",
+            "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+            "statuscode": "301",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250320022553",
+            "digest": "IP2OOBKM3CJMI567FJ3BJEBIXEUPZ7ZK",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250321011943",
+            "digest": "YFRFPDIPOLLB45YFSR3RXQLCI7FBFUET",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250326133350",
+            "digest": "J25AWF35NRC7JMJSI2U2CVJUXYYACB7U",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250329184353",
+            "digest": "HSH5HNTAGSRWAZ43BTFLPJI6CT7OSQNP",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250407015711",
+            "digest": "OQ3OBNFR7DBCFQ4ANGEQW5P2FOXZZJRA",
+            "statuscode": "301",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250410224406",
+            "digest": "J6RL36BZFEJDT23MCEUQMCWTFHMCRLFT",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250421120213",
+            "digest": "G5YDPTVOPBIT2GEKH4BU4C63VD4FVPCQ",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250519153235",
+            "digest": "P7I745JT7KSCPGSTRJEY4EMZH42MQ7R3",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250617234751",
+            "digest": "ILASNYX3MHON5M55OATSJCWYC5ZY7NIW",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250710112609",
+            "digest": "QB32G5EZWYQLK3QV7N22ADNGCR2WYJEK",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250814210454",
+            "digest": "GDWAFDSXSHZ4LFCM3TH3EE45VB3PTX3P",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250827070647",
+            "digest": "XIWN72BD7QMIMI5QRSDLYV2XC6ALM4G2",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250828214209",
+            "digest": "QUNEG4ILFR6HLSWOBYNXHQYNXOHE4RKE",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250908234308",
+            "digest": "V3T3RGUQ6R6AULBIUBQR5VJ6ZNQAQY5R",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250912164642",
+            "digest": "GXLMNQSBKVNU25YMWMOM375HDDOIZ3G7",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20250922214034",
+            "digest": "Z6APNMKJITEYWWQDAWO2OSYF2HYWBD5M",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20251002130143",
+            "digest": "DQQVSIIYTHVTJ3VF6PJN6RWCHDHENEYK",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20251011200549",
+            "digest": "MVPOMDFYCKFMXSM6BAZP5FHFND2SIFNJ",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20251109013424",
+            "digest": "5TVC2NMOTH2D7SK4FMFSRKABDMYIK4FO",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20251112094552",
+            "digest": "3XZ4QYZDFYHAHTY4JAHOYYOKSHTCXT7M",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20251206064616",
+            "digest": "SKEE5KND75254X46EHBFL4AP6X7JLQA2",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260110051955",
+            "digest": "FUN35FQYAABYCXH5X2BRUJNGOP6VNAUV",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260114003828",
+            "digest": "M3OUF3IQLUAZ53UBRXH5KOS2OFZXORRN",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260118143401",
+            "digest": "S76DQF25FRNJLINMMCSPLS5LXEZLLVDH",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260208053702",
+            "digest": "GH5BYHW4SEKFOIZRFVZIHGM2V722JEH7",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260210045759",
+            "digest": "6RLFWQ44WEDMHL3GO3VAKWFJUYWR3QHD",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260210185518",
+            "digest": "JPV3X73OM7AVDUYLJ3EUJZE2XYGHHCP2",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260307062551",
+            "digest": "ZRKQUFYEGLSXHVMTKRQFMGLKQH2T75B3",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260310174927",
+            "digest": "DV2PPUAD6RGZ662OJD4NQXRWA7IQQVYC",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260311015828",
+            "digest": "SSI7HKNJR7ARHLJU2HLXRA7F4WOJ23UX",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260315011745",
+            "digest": "75EBEOLQG2FHKNQWA3ZAFCFWOWOZRU6V",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260412232338",
+            "digest": "NTDWRY3ZO643LDMWYOEQFAFTB2PIBWX3",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260418153956",
+            "digest": "OXW4WVMJ5LDCQJLGQHEZNZIETFH3TMVT",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260418154043",
+            "digest": "EXB235OUIV2AGLLMB56PV4T5ZTM4MT3V",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260707104216",
+            "digest": "2L6OF7AJLC3L5UXBVB5YKTHJV6NVFYBR",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          },
+          {
+            "timestamp": "20260819124622",
+            "digest": "UTODXVAEOTO5B674PRG5LY6EXVOIKGAW",
+            "statuscode": "200",
+            "mimetype": "text/html"
+          }
+        ]
+      },
+      "hosterjack_repo": {
+        "ok": true,
+        "current_head": "28d33ccba517",
+        "current_head_date": "2026-08-01T16:56:09Z"
+      }
     }
   },
   "alerts": {
     "changed_bytes": [],
-    "newly_discovered_captures": []
+    "newly_discovered_captures": [],
+    "informational_changes": [
+      {
+        "target": "hosterjack_repo",
+        "prior_sha256": "3d4276583926e403912dbf4d3e0d994c53e8caa8d6e97ab7ff199d4747756b6d",
+        "current_sha256": "d1e6151fb423f67451941723a59d3e63469a26a9213a66516bdc4091b16decb6",
+        "prior_normalized_sha256": "e1a6186b954b0f22fa7bdb576013b5f1f2b6a42042ccd106cf4bc733cfe8de0d",
+        "current_normalized_sha256": "226b01ea7f1142f4f3dfd5bac7549138fb862c59c628d320ad9b3b2ec8a9136f",
+        "prior_observed_at": "2026-08-20T14:24:54Z",
+        "reason": "dynamic GitHub HTML; repository movement is gated by commit HEAD"
+      }
+    ],
+    "operational_errors": []
   },
   "new_evidence_found": false
 }

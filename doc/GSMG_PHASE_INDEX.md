@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **348** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **349** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -364,3 +364,4 @@ Audit-doc links are a best-effort keyword match on the phase heading and are not
 | 346 | P346 | 2026-08-20 | BIP32-paths-c1 (Phase 340) scaled to the two larger core corpora, deduplicated | negative | [link](../tools/gsmg/FINDINGS.md#phase-346----bip32-paths-c1-phase-340-scaled-to-the-two-larger-core-corpora-deduplicated-negative-2026-08-20) | — |
 | 347 | P347 | 2026-08-20 | Seed-6-first tradeoff resolved | provenance-monitoring baseline for restored gsmg.io, SalPhaseIon, and Hosterjack | [link](../tools/gsmg/FINDINGS.md#phase-347----seed-6-first-tradeoff-resolved-provenance-monitoring-baseline-for-restored-gsmgio-salphaseion-and-hosterjack-2026-08-20) | [GSMG_FIRST_PIECE_PNG_PALETTE_PROVENANCE_AUDIT](GSMG_FIRST_PIECE_PNG_PALETTE_PROVENANCE_AUDIT.md) |
 | 348 | P348 | 2026-08-20 | Seed 6 | multi-blob structural concordance before aggregate language scoring: negative | [link](../tools/gsmg/FINDINGS.md#phase-348----seed-6-multi-blob-structural-concordance-before-aggregate-language-scoring-negative-2026-08-20) | — |
+| 349 | P349 | 2026-08-20 | Provenance monitor repeat-safety repair and low-frequency activation | no evidence movement | [link](../tools/gsmg/FINDINGS.md#phase-349----provenance-monitor-repeat-safety-repair-and-low-frequency-activation-no-evidence-movement-2026-08-20) | — |

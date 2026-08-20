@@ -98,6 +98,7 @@ import phase32_column_calibration_audit
 import post_yinyang_dataflow_audit
 import post_phase217_consistency_audit
 import promised_standalone_audit
+import provenance_monitor
 import salphaseion_urlscan_history_audit
 import prime_sum_fefe_mask_composition_audit
 import phase32_monologue_residual_audit
@@ -132,6 +133,53 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_provenance_monitor_reads_nested_state_and_preserves_last_good(self):
+        module = provenance_monitor
+
+        def live(name, digest):
+            return {
+                "requested_url": module.FROZEN_URLS[name],
+                "final_url": module.FROZEN_URLS[name],
+                "status": 200,
+                "redirect_chain": [],
+                "raw_sha256": digest,
+                "normalized_sha256": digest,
+                "content_length": 1,
+                "observed_at": "2026-08-20T00:00:00Z",
+                "source_class": "live_fetch",
+            }
+
+        prior_live = {name: live(name, character * 64)
+                      for name, character in zip(module.FROZEN_URLS, "abc")}
+        capture = {"timestamp": "20200101000000", "digest": "A",
+                   "statuscode": "200", "mimetype": "text/html"}
+        previous = {
+            "baseline": {name: {"live": result} for name, result in prior_live.items()},
+            "archive_baseline": {
+                "gsmg_io_root": {"ok": True, "captures": [capture]},
+                "hosterjack_repo": {"ok": True, "current_head": "28d33ccba517"},
+            },
+        }
+        current = dict(prior_live)
+        current["gsmg_io_root"] = live("gsmg_io_root", "d" * 64)
+        archives = {
+            "salphaseion_route": {
+                "wayback": {"ok": True, "alert": False},
+                "urlscan": {"ok": True, "alert": False},
+            },
+            "gsmg_io_root": {"ok": False, "detail": "planted 503", "captures": []},
+            "hosterjack_repo": {"ok": True, "current_head": "28d33ccba517",
+                                "current_head_date": "2026-08-01"},
+            "live_errors": {},
+        }
+        report = module.assemble_report(current, archives, previous=previous)
+        self.assertEqual([row["target"] for row in report["alerts"]["changed_bytes"]],
+                         ["gsmg_io_root"])
+        self.assertEqual(report["archive_baseline"]["gsmg_io_root"],
+                         previous["archive_baseline"]["gsmg_io_root"])
+        self.assertTrue(any(row["source"] == "wayback"
+                            for row in report["alerts"]["operational_errors"]))
+
     def test_multi_blob_concordance_feature_registry_and_null_gate(self):
         module = multi_blob_structural_concordance_audit
         scalar = (1234567).to_bytes(32, "big")

@@ -21633,3 +21633,88 @@ statistics and frozen registry only; no candidate literals or raw bodies).
 specifying a cross-blob structure/offset, or a separately authorized larger
 candidate corpus. A weak-language statistic alone is not a reopen condition;
 it would require its own frozen phase and multiple-testing contract.
+
+## Phase 349 -- Provenance monitor repeat-safety repair and low-frequency activation: no evidence movement (2026-08-20)
+
+**Question:** option 3 in the post-Phase-348 next-work ranking was
+low-frequency provenance monitoring. Was it already complete? Review showed
+Phase 347 created a one-shot baseline and manual re-run command but explicitly
+deferred scheduling. More seriously, could the existing repeat path actually
+detect changes and preserve its reference state?
+
+**Frozen inputs:** Phase 347's exact three URLs and attribution policy remain
+unchanged: `gsmg.io/` and the exact SalPhaseIon route are attribution
+`unknown`; Hosterjack is `community`. Same passive safety boundary: one plain
+GET per frozen URL, Wayback/urlscan/GitHub commit-index queries only, no JS,
+forms, wallets, executed downloads, crawling, route discovery, or operator
+identification.
+
+**Method:** reviewed and repaired `tools/gsmg/provenance_monitor.py` before
+creating any recurring task. Two material repeat-run defects were confirmed:
+
+1. `load_baseline()` returns the complete report with target state nested
+   under `baseline`, but changed-byte comparison queried `previous.get(name)`
+   at the report's top level. Every repeat run therefore missed live-byte
+   changes and could overwrite the only old reference.
+2. `check_gsmg_root_wayback()` always declared itself a first observation,
+   never compared with previous captures, and root results were omitted from
+   `new_capture_alerts`. Phase 347's prose also said 140 root captures were
+   recorded, while the committed JSON actually contained a Wayback HTTP 503
+   and empty capture list.
+
+Introduced schema v2 with explicit last-known-good `baseline` and
+`archive_baseline` state plus current `checks`. Failed live/archive requests
+record operational errors but retain the previous successful state. Root
+Wayback captures compare by `(timestamp,digest,statuscode,mimetype)` identity.
+Hosterjack compares against the last accepted commit HEAD, advancing only when
+a successful report is manually accepted, so a new commit does not alert
+forever. GitHub rendered HTML is dynamic; its hash drift is preserved under
+`informational_changes`, while the content-addressed commit API decides repo
+movement. `write_baseline()` is atomic. `--check` performs a completely
+read-only comparison; `--run` is the explicit manual accept/update operation.
+
+Offline self-test now exercises complete nested-report transitions for
+unchanged live state, changed bytes, a new root capture, live fetch failure,
+Wayback failure, GitHub failure, Hosterjack HEAD movement and post-acceptance
+quieting, dynamic-GitHub-HTML classification, atomic write/load, and the
+existing no-network/no-candidate-leak guards. Added a permanent focused
+regression in `test_recent_audits.py` for the wrong-level comparison and
+last-known-good preservation.
+
+**Result:** all offline controls pass. A read-only live check completed with
+zero operational errors. Both actual gsmg.io pages are byte-identical to
+Phase 347: root raw SHA-256 `2f896807...c3303b`, SalPhaseIon raw SHA-256
+`a83d3de7...79d77`. Hosterjack commit HEAD remains `28d33ccba517`; its rendered
+GitHub HTML changed even between observations without a commit, confirming it
+is unsuitable as an evidence alert and is now informational. The root Wayback
+query succeeded and returned the documented 140 collapsed capture entries;
+they are now actually persisted as the first successful root reference.
+Manual `--run` then atomically accepted this repaired state: **0 changed-byte
+alerts, 0 new-capture/commit alerts, 1 informational GitHub-HTML drift, 0
+operational errors, `new_evidence_found=false`.**
+
+After verification, created the Codex heartbeat `gsmg-provenance-monitor`,
+active monthly on the first day at 09:00 local time. Its prompt is restricted
+to `--check --json`: it must not run `--run`, update the baseline, modify
+files, commit, or push. Evidence alerts, operational failures, and
+informational HTML drift are reported as separate classes.
+
+**Disposition:** provenance-only infrastructure repair and activation. No
+puzzle fact changes and no new evidence surfaced.
+
+**Facts affected:** corrects the persisted-state claim attached to Phase 347;
+the 140-entry root reference now exists on disk rather than only in prose.
+
+**Supersedes/corrects:** Phase 347's implication that manual repeat comparison
+was already functional and its statement that the committed baseline stored
+the 140 root captures. Phase 347's original live hashes, attribution, safety
+scope, and zero-evidence conclusion remain valid.
+
+**Artifacts:** `tools/gsmg/provenance_monitor.py`, `tools/gsmg/
+provenance_baseline.json`, `tools/gsmg/test_recent_audits.py`; Codex heartbeat
+ID `gsmg-provenance-monitor` (external app state, read-only repository scope).
+
+**Reopen condition:** the heartbeat reports changed bytes on either gsmg.io
+page, a new root/SalPhaseIon archive observation, a new Hosterjack commit, or
+an operational failure that persists across runs. Any evidence alert requires
+manual review before `--run` accepts it as the new baseline.

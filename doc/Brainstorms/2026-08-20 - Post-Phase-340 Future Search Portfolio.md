@@ -536,6 +536,22 @@ model rejects that story before decryption.
 
 ### 11. New-evidence diff watch, not another static scrape
 
+> [!info] Executed and made repeat-safe (Phases 347 and 349, 2026-08-20)
+> Phase 347 established the three-URL passive baseline. Phase 349 repaired
+> two repeat-run defects before enabling a low-frequency heartbeat: previous
+> live hashes were read from the wrong JSON level, and the bare-root Wayback
+> result was neither compared nor eligible to alert. The schema now keeps
+> last-known-good live/archive state across transport failures, compares root
+> captures by stable identity, advances an accepted Hosterjack HEAD without
+> repeat alerts, writes atomically only under manual `--run`, and exposes a
+> read-only `--check` for automation. The documented 140-entry root Wayback
+> reference is now actually persisted (Phase 347's committed JSON contained a
+> 503/empty result despite its prose). A live repaired run found both gsmg.io
+> pages unchanged and Hosterjack HEAD unchanged; GitHub's dynamic rendered-HTML
+> drift is retained as informational rather than puzzle evidence. A monthly
+> read-only heartbeat now runs on the first day of the month and cannot update,
+> commit, or push repository state.
+
 The restored `gsmg.io` and the Hosterjack compendium are now known surfaces.
 A future provenance brainstorm should define content hashes and a low-frequency
 diff protocol for creator attribution, changed assets, new source maps, or new
@@ -587,7 +603,7 @@ scripts, downloads that execute, or attempts to contact/identify an operator.
 | 8 | Remaining exact secret containers | concept only | medium | medium | Strong validators; DER is an explicit Phase-338 gap |
 | 9 | Ciphertext-length compatibility matrix | first CBC envelope completed | medium enabling value | low | Cheaply prunes impossible output-role stories |
 | 10 | Checksum-guided one-error repair | gated on a near-valid object | low-medium | medium | Bounded damage recovery, but only after a near-valid object exists |
-| 11 | New-evidence diff watch | concept only | variable | low recurring | Best route to parked evidence gaps, but dependent on external change |
+| 11 | New-evidence diff watch | executed, Phases 347/349; monthly read-only heartbeat active | variable | low recurring | Repeat-safe last-known-good monitor is active; only changed evidence triggers review |
 
 ## Recommended sequencing
 
