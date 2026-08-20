@@ -1,9 +1,8 @@
 ---
-type: audit
+type: source
 phase: 322
-date: 2026-08-19
+date: 2026-08-20
 status: live
-result: infrastructure
 disposition: operative
 evidence_level: solver-derived
 topics:
@@ -11,16 +10,20 @@ topics:
   - oracle
   - tooling
   - openssl
-related_phases: [322, 323]
+related_phases: [322, 323, 326, 327, 328, 331, 332, 333]
 ---
 
 # GSMG GPU AES/KDF Oracle
 
-A CUDA-accelerated, Phase-1-scoped port of `tools/gsmg/cb_common.py`'s
-`aes_try_open_bytes()` (the AES-CBC branch), built at `tools/gpu_oracle/` as a
+A CUDA-accelerated port of `tools/gsmg/cb_common.py`'s AES-CBC/ECB/CFB/OFB/CTR
+oracle plus an opt-in SEED-CBC family, built at `tools/gpu_oracle/` as a
 standalone Rust+CUDA project. This is infrastructure, not a phase result by
-itself -- see "First real sweep" below for the actual candidate-universe test
-this tool was built for.
+itself -- see "Sweeps run through this tool" below for the actual
+candidate-universe tests it's been used for. Originally built Phase-1-scoped
+(AES-CBC only, Phase 322); Phase 328 merged the stream-cipher/ECB modes and
+Bloom/API raw-key checking directly into the same kernel (see "Scope" below
+for current coverage -- this section is kept current, not a historical
+snapshot of the Phase 322 launch state).
 
 ## Why this exists
 
@@ -39,31 +42,52 @@ fixed-capacity-hit-buffer GPU launch pattern from `src/gpu/milksad.rs`) --
 copied into `tools/gpu_oracle/` and adapted; the actual crypto kernel is
 written fresh.
 
-## Scope: Phase 1, AES-CBC only
+## Scope (current, as of Phase 332)
 
 `cb_common.py`'s full oracle covers CBC across 5 cipher families (AES/3DES/
 Blowfish/Camellia/SEED), plus ECB, CFB/OFB/CTR, and AES Key-Wrap (RFC
-3394/5649) -- over 100 variant configs. This tool covers exactly the union of
-`KDF_VARIANTS` and the AES portion of `EXTENDED_CIPHER_VARIANTS`:
+3394/5649) -- over 100 variant configs. This tool's **default** variant table
+(`blobs::variant_table()`) covers:
 
 - KDF: legacy-MD5, legacy-SHA1, legacy-SHA256 (`EVP_BytesToKey`, single-round
   iterated digest), PBKDF2-HMAC-SHA256/10000 iterations -- 4 KDF configs
 - AES key sizes: 128/192/256 -- 3 sizes
-- 12 variants x 4 tracked blobs (SALPH/COSMIC/P32TRAILING/URLBLOB) = 48
+- AES cipher modes: **CBC, ECB, CFB, OFB, CTR** -- 5 modes (Phase 322 shipped
+  CBC only; Phase 328's kernel merge added the other 4 directly into the same
+  `aes_kdf_scan` kernel, not a separate pass)
+- 60 variants x 4 tracked blobs (SALPH/COSMIC/P32TRAILING/URLBLOB) = 240
   (variant, blob) pairs per candidate keystring
-- Gate: PKCS7 pad check → `printable_z_score` (weak ≥5.0 logged only, strong
-  ≥8.0 = hit) → `is_structural_binary_plaintext` bypass (full dummy PKCS7
-  pad block, `pad == 16`, any body length -- broadened from
-  `cb_common.py`'s original `body_len == 64`-pinned SALPH/P32TRAILING-only
-  check once COSMIC/URLBLOB joined the tracked-blob set; see
-  `cpu_oracle.rs::try_open`)
+- Gate, CBC/ECB: PKCS7 pad check → `printable_z_score` (weak ≥5.0 logged
+  only, strong ≥8.0 = hit) → `is_structural_binary_plaintext` bypass (full
+  dummy PKCS7 pad block, `pad == 16`, any body length) → (Phase 328)
+  unconditional raw-key Bloom check of the first two 32-byte chunks even on
+  a non-printable, non-structural body, since a real key doesn't have to
+  look like English text
+- Gate, CFB/OFB/CTR: no padding to check, so straight to `printable_z_score`
+  plus the same unconditional raw-key Bloom check (this was the *original*
+  motivation for the Bloom-chunk path, generalized to CBC/ECB by Phase 328)
+- **Opt-in**, not in the default table: SEED-CBC (`--seed-cbc`, Phase 326,
+  4 variants, one per KDF kind, fixed 128-bit key)
 
-**Explicitly out of scope, not abandoned:** AES-ECB/CFB/OFB/CTR (cheap
-follow-up -- same AES core, different chaining) and 3DES/Blowfish/Camellia/
-SEED/Key-Wrap (bigger lift, different cipher algorithms, lower historical hit
-priority per this project's own docs). A wordlist run through this tool is
-**not** equivalent to the CPU oracle's full coverage -- it's the AES-CBC
-subset only.
+**Bloom/API address checking** (ported from `../../../key-seeker`, Phase 332
+retroactively numbered -- see `checker/`): any raw-key-shaped 32-byte chunk
+recovered by the paths above is hashed to a P2PKH address (compressed and
+uncompressed) and checked against a Bloom filter of funded/used addresses,
+loaded from `db/addresses.hash160.bloom`; a Bloom hit is *never* treated as
+real on its own -- it's mandatorily re-confirmed against the live
+Blockstream API before counting. Phase 331 additionally folds in 8 specific
+target hash160s (the prize public key's on-chain "neighbors, half and
+double" -- see `checker::known_targets`) that bypass the funded-balance gate
+entirely on an exact match, since a decrypt landing on one of those specific
+points is worth surfacing regardless of whether that address currently holds
+a balance.
+
+**Explicitly out of scope, not abandoned:** 3DES/Blowfish/Camellia/AES
+Key-Wrap (bigger lift, different cipher algorithms or modes, lower
+historical hit priority per this project's own docs). A wordlist run through
+this tool with default settings is **not** equivalent to the CPU oracle's
+full coverage -- it's the AES-CBC/ECB/CFB/OFB/CTR subset (plus opt-in
+SEED-CBC), not the full cipher-family list.
 
 ## Correctness validation
 
@@ -81,12 +105,21 @@ crates, not a second hand-rolled implementation):
 2. A batch of known-negative candidates (the 8 creator macro-clue fragments
    plus a few generic strings) must produce **identical**
    (candidate, variant, blob) → hit-kind classification between GPU and CPU,
-   across every Phase-1 variant and every tracked blob.
+   across every default variant and every tracked blob.
+3. (Phase 326) A synthetic SEED-CBC positive vector must recover as
+   Structural on GPU; a negative probe grid must agree between GPU and CPU.
+4. (Phase 328) A synthetic AES-CBC body shaped as [private key | filler |
+   PKCS7 pad != block size] (non-printable, non-structural, so the CPU
+   z-score gate alone sees no hit at all) must still be recovered by the GPU
+   via the unconditional raw-key Bloom-chunk path.
 
-Both passed on first real run (2026-08-19): GPU reproduced z=21.77 on the
-known-positive vector (matching CPU exactly within tolerance), and 100%
-GPU/CPU agreement across the 12-candidate x 12-variant x 4-blob negative grid
-(576 combinations, including the PBKDF2 variants).
+All four run automatically before every real sweep (`--skip-self-test` to
+bypass, not recommended). First validated 2026-08-19: GPU reproduced z=21.77
+on the known-positive vector (matching CPU exactly within tolerance), and
+100% GPU/CPU agreement across the 12-candidate x 12-variant x 4-blob negative
+grid (576 combinations, including the PBKDF2 variants) -- the negative grid
+now runs against the full 60-variant default table. Checks 3-4 added Phase
+326/328 and still pass as of the Phase 332/333 changes.
 
 ## Checkpoint fingerprinting
 
@@ -174,3 +207,52 @@ run for cost reasons: `medium_curated_all.txt`'s 66,433 candidates had never
 had SEED-CBC coverage. 588,942 forms x 4 variants x 4 blobs = 9.4M decrypt
 attempts in 40s. **Zero hits.** Blowfish/Camellia/3DES/AES-Key-Wrap remain
 deferred (not GPU-ported).
+
+## Stream-cipher/ECB merge into the main kernel, and raw-key Bloom coverage
+
+See FINDINGS.md Phase 328 (and Phase 332 for the earlier work -- kernel
+merge, Bloom/API port, key-shape classifier -- this section's predecessor,
+retroactively documented after its in-code comments were found citing two
+phase numbers FINDINGS.md never actually used). ECB/CFB/OFB/CTR were merged
+into `aes_kdf_scan` alongside CBC (see "Scope" above); a raw-key Bloom check
+of the first two 32-byte chunks, previously only run on CFB/OFB/CTR
+candidates, was extended to CBC/ECB/SEED_CBC too, unconditionally (i.e. even
+on a non-printable, non-structural body -- a real key doesn't have to look
+like readable text). Re-ran `medium_curated_all.txt` (66,433 candidates)
+under the full 60-variant default table with the extended Bloom coverage:
+588,942 forms, 240 (variant, blob) pairs, 921s. **43 weak hits (Phase
+333 formally swept all 43 through the hex64/WIF/BIP39 key-shape classifier:
+zero matches), 0 strong, 0 structural, 3 Bloom hits (all from the
+pre-existing stream-mode path), all 3 rejected by the mandatory live API
+check.**
+
+## Known-target detector: prize pubkey's EC neighbors, half and double
+
+See FINDINGS.md Phase 331. Eight specific hash160s -- the prize public key's
+`P+G`, `P-G`, `P/2`, and `2P` points (compressed and uncompressed), matching
+a community-posted OP_RETURN reading "GSMG.io neighbors, half and double" --
+are folded into the Bloom filter uploaded to the GPU (`BloomChecker::
+insert_extra`) and additionally checked host-side via `checker::
+KnownTargetsChecker`, which returns a Hit on an exact match unconditionally,
+bypassing the ordinary funded-balance gate (4 of the 8 addresses have never
+been funded and would otherwise be silently dropped as false positives).
+The prize pubkey was independently re-derived from the six real on-chain
+transactions that spend from the prize address, not copied from the
+community post. No sweep hit this target set as of Phase 331/332/333.
+
+## Third sweep: k=8 macro-clue permutations
+
+See FINDINGS.md Phase 334. Phase 322's `MAX_K = 7` deliberately excluded
+all-8-fragment permutations; `macro_clue_permutation_combinations.py
+--write-k8` generates the omitted P(8,8) = 40,320-combination space as a
+separate, explicitly opt-in corpus -- `wordlists/gsmg/
+macro_clue_permutation_combinations_k8.txt` -- rather than silently widening
+the k=1..7 corpus Phase 322 already swept. Run against the current default
+60-variant table (all 4 blobs, Bloom/API pipeline including Phase 331's
+known targets active): 725,760 expanded forms x 240 (variant, blob) pairs =
+174,182,400 decrypt attempts in 3,021s. **42 weak hits (same noise band as
+every prior sweep at this scale), 0 strong, 0 structural, 5 Bloom hits, all
+5 rejected by live API confirmation, 0 confirmed funded, 0 matches against
+the known EC-derived targets.** Closes Phase 322's explicit k=8 reopen
+condition -- the macro-clue-concatenation hypothesis is now exhausted at
+every subset size, k=1..8.

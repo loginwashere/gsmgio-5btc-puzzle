@@ -46,6 +46,8 @@ COVERAGE = {
     "cosmic_duality_book_p8_9.txt": ("medium Tier 2 input", "build_medium_curated_candidates.py", "Phases 90/144/164", "exact lines enter Tier 2; padded binary CBC/ECB, nopad windows, literal raw key"),
     "cosmic_duality_book_screenshot_ocr.txt": ("medium Tier 1 input", "build_medium_curated_candidates.py", "Phases 83/94/164", "line/reduction derivatives: padded binary CBC/ECB, nopad windows, literal raw key"),
     "jacque_fresco_candidates.txt": ("dedicated exact list", "jacque_fresco_wordlist_audit.py", "Phases 88-90", "legacy/extended CBC, AES ECB, AES CFB/OFB/CTR, AES Key Wrap; newline forms"),
+    "macro_clue_permutation_combinations.txt": ("dedicated exact list", "tools/gpu_oracle (GPU AES/KDF oracle)", "Phase 322", "AES-128/192/256-CBC across 4 KDF kinds (12 variants) against all 4 tracked blobs; rejected"),
+    "macro_clue_permutation_combinations_k8.txt": ("dedicated exact list", "tools/gpu_oracle (GPU AES/KDF oracle)", "Phase 334", "60 AES variants (CBC/ECB/CFB/OFB/CTR x 3 key sizes x 4 KDF kinds) against all 4 tracked blobs; rejected"),
     "looking_forward_candidates.txt": ("dedicated exact list + medium Tier 2", "yin_yang_transition_audit.py", "Phases 44/90/144/164", "dedicated legacy/extended CBC and AES Key Wrap without newline forms; medium binary/raw-key coverage"),
     "matrix_architect_scene_through_choice_words.txt": ("selector source, not candidate list", "salt_selector_permutation_audit.py", "Phases 174/192", "salt-selected outputs: legacy/extended CBC, AES ECB/stream/Key Wrap"),
     "matrix_script_windows.txt": ("filtered medium Tier 3 input", "build_medium_curated_candidates.py", "Phase 164", "fixed-stride selected derivatives: literal raw key; full overlapping source not swept"),
@@ -176,7 +178,12 @@ def audit():
 def self_test():
     report = audit()
     scope = report["menu_gap_scope"]
-    assert report["excluded_wordlist_count"] == 26
+    # 28, not 26: macro_clue_permutation_combinations.txt (Phase 322) and
+    # macro_clue_permutation_combinations_k8.txt (Phase 334) added
+    # 2026-08-20 by a concurrent session, both already dedicated-audit-
+    # swept via tools/gpu_oracle and rejected -- not in MENU_GAP_FILES, so
+    # the menu-gap scope numbers below are unaffected.
+    assert report["excluded_wordlist_count"] == 28
     assert (scope["candidate_count"], scope["candidate_digest"]) == (
         EXPECTED_MENU_GAP_CANDIDATES, EXPECTED_MENU_GAP_DIGEST,
     )
@@ -195,7 +202,7 @@ def self_test():
     assert scope["concrete_decryptions"] == 1373040
     assert scope["net_new_scheduled_decryptions"] == 1184400
     assert scope["net_new_unique_passphrase_decryptions"] == 1099440
-    print("[*] self-test OK: 26-source coverage matrix and bounded 625-candidate menu-gap scope")
+    print("[*] self-test OK: 28-source coverage matrix and bounded 625-candidate menu-gap scope")
 
 
 def print_report(report):

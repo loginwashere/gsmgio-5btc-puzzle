@@ -56,6 +56,12 @@ string (see `tools/gsmg/data.py`'s header comment).
   null models after correction across all 16 divisor widths — checked
   directly, not merely unconfirmed. See
   [GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT](GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT.md).
+- Under any direct bijection of `a`--`i` to base-9 digits 0--8, the smallest
+  possible whole-stream integer has bit length 1,801 in either forward or
+  reverse order. It therefore cannot be exactly seven concatenated 32-byte
+  keys (1,792 bits). This constraint applies only to FAED-as-one-integer, not
+  to segmented streams, records, or prior transforms (Phase 330; fact
+  `F-OBJ-005`).
 - Sits immediately after binary ASCII `matrixsumlist` on the page:
   `DBBI [matrixsumlist] FAED [lastwordsbeforearchichoice] [thispassword]`
   (Phase 101).
@@ -85,6 +91,9 @@ rg -il '\bFAED\b' doc tools/gsmg/FINDINGS.md
 - Phase 236 — [GSMG_MACRO_MODEL_DISPOSITION_AUDIT](GSMG_MACRO_MODEL_DISPOSITION_AUDIT.md), formalizes the complete mirror-orbit table.
 - Phase 240 — [GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT](GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT.md), full-divisor geometric calibration, width 38 rejected.
 - Phase 243/244 — [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md), page-markup escape-pair selector branch closed negative, confirmed byte-identical across all 5 known Wayback captures.
+- Phase 330 — [GSMG_EXTERNAL_ARCHIVE_AUDIT](GSMG_EXTERNAL_ARCHIVE_AUDIT.md),
+  independently verifies the whole-stream seven-key capacity exclusion and
+  scopes the external frequency/mod-9 claims.
 
 ## Related objects
 

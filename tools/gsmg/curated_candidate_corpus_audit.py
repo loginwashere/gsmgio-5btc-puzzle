@@ -80,6 +80,8 @@ EXCLUDED_WORDLISTS = {
     "cosmic_duality_book_p8_9.txt": ("medium-input", "Book-page transcription incorporated into the separate medium-corpus workflow."),
     "cosmic_duality_book_screenshot_ocr.txt": ("broad-input", "Raw screenshot OCR incorporated into medium-corpus Tier 1 after normalization."),
     "jacque_fresco_candidates.txt": ("dedicated-audit", "Swept separately by jacque_fresco_wordlist_audit.py in Phases 88-90."),
+    "macro_clue_permutation_combinations.txt": ("dedicated-audit", "P(8,k) k=1-7 order-sensitive combinations of the 8 creator-authored macro-clue fragments; swept separately via the dedicated GPU AES/KDF oracle (tools/gpu_oracle) against all 4 tracked blobs in Phase 322; disposition rejected."),
+    "macro_clue_permutation_combinations_k8.txt": ("dedicated-audit", "The k=8 case (all 8 fragments, no subset choice) Phase 322 deliberately omitted and reopened explicitly; swept separately via the same dedicated GPU oracle in Phase 334; disposition rejected."),
     "looking_forward_candidates.txt": ("dedicated-audit", "Swept separately by yin_yang_transition_audit.py; also incorporated into medium-corpus Tier 2."),
     "matrix_architect_scene_through_choice_words.txt": ("dedicated-audit", "A cached 1,326-word scene stored on one active line and consumed by salt_selector_permutation_audit.py, not a one-candidate shortlist."),
     "matrix_script_windows.txt": ("broad-input", "464,586 overlapping screenplay windows; intentionally bounded by later medium-corpus filtering."),
@@ -328,7 +330,12 @@ def self_test():
     assert base["first_source_tier_counts"] == {
         "direct": 98, "bounded": 243, "thematic": 225, "mixed": 82,
     }
-    assert (base["included_wordlist_count"], base["excluded_wordlist_count"]) == (23, 26)
+    # 28, not 26: macro_clue_permutation_combinations.txt (Phase 322) and
+    # macro_clue_permutation_combinations_k8.txt (Phase 334) added 2026-08-20
+    # by a concurrent session, classified "dedicated-audit" (both already
+    # swept separately via tools/gpu_oracle, both rejected) -- doesn't touch
+    # the 648-candidate corpus itself, digest/count unchanged.
+    assert (base["included_wordlist_count"], base["excluded_wordlist_count"]) == (23, 28)
     assert seed["candidate_form_evaluations"] == 17073
     assert seed["unique_generated_passphrases"] == 14587
     assert seed["duplicate_generated_evaluations"] == 2486

@@ -43,11 +43,19 @@ from extended_cipher_recheck import candidate_list_digest  # noqa: E402
 import dbbi_faed_arithmetic_model_audit as _m9  # noqa: E402
 import dbbi_faed_authenticated_selector_audit as _m16  # noqa: E402
 import dbbi_faed_continued_fraction_audit as _m15  # noqa: E402
+import dbbi_faed_fsm_audit as _m11  # noqa: E402
 
-EXPECTED_CANDIDATE_COUNT = 40
-EXPECTED_CANDIDATE_DIGEST = "4e69ae768b9fd800"
+# Phase 335: model 11 (81+10 FSM) added its 2 candidates once
+# `dbbi_faed_fsm_audit.py` was fixed to expose the full output string
+# (previously only a 160-char prefix was retained) -- the "report-plumbing
+# fix" P0A/Phase 290 explicitly deferred. Count/digest/attempts below cover
+# all 42; the original 40 (Phase 290) are unchanged candidates, re-run here
+# alongside the 2 new ones rather than split into a second script, since the
+# combined run is still trivially cheap (84 passphrase attempts).
+EXPECTED_CANDIDATE_COUNT = 42
+EXPECTED_CANDIDATE_DIGEST = "51afdf5ce033500a"
 EXPECTED_FORM_COUNT = 2
-EXPECTED_PASSPHRASE_ATTEMPTS = 80
+EXPECTED_PASSPHRASE_ATTEMPTS = 84
 
 
 def eligible_candidates():
@@ -92,6 +100,15 @@ def eligible_candidates():
             f"{row['source']}/{row['target']}/{row['mode']}",
             row["output"],
         ))
+
+    # Phase 335: model 11's 2 candidates -- the full 570-symbol FSM output
+    # string and its 10-symbol trailer -- both already fully computed by
+    # `audit()`, now exposed in the report (see dbbi_faed_fsm_audit.py's
+    # `output_text` field). No new transform, same single canonical
+    # serialization the script's own docstring commits to.
+    r11 = _m11.audit()
+    out.append(("model11_fsm", "output_text", r11["output_text"]))
+    out.append(("model11_fsm", "trailer_text", r11["trailer_text"]))
 
     return out
 

@@ -19822,3 +19822,1732 @@ own FINDINGS.md phase).
 **Reopen condition:** none specific -- this closes a structural gap in
 Bloom coverage rather than testing a new candidate hypothesis; reopens
 naturally alongside any future re-sweep of this or a larger corpus.
+
+## Phase 329 -- live `gsmg.io` restoration and ownership-provenance audit: puzzle chain restored, attribution unverified (2026-08-20)
+
+**Question:** `gsmg.io` has abruptly returned after the expired-domain
+parking state recorded earlier in this project. Is the new deployment real,
+does it contain any new puzzle material, and is there enough evidence to
+attribute it to the original creator rather than a third-party purchaser or
+community restorer?
+
+**Safety boundary:** all inspection was read-only. The live site was treated
+as untrusted: no form was submitted, no password or wallet material was
+entered, no downloaded content was executed, and no creator or other third
+party was contacted. Static responses used for comparison were downloaded
+only to `/tmp`; nothing from the live host was added to the repository.
+
+**Current deployment chronology (UTC):** the domain was still represented by
+a generic parking/for-sale page in a search-engine crawl six days before this
+audit. A roughly two-week-old third-party snapshot placed it on
+AboveDomains/Trellian infrastructure (`103.224.182.249`, nameservers
+`ns1.abovedomains.com` / `ns2.abovedomains.com`). The present deployment's
+response metadata and control-plane changes are tightly clustered:
+
+| Evidence | Observed value |
+|---|---|
+| `/puzzle` `Last-Modified` | 2026-08-15 23:16:52 |
+| restored stage-page `Last-Modified` values | 2026-08-15 23:16:41--44 |
+| current Let's Encrypt certificate `notBefore` | 2026-08-16 17:13:05 |
+| `robots.txt` `Last-Modified` | 2026-08-16 19:37:05 |
+| homepage `Last-Modified` | 2026-08-17 03:22:30 |
+| `.io` RDAP `last changed` event | 2026-08-17 16:09:49 |
+
+Live DNS now uses Dynadot's `ns1.dyna-ns.net` / `ns2.dyna-ns.net` and points
+`gsmg.io` to `169.58.183.227`. RIPE RDAP identifies the containing active
+allocation as Contabo GmbH (`169.58.128.0/17`, Germany). The current
+certificate is a fresh domain-validated Let's Encrypt certificate for
+`gsmg.io`, valid 2026-08-16 through 2026-11-14. These facts establish a new
+deployment, not operator identity.
+
+**Restoration scope:** the public homepage is a new shutdown/memorial-style
+animation. It first reproduces the former trading-bot landing page, then
+shows the original 14x14 binary matrix in a terminal sequence and ends with:
+
+> `2017 — 2026`
+>
+> `The lights are off.`
+>
+> `Nine years of chaos ended. One mystery remains.`
+>
+> `Follow the white rabbit →`
+
+The link targets `/puzzle`. The old homepage's `/register` and
+`/help-center` links are present in the animation but both return HTTP 404.
+The following known puzzle routes all return HTTP 200 and have also been
+restored:
+
+- `/puzzle`
+- `/theseedisplanted`
+- `/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself`
+- `/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32`
+
+`/puzzle` is still a bare 1048x1556 RGBA PNG. Its SHA-256 is
+`38125bbdf1ea58b9b30b075bc6bf71e4089d04bba37098317e47097e2f2a1830`,
+byte-for-byte identical to `doc/img/gsmg_puzzle_stage1.png`. The two
+textareas on the Phase 2/3 page and the two textareas on the
+SalPhaseIon/Cosmic Duality page are each byte-identical to the repository's
+archived payload after whitespace normalization (lengths 896, 5,484, 1,075,
+and 1,792 non-whitespace characters respectively). The stage prose also
+matches the already-known material. **No new ciphertext, plaintext, URL, or
+substantive puzzle instruction was found.**
+
+**Fresh reconstruction, not a byte restoration:** the returned HTML does
+not match the archived HTML files as a container. It has new compact
+formatting and metadata (`noindex, nofollow`, viewport, favicon), rewrites
+image paths, and removes the archived Phase-1 form's historical CSRF token.
+The hidden form now posts a single `password` field to the relative endpoint
+`/phase1verification`; its behavior was deliberately not tested. The
+homepage is entirely new inline CSS/JavaScript and introduces a gold version
+of the GSMG logo. `robots.txt` contains rabbit ASCII art, `Follow the white
+rabbit.`, and only `User-agent: *` / `Disallow: /`; it exposes no additional
+path. Static-source review found no external script, `fetch`, WebSocket,
+storage, cookie, or dynamic-download call on the inspected GET pages. This
+supports a manually reconstructed static presentation around the known
+archive rather than recovery of the original application deployment.
+
+**Ownership evidence for continuity:** the registration retains its original
+2017-07-03 creation date and Dynadot registrar, is renewed through
+2027-07-03, and the operator reproduced the entire puzzle chain rather than
+placing a generic landing page. The new line about nine years of "chaos"
+also closely echoes the known creator's 2026 retrospective about starting
+GSMG in 2017 with nine days of "pure chaos and hope." These are compatible
+with the creator or an authorized former team member intentionally closing
+the business while preserving the puzzle.
+
+**Ownership evidence against attribution:** none of those details is
+exclusive. The image, stage HTML/content, 14x14 matrix, and creator
+retrospective were already public in this repository or other archives
+before the new homepage timestamp. The domain passed through an explicit
+parking state and the restoration occurred about 43--45 days after its
+2026-07-03 expiry, a timing compatible with Dynadot's expired-domain auction
+flow. Dynadot documents that auctioned domains retain their original creation
+date and that an auction winner can change nameservers during the temporary
+auction lock, so the surviving 2017 date and unchanged registrar cannot prove
+registrant continuity. The new Contabo/Dynadot-DNS deployment also lacks the
+old Cloudflare/application-hosting continuity. WHOIS/RDAP privacy prevents a
+registrant-name comparison, and no fresh statement from the stable creator
+identity (`@SoWut`, `user9815232`) or cryptographic signature was found.
+
+**Result:** the return is real and is a deliberate restoration of the known
+puzzle, not a stale cache or a functioning return of the former GSMG trading
+service. It adds no verified cryptanalytic input. Operator attribution is
+**unresolved**; on the available evidence, a dedicated third-party/community
+restoration is at least as plausible as an original-creator restoration and
+is weakly favored by the expiry/parking/auction-window timing plus the
+manually rebuilt containers. Do not promote the new gold logo, shutdown copy,
+or animation effects to creator-authored clue evidence unless provenance is
+first established.
+
+**Disposition:** verified restoration; ownership/authorship parked.
+
+**Facts affected:** updates the live-site status in Phase 153/156-era notes:
+the root domain and all four known puzzle routes are live again as of
+2026-08-20. No existing puzzle-stage fact or open-gap disposition changes.
+
+**Supersedes/corrects:** supersedes only stale statements that the live domain
+currently serves an expired-domain parking page. It does not correct the
+historical observation that the domain was parked earlier in 2026.
+
+**Artifacts:** none committed. Temporary inspection files and observed
+SHA-256 values included: homepage
+`2f896807a859e2f71a2f6e1e8277986af73b80dc0dd79a685a67c7f7f8c3303b`;
+original blue logo
+`073446e9259530c329bc148cef57813edae6c92e459d781afbfab331609dc718`;
+new gold logo
+`1843afbb251b556e4251d4ff0fdb739d84bece92a4a0cc33cd438f3c81c40ce5`;
+`theseedisplanted` HTML
+`7cb766d406008a397f8ae32b3a38ca68b42724bb07b3481deb84baad5c725183`;
+Phase 2/3 HTML
+`06fbd4461ab20d45c54a7053c7c0cfa256ba82a5ad4c73a47fac67f3f1cdf7d9`;
+SalPhaseIon/Cosmic Duality HTML
+`a83d3de7810f26b19b4965339b76d403e44f6b6877e5d7de2555480ca1779d77`.
+
+**Reopen condition:** obtain an authenticated statement from the stable
+creator account that explicitly references the current deployment, a fresh
+nonce cross-published by the site and that account, or a valid message
+signature from the established prize address. Separately, a material live
+payload change can reopen content comparison, but unauthenticated decorative
+changes alone should not reopen cryptanalysis.
+
+## Phase 330 -- Hosterjack interactive compendium delta audit: two narrow capacity bounds retained; no new attack path (2026-08-20)
+
+**Question:** does the community-built [interactive
+compendium](https://hosterjackagv.github.io/gsmg-5btc-puzzle/#/) or its
+[public source](https://github.com/HosterjackAGV/gsmg-5btc-puzzle) contain a
+clue, transformation, or productive search path not already represented in
+this repository?
+
+**Safety and method:** the deployed GitHub Pages application was inspected
+read-only in the browser. No form was submitted, no wallet/donation link was
+opened, and no puzzle secret was entered into its Lab. The public source was
+shallow-cloned to a temporary directory and reviewed as text; no downloaded
+project script or dependency was installed or executed. Current source HEAD
+was `28d33cc` (2026-08-01). The 13 attempt cards added since the commit used
+by the earlier external-archive audit (`1a278563f64ea3134ab453a66179292bcae22034`)
+were compared with the local findings and independently checked where they
+made quantitative claims.
+
+**Coverage result:** the compendium is a useful presentation and indexing
+layer, but its advertised top loose ends and most of its newer cards are
+already covered or superseded here. This includes the Phase-3.2 trailing
+chess clue, genesis spiral/indexing variants, `yinyang`,
+`yellowblueprimes`, `salph_inner`, the FEFE cell, prime-position zero
+insertion, URLBLOB, `matrixsumlist` masks, source-map/domain/Trello mining,
+QR/shared-token mining, the Base64 line break/`enter` observation, and visual
+grid/image readouts. In particular, the site's rabbit-nest/central-four-cell
+observation is weaker than the independently verified original diagram and
+`0100 = 4` / complement `1011 = B` results in Phases 64--67. Its `enter`
+observation is already encompassed by the stronger EOL/newline trail in
+Phase 33 and the creator/operator audit in Phase 215.
+
+**Independently verified capacity facts:** using the exact local DBBI and
+FAED strings, DBBI has 91 base-9 symbols and therefore at most
+`91 log2(9) = 288.463...` bits of direct information. That can contain a raw
+256-bit private key, but cannot directly contain the full binary payload of
+a conventional uncompressed WIF (`37 bytes = 296 bits`) or compressed WIF
+(`38 bytes = 304 bits`) before Base58 encoding. FAED has 570 base-9 symbols,
+with a nominal capacity of `1806.857...` bits. Across direct bijections of
+its nine letters to digits 0--8, the lexicographically smallest forward and
+reverse base-9 integers both still have bit length 1,801. Thus a model that
+interprets *all of FAED as one base-9 integer* cannot equal exactly seven
+concatenated 32-byte keys (`1,792 bits`). These are useful model constraints,
+not exclusions of raw DBBI keys, segmented FAED streams, record structures,
+or prior transformations.
+
+The published frequency figures also reproduce exactly: DBBI's counts give
+Pearson chi-square `40.2418`, and FAED's give `43.7368` against a uniform
+nine-symbol distribution (including FAED `g = 107` versus expectation
+`63.333...`). This shows strong non-uniformity, but does **not** establish
+that the blocks "are lists, not numbers": an arbitrary deterministic
+integer need not have random-looking base-9 digits, and the public repository
+does not include the cited research harnesses needed to reproduce every
+downstream claim.
+
+**Potentially reusable heuristic:** for explicitly independent additive
+mod-9 stream models, distribution contraction can cheaply reject candidates
+that make an already lopsided stream substantially flatter. It must remain a
+ranking or pre-filter only. Finite deterministic streams need not be uniform
+or independent, and alignment/correlation can preserve or create sample
+imbalance; therefore the site's stronger claim that mod-9 combinations can
+"only blur, never sharpen" is not a global proof. Existing adjacent-difference,
+GF(9), Nihilist/Gronsfeld, and related structural audits already cover the
+main concrete variants, so this does not justify another broad sweep now.
+
+**Claims not promoted:** absence of the author's `o` glyph from the a--i
+blocks does not prove that their values must be 1--9 or that zero is
+impossible; a separate 0--8 alphabet remains viable. Negative public-book
+and creator-lexicon sweeps do not prove that the missing datum is private or
+offline. Smoothness tests over a finite image set do not prove that no visual
+readout exists. The compendium's attribution of A007522 to creator
+confirmation remains corrected by the earlier external-archive audit: it was
+a community-posted lead, not authenticated creator confirmation.
+
+**Result:** no new candidate password, operand, ciphertext interpretation,
+or high-value executable attack path was found. Retain the two direct
+capacity bounds and the conditional distribution pre-filter as documentation;
+do not import the site's stronger list/private-data/mod-9 closure claims.
+
+**Disposition:** external delta audited; useful constraints recorded; no new
+sweep scheduled.
+
+**Artifacts:** none. All downloaded review material remained temporary.
+
+**Reopen condition:** the compendium publishes its missing harnesses and a
+reproducible result that survives the caveats above, adds primary-source clue
+material absent here, or supplies a transformation that yields a concrete
+candidate and passes the existing address/oracle checks.
+
+## Phase 331 -- GPU oracle: prize pubkey's EC "neighbors, half and double" wired in as an unconditional detector target, independently re-derived on-chain: tooling gap closed, no hits (2026-08-20)
+
+**Question:** Phase 330's compendium audit surfaced a HosterjackAGV card
+(`gsmg-ec-half-double-verified`, 2026-07-25) claiming the prize public key's
+EC "neighbors" (P+/-G), "half" (P/2), and "double" (2P) points -- published
+via a Telegram/OP_RETURN message reading "GSMG.io neighbors, half and
+double," rhyming with the confirmed Architect-speech line "the private keys
+belong to half and better half" -- match four specific Bitcoin addresses.
+Does `tools/gpu_oracle`'s Bloom/API detector already catch a decrypt that
+recovers `k+1`, `k-1`, `k/2 mod n`, or `2k mod n` instead of the literal
+prize key `k`, and if not, is the fork's claim itself trustworthy enough to
+wire in?
+
+**Method:** did not trust the fork's write-up's numbers. Independently
+re-extracted the prize public key directly from the blockchain via
+`blockstream.info`'s API: paginated all 125 transactions touching
+`1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe` and found the 6 that spend from it
+(txids `88cdb3cd...9df3` and `2aa9a4a9...071b13`, 3 inputs each), all six
+revealing the identical uncompressed SEC1 pubkey
+(`04f4d1bb...12bf33559`) in scriptSig. Verified hash160(pubkey, uncompressed)
+== the prize address's hash160 exactly. Computed P+G, P-G, P/2 (scalar
+multiply by `inv(2) mod n = (n+1)/2`, closed-form since the secp256k1 order
+`n` is odd), and 2P independently in Python (`coincurve`), then re-derived
+the same eight hash160s (four points x compressed/uncompressed) a second
+time inside the Rust codebase itself using its own `secp256k1` crate
+dependency (`tools/gpu_oracle/src/checker/known_targets.rs::tests::
+rederive_from_pubkey`), so the pinned constants are checked by two
+independent implementations, not copied from either source. Queried
+Blockstream for each of the 8 derived addresses' on-chain history.
+
+Added `checker::known_targets`: a small exact (non-probabilistic) hash160
+list wrapped by `KnownTargetsChecker`, which intercepts an exact match
+before delegating to the existing `VerifiedBloomChecker` -- necessary
+because that checker's mandatory API step only treats a Bloom hit as real
+when the address currently holds a positive net balance
+(`funded_txo_sum > spent_txo_sum`), the right rule for a filter built from
+millions of addresses but wrong for 4 of these 8 specific targets (see
+Result). `BloomChecker::insert_extra` folds the same 8 hash160s into the
+production Bloom bit array after loading it from disk, so the GPU's
+on-device pre-filter (`bloom_check_key_chunks` in `aes_kdf_oracle.cu`,
+Phase 328) doesn't filter a real match out before it ever reaches the new
+host-side exact check; no CUDA kernel changes were needed. `setup_keyshape`
+now returns `KnownTargetsChecker` everywhere it previously returned
+`VerifiedBloomChecker`, so both hit paths (`aes_kdf_scan`'s structural/
+Bloom-chunk hits and `stream_key_check.rs`'s own GPU path) pick this up
+automatically. Verified via: 8 new Rust unit tests (exact-match-always-hits,
+exact-match-never-touches-the-inner-API-call, unrelated-hash160-falls-
+through, `bloom()` passthrough, constant re-derivation); the full 78-test
+non-CUDA suite; a real `--features cuda` release build via Docker
+(`Dockerfile.cuda`, tagged `gpu_oracle:phase329-check`, removed after);
+the project's existing mandatory GPU self-test suite (all 4 checks passed
+unchanged on the real RTX 5070); and a live container run against a
+synthetic Bloom cache file confirming the
+`[main] folded in 8 known EC-derived target address(es)` log line fires and
+the checker chain still runs end-to-end (Bloom hit -> live Blockstream API
+-> confirm/discard) exactly as before for ordinary candidates.
+
+**Result:** the EC math verifies exactly, confirming the fork's claim (not
+just trusting it): hash160(pubkey) matches the prize address, and P+G/P-G/
+P/2/2P's hash160s match what the fork reported. New fact the fork's write-up
+did not have: as of 2026-08-20 the four **uncompressed**-form addresses each
+already hold a real, distinct 5,000-sat marker payment
+(`funded_txo_count=1, funded_txo_sum=5000, spent_txo_count=0`) -- i.e.
+whoever posted the OP_RETURN also funded each target with a small
+proof-of-target payment. The four **compressed**-form addresses have never
+been funded (`funded_txo_count=0`) -- these would have been silently dropped
+by `VerifiedBloomChecker`'s balance gate without this phase's
+`KnownTargetsChecker` wrapper, even on an exact match. No sweep was
+re-run against these new targets this phase (Phase 322/323/326/328's
+existing corpora were not re-checked); this closes a detector-coverage gap
+so any *future* sweep (and Phase 322's own "STRONG/STRUCTURAL hit" recompute
+path) picks the eight targets up automatically. Authorship of the original
+OP_RETURN post remains unsettled, per Phase 330's caution against importing
+the compendium's stronger unverified claims -- the pubkey has been public
+since 2020, so anyone could have computed and funded these addresses.
+
+**Disposition:** rejected (no hit this phase) -- but this is tooling-
+coverage work, not a candidate-hypothesis test; see Reopen condition.
+
+**Facts affected:** none of the puzzle's own facts. Confirms (independently,
+not by trusting the source) that HosterjackAGV's EC-neighbor/half/double
+math is correct, and adds a fact absent from that write-up: 4 of the 8
+target addresses hold a real marker payment, 4 don't.
+
+**Supersedes/corrects:** none -- extends Phase 322/328's GPU-oracle
+detector target set by 8 known hash160s; does not change any existing
+sweep's recorded result.
+
+**Artifacts:** `tools/gpu_oracle/src/checker/known_targets.rs`
+(`KNOWN_TARGETS`, `KnownTargetsChecker`, `PRIZE_PUBKEY_HEX`); `tools/
+gpu_oracle/src/checker/bloom.rs` (`BloomChecker::insert_extra`); `tools/
+gpu_oracle/src/main.rs` (`setup_keyshape` now returns `KnownTargetsChecker`).
+
+**Reopen condition:** automatically covered by any future sweep or
+structural/Bloom-chunk hit against `cosmic`/`salph_inner`/`p32_trailing`/
+`urlblob` now that the detector target set includes these 8 addresses; no
+manual re-check needed. Would also reopen if the OP_RETURN's authorship is
+ever independently confirmed (creator PGP signature, matching known
+channel), which would raise this from "verified math, unsettled authorship"
+to a load-bearing clue worth prioritizing candidate generation around.
+
+## Phase 332 -- retroactively documented: GPU oracle's Bloom/API key-shape checking and the stream-cipher/AES-KDF kernel merge (commit `252fe45`, 2026-08-19, recorded 2026-08-20)
+
+**Question:** `tools/gpu_oracle/Cargo.toml` and `kernels/secp256k1_device.cuh`
+carry `# Bloom/API key-shape checking (Phase 324)` and `Phase 325 GPU-KDF
+merge` comments, but FINDINGS.md has no `## Phase 324` heading at all, and
+its real `## Phase 325` is an unrelated topic (genesis-block adjacent
+fields) -- a naming collision Phase 328's own reopen condition already
+flagged as unresolved. What did this work actually do, and does it deserve
+its own phase number instead of two phantom ones?
+
+**Method:** identified via `git log` that both comments trace to a single
+commit, `252fe45` ("GPU oracle: broaden structural-hit gate, add
+stream-cipher Bloom/API key-shape check merged into the AES/KDF kernel",
+2026-08-19, 30 files changed) -- not two separate pieces of work under two
+different numbers, just one commit whose in-code comments guessed at two
+different phase numbers that were never reserved for it. Read the commit
+message and diffstat directly rather than re-deriving the work from
+scratch; nothing here was re-run.
+
+**What the commit actually did (unabridged from its own message):**
+broadened the CBC/ECB structural-hit gate from `cb_common.py`'s original
+`body_len==64`-pinned check to any full-dummy-pad-block body (`pad ==
+block_size`), which had silently excluded COSMIC and URLBLOB (their
+ciphertext lengths never produce `body_len==64`); added `tools/gsmg/
+key_shape_classifier.py` + `key_shape_sweep.py` (hex64/WIF/BIP39-mnemonic
+detection on decrypt output, reusing `binary_key_material_backfill.py`'s
+Bloom/queue machinery -- this is the classifier Phase 327 later
+retroactively documented running against the 648-candidate core corpus);
+ported key-seeker's Bloom/API/crypto Rust modules (`checker/`, `crypto.rs`)
+into `gpu_oracle` so structural hits get address derivation + Bloom
+pre-filter + mandatory live API confirmation inline (the exact
+`VerifiedBloomChecker` infrastructure Phase 331 later extended); added
+CFB/OFB/CTR stream-cipher key-shape checking, since stream modes have no
+padding and therefore no structural signal analogous to CBC/ECB's
+full-dummy-pad-block check; and, after finding a CPU-decrypt+GPU-point-mult
+split pipeline barely beat pure CPU (PBKDF2-HMAC-SHA256/10000, not point
+multiplication, was the actual bottleneck), merged the entire pipeline --
+decrypt, KDF, secp256k1 point-mult, hash160, and Bloom check -- into
+`aes_kdf_oracle.cu` itself, reusing key-seeker's secp256k1 CUDA kernel via a
+shared `secp256k1_device.cuh` header.
+
+**Result (as recorded in the commit message, not re-verified here):**
+validated via unit tests, a real `--features cuda` Docker build, GPU
+self-test and known-vector tests against the real RTX 5070, and a full
+`medium_curated_all.txt` run (588,942 candidates, 60 AES variants + 36
+stream variants x 4 blobs, ~15 minutes) -- **43 weak hits, 0 strong/
+structural, 3 stream-mode Bloom hits, all 3 correctly rejected by live API
+confirmation, 0 confirmed funded addresses.** This is the same 43-weak-hit
+set Phase 328's own text separately reports from its later re-run of the
+same corpus (Phase 328 only added CBC/ECB/SEED_CBC Bloom-chunk coverage; it
+did not touch the pre-existing z-score/weak-hit gate this commit already
+established, so the count matching across both phases is expected, not a
+coincidence needing reconciliation) -- see Phase 333 for the
+key-shape-classifier check against this exact set of 43 bodies.
+
+**Disposition:** documented (retroactive) -- no new test performed.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** resolves the phase-number collision Phase 328's
+reopen condition flagged: `Cargo.toml`'s "Phase 324" and
+`secp256k1_device.cuh`'s "Phase 325" both now cite Phase 332 instead (see
+Artifacts).
+
+**Artifacts:** `tools/gpu_oracle/Cargo.toml` and `kernels/
+secp256k1_device.cuh` comments corrected to cite Phase 332 instead of the
+phantom/colliding phase numbers; no code behavior changed.
+
+**Reopen condition:** none -- this is a documentation-debt closure, not a
+hypothesis test.
+
+## Phase 333 -- Phase-328's 43 weak hits swept through the key-shape classifier: zero hex64/WIF/BIP39 matches, formally recorded (2026-08-20)
+
+**Question:** Phase 327 proposed re-running the hex64/WIF/BIP39 key-shape
+classifier (`tools/gsmg/key_shape_classifier.py`) against the full
+66,433-candidate medium-curated corpus, but noted the pure-Python driver
+can't afford that scale and left it as a reopen condition pending a CUDA
+port. A narrower, much cheaper question was never formally answered: of the
+specific 43 weak-hit bodies Phase 332/328's `medium_curated_all.txt` run
+already produced (the only candidates that got far enough to be worth
+checking -- everything else in that corpus produced no hit at all), does
+any one of them contain a key-shaped substring the printable/z-score gate
+wouldn't have flagged as such?
+
+**Method:** the recorded hits JSONL's `body_preview` field turned out to be
+empty for every `hit_kind: "weak"` row -- `main.rs` only recomputes and
+stores the decrypted body for strong/structural hits (`hit.hit_kind == 2 ||
+3`), never weak ones, so the 43 bodies were not actually sitting on disk
+anywhere and had to be reconstructed. Took the 43 weak-hit rows from
+`tools/gpu_oracle/output_local/medium_curated_bloomchunk.jsonl` (candidate
+string, KDF/cipher label, blob tag -- each row fully specifies its decrypt),
+parsed the KDF label format back into `(digest-or-pbkdf2-iterations,
+key_len, stream_mode)` via `blobs::variant_label`'s own format string, and
+re-derived each key/IV and decrypted body directly with `tools/gsmg/
+cb_common.py`'s existing `evp_bytes_to_key`/`pbkdf2_bytes_to_key` and the
+`cryptography` library's AES-CFB/OFB/CTR primitives -- the same functions
+`aes_try_open_stream_bytes` already uses, just driven directly instead of
+searched. Cross-checked correctness before classifying anything: recomputed
+`printable_z_score` on all 43 reconstructed bodies and confirmed every one
+matches the `z_score` the GPU run originally recorded (0 mismatches,
+tolerance 0.05) -- proof the reconstructed plaintext is byte-identical to
+what the GPU oracle actually produced, not a plausible-looking
+re-derivation. Only then ran `tools/gsmg/key_shape_classifier.py`'s
+`classify_body` (the same checksum/scalar-range-gated hex64/WIF/BIP39 finder
+Phase 327 ran against the 648-candidate core corpus) against all 43,
+alongside its own mandatory `self_test()`.
+
+**Result:** classifier self-test passed; **zero hex64, WIF, or
+checksum-valid BIP39 mnemonic matches** across all 43 reconstructed
+weak-hit bodies.
+
+**Disposition:** rejected (this specific 43-body set, under this
+classifier).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none -- substantially reduces the urgency of Phase
+327's reopen condition (a CUDA port to classify the full 66,433-candidate
+corpus) without closing it: the 43 weak hits were always the most
+plausible place for a missed key-shaped string to hide (they're the only
+candidates that produced *any* signal at all), and that specific,
+highest-suspicion subset is now confirmed clean. The remaining
+66,433-minus-43 candidates that produced no hit whatsoever were never
+re-examined here and remain Phase 327's actual open scope.
+
+**Artifacts:** none committed -- the reconstruction/classification script
+was a throwaway one-off (not saved as a repo file); the 43 source rows are
+`tools/gpu_oracle/output_local/medium_curated_bloomchunk.jsonl` (gitignored
+runtime output).
+
+**Reopen condition:** unchanged from Phase 327 -- reopens if a CUDA port of
+`key_shape_classifier.py`'s logic makes the full 66,433-candidate corpus
+affordable, or if a future sweep produces new weak/strong hits that haven't
+been classifier-checked yet. Also worth doing someday, not blocking: fix
+`main.rs` to record weak-hit bodies too (not just strong/structural), so
+this reconstruction step isn't needed for the next batch.
+
+## Phase 334 -- the omitted k=8 macro-clue permutation case run: negative (2026-08-20)
+
+**Question:** Phase 322 deliberately excluded k=8 (all 8 creator-authored
+macro-clue fragments, no subset choice) from its P(8,k) sweep, reopening it
+explicitly as a condition rather than silently including it. k=8 is only
+8! = 40,320 permutations -- comfortably GPU-affordable. Does the omitted
+case open SALPH/COSMIC/P32TRAILING/URLBLOB?
+
+**Method:** added an opt-in `--k8`/`--write-k8` generator to `tools/gsmg/
+macro_clue_permutation_combinations.py` (a separate output file, not a
+silent `MAX_K` bump, matching this project's "don't widen an existing sweep
+in place" convention -- see the script's own self-test for the exact
+40,320-count/uniqueness/decomposition proof). Ran the resulting corpus
+through `tools/gpu_oracle` with default settings (`--newline-variants`,
+matching Phase 322's own expansion choice) -- the current default variant
+table (60 AES variants: CBC/ECB/CFB/OFB/CTR x 3 key sizes x 4 KDF kinds,
+broadened by Phase 328 well past Phase 322's original 12-variant CBC-only
+scope) against all 4 tracked blobs, with the full Bloom/API pipeline
+(including Phase 331's 8 EC-derived known targets) active throughout.
+
+**Result:** 40,320 base candidates -> 725,760 expanded passphrase forms x
+240 (variant, blob) pairs = 174,182,400 decrypt attempts, completed in
+3,021s (50m21s) at 215-241 candidates/sec (real-GPU-contention affected --
+this run shared the GPU with a concurrent, unrelated `rckangaroo` process
+for roughly the first 40 minutes; throughput only reached its steady rate
+once that process was stopped mid-run by the project owner). **42 weak
+hits** (z-scores 5.00-5.57, the same low-significance noise class every
+prior sweep at this scale has produced -- not evidence of anything, just
+the expected rate of near-threshold false positives at this volume), **0
+strong, 0 structural**. 5 stream-mode Bloom hits, all 5 `confirmed_funded:
+false` after the mandatory live Blockstream API check. **Zero matches
+against any of Phase 331's 8 known EC-derived target addresses.**
+
+**Disposition:** rejected (this candidate universe, k=8).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** closes Phase 322's explicit reopen condition for
+k=8. The fragment-combination hypothesis (any order-sensitive concatenation
+of 1-8 of the 8 macro-clue fragments) is now exhausted across its entire
+domain (P(8,k), k=1..8) with zero real hits at any k.
+
+**Artifacts:** `tools/gsmg/macro_clue_permutation_combinations.py` (`--k8`/
+`--write-k8`); `wordlists/gsmg/macro_clue_permutation_combinations_k8.txt`
+(40,320 lines, gitignored generated corpus).
+
+**Reopen condition:** only if a 9th creator-authored fragment surfaces
+(there is currently no source for one), or if the 8 fragments are combined
+under a non-concatenation operation (interleaving, XOR, a separator scheme)
+-- pure order-sensitive concatenation is now fully exhausted at every
+subset size.
+
+## Phase 335 -- Model 11 (81+10 FSM) report-plumbing fix closed; P0A/P1A sentinel backfill extended to 42 candidates: negative (2026-08-20)
+
+**Question:** the Canonical Sentinel Inventory (P0A, `doc/Brainstorms/2026-08-15
+- Canonical Sentinel Inventory (P0A).md`) scored `dbbi_faed_fsm_audit.py`'s
+model (a fixed 81-state-table + 10-symbol-trailer Moore-machine serialization
+of DBBI, driven by FAED as the input tape) "conditionally eligible": its
+`audit()` function already computes a full, fully-determined 570-symbol
+output string with no unauthored choice, but the report object only ever
+retained a 160-character prefix of it (`output_prefix`). P1A (Phase 290)
+explicitly deferred model 11's 2 candidates (full output string + trailer)
+pending that "one-line plumbing fix." Does closing the gap and running the
+2 now-eligible candidates open any blob?
+
+**Method:** added an `output_text` field to `dbbi_faed_fsm_audit.py`'s
+`audit()` report -- the exact value `output_prefix` already truncates, no
+new transform, no new choice (see the script's own docstring: one tested
+serialization, no alternate table orientation/output rule/trailer role
+searched). Added a regression test (`test_recent_audits.py::
+test_dbbi_faed_fsm_report_exposes_full_output_text`) pinning that the new
+field's length matches FAED's length and that `output_prefix` is still
+exactly its first 160 characters, so this can't silently drift back to a
+truncated report. Extended `p1a_sentinel_backfill.py`'s frozen candidate
+manifest with model 11's 2 outputs (`output_text`, `trailer_text`),
+re-derived and re-pinned its self-test constants (42 candidates, digest
+`51afdf5ce033500a`, 84 passphrase attempts) -- re-running is cheap enough
+(84 attempts total) that the original 40 (Phase 290) are re-confirmed
+alongside the 2 new ones rather than split into a second script. Same two
+declared forms as Phase 290 (literal, hex SHA-256 of literal), same 4
+tracked blobs, same 6 default KDF variants (CBC-only, `cb_common.py`'s
+`aes_try_open_bytes`) -- no scope expansion beyond what P0A already fixed
+in advance.
+
+**Result:** 42 candidates x 2 forms x 4 blobs x 6 KDF variants = 2,016
+effective decrypt attempts. **0 hits, 0 weak candidates.** Model 11's 2
+candidates specifically produced nothing (verified separately from the
+other 40, which simply re-confirmed Phase 290's own negative).
+
+**Disposition:** rejected (all 42 P0A-eligible sentinel candidates, this
+material/target/variant contract).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** extends Phase 290's P1A backfill from 40 to 42
+candidates; does not change Phase 290's own recorded result (the 40 shared
+candidates are unchanged text, re-run only because doing so was free).
+Closes P0A's "conditionally eligible" status for model 11 -- it is now
+fully eligible and fully tested, the same as models 9/15/16.
+
+**Artifacts:** `tools/gsmg/dbbi_faed_fsm_audit.py` (`output_text` field);
+`tools/gsmg/test_recent_audits.py`
+(`test_dbbi_faed_fsm_report_exposes_full_output_text`); `tools/gsmg/
+p1a_sentinel_backfill.py` (`EXPECTED_CANDIDATE_COUNT`/`_DIGEST`/
+`_PASSPHRASE_ATTEMPTS` updated to 42/`51afdf5ce033500a`/84, `_m11` import
+and its 2 candidates added to `eligible_candidates()`).
+
+**Reopen condition:** none specific to models 9/11/15/16 -- all four are now
+closed under this contract. Models 2/3/8/12/13 (no candidate exists without
+a new authored step) and models 4/6/7/10/14 (multi-valued, discarded before
+the report, or self-disqualified) remain out of scope per P0A's own
+disposition for each, and reopen only under the conditions already stated
+there.
+
+## Phase 336 -- B1 "half and better half" combine algebra, bounded pilot: negative (2026-08-20)
+
+**Question:** `doc/Brainstorms/2026-08-20 - Creative Brute-Force Coverage
+Expansion.md` (a fresh brainstorm ranking un-executed detector-coverage
+ideas) ranks its B1 idea ("two-half algebra within one plaintext") #2 by
+expected impact: the existing oracle checks a decrypt's first two 32-byte
+chunks (`half`/`better_half`) independently against the address oracle, but
+never tests whether a *combination* of the two -- XOR, modular add/subtract,
+byte interleaving, nibble interleaving, half-swaps, SHA256/HMAC combinations
+-- lands on the prize address or one of Phase 331's known EC-derived
+targets. Does this genuinely untested combine-space open anything, and can
+the detector be built and proven correct without touching the shared
+decrypt/accept pipeline (the much larger, riskier "P0B" retention-oracle
+redesign proposed in the older 2026-08-15 false-negative-surface doc)?
+
+**Method:** wrote `tools/gsmg/half_better_half_algebra_audit.py` as a
+self-contained, downstream-only detector -- no changes to `cb_common.py` or
+any shared decrypt path. Pre-registered before running (per the brainstorm's
+own "Decisions"/stop-rule requirement): frozen inputs (the 42 P0A/Phase 335
+sentinel candidates, 2 forms each -- literal and hex SHA-256, not Phase
+327's separate 14,551-keystring core corpus, since a full run against that
+larger corpus is ~47.1M combine checks at maximum (14,551 x 216 pairs x 15
+ops), realistically ~31.4M once only the 144 always-retained stream
+(variant, blob) pairs are counted -- tens of minutes of pure-Python EC
+work, corrected here from this phase's own original overstated "150M+,
+many hours" estimate; the brainstorm's own "Open questions" section still
+anticipates this needs a GPU port for comfortable full-corpus scale, just
+not at the cost this phase first claimed), frozen crypto scope
+(`cb_common.KDF_VARIANTS` (6, CBC) +
+`ECB_CIPHER_VARIANTS` (12) + `STREAM_CIPHER_VARIANTS` (36, CFB/OFB/CTR) x 4
+blobs = 216 (variant, blob) pairs/form -- CBC/ECB retain a body only on
+valid PKCS7 padding, exactly as the existing oracle requires, but with no
+printability gate afterward; stream modes retain every decrypt
+unconditionally, since they have no padding signal at all), and the exact
+15 named combine operations from the brainstorm's B1 list (XOR; A+B/A-B/
+B-A mod n; 2 interleave directions; 2 halves-swap directions; 2
+nibble-interleave directions; 3 SHA256 combinations; 2 HMAC directions) --
+no operation added or dropped after seeing results.
+
+Self-test (mandatory before the real run, `--self-test`) proved the whole
+pipeline works, not just its parts in isolation: (1) combine-family sanity
+(XOR self-inverse, halves-swap round-trips, add-mod-n checked against plain
+Python bigint arithmetic); (2) all 8 of Phase 331's known-target hash160
+constants independently re-derived a *third* time (after the original Rust
+`secp256k1` crate derivation and the Python `coincurve` cross-check) via a
+hand-rolled secp256k1 point-add/double implementation -- this caught a real
+transcription bug in a draft of this very self-test (the generator point's
+Gy constant was one hex digit short from manual copying), fixed by deriving
+G from the `cryptography` library itself instead of a literal, which is the
+kind of error this project's independent-re-derivation discipline exists to
+catch; (3) an end-to-end planted-hit test: a synthetic AES-CFB blob built so
+its two chunks' XOR-combine lands exactly on a known scalar, confirmed
+recovered by the real `run()` driver (decrypt -> extract chunks -> combine
+-> address-check), not just by the math in isolation; (4) a negative
+control confirming a wrong password against the same synthetic blob
+produces no hit.
+
+**Result:** 84 passphrase attempts, 12,128 padding-valid/unconditionally-
+retained bodies (36 stream variants x 4 blobs x 84 forms = 12,096 always-
+retained stream bodies, plus a small number of CBC/ECB padding-valid
+bodies), 181,920 combine-and-check operations (real production Bloom cache
+active throughout, plus the 8 Phase-331 known targets), completed in 1m33s.
+**Zero hits** -- no combine result matched the Bloom cache or any known
+target across any candidate, form, variant, blob, or operation.
+
+**Disposition:** rejected (this candidate/variant/combine-family universe).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none -- this is new downstream coverage (Phase
+331 checked the two chunks independently; this checks their combination),
+not a re-test of anything already closed.
+
+**Artifacts:** `tools/gsmg/half_better_half_algebra_audit.py`.
+
+**Reopen condition:** the brainstorm's own promising-directions table ranks
+this a "medium effort" item whose real-scale version (the full 14,551
+candidate corpus, or GPU-side implementation) was explicitly out of scope
+for this pilot -- reopens if that larger scope becomes worth running, if a
+new combine operation is clue-motivated, or if a new candidate corpus is
+established as high-value enough to justify the cost. Also see the
+brainstorm's own next-ranked ideas (A1 sliding key windows, A3 unconditional
+key-format scanner) as separate, not-yet-executed candidates from the same
+document.
+
+## Phase 337 -- A1+A2 sliding raw-key windows and byte-order transforms, bounded pilot: negative (2026-08-20)
+
+**Question:** the same 2026-08-20 brainstorm ranks A1 ("sliding raw-key
+windows") + A2 ("byte-order and packing transforms") #1 by expected impact
+-- higher than Phase 336's B1. Every existing raw-key detector in this
+project (Phase 328's Bloom-chunk check, Phase 336's combine-algebra check)
+only ever examines the two ALIGNED 32-byte chunks at offsets 0 and 32. A
+correct raw key beginning at any other byte offset (1 through 31) is
+currently invisible to all of them. Does sliding a 32-byte window across a
+bounded plaintext prefix, combined with A2's byte-order/endianness
+transform family, open anything?
+
+**Method:** wrote `tools/gsmg/sliding_key_window_audit.py`, reusing Phase
+336's `raw_cbc_bodies`/`raw_ecb_bodies`/`raw_stream_bodies`/`check_scalar`/
+`BloomCache`/known-target constants directly (imported, not duplicated) for
+an identical crypto scope and corpus -- same 42 P0A/Phase-335 sentinel
+candidates x 2 forms, same 54 variants (KDF_VARIANTS/ECB_CIPHER_VARIANTS/
+STREAM_CIPHER_VARIANTS) x 4 blobs, same padding-valid-or-unconditional
+retention rule. New surface: every 32-byte window within the first 64
+bytes of each retained body (A1's own "first version" bound; 33 windows
+per body -- offsets 0 and 32 are the two ALIGNED chunks every existing
+detector already checks, offsets 1-31 and 33-63 are genuinely new), each
+tested under A2's exact 7-form byte-order family (identity, full-byte
+reversal, 4-byte-word byte reversal, 8-byte-word byte reversal, 4-byte
+word-order reversal, nibble swap, bit reversal) -- verbatim from the
+brainstorm's list, no operation added or dropped after seeing results.
+Same frozen success criterion as Phase 336 (valid scalar + Bloom cache or
+Phase 331 known-target match).
+
+Self-test proved the whole pipeline before the real run: byte-order form
+sanity (each transform checked against its own definition; bit-reversal
+and nibble-swap confirmed as involutions); sliding-window enumeration
+sanity (exactly 33 windows over a 64-byte body, window 0/32 confirmed
+identical to the two aligned chunks); and, the decisive check, an
+end-to-end planted-hit test with a known scalar placed at byte **offset
+17** inside a synthetic AES-CFB body (deliberately not 0 or 32 -- the
+exact case an aligned-only detector would miss) -- confirmed recovered by
+the real driver at exactly `(offset=17, form="identity")`, plus a
+wrong-password negative control producing no hit.
+
+**Result:** 84 passphrase attempts, 12,128 retained bodies (identical count
+to Phase 336, confirming identical scope/corpus), 400,224 windows (12,128 x
+33, exact), 2,801,568 form checks (400,224 x 7, exact), 19m13s. **Zero
+hits** -- no window, at any offset or byte-order form, across any
+candidate/variant/blob, matched the Bloom cache or any known target.
+
+**Disposition:** rejected (this candidate/variant/window/byte-order-form
+universe).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none -- new coverage (unaligned offsets and
+byte-order variants), not a re-test of Phase 328/336's aligned-chunk
+checks.
+
+**Artifacts:** `tools/gsmg/sliding_key_window_audit.py`.
+
+**Reopen condition:** same shape as Phase 336's -- the brainstorm's own
+"Risk" note for A1 explicitly anticipates real scale (the full
+14,551-candidate corpus, or a wider prefix bound than 64 bytes) needs GPU
+batching; this pilot's 2.8M-check, 19-minute pure-Python run is not that
+scale. Reopens if that larger scope becomes worth building, or if a new
+byte-order transform is clue-motivated.
+
+## Phase 338 -- A3 unconditional embedded key-format scanner, bounded pilot: negative, with a self-caught false-positive-rate correction (2026-08-20)
+
+**Question:** the same brainstorm ranks A3 #3: scan every retained decrypt
+body (not just Phase 328's weak-hit survivors, and not just Phase
+327/333's hex64/WIF/BIP39) for a broader set of embedded key-shaped
+encodings -- decimal private scalars, SEC1 compressed/uncompressed public
+keys, and BIP32 extended-key (`xprv`/`xpub`) payloads -- completing Phase
+327's open full-corpus scope for the finders it already has, plus new ones.
+
+**Method:** wrote `tools/gsmg/embedded_key_format_scanner_audit.py`, reusing
+`key_shape_classifier.classify_body()` unchanged (hex64/WIF/BIP39/raw
+64-byte halves) and Phase 336's body-retention functions for an identical
+corpus/crypto scope (the same 42 P0A/Phase-335 candidates x 2 forms, same
+54-variant x 4-blob scope, same retention rule). Added three new finders:
+a boundary-anchored 60-78-digit decimal-scalar scanner (bounded to
+secp256k1's ~78-decimal-digit order); a byte-level SEC1 compressed/
+uncompressed public-key scanner (curve-membership-gated via modular
+square root, not merely prefix-matched); and a base58check xprv/xpub
+scanner (78-byte payload, mainnet version-byte-gated).
+
+**Self-caught correction, before any result was recorded as a finding:**
+the SEC1 pubkey finder's first version reported **17,182 "matches"**
+against this exact corpus/scope. Every other finder in this module is
+checksum-gated (WIF's 4-byte Base58Check checksum, BIP39's 11-bit
+checksum, xprv/xpub's 4-byte checksum + version bytes, hex64/decimal's
+exact-length boundary anchoring making chance collision astronomically
+rare) -- but a *compressed* SEC1 public key has no checksum at all; its
+x-coordinate is a quadratic residue mod p (i.e. curve-valid) for
+essentially 50% of arbitrary 32-byte values. At ~12,128 bodies x up to
+~1,300 bytes each x ~0.78% chance of the right prefix byte, thousands of
+purely-coincidental curve-valid "pubkeys" are the *expected* baseline, not
+a signal -- confirmed, not merely suspected, once every one of the 17,182
+was checked against an address derivation and found to match neither the
+live Bloom cache nor any Phase-331 known target. Fixed before recording
+any result: the finder now derives the actual hash160 from each candidate
+pubkey's bytes directly (no private-key step needed -- the bytes already
+are the public key) and only counts a result when that hash160 hits the
+Bloom cache (mandatorily confirmed) or a known target, exactly the same
+discipline Phase 336/337 already apply to scalar candidates. The self-test
+was rewritten to prove this distinction directly: an untargeted curve-valid
+planted pubkey now correctly produces *zero* reported matches (only a
+separate diagnostic curve-valid counter moves), while the same bytes
+produce a real match once their hash160 is added as a known target.
+
+**Result:** 84 passphrase attempts, 12,128 retained bodies, real production
+Bloom cache active. **Zero real matches** across all six finder types
+(hex64, WIF, BIP39, decimal scalar, SEC1 compressed/uncompressed, xprv/
+xpub). 17,182 SEC1 curve-valid-but-address-unmatched candidates recorded
+only in the diagnostic counter, not as findings -- exactly the chance-noise
+baseline the correction above predicts, not a near-miss.
+
+**Disposition:** rejected (this candidate/variant/finder universe).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none against any existing fact -- extends Phase
+327/333's hex64/WIF/BIP39 coverage from the 43-weak-hit and 648-candidate
+corpora to this project's full body-retention scope (padding-valid CBC/ECB
+plus unconditional stream), and adds three finder types with no prior
+coverage in this project at all.
+
+**Artifacts:** `tools/gsmg/embedded_key_format_scanner_audit.py`.
+
+**Reopen condition:** same shape as Phase 336/337's -- bounded pilot only
+(42-candidate corpus), full-scale (the 14,551-candidate core corpus) is
+this idea's own explicitly out-of-scope next step, likely needing the same
+GPU-batched EC math A1/A2 would. Also reopens if a DER/ASN.1 SEC1 private-
+key-container finder (mentioned in the brainstorm but not built here, for
+scope reasons) becomes worth adding.
+
+## Phase 339 -- code review corrections to Phases 336-338: Bloom fail-closed, mandatory live confirmation, frozen-digest enforcement, hit provenance (2026-08-20)
+
+**Question:** an independent code review of `half_better_half_algebra_
+audit.py` (Phase 336) found five real correctness/reproducibility issues
+and one stale-documentation issue, none of which happened to change Phase
+336's recorded "0 hits" result but all of which could silently produce a
+misleading result on a future run. Do the same issues exist in Phase
+337/338's scripts (which share most of their code with Phase 336's), and
+does fixing all of them change any recorded result?
+
+**Findings, as reported and verified:**
+1. **[P1] Missing prize-address target.** `PRIZE_HASH160_HEX` was defined
+   but never added to `KNOWN_TARGET_HASH160S` -- a decrypt landing on the
+   literal prize key `k` (not just Phase 331's EC-derived neighbors) was
+   only reachable via the Bloom cache, so a missing/stale Bloom file would
+   silently drop it from the target set entirely. Confirmed: the reviewer
+   verified the actual Bloom cache used for Phase 336 does contain the
+   prize hash160, so this did not invalidate that specific recorded
+   result -- but the gap was real. Fixed: added as an explicit
+   `"prize_address"` known target in all three scripts.
+2. **[P1] Bloom hits counted without live confirmation.** `check_scalar`'s
+   `bloom_prefilter` result (and the equivalent in Phase 338's SEC1
+   finder) was appended straight to `hits`/`matches`/`total_hits` --
+   nothing performed the mandatory Blockstream confirmation the docstrings
+   already promised. Zero Bloom hits occurred in any of the three
+   recorded runs, so this did not change any result, but a future run
+   with a Bloom false positive would have reported it as real. Fixed:
+   added `confirm_address_live()` (same funded>spent rule and endpoint
+   `binary_key_material_backfill.py`'s `verify_pending_queue` already
+   uses), called synchronously on every `bloom_prefilter` hit before it
+   can be counted; unconfirmed hits are dropped, confirmed ones are
+   relabeled `bloom_confirmed`. Also fixed: missing/stale `bloom_path` no
+   longer silently falls back to no Bloom coverage -- `run()` now raises
+   `FileNotFoundError` unless `bloom_path=None` was passed explicitly
+   (`--no-bloom` added to each script's CLI as the intentional opt-out).
+3. **[P2] Frozen candidate digest not enforced.** The pre-registration
+   pins `p1a_sentinel_backfill.py`'s digest `51afdf5ce033500a`, but
+   self-tests only asserted a count of 42 -- 42 modified or duplicate
+   candidates would have passed silently. Fixed: `EXPECTED_CANDIDATE_
+   DIGEST` is now asserted (with a uniqueness check) in all three
+   self-tests, and `run()`'s report now includes `candidate_digest`
+   (verified unchanged: `51afdf5ce033500a` on every re-run below).
+4. **[P2] Hit records lost candidate provenance.** A hit only recorded
+   `literal`/`sha256`, not which of the 42 candidates, or which P0A model/
+   label, produced it. Fixed: `frozen_candidates_with_provenance()` now
+   threads a stable index, the P0A model, the label, and the candidate's
+   own SHA-256 through every hit/match record in all three scripts.
+5. **[P2] Full-corpus cost overstated.** Phase 336's own text estimated
+   "potentially over 150M secp256k1 derivations, many hours" for a future
+   full run against Phase 327's 14,551-keystring core corpus. Correct
+   figure: 14,551 x 216 (variant, blob) pairs x 15 combine ops = 47.1M
+   maximum, ~31.4M realistic (only the 144 always-retained stream pairs
+   reliably produce a checkable body) -- also, `private_key_details()`
+   performs one EC derivation per candidate value, not two (it re-encodes
+   the same derived point as both compressed and uncompressed addresses).
+   Fixed in both `half_better_half_algebra_audit.py`'s module docstring
+   and this document's own Phase 336 entry.
+6. **[P3] `GSMG_HOME.md` phase count stale** (said 333, actual 336 at
+   review time, 338 by the time this phase was written). Fixed.
+
+**Verification:** applied the equivalent fix to `sliding_key_window_audit.
+py` (Phase 337) and `embedded_key_format_scanner_audit.py` (Phase 338) as
+well -- both share `half_better_half_algebra_audit.py`'s `run()`-shaped
+Bloom handling and had the identical two [P1] bugs. All three self-tests
+extended with: a fail-closed-on-missing-Bloom-cache check, a live-
+confirmation check proving both directions (an unconfirmed Bloom hit is
+dropped; a confirmed one is counted and labeled `bloom_confirmed`) against
+a *properly-sized* temporary Bloom cache (an early draft of this fix used
+a 1-entry test cache, which saturates -- documented elsewhere in this
+project's own Bloom tests -- and made the self-test hang for the better
+part of 20 minutes triggering the new rate-limited confirmation on nearly
+every one of ~1,000+ combine checks; padded to 200 entries to restore
+realistic selectivity), and a frozen-digest assertion. All three self-tests
+pass. Re-ran all three real pilots end to end with the fixes in place:
+
+- Phase 336 (`half_better_half_algebra_audit.py --run`): 84 attempts,
+  12,128 bodies, 181,920 combine checks, digest `51afdf5ce033500a`,
+  **0 hits** -- unchanged.
+- Phase 337 (`sliding_key_window_audit.py --run`): 84 attempts, 12,128
+  bodies, 400,224 windows, 2,801,568 form checks, digest
+  `51afdf5ce033500a`, **0 hits** -- unchanged.
+- Phase 338 (`embedded_key_format_scanner_audit.py --run`): 84 attempts,
+  12,128 bodies, digest `51afdf5ce033500a`, **0 matches** (17,182 SEC1
+  curve-valid-but-unconfirmed diagnostics, same as originally recorded)
+  -- unchanged.
+
+**Result:** all five correctness/reproducibility findings confirmed real
+and fixed across all three scripts; none of them changed any previously
+recorded result, but all three pilots are now demonstrably running under
+the guarantees their own docstrings already claimed, not silently weaker
+ones.
+
+**Disposition:** documented correction -- no new candidate-universe test.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** corrects Phase 336's module docstring and this
+document's own Phase 336 entry (cost estimate), and `GSMG_HOME.md`'s stale
+phase count. Does not change Phase 336/337/338's recorded dispositions.
+
+**Artifacts:** `tools/gsmg/half_better_half_algebra_audit.py`, `tools/gsmg/
+sliding_key_window_audit.py`, `tools/gsmg/embedded_key_format_scanner_
+audit.py` (all three: prize target added, fail-closed Bloom loading, live
+confirmation, digest enforcement, hit provenance); `doc/GSMG_HOME.md`
+(phase count).
+
+**Reopen condition:** none specific -- this closes a correctness-debt gap
+rather than testing a new hypothesis. The live-confirmation and fail-closed
+machinery is now load-bearing for any future rerun or extension of these
+three scripts (including a full-corpus/GPU-scale version of any of them).
+
+## Phase 340 -- C1 BIP32 paths from authenticated numbers, tightly bounded pilot: negative, speculative-semantics disposition (2026-08-20)
+
+**Question:** the same 2026-08-20 brainstorm's C1 idea (ranked #4):
+treating a candidate as a BIP32 seed and deriving down paths built only
+from numbers this project has already independently authenticated
+elsewhere (`23/16/7`, `401/400/73`, `1/4/21`, `14/8/1`, `574061`) --
+unlike A1/A2/A3/B1, nothing in this project's fact ledger says the
+creator used BIP32 at all, so this is explicitly speculative wallet
+semantics. What makes it worth a bounded pilot anyway: an exact-address
+endpoint (no scoring, no threshold) and authenticated-number-only inputs.
+Per the user's explicit scope freeze, this was run as one tightly bounded
+pilot, then paused before D1/A4 rather than continuing automatically.
+
+**Method:** wrote `tools/gsmg/bip32_authenticated_number_paths_audit.py`.
+Frozen scope, exactly as specified: the same 42 P0A/Phase-335 sentinel
+candidates (reused, not re-selected); exactly two seed-byte forms
+(SHA-256 -> 32 bytes, SHA-512 -> 64 bytes, BIP32's own maximum seed
+length -- chosen because candidate text length varies and BIP32 requires
+16-64 bytes); exactly 8 paths from the 5 named number sources (`574061`
+contributes three declared readings: a single-level index, this project's
+own established `574061 -> [[5,7,4],[0,6,1]]` grouping read as one
+6-level path, and that same grouping's two 3-level halves derived
+independently -- no invented numbers, no 6th source); exactly two
+hardening variants per path (all-hardened, all-non-hardened -- no mixed
+permutations); standard BIP32 HMAC-SHA512 derivation
+(`key_shape_classifier.py`'s existing `bip32_ckd_priv`/`bip32_derive_path`,
+not reimplemented); the final child key only per path, plus the seed's own
+master key as a declared control; and an exact match against the prize
+address or one of Phase 331's 8 known targets only -- no Bloom cache, no
+broad scoring, per the explicit instruction.
+
+Self-test verified against the **official BIP32 Test Vector 1**, fetched
+directly from `bitcoin/bips`' `bip-0032.mediawiki` rather than hand-typed
+from memory (the exact risk Phase 336's own self-test correction already
+demonstrated): computed master key/chain code and the m/0H child both
+matched the spec's published `xprv` strings byte-for-byte after decoding.
+Also: seed-form and hardening-policy sanity; the path registry's exact
+8-path/25-level-total contract; an end-to-end planted-hit test (a real
+final child key's own address planted as a target, recovered by the real
+driver with correct candidate/seed-form/path/hardening provenance, not
+just correct math in isolation); a second planted-hit test for the
+master-key control specifically, proving it actually runs and is
+distinguishable from a path hit; a negative control; and a bounded-scope
+assertion (34 checks/candidate, comfortably "hundreds, not millions").
+
+**Result:** 42 candidates x 2 seed forms x (1 master control + 8 paths x 2
+hardening final-child checks) = 1,428 address checks, 4,200 BIP32
+derivation steps, 17 seconds. **Zero hits.**
+
+**Disposition:** rejected (this exact frozen seed/path/hardening scheme)
+-- explicitly **not** a disposition on the underlying authenticated
+numbers themselves. Per the user's own framing when this pilot was
+scoped: a negative here is evidence against BIP32 derivation being the
+intended use of `23/16/7`/`401/400/73`/`1/4/21`/`14/8/1`/`574061` under
+this exact scheme; it says nothing about whether those numbers matter to
+the puzzle through some other mechanism, and must not be cited as closing
+them generally.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `tools/gsmg/bip32_authenticated_number_paths_audit.py`.
+
+**Reopen condition:** a different seed-construction rule, a 6th
+authenticated-number source, mixed hardening, or non-final-child check
+points would each be a new frozen scheme, not a rerun of this one. Per the
+user's explicit instruction, D1 (multi-blob aggregate scoring) and A4
+(post-decryption decoding cascade) do not follow automatically from this
+result -- each needs its own scoping decision before being run.
+
+## Phase 341 -- Seed 1: solved-boundary rule audit with leave-one-out controls: positive, calibration-only disposition (2026-08-20)
+
+**Question:** `doc/Brainstorms/2026-08-20 - Post-Phase-340 Future Search
+Portfolio.md`'s seed 1, ranked #1 in that note: do this project's
+candidate-construction habits (component order, connected/no-separator
+assembly, instruction-selected casing, literal-versus-prefix rules)
+actually reconstruct the exact known GSMG password preimages when fed only
+the already-solved clue-answer components plus the local assembly
+instructions available on that boundary's own page -- before any of the
+resulting candidates are checked against a hash? If a frozen rule engine
+cannot do this cheaply on the three boundaries where the answer is already
+public, generating more candidates from the same grammar for an
+unresolved blob is unjustified. This is explicitly a calibration exercise,
+not an attack on any open blob: it consumes only Phase 2, Phase 3, and
+Phase 3.2, all already solved.
+
+**Method:** wrote `tools/gsmg/solved_boundary_rule_audit.py`. Ground truth
+was re-extracted directly from `README.md` lines 90-266 (the primary
+public `puzzlehunt/gsmgio-5btc-puzzle` README this project has separately
+cross-checked and cites elsewhere), not retyped from the brainstorm note's
+own summary table -- which turned out to use an approximate `"aaa"` for
+what the page literally annotates as `"aa"` for the three Phase 3.2
+answers (force lowercase), distinct from `"aBa"` (preserve case) used for
+Phase 3's parts 6/7. That distinction is load-bearing: the Phase 3.2
+answers are genuinely lowercase-forced while Phase 3's `Safenet`/`HSM`
+parts are genuinely case-preserved.
+
+For each of the three boundaries, a frozen rule engine assembles a
+PRIMARY candidate (the single most literal reading of that boundary's own
+page instructions) plus a small enumerated hedge over genuinely
+text-underdetermined byte-level choices (2-3 options each, primary listed
+first, ordered by "distance from all-primary" so candidate rank is fixed
+by construction before any hash is computed):
+- Phase 2: one component (`causality`), no separator/casing/whitespace
+  ambiguity on the page at all -- 1 candidate. Kept only as a baseline;
+  per the brainstorm's own predeclared reading, recovering a
+  single-component boundary alone proves nothing about the grammar.
+- Phase 3: 7 parts, explicit "concatenate them all" (no separator
+  ambiguity), parts 1-5 unambiguous; part 6 (genesis-block hex fragment)
+  and part 7 (post-move chess FEN) carry explicit `/(aBa, connected
+  enf)` / `/(aBa, connected not enf)` annotations. Hedged axes: does the
+  literal-ASCII hex rendering keep its `"0x"` prefix (3 options), and is
+  part 7's "keep whitespace" annotation actually load-bearing (hedge:
+  strip it anyway, 2 options) -- 6 unique candidates after dedup.
+- Phase 3.2: 3 clue answers, each annotated `/(aa, connected enf)`, plus
+  an explicit `giveit` literal prefix on clue 2. Hedged axes: `giveit`
+  glued directly vs space-separated; whether `"enf"` means strip literal
+  whitespace only or strip all non-alphanumeric characters (needed to
+  explain the apostrophe-free `heisenbergs...` in the real answer); and
+  whether the raw clue-3 text is `"Heisenberg's"` or `"Heisenberg"` --
+  6 unique candidates after dedup (2 of the 8 raw combinations collapse
+  because the two `enf` interpretations are indistinguishable whenever
+  there is no non-alnum, non-whitespace character to strip).
+
+Two controls ran alongside the main enumeration per boundary: a
+**shuffled-component-order** variant (same axis budget, components
+reordered) that should not accidentally match; and a **naive global
+casing/whitespace baseline** (one casing+whitespace choice applied
+uniformly to every component, ignoring per-component page annotations,
+cross-producted over `{preserve, force-lower} x {keep, strip}` -- 4
+combos) that tests whether reading each boundary's own instructions was
+actually necessary.
+
+`self_test()` independently re-derives all three ground-truth hashes from
+literal concatenation (no rule engine involved), cross-checks them against
+`data.py`'s own `VERIFIED_PRIOR_COMMAND_HASHES`, confirms the frozen
+engine's rank-1 candidate matches each literal string exactly, confirms
+the enumeration sizes and dedup behavior, confirms zero accidental matches
+from either shuffled-order control, and confirms the naive-global-baseline
+result described below.
+
+**Result:** all three boundaries recovered their exact known preimage at
+**rank 1** (Phase 2: 1 candidate; Phase 3: 6 candidates; Phase 3.2: 6
+candidates -- all comfortably inside the predeclared "top 10 of at most
+100" success gate). Neither non-trivial boundary's shuffled-order control
+produced any match (0/6 for both Phase 3 and Phase 3.2), confirming
+component order is genuinely load-bearing rather than decorative. The
+naive global baseline found exactly one working combo per boundary out of
+four, and -- the informative part -- it was a **different** combo per
+boundary: Phase 3 needs `preserve-case + keep-whitespace`; Phase 3.2 needs
+`force-lower + strip-all-nonalnum`. No single global casing/whitespace
+rule covers both boundaries at once, so reading each boundary's own local
+instruction is necessary, not merely a convenience simplification.
+
+**Disposition:** positive, but explicitly scoped as calibration, not
+puzzle progress -- this project's own "Dataset reality check" stands: with
+only 3 known AES boundaries, this validates that a small, explicitly
+declared instruction-parsing rule set (order, no-separator concatenation,
+per-component case/whitespace mode, literal-prefix handling) reproduces
+all three known preimages exactly and rejects six real near-miss
+alternatives per non-trivial boundary. It is a reconstruction-validation
+exercise, not blind discovery or a statistically validated general author
+model -- the "primary" axis choice in each case was drawn from this
+project's own prior reading of the primary README, so recovering it does
+not by itself demonstrate an independently-guessed rule. Per the seed's
+own promotion gate, this result licenses using the same frozen rule
+registry (order, connected/no-separator assembly, instruction-selected
+per-component casing, literal-prefix handling) to construct a small
+grammar-derived candidate set for currently unresolved boundaries where
+equivalent local instructions exist -- it does not license unbounded
+grammar expansion, and it supplies no new password material of its own.
+
+**Facts affected:** none (no unresolved blob was queried).
+
+**Supersedes/corrects:** the 2026-08-20 brainstorm's own manifest table,
+which cited Phase 2's local rule evidence as `"aaa, connected enf"`; the
+page literally annotates the three Phase 3.2 answers as `"aa"` (force
+lowercase), and Phase 2 itself carries no such annotation at all (single
+unambiguous component).
+
+**Artifacts:** `tools/gsmg/solved_boundary_rule_audit.py`.
+
+**Reopen condition:** applying this frozen rule registry to a genuinely
+unresolved boundary (SALPH/COSMIC/P32TRAILING/URLBLOB) is a new,
+separately scoped experiment -- per the brainstorm's own "Recommended
+sequencing," the next step in this line is seed 2 (typed decode-and-parse
+ladder) inspecting already-retained bodies, not a fourth boundary added to
+this same audit. A fourth genuinely solved AES boundary, if one is ever
+found, would strengthen this calibration; none is currently known.
+
+## Phase 342 -- Seed 2: typed decode-and-parse ladder, bounded pilot: negative (2026-08-20)
+
+**Question:** the same brainstorm's seed 2, scoped by the user's exact
+2026-08-20 freeze: does the same 42-candidate/12,128-body corpus already
+retained by Phases 336-338 contain a body that only becomes key-shaped,
+DER-shaped, or a valid Bitcoin/PSBT object *after* exactly one hex,
+Base64/Base64URL, gzip, zlib, or ZIP decode -- invisible to every prior
+detector in this project's lineage, which only ever inspected raw
+retained bytes directly? Also: does DER/PSBT/Bitcoin-transaction
+structural recognition, applied directly to the raw retained bodies
+themselves (never checked before -- Phase 338 explicitly scoped DER out,
+and no prior phase built a PSBT or transaction parser), find anything?
+
+**Method:** wrote `tools/gsmg/typed_decode_parse_ladder_audit.py`. Per the
+user's explicit freeze: no new candidates, KDFs, ciphers, or scoring --
+`iter_retained_bodies()` reuses `half_better_half_algebra_audit.py`'s
+`raw_cbc_bodies`/`raw_ecb_bodies`/`raw_stream_bodies` and
+`frozen_candidates_with_provenance()` unchanged, reconstructing the
+identical 42 x 2-form x 54-variant x 4-blob corpus (confirmed by
+self-test to reproduce exactly 12,128 bodies, matching Phase 336/337/338's
+own reported count).
+
+Three explicit scopes only, no arbitrary substring scan: whole-body,
+newline-split lines, and whitespace-split tokens, deduplicated and
+tag-tracked per segment. Five decode triggers (strict even-length ASCII
+hex; Base64/Base64URL requiring the decoded bytes' own canonical
+re-encoding to match the input segment exactly, rejecting non-canonical
+encodings; gzip/zlib via a size- and ratio-capped `zlib.decompressobj`
+bounded inflate, `eof`-gated so the format's own checksum/trailer is
+enforced rather than bolted on after; ZIP via `zipfile` requiring
+`testzip()` to report no CRC failures). DER is its own trigger-and-parse
+in one step (an outer SEQUENCE tag whose declared length exactly consumes
+the segment). `Salted__` is detection-only, per the user's explicit
+instruction: an exact 8-byte header plus a block-aligned remainder is
+logged as a structural finding; no decrypt is attempted.
+
+Depth one, strictly: post-decode bytes are validated once, never fed back
+into the same decoder ladder. Validation is two-tiered to avoid
+duplicating Phase 338's already-negative direct-body key-format scan:
+raw, undecoded segments only get the three genuinely new structural
+checks this project never ran directly before (bounded DER-EC/PKCS8
+parser with one recursion hop for PKCS8's OCTET-STRING-wraps-SEQUENCE
+shape; a PSBT global/per-object key-value-map walker requiring exact
+byte-for-byte consumption; a legacy+segwit Bitcoin-transaction parser also
+requiring exact consumption) plus the Salted__ trigger; only POST-DECODE
+bytes additionally get `embedded_key_format_scanner_audit.classify_body_
+extended` (hex64/WIF/BIP39/raw-halves/decimal-scalar/SEC1-pubkey/xprv-
+xpub, reused unchanged) and a direct 32-byte-scalar exact-target check.
+Exact-target matching is exact-target-only (Phase 331's 8 known EC-derived
+targets plus the prize address, reused from `half_better_half_algebra_
+audit.KNOWN_TARGET_HASH160S`) -- no Bloom cache this round, consistent
+with the user's "add ... no scoring changes" freeze.
+
+Self-test: a planted positive and a malformed/corrupted near-positive for
+every decoder (hex, both Base64 variants, zlib, gzip, ZIP); a 50MB-of-
+zeros decompression bomb (compresses to a few KB) confirmed rejected by
+the size/ratio cap rather than materialized; DER verified against a real
+RFC5915-shaped structure carrying an actual secp256k1 scalar and OID, plus
+one level of PKCS8 OCTET-STRING wrapping, plus a length-truncated
+rejection; a minimal valid PSBT and a minimal valid legacy transaction
+each verified positive and then rejected once truncated/corrupted;
+`Salted__` checked both block-aligned and misaligned; scope-extraction
+tagging verified on a mixed whole-body/line/token string. An end-to-end
+planted positive ran the full real pipeline: a synthetic AES-CFB body
+whose token-scope segment is Base64 of a DER/PKCS8 structure carrying a
+scalar matching a planted known target, recovered with full candidate/
+scope/decoder provenance; a wrong-password control on the same synthetic
+blob produced zero hits. 200 random length-matched control bodies (sizes
+64/80/96/128, matching the real blob-length envelope) produced trigger
+noise on some short tokens (expected -- a 2-byte token has a nontrivial
+chance of falling inside the hex alphabet) but **zero** parser-valid
+structural findings and **zero** exact-target hits, confirming DER/PSBT/
+tx/key-format/Salted__ are all checksum- or structure-gated tightly enough
+that chance noise cannot pass them.
+
+**Result:** 12,128 bodies, 150,141 unique segments evaluated across all
+three scopes. Raw-segment structural checks (the genuinely new coverage):
+0 DER triggers, 0 PSBT-valid, 0 transaction-valid, 0 Salted__ triggers.
+Decode triggers: hex 22 (22 decoded, 18 unique outputs), Base64 16 (16
+decoded, 14 unique outputs), zlib 225 header-pattern triggers but 0
+successful decodes (the 2-byte zlib header check is a weak ~1/31 chance
+heuristic; real inflate legitimately failed on all 225), gzip 0, ZIP 0.
+Every successfully decoded output was validated against the full
+validator set. **0 parser-valid structural findings, 0 exact-target
+hits.** 53 seconds.
+
+**Disposition:** negative -- this exact bounded scope (5 decoders, depth
+one, 3 explicit scopes, the listed structural/format/target validators)
+finds nothing in the Phase 336-338 corpus. Consistent with the corpus's
+own established character: these are wrong-password decrypt outputs
+retained only because they cleared a padding-valid or unconditional-
+retention gate, not because they show any other sign of structure:
+340,161-bit family results elsewhere in this project already establish
+the bulk of this material is high-entropy noise. This closes the specific
+decode-then-structural-validate surface the seed described; it does not
+close percent-encoding (explicitly dropped from this pilot's scope, not
+tested), the nested-Salted__-decrypt step (explicitly deferred, no
+second-layer password model exists yet), or the full 14,551-candidate
+core corpus (this pilot reused the smaller 42-candidate sentinel corpus,
+same as every sibling pilot in this line).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `tools/gsmg/typed_decode_parse_ladder_audit.py`.
+
+**Reopen condition:** a different decoder set (percent-encoding, a second
+decode depth, an actual Salted__ second-layer decrypt once its password
+model is defined) or the full core corpus would each be a new frozen
+scope, not a rerun of this one. Per the brainstorm's own ranked
+sequencing and the user's framing, seed 3 (solved-vector authoring-
+toolchain calibration -- already substantially answered inline in the
+brainstorm itself) and seed 4 (content-addressed decrypt-transcript/
+coverage ledger) are the next candidates in this line; neither is
+authorized by this result alone.
+
+## Phase 343 -- Seed 4 (ledger half only): minimal machine-readable coverage ledger for Phases 336-342 (2026-08-20)
+
+**Question:** the same brainstorm's seed 4, scoped down per the user's
+explicit instruction to *only* the coverage-ledger half of that idea (no
+plaintext transcript cache, deferred until "the exact storage and
+sensitive-data boundary is agreed"): now that five comparable pilots
+(336/337/338/340/342) share large parts of the same corpus/retention/
+target-set contract with small, easy-to-miss divergences between them,
+can a machine-readable ledger make those divergences and the real
+untested coverage gaps explicit, self-check itself against live code
+instead of hand-transcribed numbers, and never store any raw plaintext,
+passphrase, private key, or WIF material?
+
+**Method:** wrote `tools/gsmg/coverage_ledger.py`. One row per Phase
+336-342 experiment (7 rows total), each recording only digests/counts/
+structural metadata -- never candidate literal text or decrypted body
+content: candidate corpus (keyed into a small `CORPORA` registry holding
+count/digest/source only), material forms, KDF/cipher/mode universe, blob
+universe, retention rule, retained-body count, detector, transforms,
+scopes, target set, result, disposition, explicit exclusions, reopen
+conditions, and the originating FINDINGS.md reference. Phase 339
+(corrections, not a new detector) and Phase 341 (the solved-boundary rule
+audit, which touches no AES body/blob/KDF at all) are included as rows
+with their inapplicable fields explicitly `None`/`"N/A"` rather than
+force-fit into the AES-body schema.
+
+A 3-corpus x 5-detector = 15-cell coverage cube (`CORPORA` x `DETECTORS`)
+classifies every cell as: covered by a ROW; a declared `GAP_CELLS` entry
+(`sentinel_only_awaiting_full_corpus_scale`, `deliberately_excluded`, or
+`evidence_blocked`, each with a specific note); or, for anything left
+over, `untested_no_reason_declared` -- computed by set difference, not
+hand-curated, so a genuinely forgotten cell cannot silently disappear into
+one of the "acceptable" buckets.
+
+`reconcile()` cross-checks the ledger against live code rather than
+trusting hand-transcribed FINDINGS.md numbers: the cheap default path
+recomputes the 42-candidate corpus digest via `candidate_list_digest(
+frozen_candidates())` and the live retained-body count via `sum(1 for _
+in typed_decode_parse_ladder_audit.iter_retained_bodies())`, both in
+about a second. `--full-reconcile` additionally imports and runs every
+sibling script's own `self_test()` -- slower, still far cheaper than
+re-running any full `--run` sweep.
+
+Self-test: row-count/phase-ordering/no-duplicates contract; a mechanical
+scan proving no row's text field contains any real frozen-candidate
+literal string or a WIF-shaped substring (not just a policy statement --
+an actual check against `frozen_candidates()`); coverage-cube accounting
+closes exactly (every one of the 15 cells lands in exactly one bucket);
+the two genuinely-untested BIP32 x larger-corpus cells are correctly
+separated from the eight sentinel-only-awaiting-scale AES-body cells;
+live reconciliation passes against current code right now; reconciliation
+is proven non-vacuous by deliberately corrupting a digest and confirming
+the check actually fails; a JSON export round-trips cleanly.
+
+**Result:** self-test and the default (cheap) reconciliation both pass
+against current code. `--write-json` produced `tools/gsmg/coverage_
+ledger.json` (357 lines: corpora, detectors, all 7 rows, and the
+generated gap report). The gap report: **5 of 15 cells** covered by an
+executed phase; **8 of 15** declared `sentinel_only_awaiting_full_corpus_
+scale` (all four AES-body detectors x both the 648- and 14,551-candidate
+core corpora -- none of them have ever been run past the 42-candidate
+sentinel corpus); **2 declared `deliberately_excluded`** (percent-
+decoding; the nested Salted__ second-layer decrypt) plus **2 declared
+`evidence_blocked`** (the DBBI/FAED operator-selection gaps; the Cosmic
+Duality book interior -- pages 57-58 were physically recovered and
+reviewed in Phase 259, so the blocker there is the same missing external
+authored selector/consumer as the DBBI/FAED gap, not a missing source
+document) recorded for completeness even though they
+are outside the 15-cell AES cube; and **2 cells surfaced as genuinely
+untested with no declared reason**: BIP32-path derivation (`bip32_paths_
+c1`, Phase 340) against both the 648- and 14,551-candidate core corpora.
+This is a real, previously-unnoticed finding, not a restatement of an
+already-known gap: unlike the other four detectors, BIP32-path derivation
+is cheap per candidate (34 checks/candidate, Phase 340's own self-test
+figure) -- scaling it to 14,551 candidates is on the order of ~495,000
+checks, well within reach on ordinary hardware, not GPU-scale like the
+AES-body detectors. It was simply never scoped to a larger corpus, not
+deliberately excluded and not compute-blocked.
+
+**Disposition:** infrastructure, not a hypothesis test -- this closes no
+puzzle question and is not itself puzzle evidence, consistent with the
+brainstorm's own framing of seed 4 as "reproducibility infrastructure,"
+not a finding. Its value is the untested-cell list above, which is now an
+explicit, auditable artifact instead of something that has to be
+re-derived by reading seven module docstrings.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** an initial draft of this ledger's
+`cosmic_duality_book_interior` note described pages 57-58 as unrecovered;
+they were physically recovered and reviewed in Phase 259 (2026-08-13,
+negative). Corrected in place before this phase closed -- the remaining
+blocker is the missing DBBI/FAED authored selector, not a missing source
+document.
+
+**Artifacts:** `tools/gsmg/coverage_ledger.py`,
+`tools/gsmg/coverage_ledger.json`.
+
+**Reopen condition:** regenerate (`--write-json`) whenever a new sibling
+phase is added to this line, and add its row before the ledger is trusted
+as current -- an unregenerated ledger after a new phase is a stale
+artifact, not a wrong one. The plaintext-transcript-cache half of the
+original seed 4 idea remains explicitly deferred pending a separate
+storage/sensitive-data-boundary decision. The BIP32 x larger-corpus gap
+this phase surfaced is a scoping candidate for a future phase, not
+authorized to run by this result alone.
+
+## Phase 344 -- Seed 5: blob chronology / dependency graph over already-documented facts (2026-08-20)
+
+**Question:** the same brainstorm's seed 5, frozen by the user immediately
+after Phase 343 closed: can a small, machine-readable chronology/dependency
+graph -- built only from facts already documented somewhere in this repo,
+never a guessed timestamp, never touching password material -- either rule
+out an anachronistic candidate source or surface a previously unrecorded
+authenticated adjacency between the four tracked blobs (SALPH/COSMIC/
+P32TRAILING/URLBLOB), the three solved boundaries, page revisions, Telegram
+artifacts, repository appearances, and relevant clues? The user also flagged
+a live correction while scoping this: `coverage_ledger.py`'s
+`cosmic_duality_book_interior` note still described the physical book's
+pages 57-58 as unrecovered, when they were actually recovered and reviewed
+in Phase 259 -- fixed in place (see Phase 343's Supersedes/corrects, above)
+before this phase started.
+
+**Method:** wrote `tools/gsmg/blob_chronology_dependency_graph.py`. 22 nodes
+across exactly the six requested types (4 blob, 3 solved_boundary, 7
+page_revision, 4 telegram_artifact, 3 repo_appearance, 1 clue) and 26 edges
+across exactly the three requested types (`contains`, `published_before`,
+`same_authenticated_object`). Every node carries three separate date
+fields -- `observed_at`, `probably_authored_at`, `first_publicly_seen` --
+each either an exact ISO string, a `{not_before/not_after}` bound, or `None`
+("not documented"), never a guess; every node and edge carries an explicit
+citation to a FINDINGS.md phase number or a `doc/GSMG_*.md` file. The
+restored (2026-08) live `gsmg.io` deployment is modeled per the user's
+explicit instruction as `attribution="unknown"` (Phase 329 left operator
+identity unresolved), never `"creator"`, and this is mechanically enforced,
+not just documented in prose. The solved Phase 2->3->3.2 chain is included
+as the requested positive chronology control via three `published_before`
+edges, even though no exact authorship date is documented for any of the
+three boundaries -- the consistency checker is required to accept a
+structurally-true ordering without exact dates rather than either silently
+ignoring it or falsely flagging it.
+
+Care was taken throughout to disambiguate "puzzle Phase 2/3/3.2" (the
+solved AES-256-CBC boundaries) from this project's own unrelated sequential
+FINDINGS.md phase numbering -- node ids use `solved_phaseN`, every citation
+spells out "FINDINGS Phase N" for the latter.
+
+Self-test (9 checks): structural validity of every node/edge (required
+fields, allowed type/attribution/edge-type enums, no dangling `src`/`dst`);
+no duplicate node ids/labels; `published_before` edges form a DAG (cycle
+check); zero chronology violations among the well-dated pairs in the frozen
+graph; the solved-chain positive control is present and does not falsely
+trip the checker despite carrying no exact dates; the restored-`gsmg.io`
+attribution rule is proven non-vacuous by flipping it to `"creator"` and
+confirming the checker then fails; a planted inverted-date edge
+(`page_salph_v3 -> page_favicon_2019`) is correctly caught as a violation,
+proving the chronology checker itself isn't vacuously passing; a mechanical
+scan (same pattern as Phase 343's ledger) proves no node or edge field
+contains a real frozen candidate literal or a WIF-shaped string; JSON
+round-trip.
+
+**Result:** self-test passes. `--write-json` produced `tools/gsmg/
+blob_chronology_dependency_graph.json`. Against the two pre-registered
+success conditions:
+
+- **Anachronism check:** zero chronology violations among the 11
+  well-dated `published_before` edges. No candidate source was suspected of
+  being anachronistic going in, so this is a bounded, checked negative (no
+  contradiction found in the modeled dates), not a claim of having
+  positively ruled out anachronism in general.
+- **New adjacency found:** joining two previously-separate, already-
+  documented facts into one queryable structure surfaces a genuine open
+  question that had never been stated explicitly before: the creator's
+  2021-12-26 "zeroed out" / prime-numbers hint (`tg_hint_zeroed_out`,
+  believed community-wide to relate to the SalPhaseIon page's DBBI/
+  matrixsumlist mechanism) precedes the earliest documented public capture
+  of that page (`page_salph_v1`, 2023-05-31) by roughly 17 months. This does
+  not show the page didn't exist earlier -- Wayback/urlscan coverage of it
+  is itself undocumented before 2023-05-31 -- but whether the page existed
+  in anything like its current DBBI/FAED form when that hint was posted is
+  not established either way, and this project had never previously joined
+  the hint date (FINDINGS Phase 2 writeup) and the capture chronology
+  (FINDINGS Phase 244/249) to notice the gap.
+
+Also confirmed structurally (not previously encoded as a checkable graph
+fact, only as prose): the DBBI/FAED textarea span is `same_authenticated_
+object` across all three SalPhaseIon HTML variants AND the 2026-08 restored
+deployment (content-normalized match only -- Phase 329 explicitly found the
+restored HTML container itself is a fresh reconstruction, not a byte
+restore); SALPH/P32TRAILING/URLBLOB are each `same_authenticated_object`
+with their corresponding entry in the HosterjackAGV fork's own catalog via
+exact salt or byte match.
+
+**Disposition:** primarily a synthesis/formalization pass over already-
+documented facts, consistent with the brainstorm's own framing -- most
+individual facts in the graph were already stated in prose somewhere in
+this repo. Its value is the one genuinely new, previously-unrecorded
+finding above (the hint/capture-chronology gap) plus a reusable, self-
+checking structure for any future chronology claim. Closes no puzzle
+question and is not itself puzzle evidence.
+
+**Facts affected:** none directly; the hint/capture-chronology gap is
+recorded here as an open question, not as a new fact.
+
+**Supersedes/corrects:** none (the pages-57-58 correction is recorded under
+Phase 343, above, where the error originated).
+
+**Artifacts:** `tools/gsmg/blob_chronology_dependency_graph.py`,
+`tools/gsmg/blob_chronology_dependency_graph.json`.
+
+**Reopen condition:** regenerate (`--write-json`) whenever a node/edge is
+added or a citation changes. The hint/capture-chronology gap this phase
+surfaced (`tg_hint_zeroed_out` vs. `page_salph_v1`) is a scoping candidate
+for a future phase (e.g. checking for any earlier, currently-untracked
+archive source for the SalPhaseIon page), not authorized to run by this
+result alone.
+
+## Phase 345 -- correction to Phase 344: the proposed hint/capture chronology gap is closed by this repository's own git history (2026-08-20)
+
+**Question:** the user flagged that Phase 344's headline finding -- a
+proposed ~17-month gap between the creator's 2021-12-26 "zeroed out" hint
+and the earliest documented public sighting of the SalPhaseIon page --
+conflated "earliest ARCHIVED (Wayback/urlscan) capture" (2023-05-31) with
+"earliest public sighting". They cited three specific commits already
+present in this project's own git history (`9d99692`, `99bd811`,
+`8382341`) as directly verifiable earlier evidence. Are those commits
+real, correctly dated, and do they actually show what was claimed?
+
+**Method:** verified independently, not taken on the user's word --
+`git cat-file -t` confirmed all three hashes resolve to real commits in
+this repo's own history (which includes the imported `puzzlehunt/gsmgio-
+5btc-puzzle` community repo as ancestor history); `git show --stat` and
+`git log -1 --format=%ad` confirmed exact authors/dates; `git show
+<commit> -- README.md` read the actual diff content; `git show
+99bd811:SalPhaselonCosmicDuality.png | sha256sum` independently
+recomputed the screenshot's hash rather than trusting the user's quoted
+value. Also checked whether this fact was already recorded anywhere in
+this repo (it was, partially: `doc/GSMG_SALPHASEION_RESPONSIVE_WRAP_
+AUDIT.md` already cites the same screenshot commit and hash for an
+unrelated pixel-geometry analysis -- Phase 344's research pass simply
+never cross-referenced that doc).
+
+**Result:** every claim verified exactly as stated:
+- `9d99692` (Richard Eames / "Naddiseo", a community researcher per
+  `doc/GSMG_PUZZLE.md`, not the creator), 2021-03-20 14:24:27 -0600,
+  "Update README.md": adds "Hashing the text gets you to the next phase,
+  SalPhaseIon & Cosmic Duality. Which text to hash, and which door to
+  insert it into is not currently public knowledge...".
+- `99bd811` (`puzzlehunt` account), 2021-05-07 10:37:57 -0400, "Add files
+  via upload": adds `SalPhaselonCosmicDuality.png`, independently
+  re-hashed to `a3810ba24250c5a04908e1281c2202e73f7487f9d19f41bfd2c3e55f
+  a9be57ed` -- exact match to both the user's quoted hash and this
+  repo's own pre-existing citation in `GSMG_SALPHASEION_RESPONSIVE_WRAP_
+  AUDIT.md`.
+- `8382341` (`puzzlehunt` account), 2021-05-07 10:50:27 -0400 (13 minutes
+  later), "SalPhaselon phase": adds `SHA256(GSMGIO5BTCPUZZLECHALLENGE1
+  GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe) = 89727c59...52f6a32` and "The
+  resulting hash leads to the SalPhaseIon and Cosmic Duality phase
+  https://gsmg.io/89727c59...", plus the screenshot embed.
+
+All three predate `tg_hint_zeroed_out` (2021-12-26). The live page,
+including its DBBI/FAED content (the same screenshot is independently
+pixel-analyzed for FAED's offset in `GSMG_SALPHASEION_RESPONSIVE_WRAP_
+AUDIT.md`), was publicly documented with its exact reachable route about
+7 months *before* the hint, not 17 months after it as Phase 344 reported.
+
+**Disposition:** correction. Updated `tools/gsmg/blob_chronology_
+dependency_graph.py`: added two new `repo_appearance` nodes
+(`repo_readme_hint_2021_03`, `repo_route_hash_2021_05`) with the verified
+dates and citations; replaced the withdrawn edge's citation and added the
+corrected `published_before` ordering (`repo_route_hash_2021_05` before
+`tg_hint_zeroed_out`); added a `same_authenticated_object` edge from the
+screenshot commit to `page_salph_v1` (content correspondence, not a
+byte-identical claim -- one is a rendered PNG, the other archived HTML
+source); corrected `page_salph_v1`'s note to distinguish "earliest
+archived capture" from "earliest public sighting"; withdrew the
+`new_adjacency_found` success-criteria text in `report()`; added self-test
+check 9 proving the corrected dates actually order before the hint and
+that the DAG/chronology checker accepts the corrected edges without a
+violation. Self-test passes (10 checks, up from 9). Phase 344's other
+results are unaffected: the zero-anachronism finding stood on 11 different
+edges and did not depend on this one; the formalization/self-checking
+structure itself remains valid, it was one node's evidentiary basis that
+was incomplete.
+
+**Facts affected:** withdraws Phase 344's "genuinely new adjacency"
+claim. No puzzle-solving fact changes -- this was always a chronology
+bookkeeping question, not a cryptanalytic one.
+
+**Supersedes/corrects:** Phase 344's `new_adjacency_found` finding and
+`page_salph_v1`'s "earliest documented public sighting" characterization.
+
+**Artifacts:** `tools/gsmg/blob_chronology_dependency_graph.py`,
+`tools/gsmg/blob_chronology_dependency_graph.json`.
+
+**Reopen condition:** none currently open on this specific question --
+the earlier-evidence claim is now itself documented and cited. If an even
+earlier public sighting of the SalPhaseIon/Cosmic Duality page surfaces
+(e.g. an earlier commit, forum post, or archive), add it as another
+`repo_appearance` or `page_revision` node rather than editing these two
+in place.
+
+## Phase 346 -- BIP32-paths-c1 (Phase 340) scaled to the two larger core corpora, deduplicated: negative (2026-08-20)
+
+**Question:** Phase 343's coverage ledger surfaced two genuinely untested
+cells -- BIP32-path derivation (Phase 340) against `648_core_candidates`
+and `14551_core_expanded`, cheap (~495k checks total) and never scoped,
+not compute-blocked. Per the user's explicit instruction: close this, but
+deduplicate the two overlapping corpora first rather than running both
+independently.
+
+**Method:** wrote `tools/gsmg/bip32_core_corpus_scaleup.py`. Established
+mechanically (not just cited) that `648_core_candidates`
+(`extended_cipher_recheck.load_curated_candidates()`) is a literal subset
+of `14551_core_expanded` (`curated_candidate_corpus_audit.build()`'s
+deduped `answer_forms()`/`keystr_forms(newline_variants=True)`
+expansion, Phase 327's scope): `cb_common.answer_forms(s)` always
+includes `s` itself unmodified, and `keystr_forms(form)`'s first output
+element is always the unmodified `form`, so every one of the 648 base
+candidate strings appears verbatim inside the 14,551-item expanded set.
+self_test() proves this with a real `set(base) <= expanded` check against
+the live corpora, plus a determinism/digest-stability check rebuilding
+the corpus twice. (A stronger cross-check against
+`curated_candidate_corpus_audit.build()`'s own independently-computed
+count was attempted but currently raises -- unrelated wordlist-manifest
+drift from another, concurrently-running session's in-progress work
+adding a new wordlist file; not this phase's file to fix, so the
+cross-check was dropped in favor of the self-contained determinism
+proof instead.) Given the subset proof, ran
+`bip32_authenticated_number_paths_audit.run()` (Phase 340's own driver,
+unmodified) against the 14,551-item corpus only -- a separate run
+against the 648-item corpus would only recompute a subset of the same
+checks for zero additional coverage. Self-test also includes a planted
+synthetic-target BIP32 master-key hit (single-candidate scope, matching
+Phase 340's own self-test pattern -- corpus-construction correctness is
+already covered by the subset/determinism checks, so the planted-hit
+check doesn't need a second full-corpus pass) and a wrong-password
+control.
+
+**Result:** self-test passes. Real run: 14,551 candidates, 2 seed forms,
+8 paths x 2 hardening modes = 494,734 address checks, 1,455,100 BIP32
+derivation steps, **0 hits**. Matches the ledger's own pre-run estimate
+exactly (14,551 x 2 x 17 = 494,734). `CORPORA["14551_core_expanded"]`'s
+digest, previously unpinned (`None`), is now pinned to `82471da28dd1824e`
+from this run's own `candidate_list_digest()` call.
+
+**Disposition:** negative, same speculative-wallet-semantics scope note
+as Phase 340 -- this closes the BIP32-derivation reading of these
+candidate strings at this corpus scale, not the underlying candidates or
+authenticated numbers through any other mechanism.
+
+**Facts affected:** closes both of Phase 343's genuinely-untested
+coverage-cube cells (`648_core_candidates` x `bip32_paths_c1`,
+`14551_core_expanded` x `bip32_paths_c1`) -- the first via the proven
+subset relationship, not a second run.
+
+**Supersedes/corrects:** none directly, but updates `tools/gsmg/
+coverage_ledger.py`'s Phase 340 row exclusions note (previously "never
+scoped," now "scoped later by Phase 346").
+
+**Artifacts:** `tools/gsmg/bip32_core_corpus_scaleup.py`. Updated
+`tools/gsmg/coverage_ledger.py` (new Phase 346 row with a tuple
+`candidate_corpus`, `_row_cells()` extended to support that, `14551_core_
+expanded`'s digest pinned, self-test updated to assert 0 untested cells
+and to prove the tuple-corpus coverage mechanism is non-vacuous by
+narrowing it and confirming the gap reopens) and `tools/gsmg/coverage_
+ledger.json` (regenerated).
+
+**Reopen condition:** a different seed-construction rule, a 6th
+authenticated-number source, or mixed hardening (same as Phase 340) --
+not authorized to run by this result alone. If
+`curated_candidate_corpus_audit.py`'s wordlist-manifest drift (the
+concurrent session's new `macro_clue_permutation_combinations_k8.txt`)
+is resolved later, revisit `bip32_core_corpus_scaleup.py`'s self_test()
+check 3 and re-add the stronger cross-check against `build()`'s
+independent count.
+
+**Addendum (2026-08-20, same day):** the manifest drift above was
+resolved directly. Both unclassified wordlist files traced cleanly to
+already-documented, already-rejected dedicated GPU-oracle sweeps
+(`macro_clue_permutation_combinations.txt` -> Phase 322,
+`macro_clue_permutation_combinations_k8.txt` -> Phase 334) and were
+classified `dedicated-audit` in `curated_candidate_corpus_audit.py`'s
+`EXCLUDED_WORDLISTS` and `excluded_wordlist_coverage_audit.py`'s
+`COVERAGE`, using each generating phase's own declared scope, not a
+guess. Confirmed: the 648-candidate corpus digest (`2d233645ef49a141`)
+and the 14,551-item expanded corpus are completely unaffected -- only
+`excluded_wordlist_count` moved 26->28, so Phase 346's BIP32 work
+(digest `82471da28dd1824e`) remains valid, and its self-test's stronger
+cross-check against `curated_candidate_corpus_audit.build()` was
+restored now that the drift blocking it is gone. Along the way, a
+second, unrelated issue was found and fixed with the user's explicit
+go-ahead (only this session was active at the time): `doc/GSMG_GPU_
+ORACLE.md`'s frontmatter used `result: infrastructure`, not a valid
+controlled-vocabulary value; changed `type: audit` -> `type: source`
+(which does not require `result`), matching the document's own prose
+("This is infrastructure, not a phase result by itself"). Full
+`test_recent_audits.py` suite (116 tests) now passes cleanly (1 skip, 0
+failures); `validate_vault_metadata.run()` reports 0 errors across 62
+checked files.
+
+## Phase 347 -- Seed-6-first tradeoff resolved: provenance-monitoring baseline for restored gsmg.io, SalPhaseIon, and Hosterjack (2026-08-20)
+
+**Question:** the user chose the provenance-monitoring track over seed 6
+(the multi-blob structural-concordance design), reasoning that the live
+P0 gaps need new authored evidence, not another cross-blob relationship
+hypothesis with its own multiple-testing burden. Scoped as a one-shot
+baseline: freeze exact URLs for restored `gsmg.io`, the SalPhaseIon
+route, and the Hosterjack compendium/repository; record raw-response
+hash, normalized content hash, status, redirects, timestamp, and source
+class; query only passive archive indexes for new captures; alert only
+on changed bytes or newly discovered historical captures, never a fresh
+timestamp alone; keep attribution fixed and explicit; no JS/forms/
+wallet/executed-downloads/operator-identification work; self-test
+before the real run; recurring monitoring explicitly deferred.
+
+**Method:** wrote `tools/gsmg/provenance_monitor.py`. Exactly 3 frozen
+URLs, each string verified against this repo's own git history or doc
+citations rather than retyped from memory: `https://gsmg.io/`; the exact
+SalPhaseIon route
+`https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32`
+(from commit `8382341`, already independently re-verified in Phase 345);
+`https://github.com/HosterjackAGV/gsmg-5btc-puzzle` (per `doc/GSMG_
+EXTERNAL_ARCHIVE_AUDIT.md`). One plain read-only HTTP GET per URL for
+the baseline (no JS engine, no form, nothing executed -- `urllib.
+request` only), recording raw SHA-256, a whitespace-normalized SHA-256
+(same convention as `page_structure_audit.normalize_salphaseion`, not a
+new one), HTTP status, the full redirect chain (a custom
+`HTTPRedirectHandler` records every hop, not just the final URL), an
+observation timestamp, and `source_class: "live_fetch"`. For "passive
+archive index" queries: reused the two existing self-alerting sibling
+scripts for the SalPhaseIon route
+(`salphaseion_wayback_history_audit.live_audit()`,
+`salphaseion_urlscan_history_audit.live_audit()` -- both already raise
+`AssertionError` if the Wayback CDX/urlscan result set differs from
+their frozen, already-authenticated tables, rather than reimplementing
+the same check); a first-ever Wayback CDX query for the bare `gsmg.io`
+root (no prior tracker exists for this exact route -- this run
+establishes the reference set for future comparisons, so it cannot
+itself alert on "newly discovered"); and GitHub's own commit-history API
+for the Hosterjack repo (content-addressed, passive to read, compared
+against the most recent already-known reference HEAD, `28d33cc`,
+FINDINGS Phase 330 -- more recent than the older `1a27856...` reference
+in `GSMG_EXTERNAL_ARCHIVE_AUDIT.md`). Attribution is a fixed dict, never
+inferred from fetched content: `gsmg_io_root`/`salphaseion_route` =
+`unknown` (Phase 329 left operator identity unresolved),
+`hosterjack_repo` = `community`.
+
+Self-test (8 checks, fully offline -- proven by patching `urlopen` to
+raise if called and confirming the rest of self-test still runs): the
+3-URL scope and attribution policy match their real citations exactly;
+non-vacuousness of the attribution-fixedness check; the whitespace
+normalization is independently re-derived and cross-checked byte-for-
+byte against `page_structure_audit.normalize_salphaseion`; the redirect
+recorder's hop-tracking is exercised directly; the changed-bytes alert
+logic is proven with a planted digest match and a planted mismatch; the
+Hosterjack HEAD-comparison logic is proven with a planted matching and
+non-matching SHA prefix; the same candidate-literal/WIF-shaped-string
+leak scan as every sibling phase this session, run against this module's
+own source.
+
+**Result:** self-test passes. Real one-shot run (`--run`, actual network
+calls to gsmg.io, archive.org, urlscan.io, github.com): all 3 URLs
+returned HTTP 200, zero redirects. The SalPhaseIon route's raw SHA-256
+(`a83d3de7810f26b19b4965339b76d403e44f6b6877e5d7de2555480ca1779d77`)
+exactly matches the value FINDINGS Phase 329 already recorded --
+independent cross-validation that the fetch mechanism is correct and the
+content genuinely has not changed since that read. Both SalPhaseIon
+archive checks (Wayback: 5 known captures; urlscan: 12 known scans) came
+back unchanged -- no new capture. The `gsmg.io` root's first-ever
+Wayback CDX check found 140 historical captures spanning 2019-04-22
+(predating the puzzle's own 2019 launch, presumably the pre-puzzle
+trading-bot site) through 2026-08-19 (the day before this run) -- now
+recorded as this route's reference set for any future re-check. The
+Hosterjack repo's current HEAD (`28d33ccba517...`) exactly matches the
+known reference `28d33cc` -- no new commits since Phase 330's review.
+**Zero alerts of either kind** (`changed_bytes: []`,
+`newly_discovered_captures: []`) -- a clean "no movement" baseline, not
+a failure: this establishes the reference state a future re-check can
+diff against, and per the user's own framing this negative result is
+itself informative for the seed-6 sequencing decision.
+
+**Disposition:** infrastructure/baseline, not a hypothesis test -- same
+category as Phase 343's coverage ledger. Closes no puzzle question.
+
+**Facts affected:** none directly. Establishes `tools/gsmg/provenance_
+baseline.json` as the reference state for future provenance re-checks.
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `tools/gsmg/provenance_monitor.py`, `tools/gsmg/
+provenance_baseline.json` (hashes and metadata only, no raw fetched
+bytes, matching Phase 329's own convention).
+
+**Reopen condition:** re-run `--run` to check for movement (a changed
+raw/normalized hash against this baseline, a new Wayback/urlscan capture
+of the SalPhaseIon route, a new commit on the Hosterjack repo, or -- on
+a future run -- a changed digest set for the `gsmg.io` root now that a
+reference exists). Making this recurring (a scheduled re-check) remains
+explicitly deferred until requested. Per the user's own stated
+sequencing: seed 6 (multi-blob structural concordance) remains queued
+next if this monitoring produces no further movement on a future
+re-check -- not authorized to start by this result alone.

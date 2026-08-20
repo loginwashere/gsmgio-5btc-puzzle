@@ -8,6 +8,8 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
+from data import FAED
+
 import architect_choice_boundary_audit
 import architect_choice_literal_password_audit
 import architect_hye_bye_audit
@@ -268,6 +270,20 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertFalse(report["output_contains_dbbi"])
         self.assertFalse(report["candidate_text_generated"])
         self.assertFalse(report["password_oracle_run"])
+
+    def test_dbbi_faed_fsm_report_exposes_full_output_text(self):
+        """Phase 335: `output_prefix` used to be the only serialized form of
+        the machine's full output (truncated to 160 chars), which is why P0A
+        scored this model "conditionally eligible" instead of eligible --
+        the candidate text existed but wasn't retained in the report. This
+        pins the fix: `output_text` is the untruncated string, matches FAED's
+        own length (the input tape drives one output symbol per step), and
+        `output_prefix` is still exactly its first 160 characters."""
+        report = dbbi_faed_fsm_audit.audit()
+        self.assertIn("output_text", report)
+        self.assertEqual(len(report["output_text"]), len(FAED))
+        self.assertEqual(report["output_prefix"], report["output_text"][:160])
+        self.assertTrue(all(c in "abcdefghi" for c in report["output_text"]))
 
     def test_dbbi_faed_sequence_alignment_is_selection_calibrated(self):
         report = dbbi_faed_sequence_alignment_audit.audit()
@@ -588,7 +604,9 @@ class CorrectedClaimTests(unittest.TestCase):
     def test_excluded_wordlist_coverage_matrix_and_menu_gap_scope(self):
         report = excluded_wordlist_coverage_audit.audit()
         scope = report["menu_gap_scope"]
-        self.assertEqual(report["excluded_wordlist_count"], 26)
+        # 28, not 26 -- see the matching comment in
+        # test_curated_candidate_corpus_identity_and_provenance below.
+        self.assertEqual(report["excluded_wordlist_count"], 28)
         self.assertEqual(
             (scope["candidate_count"], scope["candidate_digest"]),
             (625, "854bffab41ecb1ef"),
@@ -638,9 +656,14 @@ class CorrectedClaimTests(unittest.TestCase):
             base["first_source_tier_counts"],
             {"direct": 98, "bounded": 243, "thematic": 225, "mixed": 82},
         )
+        # 28, not 26: macro_clue_permutation_combinations.txt (Phase 322) and
+        # macro_clue_permutation_combinations_k8.txt (Phase 334) added
+        # 2026-08-20 by a concurrent session, classified "dedicated-audit"
+        # (both already swept separately via tools/gpu_oracle, both
+        # rejected) -- doesn't touch the 648-candidate corpus itself.
         self.assertEqual(
             (base["included_wordlist_count"], base["excluded_wordlist_count"]),
-            (23, 26),
+            (23, 28),
         )
         self.assertEqual(base["oracle_overlap_groups"], 104)
         self.assertEqual(base["oracle_overlap_candidates"], 245)

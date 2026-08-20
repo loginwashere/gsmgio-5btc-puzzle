@@ -16,6 +16,16 @@ negative, re-open k=8 explicitly rather than silently including it here.
 `wordlists/gsmg/macro_clue_permutation_combinations.txt` is a generated output,
 gitignored like this project's other derived candidate corpora; regenerate with
 `--write` rather than hand-editing it.
+
+k=8 (Phase 331, 2026-08-20): the k=1..7 sweep above (Phase 322) came back
+negative, so per this file's own reopen condition, k=8 is now run -- as a
+separate, explicitly opt-in generator (`--k8`/`--write-k8`), not by silently
+raising MAX_K, matching this project's "opt-in, don't silently expand an
+existing sweep" discipline (see e.g. SEED-CBC's `--seed-cbc` flag). k=8 has
+exactly one combination per permutation (all 8 fragments, no subset choice),
+so it's P(8,8) = 8! = 40,320 base combinations -- written to its own output
+file, `macro_clue_permutation_combinations_k8.txt`, so the k=1..7 corpus
+Phase 322 already swept is never silently re-defined.
 """
 
 import argparse
@@ -31,9 +41,11 @@ from promised_standalone_audit import MACRO_CLUE  # noqa: E402
 
 WORDLIST_DIR = SCRIPT_DIR.parent.parent / "wordlists" / "gsmg"
 OUTPUT_PATH = WORDLIST_DIR / "macro_clue_permutation_combinations.txt"
+OUTPUT_PATH_K8 = WORDLIST_DIR / "macro_clue_permutation_combinations_k8.txt"
 
 MIN_K = 1
 MAX_K = 7  # deliberately < len(MACRO_CLUE) == 8; see module docstring
+K8 = 8  # Phase 331's separate, opt-in k=8 generator -- see module docstring
 
 
 def generate():
@@ -42,11 +54,22 @@ def generate():
             yield "".join(perm)
 
 
+def generate_k8():
+    for perm in itertools.permutations(MACRO_CLUE, K8):
+        yield "".join(perm)
+
+
 def expected_count():
     import math
 
     n = len(MACRO_CLUE)
     return sum(math.perm(n, k) for k in range(MIN_K, MAX_K + 1))
+
+
+def expected_count_k8():
+    import math
+
+    return math.perm(len(MACRO_CLUE), K8)
 
 
 def digest(lines):
@@ -84,19 +107,49 @@ def self_test():
     print(f"[*] self-test OK: {len(lines)} unique combinations, digest={digest(lines)}")
 
 
+def self_test_k8():
+    lines = list(generate_k8())
+    assert len(lines) == expected_count_k8() == 40320, f"got {len(lines)}, expected 40320"
+    assert len(set(lines)) == len(lines), "duplicate k=8 combination produced"
+    # Every k=8 line must use ALL 8 fragments exactly once (no subset choice at k=8).
+    frag_set = set(MACRO_CLUE)
+    for line in lines[:200]:  # spot-check, not all 40,320, for self-test speed
+        remaining = line
+        used = []
+        while remaining:
+            for f in frag_set:
+                if remaining.startswith(f) and f not in used:
+                    used.append(f)
+                    remaining = remaining[len(f):]
+                    break
+            else:
+                raise AssertionError(f"k=8 combination {line!r} does not decompose into MACRO_CLUE fragments")
+        assert len(used) == 8, f"k=8 combination {line!r} used {len(used)} fragments, not all 8"
+    print(f"[*] k=8 self-test OK: {len(lines)} unique combinations, digest={digest(lines)}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--self-test", action="store_true")
     parser.add_argument("--write", action="store_true", help=f"write {OUTPUT_PATH}")
+    parser.add_argument("--k8", action="store_true", help="also run the k=8 self-test")
+    parser.add_argument("--write-k8", action="store_true", help=f"write {OUTPUT_PATH_K8} (implies --k8)")
     args = parser.parse_args()
 
-    if args.self_test or not args.write:
+    if args.self_test or not (args.write or args.write_k8):
         self_test()
+    if args.k8 or args.write_k8 or (args.self_test and not (args.write or args.write_k8)):
+        self_test_k8()
     if args.write:
         WORDLIST_DIR.mkdir(parents=True, exist_ok=True)
         lines = list(generate())
         OUTPUT_PATH.write_text("\n".join(lines) + "\n")
         print(f"[*] wrote {len(lines)} lines to {OUTPUT_PATH}, digest={digest(lines)}")
+    if args.write_k8:
+        WORDLIST_DIR.mkdir(parents=True, exist_ok=True)
+        lines = list(generate_k8())
+        OUTPUT_PATH_K8.write_text("\n".join(lines) + "\n")
+        print(f"[*] wrote {len(lines)} lines to {OUTPUT_PATH_K8}, digest={digest(lines)}")
 
 
 if __name__ == "__main__":

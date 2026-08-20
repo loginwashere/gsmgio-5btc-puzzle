@@ -43,6 +43,8 @@ idea inside it is still open; read each file's own per-item status.
 | 2026-08-17 | [The Warning (Logic) Phase 2-3 Meaning Close Read](2026-08-17%20-%20The%20Warning%20%28Logic%29%20Phase%202-3%20Meaning%20Close%20Read.md) | live |
 | 2026-08-17 | [The Warning x Phase 2-3 Creative Connections Brainstorm](2026-08-17%20-%20The%20Warning%20x%20Phase%202-3%20Creative%20Connections%20Brainstorm.md) | live |
 | 2026-08-18 | [Two Sloppy Days x Creator Background Profile Brainstorm](2026-08-18%20-%20Two%20Sloppy%20Days%20x%20Creator%20Background%20Profile%20Brainstorm.md) | live |
+| 2026-08-20 | [Creative Brute-Force Coverage Expansion](2026-08-20%20-%20Creative%20Brute-Force%20Coverage%20Expansion.md) | live |
+| 2026-08-20 | [Post-Phase-340 Future Search Portfolio](2026-08-20%20-%20Post-Phase-340%20Future%20Search%20Portfolio.md) | live |
 
 `Templates/` holds the two starting-point templates (`TEMPLATE - Idea.md`,
 `TEMPLATE - Session Hub.md`) referenced above; they are not brainstorm

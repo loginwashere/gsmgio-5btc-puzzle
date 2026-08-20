@@ -42,6 +42,12 @@ string (see `tools/gsmg/data.py`'s header comment).
 - Best-fit checkerboard escape pair by code-level Index of Coincidence:
   `{b,e}`, rank 1 of 36 — an admissibility signature unique among all 36
   pairs (`tools/gsmg/checkerboard_code_ic_oracle.py`).
+- Direct base-9 capacity is `91 log2(9) = 288.463...` bits. A raw 256-bit
+  scalar can fit, but the fixed leading version byte makes a conventional
+  uncompressed WIF binary payload 296 bits and a compressed payload 304 bits,
+  so neither can be represented directly by the whole 91-symbol stream. This
+  says nothing against a raw key or a prior transform (Phase 330; fact
+  `F-OBJ-004`).
 - Sits immediately before binary ASCII `matrixsumlist` on the page, itself
   immediately before `FAED` — `DBBI [matrixsumlist] FAED`
   (`tools/gsmg/salphaseion_operand_binding_audit.py`, Phase 101).
@@ -71,6 +77,9 @@ rg -il '\bDBBI\b' doc tools/gsmg/FINDINGS.md
 - Phase 236 — [GSMG_MACRO_MODEL_DISPOSITION_AUDIT](GSMG_MACRO_MODEL_DISPOSITION_AUDIT.md), reclassifies the 31-char selection to structural-only.
 - Phase 240 — [GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT](GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT.md), notes `91 = 7×13` in the divisor-legs comparison against FAED.
 - Phase 243/244 — [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md), confirms DBBI and FAED share one text node with no markup boundary between them, byte-identical across all 5 known Wayback captures.
+- Phase 330 — [GSMG_EXTERNAL_ARCHIVE_AUDIT](GSMG_EXTERNAL_ARCHIVE_AUDIT.md),
+  independently verifies the direct-capacity/WIF bound and rejects broader
+  list/zero/private-data inferences from the external compendium.
 
 ## Related objects
 

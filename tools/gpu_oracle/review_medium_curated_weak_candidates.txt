@@ -1,0 +1,221 @@
+Weak-tier hits from medium_curated_phase2_modes.jsonl
+43 hits, all re-decrypted via cb_common.py (canonical CPU oracle) for verification.
+Strong-tier threshold is z=8.0 -- nothing here is close; this file exists to let you eyeball
+the actual decrypted bytes and confirm none of it is readable text.
+====================================================================================================
+
+[1/43] z=5.9630  blob=COSMIC  kdf/mode=legacy-md5/aes-192-cfb
+  candidate (160 bytes): and i have reason to believe the narrative would become very obvious as soon as dbbi and faed would be solved, and based on it we'd be able to progress with AES
+  output (1328 bytes, 46.2% printable, non-printable shown as '.'):
+    7..K.I...m..yO}.~2.k......O=.@.cf.=L>".#.....j...8e..5.1p98..\fc..xh....^}...a.lI.*f.....~.E.u.~vp.....k..\.:f5t...J ..wS..... 4.MwUa...>.^7.A].....duN...$,..f....D}KJ<.Q..`.]qH.Yn.BMZWLF.[Im.;ctzd..M.+.i..NG.~.C`>...`t..Oq.$mJ.).q.;_...'...$.......x.~3..........d-.G.e...c.l.ed.....|...^B..5Ku..q..i....!+.Tf..o4..l.O....m.._..Q{......{.x...wX.....HPD.I.]....':.XG.%_.-/xB}=1!.........Y..<I.&...\2...L.VO.0..+#......4..0.N.7ui...:..t.<..F...I..-...../..~\.?..'....X.c6"....q!%524S.....#6....K^.ssOT...].Yt[l.-Q~.=.....f..%Im'.'....)..|.i...T...^I@.WCl.5B.J.+G.3..B'\w...f391.3.........axX..'4.F-.....6..@w.....?.qFw.D.K(....T....v..........Q.....,|?d.~ei.._.a.qm.@....I.K$L.064DX....Q>=...u....YQ."......6hP.@|. .......8.Ihf]Q.N3|..SF,o.Bs?.-....5q^.l..F.u.#.i.oJ..^..0..:0.#DQ...[.....V`l..zP..+.....q'D.......|u:\.....L(.J9....>.+.>zfIh&.#}Bip..a...._.....|_l..%......>X...-so[*j.%j.qh..f...j...u..|..1.;.z.F...ETr..P.C...M.%.Eh.].....6...-.GG.,w..)M..-2.t..AF...= .;.*..fW..d?..x.]=....&...S&........?~{D.U..}.D6.-5..Q&.VO..B2F.).}..A.4...&`X.P....K.!...*....~.*]v?K...2....4s3..L.43z8<....R..fbV...6M.....4.....{........!+\zjo}.1.....tab(.1v..Re..&..[...[OyBC..7...t#..|`cvn!..gY/.L`;....A5......7.QC..\B..[d.?.!&.B`.v.B..H..R.u.o.N..Q.|0Vh...hu0;t).....EZ.0zK`....,..|e.&...X...`t\..7...M<.9.o.%B<P..w.....@....b....G...:.
+
+[2/43] z=5.6807  blob=COSMIC  kdf/mode=legacy-sha256/aes-192-ctr
+  candidate (64 bytes): 1a8d54562679d7b274afeba95d2bda341df17a2f6084eedc516df9e169e76c95
+  output (1328 bytes, 45.9% printable, non-printable shown as '.'):
+    ....M.f.4L\.S.UAny|...E@oP.3xV.......d.. ..,...-.#.HVV....8...."I7.=..Q......n/.(..P. ............;7...ii.o...V .._-......(E..Qa`k.J..4>\.U4%-....qc.{'.%7.>......h......`#?.^{mo5...4f'-b<Lt,=CA*F...>......~..TG'...)5.gWlTw.A).........2t.n....7) ...2...v0..H#.a.'g.fV..../.P>.u...s.h)@l .I'LJ.%.{.?vC2T.jq....vgu.p.t.7.@..}G.-.W?.A......M....B.../{.s.n.....QT...:.'k1!..9.UJ..rY....Ft..<1ql..B...V..MSYI.OE.j.q...u.xW.]..p......an.w..4.wf....wb..f....p..#u.Q..C/..7..@2^y#M|2T^{StI..^{...R.W.Dy.9...&....L9..!G...B...*MeL...lm..L$...O.?.b...t.Q.J.c.$]].6d.+;+f.;...^4.'^:.X1..c...[.Y..`e.".._...2"...0...-.p(...*..g..^.m..~.....l...Pny.r.Mb.gC.....KNwJ..[.u...#Tj>.6.\)...0-.c~..\.&.j..B.ym,..q.."..'.{\..ia.1Qz......, C.!(.....oL.......|.....I......5../......9C.o...Fmt.......=mxrx^mH.?......p.?..(..c;uf.6..V......Q.Xv..H...oeSa.Xe.%/.X.vt.>..e.j.$.~SC7;6p..@I..p.~.s.d.......^%...7....r..x..HcS`.GQ>G...J._hc..Fm,9[...X.0..Xr.(.T .I..@..I.p.r.E.?"}.k...'%7C...=0Er........TDy/|.3O..j....9..y./Fe.d..'6e....a...k..D...7Wu.i.K.;..R5o........ EK.<.b.$+...~1.C..+......`I..{..-...N.{o[..C......*-.!^.{H.......6.Rf5.rD m|.=.......M..-....>77@>.;...B..."Ta|5Y"..H........*.!.N....+....).!e..{I.(..9.j>.k.....9...0..../1..k....p.M.......q..{.a..;.HY..e{....*.......\?'_VFg;D~.......]...*.....T`E.6.S..p..s..Y.....>.5.SU...E...zZ.!..y
+
+[3/43] z=5.6807  blob=COSMIC  kdf/mode=legacy-sha256/aes-192-ctr
+  candidate (64 bytes): 1a8d54562679d7b274afeba95d2bda341df17a2f6084eedc516df9e169e76c95
+  output (1328 bytes, 45.9% printable, non-printable shown as '.'):
+    ....M.f.4L\.S.UAny|...E@oP.3xV.......d.. ..,...-.#.HVV....8...."I7.=..Q......n/.(..P. ............;7...ii.o...V .._-......(E..Qa`k.J..4>\.U4%-....qc.{'.%7.>......h......`#?.^{mo5...4f'-b<Lt,=CA*F...>......~..TG'...)5.gWlTw.A).........2t.n....7) ...2...v0..H#.a.'g.fV..../.P>.u...s.h)@l .I'LJ.%.{.?vC2T.jq....vgu.p.t.7.@..}G.-.W?.A......M....B.../{.s.n.....QT...:.'k1!..9.UJ..rY....Ft..<1ql..B...V..MSYI.OE.j.q...u.xW.]..p......an.w..4.wf....wb..f....p..#u.Q..C/..7..@2^y#M|2T^{StI..^{...R.W.Dy.9...&....L9..!G...B...*MeL...lm..L$...O.?.b...t.Q.J.c.$]].6d.+;+f.;...^4.'^:.X1..c...[.Y..`e.".._...2"...0...-.p(...*..g..^.m..~.....l...Pny.r.Mb.gC.....KNwJ..[.u...#Tj>.6.\)...0-.c~..\.&.j..B.ym,..q.."..'.{\..ia.1Qz......, C.!(.....oL.......|.....I......5../......9C.o...Fmt.......=mxrx^mH.?......p.?..(..c;uf.6..V......Q.Xv..H...oeSa.Xe.%/.X.vt.>..e.j.$.~SC7;6p..@I..p.~.s.d.......^%...7....r..x..HcS`.GQ>G...J._hc..Fm,9[...X.0..Xr.(.T .I..@..I.p.r.E.?"}.k...'%7C...=0Er........TDy/|.3O..j....9..y./Fe.d..'6e....a...k..D...7Wu.i.K.;..R5o........ EK.<.b.$+...~1.C..+......`I..{..-...N.{o[..C......*-.!^.{H.......6.Rf5.rD m|.=.......M..-....>77@>.;...B..."Ta|5Y"..H........*.!.N....+....).!e..{I.(..9.j>.k.....9...0..../1..k....p.M.......q..{.a..;.HY..e{....*.......\?'_VFg;D~.......]...*.....T`E.6.S..p..s..Y.....>.5.SU...E...zZ.!..y
+
+[4/43] z=5.6066  blob=SALPH  kdf/mode=legacy-sha1/aes-192-ofb
+  candidate (64 bytes): 09b2f2c01df71b46a32c3b09a4bb6373fc2d60f6f0aa1be18a73230d25f3efca
+  output (80 bytes, 68.8% printable, non-printable shown as '.'):
+    ..rr..oI$>U.#P..3n4k.8S\&4F.rIN..!H_2\.}..2)ao$ji.i}.&=".N4...f.\Y.(,.+#....yDPY
+
+[5/43] z=5.5118  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-192-ofb
+  candidate (59 bytes): LEAVINGCHURCHKINGROBERTFRANCEORDEREDFIRSTCHRISTIANEXECUTION
+  output (96 bytes, 65.6% printable, non-printable shown as '.'):
+    .p..sW...nbx.~ZWdH.a'Tm..8.".'.2|.}F{.|.).G..y#=2;.[R6G6VV.3O.f/.~.>0LW>y[..jN..W...KC)P=.^.JM..
+
+[6/43] z=5.3985  blob=COSMIC  kdf/mode=legacy-md5/aes-128-cfb
+  candidate (29 bytes): Yellow Blue = First challenge
+  output (1328 bytes, 45.5% printable, non-printable shown as '.'):
+    k,td..1.. d&......V..A.%.E..H..;...L.6,.@...f..Ob.=.u8....1..'..{..Rj.s.c.4.. O`......F.2o....g...i.fu.N....X.#"....)xL.9G..'...<....L(...9y.[&...8-.|b..'R..Z.s~.T..wG6.^...R....5...V9'{9=]...H..o.../.x5.....}.+.r_...R..a.....o|D..Nu...".-B{K....."...q.rC.q~....xe...O.'...%?..e.y..G...h.h...."se.c.2...+..2>:4M5}mGA...-...MU..*UC4-8..{qw.*......F....0..5...Y....`7Pw.RY.RS.f/.jp....{.n-.B.$.....dK.l#v..].<....L]?4..:#7].>.....n..Q4.OkmR.9..^...r.l..Cv2.(.)v.e.z3.2%<...g.8+...Z.J.....h;}}z3QZm...... .^D...`...?._..d/......Y..n.%.`./-g]E...h...$...=...G.o]..>e......$ l.4j2.3b.k..\s...~f.....^..O.8t'.....;BSt.K.....3F........1./....;...qO:j.C?.oX.@.n'...$...1..*..7......jVj.B?....R|.0L...u8%CD.Z~....%.....g.ogK.9J^\h**".....c......!.#..j$p.U....K...v.c.Z.Fk7.YuqM.k....]]i4O#sq...#.....c....`"..N...E=.&"x.l/."&g.4...z.0...0.Q..oaJ.y..O..Bm..)..@].....N..R...5.#..55.W*g}.h.${..W.$..l-.?..}.N1'o......#:.A..mPk.....8...T)..5....u.q.6."...a7n....I`kp4...?S.cY..a..H.CG..f.....l5.......j|7..,p?91.G....r$.b..Ij..q.!.m.b.......K.......B'..^..2T....d1['t...!i..Z.7..j.b5r.].oeh.....&`.V=g..A..T.}.}...iJ...4$f0....w........QE.,.....b=..O.S..RH.{.....DK..DG.).Q...1lg.../.qC......zj.}!..%B.i..../.G..F.DP(..)ig.8 ..t..,2.(.......m../..w.C..{.8.'.Fp..~..L##&..Z^.9...Y.x.....r.(.w../m...-!kJ...rpt.6.}..c.jCnWTx..w..8=..*.3.....2
+
+[7/43] z=5.3766  blob=SALPH  kdf/mode=legacy-sha256/aes-256-cfb
+  candidate (64 bytes): 6942c77d43135e3b082263d005fe8205eb4b4994c14d0d9e50f1a39228a466d9
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    g..M\v8.Q..WBc..O.-,|j.".W[.<.>\.^R2bE0.6.}W.n$.H.3.6A,.y92OI....L.J.;524IJ.2.^V
+
+[8/43] z=5.3766  blob=P32TRAILING  kdf/mode=legacy-md5/aes-128-ofb
+  candidate (27 bytes): So the rabbit ate the seed.
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    ...>...Fmj$y*..!:'W`9s..3.x~.8#bZ.TVW9.gH7..[o.m@0rAq.2.T..I..ZH..B.!.|....\F..e
+
+[9/43] z=5.3766  blob=P32TRAILING  kdf/mode=legacy-sha1/aes-192-cfb
+  candidate (92 bytes): unable to watch or listen any longer neo goes to the door to the left the architect chuckles
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    ."F4;#.#,.J.DM.g.><PX3p8vR_fU..V._..9..*4u\w...~.7..d.6VH8Z.(...9_f!i..!yE!{b_Q.
+
+[10/43] z=5.3766  blob=SALPH  kdf/mode=legacy-sha256/aes-256-ctr
+  candidate (28 bytes): thanklifetaughtmepurposelife
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    ..qt?|H.'LGJ.N!~J h(6.Y.n$,+}$...uE.(.f.._o6`G<E=S...n.v_1.[}`.b.. .6"".!.cW..;.
+
+[11/43] z=5.3018  blob=URLBLOB  kdf/mode=legacy-md5/aes-128-cfb
+  candidate (25 bytes): yingyangunrelatedtoprimes
+  output (96 bytes, 64.6% printable, non-printable shown as '.'):
+    <.._}t.v.`&.FcW..x...'.``..y2E.(Os..u....[,>.5&.GW.L(\.U)'.E.h`YN...Fc0<..u_VT'x..i.6cO1tWdK.. <
+
+[12/43] z=5.2856  blob=COSMIC  kdf/mode=legacy-sha256/aes-256-cfb
+  candidate (7 bytes): married
+  output (1328 bytes, 45.3% printable, non-printable shown as '.'):
+    m.jj.5..6.">6....z....nC.PXk....LIp.o.$.w..:.tZ.kC...Q.w.....(.Q.:..Z...............]0zN.....z&.q...".)...d.8bk..U....../..Fn....<.<.zc Wcnb.'Z......@`.^..X.T..2.)....2.l.?R..c.Y^\...{V...Y..r....By.w6%..f.2M[.$T.>^E/q..Dl...Z.!..%l......L...j'....\`..J.C.q.C=cB7a5...$Cc...%..;..u....B...~.l..G..q%.H|...ba.... .B01u.JG4.}.[.~1+2a.........w..y...).ThGH.`....2...P..C.Qy....R..a...A94..?....8.S.`.Z.-.<...Xg+.I...&.<N..&1Mw.x....,....R...o.i..:Ty..{...I6..9..(+..A.....$3. ..,b".-..{=o..h^.(.T.l^\..s.F..Dw..e`.=*N6p+..Q9....e-./K.Q..rP.Q.A.deUj_A..X.....0._..b.noy.o..0...Xd..{S!..w.B.E.9...f.[......T(..H.m:...`V$3.Ju/...~..k,Y.q.........{B../.(D.I....]M..]t.D9...xfs.Z/...;G0Qb..?..D.m..d.1,P.e...8.6....U%z.H W.e.[b`.t#...:M..S.D....t.N.r...4.2D..;...q.:!....eB.....v.o.t.d....sFz.|.v.."....oQ...(..+`.p..W.e%|G ...r.`.t6p...d.6.D3S.B0A.i.m..'AUv8...,{......c.r|.?..-fR6...X....h.8.O..A.w.fbZ...}6.FmJ.....i...^R78..Z2..."o.....QM..;z...b.u.K.YB.n..........&.<...y..h._...p.5xV.W.m. .{.~..NrP..C.{.;_...`?L{.Ja!O..c..K..`......{..C....$..z.....7(u./..4p3C...oC..3u....H....&.....W.`......h...t..mic....l...V....[Qs!&`@...$5.3.$.PGa.......o..<.c;v].J..~..L....g=.|...2...}9.x....X8....'.kz..d.tI$./tG.h. Gr&-...d1..y.3lE.NAP..VB.LIk.m;...b&....2..0....t..s.pN..evKKJ.&C....,r@2'....o.......c..].......Rn.D..J.S.JC.o}..a.lrT.=
+
+[13/43] z=5.2291  blob=COSMIC  kdf/mode=legacy-sha256/aes-128-cfb
+  candidate (64 bytes): f27c269a4d6d32f7a5ddb7e9498554ab639aed4bfc4c398d3ed9f0c82e409729
+  output (1328 bytes, 45.3% printable, non-printable shown as '.'):
+    -.=.*w<..9Kk.gQ..\q.v.V/.>.ga_!.."Tx.!e9...e..;;.%.._..>..t.....4%dL-...y./..O.qSS..:..4.._-.v...[........y..H#.:..$..gy...!E.7z.$:....T....K.R..+gXi..;.i.+.i.....2.I.ZU.j.k......2..^;...gOcpi.y..jm...*.a4.m8"*.d.........2.[,.?.Ka..nL.Q..t........w...R.bdy`3.m.P.W..P...@.OR.4..Bv} ..]0.#....x,...'K<-U..D[zk. #..?w8..;<B.#.4....}.b...._c.3bcLU......t...u..Up5~N.tC#<-.^..'..$(..-YB....85..U.q.......6#.o...~..*.T.....}..M.K..R$34.%.>....)+4O..^*...|x..J"~....^..].....s^hG.......\4...$.|.oY..}.k.......>.....$.Og:9~.......#..hzd7m..+l..[z#...w.:....l..:.....d..Jq..W......1..Z2q+Ge.~.FB..F.Ai%._-\!X...#..F.9...X|d..`h.....7..C[`m..R.zI.%..([.Jl...^....Ho._.1..>aul.Z.7..T..c.y....G...8^.+0A....=..._...y^g.u+Y3.|..R.....%d%.U.....U..;0.H..?m.@.G.c.jFc}......'.a.l*..K._.....Ex..........*..S..}.w2S...;..+bm.4.....t.i%..%N1./..3#.^.{.a....xD.;.nIO%..........s.K3A1.....,..SP%\...'a......i....V.9.M"...J...h...Yi.A:|x6Gk~'.Q,..`!......2*+Wg...Xl..97(.r........)....0b:\v..nZ.].1`.7V.C...$..CY..2...%...=.y#"..oT.t..5....bN.2sx3T.....@.7.'.d-.W.....|..+D.x..0h...Vc....e.Ut...OC...}'Si.....r.B.Tb..J.;..Hx1......0.............ga.*a...sy$e6=.....4.....|.......#.......6..._1.].5.L.s.];*8tu..etG.Bd.SVw.=/.f....ud.]...cD.AJ=.|..A.a.....X..Kj...H.F.J9..F5QF.Q]........}j.o..C.~-o.9K.d,...>s....]....6..)1KWa...5e.g...0.s.1...e[..(.v
+
+[14/43] z=5.1727  blob=COSMIC  kdf/mode=legacy-sha1/aes-128-cfb
+  candidate (11 bytes): COINCIDENCE
+  output (1328 bytes, 45.2% printable, non-printable shown as '.'):
+    ..%.....ig`e}Hy.iq...8.I.W)e}'Y.Q........._B+..7.7....C...e5..P'..'..29..U.@. ....8.x.J.....6....B...]...M. g.m..W..2L..(.....]...N.8...@. ..Qe.a].\....#K.K.*.#.....C..J.,;~il.{.$KV./....s.....^:n....}RwV...y..1..V<.......Y.].....:...{Y......-`q..zo.&...D..9.3.....K.Ub..!....r.B.-..u..i.h..{R.U.d._#a./S3..a..K.F3..Oa..v9... Z2.....Qy.n..I.._E....M<...G.`Krm?..*..a.X...b.Q.Tru.W...7....'...y9}.uI1}H....l'.~.yZ....E..X..G.eq$l.../!Bv'.n."j.4B#^g.%jvT.^^...g.....&.e..r$E..e N..|d\.AaD..Px....0y..^'9.._+gD_/w.h+.>.h..!......r.|...='.o...=#.-.Q.?."O.W..P"#3...........re.....:.QU.3...nwE1...J;[}....T.8._...Z.~^..NJ...ny..#p:.*..l.<..;d..V!7....=.UX.R..e..C....?..QdK..W.}......]...Ii.&I.b....C8.hi'.c.TM).).}B.(H.-<T-.....j...7j..g...R..q....r.....G..fn.^.4.A...R..SL+...Q..KZ......gW.:..>.....A.....w...e.mj....X|h....._.98(..%.3..tM=.z.+.6f.o}?..'l{.q..d=<t..fzX.5.-..XrS3.....|G.S..J.o...xf.l}.g%.P.IN...x....pd,..o.....k...].L..Zv.}...k'./.c.HRm..`[N..rqE3...].F...$.(z..mh.*t]..T3..k%......K..cs.(.x..p.>.{.r.../vp.e0;..,9.z|XC.....k.x..).6fA...l.G.m...{..iy.D.Uh.........x..7}$T.9.~.m....9...W...#.#..F[$T ...G.)do..+...,N...^o......UM..<.K.<..Yj.M;.>|..H....AEn.^...8I..|..\..Sa...A.oMPi.>9....R.'. ..k.....P...j.Rg..?......H....?*<W.....0.V...<1R]1.!.m......EoQ.+v...U..N?.6..6..a.c-..d..N;(.aDJ..z..VK.6e....].2;.!B..
+
+[15/43] z=5.1466  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-192-ofb
+  candidate (25 bytes): ALSOANANTHROPOLOGISTFORNE
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    .|.q.G.~J.m.n.J.x.Z.!.pde{&....f!9*{].5.OB..g%|_?iI...V8S|{5=gj}CM,:<.t.<.&w.._a
+
+[16/43] z=5.1466  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-192-ofb
+  candidate (25 bytes): ALSOANANTHROPOLOGISTFORNE
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    .|.q.G.~J.m.n.J.x.Z.!.pde{&....f!9*{].5.OB..g%|_?iI...V8S|{5=gj}CM,:<.t.<.&w.._a
+
+[17/43] z=5.1466  blob=SALPH  kdf/mode=legacy-sha256/aes-192-cfb
+  candidate (64 bytes): 38948ccfa72a84d684a4930cef85a2091ef02b358e797e706429e9d1c9f330f4
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    \#.{ps0,.'r\...5tvT^6.%X..M-4z|.A6..9]C.|...HTa2..u...M.`)<".fT/grT.f...$q8(^\./
+
+[18/43] z=5.1466  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-128-cfb
+  candidate (64 bytes): 8f7fc47adfc8b14d9c4200a94bb84250fe994c20b2072a5872a1d7d73bdccfdc
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+     i..FR&.J&>.F.J(V="./<..{3.hd5rQd{a{.&n.1.=.(.491.._.nmQMZl.Vb...S..0u'.w.W...*L
+
+[19/43] z=5.1466  blob=SALPH  kdf/mode=legacy-md5/aes-256-ctr
+  candidate (64 bytes): c295ce489fa080bfca4fcba003d78c37f42d5c1a24acff62e95b4c862061a4ce
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    sr.c/ir!'d..gM-$.S.x0KV.Z&.)A=F.D...K.x.."P.~...5y%y.Dx.).X3h....Ob..Js.#X.p%6?\
+
+[20/43] z=5.1466  blob=SALPH  kdf/mode=legacy-sha256/aes-128-cfb
+  candidate (64 bytes): 3973819879a461600cfc128a15927157b3509d33c90d950fb7ce787a607269fb
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    n/_b.{Sl.%QB.E.2O..@.O.u.ZET...6b.b..'+g\(qN.!f7.M+aM...ISL#Zb..7x+w.w-._P8a....
+
+[21/43] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-md5/aes-128-ctr
+  candidate (10 bytes): IANCOLEMAN
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    .%b!TH~.P{.Al...2*1mx.%..D0t..9M}AZ.+.BK.E.C./%T>n..1.d.<0.Cm....(.N.wE)..1+9.&.
+
+[22/43] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-sha256/aes-256-ofb
+  candidate (64 bytes): 711d9784d52d73f629ec75fdc7ebacc9eaf8375e72c26095f774e086147d38d7
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    ?.!.:Rv$_.p.qC%.jp.%.}7.~5lLRk_.L+.;yx$..A.lK.F[.j..D..TUU.j...}hd.B..oq.Q~9&.N$
+
+[23/43] z=5.1466  blob=SALPH  kdf/mode=legacy-sha256/aes-256-ctr
+  candidate (64 bytes): ec204e00c20feb3fa74c691de9d6eaed5eda964773ba3f062067123683cdf08f
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    S`c.k.N.9.<s..."#'(.iir..U.C.f.h*fK..Y4.r1I.;k.-f.?p-n5l.<O&.\yly.Y..CBr..<j.-_.
+
+[24/43] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-sha256/aes-128-ctr
+  candidate (64 bytes): 9472b6681f1428c25ead64be0e81962917fbe72a26a74698c12350aa841527af
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    7'(.Xs70.JHu.BQA.t.,9.HY4a.U6Q...u.7.)Qk.6.a.a9CZ6..y8B!.y...$..k....NqG..y.r..q
+
+[25/43] z=5.1466  blob=SALPH  kdf/mode=legacy-sha1/aes-256-cfb
+  candidate (64 bytes): 2c18d867a293ed208809cca1ac92070f60be66d5d865f030ea0a6f666736545a
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    e<+GQ8`;.:eOtp..p.Dw.*Zq....4.OQ.q.H.:[`)gzv..j&.E.._6qn....(Tye F...I.VZHwae1.y
+
+[26/43] z=5.1466  blob=SALPH  kdf/mode=legacy-sha1/aes-256-cfb
+  candidate (64 bytes): 2c18d867a293ed208809cca1ac92070f60be66d5d865f030ea0a6f666736545a
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    e<+GQ8`;.:eOtp..p.Dw.*Zq....4.OQ.q.H.:[`)gzv..j&.E.._6qn....(Tye F...I.VZHwae1.y
+
+[27/43] z=5.0918  blob=URLBLOB  kdf/mode=legacy-md5/aes-256-cfb
+  candidate (64 bytes): 4dbf0ff2590865bafaab35ccaf52164f7dba30e2ed9e0d202d3923de0ae07bf5
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    @5>S.]..4.'.;R.vDk.9E.a.nN+)&...7Sb...H+7.!p..Aqm.aj"a.G.D--#.`>...;"}..xL.Y*.ms:q.\u.Q%.o.-e...
+
+[28/43] z=5.0918  blob=URLBLOB  kdf/mode=legacy-sha1/aes-192-ctr
+  candidate (64 bytes): 53a72e776876d2a03d4fa3580642836e793784f64afedfbec7768f974e3c4a0d
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    t.{_..=$@.(.Pv...N..o..C.tp7hVU.J.NdRN..,.HNp0qMn.e...Ed.["ufUQ.H.2..KG.>HG3HhV%\y.~...BvA.am..*
+
+[29/43] z=5.0918  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-192-ofb
+  candidate (53 bytes): EACHWITNESSTHINKTHATINACTIVITYISAPPROPRIATEEACHTHINKS
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    R.8..QO .=....I@O...>f.|y;A`]J.$...Z..".C.AH!>.S\.Q..?.Huk...>|T.bv(Qs....*@.X.vcpQ0&`4i.s"!eY}.
+
+[30/43] z=5.0918  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-192-ofb
+  candidate (53 bytes): EACHWITNESSTHINKTHATINACTIVITYISAPPROPRIATEEACHTHINKS
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    R.8..QO .=....I@O...>f.|y;A`]J.$...Z..".C.AH!>.S\.Q..?.Huk...>|T.bv(Qs....*@.X.vcpQ0&`4i.s"!eY}.
+
+[31/43] z=5.0918  blob=URLBLOB  kdf/mode=legacy-sha1/aes-256-ctr
+  candidate (64 bytes): ccdbad80e200a3ede374826c12ff5bfe968629a1952d17950ccf68488cb7519e
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    E.....ZaD..T@O>.b{..m..{.2c..+%.e\7#sPZ2..~[V./.He.;NoiNJF.0.2r56.<o.@9.i.j9.}....xnH{.B].NW._..
+
+[32/43] z=5.0918  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-192-ctr
+  candidate (64 bytes): 89457730c955e9d8a334797901c1ef8bb3cd7c5fb0a9b471d9564e40d12543d2
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    Qg_T5P.`$Yp.5Hs~..]q-Q!H.Y2Y:o.J..Qh..n.r.C~_.dL..!.6yYRe$?kg7.h. .q.[.....z>.A4.'@1L..[...[..[.
+
+[33/43] z=5.0918  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-192-ctr
+  candidate (64 bytes): 89457730c955e9d8a334797901c1ef8bb3cd7c5fb0a9b471d9564e40d12543d2
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    Qg_T5P.`$Yp.5Hs~..]q-Q!H.Y2Y:o.J..Qh..n.r.C~_.dL..!.6yYRe$?kg7.h. .q.[.....z>.A4.'@1L..[...[..[.
+
+[34/43] z=5.0918  blob=URLBLOB  kdf/mode=legacy-md5/aes-192-ctr
+  candidate (64 bytes): 30bd6043b3f5d3802a8fe9536bf954b7f10b1ddae3bbf49cbae00f8afededd70
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    fB#./R.+i_}@x5..n.o>#.6w../=L.<.....CGP=QA-U...AU.g"sb.6...#.(k.wA..Z..z!.+..'mf..C.$m6J\P..S.c$
+
+[35/43] z=5.0918  blob=URLBLOB  kdf/mode=legacy-md5/aes-192-ctr
+  candidate (64 bytes): 30bd6043b3f5d3802a8fe9536bf954b7f10b1ddae3bbf49cbae00f8afededd70
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    fB#./R.+i_}@x5..n.o>#.6w../=L.<.....CGP=QA-U...AU.g"sb.6...#.(k.wA..Z..z!.+..'mf..C.$m6J\P..S.c$
+
+[36/43] z=5.0918  blob=URLBLOB  kdf/mode=legacy-md5/aes-256-ctr
+  candidate (64 bytes): d5e52aeb79d615030fefaa929b96a4fe70fa3ebe517393fc77f413e49e2586c9
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    ..%G>.(.)|)h...2|.).<....Sj.({..5.....G.kcm-,TQo.(.qFkN..8DDK..v.J,+...sS.,9L.%r&.0H.S?rb..b:.xt
+
+[37/43] z=5.0918  blob=URLBLOB  kdf/mode=legacy-md5/aes-256-ctr
+  candidate (64 bytes): d5e52aeb79d615030fefaa929b96a4fe70fa3ebe517393fc77f413e49e2586c9
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    ..%G>.(.)|)h...2|.).<....Sj.({..5.....G.kcm-,TQo.(.qFkN..8DDK..v.J,+...sS.,9L.%r&.0H.S?rb..b:.xt
+
+[38/43] z=5.0918  blob=URLBLOB  kdf/mode=legacy-sha256/aes-192-cfb
+  candidate (13 bytes): DISTINGUISHED
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    3...yZz..T..C.i(..]<.B.(zS>=g&.-O..H ..)Sp...9^..EaJ.m!..G..l55n.._.G<G...cuYH.6.[1X(.|!.1..z'9z
+
+[39/43] z=5.0918  blob=URLBLOB  kdf/mode=legacy-sha256/aes-256-ctr
+  candidate (6 bytes): shards
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    ...$iQ.W...V.N..{U..FU2R$bF... "c.L.A`D'Ko/.$o~...'c5.F85ucX..'3.~..,2..{.._V.N.V-.;?fPbA!Bn.\. 
+
+[40/43] z=5.0597  blob=COSMIC  kdf/mode=legacy-md5/aes-256-ofb
+  candidate (64 bytes): 193efcafc6beac37c1bf7d8f40e55b8653fc4a34ebdbe9a1bc20918f62f28cb4
+  output (1328 bytes, 45.0% printable, non-printable shown as '.'):
+    M..1z......E...)7..(..,.xS..[.xZ.5........^...2R..M2..-].O.......+.p ..mO9..:.X..m_D..:.K..@5.......o.#.r0......si...s2.&*.|kx.b1.{..g...sd..V4@..+..9P<....H..|..Xw>.S?z.fs)(T_....Ce.....Eclf#Ti......zG.(|{9`q....9.x2. T.@o.".....o<A.{..'o.=..I....*]d......-k1t..Cj.n."P...]R=..F.5..mo.L.3ML..&.....<.Qz.F..BhjMo....8H.x^X......D...D......?.....0.b......d.)>.i..^>..[>..^..tK......t..d..WD...........Q....".$Y.p......,q@..,/b&....]K..}.V.4.Y."..q.9!A.....d$M_.n.Up..Wh..cK}q...F....<..^(......K..l].HF6v#<.....?.a..._X.A97xh]....G.d.6.-a]. ..0...l5.....\..a.yslM..s$.,..P.v<..S..../.w*......s|...k..7s6f.....t(_..<G.,..v.k.+A..:..O... ...^8A.\....+.f.n.<H."..B.....V.U..y....)S...m.3KS.......).`..d....E.Y.J...iA.T.Ub.T.Lz.!..(HA9.'&C,.`.l.C...l&.......?].[m~.o.....~4o..t.lTMms.....V..%C...W..E.fv...\.$M]u....Y`.f.Xx.^...Y...P.I.....}b......H(tYq>.....U:..g..-.0......!KL'W..J.(Z.T..z..fH..$..q.k...../_SWa.`..^.!....G.~x?..;.J......\..h.!.m.."..;...3.Tw!>....5..O..r.Tm.u.B.....z..)v.v1#F...,|..}..25.HJ.Y....ke...U...n.F.3..8.)...=....P...kB(.Vm[K...CRI.g.0..&:7..]6T.9E........$..M7.Ae5../..t{......v..z.0..p..v.....d.}......{)N........^w...,..v..W.?.1......m.%....WR..k.Cfj...#*..q(]...(5O.&.~cI..R+g... 0Ot.L[Za.\p.]..`.9gB1...4..8 ....i...FI].I)./.....}o...^P.. ./..`#>.as..I|i.N.e...}.Q.2.3Z..x..C.>V....n..o9.8........
+
+[41/43] z=5.0033  blob=COSMIC  kdf/mode=legacy-sha1/aes-192-ctr
+  candidate (64 bytes): 11773cd98fdeb1f4c31a6cea22eeb708a995ae96232c60ccf7f286fe48427ad1
+  output (1328 bytes, 45.0% printable, non-printable shown as '.'):
+    .1.="[....[...@.+..3...(.....l0.....[`d..0..k4Q.'VZ......s.u..JRu..H.X....T.}c0k.B.".s...Rv.X$A_..o.s0.17....9.7./d...,.z5.x..Z>.."X>@g.....7.....e.....9o..s...uX....... ...f..8\...SqY-.+.....u....K.z......w:j.N...R!.m9.#..u\.+o2.Gn.....@..aA.0.8y.;a.6.8;...:.Ht-.57L.D...%G{.4..Ls.....ipF.q-.YH!g8VS..v.N..3.c.....:..ZZp%...[.l...aSpD.].:..2.........d/.z.I.<..".....xE..~i.*.T...&*...Z.C.1.(.....>@......|`V.I-...3....`.[Q..p.....y.|.m..w._5.....[h.......u.3#e*..3.os..z`.KH..V.f.....x5.Re.Pj>.d.M[a.d'.g0.P).t..sW%B.V..b.|.W.....D...;H4y..{).S-..-.Yc....(.'rE.....$....N.) qgn^.f8......>...y.......F..SOJ-x~?.0.q....t..^.(:.f-).kk......}..^...N..5!.[.]5.]..}.KvM....!..&..1/..(9Z._A.......@>.S.jD....(...P.V14Q......Zx.%.>5..3..jf.W9[T..'W..'mI5..'.AxB...3r........s^...b..o(?|.. Z..j`OmH{,....o[..0>..z.a'..2P...6..;..~e.R).}..!..4B.....R...5.U|iY...9T...G...L~y..5....|.(8.k.....F9$).....H.@w..."...~.#..3......6a..Os%l.P.D.ygY.~..=H.z..I_.....]sNF....X.d2"......EG.).k..&.S.2.....l.*....g,...m..7z'&M.p..>&..X.&E5F.O.e..x.]U@...D,..uWx.48...+.....9..@._..t......Ya3llEf'\..p,/...w|...........i.8.<G:.4.......$.r.e......T..5.n...C.i.K@.Z.....D.a...r-..0;...?T....bl=.=3.a...y.D.,.n.(..8.B.KI.;..)....6.B.!.u....,.....D^.....Q)S.....t..M..d.qfu..M......`..K-Ca_.#.KY.V.B..].9*..Vp.@..z..=..J..Y)..%~.[.. F...quP]......5Dd.F..
+
+[42/43] z=5.0033  blob=COSMIC  kdf/mode=legacy-sha1/aes-192-ctr
+  candidate (64 bytes): 11773cd98fdeb1f4c31a6cea22eeb708a995ae96232c60ccf7f286fe48427ad1
+  output (1328 bytes, 45.0% printable, non-printable shown as '.'):
+    .1.="[....[...@.+..3...(.....l0.....[`d..0..k4Q.'VZ......s.u..JRu..H.X....T.}c0k.B.".s...Rv.X$A_..o.s0.17....9.7./d...,.z5.x..Z>.."X>@g.....7.....e.....9o..s...uX....... ...f..8\...SqY-.+.....u....K.z......w:j.N...R!.m9.#..u\.+o2.Gn.....@..aA.0.8y.;a.6.8;...:.Ht-.57L.D...%G{.4..Ls.....ipF.q-.YH!g8VS..v.N..3.c.....:..ZZp%...[.l...aSpD.].:..2.........d/.z.I.<..".....xE..~i.*.T...&*...Z.C.1.(.....>@......|`V.I-...3....`.[Q..p.....y.|.m..w._5.....[h.......u.3#e*..3.os..z`.KH..V.f.....x5.Re.Pj>.d.M[a.d'.g0.P).t..sW%B.V..b.|.W.....D...;H4y..{).S-..-.Yc....(.'rE.....$....N.) qgn^.f8......>...y.......F..SOJ-x~?.0.q....t..^.(:.f-).kk......}..^...N..5!.[.]5.]..}.KvM....!..&..1/..(9Z._A.......@>.S.jD....(...P.V14Q......Zx.%.>5..3..jf.W9[T..'W..'mI5..'.AxB...3r........s^...b..o(?|.. Z..j`OmH{,....o[..0>..z.a'..2P...6..;..~e.R).}..!..4B.....R...5.U|iY...9T...G...L~y..5....|.(8.k.....F9$).....H.@w..."...~.#..3......6a..Os%l.P.D.ygY.~..=H.z..I_.....]sNF....X.d2"......EG.).k..&.S.2.....l.*....g,...m..7z'&M.p..>&..X.&E5F.O.e..x.]U@...D,..uWx.48...+.....9..@._..t......Ya3llEf'\..p,/...w|...........i.8.<G:.4.......$.r.e......T..5.n...C.i.K@.Z.....D.a...r-..0;...?T....bl=.=3.a...y.D.,.n.(..8.B.KI.;..)....6.B.!.u....,.....D^.....Q)S.....t..M..d.qfu..M......`..K-Ca_.#.KY.V.B..].9*..Vp.@..z..=..J..Y)..%~.[.. F...quP]......5Dd.F..
+
+[43/43] z=5.0033  blob=COSMIC  kdf/mode=legacy-sha1/aes-192-cfb
+  candidate (64 bytes): c1f3f4e280e8ffa0534f0d5fa32af44f7503ba3c828e260ed4cac0d3c85a725c
+  output (1328 bytes, 45.0% printable, non-printable shown as '.'):
+    ^O+..}..(H....k.?s.ST`&.E:.V.....g&|.....M.>...\6%4Ht.4.c.&50...yd.....`..|yS|I.3...j.6.Z...W..5..*!..;...mv........5P;O.+4.........[v.Vp^.@.....%.A.g..[.=!..T{.].S=.r....p$...Z0..|O.(...L.q..5...*a..U..>p.W0.a..z^l.O3.}+..9J...C.g.Q...".zI..F4}...cU^..?Y[...+..).....M.....c..6.Rg.....~.Zk.q./,R..h....C4.(..Z2.1.{vZ.I(Y.....2./$.i...+.>"...*2T....>4.8....z.u.lB.M..x..e..is.w+.M,onG..h.K..U.\...@2w.r....U......Q..#^d\.......=..@rsq....i."TMgf.....F..@X*...YE..8.J+....}..f."....z..H.....g...?|..........6..1gV"..Bg...m1r+?..G./....1.%?.z..e1...~..18...m......ce..>2..m.9iVH.D|.ZK(G2.p......(.'...OV..v...dY.vs.....j.P.^M..I;.D.6...t.x.5.q ...|%.r.m.gQl.Xv~........i.o.\.0.z`.T4......6.q*uhM.Vf.....l........C.\..........'..z..]..s...r....m.smZ..owW.K.|K.le..A..]%..bc....r.)q|J>...c6.... F.`........2i.yEv".v.a..;.{....dO.\4.....N".?<c.....m...G.W..2E!UdN.\.c.;Ua1.N.rM[.. XO.b.../...;...Jf.9.?.t .kA<.7..*}O....K9.}$.n.1{"...~BFZ.......Pt..u.x'.M.l...zqRT.~.....W...."...(..`..DG..Z.g.V.U%2.D..,.....b>T.+ hN.(....h.ya..kA9..Gm....k$.j...q.A..?..<.5.7.Gus....=....p.=.."...p$.ZI.M2b.|0|....4.....j..@..wI...p.+Ju...{Q.....}4lS.Ja..-...?......T8..c.....W.;.v.j0^....X0..Q'..i_.}.P .[.3......J'......M......<U9.y.F..P%]0.S!....N0@2Ah3....?...%...s[.......g:.e)X.;muu...V|.i....!$.]..z.Q@%4.(H4..`g......G..a.2u..W.F........U..
+

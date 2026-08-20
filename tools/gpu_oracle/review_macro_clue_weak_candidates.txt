@@ -1,0 +1,316 @@
+Weak-tier hits from macro_clue_phase2_modes.jsonl
+62 hits, all re-decrypted via cb_common.py (canonical CPU oracle) for verification.
+Strong-tier threshold is z=8.0 -- nothing here is close; this file exists to let you eyeball
+the actual decrypted bytes and confirm none of it is readable text.
+====================================================================================================
+
+[1/62] z=6.0666  blob=SALPH  kdf/mode=pbkdf2-sha256-10000/aes-192-ctr
+  candidate (122 bytes): matrixsumlistpromisedyinyanglastwordsbeforearchichoiceverylaststepisatruegiveawayitsinfrontofyoureyesbutyourenotseeingit\r\n
+  output (80 bytes, 71.2% printable, non-printable shown as '.'):
+    wG.92.;..?R). j|0/...mpO..5s.p..|tv.-O.z7l.n..>.O.PrMFzp `.Gc{.{L6!Lx!.x..j.i.9h
+
+[2/62] z=5.6066  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-256-ofb
+  candidate (139 bytes): yinyangitsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaymatrixsumlistwewontgiveawaythepasswordlastwordsbeforearchichoice\r\n
+  output (80 bytes, 68.8% printable, non-printable shown as '.'):
+    /wpw|7.&.}<LR3m{P,z...k.~.n..VP.f.6.0C$hS4&[Fp..5q.....%..2TW x..Y.Z).#.iht.-T}'
+
+[3/62] z=5.6066  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-256-cfb
+  candidate (154 bytes): LASTWORDSBEFOREARCHICHOICEMATRIXSUMLISTPROMISEDVERYLASTSTEPISATRUEGIVEAWAYITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITWEWONTGIVEAWAYTHEPASSWORDYELLOWBLUEPRIMES
+  output (80 bytes, 68.8% printable, non-printable shown as '.'):
+    .x*+YM[.*..AmnZb.P.p.p.saK.utfP#-=...2Ht".%.4 K~vw.J...#.uxKX.f^oB.Y..j.r#*.?.=j
+
+[4/62] z=5.5678  blob=COSMIC  kdf/mode=legacy-sha1/aes-192-cfb
+  candidate (122 bytes): MATRIXSUMLISTWEWONTGIVEAWAYTHEPASSWORDYELLOWBLUEPRIMESVERYLASTSTEPISATRUEGIVEAWAYLASTWORDSBEFOREARCHICHOICEPROMISEDYINYANG
+  output (1328 bytes, 45.7% printable, non-printable shown as '.'):
+    .j.hFC.9.0&j.V...t......g..f~...B_.R^..yj..].:..F......F.|^....$IQ......E.a.gYw.*. .YVmA3.d...//S;a.@#.....:7.K]..n....5.'...@T;}I#...2..R...d...Bx...n.0.e.W..%9WL>..*.~d{Q.x....q...5.h....\.....Ns.&.1...3..........jfX/8...@.]W20..<.+.b...).....M....;+.t..6.,E..T...l".....)D.[.`g... w.|.U.....pA.."...+.zVo.}..F.XM*.....4cd...qC...bG.7eif.P_...U.,...?.mlA..o9.sS..o.i....$.E[B.t#....`.T.1.U$H.V.....w....D45.!.%...`....6...jY.H.P."0..G%.r.j"L2....{.6..N...,q..._.&A.S.ki>...y.9..-2/..O:*..E.S'O"x...9z......|.A..2}u..b`.+x~nvE:...3...Hcm..Bsj...<..l ..>q...j...f5....O.5..)x.g.'Zqi..V.!(.....xG.".m~..r.Z.O!.}:C..7.A..-..x...... .9@..^h.8C^w...5T.f.9b...]....../"...S..)C...+F.&.Wk.y.Vp.J.3.%....?./.\G.8..'..Z.9x........fzV.;oX.6...!.,~.g....e.'..J~..;1..C..j-W@..1....w<..N3~7./..e....$..s..=.9)..|...a(W.n[.TW....@@A....).MPaY.{X.....)..GY.c....M.<<..Z.n.d..WWb...L.(....pOm....^E....c....&...U..``";tE.D..{?....x..'.z}.|..<h.3.D.......T....u_I,6....j...n......>..B..;...Td..p.[;...f.2...pX&5=.....3.%..;.Zky.Ax...vS...G..1x.@g C..o.q..9 %.9....'..b.T.jp.wi.....#So.Z.:6.......C.....Ol_X.uQ..;......b....lA..Fo.e.-`.x5Y\TR...0..G.so...Ja.;N...*Oa.u..a.z......)..fY..J..F..a...0..f[C....7p2...U.6.....sfqs.h(-..g/...WNF/.N...4.OR.c.V....3.6D2.P/]NRu`....S,)?.}....n.Hg.......^....q&.._..J.4......3.^E"k..Kpe.......Zf=k0.kL~..
+
+[5/62] z=5.5118  blob=URLBLOB  kdf/mode=legacy-md5/aes-192-ofb
+  candidate (123 bytes): yinyangwewontgiveawaythepasswordverylaststepisatruegiveawaypromiseditsinfrontofyoureyesbutyourenotseeingityellowblueprimes\n
+  output (96 bytes, 65.6% printable, non-printable shown as '.'):
+    6;.|{N#9]...r.#G...Bvk~".?DUH.l.zX~i.-.p.*\}A.u_n-..r~6w.<..<,.H..y.zP.H.N...n...m^1GO8..iaeAq[&
+
+[6/62] z=5.5118  blob=URLBLOB  kdf/mode=legacy-sha256/aes-256-ctr
+  candidate (134 bytes): wewontgiveawaythepasswordverylaststepisatruegiveawayyinyangpromiseditsinfrontofyoureyesbutyourenotseeingitlastwordsbeforearchichoice\r\n
+  output (96 bytes, 65.6% printable, non-printable shown as '.'):
+    ...V.RVAP1.E$^<%_.Cg.{"=+p..vc.).f..\2..m{:..9A..B<TF`:.>.+.'<n...T&.(w.N.(S\....~u4DQ.2Q.T}o4.l
+
+[7/62] z=5.4549  blob=COSMIC  kdf/mode=legacy-sha1/aes-128-ofb
+  candidate (64 bytes): 004a4cb2df60e29af1a6f2c9331f28ebb37f37b946f759fd92faf1caec89e03f
+  output (1328 bytes, 45.6% printable, non-printable shown as '.'):
+    .F*.z.<..k.e.M-e?.......S.....VJ....}..u(...|@Dr.g......".$.1...wO.."6<....c..)..y>.6...H...hW..S..V|.. A...I.......o.M.Z........v*..B0.N.A.K...TTh....Y=...D.O.U...p..m..uDr...........Z.8.VV..e..'e...fA........,...i.:=.I.f.rl.^p.... ....81D*...I...d.r)E..g..[k..B9...2....1...T'....g%3..n..I.hq<..It......K.C..&..M.-e.iJH3p.......4<O..:tT..M..[./..>^...d26N..(j..@~...%2o...".....^=>.T....g.d|..1H..w.8a7.......3v,}'.O!......z...+...0.Zt_e.]Jh..t_..0..-.&>C.8o<.....RKF..trKC.g'4.X.7?..x.....<.(...-u.O.a.'=.%..z2......r.zZ{<......./..v..^D.z.....Y..g^..Oc*[%..^D>.E..A..|.`".;S.x..HD|N.tk.8.a.....C.m."...+9....H1...?_...~H....r./L..#.5...x.I.X.....m.htJr.H.yq....!^y.l...W@P....q...=C.-].A`.M.Yt..i.7....&w....wak$[3..X.,#...N...{.oV$*|j..$..ql[}.."...|.!...cP....\..<..s!1,.:..P=..{1...YWp.....'..tK..Hn`?...;.r.:....`t..b.\}xF;*C..=...m&.C-....T3.<*T<...d|+qM.....}......V..7..I.w........W.G...../a~Tt...p.p7.s.H..0._1....5...Q....E..=.....`=......+.....Q...I...~......HAa.qK..:].E7u...1.+a..+.~c...SS..K<...QtgF.+&$"0fTop.......u.~...)1.l.gR.n;*E....+.`>[.j.i...J.B..^.B@.j.. ..-..,F..ua.1......P....M...i...V..._x0|q.....$i... ..J.s..L....hF....f8....M.....7Q8e.bB`yG-SwB]Cj.)~.l7_%....%..xq!.ci.Nh[}p...f:..[..?...|<.~/.~.B.Cr.yE.8)NR.}.{.ES.5...p..d..f&la>..Dn..F...[.<.O7>.?-.:D.[$.M....o.T....._..c...n.a....C...1.r.pJ
+
+[8/62] z=5.3766  blob=SALPH  kdf/mode=legacy-sha256/aes-128-ofb
+  candidate (64 bytes): e6b964de82315be7a35491e5a8b1c84587f23a28837619d6f70492483ae2a7f8
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    Ee~\1z1u&@...]DuLZ{.O#s..JAfR..Cc1...GS7....ZM(.q.3pc..j.. j.U..DZD@>vW....V/`Db
+
+[9/62] z=5.3766  blob=P32TRAILING  kdf/mode=legacy-md5/aes-256-ctr
+  candidate (64 bytes): 81519f1e581f7119473eeaf3cc3951d63b22c0947cacd59c7c41c1559d363cc4
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    .*AN?..ks%J.G.fG{*.i.I.l..uR^.Y.cE6ch..BF.6.U..kT.']\6a_nEA.\.g|..H.$...w.N.!\h!
+
+[10/62] z=5.3766  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-256-ofb
+  candidate (125 bytes): itsinfrontofyoureyesbutyourenotseeingityinyangpromisedlastwordsbeforearchichoiceverylaststepisatruegiveawayyellowblueprimes\r\n
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    ..h.u..^q.!~.[KN.(.U...3.Z..l.hx?Sz[}=.Mtl]!nD.R(80<Qp.sc.';(.83S.=D.qe.ax7}ta..
+
+[11/62] z=5.3766  blob=SALPH  kdf/mode=pbkdf2-sha256-10000/aes-128-ofb
+  candidate (64 bytes): aa7e0980c23972848dec7a9e5165efcd4e31c2b0ec7cb64382c4680160ebf027
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    ..}`v..PkEar..a]V[O$..=b.h.N2fPW];%..7XwP.o".JMS..J]]?-.! ..`..`.#.l.yp..I^..m.Q
+
+[12/62] z=5.3766  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-192-cfb
+  candidate (64 bytes): 052b036f5f9ece9460568ab2a61627bd2970c1992fe6e0d2a3044577a4f8715a
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    .!GtyN.%..L..`.)..m6[9jC..O.....F.{O+J.M.S.hN.&...g}xC!]WH1d.#].9.*O5J.6..J.3amP
+
+[13/62] z=5.3766  blob=SALPH  kdf/mode=legacy-md5/aes-192-cfb
+  candidate (64 bytes): 9b35471e70fb2ece7e8ce1cbae9372bb044163fd32124d6a1a31bf915081a679
+  output (80 bytes, 67.5% printable, non-printable shown as '.'):
+    .,}j..N.xza.~.I..f.8h.&......%!d"+..H6N._N;b".n&PO.gS.\dk'e+.i2;Q%.)g|....?%R8mt
+
+[14/62] z=5.3018  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-256-cfb
+  candidate (64 bytes): 9de4dd40741fa3acf663969de62c82215f74e676e900d3761aa1397a8b39ee49
+  output (96 bytes, 64.6% printable, non-printable shown as '.'):
+    KZ...NS..`s.e..M.31"DO.\?.T#H.hymr>.~.m<\`+fp..V9$a.&..eF..Bx.&2f4Y.T.)\...D..QN90....kfN\g.DFWL
+
+[15/62] z=5.3018  blob=URLBLOB  kdf/mode=legacy-sha256/aes-128-ofb
+  candidate (64 bytes): 9e790bbd096d17fdbae687763541affe389b596811473f8300b5a0b65a9ab0b8
+  output (96 bytes, 64.6% printable, non-printable shown as '.'):
+    T[i7..@z|.Q.t.sCD.y.R.7lio./.....#. ,:.2..^.;Y..`:..5s.6\.rXv\-;b<poRf-..(g/WcqX.:R.....R.W.T. p
+
+[16/62] z=5.3018  blob=URLBLOB  kdf/mode=legacy-sha256/aes-128-cfb
+  candidate (64 bytes): a8e37a5685e146b2ecb16909636e535a299032312104715bf574e7503524d6ca
+  output (96 bytes, 64.6% printable, non-printable shown as '.'):
+    lu.7b1..n.Nt.:8HhP.O.Oo.t.N,.{D...u.^z.{0 m|\.O}.+.wb}._Kb..k.J._.rFd....q._..wA`_..>].7g0M....%
+
+[17/62] z=5.3018  blob=URLBLOB  kdf/mode=legacy-sha256/aes-192-ofb
+  candidate (64 bytes): 637a9f2bb9c3b94cfec52fdfa7ef31a4fbbfb0a3fc931ab2e2de2c0d9e29d1a7
+  output (96 bytes, 64.6% printable, non-printable shown as '.'):
+    .S5...^V.G|&IWo-'[o..>..pQ.G;.t.I_hP:B7(..j.w.r*'"N=..Ui|u.,.^.l..iGQ.c"...Bny>j.....k[..F.lP.uv
+
+[18/62] z=5.2856  blob=COSMIC  kdf/mode=legacy-md5/aes-192-cfb
+  candidate (106 bytes): PROMISEDLASTWORDSBEFOREARCHICHOICEMATRIXSUMLISTWEWONTGIVEAWAYTHEPASSWORDYINYANGVERYLASTSTEPISATRUEGIVEAWAY
+  output (1328 bytes, 45.3% printable, non-printable shown as '.'):
+    ..W.%;.ymX.h...^.=..z.U;.DT.x.B?t...$._.u6.....*}.}....$5.X_.J.1.....K..@2.(........8HD.....`...M..B!.g...p...+."v..K.....a.u.r0.~b.L..l...|%..VH..P.p+Y.DeP.l->R.W.^,."....y:.<..B.. ;B....hF8.....H5./.G&..80@."....~x...f#T....OX[.X.?..f..Y|5&@..Yd.._A...<.*.Q..I.'.<...!,V.r%UD;..K.ao.6A..M.Z.h..s.h.s=.g.._~.G....2.w/i.!b-q...=9q...+M...(.)..9$.C..x..C09.O_9.....e`.Al.V~...uYF?}l.1.we@4Q.....I..6j.A..M>'z?~Kk ....w.P.yH.F.(c../;...TuS.......\n..yR0c.z.z..=......^....K.9.......9.......7.#...(?...=.Q....IX...Y.i0.3...*...\X....(.~]........*......>../-;MMj......\8.q....[f...6..v.........?o.ET...^..tf={V.-.\!.....^E.,.=..e._.H.;..,`>!E.3#.3H8*$`8.X%"?.....6.n.cEz.a..]...@ .n.>H.]V![.....4\.......2.XzLVtC.Ds..1<...8..x.Mpj....^..(....8...b.c.U....O...d...g..C,u..JW..V..1..oV..V...4 ..E..>1.n.......1.o'd.L^}.X....L..s.azUe.....V6...7..=6.......Ioz1h.NRa ,^K+.mj32.zD...3]z.Bb:]Z.U.kQ...E'..R.5.=..........](c.../......,...kn.D.<@y;....V.g5.e.....a................>Q..n.N..........]_..t.]P....w'..p.xA."..^.C...Lo.....&.I.?{..\...&.u....z9...m)B..L.u./zP..9.....v...BL.R.....O...xO...qNB.V.*{.~;O.k1.#..R...R...~.../..:8..Rl.Q.7.g.[o_.I.8..IO..;;.........Y5"V.?...v.q.4S..c+..q.b..Oq..=v..*......H8.%.=..^<.G{C?-...o.@iUokqe]....o"..U..7u].=..;.[".....^=\n..Z.....%.m]+4...1]S.X"...@.P]rW..2...N.e....8'.P.,n.l..G..B'c$.=...
+
+[19/62] z=5.2856  blob=COSMIC  kdf/mode=legacy-sha256/aes-128-cfb
+  candidate (64 bytes): 8fbac4de09e1f3caded34a1c0ee1deb895d531b824638e99b3e81893d544bedf
+  output (1328 bytes, 45.3% printable, non-printable shown as '.'):
+    n..?..A...mW.O.L;p.\{8.j=3.v&.dt.....#R...3.r8..ysdD.=..(4..T?.....|...5.j...+o..&y.E...R....@..1[......a....r..k.t.E.c;.~.I..e.nz.b.M...i.z..xV@..U0b.o.6,..DZ8J.v.....%...o.LH.m..?.6v..P;{Td.i....v=]?du..#M.......{...8\.Y)..i.x!.......0..7=...[3..v ..uD....y7.>..MB.r....4@..<.UnA....9.......\..MT...,7^..{.v"Y....{.{.h....?..*E..5....UrMP&%.#x`/..%.@7z.&.U.....dD.X.D...fs..........N...<B%}..+U.bd`&Zr......"8.. ......8<...&.P.../0p......xl...9...p..lW.3,..k..0.:>....Q+.....q. ...XD).Sq.O...=.7b...b...^..h.]..p.0.?......F..m.`.U:X.w..c..\J...MI.$)..5Ps_.s..rN...+..z|!2.IE...Q.?.S.wf' k.....*.`..G!.........S\a.....0S.....F..G#.R..o..4.../..X.+6gs.hk.CE...r.%.%.....G43l.`...................`j..E...y.j.9.l.D.Gg....nwx2$..t.E..4..e._4...OED..I.R9........f.......)9C..E.)~.j.....+=b..Y-M.f.".dO...e7..5\...J-....7SF.$.4.'Y?..j.'...A.{...M.(>..?f..qUS.w6."...;(.6e8...Qa.,|.r?........Gx.. .x..|..j...2[...[M%}.i.*..(.n..%..._....s.j......d.P.}/.V+R..MG....n.D..@)..1.X..W..y.{..|..n]#K.@.N.....@s..K..-<.WK....%.....;ue..%l....KF{.j....j..i.4,.XqFe..r.G..rzh..8.<.B.$Z.^L..y .2{QH.s.2..#!....R.{.F....1d.yG.';.4c..F..z...-7j9.J.s.?........[{.dXf.s{....[,..g%..z].j..d%.r.....)9j...Q0.."."..C.zd ..+.(..|..TL.-..F..9.h.9:..t.;...w..M..v. 'xI5v.c[.o..)i.o.T.:K...?t~..H....!..w..(_T........Q..\..y{ ..lw.<!.a..].L.b..h.N.HTzg..u
+
+[20/62] z=5.2856  blob=COSMIC  kdf/mode=legacy-sha256/aes-128-ctr
+  candidate (136 bytes): YELLOWBLUEPRIMESPROMISEDYINYANGWEWONTGIVEAWAYTHEPASSWORDMATRIXSUMLISTITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITLASTWORDSBEFOREARCHICHOICE\r\n
+  output (1328 bytes, 45.3% printable, non-printable shown as '.'):
+    /.W'G.w..H...h..t.I.T...|.L..]...x^.&!,p....c.y..R...#dj..,3....&U.BltK.......5*.K.r.......%.'q24.Df.H......:..j.6..0G./...c.>....|...D.h.....f}e..f.z.+T.T.C>....i\q.&.5s...[.l... .. .(.._......n.......}F...ywR}.........PC..fei}..^.NfZE0_3h.C..&..;U,.....Y.5@TS...`..*.#<@I>.Z....m..=....21:.*c.Z.r.n..>.z.%.(bp.e...w.#.e#.o\m./..\9....D.H..H`%.H{.i..>..A..":..V$"Sd.?.?.R..y....c..s.T...y.<e.....!s..(..a.PJ..4..o..1h$..8x.V....(..p.PR.`M;...D..E.#.......`...jH..S\R...).K..P1.{.L..'....V.9qz(4.-..(\.[r9:......J.Z..$#.8+.(.s3.s.tD.\?3H..7B..-p......5..]L.t.H]...?..9.p.<M....Z.]....c..J8..4N@....J.pC..i...#....KO.w].)05.Ym.y\-CE._".U.8.....<.PZ.:j,.g/....h-<..WG....bI......&0uk&j.QPN'.j..Ft.B.p)..V=...I).`.K.R..c....Z.jeQ.X>..l..p/V.g?..U.L.DgDer.8....[..%T....E.c._.)j.?./g.V.B.....,..8G.(...A..<O3.o./.....M....P.r.....8|..A99?_....9.RI.LQ.B.C.[....<..U]....6..&...6..c<+.L..Im..}w...Ybv...7;.A\."....V).zuZ.I.'....8..B..N......k.4ASV....n(ELSC4N.5.#)...}.......6+..).....BWq..X..C}sg7.....YG:..............4...:@..b5p.@.3...w..N.@Te!.x...Oj*=G~a$.Y......~>....p......;......3P..H..'...^.i.....}e.P=..r.f.p...@C...[./..4.~.....K.K2.x..+..Z|-....m#.w./...^S."'...eN~.{O.....'.|,8D On.m...@..-~..Y..wn..%]...3..}..X.......,".=.....u.`.:(|A....0._.........Rj.!+..-..>.......[._.8ij1.#).!2;k.jf...!..|.G_..h.J.......q....c:.V
+
+[21/62] z=5.1466  blob=SALPH  kdf/mode=legacy-md5/aes-192-ctr
+  candidate (64 bytes): b46d31be72f36c5473c4ea8c47609d7377df1ab719e706ef913024b0081f853a
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    u"c`;8a|.72JU.0E...<<.?mw.6...?6..`..+...Nt.w.jo^:.k.w.jk?pJ.C!.?jJK/H^.#.B@.]..
+
+[22/62] z=5.1466  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-128-cfb
+  candidate (64 bytes): 802e01b0c7385a71f3faf90bba71a8695f7b02b9c05fd62aa94e1f84554aa8bd
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    S..V.u~..A.lrf0x.?.<..oFm..{.Ha9`T|:A.4.5-s@R*v$..].v_~!cF.3T=:k..9zLd?*^L......
+
+[23/62] z=5.1466  blob=SALPH  kdf/mode=legacy-sha1/aes-192-ofb
+  candidate (64 bytes): 056968204644fd51b5f00a76fb1676116e7a01ac6a0fb1100b5ce3011c7d1bbe
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    {vP7.V*1.I]:..BzZU_R~.i?..^GE..5ZxB..cV1...3sV%..3H.2.r.>..q\e.+..ed?BD%.3...L.C
+
+[24/62] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-md5/aes-256-ofb
+  candidate (82 bytes): VERYLASTSTEPISATRUEGIVEAWAYMATRIXSUMLISTWEWONTGIVEAWAYTHEPASSWORDPROMISEDYINYANG\r\n
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    BK[2L.G./F{a"...G)#.,.....Cu.gN,./R..B.Tr..+.GzaI.\#8SpY.rgn.NFv0d=.;K.G..kZ>;n.
+
+[25/62] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-sha256/aes-192-ofb
+  candidate (64 bytes): 7d5205bc72872f30500338eb0f80a9b6a1331f3ae48dfeac8b66e7927c73d5eb
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    ?..F}.38n.&$|.rb~q6qS'$.S`c...w.8`.@.F3@...&?A#...2H..qn%ltCE./!x...b.Be(..tqvd.
+
+[26/62] z=5.1466  blob=SALPH  kdf/mode=legacy-md5/aes-192-ctr
+  candidate (121 bytes): YELLOWBLUEPRIMESWEWONTGIVEAWAYTHEPASSWORDITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITPROMISEDYINYANGLASTWORDSBEFOREARCHICHOICE
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    u.G}r.vs....t6.i.tIg.U.q..g_V\t.C.R...D.<l/,T..bR'iTY!3h3.b...x)..D.D~oU..+.k_./
+
+[27/62] z=5.1466  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-256-ctr
+  candidate (121 bytes): yellowblueprimesyinyangpromisedwewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitlastwordsbeforearchichoice
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    .Ki.0..z0[hzGGudOsT4..V..s.>..%m05...Xk.X.V..O%ksW5S_8..ChM..Ku/L.&..I.."VO.)0.V
+
+[28/62] z=5.1466  blob=SALPH  kdf/mode=pbkdf2-sha256-10000/aes-256-ctr
+  candidate (64 bytes): dea9e2d1758662e544e3e41227cb27cd6bb48894c3ad468a3bc09be15e0a92d9
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    d0.<;~J.......y.1{H .HFEq.9.KlV*8..>'.T2.$=...JU5..7^*Dx.?.C....T=K.9B 3e.9.4.=b
+
+[29/62] z=5.1466  blob=SALPH  kdf/mode=legacy-sha1/aes-256-cfb
+  candidate (64 bytes): 6f9f60fe1e5752dc8f3961426e4adf99485ca04594db23bb4585b217024cd502
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    mm&.%..^wk...mD.;.D..k!....N.K(>b2/.p.)AFzQ.=[..{YbNl<"DF.a.U.w:._^.5.J"GE.?9(P$
+
+[30/62] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-md5/aes-192-cfb
+  candidate (146 bytes): VERYLASTSTEPISATRUEGIVEAWAYITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITLASTWORDSBEFOREARCHICHOICEWEWONTGIVEAWAYTHEPASSWORDYELLOWBLUEPRIMESMATRIXSUMLIST
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    i..m.Q?.I..tad.(.9-c...k...76fEG.2.#MTYT0wc.xz_7.,E'Q.N>+o.D...cF.pi\~_G^UI>...L
+
+[31/62] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-sha1/aes-192-cfb
+  candidate (115 bytes): PROMISEDYELLOWBLUEPRIMESMATRIXSUMLISTVERYLASTSTEPISATRUEGIVEAWAYWEWONTGIVEAWAYTHEPASSWORDLASTWORDSBEFOREARCHICHOICE
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    .jwt.Ek}.<...wwgf9EI.{...`...N(.?w[++...Al\.d.g5]k.]}y?;04o.S5e./I.?8...wS..K.a]
+
+[32/62] z=5.1466  blob=SALPH  kdf/mode=legacy-sha256/aes-128-ofb
+  candidate (156 bytes): YELLOWBLUEPRIMESMATRIXSUMLISTVERYLASTSTEPISATRUEGIVEAWAYITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITLASTWORDSBEFOREARCHICHOICEPROMISEDWEWONTGIVEAWAYTHEPASSWORD\r\n
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    $...[r.*.gE8xE9qY};VITM(,,.2..[.sDG.....3..J...|..BY8{.y...S"(3^:.*..S?"$DAI,e.7
+
+[33/62] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-sha256/aes-192-cfb
+  candidate (64 bytes): 3186bb8c188f4a7d67d5e60cda8200986324558d4e5230805a9cba4d5e2aa1f7
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    @`..$p.8.gs5K.[u.::N.'.(........v\;o4./G.Mb..^-y0"... ".T.e&-zY...."p.9DA+)K..y.
+
+[34/62] z=5.1466  blob=SALPH  kdf/mode=pbkdf2-sha256-10000/aes-128-ofb
+  candidate (124 bytes): matrixsumlistpromisedwewontgiveawaythepasswordyinyangverylaststepisatruegiveawaylastwordsbeforearchichoiceyellowblueprimes\r\n
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    ..G..uv.;..v[.m....$fQ.&*0Z5`LXC.4>z..A.@..S$]Qw{.Gt2...8..08.p.,6..v.T5+!hG.[xK
+
+[35/62] z=5.1466  blob=SALPH  kdf/mode=legacy-md5/aes-128-ofb
+  candidate (64 bytes): ea6b80ae779a06bbe0b8335ad3214d6edac73ce1c914f502a9688e6031821dc2
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    dVx.T..{av..7..EJ.LDR.6-Fnk.f"J4`$1>]].pF.N.,`_..Aw.n..DJ.DX/>3"Piy.1.p.....az..
+
+[36/62] z=5.1466  blob=SALPH  kdf/mode=pbkdf2-sha256-10000/aes-128-ctr
+  candidate (124 bytes): yinyangverylaststepisatruegiveawaymatrixsumlistwewontgiveawaythepasswordyellowblueprimespromisedlastwordsbeforearchichoice\r\n
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    ...c{.x?e]%oE...>,.p.U;R*d.aX[Lj8C.*........Z..L.o>. ..og4.j> l{053...`.XE?:vy5]
+
+[37/62] z=5.1466  blob=SALPH  kdf/mode=pbkdf2-sha256-10000/aes-192-ofb
+  candidate (136 bytes): WEWONTGIVEAWAYTHEPASSWORDYELLOWBLUEPRIMESLASTWORDSBEFOREARCHICHOICEPROMISEDITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITMATRIXSUMLISTYINYANG\r\n
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    ?..maq(>..5.&a..x..)..hS.SGx.. Il@....z..b.>oelJm..Hz.W3AbZ4ONPa$-.nL.E~..G`RaF.
+
+[38/62] z=5.1466  blob=P32TRAILING  kdf/mode=pbkdf2-sha256-10000/aes-192-ctr
+  candidate (135 bytes): wewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitlastwordsbeforearchichoicematrixsumlistyinyangyellowblueprimespromised\n
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    J.aH..Ifrx..w.@..!}|FqpkP.^-=.D..E.;*...RgS...|3Kb.5,k6.K.[.mqx.pr.Xvi'....V@.Rf
+
+[39/62] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-sha1/aes-192-ctr
+  candidate (64 bytes): e5d8c8325e0faf1cc1516131f7273a9d7176635e561c8ca315ec3c93a61bbba6
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    . T.J....VY38w<XxET..DR.B.*Q'..c6"I6/W.'Rn.G.$.V..D;.wh.~.[3...B2:Eal..!t$n.d2..
+
+[40/62] z=5.1466  blob=P32TRAILING  kdf/mode=legacy-sha1/aes-128-cfb
+  candidate (64 bytes): b523935b04e8115ae4dcd26b6b56803d08c13d16b203039dcfd82a6e7b8b1532
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    .;f7..ux`.H:.t.ykG@4..0..(.Iq'.![..0o].-.vW_.f-....n{.0KOJpmM_.j7Q.~P"G&k...(V..
+
+[41/62] z=5.1466  blob=SALPH  kdf/mode=pbkdf2-sha256-10000/aes-192-ofb
+  candidate (156 bytes): VERYLASTSTEPISATRUEGIVEAWAYITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITMATRIXSUMLISTLASTWORDSBEFOREARCHICHOICEYELLOWBLUEPRIMESWEWONTGIVEAWAYTHEPASSWORDPROMISED\r\n
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    >..Q....\...#.P=.eZ..:/#.hM.2$x>d(f{y53` 6}.t..> ./.C.2.xiN`q.75.jRx. ..H0.^=2.y
+
+[42/62] z=5.1466  blob=SALPH  kdf/mode=pbkdf2-sha256-10000/aes-192-ctr
+  candidate (64 bytes): 3674c1a0f89e89c234a162a52117a4e63aeeb02aff6feb3a59dd67cac56a00b1
+  output (80 bytes, 66.2% printable, non-printable shown as '.'):
+    S;>...1z-.%:.*."GC...A....TL,y?^iK.?j3..=)/S.D!>%7.)ICD8=.$t.|/b...ia.>b-rv.?..G
+
+[43/62] z=5.1162  blob=COSMIC  kdf/mode=legacy-sha1/aes-192-cfb
+  candidate (64 bytes): d4eab83c4b56fd1980c8d3e1f9d225daec4ae687ecb8210cebb4dee125a51797
+  output (1328 bytes, 45.1% printable, non-printable shown as '.'):
+    .TnXz...J...Z`dPK...y!Q3.....]=Z]E.C./:.....*C....X....K.Z..}.1.0s......H=V.z.^...1.S....R.Y.b..|...\.wP{......}...5.8.X...x...@.=.S...Z.2.... ....AV-..)....KK....Ye.....O.f...>.@....v".k....[U(..3A..59...^..z.l....:Q.&a....l.P...V...)V.......|.V.j$S..n..J.....X).HxBJs4Bk!.r~Gx.Cp......j.)..!.?.]C.-..0X..\..|..if.....E..j..?.n).(..v....%BU..3.."%b.[4.a.q...0..._.\>....M.x.o.A...z.k.s>...!...6...sU.m.=n..r..<.{^.&c.......^.t.P~t.....gC~j ...52D,..M.......,>.d\O?v.-..1..v......ux../.U^..OfX.LB..o9b.......>Q...lbt.....FO]...f..B.. B o-.1.W.s.5VVJ..Og6.P.Q`.$|..&.1.%..X....0.#....F..).pc....R5.cR.".9.0XH....]..3m....]@.<....+)Ge..1m.2E.F...r4zkOfJM..]..d.......d.....{.T..t...9.....a.n..S/4R.f.@.\.EJ.MSW....|Wjc..=S...k..+...f.[.SUs..-...U.4.D.y4.Z6.k.#.E).a.I..N..I.4.IAR>....0....8+xs.URd.1.b{}e..B'.>4.T..W.w...(2...l...V.!`...v9...gFdZ.o.........IP......g..d.E.fK;S0".y.....}.^.o....Wc.....nR....J...k....k.2g..._.z.p...p..vY....\h....?.B.A...,.b.m.CX4.M'.1.3.~M....[...E..5.b..#.....3x..V..Bnsp$.{"..wA..f.P=..G....\f^|.C..-..}..i*.,..>rx..g...Q7i.-#<..$]H..9.....a.7.V..U..x?.t.q..X(.~.#./\..:9{ATN.Eb....|../Vsu6S.P.....[s....f..h....(.Slf.......9".}2i}A......Ng....H2.]....3N.#....k.4..5]z.......Bh .E.{..u.APX..b.=z..Z...b.Q....b.W.1....C.<h.'..{.3J].z..G....Jo..P.t......?yS.c..`5..G>T..uZ.E7.pC....{[.|..Zwh.#?gR
+
+[44/62] z=5.1162  blob=COSMIC  kdf/mode=pbkdf2-sha256-10000/aes-256-cfb
+  candidate (130 bytes): LASTWORDSBEFOREARCHICHOICEYELLOWBLUEPRIMESITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITMATRIXSUMLISTVERYLASTSTEPISATRUEGIVEAWAYYINYANG\r\n
+  output (1328 bytes, 45.1% printable, non-printable shown as '.'):
+    ..7.#..o.H1..#.5N...U...H.>IC.O...,q.x..@{...>.K#'b..y}Zmc+.A..:..e.T.I......2...(..|.Q.!.9.e.....A.#.F2.@cH.'U.g.2g.....6....h.rm.....c...+...VS.1...n.Yu..%..{.WCv.%..}Y...6...y.~.....z...LM&].....R..,....z.+....52{.{D..L."1.z`Uz..kC.O.#]TxC`1..]o..j$...K!.%K.c.].sU7h.jc:k..C...X...V.<..=....p.R.5|..a.X.x2g..d.7W.e.jb.pZ.8..W......!s.......uM..;...{B:.hyx.n?.[.n.fB......qJW...NXg...u+..t9.,....H..@.R.." ...&p.."............?o.f..f}@.@v.AS..8.{...2J.....[].ZD.v..;.R,6.;6..l.r%..{...-...;\q..3:.rn}....?O.F..Uc~.S...h&..Z_./y.8.....h=..C!.WYVp{...6B."-...U..n...4..H.t.qD.)1-.<^.I...d....6.."..R....H.a.-..2h..I...p Q.y]...u.2".PCsB..T..w...^+\V<.qma .....f.]....7.......^b*.......pH..x...#.H......S.g=.A....;e.,...,...2....wg..u._..d..#..6$/!.k.^.|!.p{....nQ....sF....z.R...5'^.&G..?O#.@.-U..y.o.6.`jI...wb0.:'.......58KxY..gftv.5:..]>+..o.2.2j......)....}.7.e.GC...().n..._.r(.#_$'(..@.;Y'.~vzs^ukZ.../..P3._R.|.?ia.(.....G....K..X.Q.-...}._......U$.i:6.c....9..B*S.M&...x...O..D...]i...3B...@..,b.4DF...,i*.6."W*.t..(j..P<...PlQ.....Pux.(.....H.R.....M.9t..e...`........d.T.G.c.hr..."{a[.`Q.DF...\.Lh...W.......7n.FXDOc....<u:.....Zl...`..v.S.<w.&pe.!...n?...y....H.k..7.?.D..c}..3...@....]./....L..H.....c.(r...6.."..:...S.s....J.ZU.../...UtR;6'7g.M..~...Or&.Q.tj..Y8...0o..>4...?".=.k...k.....%G.....V..0Q&bo....Q......
+
+[45/62] z=5.1162  blob=COSMIC  kdf/mode=pbkdf2-sha256-10000/aes-128-cfb
+  candidate (148 bytes): ITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITVERYLASTSTEPISATRUEGIVEAWAYLASTWORDSBEFOREARCHICHOICEYELLOWBLUEPRIMESWEWONTGIVEAWAYTHEPASSWORDYINYANGPROMISED
+  output (1328 bytes, 45.1% printable, non-printable shown as '.'):
+    .......I!0C..4.....,..-;GE....d..Y.....oH...%c._w-..u..j..........g.].I*..-.@.7+q.....7A(.0..]@..{...T.0.m..~.QAO.@I...D..9..,.....~.M.`.....]...j..H!.hec8D..F@.w.b.8....R...=..L...I$......v#Fsa|.3R.N1...t...E.~y..2.r..8....v.V...`.a.cv..\...{........%).^...A..Mv1>B....C/.Q.B$KN!..f>z.\L.HA,U..._...m.F~....y..lj~)p.(p.6..........`A.\.....x;.N....8Me..x9l4.8...i.-&-A...3.l...c.......}R.....y.x.....u~.-..>.3.K.m.[..r..P;*Z1....H1...e[...m.....[.6...#M.DToC]IQE...{..$.R...c.%..P..HA9.P~...4."N.l.M<q2*IP0.........M.6."G..h(kia5....q..;.=.."..../.~./UX~._.Y/..!..b....W.n{y.x......J.9wXM...0*..{....Y...ji...R3C~A.....Gb...bF-..p)k..~K...5..O,...?.e7.`.Rz1,YPzQ..k.2.....Q.VKO......Z...x..g.....}..G..z.r....5.].Z6Ch3.mk....(.%I....n-F-Ik=*8A....]-.8l..o..k+hK<..j6].ow.....X.....4)O."N.]  .E<.~!..G...C}...S|...$.....\D$<.5...Lz5.k.!.%.\j?.H/...j(.f1)./...;i..;.gB.6......<...F1.>0\.N._......H.T......r...E.rK.VFY.....=$.X.}v?.~..6s.F,....}.0..u...jA.4...i1.l...{2F#......S.ae.,..K....{.....&.otA..&k..wV...K$!d..[9...2.e~.'P.4..C%...d1.MxSpN..Xd..OD{..D.YM.$;8....0}....RK..28H.._....Z....3`V....3.=.M3..R.J.R&.yC>.*^_..m..DAn..w.t..D.."RS...,.Ed.J....(0..k......\..V(.JN|#D.9..Wq}.;b.u......3.............x..{.(1WH.,...D..Co.]...'..O.'.n.....^...h,..3..^..E..' M.@.@..4!...............S.={.2.$..?...*....l\m.x.m,RF=i.X.V<sG.
+
+[46/62] z=5.0918  blob=URLBLOB  kdf/mode=legacy-md5/aes-192-ofb
+  candidate (70 bytes): lastwordsbeforearchichoiceverylaststepisatruegiveawayyinyangpromised\r\n
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    Dug0..Y.c.VJH:1.fHJH.J...Ad...`;J.^(s..H.~z.`dRo>2.Gg...\_k4..\..dFP)0y.u.z0!n.W<?E-.^.#..0."...
+
+[47/62] z=5.0918  blob=URLBLOB  kdf/mode=legacy-md5/aes-256-ctr
+  candidate (112 bytes): matrixsumlistitsinfrontofyoureyesbutyourenotseeingitpromisedwewontgiveawaythepasswordverylaststepisatruegiveaway
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    (.t(4..0a.I[.D(5.1M.'HU.3.D.8\:..S5wNW#..sq.xLRb..r}.eC.H)A4.....f.'/XO..66E.X....M+..T..WDFsS9<
+
+[48/62] z=5.0918  blob=URLBLOB  kdf/mode=legacy-sha1/aes-128-ctr
+  candidate (64 bytes): 6173d4cd86f3b651191e5f68fdd4c3b5c8c4fe2ba06a2adb430ef20c803b9461
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    .0$i8.+.>|D4(F?2...N.#..]+P..|Mc.7.f..+.#.V.Ia..7>.sU..D.lp.A64.p..ig...t..LGI$(4...1.!.ss:y`.}.
+
+[49/62] z=5.0918  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-128-ofb
+  candidate (64 bytes): 26f1662b0e29a86a3847c9941b806c41fedb2dae9c85d8c7032d085948c612f2
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    ..MQ.t1.^W..;.f-.eq.j&..#.).7.kN.H.G#.`l..SPw...S.23lv#y.U("?.X.b@:Q..C.69..#@.U!cT. P? @#)7.$..
+
+[50/62] z=5.0918  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-256-ofb
+  candidate (64 bytes): 3090b366d4b2f7a488790900e48ed53d70338235befab899caac5c245380f0b5
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    \@aP3.<..i.s4::.jnr.p.(s.g^)^b..<u.....t&.+"..:XiU-..S.tu.*A.&:\Y.ao.b.U... ..rF.._.n>6b...*E.=r
+
+[51/62] z=5.0918  blob=URLBLOB  kdf/mode=legacy-md5/aes-192-cfb
+  candidate (121 bytes): verylaststepisatruegiveawayitsinfrontofyoureyesbutyourenotseeingitmatrixsumlistpromisedwewontgiveawaythepasswordyinyang\r\n
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    O.N..g.>.t(.~..f.uln.w=.t-\G..VL #..s~L1v~z.:..."}n.....vR8wF..huGLLZ.X.R.ul;.cAL)c[.&..1F...U..
+
+[52/62] z=5.0918  blob=URLBLOB  kdf/mode=legacy-md5/aes-128-ofb
+  candidate (64 bytes): 1099c68e2fbf81ca342ae08a16b3442373dec195fece49927ef2c28b1c0c897d
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    .I1.x...6...XY.]@..)sh.K<Fs /*-,l$$~...{,h1.S.4P..+n@xFT)z>38...zIOF&...o..+_.Z....h..g`..Uf.qw.
+
+[53/62] z=5.0918  blob=URLBLOB  kdf/mode=legacy-sha1/aes-128-ctr
+  candidate (64 bytes): fb1101c905a43c60b875f083bc6333c0f4478a8f71e844116e2331ea8d09eb91
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    9`.D...e..u.,.(2.c...Q`PS.OlcU..{.0!.(~JMUH.~..OJ:m..Q.1.&....-..q..F.#.A+..E[rB.tYG*K.].t.8gr$9
+
+[54/62] z=5.0918  blob=URLBLOB  kdf/mode=legacy-sha256/aes-192-ctr
+  candidate (64 bytes): ca2243180dfc85372923bf6f18805c740e101c46eacd66edc1b21f2890d7044e
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    ..8v..R.t|n.OH....j4.d.UrOf.iH..().I.tR`,..N._Z..]W=eiiZ.3YU...7P;.S2..^78f.|...h....^!h..E]sX.r
+
+[55/62] z=5.0918  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-256-cfb
+  candidate (64 bytes): d83c1773697655a209d775e1b405bf00242bdd63440f9796da7edbdc8f289028
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    }..@;n...<..SPz..XK...PmQ..G)..uq .f.~`A*.A?...T..).'yI9 ..h....B..]...."Y.hImk.&Z.<&3Jhb...O5;.
+
+[56/62] z=5.0918  blob=URLBLOB  kdf/mode=pbkdf2-sha256-10000/aes-256-ctr
+  candidate (64 bytes): c89eee6fb55e630633d6506c59dae90473fcd68299f274b0c03e8853551a5396
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    %*3..,Y...CU.>5.o..G.T...a?+`...TzNH...A6sy^..~"..T..j.cQo._..yO...ntRZf.3g|P/?.{.U.=.V8..S.1..y
+
+[57/62] z=5.0918  blob=URLBLOB  kdf/mode=legacy-sha1/aes-256-ofb
+  candidate (64 bytes): 04303a024e1de163368ccbdcad057b14012fbb02bcda8525aa777ab79e166008
+  output (96 bytes, 63.5% printable, non-printable shown as '.'):
+    ..(.%."!.a"w..Nd*$>G.V..'...L.).w...jg..".dG\I\~p.I..._z)WT\Qd_0).x*..vU+.X.p.g.y.T.d.__<D.Cd.Eu
+
+[58/62] z=5.0597  blob=COSMIC  kdf/mode=pbkdf2-sha256-10000/aes-128-cfb
+  candidate (64 bytes): 7b2839bedc7bbad1c9584fd0d8ae1129cad980a858197d2f2999bbb7a29010c5
+  output (1328 bytes, 45.0% printable, non-printable shown as '.'):
+    Rt.U,"......J..(.+.....P..n6}.g...R..7W........ l;..v...Ha5....>?..d[a.n.8/k.M``M,...T..x.\.D...0..^?g...ez..].q.....B.y..Y5..Bwk..-.7.L.........s.A...].e.....J.5..6 #.O.Uwe....VT....J21...u.-..Z0w....[mP..T...v..Y.k.Y#(W+.K....=....DE.. ...#gW...a.<. 5N.Z@^m..bm.J...6El.....-...`tfp...,(....L.#...i.GY^......[..w.<i....=gG...........+.....A....Y7w.RE.]7......!..j.k.U..@q*+..u..L.p...G-.4...l[..m....{y.s....&]km...I.{.6..,).e.W.8zy.cg.'.Vz.P.%u..C....tf2O.,.......m.|..E......zr.W.p..l3...L`h(..Ld...=...TaR.YL..n..K.......H)N..q.c...;s.q_f../.:8.^>.wE3.*...../....D.GO.8.!..nm7pC@h73......@..... .H....td...O;..\.u"...0....&.!.?..%.M..cVQ.Y.Pr..g.eU....j..>...L....x....u7... ...\*pJ7....Y8_z......+..]1.`.}..v`..i..}(I.Jm...I.,.l..*.F.p.z.^.}../.I..U..8.w L+.d.b..5.0..NI..EEUI.y"...........v.M..b.<{.@..1..RHDaEiq..M.-..0.e.......4.wAO.`]g...e..G.m.K....._m=DE..m.(..?e..r..2...:....l.y.].....7(...y0...1.{\...\:c.. ?;z....5'h.^@xv.kA..E..&{o..t.g<..4.....?...&..<..n!JP....9..?l.Tp#=.7.zW....KLm3j.. ..My....8......\a7_Y.Kfj5R..6...:.~u3..){v.lBv~)...!?.KO.t.~.B;B-..("..s .F}.....fns.{.L.Hkg1..]).\#...'.E...w.(u...D..X..K.....&.....O'T....e.W`o...l.O.M....#..4$_E...`.....,H..[qiB.".B,....'7?O9.\.....>^?.>...8...B^..wUG.s.....X.>....e..`...9.@........S4+..(W.%n.Jg`.Ba..X..g........p..,.E.;$K^.U.8^.0.>..1..I..%..L.._A
+
+[59/62] z=5.0597  blob=COSMIC  kdf/mode=legacy-md5/aes-192-cfb
+  candidate (142 bytes): yellowblueprimesverylaststepisatruegiveawaywewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitlastwordsbeforearchichoiceyinyang\r\n
+  output (1328 bytes, 45.0% printable, non-printable shown as '.'):
+    .....z.<8.7k..x_q..&l.oj._...Nw...KqE....6+..lk.GJ|!......dw.V.+>....1b.."..e.1".kJD].G?..l6..B..%#g.9.....1.tm..../MDG....G...g..s..Y.|..."2V<o......{.R.....,.!PrQ.5...`@.-....~.$.A3........w...@.E.....9m...%.b....n..x.px*a.3....@.Bx.FF.....9r.F\iv=DA.[C.WZy.v`f.u6o...s..M|..bx....dH.gC=YU.|c.=F.<...W..?.s`...x......2YAx..r..Q..Q.7.......-.B..3t.w&..o.c.S4..J.y..........S[jp.a.|..,D.....l&q@......l.Pu.;<'p.~Q\.'IQA..YI|.X.;[...............,#.{Fn*7A...c.E....J*..l..!.wa\k.X.......qDv1t....R..Q#.u...I..mI....~:n|.~.Yo...=v@...t9Q.o.K1.E..O:R..{f....T....a.mH.pop...(.&\.....:..(m...c.c..8.[Yv.....j.jS.g. ~..b..L}#....B.@.....{3.L.OaaS6......V..P..!..M\".>:AE.G....u.w...$.....>..4..EcM....}.%..<..%t}..L._.H...>...8iX...R>..frE& :m..T.x6..i...0flB....j........MJ\(X.J..........._..{..5S...f+.o.fw.0y.U.T6.Ak.mAx2.)x......_..h.B..|....h..D.....h....p..~.oxB{...u.xk......D..g..m..R...@TR.z%..|.....c.%.u..m....]n..#.....$+.....}@...@..R.|...m\).bW8b_.........?.........../..(F#-B..^....:.r.._...in'.s.1.1j..1n.\e..B[d...p.h.8..QQP?.....Y{p.T.. .... .e".~I`.[.}@........i.....;W.y.b..0.4.G.g.C(={.E__.....D......S`...Q(.zGyM.&;.5...'.A`tQ.F<f.U.L.\.+..9.!....B....e...#..r.p.$...V/.....{..&...pg.u..L.<..~.......}...M.D^j.Bx./.M.3.q._......CF.#r.~..H=`.z./h*.d.nI....+dl..1.k._;.1..*..;UdRs}^..u..,.....$6.?\..`>0]..XB^.T@.m
+
+[60/62] z=5.0033  blob=COSMIC  kdf/mode=pbkdf2-sha256-10000/aes-128-cfb
+  candidate (64 bytes): 775b568970935e94e4ed53fd087151bed3dc8ef39a701948b745fc9e2f1ff4ba
+  output (1328 bytes, 45.0% printable, non-printable shown as '.'):
+    ...'...SE%......2.>q.4#F..2..3......B.....ZJ...x.j..6.E.hDI-...\..@.w_.F\.$5.]^hf...t..)..{...%}H.._k....N]MDgsg..!....H...P..fM.3.a.5.v.......ek,.......6.:.M..Z2......[.&.a... ....."_..z2..w.0.@......V;.Z..`:Z.F\.......Ulz%...f.&l...X..S./]+..H..8....R.....1.<{Ke.Z(]..3.@J.s...V.......gm..X.I,.{...z....z..u.A..h......]yLr.....T.0.....+........`...Jz..he:..Y...#i...0Z&...T....i.a-}.2Oc.!.g.v.&..KZ4'.....6e# ....3......W&n...4."z8``f.u<.u.|..R.r9.....v..4../.....0..\.......p...,..|-.....lcvr............7}jM..,C.......$.I7*b.. W.P.?I.5n.r.I.#.rZ.#.;yRiw...m0.(v`..S\.......{....P.-.wL']V..K,...z....-.1c...W.yOv..p\..7.$=.......\.($S.Z'?8q0o.$...j...,Htf...N>..m..(..@..RA/Wa..+F6..U.A,.Ac.....2....7.Wn..yD.j..bF..J.,"N9..c..;....9..L.P.9 ..R....]g.$..X.D.>...E..8..*.},.E..sV}..'L.......pQA.{.O?6@.>~.w3.P....X"...A.~c8..D6.Q=..I9x....:`....7e../....QV.s.B...oV....[>^u;......;^)...cS....vuk.s^.@...`...A....Cw...<#$,..Ql.;EG.K.*.d.....ms..F...".6..1V.X.KZ7:E_..ea)..F...'./0e...9c-...uEk./8...G"..'WWU.9....).....#.......\{.....s....q2...`?UW.5..f..0@..f.....1p.....t98i..R.3w.L..U..A..Q...P.&.i .,7=F,&...d3o..Ir4F..%}...4.5!.).Y:..../......>.....TPCO...}..I\W..QH..P.vXA........bD...e#.Y..mE.ca..!..$RsYT-9....WO9...[.4...9...2Kb"..$.I....x.B$..../..X.:.gJi.t...CN.%D.....K..OG..Q.-#..w..".lXI...l..N..b:...[......A.^K~
+
+[61/62] z=5.0033  blob=COSMIC  kdf/mode=pbkdf2-sha256-10000/aes-128-ofb
+  candidate (64 bytes): 1a36e414436da7686f663324cc426ac4f5298a1ed24aadeecd9f26fcbaa4c98a
+  output (1328 bytes, 45.0% printable, non-printable shown as '.'):
+    .a...jp.j..'{.U...M.c$.B+.0?m}!Q..;[X9..0.K.mnxr]..5.|....TFy\dsl....E.B./j....3...G1....-...8.E23&.<..Wx..7i.}<..W....d.9.....M..lSwh}...y:.....U;..:.J.[..?3......E...4....-&.OJ.,..Y...i.....Q]u=4..z0....yK.r...K./:../.x...b...d+.JR...N=........P.......uj.........RO...7...Hg.?....!...#.4.{.3.4..%.C...n......Ha%.R.z[$#...ol..=K.~A/6..A.+.>....:...y.*qCK..y#..u[o.U....Lk#BW..f..8.s[}...7S..O.\."..75..i$.... &+Tq.9}VF.....l@^.;!z....N.^P...M..:.a,.;D.zGw..y1..}5...K..B..,....j#2...;..5..-.$z.[n.[.3v...@.:....g..m.X4.......#js.bw........T.....9wR...{;.Q_nI\n..x3..{..*..B.........:Qq...Gi...xta.*.*m)'...$]..5(..x..i....r.r...C?.~....Jo%......(......pC.).@...#.<....FP.z...*......i......Z....a<.J...(.K.V...h..-.P./.d{.|.^]H..E.P].sh.n.....jL<.&(....a.A....s!1....g..>[...+.....%Csz..)..7.o]].S..8}..2X,.+u.z$+.(3...=.y.).......J..5...A.R.......+....'1U".jt..=H.'q.@..jKJ.,$.2..&e>{PI.).b........G..\B..T...<B'+.`'!..b...$g.....2.%..."...?.^.L~]....hm.5W..ml..O....r......v.$.6.^2`..v.Z.mJ..E#.%.}.[C..5 :(.u...H...=,nN.`w.x!T.(.. UDO{...3...6.{x....b.d......OP...C..G......D..ZG...IV3..7b.A!.$.HQ[+.|.AZy.`..q./..M.p@...?Y..L?O..a}.../G.......`......E.b?...<.Y.@..[]...s.p&c..._y...|..&......?1...k..#.m.|y..uq~?^.E.XH"..:.?N...v.Q.#SW.].-*....u+.S....B.,..!.8..C...W \..m=..@...g.....mR.......WN4..T]Og!....4.yu.R{K.~.&.G\.
+
+[62/62] z=5.0033  blob=COSMIC  kdf/mode=legacy-sha256/aes-192-ctr
+  candidate (155 bytes): VERYLASTSTEPISATRUEGIVEAWAYITSINFRONTOFYOUREYESBUTYOURENOTSEEINGITLASTWORDSBEFOREARCHICHOICEYELLOWBLUEPRIMESPROMISEDWEWONTGIVEAWAYTHEPASSWORDMATRIXSUMLIST\n
+  output (1328 bytes, 45.0% printable, non-printable shown as '.'):
+    ..R}P.H....9k../Un.L/{zZ W(2u....=.).\h..rDx.+.p.....|.....&.R.x./E.W..9.3....\.L..#.>*..Q]..M...R...=..T..g5....uK.+=S..Cv4!.....9/C..!.CWV.@`i5G&|...t,.e...97T...3.+.q..x:k...K.b.d.?M.EAO...?\\....4......3......2h.rG...>.\..y.T.......4...m...a.."]A..>Sya{d..h....i!.5.`......oW.0u.%;.....K..".J...+[=.q.d.lg..*.V....>q..O....*....../.H.3x.....7..q1.E\$.^o..L|E......$......$U..,q,.69.....%b+..(]..|.j..:.#..7...x.U...I?.......i......\4..9wy..4.I.....,.e.....B;.....)l..y..w.....).@s$.t.;?zc..B..;woB<,.*.@.v.J....y;.r.L....%U..D.h7.mRN.?&.<.....`........P"\.c#a.....5.>A..P.R.CJ...F~i8.E7L...s& ..<eI.-.0......p.0.RBme;.$.0.SG..f.7.......))..[^.=..+r$t...:........N.bV.{f.te.]M..L..HP.B...b..8.2..y-..Pg.>.....Fd.vOq....7..kD...Y)v....Uzh{...zt.d.6.3....E..B.|.=..vd..?|:..b.01...*uc*|.U.;.e.?.%........%B#.."k...c...].....V....;.~vE.!.zk.y...)4i5...B9..a>.x~...G$...c..<.I.}W.\:.K...^......,..Q..k..>.E.;._,Nu... f.x.e.V.*~\...kC....S1.o.G.....j@.bJb.R...O.ey.Qq....q!..sU=.b.{..h;."W..........)..aR .\.O...x.4..._g.qg,.x...{B.:_3b..3...SQ.b...cHpcgM.N...s..g..\....b~_S....fB......A....Qv."....ux.....0..V..F.}s...m.@.... ..hq..J..G.<>N.........". #.M..19I.M."...........B~...c>0...ml9c....}F./. 9....c......6P0.*:.qF.._..=)l$g.|...'Oc...=...H.k.<t.{....O.I.".RK.(HM.>..?.(z'.....f.hs..&dS.B...&...eR2..I.h.l..,...D.7n5D..p.
+

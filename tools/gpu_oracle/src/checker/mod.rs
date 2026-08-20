@@ -9,6 +9,7 @@
 
 pub mod api;
 pub mod bloom;
+pub mod known_targets;
 pub mod verified;
 
 pub enum CheckResult {
@@ -24,4 +25,5 @@ pub trait Checker: Send + Sync {
 
 pub use api::ApiChecker;
 pub use bloom::BloomChecker;
+pub use known_targets::KnownTargetsChecker;
 pub use verified::VerifiedBloomChecker;

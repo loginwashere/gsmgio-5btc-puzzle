@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-08-20T14:26:05Z",
+  "frozen_urls": {
+    "gsmg_io_root": "https://gsmg.io/",
+    "salphaseion_route": "https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32",
+    "hosterjack_repo": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle"
+  },
+  "baseline": {
+    "gsmg_io_root": {
+      "url": "https://gsmg.io/",
+      "attribution": "unknown",
+      "attribution_note": "authentic observation, not proof of creator operation",
+      "live": {
+        "requested_url": "https://gsmg.io/",
+        "final_url": "https://gsmg.io/",
+        "status": 200,
+        "redirect_chain": [],
+        "raw_sha256": "2f896807a859e2f71a2f6e1e8277986af73b80dc0dd79a685a67c7f7f8c3303b",
+        "normalized_sha256": "5a3e6521f5f932878de7e3833d3b39df886f49f22c028854ba84a1d723f5036c",
+        "content_length": 35785,
+        "observed_at": "2026-08-20T14:24:53Z",
+        "source_class": "live_fetch"
+      }
+    },
+    "salphaseion_route": {
+      "url": "https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32",
+      "attribution": "unknown",
+      "attribution_note": "authentic observation, not proof of creator operation",
+      "live": {
+        "requested_url": "https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32",
+        "final_url": "https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32",
+        "status": 200,
+        "redirect_chain": [],
+        "raw_sha256": "a83d3de7810f26b19b4965339b76d403e44f6b6877e5d7de2555480ca1779d77",
+        "normalized_sha256": "5a6a1d41f82bbfeb9d8e850a7a660a919a4e1678e16d6c5a6a108bdfad66446d",
+        "content_length": 4536,
+        "observed_at": "2026-08-20T14:24:54Z",
+        "source_class": "live_fetch"
+      }
+    },
+    "hosterjack_repo": {
+      "url": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
+      "attribution": "community",
+      "attribution_note": "community-sourced, not creator-authenticated",
+      "live": {
+        "requested_url": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
+        "final_url": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
+        "status": 200,
+        "redirect_chain": [],
+        "raw_sha256": "3d4276583926e403912dbf4d3e0d994c53e8caa8d6e97ab7ff199d4747756b6d",
+        "normalized_sha256": "e1a6186b954b0f22fa7bdb576013b5f1f2b6a42042ccd106cf4bc733cfe8de0d",
+        "content_length": 290663,
+        "observed_at": "2026-08-20T14:24:54Z",
+        "source_class": "live_fetch"
+      }
+    }
+  },
+  "archive_checks": {
+    "salphaseion_route": {
+      "wayback": {
+        "ok": true,
+        "alert": false,
+        "known_capture_count": 5,
+        "detail": "Wayback CDX history unchanged from the 5 already-authenticated captures"
+      },
+      "urlscan": {
+        "ok": true,
+        "alert": false,
+        "known_scan_count": 12,
+        "detail": "urlscan search result set unchanged from the 12 already-authenticated scans"
+      }
+    },
+    "gsmg_io_root": {
+      "ok": false,
+      "alert": false,
+      "detail": "query failed: <HTTPError 503: 'Service Unavailable'>",
+      "captures": []
+    },
+    "hosterjack_repo": {
+      "ok": true,
+      "alert": false,
+      "known_head": "28d33cc",
+      "known_head_date": "2026-08-01",
+      "current_head": "28d33ccba517",
+      "current_head_date": "2026-08-01T16:56:09Z",
+      "detail": "HEAD unchanged since Phase 330's review (28d33cc)"
+    }
+  },
+  "alerts": {
+    "changed_bytes": [],
+    "newly_discovered_captures": []
+  },
+  "new_evidence_found": false
+}

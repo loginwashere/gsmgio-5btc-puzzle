@@ -1,6 +1,6 @@
 # GSMG External Archive Audit
 
-Date: 2026-07-26
+Date: 2026-07-26; updated 2026-08-20
 
 ## Sources
 
@@ -120,3 +120,40 @@ alignment, with its dependence caveat. The next bounded investigation should
 ask whether offset 21 and the `21 | YOUWON | 64` partition select a
 creator-supported operation on DBBI's residual information. It should not
 resume broad passphrase spraying.
+
+## 2026-08-20 Hosterjack Delta Review
+
+The deployed [interactive compendium](https://hosterjackagv.github.io/gsmg-5btc-puzzle/#/)
+and current public-source HEAD `28d33cc` were reviewed read-only. The 13 new
+attempt cards since the snapshot above mostly document negative
+infrastructure, lexicon, presentation, and grid-image paths. Their practical
+leads are already covered or superseded by later local phases: notably the
+Base64-wrap/`enter` observation (Phases 33/215), the central-four-cell
+rabbit-nest reading (Phases 64--67), source-map/domain/archive mining, and
+visual DBBI/FAED presentations. The catalog's original top-ten loose ends are
+likewise now covered, tested, or structurally superseded here. No new
+candidate password, operand, ciphertext interpretation, or executable attack
+path was recovered.
+
+Two narrow capacity constraints reproduce and are retained:
+
+- DBBI has 91 base-9 symbols, or `91 log2(9) = 288.463...` bits of direct
+  information. This leaves room for a raw 256-bit scalar, but not a standard
+  WIF binary payload: an uncompressed WIF payload is 37 bytes/296 bits and a
+  compressed one is 38 bytes/304 bits before Base58 encoding.
+- FAED has 570 base-9 symbols. Under every direct bijection of `a`--`i` to
+  digits 0--8, the smallest possible forward and reverse base-9 integers
+  still have bit length 1,801. Therefore the *whole stream interpreted as one
+  base-9 integer* cannot equal exactly seven concatenated 32-byte keys (1,792
+  bits). This does not reject segmentation, record structures, or a prior
+  transform.
+
+The reported non-uniformity also reproduces (Pearson chi-square `40.2418` for
+DBBI and `43.7368` for FAED against uniform nine-symbol counts), but it does
+not prove the blocks are lists rather than numbers. Likewise, absence of the
+creator's `o` glyph does not exclude a separate 0--8 alphabet. Distribution
+contraction may be used as a ranking pre-filter for explicitly independent
+additive mod-9 models, never as the catalog's stronger global claim that such
+mixing can only blur a signal. Negative public-book/lexicon searches do not
+prove a missing datum is private. See FINDINGS.md Phase 330 for the full
+scope and reopening condition.

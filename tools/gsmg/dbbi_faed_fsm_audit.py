@@ -189,6 +189,15 @@ def audit(trials=TRIALS, seed=SEED):
         "visited_state_count": len(set(states)),
         "used_edge_count": len(edges),
         "output_distinct_symbols": len(set(outputs)),
+        # Full 570-symbol output string, added Phase 335 -- previously only
+        # a 160-char prefix was retained here, which is why the Canonical
+        # Sentinel Inventory (P0A) scored this model "conditionally
+        # eligible": the candidate text was already fully computed above
+        # (`output_text`, from `run_machine()`'s real return value) but
+        # never exposed in the report. This is that one-line fix -- no new
+        # transform, no new choice, the same value `output_prefix` already
+        # truncates.
+        "output_text": output_text,
         "output_prefix": output_text[:160],
         "output_equals_faed": output_text == FAED,
         "output_prefix_equals_dbbi": output_text[:len(DBBI)] == DBBI,

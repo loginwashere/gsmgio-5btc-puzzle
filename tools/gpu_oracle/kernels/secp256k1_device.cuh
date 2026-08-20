@@ -15,7 +15,9 @@
  *     (secp256k1_gpu.rs), used when stream_key_check.rs falls back off the
  *     merged kernel path below (no GPU, or GPU init failed).
  *   - kernels/aes_kdf_oracle.cu: the merged on-device path -- decrypt, KDF,
- *     AND now (Phase 325 GPU-KDF merge) secp256k1 point-mult + hash160 +
+ *     AND now (Phase 332, retroactively numbered -- this comment originally
+ *     said "Phase 325 GPU-KDF merge," colliding with FINDINGS.md's real,
+ *     unrelated Phase 325) secp256k1 point-mult + hash160 +
  *     Bloom check for stream-mode candidates, entirely inside `aes_kdf_scan`,
  *     with zero host round-trip except on an actual (rare) Bloom hit. This
  *     is the fix for the finding that a CPU-decrypt + GPU-point-mult split

@@ -1,0 +1,500 @@
+{
+  "nodes": {
+    "blob_salph": {
+      "type": "blob",
+      "label": "SALPH (SalPhaseIon embedded AES blob)",
+      "containing_artifact": "SalPhaseIon page textarea",
+      "attribution": "creator",
+      "observed_at": null,
+      "first_publicly_seen": null,
+      "probably_authored_at": null,
+      "note": "Literal base64 Salted__ AES blob embedded directly in the SalPhaseIon page text, no checkerboard decode needed to reach it.",
+      "citation": "tools/gsmg/data.py:SALPHASEION_BLOB_B64 comment"
+    },
+    "blob_cosmic": {
+      "type": "blob",
+      "label": "COSMIC (Cosmic Duality embedded AES blob)",
+      "containing_artifact": "Cosmic Duality page textarea",
+      "attribution": "creator",
+      "observed_at": null,
+      "first_publicly_seen": null,
+      "probably_authored_at": null,
+      "note": "Larger AES ciphertext referenced by the community as the eventual endgame target once dbbi/faed are decoded.",
+      "citation": "tools/gsmg/data.py:COSMIC_BLOB_B64 comment"
+    },
+    "blob_p32trailing": {
+      "type": "blob",
+      "label": "P32TRAILING (tail of solved Phase 3.2 plaintext)",
+      "containing_artifact": "Phase 3.2 solved plaintext (embedded at its end)",
+      "attribution": "creator",
+      "observed_at": null,
+      "first_publicly_seen": {
+        "not_after": "2023-08"
+      },
+      "probably_authored_at": null,
+      "note": "80-byte OpenSSL blob embedded at the end of the already-solved Phase 3.2 plaintext (salt b45a5e3d827593ca). first_publicly_seen upper-bounded by the HosterjackAGV fork's 2023-08 push, which already documented it in detail as p32_trailing; not documented is when it first entered chat.",
+      "citation": "FINDINGS Phase 25 (2026-07-24)"
+    },
+    "blob_urlblob": {
+      "type": "blob",
+      "label": "URLBLOB (hex-encoded blob in a gsmg.io URL path)",
+      "containing_artifact": "gsmg.io URL PATH itself (not the response body)",
+      "attribution": "unknown",
+      "observed_at": null,
+      "first_publicly_seen": null,
+      "probably_authored_at": null,
+      "note": "QUARANTINED provenance: no official-README or solved-plaintext corroboration; the sourcing fork itself calls it 'orphaned' and reports no tested key decrypts it.",
+      "citation": "tools/gsmg/data.py:URLBLOB_B64 comment; FINDINGS Phase 27 (2026-07-24)"
+    },
+    "solved_phase2": {
+      "type": "solved_boundary",
+      "label": "Puzzle Phase 2 boundary ('causality')",
+      "containing_artifact": "gsmg.io Phase 2/3 combined page (Thevenin/Norton riddle)",
+      "attribution": "creator",
+      "observed_at": null,
+      "first_publicly_seen": null,
+      "probably_authored_at": {
+        "not_before": "2019-04-20"
+      },
+      "note": "This project did not originally solve this boundary -- reconstructed from the community fork's public README and independently re-derived end-to-end (rank 1, no ciphertext consulted until ranking frozen) in FINDINGS Phase 341.",
+      "citation": "doc/GSMG_PUZZLE.md:90,103; FINDINGS Phase 341 (2026-08-20)"
+    },
+    "solved_phase3": {
+      "type": "solved_boundary",
+      "label": "Puzzle Phase 3 boundary (7-part chain)",
+      "containing_artifact": "gsmg.io Phase 2/3 combined page (chess FEN + parts 2-7)",
+      "attribution": "creator",
+      "observed_at": null,
+      "first_publicly_seen": null,
+      "probably_authored_at": {
+        "not_before": "2019-04-20"
+      },
+      "note": "Same reconstruction/re-verification note as solved_phase2.",
+      "citation": "doc/GSMG_PUZZLE.md:90,104,107; FINDINGS Phase 341 (2026-08-20)"
+    },
+    "solved_phase3_2": {
+      "type": "solved_boundary",
+      "label": "Puzzle Phase 3.2 boundary (Beaufort THEMATRIXHASYOU)",
+      "containing_artifact": "gsmg.io Phase 3.2 clue-answer + Beaufort stage",
+      "attribution": "creator",
+      "observed_at": null,
+      "first_publicly_seen": null,
+      "probably_authored_at": {
+        "not_before": "2019-04-20"
+      },
+      "note": "Same reconstruction/re-verification note as solved_phase2.",
+      "citation": "doc/GSMG_PUZZLE.md:108-109; FINDINGS Phase 341 (2026-08-20)"
+    },
+    "page_favicon_2019": {
+      "type": "page_revision",
+      "label": "favicon_small.png, sole Wayback capture",
+      "containing_artifact": "https://www.gsmg.io/img/favicon_small.png",
+      "attribution": "unknown",
+      "observed_at": "2019-04-28T23:47:09Z",
+      "first_publicly_seen": "2019-04-28T23:47:09Z",
+      "probably_authored_at": {
+        "not_after": "2019-04-28"
+      },
+      "note": "SHA-256 934f46d6a0a168a7ca2af725604d7e1dab8ee825ad0d7c682dbb252cc2be1423; 8 days after the documented 2019-04-20 puzzle launch. Only one capture exists, so branding-vs-puzzle-era origin is not chronologically decidable.",
+      "citation": "FINDINGS Phase 241 (2026-08-11); doc/GSMG_FACT_LEDGER.md F-FAV-005"
+    },
+    "page_salph_v1": {
+      "type": "page_revision",
+      "label": "SalPhaseIon/Cosmic Duality HTML variant 1",
+      "containing_artifact": "gsmg.io SalPhaseIon+Cosmic Duality page",
+      "attribution": "unknown",
+      "observed_at": "2023-05-31T02:49:16Z",
+      "first_publicly_seen": "2023-05-31T02:49:16Z",
+      "probably_authored_at": {
+        "not_after": "2023-05-31"
+      },
+      "note": "sha256 18a8369df1364911d5e94fcac341ef85480ff194f4500f509fbed34f19e6308b, 4556 bytes. Earliest of 16 known ARCHIVED capture events (5 Wayback + 11 urlscan) -- not the earliest public sighting overall: repo_route_hash_2021_05 (2021-05-07, this repo's own git history) documents the live page, screenshot and exact route, ~2 years earlier. Corrected by Phase 345 after Phase 344 conflated 'earliest archived capture' with 'earliest sighting'. Original authorship date remains undocumented either way.",
+      "citation": "FINDINGS Phase 244, 249 (2026-08-11/12); doc/GSMG_FACT_LEDGER.md F-OBJ-003"
+    },
+    "page_salph_v2": {
+      "type": "page_revision",
+      "label": "SalPhaseIon/Cosmic Duality HTML variant 2",
+      "containing_artifact": "gsmg.io SalPhaseIon+Cosmic Duality page",
+      "attribution": "unknown",
+      "observed_at": {
+        "not_before": "2023-11-27T18:19:47Z",
+        "not_after": "2024-04-16"
+      },
+      "first_publicly_seen": "2023-11-27T18:19:47Z",
+      "probably_authored_at": null,
+      "note": "sha256 ed6c395890553a2ef3e156f91111ef0ab503951c631717cb60ab1f72858459af, 4556 bytes. Only diff from variant 1: an H1/h1 heading-case change; the dbbi/faed textarea span is byte-identical.",
+      "citation": "FINDINGS Phase 244, 249 (2026-08-11/12)"
+    },
+    "page_salph_v3": {
+      "type": "page_revision",
+      "label": "SalPhaseIon/Cosmic Duality HTML variant 3",
+      "containing_artifact": "gsmg.io SalPhaseIon+Cosmic Duality page",
+      "attribution": "unknown",
+      "observed_at": {
+        "not_before": "2024-12-04T00:00:00Z",
+        "not_after": "2026-04-05T15:42:27Z"
+      },
+      "first_publicly_seen": "2024-12-04",
+      "probably_authored_at": null,
+      "note": "sha256 0eeb42e361a2781846ce16d2fdadd1a879793d969aa624c5fa43552347d6c4d0. Diffs from variant 2 are head-section whitespace and a Cloudflare analytics script version-token rotation only; the dbbi/faed textarea span remains byte-identical. 7 of 11 urlscan captures match this variant, through 2026-04-05 (the local mirror).",
+      "citation": "FINDINGS Phase 244, 249 (2026-08-11/12)"
+    },
+    "page_urlblob_capture1": {
+      "type": "page_revision",
+      "label": "URLBLOB URL-path capture, complete (112 bytes)",
+      "containing_artifact": "gsmg.io URL path (Wayback CDX)",
+      "attribution": "unknown",
+      "observed_at": "2026-01-05T01:59:08Z",
+      "first_publicly_seen": "2026-01-05T01:59:08Z",
+      "probably_authored_at": null,
+      "note": "Complete capture: Salted__ + salt 74c974e3f92e64b5 + 96-byte ciphertext (6 clean AES blocks). Independently re-verified against the live Wayback CDX API, not just a fork's own docs.",
+      "citation": "tools/gsmg/data.py:URLBLOB_B64 comment (2026-07-24 re-verification)"
+    },
+    "page_urlblob_capture2": {
+      "type": "page_revision",
+      "label": "URLBLOB URL-path capture, truncated duplicate (40 bytes)",
+      "containing_artifact": "gsmg.io URL path (Wayback CDX)",
+      "attribution": "unknown",
+      "observed_at": "2026-02-07T19:00:55Z",
+      "first_publicly_seen": "2026-02-07T19:00:55Z",
+      "probably_authored_at": null,
+      "note": "Truncated duplicate of the same path -- only 40 raw bytes (header + salt + a 24-byte non-block-aligned remainder). The sourcing fork's docs cite this later, truncated capture as THE capture timestamp; this project's re-verification caught and corrects that inaccuracy.",
+      "citation": "tools/gsmg/data.py:URLBLOB_B64 comment (2026-07-24 re-verification)"
+    },
+    "page_gsmgio_restored_2026": {
+      "type": "page_revision",
+      "label": "gsmg.io live restoration (2026-08)",
+      "containing_artifact": "gsmg.io (Contabo/Dynadot deployment)",
+      "attribution": "unknown",
+      "observed_at": {
+        "not_before": "2026-08-15T23:16:41Z",
+        "not_after": "2026-08-17T16:09:49Z"
+      },
+      "first_publicly_seen": {
+        "not_before": "2026-08-14",
+        "not_after": "2026-08-15T23:16:41Z"
+      },
+      "probably_authored_at": null,
+      "note": "FINDINGS Phase 329 explicitly left operator identity UNRESOLVED (fresh HTML reconstruction around known archived content, not a byte-for-byte restore of the original container; no cryptographic or fresh creator-identity signature found). Per the user's explicit instruction this node is deliberately attribution='unknown', not 'creator', regardless of how closely its content matches prior archives -- self-test enforces this.",
+      "citation": "FINDINGS Phase 329 (2026-08-20)"
+    },
+    "tg_genesis_post": {
+      "type": "telegram_artifact",
+      "label": "Creator genesis post ('Here is the GSMG Puzzle!')",
+      "containing_artifact": "Telegram support group, messages 25986-25988",
+      "attribution": "creator",
+      "observed_at": "2019-04-01",
+      "first_publicly_seen": "2019-04-01",
+      "probably_authored_at": "2019-04-01",
+      "note": "Pre-rabbit April-Fools puzzle caption + two binary payloads, from creator user9815232. Earliest documented creator-authored puzzle artifact.",
+      "citation": "doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md:79"
+    },
+    "tg_hint_1_4_21": {
+      "type": "telegram_artifact",
+      "label": "Creator hint: 'another door on {1},{4},{21}'",
+      "containing_artifact": "Telegram creator message",
+      "attribution": "creator",
+      "observed_at": "2021-04-01",
+      "first_publicly_seen": "2021-04-01",
+      "probably_authored_at": "2021-04-01",
+      "note": "Describes what looks like a separate, still-open sub-puzzle, not obviously the same thing as dbbi/faed.",
+      "citation": "FINDINGS.md line ~68-69 (Phase 2 writeup, 2026-07-03)"
+    },
+    "tg_hint_zeroed_out": {
+      "type": "telegram_artifact",
+      "label": "Creator hint: primes + 'zeroed out' characters",
+      "containing_artifact": "Telegram creator message 8000 (lead-in message 7998, 2021-12-26T22:11:26)",
+      "attribution": "creator",
+      "observed_at": "2021-12-26",
+      "first_publicly_seen": "2021-12-26",
+      "probably_authored_at": "2021-12-26",
+      "note": "Follow-up to tg_hint_1_4_21.",
+      "citation": "doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md:213; FINDINGS.md Phase 2 writeup"
+    },
+    "tg_nonchat_artifact": {
+      "type": "telegram_artifact",
+      "label": "Creator-authored non-chat raw bit string",
+      "containing_artifact": "Telegram, 2023-02-24T01:20:03, reply=None",
+      "attribution": "creator",
+      "observed_at": "2023-02-24T01:20:03Z",
+      "first_publicly_seen": "2023-02-24T01:20:03Z",
+      "probably_authored_at": "2023-02-24T01:20:03Z",
+      "note": "A community member independently reacted to it one day later (message 8448, 2023-02-25).",
+      "citation": "doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md:233-238,252"
+    },
+    "repo_naddiseo": {
+      "type": "repo_appearance",
+      "label": "Naddiseo/gsmgio-5btc-puzzle (community fork)",
+      "containing_artifact": "cb2.py, joint_attack.py, faed_base9.py",
+      "attribution": "community",
+      "observed_at": null,
+      "first_publicly_seen": null,
+      "probably_authored_at": null,
+      "note": "This project's own SALPH/COSMIC/DBBI/FAED constants were re-extracted programmatically (not retyped) from this fork's source, described as 'the community's most rigorous public effort' at the time this project started. No publish date documented in this repo.",
+      "citation": "tools/gsmg/data.py module docstring"
+    },
+    "repo_puzzlehunt_official": {
+      "type": "repo_appearance",
+      "label": "puzzlehunt/gsmgio-5btc-puzzle (official community repo)",
+      "containing_artifact": "README.md",
+      "attribution": "community",
+      "observed_at": null,
+      "first_publicly_seen": null,
+      "probably_authored_at": null,
+      "note": "This project's decoder was originally ported from this repo. Its README documents P32TRAILING verbatim.",
+      "citation": "FINDINGS Phase 25 (2026-07-24)"
+    },
+    "repo_hosterjackagv": {
+      "type": "repo_appearance",
+      "label": "HosterjackAGV/gsmg-5btc-puzzle (actively-growing fork)",
+      "containing_artifact": "docs/ATTEMPTS.md, docs/WALKTHROUGH.md, demos.js",
+      "attribution": "community",
+      "observed_at": null,
+      "first_publicly_seen": {
+        "not_after": "2023-08"
+      },
+      "probably_authored_at": null,
+      "note": "Pushed 2023-08 (as of Phase 25), 109 stars / 76 forks, ~1.5M+ logged attempts. Per this project's own standing guidance this fork is actively-growing and re-mined periodically but treated with skepticism, not as a primary source.",
+      "citation": "FINDINGS Phase 25 (2026-07-24)"
+    },
+    "repo_readme_hint_2021_03": {
+      "type": "repo_appearance",
+      "label": "puzzlehunt/gsmgio-5btc-puzzle README: SalPhaseIon/Cosmic Duality named",
+      "containing_artifact": "README.md",
+      "attribution": "community",
+      "observed_at": "2021-03-20",
+      "first_publicly_seen": "2021-03-20",
+      "probably_authored_at": "2021-03-20",
+      "note": "Commit adds: 'Hashing the text gets you to the next phase, SalPhaseIon & Cosmic Duality. Which text to hash, and which door to insert it into is not currently public knowledge...' -- names the phase but not yet its exact reachable route. Author Richard Eames ('Naddiseo'), a community researcher per doc/GSMG_PUZZLE.md, not the puzzle creator.",
+      "citation": "this repo's own git history, commit 9d99692 (2021-03-20 14:24:27 -0600), 'Update README.md'; verified directly via `git show 9d99692`"
+    },
+    "repo_route_hash_2021_05": {
+      "type": "repo_appearance",
+      "label": "puzzlehunt/gsmgio-5btc-puzzle README: exact SalPhaseIon route + screenshot",
+      "containing_artifact": "README.md, SalPhaselonCosmicDuality.png",
+      "attribution": "community",
+      "observed_at": "2021-05-07",
+      "first_publicly_seen": "2021-05-07",
+      "probably_authored_at": "2021-05-07",
+      "note": "Two commits 13 minutes apart record the live page's exact reachable state. 99bd811 (10:37:57 -0400) adds a 668x619 screenshot, sha256 a3810ba24250c5a04908e1281c2202e73f7487f9d19f41bfd2c3e55fa9be57ed -- independently re-hashed directly from this repo's git history, and the same hash doc/GSMG_SALPHASEION_RESPONSIVE_WRAP_AUDIT.md already cites and used for DBBI/FAED pixel-offset analysis (FAED ending at logical offset 765). 8382341 (10:50:27 -0400) records 'SHA256(GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe) = 89727c59...52f6a32' and the resulting live URL reaching 'the SalPhaseIon and Cosmic Duality phase'. This is the earliest documented public sighting of the live page in substantially its current DBBI/FAED form -- predating tg_hint_zeroed_out by ~7 months, not postdating it as Phase 344 originally reported.",
+      "citation": "this repo's own git history, commits 99bd811 and 8382341 (2021-05-07); verified directly via `git show` and independent sha256 re-hash; corroborated by doc/GSMG_SALPHASEION_RESPONSIVE_WRAP_AUDIT.md"
+    },
+    "clue_book_pages_57_58": {
+      "type": "clue",
+      "label": "Cosmic Duality book, physical pages 57-58",
+      "containing_artifact": "Physical 'Cosmic Duality: Mysteries of the Unknown' book",
+      "attribution": "community",
+      "observed_at": "2026-08-13",
+      "first_publicly_seen": "2026-08-13",
+      "probably_authored_at": null,
+      "note": "Recovered and reviewed: no operational numeric schema on either page; G-MSL-001's seven G3 fields still 0/7 fixed. Corrects an earlier draft of tools/gsmg/coverage_ledger.py that described these pages as still unrecovered (fixed the same day, FINDINGS Phase 343).",
+      "citation": "FINDINGS Phase 259 (2026-08-13)"
+    }
+  },
+  "edges": [
+    {
+      "src": "page_salph_v1",
+      "dst": "blob_salph",
+      "type": "contains",
+      "citation": "tools/gsmg/data.py:SALPHASEION_BLOB_B64 comment; FINDINGS Phase 244"
+    },
+    {
+      "src": "page_salph_v1",
+      "dst": "blob_cosmic",
+      "type": "contains",
+      "citation": "FINDINGS Phase 329: 'two textareas on the SalPhaseIon/Cosmic Duality page'"
+    },
+    {
+      "src": "solved_phase3_2",
+      "dst": "blob_p32trailing",
+      "type": "contains",
+      "citation": "tools/gsmg/data.py:P32_TRAILING_BLOB_B64 comment; FINDINGS Phase 25"
+    },
+    {
+      "src": "repo_puzzlehunt_official",
+      "dst": "blob_p32trailing",
+      "type": "contains",
+      "citation": "FINDINGS Phase 25"
+    },
+    {
+      "src": "repo_hosterjackagv",
+      "dst": "blob_p32trailing",
+      "type": "contains",
+      "citation": "FINDINGS Phase 25"
+    },
+    {
+      "src": "repo_hosterjackagv",
+      "dst": "blob_urlblob",
+      "type": "contains",
+      "citation": "tools/gsmg/data.py:URLBLOB_B64 comment (fork's demos.js)"
+    },
+    {
+      "src": "page_urlblob_capture1",
+      "dst": "blob_urlblob",
+      "type": "contains",
+      "citation": "tools/gsmg/data.py:URLBLOB_B64 comment"
+    },
+    {
+      "src": "repo_naddiseo",
+      "dst": "blob_salph",
+      "type": "contains",
+      "citation": "tools/gsmg/data.py module docstring"
+    },
+    {
+      "src": "repo_naddiseo",
+      "dst": "blob_cosmic",
+      "type": "contains",
+      "citation": "tools/gsmg/data.py module docstring"
+    },
+    {
+      "src": "tg_genesis_post",
+      "dst": "page_favicon_2019",
+      "type": "published_before",
+      "citation": "2019-04-01 < 2019-04-28"
+    },
+    {
+      "src": "page_favicon_2019",
+      "dst": "page_salph_v1",
+      "type": "published_before",
+      "citation": "2019-04-28 < 2023-05-31"
+    },
+    {
+      "src": "tg_hint_1_4_21",
+      "dst": "tg_hint_zeroed_out",
+      "type": "published_before",
+      "citation": "2021-04-01 < 2021-12-26"
+    },
+    {
+      "src": "tg_hint_zeroed_out",
+      "dst": "page_salph_v1",
+      "type": "published_before",
+      "citation": "2021-12-26 < 2023-05-31 -- 2023-05-31 is the earliest ARCHIVED (Wayback/urlscan) HTML capture only, not the earliest public sighting; see repo_route_hash_2021_05 (2021-05-07), which predates this hint by ~7 months. Phase 344's original 'gap' reading of this edge was withdrawn by Phase 345 -- see repo_readme_hint_2021_03 and repo_route_hash_2021_05"
+    },
+    {
+      "src": "repo_readme_hint_2021_03",
+      "dst": "repo_route_hash_2021_05",
+      "type": "published_before",
+      "citation": "2021-03-20 < 2021-05-07"
+    },
+    {
+      "src": "repo_route_hash_2021_05",
+      "dst": "tg_hint_zeroed_out",
+      "type": "published_before",
+      "citation": "2021-05-07 < 2021-12-26 -- the live SalPhaseIon/Cosmic Duality page, screenshot-documented with its exact reachable route, predates tg_hint_zeroed_out; Phase 345 correction, this repo's own git history"
+    },
+    {
+      "src": "page_salph_v1",
+      "dst": "page_salph_v2",
+      "type": "published_before",
+      "citation": "2023-05-31 < 2023-11-27"
+    },
+    {
+      "src": "page_salph_v2",
+      "dst": "page_salph_v3",
+      "type": "published_before",
+      "citation": "2023-11-27 < 2024-12-04"
+    },
+    {
+      "src": "page_salph_v3",
+      "dst": "page_gsmgio_restored_2026",
+      "type": "published_before",
+      "citation": "2026-04-05 < 2026-08-15"
+    },
+    {
+      "src": "page_urlblob_capture1",
+      "dst": "page_urlblob_capture2",
+      "type": "published_before",
+      "citation": "2026-01-05 < 2026-02-07"
+    },
+    {
+      "src": "solved_phase2",
+      "dst": "solved_phase3",
+      "type": "published_before",
+      "citation": "doc/GSMG_PUZZLE.md: Phase 3 content is reached only via the Phase 2 answer -- structural dependency, no independent authorship dates documented"
+    },
+    {
+      "src": "solved_phase3",
+      "dst": "solved_phase3_2",
+      "type": "published_before",
+      "citation": "doc/GSMG_PUZZLE.md: Phase 3.2 is reached only via Phase 3 -- structural dependency, no independent authorship dates documented"
+    },
+    {
+      "src": "solved_phase3_2",
+      "dst": "blob_p32trailing",
+      "type": "published_before",
+      "citation": "P32TRAILING is embedded inside the Phase 3.2 plaintext itself, so it cannot have been authored before that plaintext existed"
+    },
+    {
+      "src": "page_salph_v1",
+      "dst": "page_salph_v2",
+      "type": "same_authenticated_object",
+      "citation": "FINDINGS Phase 244: dbbi/faed textarea span byte-identical",
+      "note": "dbbi_faed_span_only, not the whole HTML container"
+    },
+    {
+      "src": "page_salph_v2",
+      "dst": "page_salph_v3",
+      "type": "same_authenticated_object",
+      "citation": "FINDINGS Phase 244: dbbi/faed textarea span byte-identical",
+      "note": "dbbi_faed_span_only, not the whole HTML container"
+    },
+    {
+      "src": "page_salph_v3",
+      "dst": "page_gsmgio_restored_2026",
+      "type": "same_authenticated_object",
+      "citation": "FINDINGS Phase 329: textareas byte-identical to the repository's archived payload after whitespace normalization",
+      "note": "normalized text content only -- Phase 329 explicitly found the restored HTML container itself is a fresh reconstruction, NOT a byte-for-byte restore"
+    },
+    {
+      "src": "blob_salph",
+      "dst": "repo_hosterjackagv",
+      "type": "same_authenticated_object",
+      "citation": "FINDINGS Phase 25: fork's 'salph_inner', salt-confirmed identical (3ab585348552415d)"
+    },
+    {
+      "src": "blob_p32trailing",
+      "dst": "repo_hosterjackagv",
+      "type": "same_authenticated_object",
+      "citation": "FINDINGS Phase 25: fork's 'p32_trailing', salt-confirmed identical (b45a5e3d827593ca)"
+    },
+    {
+      "src": "blob_urlblob",
+      "dst": "repo_hosterjackagv",
+      "type": "same_authenticated_object",
+      "citation": "tools/gsmg/data.py:URLBLOB_B64 comment: byte-for-byte match against the fork's demos.js literal, independently cross-checked"
+    },
+    {
+      "src": "repo_route_hash_2021_05",
+      "dst": "page_salph_v1",
+      "type": "same_authenticated_object",
+      "citation": "doc/GSMG_SALPHASEION_RESPONSIVE_WRAP_AUDIT.md: pixel analysis of the same screenshot locates FAED ending at logical offset 765, matching the known DBBI/FAED structure",
+      "note": "content correspondence only (screenshot vs. archived raw HTML bytes), not a byte-identical claim -- the screenshot is a rendered PNG, page_salph_v1 is the captured HTML source"
+    }
+  ],
+  "report": {
+    "node_count": 24,
+    "edge_count": 29,
+    "nodes_by_type": {
+      "blob": 4,
+      "solved_boundary": 3,
+      "page_revision": 7,
+      "telegram_artifact": 4,
+      "repo_appearance": 5,
+      "clue": 1
+    },
+    "structural_errors": [],
+    "cycles_found": [],
+    "chronology_violations": [],
+    "restored_site_correctly_unattributed": true,
+    "success_criteria": {
+      "anachronistic_source_ruled_out": {
+        "checked_edges": 13,
+        "violations_found": 0,
+        "note": "No suspected anachronistic candidate source was named going in; this reports that zero contradictions were found among the published_before edges that do carry concrete dates -- a checked, bounded negative, not a claim that this rules out anachronism in general."
+      },
+      "new_adjacency_found": {
+        "finding": "WITHDRAWN by Phase 345. Phase 344 originally reported tg_hint_zeroed_out (2021-12-26) as preceding the earliest documented public sighting of the SalPhaseIon page, treating page_salph_v1's 2023-05-31 Wayback capture as that earliest sighting. That conflated 'earliest ARCHIVED capture' with 'earliest public sighting': this repo's own git history (commits 9d99692, 2021-03-20; 99bd811 and 8382341, 2021-05-07) documents the live page -- named, screenshotted, and its exact reachable route recorded -- about 7 months BEFORE the hint, not 17 months after it. See repo_readme_hint_2021_03 and repo_route_hash_2021_05. No open chronology question remains here; the apparent gap was a research gap in Phase 344's own source coverage, not a puzzle fact."
+      }
+    }
+  }
+}

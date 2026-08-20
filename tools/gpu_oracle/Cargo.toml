@@ -29,7 +29,9 @@ ecb = "0.1"
 ctr = "0.9"
 ofb = "0.6"
 cfb-mode = "0.8"
-# Bloom/API key-shape checking (Phase 324) -- ported from ../../../key-seeker's
+# Bloom/API key-shape checking (Phase 332, retroactively numbered -- this
+# comment originally said "Phase 324," a number FINDINGS.md never actually
+# used) -- ported from ../../../key-seeker's
 # src/checker/{bloom,api,verified}.rs and src/crypto/mod.rs, same versions.
 secp256k1 = "0.29"
 ripemd = "0.1"

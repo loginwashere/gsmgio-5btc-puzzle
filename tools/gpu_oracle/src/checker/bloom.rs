@@ -182,6 +182,21 @@ impl BloomChecker {
         }
         checker
     }
+
+    /// Sets a few extra entries' bits in an already-built (e.g. loaded from
+    /// a large file) filter -- used to fold `checker::known_targets`'s eight
+    /// EC-derived addresses into the real production Bloom cache after
+    /// loading it, so the GPU-side on-device pre-filter
+    /// (`bloom_check_key_chunks` in `aes_kdf_oracle.cu`) can flag them too,
+    /// not just the host-side `KnownTargetsChecker::check` exact match. `m`
+    /// and `k` stay whatever they were sized for at construction; inserting
+    /// a handful of extra entries into a filter built for millions raises
+    /// the false-positive rate by an immeasurable amount.
+    pub fn insert_extra(&mut self, entries: &[[u8; 20]]) {
+        for h in entries {
+            self.insert(h);
+        }
+    }
 }
 
 impl Checker for BloomChecker {
@@ -260,6 +275,37 @@ mod tests {
             let shift = bit % 64;
             assert!((bits[word] >> shift) & 1 == 1, "bit {bit} (hash fn {i}) must be set after insert");
         }
+    }
+
+    #[test]
+    fn insert_extra_adds_new_hits_without_disturbing_existing_ones() {
+        // A filter sized for just one or two entries saturates most of its
+        // bits (see stream_key_check.rs's `real_bloom_checker_wiring_does_
+        // not_panic` doc comment) and can't demonstrate real selectivity, so
+        // this pads the filter to a realistic size first -- closer to how
+        // `insert_extra` is actually used (folding a handful of entries into
+        // a Bloom cache sized for millions). Padding fills bytes 0..200;
+        // `original`/`extra_a`/`extra_b`/`untouched` all use bytes >= 200 so
+        // none of them collide with a padding entry.
+        let padding: Vec<[u8; 20]> = (0u8..200).map(|i| [i; 20]).collect();
+        let original: [u8; 20] = [0xffu8; 20]; // 255
+        let mut entries = padding.clone();
+        entries.push(original);
+        let mut checker = BloomChecker::from_hash160_list(&entries);
+        assert!(matches!(checker.check(&original), CheckResult::Hit));
+
+        let extra_a: [u8; 20] = [0xc8u8; 20]; // 200
+        let extra_b: [u8; 20] = [0xc9u8; 20]; // 201
+        let untouched: [u8; 20] = [0xcau8; 20]; // 202
+        assert!(matches!(checker.check(&extra_a), CheckResult::Miss));
+        assert!(matches!(checker.check(&untouched), CheckResult::Miss));
+
+        checker.insert_extra(&[extra_a, extra_b]);
+
+        assert!(matches!(checker.check(&original), CheckResult::Hit), "insert_extra must not disturb pre-existing entries");
+        assert!(matches!(checker.check(&extra_a), CheckResult::Hit));
+        assert!(matches!(checker.check(&extra_b), CheckResult::Hit));
+        assert!(matches!(checker.check(&untouched), CheckResult::Miss));
     }
 
     #[test]

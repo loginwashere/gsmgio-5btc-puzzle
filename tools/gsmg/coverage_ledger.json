@@ -1,0 +1,379 @@
+{
+  "corpora": {
+    "42_sentinel_p0a": {
+      "count": 42,
+      "digest": "51afdf5ce033500a",
+      "source": "p1a_sentinel_backfill.eligible_candidates() (models 9, 11, 15, 16)"
+    },
+    "648_core_candidates": {
+      "count": 648,
+      "digest": "2d233645ef49a141",
+      "source": "extended_cipher_recheck.load_curated_candidates()"
+    },
+    "14551_core_expanded": {
+      "count": 14551,
+      "digest": "82471da28dd1824e",
+      "source": "648_core_candidates expanded through answer_forms()/keystr_forms() (Phase 327's scope)"
+    }
+  },
+  "detectors": {
+    "combine_algebra_b1": {
+      "artifact": "half_better_half_algebra_audit.py",
+      "brainstorm_id": "B1"
+    },
+    "sliding_window_a1a2": {
+      "artifact": "sliding_key_window_audit.py",
+      "brainstorm_id": "A1+A2"
+    },
+    "key_format_scanner_a3": {
+      "artifact": "embedded_key_format_scanner_audit.py",
+      "brainstorm_id": "A3"
+    },
+    "bip32_paths_c1": {
+      "artifact": "bip32_authenticated_number_paths_audit.py",
+      "brainstorm_id": "C1"
+    },
+    "typed_decode_ladder_seed2": {
+      "artifact": "typed_decode_parse_ladder_audit.py",
+      "brainstorm_id": "seed2"
+    }
+  },
+  "rows": [
+    {
+      "phase": 336,
+      "title": "B1 two-half combine algebra",
+      "artifact": "half_better_half_algebra_audit.py",
+      "candidate_corpus": "42_sentinel_p0a",
+      "material_forms": [
+        "literal",
+        "sha256_hex"
+      ],
+      "kdf_cipher_mode_universe": "cb_common.KDF_VARIANTS(6) + ECB_CIPHER_VARIANTS(12) + STREAM_CIPHER_VARIANTS(36) = 54 variants",
+      "blob_universe": [
+        "SALPH",
+        "COSMIC",
+        "P32TRAILING",
+        "URLBLOB"
+      ],
+      "retention_rule": "CBC/ECB: PKCS7-padding-valid only. Stream (CFB/OFB/CTR): unconditional. All: length >= 64 bytes.",
+      "retained_body_count": 12128,
+      "detector": "combine_algebra_b1",
+      "transforms": "15 named combine ops (XOR; add/sub mod n x3; interleave x2; halves-swap x2; nibble x2; SHA256 x3; HMAC x2)",
+      "scopes": null,
+      "target_set": "KNOWN_TARGET_HASH160S (prize address + Phase 331's 8 EC-derived P+-G/P/2/2P targets) + live-confirmed Bloom cache",
+      "result": "84 passphrase attempts; 12,128 bodies; 181,920 combine checks; 0 hits",
+      "disposition": "negative",
+      "exclusions": [
+        "full 648/14,551-candidate core corpus (GPU-scale cost estimated)"
+      ],
+      "reopen_conditions": [
+        "different combine family",
+        "full-corpus GPU port"
+      ],
+      "findings_ref": "FINDINGS.md Phase 336 (corrected Phase 339)"
+    },
+    {
+      "phase": 337,
+      "title": "A1+A2 sliding raw-key windows + byte-order transforms",
+      "artifact": "sliding_key_window_audit.py",
+      "candidate_corpus": "42_sentinel_p0a",
+      "material_forms": [
+        "literal",
+        "sha256_hex"
+      ],
+      "kdf_cipher_mode_universe": "cb_common.KDF_VARIANTS(6) + ECB_CIPHER_VARIANTS(12) + STREAM_CIPHER_VARIANTS(36) = 54 variants",
+      "blob_universe": [
+        "SALPH",
+        "COSMIC",
+        "P32TRAILING",
+        "URLBLOB"
+      ],
+      "retention_rule": "CBC/ECB: PKCS7-padding-valid only. Stream (CFB/OFB/CTR): unconditional. All: length >= 64 bytes.",
+      "retained_body_count": 12128,
+      "detector": "sliding_window_a1a2",
+      "transforms": "33 offsets (first 64-byte prefix) x 7 byte-order forms",
+      "scopes": null,
+      "target_set": "KNOWN_TARGET_HASH160S (prize address + Phase 331's 8 EC-derived P+-G/P/2/2P targets) + live-confirmed Bloom cache",
+      "result": "84 passphrase attempts; 12,128 bodies; 400,224 windows; 2,801,568 form checks; 0 hits",
+      "disposition": "negative",
+      "exclusions": [
+        "full 648/14,551-candidate core corpus (GPU batching needed)"
+      ],
+      "reopen_conditions": [
+        "wider prefix bound",
+        "full-corpus GPU port"
+      ],
+      "findings_ref": "FINDINGS.md Phase 337 (corrected Phase 339)"
+    },
+    {
+      "phase": 338,
+      "title": "A3 unconditional embedded key-format scanner",
+      "artifact": "embedded_key_format_scanner_audit.py",
+      "candidate_corpus": "42_sentinel_p0a",
+      "material_forms": [
+        "literal",
+        "sha256_hex"
+      ],
+      "kdf_cipher_mode_universe": "cb_common.KDF_VARIANTS(6) + ECB_CIPHER_VARIANTS(12) + STREAM_CIPHER_VARIANTS(36) = 54 variants",
+      "blob_universe": [
+        "SALPH",
+        "COSMIC",
+        "P32TRAILING",
+        "URLBLOB"
+      ],
+      "retention_rule": "CBC/ECB: PKCS7-padding-valid only. Stream (CFB/OFB/CTR): unconditional. All: length >= 64 bytes.",
+      "retained_body_count": 12128,
+      "detector": "key_format_scanner_a3",
+      "transforms": "hex64, WIF, checksum-valid BIP39, raw halves, decimal scalar, SEC1 pubkey, xprv/xpub",
+      "scopes": null,
+      "target_set": "KNOWN_TARGET_HASH160S (prize address + Phase 331's 8 EC-derived P+-G/P/2/2P targets) + live-confirmed Bloom cache (SEC1 pubkey only)",
+      "result": "84 passphrase attempts; 12,128 bodies; 17,182 SEC1 curve-valid diagnostic; 0 matches",
+      "disposition": "negative",
+      "exclusions": [
+        "DER/ASN.1 EC-key structures (closed by Phase 342's raw-segment DER check)",
+        "full 648/14,551-candidate core corpus"
+      ],
+      "reopen_conditions": [
+        "full-corpus GPU port"
+      ],
+      "findings_ref": "FINDINGS.md Phase 338 (corrected Phase 339)"
+    },
+    {
+      "phase": 339,
+      "title": "Code-review corrections to Phases 336-338",
+      "artifact": null,
+      "candidate_corpus": null,
+      "material_forms": null,
+      "kdf_cipher_mode_universe": null,
+      "blob_universe": null,
+      "retention_rule": null,
+      "retained_body_count": null,
+      "detector": null,
+      "transforms": null,
+      "scopes": null,
+      "target_set": null,
+      "result": "Bloom fail-closed, mandatory live confirmation, frozen-digest enforcement, hit provenance added to all three sibling scripts; no previously recorded result changed",
+      "disposition": "correction",
+      "exclusions": [],
+      "reopen_conditions": [],
+      "findings_ref": "FINDINGS.md Phase 339"
+    },
+    {
+      "phase": 340,
+      "title": "C1 BIP32 paths from authenticated numbers",
+      "artifact": "bip32_authenticated_number_paths_audit.py",
+      "candidate_corpus": "42_sentinel_p0a",
+      "material_forms": [
+        "sha256_seed",
+        "sha512_seed"
+      ],
+      "kdf_cipher_mode_universe": "N/A -- not an AES-body detector; candidate text is hashed directly into a BIP32 seed",
+      "blob_universe": [],
+      "retention_rule": "N/A -- no decrypt/retention step",
+      "retained_body_count": null,
+      "detector": "bip32_paths_c1",
+      "transforms": "8 paths (23/16/7, 401/400/73, 1/4/21, 14/8/1, 574061 x3 readings) x 2 hardening modes",
+      "scopes": null,
+      "target_set": "KNOWN_TARGET_HASH160S only (prize + 8 EC-derived), no Bloom",
+      "result": "1,428 address checks; 4,200 BIP32 derivation steps; 0 hits",
+      "disposition": "negative (speculative wallet semantics, not a rejection of the underlying numbers)",
+      "exclusions": [
+        "a 6th authenticated-number source",
+        "mixed hardening",
+        "non-final-child check points",
+        "648/14,551-candidate corpus (scoped later by Phase 346, see that row)"
+      ],
+      "reopen_conditions": [
+        "a different seed-construction rule",
+        "a 6th number source",
+        "mixed hardening"
+      ],
+      "findings_ref": "FINDINGS.md Phase 340"
+    },
+    {
+      "phase": 341,
+      "title": "Seed 1: solved-boundary rule audit + leave-one-out controls",
+      "artifact": "solved_boundary_rule_audit.py",
+      "candidate_corpus": null,
+      "material_forms": null,
+      "kdf_cipher_mode_universe": "N/A -- not an AES-oracle detector; consumes 3 already-solved boundaries directly",
+      "blob_universe": [],
+      "retention_rule": "N/A",
+      "retained_body_count": null,
+      "detector": "solved_boundary_rule_engine",
+      "transforms": "instruction-parsed component order/casing/whitespace/prefix rules; 6 hedge candidates per non-trivial boundary",
+      "scopes": null,
+      "target_set": "SHA-256 hash equality against the 3 known Phase 2/3/3.2 password hashes",
+      "result": "all 3 boundaries recovered at rank 1; shuffled-order and naive-global-rule controls clean",
+      "disposition": "positive, calibration-only",
+      "exclusions": [
+        "applying the rule registry to any unresolved boundary (separate, unscoped experiment)"
+      ],
+      "reopen_conditions": [
+        "a 4th genuinely solved AES boundary, if one is ever found"
+      ],
+      "findings_ref": "FINDINGS.md Phase 341"
+    },
+    {
+      "phase": 342,
+      "title": "Seed 2: typed decode-and-parse ladder",
+      "artifact": "typed_decode_parse_ladder_audit.py",
+      "candidate_corpus": "42_sentinel_p0a",
+      "material_forms": [
+        "literal",
+        "sha256_hex"
+      ],
+      "kdf_cipher_mode_universe": "cb_common.KDF_VARIANTS(6) + ECB_CIPHER_VARIANTS(12) + STREAM_CIPHER_VARIANTS(36) = 54 variants",
+      "blob_universe": [
+        "SALPH",
+        "COSMIC",
+        "P32TRAILING",
+        "URLBLOB"
+      ],
+      "retention_rule": "CBC/ECB: PKCS7-padding-valid only. Stream (CFB/OFB/CTR): unconditional. All: length >= 64 bytes.",
+      "retained_body_count": 12128,
+      "detector": "typed_decode_ladder_seed2",
+      "transforms": "hex, Base64/Base64URL, gzip, zlib, ZIP decode (depth one) + DER/PSBT/Bitcoin-tx/Salted__ structural checks",
+      "scopes": [
+        "whole_body",
+        "line",
+        "token"
+      ],
+      "target_set": "KNOWN_TARGET_HASH160S only (prize + 8 EC-derived), no Bloom",
+      "result": "150,141 segments; 22 hex/16 base64/225 zlib/0 gzip/0 ZIP triggers; 0 structural findings; 0 hits",
+      "disposition": "negative",
+      "exclusions": [
+        "percent-decoding",
+        "nested Salted__ second-layer decrypt (no password model defined)",
+        "full 648/14,551-candidate core corpus"
+      ],
+      "reopen_conditions": [
+        "a defined Salted__ second-layer password model",
+        "full-corpus scaling"
+      ],
+      "findings_ref": "FINDINGS.md Phase 342"
+    },
+    {
+      "phase": 346,
+      "title": "BIP32-paths-c1 scaled to the two larger core corpora (dedup run)",
+      "artifact": "bip32_core_corpus_scaleup.py",
+      "candidate_corpus": [
+        "14551_core_expanded",
+        "648_core_candidates"
+      ],
+      "material_forms": [
+        "sha256_seed",
+        "sha512_seed"
+      ],
+      "kdf_cipher_mode_universe": "N/A -- not an AES-body detector; candidate text is hashed directly into a BIP32 seed",
+      "blob_universe": [],
+      "retention_rule": "N/A -- no decrypt/retention step",
+      "retained_body_count": null,
+      "detector": "bip32_paths_c1",
+      "transforms": "same 8 paths x 2 hardening modes as Phase 340, run against the 14,551-item corpus only",
+      "scopes": null,
+      "target_set": "KNOWN_TARGET_HASH160S only (prize + 8 EC-derived), no Bloom",
+      "result": "494,734 address checks; 1,455,100 BIP32 derivation steps; 0 hits. Ran against 14551_core_expanded only -- 648_core_candidates is a mechanically-proven literal subset (every base candidate is one of answer_forms(s)'s outputs, and keystr_forms(form)'s first output is always the unmodified form), so a separate 648-item run would only recompute a subset of these same checks",
+      "disposition": "negative (same speculative-wallet-semantics scope note as Phase 340)",
+      "exclusions": [
+        "a 6th authenticated-number source",
+        "mixed hardening",
+        "non-final-child check points"
+      ],
+      "reopen_conditions": [
+        "a different seed-construction rule",
+        "a 6th number source",
+        "mixed hardening"
+      ],
+      "findings_ref": "FINDINGS.md Phase 346"
+    }
+  ],
+  "gap_report": {
+    "total_cube_cells": 15,
+    "covered_by_rows": 7,
+    "declared_gap_cells": 8,
+    "untested_no_reason": 0,
+    "accounting_closed": true,
+    "by_status": {
+      "untested_detector_cells": [],
+      "sentinel_only_awaiting_full_corpus_scale": [
+        {
+          "corpus": "648_core_candidates",
+          "detector": "combine_algebra_b1",
+          "status": "sentinel_only_awaiting_full_corpus_scale",
+          "note": "This AES-body detector ran only against the 42-candidate sentinel corpus. Scaling to 648 candidates multiplies the 216-(variant,blob)-pair cost proportionally; Phase 336's own module docstring puts the realistic full-scale combine-algebra cost alone near 31.4M checks -- a GPU port, not a rerun, per every sibling phase's own reopen condition."
+        },
+        {
+          "corpus": "648_core_candidates",
+          "detector": "sliding_window_a1a2",
+          "status": "sentinel_only_awaiting_full_corpus_scale",
+          "note": "This AES-body detector ran only against the 42-candidate sentinel corpus. Scaling to 648 candidates multiplies the 216-(variant,blob)-pair cost proportionally; Phase 336's own module docstring puts the realistic full-scale combine-algebra cost alone near 31.4M checks -- a GPU port, not a rerun, per every sibling phase's own reopen condition."
+        },
+        {
+          "corpus": "648_core_candidates",
+          "detector": "key_format_scanner_a3",
+          "status": "sentinel_only_awaiting_full_corpus_scale",
+          "note": "This AES-body detector ran only against the 42-candidate sentinel corpus. Scaling to 648 candidates multiplies the 216-(variant,blob)-pair cost proportionally; Phase 336's own module docstring puts the realistic full-scale combine-algebra cost alone near 31.4M checks -- a GPU port, not a rerun, per every sibling phase's own reopen condition."
+        },
+        {
+          "corpus": "648_core_candidates",
+          "detector": "typed_decode_ladder_seed2",
+          "status": "sentinel_only_awaiting_full_corpus_scale",
+          "note": "This AES-body detector ran only against the 42-candidate sentinel corpus. Scaling to 648 candidates multiplies the 216-(variant,blob)-pair cost proportionally; Phase 336's own module docstring puts the realistic full-scale combine-algebra cost alone near 31.4M checks -- a GPU port, not a rerun, per every sibling phase's own reopen condition."
+        },
+        {
+          "corpus": "14551_core_expanded",
+          "detector": "combine_algebra_b1",
+          "status": "sentinel_only_awaiting_full_corpus_scale",
+          "note": "This AES-body detector ran only against the 42-candidate sentinel corpus. Scaling to 14551 candidates multiplies the 216-(variant,blob)-pair cost proportionally; Phase 336's own module docstring puts the realistic full-scale combine-algebra cost alone near 31.4M checks -- a GPU port, not a rerun, per every sibling phase's own reopen condition."
+        },
+        {
+          "corpus": "14551_core_expanded",
+          "detector": "sliding_window_a1a2",
+          "status": "sentinel_only_awaiting_full_corpus_scale",
+          "note": "This AES-body detector ran only against the 42-candidate sentinel corpus. Scaling to 14551 candidates multiplies the 216-(variant,blob)-pair cost proportionally; Phase 336's own module docstring puts the realistic full-scale combine-algebra cost alone near 31.4M checks -- a GPU port, not a rerun, per every sibling phase's own reopen condition."
+        },
+        {
+          "corpus": "14551_core_expanded",
+          "detector": "key_format_scanner_a3",
+          "status": "sentinel_only_awaiting_full_corpus_scale",
+          "note": "This AES-body detector ran only against the 42-candidate sentinel corpus. Scaling to 14551 candidates multiplies the 216-(variant,blob)-pair cost proportionally; Phase 336's own module docstring puts the realistic full-scale combine-algebra cost alone near 31.4M checks -- a GPU port, not a rerun, per every sibling phase's own reopen condition."
+        },
+        {
+          "corpus": "14551_core_expanded",
+          "detector": "typed_decode_ladder_seed2",
+          "status": "sentinel_only_awaiting_full_corpus_scale",
+          "note": "This AES-body detector ran only against the 42-candidate sentinel corpus. Scaling to 14551 candidates multiplies the 216-(variant,blob)-pair cost proportionally; Phase 336's own module docstring puts the realistic full-scale combine-algebra cost alone near 31.4M checks -- a GPU port, not a rerun, per every sibling phase's own reopen condition."
+        }
+      ],
+      "deliberately_excluded": [
+        {
+          "corpus": null,
+          "detector": "percent_decoding",
+          "status": "deliberately_excluded",
+          "note": "Phase 342's scope freeze explicitly dropped percent-decoding; the brainstorm's own principle is that a decoder without an observed retained-body trigger is a menu item, not evidence."
+        },
+        {
+          "corpus": null,
+          "detector": "nested_salted_second_layer_decrypt",
+          "status": "deliberately_excluded",
+          "note": "Phase 342 detects Salted__ headers only; no second-layer password model is defined, per the user's own explicit instruction not to decrypt until one is."
+        }
+      ],
+      "evidence_blocked": [
+        {
+          "corpus": null,
+          "detector": "dbbi_faed_operator_selection",
+          "status": "evidence_blocked",
+          "note": "G-MSL-001/G-ESC-001/G-YIN-001 in GSMG_OPEN_GAP_REGISTRY.md: no source selects a DBBI matrix consumer, FAED escape-decode path, or DBBI/FAED operator. These are parameter-binding gaps, not compute shortages -- more candidates or transforms cannot supply a missing selector."
+        },
+        {
+          "corpus": null,
+          "detector": "cosmic_duality_book_interior",
+          "status": "evidence_blocked",
+          "note": "The physical Cosmic Duality book's pages 57-58 were recovered and reviewed in Phase 259 (2026-08-13): no operational numeric schema on either page, G-MSL-001's seven G3 fields still 0/7 fixed. The primary artifact is no longer missing; the remaining blocker is the same missing external authored selector/consumer as dbbi_faed_operator_selection above, not a missing source document."
+        }
+      ]
+    }
+  }
+}

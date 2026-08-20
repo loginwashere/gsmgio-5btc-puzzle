@@ -456,7 +456,7 @@ fn expand_wordlist_candidates(cli: &Cli) -> Result<(Vec<String>, Vec<String>), B
 /// cache failed to load -- a warning, not a hard error, in either case).
 fn setup_keyshape(
     cli: &Cli,
-) -> Result<(secp256k1::Secp256k1<secp256k1::All>, Option<checker::VerifiedBloomChecker>, keyshape::KeyShapeWriter), Box<dyn std::error::Error>>
+) -> Result<(secp256k1::Secp256k1<secp256k1::All>, Option<checker::KnownTargetsChecker>, keyshape::KeyShapeWriter), Box<dyn std::error::Error>>
 {
     if let Some(dir) = cli.keyshape_hits.parent() {
         if !dir.as_os_str().is_empty() {
@@ -467,14 +467,21 @@ fn setup_keyshape(
         keyshape::KeyShapeWriter::new(cli.keyshape_hits.to_str().ok_or("bad --keyshape-hits path")?)?;
 
     let secp = secp256k1::Secp256k1::new();
-    let bloom_checker: Option<checker::VerifiedBloomChecker> = if cli.no_bloom_verify {
+    let bloom_checker: Option<checker::KnownTargetsChecker> = if cli.no_bloom_verify {
         None
     } else {
         let bloom_path = cli.bloom_cache.clone().unwrap_or_else(default_bloom_cache_path);
         match checker::BloomChecker::load_from_file(bloom_path.to_string_lossy().as_ref()) {
-            Ok(bloom) => {
+            Ok(mut bloom) => {
                 println!("[main] Bloom cache loaded: {}", bloom_path.display());
-                Some(checker::VerifiedBloomChecker::new(bloom))
+                // Fold in the prize pubkey's EC "neighbors, half and
+                // double" (Phase 331) so the GPU's on-device Bloom
+                // pre-filter (bloom_check_key_chunks) can flag them too --
+                // see checker::known_targets for what these are and why.
+                let extras = checker::known_targets::all_hash160s();
+                bloom.insert_extra(&extras);
+                println!("[main] folded in {} known EC-derived target address(es) (see checker::known_targets)", extras.len());
+                Some(checker::KnownTargetsChecker::new(checker::VerifiedBloomChecker::new(bloom)))
             }
             Err(e) => {
                 eprintln!(
