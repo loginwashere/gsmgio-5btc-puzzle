@@ -1,0 +1,56 @@
+{
+  "alpha": 0.05,
+  "blob_count": 4,
+  "candidate_count": 42,
+  "candidate_digest": "51afdf5ce033500a",
+  "candidate_forms": [
+    "literal",
+    "sha256"
+  ],
+  "candidate_specific_results_disclosed": false,
+  "crypto_variant_count": 54,
+  "familywise_empirical_p": 1.0,
+  "feature_registry": {
+    "checksum_family": [
+      "sha256_first4",
+      "sha256d_first4",
+      "crc32_le",
+      "crc32_be"
+    ],
+    "delimiter_geometry": "exact (offset,byte) tuple in first 64 bytes; >=2 delimiters",
+    "record_geometry": "equal-width LF/NUL/pipe records; >=3 non-empty records",
+    "scalar_hash160": {
+      "encodings": [
+        "compressed",
+        "uncompressed"
+      ],
+      "hash160_offsets": [
+        0,
+        20,
+        32,
+        44,
+        64
+      ],
+      "scalar_offsets": [
+        0,
+        32
+      ]
+    },
+    "validated_type": "complete whole-body parser, raw or one strict decode hop"
+  },
+  "null_maximum_histogram": {
+    "0": 1000
+  },
+  "null_maximum_max": 0,
+  "null_maximum_min": 0,
+  "null_seed": 20260820,
+  "null_trials": 1000,
+  "pair_hypotheses": 18144,
+  "promoted_for_candidate_inspection": false,
+  "promoted_rows": [],
+  "real_event_family_counts": {},
+  "real_maximizer_count": 0,
+  "real_maximum_event_count": 0,
+  "record_count": 12128,
+  "stop_rule_applied": true
+}

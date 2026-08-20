@@ -94,11 +94,12 @@ for lack of trying — see each gap's row for exactly what was checked.
 ## Recently completed phases
 
 See [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) for the full generated table of
-all 347 phase entries (re-run `generate_phase_index.py` any time this count
+all 348 phase entries (re-run `generate_phase_index.py` any time this count
 looks stale). Most recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 348 | Seed 6: multi-blob structural concordance before aggregate language scoring | Exact parser/checksum/delimiter-record/scalar-to-HASH160 relations across 18,144 same-candidate/same-variant blob pairs in the frozen 12,128-body sentinel corpus. Real maximum **0 events**; 1,000/1,000 label-permutation null maxima also 0; family-wise p=1.0; candidate-inspection gate stayed closed. Negative on this registry only; D1 weak-language scoring remains unlicensed |
 | 347 | Provenance-monitoring baseline for restored gsmg.io, SalPhaseIon, and Hosterjack (chosen over seed 6) | One-shot baseline: 3 frozen URLs, live-fetch hash/status/redirects + passive Wayback/urlscan/GitHub-commit checks. SalPhaseIon raw hash exactly matches Phase 329's own recorded value; gsmg.io root's first-ever Wayback check found 140 captures back to 2019; Hosterjack HEAD unchanged since Phase 330. **Zero alerts** -- clean "no movement" baseline, informs the seed-6 sequencing decision |
 | 346 | BIP32-paths-c1 (Phase 340) scaled to the two larger core corpora, deduplicated | Proved `648_core_candidates` is a literal subset of `14551_core_expanded` (every base candidate is one of `answer_forms()`'s outputs, `keystr_forms()`'s first output is always unmodified), so ran only against the 14,551-item corpus: 494,734 address checks, 1,455,100 derivation steps, 0 hits. Closes both of Phase 343's genuinely-untested BIP32 coverage-cube cells |
 | 345 | Correction to Phase 344: hint/capture chronology gap closed by this repo's own git history | User-flagged, independently re-verified (not taken on trust): commits `9d99692`/`99bd811`/`8382341` in this repo's own git history document the live SalPhaseIon/Cosmic Duality page, screenshot, and exact route ~7 months *before* the 2021-12-26 hint, not 17 months after it. Phase 344's `new_adjacency_found` claim withdrawn; graph updated with 2 new cited nodes, self-test now 10 checks |

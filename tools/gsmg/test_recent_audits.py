@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Permanent regressions for corrected late-stage GSMG audit claims."""
 
+import hashlib
 import sys
 import unittest
 from pathlib import Path
@@ -84,6 +85,7 @@ import macro_tail_title_insertion_audit
 import macro_literal_adjacency_audit
 import macro_model_disposition_audit
 import minimal_macro_chain_audit
+import multi_blob_structural_concordance_audit
 import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import native_favicon_shadow_audit
@@ -130,6 +132,39 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_multi_blob_concordance_feature_registry_and_null_gate(self):
+        module = multi_blob_structural_concordance_audit
+        scalar = (1234567).to_bytes(32, "big")
+        target = bytes.fromhex(
+            module.private_key_details(scalar)["compressed"]["hash160"]
+        )
+        left = module.extract_features(scalar + b"L" * 48)
+        right = module.extract_features(target + b"R" * 60)
+        self.assertIn(
+            "scalar_hash160:left_to_right:scalar@0:compressed->hash160@0",
+            module.concordance_events(left, right),
+        )
+        null_records = [
+            module.Record(
+                index,
+                "synthetic",
+                f"label_{index}",
+                hashlib.sha256(f"candidate-{index}".encode()).hexdigest(),
+                "literal",
+                "synthetic/cfb",
+                blob,
+                80,
+                hashlib.sha256(f"body-{index}-{blob}".encode()).hexdigest(),
+                module.extract_features(b"Z" * 80),
+            )
+            for index in range(4)
+            for blob in ("A", "B")
+        ]
+        report = module.analyze_records(null_records, null_trials=10, null_seed=1)
+        self.assertEqual(report["real_maximum_event_count"], 0)
+        self.assertFalse(report["candidate_specific_results_disclosed"])
+        self.assertEqual(report["promoted_rows"], [])
+
     def test_dbbi_faed_exact_six_lane_geometry_and_tail_are_bounded(self):
         report = dbbi_faed_six_lane_audit.audit(trials=100)
         self.assertEqual(report["geometry"]["dbbi_length"], 91)

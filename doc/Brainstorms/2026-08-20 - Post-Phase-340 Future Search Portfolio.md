@@ -404,6 +404,26 @@ plaintext, with uncertainty intervals retained rather than guessed dates.
 
 ### 6. Multi-blob concordance before aggregate language scoring
 
+> [!info] Executed, bounded structural-only pilot (2026-08-20)
+> See FINDINGS.md Phase 348 and `tools/gsmg/multi_blob_structural_
+> concordance_audit.py` / `multi_blob_structural_concordance_report.json`.
+> Reused the exact 42-candidate, 12,128-body Phase 336--338/342 corpus;
+> added no candidate, KDF, cipher, mode, blob, retention rule, or language
+> statistic. Four whole-body families were frozen before running: complete
+> parser-valid type (raw or one strict decode hop), valid four-byte checksum
+> family, exact first-64-byte delimiter / fixed-record geometry, and
+> secp256k1-scalar-to-HASH160 relations at a small fixed offset registry.
+> The statistic was the global maximum number of exact events on any same-
+> candidate/same-form/same-variant blob pair. A 1,000-trial deterministic
+> label-permutation null preserved blob, form, variant, body-length multiset,
+> and missing-retention pattern; every trial contributed its global maximum,
+> correcting across all features, offsets, candidates, and pairs. Candidate
+> provenance was gated behind family-wise `p <= 0.05`. **Result: 18,144 pair
+> hypotheses, real maximum 0 events; all 1,000 null maxima also 0; p=1.0;
+> no candidate disclosed or inspected.** This closes only this exact
+> structural-concordance registry on the sentinel corpus. It neither runs nor
+> licenses D1's weak aggregate-language scoring.
+
 Reframe D1/D2 so exact shared structure comes first. Under the identical
 candidate and crypto variant, test whether two blobs independently produce the
 same validated type, delimiter geometry, embedded checksum family, or
@@ -562,7 +582,7 @@ scripts, downloads that execute, or attempts to contact/identify an operator.
 | 3 | Solved-vector authoring-toolchain calibration | core three-vector profile complete; provenance formalization remains | high | low | Selects the legacy-SHA256/AES256 compatibility baseline using primary puzzle artifacts |
 | 4 | Coverage ledger + decrypt transcript | executed, ledger half only, Phase 343 | high enabling value | medium-high | Prevents duplicated crypto work and makes untested cells explicit |
 | 5 | Blob chronology/dependency graph | executed, Phase 344 | medium-high | medium | Can rule out anachronistic candidate sources without decryption |
-| 6 | Multi-blob structural concordance | concept only | medium | medium | Safer precursor to D1's weak aggregate scoring |
+| 6 | Multi-blob structural concordance | executed, Phase 348, negative | medium | medium | Exact structural precursor completed; no shared event, so D1 remains unlicensed |
 | 7 | Input-byte pathway reconstruction | concept only | medium | medium | Turns a broad encoding menu into evidence-selected variants |
 | 8 | Remaining exact secret containers | concept only | medium | medium | Strong validators; DER is an explicit Phase-338 gap |
 | 9 | Ciphertext-length compatibility matrix | first CBC envelope completed | medium enabling value | low | Cheaply prunes impossible output-role stories |

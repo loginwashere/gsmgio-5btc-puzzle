@@ -21551,3 +21551,85 @@ explicitly deferred until requested. Per the user's own stated
 sequencing: seed 6 (multi-blob structural concordance) remains queued
 next if this monitoring produces no further movement on a future
 re-check -- not authorized to start by this result alone.
+
+## Phase 348 -- Seed 6: multi-blob structural concordance before aggregate language scoring: negative (2026-08-20)
+
+**Question:** can an identical candidate and exact crypto configuration
+produce independently decrypted blobs with the same strong, predeclared
+structure, even though each body separately missed the earlier detectors?
+This is Seed 6 from `doc/Brainstorms/2026-08-20 - Post-Phase-340 Future
+Search Portfolio.md`, authorized by the user after Phase 347's provenance
+baseline showed no movement. The purpose is to test exact cross-output
+structure before considering D1's substantially weaker aggregate-language
+score.
+
+**Frozen inputs:** the identical Phase 336--338/342 corpus: 42 P0A sentinel
+candidates (digest `51afdf5ce033500a`), each in literal and lowercase
+SHA256-hex passphrase form, 54 crypto variants, and all four tracked blobs
+(SALPH/COSMIC/P32TRAILING/URLBLOB), using the existing padding-valid CBC/ECB
+and unconditional stream-body retention rules. Expected and enforced retained
+body count: 12,128. No candidates, KDFs, ciphers, modes, blobs, or retention
+rules were added.
+
+**Method:** wrote `tools/gsmg/multi_blob_structural_concordance_audit.py`.
+The comparison unit is a pair of independently decrypted blobs sharing the
+same candidate index, material form, and exact crypto variant. The whole-body
+feature registry was frozen before the real run:
+
+1. identical complete parser-valid type, raw or after one strict depth-one
+   decoder inherited from Phase 342;
+2. identical valid four-byte trailer family (`SHA256`, `SHA256d`, CRC32 little-
+   or big-endian);
+3. exact `(offset, byte)` delimiter geometry in the first 64 bytes (at least
+   two delimiters), or identical fixed-width LF/NUL/pipe record geometry (at
+   least three non-empty records); and
+4. a valid secp256k1 scalar at fixed offset 0 or 32 in one body whose
+   compressed/uncompressed HASH160 occurs at fixed offset 0/20/32/44/64 in
+   the other body, checked in both directions.
+
+No printability or language score, arbitrary substring search, adaptive
+offset, or candidate-specific inspection was permitted. The real statistic
+was one global maximum: the number of registered exact-concordance events on
+any candidate/variant/blob pair. The null used 1,000 deterministic label
+permutations (`seed=20260820`); inside each `(form, variant, blob)` stratum,
+retained bodies were reassigned across the existing candidate slots. This
+preserves blob, cipher/mode, form, body-length multiset, and the exact sparse
+padding-retention pattern. Every permutation contributed its own global
+maximum, automatically correcting across all candidates, blob pairs, feature
+families, and fixed offsets. Family-wise empirical `p = (1 + count(null >=
+real)) / 1001`; candidate provenance could be disclosed only at `p <= 0.05`.
+
+Self-test proves each family with a planted positive and malformed/near-
+negative, exercises the scalar-to-HASH160 relationship, inherits a complete
+`Salted__` validator rather than magic-byte matching, promotes a planted
+aligned relationship through the actual maximum/permutation gate, proves a
+null population discloses no candidate, mechanically shows permutation
+preserves stratum slots/lengths/missingness, and re-enforces the live candidate
+digest and exact 12,128-body count.
+
+**Result:** self-test passes. The real run produced 18,144 eligible same-
+candidate/same-form/same-variant blob-pair hypotheses. **No pair produced even
+one registered event: real maximum 0, real event-family counts empty.** All
+1,000 null global maxima were also 0. Family-wise empirical `p=1.0`; the
+predeclared inspection gate remained closed, so no candidate identity or
+body-specific maximum was disclosed or manually inspected.
+
+**Disposition:** rejected for this exact structural registry and sentinel
+corpus. This is a strong bounded negative, not evidence that the four blobs
+cannot share a password and not a full-corpus result. Most importantly, it
+does not run or license D1 aggregate weak-language scoring: exact structure
+provided no lead to calibrate such a weaker endpoint.
+
+**Facts affected:** no puzzle fact changes. Seed 6 moves from concept-only to
+executed/negative in its brainstorm portfolio.
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `tools/gsmg/multi_blob_structural_concordance_audit.py`,
+`tools/gsmg/multi_blob_structural_concordance_report.json` (aggregate
+statistics and frozen registry only; no candidate literals or raw bodies).
+
+**Reopen condition:** a parser-valid retained object, an authenticated clue
+specifying a cross-blob structure/offset, or a separately authorized larger
+candidate corpus. A weak-language statistic alone is not a reopen condition;
+it would require its own frozen phase and multiple-testing contract.
