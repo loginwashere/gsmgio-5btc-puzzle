@@ -7,10 +7,10 @@ cache. That half is deferred until "the exact storage and sensitive-data
 boundary is agreed" (the brainstorm's own words); this module never
 stores raw decrypted bytes, candidate literal text, passphrases, private
 keys, or WIF strings -- only digests, counts, and structural metadata
-about seven already-completed phases (336-342).
+about nine already-completed phase records (336-342, 346, and 350).
 
 Frozen scope, exactly as specified:
-  - One machine-readable row per Phase 336-342 experiment.
+  - One machine-readable row per covered experiment/maintenance phase.
   - Candidate manifest/digest and material forms.
   - KDF/cipher/mode/blob universe.
   - Retention rule and retained-body count.
@@ -70,7 +70,7 @@ DETECTORS = {
     "sliding_window_a1a2": {"artifact": "sliding_key_window_audit.py", "brainstorm_id": "A1+A2"},
     "key_format_scanner_a3": {"artifact": "embedded_key_format_scanner_audit.py", "brainstorm_id": "A3"},
     "bip32_paths_c1": {"artifact": "bip32_authenticated_number_paths_audit.py", "brainstorm_id": "C1"},
-    "typed_decode_ladder_seed2": {"artifact": "typed_decode_parse_ladder_audit.py", "brainstorm_id": "seed2"},
+    "typed_decode_ladder_seed2": {"artifact": "typed_decode_parse_ladder_audit.py + remaining_secret_container_delta_audit.py", "brainstorm_id": "seed2+seed8-delta"},
 }
 
 AES_BODY_UNIVERSE = "cb_common.KDF_VARIANTS(6) + ECB_CIPHER_VARIANTS(12) + STREAM_CIPHER_VARIANTS(36) = 54 variants"
@@ -259,10 +259,33 @@ ROWS = [
         "reopen_conditions": ["a different seed-construction rule", "a 6th number source", "mixed hardening"],
         "findings_ref": "FINDINGS.md Phase 346",
     },
+    {
+        "phase": 350,
+        "title": "Seed 8 delta: remaining exact secret containers",
+        "artifact": "remaining_secret_container_delta_audit.py",
+        "candidate_corpus": "42_sentinel_p0a",
+        "material_forms": ["literal", "sha256_hex"],
+        "kdf_cipher_mode_universe": AES_BODY_UNIVERSE,
+        "blob_universe": BLOB_UNIVERSE,
+        "retention_rule": AES_RETENTION_RULE,
+        "retained_body_count": 12128,
+        "detector": "typed_decode_ladder_seed2",
+        "transforms": "Phase-342 scopes and depth-one decoders + BIP38/Casascius-mini/SLIP-132/descriptor/Core-record validators only",
+        "scopes": ["whole_body", "line", "token"],
+        "target_set": "KNOWN_TARGET_HASH160S only (prize + 8 EC-derived), no Bloom",
+        "result": "150,141 segments; 750,895 validator invocations; 0 structural findings; 0 exact-target hits",
+        "disposition": "negative (strict Phase-342 format delta)",
+        "exclusions": ["DER/PKCS8, PSBT, and Bitcoin transactions (already covered by Phase 342)",
+                       "descriptor dialects outside the frozen bounded grammar",
+                       "full 648/14,551-candidate core corpus"],
+        "reopen_conditions": ["authenticated format clue", "parser-valid near-object",
+                              "specifically evidenced descriptor dialect", "full-corpus scaling"],
+        "findings_ref": "FINDINGS.md Phase 350",
+    },
 ]
 
-EXPECTED_ROW_COUNT = 8
-EXPECTED_PHASES = (336, 337, 338, 339, 340, 341, 342, 346)
+EXPECTED_ROW_COUNT = 9
+EXPECTED_PHASES = (336, 337, 338, 339, 340, 341, 342, 346, 350)
 
 # Fields that would be a genuine policy violation if they ever held candidate
 # literal text, decrypted plaintext, a passphrase, a private key, or a WIF --
@@ -436,7 +459,7 @@ def write_json(path):
 # ---------------------------------------------------------------------------
 
 def self_test():
-    # 1. Row contract: exactly 8 rows, exactly phases 336-342+346, no duplicates.
+    # 1. Row contract: exactly 9 rows, exactly phases 336-342+346+350, no duplicates.
     assert len(ROWS) == EXPECTED_ROW_COUNT
     phases = [r["phase"] for r in ROWS]
     assert phases == sorted(phases)
@@ -511,7 +534,7 @@ def self_test():
     assert digest_check["applies_to_phases"] if "applies_to_phases" in digest_check else True
     body_check = next(c for c in recon["checks"] if c["check"] == "retained_body_count")
     assert body_check["actual"] == 12128
-    assert set(body_check["applies_to_phases"]) == {336, 337, 338, 342}
+    assert set(body_check["applies_to_phases"]) == {336, 337, 338, 342, 350}
 
     # 7. write_json round-trips without error and without leaking anything
     #    the mechanical scan above wouldn't have caught either (same
@@ -537,7 +560,7 @@ def self_test():
     finally:
         CORPORA["42_sentinel_p0a"]["digest"] = original
 
-    print("[*] self-test OK: 8 rows for phases 336-342+346 confirmed unique and ordered; no row field "
+    print("[*] self-test OK: 9 rows for phases 336-342+346+350 confirmed unique and ordered; no row field "
           "leaks a real candidate literal or a WIF-shaped string; 15-cell coverage cube accounting "
           "closes exactly; Phase 346 closed both former BIP32/larger-corpus gaps via a tuple-corpus "
           "row (subset-coverage proven non-vacuous by narrowing it and confirming the gap reopens); "

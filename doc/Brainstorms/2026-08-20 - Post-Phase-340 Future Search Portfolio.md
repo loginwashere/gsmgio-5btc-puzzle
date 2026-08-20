@@ -458,6 +458,20 @@ instructions.
 
 ### 8. Remaining exact secret-container formats
 
+> [!info] Executed as a strict Phase-342 delta (Phase 350, 2026-08-20)
+> DER/PKCS#8, PSBT, and complete transactions were already covered by Phase
+> 342, so they were not rerun or reimplemented. Phase 350 added only the five
+> still-missing families: BIP38, Casascius mini keys, all 12 Bitcoin
+> mainnet/testnet SLIP-132 versions, checksummed output descriptors under a
+> frozen bounded grammar, and complete logical Bitcoin Core `key`, checksum-
+> bearing `ckey`, and tightly structured `mkey` records. It reused Phase 342's
+> exact 42-candidate/12,128-body corpus, three scopes, and depth-one decoders;
+> no candidate, crypto, retention, scope, or decoder expansion was permitted.
+> The real pass checked 150,141 segments and made 750,895 validator
+> invocations. **Zero structurally valid containers and zero exact-target
+> hits.** See FINDINGS.md Phase 350 and
+> `tools/gsmg/remaining_secret_container_delta_audit.py`.
+
 Add parsers only for formats with strong internal validation and plausible
 Bitcoin-era use:
 
@@ -600,7 +614,7 @@ scripts, downloads that execute, or attempts to contact/identify an operator.
 | 5 | Blob chronology/dependency graph | executed, Phase 344 | medium-high | medium | Can rule out anachronistic candidate sources without decryption |
 | 6 | Multi-blob structural concordance | executed, Phase 348, negative | medium | medium | Exact structural precursor completed; no shared event, so D1 remains unlicensed |
 | 7 | Input-byte pathway reconstruction | concept only | medium | medium | Turns a broad encoding menu into evidence-selected variants |
-| 8 | Remaining exact secret containers | concept only | medium | medium | Strong validators; DER is an explicit Phase-338 gap |
+| 8 | Remaining exact secret containers | executed as Phase-342 delta, Phase 350, negative | medium | medium | Five residual parser/checksum families closed on the sentinel corpus; DER/PSBT/transactions were not duplicated |
 | 9 | Ciphertext-length compatibility matrix | first CBC envelope completed | medium enabling value | low | Cheaply prunes impossible output-role stories |
 | 10 | Checksum-guided one-error repair | gated on a near-valid object | low-medium | medium | Bounded damage recovery, but only after a near-valid object exists |
 | 11 | New-evidence diff watch | executed, Phases 347/349; monthly read-only heartbeat active | variable | low recurring | Repeat-safe last-known-good monitor is active; only changed evidence triggers review |

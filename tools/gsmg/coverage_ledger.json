@@ -34,8 +34,8 @@
       "brainstorm_id": "C1"
     },
     "typed_decode_ladder_seed2": {
-      "artifact": "typed_decode_parse_ladder_audit.py",
-      "brainstorm_id": "seed2"
+      "artifact": "typed_decode_parse_ladder_audit.py + remaining_secret_container_delta_audit.py",
+      "brainstorm_id": "seed2+seed8-delta"
     }
   },
   "rows": [
@@ -286,6 +286,47 @@
         "mixed hardening"
       ],
       "findings_ref": "FINDINGS.md Phase 346"
+    },
+    {
+      "phase": 350,
+      "title": "Seed 8 delta: remaining exact secret containers",
+      "artifact": "remaining_secret_container_delta_audit.py",
+      "candidate_corpus": "42_sentinel_p0a",
+      "material_forms": [
+        "literal",
+        "sha256_hex"
+      ],
+      "kdf_cipher_mode_universe": "cb_common.KDF_VARIANTS(6) + ECB_CIPHER_VARIANTS(12) + STREAM_CIPHER_VARIANTS(36) = 54 variants",
+      "blob_universe": [
+        "SALPH",
+        "COSMIC",
+        "P32TRAILING",
+        "URLBLOB"
+      ],
+      "retention_rule": "CBC/ECB: PKCS7-padding-valid only. Stream (CFB/OFB/CTR): unconditional. All: length >= 64 bytes.",
+      "retained_body_count": 12128,
+      "detector": "typed_decode_ladder_seed2",
+      "transforms": "Phase-342 scopes and depth-one decoders + BIP38/Casascius-mini/SLIP-132/descriptor/Core-record validators only",
+      "scopes": [
+        "whole_body",
+        "line",
+        "token"
+      ],
+      "target_set": "KNOWN_TARGET_HASH160S only (prize + 8 EC-derived), no Bloom",
+      "result": "150,141 segments; 750,895 validator invocations; 0 structural findings; 0 exact-target hits",
+      "disposition": "negative (strict Phase-342 format delta)",
+      "exclusions": [
+        "DER/PKCS8, PSBT, and Bitcoin transactions (already covered by Phase 342)",
+        "descriptor dialects outside the frozen bounded grammar",
+        "full 648/14,551-candidate core corpus"
+      ],
+      "reopen_conditions": [
+        "authenticated format clue",
+        "parser-valid near-object",
+        "specifically evidenced descriptor dialect",
+        "full-corpus scaling"
+      ],
+      "findings_ref": "FINDINGS.md Phase 350"
     }
   ],
   "gap_report": {

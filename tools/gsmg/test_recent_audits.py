@@ -2,6 +2,7 @@
 """Permanent regressions for corrected late-stage GSMG audit claims."""
 
 import hashlib
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -99,6 +100,7 @@ import post_yinyang_dataflow_audit
 import post_phase217_consistency_audit
 import promised_standalone_audit
 import provenance_monitor
+import remaining_secret_container_delta_audit
 import salphaseion_urlscan_history_audit
 import prime_sum_fefe_mask_composition_audit
 import phase32_monologue_residual_audit
@@ -133,6 +135,28 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_remaining_secret_container_delta_contract_and_result(self):
+        module = remaining_secret_container_delta_audit
+        self.assertEqual(module.descriptor_checksum("raw(deadbeef)"), "89f8spxm")
+        self.assertIsNotNone(module.parse_bip38(
+            b"6PRVWUbkzzsbcVac2qwfssoUJAN1Xhrg6bNk8J7Nzm5H7kxEbn2Nh2ZoGg"
+        ))
+        self.assertIsNotNone(module.parse_minikey(
+            b"S6c56bnXQiBjk9mqSYE7ykVQ7NzrRy"
+        ))
+        self.assertEqual(
+            module.parse_bitcoin_core_record(module._core_key_fixture())["record_type"],
+            "key",
+        )
+        report_path = SCRIPT_DIR / "remaining_secret_container_delta_report.json"
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+        self.assertEqual(report["candidate_digest"], module.EXPECTED_CANDIDATE_DIGEST)
+        self.assertEqual(report["counters"]["bodies_checked"], module.EXPECTED_BODY_COUNT)
+        self.assertEqual(report["counters"]["segments_checked"], module.EXPECTED_SEGMENT_COUNT)
+        self.assertEqual(report["format_registry"], list(module.FORMAT_NAMES))
+        self.assertEqual(report["structural_findings_count"], 0)
+        self.assertEqual(report["exact_target_hits_count"], 0)
+
     def test_provenance_monitor_reads_nested_state_and_preserves_last_good(self):
         module = provenance_monitor
 
