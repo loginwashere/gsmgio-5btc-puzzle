@@ -172,7 +172,7 @@ gone, the reply cannot validate any specific puzzle interpretation.
 |---|---|---|
 | `60306` | Responds “Maybe” plus a Cartman joke to Denis’s *Looking Forward* suggestion. | Explicit hedge; the book title is not confirmed. |
 | `60309` | Responds to a demand for direction by pointing at gnomad. | Sets up the following confirmation. |
-| `60312` | Says `Bingo` immediately after gnomad repeats only “it’s in front of your eyes but you’re not seeing it.” | Confirms the phrase-level pointer, not *Looking Forward*. |
+| `60312` | Says `Bingo` immediately after gnomad repeats only “it’s in front of your eyes but you’re not seeing it.” | Confirms the phrase-level pointer, not *Looking Forward*. Phase 366 shows this also precedes Denis's first abstract extraction claim by 13 seconds and his exact 31-character post by 601 seconds, so it does not confirm either. |
 | `60314` | Says reaching the next phase means the prize is taken “in no-time.” | Final transition is short; no algorithm disclosed. |
 | `60326` | Replies “Nope” to whether binary contact information on `jrk.agency` is related. | Closes that external-site lead. |
 | `63957` | When the sites go offline, confirms “The puzzle is still valid!” | Solving does not depend on the removed live sites. |

@@ -22722,3 +22722,156 @@ exact best-result assertions).
 whose own matrix/filter is specified independently of these pixels. Learning a
 7x7 threshold matrix directly from the target is not a reopen because it adds
 no provenance or decode.
+
+## Phase 365 -- final QR `#FAFAFA` structural closure: seven-track, symmetry, and spectral tests confirm a module texture, not a decodable payload (2026-08-21)
+
+**Question:** do the three remaining geometry-selected local tests -- all-seven
+depth unrolling, square-symmetry residuals, and Fourier lattice analysis --
+produce a uniquely selected message or mechanism that would justify continuing
+to decode the replicated QR finder texture?
+
+**Frozen input and geometry:** the pinned complete 49x49 finder from Phase 356,
+with exact equality to RGB `(250,250,250)` as bit one. The sixteen white-ring
+modules are visited clockwise from top-left module `(1,1)`. At every subpixel
+depth `0..6`, top/bottom modules are read horizontally and the three non-corner
+modules on each side vertically, giving all seven tracks equal fixed length
+`16*7=112`. No depth, crop, or start is selected after viewing output. Five
+hundred deterministic controls shuffle pixels independently inside every real
+7x7 module, preserving all sixteen exact `#FAFAFA` counts and the finder
+geometry.
+
+**Seven-track result:** track one-counts are
+`19,87,43,30,43,96,27`. Mean pairwise agreement is **0.621599** versus null
+mean **0.502255** (`p=1/501`); the closest pair agrees on **103/112** bits
+versus null maximum 75/112. Twenty-four positions are unanimous across all
+seven depths, versus control range 0--6 (`p=1/501`). Depth 3 differs from the
+fixed majority at only **7/112** positions, versus control minimum 21
+(`p=1/501`). This is a strong mechanical collapse, but none of the seven
+fixed tracks is printable ASCII. An 8-bit split of the 112-bit majority
+stream gives `048912244c993264891224099326`, but that boundary is arbitrary:
+the stream is 16 modules of 7 bits each, not 14 bytes. Regrouped on the
+QR-native module boundary (one value per `RING_MODULES` position, corners
+included in their adjacent row/column run), the 16 values are:
+
+`2, 34, 34, 34, 34, 50, 50, 50, 50, 34, 34, 34, 32, 38, 38, 38`
+
+This maps exactly onto ring geometry: position 0 is the standalone top-left
+corner; positions 1-4 are the three top-edge modules plus the top-right
+corner, which coincides with them in value; positions 5-8 are the three
+right-edge modules plus the bottom-right corner, likewise coincident;
+positions 9-11 are the three bottom-edge modules; position 12 is the
+standalone bottom-left corner; positions 13-15 are the three left-edge
+modules. Two of the four corners happen to share their run's value and two
+do not -- a real, position-indexed fact about the texture, not an artifact
+of the grouping choice. Neither form is text, a parser-valid object, a known
+puzzle token, or a downstream cryptographic target. The unroll therefore
+quantifies the same module texture under its natural encoding; it does not
+select a decode.
+
+**Symmetry result:** all seven non-identity square symmetries are much closer
+than module-count-preserving controls. Residual pixel counts are horizontal
+flip **78**, transpose **206**, vertical flip **208**, rotations 90/270
+**230/230**, rotation 180 **238**, and anti-transpose **254**; every ordered
+residual rank has empirical `p=1/501`. The strongest horizontal symmetry is
+96.7514% exact. However, its 78 residual pixels split into **46** four-neighbor
+components with largest size **4**. Across all views there are 46--142
+components and largest components only 4--7 pixels: repeated boundary/tooth
+corrections, not a connected glyph layer. Fixed nearest-neighbor renders of
+the full mask and all residuals were also checked with local Tesseract 5.3.0,
+PSM 6/11/13 and both polarities. It emitted inconsistent shape hallucinations
+that changed with view/polarity; no stable word, symbol, or puzzle token
+survived.
+
+**Spectral result:** **18.8031%** of non-DC power lies on the seven-pixel
+lattice versus module-shuffle mean **1.3135%** (`p=1/501`); **15.0880%** lies
+on its axial harmonics versus **0.3205%** (`p=1/501`). The strongest peaks are
+the vertical `+/-14` harmonics, each holding 5.1940% of power. This is not an
+independent cipher signature: repeating any 23-of-49 tile through the sixteen
+modules produces exactly **20.4624%** lattice power, and the real shared
+majority tile produces the same value. The spectrum independently confirms
+module locking but cannot distinguish the observed texture from a generic
+repeated module primitive.
+
+**Disposition:** **structural positive, decode negative, local branch closed.**
+All remaining non-arbitrary local analyses converge on a position-dependent
+7x7 module texture: seven tracks collapse mechanically, every D4 comparison
+leaves fragmented boundary residuals, and Fourier power is exactly where a
+repeated 7x7 primitive predicts. Together with Phases 296--306 and 354--364,
+there is no selected payload representation left whose decoding would have a
+defensible false-positive rate. Do not continue with alternate traversals,
+color mappings, glyph recognizers, morphology settings, generator catalogs,
+or learned textures on the unchanged PNG.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** executes A2, A3/C2, A6, and the fixed full-mask OCR
+sanity check from the 2026-08-21 brainstorm. It closes the earlier arbitrary-
+depth objection by carrying all seven tracks simultaneously and closes the
+remaining local structural portfolio without claiming the texture's historical
+source is known.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_final_structural_closure_audit.py`
+(pinned source/order/results, planted repeated-tile control, 500 matched
+controls per family, self-test) and
+`doc/img/gsmg_qr_fafafa_phase365_final_closure.png`.
+
+**Reopen/next condition:** only genuinely new external evidence -- a historical
+source/design bundle, exact earlier asset, or independently named generator or
+consumer -- that selects a source process or payload interpretation before
+examining these pixels. The QR `#FAFAFA` branch should otherwise remain frozen.
+
+## Phase 366 -- “in front of your eyes” chronology rejects a creator-confirmed 31-character transition (2026-08-21)
+
+**Question:** does the creator's `Bingo` in the 2026 exchange authenticate the
+exact 31-character selection `ncsyangcahiriasogaleafayanestve`, its proposed
+prime/last-words chain, or an operand visible at that boundary? This is option
+1 from the post-Phase-365 ranking: identify a selector from evidence, without
+generating passwords or running a cipher/blob oracle.
+
+**Method:** added `tools/gsmg/eyes_transition_chronology_audit.py`, pinned to
+the complete Telegram export SHA-256
+`09fa513506ded392d56894424f6e019297781d8d669c27c3c0e9f62f3a31a084`.
+The audit verifies creator IDs, exact message text, timestamps, reply edges,
+the 161-character creator macro and its literal anchor order. It freezes eight
+possible visible referents before applying five gates: public by `Bingo`,
+direct eyes binding, boundary adjacency, fixed operation, and independently
+recognizable output. No password, cipher, address, or blob oracle is present.
+
+**Chronology result:** gnomad repeats only the visibility phrase at `03:27:47`;
+the creator says `Bingo` at `03:29:05`. Denis first claims a 30--31-character
+prime/last-words extraction at `03:29:18` (**13 seconds later**), posts the
+exact text at `03:39:06` (**601 seconds later**), and narrates the proposed
+chain at `03:57:30` (**1,705 seconds later**). Therefore `Bingo` cannot
+authenticate any of those later claims. The selected-mask image itself was
+already public, so chronology alone does not exclude it, but neither a reply
+edge nor creator text identifies it as the phrase's referent.
+
+**Macro-order result:** exact source order is `...lastwordsbeforearchichoice ->
+yinyang -> wewontgiveawaythepassword -> itsinfrontofyoureyes...`. The
+visibility clause is syntactically downstream of `yinyang`, which ranks it as
+a post-yinyang password/final-recognition clue rather than an authenticated
+operator for reaching yin-yang. This is a ranking constraint, not proof that
+every macro clause is procedural.
+
+**Referent result:** **0/8 qualify**. The macro itself directly contains the
+phrase but supplies no pointed-to operand/action; DBBI/FAED is visible and
+boundary-adjacent but lacks a binding and consumer; the guide/mask images are
+community artifacts with no creator confirmation; *Looking Forward* received
+the explicit hedge `Maybe`; and the exact text postdates `Bingo`.
+
+**Disposition:** bounded negative. The phrase remains authenticated, and the
+31-character mask remains a real community-reconstructed structural object,
+but the existing creator exchange does not bind them and supplies no consumer
+for the selected string or DBBI/FAED operator. This corrects the tempting but
+chronologically impossible reading that `Bingo` endorsed Denis's later exact
+extraction.
+
+**Artifacts:** `tools/gsmg/eyes_transition_chronology_audit.py` and
+`doc/GSMG_EYES_TRANSITION_CHRONOLOGY_AUDIT.md`; permanent regression added to
+`tools/gsmg/test_recent_audits.py`. Creator clue ledger/index rows now record
+the exact temporal limit.
+
+**Reopen/next condition:** a primary artifact that directly identifies the
+visible referent or fixes its complete operation. Repeating the phrase,
+reinterpreting `Bingo`, or applying more transforms to the unchanged
+31-character string is not a reopen condition.

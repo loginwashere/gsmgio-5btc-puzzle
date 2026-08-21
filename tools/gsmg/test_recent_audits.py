@@ -54,6 +54,7 @@ import dbbi_faed_continued_fraction_audit
 import dbbi_faed_authenticated_selector_audit
 import decimal_transport_inverse_audit
 import dual_channel_consistency_audit
+import eyes_transition_chronology_audit
 import excluded_wordlist_coverage_audit
 import first_piece_hamming_control_audit
 import first_piece_bitplane_audit
@@ -95,6 +96,7 @@ import onchain_op_return_provenance_audit
 import p32_sibling_password_audit
 import page_syntax_house_style_audit
 import phase1_icon_symbol_layer_audit
+import qr_fafafa_final_structural_closure_audit
 import phase32_column_calibration_audit
 import post_yinyang_dataflow_audit
 import post_phase217_consistency_audit
@@ -135,6 +137,23 @@ from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_eyes_transition_chronology_does_not_confirm_selected_31(self):
+        report = eyes_transition_chronology_audit.audit()
+        self.assertEqual(
+            report["timing"],
+            {
+                "bingo_to_abstract_claim_seconds": 13,
+                "bingo_to_exact_text_seconds": 601,
+                "bingo_to_chain_narration_seconds": 1705,
+            },
+        )
+        self.assertTrue(report["macro"]["eyes_clause_is_after_yinyang"])
+        self.assertEqual(report["qualifier_count"], 0)
+        self.assertFalse(report["oracle_authorized"])
+
+    def test_qr_fafafa_final_structural_closure_contract(self):
+        qr_fafafa_final_structural_closure_audit.self_test()
+
     def test_remaining_secret_container_delta_contract_and_result(self):
         module = remaining_secret_container_delta_audit
         self.assertEqual(module.descriptor_checksum("raw(deadbeef)"), "89f8spxm")

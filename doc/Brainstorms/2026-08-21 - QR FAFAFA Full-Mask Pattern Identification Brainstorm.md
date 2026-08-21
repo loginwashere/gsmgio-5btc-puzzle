@@ -125,6 +125,14 @@ substantially shorter exact description than controls.
 
 #### A2. Seven-track ring unroll
 
+> [!info] Executed as Phase 365 (2026-08-21)
+> All seven QR-native depth tracks were unrolled simultaneously into 112 bits
+> each. Their mean agreement, best-pair agreement, unanimous positions, and
+> closest-to-majority distance are all beyond 500 module-count-preserving
+> controls (`p=1/501`). None is printable; the fixed majority is repeating
+> mechanical bytes `048912244c993264891224099326`, not text or a parser-valid
+> object. Strong structure, negative decode.
+
 Resolve the old arbitrary-depth blocker by unrolling **all seven depth tracks**
 clockwise from the same QR-native corner. Treat the result as a 7-channel
 sequence rather than selecting one favorable track. Measure cross-track
@@ -138,6 +146,13 @@ mechanical collapse (unanimous bit, majority bit, or one demonstrably distinct
 track) is selected before viewing decoded output.
 
 #### A3. Dihedral residual atlas
+
+> [!info] Executed as Phase 365 (2026-08-21)
+> All seven non-identity D4 residuals are much smaller than matched controls,
+> with horizontal flip strongest at 78 pixels / 96.7514% agreement. But the
+> residuals fragment into 46--142 components whose largest sizes are only
+> 4--7 pixels. Fixed Tesseract views across PSM 6/11/13 and both polarities
+> produce unstable shape hallucinations, not a repeated glyph or puzzle token.
 
 Compute XOR residuals against horizontal flip, vertical flip, 180-degree
 rotation, and the valid rectangular transpose/90-degree comparisons after a
@@ -196,6 +211,13 @@ pitch plus a repeated vector primitive could naturally create the 7/14 cadence.
 An exact reconstruction would strongly favor rendering over payload.
 
 #### A6. Spectral/lattice fingerprint
+
+> [!info] Executed as Phase 365 (2026-08-21)
+> Seven-pixel lattice power is 18.8031% versus matched-shuffle mean 1.3135%,
+> and axial power is 15.0880% versus 0.3205% (`p=1/501` for both). This is
+> exactly the expected renderer signature: any repeated 23-of-49 7x7 tile has
+> 20.4624% lattice power. The spectrum confirms module locking but supplies no
+> decoder or source identity.
 
 Compute the 2D autocorrelation and discrete Fourier spectrum of the mask, then
 fit dominant periods without interpreting them as characters. Compare against
@@ -381,6 +403,12 @@ fingerprint elsewhere would weaken the steganographic reading.
 
 #### C1. Full `#FAFAFA` bitmap recognition
 
+> [!info] Closed in Phase 365 (2026-08-21)
+> The frozen full mask and both polarities were rendered at nearest-neighbor
+> scale and checked together with the D4 residual views. OCR outputs were
+> unstable raster-shape hallucinations and no stable token survived. Further
+> morphology or recognizer settings would add post-result freedom.
+
 Render only the 48x49 mask in black/white under a frozen set of four views:
 native, horizontal flip, vertical flip, and 180 degrees. Apply one declared
 morphological closing radius (or none) selected from the inferred tooth width,
@@ -391,6 +419,11 @@ This is the most direct version of the user's observation and has not been run
 as a full-square `#FAFAFA`-only experiment.
 
 #### C2. Symmetry-residual glyph test
+
+> [!info] Closed in Phase 365 (2026-08-21)
+> The exact residual atlas is strongly non-random but consists of dozens of
+> tiny boundary-aligned components. No glyph is stable across independent
+> residual definitions or polarity, so the predeclared promotion gate fails.
 
 Render the fixed D4 residuals from A3 at nearest-neighbor scale and run the same
 recognizers. The residual is allowed to count as a hit only if one exact symbol
@@ -550,22 +583,27 @@ Ranked by information gain, discipline, and effort:
    required to select a center rule.
 2. **Historical/source bundle acquisition.** Phases 358/362 find no independent
    local raster asset; new provenance now requires genuinely new material.
-3. **A3 + C2 + D2 — symmetry-residual atlas with synthetic controls.** Small,
-   visual, and genuinely different from Phases 300--306.
-4. **A2 — seven-track ring unroll.** Resolves the old depth-selection blocker
-   without cherry-picking one track.
-5. **C1 — full `#FAFAFA`-only bitmap recognition.** Cheap and directly answers
-   the user's proposed object, but high pareidolia risk without D2 controls.
+3. ~~**A3 + C2 + D2 — symmetry-residual atlas.**~~ Executed Phase 365;
+   structural positive, glyph/decode negative.
+4. ~~**A2 — seven-track ring unroll.**~~ Executed Phase 365; the tracks collapse
+   to a repeating mechanical cadence and no selected text.
+5. ~~**C1 — full `#FAFAFA`-only bitmap recognition.**~~ Closed Phase 365 under
+   fixed views; no stable token.
 6. ~~**C7 — Braille-cell interpretation.**~~ Direct-pixel and frozen-residual
    variants executed Phase 355, closed negative. Phase 354 selected a 7x7 tile,
    not a Braille-compatible 2x3/2x4 lattice; do not manufacture a new lattice
    without external selection.
 
-With B1/B2/B4 partly executed, the surviving renderer account is narrower but
-plural: a position-dependent **six-variant 7x7 module atlas** or patterned fill.
-Constant fill is negative. Smaller-source inversion and local fingerprinting
-are negative only for the canonical right-side variant; the other five exact
-patches remain to be handled as an atlas.
+With B1/B2/B4 executed and corrected through Phases 362--364, the surviving
+renderer account is a position-dependent **six-variant 7x7 module atlas** or
+patterned fill. Constant fill, standard dithering, smaller-source inversion,
+and local all-six fingerprinting are negative.
+
+> [!success] Local branch closure -- Phase 365
+> Phase 365 executes the last non-arbitrary structural/decode portfolio. The
+> unchanged PNG now has no live local decoding path. Reopen only for a genuinely
+> new historical asset, design/source bundle, independently named generator,
+> or external consumer.
 
 ## Proposed first experiment contract
 
