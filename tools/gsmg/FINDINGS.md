@@ -21814,3 +21814,911 @@ families, a parser-valid near-object that independently licenses Seed 9's
 single-error repair, support for a specifically evidenced descriptor dialect
 outside the frozen grammar, or a separately authorized larger candidate
 corpus. Generic format expansion is not a reopen condition.
+
+## Phase 351 -- authenticated Phase 2/Phase 3 plaintext contains zero backspace (0x08) control bytes: hypothesis falsified pre-audit (2026-08-20)
+
+**Question:** FINDINGS Phase 268/269 found that a 2025 Telegram repost
+(message 38301) appends eight literal `\b` text characters after the Phase
+2 "worst gear" line, absent from the earliest preserved 2020 repost (message
+2834) -- correctly never treated as authenticated. A sharper follow-up
+hypothesis asked about a different artifact entirely: does the actual
+creator-authored, AES-decrypted Phase 2 plaintext itself contain real 0x08
+(ASCII backspace) bytes -- as opposed to a community markdown transcription,
+which could silently normalize control characters? If so, seven trailing
+backspaces before a shell prompt is a specific, narrow, authenticated
+terminal-rendering hypothesis (cursor-left, prompt-overwrite semantics) worth
+pursuing before any further brute force.
+
+**Frozen inputs:** the exact live Phase 2 URL (`gsmg.io/choiceisanillusion...
+iwroteitmyself`), one plain GET, no JS/forms executed -- the same safety
+boundary as `tools/gsmg/provenance_monitor.py`. Passwords are this project's
+already-published, already-verified values: `SHA256("causality")` for Phase
+2 and `data.py`'s `phase3_parts` digest for Phase 3. No new candidate,
+wordlist, or blob was touched; this is a source-authentication question, not
+a passphrase search.
+
+**Method:** rather than trust a screenshot, an OCR read, or any chat
+transcription, fetched the live `gsmg.io` Phase 2 page directly and pulled
+the raw ciphertext straight out of the HTML `<textarea>` elements -- exact
+bytes, no transcription step. Cross-checked the Phase 2 blob's opening
+characters against an independent, publicly-fetched urlscan.io capture from
+2020-03-25 (`37b45c0e-67cc-43f6-9a3c-c5e448114082`, screenshot only, no
+login required) -- identical, confirming this exact ciphertext has been
+stable since the puzzle's earliest days, not something later altered.
+Decrypted both the Phase 2 and Phase 3 textareas with this project's own
+established KDF convention (`cb_common.evp_bytes_to_key(..., "sha256")` --
+not the community README's bare `openssl enc` invocation, which depends on
+the local machine's default digest and does not reproduce the solve).
+**Valid PKCS7 padding on both** is itself strong evidence of correctness,
+since any wrong byte in the final two ciphertext blocks would break it.
+
+Built `tools/gsmg/phase2_phase3_control_byte_audit.py` to make this
+reproducible rather than leave it as one-off interactive output: it scans
+every byte of the recovered plaintext (not just the tail) for `0x08` or any
+other non-CRLF control byte, self-tests fully offline against a pinned
+2026-08-20 copy of the real Phase 2 ciphertext plus a locally-built fixture
+with a planted 7x`0x08` control (proving the detector isn't vacuously always
+zero) and a wrong-password control (proving bad decrypts raise rather than
+silently returning garbage), and a `--run` mode that re-fetches live and
+flags if the ciphertext digest has ever changed since this pin.
+
+**Result:** Phase 2 plaintext (648 bytes, SHA-256 `e2f9dd65...582b593a`)
+matches README's already-published transcription word-for-word, ending
+exactly `...Ok kid, on the highway, let put it in the worst gear.` with
+nothing after the period. **Zero `0x08` bytes anywhere in the plaintext**,
+and zero other non-CRLF control bytes. Phase 3's plaintext (4,090 bytes) was
+checked the same way as an adjacent comparison point: also valid padding,
+also **zero `0x08` bytes**. The `\b`-in-a-2025-repost finding from Phase
+268/269 remains correctly closed as chat-transcription noise on a different
+text (the X2SH4Y0QB15 riddle block) -- it was never a claim about the AES
+ciphertext, and there is nothing in the actual ciphertext for it to
+corroborate.
+
+**Disposition:** the "seven authenticated backspace bytes" premise is
+falsified directly against the primary source, not merely under-tested.
+Negative; closes before requiring the more elaborate 6-step terminal-
+semantics audit that would otherwise have been Phase 351.
+
+**Facts affected:** adds F-CHAIN-018 (see `doc/GSMG_FACT_LEDGER.md`) --
+Phase 2/Phase 3's authenticated plaintext contains no control bytes of any
+kind, closing the terminal-control-byte reading of "worst gear" and of the
+Phase 3->3.2 boundary.
+
+**Supersedes/corrects:** nothing prior; this is a new check. It does narrow
+Phase 268/269's already-correct disposition by confirming the same
+conclusion holds for the actual ciphertext, not only the disclosed chat
+repost.
+
+**Artifacts:** `tools/gsmg/phase2_phase3_control_byte_audit.py` (no
+passwords, private keys, or WIFs stored -- both AES passwords used are
+already-public creator clues identical to `README.md`/`data.py`).
+
+**Reopen condition:** a creator statement or authenticated source
+independently establishing that terminal rendering (not raw ciphertext
+bytes) is the intended channel, or a future live fetch whose ciphertext
+digest differs from this phase's pin (`f61214da...`/`09bd7718...` for
+Phase 2/Phase 3 respectively).
+
+## Phase 352 -- stego-toolkit (dominicbreuker/stego-toolkit) sweep over all 137 repository media files: negative (2026-08-20)
+
+**Question:** Phase 161 reimplemented binwalk/zsteg equivalents in pure
+Python because neither tool was installable in this environment. Does
+running the actual reference tools (via the pinned, offline
+`dominicbreuker/stego-toolkit` Docker image) against the complete media
+corpus -- not just Phase 161's original 7-image subset -- surface anything
+Phase 161's reimplementation could have structurally missed?
+
+**Frozen inputs:** every media file under this repository (confirmed by
+independent recount against Phase 161's scope: 79 JPEG + 50 PNG + 3 PDF + 2
+SVG + 2 MIDI + 1 MP4 = 137 raw files, matching exactly), deduplicated to 131
+unique payloads. Docker image pinned by digest
+(`sha256:f0669ac...`), run offline against temporary copies -- no files
+were uploaded anywhere, nothing added to the repository itself.
+
+**Method:** Steghide, Outguess, JSteg, OpenStego, Stegdetect+Stegbreak,
+zsteg, and binwalk run against the full corpus. OpenStego's extraction path
+was verified with a planted positive control (recovered payload hash
+matched exactly) before trusting a "no extraction" result elsewhere.
+zsteg's 2,437 raw guesses were not treated as signal by count -- including a
+bogus PGP hit on zsteg's own clean control, which calibrated how noisy the
+raw guess stream is -- the 86 container-looking results were extracted and
+independently parsed as PGP/zlib/CPIO/UTF-32/Java-keystore structures; all
+failed. Stegdetect flagged 11 Telegram JPEGs as possible `jphide`; Stegbreak
+ran 836,649 password/rule combinations from this project's frozen puzzle
+corpus against them and recovered zero embeddings, with thumbnail/full-size
+compression patterns independently consistent with a false-positive
+explanation. Binwalk's signature hits were checked byte-by-byte and traced
+to false magic-number matches inside ordinary compressed streams (the same
+finding Phase 161 already made with its reimplementation, now confirmed
+with the reference tool). Trailing-data checks after JPEG EOI, PNG IEND, PDF
+EOF, MIDI track end, and MP4 atom boundaries were all clean.
+
+**Result:** both MIDI files are valid with no textual or SysEx events and no
+extra bytes. The MP4 is a video-only, 1.6-second community meme ("THE END
+IS NEAR"), no audio, no extra container data. Both SVGs have no scripts,
+embedded images, or external references. The only metadata of note is a
+GIMP 2.10/Linux record dated 2024-04-06 in the duplicate community DBBI
+screenshot `23800.png`/`41760.png`, matching that file's known community
+post date -- provides no creator evidence. **No successful extraction from
+any tool, on any file.**
+
+**Disposition:** materially strengthens Phase 161's negative with the
+actual reference toolkit rather than a reimplementation, across the
+complete media corpus rather than a 7-image subset. Does not overturn
+Phase 161/162; closes rather than reopens the generic-stego-sweep line of
+inquiry. Consistent with this project's brainstorm discipline: the
+sensible next step is recording this as a negative, not expanding into
+unguided password brute force against the 11 `jphide`-flagged JPEGs beyond
+the already-run frozen-corpus Stegbreak pass.
+
+**Facts affected:** no puzzle fact changes; extends Phase 161/162's standing
+negative verdict onto the reference toolkit and full corpus.
+
+**Supersedes/corrects:** nothing; Phase 161/162's original reimplementation-
+based negative stands and is now independently corroborated.
+
+**Artifacts:** none persisted in-repo by design (ephemeral Docker run over
+temporary file copies, consistent with the project's no-external-upload
+safety convention); this entry is the durable record of scope, method, and
+result.
+
+**Reopen condition:** a creator statement or authenticated clue pointing at
+a specific file/tool/technique this sweep didn't cover, or a newly added
+media file that hasn't yet been run through the same toolkit.
+
+## Phase 353 -- is the 14x14 rabbit grid an enlarged crop of the page's own QR code? Negative (2026-08-21)
+
+**Question:** the Stage-0 page (`doc/img/gsmg_puzzle_stage1.png`) contains
+two black/white grid-like structures: the 14x14 `follow_the_white_rabbit.png`
+grid (spiral-decodes to `gsmg.io/theseedisplanted`, Phase-verified in
+`grid_spiral.py`) and, in the same page's footer, a real embedded QR code
+(version 4, 33x33 modules, clean decode to the visible blockchain.com prize
+address, established in Phase 73). Is the 14x14 grid's black/white pattern
+actually an enlarged crop of some 14x14 region of the QR's own module
+matrix, under some rotation/reflection -- i.e. is one structure secretly
+derived from the other?
+
+**Frozen inputs:** `doc/img/gsmg_puzzle_stage1.png` (sha256
+`38125bbd...`, same file Phase 73 pinned) and `doc/img/gsmg_rabbit_hint.png`
+(sha256 `5e8d84b8...`, byte-identical to the community-fork/mirror copy of
+`follow_the_white_rabbit.png`). The QR's real module matrix -- not a
+freshly-generated QR -- is extracted directly from the source PNG via
+OpenCV rectification/thresholding (547 of 1,089 modules black). The grid's
+per-cell colors are taken from `grid_spiral.py`'s existing majority-color
+extraction (86 black, 86 white, 15 blue, 9 yellow cells).
+
+**Method:** exhaustive search over every 14x14 window of the 33x33 QR
+matrix (20x20 = 400 positions) x all 8 dihedral orientations (rotations +
+reflections) = 3,200 candidate crops, scored against the grid's black/white
+cells by exact match ratio. Three variants handle the grid's 24 non-black/
+white (blue/yellow) cells, since there's no a priori reason to prefer one:
+`exclude` (172 cells scored, colored cells ignored), `spiral_rule`
+(blue=black/yellow=white, the polarity independently established by
+`grid_spiral.py`'s own spiral decode, 196 cells scored), and `both_white`
+(blue and yellow both scored as white, no encoding assumption, 196 cells
+scored). Each variant's best real match is calibrated against a null: 500
+shuffles of the grid's own bit multiset (same known/unknown cell positions
+held fixed, values permuted), with the full 3,200-candidate search re-run
+on every shuffle -- so the null accounts for the same generous 400x8
+search freedom the real grid gets, not a single fixed comparison.
+
+**Result:** all three variants land at essentially the same ~62% best
+match, and none beats its own shuffled-bit null:
+
+| variant | cells scored | best match | best window / orientation | null mean [range] | p-value |
+|---|---:|---|---|---|---|
+| exclude | 172 | 62.21% (107/172) | (3,12) / transform #0 | 63.44% [61.05%, 67.44%] | 0.918 |
+| spiral_rule | 196 | 62.24% (122/196) | (11,10) / transform #4 | 62.61% [59.69%, 67.35%] | 0.668 |
+| both_white | 196 | 62.76% (123/196) | (12,3) / transform #4 | 62.49% [60.20%, 66.84%] | 0.452 |
+
+The best-matching window/orientation is not even stable across the three
+variants, and two of the three real best-ratios sit *below* their own null
+mean -- a genuine enlarged crop would score close to 100% on one stable
+window, not ~62% with the specific window drifting depending on how the 24
+ambiguous cells are scored. This is the signature of two independent
+roughly-balanced black/white bitmaps, not a derivation relationship.
+
+**Disposition:** closed negative. The 14x14 grid and the page's QR code are
+independent structures; the QR carries no relationship to the grid beyond
+both being black/white raster patterns on the same page.
+
+**Facts affected:** no puzzle fact changes; rules out one specific
+structural-derivation hypothesis between two already-characterized
+artifacts.
+
+**Supersedes/corrects:** nothing prior; new check.
+
+**Artifacts:** `tools/gsmg/rabbit_grid_qr_module_crop_audit.py` (self-
+tested, deterministic, pinned source hashes and expected best-match/null
+values for all three variants).
+
+**Reopen condition:** a creator statement or authenticated source claiming
+a specific relationship between the grid and the QR, or a proposed crop
+region/orientation with independent motivation (not chosen by this
+exhaustive search) that this audit didn't already cover.
+
+## Phase 354 -- QR `#FAFAFA` mask is predicted by one global 7x7 tile: positive structural identification, 23 boundary/irregular-row residual pixels (2026-08-21)
+
+**Question:** Phases 296--306 established that the three finder eyes contain
+one identical, strongly periodic grayscale texture, but several direct color,
+row, block, and irregular-row readings were negative. The 2026-08-21 full-mask
+brainstorm proposed a different first step: can a small periodic model learned
+from three predeclared sides of the `#FAFAFA` ring predict the fourth, leaving
+a stable residual that is better defined than the full 345-pixel texture?
+
+**Frozen inputs:** exact RGB equality to `(250,250,250)` in the first 48x49
+finder box of pinned `doc/img/gsmg_puzzle_stage1.png` (SHA-256
+`38125bbd...`). The other two eyes are used only to assert byte identity, not
+as independent samples. Four disjoint finder-relative bands contain all 345
+`#FAFAFA` pixels and define 749 prediction sites: top/bottom `7x34`, left
+`21x6`, right `21x7`. Tile height/width are exhaustively bounded to 1--14.
+
+**Method:** for each held-out band, fit every tile size under two non-leaking
+coordinate systems: global finder-relative residue and phase reset at each
+predeclared band origin. Each residue's training majority defines its tile
+bit; a frozen two-part MDL proxy (literal tile bits plus enumerative residual
+code) selects the model on training pixels only, then predicts the held-out
+band without refitting. The brainstorm's proposed per-connected-component
+reset was rejected before the real run because component discovery reveals
+held-out target pixels. Self-test also found the proposed simultaneous row+
+column-sum-preserving 2x2-switch null to be degenerate: every band has zero
+legal switches, so that control reproduces the source exactly. This was
+corrected, disclosed, and replaced before the real run by two separate null
+families (200 deterministic controls each), independently permuting within
+rows or columns and preserving exactly the named one-axis projection. A
+planted global-periodic positive recovers at MCC > 0.95.
+
+**Result:** all four folds independently select the **same global 7x7 tile**.
+Held-out results are 229/238 top, 231/238 bottom, 117/126 left, and 144/147
+right: aggregate confusion `TP=341, TN=380, FP=24, FN=4`, **721/749 =
+96.26% accuracy, balanced accuracy 96.45%, MCC 0.9264**. This exceeds both
+null families on all three registered statistics at the minimum attainable
+empirical `p=1/201=0.004975`; row-sum-null mean MCC is 0.7747 and column-sum-
+null mean MCC is 0.2387. The full-data MDL fit selects the same global 7x7
+tile (`0000000/1111111/1101110/1000100/0000000/1111111/1000100`) with 23
+residual pixels. Every residual lies either in finder-relative column `x=7`
+(the already-observed edge/boundary asymmetry) or rows `y=9` and `y=37` (the
+two irregular rows isolated in Phase 305). No new unconstrained residue exists.
+
+**Disposition:** **structural-only** positive. This identifies a compact global
+7x7 raster primitive that predicts the texture across all four sides and
+sharply freezes the residual. It does not establish that the tile or residual
+encodes a message. Localization onto exactly the already-known boundary and
+irregular-row exceptions favors a rendering/tile-boundary account, while
+licensing a separate bounded residual analysis if desired.
+
+**Facts affected:** no Fact Ledger change; this is a reproducible structural
+characterization of a non-canonical side channel, not a puzzle transition.
+
+**Supersedes/corrects:** sharpens Phases 296/302--305 by replacing the verbal
+period-7/irregular-row description with a held-out predictive 7x7 model. It
+does not reverse their negative payload tests. Corrects the brainstorm's
+unexecutable connected-component reset and degenerate dual-projection null
+before either was used as evidence.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_tile_predictability_audit.py` (pinned
+source hash, deterministic controls, planted positive, exact real tile/fold/
+confusion/residual self-tests); originating brainstorm:
+`doc/Brainstorms/2026-08-21 - QR FAFAFA Full-Mask Pattern Identification
+Brainstorm.md`.
+
+**Reopen condition:** an exact historical asset/render path reproducing the
+7x7 tile and its 23 boundary exceptions; or a separately predeclared residual
+analysis producing a parser-valid/authenticated output above matched controls.
+Further arbitrary mappings of the full 345-pixel mask are not a reopen.
+
+## Phase 355 -- exhaustive Braille readings of QR `#FAFAFA` mask and Phase-354 residual: closed negative against matched controls (2026-08-21)
+
+**Question:** could the structured `#FAFAFA` teeth be 6-dot or 8-dot Braille,
+either in the complete finder mask or in the 23-pixel residual frozen by Phase
+354's global 7x7 model?
+
+**Frozen inputs:** Phase 354's exact 49x48 Boolean mask (345 `#FAFAFA` pixels)
+and exact 23-coordinate residual. No hand-selected crop or alignment. The
+closed universe is 6-dot 2x3 and 8-dot 2x4 Braille at every grid phase (6 and
+8 respectively), both polarities, and identity/horizontal flip/vertical flip/
+180-degree orientation: **112 readings per input**. Standard Unicode Braille
+dot order and uncontracted Grade-1 letters are fixed; Grade-2 contractions are
+excluded because they add language-dependent interpretive freedom.
+
+**Method:** transliterate every reading mechanically. A frozen language score
+combines Grade-1 letter fraction, a disclosed common-English-bigram rate,
+longest contiguous letter run, and an unknown-cell penalty. Selection takes
+the maximum across all 112 readings, and every null control receives the same
+maximize-over-readings freedom. The full mask is compared to Phase 354's 200
+row-sum-preserving and 200 column-sum-preserving control families. The residual
+is compared to 200 deterministic masks placing the same 23 pixels uniformly
+within the same 749-site ring domain. Self-test verifies standard dot order
+with the full Grade-1 alphabet plus a planted `a`, pins both input sizes, and
+pins both real best-reading identities/scores.
+
+**Result:** the best full-mask reading is 6-dot, identity, inverted polarity,
+phase `(x=1,y=1)`, score `0.18`: **106 letters, 319 unknown cells, zero common
+English bigrams** across 425 cells. It is worse than essentially every matched
+control: row-sum null mean 0.2183, `p=200/201=0.9950`; column-sum null mean
+0.3301, `p=201/201=1.0`. The best frozen-residual reading is 6-dot, horizontal
+flip, inverted, phase `(1,0)`, score `0.03247`, with 49 letters, 376 unknowns,
+and zero common bigrams; density-null mean 0.04759, `p=194/201=0.9652`. No
+recognizable word or stable Grade-1 text appears.
+
+**Disposition:** **rejected**. Direct Braille grouping is not merely
+unconvincing by eye; it underperforms controls after granting all declared
+alignments, orientations, and polarities. Phase 354 independently selected a
+7x7 raster tile, not a 2x3/2x4 Braille lattice, so no stronger geometry-
+selected Braille reading is currently licensed.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** executes and closes C7 from the 2026-08-21 full-mask
+brainstorm. It does not change Phase 354's structural-positive 7x7 result.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_braille_audit.py` (self-testing,
+deterministic controls); originating full-mask brainstorm.
+
+**Reopen condition:** an authenticated source or exact recovered asset that
+selects a specific 2x3/2x4 dot lattice and traversal absent from this exhaustive
+pixel-grid pass. A suggestive hand-chosen grouping is not a reopen condition.
+
+## Phase 356 -- QR `#FAFAFA` texture is locked to one native 7x7-pixel module: positive leave-one-module-out identification (2026-08-21)
+
+**Question:** Phase 354 found a predictive global 7x7 pixel tile over four
+rectangular ring bands. Is that period merely numerical, or is it exactly the
+embedded QR code's native module pitch—meaning the texture is one module-sized
+primitive repeated through the finder eye's white ring?
+
+**Frozen inputs:** the pinned Stage-0 PNG and three complete logical finder-eye
+boxes `(1,1289)..(49,1337)`, `(183,1289)..(231,1337)`, and
+`(1,1471)..(49,1519)`. Unlike the earlier 48x49 flood-filled pure-black
+component boxes, these include the antialiased left boundary and are exactly
+49x49 pixels. Standard QR finder geometry fixes the sixteen white-ring modules;
+each is 7x7 pixels. Input remains exact RGB `(250,250,250)` only.
+
+**Method:** verify the three complete eyes are byte-identical and their origins
+differ by 182 pixels horizontally/vertically. Since Version 4 finder origins
+are 26 modules apart, this independently gives exactly 7 pixels/module. For
+each of the sixteen logical white-ring modules, learn a 7x7 Boolean subpixel
+tile by majority vote over the other fifteen and predict the held-out module
+without refitting. The registered null independently shuffles `#FAFAFA`
+positions inside each module while preserving every module's exact pixel count;
+500 deterministic controls receive the identical sixteen-fold procedure. A
+planted shared-module tile predicts perfectly in self-test.
+
+**Result:** all 345 `#FAFAFA` pixels occur inside the sixteen white-ring
+modules. Leave-one-module-out aggregate confusion is `TP=340, TN=411, FP=28,
+FN=5`: **751/784 = 95.79% accuracy, balanced accuracy 96.09%, MCC 0.9168**.
+The count-preserving null has mean MCC 0.00195 (range -0.3101..0.1894), giving
+the minimum empirical `p=1/501=0.001996`; accuracy-null mean is 52.28%.
+The full shared module tile is
+`0000000/1111111/0110111/0100010/0000000/1111111/0100010`. Five right-side
+white-ring modules predict perfectly; repeated left-side modules share the
+same small boundary residual, while top/bottom exceptions align with the
+already-known irregular rows.
+
+**Disposition:** **structural-only** positive. The 7-pixel period is exactly
+the QR module pitch, and the texture behaves as a shared one-module 7x7 raster
+primitive clipped/repeated throughout the finder white ring. This materially
+strengthens the stamped/tiled renderer explanation and explains why the real
+bottom band continues the top pattern. It does not demonstrate a message.
+
+**Facts affected:** none; structural characterization of a side artifact.
+
+**Supersedes/corrects:** sharpens Phase 354's band-based global-tile result by
+binding its period to independently fixed QR module geometry and correcting
+the analysis box to the complete 49x49 logical eye. Does not reverse Phase 355.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_module_lock_audit.py` (pinned source,
+exact eye/module geometry, planted positive, exact real tile/confusion
+self-tests, deterministic matched controls); originating full-mask brainstorm.
+
+**Reopen condition:** an exact historical generator/asset/render path matching
+this 7x7 module tile and its boundary exceptions, or a source-selected consumer
+for the tile. Arbitrary decoding of the now-explained repeated modules is not a
+reopen condition.
+
+**Scope correction (2026-08-21):** the phrase “one native 7x7-pixel module”
+refers to the shared coordinate grid/majority predictor, not one byte-identical
+bitmap in all sixteen positions. Direct enumeration gives six byte-distinct
+7x7 grayscale patches with multiplicities `4,4,4,2,1,1`, arranged by module
+role. The 95.79% predictive result and exact module-grid lock stand; a single
+repeated-asset claim does not.
+
+## Phase 357 -- QR module-tile scale-history inversion: no exact smaller raster/filter source, native 7x7 primitive favored (2026-08-21)
+
+**Question:** Phase 356 binds the `#FAFAFA` texture to one native 7x7-pixel QR
+module. Was that primitive itself produced by resizing a smaller raster, which
+could identify its authoring path?
+
+**Frozen inputs:** the canonical exact grayscale module patch shared byte-for-
+byte by finder modules `(1,5),(2,5),(3,5),(4,5)`: a 7x7 matrix containing 23
+pixels at 250 and 26 at 255. Boundary-clipped left modules and the anomalous
+bottom row are excluded rather than averaged into the source target. Candidate
+sources are every smaller raster size 1..6 by 1..6 through Pillow nearest,
+box, bilinear, Hamming, bicubic, and Lanczos: 216 models, fixed before fitting.
+
+**Method:** build each resize operation as a linear 49-by-source-pixel matrix
+from floating-point basis images. Solve an unconstrained continuous least-
+squares source—more generous than any binary/8-bit source—and record RMSE/max
+error. Then clip/round that solution to an 8-bit source and render through the
+real Pillow filter for exact byte comparison. A planted 2x2 nearest-neighbor
+source is recovered exactly. For calibration, 500 deterministic random 7x7
+two-level masks with the same 23/26 counts each receive the full 216-model
+search; lower best RMSE is the registered statistic.
+
+**Result:** **zero continuous-exact and zero 8-bit byte-exact models**. The
+best continuous approximation is a 6x6 Hamming source—36 source degrees of
+freedom for a 49-pixel target—with RMSE 0.75385 and max error 2.3445; its
+rounded 8-bit rendering still mismatches **22/49 target bytes**. Tighter source
+budgets fit poorly (best RMSE at maximum 1/4/9/16/25 DOF is respectively
+2.495/2.243/1.486/1.451/1.315). The real tile is nevertheless more compressible
+than controls: null best-RMSE mean 1.1825, range 0.6699..1.5532, empirical
+`p=5/501=0.00998`. That confirms its already-known row/tooth regularity, but
+the only best fit is nearly target-sized and not byte-faithful.
+
+**Disposition:** **rejected** as a simple smaller-raster scaling history;
+**structural-only** corroboration that the native tile is unusually regular.
+No tested filter/source size reproduces the asset. The evidence favors a
+native 7x7 authored/tiled primitive over an ordinary resize from 1..6 pixels,
+without identifying the generator.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** executes B2 from the full-mask brainstorm after Phase
+356 constrained its target. Does not weaken Phase 356's exact module lock.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_scale_inversion_audit.py` (pinned source,
+216-model inversion, planted positive, exact target/best-model self-tests,
+same-density controls); originating brainstorm.
+
+**Reopen condition:** an exact historical asset, an evidenced nonstandard
+resampler/filter chain, or an authoring-tool hypothesis specifying a larger or
+multi-stage source transform before fitting. Adding arbitrary filters or
+multi-stage resize combinations without provenance is not a reopen condition.
+
+**Scope clarification (2026-08-21):** this inversion target is explicitly the
+four-copy canonical right-side patch. The other five byte-distinct module
+variants were not inverted, so this phase favors “native 7x7” only for that
+variant and does not close a shared generative model for the six-variant atlas.
+
+## Phase 358 -- repository-wide exact 7x7 QR tile fingerprint: only known Stage-0 copies and derived visualization, no independent asset (2026-08-21)
+
+**Question:** Phase 356 identified an exact native-module 7x7 texture and Phase
+357 favored a native primitive over a resize. Does the same asset occur
+elsewhere in the repository, possibly palette-remapped, revealing its source or
+reuse history?
+
+**Frozen inputs:** Phase 357's canonical 7x7 two-class geometry (23 `#FAFAFA`,
+26 white pixels), exact RGB patch, all eight dihedral symmetries, and every
+repository raster outside `.git`/build targets. Byte-exact matching applies to
+all raster formats. Palette-remapped matching is restricted to lossless flat
+graphics with at most 256 colors, where an exact two-color primitive can
+survive; JPEG/high-color photographs remain in byte-exact scope but cannot
+meaningfully preserve an arbitrary exact palette remap.
+
+**Method:** scan every valid 7x7 window. The broad fingerprint requires every
+site in one target class to have one constant RGB color and every site in the
+other class a different constant RGB color; it is exact geometry, not
+perceptual similarity. OpenCV moment filters generate candidates, followed by
+exact NumPy pixel verification. A planted arbitrary-RGB palette remap is found
+at its exact coordinate; a uniform-image negative returns zero. An initial
+exact-prefilter threshold omitted known matches through floating roundoff and
+was corrected before recording results by using a generous candidate threshold
+plus exact byte verification; self-test now pins all twelve source-image copies.
+
+**Result:** 129 rasters received byte-exact search; 35 flat/lossless rasters
+also received full palette-remapped/symmetry search. **36 total hits in exactly
+three files:** twelve canonical module copies in `puzzle.png`, the same twelve
+in byte-identical `doc/img/gsmg_puzzle_stage1.png`, and twelve in this project's
+derived `gsmg_puzzle_stage1_383838_highlighted_red.png`, which leaves those QR
+pixels unchanged. Every hit is byte-exact `(255,255,255)/(250,250,250)` in the
+identity orientation. **Zero independent files, zero palette-remapped hits,
+zero read errors.** The two puzzle paths are one artifact, and the third file
+is a later audit output, not provenance.
+
+**Disposition:** **rejected** for a locally recoverable independent source
+asset; **provenance-only** negative. The canonical tile exists nowhere else in
+the available raster corpus except copies derived from the same Stage-0 image.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** executes the local half of B4 from the full-mask
+brainstorm. Does not close genuinely new external/historical source bundles.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_asset_fingerprint_audit.py` (exact and
+palette-remapped fingerprinting, planted positive, uniform negative, pinned
+source-copy result); originating brainstorm.
+
+**Reopen condition:** acquisition of a genuinely new historical design/source
+bundle or raster corpus not among these 129 files. Re-searching the unchanged
+local corpus or using perceptual near-matches is not a reopen condition.
+
+**Scope correction (2026-08-21):** the fingerprint target was the canonical
+right-side patch only. Therefore “local branch closed” applies to that exact
+variant, not to the other five patches. A bounded all-six-variant fingerprint
+is a valid continuation on the existing corpus, not a forbidden rerun.
+
+## Phase 359 -- constant-fill QR finder renderer calibration: Pillow/OpenCV/Cairo cannot produce the native 7x7 patterned module (2026-08-21)
+
+**Question:** can ordinary scan conversion/antialiasing of an ideal finder eye
+whose white ring is a constant `#FAFAFA` fill produce Phase 356's canonical
+four-row-pattern 7x7 module, without an explicit patterned asset?
+
+**Frozen inputs:** one ideal 49x49 finder (7 modules at 7 pixels each), black
+outer/center squares, constant `#FAFAFA` white ring, and the canonical right-
+side module patch from Phases 356--358. Local render catalog: Pillow integer
+fill; OpenCV hard and antialiased rectangles; Cairo default/none/gray/subpixel
+AA at pixel offsets 0, .25, .5, .75—19 variants total. Exact bytes and number
+of distinct row patterns are the registered comparisons.
+
+**Method:** render independently through Pillow 10.2.0, OpenCV 5.0.0, and
+Cairo 1.18.0, then extract the same logical right-side 7x7 module and compare
+to source bytes. Self-test plants and detects an exact target. The structural
+control is stronger than engine identity: a constant vertical strip has
+Y-invariant geometry away from horizontal corners, so a local scan converter
+may alter its vertical edge columns but cannot generate the target's four
+different interior row patterns. Browser SVG/canvas was attempted through the
+approved browser surface, but its local synthetic data URL was blocked by URL
+security policy; it is explicitly not counted and was not routed around.
+
+**Result:** **0/19 exact matches**. Pillow, hard OpenCV, and integer/default
+Cairo produce a uniform-250 module: 26/49 byte mismatches (exactly every source
+white pixel). OpenCV/Cairo AA at fractional phases add only a changed boundary
+column, yielding at most two distinct row patterns and 28/49 mismatches. The
+real module has four distinct row patterns with interior 250/255 teeth. No
+tested constant-fill renderer approaches that geometry.
+
+**Disposition:** **rejected** for the constant-fill rasterizer/antialiasing
+class; **structural-only** support for an explicit patterned module primitive.
+This does not identify which tool or asset supplied that pattern.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** executes the locally available part of B1 and sharpens
+Phase 296's general rasterizer concern using Phase 356's exact module geometry.
+Browser rendering is unavailable in this pass, not negative evidence.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_renderer_calibration_audit.py` (three
+renderer families, exact planted positive, pinned zero-match/row-pattern
+self-tests); originating full-mask brainstorm.
+
+**Reopen condition:** an evidenced renderer that applies a non-constant
+patterned fill, texture, shader, or postprocess inside each module, or a browser
+render obtained through an allowed local test surface. Another constant-solid-
+fill rectangle engine is not a meaningful reopen because the Y-invariance
+contradiction is geometric, not implementation-specific.
+
+**Scope clarification (2026-08-21):** comparison used the canonical right-side
+patch, but the constant-fill rejection generalizes: all six actual variants
+contain Y-varying interior rows that a constant vertical strip does not. This
+phase rejects constant fill, not a position-dependent multi-patch atlas.
+
+## Phase 360 -- six-variant QR `#FAFAFA` atlas: row-plus-column model predicts 773/784 held-out pixels; center continuation is constrained but counterfactual (2026-08-21)
+
+**Question:** Phase 356's scope correction established six byte-distinct 7x7
+grayscale patches among the sixteen logical white-ring modules. Can those
+position-dependent variants be explained by a simple compositional rule that
+generalizes across observed modules, and can that rule constrain what the
+texture would look like if the black 3x3 center were absent?
+
+**Frozen inputs:** the same pinned 49x49 logical finder eye and exact equality
+to grayscale value 250. Before modeling, the complete grayscale atlas is
+enumerated and pinned: six SHA-256-distinct patches in first-occurrence order,
+with multiplicities `4,1,2,4,1,4` (sorted `4,4,4,2,1,1`). This preserves the
+234/236/250/252/255 byte distinctions even though the registered model target
+is specifically the binary exact-`#FAFAFA` occupancy.
+
+**Method:** view the sixteen white-ring modules as the observed perimeter of a
+5x5 module matrix. Independently for each of the 49 subpixel coordinates, fit
+one frozen nine-parameter additive linear model: intercept plus categorical
+module-row effects and module-column effects; threshold the predicted score at
+0.5. There are no row-column interactions and no lookup keyed by an individual
+module. Rotate one held-out perimeter module at a time, fitting on the other
+fifteen. The matched control permutes the sixteen real module patches among
+the sixteen perimeter positions, preserving the complete six-variant corpus
+and multiplicities; 500 deterministic permutations receive the same fitting
+and thresholding freedom. Only after cross-validation is the model fit to all
+sixteen modules and applied to the unobserved center coordinates `(2..4,2..4)`.
+
+**Result:** the additive model predicts **773/784 = 98.5969%** exact held-out
+bits, improving Phase 356's shared-majority-tile result by 22 pixels. All
+**11 errors lie on subpixel row 2**, the same irregular row family already
+isolated in Phases 305/354; the twelve repeated vertical-side folds are
+especially strong, with six perfect folds and six one-error folds. Position-
+permuted controls have mean 735.418 exact pixels and range 707..774; two of
+500 equal or exceed the real score, empirical **p=3/501=0.005988**. Fit to all
+observed modules, the binary model reconstructs **784/784** bits exactly.
+
+The resulting center continuation contains 210 predicted `#FAFAFA` pixels out
+of 441 and two distinct predicted patches: the three modules in hidden module
+column 2 receive one extra row-2 `#FAFAFA` site, while hidden columns 3 and 4
+receive the canonical 23-site geometry. Hidden module rows 2--4 are identical.
+This is a model-derived counterfactual, not recovered image content.
+
+**Disposition:** **structural-only positive** for a separable module-row plus
+module-column organization of the exact-`#FAFAFA` atlas. It gives the first
+cross-validated, position-aware continuation through the black center and is
+materially better than one universal tile. It is **not a decode** and does not
+prove that this is the historical generator. The perimeter does not uniquely
+determine its missing center without a model class; nonlinear or interaction-
+based models could produce other completions. The non-250 grayscale edge
+values are pinned but not reconstructed by this binary model.
+
+**Facts affected:** none; this remains a solver-derived structural model of a
+non-canonical image layer.
+
+**Supersedes/corrects:** follows the Phase 356 scope correction by preserving
+all six exact variants rather than analyzing only the canonical right-side
+patch. It replaces the earlier visual “repeat one tile through the center”
+hypothesis with a rule-derived alternative, but does not claim the alternative
+is observed truth. Braille remains closed by Phase 355.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_six_variant_atlas_audit.py` (pinned
+source and patch hashes, planted additive positive, exact atlas/fold/center/
+null self-tests); false-color counterfactual
+`doc/img/gsmg_qr_fafafa_phase360_center_prediction.png`; originating full-mask
+brainstorm.
+
+**Reopen/next condition:** test the frozen 11 held-out-error sites as one
+irregular-row residual object, or identify an evidenced renderer/asset whose
+position rule reproduces the six grayscale patches. Do not decode the 210
+predicted center pixels as if they were observed evidence.
+
+## Phase 361 -- Phase-360 QR residual is exceptionally compact, but the hidden-center continuation is mathematically non-identifiable (2026-08-21)
+
+**Question:** do Phase 360's eleven leave-one-module-out errors behave like a
+small payload-like residual, and does the observed perimeter uniquely license
+its 210-pixel center continuation?
+
+**Frozen inputs:** the exact union of Phase 360's sixteen held-out prediction
+errors, including module coordinate, subpixel coordinate, actual bit, predicted
+bit, and sign. In module-row-major order the actual bits are `11001011111` and
+the signs are `++--+-+++++`. These are diagnostic serializations, not proposed
+passwords. The source and all upstream patch hashes remain pinned.
+
+**Method, residual compactness:** record the number of distinct subpixel rows
+and columns occupied by the errors and their Cartesian support area. Apply the
+same statistic to 500 deterministic controls that permute the sixteen real
+patches among perimeter module positions and rerun the complete Phase-360
+leave-one-out model. The permutation preserves the six variants, their exact
+bits, and multiplicities.
+
+**Method, center identifiability:** Phase 360's row-plus-column score is
+extended by one shared scalar multiplied by an indicator which is zero on all
+sixteen perimeter modules and one only in the unobserved 3x3 center. Therefore
+this term is invisible to every source observation and every held-out fold:
+all values retain exactly the same 773/784 perimeter score. Three small frozen
+values `-0.25, 0, +0.25` are rendered to exhibit whether the center nevertheless
+changes. This is a constructive non-identifiability proof, not a competing
+historical-generator claim.
+
+**Result:** all **11 residual errors occupy subpixel row 2 and only subpixel
+columns 0/4**, support area **1x2=2**. They occur only in finder rows 9 and 37,
+the two irregular rows already isolated and decoded negatively in Phase 305.
+Every one of 500 patch-position controls spans exactly five subpixel rows and
+three columns, support area **15**; empirical compactness
+**p=1/501=0.001996**. Controls also have a much larger mean error count
+(48.582, range 10..77), corroborating Phase 360's positional fit.
+
+The three center-interaction values yield respectively **198, 210, and 213**
+predicted `#FAFAFA` pixels while leaving the complete observed/perimeter score
+identically 773/784. Thus even a single simple unobservable interaction changes
+the continuation. More extreme values could change it further; these three are
+sufficient to prove ambiguity.
+
+**Disposition:** **structural-only positive** that the residual is a highly
+compact, position-locked irregular-row correction, strengthening the patterned
+renderer/atlas account. **Negative for center identifiability:** Phase 360's
+210-pixel visualization is one defensible minimal-model counterfactual, not a
+recoverable hidden layer and not a licensed decode substrate. The eleven-error
+stream is a model-selected subset of rows 9/37, whose complete bitstrings,
+reversals, concatenations, difference mask, and differing positions were
+already closed by Phase 305; rerunning generic text/passphrase mappings on this
+short derivative would add selection freedom rather than evidence.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** narrows Phase 360's “constrained but counterfactual”
+language: the additive model is predictive on the observed perimeter, but the
+missing center is formally underdetermined unless center-only interactions are
+forbidden without source evidence. Executes Phase 360's proposed residual test
+without reopening Phase 305's negative irregular-row decoder family.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_residual_identifiability_audit.py`
+(pinned signed residual, deterministic compactness controls, three exact center
+alternatives, self-tests); visualization
+`doc/img/gsmg_qr_fafafa_phase361_residual_and_ambiguity.png`.
+
+**Reopen/next condition:** an evidenced generator or asset that independently
+forbids center interactions and selects one continuation; or an independently
+specified consumer for the eleven signed errors. Without that evidence, move
+to all-six-variant provenance/fingerprint analysis rather than another decode.
+
+## Phase 362 -- all-six QR module-variant fingerprint: only known Stage-0 copies; no independent exact or small-asset palette-remapped source (2026-08-21)
+
+**Question:** Phase 358 fingerprinted only the canonical right-side 7x7 patch.
+Do any of the other five byte-distinct module variants occur independently in
+the repository, possibly with their exact grayscale classes palette-remapped?
+
+**Frozen inputs:** Phase 360's six exact 7x7 grayscale targets and hashes, with
+class counts spanning two, four, and five distinct intensities. All repository
+rasters outside `.git`, build targets, and caches receive byte-exact RGB search.
+The broader geometry test preserves the complete equality partition of every
+target: each source intensity class must map to one constant RGB color and all
+classes must remain pairwise distinct, under all eight dihedral transforms.
+
+**Bounded geometry scope:** exact arbitrary-palette verification is
+pathologically expensive on large uniform/two-color audit canvases because
+nearly every window survives a safe constancy prefilter. After profiling and
+before recording any corpus result, the palette-remap lane was frozen to flat,
+lossless rasters of at most **10,000 pixels**—the asset/icon-sized corpus. This
+covers 10 files; larger flat graphics remain in full byte-exact scope but not
+the new five-variant remap scope. Phase 358 already performed uncapped flat-
+graphic remap search for the canonical two-class variant. Self-tests plant and
+recover an arbitrary RGB remap for each two/four/five-class target and reject
+uniform windows.
+
+**Result:** **133 rasters** received all-six byte-exact search; 10 small flat/
+lossless rasters also received equality-partition remap search. **144 total
+hits in exactly three files**, distributed identically in each: variant counts
+`12,3,6,12,3,12`, totaling the expected 48 patches across three finder eyes.
+The files are `puzzle.png`, byte-identical
+`doc/img/gsmg_puzzle_stage1.png`, and the later derived
+`doc/img/gsmg_puzzle_stage1_383838_highlighted_red.png`, which preserves the
+ring bytes. Every hit is byte-exact and in its source orientation. **Zero
+independent files and zero small-asset palette-remapped hits.**
+
+**Disposition:** **provenance-only negative**. The full six-variant atlas does
+not exist elsewhere byte-for-byte in the available raster corpus, and no
+asset-sized exact palette remap is present. This strengthens the view that the
+variants belong to the Stage-0 finder rendering rather than a separately
+tracked small sprite, but it neither identifies the generator nor closes
+palette-remapped occurrences embedded in larger flat rasters.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** executes Phase 358's scope-correction continuation for
+all six exact variants. Phase 358 remains the stronger uncapped palette-remap
+negative for the canonical variant; Phase 362 supplies repository-wide byte-
+exact closure for the other five and a disclosed small-asset remap pilot.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_six_variant_fingerprint_audit.py`
+(six pinned targets, planted remaps for every class cardinality, exact source
+counts, uniform negatives, disclosed geometry cap).
+
+**Reopen/next condition:** a genuinely new historical/source bundle, or an
+optimized equality-partition engine capable of completing the five-variant
+large-flat-raster remap lane without changing its exact definition. Repeating
+byte-exact search over the unchanged 133-raster corpus is closed.
+
+## Phase 363 -- QR-eye PNG scanline provenance: identical pixels precede whole-image filtering; exporter family narrowed but stamping/drawing remains indistinguishable (2026-08-21)
+
+**Question:** can the PNG IDAT/filter context distinguish a copied QR-eye
+raster asset from procedurally drawn identical eyes, or identify the final
+exporter that produced the `#FAFAFA` texture?
+
+**Prior scope:** Phases 73 and 202 already pin the PNG CRCs, chunks, IHDR,
+unfiltered RGBA samples, full filter histogram, and lone filter-0 row. This
+phase does not reinterpret that anomaly. It adds only QR-box filtered-byte
+comparisons, comparison with the separately exported 350x350 rabbit asset,
+and local encoder calibration.
+
+**Frozen inputs/method:** parse the pinned Stage-0 PNG's single IDAT stream and
+compare the raw pre-unfilter bytes for the three complete 49x49 eye boxes. For
+the horizontal pair, compare both the complete 196-byte row segment and the
+segment after its first RGBA pixel, because PNG Sub filtering depends on the
+pixel immediately left of the box. For vertical comparisons, record global
+scanline filter equality. Separately compare chunk order, zlib header, and
+filter families with pinned `gsmg_rabbit_hint.png`. Finally re-encode the exact
+Stage-0 RGBA pixels through 20 Pillow variants (compression levels 0--9,
+optimize off/on) and 50 OpenCV variants (levels 0--9 across default, filtered,
+Huffman-only, RLE, and fixed strategies): 70 frozen local outputs.
+
+**Result, source profile:** Stage-0 is 29,931 bytes with chunk sequence
+`IHDR,sRGB,gAMA,pHYs,IDAT,IEND`, one 29,824-byte IDAT payload, zlib header
+`785e`, and filters `{None:1, Sub:91, Up:1464}`—no Average or Paeth. The rabbit
+asset has the identical chunk sequence and zlib header and likewise uses only
+Sub/Up (`{Sub:14, Up:336}`), consistent with a shared final export pipeline.
+
+**Result, three eyes:** top-left versus top-right has 43/49 completely
+identical filtered rows and **49/49 identical after excluding the first RGBA
+pixel**; all filter choices match. The six complete-row differences are
+exactly the Sub-filter boundary dependency on pixels outside the eye. Top-left
+versus bottom-left has **48/49 completely identical filtered rows**. Its sole
+difference is eye-relative row 14: global rows 1303/1485 use filters Up/Sub,
+respectively, so the whole filtered representation changes even though the
+decoded eye pixels remain identical. Top-right versus bottom-left behaves as
+the combination of those two boundary effects. Thus the eyes were present as
+identical pixels before final whole-image filtering; their encoded byte
+contexts are not independent embedded/pre-filtered objects.
+
+**Result, local writers:** **0/70 byte-exact and 0/70 filter-sequence-exact**
+matches. Every best local result differs on 92 scanlines and uses
+`{None:1, Sub:47, Up:1416, Paeth:92}`. Compression level changes IDAT size and
+zlib header but not this filter-selection mismatch. The source exporter is not
+reproduced by this Pillow/OpenCV matrix; the shared rabbit profile remains an
+exporter-family fingerprint, not a tool identification.
+
+**Disposition:** **provenance-only partial**. PNG evidence closes the idea that
+each finder eye survives as a separately embedded or prefiltered byte block.
+It supports one final whole-image export after all repeated pixels were already
+composed. PNG filtering and DEFLATE cannot distinguish whether those pixels
+were earlier stamped from an asset, cloned, or generated procedurally, so B3
+does not decide the patterned-fill mechanism and supplies no decode.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** executes B3 from the full-mask brainstorm while
+respecting Phases 73/202. It narrows Phase 362's missing-source result to
+“repetition exists in the composed pixel plane, source operation unknown,” not
+“separate sprite disproved.”
+
+**Artifacts:** `tools/gsmg/qr_fafafa_png_scanline_provenance_audit.py`
+(pinned source/rabbit profiles, exact eye-pair filtered-byte results, bounded
+70-variant local writer calibration, deterministic self-tests).
+
+**Reopen/next condition:** a historical source/export environment or an
+independently evidenced encoder candidate reproducing the exact filter/chunk
+profile. More DEFLATE back-reference interpretation cannot recover the earlier
+drawing operation from the final raster.
+
+## Phase 364 -- QR light-gray compositing/dither inversion: low-order coverage and standard Bayer/error diffusion cannot reproduce the six-variant atlas (2026-08-21)
+
+**Question:** can the observed light grays and 7x7 `#FAFAFA` teeth be ordinary
+coverage/opacity levels or spatial dithering of one flat near-white tone,
+rather than an explicit patterned primitive?
+
+**Frozen inputs:** all grayscale values in the sixteen white-ring modules are
+`234,236,250,252,255`; the binary target remains exact equality to 250 at all
+784 module sites. Three mechanism families were fixed: (1) black-over-white
+straight-alpha coverage from equal-area binary N×N samples, N=2..32; (2)
+recursive Bayer matrices sizes 2/4/8/16 under every unique dihedral transform,
+phase, threshold, and polarity, evaluated both in global finder coordinates
+and with phase reset inside every QR module; (3) constant-tone Floyd–Steinberg
+and Atkinson diffusion, raster and serpentine, tones 250.25..254.75 by 0.25,
+with a fixed 16×16 central crop-phase window. An arbitrary learned 7x7 matrix
+is excluded because it would restate the observed module tile by construction.
+
+**Coverage result:** under `round(255*(1-k/N²))`, no 2×2 through 15×15 binary
+coverage grid reproduces all five levels. The best smaller grid is 12×12 and
+still maps 252 to 253. The first exact square grid is **16×16**, with coverage
+numerators `21,19,5,3,0` over 256. Those are simply the luminance deficits from
+white and have the same effective resolution as an ordinary 8-bit alpha
+channel. Because the stored PNG is fully opaque (Phase 202), this is a possible
+compositing history but not independently recovered alpha data; every 8-bit
+gray admits essentially the same re-expression.
+
+**Ordered-dither result:** each coordinate model receives **1,113,024** Bayer
+candidates; **zero exact matches**. The best global model has MCC 0.24534 and
+495/784 exact bits, predicting only 136 dark sites. The more generous module-
+reset model reaches MCC 0.46352 and 557/784 exact bits, still **227 errors** and
+only 128 predicted dark sites versus the real 345. This is far below the
+Phase-356 shared-module model (751/784) and Phase-360 position model (773/784).
+
+**Error-diffusion result:** **19,456** Floyd–Steinberg/Atkinson candidates,
+zero exact. Best is serpentine Floyd–Steinberg at tone 253.75 and phase
+`(25,25)`, MCC 0.17288, 474/784 exact bits (**310 errors**) and 181 dark sites.
+
+**Disposition:** **rejected** for low-order binary coverage and the declared
+standard flat-tone Bayer/error-diffusion families. The pattern is not a normal
+ordered/error-diffused rendering of one constant near-white tone. A native
+8-bit opacity texture, custom 7x7 threshold matrix, shader, or other explicit
+position-dependent postprocess remains mathematically possible—but each is
+already a patterned primitive, not the mundane flat-fill explanation tested
+here. No decoding alphabet or hidden alpha channel is recovered.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** executes the compositing/dither continuation after
+Phases 359/363. Phase 359 rejected ordinary constant-fill rasterization; this
+phase also rejects standard spatial quantization applied to a constant light
+tone. It does not contradict the six-patch atlas or claim every possible
+custom filter has been tested.
+
+**Artifacts:** `tools/gsmg/qr_fafafa_compositing_dither_inversion_audit.py`
+(pinned palette and source, exact coverage-grid search, exhaustive declared
+Bayer family, bounded deterministic diffusion family, planted Bayer self-test,
+exact best-result assertions).
+
+**Reopen/next condition:** an evidenced custom dither/opacity asset or renderer
+whose own matrix/filter is specified independently of these pixels. Learning a
+7x7 threshold matrix directly from the target is not a reopen because it adds
+no provenance or decode.

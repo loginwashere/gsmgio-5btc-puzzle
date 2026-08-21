@@ -45,6 +45,7 @@ idea inside it is still open; read each file's own per-item status.
 | 2026-08-18 | [Two Sloppy Days x Creator Background Profile Brainstorm](2026-08-18%20-%20Two%20Sloppy%20Days%20x%20Creator%20Background%20Profile%20Brainstorm.md) | live |
 | 2026-08-20 | [Creative Brute-Force Coverage Expansion](2026-08-20%20-%20Creative%20Brute-Force%20Coverage%20Expansion.md) | live |
 | 2026-08-20 | [Post-Phase-340 Future Search Portfolio](2026-08-20%20-%20Post-Phase-340%20Future%20Search%20Portfolio.md) | live |
+| 2026-08-21 | [QR FAFAFA Full-Mask Pattern Identification Brainstorm](2026-08-21%20-%20QR%20FAFAFA%20Full-Mask%20Pattern%20Identification%20Brainstorm.md) | live |
 
 `Templates/` holds the two starting-point templates (`TEMPLATE - Idea.md`,
 `TEMPLATE - Session Hub.md`) referenced above; they are not brainstorm

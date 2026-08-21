@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="620" viewBox="0 0 560 620">
+  <rect width="560" height="620" fill="#202124"/>
+  <text x="280" y="45" fill="#ffffff" font-family="monospace" font-size="24" text-anchor="middle">Canonical 7×7 module tile</text>
+  <text x="280" y="76" fill="#c8c8c8" font-family="monospace" font-size="16" text-anchor="middle">outlined cells = #FAFAFA · blank cells = #FFFFFF</text>
+  <g transform="translate(70 110)">
+    <rect width="420" height="420" fill="#ffffff"/>
+    <!-- #FAFAFA cells: 0000000 / 1111111 / 0110111 / 0100010 / 0000000 / 1111111 / 0100010 -->
+    <g fill="#fafafa" stroke="#00a651" stroke-width="4">
+      <rect x="0" y="60" width="60" height="60"/><rect x="60" y="60" width="60" height="60"/><rect x="120" y="60" width="60" height="60"/><rect x="180" y="60" width="60" height="60"/><rect x="240" y="60" width="60" height="60"/><rect x="300" y="60" width="60" height="60"/><rect x="360" y="60" width="60" height="60"/>
+      <rect x="60" y="120" width="60" height="60"/><rect x="120" y="120" width="60" height="60"/><rect x="240" y="120" width="60" height="60"/><rect x="300" y="120" width="60" height="60"/><rect x="360" y="120" width="60" height="60"/>
+      <rect x="60" y="180" width="60" height="60"/><rect x="300" y="180" width="60" height="60"/>
+      <rect x="0" y="300" width="60" height="60"/><rect x="60" y="300" width="60" height="60"/><rect x="120" y="300" width="60" height="60"/><rect x="180" y="300" width="60" height="60"/><rect x="240" y="300" width="60" height="60"/><rect x="300" y="300" width="60" height="60"/><rect x="360" y="300" width="60" height="60"/>
+      <rect x="60" y="360" width="60" height="60"/><rect x="300" y="360" width="60" height="60"/>
+    </g>
+    <g fill="none" stroke="#b8b8b8" stroke-width="1">
+      <path d="M60 0V420M120 0V420M180 0V420M240 0V420M300 0V420M360 0V420M0 60H420M0 120H420M0 180H420M0 240H420M0 300H420M0 360H420"/>
+      <rect width="420" height="420" stroke-width="2"/>
+    </g>
+  </g>
+  <text x="280" y="570" fill="#ffffff" font-family="monospace" font-size="20" text-anchor="middle">0000000 / 1111111 / 0110111 / 0100010</text>
+  <text x="280" y="598" fill="#ffffff" font-family="monospace" font-size="20" text-anchor="middle">0000000 / 1111111 / 0100010</text>
+</svg>
