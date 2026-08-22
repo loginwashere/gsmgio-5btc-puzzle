@@ -1,0 +1,1340 @@
+{
+  "extraction_rule": "Every message in the export where from_id == 'user9815232' (the creator account, confirmed consistent elsewhere in this freeze) and reply_to_message_id is not null, plus that parent message's from_id -- a fully mechanical rule with no manual topic curation. Sorted by id. This is the FULL universe; Step 2 applies a preregistered relevance rule to select the subset that bears on topology questions -- that selection does not happen here.",
+  "source_export_sha256": "09fa513506ded392d56894424f6e019297781d8d669c27c3c0e9f62f3a31a084",
+  "row_count": 148,
+  "structure_sha256": "8fc0aa79cc4f8769228c3a67f699881b223d663790fbe4f8ba181f7be538ad43",
+  "rows": [
+    {
+      "id": 850,
+      "date": "2019-05-14T17:49:49",
+      "edited": null,
+      "reply_to_message_id": 848,
+      "parent_from_id": "user274980096",
+      "parent_exists_in_export": true,
+      "text_sha256": "c7f194a41901098bc021a6386c1b9c920ee582b5949eaec892a37e773f39e8bd"
+    },
+    {
+      "id": 851,
+      "date": "2019-05-14T17:51:40",
+      "edited": "2025-05-01T01:51:31",
+      "reply_to_message_id": 849,
+      "parent_from_id": null,
+      "parent_exists_in_export": false,
+      "text_sha256": "33bfc8bb9a198c5ebe2117f8b06c42fb10ebf49ee0b4c059aff131237f84946e"
+    },
+    {
+      "id": 855,
+      "date": "2019-05-14T17:53:59",
+      "edited": null,
+      "reply_to_message_id": 853,
+      "parent_from_id": "user422483354",
+      "parent_exists_in_export": true,
+      "text_sha256": "72edd6643519290fdc9ff928e8b3dd01405f722ba16032cd180062ddae5351c5"
+    },
+    {
+      "id": 859,
+      "date": "2019-05-14T18:01:11",
+      "edited": "2025-05-01T01:52:05",
+      "reply_to_message_id": 857,
+      "parent_from_id": "user750026879",
+      "parent_exists_in_export": true,
+      "text_sha256": "d76cd60072bea4fc8a95bb68a22df5e8d834166605b1bafb2742a5892060b5e5"
+    },
+    {
+      "id": 950,
+      "date": "2019-05-27T03:25:10",
+      "edited": null,
+      "reply_to_message_id": 949,
+      "parent_from_id": null,
+      "parent_exists_in_export": false,
+      "text_sha256": "88e938f0b3ca5b1a03ee73952a1d97337c02792c6d30c7fb96c669ed451b60f0"
+    },
+    {
+      "id": 961,
+      "date": "2019-05-28T19:45:40",
+      "edited": null,
+      "reply_to_message_id": 958,
+      "parent_from_id": "user815412073",
+      "parent_exists_in_export": true,
+      "text_sha256": "7441c86c7a105000efc933cf1c2443562fd77c33401b9e91b2b253ced5b05d79"
+    },
+    {
+      "id": 988,
+      "date": "2019-05-31T18:27:49",
+      "edited": null,
+      "reply_to_message_id": 986,
+      "parent_from_id": "user166247483",
+      "parent_exists_in_export": true,
+      "text_sha256": "60f126153e89eb190abb0f7940d37be562ec2e7b3b71bfd96477c3d9308b652a"
+    },
+    {
+      "id": 990,
+      "date": "2019-05-31T18:28:01",
+      "edited": null,
+      "reply_to_message_id": 987,
+      "parent_from_id": "user507197982",
+      "parent_exists_in_export": true,
+      "text_sha256": "600db74b3ef144331b1148f3d6344467491998b3562c7b61fe6d92fd8d2e40c1"
+    },
+    {
+      "id": 1461,
+      "date": "2019-09-23T01:55:01",
+      "edited": "2024-02-26T16:37:49",
+      "reply_to_message_id": 1460,
+      "parent_from_id": "user884485205",
+      "parent_exists_in_export": true,
+      "text_sha256": "c46a5d798c73f8a3b6d610dc3c29efd1713ec2df9c4e6766473dd45dcd8280d2"
+    },
+    {
+      "id": 1638,
+      "date": "2019-12-31T12:30:23",
+      "edited": null,
+      "reply_to_message_id": 1632,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "dec64f6e9151365bfa373e73888d4a4ce87ebf99e56ce085ca6d1b2f7990dceb"
+    },
+    {
+      "id": 1680,
+      "date": "2020-01-12T22:52:32",
+      "edited": null,
+      "reply_to_message_id": 1659,
+      "parent_from_id": "user9815232",
+      "parent_exists_in_export": true,
+      "text_sha256": "b0eef39cc90255c3e9cef355413456aa55cc9996e37fc9bc4f987f66e6722bd9"
+    },
+    {
+      "id": 1726,
+      "date": "2020-01-27T17:21:35",
+      "edited": null,
+      "reply_to_message_id": 1724,
+      "parent_from_id": "user969034109",
+      "parent_exists_in_export": true,
+      "text_sha256": "765247253124b25ccf3d9f2597b6f0014cbccfd99e331fd58027e2136c54c45a"
+    },
+    {
+      "id": 1895,
+      "date": "2020-02-25T14:45:53",
+      "edited": "2025-09-27T03:03:01",
+      "reply_to_message_id": 1888,
+      "parent_from_id": null,
+      "parent_exists_in_export": false,
+      "text_sha256": "b4ee2fe2c39268c490ee81bc39b01f8b2308d3355b8b07ad8116478d35846749"
+    },
+    {
+      "id": 2002,
+      "date": "2020-02-25T20:04:46",
+      "edited": null,
+      "reply_to_message_id": 1987,
+      "parent_from_id": "user252821338",
+      "parent_exists_in_export": true,
+      "text_sha256": "8cb3e30cfc13f66241e4fe915d2693e8939dde8d2c4950dda81a842e8a3891a9"
+    },
+    {
+      "id": 2017,
+      "date": "2020-02-25T20:09:10",
+      "edited": "2025-01-31T19:32:26",
+      "reply_to_message_id": 2016,
+      "parent_from_id": "user809473266",
+      "parent_exists_in_export": true,
+      "text_sha256": "6fe117415a52e7912e75978d8edef7b85ac37d31e760e9db84c3a6838b937ca4"
+    },
+    {
+      "id": 2023,
+      "date": "2020-02-25T20:10:30",
+      "edited": null,
+      "reply_to_message_id": 2021,
+      "parent_from_id": "user1084918156",
+      "parent_exists_in_export": true,
+      "text_sha256": "0da19f2c78f52bb5b48e1f6cb68417428654b068486d97a8e8f735ba8cc78de9"
+    },
+    {
+      "id": 2067,
+      "date": "2020-02-25T20:38:52",
+      "edited": "2025-01-31T19:38:08",
+      "reply_to_message_id": 2051,
+      "parent_from_id": "user809473266",
+      "parent_exists_in_export": true,
+      "text_sha256": "b3d2485062c12fa0dcd94fc00dcc88702ff754e64045414c3bf3953ff678c4e5"
+    },
+    {
+      "id": 2905,
+      "date": "2020-03-25T02:19:39",
+      "edited": "2026-05-27T19:35:31",
+      "reply_to_message_id": 2899,
+      "parent_from_id": "user750026879",
+      "parent_exists_in_export": true,
+      "text_sha256": "fac8312a4cebce21ad1310c9ac038c67a73700c5d8de4d1895a2f6b176234f16"
+    },
+    {
+      "id": 2910,
+      "date": "2020-03-25T03:02:42",
+      "edited": null,
+      "reply_to_message_id": 2906,
+      "parent_from_id": "user952048031",
+      "parent_exists_in_export": true,
+      "text_sha256": "8528a892a22dde64134478d211f468732924f38a9a81beadbaf2c35ae3bb1831"
+    },
+    {
+      "id": 2918,
+      "date": "2020-03-25T03:22:40",
+      "edited": null,
+      "reply_to_message_id": 2911,
+      "parent_from_id": "user231061724",
+      "parent_exists_in_export": true,
+      "text_sha256": "1967efe73c87316dbab7ca8067bada2d349f8eae7f7140f2821ff7e86d34de81"
+    },
+    {
+      "id": 3365,
+      "date": "2020-04-08T23:12:57",
+      "edited": null,
+      "reply_to_message_id": 3350,
+      "parent_from_id": "user713273879",
+      "parent_exists_in_export": true,
+      "text_sha256": "7baa76b0baa47a8f422cdeccd81fe7bc0084d410a4b51bedd1f0332bfd0ca906"
+    },
+    {
+      "id": 3395,
+      "date": "2020-04-08T23:39:11",
+      "edited": null,
+      "reply_to_message_id": 3394,
+      "parent_from_id": "user952048031",
+      "parent_exists_in_export": true,
+      "text_sha256": "7868f3fe8c07dab2d041ba13584bd8c3414bfe76d1427c5ea1c2f02edf4f2d8d"
+    },
+    {
+      "id": 3615,
+      "date": "2020-04-29T20:18:49",
+      "edited": null,
+      "reply_to_message_id": 3613,
+      "parent_from_id": "user633059140",
+      "parent_exists_in_export": true,
+      "text_sha256": "b0eef39cc90255c3e9cef355413456aa55cc9996e37fc9bc4f987f66e6722bd9"
+    },
+    {
+      "id": 3876,
+      "date": "2020-05-11T20:07:48",
+      "edited": null,
+      "reply_to_message_id": 3863,
+      "parent_from_id": "user293334370",
+      "parent_exists_in_export": true,
+      "text_sha256": "adccc1ce9f8471b0a3bc6a504a5dbf0cd7a8edb104d0195b5e2f6fe5e6b2aff2"
+    },
+    {
+      "id": 3902,
+      "date": "2020-05-11T22:26:40",
+      "edited": null,
+      "reply_to_message_id": 3901,
+      "parent_from_id": "user633059140",
+      "parent_exists_in_export": true,
+      "text_sha256": "60067d04a1ad73fe904a6ecc8f79de8481f6afcedafcee3e6505425e0ed4e3ee"
+    },
+    {
+      "id": 4094,
+      "date": "2020-05-21T01:54:11",
+      "edited": null,
+      "reply_to_message_id": 4076,
+      "parent_from_id": "user1027386051",
+      "parent_exists_in_export": true,
+      "text_sha256": "130deb9847838292ff1a52b6c5d57ce4a682e1591c464312f93b83a741a11fd0"
+    },
+    {
+      "id": 4096,
+      "date": "2020-05-21T02:36:55",
+      "edited": "2025-12-23T21:43:42",
+      "reply_to_message_id": 1710,
+      "parent_from_id": "user9815232",
+      "parent_exists_in_export": true,
+      "text_sha256": "e4718145e510296f279c9c61fb61ed250261551b38864df5c17add8acc43d59a"
+    },
+    {
+      "id": 4307,
+      "date": "2020-05-23T22:51:51",
+      "edited": null,
+      "reply_to_message_id": 3863,
+      "parent_from_id": "user293334370",
+      "parent_exists_in_export": true,
+      "text_sha256": "e70dff696b85a16b2706dece597c0593111e71a6f0d6f5a8850ce261d39686e0"
+    },
+    {
+      "id": 4548,
+      "date": "2020-07-01T02:29:05",
+      "edited": "2024-04-08T02:08:42",
+      "reply_to_message_id": 4545,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "b0eef39cc90255c3e9cef355413456aa55cc9996e37fc9bc4f987f66e6722bd9"
+    },
+    {
+      "id": 4912,
+      "date": "2020-10-27T10:58:39",
+      "edited": "2026-05-04T16:19:05",
+      "reply_to_message_id": 4901,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "30ef197d308c8faef39264dcfd1d91731c790ad214a4d4c9feafa24fc9c1e115"
+    },
+    {
+      "id": 5370,
+      "date": "2021-01-07T21:59:38",
+      "edited": null,
+      "reply_to_message_id": 5369,
+      "parent_from_id": "user231061724",
+      "parent_exists_in_export": true,
+      "text_sha256": "38e96aa9b363bcb07da4393ec19df4d4c7b65ab3634aaa18d7541ad05f602f5f"
+    },
+    {
+      "id": 5375,
+      "date": "2021-01-07T23:58:17",
+      "edited": null,
+      "reply_to_message_id": 5372,
+      "parent_from_id": "user871228632",
+      "parent_exists_in_export": true,
+      "text_sha256": "167e61612fbfd0f7ff55f15c409b29bb43a2b478fc08bc1be724c890de71c674"
+    },
+    {
+      "id": 5672,
+      "date": "2021-01-18T16:41:23",
+      "edited": "2025-09-07T22:16:38",
+      "reply_to_message_id": 5668,
+      "parent_from_id": "user689225742",
+      "parent_exists_in_export": true,
+      "text_sha256": "219723cbc5609cbd8a24dd689186ccff543164440c5a313dcc66d0d8136fca16"
+    },
+    {
+      "id": 5717,
+      "date": "2021-01-21T13:35:49",
+      "edited": "2025-02-02T03:18:34",
+      "reply_to_message_id": 5715,
+      "parent_from_id": null,
+      "parent_exists_in_export": false,
+      "text_sha256": "35ed2a9a9afc52611a23e9ac6ec20ccb7a0803e5312e370f870e54598225c2eb"
+    },
+    {
+      "id": 5960,
+      "date": "2021-03-01T13:33:17",
+      "edited": null,
+      "reply_to_message_id": 5952,
+      "parent_from_id": "user394589394",
+      "parent_exists_in_export": true,
+      "text_sha256": "e35945979c32af2650619a263854b3b555d1660ee021e907b5b6c74905f2f607"
+    },
+    {
+      "id": 6243,
+      "date": "2021-03-05T15:14:28",
+      "edited": "2025-07-10T16:18:11",
+      "reply_to_message_id": 6201,
+      "parent_from_id": "user690769341",
+      "parent_exists_in_export": true,
+      "text_sha256": "b52ed83e78caa3165ac56ab3d999879b1d269e1121e015a68ade1c0d609e13b5"
+    },
+    {
+      "id": 6495,
+      "date": "2021-03-14T11:25:14",
+      "edited": null,
+      "reply_to_message_id": 6493,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "7bf1556708efd0d8af6050f592ae25a5b6fdd4f7d15ae3ed6deb43b5a26c6ff8"
+    },
+    {
+      "id": 6497,
+      "date": "2021-03-14T11:45:01",
+      "edited": "2025-06-26T11:42:30",
+      "reply_to_message_id": 6496,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "fcf24bee5043aaa776e11daf3d64f50587f573c0c311b404acfb630e54e5bda5"
+    },
+    {
+      "id": 6509,
+      "date": "2021-03-14T17:19:29",
+      "edited": null,
+      "reply_to_message_id": 6508,
+      "parent_from_id": "user419791047",
+      "parent_exists_in_export": true,
+      "text_sha256": "4d500c448f2d17194ad0f24a123a58d342b98726d5702c5f66387885ee84fb63"
+    },
+    {
+      "id": 6767,
+      "date": "2021-03-25T00:19:43",
+      "edited": null,
+      "reply_to_message_id": 6766,
+      "parent_from_id": "user809473266",
+      "parent_exists_in_export": true,
+      "text_sha256": "2c3c1f8c63fbeb30ced9d27873a901e914e0a0c5a13dd1b8cb46ba014a24229b"
+    },
+    {
+      "id": 6846,
+      "date": "2021-03-27T15:37:10",
+      "edited": null,
+      "reply_to_message_id": 6845,
+      "parent_from_id": "user340325111",
+      "parent_exists_in_export": true,
+      "text_sha256": "c8ea9b8b1e80c530e5d4dac0b45efad902323cc049270c67b1f8a2696d9c16a3"
+    },
+    {
+      "id": 6895,
+      "date": "2021-04-01T11:34:22",
+      "edited": null,
+      "reply_to_message_id": 6891,
+      "parent_from_id": "user633059140",
+      "parent_exists_in_export": true,
+      "text_sha256": "54e95569ee31f1737cdee04486198cd042a4c543907219bd0d76202282cef58f"
+    },
+    {
+      "id": 6944,
+      "date": "2021-04-01T17:06:39",
+      "edited": null,
+      "reply_to_message_id": 6943,
+      "parent_from_id": "user809473266",
+      "parent_exists_in_export": true,
+      "text_sha256": "b0eef39cc90255c3e9cef355413456aa55cc9996e37fc9bc4f987f66e6722bd9"
+    },
+    {
+      "id": 7028,
+      "date": "2021-04-02T23:18:22",
+      "edited": null,
+      "reply_to_message_id": 7025,
+      "parent_from_id": "user1760549311",
+      "parent_exists_in_export": true,
+      "text_sha256": "047e0525369e69c355e5317aa41cb608042e39e1e880280532c384b49e7a9180"
+    },
+    {
+      "id": 7060,
+      "date": "2021-04-03T18:51:32",
+      "edited": null,
+      "reply_to_message_id": 7057,
+      "parent_from_id": "user1465192424",
+      "parent_exists_in_export": true,
+      "text_sha256": "20973426364aefcf60bda4d4644b7da8195357796f1a7ef9688fbbd5cb06db5e"
+    },
+    {
+      "id": 7153,
+      "date": "2021-04-06T17:09:36",
+      "edited": null,
+      "reply_to_message_id": 7142,
+      "parent_from_id": null,
+      "parent_exists_in_export": false,
+      "text_sha256": "e10ccdf1aa994fa311724ad8ca72b1a6952c283f8316fad6605344e625b75be2"
+    },
+    {
+      "id": 7224,
+      "date": "2021-04-09T22:46:38",
+      "edited": null,
+      "reply_to_message_id": 7223,
+      "parent_from_id": "user293334370",
+      "parent_exists_in_export": true,
+      "text_sha256": "1d456424c3dcb95a3a0ca260207db2d551a410d9db9742bd8e4df3766e84a766"
+    },
+    {
+      "id": 7385,
+      "date": "2021-04-16T14:20:09",
+      "edited": null,
+      "reply_to_message_id": 7383,
+      "parent_from_id": "user1465192424",
+      "parent_exists_in_export": true,
+      "text_sha256": "83148dc67ea287890b586af3c5440acbb30d38c7f3d8a710ca082f5768a67ba6"
+    },
+    {
+      "id": 7396,
+      "date": "2021-04-16T14:33:32",
+      "edited": null,
+      "reply_to_message_id": 7389,
+      "parent_from_id": null,
+      "parent_exists_in_export": false,
+      "text_sha256": "e8c2d9b71a01192e9200197b78cd15894fad6d388fcccf4efcaabb9fa3a48b91"
+    },
+    {
+      "id": 7418,
+      "date": "2021-04-16T15:08:24",
+      "edited": "2025-01-24T11:09:51",
+      "reply_to_message_id": 7416,
+      "parent_from_id": "user737261554",
+      "parent_exists_in_export": true,
+      "text_sha256": "3370eb4d3903ec3b373ec332e2857877f9b54bfadf33c06c3c4a73fdd1644bc1"
+    },
+    {
+      "id": 7520,
+      "date": "2021-04-18T20:33:41",
+      "edited": null,
+      "reply_to_message_id": 7517,
+      "parent_from_id": "user1465192424",
+      "parent_exists_in_export": true,
+      "text_sha256": "a5b372a03da930db43ad1bb62d7009f5910b76bb71bd6d9987e157ed816fd3bd"
+    },
+    {
+      "id": 7529,
+      "date": "2021-04-18T21:24:13",
+      "edited": "2026-07-22T17:09:58",
+      "reply_to_message_id": 7528,
+      "parent_from_id": "user1783233127",
+      "parent_exists_in_export": true,
+      "text_sha256": "291e0242f040eb99a21b64770eff5fe4a2bfbf281231c2b80c2e069bb49bc3e2"
+    },
+    {
+      "id": 7830,
+      "date": "2021-08-10T23:51:12",
+      "edited": null,
+      "reply_to_message_id": 7826,
+      "parent_from_id": "user231061724",
+      "parent_exists_in_export": true,
+      "text_sha256": "e139038c14922baa0f5936853182bcce02b16cd9be7bd11f525feffd87175a71"
+    },
+    {
+      "id": 7832,
+      "date": "2021-08-11T13:55:52",
+      "edited": "2026-01-07T00:05:22",
+      "reply_to_message_id": 7831,
+      "parent_from_id": "user231061724",
+      "parent_exists_in_export": true,
+      "text_sha256": "fe2f75fb98a383040604e138773d0234ce3480dac5ce9c700aad6600e41f2412"
+    },
+    {
+      "id": 7889,
+      "date": "2021-09-24T12:37:18",
+      "edited": null,
+      "reply_to_message_id": 7888,
+      "parent_from_id": "user1483942636",
+      "parent_exists_in_export": true,
+      "text_sha256": "f893cf0160e840cd7f9c16a8880491456063f65513d082884514021aa0721e67"
+    },
+    {
+      "id": 7914,
+      "date": "2021-12-03T05:41:18",
+      "edited": null,
+      "reply_to_message_id": 7913,
+      "parent_from_id": "user750026879",
+      "parent_exists_in_export": true,
+      "text_sha256": "fec115dae7fbfc7137d8694d3ccbd978a2b2ea893244c64b09fb9aeb79a2cbcc"
+    },
+    {
+      "id": 7915,
+      "date": "2021-12-03T05:46:25",
+      "edited": null,
+      "reply_to_message_id": 7892,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "b5645f13db5450dd916d9d3375225beb9e69f23aa31f76822a68618ae36233ec"
+    },
+    {
+      "id": 8034,
+      "date": "2021-12-31T02:39:11",
+      "edited": null,
+      "reply_to_message_id": 8033,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "0ecb590386804b5ab3c33bbaaa4ad0552e39fdcec3400e3afdbae73e6ef138f9"
+    },
+    {
+      "id": 8036,
+      "date": "2021-12-31T02:42:43",
+      "edited": null,
+      "reply_to_message_id": 8035,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "531e8b01a08da8f239b80e7c042eefdd88cda5945a6fc28b22baabee214ddfd3"
+    },
+    {
+      "id": 8042,
+      "date": "2021-12-31T02:47:07",
+      "edited": "2026-05-19T09:46:06",
+      "reply_to_message_id": 8039,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "cd8f0476185dcb4fd6c13fadc1ca51c4f8d0f608bfd47acb69b79087573bf579"
+    },
+    {
+      "id": 8048,
+      "date": "2021-12-31T19:14:55",
+      "edited": null,
+      "reply_to_message_id": 8045,
+      "parent_from_id": "user952048031",
+      "parent_exists_in_export": true,
+      "text_sha256": "f6b1b67b8b33b4829be7b62f68a83edc2317c26e647c1a754c2aca4feeb82518"
+    },
+    {
+      "id": 8309,
+      "date": "2022-12-03T00:45:40",
+      "edited": null,
+      "reply_to_message_id": 8308,
+      "parent_from_id": "user690769341",
+      "parent_exists_in_export": true,
+      "text_sha256": "98c6db8e890066c328705c3603c61162a92f437f59fd9f1b5283d485a280a1a6"
+    },
+    {
+      "id": 8311,
+      "date": "2022-12-11T17:30:38",
+      "edited": null,
+      "reply_to_message_id": 8310,
+      "parent_from_id": "user925838121",
+      "parent_exists_in_export": true,
+      "text_sha256": "fd8872ae8a952f5e952e02e55bebe876b7c16c2af391cb3c4c9efec6be02092a"
+    },
+    {
+      "id": 8339,
+      "date": "2023-01-11T10:45:22",
+      "edited": "2025-02-05T00:06:43",
+      "reply_to_message_id": 8333,
+      "parent_from_id": "user786391896",
+      "parent_exists_in_export": true,
+      "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": 8353,
+      "date": "2023-01-12T13:08:02",
+      "edited": "2024-10-16T21:04:51",
+      "reply_to_message_id": 8350,
+      "parent_from_id": "user690769341",
+      "parent_exists_in_export": true,
+      "text_sha256": "cdfb7ec50d1cbcd059ce9820c9194d9ff4a98c07085cd44dc664322f70f346df"
+    },
+    {
+      "id": 8358,
+      "date": "2023-01-12T13:13:36",
+      "edited": null,
+      "reply_to_message_id": 8308,
+      "parent_from_id": "user690769341",
+      "parent_exists_in_export": true,
+      "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": 8364,
+      "date": "2023-01-12T18:05:16",
+      "edited": null,
+      "reply_to_message_id": 8361,
+      "parent_from_id": "user231061724",
+      "parent_exists_in_export": true,
+      "text_sha256": "1c0fe42d8908e151bfbfae62ca13213851df622ac6890306c17fdd9b39b47023"
+    },
+    {
+      "id": 8368,
+      "date": "2023-01-12T19:47:07",
+      "edited": "2024-04-17T17:15:15",
+      "reply_to_message_id": 8367,
+      "parent_from_id": "user690769341",
+      "parent_exists_in_export": true,
+      "text_sha256": "b0eef39cc90255c3e9cef355413456aa55cc9996e37fc9bc4f987f66e6722bd9"
+    },
+    {
+      "id": 8438,
+      "date": "2023-02-02T16:47:18",
+      "edited": null,
+      "reply_to_message_id": 8436,
+      "parent_from_id": "user925838121",
+      "parent_exists_in_export": true,
+      "text_sha256": "a0d4fef526370c54e906f387eada803a3cf2f91f71fd734c68a7fc4292f7df0c"
+    },
+    {
+      "id": 8483,
+      "date": "2023-04-08T05:53:03",
+      "edited": "2026-02-16T19:24:25",
+      "reply_to_message_id": 8448,
+      "parent_from_id": "user419791047",
+      "parent_exists_in_export": true,
+      "text_sha256": "0351c0c22a530cc956cdb3af4b79bd8ca1448d6de0f0f01280e0fa57ddcaaf3d"
+    },
+    {
+      "id": 8516,
+      "date": "2023-05-02T22:12:43",
+      "edited": null,
+      "reply_to_message_id": 8515,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "06a55ac4ab8ea1c1c5350489cb7d0ccd891aeff2050072ecd73e5930a26d8484"
+    },
+    {
+      "id": 8608,
+      "date": "2023-06-12T15:31:49",
+      "edited": null,
+      "reply_to_message_id": 8607,
+      "parent_from_id": "user724453304",
+      "parent_exists_in_export": true,
+      "text_sha256": "5dfde67f1a15746d216a079c1530d1b0b266feb9d530a77eaab2898f41081e6c"
+    },
+    {
+      "id": 8773,
+      "date": "2023-08-03T22:50:23",
+      "edited": null,
+      "reply_to_message_id": 8771,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "8d7b3ce6f99c5acf213cfd6f533a9074cc32761e7d4927a54babdacc9bc91578"
+    },
+    {
+      "id": 8779,
+      "date": "2023-08-03T23:17:19",
+      "edited": "2025-06-22T14:12:00",
+      "reply_to_message_id": 8776,
+      "parent_from_id": "user6249502156",
+      "parent_exists_in_export": true,
+      "text_sha256": "5b721dad2bed8bf97a59d7167d45eb4bbf0566a79b21401b89911bd895dd7f1b"
+    },
+    {
+      "id": 8787,
+      "date": "2023-08-03T23:28:20",
+      "edited": "2023-10-31T17:57:45",
+      "reply_to_message_id": 8784,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "0b3accc3b55202806fa2c3d4dd3036624f57212072f36e14f04356304edb2101"
+    },
+    {
+      "id": 8790,
+      "date": "2023-08-03T23:30:14",
+      "edited": null,
+      "reply_to_message_id": 8788,
+      "parent_from_id": "user6057219919",
+      "parent_exists_in_export": true,
+      "text_sha256": "a1cf85f57119884464f53a4683233128dcd05672e2a32afc2fd2b5bbbc472e84"
+    },
+    {
+      "id": 8795,
+      "date": "2023-08-03T23:33:50",
+      "edited": null,
+      "reply_to_message_id": 8791,
+      "parent_from_id": "user6249502156",
+      "parent_exists_in_export": true,
+      "text_sha256": "d305e5389af3d01de2f5124a1023d9604335f5d9deb5264215e9593f2b1f6937"
+    },
+    {
+      "id": 9047,
+      "date": "2023-08-05T03:46:47",
+      "edited": null,
+      "reply_to_message_id": 8988,
+      "parent_from_id": null,
+      "parent_exists_in_export": false,
+      "text_sha256": "cbbe2201a5c99a4c3d4c4e74131a002ad6f537c31267597212307fd1032a85b7"
+    },
+    {
+      "id": 9572,
+      "date": "2023-08-06T13:55:01",
+      "edited": null,
+      "reply_to_message_id": 9570,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "dbab42484bafb203c9c609c483f8b02e85edb94a408ad3215d7ae50cdef5f5dc"
+    },
+    {
+      "id": 9577,
+      "date": "2023-08-06T13:56:34",
+      "edited": null,
+      "reply_to_message_id": 9575,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "307f67a4fa2d914fa87c144fe5a2614ef314e705f268957735a616ec6d2a8620"
+    },
+    {
+      "id": 9592,
+      "date": "2023-08-06T15:05:33",
+      "edited": "2024-10-26T11:32:36",
+      "reply_to_message_id": 9588,
+      "parent_from_id": "user6249502156",
+      "parent_exists_in_export": true,
+      "text_sha256": "11c3b03bfafa7e4561a47069d7aaa653138f6656ade25bd7f6f179617a5961d4"
+    },
+    {
+      "id": 9593,
+      "date": "2023-08-06T15:05:51",
+      "edited": null,
+      "reply_to_message_id": 9591,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "001bf3bb44739d579c4352f04645a2989cfa99feaae23c980547747e6d09af5b"
+    },
+    {
+      "id": 9601,
+      "date": "2023-08-06T15:13:30",
+      "edited": null,
+      "reply_to_message_id": 9598,
+      "parent_from_id": "user59168199",
+      "parent_exists_in_export": true,
+      "text_sha256": "e5f930baee0829247b50b2aa026149b934355bf38082ac5439fe7b74573c453b"
+    },
+    {
+      "id": 9607,
+      "date": "2023-08-06T15:19:07",
+      "edited": null,
+      "reply_to_message_id": 9605,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "31a72656e9fc4b6f117f4fe952af9270fd87a4c8fe90e1f1d295fbe714eba9ad"
+    },
+    {
+      "id": 9615,
+      "date": "2023-08-06T15:21:07",
+      "edited": null,
+      "reply_to_message_id": 9609,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "e3c5e3bef99e8ae2cf42fccab4bd03b65c0c2a8cad9c69713e409a623f5da4aa"
+    },
+    {
+      "id": 9616,
+      "date": "2023-08-06T15:21:37",
+      "edited": null,
+      "reply_to_message_id": 9613,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "98e68b659f3f43f54c880e80e58f0e9665f9e4aeb7dd2a218cf1c88871be36f6"
+    },
+    {
+      "id": 9621,
+      "date": "2023-08-06T15:43:54",
+      "edited": "2025-01-23T16:22:08",
+      "reply_to_message_id": 9616,
+      "parent_from_id": "user9815232",
+      "parent_exists_in_export": true,
+      "text_sha256": "68f18f69a0ab0df7f0842b122dcdb2feda62ab019d97027c32f257a985569152"
+    },
+    {
+      "id": 9627,
+      "date": "2023-08-06T15:49:59",
+      "edited": null,
+      "reply_to_message_id": 9626,
+      "parent_from_id": "user980067088",
+      "parent_exists_in_export": true,
+      "text_sha256": "21a849c7ceee78eb3965f36792aae5244d8df8dd515bc85daf42bbca993974e9"
+    },
+    {
+      "id": 9636,
+      "date": "2023-08-06T20:23:44",
+      "edited": null,
+      "reply_to_message_id": 9634,
+      "parent_from_id": "user1239434587",
+      "parent_exists_in_export": true,
+      "text_sha256": "876b1e5c73f68e10f8e4cc7f40ac0337027091c6dc7e68be3125e9c5c1ad2954"
+    },
+    {
+      "id": 10423,
+      "date": "2023-08-18T16:24:12",
+      "edited": null,
+      "reply_to_message_id": 10398,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "c1f5a35250feda3588af6d5439a56ff3d7bd9b37d8b19ab6f7b2ca9bfb1b04a2"
+    },
+    {
+      "id": 11989,
+      "date": "2023-08-23T22:43:21",
+      "edited": null,
+      "reply_to_message_id": 11911,
+      "parent_from_id": "user5260693904",
+      "parent_exists_in_export": true,
+      "text_sha256": "58fdd4aac989f29f32dab57a84724deaa3fe0c5eab42242ee8fe49c23e60d273"
+    },
+    {
+      "id": 12653,
+      "date": "2023-08-29T21:06:07",
+      "edited": null,
+      "reply_to_message_id": 12580,
+      "parent_from_id": "user6057219919",
+      "parent_exists_in_export": true,
+      "text_sha256": "aca01a1a3a27d35c264a8104b0f2817aa31a8a29f8eec1e6cceddc6ac208c723"
+    },
+    {
+      "id": 15513,
+      "date": "2023-09-28T19:13:32",
+      "edited": null,
+      "reply_to_message_id": 15510,
+      "parent_from_id": "user5260693904",
+      "parent_exists_in_export": true,
+      "text_sha256": "d7b78e6a998f2aae808204bfe4033ed0ced2c1877b3f7ca62b489d41d4087e57"
+    },
+    {
+      "id": 15517,
+      "date": "2023-09-28T19:16:21",
+      "edited": null,
+      "reply_to_message_id": 15514,
+      "parent_from_id": "user5939972373",
+      "parent_exists_in_export": true,
+      "text_sha256": "e741c9d53f3a8e2f18de8e2b0b2fd259cd6b6ae82add97a71271e7fb5628da94"
+    },
+    {
+      "id": 20223,
+      "date": "2024-01-26T19:21:46",
+      "edited": null,
+      "reply_to_message_id": 20221,
+      "parent_from_id": "user6501279574",
+      "parent_exists_in_export": true,
+      "text_sha256": "5fbb8083afcff8a5e269063dfa93964812b9610bce7419b42eeb01c7b86c26bf"
+    },
+    {
+      "id": 20224,
+      "date": "2024-01-26T19:22:04",
+      "edited": null,
+      "reply_to_message_id": 20222,
+      "parent_from_id": "user6246033427",
+      "parent_exists_in_export": true,
+      "text_sha256": "9235c4fb32f2256c06129b9b462c428aaea9872264c141e6c8b3cc217a987012"
+    },
+    {
+      "id": 23121,
+      "date": "2024-03-26T12:43:04",
+      "edited": "2024-03-26T12:43:29",
+      "reply_to_message_id": 23119,
+      "parent_from_id": "user5260693904",
+      "parent_exists_in_export": true,
+      "text_sha256": "bb2f40b7ff9bc9d44c2968ab24b99825e550b1021be69202b5f2245e2307122b"
+    },
+    {
+      "id": 23134,
+      "date": "2024-03-26T12:53:04",
+      "edited": "2024-03-26T12:53:27",
+      "reply_to_message_id": 23132,
+      "parent_from_id": "user752158324",
+      "parent_exists_in_export": true,
+      "text_sha256": "e9b34818e482cfa4c75195003daa3f4e36934e8ccd4af35e51dad77cc56f9a8f"
+    },
+    {
+      "id": 23136,
+      "date": "2024-03-26T12:55:39",
+      "edited": null,
+      "reply_to_message_id": 23135,
+      "parent_from_id": "user497668740",
+      "parent_exists_in_export": true,
+      "text_sha256": "51eb91d316a9eed898bca4091ea31b50d228ed5dcc6211c01f8afa8f2a05532d"
+    },
+    {
+      "id": 23151,
+      "date": "2024-03-26T16:40:01",
+      "edited": null,
+      "reply_to_message_id": 23148,
+      "parent_from_id": "user786391896",
+      "parent_exists_in_export": true,
+      "text_sha256": "b537dd3b0f0a61afb1ce1c10f1f531e2a07966b3bdf6cf4bc32bb9030c0555e4"
+    },
+    {
+      "id": 23159,
+      "date": "2024-03-26T19:05:05",
+      "edited": null,
+      "reply_to_message_id": 23155,
+      "parent_from_id": "user1472167187",
+      "parent_exists_in_export": true,
+      "text_sha256": "80b80cba2a4b2b1a85d97984718c872d632d69f80b48ec938dcff20b8850273e"
+    },
+    {
+      "id": 23163,
+      "date": "2024-03-26T19:23:03",
+      "edited": null,
+      "reply_to_message_id": 23161,
+      "parent_from_id": "user1472167187",
+      "parent_exists_in_export": true,
+      "text_sha256": "0a02175bf1fb19e58c445e374bc4727b22abb527c15dd2699260cfd1cb7d499f"
+    },
+    {
+      "id": 23200,
+      "date": "2024-03-27T18:41:56",
+      "edited": "2024-03-27T18:42:15",
+      "reply_to_message_id": 23193,
+      "parent_from_id": "user5602405073",
+      "parent_exists_in_export": true,
+      "text_sha256": "7700b771093ed7a96c42fb68d9b44c0e4e691f826d7354469e4d1bdba95954ef"
+    },
+    {
+      "id": 26085,
+      "date": "2024-07-11T22:29:17",
+      "edited": null,
+      "reply_to_message_id": 26073,
+      "parent_from_id": "user1571850682",
+      "parent_exists_in_export": true,
+      "text_sha256": "a5f90f80964c3ccb2f0e1ce0f99d7005245a51f5ea0559a6187365df83981131"
+    },
+    {
+      "id": 26490,
+      "date": "2024-08-30T12:21:04",
+      "edited": null,
+      "reply_to_message_id": 26489,
+      "parent_from_id": "user5260693904",
+      "parent_exists_in_export": true,
+      "text_sha256": "b1d557065759df8370e9b3618c32875216c0f0f60312573c467d46b0c45d14a2"
+    },
+    {
+      "id": 27882,
+      "date": "2024-10-21T22:03:09",
+      "edited": "2025-04-06T00:33:16",
+      "reply_to_message_id": 27602,
+      "parent_from_id": null,
+      "parent_exists_in_export": false,
+      "text_sha256": "75e648f6c3b28789f157b03d889b074fb50a89d77c1ff01ca09dc0d209b56df3"
+    },
+    {
+      "id": 27907,
+      "date": "2024-10-21T22:06:58",
+      "edited": "2024-10-21T22:08:27",
+      "reply_to_message_id": 27899,
+      "parent_from_id": "user1690548820",
+      "parent_exists_in_export": true,
+      "text_sha256": "8b46f2d8d1356c2de3aa37d9e8c581e13a9a4e79672a462cf8442eb7556d1dde"
+    },
+    {
+      "id": 32537,
+      "date": "2024-11-29T12:00:19",
+      "edited": "2024-11-29T12:00:31",
+      "reply_to_message_id": 32534,
+      "parent_from_id": "user1571850682",
+      "parent_exists_in_export": true,
+      "text_sha256": "f8c7b6e8835abfd594a1dc4f240a26c488bf9762eb02f6e7f6b73f4a7ccda867"
+    },
+    {
+      "id": 32550,
+      "date": "2024-11-29T12:10:40",
+      "edited": "2024-11-29T12:11:08",
+      "reply_to_message_id": 32548,
+      "parent_from_id": "user1571850682",
+      "parent_exists_in_export": true,
+      "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": 32555,
+      "date": "2024-11-29T12:13:16",
+      "edited": null,
+      "reply_to_message_id": 32551,
+      "parent_from_id": "user398109413",
+      "parent_exists_in_export": true,
+      "text_sha256": "c31fc1ab9da984ca83d83afd9667ffb4fc726948fecc90931384ffe529e0ba31"
+    },
+    {
+      "id": 32560,
+      "date": "2024-11-29T12:17:21",
+      "edited": null,
+      "reply_to_message_id": 32556,
+      "parent_from_id": "user6603256460",
+      "parent_exists_in_export": true,
+      "text_sha256": "c284f7602076e5bf856f656d4cb6314fa8eac8b34cdcef7b16069168f4a61915"
+    },
+    {
+      "id": 32570,
+      "date": "2024-11-29T12:20:59",
+      "edited": "2024-11-29T13:08:44",
+      "reply_to_message_id": 32568,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "9235c4fb32f2256c06129b9b462c428aaea9872264c141e6c8b3cc217a987012"
+    },
+    {
+      "id": 32613,
+      "date": "2024-11-29T12:47:19",
+      "edited": "2024-11-29T12:51:15",
+      "reply_to_message_id": 32600,
+      "parent_from_id": "user6057219919",
+      "parent_exists_in_export": true,
+      "text_sha256": "7c90587b9cefe48d72e04f3c2b5022ab11e5e53065602f0b48caff6bcd78022b"
+    },
+    {
+      "id": 32640,
+      "date": "2024-11-29T12:57:33",
+      "edited": "2024-11-29T12:58:19",
+      "reply_to_message_id": 32617,
+      "parent_from_id": "user122813939",
+      "parent_exists_in_export": true,
+      "text_sha256": "e5b64f95af502663c818f94c7249f3d5ce6027f162595b12b549e9689bd9338c"
+    },
+    {
+      "id": 32644,
+      "date": "2024-11-29T12:58:58",
+      "edited": "2024-11-29T12:59:17",
+      "reply_to_message_id": 32627,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "0d10ffd25c40cb499eaf563217f4e5dc6a39c92cc752c5eb9ee8450e42ba69e3"
+    },
+    {
+      "id": 32671,
+      "date": "2024-11-29T13:06:24",
+      "edited": "2024-11-29T13:07:09",
+      "reply_to_message_id": 32666,
+      "parent_from_id": "user6057219919",
+      "parent_exists_in_export": true,
+      "text_sha256": "2b6673eb7c84411e5cbb3ef6aabfb14b8c9e197fe3473500e8ff5d308cab2607"
+    },
+    {
+      "id": 32695,
+      "date": "2024-11-29T13:20:19",
+      "edited": "2025-07-09T22:39:20",
+      "reply_to_message_id": 32686,
+      "parent_from_id": "user786391896",
+      "parent_exists_in_export": true,
+      "text_sha256": "d47d9d6e26abbd45dfe5a16be20e3af2c5da597407f2386441c6846b1824e7c8"
+    },
+    {
+      "id": 32699,
+      "date": "2024-11-29T13:23:12",
+      "edited": null,
+      "reply_to_message_id": 32696,
+      "parent_from_id": "user497668740",
+      "parent_exists_in_export": true,
+      "text_sha256": "ecb366a2191883a529ea90061858802011a080d6db49ceca96ab5099b7a9b009"
+    },
+    {
+      "id": 32728,
+      "date": "2024-11-29T13:39:50",
+      "edited": null,
+      "reply_to_message_id": 32726,
+      "parent_from_id": "user7731476133",
+      "parent_exists_in_export": true,
+      "text_sha256": "27af54d6ca8e2d128d6a063bf199d9e313f52dfd6895f43b50ce31d234f7cbc5"
+    },
+    {
+      "id": 32741,
+      "date": "2024-11-29T13:47:44",
+      "edited": "2026-07-01T17:55:39",
+      "reply_to_message_id": 32730,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "7077d7f97bc45dd9e05e3c455f6906f4b4216b27988cf123d4600f9cf1a47e47"
+    },
+    {
+      "id": 32748,
+      "date": "2024-11-29T13:51:05",
+      "edited": "2024-11-29T13:52:03",
+      "reply_to_message_id": 32735,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "e6c2eebd551e17bef6b7e2c4e7080530b48a52821c58451c1fb5d4c5066a67b4"
+    },
+    {
+      "id": 32755,
+      "date": "2024-11-29T13:54:17",
+      "edited": "2025-04-02T03:43:34",
+      "reply_to_message_id": 32752,
+      "parent_from_id": "user6057219919",
+      "parent_exists_in_export": true,
+      "text_sha256": "e2d19fbeb0b667917ff172bf6b10a551adfdf2bdbdb2873b3c2ee73f517a4bd1"
+    },
+    {
+      "id": 32772,
+      "date": "2024-11-29T14:06:39",
+      "edited": null,
+      "reply_to_message_id": 32763,
+      "parent_from_id": "user122813939",
+      "parent_exists_in_export": true,
+      "text_sha256": "5d835e8666bd5cf65be66efbca6847b24e41fd85993448a211ad7be5fea559ab"
+    },
+    {
+      "id": 39208,
+      "date": "2025-04-28T19:52:50",
+      "edited": "2025-04-28T20:16:16",
+      "reply_to_message_id": 39205,
+      "parent_from_id": "user7363495849",
+      "parent_exists_in_export": true,
+      "text_sha256": "5c170dfe78b5addcb08dcf6264ae7c78e65f3e3225cd6f86fe9d2b9ed4277d33"
+    },
+    {
+      "id": 39234,
+      "date": "2025-04-28T20:00:26",
+      "edited": null,
+      "reply_to_message_id": 39221,
+      "parent_from_id": "user497668740",
+      "parent_exists_in_export": true,
+      "text_sha256": "11d2776787c8df6dd94ee46200b67ea281460e8f4f6d1acb5988d4804ece5a4c"
+    },
+    {
+      "id": 39237,
+      "date": "2025-04-28T20:01:36",
+      "edited": "2025-04-28T20:20:30",
+      "reply_to_message_id": 39233,
+      "parent_from_id": "user432257224",
+      "parent_exists_in_export": true,
+      "text_sha256": "a6716da7b951f612d3f4499c978480950b8ac45b8b8dde99c924214f15e31785"
+    },
+    {
+      "id": 60285,
+      "date": "2026-03-04T03:11:55",
+      "edited": null,
+      "reply_to_message_id": 60282,
+      "parent_from_id": "user142464266",
+      "parent_exists_in_export": true,
+      "text_sha256": "3e9fd5ab4f14d8f1106405a1f74e0de49f7ea84fcd4b21e7a7f4f6f4866bc295"
+    },
+    {
+      "id": 60307,
+      "date": "2026-03-04T03:23:27",
+      "edited": "2026-03-04T03:23:36",
+      "reply_to_message_id": 60300,
+      "parent_from_id": "user497668740",
+      "parent_exists_in_export": true,
+      "text_sha256": "9235c4fb32f2256c06129b9b462c428aaea9872264c141e6c8b3cc217a987012"
+    },
+    {
+      "id": 60309,
+      "date": "2026-03-04T03:27:00",
+      "edited": "2026-03-04T03:27:12",
+      "reply_to_message_id": 60308,
+      "parent_from_id": "user497668740",
+      "parent_exists_in_export": true,
+      "text_sha256": "2b450937f8b66819ea56b586f599bedee899a8a8a0cdc75d99a16954d776a11d"
+    },
+    {
+      "id": 60326,
+      "date": "2026-03-04T03:36:04",
+      "edited": "2026-07-01T20:59:46",
+      "reply_to_message_id": 60323,
+      "parent_from_id": "user7675830926",
+      "parent_exists_in_export": true,
+      "text_sha256": "66a28beff71b2b7fa491f51ccb811e661b10a7485ec049f04fdf8106d4938c67"
+    },
+    {
+      "id": 63957,
+      "date": "2026-05-28T14:41:02",
+      "edited": "2026-05-28T14:41:51",
+      "reply_to_message_id": 63942,
+      "parent_from_id": "user697342298",
+      "parent_exists_in_export": true,
+      "text_sha256": "8b365bf75616016c5bce8e24e38a182657b948920dab6d533a851a4baa715350"
+    },
+    {
+      "id": 63966,
+      "date": "2026-05-28T16:34:18",
+      "edited": "2026-05-28T17:16:31",
+      "reply_to_message_id": 63959,
+      "parent_from_id": "user497668740",
+      "parent_exists_in_export": true,
+      "text_sha256": "bd9b5ae409d695134452f235e057f92cd1fa141bc00b93b53ea8882b9a222579"
+    },
+    {
+      "id": 66559,
+      "date": "2026-07-13T03:34:41",
+      "edited": "2026-07-16T23:32:02",
+      "reply_to_message_id": 66557,
+      "parent_from_id": "user7731476133",
+      "parent_exists_in_export": true,
+      "text_sha256": "24941c28b32a5c90dc3aa1a559863bce53e618ce74b2db9640513b30dfbc5ebe"
+    },
+    {
+      "id": 66560,
+      "date": "2026-07-13T03:35:20",
+      "edited": null,
+      "reply_to_message_id": 66554,
+      "parent_from_id": "user398109413",
+      "parent_exists_in_export": true,
+      "text_sha256": "248d6cd609611b315133d67235fd9bf7eaf5559ce2261eded8d716575cbff3cc"
+    },
+    {
+      "id": 66592,
+      "date": "2026-07-13T04:08:52",
+      "edited": "2026-07-13T09:19:06",
+      "reply_to_message_id": 66556,
+      "parent_from_id": "user7731476133",
+      "parent_exists_in_export": true,
+      "text_sha256": "419376a8eecf5628295ed1cec0f46d640baaf7cacbf11eba14ab209dcced15bb"
+    },
+    {
+      "id": 66596,
+      "date": "2026-07-13T04:12:48",
+      "edited": "2026-07-13T16:49:57",
+      "reply_to_message_id": 66594,
+      "parent_from_id": "user7731476133",
+      "parent_exists_in_export": true,
+      "text_sha256": "3f39dbeae6017042938008521a3df198c73609ab9368244b60cfc090d315de9c"
+    },
+    {
+      "id": 66600,
+      "date": "2026-07-13T04:17:49",
+      "edited": "2026-07-13T09:20:06",
+      "reply_to_message_id": 66599,
+      "parent_from_id": "user122813939",
+      "parent_exists_in_export": true,
+      "text_sha256": "73600cfc604962d36e21fc554fce5de6c3663739300bc0fe3cf269d346c0d672"
+    },
+    {
+      "id": 66606,
+      "date": "2026-07-13T04:22:37",
+      "edited": "2026-07-13T04:22:50",
+      "reply_to_message_id": 66605,
+      "parent_from_id": "user122813939",
+      "parent_exists_in_export": true,
+      "text_sha256": "a4299f3037995d2045ecc91cc9ad9484be39d32ded22c4cde040fe3f9901e487"
+    },
+    {
+      "id": 66884,
+      "date": "2026-07-17T01:06:17",
+      "edited": "2026-07-17T08:47:17",
+      "reply_to_message_id": 66699,
+      "parent_from_id": "user417022692",
+      "parent_exists_in_export": true,
+      "text_sha256": "62051ad5594a82661dd6eedc038059dd39bfc7cc319348cb96e9e8ce9541eed5"
+    },
+    {
+      "id": 66903,
+      "date": "2026-07-17T01:19:17",
+      "edited": "2026-07-17T01:20:35",
+      "reply_to_message_id": 66901,
+      "parent_from_id": "user417022692",
+      "parent_exists_in_export": true,
+      "text_sha256": "df9d85fd8df2388e8d370264bf46d35dabf24d7a4cec84b36f0b6a9b2a77a777"
+    },
+    {
+      "id": 66904,
+      "date": "2026-07-17T01:20:06",
+      "edited": null,
+      "reply_to_message_id": 66899,
+      "parent_from_id": "user874768682",
+      "parent_exists_in_export": true,
+      "text_sha256": "a9a35bdbde36cadf642de0e55ffc29f7211c882119717d2bd4b880aa1aa902ce"
+    },
+    {
+      "id": 66912,
+      "date": "2026-07-17T01:26:27",
+      "edited": "2026-07-17T01:57:36",
+      "reply_to_message_id": 66908,
+      "parent_from_id": "user7895551210",
+      "parent_exists_in_export": true,
+      "text_sha256": "7670d159e00f91053209be5bbea03595754f085d926289d1e58a7ec9d0ddbba1"
+    },
+    {
+      "id": 66913,
+      "date": "2026-07-17T01:26:44",
+      "edited": "2026-07-17T01:26:48",
+      "reply_to_message_id": 66911,
+      "parent_from_id": "user1625609648",
+      "parent_exists_in_export": true,
+      "text_sha256": "03769545ce0274a462c6adf4084a46abe3740c454b05f699e4978b753aea9567"
+    },
+    {
+      "id": 66931,
+      "date": "2026-07-17T01:32:30",
+      "edited": null,
+      "reply_to_message_id": 66917,
+      "parent_from_id": "user1625609648",
+      "parent_exists_in_export": true,
+      "text_sha256": "86e8a573a1a2160eff5e78457dd3a3d5b89574a1667fc5792baba9a85e3fadcf"
+    },
+    {
+      "id": 66935,
+      "date": "2026-07-17T01:33:29",
+      "edited": "2026-07-17T01:33:57",
+      "reply_to_message_id": 66918,
+      "parent_from_id": "user546901636",
+      "parent_exists_in_export": true,
+      "text_sha256": "685704667bd51ca9640a5a535c1d70f76bf3568a46d04ec79451a2db9ab32d7b"
+    },
+    {
+      "id": 66938,
+      "date": "2026-07-17T01:36:07",
+      "edited": "2026-07-17T02:00:41",
+      "reply_to_message_id": 66907,
+      "parent_from_id": "user874768682",
+      "parent_exists_in_export": true,
+      "text_sha256": "6afc21bfd75f1238faeb43dd64367cbe767e4c7344edd036c81d6273c1d1bd66"
+    },
+    {
+      "id": 66962,
+      "date": "2026-07-17T01:51:10",
+      "edited": "2026-07-18T15:10:03",
+      "reply_to_message_id": 66958,
+      "parent_from_id": "user24791610",
+      "parent_exists_in_export": true,
+      "text_sha256": "0c8d1185a23aa17fea0bdbf821018b254167a6dfb653afbc6860c76ab6ebc461"
+    },
+    {
+      "id": 66964,
+      "date": "2026-07-17T01:52:37",
+      "edited": null,
+      "reply_to_message_id": 66955,
+      "parent_from_id": "user5386650593",
+      "parent_exists_in_export": true,
+      "text_sha256": "fdc96ffbf256523aec8846ae56321053c7ab751c99eb766e6bb4a7d362a4f060"
+    }
+  ]
+}

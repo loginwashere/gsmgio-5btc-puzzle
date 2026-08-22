@@ -1,0 +1,5789 @@
+{
+  "nodes": [
+    {
+      "stable_id": "P0_1",
+      "number": "0.1",
+      "subject": "\"your last command\" direct probe",
+      "date": null,
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P0_2",
+      "number": "0.2",
+      "subject": "alphabet-derivation hypothesis check",
+      "date": null,
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P002",
+      "number": "2",
+      "subject": "dictionary-scale sweep",
+      "date": null,
+      "in_degree": 5,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P003",
+      "number": "3",
+      "subject": "resolving the alphabet-derivation gap",
+      "date": "2026-07-03",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P004",
+      "number": "4",
+      "subject": "the \"another door\" / prime / neo's-passport hints",
+      "date": "2026-07-04",
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P005",
+      "number": "5",
+      "subject": "independent image forensic audit",
+      "date": "2026-07-04",
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P006",
+      "number": "6",
+      "subject": "checking for genuine post-fork progress",
+      "date": "2026-07-04",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P007",
+      "number": "7",
+      "subject": "full read-through of all 411 creator messages",
+      "date": "2026-07-04",
+      "in_degree": 7,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P008-A",
+      "number": "8",
+      "subject": "chasing the alphabet directly",
+      "date": null,
+      "in_degree": 2,
+      "out_degree": 6
+    },
+    {
+      "stable_id": "P008-B",
+      "number": "8",
+      "subject": "Architect/Gnostic synonym sweep",
+      "date": "2026-07-15",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P010",
+      "number": "10",
+      "subject": "full OCR transcription of the physical \"Cosmic Duality\" book",
+      "date": "2026-07-15",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P011",
+      "number": "11",
+      "subject": "hash duality as command-state composition",
+      "date": "2026-07-23",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P012",
+      "number": "12",
+      "subject": "reverse and raw cross-target coupling",
+      "date": "2026-07-23",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P013",
+      "number": "13",
+      "subject": "cross-phase prime/color linkage (2026-07-23) \u2014 DEBUNKED, see correction",
+      "date": null,
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P014",
+      "number": "14",
+      "subject": "AES oracle false-negative fix",
+      "date": "2026-07-24",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P015",
+      "number": "15",
+      "subject": "Cosmic Duality book",
+      "date": "2026-07-24",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P016",
+      "number": "16",
+      "subject": "code review of all 25 tools/gsmg/*.py scripts",
+      "date": "2026-07-24",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P017",
+      "number": "17",
+      "subject": "independent verification of a second, deeper code-review pass",
+      "date": "2026-07-24",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P018",
+      "number": "18",
+      "subject": "fixed the faed escape-pair coverage gap; recorded autokey tier-2's exact old/new boundary, NOT yet resumed",
+      "date": "2026-07-24",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P019-A",
+      "number": "19",
+      "subject": "model-changing paths after coverage saturation",
+      "date": "2026-07-24",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P019-B",
+      "number": "19",
+      "subject": "`matrixsumlist` self-derived permutation",
+      "date": "2026-07-24",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P020",
+      "number": "20",
+      "subject": "Checkerboard recovery calibration harness",
+      "date": "2026-07-24",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P021",
+      "number": "21",
+      "subject": "Digraphic cipher over the 25-code alphabet",
+      "date": "2026-07-24",
+      "in_degree": 4,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P022",
+      "number": "22",
+      "subject": "Broadened cipher/KDF oracle + staged SALPH->COSMIC pipeline",
+      "date": "2026-07-24",
+      "in_degree": 3,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P023",
+      "number": "23",
+      "subject": "Exact command-provenance recheck (path 3, 2026-07-24)",
+      "date": null,
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P024",
+      "number": "24",
+      "subject": "Prefix/header boundary hypothesis (path 4, 2026-07-24)",
+      "date": null,
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P025",
+      "number": "25",
+      "subject": "Provenance triage of the untracked base64 fragment",
+      "date": "2026-07-24",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P026",
+      "number": "26",
+      "subject": "AES Key Wrap (RFC 3394 / RFC 5649) hypothesis test",
+      "date": "2026-07-24",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P027",
+      "number": "27",
+      "subject": "`urlblob` provenance verification, quarantine, and sweep",
+      "date": "2026-07-24",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P028",
+      "number": "28",
+      "subject": "Puzzle-address split and blockchain metadata candidates",
+      "date": "2026-07-24",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P029",
+      "number": "29",
+      "subject": "Adjacent-difference / self-synchronizing-cipher hypothesis",
+      "date": "2026-07-24",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P030",
+      "number": "30",
+      "subject": "Creator-authored clue-to-operation ledger",
+      "date": "2026-07-25",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P031",
+      "number": "31",
+      "subject": "Exact first-piece yellow/blue reconstruction",
+      "date": "2026-07-25",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P032",
+      "number": "32",
+      "subject": "`574061 -> matrixsumlist` checkpoint",
+      "date": "2026-07-25",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P033",
+      "number": "33",
+      "subject": "Architect-choice extraction",
+      "date": "2026-07-25",
+      "in_degree": 6,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P034",
+      "number": "34",
+      "subject": "`BUT/HYE` yin-yang rail audit",
+      "date": "2026-07-25",
+      "in_degree": 6,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P035",
+      "number": "35",
+      "subject": "non-blob `H` lock, zeroing, and Cosmic-boundary audit",
+      "date": "2026-07-25",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P036",
+      "number": "36",
+      "subject": "barrystyle provenance and 196-cell yellow-mask prime",
+      "date": "2026-07-25",
+      "in_degree": 6,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P037",
+      "number": "37",
+      "subject": "`{1},{4},{21}` and the FEFE prime zero",
+      "date": "2026-07-25",
+      "in_degree": 3,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P038",
+      "number": "38",
+      "subject": "bounded convergence of the prime-matrix and FEFE threads",
+      "date": "2026-07-25",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P039",
+      "number": "39",
+      "subject": "matrix-row self-addressing grammar",
+      "date": "2026-07-25",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P040",
+      "number": "40",
+      "subject": "independent tail-selector audit",
+      "date": "2026-07-25",
+      "in_degree": 3,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P041",
+      "number": "41",
+      "subject": "bounded FEFE zero-operation audit",
+      "date": "2026-07-25",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P042",
+      "number": "42",
+      "subject": "bounded plated-seed referent audit",
+      "date": "2026-07-25",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P043",
+      "number": "43",
+      "subject": "FAED ciphertext-only monoalphabetic recovery under (h,e), corrected",
+      "date": "2026-07-25",
+      "in_degree": 3,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P044",
+      "number": "44",
+      "subject": "corrected \u201cin front of your eyes\u201d transition audit",
+      "date": "2026-07-25",
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P045",
+      "number": "45",
+      "subject": "native prime/character-zeroing sweep, corrected",
+      "date": "2026-07-25",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P046",
+      "number": "46",
+      "subject": "exact uniform-subset base-rate audit of Denis Golovkin's \"yang\" extraction",
+      "date": "2026-07-25",
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P047",
+      "number": "47",
+      "subject": "first-piece color sequence / Denis-mask convergence audit",
+      "date": "2026-07-25",
+      "in_degree": 3,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P048",
+      "number": "48",
+      "subject": "Flo prime-walk provenance recovers Denis's mask and resolves the FEFE boundary",
+      "date": "2026-07-26",
+      "in_degree": 7,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P049",
+      "number": "49",
+      "subject": "bounded consumption audit of the exact 31-position mask",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P050",
+      "number": "50",
+      "subject": "residual prime-walk events cross the real DBBI/matrixsumlist page boundary",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P051",
+      "number": "51",
+      "subject": "`matrixsumlist` consumer feasibility audit",
+      "date": "2026-07-26",
+      "in_degree": 5,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P052",
+      "number": "52",
+      "subject": "transition-evidence recovery",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P053",
+      "number": "53",
+      "subject": "recovered Telegram yellow-blue-primes guide and corrected FEFE audit",
+      "date": "2026-07-26",
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P054",
+      "number": "54",
+      "subject": "Denis Golovkin's own narrated chain, in the complete Telegram export",
+      "date": "2026-07-26",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P055",
+      "number": "55",
+      "subject": "recovered-guide Telegram neighborhood audit",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P056",
+      "number": "56",
+      "subject": "\u201cmatrix sum list\u201d passage provenance",
+      "date": "2026-07-26",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P058",
+      "number": "58",
+      "subject": "exact Architect-dialogue counts and the recovered `[23,16,7]` list",
+      "date": "2026-07-26",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P059",
+      "number": "59",
+      "subject": "Stage 3 OCR pass over the Stage 2 media shortlist",
+      "date": "2026-07-26",
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P060",
+      "number": "60",
+      "subject": "Phase 36's missing barrystyle media recovered",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P061",
+      "number": "61",
+      "subject": "Telegram `[23,16,7]` operation audit",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P062",
+      "number": "62",
+      "subject": "backend consistency audit",
+      "date": "2026-07-26",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P063",
+      "number": "63",
+      "subject": "consolidated creator clue, confirmation, and praise index",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P064",
+      "number": "64",
+      "subject": "a 2020 diagram independently corroborates FEFE and names the \"nest\" cells",
+      "date": "2026-07-26",
+      "in_degree": 5,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P065",
+      "number": "65",
+      "subject": "rabbit-nest leftover nibble",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P066",
+      "number": "66",
+      "subject": "creator clue index expanded to 80 records; one real provenance upgrade",
+      "date": "2026-07-26",
+      "in_degree": 3,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P067",
+      "number": "67",
+      "subject": "full 2020 rabbit-diagram transcription audit",
+      "date": "2026-07-26",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P068",
+      "number": "68",
+      "subject": "reaction-signal and success-claim sweeps of the complete export",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P069",
+      "number": "69",
+      "subject": "calibrating the `-41+-17=-58` coincidence",
+      "date": "2026-07-26",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P070",
+      "number": "70",
+      "subject": "`{b,e}` x `7x13/13x7` historical-coverage audit",
+      "date": "2026-07-26",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P071",
+      "number": "71",
+      "subject": "Stage-1 icon overlap + visible-rebus correction",
+      "date": "2026-07-26",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P072",
+      "number": "72",
+      "subject": "Stage-1 icon row band widths",
+      "date": "2026-07-26",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P073",
+      "number": "73",
+      "subject": "Stage-0 PNG filter-byte anomaly (message `49536`) fully reproduced, calibrated negative",
+      "date": "2026-07-26",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P074",
+      "number": "74",
+      "subject": "External archive audit",
+      "date": "2026-07-26",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P075",
+      "number": "75",
+      "subject": "`YOUWON` partition audit",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P076",
+      "number": "76",
+      "subject": "Telegram path diagram audit",
+      "date": "2026-07-26",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P077",
+      "number": "77",
+      "subject": "Legacy-CBC backfill for P32TRAILING and URLBLOB",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P078",
+      "number": "78",
+      "subject": "Binary-key-material CBC/ECB oracle gap fixed and backfilled negative",
+      "date": "2026-07-26",
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P079",
+      "number": "79",
+      "subject": "creator macro-clue fragments added to the corpus; CFB/OFB/CTR cipher-mode gap closed",
+      "date": "2026-07-26",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P080",
+      "number": "80",
+      "subject": "structural binary-plaintext oracle gate",
+      "date": "2026-07-26",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P081",
+      "number": "81",
+      "subject": "provenance-tiered medium candidate corpus built, not launched",
+      "date": "2026-07-26",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P082",
+      "number": "82",
+      "subject": "pre-Tier-1 checkpoint and API hardening complete",
+      "date": "2026-07-26",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P083",
+      "number": "83",
+      "subject": "Tier-1 binary-material expansion complete, clean negative",
+      "date": "2026-07-27",
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P084",
+      "number": "84",
+      "subject": "`-nopad` window sweep built and validated; not yet launched",
+      "date": "2026-07-27",
+      "in_degree": 5,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P085",
+      "number": "85",
+      "subject": "`-nopad` sweep",
+      "date": "2026-07-27",
+      "in_degree": 5,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P086",
+      "number": "86",
+      "subject": "`-nopad` sweep",
+      "date": "2026-07-27",
+      "in_degree": 4,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P087",
+      "number": "87",
+      "subject": "`-nopad` sweep",
+      "date": "2026-07-27",
+      "in_degree": 4,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P088",
+      "number": "88",
+      "subject": "Jacque Fresco's broader body of work",
+      "date": "2026-07-27",
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P089",
+      "number": "89",
+      "subject": "Fresco wordlist",
+      "date": "2026-07-27",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P090",
+      "number": "90",
+      "subject": "Fresco wordlist",
+      "date": "2026-07-27",
+      "in_degree": 3,
+      "out_degree": 6
+    },
+    {
+      "stable_id": "P091",
+      "number": "91",
+      "subject": "`-nopad` sweep",
+      "date": "2026-07-27",
+      "in_degree": 2,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P092",
+      "number": "92",
+      "subject": "`-nopad` sweep",
+      "date": "2026-07-27",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P093",
+      "number": "93",
+      "subject": "`-nopad` sweep multiprocessing",
+      "date": "2026-07-27",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P094",
+      "number": "94",
+      "subject": "`-nopad` Tier-1 sweep",
+      "date": "2026-07-27",
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P095",
+      "number": "95",
+      "subject": "`-nopad` sweep",
+      "date": "2026-07-27",
+      "in_degree": 2,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P096",
+      "number": "96",
+      "subject": "case-sensitive `SalPhaseIon -> SalVATIon -> SALVATION` rebus audit",
+      "date": "2026-07-27",
+      "in_degree": 9,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P097",
+      "number": "97",
+      "subject": "elemental `SALPHATION -> SALVATION` reproduces `[23,16,7]` exactly",
+      "date": "2026-07-27",
+      "in_degree": 7,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P098",
+      "number": "98",
+      "subject": "creator-corpus base-rate audit downgrades the atomic-number match",
+      "date": "2026-07-27",
+      "in_degree": 7,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P099",
+      "number": "99",
+      "subject": "scheme sensitivity and the degenerate creator-word control",
+      "date": "2026-07-27",
+      "in_degree": 4,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P100",
+      "number": "100",
+      "subject": "Tier-1 `-nopad` queue verified; zero funded or known addresses",
+      "date": "2026-07-27",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P101",
+      "number": "101",
+      "subject": "typed page grammar remains underdetermined; `anstoo` correction",
+      "date": "2026-07-27",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P102",
+      "number": "102",
+      "subject": "`anstoo`/SHA-operand provenance audit",
+      "date": "2026-07-27",
+      "in_degree": 4,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P103",
+      "number": "103",
+      "subject": "`SALVATION` functional-role audit",
+      "date": "2026-07-27",
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P104",
+      "number": "104",
+      "subject": "dual-channel consistency audit",
+      "date": "2026-07-27",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P105",
+      "number": "105",
+      "subject": "`SALVATION` as a 3x3 letter matrix",
+      "date": "2026-07-27",
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P106",
+      "number": "106",
+      "subject": "a calibrated partial oracle for the checkerboard escape pair",
+      "date": "2026-07-27",
+      "in_degree": 3,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P107",
+      "number": "107",
+      "subject": "`l`/`I` homoglyph reading of `SalPhaseIon`",
+      "date": "2026-07-27",
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P108",
+      "number": "108",
+      "subject": "`SPI`/`CD`",
+      "date": "2026-07-27",
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P109",
+      "number": "109",
+      "subject": "bird's-eye re-sweep of the SalPhaseIon page's own artifacts",
+      "date": "2026-07-27",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P110",
+      "number": "110",
+      "subject": "re-swept the full export for other raw-binary creator posts",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P111",
+      "number": "111",
+      "subject": "acrostic/telestich on the macro clue's constituent words",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P112",
+      "number": "112",
+      "subject": "review correction",
+      "date": "2026-07-28",
+      "in_degree": 6,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P113",
+      "number": "113",
+      "subject": "calibrated FAED monoalphabetic recovery under `{g,i}`",
+      "date": "2026-07-28",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P114",
+      "number": "114",
+      "subject": "late-stage reproducibility hardening",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P115",
+      "number": "115",
+      "subject": "creator handle `SoWut`",
+      "date": "2026-07-28",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P116",
+      "number": "116",
+      "subject": "historical SafeNet/Luna HSM terminology audit",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P117",
+      "number": "117",
+      "subject": "Phase-4 door/date re-audit",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P118",
+      "number": "118",
+      "subject": "recovered Matrix-text difference instruction",
+      "date": "2026-07-28",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P119",
+      "number": "119",
+      "subject": "full enumeration of barrystyle's media attachments",
+      "date": "2026-07-28",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P120",
+      "number": "120",
+      "subject": "barrystyle attachment follow-up",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P121",
+      "number": "121",
+      "subject": "binary-hint operand audit",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P122",
+      "number": "122",
+      "subject": "community \"found the yin yang\" photo (message 10102)",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P123",
+      "number": "123",
+      "subject": "FAED `{g,i}` VIC-style chain-addition reopening",
+      "date": "2026-07-28",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P124",
+      "number": "124",
+      "subject": "bounded yin-yang artifact inventory",
+      "date": "2026-07-28",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P125",
+      "number": "125",
+      "subject": "black-rabbit negative-space audit",
+      "date": "2026-07-28",
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P126",
+      "number": "126",
+      "subject": "user-drawn lower rabbit",
+      "date": "2026-07-28",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P127",
+      "number": "127",
+      "subject": "cell-classifier fix",
+      "date": "2026-07-28",
+      "in_degree": 7,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P128",
+      "number": "128",
+      "subject": "rabbit-nest binary maze",
+      "date": "2026-07-28",
+      "in_degree": 1,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P129",
+      "number": "129",
+      "subject": "rabbit-nest maze sensitivity check",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P130",
+      "number": "130",
+      "subject": "`SAL[PHASE I]ON` and Phase-One \"opposites attract\"",
+      "date": "2026-07-28",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P131",
+      "number": "131",
+      "subject": "selected-text thematic cluster",
+      "date": "2026-07-28",
+      "in_degree": 1,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P132",
+      "number": "132",
+      "subject": "family-wise selected-text calibration",
+      "date": "2026-07-29",
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P133",
+      "number": "133",
+      "subject": "bounded \u201chalf / better half\u201d key-operation audit",
+      "date": "2026-07-29",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P134",
+      "number": "134",
+      "subject": "self-referential \"our first hint\" literal-string sweep",
+      "date": "2026-07-29",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P135",
+      "number": "135",
+      "subject": "original-announcement provenance correction",
+      "date": "2026-07-29",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P136",
+      "number": "136",
+      "subject": "pre-rabbit \u201cfirst GSMG puzzle\u201d recovered and decoded",
+      "date": "2026-07-29",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P137",
+      "number": "137",
+      "subject": "complete public support-group export and original rabbit JPEG recovered",
+      "date": "2026-07-29",
+      "in_degree": 3,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P138",
+      "number": "138",
+      "subject": "full creator-message hint review",
+      "date": "2026-07-29",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P139",
+      "number": "139",
+      "subject": "literal yellow/blue prime-list sums",
+      "date": "2026-07-29",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P140",
+      "number": "140",
+      "subject": "recovered-guide row/column family",
+      "date": "2026-07-29",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P141",
+      "number": "141",
+      "subject": "recovered-guide Caesar extension",
+      "date": "2026-07-29",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P142",
+      "number": "142",
+      "subject": "`401 symbols / 400 spaces` SalPhaseIon boundary audit",
+      "date": "2026-08-01",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P143",
+      "number": "143",
+      "subject": "Cosmic Duality last-column base64 decode",
+      "date": "2026-08-04",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P144",
+      "number": "144",
+      "subject": "`-nopad` Tier-2 binary-key-material sweep",
+      "date": "2026-08-05",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P145",
+      "number": "145",
+      "subject": "non-standard N-escape checkerboard topology (N=3, N=4)",
+      "date": "2026-08-06",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P146",
+      "number": "146",
+      "subject": "short-period Bifid/Trifid-style block fractionation",
+      "date": "2026-08-06",
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P147",
+      "number": "147",
+      "subject": "`YOUWON` tail direct-key decode",
+      "date": "2026-08-06",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P148",
+      "number": "148",
+      "subject": "`SalPhaseIon -> APHELION` sub-anagram",
+      "date": "2026-08-06",
+      "in_degree": 5,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P149",
+      "number": "149",
+      "subject": "numeric-coincidence triage tool built and run",
+      "date": "2026-08-06",
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P150",
+      "number": "150",
+      "subject": "`matrixsumlist` self/fold consumer pairings + literal-index probe",
+      "date": "2026-08-06",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P151",
+      "number": "151",
+      "subject": "Trinity resurrection-speech \"half and better half\" reading",
+      "date": "2026-08-06",
+      "in_degree": 3,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P152",
+      "number": "152",
+      "subject": "Trinity resurrection reading, remaining two roles (KDF context, checkerboard seed)",
+      "date": "2026-08-06",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P153",
+      "number": "153",
+      "subject": "audit for missed sub-tasks in items 1 and 2, three residual checks closed",
+      "date": "2026-08-06",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P154",
+      "number": "154",
+      "subject": "creator idiolect/OSINT pass",
+      "date": "2026-08-06",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P155",
+      "number": "155",
+      "subject": "second Telegram corpus discovered (\"Community & support group\"), rechecked, new first-party context, bounded oracle test negative",
+      "date": "2026-08-06",
+      "in_degree": 3,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P156",
+      "number": "156",
+      "subject": "on-chain/DNS forensics sweep (item 4)",
+      "date": "2026-08-06",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P157",
+      "number": "157",
+      "subject": "repo-wide palette-anomaly sweep (item 8)",
+      "date": "2026-08-06",
+      "in_degree": 1,
+      "out_degree": 13
+    },
+    {
+      "stable_id": "P158",
+      "number": "158",
+      "subject": "`promised` provenance",
+      "date": "2026-08-06",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P159",
+      "number": "159",
+      "subject": "has `SALVATION` itself ever been anagrammed? Real gap, found and closed negative by base rate",
+      "date": "2026-08-06",
+      "in_degree": 1,
+      "out_degree": 6
+    },
+    {
+      "stable_id": "P160",
+      "number": "160",
+      "subject": "item 2 audit",
+      "date": "2026-08-06",
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P161",
+      "number": "161",
+      "subject": "item 3",
+      "date": "2026-08-06",
+      "in_degree": 2,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P162",
+      "number": "162",
+      "subject": "did Phase 161 fetch fresh from Wayback? No -- real gap for 4 files, moot for the other 3, found 7 genuinely new never-checked assets",
+      "date": "2026-08-06",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P163",
+      "number": "163",
+      "subject": "creator's own recommended hash-checking tool identified and its exact whitespace behavior tested against the curated corpus",
+      "date": "2026-08-07",
+      "in_degree": 3,
+      "out_degree": 5
+    },
+    {
+      "stable_id": "P164",
+      "number": "164",
+      "subject": "brainstorm item 2",
+      "date": "2026-08-07",
+      "in_degree": 4,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P165",
+      "number": "165",
+      "subject": "brainstorm item 3",
+      "date": "2026-08-07",
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P166",
+      "number": "166",
+      "subject": "brainstorm item 4",
+      "date": "2026-08-07",
+      "in_degree": 0,
+      "out_degree": 9
+    },
+    {
+      "stable_id": "P167",
+      "number": "167",
+      "subject": "bare literal `sha256` as a standalone candidate",
+      "date": "2026-08-07",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P168",
+      "number": "168",
+      "subject": "has `COSMIC DUALITY` itself ever been anagrammed? Real gap, found and closed by base rate, same discipline as Phase 159",
+      "date": "2026-08-08",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P169",
+      "number": "169",
+      "subject": "`SalPhaseIon + T -> SaltPhaseIon`",
+      "date": "2026-08-08",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P170",
+      "number": "170",
+      "subject": "Phase 3.2 calibration gate + literal SALT/PHRASE/ION XOR audit",
+      "date": "2026-08-08",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P171",
+      "number": "171",
+      "subject": "COSMIC's exact 83/84 guide alignment and 6/84/6 salted-envelope geometry",
+      "date": "2026-08-08",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P172",
+      "number": "172",
+      "subject": "guide row sums as zero-parameter selectors over COSMIC's fourteen six-block strips",
+      "date": "2026-08-08",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P173",
+      "number": "173",
+      "subject": "final shape-preserving consumer",
+      "date": "2026-08-08",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P174",
+      "number": "174",
+      "subject": "OpenSSL salt bytes as bounded selectors/permutations",
+      "date": "2026-08-08",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P175",
+      "number": "175",
+      "subject": "complementary color masks over full DBBI/FAED streams",
+      "date": "2026-08-08",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P176",
+      "number": "176",
+      "subject": "every-`i` immediate-neighbor channels over DBBI/FAED",
+      "date": "2026-08-08",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P177",
+      "number": "177",
+      "subject": "triangular DBBI / `matrixsumlist` square audit",
+      "date": "2026-08-08",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P178",
+      "number": "178",
+      "subject": "synthesis action paths",
+      "date": "2026-08-08",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P180",
+      "number": "180",
+      "subject": "searched the Cosmic Duality book for a second `fubcd-king`-style riddle",
+      "date": "2026-08-08",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P179",
+      "number": "179",
+      "subject": "remaining structural avenues",
+      "date": "2026-08-08",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P182",
+      "number": "182",
+      "subject": "trilogy-wide major Neo-choice boundary phrases",
+      "date": "2026-08-08",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P181",
+      "number": "181",
+      "subject": "movie-transcript-vs-shooting-script check on the `[23,16,7]` source text",
+      "date": "2026-08-08",
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P183",
+      "number": "183",
+      "subject": "movie-transcript-vs-shooting-script check, part 2",
+      "date": "2026-08-08",
+      "in_degree": 1,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P184",
+      "number": "184",
+      "subject": "Smith/Neo \"equation\" scene",
+      "date": "2026-08-08",
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P185",
+      "number": "185",
+      "subject": "`[23,16,7]` as a direct dbbi/faed position selector, and one non-wrapping cumulative stride walk",
+      "date": "2026-08-08",
+      "in_degree": 0,
+      "out_degree": 5
+    },
+    {
+      "stable_id": "P186",
+      "number": "186",
+      "subject": "Stage-0 footer `#383838` layer",
+      "date": "2026-08-08",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P187",
+      "number": "187",
+      "subject": "repeated-byte grayscale claim (`CECECE -> CE`, `FEFEFE -> FE`)",
+      "date": "2026-08-08",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P188",
+      "number": "188",
+      "subject": "annotator's \"G in the shadows and the text\" clarification",
+      "date": "2026-08-08",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P189",
+      "number": "189",
+      "subject": "exploratory G-shadow-count consumer",
+      "date": "2026-08-08",
+      "in_degree": 3,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P190",
+      "number": "190",
+      "subject": "G-consumer comparison without annotator confirmation",
+      "date": "2026-08-08",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P191",
+      "number": "191",
+      "subject": "bounded Stage-0 convergence",
+      "date": "2026-08-08",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P192",
+      "number": "192",
+      "subject": "URLBLOB promoted into the default target registry; post-quarantine coverage inventory and bounded rerun",
+      "date": "2026-08-08",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P193",
+      "number": "193",
+      "subject": "URLBLOB-only Key Wrap backfill against the current 648-candidate corpus",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P194",
+      "number": "194",
+      "subject": "Cosmic Duality's last-column decode calibrated against a solved blob's identical structure",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P195",
+      "number": "195",
+      "subject": "first-piece Hamming/control-language audit",
+      "date": "2026-08-09",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P196",
+      "number": "196",
+      "subject": "independent `400/401/73` reconstruction and selector-free FE composition",
+      "date": "2026-08-09",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P197",
+      "number": "197",
+      "subject": "complete URL bit-plane audit",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P198",
+      "number": "198",
+      "subject": "`{1,4,21} -> ggn` distinctiveness audit",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P199",
+      "number": "199",
+      "subject": "first-piece matrix-product audit",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P200",
+      "number": "200",
+      "subject": "second `matrixsumlist` audit",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P201",
+      "number": "201",
+      "subject": "14/8/1 event-rail audit",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P202",
+      "number": "202",
+      "subject": "FEFE PNG palette/alpha provenance",
+      "date": "2026-08-09",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P203",
+      "number": "203",
+      "subject": "two 11-item shadow rails",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P204",
+      "number": "204",
+      "subject": "`86420/13579/a-i` gate audit",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P205",
+      "number": "205",
+      "subject": "`BaTcH`/BATCH gate",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P206",
+      "number": "206",
+      "subject": "`Ce/Fe` arithmetic and element checkerboard seed",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P207",
+      "number": "207",
+      "subject": "final overlay/DNA/RGB gates",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P208",
+      "number": "208",
+      "subject": "border/raster grid-scan audit",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P209",
+      "number": "209",
+      "subject": "recovered VoVaM annotation images and deleted-thread provenance",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 6
+    },
+    {
+      "stable_id": "P210",
+      "number": "210",
+      "subject": "`4f7a1e4e` COSMIC correction",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P211",
+      "number": "211",
+      "subject": "strict transition worksheet",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P212",
+      "number": "212",
+      "subject": "`matrixsumlist` provenance refresh",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P213",
+      "number": "213",
+      "subject": "page-syntax scope audit",
+      "date": "2026-08-09",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P214",
+      "number": "214",
+      "subject": "chronological `matrixsumlist` code audit",
+      "date": "2026-08-09",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P215",
+      "number": "215",
+      "subject": "creator/operator vocabulary inventory",
+      "date": "2026-08-09",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P216",
+      "number": "216",
+      "subject": "`BUT/HYE` survives a film-vs-screenplay stress test; literal seven-word boundary phrase is oracle-negative",
+      "date": "2026-08-09",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P217",
+      "number": "217",
+      "subject": "minimal creator-macro chain reaches `yinyang` via the six-digit prime; VAT/SALVATION and an invented \"H|YE|BUT\" reading removed after review",
+      "date": "2026-08-09",
+      "in_degree": 2,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P218",
+      "number": "218",
+      "subject": "post-yinyang dataflow ranking",
+      "date": "2026-08-09",
+      "in_degree": 3,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P219",
+      "number": "219",
+      "subject": "FAED decoder coverage map",
+      "date": "2026-08-10",
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P220",
+      "number": "220",
+      "subject": "authenticated presentation layer contains no DBBI/FAED binding",
+      "date": "2026-08-10",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P221",
+      "number": "221",
+      "subject": "propagated the Phase-217 circular-rebus correction through active synthesis docs",
+      "date": "2026-08-10",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P222",
+      "number": "222",
+      "subject": "macro tail does not uniquely supply `T`; SaltPhaseIon retained as bounded recognition",
+      "date": "2026-08-10",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P223",
+      "number": "223",
+      "subject": "BUT/HYE survives, but its partial mirror does not mechanically establish `yinyang`",
+      "date": "2026-08-10",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P224",
+      "number": "224",
+      "subject": "`yinyang` does not redirect SalPhaseIon instructions to COSMIC",
+      "date": "2026-08-10",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P225",
+      "number": "225",
+      "subject": "creator `YING/YANG` exactly fits FAED's `{g,i}` pair, but the typo is not an authenticated operator",
+      "date": "2026-08-10",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P226",
+      "number": "226",
+      "subject": "exact creator feasibility envelope",
+      "date": "2026-08-10",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P227",
+      "number": "227",
+      "subject": "visible-referent delta",
+      "date": "2026-08-10",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P228",
+      "number": "228",
+      "subject": "64-column matched-control correction",
+      "date": "2026-08-10",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P229",
+      "number": "229",
+      "subject": "responsive SalPhaseIon wrapping",
+      "date": "2026-08-10",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P230",
+      "number": "230",
+      "subject": "corrected two-chat feasibility and presentation-vocabulary envelope",
+      "date": "2026-08-10",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P231",
+      "number": "231",
+      "subject": "literal macro adjacency confirms BUT, but exposes no password value",
+      "date": "2026-08-10",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P232",
+      "number": "232",
+      "subject": "full endings rail partially mirrors from HYE to BYE",
+      "date": "2026-08-10",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P233",
+      "number": "233",
+      "subject": "BYE has an independently prior semantic bridge to CIAO BELLA O",
+      "date": "2026-08-10",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P234",
+      "number": "234",
+      "subject": "CIAO selection-and-coverage audit",
+      "date": "2026-08-10",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P235",
+      "number": "235",
+      "subject": "Architect-passage residual audit",
+      "date": "2026-08-10",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P236",
+      "number": "236",
+      "subject": "macro-model comparison reclassifies the selected 31 as a structural checkpoint",
+      "date": "2026-08-11",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P237",
+      "number": "237",
+      "subject": "legacy checkerboard-keyword gap closed on P32TRAILING/URLBLOB",
+      "date": "2026-08-11",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P238",
+      "number": "238",
+      "subject": "page-syntax house-style audit",
+      "date": "2026-08-11",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P239",
+      "number": "239",
+      "subject": "native favicon shadow audit",
+      "date": "2026-08-11",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P240",
+      "number": "240",
+      "subject": "shadow/macro length and FAED factor calibration",
+      "date": "2026-08-11",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P241",
+      "number": "241",
+      "subject": "favicon Wayback chronology",
+      "date": "2026-08-11",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P242",
+      "number": "242",
+      "subject": "SVG/PNG edge geometry",
+      "date": "2026-08-11",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P243",
+      "number": "243",
+      "subject": "DBBI/FAED boundary page-selector audit",
+      "date": "2026-08-11",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P244",
+      "number": "244",
+      "subject": "DBBI/FAED cross-capture stability",
+      "date": "2026-08-11",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P245",
+      "number": "245",
+      "subject": "creator personal-disclosures audit",
+      "date": "2026-08-12",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P246",
+      "number": "246",
+      "subject": "Telegram creator-media completeness audit",
+      "date": "2026-08-12",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P247",
+      "number": "247",
+      "subject": "Architect beginnings/endings/B<->H mirror selector audit",
+      "date": "2026-08-12",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P248",
+      "number": "248",
+      "subject": "Architect visual and precedent-transfer selector audit",
+      "date": "2026-08-12",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P249",
+      "number": "249",
+      "subject": "SalPhaseIon urlscan history audit",
+      "date": "2026-08-12",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P250",
+      "number": "250",
+      "subject": "Designing the Future source audit",
+      "date": "2026-08-12",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P251",
+      "number": "251",
+      "subject": "first-piece missed-points audit",
+      "date": "2026-08-13",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P252",
+      "number": "252",
+      "subject": "fresh-brainstorm residual audit",
+      "date": "2026-08-13",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P253",
+      "number": "253",
+      "subject": "bounded Blowfish/Camellia/SEED OpenSSL-container recheck",
+      "date": "2026-08-13",
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P254",
+      "number": "254",
+      "subject": "curated-candidate corpus provenance audit",
+      "date": "2026-08-13",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P255",
+      "number": "255",
+      "subject": "excluded-wordlist coverage matrix",
+      "date": "2026-08-13",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P256",
+      "number": "256",
+      "subject": "candidate-level V2 registry",
+      "date": "2026-08-13",
+      "in_degree": 1,
+      "out_degree": 6
+    },
+    {
+      "stable_id": "P257",
+      "number": "257",
+      "subject": "V2 residual oracle backfill",
+      "date": "2026-08-13",
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P258",
+      "number": "258",
+      "subject": "Phase-1 icon symbol layer",
+      "date": "2026-08-13",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P259",
+      "number": "259",
+      "subject": "physical Cosmic Duality book pages 57-58 recovered",
+      "date": "2026-08-13",
+      "in_degree": 4,
+      "out_degree": 11
+    },
+    {
+      "stable_id": "P260",
+      "number": "260",
+      "subject": "Cosmic Duality title page's C/D initials",
+      "date": "2026-08-13",
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P261",
+      "number": "261",
+      "subject": "Phase 260 correction",
+      "date": "2026-08-13",
+      "in_degree": 3,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P262",
+      "number": "262",
+      "subject": "Chapter 2's first three yin-yang drop caps",
+      "date": "2026-08-13",
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P263",
+      "number": "263",
+      "subject": "first-piece Roman-rail prime-sum audit",
+      "date": "2026-08-13",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P264",
+      "number": "264",
+      "subject": "`X2SH4Y0QB15` Decentraland coordinate audit",
+      "date": "2026-08-13",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P265",
+      "number": "265",
+      "subject": "Phase 3.2 monologue's own residual vocabulary against all four blobs",
+      "date": "2026-08-13",
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P266",
+      "number": "266",
+      "subject": "Phase 3's seven-part construction reused as a P32 password candidate",
+      "date": "2026-08-13",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P267",
+      "number": "267",
+      "subject": "Full Phase 2/3/3.2 decrypted-text sentence sweep against all four blobs",
+      "date": "2026-08-13",
+      "in_degree": 4,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P268",
+      "number": "268",
+      "subject": "X2SH4Y0QB15's own text (literal, substituted, coordinate, and three reversal scopes) against all four blobs",
+      "date": "2026-08-13",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P269",
+      "number": "269",
+      "subject": "Phase 268 corrective closure",
+      "date": "2026-08-13",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P270",
+      "number": "270",
+      "subject": "P32 trailing blob as the Phase 3.2 sibling-output payload",
+      "date": "2026-08-14",
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P271",
+      "number": "271",
+      "subject": "external fork re-audit (family 6, blob-literal/code-context archaeology)",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P272",
+      "number": "272",
+      "subject": "FAED hexadecimal-nibble packing",
+      "date": "2026-08-14",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P273",
+      "number": "273",
+      "subject": "DBBI/FAED through the page's exact decimal transport inverse",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P274",
+      "number": "274",
+      "subject": "Exact six-lane FAED/DBBI geometry and 24-symbol endpoint tail",
+      "date": "2026-08-14",
+      "in_degree": 3,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P275",
+      "number": "275",
+      "subject": "Canonical 9x9 DBBI/FAED transition matrices",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P276",
+      "number": "276",
+      "subject": "GF(9) linear complexity, recurrence transfer, and seven-row rank",
+      "date": "2026-08-14",
+      "in_degree": 3,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P277",
+      "number": "277",
+      "subject": "Three-trit base-27 decoding",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P278",
+      "number": "278",
+      "subject": "Move-to-front structural gate",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P279",
+      "number": "279",
+      "subject": "Natural base-81 digraph tokens",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P280",
+      "number": "280",
+      "subject": "Factoradic/Lehmer records at n=6 and n=9",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P281",
+      "number": "281",
+      "subject": "Crib-solved low-order recurrences",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P282",
+      "number": "282",
+      "subject": "DBBI probability model / FAED arithmetic code",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P283",
+      "number": "283",
+      "subject": "`anstoo` / asymmetric-numeral-system feasibility",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P284",
+      "number": "284",
+      "subject": "Canonical DBBI `81+10` finite-state machine",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P285",
+      "number": "285",
+      "subject": "Indel-tolerant DBBI/FAED sequence alignment",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P286",
+      "number": "286",
+      "subject": "DBBI/FAED canonical tone renders",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P287",
+      "number": "287",
+      "subject": "DBBI/FAED matrix-barcode rendering",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P288",
+      "number": "288",
+      "subject": "DBBI/FAED continued fractions",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P289",
+      "number": "289",
+      "subject": "DBBI/FAED as authenticated-string selectors",
+      "date": "2026-08-14",
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P290",
+      "number": "290",
+      "subject": "P1A",
+      "date": "2026-08-15",
+      "in_degree": 1,
+      "out_degree": 17
+    },
+    {
+      "stable_id": "P291",
+      "number": "291",
+      "subject": "Bounded primary-source delta search for DBBI/FAED",
+      "date": "2026-08-15",
+      "in_degree": 0,
+      "out_degree": 18
+    },
+    {
+      "stable_id": "P292",
+      "number": "292",
+      "subject": "Candidate family 10 executed",
+      "date": "2026-08-15",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P293",
+      "number": "293",
+      "subject": "`mirror9` direct substitution on full DBBI/FAED",
+      "date": "2026-08-16",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P294",
+      "number": "294",
+      "subject": "Cosmic Duality colophon/copyright-page identifiers",
+      "date": "2026-08-16",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P295",
+      "number": "295",
+      "subject": "Full Phase 3.2.1 plaintext reversal",
+      "date": "2026-08-16",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P296",
+      "number": "296",
+      "subject": "QR finder-ring texture",
+      "date": "2026-08-16",
+      "in_degree": 10,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P297",
+      "number": "297",
+      "subject": "Joint DBBI x FAED positional co-occurrence matrix",
+      "date": "2026-08-16",
+      "in_degree": 3,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P298",
+      "number": "298",
+      "subject": "QR finder-ring texture",
+      "date": "2026-08-16",
+      "in_degree": 4,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P299",
+      "number": "299",
+      "subject": "QR Code Monkey full eye-style catalog sweep",
+      "date": "2026-08-16",
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P300",
+      "number": "300",
+      "subject": "QR finder-ring texture",
+      "date": "2026-08-16",
+      "in_degree": 5,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P301",
+      "number": "301",
+      "subject": "QR finder-ring texture",
+      "date": "2026-08-16",
+      "in_degree": 5,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P302",
+      "number": "302",
+      "subject": "QR finder-ring texture",
+      "date": "2026-08-16",
+      "in_degree": 5,
+      "out_degree": 6
+    },
+    {
+      "stable_id": "P303",
+      "number": "303",
+      "subject": "QR finder-ring texture",
+      "date": "2026-08-16",
+      "in_degree": 2,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P304",
+      "number": "304",
+      "subject": "QR finder-ring texture",
+      "date": "2026-08-16",
+      "in_degree": 1,
+      "out_degree": 5
+    },
+    {
+      "stable_id": "P305",
+      "number": "305",
+      "subject": "QR finder-ring texture",
+      "date": "2026-08-16",
+      "in_degree": 4,
+      "out_degree": 9
+    },
+    {
+      "stable_id": "P306",
+      "number": "306",
+      "subject": "QR finder-ring texture",
+      "date": "2026-08-16",
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P307",
+      "number": "307",
+      "subject": "Architect monologue, forward, as one unbroken block against all four blobs",
+      "date": "2026-08-16",
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P308",
+      "number": "308",
+      "subject": "Architect monologue \"wiseman\"/\"140\" identity research and token-level oracle closure",
+      "date": "2026-08-16",
+      "in_degree": 1,
+      "out_degree": 5
+    },
+    {
+      "stable_id": "P309",
+      "number": "309",
+      "subject": "Legik's \"Bacon cipher\" observation on DBBI",
+      "date": "2026-08-17",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P310",
+      "number": "310",
+      "subject": "Nihilist-cipher additive-key hypothesis on DBBI/FAED",
+      "date": "2026-08-17",
+      "in_degree": 3,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P311",
+      "number": "311",
+      "subject": "Cosmic Duality book text as a running key over DBBI/FAED",
+      "date": "2026-08-17",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P312",
+      "number": "312",
+      "subject": "Bellaso 1553 reciprocal cipher as a \"Ciao Bella\" lead",
+      "date": "2026-08-17",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P313",
+      "number": "313",
+      "subject": "\"The Warning\" (Logic) unused remainder",
+      "date": "2026-08-17",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P314",
+      "number": "314",
+      "subject": "Architect monologue's \"no film equivalent\" rows (6/7/14) as password material",
+      "date": "2026-08-18",
+      "in_degree": 0,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P315",
+      "number": "315",
+      "subject": "Mr. Robot identity-theme show terms as password material",
+      "date": "2026-08-18",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P316",
+      "number": "316",
+      "subject": "anti-banking-theme candidates as password material",
+      "date": "2026-08-18",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P317",
+      "number": "317",
+      "subject": "all 5040 orderings of Phase 3's seven-part password",
+      "date": "2026-08-18",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P318",
+      "number": "318",
+      "subject": "DBBI/FAED as raw base-9 bignums (no checkerboard at all)",
+      "date": "2026-08-19",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P319",
+      "number": "319",
+      "subject": "spiral/boustrophedon route transposition on DBBI/FAED's established grid factorizations",
+      "date": "2026-08-19",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P320",
+      "number": "320",
+      "subject": "Gronsfeld pre-segmentation shift, progressive shift, and extra Nihilist keywords on DBBI/FAED",
+      "date": "2026-08-19",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P321",
+      "number": "321",
+      "subject": "ADFGVX-style keyed columnar transposition on DBBI/FAED",
+      "date": "2026-08-19",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P322",
+      "number": "322",
+      "subject": "GPU AES/KDF oracle built and validated; creator-authored macro-clue fragment combinations swept",
+      "date": "2026-08-19",
+      "in_degree": 5,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P323",
+      "number": "323",
+      "subject": "GPU oracle backfill",
+      "date": "2026-08-19",
+      "in_degree": 4,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P325",
+      "number": "325",
+      "subject": "genesis-block adjacent unused fields (timestamp/nBits/height/nonce) as password material",
+      "date": "2026-08-19",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P326",
+      "number": "326",
+      "subject": "SEED-CBC ported to the GPU oracle; closes the medium-curated 66,433-candidate SEED gap",
+      "date": "2026-08-19",
+      "in_degree": 2,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P327",
+      "number": "327",
+      "subject": "key-shape classifier (hex64/WIF/BIP39) swept against the core candidate corpus",
+      "date": "2026-08-19",
+      "in_degree": 4,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P328",
+      "number": "328",
+      "subject": "GPU oracle",
+      "date": "2026-08-19",
+      "in_degree": 5,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P329",
+      "number": "329",
+      "subject": "live `gsmg.io` restoration and ownership-provenance audit",
+      "date": "2026-08-20",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P330",
+      "number": "330",
+      "subject": "Hosterjack interactive compendium delta audit",
+      "date": "2026-08-20",
+      "in_degree": 2,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P331",
+      "number": "331",
+      "subject": "GPU oracle",
+      "date": "2026-08-20",
+      "in_degree": 6,
+      "out_degree": 5
+    },
+    {
+      "stable_id": "P332",
+      "number": "332",
+      "subject": "retroactively documented",
+      "date": null,
+      "in_degree": 1,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P333",
+      "number": "333",
+      "subject": "Phase-328's 43 weak hits swept through the key-shape classifier",
+      "date": "2026-08-20",
+      "in_degree": 2,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P334",
+      "number": "334",
+      "subject": "the omitted k=8 macro-clue permutation case run",
+      "date": "2026-08-20",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P335",
+      "number": "335",
+      "subject": "Model 11 (81+10 FSM) report-plumbing fix closed; P0A/P1A sentinel backfill extended to 42 candidates",
+      "date": "2026-08-20",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P336",
+      "number": "336",
+      "subject": "B1 \"half and better half\" combine algebra, bounded pilot",
+      "date": "2026-08-20",
+      "in_degree": 7,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P337",
+      "number": "337",
+      "subject": "A1+A2 sliding raw-key windows and byte-order transforms, bounded pilot",
+      "date": "2026-08-20",
+      "in_degree": 3,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P338",
+      "number": "338",
+      "subject": "A3 unconditional embedded key-format scanner, bounded pilot",
+      "date": "2026-08-20",
+      "in_degree": 2,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P339",
+      "number": "339",
+      "subject": "code review corrections to Phases 336-338",
+      "date": "2026-08-20",
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P340",
+      "number": "340",
+      "subject": "C1 BIP32 paths from authenticated numbers, tightly bounded pilot",
+      "date": "2026-08-20",
+      "in_degree": 2,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P341",
+      "number": "341",
+      "subject": "Seed 1",
+      "date": "2026-08-20",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P342",
+      "number": "342",
+      "subject": "Seed 2",
+      "date": "2026-08-20",
+      "in_degree": 2,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P343",
+      "number": "343",
+      "subject": "Seed 4 (ledger half only)",
+      "date": "2026-08-20",
+      "in_degree": 3,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P344",
+      "number": "344",
+      "subject": "Seed 5",
+      "date": "2026-08-20",
+      "in_degree": 1,
+      "out_degree": 6
+    },
+    {
+      "stable_id": "P345",
+      "number": "345",
+      "subject": "correction to Phase 344",
+      "date": "2026-08-20",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P346",
+      "number": "346",
+      "subject": "BIP32-paths-c1 (Phase 340) scaled to the two larger core corpora, deduplicated",
+      "date": "2026-08-20",
+      "in_degree": 0,
+      "out_degree": 5
+    },
+    {
+      "stable_id": "P347",
+      "number": "347",
+      "subject": "Seed-6-first tradeoff resolved",
+      "date": "2026-08-20",
+      "in_degree": 2,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P348",
+      "number": "348",
+      "subject": "Seed 6",
+      "date": "2026-08-20",
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P349",
+      "number": "349",
+      "subject": "Provenance monitor repeat-safety repair and low-frequency activation",
+      "date": "2026-08-20",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P350",
+      "number": "350",
+      "subject": "Seed 8 delta",
+      "date": "2026-08-20",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P351",
+      "number": "351",
+      "subject": "authenticated Phase 2/Phase 3 plaintext contains zero backspace (0x08) control bytes",
+      "date": "2026-08-20",
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P352",
+      "number": "352",
+      "subject": "stego-toolkit (dominicbreuker/stego-toolkit) sweep over all 137 repository media files",
+      "date": "2026-08-20",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P353",
+      "number": "353",
+      "subject": "is the 14x14 rabbit grid an enlarged crop of the page's own QR code? Negative",
+      "date": "2026-08-21",
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P354",
+      "number": "354",
+      "subject": "QR `#FAFAFA` mask is predicted by one global 7x7 tile",
+      "date": "2026-08-21",
+      "in_degree": 3,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P355",
+      "number": "355",
+      "subject": "exhaustive Braille readings of QR `#FAFAFA` mask and Phase-354 residual",
+      "date": "2026-08-21",
+      "in_degree": 2,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P356",
+      "number": "356",
+      "subject": "QR `#FAFAFA` texture is locked to one native 7x7-pixel module",
+      "date": "2026-08-21",
+      "in_degree": 5,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P357",
+      "number": "357",
+      "subject": "QR module-tile scale-history inversion",
+      "date": "2026-08-21",
+      "in_degree": 1,
+      "out_degree": 1
+    },
+    {
+      "stable_id": "P358",
+      "number": "358",
+      "subject": "repository-wide exact 7x7 QR tile fingerprint",
+      "date": "2026-08-21",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P359",
+      "number": "359",
+      "subject": "constant-fill QR finder renderer calibration",
+      "date": "2026-08-21",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P360",
+      "number": "360",
+      "subject": "six-variant QR `#FAFAFA` atlas",
+      "date": "2026-08-21",
+      "in_degree": 2,
+      "out_degree": 4
+    },
+    {
+      "stable_id": "P361",
+      "number": "361",
+      "subject": "Phase-360 QR residual is exceptionally compact, but the hidden-center continuation is mathematically non-identifiable",
+      "date": "2026-08-21",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P362",
+      "number": "362",
+      "subject": "all-six QR module-variant fingerprint",
+      "date": "2026-08-21",
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P363",
+      "number": "363",
+      "subject": "QR-eye PNG scanline provenance",
+      "date": "2026-08-21",
+      "in_degree": 1,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P364",
+      "number": "364",
+      "subject": "QR light-gray compositing/dither inversion",
+      "date": "2026-08-21",
+      "in_degree": 0,
+      "out_degree": 3
+    },
+    {
+      "stable_id": "P365",
+      "number": "365",
+      "subject": "final QR `#FAFAFA` structural closure",
+      "date": "2026-08-21",
+      "in_degree": 0,
+      "out_degree": 2
+    },
+    {
+      "stable_id": "P366",
+      "number": "366",
+      "subject": "\u201cin front of your eyes\u201d chronology rejects a creator-confirmed 31-character transition",
+      "date": "2026-08-21",
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    {
+      "stable_id": "P367",
+      "number": "367",
+      "subject": "praised-snapshot dependency closure rejected; 2026 `tiny hint` parked as possibly directional, non-operational",
+      "date": "2026-08-21",
+      "in_degree": 0,
+      "out_degree": 0
+    }
+  ],
+  "edges": [
+    {
+      "from": "P003",
+      "to": "P002",
+      "count": 1
+    },
+    {
+      "from": "P004",
+      "to": "P003",
+      "count": 2
+    },
+    {
+      "from": "P006",
+      "to": "P002",
+      "count": 1
+    },
+    {
+      "from": "P007",
+      "to": "P096",
+      "count": 1
+    },
+    {
+      "from": "P007",
+      "to": "P136",
+      "count": 1
+    },
+    {
+      "from": "P008-A",
+      "to": "P002",
+      "count": 2
+    },
+    {
+      "from": "P008-A",
+      "to": "P003",
+      "count": 1
+    },
+    {
+      "from": "P008-A",
+      "to": "P004",
+      "count": 1
+    },
+    {
+      "from": "P008-A",
+      "to": "P005",
+      "count": 1
+    },
+    {
+      "from": "P008-A",
+      "to": "P006",
+      "count": 1
+    },
+    {
+      "from": "P008-A",
+      "to": "P007",
+      "count": 1
+    },
+    {
+      "from": "P008-B",
+      "to": "P007",
+      "count": 2
+    },
+    {
+      "from": "P010",
+      "to": "P007",
+      "count": 1
+    },
+    {
+      "from": "P015",
+      "to": "P014",
+      "count": 1
+    },
+    {
+      "from": "P016",
+      "to": "P015",
+      "count": 1
+    },
+    {
+      "from": "P017",
+      "to": "P016",
+      "count": 1
+    },
+    {
+      "from": "P018",
+      "to": "P016",
+      "count": 1
+    },
+    {
+      "from": "P021",
+      "to": "P020",
+      "count": 1
+    },
+    {
+      "from": "P023",
+      "to": "P022",
+      "count": 1
+    },
+    {
+      "from": "P024",
+      "to": "P020",
+      "count": 1
+    },
+    {
+      "from": "P024",
+      "to": "P021",
+      "count": 1
+    },
+    {
+      "from": "P026",
+      "to": "P025",
+      "count": 1
+    },
+    {
+      "from": "P026",
+      "to": "P022",
+      "count": 1
+    },
+    {
+      "from": "P035",
+      "to": "P036",
+      "count": 1
+    },
+    {
+      "from": "P042",
+      "to": "P028",
+      "count": 1
+    },
+    {
+      "from": "P043",
+      "to": "P034",
+      "count": 1
+    },
+    {
+      "from": "P043",
+      "to": "P019-A",
+      "count": 1
+    },
+    {
+      "from": "P043",
+      "to": "P019-B",
+      "count": 1
+    },
+    {
+      "from": "P045",
+      "to": "P044",
+      "count": 2
+    },
+    {
+      "from": "P047",
+      "to": "P048",
+      "count": 1
+    },
+    {
+      "from": "P047",
+      "to": "P046",
+      "count": 4
+    },
+    {
+      "from": "P047",
+      "to": "P041",
+      "count": 2
+    },
+    {
+      "from": "P047",
+      "to": "P037",
+      "count": 1
+    },
+    {
+      "from": "P048",
+      "to": "P047",
+      "count": 3
+    },
+    {
+      "from": "P049",
+      "to": "P050",
+      "count": 1
+    },
+    {
+      "from": "P049",
+      "to": "P048",
+      "count": 2
+    },
+    {
+      "from": "P050",
+      "to": "P048",
+      "count": 1
+    },
+    {
+      "from": "P050",
+      "to": "P049",
+      "count": 2
+    },
+    {
+      "from": "P051",
+      "to": "P013",
+      "count": 1
+    },
+    {
+      "from": "P051",
+      "to": "P048",
+      "count": 1
+    },
+    {
+      "from": "P055",
+      "to": "P052",
+      "count": 1
+    },
+    {
+      "from": "P058",
+      "to": "P051",
+      "count": 1
+    },
+    {
+      "from": "P059",
+      "to": "P053",
+      "count": 1
+    },
+    {
+      "from": "P059",
+      "to": "P054",
+      "count": 2
+    },
+    {
+      "from": "P059",
+      "to": "P055",
+      "count": 1
+    },
+    {
+      "from": "P059",
+      "to": "P056",
+      "count": 2
+    },
+    {
+      "from": "P060",
+      "to": "P036",
+      "count": 2
+    },
+    {
+      "from": "P063",
+      "to": "P127",
+      "count": 1
+    },
+    {
+      "from": "P064",
+      "to": "P127",
+      "count": 2
+    },
+    {
+      "from": "P064",
+      "to": "P040",
+      "count": 1
+    },
+    {
+      "from": "P064",
+      "to": "P031",
+      "count": 1
+    },
+    {
+      "from": "P064",
+      "to": "P048",
+      "count": 1
+    },
+    {
+      "from": "P065",
+      "to": "P127",
+      "count": 1
+    },
+    {
+      "from": "P065",
+      "to": "P064",
+      "count": 2
+    },
+    {
+      "from": "P066",
+      "to": "P063",
+      "count": 1
+    },
+    {
+      "from": "P066",
+      "to": "P064",
+      "count": 1
+    },
+    {
+      "from": "P066",
+      "to": "P040",
+      "count": 1
+    },
+    {
+      "from": "P067",
+      "to": "P064",
+      "count": 1
+    },
+    {
+      "from": "P067",
+      "to": "P065",
+      "count": 1
+    },
+    {
+      "from": "P068",
+      "to": "P066",
+      "count": 2
+    },
+    {
+      "from": "P069",
+      "to": "P013",
+      "count": 1
+    },
+    {
+      "from": "P069",
+      "to": "P036",
+      "count": 1
+    },
+    {
+      "from": "P072",
+      "to": "P071",
+      "count": 4
+    },
+    {
+      "from": "P072",
+      "to": "P069",
+      "count": 1
+    },
+    {
+      "from": "P075",
+      "to": "P074",
+      "count": 1
+    },
+    {
+      "from": "P079",
+      "to": "P066",
+      "count": 1
+    },
+    {
+      "from": "P080",
+      "to": "P078",
+      "count": 2
+    },
+    {
+      "from": "P081",
+      "to": "P078",
+      "count": 1
+    },
+    {
+      "from": "P082",
+      "to": "P078",
+      "count": 1
+    },
+    {
+      "from": "P083",
+      "to": "P081",
+      "count": 1
+    },
+    {
+      "from": "P085",
+      "to": "P084",
+      "count": 1
+    },
+    {
+      "from": "P086",
+      "to": "P084",
+      "count": 1
+    },
+    {
+      "from": "P086",
+      "to": "P085",
+      "count": 2
+    },
+    {
+      "from": "P087",
+      "to": "P084",
+      "count": 1
+    },
+    {
+      "from": "P087",
+      "to": "P085",
+      "count": 1
+    },
+    {
+      "from": "P087",
+      "to": "P086",
+      "count": 2
+    },
+    {
+      "from": "P089",
+      "to": "P088",
+      "count": 1
+    },
+    {
+      "from": "P090",
+      "to": "P088",
+      "count": 2
+    },
+    {
+      "from": "P090",
+      "to": "P089",
+      "count": 2
+    },
+    {
+      "from": "P090",
+      "to": "P083",
+      "count": 1
+    },
+    {
+      "from": "P090",
+      "to": "P085",
+      "count": 1
+    },
+    {
+      "from": "P090",
+      "to": "P086",
+      "count": 1
+    },
+    {
+      "from": "P090",
+      "to": "P087",
+      "count": 1
+    },
+    {
+      "from": "P091",
+      "to": "P087",
+      "count": 5
+    },
+    {
+      "from": "P091",
+      "to": "P086",
+      "count": 1
+    },
+    {
+      "from": "P091",
+      "to": "P085",
+      "count": 1
+    },
+    {
+      "from": "P091",
+      "to": "P084",
+      "count": 1
+    },
+    {
+      "from": "P092",
+      "to": "P087",
+      "count": 3
+    },
+    {
+      "from": "P092",
+      "to": "P091",
+      "count": 1
+    },
+    {
+      "from": "P093",
+      "to": "P092",
+      "count": 2
+    },
+    {
+      "from": "P093",
+      "to": "P095",
+      "count": 1
+    },
+    {
+      "from": "P094",
+      "to": "P028",
+      "count": 1
+    },
+    {
+      "from": "P095",
+      "to": "P094",
+      "count": 3
+    },
+    {
+      "from": "P095",
+      "to": "P091",
+      "count": 1
+    },
+    {
+      "from": "P095",
+      "to": "P092",
+      "count": 1
+    },
+    {
+      "from": "P097",
+      "to": "P096",
+      "count": 1
+    },
+    {
+      "from": "P097",
+      "to": "P032",
+      "count": 1
+    },
+    {
+      "from": "P098",
+      "to": "P097",
+      "count": 1
+    },
+    {
+      "from": "P098",
+      "to": "P096",
+      "count": 1
+    },
+    {
+      "from": "P099",
+      "to": "P098",
+      "count": 1
+    },
+    {
+      "from": "P102",
+      "to": "P098",
+      "count": 1
+    },
+    {
+      "from": "P102",
+      "to": "P099",
+      "count": 1
+    },
+    {
+      "from": "P103",
+      "to": "P096",
+      "count": 1
+    },
+    {
+      "from": "P103",
+      "to": "P033",
+      "count": 1
+    },
+    {
+      "from": "P103",
+      "to": "P034",
+      "count": 1
+    },
+    {
+      "from": "P104",
+      "to": "P034",
+      "count": 1
+    },
+    {
+      "from": "P105",
+      "to": "P097",
+      "count": 1
+    },
+    {
+      "from": "P105",
+      "to": "P098",
+      "count": 1
+    },
+    {
+      "from": "P105",
+      "to": "P099",
+      "count": 1
+    },
+    {
+      "from": "P105",
+      "to": "P112",
+      "count": 1
+    },
+    {
+      "from": "P106",
+      "to": "P112",
+      "count": 1
+    },
+    {
+      "from": "P106",
+      "to": "P008-A",
+      "count": 1
+    },
+    {
+      "from": "P106",
+      "to": "P008-B",
+      "count": 1
+    },
+    {
+      "from": "P107",
+      "to": "P096",
+      "count": 1
+    },
+    {
+      "from": "P107",
+      "to": "P097",
+      "count": 4
+    },
+    {
+      "from": "P107",
+      "to": "P098",
+      "count": 3
+    },
+    {
+      "from": "P107",
+      "to": "P099",
+      "count": 3
+    },
+    {
+      "from": "P108",
+      "to": "P097",
+      "count": 1
+    },
+    {
+      "from": "P108",
+      "to": "P102",
+      "count": 1
+    },
+    {
+      "from": "P108",
+      "to": "P098",
+      "count": 1
+    },
+    {
+      "from": "P108",
+      "to": "P099",
+      "count": 1
+    },
+    {
+      "from": "P110",
+      "to": "P007",
+      "count": 2
+    },
+    {
+      "from": "P112",
+      "to": "P106",
+      "count": 1
+    },
+    {
+      "from": "P113",
+      "to": "P112",
+      "count": 4
+    },
+    {
+      "from": "P113",
+      "to": "P043",
+      "count": 3
+    },
+    {
+      "from": "P117",
+      "to": "P037",
+      "count": 1
+    },
+    {
+      "from": "P117",
+      "to": "P004",
+      "count": 1
+    },
+    {
+      "from": "P119",
+      "to": "P036",
+      "count": 1
+    },
+    {
+      "from": "P119",
+      "to": "P060",
+      "count": 2
+    },
+    {
+      "from": "P120",
+      "to": "P119",
+      "count": 1
+    },
+    {
+      "from": "P120",
+      "to": "P036",
+      "count": 3
+    },
+    {
+      "from": "P123",
+      "to": "P113",
+      "count": 1
+    },
+    {
+      "from": "P124",
+      "to": "P123",
+      "count": 1
+    },
+    {
+      "from": "P124",
+      "to": "P127",
+      "count": 1
+    },
+    {
+      "from": "P125",
+      "to": "P127",
+      "count": 3
+    },
+    {
+      "from": "P126",
+      "to": "P127",
+      "count": 1
+    },
+    {
+      "from": "P126",
+      "to": "P125",
+      "count": 2
+    },
+    {
+      "from": "P127",
+      "to": "P126",
+      "count": 4
+    },
+    {
+      "from": "P127",
+      "to": "P064",
+      "count": 1
+    },
+    {
+      "from": "P127",
+      "to": "P098",
+      "count": 1
+    },
+    {
+      "from": "P127",
+      "to": "P125",
+      "count": 2
+    },
+    {
+      "from": "P128",
+      "to": "P125",
+      "count": 1
+    },
+    {
+      "from": "P128",
+      "to": "P126",
+      "count": 1
+    },
+    {
+      "from": "P128",
+      "to": "P127",
+      "count": 1
+    },
+    {
+      "from": "P129",
+      "to": "P128",
+      "count": 6
+    },
+    {
+      "from": "P131",
+      "to": "P132",
+      "count": 2
+    },
+    {
+      "from": "P131",
+      "to": "P046",
+      "count": 1
+    },
+    {
+      "from": "P131",
+      "to": "P048",
+      "count": 1
+    },
+    {
+      "from": "P132",
+      "to": "P131",
+      "count": 1
+    },
+    {
+      "from": "P134",
+      "to": "P101",
+      "count": 2
+    },
+    {
+      "from": "P134",
+      "to": "P102",
+      "count": 2
+    },
+    {
+      "from": "P135",
+      "to": "P137",
+      "count": 1
+    },
+    {
+      "from": "P136",
+      "to": "P007",
+      "count": 1
+    },
+    {
+      "from": "P136",
+      "to": "P137",
+      "count": 1
+    },
+    {
+      "from": "P138",
+      "to": "P136",
+      "count": 1
+    },
+    {
+      "from": "P138",
+      "to": "P137",
+      "count": 1
+    },
+    {
+      "from": "P139",
+      "to": "P053",
+      "count": 1
+    },
+    {
+      "from": "P140",
+      "to": "P053",
+      "count": 1
+    },
+    {
+      "from": "P141",
+      "to": "P140",
+      "count": 1
+    },
+    {
+      "from": "P144",
+      "to": "P100",
+      "count": 2
+    },
+    {
+      "from": "P144",
+      "to": "P090",
+      "count": 1
+    },
+    {
+      "from": "P145",
+      "to": "P106",
+      "count": 1
+    },
+    {
+      "from": "P145",
+      "to": "P112",
+      "count": 1
+    },
+    {
+      "from": "P146",
+      "to": "P145",
+      "count": 1
+    },
+    {
+      "from": "P146",
+      "to": "P106",
+      "count": 1
+    },
+    {
+      "from": "P146",
+      "to": "P112",
+      "count": 1
+    },
+    {
+      "from": "P146",
+      "to": "P144",
+      "count": 1
+    },
+    {
+      "from": "P147",
+      "to": "P074",
+      "count": 1
+    },
+    {
+      "from": "P147",
+      "to": "P075",
+      "count": 4
+    },
+    {
+      "from": "P149",
+      "to": "P097",
+      "count": 1
+    },
+    {
+      "from": "P149",
+      "to": "P098",
+      "count": 1
+    },
+    {
+      "from": "P149",
+      "to": "P148",
+      "count": 1
+    },
+    {
+      "from": "P150",
+      "to": "P051",
+      "count": 2
+    },
+    {
+      "from": "P151",
+      "to": "P022",
+      "count": 1
+    },
+    {
+      "from": "P151",
+      "to": "P078",
+      "count": 2
+    },
+    {
+      "from": "P151",
+      "to": "P148",
+      "count": 1
+    },
+    {
+      "from": "P152",
+      "to": "P021",
+      "count": 1
+    },
+    {
+      "from": "P152",
+      "to": "P151",
+      "count": 1
+    },
+    {
+      "from": "P153",
+      "to": "P151",
+      "count": 1
+    },
+    {
+      "from": "P153",
+      "to": "P051",
+      "count": 1
+    },
+    {
+      "from": "P155",
+      "to": "P154",
+      "count": 2
+    },
+    {
+      "from": "P155",
+      "to": "P148",
+      "count": 2
+    },
+    {
+      "from": "P155",
+      "to": "P151",
+      "count": 2
+    },
+    {
+      "from": "P155",
+      "to": "P152",
+      "count": 1
+    },
+    {
+      "from": "P156",
+      "to": "P155",
+      "count": 1
+    },
+    {
+      "from": "P157",
+      "to": "P037",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P038",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P039",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P040",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P041",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P042",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P043",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P044",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P045",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P046",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P047",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P048",
+      "count": 2
+    },
+    {
+      "from": "P157",
+      "to": "P021",
+      "count": 1
+    },
+    {
+      "from": "P158",
+      "to": "P102",
+      "count": 3
+    },
+    {
+      "from": "P158",
+      "to": "P155",
+      "count": 2
+    },
+    {
+      "from": "P159",
+      "to": "P148",
+      "count": 5
+    },
+    {
+      "from": "P159",
+      "to": "P088",
+      "count": 1
+    },
+    {
+      "from": "P159",
+      "to": "P096",
+      "count": 1
+    },
+    {
+      "from": "P159",
+      "to": "P046",
+      "count": 1
+    },
+    {
+      "from": "P159",
+      "to": "P047",
+      "count": 1
+    },
+    {
+      "from": "P159",
+      "to": "P021",
+      "count": 1
+    },
+    {
+      "from": "P160",
+      "to": "P150",
+      "count": 1
+    },
+    {
+      "from": "P160",
+      "to": "P153",
+      "count": 2
+    },
+    {
+      "from": "P160",
+      "to": "P034",
+      "count": 1
+    },
+    {
+      "from": "P160",
+      "to": "P051",
+      "count": 1
+    },
+    {
+      "from": "P161",
+      "to": "P005",
+      "count": 5
+    },
+    {
+      "from": "P161",
+      "to": "P068",
+      "count": 1
+    },
+    {
+      "from": "P161",
+      "to": "P069",
+      "count": 1
+    },
+    {
+      "from": "P162",
+      "to": "P161",
+      "count": 6
+    },
+    {
+      "from": "P162",
+      "to": "P005",
+      "count": 2
+    },
+    {
+      "from": "P163",
+      "to": "P155",
+      "count": 1
+    },
+    {
+      "from": "P163",
+      "to": "P094",
+      "count": 1
+    },
+    {
+      "from": "P163",
+      "to": "P095",
+      "count": 2
+    },
+    {
+      "from": "P163",
+      "to": "P323",
+      "count": 1
+    },
+    {
+      "from": "P163",
+      "to": "P328",
+      "count": 1
+    },
+    {
+      "from": "P164",
+      "to": "P163",
+      "count": 1
+    },
+    {
+      "from": "P165",
+      "to": "P164",
+      "count": 2
+    },
+    {
+      "from": "P165",
+      "to": "P094",
+      "count": 1
+    },
+    {
+      "from": "P165",
+      "to": "P163",
+      "count": 1
+    },
+    {
+      "from": "P165",
+      "to": "P158",
+      "count": 1
+    },
+    {
+      "from": "P166",
+      "to": "P164",
+      "count": 2
+    },
+    {
+      "from": "P166",
+      "to": "P165",
+      "count": 1
+    },
+    {
+      "from": "P166",
+      "to": "P031",
+      "count": 1
+    },
+    {
+      "from": "P166",
+      "to": "P034",
+      "count": 1
+    },
+    {
+      "from": "P166",
+      "to": "P043",
+      "count": 1
+    },
+    {
+      "from": "P166",
+      "to": "P112",
+      "count": 1
+    },
+    {
+      "from": "P166",
+      "to": "P124",
+      "count": 4
+    },
+    {
+      "from": "P166",
+      "to": "P033",
+      "count": 1
+    },
+    {
+      "from": "P166",
+      "to": "P079",
+      "count": 1
+    },
+    {
+      "from": "P167",
+      "to": "P163",
+      "count": 1
+    },
+    {
+      "from": "P167",
+      "to": "P164",
+      "count": 1
+    },
+    {
+      "from": "P168",
+      "to": "P159",
+      "count": 1
+    },
+    {
+      "from": "P168",
+      "to": "P148",
+      "count": 1
+    },
+    {
+      "from": "P169",
+      "to": "P222",
+      "count": 1
+    },
+    {
+      "from": "P169",
+      "to": "P096",
+      "count": 1
+    },
+    {
+      "from": "P170",
+      "to": "P164",
+      "count": 2
+    },
+    {
+      "from": "P170",
+      "to": "P169",
+      "count": 1
+    },
+    {
+      "from": "P171",
+      "to": "P053",
+      "count": 1
+    },
+    {
+      "from": "P171",
+      "to": "P061",
+      "count": 1
+    },
+    {
+      "from": "P172",
+      "to": "P171",
+      "count": 1
+    },
+    {
+      "from": "P174",
+      "to": "P139",
+      "count": 1
+    },
+    {
+      "from": "P176",
+      "to": "P170",
+      "count": 1
+    },
+    {
+      "from": "P178",
+      "to": "P132",
+      "count": 1
+    },
+    {
+      "from": "P178",
+      "to": "P051",
+      "count": 1
+    },
+    {
+      "from": "P179",
+      "to": "P097",
+      "count": 1
+    },
+    {
+      "from": "P182",
+      "to": "P054",
+      "count": 1
+    },
+    {
+      "from": "P181",
+      "to": "P033",
+      "count": 2
+    },
+    {
+      "from": "P181",
+      "to": "P139",
+      "count": 2
+    },
+    {
+      "from": "P181",
+      "to": "P174",
+      "count": 3
+    },
+    {
+      "from": "P181",
+      "to": "P056",
+      "count": 1
+    },
+    {
+      "from": "P183",
+      "to": "P181",
+      "count": 7
+    },
+    {
+      "from": "P183",
+      "to": "P182",
+      "count": 7
+    },
+    {
+      "from": "P183",
+      "to": "P184",
+      "count": 1
+    },
+    {
+      "from": "P184",
+      "to": "P183",
+      "count": 1
+    },
+    {
+      "from": "P184",
+      "to": "P182",
+      "count": 4
+    },
+    {
+      "from": "P184",
+      "to": "P178",
+      "count": 1
+    },
+    {
+      "from": "P184",
+      "to": "P179",
+      "count": 1
+    },
+    {
+      "from": "P185",
+      "to": "P032",
+      "count": 1
+    },
+    {
+      "from": "P185",
+      "to": "P033",
+      "count": 3
+    },
+    {
+      "from": "P185",
+      "to": "P034",
+      "count": 1
+    },
+    {
+      "from": "P185",
+      "to": "P097",
+      "count": 1
+    },
+    {
+      "from": "P185",
+      "to": "P150",
+      "count": 2
+    },
+    {
+      "from": "P186",
+      "to": "P157",
+      "count": 2
+    },
+    {
+      "from": "P188",
+      "to": "P186",
+      "count": 1
+    },
+    {
+      "from": "P190",
+      "to": "P189",
+      "count": 1
+    },
+    {
+      "from": "P191",
+      "to": "P189",
+      "count": 1
+    },
+    {
+      "from": "P191",
+      "to": "P192",
+      "count": 1
+    },
+    {
+      "from": "P192",
+      "to": "P027",
+      "count": 2
+    },
+    {
+      "from": "P193",
+      "to": "P192",
+      "count": 2
+    },
+    {
+      "from": "P194",
+      "to": "P143",
+      "count": 3
+    },
+    {
+      "from": "P195",
+      "to": "P188",
+      "count": 1
+    },
+    {
+      "from": "P196",
+      "to": "P195",
+      "count": 2
+    },
+    {
+      "from": "P204",
+      "to": "P191",
+      "count": 1
+    },
+    {
+      "from": "P205",
+      "to": "P190",
+      "count": 1
+    },
+    {
+      "from": "P209",
+      "to": "P188",
+      "count": 3
+    },
+    {
+      "from": "P209",
+      "to": "P189",
+      "count": 2
+    },
+    {
+      "from": "P209",
+      "to": "P190",
+      "count": 2
+    },
+    {
+      "from": "P209",
+      "to": "P191",
+      "count": 1
+    },
+    {
+      "from": "P209",
+      "to": "P186",
+      "count": 1
+    },
+    {
+      "from": "P209",
+      "to": "P187",
+      "count": 1
+    },
+    {
+      "from": "P210",
+      "to": "P156",
+      "count": 1
+    },
+    {
+      "from": "P216",
+      "to": "P223",
+      "count": 1
+    },
+    {
+      "from": "P217",
+      "to": "P223",
+      "count": 1
+    },
+    {
+      "from": "P217",
+      "to": "P216",
+      "count": 1
+    },
+    {
+      "from": "P217",
+      "to": "P096",
+      "count": 2
+    },
+    {
+      "from": "P218",
+      "to": "P217",
+      "count": 2
+    },
+    {
+      "from": "P218",
+      "to": "P216",
+      "count": 1
+    },
+    {
+      "from": "P218",
+      "to": "P033",
+      "count": 1
+    },
+    {
+      "from": "P218",
+      "to": "P096",
+      "count": 1
+    },
+    {
+      "from": "P219",
+      "to": "P218",
+      "count": 1
+    },
+    {
+      "from": "P219",
+      "to": "P018",
+      "count": 1
+    },
+    {
+      "from": "P219",
+      "to": "P144",
+      "count": 1
+    },
+    {
+      "from": "P219",
+      "to": "P146",
+      "count": 1
+    },
+    {
+      "from": "P220",
+      "to": "P218",
+      "count": 1
+    },
+    {
+      "from": "P221",
+      "to": "P217",
+      "count": 1
+    },
+    {
+      "from": "P222",
+      "to": "P169",
+      "count": 1
+    },
+    {
+      "from": "P223",
+      "to": "P218",
+      "count": 1
+    },
+    {
+      "from": "P226",
+      "to": "P230",
+      "count": 3
+    },
+    {
+      "from": "P228",
+      "to": "P227",
+      "count": 1
+    },
+    {
+      "from": "P229",
+      "to": "P220",
+      "count": 1
+    },
+    {
+      "from": "P230",
+      "to": "P226",
+      "count": 2
+    },
+    {
+      "from": "P233",
+      "to": "P232",
+      "count": 1
+    },
+    {
+      "from": "P234",
+      "to": "P233",
+      "count": 2
+    },
+    {
+      "from": "P235",
+      "to": "P226",
+      "count": 1
+    },
+    {
+      "from": "P235",
+      "to": "P230",
+      "count": 1
+    },
+    {
+      "from": "P236",
+      "to": "P132",
+      "count": 1
+    },
+    {
+      "from": "P238",
+      "to": "P236",
+      "count": 1
+    },
+    {
+      "from": "P238",
+      "to": "P101",
+      "count": 1
+    },
+    {
+      "from": "P239",
+      "to": "P162",
+      "count": 1
+    },
+    {
+      "from": "P239",
+      "to": "P187",
+      "count": 1
+    },
+    {
+      "from": "P240",
+      "to": "P036",
+      "count": 1
+    },
+    {
+      "from": "P241",
+      "to": "P239",
+      "count": 1
+    },
+    {
+      "from": "P242",
+      "to": "P239",
+      "count": 1
+    },
+    {
+      "from": "P244",
+      "to": "P243",
+      "count": 3
+    },
+    {
+      "from": "P245",
+      "to": "P115",
+      "count": 1
+    },
+    {
+      "from": "P248",
+      "to": "P247",
+      "count": 2
+    },
+    {
+      "from": "P248",
+      "to": "P245",
+      "count": 1
+    },
+    {
+      "from": "P250",
+      "to": "P044",
+      "count": 1
+    },
+    {
+      "from": "P251",
+      "to": "P195",
+      "count": 1
+    },
+    {
+      "from": "P255",
+      "to": "P254",
+      "count": 1
+    },
+    {
+      "from": "P255",
+      "to": "P253",
+      "count": 3
+    },
+    {
+      "from": "P256",
+      "to": "P254",
+      "count": 2
+    },
+    {
+      "from": "P256",
+      "to": "P255",
+      "count": 1
+    },
+    {
+      "from": "P256",
+      "to": "P253",
+      "count": 1
+    },
+    {
+      "from": "P256",
+      "to": "P066",
+      "count": 1
+    },
+    {
+      "from": "P256",
+      "to": "P079",
+      "count": 1
+    },
+    {
+      "from": "P256",
+      "to": "P257",
+      "count": 1
+    },
+    {
+      "from": "P257",
+      "to": "P256",
+      "count": 1
+    },
+    {
+      "from": "P257",
+      "to": "P253",
+      "count": 1
+    },
+    {
+      "from": "P257",
+      "to": "P025",
+      "count": 1
+    },
+    {
+      "from": "P257",
+      "to": "P077",
+      "count": 1
+    },
+    {
+      "from": "P258",
+      "to": "P071",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P007",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P044",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P083",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P084",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P085",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P086",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P087",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P088",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P089",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P090",
+      "count": 1
+    },
+    {
+      "from": "P259",
+      "to": "P261",
+      "count": 1
+    },
+    {
+      "from": "P260",
+      "to": "P196",
+      "count": 2
+    },
+    {
+      "from": "P261",
+      "to": "P259",
+      "count": 2
+    },
+    {
+      "from": "P261",
+      "to": "P260",
+      "count": 3
+    },
+    {
+      "from": "P262",
+      "to": "P260",
+      "count": 2
+    },
+    {
+      "from": "P262",
+      "to": "P261",
+      "count": 2
+    },
+    {
+      "from": "P262",
+      "to": "P259",
+      "count": 1
+    },
+    {
+      "from": "P263",
+      "to": "P260",
+      "count": 1
+    },
+    {
+      "from": "P263",
+      "to": "P261",
+      "count": 1
+    },
+    {
+      "from": "P265",
+      "to": "P179",
+      "count": 1
+    },
+    {
+      "from": "P268",
+      "to": "P265",
+      "count": 1
+    },
+    {
+      "from": "P268",
+      "to": "P266",
+      "count": 1
+    },
+    {
+      "from": "P269",
+      "to": "P268",
+      "count": 1
+    },
+    {
+      "from": "P269",
+      "to": "P267",
+      "count": 1
+    },
+    {
+      "from": "P271",
+      "to": "P270",
+      "count": 1
+    },
+    {
+      "from": "P283",
+      "to": "P102",
+      "count": 1
+    },
+    {
+      "from": "P285",
+      "to": "P274",
+      "count": 1
+    },
+    {
+      "from": "P286",
+      "to": "P008-A",
+      "count": 1
+    },
+    {
+      "from": "P286",
+      "to": "P008-B",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P273",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P274",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P275",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P276",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P277",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P278",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P279",
+      "count": 2
+    },
+    {
+      "from": "P290",
+      "to": "P280",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P281",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P282",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P283",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P284",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P285",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P286",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P287",
+      "count": 1
+    },
+    {
+      "from": "P290",
+      "to": "P288",
+      "count": 2
+    },
+    {
+      "from": "P290",
+      "to": "P289",
+      "count": 2
+    },
+    {
+      "from": "P291",
+      "to": "P271",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P273",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P274",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P275",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P276",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P277",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P278",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P279",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P280",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P281",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P282",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P283",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P284",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P285",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P286",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P287",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P288",
+      "count": 1
+    },
+    {
+      "from": "P291",
+      "to": "P289",
+      "count": 1
+    },
+    {
+      "from": "P292",
+      "to": "P271",
+      "count": 1
+    },
+    {
+      "from": "P293",
+      "to": "P276",
+      "count": 1
+    },
+    {
+      "from": "P293",
+      "to": "P296",
+      "count": 1
+    },
+    {
+      "from": "P295",
+      "to": "P007",
+      "count": 1
+    },
+    {
+      "from": "P297",
+      "to": "P293",
+      "count": 1
+    },
+    {
+      "from": "P297",
+      "to": "P004",
+      "count": 1
+    },
+    {
+      "from": "P297",
+      "to": "P005",
+      "count": 1
+    },
+    {
+      "from": "P298",
+      "to": "P296",
+      "count": 1
+    },
+    {
+      "from": "P299",
+      "to": "P298",
+      "count": 3
+    },
+    {
+      "from": "P300",
+      "to": "P296",
+      "count": 1
+    },
+    {
+      "from": "P300",
+      "to": "P298",
+      "count": 1
+    },
+    {
+      "from": "P300",
+      "to": "P299",
+      "count": 1
+    },
+    {
+      "from": "P301",
+      "to": "P300",
+      "count": 2
+    },
+    {
+      "from": "P301",
+      "to": "P296",
+      "count": 1
+    },
+    {
+      "from": "P301",
+      "to": "P297",
+      "count": 1
+    },
+    {
+      "from": "P302",
+      "to": "P300",
+      "count": 1
+    },
+    {
+      "from": "P302",
+      "to": "P301",
+      "count": 2
+    },
+    {
+      "from": "P302",
+      "to": "P296",
+      "count": 1
+    },
+    {
+      "from": "P302",
+      "to": "P297",
+      "count": 1
+    },
+    {
+      "from": "P302",
+      "to": "P298",
+      "count": 1
+    },
+    {
+      "from": "P302",
+      "to": "P299",
+      "count": 1
+    },
+    {
+      "from": "P303",
+      "to": "P300",
+      "count": 2
+    },
+    {
+      "from": "P303",
+      "to": "P301",
+      "count": 3
+    },
+    {
+      "from": "P303",
+      "to": "P302",
+      "count": 3
+    },
+    {
+      "from": "P304",
+      "to": "P303",
+      "count": 2
+    },
+    {
+      "from": "P304",
+      "to": "P302",
+      "count": 2
+    },
+    {
+      "from": "P304",
+      "to": "P296",
+      "count": 1
+    },
+    {
+      "from": "P304",
+      "to": "P300",
+      "count": 1
+    },
+    {
+      "from": "P304",
+      "to": "P301",
+      "count": 1
+    },
+    {
+      "from": "P305",
+      "to": "P304",
+      "count": 2
+    },
+    {
+      "from": "P305",
+      "to": "P296",
+      "count": 2
+    },
+    {
+      "from": "P305",
+      "to": "P300",
+      "count": 1
+    },
+    {
+      "from": "P305",
+      "to": "P301",
+      "count": 1
+    },
+    {
+      "from": "P305",
+      "to": "P302",
+      "count": 1
+    },
+    {
+      "from": "P305",
+      "to": "P303",
+      "count": 1
+    },
+    {
+      "from": "P305",
+      "to": "P297",
+      "count": 1
+    },
+    {
+      "from": "P305",
+      "to": "P298",
+      "count": 1
+    },
+    {
+      "from": "P305",
+      "to": "P299",
+      "count": 1
+    },
+    {
+      "from": "P306",
+      "to": "P301",
+      "count": 1
+    },
+    {
+      "from": "P306",
+      "to": "P302",
+      "count": 1
+    },
+    {
+      "from": "P306",
+      "to": "P305",
+      "count": 2
+    },
+    {
+      "from": "P307",
+      "to": "P235",
+      "count": 1
+    },
+    {
+      "from": "P307",
+      "to": "P267",
+      "count": 1
+    },
+    {
+      "from": "P307",
+      "to": "P295",
+      "count": 3
+    },
+    {
+      "from": "P307",
+      "to": "P118",
+      "count": 1
+    },
+    {
+      "from": "P308",
+      "to": "P236",
+      "count": 1
+    },
+    {
+      "from": "P308",
+      "to": "P154",
+      "count": 1
+    },
+    {
+      "from": "P308",
+      "to": "P214",
+      "count": 2
+    },
+    {
+      "from": "P308",
+      "to": "P265",
+      "count": 1
+    },
+    {
+      "from": "P308",
+      "to": "P267",
+      "count": 1
+    },
+    {
+      "from": "P310",
+      "to": "P321",
+      "count": 2
+    },
+    {
+      "from": "P311",
+      "to": "P310",
+      "count": 4
+    },
+    {
+      "from": "P314",
+      "to": "P265",
+      "count": 1
+    },
+    {
+      "from": "P314",
+      "to": "P267",
+      "count": 1
+    },
+    {
+      "from": "P314",
+      "to": "P307",
+      "count": 1
+    },
+    {
+      "from": "P314",
+      "to": "P308",
+      "count": 1
+    },
+    {
+      "from": "P317",
+      "to": "P266",
+      "count": 1
+    },
+    {
+      "from": "P320",
+      "to": "P310",
+      "count": 5
+    },
+    {
+      "from": "P320",
+      "to": "P311",
+      "count": 2
+    },
+    {
+      "from": "P321",
+      "to": "P310",
+      "count": 5
+    },
+    {
+      "from": "P321",
+      "to": "P311",
+      "count": 2
+    },
+    {
+      "from": "P323",
+      "to": "P083",
+      "count": 1
+    },
+    {
+      "from": "P323",
+      "to": "P090",
+      "count": 1
+    },
+    {
+      "from": "P325",
+      "to": "P292",
+      "count": 4
+    },
+    {
+      "from": "P326",
+      "to": "P253",
+      "count": 5
+    },
+    {
+      "from": "P326",
+      "to": "P255",
+      "count": 3
+    },
+    {
+      "from": "P326",
+      "to": "P322",
+      "count": 1
+    },
+    {
+      "from": "P327",
+      "to": "P323",
+      "count": 1
+    },
+    {
+      "from": "P327",
+      "to": "P326",
+      "count": 1
+    },
+    {
+      "from": "P328",
+      "to": "P322",
+      "count": 1
+    },
+    {
+      "from": "P328",
+      "to": "P323",
+      "count": 1
+    },
+    {
+      "from": "P328",
+      "to": "P325",
+      "count": 1
+    },
+    {
+      "from": "P329",
+      "to": "P153",
+      "count": 1
+    },
+    {
+      "from": "P329",
+      "to": "P156",
+      "count": 1
+    },
+    {
+      "from": "P330",
+      "to": "P064",
+      "count": 1
+    },
+    {
+      "from": "P330",
+      "to": "P033",
+      "count": 1
+    },
+    {
+      "from": "P330",
+      "to": "P215",
+      "count": 1
+    },
+    {
+      "from": "P331",
+      "to": "P330",
+      "count": 2
+    },
+    {
+      "from": "P331",
+      "to": "P328",
+      "count": 3
+    },
+    {
+      "from": "P331",
+      "to": "P322",
+      "count": 3
+    },
+    {
+      "from": "P331",
+      "to": "P323",
+      "count": 1
+    },
+    {
+      "from": "P331",
+      "to": "P326",
+      "count": 1
+    },
+    {
+      "from": "P332",
+      "to": "P325",
+      "count": 3
+    },
+    {
+      "from": "P332",
+      "to": "P328",
+      "count": 4
+    },
+    {
+      "from": "P332",
+      "to": "P331",
+      "count": 1
+    },
+    {
+      "from": "P332",
+      "to": "P333",
+      "count": 1
+    },
+    {
+      "from": "P333",
+      "to": "P327",
+      "count": 5
+    },
+    {
+      "from": "P333",
+      "to": "P332",
+      "count": 1
+    },
+    {
+      "from": "P333",
+      "to": "P328",
+      "count": 1
+    },
+    {
+      "from": "P334",
+      "to": "P322",
+      "count": 2
+    },
+    {
+      "from": "P334",
+      "to": "P331",
+      "count": 1
+    },
+    {
+      "from": "P335",
+      "to": "P290",
+      "count": 6
+    },
+    {
+      "from": "P336",
+      "to": "P331",
+      "count": 3
+    },
+    {
+      "from": "P336",
+      "to": "P327",
+      "count": 1
+    },
+    {
+      "from": "P337",
+      "to": "P336",
+      "count": 7
+    },
+    {
+      "from": "P337",
+      "to": "P328",
+      "count": 2
+    },
+    {
+      "from": "P337",
+      "to": "P331",
+      "count": 1
+    },
+    {
+      "from": "P338",
+      "to": "P327",
+      "count": 2
+    },
+    {
+      "from": "P338",
+      "to": "P336",
+      "count": 2
+    },
+    {
+      "from": "P338",
+      "to": "P337",
+      "count": 2
+    },
+    {
+      "from": "P338",
+      "to": "P333",
+      "count": 1
+    },
+    {
+      "from": "P339",
+      "to": "P336",
+      "count": 10
+    },
+    {
+      "from": "P339",
+      "to": "P337",
+      "count": 4
+    },
+    {
+      "from": "P339",
+      "to": "P338",
+      "count": 5
+    },
+    {
+      "from": "P340",
+      "to": "P331",
+      "count": 1
+    },
+    {
+      "from": "P340",
+      "to": "P336",
+      "count": 1
+    },
+    {
+      "from": "P342",
+      "to": "P336",
+      "count": 1
+    },
+    {
+      "from": "P342",
+      "to": "P337",
+      "count": 1
+    },
+    {
+      "from": "P342",
+      "to": "P338",
+      "count": 3
+    },
+    {
+      "from": "P342",
+      "to": "P331",
+      "count": 1
+    },
+    {
+      "from": "P343",
+      "to": "P340",
+      "count": 1
+    },
+    {
+      "from": "P343",
+      "to": "P259",
+      "count": 1
+    },
+    {
+      "from": "P344",
+      "to": "P343",
+      "count": 4
+    },
+    {
+      "from": "P344",
+      "to": "P259",
+      "count": 1
+    },
+    {
+      "from": "P344",
+      "to": "P329",
+      "count": 1
+    },
+    {
+      "from": "P344",
+      "to": "P002",
+      "count": 1
+    },
+    {
+      "from": "P344",
+      "to": "P244",
+      "count": 1
+    },
+    {
+      "from": "P344",
+      "to": "P249",
+      "count": 1
+    },
+    {
+      "from": "P345",
+      "to": "P344",
+      "count": 4
+    },
+    {
+      "from": "P346",
+      "to": "P343",
+      "count": 2
+    },
+    {
+      "from": "P346",
+      "to": "P340",
+      "count": 6
+    },
+    {
+      "from": "P346",
+      "to": "P327",
+      "count": 1
+    },
+    {
+      "from": "P346",
+      "to": "P322",
+      "count": 1
+    },
+    {
+      "from": "P346",
+      "to": "P334",
+      "count": 1
+    },
+    {
+      "from": "P347",
+      "to": "P345",
+      "count": 1
+    },
+    {
+      "from": "P347",
+      "to": "P330",
+      "count": 2
+    },
+    {
+      "from": "P347",
+      "to": "P329",
+      "count": 2
+    },
+    {
+      "from": "P347",
+      "to": "P343",
+      "count": 1
+    },
+    {
+      "from": "P348",
+      "to": "P347",
+      "count": 1
+    },
+    {
+      "from": "P348",
+      "to": "P336",
+      "count": 1
+    },
+    {
+      "from": "P348",
+      "to": "P342",
+      "count": 1
+    },
+    {
+      "from": "P349",
+      "to": "P347",
+      "count": 5
+    },
+    {
+      "from": "P350",
+      "to": "P342",
+      "count": 4
+    },
+    {
+      "from": "P350",
+      "to": "P336",
+      "count": 1
+    },
+    {
+      "from": "P351",
+      "to": "P268",
+      "count": 1
+    },
+    {
+      "from": "P351",
+      "to": "P269",
+      "count": 1
+    },
+    {
+      "from": "P351",
+      "to": "P002",
+      "count": 1
+    },
+    {
+      "from": "P352",
+      "to": "P161",
+      "count": 9
+    },
+    {
+      "from": "P352",
+      "to": "P162",
+      "count": 3
+    },
+    {
+      "from": "P353",
+      "to": "P073",
+      "count": 1
+    },
+    {
+      "from": "P354",
+      "to": "P296",
+      "count": 2
+    },
+    {
+      "from": "P354",
+      "to": "P305",
+      "count": 1
+    },
+    {
+      "from": "P354",
+      "to": "P302",
+      "count": 1
+    },
+    {
+      "from": "P355",
+      "to": "P354",
+      "count": 5
+    },
+    {
+      "from": "P356",
+      "to": "P354",
+      "count": 2
+    },
+    {
+      "from": "P356",
+      "to": "P355",
+      "count": 1
+    },
+    {
+      "from": "P357",
+      "to": "P356",
+      "count": 3
+    },
+    {
+      "from": "P358",
+      "to": "P356",
+      "count": 1
+    },
+    {
+      "from": "P358",
+      "to": "P357",
+      "count": 2
+    },
+    {
+      "from": "P359",
+      "to": "P356",
+      "count": 3
+    },
+    {
+      "from": "P359",
+      "to": "P296",
+      "count": 1
+    },
+    {
+      "from": "P360",
+      "to": "P356",
+      "count": 3
+    },
+    {
+      "from": "P360",
+      "to": "P305",
+      "count": 1
+    },
+    {
+      "from": "P360",
+      "to": "P354",
+      "count": 1
+    },
+    {
+      "from": "P360",
+      "to": "P355",
+      "count": 1
+    },
+    {
+      "from": "P361",
+      "to": "P360",
+      "count": 7
+    },
+    {
+      "from": "P361",
+      "to": "P305",
+      "count": 3
+    },
+    {
+      "from": "P362",
+      "to": "P358",
+      "count": 4
+    },
+    {
+      "from": "P362",
+      "to": "P360",
+      "count": 1
+    },
+    {
+      "from": "P363",
+      "to": "P073",
+      "count": 2
+    },
+    {
+      "from": "P363",
+      "to": "P202",
+      "count": 2
+    },
+    {
+      "from": "P363",
+      "to": "P362",
+      "count": 1
+    },
+    {
+      "from": "P364",
+      "to": "P202",
+      "count": 1
+    },
+    {
+      "from": "P364",
+      "to": "P359",
+      "count": 2
+    },
+    {
+      "from": "P364",
+      "to": "P363",
+      "count": 1
+    },
+    {
+      "from": "P365",
+      "to": "P356",
+      "count": 1
+    },
+    {
+      "from": "P365",
+      "to": "P296",
+      "count": 1
+    }
+  ],
+  "ambiguous_low_number_mentions": {},
+  "dangling_number_mentions": {
+    "0": 2,
+    "2026": 3,
+    "1": 1,
+    "324": 4
+  }
+}

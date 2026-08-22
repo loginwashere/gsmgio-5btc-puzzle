@@ -1,0 +1,33 @@
+{
+  "verified": "2026-08-22, live fetch from web.archive.org, all 5 pinned timestamps",
+  "method": "raw capture bytes -> page_structure_audit.TextareaParser -> sha256 per textarea",
+  "per_capture": [
+    {
+      "timestamp": "20230601222752",
+      "salphaseion_sha256": "d39d10b1e1902d2620eb19ebcad4215e23c048de639466cca9a26bdc9303330c",
+      "cosmic_duality_sha256": "5e636bd7f1670a39666c0820f0df3fe9b4962d96f29d40156699dc947cce470b"
+    },
+    {
+      "timestamp": "20231127181947",
+      "salphaseion_sha256": "d39d10b1e1902d2620eb19ebcad4215e23c048de639466cca9a26bdc9303330c",
+      "cosmic_duality_sha256": "5e636bd7f1670a39666c0820f0df3fe9b4962d96f29d40156699dc947cce470b"
+    },
+    {
+      "timestamp": "20241123015038",
+      "salphaseion_sha256": "d39d10b1e1902d2620eb19ebcad4215e23c048de639466cca9a26bdc9303330c",
+      "cosmic_duality_sha256": "5e636bd7f1670a39666c0820f0df3fe9b4962d96f29d40156699dc947cce470b"
+    },
+    {
+      "timestamp": "20251031153559",
+      "salphaseion_sha256": "d39d10b1e1902d2620eb19ebcad4215e23c048de639466cca9a26bdc9303330c",
+      "cosmic_duality_sha256": "5e636bd7f1670a39666c0820f0df3fe9b4962d96f29d40156699dc947cce470b"
+    },
+    {
+      "timestamp": "20260405154227",
+      "salphaseion_sha256": "d39d10b1e1902d2620eb19ebcad4215e23c048de639466cca9a26bdc9303330c",
+      "cosmic_duality_sha256": "5e636bd7f1670a39666c0820f0df3fe9b4962d96f29d40156699dc947cce470b"
+    }
+  ],
+  "salphaseion_sha256_all_5_identical": "d39d10b1e1902d2620eb19ebcad4215e23c048de639466cca9a26bdc9303330c",
+  "cosmic_duality_sha256_all_5_identical": "5e636bd7f1670a39666c0820f0df3fe9b4962d96f29d40156699dc947cce470b"
+}

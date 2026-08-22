@@ -95,6 +95,47 @@ def sweep(candidates, blobs=None):
     return attempts, hits
 
 
+def self_test():
+    """Verify candidate loading + sweep plumbing against a synthetic
+    known-positive vector. Extracted from main()'s former inline
+    `--self-test` block so it can be called directly (e.g. from the test
+    suite) without going through argparse."""
+    from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+
+    candidates = load_candidates(None)
+    assert len(candidates) > 500, (
+        f"self-test FAILED: expected >500 curated candidates, got {len(candidates)}"
+    )
+    # Known-positive synthetic vector: a candidate whose literal
+    # (truncate/pad) 16-byte form is a real AES-128 key, matching
+    # cb_common's own raw_key_try_open self-test pattern.
+    synth_phrase = "sixteenbyteskey"  # 15 chars -> zero-padded to 16 bytes
+    raw_key = synth_phrase.encode("utf-8").ljust(16, b"\x00")
+    assert len(raw_key) == 16
+    plaintext = b"literal raw key material self-test vector, zero KDF"
+    block = 16
+    pad_len = block - (len(plaintext) % block)
+    padded = plaintext + bytes([pad_len]) * pad_len
+    encryptor = Cipher(algorithms.AES(raw_key), modes.CBC(bytes(block))).encryptor()
+    ct = encryptor.update(padded) + encryptor.finalize()
+    synth_blobs = {"SYNTHLIT": (b"01234567", ct)}
+
+    forms = raw_key_forms(synth_phrase)
+    assert forms[16] == raw_key, (
+        f"self-test FAILED: raw_key_forms() built {forms[16]!r}, expected {raw_key!r}"
+    )
+    attempts, hits = sweep([synth_phrase] + candidates[:5], blobs=synth_blobs)
+    assert attempts > 0, "self-test FAILED: sweep() produced zero attempts"
+    assert any(
+        h["blob"] == "SYNTHLIT" and h["plaintext"] == plaintext for h in hits
+    ), (
+        "self-test FAILED: sweep() did not recover the known-positive "
+        "synthetic literal-raw-key vector"
+    )
+    print(f"[*] self-test OK ({attempts} attempts on 6 candidates, "
+          f"{len(hits)} hits, synthetic vector recovered)")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--self-test", action="store_true",
@@ -109,6 +150,10 @@ def main():
                           "convention as binary_key_material_backfill.py")
     args = ap.parse_args()
 
+    if args.self_test:
+        self_test()
+        return
+
     candidates = load_candidates(args.candidate_file)
     print(f"[*] loaded {len(candidates)} candidates"
           + (f" from {args.candidate_file}" if args.candidate_file else " (default curated tier)"))
@@ -117,42 +162,6 @@ def main():
 
     blobs = {**BLOBS, **QUARANTINED_BLOBS} if args.include_quarantined else None
     active_blobs = blobs if blobs is not None else BLOBS
-
-    if args.self_test:
-        from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-
-        assert len(candidates) > 500, (
-            f"self-test FAILED: expected >500 curated candidates, got {len(candidates)}"
-        )
-        # Known-positive synthetic vector: a candidate whose literal
-        # (truncate/pad) 16-byte form is a real AES-128 key, matching
-        # cb_common's own raw_key_try_open self-test pattern.
-        synth_phrase = "sixteenbyteskey"  # 15 chars -> zero-padded to 16 bytes
-        raw_key = synth_phrase.encode("utf-8").ljust(16, b"\x00")
-        assert len(raw_key) == 16
-        plaintext = b"literal raw key material self-test vector, zero KDF"
-        block = 16
-        pad_len = block - (len(plaintext) % block)
-        padded = plaintext + bytes([pad_len]) * pad_len
-        encryptor = Cipher(algorithms.AES(raw_key), modes.CBC(bytes(block))).encryptor()
-        ct = encryptor.update(padded) + encryptor.finalize()
-        synth_blobs = {"SYNTHLIT": (b"01234567", ct)}
-
-        forms = raw_key_forms(synth_phrase)
-        assert forms[16] == raw_key, (
-            f"self-test FAILED: raw_key_forms() built {forms[16]!r}, expected {raw_key!r}"
-        )
-        attempts, hits = sweep([synth_phrase] + candidates[:5], blobs=synth_blobs)
-        assert attempts > 0, "self-test FAILED: sweep() produced zero attempts"
-        assert any(
-            h["blob"] == "SYNTHLIT" and h["plaintext"] == plaintext for h in hits
-        ), (
-            "self-test FAILED: sweep() did not recover the known-positive "
-            "synthetic literal-raw-key vector"
-        )
-        print(f"[*] self-test OK ({attempts} attempts on 6 candidates, "
-              f"{len(hits)} hits, synthetic vector recovered)")
-        return
 
     attempts, hits = sweep(candidates, blobs=blobs)
     print(f"[*] {attempts:,} attempts across {len(KEY_LENS)} raw key lengths "

@@ -25,6 +25,16 @@ OUTPUT = REPO_ROOT / "doc" / "GSMG_PHASE_INDEX.md"
 HEADING_RE = re.compile(r"^## Phase (\S+)\s+[—-]{1,2}\s*(.+)$")
 DATE_RE = re.compile(r"\((\d{4}-\d{2}-\d{2})[^)]*\)\s*$")
 PHASE_ID_MARKER_RE = re.compile(r"^<!--\s*phase_id:\s*(\S+)\s*-->\s*$")
+# Generic marker line, stackable immediately above a heading (any order, no
+# blank lines between them or the heading). Currently recognized keys:
+#   index_note          -- short corrective text appended to the Result cell,
+#                           for a same-day/later correction that changed a
+#                           heading's original claim without editing the
+#                           heading itself (see GSMG_PHASE_TEMPLATE.md).
+#   audit_doc_override   -- exact doc/GSMG_*.md filename to use instead of
+#                           find_audit_doc()'s keyword match, for a phase
+#                           whose own text names a different canonical doc.
+GENERIC_MARKER_RE = re.compile(r"^<!--\s*([a-z_]+):\s*(.+?)\s*-->\s*$")
 
 
 def github_slug(heading_text):
@@ -32,6 +42,23 @@ def github_slug(heading_text):
     slug = re.sub(r"[^\w\s-]", "", slug)
     slug = re.sub(r"\s+", "-", slug)
     return slug
+
+
+def collect_markers(lines, heading_index):
+    """Walk upward from immediately above a heading, collecting every
+    consecutive `<!-- key: value -->` marker line. Stops at the first line
+    that isn't a recognized marker, so markers must be stacked directly
+    above the heading with no gap."""
+    markers = {}
+    i = heading_index - 1
+    while i >= 0:
+        match = GENERIC_MARKER_RE.match(lines[i])
+        if not match:
+            break
+        key, value = match.groups()
+        markers.setdefault(key, value)
+        i -= 1
+    return markers
 
 
 def parse_phases(text):
@@ -48,11 +75,7 @@ def parse_phases(text):
         subject, _, result = body.partition(":")
         subject = subject.strip().rstrip(":")
         result = result.strip()
-        explicit_id = None
-        if index > 0:
-            marker = PHASE_ID_MARKER_RE.match(lines[index - 1])
-            if marker:
-                explicit_id = marker.group(1)
+        markers = collect_markers(lines, index)
         rows.append(
             {
                 "number": number,
@@ -62,7 +85,9 @@ def parse_phases(text):
                 "result": result,
                 "date": date,
                 "slug": github_slug(line[3:]),
-                "explicit_id": explicit_id,
+                "explicit_id": markers.get("phase_id"),
+                "index_note": markers.get("index_note"),
+                "audit_doc_override": markers.get("audit_doc_override"),
             }
         )
     return rows
@@ -152,6 +177,12 @@ def build_index(rows, doc_dir):
         "and are not guaranteed correct for every row; the FINDINGS.md link is "
         "authoritative.",
         "",
+        "A phase whose original heading was later corrected without editing "
+        "the heading itself can carry `<!-- index_note: ... -->` and/or "
+        "`<!-- audit_doc_override: FILENAME.md -->` marker comments stacked "
+        "directly above its `## Phase N` line in FINDINGS.md; this generator "
+        "reads them into the Result/Audit-doc cells below.",
+        "",
     ]
     if duplicate_numbers:
         lines += [
@@ -169,10 +200,18 @@ def build_index(rows, doc_dir):
     ]
     for row in rows:
         findings_link = f"[link](../tools/gsmg/FINDINGS.md#{row['slug']})"
-        audit_doc = find_audit_doc(f"{row['subject']} {row['result']}", doc_dir)
-        audit_link = f"[{audit_doc.stem}]({audit_doc.name})" if audit_doc else "—"
+        override = row.get("audit_doc_override")
+        if override:
+            override_path = doc_dir / override
+            audit_link = f"[{override_path.stem}]({override_path.name})"
+        else:
+            audit_doc = find_audit_doc(f"{row['subject']} {row['result']}", doc_dir)
+            audit_link = f"[{audit_doc.stem}]({audit_doc.name})" if audit_doc else "—"
         subject = row["subject"] or row["heading_text"]
         result = row["result"] or "—"
+        if row.get("index_note"):
+            note = f"**{row['index_note']}**"
+            result = f"{result} — {note}" if result != "—" else note
         date = row["date"] or "—"
         lines.append(
             f"| {row['number']} | {row['stable_id']} | {date} | {subject} | "

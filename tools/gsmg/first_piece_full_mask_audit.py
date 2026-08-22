@@ -103,14 +103,8 @@ def exact_profile_count():
     return math.comb(24, 9)
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--image", default=DEFAULT_IMAGE)
-    parser.add_argument("--trials", type=int, default=50_000)
-    parser.add_argument("--seed", type=int, default=20260725)
-    args = parser.parse_args()
-
-    grid = load_grid(args.image)
+def audit(image=DEFAULT_IMAGE, trials=50_000, seed=20260725):
+    grid = load_grid(image)
     matches = prime_variants(grid)
     expected = [
         ("yellow", True, True, EXPECTED_YELLOW_REVERSE_INVERT),
@@ -122,25 +116,62 @@ def main():
     if len(boundary_indices) != 24 or len(yellow_positions) != 9:
         raise AssertionError("unexpected colored-cell profile")
 
+    count, empirical_p = shuffle_gate(grid, trials, seed)
+    return {
+        "matches": matches,
+        "boundary_indices": boundary_indices,
+        "yellow_positions": yellow_positions,
+        "profile_count": exact_profile_count(),
+        "trials": trials,
+        "seed": seed,
+        "at_least_as_good": count,
+        "empirical_p": empirical_p,
+    }
+
+
+def self_test():
+    report = audit(trials=50_000, seed=20260725)
+    assert report["matches"] == [
+        ("yellow", True, True, EXPECTED_YELLOW_REVERSE_INVERT)
+    ]
+    assert len(report["boundary_indices"]) == 24
+    assert len(report["yellow_positions"]) == 9
+    assert report["profile_count"] == 1_307_504
+    assert abs(report["empirical_p"] - 0.060099) < 1e-6
+    print(
+        "[*] self-test OK: 60-digit yellow/reverse/invert prime reproduced, "
+        "24-cell/9-yellow profile confirmed, seed=20260725/50000-trial "
+        f"shuffle gate p={report['empirical_p']:.6f}"
+    )
+    return report
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--image", default=DEFAULT_IMAGE)
+    parser.add_argument("--trials", type=int, default=50_000)
+    parser.add_argument("--seed", type=int, default=20260725)
+    args = parser.parse_args()
+
+    report = audit(args.image, args.trials, args.seed)
     print("real prime variants:")
-    for color_name, reversed_order, inverted, value in matches:
+    for color_name, reversed_order, inverted, value in report["matches"]:
         print(
             f"  color={color_name} reverse={reversed_order} "
             f"invert={inverted} digits={len(str(value))} value={value}"
         )
     print(
         "null profile:",
-        f"choose {len(yellow_positions)} yellow positions among "
-        f"{len(boundary_indices)} fixed colored boundaries",
-        f"({exact_profile_count()} possible assignments)",
+        f"choose {len(report['yellow_positions'])} yellow positions among "
+        f"{len(report['boundary_indices'])} fixed colored boundaries",
+        f"({report['profile_count']} possible assignments)",
     )
-    count, empirical_p = shuffle_gate(grid, args.trials, args.seed)
     print(
         "family-wise shuffle gate:",
-        f"seed={args.seed}",
-        f"trials={args.trials}",
-        f"at_least_as_good={count}",
-        f"p={empirical_p:.6f}",
+        f"seed={report['seed']}",
+        f"trials={report['trials']}",
+        f"at_least_as_good={report['at_least_as_good']}",
+        f"p={report['empirical_p']:.6f}",
     )
 
 

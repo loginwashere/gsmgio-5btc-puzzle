@@ -1,0 +1,79 @@
+{
+  "1710": {
+    "target": {
+      "id": 1710,
+      "from_id": "user9815232",
+      "date": "2020-01-14T12:38:06",
+      "edited": "2024-04-24T09:58:18",
+      "text_sha256": "0499da8d2eb85062b529a71eb7ab305a4c8c87e830538b14d1f2b42953fb5c69"
+    },
+    "witnesses": [
+      {
+        "id": 3388,
+        "from_id": "user689225742",
+        "date": "2020-04-08T23:31:00",
+        "edited": null,
+        "text_sha256": "f52832e45fc061e485c43fb571657b381cdb220a5fbcacd74098db124025d6f4"
+      },
+      {
+        "id": 3644,
+        "from_id": "user646609236",
+        "date": "2020-05-04T12:04:07",
+        "edited": null,
+        "text_sha256": "0f0d9119ee35f44a4f184d13cc4afd10ea0a95a96efa2bffcaaa81d375c583d7"
+      }
+    ],
+    "witness_relationship": "same_substance_not_byte_identical",
+    "note": "3388 (2020-04-08) and 3644 (2020-05-04) reproduce 1710's operational content (the 'Roses are White...' rhyme and its instruction) within community quote/paraphrase, predating 1710's 2024-04-24 edit by ~4 years. Their text_sha256 differs from 1710's because of quoting formatting (added quote marks, an 'old hint:' prefix), not substantive content -- so this is a content witness, not a byte-identical witness.",
+    "classification": "contemporaneously witnessed; operational content stable"
+  },
+  "8446": {
+    "target": {
+      "id": 8446,
+      "from_id": "user9815232",
+      "date": "2023-02-24T01:20:03",
+      "edited": "2023-12-03T00:47:40",
+      "text_sha256": "db5584dc1a7a24d4d8d219192deeed03e7d41a70d5e322fc430ba61d9fa9c375"
+    },
+    "witnesses": [
+      {
+        "id": 8448,
+        "from_id": "user419791047",
+        "date": "2023-02-25T05:58:12",
+        "edited": null,
+        "text_sha256": "c0616bd05c97e7c56e83aa6579881e68ef1fe14a97bc2de4ba540f148f6add41"
+      },
+      {
+        "id": 15851,
+        "from_id": "user5260693904",
+        "date": "2023-10-08T04:34:37",
+        "edited": null,
+        "text_sha256": "db5584dc1a7a24d4d8d219192deeed03e7d41a70d5e322fc430ba61d9fa9c375"
+      }
+    ],
+    "witness_relationship": "15851_byte_identical_to_8446_current_text",
+    "note": "8448 (2023-02-25, one day after 8446's original post) gives the complete decoded macro in plain text, confirming the operational content immediately. 15851 (2023-10-08) is text_sha256-IDENTICAL to 8446's current text, and predates 8446's recorded 2023-12-03 edit -- so 8446's present bytes are pre-edit-witnessed, not just post-edit.",
+    "classification": "contemporaneously decoded and pre-edit byte-witnessed; operational order stable"
+  },
+  "6497": {
+    "target": {
+      "id": 6497,
+      "from_id": "user9815232",
+      "date": "2021-03-14T11:45:01",
+      "edited": "2025-06-26T11:42:30",
+      "text_sha256": "fcf24bee5043aaa776e11daf3d64f50587f573c0c311b404acfb630e54e5bda5"
+    },
+    "witnesses": [
+      {
+        "id": 27274,
+        "from_id": "user5260693904",
+        "date": "2024-09-22T04:42:15",
+        "edited": null,
+        "text_sha256": "fcf24bee5043aaa776e11daf3d64f50587f573c0c311b404acfb630e54e5bda5"
+      }
+    ],
+    "witness_relationship": "27274_byte_identical_to_6497_current_text",
+    "note": "27274 (2024-09-22) is text_sha256-IDENTICAL to 6497's current text, and predates 6497's recorded 2025-06-26 edit -- so 6497's present bytes are witnessed back to 2024-09-22. This does NOT establish the message's original 2021-03-14 wording; no witness earlier than 2024-09-22 has been located.",
+    "classification": "creator-authored final text, witnessed by 2024; original-2021 wording unresolved"
+  }
+}

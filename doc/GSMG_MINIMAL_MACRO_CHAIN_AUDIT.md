@@ -1,5 +1,10 @@
 # GSMG Minimal Creator-Macro Chain Audit
 
+> **Phase-223 correction:** the `b<->h`/`e`-fixed mirror below reaches the
+> BUT/HYE checkpoint but does not by itself establish that `yinyang` is
+> reached; that interpretation remains unverified. See "Revised boundary"
+> below for the corrected scope.
+
 ## Result
 
 The creator-authored macro begins with the continuous four-step sequence:

@@ -12,12 +12,32 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 from data import FAED
 
+import aes_key_wrap_sweep
+import anstoo_provenance_audit
 import architect_choice_boundary_audit
+import bip32_authenticated_number_paths_audit
+import command_provenance_recheck
+import embedded_key_format_scanner_audit
+import external_archive_lead_audit
+import fefe_zero_operation_audit
+import genesis_adjacent_fields_audit
+import image_stego_metadata_audit
+import lastcommand_probe
+import salph_cosmic_phase341_eligibility_audit
+import legacy_cbc_backfill
+import stream_mode_cipher_sweep
+import salphaseion_operand_binding_audit
+import small_number_coincidence_calibration
+import telegram_export_keyword_sweep
+import youwon_full_oracle_backfill
+import youwon_partition_audit
+import typed_decode_parse_ladder_audit
 import architect_choice_literal_password_audit
 import architect_hye_bye_audit
 import architect_mirror_selector_audit
 import architect_passage_residual_audit
 import architect_yinyang_distinctiveness_audit
+import binary_key_material_backfill
 import binary_message_export_audit
 import bye_ciao_provenance_audit
 import checkerboard_keyword_blob_gap_audit
@@ -31,10 +51,14 @@ import cosmic_duality_chapter2_yin_lead_audit
 import cosmic_duality_dropcap_inventory
 import ciao_selection_coverage_audit
 import cosmic_raw_digest_checkpoint_audit
+import cosmic_sweep
+import cosmic_duality_book_second_riddle_audit
+import prefix_boundary_sweep
 import creator_feasibility_envelope_audit
 import creator_yingyang_faed_pair_audit
 import creator_operator_vocabulary_audit
 import creator_personal_disclosures_audit
+import dbbi_faed_independent_consumer_audit
 import dbbi_faed_boundary_selector_audit
 import dbbi_faed_six_lane_audit
 import dbbi_faed_transition_matrix_audit
@@ -52,10 +76,14 @@ import dbbi_faed_audio_spectrogram_audit
 import dbbi_faed_matrix_barcode_audit
 import dbbi_faed_continued_fraction_audit
 import dbbi_faed_authenticated_selector_audit
+import dbbi_faed_cosmic_duality_running_key_audit
 import decimal_transport_inverse_audit
+import denis_prime_extraction_audit
+import door_prime_passport_probe
 import dual_channel_consistency_audit
 import eyes_transition_chronology_audit
 import excluded_wordlist_coverage_audit
+import extended_cipher_recheck
 import first_piece_hamming_control_audit
 import first_piece_bitplane_audit
 import first_piece_ggn_distinctiveness_audit
@@ -65,8 +93,17 @@ import first_piece_second_matrixsumlist_audit
 import first_piece_event_rail_preservation_audit
 import first_piece_png_palette_provenance_audit
 import first_piece_shadow_column_rail_audit
+import first_piece_full_mask_audit
+import first_hint_hash_audit
 import faed_decoder_coverage_audit
+import faed_monoalphabetic_sweep
+import faed_token_null_check
 import favicon_wayback_chronology_audit
+import flo_prime_walk_provenance_audit
+import first_piece_color_reconstruction
+import grid_spiral
+import half_better_half_algebra_audit
+import hash_duality_corrected_oracle_backfill
 import generate_phase_index
 import gameoflogic_source_audit
 import validate_vault_metadata
@@ -78,11 +115,19 @@ import first_piece_border_raster_scan_audit
 import first_piece_marker_numeric_control_audit
 import first_piece_native_matrixsumlist_audit
 import first_piece_g_operator_gate_audit
+import first_puzzle_announcement_audit
+import jacque_fresco_wordlist_audit
+import key_shape_classifier
+import key_shape_sweep
+import literal_raw_key_material_audit
 import matrixsum_cumulative_stride_audit
 import matrixsum_dbbi_faed_position_audit
+import matrixsumlist_31_feasibility_audit
 import matrixsumlist_provenance_refresh_audit
 import matrixsumlist_page_scope_audit
 import matrixsumlist_historical_code_audit
+import matrixsumlist_color_prime_audit
+import matrixsumlist_self_fold_consumer_audit
 import macro_tail_title_insertion_audit
 import macro_literal_adjacency_audit
 import macro_model_disposition_audit
@@ -92,17 +137,31 @@ import neo_choice_last_words_audit
 import neo_smith_equation_audit
 import native_favicon_shadow_audit
 import nibble_packing_audit
+import nopad_window_sweep
 import onchain_op_return_provenance_audit
 import p32_sibling_password_audit
+import p32_solved_boundary_grammar_transfer_audit
 import page_syntax_house_style_audit
 import phase1_icon_symbol_layer_audit
+import phase1_icon_rebus_audit
 import qr_fafafa_final_structural_closure_audit
+import qr_fafafa_braille_audit
+import qr_fafafa_six_variant_atlas_audit
+import qr_finder_ring_texture_reindex_dither_audit
+import qr_finder_ring_texture_generator_comparison_audit
+import qr_finder_ring_texture_irregular_rows_only_audit
 import phase32_column_calibration_audit
 import post_yinyang_dataflow_audit
 import post_phase217_consistency_audit
+import prime_matrixsum_reconstruction
 import promised_standalone_audit
 import provenance_monitor
+import black_rabbit_negative_space_audit
+import black_rabbit_drawn_overlay_audit
+import rabbit_hole_nest_audit
+import rabbit_nest_nibble_audit
 import remaining_secret_container_delta_audit
+import salphaseion_aphelion_anagram_audit
 import salphaseion_urlscan_history_audit
 import prime_sum_fefe_mask_composition_audit
 import phase32_monologue_residual_audit
@@ -116,27 +175,69 @@ import salphaseion_presentation_binding_audit
 import salphaseion_responsive_wrap_audit
 import salphaseion_wayback_history_audit
 import salphaseion_heading_metadata_audit
+import salphaseion_title_rebus_audit
+import snapshot_dependency_closure_audit
 import shadow_macro_faed_geometry_audit
 import spi_cd_initials_audit
 import stage0_footer_palette_layer_audit
 import stage0_even_sequence_convergence_audit
 import stage0_g_shadow_consumer_audit
 import stage0_repeated_grayscale_audit
+import stage0_png_filter_anomaly_audit
+import staged_pipeline
+import salt_phase_ion_audit
+import cosmic_83_guide_alignment_audit
+import salt_selector_permutation_audit
+import qr_finder_ring_texture_center_square_continuation_render
+import qr_finder_ring_texture_line_type_alphabet_audit
 import synthesis_action_paths_audit
 import svg_png_edge_geometry_audit
+import telegram_backend_comparison_audit
 import telegram_creator_media_completeness_audit
+import telegram_yellow_blue_fefe_sweep
+import telegram_yellow_blue_guide_audit
 import telegram_yellow_blue_matrix_direction_audit
+import telegram_matrix_sum_passage_audit
+import thispassword_role_identifiability_audit
+import thispassword_role_topology_discrimination_audit
+import topology_identifiability_evidence_freeze
+import thread_convergence_audit
+import transition_evidence_recovery_audit
 import triangular_matrixsumlist_audit
 import urlblob_keywrap_backfill
 import visible_referent_delta_audit
 import x2sh4y0qb15_p32_candidate_audit
 import yinyang_cosmic_phase_label_audit
+import yin_yang_transition_audit
+import yin_yang_next_edge_audit
+import looking_forward_source_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
 from cb_common import BLOBS, QUARANTINED_BLOBS
 
 
 class CorrectedClaimTests(unittest.TestCase):
+    def test_praised_snapshot_dependency_closure_stop_rule(self):
+        report = snapshot_dependency_closure_audit.self_test()
+        self.assertEqual(report["everything_occurrences_in_readme"], 1)
+        self.assertEqual(
+            report["everything_anchor"],
+            "> Morpheus: Everything begins with choice.",
+        )
+        self.assertEqual(
+            report["everything_anchor_context"],
+            "already-solved Phase 2 explanation",
+        )
+        self.assertFalse(report["everything_lead_promoted"])
+        self.assertEqual(
+            report["tiny_hint_directional_reading"],
+            "plausible but non-operational",
+        )
+        self.assertEqual(report["open_payload_count"], 5)
+        self.assertEqual(report["frontier_cluster_count"], 3)
+        self.assertFalse(report["unique_gap_gate"])
+        self.assertFalse(report["oracle_authorized"])
+
     def test_eyes_transition_chronology_does_not_confirm_selected_31(self):
         report = eyes_transition_chronology_audit.audit()
         self.assertEqual(
@@ -1810,6 +1911,12 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(frozenset(dbbi["ranked"][0][0]), frozenset("be"))
         self.assertEqual(frozenset(faed["ranked"][0][0]), frozenset("gi"))
 
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 112's own self_test()
+    # covers the code_ic()/segment_codes() mechanism directly (not exercised
+    # by the two hand-written tests above) but was never wired in.
+    def test_checkerboard_code_ic_oracle_mechanism(self):
+        checkerboard_code_ic_oracle.self_test()
+
     def test_promised_candidate_family_is_deduplicated(self):
         report = promised_standalone_audit.audit()
         self.assertEqual(
@@ -2438,6 +2545,702 @@ class CorrectedClaimTests(unittest.TestCase):
             report["gates"]["pre_puzzle_branding_provenance_established"]
         )
         self.assertFalse(report["promoted"])
+
+    # 2026-08-22 hub-phase code-vs-premise review: these five scripts (Phases
+    # 46, 48, 52, 62, 64) each already had their own internal self_test(),
+    # but none was wired into this suite, so none was actually re-verified by
+    # routine `python3 test_recent_audits.py` runs. Three of them
+    # (flo_prime_walk_provenance_audit, transition_evidence_recovery_audit,
+    # telegram_backend_comparison_audit) also require the raw, never-committed
+    # `_work/chat_transcript.txt` export (see doc/GSMG_PUZZLE.md), which is
+    # not present in every checkout -- skipped, not silently absent, when
+    # it's missing, matching this file's existing external-fixture pattern.
+
+    def test_denis_prime_extraction_masks_reproduce(self):
+        denis_prime_extraction_audit.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 46's headline
+    # calibration numbers (the four exact uniform-subset base rates) are
+    # computed in main() but never asserted anywhere, including self_test().
+    def test_denis_prime_extraction_exact_base_rates(self):
+        m = denis_prime_extraction_audit
+        _, _, yang31 = m.exact_subset_rate(m.SOURCE, 31, "yang")
+        _, _, yang30 = m.exact_subset_rate(m.SOURCE, 30, "yang")
+        _, _, ying31 = m.exact_subset_rate(m.SOURCE, 31, "ying")
+        _, _, ying30 = m.exact_subset_rate(m.SOURCE, 30, "ying")
+        self.assertAlmostEqual(yang31, 0.002579127, places=9)
+        self.assertAlmostEqual(yang30, 0.002403975, places=9)
+        self.assertAlmostEqual(ying31 / 2.323839e-10, 1.0, places=6)
+        self.assertAlmostEqual(ying30 / 4.938532e-10, 1.0, places=6)
+
+    @unittest.skipUnless(
+        flo_prime_walk_provenance_audit.DEFAULT_CHAT.exists(),
+        "raw chat_transcript.txt export is unavailable",
+    )
+    def test_flo_prime_walk_reproduces_denis_mask_and_fefe_insertion(self):
+        flo_prime_walk_provenance_audit.self_test()
+
+    @unittest.skipUnless(
+        transition_evidence_recovery_audit.DEFAULT_CHAT.exists()
+        and transition_evidence_recovery_audit.DEFAULT_CREATOR.exists()
+        and transition_evidence_recovery_audit.DEFAULT_PARSER.exists(),
+        "raw chat_transcript.txt/creator_jrk.txt/parse_chat.py archive is unavailable",
+    )
+    def test_transition_evidence_no_archived_post_selection_operator(self):
+        transition_evidence_recovery_audit.self_test()
+
+    @unittest.skipUnless(
+        telegram_backend_comparison_audit.DEFAULT_OLD_TRANSCRIPT.exists(),
+        "raw chat_transcript.txt export is unavailable",
+    )
+    def test_telegram_backend_old_transcript_matches_complete_export(self):
+        telegram_backend_comparison_audit.self_test()
+
+    def test_rabbit_hole_nest_matches_fefe_and_leftover_spiral_cells(self):
+        rabbit_hole_nest_audit.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review, continued: these two
+    # scripts (Phases 33/36) had real assertion-driven logic but no
+    # self_test()/audit() split -- everything lived in an argparse-parsing
+    # main(), so it could only ever be checked by remembering to run the
+    # script by hand. Refactored to the project's usual audit()/self_test()
+    # split (behavior-preserving; `main()`'s printed output is unchanged)
+    # and wired in here.
+
+    def test_prime_matrixsum_reconstruction_reproduces_but_hye_eol(self):
+        prime_matrixsum_reconstruction.self_test()
+
+    def test_first_piece_full_mask_audit_reproduces_prime_and_pvalue(self):
+        first_piece_full_mask_audit.self_test()
+
+    # 2026-08-22: Phase 2 (the project's first dictionary-scale sweep) had no
+    # self-test at all, and 3 of its 5 default wordlist sources (cypherpunk/
+    # bitcoin-historical/gutenberg) are large external corpora not committed
+    # to this repo, so its real 338,905-candidate/677,810-keyword-test sweep
+    # cannot be reproduced here. Added a synthetic self-test that verifies
+    # the sweep mechanism itself (wordlist dedup, missing-file resilience,
+    # and -- the part that actually matters for trusting "0 hits" -- a
+    # planted end-to-end hit through the exact same pad28/decode/answer-
+    # form/keystring/AES-oracle chain every real candidate goes through).
+
+    def test_cosmic_sweep_mechanism_and_planted_hit(self):
+        cosmic_sweep.self_test()
+
+    @unittest.skipUnless(
+        flo_prime_walk_provenance_audit.DEFAULT_CHAT.exists(),
+        "raw chat_transcript.txt export is unavailable",
+    )
+    def test_matrixsumlist_31_feasibility_no_unique_operation(self):
+        matrixsumlist_31_feasibility_audit.self_test()
+
+    # 2026-08-22 hub-phase review: while checking Phase 64, found that Phase
+    # 127's cell-classifier fix corrected Phases 64/65/125/126's numbers but
+    # that correction was never propagated back into their own FINDINGS.md
+    # text (fixed separately). These three scripts had working self-tests
+    # that were simply never wired into this suite.
+
+    def test_black_rabbit_negative_space_corrected_counts(self):
+        black_rabbit_negative_space_audit.self_test()
+
+    def test_black_rabbit_drawn_overlay_no_unique_orientation(self):
+        black_rabbit_drawn_overlay_audit.self_test()
+
+    @unittest.skipUnless(
+        flo_prime_walk_provenance_audit.DEFAULT_CHAT.exists(),
+        "raw chat_transcript.txt export is unavailable",
+    )
+    def test_rabbit_nest_nibble_is_trivial_all_zero(self):
+        rabbit_nest_nibble_audit.self_test()
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists()
+        and (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "sibling GSMG page mirror or Telegram export is unavailable",
+    )
+    def test_salphaseion_aphelion_subanagram_base_rate_downgrade(self):
+        salphaseion_aphelion_anagram_audit.self_test()
+        report = salphaseion_aphelion_anagram_audit.audit(
+            DEFAULT_HTML, Path(DEFAULT_EXPORT_DIR) / "result.json"
+        )
+        self.assertEqual(len(report["base_rate"]["all_sub_anagrams"]), 457)
+        self.assertEqual(
+            report["base_rate"]["same_length_as_target"],
+            [
+                "Alphonse", "aphelion", "epsilons", "holiness", "painless",
+                "pinholes", "polishes", "seasonal", "spaniels",
+            ],
+        )
+        self.assertEqual(report["corpus_mentions"], {"APHELION": [], "PERIHELION": []})
+        blobs = dict(BLOBS, **QUARANTINED_BLOBS)
+        result = salphaseion_aphelion_anagram_audit.oracle_check(
+            report["candidates"], blobs
+        )
+        self.assertEqual(result["unique_keystrings"], 126)
+        self.assertEqual(result["blob_count"], 4)
+        self.assertEqual(sum(len(v) for v in result["hits"].values()), 0)
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 53's two scripts
+    # were never wired into the suite despite passing self-tests. The guide
+    # audit depends on a real Telegram Desktop JSON export under a fixed
+    # absolute path outside the repo (same external-corpus pattern as
+    # chat_transcript.txt), so it is skip-guarded; the FEFE sweep only
+    # depends on the committed first-piece image plus a constant imported
+    # from the guide module, so it runs unconditionally.
+    @unittest.skipUnless(
+        telegram_yellow_blue_guide_audit.DEFAULT_EXPORT.exists(),
+        "raw Telegram Desktop JSON export is unavailable",
+    )
+    def test_telegram_yellow_blue_guide_reproduces_izlkeseedqppen(self):
+        telegram_yellow_blue_guide_audit.self_test()
+
+    def test_telegram_yellow_blue_fefe_sweep_reproduces_three_policy_outputs(self):
+        telegram_yellow_blue_fefe_sweep.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 78's binary-key-
+    # material oracle and Phase 84-87's -nopad window sweep both have
+    # thorough, fast, all-synthetic self-tests (temp-dir I/O only, mocked
+    # network calls) but were never wired into the suite.
+    def test_binary_key_material_backfill_synthetic_hit_and_api_mocking(self):
+        binary_key_material_backfill.self_test()
+
+    def test_nopad_window_sweep_reproduces_full_self_test_suite(self):
+        nopad_window_sweep.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 88's Fresco
+    # wordlist oracle-wiring self-test was never wired into the suite.
+    def test_jacque_fresco_wordlist_audit_oracle_family_wiring(self):
+        jacque_fresco_wordlist_audit.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 38's
+    # thread_convergence_audit.py has no self_test()/audit() split -- its
+    # main() itself hard-asserts every claim (FEFE coordinate/spiral-index
+    # convergence, exact 12/9/1-of-172 null counts) and takes no CLI args,
+    # so it is safe to call directly as a regression guard.
+    def test_thread_convergence_audit_reproduces_fefe_convergence_and_null(self):
+        thread_convergence_audit.main()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 4's
+    # door_prime_passport_probe.py has no self_test()/audit() split, but its
+    # two probe functions take no args, run against the real production AES
+    # oracle deterministically, and only print instead of asserting -- so
+    # this test asserts the exact reported counts and 0-hit result directly.
+    def test_door_prime_passport_probe_reproduces_zero_hits(self):
+        direct_hits = door_prime_passport_probe.probe_direct_passphrases()
+        self.assertEqual(direct_hits, [])
+        self.assertEqual(len(door_prime_passport_probe.CANDIDATES), 31)
+        zero_hits = door_prime_passport_probe.probe_prime_zeroing()
+        self.assertEqual(zero_hits, [])
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 22's two scripts
+    # (extended cipher/KDF coverage recheck, staged SALPH->COSMIC pipeline)
+    # both have --self-test flags that were never wired into the suite.
+    def test_extended_cipher_recheck_curated_corpus_and_sweep_mechanism(self):
+        extended_cipher_recheck.self_test()
+
+    def test_staged_pipeline_synthetic_salph_to_cosmic_chain(self):
+        staged_pipeline._self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 43's FAED
+    # ciphertext-only hill-climb sweep has a fast standalone self_test()
+    # (tiny iters/restarts) that was never wired into the suite.
+    def test_faed_monoalphabetic_sweep_code_counts_and_variant_coverage(self):
+        faed_monoalphabetic_sweep.self_test()
+
+    def test_faed_token_null_check_shuffle_gate_and_checkpoint_guards(self):
+        faed_token_null_check.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 7's read-through
+    # cites two decode chains (the macro-clue rebus, the Caesar/base64/
+    # Rick-Roll message) as later hard-asserted by these two scripts'
+    # self-tests, but neither was ever wired into the suite.
+    def test_salphaseion_title_rebus_audit_reproduces_fixed_candidates(self):
+        salphaseion_title_rebus_audit.self_test()
+
+    def test_first_puzzle_announcement_audit_caesar_and_base64_chain(self):
+        first_puzzle_announcement_audit.self_test()
+
+    @unittest.skipUnless(
+        first_puzzle_announcement_audit.DEFAULT_EXPORT.exists(),
+        "raw Telegram Desktop JSON export is unavailable",
+    )
+    def test_first_puzzle_announcement_audit_full_reconstruction_zero_hits(self):
+        message, binary_text = first_puzzle_announcement_audit.extract_forwarded_payload(
+            first_puzzle_announcement_audit.DEFAULT_EXPORT
+        )
+        materials = first_puzzle_announcement_audit.reconstruct(binary_text)
+        totals = first_puzzle_announcement_audit.audit(materials)
+        self.assertEqual(
+            totals, {"address": 0, "cbc": 0, "wrap": 0, "raw_key": 0}
+        )
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 98's creator-corpus
+    # base-rate audit (313/1,312 element-parsable word types, 107/313 sum-16
+    # spans, 6/313 exact P,H spans, only "salphation" surviving PH->V) lives
+    # in creator_element_base_rate(), reachable only through the real audit()
+    # call (needs the archived HTML heading, the Telegram export, and the
+    # screenplay PDF) -- self_test() alone never exercises it.
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists()
+        and (Path(DEFAULT_EXPORT_DIR) / "result.json").exists()
+        and prime_matrixsum_reconstruction.PDF_PATH.exists(),
+        "sibling GSMG page mirror, Telegram export, or screenplay PDF is unavailable",
+    )
+    def test_salphaseion_title_rebus_audit_creator_corpus_base_rate(self):
+        report = salphaseion_title_rebus_audit.audit(
+            DEFAULT_HTML,
+            Path(DEFAULT_EXPORT_DIR) / "result.json",
+            prime_matrixsum_reconstruction.PDF_PATH,
+        )
+        profile = report["elemental_base_rate"]["profiles"]["all_lengths"]
+        self.assertEqual(report["elemental_base_rate"]["creator_message_count"], 482)
+        self.assertEqual(report["elemental_base_rate"]["creator_word_types"], 1312)
+        self.assertEqual(profile["element_parsable_word_types"], 313)
+        self.assertEqual(profile["sum16_span_word_types"], 107)
+        self.assertEqual(profile["ph_span_word_types"], 6)
+        self.assertEqual(profile["ph_to_salvation_words"], ("salphation",))
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 127's cell-classifier
+    # fix (single center-pixel sample vs. majority-color-across-the-cell) is
+    # the root fix that everything downstream (Phases 64/65/125/126/128, and
+    # the validated 192-cell gsmg.io/theseedisplanted decode itself) silently
+    # depends on, but neither first_piece_color_reconstruction.py nor
+    # grid_spiral.py -- the two places load_grid() was fixed -- was ever
+    # itself imported or tested by this suite. reconstruct()/decode() both
+    # hard-assert every claim internally (color sequence, rose-hex, prime,
+    # FEFE 1/4/21 descriptor), so calling them directly is a real regression
+    # guard, not just a smoke test. Also directly pins the exact bug: cell
+    # (row 8, column 7, 1-indexed) must classify as white, not black.
+    def test_first_piece_color_reconstruction_load_grid_majority_fix(self):
+        grid = first_piece_color_reconstruction.load_grid(
+            first_piece_color_reconstruction.DEFAULT_IMAGE
+        )
+        self.assertEqual(grid[7][6], first_piece_color_reconstruction.WHITE)
+        result = first_piece_color_reconstruction.reconstruct(
+            first_piece_color_reconstruction.DEFAULT_IMAGE
+        )
+        self.assertEqual(
+            result["color_sequence"],
+            first_piece_color_reconstruction.EXPECTED_COLOR_SEQUENCE,
+        )
+        self.assertEqual(
+            result["rose_hex"], first_piece_color_reconstruction.EXPECTED_ROSE_HEX
+        )
+        self.assertEqual(
+            result["prime_value"], first_piece_color_reconstruction.EXPECTED_PRIME
+        )
+        self.assertEqual(
+            (result["fefe"]["bit_1"], result["fefe"]["character_1"]), (4, 21)
+        )
+
+    @unittest.skipUnless(
+        grid_spiral.DEFAULT_IMG_PATH.exists(),
+        "sibling gsmg-site-mirror checkout is unavailable",
+    )
+    def test_grid_spiral_load_grid_majority_fix_and_decode(self):
+        grid = grid_spiral.load_grid()
+        self.assertEqual(grid[7][6], grid_spiral.WHITE)
+        _grid, _coords, _bits, chars = grid_spiral.decode()
+        self.assertEqual(chars, grid_spiral.TARGET)
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 336's two-half
+    # combine-algebra detector has a real self-test (15 combine forms, 9
+    # independently re-derived EC known-target constants, an end-to-end
+    # planted xor-combine hit, wrong-password control) but was never wired
+    # into this suite. Slow-ish (~16s, live secp256k1 point arithmetic) but
+    # well within this suite's existing budget.
+    def test_half_better_half_algebra_audit_combine_forms_and_planted_hit(self):
+        half_better_half_algebra_audit.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 296 (the single
+    # highest in-degree phase in the whole citation graph) has a real
+    # self-test pinning the finder-square relocation, the 5/7 exact-row
+    # match count, the multi-valued-row falsification, and JPEG-origin
+    # invariance -- all against the committed doc/img/gsmg_puzzle_stage1.png
+    # asset (no external dependency) -- but it was never wired into the suite.
+    def test_qr_finder_ring_texture_reindex_dither_audit(self):
+        qr_finder_ring_texture_reindex_dither_audit.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 298's real free-
+    # generator comparison has a self-test pinning all three saved images'
+    # analysis (qrserver/quickchart pure B/W, qrcode-monkey's 528 eyes-
+    # confined gray pixels) but was never wired into the suite.
+    def test_qr_finder_ring_texture_generator_comparison_audit(self):
+        qr_finder_ring_texture_generator_comparison_audit.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 305's irregular-
+    # rows-in-isolation audit has a self-test pinning the 6-differing-bit
+    # premise and the exact 8-candidate/24-attempt count but was never wired
+    # into the suite.
+    def test_qr_finder_ring_texture_irregular_rows_only_audit(self):
+        qr_finder_ring_texture_irregular_rows_only_audit.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 327's key-shape
+    # classifier (hex64/WIF/BIP39) and its sweep driver both have real,
+    # fully-synthetic self-tests (no external dependency, no real network
+    # calls) but neither was ever wired into the suite.
+    def test_key_shape_classifier_hex64_wif_bip39_and_base58check(self):
+        key_shape_classifier.self_test()
+
+    def test_key_shape_sweep_synthetic_wif_hit_reaches_bloom_and_queue(self):
+        key_shape_sweep.self_test()
+
+    # 2026-08-22 in-degree-2 tier code-vs-premise review: batch of scripts
+    # whose audit()/self_test() already hard-asserts every claim in its own
+    # FINDINGS phase but was never wired into this suite. Verified each
+    # individually before trusting it.
+    def test_fefe_zero_operation_audit_reproduces_fe_plated_rebus(self):
+        fefe_zero_operation_audit.audit(fefe_zero_operation_audit.DEFAULT_IMAGE)
+
+    def test_telegram_export_keyword_sweep_mechanism(self):
+        telegram_export_keyword_sweep.self_test()
+
+    def test_small_number_coincidence_calibration_base_rate(self):
+        small_number_coincidence_calibration.self_test()
+
+    def test_phase1_icon_rebus_audit_reproduces_warning_logic(self):
+        phase1_icon_rebus_audit.self_test()
+
+    def test_stage0_png_filter_anomaly_audit_reproduces_row_1416(self):
+        stage0_png_filter_anomaly_audit.self_test()
+
+    def test_external_archive_lead_audit(self):
+        external_archive_lead_audit.audit()
+
+    @unittest.skipUnless(
+        Path(DEFAULT_HTML).exists(),
+        "sibling GSMG page mirror is unavailable",
+    )
+    def test_salphaseion_operand_binding_audit(self):
+        salphaseion_operand_binding_audit.self_test()
+
+    # matrixsumlist_color_prime_audit.py's audit() calls
+    # flo_prime_walk_provenance_audit.audit() with its default chat_path,
+    # so it inherits the same raw chat_transcript.txt dependency.
+    @unittest.skipUnless(
+        flo_prime_walk_provenance_audit.DEFAULT_CHAT.exists(),
+        "raw chat_transcript.txt export is unavailable",
+    )
+    def test_matrixsumlist_color_prime_audit_reproduces_fitted_sums(self):
+        matrixsumlist_color_prime_audit.self_test()
+
+    def test_matrixsumlist_self_fold_consumer_audit(self):
+        matrixsumlist_self_fold_consumer_audit.self_test()
+
+    def test_image_stego_metadata_audit(self):
+        image_stego_metadata_audit.self_test()
+
+    def test_dbbi_faed_cosmic_duality_running_key_audit(self):
+        dbbi_faed_cosmic_duality_running_key_audit.self_test()
+
+    def test_genesis_adjacent_fields_audit_reproduces_eight_candidates(self):
+        genesis_adjacent_fields_audit.self_test()
+
+    def test_embedded_key_format_scanner_audit(self):
+        embedded_key_format_scanner_audit.self_test()
+
+    def test_bip32_authenticated_number_paths_audit(self):
+        bip32_authenticated_number_paths_audit.self_test()
+
+    def test_typed_decode_parse_ladder_audit(self):
+        typed_decode_parse_ladder_audit.self_test()
+
+    def test_qr_fafafa_braille_audit(self):
+        qr_fafafa_braille_audit.self_test()
+
+    def test_qr_fafafa_six_variant_atlas_audit(self):
+        qr_fafafa_six_variant_atlas_audit.self_test()
+
+    # 2026-08-22 in-degree-2 tier: Phase 79's two bookkeeping oracles.
+    # aes_key_wrap_sweep.py has a real synthetic _self_test() (leading-
+    # underscore convention, already safe to call directly). legacy_cbc_
+    # backfill.py has no self-test but its real sweep against the full
+    # curated corpus is cheap (~2s, only 6 legacy KDF variants, no PBKDF2),
+    # so it's called directly and its exact FINDINGS numbers pinned.
+    # stream_mode_cipher_sweep.py's real sweep is NOT reproduced here (its
+    # 36 variants include 10,000-iteration PBKDF2, making the real
+    # 2,095,344-op run too slow for a regression test) -- only its existing
+    # checkpoint/fingerprint-mechanism self_test() is wired.
+    def test_aes_key_wrap_sweep_synthetic_chained_unwrap(self):
+        aes_key_wrap_sweep._self_test()
+
+    def test_legacy_cbc_backfill_reproduces_zero_hits(self):
+        candidates = extended_cipher_recheck.load_curated_candidates()
+        result = legacy_cbc_backfill.sweep(candidates)
+        self.assertEqual(len(candidates), 648)
+        self.assertEqual(result["keystrings"], 14551)
+        self.assertEqual(result["hits"], [])
+
+    def test_stream_mode_cipher_sweep_checkpoint_mechanism(self):
+        stream_mode_cipher_sweep.self_test()
+
+    # 2026-08-22: Phase 23's command-provenance recheck had the same unsafe
+    # inline-in-main() self-test pattern fixed earlier this session in
+    # extended_cipher_recheck.py and literal_raw_key_material_audit.py.
+    # Extracted a standalone self_test() (verified byte-identical CLI vs.
+    # direct-call output) and strengthened it to run the real full sweep
+    # (cheap, ~0.2s) instead of a single-candidate probe, matching FINDINGS'
+    # own "13 candidates, 0 hits" result.
+    def test_command_provenance_recheck_reproduces_zero_hits(self):
+        command_provenance_recheck.self_test()
+
+    # 2026-08-22: first_hint_hash_audit.py (Phase 35, extended across many
+    # later phases -- 137/154/164) has a real self-test (address derivation,
+    # known SalPhaseIon route hash, solved Phase-1 password hash, and the
+    # original creator JPEG's exact SHA-256, all against committed assets)
+    # but was never wired into this suite.
+    def test_first_hint_hash_audit_provenance(self):
+        first_hint_hash_audit.self_test()
+
+    # 2026-08-22: lastcommand_probe.py (Phase 0.1) had no self_test()/audit()
+    # split and no argparse -- its sweep logic lived entirely inline in
+    # main(), only reachable by capturing stdout. Extracted a standalone
+    # probe() returning (forms, hits) so this can be asserted directly
+    # (behavior-preserving; verified byte-identical CLI output before/after).
+    def test_lastcommand_probe_reproduces_zero_hits(self):
+        forms, hits = lastcommand_probe.probe()
+        self.assertEqual(len(lastcommand_probe.CANDIDATES), 28)
+        self.assertEqual(len(forms), 168)
+        self.assertEqual(hits, [])
+
+    # 2026-08-22: Phase 75's own audit script (youwon_partition_audit.py)
+    # was never wired into this suite either.
+    @unittest.skipUnless(
+        Path(DEFAULT_EXPORT_DIR, "result.json").exists(),
+        "raw Telegram Desktop JSON export is unavailable",
+    )
+    def test_youwon_partition_audit_geometry_and_oracle(self):
+        result = youwon_partition_audit.audit()
+        self.assertEqual(result["grid"][3], youwon_partition_audit.ROW_TEXT)
+        self.assertEqual(result["oracle"]["hits"], [])
+
+    # 2026-08-22: Phase 368 closes GSMG_PHASE_VALIDATION_LOGIC_CONSISTENCY_
+    # AUDIT.md Finding 2 -- Phase 75's YOUWON/YOUWONX candidates predate
+    # Phase 78's binary-plaintext oracle fix and were never confirmed
+    # re-swept. This reruns them under the current oracle across
+    # CBC/ECB/stream/Key Wrap.
+    def test_youwon_full_oracle_backfill_reproduces_zero_hits(self):
+        youwon_full_oracle_backfill.self_test()
+
+    # 2026-08-22: Phase 370 forward-transfers Phase 341's solved-boundary
+    # grammar to P32TRAILING per the user's exact sequencing (freeze rules,
+    # generate manifest without querying the blob, diff against Phase 270,
+    # query only genuinely-new candidates). Confirms 0 genuinely new
+    # candidates -- P32TRAILING has no local annotation for the grammar's
+    # case/whitespace axes to freeze, so the transfer collapses to exactly
+    # Phase 270's own already-tested "whole-text family."
+    def test_p32_solved_boundary_grammar_transfer_audit(self):
+        p32_solved_boundary_grammar_transfer_audit.self_test()
+
+    # 2026-08-22: Phase 371 tests the null/T6 topology (GSMG_TOPOLOGY_AUDIT.md)
+    # directly -- for each of DBBI/FAED separately: what local instruction
+    # consumes it, what output type does that predict, what authenticated
+    # target accepts that type. Finds an asymmetric result (DBBI has 1
+    # adjacent instruction, unexecutable per G-MSL-001; FAED has 2, pointing
+    # at the separately-tracked G-ARCH-001 rather than at FAED itself) and no
+    # evidence either stream requires the other as input.
+    @unittest.skipUnless(
+        dbbi_faed_independent_consumer_audit.DEFAULT_HTML.exists(),
+        "sibling GSMG page mirror is unavailable",
+    )
+    def test_dbbi_faed_independent_consumer_audit(self):
+        dbbi_faed_independent_consumer_audit.self_test()
+
+    # 2026-08-22: Phase 372 -- SALPH/COSMIC Phase-341 eligibility-and-delta
+    # audit. SALPH's hash_prefix branch is grammar-eligible and fully
+    # exhausted (0 new candidates, 0 hits widened to ECB/stream/Key Wrap);
+    # its thispassword branch is ineligible because Phase 101's three
+    # candidate roles (password for FAED, FAED's answer merely labeled
+    # "password", or password for SALPH) remain unreconciled -- none
+    # selected, so no candidate is generated (corrected same-day: this is
+    # NOT "pending G-ARCH-001"; that was a retracted overclaim -- see the
+    # Phase 372 correction blockquote in FINDINGS.md). COSMIC fails
+    # eligibility entirely (self-contained, no demonstrated connection).
+    @unittest.skipUnless(
+        salph_cosmic_phase341_eligibility_audit.DEFAULT_HTML.exists(),
+        "sibling GSMG page mirror is unavailable",
+    )
+    def test_salph_cosmic_phase341_eligibility_audit(self):
+        salph_cosmic_phase341_eligibility_audit.self_test()
+
+    # 2026-08-22: Phase 373 -- attempts to discriminate Phase 101's three
+    # thispassword roles by scoring dataflow topology on seven frozen
+    # dimensions, calibrated first against the two known multi-component
+    # solved boundaries (Phase 3, Phase 3.2). No password or transform is
+    # run. CORRECTED SAME-DAY (user review): the original modeling scored
+    # faed_answer_is_password as though it had to skip
+    # lastwordsbeforearchichoice to bind on raw FAED (it doesn't -- its
+    # natural graph labels that instruction's own output directly), and
+    # scored password_for_salph_blob against hash_prefix -- a separate,
+    # already-scoped instruction (Phase 121/372) -- rather than the actual
+    # SALPH blob segment, plus awarded message-8446 precedent asymmetrically
+    # despite that message fixing token ORDER only, never a consumption
+    # edge. The file now keeps both the disputed and a corrected modeling
+    # and asserts they DISAGREE on the winner (password_for_salph_blob vs.
+    # faed_answer_is_password) -- proving the original conclusion was
+    # model-dependent. Combined with CALIBRATION_ANALOG_AVAILABLE=False (no
+    # solved boundary calibrates thispassword's specific postpositive-
+    # attachment ambiguity), the verdict is inconclusive and
+    # operand_ranking_licensed=False. Phase 101's three roles remain
+    # unresolved; the self-test source-guards against reintroducing Phase
+    # 372's retracted G-ARCH-001 overclaim.
+    @unittest.skipUnless(
+        thispassword_role_topology_discrimination_audit.DEFAULT_HTML.exists(),
+        "sibling GSMG page mirror is unavailable",
+    )
+    def test_thispassword_role_topology_discrimination_audit(self):
+        thispassword_role_topology_discrimination_audit.self_test()
+
+    # 2026-08-22: Phase 374 -- corrected-oracle backfill for Phase 11's
+    # frozen hash-duality candidate family (11,899 candidates x 4 prior
+    # hashes). Wires only self_test(), which regenerates and digests the
+    # manifest and confirms the newline-coverage discrepancy as a checked
+    # fact (with_newline=4,283,640 vs no_newline=1,427,880) -- fast, no
+    # oracle calls. The actual multi-million-attempt Stage 2/3 oracle sweep
+    # (1,427,880 + 2,855,760 attempts, 0 hits, ~132s total) was run once and
+    # is recorded in FINDINGS.md, not rerun on every test invocation.
+    def test_hash_duality_corrected_oracle_backfill(self):
+        hash_duality_corrected_oracle_backfill.self_test()
+
+    # 2026-08-22: Phase 376 -- Step 1 of the topology-identifiability audit.
+    # Freezes ONLY primary evidence (5 Wayback captures, live DOM
+    # segmentation, solved-stage syntax, creator messages with real reply
+    # edges), explicitly excluding community interpretation and prior-phase
+    # prose. Independently re-verified this session by live fetch (see
+    # FINDINGS.md): both textareas are byte-identical across the full
+    # 2023-06-01 to 2026-04-05 observation window. Sharp finding: creator
+    # message 20223 replies to 20221, not 20222 -- answers a different
+    # question than the one immediately before it.
+    def test_topology_identifiability_evidence_freeze(self):
+        topology_identifiability_evidence_freeze.self_test()
+
+    # 2026-08-22 (corrected same-day): Steps 2-5 of the topology-
+    # identifiability audit. For each of Phase 101's three thispassword
+    # roles, states the discriminating observable it would need, checks it
+    # against Step 1's frozen evidence (literal DOM stream -- both its
+    # deictic vocabulary AND, separately, an explicit attachment marker;
+    # solved-stage grammar; creator reply record, including a reply-parent
+    # check across all 148 rows), and -- finding no witness and no hard
+    # contradiction -- reports the bounded verdict: underdetermined, not
+    # formally unidentifiable by any possible model. No scoring or
+    # password generation is performed.
+    def test_thispassword_role_identifiability_audit(self):
+        thispassword_role_identifiability_audit.self_test()
+
+    # 2026-08-22: Phase 169/192's SalPhaseIon salt/selector family and
+    # Phase 303's QR line-type/center-square-fill scripts all have real
+    # self-tests but were never wired into the suite.
+    def test_salt_phase_ion_audit(self):
+        salt_phase_ion_audit.self_test()
+
+    def test_cosmic_83_guide_alignment_audit(self):
+        cosmic_83_guide_alignment_audit.self_test()
+
+    def test_salt_selector_permutation_audit(self):
+        salt_selector_permutation_audit.self_test()
+
+    def test_qr_finder_ring_texture_center_square_continuation_render(self):
+        qr_finder_ring_texture_center_square_continuation_render.self_test()
+
+    def test_qr_finder_ring_texture_line_type_alphabet_audit(self):
+        qr_finder_ring_texture_line_type_alphabet_audit.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 44's three scripts
+    # were never wired into this suite. yin_yang_next_edge_audit.py's audit()
+    # hard-asserts all its claims and needs only the committed first-piece
+    # image, so it runs unconditionally. yin_yang_transition_audit.py's
+    # audit() needs the raw chat_transcript.txt export (skip-guarded, same
+    # external-fixture pattern as elsewhere in this file).
+    # looking_forward_source_audit.py's audit() needs the frozen source PDF
+    # already downloaded to its default /tmp path (skip-guarded rather than
+    # auto-downloading during test runs); this session downloaded it once by
+    # hand while verifying Phase 44 and confirmed the exact SHA-256/anchors
+    # match, but a fresh checkout without that file will correctly skip.
+    def test_yin_yang_next_edge_audit_reproduces_bounded_readings(self):
+        report = yin_yang_next_edge_audit.audit(
+            yin_yang_next_edge_audit.DEFAULT_IMAGE
+        )
+        self.assertEqual(
+            report["true_characters"],
+            yin_yang_next_edge_audit.EXPECTED_TRUE_CHARACTERS,
+        )
+        self.assertEqual(
+            report["false_characters"],
+            yin_yang_next_edge_audit.EXPECTED_FALSE_CHARACTERS,
+        )
+        self.assertEqual(
+            report["byte_aligned_forward"],
+            yin_yang_next_edge_audit.EXPECTED_BYTE_ALIGNED_FORWARD,
+        )
+
+    @unittest.skipUnless(
+        yin_yang_transition_audit.DEFAULT_CHAT.exists(),
+        "raw chat_transcript.txt export is unavailable",
+    )
+    def test_yin_yang_transition_audit_reproduces_bingo_evidence(self):
+        report = yin_yang_transition_audit.audit(
+            yin_yang_transition_audit.DEFAULT_CHAT,
+            yin_yang_transition_audit.DEFAULT_MIRROR,
+            yin_yang_transition_audit.DEFAULT_IMAGE,
+        )
+        self.assertEqual(
+            len(report["page_mechanics"]["seed_page"]["forms"]), 1
+        )
+        self.assertAlmostEqual(
+            report["first_piece"]["minimal_hue_distance"], 180, delta=1
+        )
+
+    @unittest.skipUnless(
+        looking_forward_source_audit.DEFAULT_PDF.exists(),
+        "Looking Forward source PDF has not been downloaded",
+    )
+    def test_looking_forward_source_audit_sha256_and_page37_anchors(self):
+        report = looking_forward_source_audit.audit(
+            looking_forward_source_audit.DEFAULT_PDF
+        )
+        self.assertEqual(
+            report["sha256"], looking_forward_source_audit.EXPECTED_SHA256
+        )
+        self.assertEqual(report["page_count"], 122)
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 102's anstoo/SHA-
+    # operand provenance re-scan has a real self-test (0 creator mentions,
+    # >=90 community mentions, 103-char instruction-concatenation check,
+    # 21-row walkback) but was never wired into the suite.
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "Telegram export is unavailable",
+    )
+    def test_anstoo_provenance_audit_creator_silence_and_community_survey(self):
+        report = anstoo_provenance_audit.self_test()
+        self.assertEqual(report["anstoo_mention_count"], 93)
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 164's literal-raw-
+    # key-material oracle had its self-test unsafely embedded inline inside
+    # main()'s argparse flow (same class of bug fixed earlier in
+    # extended_cipher_recheck.py). Extracted a standalone self_test(),
+    # behavior-preserving (verified byte-identical CLI vs. direct-call
+    # output), and wired it in here.
+    def test_literal_raw_key_material_audit_synthetic_vector_recovered(self):
+        literal_raw_key_material_audit.self_test()
+
+    # 2026-08-22 hub-phase code-vs-premise review: Phase 259 lists three
+    # downstream consumer scripts it re-ran after the book-text update
+    # (cosmic_duality_book_second_riddle_audit.py, telegram_matrix_sum_
+    # passage_audit.py, prefix_boundary_sweep.py) that were never actually
+    # wired into this suite -- unlike yinyang_cosmic_phase_label_audit.py and
+    # matrixsumlist_provenance_refresh_audit.py, which already were.
+    def test_cosmic_duality_book_second_riddle_audit_reproduces_token_counts(self):
+        cosmic_duality_book_second_riddle_audit.self_test()
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "Telegram export is unavailable",
+    )
+    def test_telegram_matrix_sum_passage_audit_provenance(self):
+        telegram_matrix_sum_passage_audit.self_test()
+
+    def test_prefix_boundary_sweep_self_tests(self):
+        prefix_boundary_sweep.run_self_tests()
 
 
 if __name__ == "__main__":

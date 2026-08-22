@@ -107,7 +107,7 @@ not a formula at all.**
    reason — not an oversight we're the first to catch, but independently re-derived and
    now confirmed at the byte level in this repo.
 
-**What this changes:** every negative result in Phase 2 (and the community's 4904-test
+**What this changes:** every negative result in FINDINGS Phase 2 (and the community's 4904-test
 joint attack before it) is now explained, not just observed. `pad28(candidate)` was
 never capable of producing a puzzle-real alphabet — for *any* candidate, dictionary-scale
 or otherwise — because these alphabets are hand-built from a specific riddle sentence's
@@ -129,7 +129,7 @@ new dictionary sweep.
 
 ## Phase 4 — the "another door" / prime / neo's-passport hints (2026-07-04)
 
-Phase 3 pointed at the creator's still-unresolved 2021 hints as the most promising
+FINDINGS Phase 3 pointed at the creator's still-unresolved 2021 hints as the most promising
 lead. Pulling the full 181k-line community chat export (`chat_transcript.txt`, fetched
 via raw.githubusercontent.com — the GitHub contents API only inlines base64 for files
 under ~1MB, and this one is 7.2MB) surfaced the exact chronological sequence, richer
@@ -172,7 +172,7 @@ Tested:
 warns produces false confidence in a 9-symbol alphabet; not pursued further.)
 
 **Caveat that keeps this from being a clean falsification:** `ALPHA_322` is almost
-certainly the *wrong* alphabet for dbbi/faed (Phase 3 established each stage's
+certainly the *wrong* alphabet for dbbi/faed (FINDINGS Phase 3 established each stage's
 alphabet is hand-built from its own riddle sentence) — so the prime-zeroing test in
 particular is weak evidence either way. The direct-passphrase test is the more
 solid negative of the two.
@@ -305,6 +305,15 @@ be already-resolved, not new leads:
    year! Make the best of everything. Oh, and here's a 'tiny hint' <3."* — the scare
    quotes are the tell; no cipher or keyword content follows. Pure holiday banter.
 
+This was a manual read-through, not a scripted audit, so no self-test is cited
+here directly. All three decodes above were later hard-asserted with real
+self-tests once the underlying tooling matured: message 1's macro clue via
+FINDINGS Phase 96/`salphaseion_title_rebus_audit.py`'s `EXPECTED_MACRO`;
+message 2's Caesar/base64/Rick-Roll chain via FINDINGS Phase 136/
+`first_puzzle_announcement_audit.py --self-test`; and message 3's exact text
+via `binary_message_export_audit.py --self-test` (message `53342`). All three
+were independently re-run and still pass as of 2026-08-22.
+
 **No previously-unflagged riddle-style hint was found anywhere in the full 411-message
 set.** Everything else in the export is either already-documented material (the Roses
 poem, "another door"/prime/passport, the repeated "no hints" refrain) or non-technical
@@ -354,8 +363,8 @@ accessible).
 ## Bottom line
 
 **Six independent lines of attack have now returned negative on this endgame:** the
-dictionary-scale keyword sweep (Phase 2), the alphabet-derivation model itself
-(Phase 3 — confirmed structurally wrong, explaining Phase 2's result), the creator's
+dictionary-scale keyword sweep (FINDINGS Phase 2), the alphabet-derivation model itself
+(FINDINGS Phase 3 — confirmed structurally wrong, explaining FINDINGS Phase 2's result), the creator's
 two most-discussed still-open hints read literally (Phase 4), an independent image
 forensic audit (Phase 5), a check for genuine post-fork community progress (Phase 6
 — found only fabricated "solved" spam, on-chain balance unchanged), and a full
@@ -4581,7 +4590,15 @@ older ledger as the dependency-chain interpretation. New creator evidence
 must be added by stable message/user ID with its exact reply parent and a
 statement of scope before it can influence a transform or cipher search.
 
+<!-- index_note: nest cells corrected to 4/4 white by Phase 127 -->
 ## Phase 64 -- a 2020 diagram independently corroborates FEFE and names the "nest" cells (2026-07-26)
+
+> **Correction (Phase 127, 2026-07-28):** a single-center-pixel sampling bug
+> in the shared cell classifier affected exactly one board cell -- the
+> "rabbit nest" cell reported below as black. The corrected majority-color
+> classifier shows all 4 nest cells are white, not white/black/white/white
+> as originally reported -- an exact match to the diagram's own "white box"
+> caption. The FEFE/"rabbit hole" identification below is unaffected.
 
 A 2020-03-24 community diagram (old `chat_transcript.txt:6848`; recovered in
 the complete Telegram export as message `2899`, sender anonymized, photo
@@ -4618,7 +4635,16 @@ does not supply a new operation -- FEFE's role is already fixed, and the
 nest cells carry no hidden color signal. Filed as provenance strengthening,
 not a new lead.
 
+<!-- index_note: retracted by Phase 127 -- nibble is trivial all-zero, no signal -->
 ## Phase 65 -- rabbit-nest leftover nibble: exact `4/B` checksum, direct bit-4 zeroing negative (2026-07-26)
+
+> **Retracted (Phase 127, 2026-07-28):** the same cell-classifier sampling
+> bug that affected Phase 64 means the nest nibble is actually the trivial
+> `0000`/hex `0` (complement `1111`/hex `F`), not `0100`/`4` (complement
+> `1011`/`B`) as reported below. The "`4/B` is a compact checksum" framing
+> does not survive the correction -- an all-zero nibble carries no signal.
+> This sub-line of investigation is fully closed; do not reopen it without
+> new creator evidence unrelated to this nibble.
 
 Phase 64 identified the diagram's central “rabbit nest” as the four spiral
 cells left after the 192-bit/24-byte `gsmg.io/theseedisplanted` decode.
@@ -5225,6 +5251,15 @@ replaced by literal zeroes, and the full output. All normalized case forms:
 zero hits.
 
 Reproduced and asserted by `tools/gsmg/youwon_partition_audit.py`.
+
+**Coverage note (added 2026-08-22):** this sweep predates Phase 78's
+binary-plaintext oracle fix (`aes_try_open_bytes()` previously discarded a
+correct decrypt whose plaintext body is non-printable). `YOUWON`/`YOUWONX`
+are not registered in `curated_candidate_registry.py`'s tracked files, so
+they have not been confirmed re-swept under the corrected oracle. A bounded
+re-sweep of exactly these two forms would close this identifiable gap.
+**Resolved same day by Phase 368**: re-swept under the current oracle across
+CBC/ECB/stream/Key Wrap and all 4 blobs, 0 hits.
 
 Follow-up quarantine exhaustion: tested exactly `YOUWON` and `YOUWONX`
 (upper/lower case forms) against `URLBLOB` as well, under the same 24 CBC
@@ -6439,6 +6474,7 @@ catching both by insisting on demonstrating the test against a
 deliberately-reintroduced bug rather than trusting a passing run at face
 value. Still not launched against the real corpus.
 
+<!-- index_note: Vanity-substring classification code was added but not applied retroactively to this run's already-completed 525,436-keystring launch; see Phase 95. -->
 ## Phase 94 -- `-nopad` Tier-1 sweep: real launch (clean negative) + vanity-substring classification added (2026-07-27)
 
 Efficiency-vs-throughput tradeoff (per-worker efficiency drops from ~95.6%
@@ -7253,6 +7289,7 @@ the 3x3-matrix reading of `SALVATION` as a direct-passphrase hypothesis; it
 does not reopen the periodic-table numerology or license a broader
 transposition search over the grid.
 
+<!-- index_note: Superseded by Phase 112 -- objective was inverted; code-level IC is a validated positive partial escape-pair oracle, not a negative. -->
 ## Phase 106 -- a calibrated partial oracle for the checkerboard escape pair: real idea, real calibration, real negative (2026-07-27)
 
 > **Superseded by Phase 112.** This phase ranked candidates by largest IC
@@ -8552,7 +8589,15 @@ surviving deterministic downstream operation.** No new cipher sweep follows.
 Full output and boundaries are recorded in
 [doc/GSMG_YINYANG_ARTIFACT_INVENTORY.md](../../doc/GSMG_YINYANG_ARTIFACT_INVENTORY.md).
 
+<!-- index_note: counts corrected same-day by Phase 127; pattern/verdict unchanged -->
 ## Phase 125 -- black-rabbit negative-space audit: corrected adjacent pattern (2026-07-28)
+
+> **Correction (Phase 127, same day):** the shared cell classifier's single-
+> center-pixel sampling bug (fixed later this same day) shifts the counts
+> below: 925 visible rabbit pixels, not 1,250; 86 total black cells, not 87;
+> fixed-location probability `2.4560e-5`, not `2.53255e-5`; shuffle-family
+> empirical p=0.023560, not 0.024470. The 3x5 pattern, its unique occurrence,
+> and the qualitative verdict are unchanged -- see Phase 127 for why.
 
 Implemented `tools/gsmg/black_rabbit_negative_space_audit.py` after a visual
 suggestion that the black cells below and right of the explicit white rabbit
@@ -8613,7 +8658,16 @@ first audit's non-unique distant template match. Retain it as a real visual
 lead and possible white/black dual artifact, but not as creator-confirmed or
 as an operation. Nothing here alone justifies a cipher/password sweep.
 
+<!-- index_note: unique 180-degree fit does not survive Phase 127's correction -->
 ## Phase 126 -- user-drawn lower rabbit: partial transformed-sprite overlap (2026-07-28)
+
+> **Correction (Phase 127, same day):** the shared cell classifier's single-
+> center-pixel sampling bug (fixed later this same day) shrinks the cropped
+> source rabbit template from (65,80) to the correct (65,70). Under that
+> crop, rotate_180 and rotate_270 tie exactly (F1=0.3757, precision=0.7820,
+> recall=0.2472) -- the unique "180-degree rotation... thematically
+> compatible with duality" framing below does **not** survive: there is no
+> single preferred orientation once corrected.
 
 The Phase 125 cell pattern was not the user's intended shape. Their
 `doc/img/gsmg_rabbit_hint_254marker_fullres_edited.png` proposes a second
@@ -10343,7 +10397,7 @@ keystrings, all 4 blobs, CBC (+ extended variants)/ECB/stream/keywrap:
 **Also checked and closed as already covered**, prompted by two other
 creator messages surfaced in this same search (Phase-3-era typo reports,
 2019-05/08): `giveit`/`givetit` and the "extra character between the 3
-answers" Phase 3 mistake are both already documented and handled in
+answers" solved Phase 3 mistake are both already documented and handled in
 `tools/gsmg/data.py` and existing docs -- no new gap, no action needed.
 
 **Verdict:** the second corpus is now fully checked, not an outstanding gap.
@@ -10953,6 +11007,14 @@ candidates have never been run through the *padded* CBC/ECB
 have) -- a real, pre-existing coverage gap noticed as a side effect, not
 part of this phase's scope, and not to be conflated with the
 whitespace-specific finding above.
+
+**Disposition note (added 2026-08-22):** the padded `EXTENDED_CIPHER_VARIANTS`
+gap above was later closed by Phase 323/328's GPU-oracle backfill of the
+same medium-curated Tier 1-3 union (66,433 candidates), negative. The nopad
+Tier-1 `--whitespace-variants` rerun remains genuinely unrun; deprioritized
+(low expected value -- whitespace variants already tested clean at the
+smaller curated tier, and this candidate family has since been superseded
+in priority by the medium-curated corpus sweeps), not silently dropped.
 
 ## Phase 164 -- brainstorm item 2: literal page text as a raw (unhashed, undeived) AES/3DES key, curated tier closed negative (2026-08-07)
 
@@ -13159,6 +13221,7 @@ normalization as exact mechanics. Do not promote the latter as a password or
 second confirmation; conditioned correctly, it is a deterministic restatement
 of the same balance.
 
+<!-- audit_doc_override: GSMG_FIRST_PIECE_BITPLANE_VERIFICATION.md -->
 ## Phase 197 -- complete URL bit-plane audit: 21-byte residual verified but length-forced; prime/staircase unique to the colored plane, Hamming weight is not (2026-08-09)
 
 `tools/gsmg/first_piece_bitplane_audit.py` transposes all 192 bits of the
@@ -14212,6 +14275,7 @@ native boundary check unavailable to any other indexing convention. It does
 not yet identify a deterministic consumer, and the literal seven-word
 alternative is closed negative as a direct password.
 
+<!-- index_note: Corrected same day by Phase 223 -- reaches the BUT/HYE checkpoint but does not by itself establish that yinyang is reached. -->
 ## Phase 217 -- minimal creator-macro chain reaches `yinyang` via the six-digit prime; VAT/SALVATION and an invented "H|YE|BUT" reading removed after review (2026-08-09)
 
 **Later correction (Phase 223):** the route robustly reaches BUT/HYE, but the
@@ -16080,7 +16144,7 @@ current direct passphrase-oracle coverage across CBC, ECB, stream, and Key
 Wrap. No broad V2 rerun is needed. Full scope and reproduction:
 [GSMG_V2_RESIDUAL_ORACLE_BACKFILL](../../doc/GSMG_V2_RESIDUAL_ORACLE_BACKFILL.md).
 
-## Phase 258 -- Phase-1 icon symbol layer: “opposites attract” confirmed as instruction/illustration, no second key (2026-08-13)
+## Phase 258 -- Phase-1 icon symbol layer: “opposites attract” established as instruction/illustration, no second key (2026-08-13)
 
 Reopened the exact Telegram JPEG from message `670`
 (`photo_15@08-05-2019_17-54-34.jpg`, 189x323, SHA-256
@@ -16206,6 +16270,7 @@ pending. `GSMG_STRICT_TRANSITION_WORKSHEET.md`, `GSMG_OPEN_GAP_REGISTRY.md`,
 and `GSMG_HOME.md` are updated accordingly; the reopen trigger for this row
 no longer names these two pages.
 
+<!-- index_note: Corrected by Phase 261 -- the yin-yang drop cap is book-wide design, not unique to the title's C/D; CD=400 corroborates, does not independently select. -->
 ## Phase 260 -- Cosmic Duality title page's C/D initials: pixel-confirmed miniature yin-yang glyphs, Roman CD=400 independently echoes the yellow prime sum (2026-08-13)
 
 User-flagged observation on the book's interior title page (one of the same
@@ -16581,7 +16646,7 @@ the already-known `1a57c572...`.
 `phase3_sevenpart_p32_reuse_audit.py` tests whether P32TRAILING reuses that
 exact construction. Independently re-derived from scratch first (not taken
 from any report): the 227-character concatenation and its SHA-256 hex digest
-both recomputed and matched byte-for-byte against the known Phase 3 hash.
+both recomputed and matched byte-for-byte against the known solved Phase 3 hash.
 The concatenation, its digest (hex and raw 32 bytes), case/alpha-only
 normalization forms, and LF/CRLF/trailing-space variants -- 119 unique key
 materials -- were run through the full standard oracle (CBC with all KDF and
@@ -16589,7 +16654,7 @@ extended-cipher variants, stream, ECB, key-wrap) against all four tracked
 blobs. **0 hits.**
 
 This closes the narrow, well-motivated version of the hypothesis: P32 does
-not reuse Phase 3's seven parts verbatim or in any straightforward derived
+not reuse solved Phase 3's seven parts verbatim or in any straightforward derived
 form. It does not close the broader "concatenate seven previously-solved
 values" idea in general -- no other set of exactly seven password-level
 items is uniquely identified in the solved chain, and assembling one would
@@ -16601,8 +16666,8 @@ unequal-length strings.
 **Verdict:** the most concrete, non-arbitrary reading of "seven intertwined
 passwords" is now closed negative. P32TRAILING remains open with no known
 password. Further pursuit of this specific thread would require either a new
-selector for which seven values to combine, or abandoning the "reuse Phase
-3's construction" framing entirely.
+selector for which seven values to combine, or abandoning the "reuse solved
+Phase 3's construction" framing entirely.
 
 ## Phase 267 -- Full Phase 2/3/3.2 decrypted-text sentence sweep against all four blobs: 48 candidates, 2,196 key materials, 0 hits (2026-08-13)
 
@@ -18234,7 +18299,7 @@ executable as originally framed. The digits 2/3/4 in the Phase 3.2
 plaintext's "2name...3Moon?...4How so mate?" are the SAME digits that
 already fix Safenet/Luna/HSM as parts 2/3/4 of the solved 7-part
 concatenation (`README.md`) -- reading them as "an ordering key over parts
-2/3/4" reproduces the identity permutation already used to solve Phase 3,
+2/3/4" reproduces the identity permutation already used to solve puzzle Phase 3,
 not a new candidate. No independently-sourced non-identity reordering rule
 exists anywhere in this project's corpus or the fork's. Only the literal
 digit-glued fragment substrings themselves were tested (zero
@@ -19029,6 +19094,12 @@ board, not a narrow spike a seeding artifact could manufacture) -- but the
 specific "best keyword" this entry's output printed is not a reproducible
 attribution if anyone reruns `dbbi_faed_nihilist_additive_audit.py` as-is.
 
+**Fixed (2026-08-22):** `dbbi_faed_nihilist_additive_audit.py` now derives
+its per-search seed from a `hashlib.sha256` digest (`stable_seed()`) instead
+of Python's `hash()`, so the seed -- and therefore which keyword's hillclimb
+prints as "best" -- is reproducible across separate runs. Does not change
+this phase's negative verdict.
+
 ## Phase 311 -- Cosmic Duality book text as a running key over DBBI/FAED: bounded exploratory pass, no signal (2026-08-17)
 
 Extends Phase 310's mechanism with better-grounded key material: instead of
@@ -19107,7 +19178,7 @@ system (not the 11-letter one) is the correct 1553 target.
 
 ## Phase 313 -- "The Warning" (Logic) unused remainder: lexical test negative, structural fork-selection review inconclusive (2026-08-17)
 
-Follow-up to `doc/Brainstorms/2026-08-17 - The Warning (Logic) Phase 2-3
+Follow-up to this puzzle's `doc/Brainstorms/2026-08-17 - The Warning (Logic) Phase 2-3
 Meaning Close Read.md`, which established that Logic's "The Warning" is a
 *confirmed* creator source (its opening lines are the verified Stage 0/1 URL,
 icon-rebus answer, and Phase 1 form password -- `doc/GSMG_PUZZLE.md` lines
@@ -20848,7 +20919,7 @@ by construction before any hash is computed):
   ambiguity on the page at all -- 1 candidate. Kept only as a baseline;
   per the brainstorm's own predeclared reading, recovering a
   single-component boundary alone proves nothing about the grammar.
-- Phase 3: 7 parts, explicit "concatenate them all" (no separator
+- solved Phase 3: 7 parts, explicit "concatenate them all" (no separator
   ambiguity), parts 1-5 unambiguous; part 6 (genesis-block hex fragment)
   and part 7 (post-move chess FEN) carry explicit `/(aBa, connected
   enf)` / `/(aBa, connected not enf)` annotations. Hedged axes: does the
@@ -21829,7 +21900,7 @@ backspaces before a shell prompt is a specific, narrow, authenticated
 terminal-rendering hypothesis (cursor-left, prompt-overwrite semantics) worth
 pursuing before any further brute force.
 
-**Frozen inputs:** the exact live Phase 2 URL (`gsmg.io/choiceisanillusion...
+**Frozen inputs:** the exact live puzzle Phase 2 URL (`gsmg.io/choiceisanillusion...
 iwroteitmyself`), one plain GET, no JS/forms executed -- the same safety
 boundary as `tools/gsmg/provenance_monitor.py`. Passwords are this project's
 already-published, already-verified values: `SHA256("causality")` for Phase
@@ -22159,6 +22230,7 @@ deterministic controls); originating full-mask brainstorm.
 selects a specific 2x3/2x4 dot lattice and traversal absent from this exhaustive
 pixel-grid pass. A suggestive hand-chosen grouping is not a reopen condition.
 
+<!-- index_note: Scope-corrected same day -- "one native module" means the shared coordinate grid/majority predictor, not one byte-identical bitmap; six byte-distinct patches exist. -->
 ## Phase 356 -- QR `#FAFAFA` texture is locked to one native 7x7-pixel module: positive leave-one-module-out identification (2026-08-21)
 
 **Question:** Phase 354 found a predictive global 7x7 pixel tile over four
@@ -22222,6 +22294,7 @@ bitmap in all sixteen positions. Direct enumeration gives six byte-distinct
 role. The 95.79% predictive result and exact module-grid lock stand; a single
 repeated-asset claim does not.
 
+<!-- index_note: Scope-corrected same day -- inversion target was the canonical right-side patch only, not all six byte-distinct module variants. -->
 ## Phase 357 -- QR module-tile scale-history inversion: no exact smaller raster/filter source, native 7x7 primitive favored (2026-08-21)
 
 **Question:** Phase 356 binds the `#FAFAFA` texture to one native 7x7-pixel QR
@@ -22279,6 +22352,7 @@ four-copy canonical right-side patch. The other five byte-distinct module
 variants were not inverted, so this phase favors “native 7x7” only for that
 variant and does not close a shared generative model for the six-variant atlas.
 
+<!-- index_note: Scope-corrected same day -- fingerprint target was the canonical right-side patch only, not all six variants. -->
 ## Phase 358 -- repository-wide exact 7x7 QR tile fingerprint: only known Stage-0 copies and derived visualization, no independent asset (2026-08-21)
 
 **Question:** Phase 356 identified an exact native-module 7x7 texture and Phase
@@ -22336,6 +22410,7 @@ right-side patch only. Therefore “local branch closed” applies to that exact
 variant, not to the other five patches. A bounded all-six-variant fingerprint
 is a valid continuation on the existing corpus, not a forbidden rerun.
 
+<!-- index_note: Scope-clarified same day -- rejection generalizes to all six variants, but the tested comparison used the canonical right-side patch. -->
 ## Phase 359 -- constant-fill QR finder renderer calibration: Pillow/OpenCV/Cairo cannot produce the native 7x7 patterned module (2026-08-21)
 
 **Question:** can ordinary scan conversion/antialiasing of an ideal finder eye
@@ -22875,3 +22950,1147 @@ the exact temporal limit.
 visible referent or fixes its complete operation. Repeating the phrase,
 reinterpreting `Bingo`, or applying more transforms to the unchanged
 31-character string is not a reopen condition.
+
+## Phase 367 -- praised-snapshot dependency closure rejected; 2026 `tiny hint` parked as possibly directional, non-operational (2026-08-21)
+
+**Question:** does the repository state plausibly praised by creator message
+8352, combined with the adjacent `theory of everything` clue and the later
+2026 binary `tiny hint`, form a dependency closure with exactly one missing
+object or transition?
+
+**Method:** `tools/gsmg/snapshot_dependency_closure_audit.py` freezes commit
+`fb92dd15487c6e2d275adb8c923698b7166c328e`, verifies it is the latest commit
+at the 2023-01-12 praise cutoff, and pins all seven tree entries by git blob
+ID. The praise is used only to select a plausible historical snapshot, not as
+endorsement of every README conclusion. The failure test is conservative: it
+counts only opaque/raw payloads visible in that snapshot and excludes
+ambiguous prose, `X 2 S H 4 Y 0 Q B 15`, the abstract `yinyang` state, and
+later-derived objects.
+
+**Post-hoc lexical observation:** the standalone word `everything` occurs
+exactly **once** in the frozen README, in Morpheus's line **“Everything begins
+with choice.”** This was noticed after the registered closure test failed and
+is not promoted as a second test. Its surrounding text is the fully solved
+Phase 2 walkthrough: the dialogue explains the already-consumed URL slug and
+the password is `causality`. Three of four snapshot `choice` hits belong to
+that solved passage; the fourth is the already-known
+`lastwordsbeforearchichoice` token. It supplies no new Architect selector and
+does not reopen parked `G-ARCH-001`.
+
+**Closure result:** **rejected**. Five conservative open payloads remain:
+`P32TRAILING`, `DBBI`, `FAED`, `SALPH`, and `COSMIC`, spanning three frontier
+clusters (Phase-3.2 trailing, SalPhaseIon, Cosmic Duality). The February 2023
+macro orders `yellowblueprimes -> matrixsumlist ->
+lastwordsbeforearchichoice -> yinyang`, but does not consume those five
+objects or select one cluster. The exact stop rule therefore fails at **5
+objects / 3 clusters**, not 1/1; no cipher or blob oracle is authorized.
+
+**Artifacts:** `tools/gsmg/snapshot_dependency_closure_audit.py` and
+`doc/GSMG_PRAISED_SNAPSHOT_DEPENDENCY_CLOSURE_AUDIT.md`; permanent regression
+added to `tools/gsmg/test_recent_audits.py` and message 53342's evidence-index
+scope corrected.
+
+**`tiny hint` disposition:** the exact phrase is a rare callback to the
+creator's 2019 promise. The known 2020 fulfillment shows that the creator can
+wrap a real, low-bandwidth semantic nudge in trolling, so “not key material”
+does not imply “not a hint.” The five-dot countdown, binary packaging,
+self-label, edit, and creator-corpus rarity keep a directional reminder toward
+message 8354's `theory of everything` plausible. But the 7x11 centering is
+retrospective and has no consumer, the ASCII-row-sum confirmation is
+space-count-confounded, the snapshot word trail is inert solved context, and
+no tested reading yields an operation or key material.
+
+**Final disposition / next condition:** **parked, non-operational**. Do not
+run a `choice`-referent audit, more grid readings, password derivations, or
+blob oracles. Reopen only if the pre-edit message is recovered, the creator
+clarifies the target, or a new primary artifact independently selects an
+operation. The 5-payload / 3-cluster closure rejection remains unchanged.
+
+## Phase 368 -- `YOUWON`/`YOUWONX` re-swept under the corrected binary-plaintext oracle: closed negative, now with full CBC/ECB/stream/Key Wrap coverage (2026-08-22)
+
+**Question:** `GSMG_PHASE_VALIDATION_LOGIC_CONSISTENCY_AUDIT.md` Finding 2
+flagged that Phase 75's `YOUWON`/`YOUWONX` candidates were tested only under
+the pre-Phase-78 oracle, which discarded correct AES decrypts with
+non-printable (binary) plaintext bodies -- exactly the shape the
+authenticated "half and better half" plaintext implies a real hit would
+have. Neither candidate is registered in `curated_candidate_registry.py`'s
+tracked files, so no later corpus-level sweep folded them in. Does a bounded
+re-sweep of exactly Phase 75's already-enumerated candidate forms, under the
+current (post-Phase-78) oracle, change the result?
+
+**Method:** `tools/gsmg/youwon_full_oracle_backfill.py` reuses
+`youwon_partition_audit.py`'s own `candidate_forms()` output verbatim -- the
+same DBBI-subtraction-derived strings Phase 75 already enumerated (`YOUWON`;
+the `YOUWONX` row; the 21-char prefix; 64/63-char tails; the row-removed,
+`AAAAAAA`-zeroed, and literal-zeroed variants; the full 91-char output) -- and
+`cb_common.answer_forms()` for the same case variants Phase 75 already tried.
+No new candidates, no sha256/newline pre-hash forms: those are a genuinely
+different oracle axis, not a "confirm this still holds" rerun. 18 unique
+byte-string passphrases result (20 label/form pairs per Phase 75's own
+counting convention, with 2 exact collisions across labels).
+
+Live confirmation that `cb_common.aes_try_open`/`aes_try_open_bytes` already
+carry the Phase-78 fix (no code change was needed -- it's a shared oracle):
+running the existing `youwon_partition_audit.py` unmodified now reports "20
+candidate forms x 24 variants x 4 blobs, 0 hits" against all four blobs
+(`SALPH`, `COSMIC`, `P32TRAILING`, `URLBLOB` -- `URLBLOB` has since moved from
+`QUARANTINED_BLOBS` into `BLOBS` by default, widening Phase 75's own
+CBC-only/3-blob coverage for free).
+
+The one deliberate widening beyond a literal rerun: Phase 75 only ever ran
+the CBC-family oracle. This also runs ECB, stream-mode, and AES Key Wrap --
+already this project's own standard bar for calling a candidate set "fully
+covered" (Phase 256/257's `curated_v2_residual_oracle_backfill.py` precedent)
+-- against the same 4 blobs: 1,728 CBC decryptions (24 variants), 864 ECB
+decryptions (12 variants), 2,592 stream decryptions (36 variants), and 3,456
+effective Key Wrap unwrap attempts (12 KDF variants) -- 8,640 effective
+operations total.
+
+**Result:** **zero hits** in every family.
+
+**Verdict:** Finding 2's flagged coverage gap is closed. `YOUWON`/`YOUWONX`
+and Phase 75's other DBBI-row-derived forms are not the passphrase for any
+tracked blob under any currently-supported cipher/KDF combination, evaluated
+with the oracle that actually accepts binary plaintext. This is a coverage
+correction, not a new theory -- no candidate expansion, no new geometry, no
+downstream consumer identified. The `YOUWON` line stays closed per Phase 75's
+own verdict; do not reopen without new creator evidence or a transition
+consumer for `YOUWONX`/row 4.
+
+**Artifacts:** `tools/gsmg/youwon_full_oracle_backfill.py`; permanent
+regression added to `tools/gsmg/test_recent_audits.py`.
+
+## Phase 369 -- frontier assumption ledger and topology audit: DBBI/FAED "must combine" has never itself been tested (2026-08-22)
+
+**Question, prompted directly by the user:** given ~50 phases of negative
+cryptanalysis on DBBI/FAED and dozens more on SALPH/COSMIC/P32TRAILING/
+matrixsumlist/Architect with no solve, is this an under-testing problem or
+did many later phases inherit an early, never-independently-verified
+assumption about how these objects connect? "A phase closes one specific
+model under specific inputs, topology, and oracle. It does not necessarily
+close the underlying puzzle path."
+
+**Method:** built `doc/GSMG_FRONTIER_ASSUMPTION_LEDGER.md`, a per-phase
+record (claim tested, authenticated inputs used, assumed edges, coverage
+scope, result, load-bearing assumptions) scoped to every phase making a
+real topological claim among the ten frontier objects/tokens (`DBBI`,
+`matrixsumlist`, `FAED`, `lastwordsbeforearchichoice`, `thispassword`,
+`SALPH`, `anstoo`, `COSMIC`, `P32TRAILING`, Architect/`BUT`/`HYE`/`BYE`/
+`CIAO`) -- not every phase that merely mentions one. Then
+`doc/GSMG_TOPOLOGY_AUDIT.md` scores eight named candidate topologies plus an
+explicit null topology against that ledger, on: authenticated tokens
+consumed, page/source order preserved, unsupported edges introduced,
+unresolved tokens left behind, compatibility with the Phase-341 solved-
+boundary grammar, dependency on external evidence, and number of arbitrary
+operator/orientation choices required. No decryption oracle was run as part
+of the scoring itself.
+
+**Result:** three topologies survive with real (non-inherited) support, and
+per the user's own instruction they are retained as ties rather than forced
+to a winner:
+
+- **Checkpoints, not operands** (some intermediate results confirm the
+  interpretive path without being cipher/key material) is the single
+  best-supported claim in the ledger -- three independent phases (96,
+  217/223, 238) converge on it, and Phase 238's "zero of six adjacency
+  rules survive across all page slots" is the strongest falsification in
+  the whole audit, working directly against the assumption other phases
+  inherited by default.
+- **P32TRAILING as a parallel continuation of the already-solved Phase 3.2
+  boundary**, with SALPH/COSMIC self-contained and not chained to it, is
+  the strongest *actionable* topology: it needs the fewest unsupported
+  edges, rests on an already-measured structural fact (P32TRAILING's literal
+  position at the end of the solved Phase 3.2 plaintext), and is the only
+  topology that lets Phase 341's validated construction grammar be applied
+  forward immediately.
+- **The null topology for DBBI/FAED** ("not established to interact at
+  all") is contradicted by nothing in the ledger and has never been tested
+  as a first-class hypothesis. The bulk block of Phases 272-321 (~45
+  phases) all assume DBBI and FAED must combine and test *which* operator
+  does it; none tests *whether* one is needed. This directly confirms, with
+  ledger evidence rather than intuition, the user's own framing: dozens of
+  phases searched for how DBBI and FAED interact without ever establishing
+  that they must.
+
+> **Correction (2026-08-22, later same day):** this gap was closed by
+> Phase 371, which tests DBBI's and FAED's local instruction adjacency
+> independently (T0/T6) instead of assuming a joint object. Result:
+> inconclusive by design (checkpoint/no-consumer was an explicitly
+> permitted answer), but it directly falsifies the *implicit* symmetric-
+> combine premise at the page-structure level. The null topology is no
+> longer untested as a first-class hypothesis, even though the question it
+> raises (do DBBI/FAED need each other at all) remains open.
+
+Single linear chain (T1) and DBBI/FAED symmetric combination (T3) -- the
+two topologies this project has invested the most phases in -- score
+weakest: not for lack of testing, but because the specific mechanisms
+needed to make them true (adjacency-implies-operand, presentational
+binding, a conserved dual-pole model, a working combinator) were each
+directly tested and failed (Phases 104, 220, 238, and the 272-321 block).
+
+**Verdict:** not primarily an under-testing problem in the way "run more
+sweeps" would fix -- it is a premise-inheritance problem in exactly the
+place the user identified. `doc/GSMG_OPEN_GAP_REGISTRY.md`'s `G-YIN-001` row
+is sharpened accordingly: its prior framing ("no operator is selected")
+narrowed the question to "which operator," which every one of the ~50
+tested phases already assumed the answer to; the actually-untested question
+is whether an operator is needed at all.
+
+**Recommended next actions (not yet executed, own separately-scoped
+experiments per this project's brainstorm discipline):** (1) test the null/
+independent-consumer topology for DBBI/FAED directly -- run each stream
+alone through Phase 341's solved-boundary grammar rather than a bespoke
+combinator; (2) transfer Phase 341's grammar forward to P32TRAILING, since
+its position is already authenticated and needs no new topology assumption;
+(3) do not add a 46th DBBI/FAED combinator without first doing (1).
+
+**Artifacts:** `doc/GSMG_FRONTIER_ASSUMPTION_LEDGER.md`,
+`doc/GSMG_TOPOLOGY_AUDIT.md`; `doc/GSMG_OPEN_GAP_REGISTRY.md`'s `G-YIN-001`
+row updated with cross-references. No code changes -- this phase is a
+structural/evidentiary audit over already-completed phases, not a new
+cryptanalytic sweep.
+
+## Phase 370 -- Phase-341 grammar transferred forward to P32TRAILING: 0 genuinely new candidates, fully subsumed by Phase 270 (2026-08-22)
+
+**Question:** Phase 341's frozen construction-rule engine (order, no-
+separator concatenation, per-component case/whitespace instructions,
+literal-prefix handling) recovers all 3 known solved-boundary passwords
+exactly, but was only ever validated backward. Applying it forward to a
+genuinely unresolved boundary was explicitly flagged as its own unexecuted
+experiment. `P32TRAILING` is the natural first target: its position is
+already an authenticated structural fact (the 96-byte OpenSSL envelope is
+literally the tail of the already-solved Phase 3.2 plaintext), so no new
+topology assumption is needed to attack it (Phase 369's T2).
+
+**Method:** `tools/gsmg/p32_solved_boundary_grammar_transfer_audit.py`.
+Before generating anything, checked whether P32TRAILING actually carries the
+one ingredient that makes Phase 341's grammar meaningful: a page-level
+annotation licensing a specific case/whitespace/prefix transform (the way
+Phase 3.2's three clue answers are each explicitly marked "/(aa, connected
+enf)"). Reusing `p32_sibling_password_audit.py`'s own byte-exact delimiter
+extraction (`extract_phase32_components`), the gap between the end of the
+Phase-3.2.2 clue text and the start of the P32TRAILING envelope is exactly
+`b'\r\n\r\n'` -- a bare separator, zero instruction bytes. **P32TRAILING has
+no local annotation of its own**, unlike every boundary Phase 341 was built
+from.
+
+Consequently the grammar's case-forcing, whitespace-stripping, and literal-
+prefix axes have nothing to freeze -- the only parts of the grammar that
+remain applicable are authenticated component order (3.2.1 -> 3.2.2,
+independently confirmed by `page_structure_audit.py`), no-separator
+concatenation, and the established SHA-256-hex-plus-raw / OpenSSL-KDF
+profile shared by all three solved boundaries. That collapses the entire
+forward-transferred manifest to a closed, pre-declared set: the primary
+(distance-0) reading `answer_321 + answer_322` and Phase 341's own
+shuffled-order negative control `answer_322 + answer_321`, each tried raw
+and as SHA-256 hex -- **4 password materials, generated without any
+reference to P32TRAILING's ciphertext.**
+
+Each of the 4 was then diffed, by exact byte-string membership, against
+Phase 270's own 50 already-tested password materials (`build_candidates` +
+`password_materials`, re-run live, not re-typed) and the 648-entry curated
+candidate registry.
+
+**Result: all 4 are exact duplicates of Phase 270's "whole-text family"**
+(`complete_321_then_322` and `complete_322_then_321_control`, both already
+tried raw and as SHA-256 hex in Phase 270). **Zero genuinely new
+candidates; zero oracle queries were made** -- per the user's own explicit
+sequencing, only genuinely-new candidates are queried, and there were none.
+
+**Verdict:** the apparent "unexecuted transfer" evaporates on close
+inspection, not because the idea was wrong, but because P32TRAILING lacks
+the specific ingredient (a local annotated construction instruction) that
+made the grammar non-trivial for Phase 2/3/3.2. Phase 270's "whole-text
+family" already performed this exact transfer, in substance, under a
+different name -- its own docstring already frames itself as testing "the
+established grammar where one stage's clue material supplies password
+content for a following object." This is a real, useful negative result:
+it closes the specific gap Phase 341 flagged as its own reopen condition,
+and confirms (rather than merely asserts) that no new construction axis is
+available here without a genuinely new source -- matching this project's
+repeated finding that source-starvation, not under-testing, is the
+bottleneck.
+
+**Artifacts:** `tools/gsmg/p32_solved_boundary_grammar_transfer_audit.py`;
+permanent regression added to `tools/gsmg/test_recent_audits.py`.
+
+## Phase 371 -- DBBI/FAED independent-consumer audit: the null/T6 topology tested directly, asymmetric result (2026-08-22)
+
+**Question:** Phase 369 found that ~45 phases (272-321) test *which*
+operator combines DBBI and FAED, and zero test *whether* they should be
+combined at all. Per the user's exact framing, this audits the null/T6
+topology directly, per stream, per stream -- not by running DBBI/FAED
+through Phase 341's assembly grammar (that grammar builds passwords from
+already-decoded clue answers with their own page annotations; DBBI/FAED are
+raw, undecoded streams with none, so feeding them through it would just be
+another candidate generator, not a topology test). For each stream: what
+local instruction can consume it, what output type does that instruction
+predict, and what authenticated target accepts that type -- with
+"recognition checkpoint; no consumer" as an explicitly valid answer.
+
+**Method:** `tools/gsmg/dbbi_faed_independent_consumer_audit.py` reuses two
+already-verified, independent sources rather than re-deriving anything: the
+exact literal page segmentation from `page_structure_audit.segment_salphaseion()`
+(byte-verified against the live HTML capture) to find which instruction
+tokens are actually adjacent to each raw stream, and
+`checkerboard_code_ic_oracle.apply_to_real_data()` for each stream's own
+independently-best-fit escape pair by code index-of-coincidence.
+
+**Result -- the two streams are not symmetric, and neither shows a
+demonstrated cross-stream dependency:**
+
+- **DBBI** has exactly one adjacent instruction token: `matrixsumlist`
+  (binary-ASCII-encoded, decoded and verified). It does not embed DBBI's
+  raw content. Per `G-MSL-001` (all 7/7 fields -- dimensions, traversal,
+  value mapping, aggregation, serialization -- unbound after Phase 259
+  exhausted the last known primary source), this instruction is **present
+  but not currently executable**. Classification: `instruction_present_but_unexecutable`.
+- **FAED** has two adjacent instruction tokens: `lastwordsbeforearchichoice`,
+  then `thispassword`. Neither embeds FAED's raw content. Read literally,
+  these point at the separately-authenticated Architect monologue's own
+  choice-boundary (`G-ARCH-001`'s subject) -- not at a transform of FAED
+  itself. This is exactly the "adjacency does not imply operand" pattern
+  Phase 238 already established as a general page rule, now confirmed
+  specifically for FAED. Classification: `recognition_checkpoint_no_demonstrated_consumer`.
+- **Each stream has its own independent candidate self-decode**: DBBI's
+  own best-fit escape pair is `('b','e')`; FAED's is `('g','i')` -- these
+  differ, and neither computation references the other stream.
+- **`asymmetric_instruction_adjacency = True`** (1 instruction vs. 2, not a
+  matched pair); **`escape_pairs_independent = True`**;
+  **`either_stream_requires_the_other_as_input = False`** -- no page
+  evidence found requires DBBI's content to feed FAED, or vice versa.
+
+**Verdict:** the null/T6 topology is not falsified by this test -- if
+anything, the page's own literal structure treats DBBI and FAED
+asymmetrically (different instruction-token counts, different candidate
+decodes, no embedding of either stream's content in the other's adjacent
+instructions), which is the opposite of what a "DBBI and FAED are meant to
+combine as symmetric peers" reading (T3) would predict. This does not prove
+T0/T6 either -- "recognition checkpoint, no consumer" and "instruction
+present but unexecutable" are both explicitly non-conclusive outcomes, not
+positive confirmations -- but it means the ~45-phase T3 search direction
+(Phases 272-321) rested on an assumption this audit finds no direct support
+for, while the specific instruction tokens the page actually places next to
+each stream point toward two already-tracked, independent gaps
+(`G-MSL-001`, `G-ARCH-001`) rather than toward each other.
+
+**Artifacts:** `tools/gsmg/dbbi_faed_independent_consumer_audit.py`;
+permanent regression added to `tools/gsmg/test_recent_audits.py`.
+`doc/GSMG_TOPOLOGY_AUDIT.md` and `doc/GSMG_OPEN_GAP_REGISTRY.md`'s
+`G-YIN-001` row updated to record this as executed, not merely
+recommended.
+
+## Phase 372 -- SALPH/COSMIC Phase-341 eligibility-and-delta audit: one SALPH reading exhausted, `thispassword`'s role remains undetermined; COSMIC is self-contained (2026-08-22)
+
+> **Correction (same-day review):** the original version of this phase
+> overclaimed in three ways, since fixed in `tools/gsmg/salph_cosmic_phase341_eligibility_audit.py`
+> and below: (1) it treated `thispassword` as necessarily requiring
+> `G-ARCH-001`'s specific mirror-operation output, when Phase 101 explicitly
+> retained three unreconciled roles for `lastwordsbeforearchichoice`/
+> `thispassword` (password for FAED, FAED's answer merely labeled
+> "password," or password for SALPH) and no source selects among them, or
+> equates "the Architect-choice output" with `G-ARCH-001`'s narrower mirror
+> hypothesis specifically; (2) it implied the 18-candidate hash_prefix
+> manifest alone closed the SHA-operand question, when Phase 101 found the
+> operand itself three-way ambiguous and Phase 121 (not this phase) already
+> closed the broader source-grounded readings (message 8446, message 1710,
+> `574061`, the 31-char selection); (3) it read the OpenSSL `Salted__`
+> header as selecting AES-CBC, when it establishes only an OpenSSL envelope
+> and passphrase type, not a specific cipher family (the widened oracle
+> already correctly tested CBC/ECB/stream/Key Wrap despite the wording
+> error). `G-ARCH-001`'s priority is reverted to P1 and `G-MSL-001` to P0
+> in the gap registry; see the corrected verdict below.
+
+**Question, per the user's exact sequencing:** treating DBBI/FAED, BUT/HYE,
+and the 31-character selection as checkpoints unless independently
+consumed (Phases 369-371), inspect SALPH and COSMIC separately for Phase
+341's five required grammar fields (authenticated solved components; local
+ordering instructions; casing/whitespace annotations; an explicit SHA/
+password referent; an independently expected output type). Generate
+candidates only where every required field is locally bound; diff against
+existing materials before querying either blob.
+
+**Method:** `tools/gsmg/salph_cosmic_phase341_eligibility_audit.py`, built
+on the same byte-verified literal page segmentation Phase 371 used
+(`page_structure_audit.segment_salphaseion()`).
+
+**SALPH has two distinct local referents, not one:**
+
+- **hash_prefix branch's literal self-referential reading** (the literal
+  hint immediately preceding SALPH's ciphertext, "sha256 our first hint is
+  your last command" -- spelled on the page via its own established
+  digit-letter substitution, 2->b/5->e/6->f): the hint TEXT is directly
+  given as page content and requires no resolution of `matrixsumlist`
+  (`G-MSL-001`) or Architect-choice (`G-ARCH-001`) to read. What its own
+  SHA operand refers to is a separate question Phase 101 found three-way
+  ambiguous (explicit first-hint==last-command, a preceding password
+  result, or a preceding phase answer); this branch tests only the literal
+  self-referential reading -- **grammar-eligible, 5/5 fields bound** (one,
+  casing/whitespace, as a small enumerated axis per Phase 341's own
+  convention, not a guess). Generated its exact 18-candidate frozen
+  manifest (3 case/whitespace forms x 3 newline variants x raw/SHA-256) and
+  diffed by exact byte-string membership against Phase 0.1's own
+  `lastcommand_probe.py` sweep: **all 18 are exact duplicates.** Phase 0.1
+  only ever ran the CBC-family oracle, so -- matching Phase 368's precedent
+  for `YOUWON` -- widened coverage to ECB/stream/AES Key Wrap across all 4
+  tracked blobs: **0 hits.** This literal reading is now fully exhausted
+  across every established cipher family. The broader source-grounded SHA-
+  operand readings (message 8446, message 1710, `574061`, the 31-char
+  selection) were already separately closed negative by Phase 121, not by
+  this manifest.
+- **`thispassword` branch** (FAED's second adjacent instruction, per Phase
+  371): its role is not structurally resolved. Phase 101
+  (`salphaseion_operand_binding_audit.py`) explicitly retained three
+  unreconciled readings for `lastwordsbeforearchichoice`/`thispassword`
+  jointly -- password for FAED itself, FAED's answer merely labeled
+  "password" without further consumption, or password for the following
+  SALPH blob -- and no source selects among them. Only the third role would
+  even make this a SALPH referent, and even then the instruction's operand
+  is not established to be `G-ARCH-001`'s specific beginnings/endings/
+  mirror-operation output -- that is one candidate reading of "words before
+  Architect choice," not a proven equivalence. **Ineligible on role
+  ambiguity**, not on a single named unresolved component: per the user's
+  explicitly permitted outcome, "no executable candidate because a
+  component is unresolved" is reported honestly, without asserting more
+  certainty about which component than the page actually supports.
+
+**COSMIC fails eligibility entirely: 0/5 fields bound.** Its textarea
+content is byte-verified to be *exactly* `COSMIC_BLOB_B64` -- the raw
+ciphertext and nothing else (`page_structure_audit.audit()`'s own existing
+hard assertion, reused here) -- so there is no embedded instruction, no
+ordering signal, no casing annotation, and no local SHA/password referent
+anywhere inside Cosmic Duality's own object. (The `hash_suffix` segment,
+"sha256 + anstoo", trails SALPH's ciphertext within the *SalPhaseIon*
+textarea -- the closest thing on the page to a SALPH->COSMIC handoff
+signal, already tracked by Phase 224/`anstoo_provenance_audit.py` and not
+re-litigated here -- but it is not embedded in Cosmic's own textarea, so it
+does not count toward Cosmic's own field-5 score.) **Outcome:
+`self_contained_encrypted_object_no_demonstrated_connection`** -- exactly
+the fourth honest outcome the user's sequencing permitted, and consistent
+with Phase 220 (no presentational binding) and Phase 224 (SALPH-self
+remains the nearer, unexplained default).
+
+**Verdict (corrected, same-day):** SALPH's literal hash-hint-as-password
+reading is fully covered and negative. COSMIC contains no local instruction
+of its own. **The role and operand of `thispassword` remain
+underdetermined; `G-ARCH-001` is one possible dependency, not an
+established sole bottleneck.** `matrixsumlist` (`G-MSL-001`) is DBBI's own
+separate adjacent instruction (Phase 371) and is not shown to gate SALPH's
+`thispassword` branch either way -- this observation stands regardless of
+which of Phase 101's three roles eventually wins, so `G-MSL-001`'s own
+priority (independent of SALPH) is left unchanged at P0, not demoted.
+`G-ARCH-001`'s priority, raised to P0 in this phase's original version on
+the retracted "sole bottleneck" claim, is reverted to P1 -- the gap
+registry already carries `G-ESC-001` and `G-YIN-001` at P0, so "sole P0"
+was internally inconsistent regardless of the thispassword-role error.
+
+**Next bounded audit:** discriminate Phase 101's three
+`thispassword` roles (`password_for_faed`, `faed_answer_labeled_as_password`,
+`password_for_salph_blob`) using topology and solved-stage grammar, without
+generating passwords. Only if `password_for_salph_blob` wins independently
+should its possible operands -- including, but not limited to, `G-ARCH-001`
+-- be ranked.
+
+> **Correction (2026-08-22, later same day):** this audit was run by Phase
+> 373 (topology/dataflow scoring, calibration-gated, verdict
+> inconclusive/model-dependent), then Phases 376-377 (frozen-evidence
+> witness search, Phase 377 corrected twice same day, verdict: no direct
+> role-selecting witness found under three declared tests, no hard
+> contradiction detected under those checks, role remains underdetermined
+> and parked). See `doc/GSMG_TOPOLOGY_AUDIT.md`'s "Role discrimination
+> result" and "Topology-identifiability result" sections. Not "not yet
+> run" as of this correction.
+
+**Artifacts:** `tools/gsmg/salph_cosmic_phase341_eligibility_audit.py`
+(corrected same-day: `thispassword` now modeled as three unreconciled
+Phase-101 roles rather than a single asserted `G-ARCH-001` dependency;
+`Salted__` reworded to an OpenSSL envelope/passphrase-type fact, not a
+cipher-family selector); permanent regression added to
+`tools/gsmg/test_recent_audits.py`; `doc/GSMG_OPEN_GAP_REGISTRY.md`
+(`G-ARCH-001` reverted to P1, `G-MSL-001` reverted to P0, both with
+corrected scope notes) and `doc/GSMG_TOPOLOGY_AUDIT.md` updated with the
+corrected, softened frontier statement.
+
+## Phase 373 -- `thispassword` role discrimination by calibrated topology scoring: inconclusive/model-dependent, corrected same-day (2026-08-22)
+
+> **Correction (same-day review):** this phase's original conclusion was
+> retracted. The scoring underneath the `3 / -1 / -2` result contained
+> disputed feature assignments, not independently extracted structure:
+> `faed_answer_is_password` was scored as though it had to skip
+> `lastwordsbeforearchichoice` to bind directly on raw FAED (its natural
+> graph is `FAED -> lastwordsbeforearchichoice -> answer -> postpositive
+> "thispassword" label`, requiring no skip); `password_for_salph_blob`
+> measured adjacency and vocabulary against `hash_prefix` -- a separate
+> instruction with its own SHA operand, already scoped apart by Phase
+> 121/372 -- rather than the actual SALPH blob segment; and
+> `precedent_match` was awarded only to the SALPH role despite message
+> 8446 fixing token ORDER, not a consumption edge (exactly the
+> checkpoint/operand distinction Phase 369 itself established). A further
+> issue: the calibration boundaries (Phase 3, Phase 3.2) validate only
+> "is this explicitly, unambiguously consumed at all," a different,
+> easier question than the postpositive/ambiguous attachment
+> `thispassword` actually poses, which no solved GSMG boundary
+> calibrates. See the corrected verdict below and
+> `tools/gsmg/thispassword_role_topology_discrimination_audit.py`, fixed
+> same-day.
+
+Follows Phase 372's correction directly, per the user's specified bounded
+audit: discriminate Phase 101's three `thispassword` roles
+(`password_for_faed`, `faed_answer_is_password`, `password_for_salph_blob`
+-- names pulled from `salphaseion_operand_binding_audit.py`'s own axis, not
+retyped) using topology and solved-stage grammar, without generating any
+password. `tools/gsmg/thispassword_role_topology_discrimination_audit.py`
+implements this in two stages, run in the order the user required.
+
+**Calibration gate (run first, before touching Phase 101 at all).** The
+same seven-dimension scoring rule the user specified -- page order,
+immediate content-adjacency, explicit password/SHA vocabulary,
+solved-stage directionality precedent, unsupported edges, unresolved
+operand bindings, no penalty for an honestly unconsumed checkpoint -- is
+applied to three candidate topologies (`linear_consumed`,
+`order_invariant_consumed`, `unconsumed_checkpoint`) for each of the two
+known multi-component solved boundaries, Phase 3 and Phase 3.2 (Phase 2 is
+excluded, matching `solved_boundary_rule_audit.py`'s own reasoning: a
+single component has no order/adjacency question to get right). Every
+input to this scoring is textual/structural -- explicit page wording
+("Concatenate them all and perform SHA256"; "just add giveit in front of
+the answer"), not a hash-match outcome, so the gate cannot be circular. On
+both boundaries, `linear_consumed` wins uniquely (score 5 vs. 3 vs. -1).
+The gate passes.
+
+**Applying the calibrated rule to Phase 101.** thispassword's content-order
+distance to its two candidate targets is computed directly from the live,
+byte-verified segmentation (`page_structure_audit.segment_salphaseion`),
+not hardcoded: 1 content-hop forward to `hash_prefix` (SALPH's own
+SHA-labeled entry point), 2 content-hops backward to `faed`. The one
+authenticated ordering precedent available -- Phase 121's creator message
+`8446`, which fixes the chain `yellowblueprimes -> matrixsumlist ->
+lastwordsbeforearchichoice -> yinyang` -- is used only as leave-one-out
+precedent for whether an explicit, creator-affirmed instruction
+(`lastwordsbeforearchichoice`) gets treated as a genuine, order-fixing step
+that is never silently skipped; the chain notably does not mention
+`thispassword` at all, so it is not used to favor any one role directly.
+
+Scored results:
+
+```text
+password_for_salph_blob:    3  (forward, adjacency 1, vocab match, precedent match, 0 unsupported, 1 unresolved value)
+faed_answer_is_password:   -1  (backward target, adjacency 2, no vocab match, no precedent, 1 unsupported no-op assumption)
+password_for_faed:         -2  (backward target, adjacency 2, no vocab match, no precedent, 1 unsupported backward-reach, 1 unresolved value)
+```
+
+`password_for_salph_blob` wins uniquely. The two losing roles both require
+either reading backward past the intervening `lastwordsbeforearchichoice`
+instruction to bind to `faed`, or silently treating that same instruction
+as a no-op so a label can attach directly to `faed` -- both unlicensed by
+any local text, and the second directly conflicts with Phase 121's own
+finding that `lastwordsbeforearchichoice` is a real, order-fixing step.
+
+**What this does and does not establish.** This ranks *which object*
+`thispassword` targets -- not what value fills that slot. No password,
+transform, or hash comparison was run. Ties were predeclared a valid
+outcome and the ranking function is exercised against a synthetic tied
+pair to confirm that code path actually works; no tie occurred in either
+modeling below.
+
+**Corrected verdict (same-day review, see the blockquote above).** The
+above `3 / -1 / -2` result and its "unique winner" framing are retracted.
+`tools/gsmg/thispassword_role_topology_discrimination_audit.py` now keeps
+both the original (disputed) modeling and a corrected modeling side by
+side:
+
+```text
+disputed (retracted):
+  password_for_salph_blob:    3
+  faed_answer_is_password:   -1
+  password_for_faed:         -2
+
+corrected:
+  faed_answer_is_password:    2   (adjacency to lastwordsbeforearchichoice's OWN output -- 1 hop, not 2;
+                                    "password" sits directly on that result; 0 unsupported edges)
+  password_for_salph_blob:   -1   (adjacency to the actual SALPH blob segment -- 2 hops, not to hash_prefix's
+                                    1 hop; hash_prefix's own SHA operand is a separate, already-scoped referent
+                                    (Phase 121/372), so no vocabulary match is claimed here; reaching the blob
+                                    past hash_prefix is itself an unsupported edge)
+  password_for_faed:         -2   (unchanged -- this is the one role whose name explicitly claims to reach
+                                    past lastwordsbeforearchichoice onto raw FAED)
+```
+
+The two modelings disagree on the winner. `precedent_match` is now False
+for all three roles in the corrected modeling, since message 8446 fixes
+token order only, never a consumption edge, and never mentions
+`thispassword` at all -- using it to differentially favor one role would
+repeat the exact checkpoint/operand conflation Phase 369 flagged.
+`CALIBRATION_ANALOG_AVAILABLE = False` is now an explicit, asserted
+constant: Phase 3/Phase 3.2 calibrate only "explicit consumption vs.
+checkpoint vs. order-invariant," not the postpositive/ambiguous
+attachment question `thispassword` actually poses, and no solved GSMG
+boundary carries that specific structure. Per the user's explicit stop
+rule, no new "comparable" boundary was invented to force the gate closed.
+
+**Verdict: inconclusive/model-dependent.** `operand_ranking_licensed` is
+now `False` unconditionally (it requires both a calibration analog and
+modeling agreement; neither holds). `doc/GSMG_OPEN_GAP_REGISTRY.md`'s
+statement that `thispassword` "structurally targets SALPH" is retracted.
+Phase 101's three `thispassword` roles remain unresolved. The script's
+self-test asserts the disagreement between the two modelings as a checked
+fact (not a narrated claim), so a future edit that made them agree again
+would force a conscious decision rather than a silent reversion, and
+source-guards the `G-ARCH-001` name to prevent it from ever being
+reintroduced as a winning operand.
+
+**Artifacts:**
+`tools/gsmg/thispassword_role_topology_discrimination_audit.py` (new,
+corrected same-day: added `role_candidates_disputed()` alongside a fixed
+`role_candidates_corrected()`, `CALIBRATION_ANALOG_AVAILABLE = False`,
+verdict changed to inconclusive/model-dependent,
+`operand_ranking_licensed` forced `False`); permanent regression
+`test_thispassword_role_topology_discrimination_audit` added to
+`tools/gsmg/test_recent_audits.py`; `doc/GSMG_OPEN_GAP_REGISTRY.md` and
+`doc/GSMG_TOPOLOGY_AUDIT.md` updated to remove the retracted "structurally
+targets SALPH" statement.
+
+## Phase 374 -- corrected-oracle backfill for Phase 11's frozen hash-duality family: 4,283,640 attempts, 0 hits (2026-08-22)
+
+Opens the repository-wide reopenability report the user requested after
+Phase 373 closed: identify older CLOSED encrypted-object phases whose
+oracle, candidate set, topology, or authenticated inputs changed after
+they closed. A background survey of `FINDINGS.md` ranked three
+candidates: **Phase 11** (stale pre-Phase-78 oracle, already flagged
+unactioned in the ledger), **Phase 290/335** (ruled out -- its CBC-only
+scope was a deliberate, disclosed P0A/P1A sentinel contract, not an
+oversight), and **Phase 12** (real stale-oracle defect, but its candidate
+family depends on the now-weakened DBBI/FAED-combination topology --
+remains parked).
+
+The user corrected the survey's "cheap Phase-368-sized rerun" framing on
+two counts, both verified against source before running anything:
+
+1. **Scale.** Phase 11's 11,899 candidate answers x 4 verified prior
+   hashes produce 1,427,880 unique passphrase materials (confirmed by
+   direct regeneration), not a small pool -- a full CBC+ECB+stream+KeyWrap
+   run would be roughly 480 million nominal decrypt combinations, not a
+   Phase-368-scale rerun.
+2. **A second, independent coverage discrepancy.** Phase 11's write-up
+   claims "raw, LF, and CRLF passphrase forms" were tested, but the
+   recorded count (1,427,880) exactly matches
+   `material_forms(..., newline_variants=False)` (2 forms/material) --
+   confirmed by inspecting `hash_duality_sweep.py` directly.
+   `newline_variants=True` regenerates exactly 4,283,640 materials
+   (verified independently, matching the user's own computation exactly).
+   The LF/CRLF forms were never actually run.
+
+`tools/gsmg/hash_duality_corrected_oracle_backfill.py` implements the
+user's exact 5-stage plan:
+
+- **Stage 1 (freeze/digest).** Regenerated today's live candidate set and
+  confirmed it still matches Phase 11's recorded counts exactly (no
+  upstream drift in `matrix_instruction_sweep.py` since 2026-07-23):
+  11,899 candidates, 4 prior hashes, 1,427,880 no-newline materials,
+  digest `425860df33d961d3...`.
+- **Stage 2 (corrected CBC backfill).** Ran those exact frozen materials
+  through `cb_common`'s current CBC oracle (`KDF_VARIANTS`, 6 combos,
+  passed explicitly, not implicitly) across all 4 current default blobs
+  (SALPH/COSMIC/P32TRAILING/URLBLOB -- P32TRAILING was added to `BLOBS`
+  one day after Phase 11 ran; URLBLOB was folded in later by Phase 192).
+  **1,427,880 attempts, 0 hits, 43.7s.**
+- **Stage 3 (newline delta).** Ran ONLY the materials
+  `newline_variants=True` adds beyond Stage 2 (one running dedup set
+  across all of a candidate's operations, matching the original script's
+  own dedup semantics -- a naive per-material delta sum over-counts by
+  ignoring rare cross-operation byte collisions). **2,855,760 attempts, 0
+  hits, 88.5s.** Recorded separately, per the user's instruction, so the
+  original overstatement is documented rather than silently absorbed.
+- **Stage 4 (ECB/stream/AES-Key-Wrap widening) NOT run.** Left as an
+  explicitly separately-costed, not-yet-preregistered stage, consistent
+  with the P0A/P1A brainstorm's own "bounded, disclosed contract" rule
+  (`doc/Brainstorms/2026-08-15 - Passphrase Oracle False-Negative
+  Surface.md`, "Reopening rules": an endpoint contract must be bounded
+  and counted, and authorized separately, not silently absorbed into an
+  unrelated fix).
+
+**Combined: 4,283,640 attempts (the complete with-newline material family,
+1,427,880 + 2,855,760), 0 hits.** This directly repairs the demonstrated
+Phase-78/blob-set false-negative surface and closes the newline-coverage
+gap Phase 11's own write-up overstated, still under CBC only.
+
+**Topology caveat (preserved per the user's explicit instruction):** this
+closes the FROZEN hash-duality candidate family's oracle coverage. It
+says nothing about, and does not validate, the inherited linear-chain
+topology edge this candidate family's own generation logic assumes
+(`doc/GSMG_TOPOLOGY_AUDIT.md`) -- Phases 369-373 already left that edge
+unresolved (most recently, Phase 373's corrected verdict: `thispassword`'s
+own attachment is a genuine, uncalibrated three-way tie).
+
+**Reproducibility tightened (same-day, user review):** the original
+version computed the manifest digest but never asserted it against a
+pinned value, so a changed-but-same-size candidate set would still pass;
+and pinned the CBC oracle by parameter NAME (`kdf_variants=KDF_VARIANTS`,
+`blobs=BLOBS`) without pinning their actual CONTENT, so a future edit to
+`cb_common.KDF_VARIANTS`/`BLOBS` would silently change what this phase's
+regression claims to reproduce. `freeze_manifest()` now asserts the exact
+digest (`425860df33d961d39c2116b5ac477249ceb043ff1ac744e130da55a2b13106ae`);
+`self_test()` now also asserts the exact 6 `KDF_VARIANTS` tuples and a
+`sha256(salt+ciphertext)` fingerprint for all 4 blobs, so either changing
+independently trips this regression even though neither would touch this
+file.
+
+**Artifacts:** `tools/gsmg/hash_duality_corrected_oracle_backfill.py`
+(new, corrected same-day: digest and oracle-content pinning added);
+`tools/gsmg/hash_duality_corrected_oracle_backfill_report.json` (new,
+created same-day, not yet git-committed -- the real Stage 2/3 run's
+manifest, attempt counts, elapsed
+times, and empty hit lists, so this phase's expensive one-time execution
+is evidenced by more than FINDINGS.md prose); permanent regression
+`test_hash_duality_corrected_oracle_backfill` added to
+`tools/gsmg/test_recent_audits.py` (wires `self_test()` only -- fast
+manifest/digest/fingerprint checks, no oracle calls; the real Stage 2/3
+sweep was run once and is recorded in the JSON report above, not rerun on
+every test invocation).
+
+## Phase 375 -- dependency-delta reopenability audit: Phase 121/message-8446 and Phase 259/book-pages lanes, 0 rows genuinely reopenable (2026-08-22)
+
+> **Correction (same-day review):** the version below understated Lane 1's
+> discovery manifest and produced no machine-readable artifact. Verified
+> and fixed: **Phase 31** (`first_piece_color_reconstruction.py`) and
+> **Phase 111** (`macro_clue_acrostic_audit.py`) are real, oracle-reaching
+> gaps that belong in Lane 1's table -- both confirmed by direct read
+> (Phase 31: "Focused oracle recheck... CBC 261 unique keystrings x 24
+> variants x 4 blobs, 0 hits"; Phase 111: "108 unique keystrings...
+> CBC/ECB/CFB/OFB/CTR/Key Wrap, zero hits"). Both are correctly
+> **non-reopenable** on the same grounds the reviewer suggested (Phase 31
+> superseded by Phase 121's own SHA-operand sweep; Phase 111 tests a
+> candidate class -- word-level splits of already-decoded text -- that
+> Phase 121's raw-transport/order delta doesn't change), so the verdict
+> (0 rows reopenable) is unchanged. **Second-round correction, same day:**
+> the reviewer confirmed "Phase 59" was the intended citation, precisely
+> located at FINDINGS.md lines 4348-4353 -- id `62292`'s caption, a
+> community-constructed concatenation of macro-chain tokens
+> (`matrixsumlistenterlastwordsbeforearchichoicethispasswordmatrixsumlist`,
+> not message 8446's literal plaintext), tested via
+> `telegram_shortlist_ocr.py` through `cb_common.aes_try_open` (6 KDF
+> variants, the then-current 3 default blobs): negative. Added to Lane 1's
+> table as **non-reopenable** -- Phase 121 authenticates the token order
+> but does not change these already-tested candidate bytes. Also
+> corrected: Phase 96 does call an oracle (against a disjoint
+> SALVATION-rebus candidate set, not Phase 121's delta object --
+> disposition unchanged); "8 considered rows" is now precisely 13 grouped
+> table rows covering 21 phase numbers in Lane 1 (was ambiguous before);
+> and the verdict wording
+> below is scoped to what this phase actually tested (silent drift from
+> the Phase 121 and Phase 259 input changes specifically), not every
+> possible coverage artifact across all 375 phases. A machine-readable
+> ledger now exists (created, not yet git-committed):
+> `tools/gsmg/phase375_reopenability_ledger.json` (schema: `phase`,
+> `matched_input`, `code_path`, `byte_impact`, `superseding_phase`,
+> `disposition`, `reason`, per lane, including every non-reopenable row
+> with its reason -- not only reopenable ones).
+
+Continues the repository-wide reopenability report (opened by Phase 374)
+with a pre-registered rule, per the user's exact framing, to keep this a
+targeted dependency-delta audit rather than a blanket rerun:
+
+> Reopen a phase only when a newly authenticated input changes bytes
+> reaching its candidate generator, selector, operation order, or oracle,
+> and no later phase reran that exact branch.
+
+Two lanes, run separately:
+
+**Lane 1 -- Phase 121 / message 8446 (higher expected value).** Phase 121
+(2026-07-28) established a creator-authenticated high-level order
+(`yellowblueprimes -> matrixsumlist -> lastwordsbeforearchichoice ->
+yinyang`) and froze nine exact operand forms (message 8446 as-transported/
+compact-bits/packed-161-bytes/whole-stream-reversed macro; message 1710
+exact/whitespace-collapsed/letters-only; the first-hint result `574061`;
+the 31-character selected result). Surveyed every phase before it
+(Phases 1-120) for candidate-generation logic -- not prose commentary --
+that assumed a different order or used these objects in a form weaker
+than Phase 121's nine frozen forms:
+
+| phase | old input | authenticated delta | affected code path | later rerun | reopenable | reason |
+|---|---|---|---|---|---|---|
+| 13 (debunked) | self-invented 23-token color mask, not message 8446 | Phase 121's authenticated order | `phase_linkage_sweep.py` (removed) | n/a | no | falsified as apophenia on unrelated grounds; code already deleted |
+| **31** | `574061`/`F73D92` as 20 exact bounded forms | Phase 121's 9 frozen operand forms + SHA-operand test | `first_piece_color_reconstruction.py` -- CBC 261 keystrings x 24 variants x 4 blobs + Key Wrap 540 attempts, 0 hits | **Phase 121** | no | reaches an oracle (correction: omitted from the first pass), but Phase 121's own sweep supersedes this candidate family's missing SHA-operand treatment |
+| 32 | `574061` used only as a matrix-row seed for the G-ARCH `[23,16,7]` chain | none -- different target | matrix-chain construction, not SHA-operand testing | n/a | no | different code path from Phase 121's SHA-operand fix; `574061` is never tested as a passphrase operand here |
+| 33 | `BUT`/`HYE`/`EOL` word extractions from `[23,16,7]` applied to the Architect screenplay | none -- different candidate class | `prime_matrixsum_reconstruction.py` -- 216 keystrings x 24 CBC variants + 306 Key Wrap attempts, 0 hits | n/a | no | reaches an oracle (correction: listed for completeness), but the tested bytes are BUT/HYE/EOL extractions, not any of Phase 121's 9 frozen forms |
+| 44-51 | 31-char mask decoded structurally (rails, matrix reads, sums) | Phase 121's SHA-operand binding | `prime_walk_output_consumption_audit.py` et al. | n/a | no | explicitly no-oracle ("no AES escalation is justified/follows") -- structural inventory only |
+| 54 | 31-char result tested only as a **raw passphrase** | Phase 121 tests the same string as the SHA **operand** of "our first hint is your last command" | raw `aes_try_open` call | **Phase 121** | no | Phase 121's own writeup names and closes this exact gap directly |
+| 58 | `[23,16,7]` provenance via Architect-dialogue word counts | none | `matrix_dialogue_count_audit.py` | n/a | no | structural provenance chain, no oracle call |
+| **59** | community-constructed concatenation of ordered `matrixsumlist`/`lastwordsbeforearchichoice`/`thispassword` tokens (id `62292`'s caption: `matrixsumlistenterlastwordsbeforearchichoicethispasswordmatrixsumlist`) | Phase 121's authenticated order | `telegram_shortlist_ocr.py` -- `cb_common.aes_try_open`, 6 KDF variants, then-current 3 default blobs, 0 hits | n/a | no | Phase 121 authenticates the token order but does not change these already-tested candidate bytes; provenance strengthened, candidate already negative |
+| 79 | message-8446's decoded TEXT fragments swept CBC/extended/KeyWrap/stream | Phase 121 additionally freezes RAW/binary-transport forms of the same message | curated-corpus sweep (648 candidates) | n/a | no | non-overlapping candidate classes -- Phase 121 doesn't invalidate Phase 79's text-fragment sweep |
+| 96-97 | `574061`/`[23,16,7]` reconstructed via elemental SALPHATION->SALVATION parse | none | `salphation_*` scripts | n/a | no | the 574061 reconstruction itself has no oracle call; Phase 96 separately runs a focused oracle check, but against a disjoint SALVATION-rebus candidate set (correction: not oracle-free as first stated, disposition unchanged) |
+| 104 | dual-channel consistency across the above chains | none | structural audit only | n/a | no | explicitly a non-oracle consistency check |
+| **111** | macro clue's constituent WORDS (acrostic/telestich, word-level not fragment-level), 6 candidates | Phase 121's raw-transport/order delta | `macro_clue_acrostic_audit.py` -- 108 keystrings x CBC/ECB/CFB/OFB/CTR/Key Wrap, 0 hits | n/a | no | reaches the full cipher menu (correction: omitted from the first pass), but tests word-level splits of already-decoded text -- Phase 121 doesn't change these bytes or construction, same reasoning as Phase 79 |
+
+`1710` produces zero pre-Phase-121 hits -- no earlier phase used it in any
+form. **0 of 13 grouped table rows (21 phase numbers) reopenable.** Two
+real near-hits exist -- Phase 54's raw-passphrase-only test of the
+31-character result, and Phase 31's missing SHA-operand treatment of
+`574061` -- both are exactly the gap Phase 121 itself names and closes:
+superseded, not open. Full machine-readable detail, including every row's
+`byte_impact` and `superseding_phase`, is in
+`tools/gsmg/phase375_reopenability_ledger.json`.
+
+**Lane 2 -- Phase 259 / book pages 57-58 (expected quick closure).**
+Phase 259 (2026-08-13) already names and reruns its five direct
+consumers of `cosmic_duality_book_full_text.txt`
+(`cosmic_duality_book_second_riddle_audit.py`,
+`yinyang_cosmic_phase_label_audit.py`,
+`matrixsumlist_provenance_refresh_audit.py`,
+`telegram_matrix_sum_passage_audit.py`, `prefix_boundary_sweep.py`).
+Grepped every script in `tools/gsmg/` referencing the book file to verify
+completeness (not merely thematic citation):
+
+| phase | old input | authenticated delta | affected code path | later rerun | reopenable | reason |
+|---|---|---|---|---|---|---|
+| 20 | book text as 1 of 3 decode-calibration corpora | pages 57-58 added | `CORPUS_SOURCES["book"]`, `checkerboard_recovery_calibration.py` | n/a | no | no `aes_try_open` call anywhere in the file -- calibration harness, not a candidate generator |
+| 21 | book text -> synthetic self-test plaintext | pages 57-58 added | `synthetic_plaintext()`, `digraphic_sweep.py` | n/a | no | validates a decode implementation against known text, generates no oracle candidates |
+| 148 | book text scanned for literal "APHELION"/"PERIHELION" | pages 57-58 added; Phase 259 confirms neither word appears | `corpus_mentions()`, `salphaseion_aphelion_anagram_audit.py` | superseded by Phase 259's own check | no | `corpus_mentions()` feeds only a reported field -- `fixed_candidates()` derives solely from the page-title anagram remainder, never touches book text |
+| 90/144/164 | derived wordlist files, not `full_text.txt` directly | Phase 259: "no new candidate material added to any wordlist" | `build_medium_curated_candidates.py` / `curated_candidate_corpus_audit.py` / `excluded_wordlist_coverage_audit.py` | n/a | no | Phase 259 already checked and confirmed zero new lines qualify by this project's own candidate bar |
+| 311 | book text as running-key source | n/a | `dbbi_faed_cosmic_duality_running_key_audit.py` | ran 2026-08-19, after Phase 259 | no | already ran on the current, post-259 file |
+
+**0 of 5 additional rows reopenable; Phase 259's own 5-consumer rerun list
+is confirmed complete.**
+
+**Verdict: 0 rows genuinely reopenable across both lanes.** Per the
+pre-registered stop rule, no cryptanalysis follows from this phase --
+every affected branch was either already rerun by a later phase, or the
+delta never reaches a candidate generator/selector/oracle at all (most
+commonly: the object is a calibration corpus, a documentation field, or a
+structural provenance check, not something whose bytes are tested against
+SALPH/COSMIC/P32TRAILING/URLBLOB). This rules out silent drift caused
+specifically by the Phase 121 and Phase 259 input changes -- it does not,
+and is not claimed to, generally rule out every possible coverage
+artifact across all 375 phases; it is one targeted, bounded check, not a
+project-wide clearance.
+
+**Artifacts:**
+`tools/gsmg/phase375_reopenability_ledger.json` (new, created same-day,
+not yet git-committed -- the machine-readable ledger this phase was originally
+missing: `phase`, `matched_input`, `code_path`, `byte_impact`,
+`superseding_phase`, `disposition`, `reason` per lane, including every
+row this audit considered, not only reopenable ones); no scripts written
+(read-only documentation survey); `doc/GSMG_PHASE_INDEX.md` regenerated.
+
+## Phase 376 -- topology-identifiability audit, Step 1: primary evidence frozen (2026-08-22)
+
+Opens the topology-identifiability audit the user specified after closing
+the reopenability track (Phases 374-375): not "which topology scores
+best" (Phase 369 already tried that), but "is the current evidence even
+capable of selecting one at all." Step 1: freeze exact page/DOM bytes, the
+5 historical Wayback captures, solved-stage syntax, and creator messages
+with real reply edges -- explicitly excluding community interpretation
+and prior-phase PROSE conclusions (their underlying primary artifacts are
+independently re-derived/re-verified here, not cited from prose).
+
+`tools/gsmg/topology_identifiability_evidence_freeze.py` freezes four
+evidence classes:
+
+**1. Wayback captures.** All 5 pinned captures were re-fetched live from
+`web.archive.org` this session (not merely checked against stored hashes)
+and matched their pinned sha256/byte_count/heading values exactly. Both
+textareas (SalPhaseIon, Cosmic Duality) are byte-identical across all 5
+captures spanning **2023-06-01 to 2026-04-05** -- verified by direct
+digest comparison, not inferred. The entire observed history of this page
+shows **zero content changes** to either instruction/ciphertext block; the
+only diff across all 5 raw captures is one heading capitalization change
+(`<h1>` -> `<H1>` for SalPhaseIon, between capture 1 and 2) plus unrelated
+whitespace reflow and Cloudflare-analytics-script churn in the surrounding
+page shell (confirmed by direct byte diff of each consecutive pair, not
+assumed).
+
+**2. Current live DOM segmentation.** Re-confirms the byte-verified
+13-segment SalPhaseIon order (`page_structure_audit`/
+`salphaseion_operand_binding_audit`'s `EXPECTED_SEGMENTS`) against the
+live mirror -- unchanged, not re-derived.
+
+**3. Solved-stage syntax.** Re-confirms `solved_boundary_rule_audit`'s
+Phase 2/3/3.2 ground-truth hashes at rank 1 -- this project's strongest
+evidence tier, confirmed by an actual hash match.
+
+**4. Creator messages with real reply edges.** Independently re-extracted
+`from_id`/`reply_to_message_id`/`edited` timestamp/text-sha256 for every
+message in scope, directly from the raw Telegram export JSON -- not from
+any phase's prose summary. Two real reply chains are frozen: the
+"Breaking salphation" chain (community message `6496` -> creator `6497`,
+Phase 97's PH->V premise) and the "our first hint is your last command"
+chain (`20221`/`20222` -> creator `20223`/`20224` -> `20226`). Messages
+`8446` and `1710` are recorded separately as **standalone creator
+broadcasts** (no `reply_to_message_id` at all) -- per the user's precise
+phrasing, these are NOT reply-edge evidence, even though they remain
+primary/authenticated on other grounds (a single consistent `from_id`,
+`user9815232`, across every creator message in scope).
+
+**Two findings worth flagging, neither previously stated this precisely:**
+
+- **Sharp finding:** creator message `20223` replies to `20221`, not
+  `20222` -- it answers a different question ("what format key are we
+  searching for") than the one asked immediately before it ("our first
+  hint is your last command"). `20222`'s actual reply is `20224` (a bare
+  🤐 decline). The follow-up `20226` ("who does 'our' refer to") is never
+  answered anywhere in the export. This matches Phase 101/102's existing
+  reading, but is now independently re-derived from the raw `reply_to_
+  message_id` graph rather than taken on prose faith.
+- **Epistemic caveat:** messages `6497`, `8446`, and `1710` all carry
+  non-null `edited` timestamps well after their original post dates
+  (2025-06-26, 2023-12-03, 2024-04-24 respectively, against original
+  posts of 2021-03-14, 2023-02-24, and 2020-01-14). Telegram exposes no
+  edit-history API -- only the final edited text is ever visible, so the
+  export cannot directly show what changed. Independent witness messages
+  (below) resolve `1710` and `8446` operationally -- their present bytes
+  are witnessed well before their respective edits -- while `6497`'s
+  original 2021 wording remains unresolved.
+
+**No scoring, ranking, or cryptanalysis performed.** This is a frozen
+manifest for Steps 2-5 to consume, not a conclusion about any topology or
+`thispassword` role.
+
+**Artifacts:** `tools/gsmg/topology_identifiability_evidence_freeze.py`
+(new); permanent regression `test_topology_identifiability_evidence_freeze`
+added to `tools/gsmg/test_recent_audits.py` (verifies against pinned
+values, does not re-fetch over the network on every run -- matching this
+project's existing local-vs-live testing split, e.g.
+`salphaseion_wayback_history_audit.py`'s own `audit_local_mirror` vs.
+`live_audit`).
+
+> **Correction (same-day review):** the first version of this file had
+> three defects, all fixed:
+>
+> 1. `verify_wayback_captures()` never read capture bytes or derived a
+>    textarea digest -- it compared a hard-coded dict to itself, so the
+>    "byte-identical across all 5 captures" claim, while true, was not
+>    actually checked by the code. Fixed by extracting both textareas
+>    from each of the 5 raw captures via `page_structure_audit.
+>    TextareaParser` and hashing them for real. Re-run live this session
+>    (`--live` flag, no network caching): all 5 captures produce the
+>    identical SalPhaseIon sha256 (`d39d10b1e19...330c`) and the
+>    identical Cosmic Duality sha256 (`5e636bd7f16...470b`), full digests
+>    pinned in `tools/gsmg/topology_identifiability_wayback_textarea_
+>    freeze.json`. The original finding stands, now on real evidence.
+> 2. `edited` timestamps were recorded per message but never asserted
+>    against the export -- fixed in `verify_creator_reply_edges()`.
+> 3. The 7-message reply-edge set had no reproducible inclusion rule (it
+>    was manually curated). Fixed by mechanically extracting the FULL
+>    universe of creator reply edges -- every message with
+>    `from_id == "user9815232"` and a non-null `reply_to_message_id`,
+>    plus its parent's `from_id`, sorted by id, zero manual topic
+>    selection -- **148 rows**, pinned in `tools/gsmg/
+>    topology_identifiability_creator_reply_universe.json` alongside the
+>    source export's own sha256. The original 7-message set is retained
+>    only as a labeled Step-2 candidate subset, not presented as the
+>    full frozen universe.
+>
+> **Witness layer added** for the three edited/standalone creator
+> messages, closing most of the epistemic caveat above (pinned in
+> `tools/gsmg/topology_identifiability_witness_layer.json`, full
+> SHA-256 throughout -- the 16-character prefixes used in the first
+> version have been replaced everywhere):
+>
+> - **`1710`** (first formal 2020 hint): its operational content --
+>   the "Roses are White..." rhyme and instruction -- is reproduced in
+>   community messages `3388` (2020-04-08) and `3644` (2020-05-04), ~4
+>   years before `1710`'s 2024-04-24 edit. Their `text_sha256` differs
+>   from `1710`'s current text (added quote marks / an "old hint:"
+>   prefix from quoting), so this is a **content witness, not a
+>   byte-identical witness**. Classification: *contemporaneously
+>   witnessed; operational content stable.*
+> - **`8446`** (reversed-binary macro): community message `8448`
+>   (2023-02-25, one day after the original post) gives the complete
+>   decoded macro in plain text, confirming the operational content
+>   immediately. Message `15851` (2023-10-08) is `text_sha256`-**identical**
+>   to `8446`'s current text and predates `8446`'s recorded 2023-12-03
+>   edit -- so `8446`'s present bytes are pre-edit byte-witnessed, not
+>   only post-edit. Classification: *contemporaneously decoded and
+>   pre-edit byte-witnessed; operational order stable.*
+> - **`6497`** ("Breaking salphation..."): message `27274` (2024-09-22)
+>   is `text_sha256`-**identical** to `6497`'s current text and predates
+>   its recorded 2025-06-26 edit -- so `6497`'s present bytes are
+>   witnessed back to 2024-09-22. This does **not** establish the
+>   message's original 2021-03-14 wording; no earlier witness has been
+>   located. Classification: *creator-authored final text, witnessed by
+>   2024; original-2021 wording unresolved.* This is the one message of
+>   the three that cannot yet serve as a hard contradiction about the
+>   puzzle's original topology in Steps 2-5 -- it remains usable evidence
+>   for anything that only depends on its post-2024 wording.
+>
+> `test_topology_identifiability_evidence_freeze` now exercises all of
+> the above against the pinned artifacts (textarea-content consistency,
+> edited-timestamp checks, full 148-row universe re-derivation, and the
+> 3-message witness layer, including its new chronology and normalized-
+> containment checks below) and still passes. It does not itself re-fetch
+> over the network -- the live textarea re-fetch is a separate, manually
+> invoked `--live` path (see the second correction round below), matching
+> this project's existing local-vs-live testing split.
+>
+> **Second-round correction, same day:** three more mechanical gaps, all
+> fixed:
+>
+> 1. `verify_witness_layer()` recorded witness dates but never asserted
+>    them -- fixed with an explicit `witness_date < target_edited`
+>    check for every witness, plus an assertion that each target's
+>    witness-id set matches an exact expected set (`EXPECTED_WITNESS_
+>    IDS`), so a silently dropped or swapped witness would fail loudly.
+>    `1710`'s claim of "operational content stable" is now also
+>    mechanically checked: both `3388` and `3644`, normalized (quote
+>    marks stripped, an optional leading "old hint:" line dropped,
+>    whitespace collapsed), reduce to the exact same string as `1710`'s
+>    own normalized text.
+> 2. `verify_wayback_textarea_content_local()` existed but had no CLI
+>    flag -- added `--local-capture-dir`, mutually exclusive with
+>    `--live`, so the documented offline reproduction path is directly
+>    runnable.
+> 3. `self_test()`'s printed message said "live-verified, not just
+>    pinned," which overstated what a self-test run (no network calls)
+>    actually checks. Changed to "pinned from the recorded live
+>    verification" -- the live fetch happened once, this session, and is
+>    reproducible on demand via `--live`, not on every test run.
+
+## Phase 377 -- topology-identifiability audit, Steps 2-5: no direct witness found for any thispassword role; underdetermined, parked (2026-08-22, corrected same-day)
+
+Completes the topology-identifiability audit the user specified, per the
+exact 2026-08-22 five-step spec. Step 1 (Phase 376, sound, unchanged)
+froze primary evidence only; this phase runs Steps 2-5 against that
+frozen evidence, scoped to Phase 101's three unreconciled `thispassword`
+roles (`password_for_faed`, `faed_answer_is_password`,
+`password_for_salph_blob` -- see Phase 373, `doc/GSMG_TOPOLOGY_AUDIT.md`'s
+T1 row: "a genuine three-way unresolved tie... no edge here has a
+standing default"). The broader T0/T2/T8 macro-topology comparison in
+that same document is a separate, already-closed question -- its own
+Verdict section retains T0/T2/T8 as a deliberate non-forced composition
+per the user's own prior instruction, not an open tie needing a
+discriminant -- and stays out of scope here.
+
+> **Correction (same-day review):** the first version of this phase
+> over-claimed on three counts, all fixed:
+> 1. The literal-stream check asserted "zero directional markers of any
+>    kind," which was imprecise -- the decoded stream DOES contain
+>    directional/deictic vocabulary ('before', 'this', 'first', 'last').
+>    What is actually absent is a distinct, EXPLICIT ATTACHMENT marker
+>    (an arrow, colon, equals sign, or an explicit 'skip'/'label'/
+>    'attach' token). The script now checks and reports both, separately.
+> 2. `observable_present_in_frozen_evidence` was hard-set to `False` for
+>    all three roles regardless of any sub-check's result, so the
+>    verdict was structurally guaranteed rather than derived. Each
+>    role's value is now computed from real per-role predicates.
+> 3. The verdict claimed "formally unidentifiable... unresolvable by any
+>    model." The three declared observables are POSSIBLE sufficient
+>    witnesses, not proven necessary conditions -- their absence shows no
+>    direct witness turned up under these three tests, not that no
+>    witness could exist under some other model (the ordered stream FAED
+>    -> instruction-1 -> instruction-2 -> hash_prefix -> SALPH is itself
+>    asymmetric, and Phase 373 already showed different grammar models
+>    read that order differently). Corrected to the defensible claim
+>    below.
+>
+> Also narrowed the corpus claim: zero creator messages containing the
+> exact token `thispassword` is real and checked, but is not full
+> semantic silence (a paraphrase or an unquoted reply would not be
+> caught). A narrower, additional check was added: none of the 148
+> mechanically-extracted creator reply edges has a PARENT message
+> containing the literal token either -- the creator has never been
+> observed replying to a community message that used the word. Broader
+> paraphrase coverage across the full corpus remains unproven.
+>
+> **P2 follow-up (same day), neither changing the result:** (a) "No hard
+> contradiction eliminates any role" is scoped throughout to "no hard
+> contradiction was detected under the declared checks" -- paraphrase-
+> level creator evidence is explicitly unchecked, so the broader wording
+> overstated what was actually verified. (b) Word-like attachment
+> markers (`attach`, `label`, `skip`) are now searched against the
+> DECODED instruction words and legible `hash_prefix`/`hash_suffix`
+> segments specifically, not the raw 1075-character cipher stream -- a
+> substring hit against undecoded letter-cipher text would be a
+> coincidence, not an instruction. Symbolic markers (`->`, `:`, `=`)
+> remain checked against the raw stream, since those could only appear
+> there as literal punctuation.
+
+`tools/gsmg/thispassword_role_identifiability_audit.py` performs no
+scoring (does not import `TopologyCandidate`, `classify_ranking`, or any
+`role_candidates_*`/`run_role_discrimination` function from the scoring
+file -- only its boolean `CALIBRATION_ANALOG_AVAILABLE` flag, asserted
+by AST inspection of this file's own imports in `self_test()`), no
+candidate generation, and no oracle query.
+
+**Step 2 -- discriminating observable per role, stated before checking
+anything:**
+
+- `password_for_faed`: an explicit attachment marker in the literal DOM
+  stream reaching from `thispassword` past
+  `lastwordsbeforearchichoice` onto `faed`, or a creator message naming
+  `thispassword` together with FAED.
+- `faed_answer_is_password`: an explicit attachment marker binding
+  `thispassword` directly onto `lastwordsbeforearchichoice`'s own
+  result, either in the literal DOM stream or as a precedent already
+  present in a solved boundary's grammar.
+- `password_for_salph_blob`: an explicit attachment marker or creator
+  statement connecting `thispassword` specifically to the SALPH blob
+  itself (`salphaseion_aes_prefix`), not `hash_prefix`.
+
+**Step 3 -- checked against the frozen evidence, all negative:**
+
+1. **Literal DOM stream** (re-derived from the live mirror this
+   session): the 13-segment SalPhaseIon stream DOES contain directional/
+   deictic vocabulary within the decoded words themselves -- `before`
+   and `last` in `lastwordsbeforearchichoice`, `this` in `thispassword`,
+   `first` and `last` again in the legible `hash_prefix` segment
+   (`...firsthintisyourlastcommand`). That vocabulary is present but not
+   discriminating: each word appears regardless of which role is
+   correct. Checked separately, as two distinct kinds: symbolic markers
+   (arrow, colon, equals sign) anywhere in the full 1075-character raw
+   stream, since those could only appear there as literal punctuation;
+   and word-like markers (`skip`/`label`/`attach`) against the DECODED
+   instruction words and legible `hash_prefix`/`hash_suffix` segments
+   specifically, not the raw cipher stream, where an English-word
+   substring hit would be a coincidence, not an instruction. Neither
+   kind was found. The three `z` separators remain uniform single-
+   character delimiters with no directional information of their own.
+2. **Solved-stage grammar** (Phase 2/3/3.2): both multi-component
+   boundaries use explicit forward imperative instruction tokens
+   ("perform SHA256", "giveit") that name their operation directly.
+   Neither exhibits a bare trailing noun functioning as a retroactive
+   label on a preceding result -- the specific structure
+   `faed_answer_is_password` would need as precedent. Reuses Phase 373's
+   own `CALIBRATION_ANALOG_AVAILABLE = False` finding rather than
+   re-deriving it differently.
+3. **Creator reply record**, three exact-token checks: (a) a fresh
+   full-export scan finds **zero** creator messages (`from_id ==
+   "user9815232"`) that ever use the literal word `thispassword`, out of
+   **73** total mentions anywhere in the export, all community-authored
+   and excluded from frozen evidence per Step 1's scope; (b) zero
+   creator messages contain `thispassword` together with `faed` or
+   `salph` (trivially, given (a)); (c) across all **148** rows of Step
+   1's mechanically-extracted creator reply universe, **zero** have a
+   PARENT (community) message containing `thispassword` -- the creator
+   has never been observed directly replying to a community message
+   using the term. None of these three exact-token checks establishes
+   full semantic silence; paraphrase-level discussion is unchecked.
+
+**Step 4 -- hard contradictions only, no weighted scoring:** no hard
+contradiction was detected under the declared checks. The literal
+stream has no explicit attachment marker under any of the three declared
+tests, and the creator record is silent under every exact-token check
+run -- silence under these checks is absence of a found witness, not a
+positive contradiction, and paraphrase-level creator evidence is
+explicitly unchecked, so this does not claim no contradiction could ever
+be found. Phase 373's corrected modeling already recorded each role's
+unsupported-edge count honestly without promoting any of them to
+"falsified," and nothing found here changes that. The hard-contradiction
+check is a real, exercised assertion path (it would raise if a marker or
+creator mention were ever found), not a narrated absence.
+
+**Step 5 -- bounded verdict:** No direct role-selecting witness was
+found under the three declared primary-evidence tests, and no hard
+contradiction was detected under those same declared checks. The role
+remains underdetermined. Further internal scoring is not licensed, so it
+is parked until new primary evidence appears -- a newly surfaced creator
+statement naming `thispassword`, a changed Wayback capture, or an
+authenticated macro-chain source not previously in scope. This does
+**not** claim the roles are formally unidentifiable by any possible
+model built from the frozen evidence, and is consistent with, not
+stronger than, Phase 373's inconclusive/model-dependent verdict.
+
+**Artifacts:** `tools/gsmg/thispassword_role_identifiability_audit.py`
+(new, corrected same-day); permanent regression
+`test_thispassword_role_identifiability_audit` added to
+`tools/gsmg/test_recent_audits.py`, verified passing with no duplicate
+imports or test names.

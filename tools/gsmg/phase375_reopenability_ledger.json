@@ -1,0 +1,195 @@
+{
+  "phase": 375,
+  "date": "2026-08-22",
+  "preregistered_rule": "Reopen a phase only when a newly authenticated input changes bytes reaching its candidate generator, selector, operation order, or oracle, and no later phase reran that exact branch.",
+  "note": "Corrected same-day, two rounds (user review, [P1]/[P1] then a follow-up citation confirmation): round 1 added Phase 31 and Phase 111 to lane_1's discovery manifest and created this file (not git-committed as of this writing -- see repo git status) as the machine-readable artifact the phase originally lacked. Round 1 also flagged the reviewer's cited 'Phase 59' as unlocatable; round 2 confirmed the citation and pinpointed it exactly (FINDINGS.md lines 4348-4353, id 62292's caption -- a community-constructed concatenation of ordered matrixsumlist/lastwordsbeforearchichoice/thispassword tokens, not message 8446's literal plaintext), now added below as phase 59, non-reopenable. This file records the COMPLETE discovered universe per lane, including every non-reopenable row and why, not only reopenable ones.",
+  "lane_1_phase_121_message_8446": {
+    "authenticated_input": "Phase 121 (2026-07-28): creator-authenticated order yellowblueprimes -> matrixsumlist -> lastwordsbeforearchichoice -> yinyang (message 8446), plus 9 frozen operand forms (message 8446 as-transported/compact-bits/packed-161-bytes/whole-stream-reversed macro; message 1710 exact/whitespace-collapsed/letters-only; result 574061; the 31-character selected result).",
+    "rows": [
+      {
+        "phase": 13,
+        "matched_input": "self-invented 23-token color mask, not message 8446",
+        "code_path": "phase_linkage_sweep.py (removed from repo)",
+        "byte_impact": "none -- input object is unrelated to message 8446/1710/574061/31-char result",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Falsified as apophenia (3.68% base rate) on grounds unrelated to Phase 121's operand forms; code already deleted 2026-07-13."
+      },
+      {
+        "phase": 31,
+        "matched_input": "574061 (yellow/blue prime reconstruction) and its RGB complement F73D92, as 20 exact bounded forms",
+        "code_path": "first_piece_color_reconstruction.py -- 'Focused oracle recheck across all three authenticated blobs plus quarantined URLBLOB: CBC 261 unique keystrings x 24 variants x 4 blobs; Key Wrap 540 attempts x 4 blobs, 0 hits'",
+        "byte_impact": "574061 predates Phase 121's operand freeze and is tested only as a raw/derived passphrase, never as the SHA operand of the page's 'our first hint is your last command' instruction",
+        "superseding_phase": 121,
+        "disposition": "no",
+        "reason": "Verified real oracle-reaching gap in the discovery manifest (2026-08-22 correction), but Phase 121's own 162-material sweep (message 8446/1710/574061/31-char-result, all forms, all 4 blobs, CBC+ECB+CFB/OFB/CTR+Key Wrap) supersedes this candidate family's missing SHA-operand treatment."
+      },
+      {
+        "phase": 32,
+        "matched_input": "574061's 2x3 digit matrix -> row sums [16,7], total 23",
+        "code_path": "no oracle call in this phase's own text (checkpoint only, per its own verdict: 'strong checkpoint, not yet a complete solve')",
+        "byte_impact": "none reaching an oracle",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Structural checkpoint; 574061 is consumed as a matrix seed for a different downstream chain (G-ARCH), not tested as a passphrase."
+      },
+      {
+        "phase": 33,
+        "matched_input": "BUT/HYE/EOL word extractions derived from [23,16,7] applied to the Architect screenplay, not message 8446/1710/574061 forms directly",
+        "code_path": "prime_matrixsum_reconstruction.py -- 'Focused direct-oracle check of 12 selected-phrase/edge/EOL forms: 216 unique keystrings x 24 CBC variants, 0 hits; 306 Key Wrap attempts, 0 hits'",
+        "byte_impact": "reaches an oracle, but the tested bytes are BUT/HYE/EOL word extractions, not any of Phase 121's 9 frozen operand forms",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Does call the oracle (correction: not purely structural as first characterized), but Phase 121's operand freeze doesn't change these candidate bytes -- different candidate class, downstream of 574061 rather than a direct use of it."
+      },
+      {
+        "phase": 39,
+        "matched_input": "creator's reversed-binary message (message 8446) cited only for its decoded TEXT justifying a row-list grammar, not as passphrase material",
+        "code_path": "none -- explicit verdict: 'No downstream transform or AES test was justified here'",
+        "byte_impact": "none reaching an oracle",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Purely structural grammar hypothesis; confirmed no oracle call in the phase text."
+      },
+      {
+        "phase": "44-51",
+        "matched_input": "31-character mask decoded structurally (rails, matrix reads, sums)",
+        "code_path": "prime_walk_output_consumption_audit.py et al.",
+        "byte_impact": "none reaching an oracle",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Explicitly no-oracle by their own verdicts ('no AES escalation is justified' Ph.49, 'no AES escalation follows' Ph.50) -- structural inventory only."
+      },
+      {
+        "phase": 54,
+        "matched_input": "the 31-character result tested only as a raw passphrase",
+        "code_path": "raw aes_try_open call",
+        "byte_impact": "same string Phase 121 later tests as the SHA operand of 'our first hint is your last command', not merely raw",
+        "superseding_phase": 121,
+        "disposition": "no",
+        "reason": "Phase 121's own writeup names and closes this exact gap directly ('previously checked only as a raw passphrase... never tested as the operand of the page's explicit SHA command')."
+      },
+      {
+        "phase": 58,
+        "matched_input": "[23,16,7] provenance via Architect-dialogue word counts",
+        "code_path": "matrix_dialogue_count_audit.py -- no oracle mentions found in phase text",
+        "byte_impact": "none reaching an oracle",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Structural provenance chain; confirmed no oracle call."
+      },
+      {
+        "phase": 59,
+        "matched_input": "community-constructed concatenation of ordered matrixsumlist/lastwordsbeforearchichoice/thispassword tokens (id 62292's caption: 'matrixsumlistenterlastwordsbeforearchichoicethispasswordmatrixsumlist')",
+        "code_path": "telegram_shortlist_ocr.py -- 'Tested properly through this project's own oracle (cb_common.aes_try_open, all 6 KDF variants, all three default blobs): negative'",
+        "byte_impact": "Phase 121 authenticates the token order but does not change these already-tested candidate bytes",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Provenance strengthened by Phase 121's order confirmation; candidate already negative. Not message 8446's literal plaintext -- a community-constructed macro-chain-token concatenation."
+      },
+      {
+        "phase": 79,
+        "matched_input": "message-8446's decoded TEXT fragments (8 macro-clue fragments), swept as a 648-candidate curated corpus",
+        "code_path": "stream_mode_cipher_sweep.py / curated corpus -- CBC/extended/KeyWrap/stream, all 4 blobs",
+        "byte_impact": "text-fragment forms only; Phase 121 additionally freezes RAW/binary-transport forms (spaced bits, compact bits, packed 161 bytes, whole-stream-reversed macro) of the SAME message",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Non-overlapping candidate class from Phase 121's raw-transport delta -- Phase 121 doesn't invalidate or supersede Phase 79's already-complete text-fragment sweep."
+      },
+      {
+        "phase": "96-97",
+        "matched_input": "574061/[23,16,7] independently reconstructed via elemental SALPHATION->SALVATION parse (PH->V substitution)",
+        "code_path": "salphaseion_title_rebus_audit.py -- the 574061/[23,16,7] reconstruction itself has no oracle call; Phase 96 DOES separately run a focused oracle check, but against an UNRELATED SALVATION-rebus candidate family (VAT/SalVATIon/SALVATION/SALVATION OF ZION/THE SALVATION OF ZION, 117 keystrings, 0 hits) -- not built from 574061/message-8446/1710/31-char forms",
+        "byte_impact": "none of Phase 121's 9 operand forms reach either the reconstruction or the SALVATION-rebus oracle check",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Corrected for completeness (2026-08-22): Phase 96 is not oracle-free as first stated, but the oracle-tested material is a disjoint SALVATION-rebus candidate set, not Phase 121's delta object -- disposition unchanged."
+      },
+      {
+        "phase": 104,
+        "matched_input": "dual-channel consistency across the 574061/[23,16,7]/SALVATION chains",
+        "code_path": "structural audit only -- confirmed no oracle mentions in phase text",
+        "byte_impact": "none reaching an oracle",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Explicitly a non-oracle consistency check ('not one conserved dual channel')."
+      },
+      {
+        "phase": 111,
+        "matched_input": "macro clue's constituent WORDS (acrostic/telestich on the decoded message-8446 text, word-level not fragment-level), 6 candidates",
+        "code_path": "macro_clue_acrostic_audit.py -- '108 unique keystrings via answer_forms() x keystr_forms(newline_variants=True), tested against all four tracked/quarantined blobs under CBC (original+extended), ECB, CFB/OFB/CTR, and AES Key Wrap: zero hits'",
+        "byte_impact": "word-level derivations of the same already-decoded text Phase 79 covers at fragment level; Phase 121's delta is raw/binary-transport forms and the SHA-operand test, neither of which changes these word-split candidate bytes",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Verified real gap in the discovery manifest (2026-08-22 correction), same day as Phase 121 but numbered before it. Non-overlapping candidate class, same reasoning as Phase 79: Phase 121 does not change these bytes or construction."
+      }
+    ],
+    "message_1710_note": "grep for '1710' across FINDINGS.md lines 1-8337 (everything before Phase 121's heading) returns zero hits -- no earlier phase used it in any form.",
+    "table_rows": 13,
+    "phase_numbers_covered": 21,
+    "rows_reopenable": 0
+  },
+  "lane_2_phase_259_book_pages_57_58": {
+    "authenticated_input": "Phase 259 (2026-08-13): physical Cosmic Duality book pages 57-58 transcribed into wordlists/gsmg/cosmic_duality_book_full_text.txt; confirmed no operational numeric schema and no new candidate material by this project's own bar (creator quote / exact numeric match / hyphenated-riddle construction).",
+    "rows": [
+      {
+        "phase": 20,
+        "matched_input": "book text as 1 of 3 corpora in a decode-accuracy calibration harness",
+        "code_path": "checkerboard_recovery_calibration.py, CORPUS_SOURCES['book']",
+        "byte_impact": "corpus grows longer, but no aes_try_open call exists anywhere in the file",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Calibration harness, not a candidate generator -- book bytes never reach an oracle."
+      },
+      {
+        "phase": 21,
+        "matched_input": "book text used to build a synthetic self-test plaintext",
+        "code_path": "digraphic_sweep.py, synthetic_plaintext()",
+        "byte_impact": "corpus grows longer, feeds a decode-algorithm validation test only",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Validates a decode implementation against known text; generates no oracle candidates."
+      },
+      {
+        "phase": 148,
+        "matched_input": "book text scanned for literal 'APHELION'/'PERIHELION'",
+        "code_path": "salphaseion_aphelion_anagram_audit.py, corpus_mentions()",
+        "byte_impact": "feeds only a reported 'corpus_mentions' field; actual candidate generation (fixed_candidates(remainder)) derives solely from the page-title anagram remainder and never touches book text",
+        "superseding_phase": 259,
+        "disposition": "no",
+        "reason": "Phase 259 independently confirms neither word appears on the new pages; and even if it did, this script's candidate generator doesn't consume book text."
+      },
+      {
+        "phase": "90/144/164",
+        "matched_input": "derived wordlist files (cosmic_duality_book_candidates.txt etc.), not full_text.txt directly",
+        "code_path": "build_medium_curated_candidates.py / curated_candidate_corpus_audit.py / excluded_wordlist_coverage_audit.py",
+        "byte_impact": "none -- Phase 259 explicitly checked and found 'no new candidate material was added to any wordlist' from pages 57-58",
+        "superseding_phase": 259,
+        "disposition": "no",
+        "reason": "Phase 259 already verified the derived candidate files these scripts consume are correctly unchanged."
+      },
+      {
+        "phase": 311,
+        "matched_input": "full book text as a running-key source",
+        "code_path": "dbbi_faed_cosmic_duality_running_key_audit.py",
+        "byte_impact": "n/a -- ran on the post-Phase-259 file already",
+        "superseding_phase": null,
+        "disposition": "no",
+        "reason": "Ran 2026-08-19, after Phase 259 (2026-08-13) already updated the file -- nothing to reopen."
+      },
+      {
+        "phase": 259,
+        "matched_input": "n/a -- these ARE the 5 direct consumers Phase 259 itself reran the same day",
+        "code_path": "cosmic_duality_book_second_riddle_audit.py, yinyang_cosmic_phase_label_audit.py, matrixsumlist_provenance_refresh_audit.py, telegram_matrix_sum_passage_audit.py, prefix_boundary_sweep.py",
+        "byte_impact": "already current",
+        "superseding_phase": 259,
+        "disposition": "already_addressed",
+        "reason": "Reran same-day by Phase 259 itself; listed here only for ledger completeness, not a separate discovery."
+      }
+    ],
+    "table_rows": 6,
+    "phase_numbers_covered": 8,
+    "rows_reopenable": 0
+  },
+  "verdict": "0 rows genuinely reopenable across both lanes. This rules out silent drift specifically caused by the Phase 121 and Phase 259 input changes -- it does not generally rule out every possible coverage artifact across all 375 phases."
+}

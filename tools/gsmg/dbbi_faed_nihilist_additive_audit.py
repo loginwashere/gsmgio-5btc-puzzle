@@ -36,6 +36,7 @@ Reproduce with:
     python3 tools/gsmg/dbbi_faed_nihilist_additive_audit.py
 """
 import argparse
+import hashlib
 import math
 import random
 import sys
@@ -99,6 +100,15 @@ def apply_shift(slots, key25, sign):
 
 def decode_slots(slots, key26):
     return "".join(key26[i] for i in slots)
+
+
+def stable_seed(*parts):
+    """Process-stable replacement for `hash(tuple)` & 0xffff, which is
+    PYTHONHASHSEED-randomized per run for str/tuple and made this script's
+    per-search seeding (and its printed "best keyword") non-reproducible
+    across separate runs (self-caught 2026-08-19, fixed 2026-08-22)."""
+    digest = hashlib.sha256(repr(parts).encode("utf-8")).digest()
+    return int.from_bytes(digest[:2], "big")
 
 
 def hillclimb_slots(slots, iters, restarts, seed=None):
@@ -169,7 +179,7 @@ def main():
                     for sign, label in ((+1, "+"), (-1, "-")):
                         shifted = apply_shift(base_slots, key25, sign)
                         best = hillclimb_slots(shifted, args.iters, args.restarts,
-                                                seed=hash((name, e1, e2, topo, kw, sign)) & 0xffff)
+                                                seed=stable_seed(name, e1, e2, topo, kw, sign))
                         results.append((best[0], name, e1, e2, topo, kw, label))
 
     results.sort(key=lambda r: -r[0])

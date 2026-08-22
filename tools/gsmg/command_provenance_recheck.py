@@ -135,23 +135,33 @@ def sweep(candidates):
     return hits
 
 
+def self_test():
+    """Verify candidate construction, then run the real (cheap -- ~13
+    candidates x ~24 cipher/KDF variants x 4 blobs) sweep end to end.
+    Extracted from main()'s former inline `--self-test` block so it can be
+    called directly (e.g. from the test suite) without going through
+    argparse."""
+    candidates = build_candidates()
+    assert len(candidates) >= 12, (
+        f"self-test FAILED: expected >=12 candidates, got {len(candidates)}"
+    )
+    assert "ZION" in candidates, "self-test FAILED: expected literal 'ZION' missing"
+    hits = sweep(candidates)
+    assert not hits, f"self-test FAILED: expected 0 hits, got {len(hits)}"
+    print(f"[*] self-test OK ({len(candidates)} total candidates, "
+          f"full sweep ran cleanly, {len(hits)} hits)")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
 
-    candidates = build_candidates()
-
     if args.self_test:
-        assert len(candidates) >= 12, (
-            f"self-test FAILED: expected >=12 candidates, got {len(candidates)}"
-        )
-        assert "ZION" in candidates, "self-test FAILED: expected literal 'ZION' missing"
-        hits = sweep({"ZION": candidates["ZION"]})
-        print(f"[*] self-test OK ({len(candidates)} total candidates, "
-              f"1-candidate probe ran cleanly, {len(hits)} hits)")
+        self_test()
         return
 
+    candidates = build_candidates()
     print(f"[*] {len(candidates)} real chat-mined command-provenance candidates "
           f"x {len(ALL_VARIANTS)} cipher/KDF variants x {len(BLOBS)} blobs "
           f"({', '.join(BLOBS)})")

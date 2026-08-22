@@ -1,0 +1,24 @@
+{
+  "manifest": {
+    "candidate_count": 11899,
+    "prior_hash_count": 4,
+    "no_newline_material_count": 1427880,
+    "material_digest_sha256": "425860df33d961d39c2116b5ac477249ceb043ff1ac744e130da55a2b13106ae"
+  },
+  "stage2_corrected_cbc": {
+    "label": "stage2_corrected_cbc",
+    "candidate_count": 11899,
+    "passphrase_attempts": 1427880,
+    "hits": [],
+    "elapsed_seconds": 43.692
+  },
+  "stage3_newline_delta": {
+    "label": "stage3_newline_delta",
+    "candidate_count": 11899,
+    "passphrase_attempts": 2855760,
+    "hits": [],
+    "elapsed_seconds": 88.504
+  },
+  "stage4_ecb_stream_keywrap": "NOT RUN -- separately costed, ~480M+ nominal decrypt combinations, requires its own preregistered contract",
+  "topology_caveat": "Closes oracle coverage for the frozen hash-duality candidate family only. Does not validate the inherited linear-chain topology edge (doc/GSMG_TOPOLOGY_AUDIT.md); Phases 369-373 leave that edge unresolved/a tie."
+}

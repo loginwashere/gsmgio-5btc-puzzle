@@ -154,6 +154,28 @@ def sweep(candidates, newline_variants=True, blobs=None,
     return attempts, hits
 
 
+def self_test():
+    """Verify candidate loading + sweep plumbing on the real curated corpus,
+    without running the full sweep. Extracted from main()'s former inline
+    `--self-test` block so it can be called directly (e.g. from the test
+    suite) without going through argparse."""
+    candidates = load_curated_candidates()
+    assert len(candidates) > 500, (
+        f"self-test FAILED: expected >500 curated candidates, got {len(candidates)} "
+        f"-- a wordlist file is probably missing or empty"
+    )
+    assert "salphaseion" in candidates, (
+        "self-test FAILED: expected seed candidate 'salphaseion' not found"
+    )
+    attempts, hits = sweep(
+        candidates[:5], newline_variants=False, blobs=None,
+        kdf_variants=EXTENDED_CIPHER_VARIANTS,
+    )
+    assert attempts > 0, "self-test FAILED: sweep() produced zero attempts"
+    print(f"[*] self-test OK ({attempts} attempts on 5 candidates, "
+          f"{len(hits)} hits)")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--self-test", action="store_true",
@@ -166,6 +188,10 @@ def main():
                     help="test only the bounded Blowfish-, Camellia-, and SEED-CBC "
                          "variant set, rather than the earlier AES/3DES extensions")
     args = ap.parse_args()
+
+    if args.self_test:
+        self_test()
+        return
 
     candidates = load_curated_candidates()
     if args.openssl_menu_gaps:
@@ -182,23 +208,6 @@ def main():
     active_blobs = blobs if blobs is not None else BLOBS
     variants = (OPENSSL_MENU_GAP_CIPHER_VARIANTS
                 if args.openssl_menu_gaps else EXTENDED_CIPHER_VARIANTS)
-
-    if args.self_test:
-        assert len(candidates) > 500, (
-            f"self-test FAILED: expected >500 curated candidates, got {len(candidates)} "
-            f"-- a wordlist file is probably missing or empty"
-        )
-        assert "salphaseion" in candidates, (
-            "self-test FAILED: expected seed candidate 'salphaseion' not found"
-        )
-        attempts, hits = sweep(
-            candidates[:5], newline_variants=False, blobs=blobs,
-            kdf_variants=variants,
-        )
-        assert attempts > 0, "self-test FAILED: sweep() produced zero attempts"
-        print(f"[*] self-test OK ({attempts} attempts on 5 candidates, "
-              f"{len(hits)} hits)")
-        return
 
     attempts, hits = sweep(candidates, blobs=blobs, kdf_variants=variants)
     print(f"[*] {attempts:,} attempts across {len(variants)} "

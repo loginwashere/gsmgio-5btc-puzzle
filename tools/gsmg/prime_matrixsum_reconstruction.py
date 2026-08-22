@@ -182,7 +182,10 @@ def exact_rail_null(tokens, boundary_word, rail_word):
     return counts, joint_indices
 
 
-def main():
+def audit():
+    """Compute and hard-assert every claim this module makes; return a
+    report dict so both `self_test()` and `main()` print from one
+    computation instead of duplicating it (and drifting apart over time)."""
     color_result = reconstruct(DEFAULT_IMAGE)
     prime = color_result["prime_value"]
     if prime != EXPECTED_PRIME:
@@ -191,74 +194,121 @@ def main():
     orientation_matches = matching_matrix_orientations(prime, sum_list[1:])
     if orientation_matches != ["forward_2x3_rows"]:
         raise AssertionError(f"matrix orientation is not unique: {orientation_matches}")
-    print("prime:", prime)
-    print("matrix:")
-    for row in matrix:
-        print(" ", row)
-    print("matrix sum list:", sum_list)
-    print("unique orientation:", orientation_matches[0])
+
     architect_words, first_word_after_choice = load_architect_words()
-    print("words before Architect choice:", len(architect_words))
     results = bounded_indexings(architect_words, sum_list)
-    boundary_matches = []
-    for label, selected in results.items():
-        print(f"{label}: {' '.join(selected)}")
-        if edge_letters(selected)[0] == first_word_after_choice:
-            boundary_matches.append(label)
+    boundary_matches = [
+        label for label, selected in results.items()
+        if edge_letters(selected)[0] == first_word_after_choice
+    ]
     if boundary_matches != ["forward_one"]:
         raise AssertionError(f"choice-boundary rule is not unique: {boundary_matches}")
+
     selected = results["forward_one"]
     first_edges, last_edges = edge_letters(selected)
-    print("forward_one first letters:", first_edges)
-    print("forward_one last letters:", last_edges)
-    print("first Architect word after choice:", first_word_after_choice)
     if first_edges != first_word_after_choice:
         raise AssertionError(
             f"boundary validation mismatch: {first_edges} != {first_word_after_choice}"
         )
     ordered_end_rail = order_payload_by_key(first_edges, last_edges)
-    print("last letters ordered by first letters:", ordered_end_rail)
     if ordered_end_rail != "hey":
-        raise AssertionError(
-            f"beginning-keyed end rail mismatch: {ordered_end_rail}"
-        )
+        raise AssertionError(f"beginning-keyed end rail mismatch: {ordered_end_rail}")
+
     first_9ary = "".join(character for character in first_edges if character in NINE_SYMBOLS)
     last_9ary = "".join(character for character in last_edges if character in NINE_SYMBOLS)
-    print("a-i symbols in beginning/end rails:", first_9ary, last_9ary)
     if first_9ary != "b" or last_9ary != "he":
         raise AssertionError(
             f"unexpected a-i rail symbols: {first_9ary!r}/{last_9ary!r}"
         )
     if mirror9(first_9ary) != last_9ary[0] or mirror9(last_9ary[1]) != last_9ary[1]:
         raise AssertionError("B/H mirror pair with fixed E center was not recovered")
+
     rail_rebus = last_edges + first_edges
-    print("end rail followed by beginning rail:", rail_rebus, "(H | YE | BUT)")
     if rail_rebus != "hyebut":
         raise AssertionError(f"unexpected rail rebus: {rail_rebus}")
+
     end_of_line = add_shifts(last_edges, sum_list)
-    print("last letters + matrix sum list:", end_of_line)
     if end_of_line != "eol":
         raise AssertionError(f"end-of-line validation mismatch: {end_of_line}")
+
     null_counts, joint_indices = exact_chain_null(
         architect_words,
         first_word_after_choice,
         end_of_line,
     )
-    print("exact ordered-triple null:")
-    for label in ("triples", "boundary", "end_marker", "joint"):
-        print(f"  {label}: {null_counts[label]}")
-    print("  joint indices:", joint_indices)
     if sum_list not in joint_indices:
         raise AssertionError("matrix sum list is absent from the joint null matches")
+
     rail_counts, rail_joint_indices = exact_rail_null(
         architect_words,
         first_word_after_choice,
         ordered_end_rail,
     )
+
+    return {
+        "prime": prime,
+        "matrix": matrix,
+        "sum_list": sum_list,
+        "orientation": orientation_matches[0],
+        "architect_word_count": len(architect_words),
+        "results": results,
+        "first_word_after_choice": first_word_after_choice,
+        "first_edges": first_edges,
+        "last_edges": last_edges,
+        "ordered_end_rail": ordered_end_rail,
+        "first_9ary": first_9ary,
+        "last_9ary": last_9ary,
+        "rail_rebus": rail_rebus,
+        "end_of_line": end_of_line,
+        "null_counts": null_counts,
+        "joint_indices": joint_indices,
+        "rail_counts": rail_counts,
+        "rail_joint_indices": rail_joint_indices,
+        "sum_list_in_rail_joint": sum_list in rail_joint_indices,
+    }
+
+
+def self_test():
+    report = audit()
+    assert report["null_counts"] == {"triples": 357840, "boundary": 160, "end_marker": 24, "joint": 4}
+    assert report["rail_counts"]["boundary"] == 160
+    assert report["rail_counts"]["rail_word"] == 114
+    assert report["rail_counts"]["joint"] == 12
+    assert report["sum_list_in_rail_joint"]
+    print(
+        "[*] self-test OK: prime 574061, unique forward_2x3_rows orientation, "
+        "BUT/HYE/EOL chain, and exact 357,840-triple null counts (160/24/4, "
+        "12 rail-joint) all reproduce"
+    )
+    return report
+
+
+def main():
+    report = self_test()
+    print("prime:", report["prime"])
+    print("matrix:")
+    for row in report["matrix"]:
+        print(" ", row)
+    print("matrix sum list:", report["sum_list"])
+    print("unique orientation:", report["orientation"])
+    print("words before Architect choice:", report["architect_word_count"])
+    for label, selected in report["results"].items():
+        print(f"{label}: {' '.join(selected)}")
+    print("forward_one first letters:", report["first_edges"])
+    print("forward_one last letters:", report["last_edges"])
+    print("first Architect word after choice:", report["first_word_after_choice"])
+    print("last letters ordered by first letters:", report["ordered_end_rail"])
+    print("a-i symbols in beginning/end rails:", report["first_9ary"], report["last_9ary"])
+    print("end rail followed by beginning rail:", report["rail_rebus"], "(H | YE | BUT)")
+    print("last letters + matrix sum list:", report["end_of_line"])
+    print("exact ordered-triple null:")
+    for label in ("triples", "boundary", "end_marker", "joint"):
+        print(f"  {label}: {report['null_counts'][label]}")
+    print("  joint indices:", report["joint_indices"])
     print("exact beginning-keyed-end-rail null:")
     for label in ("triples", "boundary", "rail_word", "joint"):
-        print(f"  {label}: {rail_counts[label]}")
-    print("  derived indices among joint matches:", sum_list in rail_joint_indices)
+        print(f"  {label}: {report['rail_counts'][label]}")
+    print("  derived indices among joint matches:", report["sum_list_in_rail_joint"])
 
 
 if __name__ == "__main__":

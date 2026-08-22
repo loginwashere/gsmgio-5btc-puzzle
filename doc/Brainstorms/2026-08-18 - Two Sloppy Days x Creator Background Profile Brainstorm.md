@@ -352,9 +352,10 @@ R-O-I-B-O-T is R-O-B-O-T with a single letter "I" inserted immediately after
 fact: delete the "I" from "ROIBOT" and the remaining eight letters spell
 "ROBOT" exactly. "ROI" (Return on Investment) is the obvious, sufficient,
 literal reading for a trading-bot name on its own -- this doesn't replace
-that reading, it sits underneath it as a second, simultaneous one. Given
-everything below, treating this as coincidental is harder to justify than
-treating it as deliberate.
+that reading, it sits underneath it as a secondary, unverified one: a single
+inserted letter in a short English word is not a low-base-rate coincidence
+on its own, so this remains an unconfirmed second reading, not a finding
+that competes with the ROI interpretation.
 
 **12. The creator's engagement with the show is personal, not just
 decorative -- confirmed via a direct quote, not inferred (strong, changes

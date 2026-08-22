@@ -50,28 +50,36 @@ CANDIDATES = [
 ]
 
 
-def main():
-    # Also try each candidate with a trailing newline/CRLF appended, before and
-    # after SHA-256 -- the "enter" reading of the abba-encoded word embedded in
-    # the AES blob itself (an `echo "x" | sha256sum`-style terminal session
-    # includes the newline from pressing Enter; `echo -n` does not).
+def probe():
+    """Every candidate x newline/CRLF x raw/SHA-256 form against the literal
+    SalPhaseIon AES blob. Also try each candidate with a trailing newline/CRLF
+    appended, before and after SHA-256 -- the "enter" reading of the abba-
+    encoded word embedded in the AES blob itself (an `echo "x" | sha256sum`-
+    style terminal session includes the newline from pressing Enter; `echo -n`
+    does not). Returns (forms, hits)."""
     forms = []
     for c in CANDIDATES:
         for base in (c, c + "\n", c + "\r\n"):
             forms.append((c, base))
             forms.append((c, __import__("hashlib").sha256(base.encode()).hexdigest()))
-    print(f"[*] testing {len(CANDIDATES)} candidates ({len(forms)} forms incl. "
-          f"newline variants) against the literal SalPhaseIon AES blob...")
-    hits = 0
+    hits = []
     for c, keystr in forms:
         r = aes_try_open(keystr, blobs={"SALPH": BLOBS["SALPH"]})
         if r:
-            hits += 1
-            tag, body, digest_name, key_len = r
-            print(f"\n[+++ HIT] candidate={c!r} keystr={keystr!r} blob={tag} kdf={digest_name}/aes{key_len*8}")
-            print(f"    plaintext={body[:300]!r}")
-    print(f"\n[*] done. {hits} hits out of {len(forms)} forms.")
-    if hits == 0:
+            hits.append((c, keystr, r))
+    return forms, hits
+
+
+def main():
+    forms, hits = probe()
+    print(f"[*] testing {len(CANDIDATES)} candidates ({len(forms)} forms incl. "
+          f"newline variants) against the literal SalPhaseIon AES blob...")
+    for c, keystr, r in hits:
+        tag, body, digest_name, key_len = r
+        print(f"\n[+++ HIT] candidate={c!r} keystr={keystr!r} blob={tag} kdf={digest_name}/aes{key_len*8}")
+        print(f"    plaintext={body[:300]!r}")
+    print(f"\n[*] done. {len(hits)} hits out of {len(forms)} forms.")
+    if not hits:
         print("[*] negative result — none of the direct 'last command' readings "
               "(incl. trailing-newline/'enter' variants) open the blob.")
 
