@@ -24164,3 +24164,101 @@ concept-only/genuinely-unrun to executed/negative in
 `doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md`.
 
 **Artifacts:** `tools/gsmg/input_byte_pathway_reconstruction_audit.py`.
+
+> **Correction (2026-08-23, same-day review):** this entry overstated its
+> own scope in four ways, all fixed same-day; see Phase 379 below for the
+> repair and the completing delta run.
+>
+> 1. "Full oracle" was not full: the CBC family used bare `KDF_VARIANTS`
+>    (6 legacy variants), silently omitting this project's established
+>    full-oracle convention of `KDF_VARIANTS + EXTENDED_CIPHER_VARIANTS`
+>    (18 more: AES-192-CBC, 3DES-CBC at 3 key sizes, PBKDF2/CBC). The 66
+>    configurations actually run, and the 199,584 figure derived from
+>    them, covered legacy CBC + ECB + stream + Key Wrap only.
+> 2. The Key Wrap result branch unpacked every oracle result as one
+>    CBC-style 4-tuple, but `aes_keywrap_try_open_bytes` returns a *list*
+>    of 5-tuples. A genuine Key Wrap hit would have crashed or been
+>    misrecorded rather than reported -- the reported 0 Key Wrap hits is
+>    still correct (the returned list was empty, so the buggy unpacking
+>    line was never reached), but the code path for a positive was
+>    untested and wrong.
+> 3. "199,584 effective decrypt attempts" undercounted Key Wrap, which
+>    tries 4 distinct unwrap forms (RFC 3394 default/OpenSSL-custom-IV,
+>    RFC 5649 default/OpenSSL-custom-IV) per configuration/blob, not 1.
+>    199,584 is more accurately described as variant/blob applications
+>    for the families actually run.
+> 4. "Seed 7 moves ... to executed/negative" above contradicts
+>    `doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md`, which correctly recorded
+>    `partially-executed` (the brainstorm entry's `textContent`/selection,
+>    HTML-entity, and UTF-16 concepts remain genuinely unrun). The ledger
+>    was right; this sentence was wrong.
+>
+> Smaller wording note: raw SHA-256 digest bytes have the direct COSMIC
+> precedent; raw *double*-SHA-256 is only a reasonable symmetric
+> compatibility extension of that class, not itself precedented.
+
+## Phase 379 -- Phase 378 coverage repair: CBC-extended delta, Key Wrap fix, negative (2026-08-23)
+
+**Question:** Phase 378 claimed "full oracle" coverage for its 756 new
+byte-pathway materials but actually omitted 18 CBC configurations, had an
+unexercised bug in its Key Wrap result handling, and undercounted its own
+effective-attempts figure. Does completing the omitted coverage and fixing
+the bug change the negative result?
+
+**Frozen inputs:** the identical Phase 378 756-material set (42 P0A/P1A
+candidates x 18 new byte-pathway forms each). No new candidate text or
+byte-pathway form was introduced.
+
+**Method:** fixed `tools/gsmg/input_byte_pathway_reconstruction_audit.py`
+in place (git history preserves the Phase 378 version):
+
+1. `CBC_KDF_VARIANTS = KDF_VARIANTS + EXTENDED_CIPHER_VARIANTS` (24 total)
+   is now the correct CBC family for any fresh full run, matching this
+   project's established full-oracle convention.
+2. The Key Wrap branch in `run()` now iterates the list `aes_keywrap_
+   try_open_bytes` actually returns (5-tuples: tag, wrap_kind, kdf_label,
+   key_len, unwrapped_bytes) instead of unpacking one CBC-style 4-tuple. A
+   synthetic positive-path self-test (`_self_test_keywrap_hit_handling`,
+   mirroring `cb_common._self_test_keywrap`'s fixture) plants a real
+   RFC-3394-wrapped blob under a KEK derived from an actually-tested
+   byte-pathway form (`trailing_space/literal`, since the bare literal is
+   one of the 2 forms Phase 378 already excluded) and asserts `run()`
+   reports it correctly -- this exercises the code path a real hit would
+   take, not just the empty-list case Phase 378's zero-hit run happened to
+   take.
+3. `effective_decrypt_attempts` now multiplies Key Wrap's contribution by
+   4 (its real per-configuration unwrap-form count) instead of counting it
+   as 1, matching every tracked blob's actual length (all 4 are >=24
+   bytes, so all 4 unwrap forms are attempted for every configuration).
+
+Rather than repeating the 6-variant legacy-CBC + ECB + stream + Key Wrap
+work Phase 378 already completed and confirmed negative, only the omitted
+18-configuration CBC-extended delta was run: `run_cbc_extended_delta()`,
+invoked via `--delta`. 756 materials x 18 configurations x 4 blobs.
+
+**Result:** self-test passes, including the new Key Wrap synthetic
+positive (correctly recorded, right blob/plaintext/kdf-label) and the
+corrected full-oracle config count (84 = 24 CBC + 12 ECB + 36 stream + 12
+Key Wrap). Real delta run: 756/756 materials attempted, **54,432
+effective decrypt attempts, 0 hits.**
+
+**Disposition:** negative. Combined with Phase 378's original 308,448
+effective attempts (199,584 nominal variant/blob applications, Key Wrap
+corrected to its true 4x per-configuration count), the 756-material
+byte-pathway set has now genuinely completed this project's full-oracle
+convention across CBC + ECB + stream + Key Wrap: 362,880 effective
+decrypt attempts total, 0 hits. The Key Wrap handling bug is fixed and now
+has a positive-path regression; it did not affect Phase 378's reported
+0-hit result (the buggy line was only reachable on a non-empty list, which
+never occurred).
+
+**Facts affected:** no puzzle fact changes. Corrects Phase 378's overstated
+"full oracle" claim and its "executed/negative" Seed-7 disposition
+sentence (the ledger's `partially-executed` was already correct and is
+unchanged).
+
+**Supersedes/corrects:** Phase 378's coverage and effective-attempts
+claims, per the same-day correction appended to that entry above.
+
+**Artifacts:** `tools/gsmg/input_byte_pathway_reconstruction_audit.py`
+(fixed in place).

@@ -442,16 +442,20 @@ compared with the complete permutation/null maximum distribution.
 
 ### 7. Input-byte pathway reconstruction
 
-> [!info] Result -- scoped subset executed (2026-08-23)
-> See FINDINGS.md Phase 378 / `tools/gsmg/input_byte_pathway_reconstruction_audit.py`.
-> Only the pathways with real evidence in this project were run: raw
-> SHA-256 digest bytes (the COSMIC precedent), and trailing space/LF/CRLF
-> bases (the Phase 163 hash-tool finding) -- 756 new materials against the
-> frozen 42-candidate P0A/P1A corpus, full oracle, all 4 blobs. **0 hits.**
-> The rest of this entry's concept list -- `textContent` vs. copied
-> selection, HTML entity decoding, and any UTF-16/low-byte path -- has no
-> puzzle-era evidence found (grepped, zero hits) and remains genuinely
-> unrun, not disproven.
+> [!info] Result -- scoped subset executed (2026-08-23, coverage repaired same-day)
+> See FINDINGS.md Phase 378 / Phase 379 /
+> `tools/gsmg/input_byte_pathway_reconstruction_audit.py`. Only the
+> pathways with real evidence in this project were run: raw SHA-256 digest
+> bytes (the COSMIC precedent), and trailing space/LF/CRLF bases (the
+> Phase 163 hash-tool finding) -- 756 new materials against the frozen
+> 42-candidate P0A/P1A corpus, all 4 blobs. Phase 378's first pass
+> understated itself as "full oracle" (missed 18 CBC-extended
+> configurations) and had an unexercised Key Wrap bug; Phase 379 fixed the
+> bug and completed the missing coverage. **362,880 effective decrypt
+> attempts total, 0 hits.** The rest of this entry's concept list --
+> `textContent` vs. copied selection, HTML entity decoding, and any
+> UTF-16/low-byte path -- has no puzzle-era evidence found (grepped, zero
+> hits) and remains genuinely unrun, not disproven.
 
 The oracle accepts bytes, while solvers usually see rendered text. Reconstruct
 only historically plausible paths from authored page text to password bytes:

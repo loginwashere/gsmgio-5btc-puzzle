@@ -59,13 +59,16 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from cb_common import (  # noqa: E402
     BLOBS,
     ECB_CIPHER_VARIANTS,
+    EXTENDED_CIPHER_VARIANTS,
     KDF_VARIANTS,
     KEY_WRAP_KDF_VARIANTS,
     STREAM_CIPHER_VARIANTS,
+    aes_key_wrap,
     aes_keywrap_try_open_bytes,
     aes_try_open_bytes,
     aes_try_open_ecb_bytes,
     aes_try_open_stream_bytes,
+    derive_kek,
     keystr_forms,
 )
 from extended_cipher_recheck import candidate_list_digest  # noqa: E402
@@ -76,11 +79,42 @@ EXPECTED_CANDIDATE_DIGEST = "51afdf5ce033500a"  # same manifest as Phase 290/335
 EXPECTED_NEW_FORMS_PER_CANDIDATE = 18
 EXPECTED_NEW_MATERIALS = EXPECTED_CANDIDATE_COUNT * EXPECTED_NEW_FORMS_PER_CANDIDATE
 
+# Corrected 2026-08-23 (same-day review): the original run used bare
+# KDF_VARIANTS for CBC, silently omitting the project's established
+# full-oracle convention of KDF_VARIANTS + EXTENDED_CIPHER_VARIANTS
+# (AES-192-CBC, 3DES-CBC at 3 key sizes, PBKDF2/CBC) -- 18 configurations.
+# This constant is now the correct, complete CBC set for any *fresh* full
+# run of this script. The 18 EXTENDED_CIPHER_VARIANTS configurations
+# already missing from the completed Phase 378 run were instead covered by
+# a separate delta (see run_cbc_extended_delta below) rather than
+# repeating the 6-variant portion Phase 378 already ran and confirmed
+# negative.
+CBC_KDF_VARIANTS = KDF_VARIANTS + EXTENDED_CIPHER_VARIANTS
+
+# Key Wrap's oracle function has a materially different contract from the
+# other three families: it returns a *list* of (tag, wrap_kind, kdf_label,
+# key_len, unwrapped_bytes) 5-tuples -- every successful unwrap, not one
+# best candidate -- instead of a single 4-tuple or None. It also tries 4
+# distinct unwrap forms per (KDF variant, blob) pair (RFC 3394 default IV,
+# RFC 3394 OpenSSL custom IV, RFC 5649 default IV, RFC 5649 OpenSSL custom
+# IV), so counting it as "1 configuration = 1 attempt" the way CBC/ECB/
+# stream are counted undercounts its real cryptographic work by 4x. Both
+# facts are handled explicitly in run() below rather than folded into the
+# uniform (name, fn, variants) family shape the other three share.
+KEYWRAP_FORMS_PER_CONFIG = 4
+
 ORACLE_FAMILIES = (
-    ("cbc", aes_try_open_bytes, KDF_VARIANTS),
-    ("ecb", aes_try_open_ecb_bytes, ECB_CIPHER_VARIANTS),
-    ("stream", aes_try_open_stream_bytes, STREAM_CIPHER_VARIANTS),
-    ("keywrap", aes_keywrap_try_open_bytes, KEY_WRAP_KDF_VARIANTS),
+    ("cbc", aes_try_open_bytes, CBC_KDF_VARIANTS, 1),
+    ("ecb", aes_try_open_ecb_bytes, ECB_CIPHER_VARIANTS, 1),
+    ("stream", aes_try_open_stream_bytes, STREAM_CIPHER_VARIANTS, 1),
+    ("keywrap", aes_keywrap_try_open_bytes, KEY_WRAP_KDF_VARIANTS, KEYWRAP_FORMS_PER_CONFIG),
+)
+
+# The 18-configuration CBC delta Phase 378 omitted, run on its own against
+# the same frozen 756 materials without repeating the 6-variant KDF_VARIANTS
+# portion Phase 378 already completed and confirmed negative.
+CBC_EXTENDED_DELTA_FAMILIES = (
+    ("cbc_extended_delta", aes_try_open_bytes, EXTENDED_CIPHER_VARIANTS, 1),
 )
 
 
@@ -119,51 +153,75 @@ def new_material_forms(text):
     return out
 
 
-def run(blobs=None):
+def run(blobs=None, families=None):
+    """`families` defaults to ORACLE_FAMILIES (the full, corrected oracle).
+    Pass CBC_EXTENDED_DELTA_FAMILIES to run only the 18-configuration CBC
+    delta Phase 378 omitted, without repeating already-completed work."""
     active_blobs = BLOBS if blobs is None else blobs
+    active_families = ORACLE_FAMILIES if families is None else families
     candidates = eligible_candidates()
     texts = [c[2] for c in candidates]
 
-    attempts = []
+    variant_config_count = 0
+    effective_attempts = 0
     hits = []
     for model, label, text in candidates:
         for form_kind, material in new_material_forms(text):
-            for family_name, oracle_fn, variants in ORACLE_FAMILIES:
-                result = oracle_fn(material, kdf_variants=variants, blobs=active_blobs)
-                attempts.append({
-                    "model": model,
-                    "label": label,
-                    "form": form_kind,
-                    "family": family_name,
-                })
-                if result:
-                    tag, body, kdf_label, key_len = result
-                    hits.append({
-                        "model": model,
-                        "label": label,
-                        "form": form_kind,
-                        "family": family_name,
-                        "blob": tag,
-                        "kdf": f"{kdf_label}/aes{key_len * 8}",
-                        "plaintext_hex": body.hex(),
-                    })
+            for family_name, oracle_fn, variants, forms_per_config in active_families:
+                variant_config_count += 1
+                effective_attempts += len(variants) * len(active_blobs) * forms_per_config
+                if family_name.startswith("keywrap"):
+                    # aes_keywrap_try_open_bytes returns a LIST of 5-tuples
+                    # (tag, wrap_kind, kdf_label, key_len, unwrapped), one
+                    # per successful unwrap -- not a single 4-tuple/None
+                    # like the other three families.
+                    for tag, wrap_kind, kdf_label, key_len, unwrapped in oracle_fn(
+                        material, kdf_variants=variants, blobs=active_blobs,
+                    ):
+                        hits.append({
+                            "model": model,
+                            "label": label,
+                            "form": form_kind,
+                            "family": family_name,
+                            "blob": tag,
+                            "kdf": f"{kdf_label}/aes{key_len * 8}/{wrap_kind}",
+                            "plaintext_hex": unwrapped.hex(),
+                        })
+                else:
+                    result = oracle_fn(material, kdf_variants=variants, blobs=active_blobs)
+                    if result:
+                        tag, body, kdf_label, key_len = result
+                        hits.append({
+                            "model": model,
+                            "label": label,
+                            "form": form_kind,
+                            "family": family_name,
+                            "blob": tag,
+                            "kdf": f"{kdf_label}/aes{key_len * 8}",
+                            "plaintext_hex": body.hex(),
+                        })
 
-    total_variants = sum(len(v) for _, _, v in ORACLE_FAMILIES)
+    new_materials = variant_config_count // len(active_families)
     return {
         "candidate_count": len(candidates),
         "candidate_digest": candidate_list_digest(texts),
-        "new_materials": len(attempts) // len(ORACLE_FAMILIES),
+        "new_materials": new_materials,
         "blobs": tuple(active_blobs),
-        "oracle_families": [name for name, _, _ in ORACLE_FAMILIES],
-        "total_variant_configs": total_variants,
-        "effective_decrypt_attempts": sum(
-            len(new_material_forms(text)) * len(variants) * len(active_blobs)
-            for text in texts
-            for _, _, variants in ORACLE_FAMILIES
-        ),
+        "oracle_families": [name for name, _, _, _ in active_families],
+        "total_variant_configs": sum(len(v) for _, _, v, _ in active_families),
+        "effective_decrypt_attempts": effective_attempts,
         "hits": hits,
         "total_hits": len(hits),
     }
+
+
+def run_cbc_extended_delta(blobs=None):
+    """The 18-configuration CBC delta Phase 378 omitted (see
+    CBC_EXTENDED_DELTA_FAMILIES): AES-192-CBC, 3DES-CBC (3 key sizes), and
+    PBKDF2/CBC, against the same frozen 756 materials. Does not repeat the
+    6-variant KDF_VARIANTS portion of CBC, ECB, stream, or Key Wrap, all of
+    which Phase 378 already ran and confirmed negative."""
+    return run(blobs=blobs, families=CBC_EXTENDED_DELTA_FAMILIES)
 
 
 def self_test():
@@ -191,23 +249,75 @@ def self_test():
     assert tuple(BLOBS) == ("SALPH", "COSMIC", "P32TRAILING", "URLBLOB")
     total_new = sum(len(new_material_forms(t)) for t in texts)
     assert total_new == EXPECTED_NEW_MATERIALS, total_new
+
+    # Corrected 2026-08-23: the full oracle's CBC leg is KDF_VARIANTS (6) +
+    # EXTENDED_CIPHER_VARIANTS (18) = 24, matching this project's
+    # established full-oracle convention (not the bare 6 Phase 378 used).
+    assert len(CBC_KDF_VARIANTS) == 24, len(CBC_KDF_VARIANTS)
+    total_full_configs = sum(len(v) for _, _, v, _ in ORACLE_FAMILIES)
+    assert total_full_configs == 84, total_full_configs  # 24+12+36+12
+    delta_configs = sum(len(v) for _, _, v, _ in CBC_EXTENDED_DELTA_FAMILIES)
+    assert delta_configs == 18, delta_configs
+    assert EXPECTED_NEW_MATERIALS * delta_configs * 4 == 54432
+
+    _self_test_keywrap_hit_handling()
+
     print(
         f"[*] self-test OK: {EXPECTED_CANDIDATE_COUNT} candidates (digest "
         f"{EXPECTED_CANDIDATE_DIGEST}), {EXPECTED_NEW_FORMS_PER_CANDIDATE} new "
-        f"forms/candidate, {EXPECTED_NEW_MATERIALS} new materials planned"
+        f"forms/candidate, {EXPECTED_NEW_MATERIALS} new materials planned, "
+        f"{total_full_configs} full-oracle configs (24 CBC + 12 ECB + 36 "
+        f"stream + 12 keywrap), {delta_configs}-config CBC-extended delta "
+        f"verified, Key Wrap 5-tuple-list hit handling verified"
     )
+
+
+def _self_test_keywrap_hit_handling():
+    """Confirms run()'s Key Wrap branch actually produces a correctly
+    shaped hit from a planted positive, rather than merely confirming (as
+    Phase 378's zero-hit run did) that an empty list doesn't crash. Mirrors
+    cb_common._self_test_keywrap's fixture construction."""
+    # Must match a form new_material_forms() actually produces -- the bare
+    # literal is one of the 2 already-tested forms it deliberately excludes
+    # (see already_tested_forms), so the KEK is derived from the
+    # "trailing_space/literal" form (candidate text + " ") instead, which
+    # run() really does try.
+    candidate_text = eligible_candidates()[0][2]
+    salt = b"01234567"
+    variant = KEY_WRAP_KDF_VARIANTS[0]
+    kdf_kind, kdf_param, key_len = variant
+    kek = derive_kek(kdf_kind, kdf_param, salt, (candidate_text + " ").encode(), key_len)
+    key_material = b"0123456789ABCDEF"  # 16 bytes: minimum RFC 3394 accepts
+    wrapped = aes_key_wrap(kek, key_material)
+
+    synth_family = (("keywrap", aes_keywrap_try_open_bytes, [variant], KEYWRAP_FORMS_PER_CONFIG),)
+    report = run(blobs={"SYNTH": (salt, wrapped)}, families=synth_family)
+    assert report["total_hits"] >= 1, "planted Key Wrap hit was not recorded"
+    hit = report["hits"][0]
+    assert hit["blob"] == "SYNTH"
+    assert hit["plaintext_hex"] == key_material.hex()
+    assert "rfc3394-default" in hit["kdf"]
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--self-test", action="store_true")
     parser.add_argument("--run", action="store_true")
+    parser.add_argument(
+        "--delta", action="store_true",
+        help="run only the 18-config CBC-extended delta, not the full oracle",
+    )
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
     if args.self_test:
         self_test()
         return
-    report = run() if args.run else {"note": "pass --run to execute against the oracle"}
+    if args.delta:
+        report = run_cbc_extended_delta()
+    elif args.run:
+        report = run()
+    else:
+        report = {"note": "pass --run (full oracle) or --delta (CBC-extended only)"}
     if args.json:
         print(json.dumps(report, indent=2, default=repr))
     else:
