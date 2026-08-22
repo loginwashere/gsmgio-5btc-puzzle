@@ -1,0 +1,279 @@
+---
+type: audit
+status: live
+topics:
+  - brainstorm-backlog
+  - frontier-assumption-ledger
+  - topology-audit
+---
+
+# GSMG Brainstorm Backlog Ledger
+
+**Purpose.** Brainstorm documents in `doc/Brainstorms/` record their own
+execution status inline (`[!info] Executed...` callouts, status tables,
+checkboxes), but that status frequently goes stale the moment a *later*
+phase or a *different* brainstorm document closes an item — the item's own
+file is never revisited to say so. This ledger cross-references every
+still-relevant brainstorm item against `tools/gsmg/FINDINGS.md` so a
+checkbox never has to be trusted at face value again: each row here is
+independently verified against the phase it claims closes it, not copied
+from the brainstorm doc's own claim.
+
+**Scope.** This ledger covers the P32-trailing attack-surface families,
+the post-Phase-340 search portfolio seeds, and the P0A canonical-sentinel
+backfill — the frontier-relevant brainstorm material, i.e. everything
+feeding the currently open P0/P1 gaps (`G-MSL-001`, `G-ESC-001`,
+`G-YIN-001`, `G-ARCH-001`). QR-texture and creator-profile brainstorm
+lines were spot-checked (all closed through Phase 365 with no stale
+checkboxes found) and are not itemized below since they carry no open
+backlog item.
+
+**Status values:**
+- `executed` — run to completion, disposition recorded, verified against
+  FINDINGS.md.
+- `superseded` — closed by a broader external or later result without
+  itself being run (e.g. the fork's independent sweep).
+- `partially-executed` — the core question was answered but a declared
+  sub-part (an artifact, a formalization, a corpus) was deliberately
+  deferred, not forgotten.
+- `parked` — deliberately deferred pending a named precondition (a policy
+  decision, new evidence), not simply unscheduled.
+- `genuinely-unrun` — no execution recorded anywhere; still a live backlog
+  candidate.
+
+```yaml
+item: "P32 Family 1 -- residual cross-blob salt-relationship audit"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: superseded
+verified_against: "FINDINGS.md Phase 271"
+note: "closed by the independent HosterjackAGV fork's own ~35,000-combination salt/cross-blob sweep, strictly broader than this family's pre-registered table; not run locally"
+```
+
+```yaml
+item: "P32 Family 2 -- transaction-graph trace beyond the first hop"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: genuinely-unrun
+verified_against: n/a
+note: "common-input-ownership clustering and output-following over the two known creator addresses' full transaction histories -- not executed; priority 6 of 8 in the source doc's own execution order"
+```
+
+```yaml
+item: "P32 Family 3 -- raw binary asset bytes as password material"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: genuinely-unrun
+verified_against: n/a
+note: "finite, exact-byte, cheap, reuses the existing structural oracle with no new fetch or judgment call, independent of DBBI/FAED topology; weakness is that no clue names hashing an asset, so a negative closes coverage rather than advancing topology -- BEST REMAINING BOUNDED EXPERIMENT per 2026-08-22 review"
+```
+
+```yaml
+item: "P32 Family 4 -- numeric/temporal metadata as password material"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: genuinely-unrun
+verified_against: n/a
+note: "exact and bounded (declared decimal/hex/ISO-date serializations only) but poorly selected -- no clue names a specific number as password material, so this is a coverage sweep, not a targeted test"
+```
+
+```yaml
+item: "P32 Family 5 -- external community candidate mining, fabrication-checked"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: genuinely-unrun
+verified_against: n/a
+note: "lowest priority in source doc (9 of 8+1); high noise given this project's own demonstrated spam/fabrication history (debunked GitHub/bitcointalk campaign), but cheap and bounded if run with the declared provenance discipline"
+```
+
+```yaml
+item: "P32 Family 6 -- exact blob-literal and code-context archaeology"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: executed
+verified_against: "FINDINGS.md Phase 271"
+note: "run against the pinned HosterjackAGV fork tree; no hidden decrypt call/ordering/parameter found beyond what this project already knows; surfaced family 10's four leads"
+```
+
+```yaml
+item: "P32 Family 7 -- authoring-toolchain calibration from solved stages"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: partially-executed
+verified_against: "Post-Phase-340 Future Search Portfolio.md, Seed 3 investigation pass (2026-08-20, not a separate FINDINGS phase)"
+note: "core cryptographic finding complete: all three solved AES boundaries (Phase 2/3/3.2) share one observable profile -- SHA-256 digest as lowercase hex text, legacy single-round EVP_BytesToKey/SHA-256, AES-256-CBC, PKCS#7, OpenSSL Salted__ Base64. NOT yet consolidated into a standalone, complete provenance audit artifact -- genuinely unrun as a dedicated deliverable"
+```
+
+```yaml
+item: "P32 Family 8 -- blob-centric first-appearance and co-occurrence graph"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: executed
+verified_against: "FINDINGS.md Phase 344 (run as Post-Phase-340 Seed 5)"
+note: "22 nodes, 26 edges across contains/published-before/same-authenticated-object; zero chronology violations among 11 well-dated edges; one new adjacency surfaced (2021-12-26 hint precedes earliest SalPhaseIon capture by ~17 months), flagged as a scoping candidate only"
+```
+
+```yaml
+item: "P32 Family 9 -- transaction serialization and wallet-style fingerprint"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: genuinely-unrun
+verified_against: n/a
+note: "version/nLockTime/sequence/pubkey-encoding/sighash-style/repeated-ECDSA-r comparison; best run from the raw transaction cache Family 2 would produce, so realistically gated on Family 2 running first"
+```
+
+```yaml
+item: "P32 Family 10 -- fork-surfaced residual leads"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: executed
+verified_against: "FINDINGS.md Phase 292"
+note: "4 leads (VIC alphabet alternate reconstruction, Safenet/Luna/HSM digit-glued fragments, genesis coinbase headline decoded, orphan CIAO-BELLA-O token), 15 candidates, 720 effective decrypt attempts, 0/4 hits on every lead. Lead 2's 'ordering key' reading remains formally unexecuted (no independently-sourced reordering rule exists), not disproven"
+```
+
+```yaml
+item: "P32 Family 11 -- hexadecimal-nibble packing of the 9-ary streams"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: executed
+verified_against: "FINDINGS.md Phase 272"
+note: "closed negative; FAED yields eight exact 285-byte bodies, DBBI always leaves an unpaired nibble; 0 signatures, 0 decompressions, 0 oracle hits from 24 materials"
+```
+
+```yaml
+item: "P32 Family 12 -- exact inverse of the page's decimal transport"
+source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
+status: executed
+verified_against: "FINDINGS.md Phase 273"
+note: "closed negative; both known-instruction positive controls round-trip correctly, but DBBI/FAED outputs under all 8 variants are binary noise with 0 oracle hits"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 1 -- solved-boundary rule audit with leave-one-out stress tests"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: executed
+verified_against: "FINDINGS.md Phase 341"
+note: "all 3 known AES boundaries (Phase 2/3/3.2) recover their exact preimage at rank 1 under a frozen instruction-parsing rule engine; positive/calibration-only disposition, not puzzle progress by itself. Forward-transferred to P32TRAILING by Phase 370 -- 0 genuinely new candidates"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 2 -- typed decode-and-parse ladder"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: executed
+verified_against: "FINDINGS.md Phase 342"
+note: "150,141 segments across the full Phase 336-338 corpus; 0 structural findings, 0 exact-target hits. Percent-decoding and nested-Salted__-decrypt were explicitly out of scope"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 3 -- solved-vector authoring-toolchain calibration"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: partially-executed
+verified_against: "in-document investigation pass, 2026-08-20 (same item as P32 Family 7 above)"
+note: "duplicate of P32 Family 7 -- see that row for status detail"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 4 -- content-addressed decrypt transcript and coverage ledger"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: parked
+verified_against: "FINDINGS.md Phase 343"
+note: "coverage-ledger half built (tools/gsmg/coverage_ledger.py); the raw-body plaintext-transcript half was intentionally deferred pending a sensitive-data storage policy decision -- not forgotten, blocked on a named precondition"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 5 -- blob chronology and dependency graph"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: executed
+verified_against: "FINDINGS.md Phase 344"
+note: "duplicate of P32 Family 8 above -- see that row"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 6 -- multi-blob concordance before aggregate language scoring"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: executed
+verified_against: "FINDINGS.md Phase 348"
+note: "18,144 pair hypotheses, real maximum 0 events, 1,000-trial permutation null also 0, p=1.0; closes only this exact structural-concordance registry, does not license D1's weak aggregate-language scoring"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 7 -- input-byte pathway reconstruction"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: genuinely-unrun
+verified_against: n/a
+note: "reconstruct historically plausible input-byte paths (textarea textContent vs. copied selection, HTML entity decoding, line-ending conversion, terminal newline, UTF-8 vs. demonstrated JS UTF-16/low-byte mistake, shell echo vs. printf) -- concept only, never scoped into a phase"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 8 -- remaining exact secret-container formats"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: executed
+verified_against: "FINDINGS.md Phase 350"
+note: "executed as a strict Phase-342 delta -- BIP38, Casascius mini keys, all 12 SLIP-132 versions, output descriptors, Bitcoin Core key/ckey/mkey records; 750,895 validator invocations, 0 structurally valid containers, 0 exact-target hits"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 9 -- checksum-guided one-error repair"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: parked
+verified_against: n/a
+note: "gated on a near-valid object existing first (WIF/extended-key/Bech32/mini-key/BIP39 with a checksum-decidable single-error repair); no such near-valid object is currently on record, so there is nothing to run this against yet"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 10 -- ciphertext-length and output-role compatibility matrix"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: partially-executed
+verified_against: "in-document investigation pass, 2026-08-20"
+note: "first row completed (CBC/PKCS#7 length envelope for all four blobs, excluding standalone WIF/BIP38/mini-key/xprv-xpub roles by ciphertext length alone). Compression/stream-mode rows and any framed/variable-length role analysis remain unrun"
+```
+
+```yaml
+item: "Post-Phase-340 Seed 11 -- new-evidence diff watch"
+source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
+status: executed
+verified_against: "FINDINGS.md Phases 347, 349"
+note: "three-URL passive baseline established (347), made repeat-safe with a monthly read-only heartbeat (349); passive GETs only, no forms/wallet actions/scripts; the only item in this ledger that could directly reopen the evidence-blocked P0 gaps without a cryptographic hit"
+```
+
+```yaml
+item: "P0A Model 11 (81+10 FSM) sentinel backfill"
+source: "2026-08-15 - Canonical Sentinel Inventory (P0A).md"
+status: executed
+verified_against: "FINDINGS.md Phase 335"
+note: "report-plumbing fix closed (output_text field added, no new transform); 42-candidate corpus, 2,016 effective decrypt attempts, 0 hits, model 11's 2 candidates verified separately from the original 40"
+```
+
+```yaml
+item: "Phase 163 Tier-1 --whitespace-variants nopad rerun"
+source: "tools/gsmg/FINDINGS.md (not a brainstorm document)"
+status: genuinely-unrun
+verified_against: n/a
+note: "~700,000 keystrings, estimated 1-2 hours; source-grounded coverage gap but low expected value and unlikely to resolve the topology. User declined to run it (2026-08-22)"
+```
+
+## Reading this ledger
+
+Every `genuinely-unrun` row above is a live backlog candidate; every other
+status is closed as far as this ledger currently knows and should not be
+independently re-derived from a brainstorm document's own checkboxes
+without checking this ledger (or `git log`/`FINDINGS.md`) first, since
+those checkboxes are demonstrably prone to going stale across documents.
+
+## Recommended next bounded experiment
+
+**P32 Family 3 (raw authenticated asset bytes)** is the strongest
+remaining `genuinely-unrun` item: finite, exact-byte-based, cheap, and
+independent of the still-unresolved DBBI/FAED topology. Its own source
+document's bounding rules (2026-08-14) — freeze only historically
+authenticated site/Telegram assets, exclude thumbnails/OCR/renders/
+research-generated files, deduplicate by SHA-256, test exactly three byte
+forms (literal file bytes, binary SHA-256, lowercase SHA-256 hex),
+initially target `P32TRAILING` only, exclude filename words or
+metadata-derived candidates, and use Phase 344's chronology graph to
+exclude assets that first appeared after `P32TRAILING` — remain the
+correct bounding rules and require no revision.
+
+**P32 Family 2 (transaction-graph trace)** is the best remaining
+evidence-acquisition project — it can surface a new authenticated fact
+rather than only closing coverage — but it is more expensive (external API
+calls, cross-source provenance checks) and is not itself a bounded
+password-material test.
+
+## Related documents
+
+- [GSMG Frontier Assumption Ledger](GSMG_FRONTIER_ASSUMPTION_LEDGER.md)
+- [GSMG Topology Audit](GSMG_TOPOLOGY_AUDIT.md)
+- [GSMG Open Gap Registry](GSMG_OPEN_GAP_REGISTRY.md)
+- [P32 New Attack Surfaces Beyond Text Recombination](Brainstorms/2026-08-14%20-%20P32%20New%20Attack%20Surfaces%20Beyond%20Text%20Recombination.md)
+- [Post-Phase-340 Future Search Portfolio](Brainstorms/2026-08-20%20-%20Post-Phase-340%20Future%20Search%20Portfolio.md)
+- [Canonical Sentinel Inventory (P0A)](Brainstorms/2026-08-15%20-%20Canonical%20Sentinel%20Inventory%20%28P0A%29.md)

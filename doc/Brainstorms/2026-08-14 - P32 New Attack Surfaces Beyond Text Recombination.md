@@ -369,6 +369,15 @@ documented inconsistency showing that the blobs were not generated alike.
 
 ## Candidate family 8 — blob-centric first-appearance and co-occurrence graph
 
+> [!info] Result — family 8 executed (2026-08-20)
+> Completed as Post-Phase-340 Seed 5. See FINDINGS.md Phase 344 and
+> `tools/gsmg/blob_chronology_dependency_graph.py`. 22 nodes, 26 edges
+> across exactly the three declared relations. **Zero chronology
+> violations** among 11 well-dated `published-before` edges; one genuinely
+> new adjacency surfaced (the creator's 2021-12-26 hint precedes the
+> earliest documented SalPhaseIon capture by ~17 months), flagged as a
+> scoping candidate, not itself authorized to run further work.
+
 **Priority: 4 (evidence selection rather than direct password spraying).**
 
 Individual artifacts have strong provenance notes, but no single timeline
@@ -414,6 +423,15 @@ feature counts and anomalies. Do not attempt private-key extraction, fund
 movement, or identity attribution from a fingerprint.
 
 ## Candidate family 10 — fork-surfaced residual leads (2026-08-14)
+
+> [!info] Result — family 10 executed (2026-08-15)
+> `tools/gsmg/p32_family10_fork_leads_audit.py`, FINDINGS.md Phase 292. All
+> four leads tested against all four tracked blobs, 15 candidates in the
+> two declared forms, 720 effective decrypt attempts. **0/4 hits on every
+> lead.** Lead 2 (Safenet/Luna/HSM digit-glued ordering) remains formally
+> unexecuted as an ordering-key reading specifically — only the literal
+> digit-glued substrings were testable without inventing a reordering rule
+> this project does not have; leads 1, 3, and 4 are fully closed negative.
 
 **Priority: 2 (source-grounded, cheap to test, but third-party-sourced —
 apply the same fabrication/provenance discipline as family 5 before
@@ -557,22 +575,25 @@ against a different source.
    2026-08-14**, see FINDINGS.md Phase 272. ~~Family 12 (exact decimal-
    transport inverse)~~ — **closed negative 2026-08-14**, see FINDINGS.md
    Phase 273.
-1. Family 10 (fork-surfaced residual leads) — source-grounded, cheap, and
-   directly motivated by family 6's execution; run next.
+1. ~~Family 10 (fork-surfaced residual leads)~~ — **executed 2026-08-15,
+   negative**, see FINDINGS.md Phase 292 above.
 2. Family 3 (raw authenticated asset bytes) — cheap, reuses the structural
-   oracle with no new fetch or judgment call.
+   oracle with no new fetch or judgment call. **Still genuinely unrun as of
+   2026-08-23** — see `doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md`.
 3. Family 7 (authoring-toolchain calibration) — narrows future cryptographic
-   assumptions using solved controls.
-4. Family 8 (first-appearance/co-occurrence graph) — constrains which
-   candidate sources were actually available for each blob.
+   assumptions using solved controls. **Core cryptographic finding complete**
+   (Post-Phase-340 Seed 3's three-vector profile, 2026-08-20) **but not
+   consolidated into a standalone audit** — see backlog ledger.
+4. ~~Family 8 (first-appearance/co-occurrence graph)~~ — **executed
+   2026-08-20 as Post-Phase-340 Seed 5**, see FINDINGS.md Phase 344 above.
 5. Family 4 (numeric/temporal metadata) — reuses the existing pipeline with
-   a small declared serialization set.
+   a small declared serialization set. Still genuinely unrun.
 6. Family 2 (transaction-graph trace) — more expensive (external API calls,
-   provenance cross-checks), higher potential value.
+   provenance cross-checks), higher potential value. Still genuinely unrun.
 7. Family 9 (transaction serialization fingerprint) — best run from the raw
-   transaction cache produced by family 2.
+   transaction cache produced by family 2. Still genuinely unrun.
 8. Family 5 (external community mining) — lowest priority, explicitly
-   bounded and skepticism-gated.
+   bounded and skepticism-gated. Still genuinely unrun.
 
 Record candidate counts, exact byte/number sources, and negative results
 for each family in FINDINGS.md as it is run, following this project's

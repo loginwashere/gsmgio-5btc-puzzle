@@ -81,6 +81,12 @@ Model 11 (FSM) adds 2 more (full output string + trailer) once its report
 is extended to retain the full string rather than a 160-char prefix -- a
 one-line change to expose an already-computed value, not a new transform.
 
+> [!info] Plumbing fix closed (2026-08-20)
+> See FINDINGS.md Phase 335. `output_text` added to
+> `dbbi_faed_fsm_audit.py`'s report; the sentinel corpus is now 42
+> candidates. Both of model 11's candidates were run in Phase 335 (below)
+> alongside a re-confirmation of the original 40 -- 0 hits.
+
 ## Cross-model notes
 
 - **`candidate_text_generated: False` is unreliable as a signal.** Three
@@ -119,6 +125,10 @@ one-line change to expose an already-computed value, not a new transform.
 > blobs. **0/80 passphrase attempts hit; 0 weak candidates.** Closed
 > negative. Model 11's 2 candidates were not included (report-plumbing fix
 > still pending).
+>
+> **Correction (2026-08-20):** the plumbing fix was closed and the 2
+> deferred model-11 candidates were run -- see FINDINGS.md Phase 335. Full
+> 42-candidate corpus, still 0 hits.
 
 This inventory is P0A only -- no candidate here has been run against
 `cb_common.py`'s oracle. P1A (bounded statistical-gate sentinel backfill)

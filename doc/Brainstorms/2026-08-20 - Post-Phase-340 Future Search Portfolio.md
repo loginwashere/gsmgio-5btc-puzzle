@@ -640,16 +640,29 @@ above.
 
 ## Experiments and next actions
 
-- [ ] Draft the solved-boundary/leave-one-out dataset: solved boundary, available clue
+> [!info] Status reconciled (2026-08-23)
+> The checkboxes below were left unchecked when written; three of five are
+> now done. See `doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md` for the full
+> cross-brainstorm reconciliation.
+
+- [x] Draft the solved-boundary/leave-one-out dataset: solved boundary, available clue
       components, exact expected preimage, exact expected password bytes.
+      **Done — Phase 341.**
 - [ ] Inventory authenticated solved ciphertext/password vectors and commands
       for toolchain calibration; record missing provenance rather than filling
-      it by assumption.
-- [ ] Freeze a typed decoder/parser registry and false-positive controls before
-      applying it to any real retained body.
+      it by assumption. **Core cryptographic finding done** (the seed-3
+      investigation pass above: all three solved vectors share one legacy
+      SHA-256/AES-256-CBC profile) **but not yet consolidated into a
+      standalone, complete provenance audit** — genuinely unrun as a
+      dedicated artifact.
+- [x] Freeze a typed decoder/parser registry and false-positive controls before
+      applying it to any real retained body. **Done — Phase 342.**
 - [ ] Decide whether a reusable transcript may store raw bodies; if not, define
       encrypted storage or feature-only records before implementation.
-- [ ] Keep every seed as its own phase. No execution is scheduled by this note.
+      **Still deferred — Phase 343 built only the coverage-ledger half; the
+      raw-body transcript half needs a sensitive-data policy decision first.**
+- [x] Keep every seed as its own phase. No execution is scheduled by this note.
+      **Followed throughout (Phases 341-350).**
 
 ## Promotion
 
