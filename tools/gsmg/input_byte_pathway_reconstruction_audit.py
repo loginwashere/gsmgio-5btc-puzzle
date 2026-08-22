@@ -292,11 +292,16 @@ def _self_test_keywrap_hit_handling():
 
     synth_family = (("keywrap", aes_keywrap_try_open_bytes, [variant], KEYWRAP_FORMS_PER_CONFIG),)
     report = run(blobs={"SYNTH": (salt, wrapped)}, families=synth_family)
-    assert report["total_hits"] >= 1, "planted Key Wrap hit was not recorded"
-    hit = report["hits"][0]
-    assert hit["blob"] == "SYNTH"
-    assert hit["plaintext_hex"] == key_material.hex()
-    assert "rfc3394-default" in hit["kdf"]
+    # Locate the planted hit by content rather than assuming hits[0] is it
+    # (2026-08-23 review: an accidental additional valid unwrap elsewhere
+    # in the 42-candidate corpus is extraordinarily unlikely, but asserting
+    # against a specific match is strictly more robust than an index).
+    assert any(
+        h["blob"] == "SYNTH"
+        and h["plaintext_hex"] == key_material.hex()
+        and "rfc3394-default" in h["kdf"]
+        for h in report["hits"]
+    ), f"planted Key Wrap hit not found in {report['hits']!r}"
 
 
 def main():
