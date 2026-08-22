@@ -241,6 +241,14 @@ verified_against: n/a
 note: "~700,000 keystrings, estimated 1-2 hours; source-grounded coverage gap but low expected value and unlikely to resolve the topology. User declined to run it (2026-08-22)"
 ```
 
+```yaml
+item: "Raw-key chunk audit over Phase 378/379's byte-pathway materials"
+source: "preregistered during Phase 378/379 review (2026-08-23), not from a brainstorm document"
+status: executed
+verified_against: "FINDINGS.md Phase 380"
+note: "tests whether the right password in the existing 756-material corpus could produce binary secp256k1 key material the printable-text/structural-binary gate discards; first-two-32-byte-chunk convention ported from doc/GSMG_GPU_ORACLE.md; 72 non-Key-Wrap configs, 109,317 bodies, 218,634 chunks, frozen 10-address known-target set (PRIZE_ADDRESS/HALVING_ADDRESS + 8 EC-derived neighbors), 0 hits"
+```
+
 ## Reading this ledger
 
 Every `genuinely-unrun` row above is a live backlog candidate; every other

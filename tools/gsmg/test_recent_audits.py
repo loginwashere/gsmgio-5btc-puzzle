@@ -212,6 +212,7 @@ import yin_yang_transition_audit
 import yin_yang_next_edge_audit
 import looking_forward_source_audit
 import input_byte_pathway_reconstruction_audit
+import raw_key_chunk_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
 from cb_common import BLOBS, QUARANTINED_BLOBS
@@ -3129,6 +3130,9 @@ class CorrectedClaimTests(unittest.TestCase):
 
     def test_input_byte_pathway_reconstruction_audit(self):
         input_byte_pathway_reconstruction_audit.self_test()
+
+    def test_raw_key_chunk_audit(self):
+        raw_key_chunk_audit.self_test()
 
     # 2026-08-22: Phase 169/192's SalPhaseIon salt/selector family and
     # Phase 303's QR line-type/center-square-fill scripts all have real
