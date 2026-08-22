@@ -211,6 +211,7 @@ import yinyang_cosmic_phase_label_audit
 import yin_yang_transition_audit
 import yin_yang_next_edge_audit
 import looking_forward_source_audit
+import input_byte_pathway_reconstruction_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
 from cb_common import BLOBS, QUARANTINED_BLOBS
@@ -3125,6 +3126,9 @@ class CorrectedClaimTests(unittest.TestCase):
     # password generation is performed.
     def test_thispassword_role_identifiability_audit(self):
         thispassword_role_identifiability_audit.self_test()
+
+    def test_input_byte_pathway_reconstruction_audit(self):
+        input_byte_pathway_reconstruction_audit.self_test()
 
     # 2026-08-22: Phase 169/192's SalPhaseIon salt/selector family and
     # Phase 303's QR line-type/center-square-fill scripts all have real

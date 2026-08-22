@@ -24094,3 +24094,73 @@ stronger than, Phase 373's inconclusive/model-dependent verdict.
 `test_thispassword_role_identifiability_audit` added to
 `tools/gsmg/test_recent_audits.py`, verified passing with no duplicate
 imports or test names.
+
+## Phase 378 -- input-byte pathway reconstruction (Post-Phase-340 Seed 7): raw digest bytes and newline/space bases, negative (2026-08-23)
+
+**Question:** across a candidate string that reads correctly, could this
+project have missed a hit purely through the *byte representation* fed to
+the KDF -- hex text instead of raw digest bytes, or a stripped literal
+instead of the exact bytes a real browser/terminal path would have
+produced? Prompted by a direct question about whether a wrong text
+encoding could hide a result, and by the precedent already on file: the
+community COSMIC construction (`doc/GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md`)
+was falsely rejected as a 64-character hex string and only reproduced when
+the same SHA-256 digest was supplied as 32 raw bytes.
+
+**Frozen inputs:** the identical Phase 290/335 P0A/P1A sentinel corpus --
+42 candidates, digest `51afdf5ce033500a` -- with no new candidate text
+introduced. Only the byte-pathway *forms* tested against each candidate are
+new.
+
+**Method:** wrote `tools/gsmg/input_byte_pathway_reconstruction_audit.py`.
+Declared exactly two justified pathway classes in advance, both tied to
+real evidence already on file rather than to an open-ended "try every
+encoding" sweep:
+
+1. Raw SHA-256 digest bytes, and raw double-SHA-256 (digest of the raw
+   digest bytes), as password material -- the COSMIC precedent's class,
+   generalized to this corpus.
+2. Trailing space, LF, and CRLF appended to the literal before hashing --
+   already-justified forms (`cb_common.keystr_forms`'s `newline_variants`/
+   `whitespace_variants`, established by Phase 163's finding that the
+   creator's own recommended hash tool strips `\r` and nothing else) that
+   the original P0A/P1A run deliberately left off to keep that run's scope
+   minimal.
+
+UTF-16 (LE/BE, with/without BOM), Latin-1/CP1252, leading whitespace, and
+HTML-entity decoding were deliberately excluded: none has any puzzle-era
+evidence in this project (`FINDINGS.md`/`doc/GSMG_PUZZLE.md` grepped for
+"UTF-16", zero hits, despite that exact possibility being named in the
+Post-Phase-340 brainstorm's "concept only" Seed 7 entry). All 42 candidate
+strings are pure ASCII, where Latin-1/CP1252/UTF-8 are byte-identical
+regardless.
+
+4 bases (literal, +space, +LF, +CRLF) x 5 sub-forms each (hex-SHA,
+double-hex-SHA, raw digest bytes, raw double-digest bytes, plus the bare
+base literal where not already tested) gives 18 new forms per candidate
+after excluding the 2 forms Phase 290/335 already ran (bare literal, bare
+hex-SHA) -- 756 new materials total. Each was tried against the full
+oracle (CBC, ECB, stream, AES Key Wrap; 66 combined KDF/cipher variant
+configs) across all 4 tracked blobs: 199,584 effective decrypt attempts.
+
+**Result:** self-test passes (candidate count/digest, new-form count,
+already-tested-form exclusion, all-ASCII claim, and blob set all asserted).
+Real run: 756/756 new materials attempted, 199,584 effective decrypt
+attempts, **0 hits**.
+
+**Disposition:** negative for this exact, evidence-bounded set of
+byte-pathway hypotheses on the 42-candidate sentinel corpus. This closes
+Post-Phase-340 Seed 7 as scoped here -- raw-digest-byte and newline/space
+representations of already-materialized, already-vetted candidate text --
+not the brainstorm entry's full open-ended concept list (DOM `textContent`
+vs. copied selection, HTML entity decoding, and any undemonstrated UTF-16
+path remain untested and unevidenced, not disproven). It also does not
+extend to any candidate outside this frozen 42-item corpus; other
+candidate families (e.g. the ad-hoc, unlogged 1141-offset check discussed
+2026-08-23) were not re-run under these byte pathways.
+
+**Facts affected:** no puzzle fact changes. Seed 7 moves from
+concept-only/genuinely-unrun to executed/negative in
+`doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md`.
+
+**Artifacts:** `tools/gsmg/input_byte_pathway_reconstruction_audit.py`.

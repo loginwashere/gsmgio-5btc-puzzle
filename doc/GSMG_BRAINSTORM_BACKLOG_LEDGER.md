@@ -188,9 +188,9 @@ note: "18,144 pair hypotheses, real maximum 0 events, 1,000-trial permutation nu
 ```yaml
 item: "Post-Phase-340 Seed 7 -- input-byte pathway reconstruction"
 source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
-status: genuinely-unrun
-verified_against: n/a
-note: "reconstruct historically plausible input-byte paths (textarea textContent vs. copied selection, HTML entity decoding, line-ending conversion, terminal newline, UTF-8 vs. demonstrated JS UTF-16/low-byte mistake, shell echo vs. printf) -- concept only, never scoped into a phase"
+status: partially-executed
+verified_against: "FINDINGS.md Phase 378"
+note: "only the evidence-backed subset run: raw SHA-256 digest bytes (COSMIC precedent) and trailing space/LF/CRLF bases (Phase 163 hash-tool finding), 756 new materials against the frozen 42-candidate P0A/P1A corpus, full oracle, 0 hits. textContent-vs-selection, HTML entity decoding, and any UTF-16/low-byte path remain genuinely unrun -- no puzzle-era evidence found for them (grepped, zero hits), not disproven"
 ```
 
 ```yaml
