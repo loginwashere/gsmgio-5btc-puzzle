@@ -1,7 +1,7 @@
 ---
 type: index
 status: live
-date: 2026-08-19
+date: 2026-08-23
 ---
 
 # GSMG 5 BTC Puzzle — Home
@@ -93,12 +93,14 @@ for lack of trying — see each gap's row for exactly what was checked.
 
 ## Recently completed phases
 
-See [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) for the full generated table of
-all 364 phase entries (re-run `generate_phase_index.py` any time this count
-looks stale). Most recent:
+See [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) for the full generated table
+(re-run `generate_phase_index.py` any time this count looks stale). Most
+recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 381 | P32 Family 3: raw authenticated asset bytes as password material | 83-candidate manifest (7 site assets with pre-2023 provenance -- 1 independently Wayback-confirmed, 6 asserted by the local mirror's own manifest and pinned in a committed `PROVENANCE.json` -- + 76 unique creator-authored Telegram payloads dated before P32TRAILING's chronology bound, content-pinned by a canonical digest enforced on both the self-test and the real `--run` path, drawn from Phase 248's frozen universe), 3 byte forms each, `P32TRAILING` only, 29,880 effective decrypt attempts, 0 hits. Corrected three times same-day (miscategorized provenance; 4 omitted eligible assets and an unpinned corpus; a digest pin that self-test checked but `--run` didn't enforce). Closes the backlog ledger's former top-ranked genuinely-unrun item |
+| 378-380 | Post-Phase-340 Seed 7 (input-byte pathway reconstruction) and a raw-key chunk audit over the same materials | Raw SHA-256 digest bytes/newline-space bases against the 42-candidate P0A/P1A corpus (362,880 effective attempts) and a first-two-32-byte-chunk secp256k1 scan of the same corpus's retained bodies (218,634 chunks) against the frozen 10-address known-target set -- both negative |
 | 364 | QR light-gray compositing/dither inversion | No 2×2–15×15 binary coverage grid reproduces all five grays; 16×16 is merely 8-bit alpha equivalence. Zero exact models across 2,226,048 Bayer and 19,456 Floyd–Steinberg/Atkinson candidates. Standard flat-tone dithering rejected. |
 | 363 | QR-eye PNG scanline provenance | Identical eye pixels precede whole-image PNG filtering. Stage-0/rabbit share an exporter profile, but 70 Pillow/OpenCV encodes do not reproduce it. PNG bytes cannot distinguish earlier stamping from procedural drawing. |
 | 362 | All-six QR module-variant fingerprint | All 133 rasters searched byte-exactly; only the expected 144 hits in three known/derived Stage-0 files. No independent or small-asset palette-remapped source. |

@@ -213,6 +213,7 @@ import yin_yang_next_edge_audit
 import looking_forward_source_audit
 import input_byte_pathway_reconstruction_audit
 import raw_key_chunk_audit
+import raw_asset_byte_password_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
 from cb_common import BLOBS, QUARANTINED_BLOBS
@@ -3133,6 +3134,14 @@ class CorrectedClaimTests(unittest.TestCase):
 
     def test_raw_key_chunk_audit(self):
         raw_key_chunk_audit.self_test()
+
+    @unittest.skipUnless(
+        (raw_asset_byte_password_audit.SOLVER_EXPORT_DIR / "result.json").exists()
+        and (raw_asset_byte_password_audit.SUPPORT_EXPORT_DIR / "result.json").exists(),
+        "one or both Telegram exports are unavailable",
+    )
+    def test_raw_asset_byte_password_audit(self):
+        raw_asset_byte_password_audit.self_test()
 
     # 2026-08-22: Phase 169/192's SalPhaseIon salt/selector family and
     # Phase 303's QR line-type/center-square-fill scripts all have real

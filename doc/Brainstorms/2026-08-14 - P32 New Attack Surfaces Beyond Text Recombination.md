@@ -577,9 +577,9 @@ against a different source.
    Phase 273.
 1. ~~Family 10 (fork-surfaced residual leads)~~ — **executed 2026-08-15,
    negative**, see FINDINGS.md Phase 292 above.
-2. Family 3 (raw authenticated asset bytes) — cheap, reuses the structural
-   oracle with no new fetch or judgment call. **Still genuinely unrun as of
-   2026-08-23** — see `doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md`.
+2. ~~Family 3 (raw authenticated asset bytes)~~ — **executed 2026-08-23,
+   negative**, see FINDINGS.md Phase 381 and `doc/GSMG_BRAINSTORM_BACKLOG_
+   LEDGER.md`.
 3. Family 7 (authoring-toolchain calibration) — narrows future cryptographic
    assumptions using solved controls. **Core cryptographic finding complete**
    (Post-Phase-340 Seed 3's three-vector profile, 2026-08-20) **but not

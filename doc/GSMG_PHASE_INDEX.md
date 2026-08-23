@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **380** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **381** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -398,3 +398,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 378 | P378 | 2026-08-23 | input-byte pathway reconstruction (Post-Phase-340 Seed 7) | raw digest bytes and newline/space bases, negative | [link](../tools/gsmg/FINDINGS.md#phase-378----input-byte-pathway-reconstruction-post-phase-340-seed-7-raw-digest-bytes-and-newlinespace-bases-negative-2026-08-23) | [GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT](GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md) |
 | 379 | P379 | 2026-08-23 | Phase 378 coverage repair | CBC-extended delta, Key Wrap fix, negative | [link](../tools/gsmg/FINDINGS.md#phase-379----phase-378-coverage-repair-cbc-extended-delta-key-wrap-fix-negative-2026-08-23) | — |
 | 380 | P380 | 2026-08-23 | raw-key chunk audit over Phase 378/379's byte-pathway materials | negative | [link](../tools/gsmg/FINDINGS.md#phase-380----raw-key-chunk-audit-over-phase-378379s-byte-pathway-materials-negative-2026-08-23) | [GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT](GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md) |
+| 381 | P381 | 2026-08-23 | P32 Family 3 | raw authenticated asset bytes as password material, negative | [link](../tools/gsmg/FINDINGS.md#phase-381----p32-family-3-raw-authenticated-asset-bytes-as-password-material-negative-2026-08-23-corrected-three-times-same-day-plus-2-non-blocking-nits) | — |

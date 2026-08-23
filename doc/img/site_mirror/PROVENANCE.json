@@ -1,0 +1,49 @@
+{
+  "accepted_rows": [
+    {
+      "bytes": 31888,
+      "local": "fonts/lato-regular-webfont.woff",
+      "mime": "application/font-woff",
+      "orig": "https://gsmg.io/fonts/lato-regular-webfont.woff",
+      "timestamp": "20220706220803"
+    },
+    {
+      "bytes": 97750,
+      "local": "img/background-full.jpg",
+      "mime": "image/jpeg",
+      "orig": "https://gsmg.io/img/background-full.jpg",
+      "timestamp": "20220706222904"
+    },
+    {
+      "bytes": 2677,
+      "local": "img/favicon_small.png",
+      "mime": "image/png",
+      "orig": "https://www.gsmg.io/img/favicon_small.png",
+      "timestamp": "20190428234709"
+    },
+    {
+      "bytes": 11370,
+      "local": "img/front_bg_1920.svg",
+      "mime": "image/svg+xml",
+      "orig": "https://gsmg.io/img/front_bg_1920.svg",
+      "timestamp": "20230626163906"
+    },
+    {
+      "bytes": 5001,
+      "local": "img/front_bittrex.svg",
+      "mime": "image/svg+xml",
+      "orig": "https://gsmg.io/img/front_bittrex.svg",
+      "timestamp": "20230718041248"
+    },
+    {
+      "bytes": 40046,
+      "local": "img/logo_medium.png",
+      "mime": "image/png",
+      "orig": "https://www.gsmg.io/img/logo_medium.png",
+      "timestamp": "20200830002126"
+    }
+  ],
+  "note": "Verbatim rows accepted into raw_asset_byte_password_audit.SITE_ASSETS as Class A (authenticated historical site-response bytes), extracted from the local site mirror tool's own _manifest.json (external, not part of this git repo). Pins the exact source and rows this claim rests on so it is a reproducible artifact, not an unpinned assertion. Does not itself constitute independent cross-verification -- see FINDINGS.md Phase 381 and this script's own docstring for which entries (favicon_small.png only) additionally have a second, independently-recorded source.",
+  "source_manifest_path": "/home/loginwashere/projects/gsmg-site-mirror/_manifest.json",
+  "source_manifest_sha256": "9e2bbc930926f2dcae5fb1089274c508c822a8150270b3b7fc6752f1366cd1e8"
+}
