@@ -72,7 +72,12 @@ def parse_phases(text):
         date_match = DATE_RE.search(rest)
         date = date_match.group(1) if date_match else None
         body = rest[: date_match.start()].strip() if date_match else rest.strip()
-        subject, _, result = body.partition(":")
+        # Split on the heading delimiter "colon-space", not a bare colon:
+        # a bare-colon split matches the first ":" anywhere in the heading,
+        # including one inside inline code with no following space (e.g.
+        # `decoded[7:98]`), which produces a subject/result split in the
+        # middle of a slice expression instead of at the real separator.
+        subject, _, result = body.partition(": ")
         subject = subject.strip().rstrip(":")
         result = result.strip()
         markers = collect_markers(lines, index)

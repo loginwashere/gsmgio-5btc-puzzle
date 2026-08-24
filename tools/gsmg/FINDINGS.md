@@ -25381,6 +25381,7 @@ final candidate does not authenticate. No registered gap closes; `YOUWON`/
 `tools/gsmg/phase395_youwon_vic_dual_rail_convergence_audit.py`; permanent
 regression in `tools/gsmg/test_recent_audits.py`.
 
+<!-- index_note: oracle material/attempt counts and baseline framing corrected same-day by code review; pattern/verdict unchanged -->
 ## Phase 396 -- header-aware `P91 = decoded[7:98]` block: 91-character length match to DBBI/M91 confirmed real, no signal, closed negative (2026-08-25)
 
 **Question, prompted by the user:** Phase 386 describes the Bifid decode's
@@ -25404,17 +25405,31 @@ generator verbatim; reused `cb_common.keystr_forms()` for the oracle sweep
 one axis Phase 386/387/394 left untested for this specific object.
 
 **Result:** confirmed `P91` is exactly 91 characters, matching `DBBI`/`M91`
-length exactly. No target keyword (`YOUWON`, `KMODEST`, `BTCSEED`,
-`MODEST`, `SATOSHI`, `SEED`, `KEY`, `WALLET`) appears in `P91` or in any of
-its 4 subtraction outputs. Dictionary-word density in all five strings sits
-at or below each string's own random-letter baseline -- unremarkable, no
-sign of deliberate embedded plaintext. `P91` and the four subtraction
-outputs, each in literal/upper/lower case and as SHA-256/double-SHA-256:
-**45 materials, 21,600 effective decrypt attempts against all four tracked
-blobs, 0 hits.**
+length exactly, and its single `Z` is confirmed unique in the 570-character
+decode (`decoded.count("Z") == 1`, not just its first `index()`). No target
+keyword (`YOUWON`, `KMODEST`, `BTCSEED`, `MODEST`, `SATOSHI`, `SEED`, `KEY`,
+`WALLET`) appears in `P91` or in any of its 4 subtraction outputs.
+Dictionary-word counts (0, 0, 2, 1, 1 across `P91` and the four
+subtractions) are judged against each string's own 200-trial random-letter-
+control baseline by empirical tail rate -- the fraction of control trials
+matching or exceeding the real count -- not an arbitrary absolute cutoff.
+Three of the five counts exceed their control *mean* (`DBBI-P91`: 2 vs.
+0.80, tail 39/200 = 19.5%; `P91-M91`: 1 vs. 0.42, tail 65/200 = 32.5%;
+`M91-P91`: 1 vs. 0.41, tail 55/200 = 27.5%), but every tail rate is far
+from extreme (>5%), so all five counts sit within baseline variation --
+unremarkable, no sign of deliberate embedded plaintext. Because the Bifid
+decode and `subtract_mod26()` both emit uppercase A-Z, the as-decoded and
+`.upper()` case forms of all five strings are byte-identical; deduplicating
+before the oracle sweep gives 5 strings x 2 distinct case forms x 3 hash
+forms = **30 unique materials, 14,400 effective decrypt attempts against
+all four tracked blobs, 0 hits** (an initial version of this script tested
+45 labeled rows without deduplicating case, inflating the reported counts
+by 50% without changing the zero-hit result -- caught and corrected by
+same-day code review, along with the tail-rate framing above and the `Z`-
+uniqueness check).
 
 **Disposition:** the length match is real and was genuinely untested, but
-produces no keyword hit, no above-baseline word structure, and no blob
+produces no keyword hit, no out-of-baseline word structure, and no blob
 authentication under any tested combinator or form. Closes the specific
 bounded gap identified. Does not retract Phase 386's own "97 characters
 counted from the start" statement, which is independently correct; this

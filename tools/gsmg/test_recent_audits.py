@@ -792,9 +792,12 @@ class CorrectedClaimTests(unittest.TestCase):
 
     def test_phase396_p91_header_aware_block(self):
         report = phase396_p91_header_aware_block_audit.self_test(run_oracle=True)
+        self.assertEqual(report["structure"]["z_count"], 1)
         self.assertTrue(report["structure"]["p91_matches_dbbi_m91_length"])
         for entry in report["combinators"].values():
             self.assertEqual(entry["keyword_hits"], [])
+            self.assertGreater(entry["baseline_tail_rate"], 0.05)
+        self.assertEqual(report["oracle"]["materials_tried"], 30)
         self.assertEqual(report["oracle"]["total_hits"], 0)
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
@@ -2555,6 +2558,23 @@ class CorrectedClaimTests(unittest.TestCase):
             if row["number"] in duplicated_numbers and row["explicit_id"]
         }
         self.assertEqual(marked, duplicated_numbers)
+
+    def test_phase_index_heading_split_ignores_colon_inside_inline_code(self):
+        # Phase 396's real heading contains `decoded[7:98]` -- a colon with
+        # no following space, inside inline code, before the real "subject:
+        # result" separator. A bare-colon partition() would split there
+        # instead, producing a malformed subject/result pair.
+        heading = (
+            "## Phase 999 -- header-aware `P91 = decoded[7:98]` block: "
+            "confirmed real, no signal, closed negative (2026-08-25)"
+        )
+        rows = generate_phase_index.parse_phases(heading)
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertEqual(row["subject"], "header-aware `P91 = decoded[7:98]` block")
+        self.assertEqual(row["result"], "confirmed real, no signal, closed negative")
+        self.assertNotIn("[7 ", row["subject"])
+        self.assertNotIn("| 98", row["subject"] + row["result"])
 
     @unittest.skipUnless(
         Path(DEFAULT_HTML).exists()

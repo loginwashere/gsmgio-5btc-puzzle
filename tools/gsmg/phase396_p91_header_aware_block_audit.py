@@ -22,19 +22,30 @@ Phase 75's own combinator -- both directions against both `DBBI` and
 dictionary-word scanner and letter-frequency baseline generator verbatim.
 Reuses `cb_common.keystr_forms()` (literal / SHA-256 / double-SHA-256) for
 the oracle sweep, in upper, lower, and as-decoded case -- the one axis Phase
-386/387/394 left untested for this specific 91-character object.
+386/387/394 left untested for this specific 91-character object. Because the
+Bifid decode and `subtract_mod26()` both emit uppercase A-Z, the as-decoded
+and `.upper()` case forms are byte-identical for every one of these five
+strings; case variants are deduplicated by value before the oracle sweep
+runs, so 5 combinators x 2 distinct case forms x 3 hash forms = 30 unique
+materials, not 45 (an earlier version of this script tested 45 labeled rows
+without deduplicating, which inflated the reported material/attempt counts
+by 50% without changing the zero-hit result).
 
 **Result:** no embedded target keyword (`YOUWON`, `KMODEST`, `BTCSEED`,
 `MODEST`, `SATOSHI`, `SEED`, `KEY`, `WALLET`) appears in `P91` or in any of
-the four subtraction outputs. Dictionary-word density in all five strings
-(0, 2, 1, 1 hits respectively for the four subtractions, and however many
-`P91` itself contains) sits at or below each string's own random-letter
-baseline (200 trials per string, same seed convention as Phase 386) --
-unremarkable, no sign of a deliberate embedded plaintext. `P91` and the four
-subtraction outputs, each in literal/upper/lower case and as SHA-256/double-
-SHA-256 hex, tested against all four tracked blobs under the full CBC/ECB/
-stream/Key Wrap oracle: 45 materials, 21,600 effective decrypt attempts,
-zero hits.
+the four subtraction outputs. Dictionary-word counts (0, 0, 2, 1, 1 across
+`P91` and the four subtractions) are compared against each string's own
+200-trial random-letter-control baseline (same seed convention as Phase
+386), using the empirical tail rate -- the fraction of control trials that
+matched or exceeded the real count -- rather than an arbitrary absolute
+cutoff. Three of the five counts exceed their control *mean* (`DBBI-P91`:
+2 vs. 0.80, tail 39/200 = 19.5%; `P91-M91`: 1 vs. 0.42, tail 65/200 = 32.5%;
+`M91-P91`: 1 vs. 0.41, tail 55/200 = 27.5%), but all five tail rates are
+far from the extreme tail (>5%), so every count is within baseline
+variation -- unremarkable, no sign of a deliberate embedded plaintext.
+`P91` and the four subtraction outputs, in their 2 distinct case forms and
+as SHA-256/double-SHA-256 hex: 30 unique materials, 14,400 effective
+decrypt attempts against all four tracked blobs, zero hits.
 
 **Disposition:** the `91`-character length match between `P91` and `DBBI`/
 `M91` is confirmed real and previously untested, but produces no keyword
@@ -93,11 +104,13 @@ ORACLE_FAMILIES = (
 
 
 def structure_report(decoded):
+    z_count = decoded.count("Z")
     z_index = decoded.index("Z")
     p90 = decoded[7:97]
     p91 = decoded[7:98]
     return {
         "decoded_length": len(decoded),
+        "z_count": z_count,
         "z_index": z_index,
         "header": decoded[:7],
         "p90": p90,
@@ -123,13 +136,18 @@ def combinator_report(p91, dictionary):
     report = {}
     for label, text in combos.items():
         embedded = find_embedded_words(text, dictionary)
+        observed = len(embedded)
         baseline = random_letter_baseline(text, dictionary)
         keyword_hits = [kw for kw in TARGET_KEYWORDS if kw in text.upper()]
+        tail_hits = sum(1 for count in baseline if count >= observed)
         report[label] = {
             "text": text,
-            "embedded_word_count": len(embedded),
+            "embedded_word_count": observed,
             "embedded_words": [word for _pos, word in embedded],
             "baseline_mean": sum(baseline) / len(baseline),
+            "baseline_trials": len(baseline),
+            "baseline_tail_hits": tail_hits,
+            "baseline_tail_rate": tail_hits / len(baseline),
             "keyword_hits": keyword_hits,
         }
     return report
@@ -141,9 +159,18 @@ def oracle_report(combos):
     materials_tried = 0
     for label, entry in combos.items():
         text = entry["text"]
+        case_variants = {}
         for case_label, variant in (
             (label, text), (label + "_lower", text.lower()), (label + "_upper", text.upper())
         ):
+            # All combinator outputs are already uppercase (Bifid decode and
+            # subtract_mod26 both emit A-Z), so the as-decoded and .upper()
+            # variants are byte-identical here. Dedupe by value so repeated
+            # case forms aren't tested (and counted) twice -- keeps
+            # "materials_tried" a true unique-material count, separate from
+            # "effective_attempts" x duplicate-case-multiplicity below.
+            case_variants.setdefault(variant, case_label)
+        for variant, case_label in case_variants.items():
             for form_name, material in zip(
                 ("literal", "sha256_hex", "sha256_hex_hex"), keystr_forms(variant)
             ):
@@ -187,6 +214,7 @@ def self_test(run_oracle=False):
     report = audit(run_oracle=run_oracle)
 
     structure = report["structure"]
+    assert structure["z_count"] == 1
     assert structure["z_index"] == 97
     assert structure["header"] == "BTCSEED"
     assert structure["p90_length"] == 90
@@ -198,28 +226,37 @@ def self_test(run_oracle=False):
     combos = report["combinators"]
     for label, entry in combos.items():
         assert entry["keyword_hits"] == [], (label, entry["keyword_hits"])
-        assert entry["embedded_word_count"] <= entry["baseline_mean"] + 3, (
-            label, entry["embedded_word_count"], entry["baseline_mean"]
+        # Statistical test, not an arbitrary absolute allowance: the observed
+        # count is unremarkable as long as a non-trivial fraction of the
+        # random-letter control trials matched or exceeded it. A low tail
+        # rate (deep in the extreme tail) would be the actual red flag.
+        assert entry["baseline_tail_rate"] > 0.05, (
+            label, entry["embedded_word_count"], entry["baseline_tail_rate"]
         )
 
     if run_oracle:
         oracle = report["oracle"]
-        assert oracle["materials_tried"] == 45
-        assert oracle["effective_attempts"] == 21600
+        # 5 combinators x 2 distinct case forms (as-decoded/.upper() are
+        # byte-identical -- both the Bifid decode and subtract_mod26 emit
+        # uppercase A-Z) x 3 hash forms = 30 unique materials, not 45.
+        assert oracle["materials_tried"] == 30
+        assert oracle["effective_attempts"] == 14400
         assert oracle["total_hits"] == 0
 
     print(
         f"[*] self-test OK: P91 = decoded[7:98] (the post-BTCSEED block through "
-        f"the single Z) confirmed 91 characters, matching DBBI/VALIDATION_ANSWER "
-        f"length exactly -- a previously-untested alignment; no target keyword "
-        f"({', '.join(TARGET_KEYWORDS)}) found in P91 or any of its 4 mod-26 "
-        f"subtraction combinations against DBBI/M91; embedded dictionary-word "
-        f"counts sit at or near each string's own random-letter baseline in all "
-        f"5 strings; "
+        f"the single, confirmed-unique Z) is 91 characters, matching DBBI/"
+        f"VALIDATION_ANSWER length exactly -- a previously-untested alignment; "
+        f"no target keyword ({', '.join(TARGET_KEYWORDS)}) found in P91 or any "
+        f"of its 4 mod-26 subtraction combinations against DBBI/M91; embedded "
+        f"dictionary-word counts are within baseline variation in all 5 "
+        f"strings (each observed count's random-letter-control tail rate > "
+        f"5%, none in the extreme tail); "
         f"{report.get('oracle', {}).get('effective_attempts', 'skipped')} "
-        f"effective decrypt attempts across 45 case/hash-form materials against "
-        f"all 4 tracked blobs -- "
-        f"{report.get('oracle', {}).get('total_hits', 'n/a')} hits"
+        f"effective decrypt attempts across "
+        f"{report.get('oracle', {}).get('materials_tried', 'skipped')} unique "
+        f"case/hash-form materials (case-duplicate rows deduped) against all "
+        f"4 tracked blobs -- {report.get('oracle', {}).get('total_hits', 'n/a')} hits"
     )
     return report
 
