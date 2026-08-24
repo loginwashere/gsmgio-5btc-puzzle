@@ -318,6 +318,7 @@ class CorrectedClaimTests(unittest.TestCase):
             "archive_baseline": {
                 "gsmg_io_root": {"ok": True, "captures": [capture]},
                 "hosterjack_repo": {"ok": True, "current_head": "28d33ccba517"},
+                "naddiseo_repo": {"ok": True, "current_head": "15b43fc859c3"},
             },
         }
         current = dict(prior_live)
@@ -330,6 +331,8 @@ class CorrectedClaimTests(unittest.TestCase):
             "gsmg_io_root": {"ok": False, "detail": "planted 503", "captures": []},
             "hosterjack_repo": {"ok": True, "current_head": "28d33ccba517",
                                 "current_head_date": "2026-08-01"},
+            "naddiseo_repo": {"ok": True, "current_head": "15b43fc859c3",
+                              "current_head_date": "2026-08-20"},
             "live_errors": {},
         }
         report = module.assemble_report(current, archives, previous=previous)

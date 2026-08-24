@@ -1,6 +1,6 @@
 ---
-type: audit
-status: in-progress
+type: index
+status: live
 date: 2026-08-24
 topics:
   - naddiseo

@@ -1,6 +1,8 @@
 ---
 type: audit
 status: live
+result: mixed
+disposition: structural-only
 topics:
   - topology-audit
   - frontier-assumption-ledger

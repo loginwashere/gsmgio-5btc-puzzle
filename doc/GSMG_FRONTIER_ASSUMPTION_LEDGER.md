@@ -1,5 +1,5 @@
 ---
-type: audit
+type: index
 status: live
 topics:
   - frontier-assumption-ledger
