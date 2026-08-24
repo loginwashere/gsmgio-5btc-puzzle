@@ -25780,3 +25780,52 @@ never tested.
 **Artifacts:**
 `tools/gsmg/phase403_raw_control_channel_bip32_seed_audit.py`; permanent
 regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 404 -- Q472's native-order data rail as an identity message/key candidate: closed negative (2026-08-25)
+
+**Question:** a second identified residual from the (now-exhausted)
+BTCSEED/P91/Z continuation brainstorm's ranked queue: Phase 402's ten
+control/data combining machines all *transform* `Q472`'s data rail
+(`DATA236 = Q472[1::2]`) through some control-driven operation; none of
+them test the rail's own untouched, native-order sequence as a
+message/key candidate in its own right.
+
+**Method:** wrote
+`tools/gsmg/phase404_q472_native_data_rail_identity_audit.py` against a
+contract frozen before any code was written: exactly `DATA236` in native
+forward order, no reversal/routes/shifts/control interaction; the paired
+control rail (`Q472[0::2]`) asserted to remain exactly `{B,C,D,E}` but
+not otherwise used. Evaluated with Phase 396's frozen keyword list
+(descriptive only) and Phase 387's `quadgram_mean`, calibrated against a
+100,000-trial multiset-preserving shuffle of `DATA236` itself (a
+single-candidate empirical p-value; English promotion requires
+`p <= 0.005`). Blob oracle: uppercase/lowercase x literal/SHA-256/
+double-SHA-256 (6 materials, 2,880 effective attempts, the established
+480-per-material unit x 6). Direct Bitcoin consumer: binary SHA-256 of
+the uppercase/lowercase forms only, compressed/uncompressed P2PKH (4
+address checks), no BIP32 tree. Three planted positives: a synthetic
+English-like string run through the identical shuffle p-value pipeline
+(proves real significance is actually detected, not just some number
+returned); a synthetic AES-CBC blob encrypted with a known material
+under the real first `KDF_VARIANTS` entry via `evp_bytes_to_key()` (the
+same construction `cosmic_sweep.py`'s own end-to-end self-test uses),
+with an unrelated-material control; a known scalar/address pair for the
+direct-key detector.
+
+**Result:** all three planted positives fire correctly. Real data:
+`DATA236` reproduces as 236 symbols drawn from the full keyed-square
+alphabet (confirmed not `{B,C,D,E}`-restricted), paired control rail
+confirmed exactly `{B,C,D,E}`; zero keyword hits; quadgram mean
+`-7.2906`; **85,929/100,000 (85.93%)** of multiset-preserving shuffles
+reach at least that score (`p=0.859`) -- nowhere near the 0.005 bound.
+Oracle: 2,880 effective attempts across 6 materials, zero hits.
+Direct-key: 4 address checks, zero hits.
+
+**Disposition:** closes negative -- neither an exact blob/address hit
+nor statistical significance obtains. Per the contract's own stopping
+rule, this does not extend to the `P91` or full-570-character rails in
+native order; those remain separate, unfrozen expansions.
+
+**Artifacts:**
+`tools/gsmg/phase404_q472_native_data_rail_identity_audit.py`; permanent
+regression in `tools/gsmg/test_recent_audits.py`.

@@ -37,8 +37,15 @@ topics:
 > -- as the strongest remaining candidate. That gap was itself frozen and
 > executed as [Phase 403](../../tools/gsmg/FINDINGS.md#phase-403----phase-397s-raw-59-byte-control-channel-outputs-as-bip32-seed-material-closed-negative-2026-08-25):
 > 96,016 address checks against the exact prize address, zero hits,
-> planted positive fires. The remaining ~99 idea-bank items are still
-> untested and still require their own fresh, separately-frozen contracts.
+> planted positive fires. A second identified residual -- `Q472`'s data
+> rail (`Q472[1::2]`) in its own native order, never tested as a
+> candidate on its own since Phase 402's ten machines only ever
+> transform it -- was likewise frozen and executed as
+> [Phase 404](../../tools/gsmg/FINDINGS.md#phase-404----q472s-native-order-data-rail-as-an-identity-messagekey-candidate-closed-negative-2026-08-25):
+> quadgram-shuffle p=0.859 (nowhere near the 0.005 bound), 2,880 oracle
+> attempts and 4 address checks, zero hits, all three planted positives
+> fire. The remaining ~98 idea-bank items are still untested and still
+> require their own fresh, separately-frozen contracts.
 
 ## Executive result
 

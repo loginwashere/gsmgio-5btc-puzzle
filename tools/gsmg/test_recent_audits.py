@@ -234,6 +234,7 @@ import phase400_p91z_priority4_direct_bitcoin_consumer_audit
 import phase401_p91z_priority5_youwon_difference_algebra_audit
 import phase402_p91z_priority6_control_data_digraph_machine_audit
 import phase403_raw_control_channel_bip32_seed_audit
+import phase404_q472_native_data_rail_identity_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -864,6 +865,19 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(report["total_address_checks"], 96016)
         self.assertFalse(report["any_hit"])
         self.assertEqual(len(report["planted_bip32_path_positive"]["hits"]), 1)
+
+    def test_phase404_q472_native_data_rail_identity(self):
+        report = phase404_q472_native_data_rail_identity_audit.self_test()
+        self.assertEqual(report["control_length"], 236)
+        self.assertEqual(report["data_length"], 236)
+        self.assertEqual(report["control_alphabet"], "BCDE")
+        self.assertEqual(report["oracle"]["hits"], [])
+        self.assertEqual(report["direct_key"]["hits"], [])
+        self.assertGreater(report["p_value"], 0.005)
+        self.assertFalse(report["promoted"])
+        self.assertLessEqual(report["planted_language_positive"]["p_value"], 0.005)
+        self.assertTrue(report["planted_blob_positive"]["hit_found"])
+        self.assertFalse(report["planted_blob_positive"]["wrong_material_hit"])
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()
