@@ -40,6 +40,15 @@ string (see `tools/gsmg/data.py`'s header comment).
 - Best-fit checkerboard escape pair by code-level Index of Coincidence:
   `{g,i}`, rank 1 of 36 — but this admissibility signature is shared by 5 of
   36 pairs (less distinctive than DBBI's).
+- Independent confirmation from raw letter frequency alone: FAED's a-i
+  counts (`a:54, b:49, c:52, d:49, e:69, f:57, g:107, h:58, i:75`) reject
+  uniformity by chi-square (df=8) at p ≈ 6.38×10⁻⁷ (~1 in 1,568,000), driven
+  overwhelmingly by `g` (107 occurrences alone contributes ~69% of the
+  statistic). `{g,i}` jointly account for ~74% of the deviation, versus
+  ~2% for `{h,e}` (`tools/gsmg/faed_letter_frequency_chi_square.py`). This
+  quantifies, but does not resolve, the `{g,i}` vs. `{h,e}` question below:
+  the frequency signal offers `{h,e}` almost no support, but the `{h,e}`
+  case was never a frequency argument in the first place.
 - The Architect-boundary mirror (via `BUT/HYE` → mirror9) predicts `{h,e}`
   instead, and this remains unreconciled with `{g,i}`. Neither pair's
   mirror9 image (`{a,c}` / `{c,g}`) validly segments its own origin stream

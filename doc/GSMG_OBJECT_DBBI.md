@@ -42,6 +42,15 @@ string (see `tools/gsmg/data.py`'s header comment).
 - Best-fit checkerboard escape pair by code-level Index of Coincidence:
   `{b,e}`, rank 1 of 36 — an admissibility signature unique among all 36
   pairs (`tools/gsmg/checkerboard_code_ic_oracle.py`).
+- Independent confirmation from raw letter frequency alone: DBBI's a-i
+  counts (`a:3, b:25, c:8, d:4, e:18, f:10, g:10, h:8, i:5`) reject
+  uniformity by chi-square (df=8) at p ≈ 2.89×10⁻⁶ (~1 in 346,000), and `b`
+  and `e` together account for ~70% of that deviation
+  (`tools/gsmg/dbbi_letter_frequency_chi_square.py`). This is not a new
+  signal — it's the same `{b,e}` escape-pair structure above, recovered
+  from a simpler statistic, and does not by itself imply anything about
+  grid/reshape-dependent patterns (e.g. prime-numbered row/column sums),
+  which remain unestablished (Phase 319, negative).
 - Direct base-9 capacity is `91 log2(9) = 288.463...` bits. A raw 256-bit
   scalar can fit, but the fixed leading version byte makes a conventional
   uncompressed WIF binary payload 296 bits and a compressed payload 304 bits,
