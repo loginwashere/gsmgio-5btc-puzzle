@@ -229,6 +229,7 @@ import phase395_youwon_vic_dual_rail_convergence_audit
 import phase396_p91_header_aware_block_audit
 import phase397_p91z_priority1_control_channel_audit
 import phase398_p91z_priority2_bip39_recalibration_audit
+import phase399_p91z_priority3_coordinate_matrix_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -814,6 +815,12 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(report["column_major_bcde"], (2, 1, 0, 3))
         self.assertEqual(report["row_major_bcde"], (1, 2, 0, 3))
         self.assertIsNone(report["natural_offset_selects_30"])
+
+    def test_phase399_p91z_priority3_coordinate_matrix(self):
+        report = phase399_p91z_priority3_coordinate_matrix_audit.self_test()
+        self.assertTrue(report["planted_parity_a_exact"])
+        self.assertFalse(report["real_any_exact"])
+        self.assertGreater(report["family_wise_rate"], 0.005)
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()

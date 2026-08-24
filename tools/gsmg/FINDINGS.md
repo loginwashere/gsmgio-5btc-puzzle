@@ -25539,3 +25539,51 @@ stands untouched.
 **Artifacts:**
 `tools/gsmg/phase398_p91z_priority2_bip39_recalibration_audit.py`;
 permanent regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 399 -- BTCSEED/P91/Z brainstorm Priority 3: 98-letter to 14x14 coordinate matrix, closed negative (2026-08-25)
+
+**Question:** Priority 3 of the 2026-08-25 BTCSEED/P91/Z continuation
+brainstorm tests the one construction that makes `98*2=196=14*14` more
+than bare factorization: does `decoded[:98]` (`BTCSEED`+`P91`), reshaped
+as `14x7` and expanded letter-by-letter into 14 row-coordinates followed
+by 14 column-coordinates per row (using each letter's position in the
+DBBI-keyed Bifid square), produce a `14x14` binary matrix -- under any of
+a small, frozen family of coordinate-value reductions -- matching the
+authenticated (non-FEFE-flipped) Stage-0 matrix better than chance?
+
+**Method:** wrote
+`tools/gsmg/phase399_p91z_priority3_coordinate_matrix_audit.py` against a
+contract the user froze in full before any code was written: `decoded[:98]`
+reshaped directly as `14x7` (no alternate layout); each row's 7 letters
+expanded to 7 row-coordinates then 7 column-coordinates; target is only
+Phase 394's `STAGE0_MATRIX` (FEFE-flipped variant excluded); exactly three
+binary reductions of a `0..4` coordinate value, each in both polarities
+(parity; `value<2`; `value in {0,4}` vs. interior) -- 6 candidates total,
+no rotations, reflections, alternate layouts, routes, or threshold tuning.
+Primary statistic is the maximum cell agreement across the six candidates,
+calibrated against 100,000 deterministic multiset-preserving shuffles of
+the 98 letters (fixed seed, this project's established convention), with
+the identical six-member family applied to every shuffle. A synthetic
+planted-positive string (independent of real puzzle data) verifies the
+exact-match detector actually fires before trusting a negative result.
+
+**Result:** planted positive fires exactly (`parity_a` reduction on the
+synthetic string reproduces `STAGE0_MATRIX` 196/196). On the real data,
+the best of the six candidates reaches only **107/196** cell agreement --
+barely above the 98/196 chance baseline for a random binary matrix -- and
+no candidate reaches exact equality. Under the 100,000-shuffle null,
+**47,060/100,000 (47.06%)** of shuffles reach at least that same maximum
+agreement -- squarely unremarkable, nowhere near the pre-declared 0.5%
+promotion threshold.
+
+**Disposition:** closes negative per the contract's own promotion rule
+(exact equality or a predeclared strong family-wise result required;
+neither obtains). The `98*2=196=14*14` relation remains exactly what the
+brainstorm's own "Risks" section warned it might be -- an attractive
+factorization without underlying structure, at least under this one
+frozen, non-arbitrary construction. No rotation/reflection/route widening
+follows from this result without its own fresh promotion.
+
+**Artifacts:**
+`tools/gsmg/phase399_p91z_priority3_coordinate_matrix_audit.py`; permanent
+regression in `tools/gsmg/test_recent_audits.py`.

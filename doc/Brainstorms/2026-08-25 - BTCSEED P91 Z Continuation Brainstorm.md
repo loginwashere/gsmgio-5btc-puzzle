@@ -376,6 +376,15 @@ structure.
 
 ### Priority 3: 98 letters to 14x14 coordinates
 
+> [!info] Executed as Phase 399 (2026-08-25)
+> Planted positive fires exactly. On the real data, best of 6 frozen
+> reductions reaches only 107/196 cell agreement (barely above the 98/196
+> chance baseline), no exact match. 47,060/100,000 (47.06%) multiset-
+> preserving shuffles reach at least that agreement -- squarely
+> unremarkable, nowhere near the 0.5% promotion threshold. Closed negative.
+> See [Phase 399](../../tools/gsmg/FINDINGS.md#phase-399----btcseedp91z-brainstorm-priority-3-98-letter-to-14x14-coordinate-matrix-closed-negative-2026-08-25)
+> and [its implementation](../../tools/gsmg/phase399_p91z_priority3_coordinate_matrix_audit.py).
+
 Pre-register the one direct construction—seven row coordinates followed by
 seven column coordinates for each letter row—and a small binary-reduction
 family. Compare against the authenticated Stage-0 matrix and shuffled controls.
@@ -433,13 +442,14 @@ Before executing any item:
 
 ## Outcome
 
-- Status: Priorities 1--2 executed and closed negative; Priorities 3--6
+- Status: Priorities 1--3 executed and closed negative; Priorities 4--6
   and the 100-item idea bank remain an untested portfolio
 - Promoted phases: [Phase 397](../../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25)
   (Priority 1), [Phase 398](../../tools/gsmg/FINDINGS.md#phase-398----btcseedp91z-brainstorm-priority-2-bip39-checksum-recalibration-under-the-two-grid-native-mappings-closed-negative-2026-08-25)
-  (Priority 2)
-- Canonical findings changed: Phases 397--398 added; no prior phase
+  (Priority 2), [Phase 399](../../tools/gsmg/FINDINGS.md#phase-399----btcseedp91z-brainstorm-priority-3-98-letter-to-14x14-coordinate-matrix-closed-negative-2026-08-25)
+  (Priority 3)
+- Canonical findings changed: Phases 397--399 added; no prior phase
   retracted
-- Highest-value next experiment: Priority 3 (98 letters -> 196 coordinates
-  -> 14x14 construction)
+- Highest-value next experiment: Priority 4 (direct Bitcoin consumers of
+  P91)
 

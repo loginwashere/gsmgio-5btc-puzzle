@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **398** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **399** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -416,3 +416,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 396 | P396 | 2026-08-25 | header-aware `P91 = decoded[7:98]` block | 91-character length match to DBBI/M91 confirmed real, no signal, closed negative — **oracle material/attempt counts and baseline framing corrected same-day by code review; pattern/verdict unchanged** | [link](../tools/gsmg/FINDINGS.md#phase-396----header-aware-p91-decoded798-block-91-character-length-match-to-dbbim91-confirmed-real-no-signal-closed-negative-2026-08-25) | — |
 | 397 | P397 | 2026-08-25 | BTCSEED/P91/Z brainstorm Priority 1 | post-Z 59-byte control channel, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25) | — |
 | 398 | P398 | 2026-08-25 | BTCSEED/P91/Z brainstorm Priority 2 | BIP39 checksum recalibration under the two grid-native mappings, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-398----btcseedp91z-brainstorm-priority-2-bip39-checksum-recalibration-under-the-two-grid-native-mappings-closed-negative-2026-08-25) | — |
+| 399 | P399 | 2026-08-25 | BTCSEED/P91/Z brainstorm Priority 3 | 98-letter to 14x14 coordinate matrix, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-399----btcseedp91z-brainstorm-priority-3-98-letter-to-14x14-coordinate-matrix-closed-negative-2026-08-25) | — |
