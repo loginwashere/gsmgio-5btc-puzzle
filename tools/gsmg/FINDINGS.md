@@ -25678,3 +25678,62 @@ frozen family.
 **Artifacts:**
 `tools/gsmg/phase401_p91z_priority5_youwon_difference_algebra_audit.py`;
 permanent regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 402 -- BTCSEED/P91/Z brainstorm Priority 6 (final): control/data digraph machine, closed negative (2026-08-25)
+
+**Question:** Priority 6, the last ranked item in the 2026-08-25
+BTCSEED/P91/Z continuation brainstorm, asks whether `Q472`'s 236
+`[control, data]` digraphs (Priority 1/Phase 397 only ever read the
+control rail alone) combine into something recognizable through a small,
+closed family of control/data combining machines.
+
+**Method:** wrote
+`tools/gsmg/phase402_p91z_priority6_control_data_digraph_machine_audit.py`
+against a contract the user froze in full before any code was written:
+`control=(cr,cc)` and `data=(dr,dc)` from each digraph symbol's own
+position in the DBBI-keyed 5x5 square, `q_row=2*cr+cc`, `q_col=2*cc+cr`,
+`data_index=5*dr+dc`; exactly ten labeled machines -- two mod-5 selector/
+complement machines (236 digits, paired into 118 letters), two clockwise
+grid-rotation machines by `q_row`/`q_col` quarter-turns, additive and
+subtractive control-offset machines (236 letters each), and four raw-byte
+formulas (`25*q_row+data_index`, `25*q_col+data_index`,
+`4*data_index+q_row`, `4*data_index+q_col`; 236-byte streams, values
+0..99 by construction). Letter outputs scored with Phase 396's frozen
+keyword list and Phase 387's `quadgram_mean` (average log-probability per
+quadgram, so the 118- and 236-letter outputs are comparable); raw-byte
+outputs run through the strict `typed_decode_parse_ladder_audit`
+scanners only, no printability promotion. Calibrated the letter machines
+against 100,000 trials that shuffle the data rail only (control rail held
+fixed), recomputing all six letter machines' family-max `quadgram_mean`
+per trial. Blob oracle (36 materials: 6 letter outputs x 2 case forms x 3
+hash forms, deduplicated) against all 4 blobs; direct-secp256k1-scalar
+address checks against the exact prize address for both the six unique
+letter-case outputs (12 digests, 24 checks) and the four raw-byte streams
+(4 digests, 8 checks) -- no BIP32 tree, per the contract. Four planted
+positives prove the pipeline actually fires: a synthetic rail that
+recovers a phrase (`SEED`) through the real selector/digit-pairing logic;
+a synthetic rail at the non-trivial `q_row=1` rotation case that recovers
+a phrase (`KEY`); a synthetic 32-byte `Salted__` fixture (built
+independently of the coordinate formulas, which can never emit a byte
+above 99 and so can never spell an ASCII magic header) that trips the
+raw-byte evaluator; a known scalar/address pair that trips the direct-key
+detector.
+
+**Result:** all four planted positives fire correctly. Real data: zero
+keyword hits across all 6 letter machines; family-maximum `quadgram_mean`
+`-7.5621`; **90,459/100,000 (90.46%)** of data-rail-only shuffles reach at
+least that same family-maximum -- nowhere near the 0.5% promotion bound.
+Zero raw-byte machines trigger any magic-byte, structural, or key-format
+match (`parser_valid` false for all 4). Oracle: 17,280 effective attempts
+across 36 materials, zero hits. Direct-key: 32 address checks (24 letter
++ 8 byte), zero hits.
+
+**Disposition:** closes negative per the contract's own promotion rule
+(exact parser/blob/address hit, or family-wise `p <= 0.005`; neither
+obtains). Per the user's own instruction accompanying this contract, this
+closes the brainstorm's entire ranked verification queue -- Priorities
+1-6, executed as Phases 397-402 -- without opening a Priority 7.
+
+**Artifacts:**
+`tools/gsmg/phase402_p91z_priority6_control_data_digraph_machine_audit.py`;
+permanent regression in `tools/gsmg/test_recent_audits.py`.

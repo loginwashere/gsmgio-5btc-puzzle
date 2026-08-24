@@ -420,6 +420,19 @@ This is more grounded than inventing another arbitrary P91/DBBI operator.
 
 ### Priority 6: control/data digraph machine
 
+> [!info] Executed as Phase 402 (2026-08-25)
+> All four planted positives fire (selector-machine phrase recovery,
+> rotation-machine phrase recovery at q_row=1, Salted__ byte-fixture
+> detection, direct-scalar address match). Real data: zero keyword hits
+> across all 6 letter machines; family-max quadgram_mean -7.5621;
+> 90,459/100,000 (90.46%) of data-rail-only shuffles reach at least that
+> score -- nowhere near the 0.5% promotion bound. Zero raw-byte machines
+> parser-valid. Oracle: 17,280 attempts, zero hits. Direct-key: 32
+> address checks, zero hits. Closed negative per the contract's own
+> promotion rule -- exhausting the ranked queue. See
+> [Phase 402](../../tools/gsmg/FINDINGS.md#phase-402----btcseedp91z-brainstorm-priority-6-final-controldata-digraph-machine-closed-negative-2026-08-25)
+> and [its implementation](../../tools/gsmg/phase402_p91z_priority6_control_data_digraph_machine_audit.py).
+
 Start with operations supplied by the geometry of two control bits and one
 5x5 data coordinate. Rank typed outputs and exact authentication above English
 likeness.
@@ -460,16 +473,22 @@ Before executing any item:
 
 ## Outcome
 
-- Status: Priorities 1--5 executed and closed negative; Priority 6 and
-  the 100-item idea bank remain an untested portfolio
+- Status: Priorities 1--6 (the entire ranked verification queue)
+  executed and closed negative; the 100-item idea bank beyond this
+  ranked queue remains an untested portfolio, but per this contract's
+  own instruction, closing Priority 6 negative does not open a
+  Priority 7
 - Promoted phases: [Phase 397](../../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25)
   (Priority 1), [Phase 398](../../tools/gsmg/FINDINGS.md#phase-398----btcseedp91z-brainstorm-priority-2-bip39-checksum-recalibration-under-the-two-grid-native-mappings-closed-negative-2026-08-25)
   (Priority 2), [Phase 399](../../tools/gsmg/FINDINGS.md#phase-399----btcseedp91z-brainstorm-priority-3-98-letter-to-14x14-coordinate-matrix-closed-negative-2026-08-25)
   (Priority 3), [Phase 400](../../tools/gsmg/FINDINGS.md#phase-400----btcseedp91z-brainstorm-priority-4-p90p91q472full-stream-as-direct-bitcoin-key-material-closed-negative-2026-08-25)
   (Priority 4), [Phase 401](../../tools/gsmg/FINDINGS.md#phase-401----btcseedp91z-brainstorm-priority-5-p91-against-the-youwon-bearing-dbbi-m91-difference-closed-negative-2026-08-25)
-  (Priority 5)
-- Canonical findings changed: Phases 397--401 added; no prior phase
+  (Priority 5), [Phase 402](../../tools/gsmg/FINDINGS.md#phase-402----btcseedp91z-brainstorm-priority-6-final-controldata-digraph-machine-closed-negative-2026-08-25)
+  (Priority 6)
+- Canonical findings changed: Phases 397--402 added; no prior phase
   retracted
-- Highest-value next experiment: Priority 6 (control/data digraph
-  machine)
+- Highest-value next experiment: none within this contract's scope --
+  the ranked queue is exhausted. Any further work on the 100-item idea
+  bank requires a fresh, separately-frozen contract, not a quiet
+  extension of this one.
 
