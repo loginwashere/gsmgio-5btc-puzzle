@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **396** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **397** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -414,3 +414,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 394 | P394 | 2026-08-24 | Phase-393 lead authentication | FEFE/GF(2) ordinary; BIP39 checksum expected and prize-address negative; exact claim oracle 0 hits | [link](../tools/gsmg/FINDINGS.md#phase-394----phase-393-lead-authentication-fefegf2-ordinary-bip39-checksum-expected-and-prize-address-negative-exact-claim-oracle-0-hits-2026-08-24) | — |
 | 395 | P395 | 2026-08-25 | Telegram 66722's "dual-rail" convergence on offset 21 | mostly a restatement of Phase 75, one modest un-pre-registered addition, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-395----telegram-66722s-dual-rail-convergence-on-offset-21-mostly-a-restatement-of-phase-75-one-modest-un-pre-registered-addition-closed-negative-2026-08-25) | — |
 | 396 | P396 | 2026-08-25 | header-aware `P91 = decoded[7:98]` block | 91-character length match to DBBI/M91 confirmed real, no signal, closed negative — **oracle material/attempt counts and baseline framing corrected same-day by code review; pattern/verdict unchanged** | [link](../tools/gsmg/FINDINGS.md#phase-396----header-aware-p91-decoded798-block-91-character-length-match-to-dbbim91-confirmed-real-no-signal-closed-negative-2026-08-25) | — |
+| 397 | P397 | 2026-08-25 | BTCSEED/P91/Z brainstorm Priority 1 | post-Z 59-byte control channel, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25) | — |

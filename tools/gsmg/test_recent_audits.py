@@ -227,6 +227,7 @@ import phase392_seed7_representation_residue_evidence_gate
 import phase394_telegram_recipe_leads_authentication_audit
 import phase395_youwon_vic_dual_rail_convergence_audit
 import phase396_p91_header_aware_block_audit
+import phase397_p91z_priority1_control_channel_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -799,6 +800,12 @@ class CorrectedClaimTests(unittest.TestCase):
             self.assertGreater(entry["baseline_tail_rate"], 0.05)
         self.assertEqual(report["oracle"]["materials_tried"], 30)
         self.assertEqual(report["oracle"]["total_hits"], 0)
+
+    def test_phase397_p91z_priority1_control_channel(self):
+        report = phase397_p91z_priority1_control_channel_audit.self_test()
+        self.assertEqual(report["candidate_count"], 8)
+        self.assertFalse(report["any_parser_valid"])
+        self.assertFalse(report["any_exact_target_hit"])
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()

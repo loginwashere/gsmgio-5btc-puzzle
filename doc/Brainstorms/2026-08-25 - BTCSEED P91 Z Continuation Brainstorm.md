@@ -333,6 +333,14 @@ P91
 
 ### Priority 1: post-Z 59-byte channel
 
+> [!info] Executed as Phase 397 (2026-08-25)
+> All 8 frozen candidates (2 mappings x 2 directions x 2 packings) tested
+> zero magic-byte triggers, zero structural parses, zero key-format
+> matches, zero exact target-address hits. Closed negative as scoped. See
+> [Phase 397](../../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25)
+> and [its implementation](../../tools/gsmg/phase397_p91z_priority1_control_channel_audit.py).
+> Does not close the other five priorities or the idea bank at large.
+
 Freeze:
 
 - Q472 exactly as `decoded[98:]`;
@@ -415,9 +423,11 @@ Before executing any item:
 
 ## Outcome
 
-- Status: untested brainstorm portfolio
-- Promoted phase: none
-- Canonical findings changed: none
-- Highest-value next experiment: post-Z BCDE control rail to the bounded
-  59-byte typed-output family
+- Status: Priority 1 executed and closed negative; Priorities 2--6 and the
+  100-item idea bank remain an untested portfolio
+- Promoted phase: [Phase 397](../../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25)
+  (Priority 1 only)
+- Canonical findings changed: Phase 397 added; no prior phase retracted
+- Highest-value next experiment: Priority 2 (coordinate-selected BIP39
+  recalibration under the two grid-native mappings)
 

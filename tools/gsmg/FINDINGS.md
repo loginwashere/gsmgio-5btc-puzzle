@@ -25440,3 +25440,51 @@ scope -- it was not the bounded object identified and is not opened here.
 **Artifacts:**
 `tools/gsmg/phase396_p91_header_aware_block_audit.py`; permanent
 regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 397 -- BTCSEED/P91/Z brainstorm Priority 1: post-Z 59-byte control channel, closed negative (2026-08-25)
+
+**Question:** the 2026-08-25 BTCSEED/P91/Z continuation brainstorm
+(`doc/Brainstorms/2026-08-25 - BTCSEED P91 Z Continuation Brainstorm.md`)
+identifies the one byte-perfect (not merely factorization-attractive)
+boundary in this branch: `decoded[98:]` (`Q472`, 472 characters) splits
+into 236 digraphs whose even-position "control" rail is drawn from the
+keyed square's upper-left `2x2` alphabet (`{B,C,D,E}`); 236 symbols x 2
+bits = 472 bits = 59 bytes exactly. Its Priority 1 asks whether any grid-
+native packing of that control rail into 59 bytes produces a recognizable
+typed container or key material.
+
+**Method:** wrote
+`tools/gsmg/phase397_p91z_priority1_control_channel_audit.py`, executing
+exactly the family the brainstorm froze -- no additions. `control =
+Q472[0::2]` (236 symbols) only; the paired data rail stays out of scope.
+Two grid-native symbol-to-2-bit mappings (row-major `D,B,C,E->0,1,2,3`;
+column-major `D,C,B,E->0,1,2,3`, matching Phase 394's posted BIP39
+mapping) x two processing directions (forward; `control[::-1]`) x two
+intra-byte packings (MSB-first; LSB-first) = 8 candidate byte strings,
+enumerated before any output was inspected. Reused this project's own
+`typed_decode_parse_ladder_audit.py` verbatim for every check: the five
+magic-byte/structural triggers (DER, `Salted__`, PSBT, Bitcoin transaction,
+plus the hex/base64/gzip/zlib/zip decode-then-validate family) and
+`embedded_key_format_scanner_audit.py`'s key-format scanner (WIF, extended
+keys, SEC1 pubkeys, decimal scalars, hex64, BIP39 word runs) plus exact
+target-address checking, via `validate_full`/`is_parser_valid`. No English
+scoring, no dictionary search, no manual judgment calls.
+
+**Result:** all 8 candidates reproduce as exactly 59 bytes. **Zero** magic-
+byte triggers, **zero** structural parses, **zero** key-format matches,
+**zero** exact target-address hits, across all 8 -- `is_parser_valid` is
+`False` for every candidate.
+
+**Disposition:** Priority 1 closes negative as scoped. The byte-perfect
+`472 = 59*8` boundary is confirmed real (Phase 396 already established the
+underlying lengths) but does not, on this frozen reading, produce a
+recognizable typed container or key material. Per the brainstorm's own
+promotion contract, this stops the family here rather than widening it
+(the other 22 symbol mappings, splicing in the paired data rail, English/
+printability scoring) -- any such widening needs its own fresh promotion.
+The remaining five ranked priorities in the brainstorm are untouched by
+this result.
+
+**Artifacts:**
+`tools/gsmg/phase397_p91z_priority1_control_channel_audit.py`; permanent
+regression in `tools/gsmg/test_recent_audits.py`.
