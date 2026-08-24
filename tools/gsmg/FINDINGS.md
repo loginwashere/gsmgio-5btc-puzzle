@@ -25829,3 +25829,51 @@ native order; those remain separate, unfrozen expansions.
 **Artifacts:**
 `tools/gsmg/phase404_q472_native_data_rail_identity_audit.py`; permanent
 regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 405 -- BCDE control rail as a Base64 sextet channel: closed negative (2026-08-25)
+
+**Question:** a third identified residual: `{B,C,D,E}` supplies exactly
+2 bits per symbol, so three control symbols supply 6 bits -- one
+standard Base64 character exactly. Phase 397 already byte-packed
+`Q472`'s 236-symbol control rail (not divisible by 3), but never
+covered the two other natural control-rail boundaries: the full
+285-symbol rail (`decoded[0::2]`) and the P91-scoped 45-symbol rail
+(`decoded[7:98][1::2]`).
+
+**Method:** wrote
+`tools/gsmg/phase405_bcde_base64_sextet_channel_audit.py` against a
+contract frozen before any code was written: exactly 2 sources x Phase
+397's 2 grid-native mappings (row-major, column-major) = 4 candidates;
+`index = v0<<4 | v1<<2 | v2` per triple through the standard Base64
+alphabet, native forward order only; exactly one `=` appended (both
+sources' sextet counts are `4n+3`); decoded via standard Base64 -- 71
+bytes for the 95-sextet full-rail source, 11 bytes for the 15-sextet
+P91-scoped source, 2 discarded terminal bits in both cases, canonical-
+Base64 flag reported. Scanner calls deduplicated by unique decoded-byte
+value, all 4 labels still reported. Evaluated with strict magic/
+container/key-format parsing only (DER, PSBT, Bitcoin transaction,
+`Salted__`, compressed-format magic bytes, WIF/extended-key/SEC1/
+decimal-scalar/hex64/BIP39-word-run matches, exact target-address hit),
+reusing Phase 402's `evaluate_raw_bytes()` verbatim -- no English
+scoring, no SHA-256-scalar/BIP32 consumer (71 and 11 bytes both fall
+outside BIP32's 16-64-byte seed range and neither is a raw 32-byte
+scalar). Two planted positives: a Base64 round-trip (a known clean
+4-character Base64 string, `b64encode(b"BTC")`, inverse-mapped back
+through row-major into synthetic control symbols and re-encoded through
+the real forward packer, reproducing the original string exactly); the
+same independent 32-byte `Salted__` fixture Phase 402 uses for the typed
+scanner.
+
+**Result:** both planted positives fire correctly. All 4 candidates
+reproduce at their pinned lengths (95/15 sextets, 71/11 decoded bytes, 2
+discarded terminal bits each); zero magic-byte triggers, structural
+parses, key-format matches, or target-address hits across all 4.
+
+**Disposition:** closes negative per the contract's own stopping rule --
+absent an exact parser/key-format/target-address hit, this does not
+extend to reversal, URL-safe variants, alternative alphabets, or `Q472`
+remainder handling.
+
+**Artifacts:**
+`tools/gsmg/phase405_bcde_base64_sextet_channel_audit.py`; permanent
+regression in `tools/gsmg/test_recent_audits.py`.

@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **404** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **405** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -422,3 +422,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 402 | P402 | 2026-08-25 | BTCSEED/P91/Z brainstorm Priority 6 (final) | control/data digraph machine, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-402----btcseedp91z-brainstorm-priority-6-final-controldata-digraph-machine-closed-negative-2026-08-25) | — |
 | 403 | P403 | 2026-08-25 | Phase 397's raw 59-byte control-channel outputs as BIP32 seed material | closed negative | [link](../tools/gsmg/FINDINGS.md#phase-403----phase-397s-raw-59-byte-control-channel-outputs-as-bip32-seed-material-closed-negative-2026-08-25) | — |
 | 404 | P404 | 2026-08-25 | Q472's native-order data rail as an identity message/key candidate | closed negative | [link](../tools/gsmg/FINDINGS.md#phase-404----q472s-native-order-data-rail-as-an-identity-messagekey-candidate-closed-negative-2026-08-25) | — |
+| 405 | P405 | 2026-08-25 | BCDE control rail as a Base64 sextet channel | closed negative | [link](../tools/gsmg/FINDINGS.md#phase-405----bcde-control-rail-as-a-base64-sextet-channel-closed-negative-2026-08-25) | — |

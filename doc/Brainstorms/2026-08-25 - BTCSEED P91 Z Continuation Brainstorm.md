@@ -44,7 +44,14 @@ topics:
 > [Phase 404](../../tools/gsmg/FINDINGS.md#phase-404----q472s-native-order-data-rail-as-an-identity-messagekey-candidate-closed-negative-2026-08-25):
 > quadgram-shuffle p=0.859 (nowhere near the 0.005 bound), 2,880 oracle
 > attempts and 4 address checks, zero hits, all three planted positives
-> fire. The remaining ~98 idea-bank items are still untested and still
+> fire. A third residual -- the `{B,C,D,E}` control rail read as a
+> Base64 sextet channel (three symbols = 6 bits = one Base64 character)
+> over the two boundaries Phase 397 never covered, the full 285-symbol
+> rail and the P91-scoped 45-symbol rail -- was frozen and executed as
+> [Phase 405](../../tools/gsmg/FINDINGS.md#phase-405----bcde-control-rail-as-a-base64-sextet-channel-closed-negative-2026-08-25):
+> 4 candidates (2 sources x 2 grid-native mappings), zero magic-byte,
+> structural, key-format, or target-address hits, both planted positives
+> fire. The remaining ~97 idea-bank items are still untested and still
 > require their own fresh, separately-frozen contracts.
 
 ## Executive result
