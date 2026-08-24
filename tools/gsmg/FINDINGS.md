@@ -24669,3 +24669,276 @@ already-solved or still-open password.
 **Artifacts:** `tools/gsmg/x2sh4y0qb15_fork_resolution_delta_audit.py`;
 `doc/GSMG_NADDISEO_SEMANTIC_CONCORDANCE.md` (Entry 1, the concordance this
 phase closes the action item for).
+
+## Phase 385 -- Post-Phase-340 Seed 10 completion: stream-mode and compression length envelopes (2026-08-24)
+
+**Question:** Seed 10's 2026-08-20 investigation pass built only the
+CBC/PKCS#7 row of its own declared ciphertext-length compatibility matrix
+(unpadded plaintext in `[C-16, C-1]` for a `C`-byte block-aligned
+ciphertext) and explicitly flagged the rest open: "compression and stream
+modes change the inference, so every row must name its cipher/mode/padding
+assumptions explicitly" (`doc/Brainstorms/2026-08-20 - Post-Phase-340
+Future Search Portfolio.md`, section 10). The backlog ledger accordingly
+carried this item as `partially-executed`. Do the two unrun rows -- stream
+mode (no padding, exact-length match) and a compression layer ahead of
+encryption -- change which standalone key-material roles (WIF, BIP38,
+mini-key, xprv/xpub, hex64, two raw 32-byte chunks) the short blobs'
+ciphertext length can admit or exclude?
+
+**Method:** wrote `tools/gsmg/phase385_stream_compression_length_envelope_audit.py`.
+Built one deterministic (SHA-256 counter-expansion, not `random`, so every
+byte is re-derivable) representative string per role, at that role's own
+literal-text/binary length (WIF compressed 52, WIF uncompressed 51, BIP38
+58, mini-key 22 and 30, xprv/xpub 111, hex64-as-text 64, two raw 32-byte
+chunks 64 binary) -- the same convention Seed 10's own CBC row used.
+Compressed each with the 4 general-purpose compressors in the Python
+standard library at maximum settings (zlib/raw DEFLATE, gzip, bz2, lzma),
+a bounded, declared set rather than an open-ended compressor search.
+Checked, for every (role, compressor-variant, blob) combination, against
+both the already-established CBC window and a stream-mode exact-length
+match (`length == ciphertext_bytes`, stricter than CBC since there is no
+padding to absorb slack). No oracle sweep against the blobs' actual
+ciphertext bytes -- this is closed-form arithmetic over declared lengths.
+
+**Result:** self-test asserts every one of the 40 pinned lengths (8 roles x
+5 variants) and the full newly-admitted/newly-excluded sets exactly. An
+initial hand-check while writing this script wrongly assumed base58 text
+could never be compressed into a window; running the code caught that
+immediately (the self-test failed on the first run) and the assertions
+were rewritten against the real computed output rather than the
+assumption. Real finding: DEFLATE-family algorithms cannot shrink base58
+text at all -- every base58 role variant is equal-or-larger than its raw
+length under all 4 compressors, confirming the alphabet (~5.858 bit/char)
+is already close to incompressible. But gzip/bz2/lzma's fixed container
+overhead (headers/trailers, largest for lzma's `.xz` format) pushes several
+roles that were originally too *short* for SALPH/P32TRAILING's 64-79-byte
+CBC window up across its floor: BIP38 (58->66 zlib, 78 gzip), mini-key 22
+(22->64 bz2) and 30 (30->72 bz2), and both WIF forms (51/52->71/72 gzip)
+all become CBC-admissible under at least one compressor -- 19
+newly-admitted rows total, purely from container-size arithmetic, with no
+bearing on content plausibility. xprv/xpub (raw 111, already above every
+short-blob window) is never rescued -- nothing shrinks it, so it stays
+excluded from SALPH/P32TRAILING and URLBLOB under every tested compressor.
+10 rows also flip the other way (newly excluded): hex64-as-text, CBC-
+admissible for SALPH/P32TRAILING at the window's exact floor uncompressed,
+drops out under zlib (58, below 64) and lzma (120, above 79); the two-raw-
+32-byte-chunk role drops out under bz2/gzip/lzma (all >79) though it
+survives under zlib (75, still in-window). One coincidental stream-mode
+exact-length hit: mini-key 22 under lzma lands on exactly 80 bytes,
+matching SALPH/P32TRAILING's ciphertext length precisely -- flagged, not
+promoted (no known toolchain plausibly wraps a single ad-hoc mini-key in a
+full `.xz` container before AES, and length alone is not evidence of
+content). No representative comes anywhere near COSMIC's 1312-1327 window
+or 1328-byte stream-mode length under any compressor (largest observed
+output: xprv/xpub under lzma at 172).
+
+**Disposition:** closed. Confirms Seed 10's own guardrail empirically
+rather than leaving it as an assertion: the CBC-only exclusion table from
+the 2026-08-20 pass is genuinely not compressor-invariant for the two
+80-byte blobs, so any future proposal that a specific WIF/BIP38/mini-key
+role is excluded "by length alone" for SALPH or P32TRAILING must also
+name its compression assumption, exactly as the guardrail already
+required. Does not reopen or contradict the original CBC-only table for
+xprv/xpub (still excluded everywhere) or for the un-compressed baseline
+(unchanged). Post-Phase-340 Seed 10 backlog item promoted from
+`partially-executed` to `executed`.
+
+**Facts affected:** no puzzle fact changes -- this is model-pruning
+bookkeeping, not a candidate test against real ciphertext bytes.
+
+**Artifacts:** `tools/gsmg/phase385_stream_compression_length_envelope_audit.py`;
+updates `doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md`'s Seed 10 entry.
+
+## Phase 386 -- the community "btcseed" Bifid-decode theory: mechanically real, improbability claims do not hold up, not promoted (2026-08-24)
+
+**Question:** a user-supplied screenshot (dCode Bifid decoder, keyed
+alphabet `DBIFHCEGAKLMNOPQRSTUVWXYZ`, period 570) claimed that Bifid-
+decrypting `FAED` produces plaintext starting `BTCSEED...`, and asked
+whether JRK's authenticated 2023-08-03 hint ("Are you really looking for
+just the btc...?", Telegram message `8774`, sender "Jrk Bgrt" -- confirmed
+directly against the raw export, date and text match exactly) was pointing
+at this result. Is the decode mechanically real, is it new, and do the
+improbability arguments the community has made for treating it as
+intentional plaintext survive a direct recount?
+
+**Provenance, traced from the raw export rather than assumed:** not new.
+First posted by "Sycorax" on 2025-06-12 (message `43248`), circulated on
+and off through 2026-01 (113 total `btcseed` mentions in the export). The
+Stage-1 keyword sweep (`telegram_export_keyword_sweep.py`) technically
+contains both the origin message and the message naming the result
+outright (`43671`, "[dbbi] and [faed] already deciphered into
+'btcseed...'") -- both match the pre-registered `dbbi`/`faed` keywords --
+but that sweep returns 1,828 hits and, per its own docstring, was scoped to
+a different question (31-character prime-walk consumption), not reviewed
+exhaustively for unrelated results. The only trace reaching this project's
+more closely-curated material is one tangential image caption in
+`doc/GSMG_TELEGRAM_MEDIA_SHORTLIST.md` (message `61439`), never followed
+up. `bifid`/`btcseed` were never in the keyword list themselves.
+
+**Method:** wrote `tools/gsmg/phase386_btcseed_bifid_faed_decode_audit.py`,
+re-implementing Bifid decryption from scratch (no dependency on the
+community's tooling or the dCode web tool). Reproduces the community's
+grid construction exactly: `DBBI`'s own first 13 characters, de-duplicated
+in order (`dbbibfbhccbeg` -> `dbifhceg`), padded with the remaining
+alphabet (`J` dropped) -> `DBIFHCEGAKLMNOPQRSTUVWXYZ`. Bifid-decrypts
+`FAED` as one 570-character block, row-column order. Separately checks two
+specific claims made in the chat: (a) that the segment before the decode's
+one `Z` matches `DBBI`'s length (message `61439`), and (b) that the
+"1 in 8 billion" improbability figure (messages `43451`, `43678`, `44024`)
+is a sound estimate, by computing the decode's actual empirical letter
+frequencies and a same-position match probability under them.
+
+**Result:** self-test passes. The decode is mechanically real and exactly
+reproducible: 570 characters, starts `BTCSEEDDEOEMCKEADHBSCHDKBDCSDKD...`,
+matching the screenshot and chat text byte-for-byte. Both specific
+improbability claims fail on direct recount: the pre-`Z` segment is
+**97 characters, not 91** -- the claimed DBBI-length coincidence is false.
+The output alphabet is heavily skewed (top 4 letters `B`,`C`,`D`,`E` cover
+57% of all 570 output characters, a mechanical consequence of Bifid-
+recombining FAED's own 9-symbol source alphabet through a fixed grid) --
+under the real empirical frequencies a same-position 7-character match has
+probability ~3.1e-08, about 190x more likely than the naive uniform-25^7
+estimate (~1.6e-10) the "1 in 8 billion" figure is consistent with. That
+gap widens further once the chat's own record of trying multiple
+techniques (Bifid, Trifid, XOR) and keyword lengths in the same session
+(message `43258`) is counted as search space. No coherent continuation was
+ever found in the remaining 563 characters across 14+ months of
+intermittent effort (message `43677`).
+
+**Addendum (same day):** a user independently supplied and verified their
+own complete 570-character decode (matching this script's output and
+self-test exactly, including the SHA-256 of the lowercase form), and asked
+whether the output looks split into multiple word-like parts the way
+`BTCSEED` stands out at the start, or reads as one continuous stream.
+Extended the script to substring-scan the full output against the system
+dictionary (`/usr/share/dict/words`, length 4-12): 13 embedded words found
+(`seed` at position 3 -- the tail of `btcseed` -- then `medea`, `dead`,
+`dues`, `rene`, `cubs`, `endue`, `back`, `bsds`, `bier`, `geld`,
+`meld`/`melds`, spread through the remaining 567 characters, not clustered
+near the start). Generated 200 random strings from the decode's own
+empirical letter frequencies and ran the identical scan: mean 9.82 hits,
+population stdev 3.63. The real decode's 13 hits sits under 1 standard
+deviation above that mean -- statistically unremarkable. The output shows
+no deliberate word-segmentation structure; `BTCSEED` is not distinguishable
+in kind from `GELD`/`BIER`/`MELD` elsewhere in the same string, only
+thematically loaded because `btc` (Bitcoin) happens to sit immediately
+before it.
+
+**Disposition:** closed, unconfirmed -- not promoted. The decode is real
+and not fabricated, and its construction (using `DBBI` itself, not an
+external word, as the Bifid keyword source) is more principled than an
+arbitrary key search. But the two concrete arguments offered for treating
+the `BTCSEED` prefix as intentional rather than a partial coincidence do
+not survive direct verification, the addendum's word-density check finds no
+structural signal beyond ordinary noise, and the total absence of any
+coherent continuation over 14+ months weighs against it. Per this project's
+existing discipline (present unconfirmed community results as unconfirmed;
+do not promote a partial match without an exact, complete decode), this
+stays parked. Does not reopen or narrow any existing gap.
+
+**Facts affected:** none. `DBBI`/`FAED` remain otherwise-unresolved per
+existing findings; this closes one specific community theory about them.
+
+**Artifacts:** `tools/gsmg/phase386_btcseed_bifid_faed_decode_audit.py`.
+
+## Phase 387 -- post-BTCSEED `KMODEST` checkpoint: mechanically real and moderately unusual; `BE MODEST` continuation not promoted (2026-08-24)
+
+**Origin:** the exhaustive residual review of Stage 1's Telegram keyword hits
+surfaced message `66722` (Vasilis Dragon, 2026-07-13), which Phase 386 had not
+assessed.  The message extends the already-reproduced Bifid output with a
+specific finite extraction and candidly labels its final `BE MODEST` step
+"the soft one" and "a convention not a forced step."
+
+**Mechanically reproduced checkpoint:** Phase 386's output has its only `Z`
+at zero-based index 97.  The prefix through it is therefore 98 characters:
+`98 = 2 * 7 * 7`.  Split that prefix into 49 digraphs and take each digraph's
+second character.  The resulting 49-character rail is:
+
+```text
+TSEDOMK
+AHSHKDS
+KVXPOHR
+IIQEDBN
+SDPGPNN
+SSGDLNM
+UUQADLZ
+```
+
+Reversing its first row gives exactly **`KMODEST`**.  This is independent of
+the message author's implementation: the audit imports Phase 386's own
+from-scratch Bifid decode and asserts every boundary and all seven rows.
+
+**Bounded calibration:** 100,000 deterministic shuffles preserving FAED's
+exact letter multiset retained the DBBI-derived Bifid square and whole-stream
+period.  Under the frozen 98-character/second-rail/reversed-first-row rule,
+zero shuffles produced exact `KMODEST`; 603/100,000 (0.603%, about 1 in 166)
+scored at least as English-like by the project's frozen quadgram table.  In a
+stricter control where the first `Z` itself had to produce a `2*n*n` prefix,
+610/100,000 produced the same `n=7` geometry and only 5/100,000 produced both
+that geometry and a seven-letter result scoring at least as English-like as
+`KMODEST` (0.005%, about 1 in 20,000).  No exact `KMODEST` occurred.
+
+**Qualification:** these rates are diagnostic, not a proof of intention.  The
+second rail, first row, and reversal were recognized after `BTCSEED`, `Z`, and
+the square geometry were visible, so the true discovery search space is wider
+than the frozen control.  More decisively, message `66722`'s continuation
+deletes `K` from `KMODEST`, then reads K's keyed-Bifid-grid coordinates `(2,5)`
+as A1Z26 letters `B,E` to obtain `BE MODEST`.  The author explicitly admits
+that coordinate reading is selected because the desired phrase is already
+known.  It has no independent selector and is not promoted.
+
+**Disposition:** retain `KMODEST` as a real, moderately strong secondary
+checkpoint candidate and a meaningful improvement over Phase 386's statement
+that no coherent continuation was known.  It is not a demonstrated decode,
+password, or key, and it does not close a registered gap.  The `BE MODEST`
+continuation stays quarantined as post-hoc.
+
+**Artifacts:** `tools/gsmg/phase387_btcseed_kmodest_checkpoint_audit.py`;
+permanent regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 388 -- Telegram residual-discovery audit: one new reproducible lead; low-engagement blind spot closed by independent axes (2026-08-24)
+
+Completed the bounded four-stage follow-up triggered by Phase 386's discovery
+that the original 1,828-hit keyword sweep had never been comprehensively
+reviewed for unrelated technical results.
+
+**Stage A:** corrected the prior arithmetic: Phase 54 reviewed 68 rows (56
+anchor-sender plus 12 rows selected by its four rare scoped terms), leaving
+1,760, not 1,772.  The message-level ledger classifies 381 as covered by an
+existing cited or named finite family, 1,378 as questions/reposts/noise or
+claims lacking a complete reproducible chain, and one new lead: message
+`66722`, separately verified and calibrated in Phase 387.  Each ledger row
+pins the full source text by SHA-256.  Manual full-text review covered the 132
+code/formula/structural candidates, 260 further explicit-result messages, and
+the independent 77-message Stage-C intersection; the remaining lower-signal
+rows were classified on their complete text by frozen, inspectable rules.
+
+**Stage B:** generalized the existing two-hour same-sender window to every
+Stage-1 hit.  The raw expansion is 11,407 messages / 10,078 new -- too broad
+to mislabel as a shortlist.  A declared technical/media lane (technique or
+surprise term, media, or >=500 characters) yields 2,365 / 1,036 new and still
+recovers BTCSEED follow-ups `43258`, `43441`, and `43442`.  The latter two are
+reached via nearby Stage-1 seed `43440`; the previously proposed 26-hour
+window widening is unnecessary.
+
+**Stage C:** a separate token-boundary-aware technique-plus-surprise sweep
+finds 1,629 technique hits, 827 surprise/probability hits, and 77 in their
+intersection.  All 77 were read in full.  This axis catches `43248`, `43258`,
+and `43274` without depending on `dbbi`/`faed`, but finds no second
+authenticated result.  Other apparent leads omit required inputs/derivations
+or have ordinary false-positive rates.
+
+**Stage D:** Phase 68's >=5-reaction threshold remains frozen at the natural
+knee (105 messages; 523 at >=3).  BTCSEED's absence is recorded as a
+structural blind spot for low-engagement technical threads, not repaired by
+post-hoc threshold lowering.  The context and technique/surprise axes now
+cover that failure mode independently.
+
+**Disposition:** the residual audit is complete.  Phase 387's `KMODEST` is
+the sole new reproducible checkpoint and remains unconfirmed; no registered
+gap closes.  The reaction cutoff remains unchanged.
+
+**Artifacts:** `doc/GSMG_TELEGRAM_RESIDUAL_DISCOVERY_AUDIT.md`;
+`tools/gsmg/telegram_stage1_residual_classification_audit.py`;
+`tools/gsmg/telegram_export_all_hit_context_clusters.py`;
+`tools/gsmg/telegram_export_technique_surprise_sweep.py`.

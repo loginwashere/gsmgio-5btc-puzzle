@@ -179,6 +179,21 @@ don't auto-decompress Wayback's `br`/gzip/zstd `Content-Encoding` — must use
 `curl --compressed` (or equivalent) or you'll save raw compressed bytes under a
 misleading `.html` name.
 
+**Update (2026-08-24, post-Phase-329 restoration) — the `/Puzzle` behavior above is now
+stale.** Live-checked case sensitivity on the restored domain: the exact lowercase
+`gsmg.io/puzzle` still returns the raw PNG directly (byte-identical to `puzzle.png` in
+this repo, unchanged since 2020), but every other casing (`/Puzzle`, `/PUZZLE`, `/PuZzLe`)
+now serves real static HTML — a "GSMG MEGANIGMA || 5 BTC" card embedding
+`img/follow_the_white_rabbit.png` — not the generic Vue-app shell this section describes.
+Saved as [doc/html/Puzzle.html](html/Puzzle.html) (SHA-256
+`4e2c43f2378705e495e2d920c2c49829b2b6bf29093c9d2efcd9c0724942c902`, 2155 bytes,
+re-verified stable across two fetches). Not the same content the July mirror captured for
+this route (`gsmg-site-mirror/puzzle/index.html`, the generic shell, SHA-256
+`e27e53ddafb4f2b585f12b21fbe5c9ecfb39a2f484d8cc147e83fffc1beac5bb`) — this is
+post-restoration-only content, previously unsaved anywhere in this repo. No new puzzle
+fact: it names the same already-known `follow_the_white_rabbit.png` asset and title this
+project already tracks, just via a real static page instead of a client-rendered shell.
+
 ---
 
 ### Phase 3.2.1 / 3.2.2 — validated

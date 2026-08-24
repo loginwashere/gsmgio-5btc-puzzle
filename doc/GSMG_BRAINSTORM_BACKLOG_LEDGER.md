@@ -212,9 +212,9 @@ note: "gated on a near-valid object existing first (WIF/extended-key/Bech32/mini
 ```yaml
 item: "Post-Phase-340 Seed 10 -- ciphertext-length and output-role compatibility matrix"
 source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
-status: partially-executed
-verified_against: "in-document investigation pass, 2026-08-20"
-note: "first row completed (CBC/PKCS#7 length envelope for all four blobs, excluding standalone WIF/BIP38/mini-key/xprv-xpub roles by ciphertext length alone). Compression/stream-mode rows and any framed/variable-length role analysis remain unrun"
+status: executed
+verified_against: "FINDINGS.md Phase 385"
+note: "CBC/PKCS#7 row from the 2026-08-20 pass, plus stream-mode (exact-length) and compression (zlib/gzip/bz2/lzma) rows added by Phase 385: compression cannot shrink base58 role text, but container overhead alone rescues several short-form roles (BIP38, mini-key, WIF) into the short blobs' CBC window, so length-only exclusion for SALPH/P32TRAILING must name its compression assumption. Framed/variable-length objects (prefix/suffix/label/JSON/container) remain permanently non-excludable by length alone, same as DER/mnemonic phrases -- not a residual task, an inherent limit of this technique"
 ```
 
 ```yaml

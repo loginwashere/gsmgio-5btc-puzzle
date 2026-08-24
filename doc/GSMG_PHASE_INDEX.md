@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **384** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **388** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -402,3 +402,7 @@ A phase whose original heading was later corrected without editing the heading i
 | 382 | P382 | 2026-08-24 | the "1141-offset" candidate family against DBBI/FAED | closed, negative | [link](../tools/gsmg/FINDINGS.md#phase-382----the-1141-offset-candidate-family-against-dbbifaed-closed-negative-2026-08-24) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
 | 383 | P383 | 2026-08-24 | P32 Family 2 transaction-graph trace | authenticated, no new creator address or route | [link](../tools/gsmg/FINDINGS.md#phase-383----p32-family-2-transaction-graph-trace-authenticated-no-new-creator-address-or-route-2026-08-24) | [GSMG_P32_FAMILY2_TRANSACTION_GRAPH_AUDIT](GSMG_P32_FAMILY2_TRANSACTION_GRAPH_AUDIT.md) |
 | 384 | P384 | 2026-08-24 | X2SH4Y0QB15 fork-resolution delta | B=25/H=42 retest, negative | [link](../tools/gsmg/FINDINGS.md#phase-384----x2sh4y0qb15-fork-resolution-delta-b25h42-retest-negative-2026-08-24) | — |
+| 385 | P385 | 2026-08-24 | Post-Phase-340 Seed 10 completion | stream-mode and compression length envelopes | [link](../tools/gsmg/FINDINGS.md#phase-385----post-phase-340-seed-10-completion-stream-mode-and-compression-length-envelopes-2026-08-24) | — |
+| 386 | P386 | 2026-08-24 | the community "btcseed" Bifid-decode theory | mechanically real, improbability claims do not hold up, not promoted | [link](../tools/gsmg/FINDINGS.md#phase-386----the-community-btcseed-bifid-decode-theory-mechanically-real-improbability-claims-do-not-hold-up-not-promoted-2026-08-24) | — |
+| 387 | P387 | 2026-08-24 | post-BTCSEED `KMODEST` checkpoint | mechanically real and moderately unusual; `BE MODEST` continuation not promoted | [link](../tools/gsmg/FINDINGS.md#phase-387----post-btcseed-kmodest-checkpoint-mechanically-real-and-moderately-unusual-be-modest-continuation-not-promoted-2026-08-24) | — |
+| 388 | P388 | 2026-08-24 | Telegram residual-discovery audit | one new reproducible lead; low-engagement blind spot closed by independent axes | [link](../tools/gsmg/FINDINGS.md#phase-388----telegram-residual-discovery-audit-one-new-reproducible-lead-low-engagement-blind-spot-closed-by-independent-axes-2026-08-24) | [GSMG_TELEGRAM_RESIDUAL_DISCOVERY_AUDIT](GSMG_TELEGRAM_RESIDUAL_DISCOVERY_AUDIT.md) |

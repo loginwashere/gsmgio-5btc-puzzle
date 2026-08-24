@@ -217,6 +217,12 @@ import input_byte_pathway_reconstruction_audit
 import raw_key_chunk_audit
 import raw_asset_byte_password_audit
 import phase382_1141_offset_audit
+import phase385_stream_compression_length_envelope_audit
+import phase386_btcseed_bifid_faed_decode_audit
+import phase387_btcseed_kmodest_checkpoint_audit
+import telegram_export_all_hit_context_clusters
+import telegram_export_technique_surprise_sweep
+import telegram_stage1_residual_classification_audit
 from page_structure_audit import DEFAULT_HTML
 from telegram_export_manifest import DEFAULT_EXPORT_DIR
 from cb_common import BLOBS, QUARANTINED_BLOBS
@@ -676,6 +682,56 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(report["candidate_count"], 26)
         self.assertIn("5152280Y424232X", report["candidates"])
         self.assertEqual(report["hits"], [])
+
+    def test_phase385_stream_compression_length_envelope(self):
+        report = phase385_stream_compression_length_envelope_audit.self_test()
+        self.assertEqual(report["lengths"]["bip38"]["raw"], 58)
+        self.assertEqual(report["lengths"]["xprv_xpub"]["raw"], 111)
+        self.assertIn(
+            ("bip38", "zlib", "SALPH", "cbc"), report["newly_admitted"]
+        )
+        self.assertIn(
+            ("hex64_text", "zlib", "SALPH", "cbc"), report["newly_excluded"]
+        )
+        self.assertFalse(
+            any(row[0] == "xprv_xpub" for row in report["newly_admitted"])
+        )
+
+    def test_phase386_btcseed_bifid_faed_decode(self):
+        report = phase386_btcseed_bifid_faed_decode_audit.self_test()
+        self.assertEqual(report["grid_keyword"], "DBIFHCEGAKLMNOPQRSTUVWXYZ")
+        self.assertTrue(report["starts_with_btcseed"])
+        self.assertEqual(report["pre_z_length"], 97)
+        self.assertFalse(report["pre_z_matches_dbbi_length"])
+        self.assertEqual(report["embedded_word_count"], 13)
+        self.assertLess(
+            report["embedded_word_count"],
+            report["baseline_mean"] + report["baseline_stdev"],
+        )
+
+    def test_phase387_btcseed_kmodest_checkpoint(self):
+        phase387_btcseed_kmodest_checkpoint_audit.self_test()
+        observed = phase387_btcseed_kmodest_checkpoint_audit.observed_report()
+        self.assertEqual(observed["first_z_index"], 97)
+        self.assertEqual(observed["prefix_length_through_z"], 98)
+        self.assertEqual(observed["candidate"], "KMODEST")
+
+    def test_telegram_technique_surprise_sweep_token_boundaries(self):
+        telegram_export_technique_surprise_sweep.self_test()
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "Telegram export is unavailable",
+    )
+    def test_telegram_all_hit_context_clusters(self):
+        telegram_export_all_hit_context_clusters.self_test()
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "Telegram export is unavailable",
+    )
+    def test_telegram_stage1_residual_classification(self):
+        telegram_stage1_residual_classification_audit.self_test()
 
     def test_p32_transaction_graph_snapshot(self):
         p32_transaction_graph_audit.self_test()
