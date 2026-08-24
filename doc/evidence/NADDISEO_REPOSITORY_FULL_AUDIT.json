@@ -1,0 +1,2044 @@
+{
+  "audio": {
+    "channel_difference_visual_read": "48 41 53 48 54 48 45 54 45 58 54 -> HASHTHETEXT",
+    "path": "decentraland-assets/puzzlepiece.mp3",
+    "sha256": "ef17a96dce37b4dd7cbf79f210c5cbaf37fcae60e5faf8004de4e0832bd0dfee",
+    "stream_probe": {
+      "format": {
+        "duration": "5.198375",
+        "format_name": "mp3",
+        "size": "212031"
+      },
+      "programs": [],
+      "streams": [
+        {
+          "channels": 2,
+          "codec_name": "mp3",
+          "sample_rate": "44100"
+        }
+      ]
+    }
+  },
+  "category_counts": {
+    "audio": 1,
+    "encrypted_payload": 3,
+    "hint_image": 34,
+    "notebook": 7,
+    "placeholder": 1,
+    "text": 7,
+    "walkthrough_image": 32
+  },
+  "commit": "15b43fc859c33170d7c45b9fe41789d77b7af974",
+  "deterministic_replays": {
+    "aes_exact_plaintext_matches": [
+      {
+        "encrypted": "phase2-assets/phase2_aes.txt",
+        "plaintext": "phase2-assets/phase2.1.txt",
+        "sha256": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a"
+      },
+      {
+        "encrypted": "phase2-assets/phase3_aes.txt",
+        "plaintext": "phase2-assets/phase3.txt",
+        "sha256": "c4ad94559a44a927c1032cc0e024515f9510a0806a2d14458dbf4a360af9865f"
+      },
+      {
+        "encrypted": "phase3-assets/phase3.2-aes.txt",
+        "plaintext": "phase3-assets/phase3.2.txt",
+        "sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34"
+      }
+    ],
+    "phase0": "'gsmg.io/theseedisplanted\\x00'",
+    "salphaseion": {
+      "binary_1": "matrixsumlist",
+      "binary_2": "enter",
+      "decimal_1": "lastwordsbeforearchichoice",
+      "decimal_2": "thispassword"
+    }
+  },
+  "files": [
+    {
+      "category": "text",
+      "coverage": "full-text review, digest, relationship to notebook outputs",
+      "git_blob": "f4503debae76980e5aa9dd7b8b6f4723369a5f39",
+      "mode": "100644",
+      "path": "README.md",
+      "sha256": "9c3cc17b46e6996feb15ad48bdbebe7315f5b87b099909cd7dc6d6336f09c4cc",
+      "size": 16332,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "4d984d03cb54f53a5496bc3205a81b9a01ac2e1a",
+      "image": {
+        "format": "PNG",
+        "height": 617,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 619
+      },
+      "mode": "100644",
+      "path": "decentraland-assets/01-show-interactive.png",
+      "sha256": "3dc545d09717041004a956618e14b0daf55de75376e7cd00a80b0a14b08a94ed",
+      "size": 240221,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "ad57deb0406e0518778e32865100cb4e19dffabb",
+      "image": {
+        "format": "PNG",
+        "height": 328,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 725
+      },
+      "mode": "100644",
+      "path": "decentraland-assets/02-dcl-info.png",
+      "sha256": "60fc0db5a9f708dcaf7bbb3df5abdbe313e9fa3cfecd62e691ea90096f3637c4",
+      "size": 55221,
+      "status": "reviewed"
+    },
+    {
+      "category": "audio",
+      "coverage": "stream metadata, channel-difference spectrogram, digest",
+      "git_blob": "5103e8f1d4b378a646548156ba23ed523b23e5a9",
+      "mode": "100644",
+      "path": "decentraland-assets/puzzlepiece.mp3",
+      "sha256": "ef17a96dce37b4dd7cbf79f210c5cbaf37fcae60e5faf8004de4e0832bd0dfee",
+      "size": 212031,
+      "status": "reviewed"
+    },
+    {
+      "category": "notebook",
+      "coverage": "all cells, saved outputs, attachments, dependencies, side effects",
+      "git_blob": "4bf7362638c01468dd9a8feb02c4e2db839a2866",
+      "mode": "100644",
+      "notebook": {
+        "attachments": 3,
+        "code_cells": 5,
+        "markdown_cells": 6,
+        "saved_error_outputs": 0,
+        "saved_outputs": 5
+      },
+      "path": "decentraland.ipynb",
+      "sha256": "62f981b8be64d50d5833c12e81bb16e4320b2d2e3210bde91c645c85d6759443",
+      "size": 1152695,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "d07c71100a855fc34836e9a952cfe0c6b3c68144",
+      "image": {
+        "format": "PNG",
+        "height": 262,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 574
+      },
+      "mode": "100644",
+      "path": "hints/2020-01-14-roses-are-red.png",
+      "sha256": "7f4886a829a682012d9120f2fce923394accade39046e7283d41a3986fea3410",
+      "size": 90192,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "72a41fcadbab3bedb22cebe4ea2f2bb9ee4d6173",
+      "image": {
+        "format": "JPEG",
+        "height": 749,
+        "metadata_keys": [
+          "dpi",
+          "jfif",
+          "jfif_density",
+          "jfif_unit",
+          "jfif_version"
+        ],
+        "mode": "RGB",
+        "trailing_bytes": 0,
+        "width": 1280
+      },
+      "mode": "100644",
+      "path": "hints/2020-02-20-decentraland.jpg",
+      "sha256": "312dfc1898cb0a453ad093d7febb21c1d799717b2c089a5ea1d204aa96df9a35",
+      "size": 90957,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "a1286d7867c75638f4132eb9b50741e395839bd2",
+      "image": {
+        "format": "PNG",
+        "height": 145,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 580
+      },
+      "mode": "100644",
+      "path": "hints/2020-04-08.png",
+      "sha256": "64db0a372d006dc9b6d7900e8de028eb5f8a9a6e50866565a2e530f69f4f9cfc",
+      "size": 57827,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "73720043d13789298937676cca44771ee75c5cb1",
+      "image": {
+        "format": "PNG",
+        "height": 115,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 583
+      },
+      "mode": "100644",
+      "path": "hints/2020-05-11.png",
+      "sha256": "ac8e1d9bbc1e7891eff5282e39dbc57ca0f8ef90e827b4fde4aef7f944ecdfc2",
+      "size": 47397,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "8556656d37a6bbaa0aa9a3ac00c224c03ee43da0",
+      "image": {
+        "format": "PNG",
+        "height": 136,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 694
+      },
+      "mode": "100644",
+      "path": "hints/2020-06-07-salph-discord.png",
+      "sha256": "349aca1ff8271272674bfffa99fed92e2393881b7acb19eb76042687ce3a90dc",
+      "size": 20515,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "597ccafe5ab27ea54e8a153822001f64d8796c13",
+      "image": {
+        "format": "PNG",
+        "height": 206,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 571
+      },
+      "mode": "100644",
+      "path": "hints/2020-08-02.png",
+      "sha256": "de4186928bb3bacd78724a8b1036245561728224fb73efec66a647084ba991dc",
+      "size": 82591,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "a2e8009370f05470dca449534cf63cbd0261fed9",
+      "image": {
+        "format": "PNG",
+        "height": 140,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 604
+      },
+      "mode": "100644",
+      "path": "hints/2021-01-21.png",
+      "sha256": "3acd19edd58a678249b669670cc61b66bd3ade6ad40b8f521eb57dfff1aad523",
+      "size": 62794,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "fa1c71250016d7649ad3b514d69947ff9777a8e9",
+      "image": {
+        "format": "PNG",
+        "height": 237,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 586
+      },
+      "mode": "100644",
+      "path": "hints/2021-02-12-salph-mention.png",
+      "sha256": "b6c7e76159a1df675b9d09ea4a02982533b6fd62604b754f97f61dc38e5a1d55",
+      "size": 78406,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "bc8618840bea20bd8894584a49c6c37b70e44764",
+      "image": {
+        "format": "PNG",
+        "height": 460,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 534
+      },
+      "mode": "100644",
+      "path": "hints/2021-03-01-primes.png",
+      "sha256": "233f67719bbec6be109a56b60c18a6d3ae705aefbe0ea8371eac57a72d96dede",
+      "size": 189488,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "d6eaa9809e60e6d6b848d0907c36ff6aead9b02b",
+      "image": {
+        "format": "PNG",
+        "height": 390,
+        "metadata_keys": [
+          "Comment",
+          "dpi",
+          "icc_profile"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 522
+      },
+      "mode": "100644",
+      "path": "hints/2021-03-01-spelling-hint.png",
+      "sha256": "c0f1747aa365636f244214f3e895f8bcf9b02040f57d19f18885ce63f39367ef",
+      "size": 134859,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "b9d1e43abd67e9c5436216cc001fba29a834ce84",
+      "image": {
+        "format": "PNG",
+        "height": 349,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 552
+      },
+      "mode": "100644",
+      "path": "hints/2021-03-14.png",
+      "sha256": "4e3dc1a4c1306be5efaccec6f47f95c1652a21cc33d23991927a33dd8975ebf4",
+      "size": 131249,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "157cbc783557ce1d51da31a2f3bac35b371a681b",
+      "image": {
+        "format": "PNG",
+        "height": 164,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 516
+      },
+      "mode": "100644",
+      "path": "hints/2021-04-01-april fool.png",
+      "sha256": "e7ff51ad5e00646d9fb785602090db93da36d249365326e46e8ca1ec959ac33c",
+      "size": 33218,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "95757bf95ac32a6f52fa07ef062998a2813ae304",
+      "image": {
+        "format": "PNG",
+        "height": 773,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 499
+      },
+      "mode": "100644",
+      "path": "hints/2021-04-16-salph.png",
+      "sha256": "6d0038e5f7988e3d8f6bf46892f445680b2f8c3194d30b438687e6b73cdb5812",
+      "size": 211370,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "cd87341e309577a00d110d41c681524108a4d004",
+      "image": {
+        "format": "PNG",
+        "height": 93,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 513
+      },
+      "mode": "100644",
+      "path": "hints/2021-05-06-salph instructions.png",
+      "sha256": "21b3f2eaa7bdf8db60d2ab8d579087f2499ce8f864974f803d722692a19ff596",
+      "size": 32128,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "7c7f69864439517b5e2910761b3e46c007874334",
+      "image": {
+        "format": "PNG",
+        "height": 252,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 478
+      },
+      "mode": "100644",
+      "path": "hints/2021-12-02-another-door-hint.png",
+      "sha256": "6fbd2939e02d0f48fa2f83cd82d83052f751033262e52f0eeb5eba7926a87ebb",
+      "size": 43838,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "072545c580c4ee6cdf2a7d6a7ed5e1c01376fb23",
+      "image": {
+        "format": "PNG",
+        "height": 175,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 531
+      },
+      "mode": "100644",
+      "path": "hints/2021-12-25-hint.png",
+      "sha256": "63096303fc9fc83292bc33e3819746c99f87495ca618bb19afa65645e7409083",
+      "size": 65612,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "0e050a68a2eeefdedb5ca31d1025512589fde208",
+      "image": {
+        "format": "PNG",
+        "height": 576,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 543
+      },
+      "mode": "100644",
+      "path": "hints/2022-12-10-cosmic.png",
+      "sha256": "6c61b0d2245d9627f10ed6e82a5f76aa2e0701bf6a8f977c4772ceabcffdfc5d",
+      "size": 243495,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "a2692902ea5727f3fd8e35cf1f3c17408af0dff1",
+      "image": {
+        "format": "PNG",
+        "height": 130,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 557
+      },
+      "mode": "100644",
+      "path": "hints/2023-01-09-prime-number.png",
+      "sha256": "fa043633c30163a7c8ffe162a137e20eac44993cb44b65b35ed8f741f3348fb5",
+      "size": 50943,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "03e421281a727ece2437ecdf000a111ccb3f0b4b",
+      "image": {
+        "format": "PNG",
+        "height": 76,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 552
+      },
+      "mode": "100644",
+      "path": "hints/2023-01-12-theory of everything.png",
+      "sha256": "d94f05e7a955244aa2ae10261a7217097747d7f52ea49da2d254c015ff41fee6",
+      "size": 30798,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "1c7da1221bbe5fce0e4e35143caa7c0ecc2f0280",
+      "image": {
+        "format": "PNG",
+        "height": 760,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 551
+      },
+      "mode": "100644",
+      "path": "hints/2023-02-23.png",
+      "sha256": "5dddf73995c45497facb034e3d38d2bbbe3642603b15fce22e118d34209c0197",
+      "size": 155098,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "4340f585cc21b17446cc0c313b2edc315f4e2499",
+      "image": {
+        "format": "PNG",
+        "height": 202,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 526
+      },
+      "mode": "100644",
+      "path": "hints/2023-08-03-1.png",
+      "sha256": "3e955954b5b8f687a8615ab409f1481556c448145980cdbe11dd0b0de0e8c216",
+      "size": 77053,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "11bda8f9b37ffd3be04066a02e92d30652b5a961",
+      "image": {
+        "format": "PNG",
+        "height": 157,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 519
+      },
+      "mode": "100644",
+      "path": "hints/2023-08-03-2.png",
+      "sha256": "6564f5a9be9e4f43c1fced18775cf117992c8884742cf7f14ffa23f1a51e3395",
+      "size": 50112,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "9062ac52032d7caf984c278bee220c85a70484c3",
+      "image": {
+        "format": "PNG",
+        "height": 410,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 518
+      },
+      "mode": "100644",
+      "path": "hints/2023-08-06-1.png",
+      "sha256": "2696ea0469ed91d4f03a6b06f038d3c62837015caef4a450eb3eaf3794bc4f7d",
+      "size": 169022,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "4537de944f382e0b30443acc4b0ab6a2c4c48f53",
+      "image": {
+        "format": "PNG",
+        "height": 246,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 536
+      },
+      "mode": "100644",
+      "path": "hints/2023-08-06-2.png",
+      "sha256": "692add262a52302458069e7172c74b2b13aeee1e734685ce201fcb1ab5f42743",
+      "size": 80485,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "d3ccb4e0ce0e221f57849dfd67d499d5f8239f1a",
+      "image": {
+        "format": "PNG",
+        "height": 131,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 533
+      },
+      "mode": "100644",
+      "path": "hints/2023-08-06-3.png",
+      "sha256": "75e756cec140a234f146e30b42be4155cbb332bbe5241d54c35b33f35ddb2a26",
+      "size": 32782,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "a8843600b9d822440532b6b7f3ae466ae524b414",
+      "image": {
+        "format": "PNG",
+        "height": 537,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 554
+      },
+      "mode": "100644",
+      "path": "hints/2023-08-06-4.png",
+      "sha256": "5b4b92a99af75af85150293ab89b5a2d9a8b2682e7bc1d5a049ad7a0804f0c23",
+      "size": 200644,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "c0e7b0d7938814986dd2a92cf570dc21ac496cde",
+      "image": {
+        "format": "PNG",
+        "height": 122,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 310
+      },
+      "mode": "100644",
+      "path": "hints/2024-04-10.png",
+      "sha256": "f6d874a357ad45287c8bb30638e525b42a3f1ee1a84c5b32922764b73c887b0e",
+      "size": 31810,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "615bfb2dcb031f1fef28a346a3f633c113d86780",
+      "image": {
+        "format": "PNG",
+        "height": 268,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 541
+      },
+      "mode": "100644",
+      "path": "hints/2024-04-19-1.png",
+      "sha256": "ff7ee78ab3805a2f5d9f4b16e6418e132ddfa963338d067a781efabeef90eab8",
+      "size": 101090,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "71ed3cd9867454340daef6ac472957778df86fd6",
+      "image": {
+        "format": "PNG",
+        "height": 268,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 541
+      },
+      "mode": "100644",
+      "path": "hints/2024-04-19-2.png",
+      "sha256": "85dcbbd1c2dc00ef0e566c1caa2b485ef2c53650fba211acb66ab0350cfd2af8",
+      "size": 99806,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "d5f362ebaf4a0002ff519daecf82125c9ea23493",
+      "image": {
+        "format": "PNG",
+        "height": 605,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 521
+      },
+      "mode": "100644",
+      "path": "hints/2026-01-01-new-year-hint.png",
+      "sha256": "028419db3ee983bd38e44acf2b1ed642f329b3624081ab789622580dca78e26f",
+      "size": 170312,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "9b0e580c6f59034ed65c54bb4b73be5f6a91580b",
+      "image": {
+        "format": "PNG",
+        "height": 128,
+        "metadata_keys": [],
+        "mode": "RGB",
+        "trailing_bytes": 0,
+        "width": 525
+      },
+      "mode": "100644",
+      "path": "hints/2026-07-12-official-hint.png",
+      "sha256": "d7f2c4c7fa3d608be892428984bc7488c017b68dd5c493bf0e7f4ba440c501e0",
+      "size": 34745,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "07af2bb72e365d9e9580ad9aca9a625af943b7ad",
+      "image": {
+        "format": "PNG",
+        "height": 313,
+        "metadata_keys": [],
+        "mode": "RGB",
+        "trailing_bytes": 0,
+        "width": 562
+      },
+      "mode": "100644",
+      "path": "hints/2026-07-12-other-msg.png",
+      "sha256": "357b3ce1f1108a7203554b6c0fd7c21f8359fad0de4dc767bf5c0771603d7c42",
+      "size": 68341,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "803410eb2b2aa98fccfea92ef3659140ffb096c0",
+      "image": {
+        "format": "PNG",
+        "height": 651,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 553
+      },
+      "mode": "100644",
+      "path": "hints/cosmic-duality-book.png",
+      "sha256": "edde7220c751583a7f9a884b64ee72a28e8d5c2e53c29a74d7a1c7cdc4221504",
+      "size": 687085,
+      "status": "reviewed"
+    },
+    {
+      "category": "hint_image",
+      "coverage": "visual review, authorship context, metadata, boundary, digest",
+      "git_blob": "3fcacc39aeaf825376da8c3ff93e40bf74a5e302",
+      "image": {
+        "format": "PNG",
+        "height": 362,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 613
+      },
+      "mode": "100644",
+      "path": "hints/decentraland-tg.png",
+      "sha256": "e0e9d0ea66a1e867032a54217fc57833a4b1bfcb114fd3d67a029776a19f60f6",
+      "size": 247119,
+      "status": "reviewed"
+    },
+    {
+      "category": "notebook",
+      "coverage": "all cells, saved outputs, attachments, dependencies, side effects",
+      "git_blob": "55febbec35468a3dc2c8f76e0c3f5d7c7eecc4bd",
+      "mode": "100644",
+      "notebook": {
+        "attachments": 0,
+        "code_cells": 3,
+        "markdown_cells": 5,
+        "saved_error_outputs": 0,
+        "saved_outputs": 3
+      },
+      "path": "phase0.ipynb",
+      "sha256": "a9b5d6071a2b9618e7fcc40355761ccc2a31481c3a514408b101c8b2283e9bbc",
+      "size": 7592,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "705ec6fd3dbeae75476b7b3de72177852f75c9e3",
+      "image": {
+        "format": "PNG",
+        "height": 458,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 1285
+      },
+      "mode": "100644",
+      "path": "phase1-assets/phase1-source.png",
+      "sha256": "42139a8e1a32c99b1f76cc9ff02050f2c120c6ed1498644324d0803d4c45807c",
+      "size": 108525,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "b9e050f426068914eb96c1ffc1a3466766d614f5",
+      "image": {
+        "format": "PNG",
+        "height": 135,
+        "metadata_keys": [
+          "dpi",
+          "gamma",
+          "srgb"
+        ],
+        "mode": "RGB",
+        "trailing_bytes": 0,
+        "width": 688
+      },
+      "mode": "100644",
+      "path": "phase1-assets/theseedisplanted.png",
+      "sha256": "6230f079b0127877aaa19988316d0338a7a8b72280417b3afd6d5fe632ea2993",
+      "size": 8619,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "acab630a924ed7e45e206fa574bcd8ab90f9745d",
+      "image": {
+        "format": "PNG",
+        "height": 321,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 195
+      },
+      "mode": "100644",
+      "path": "phase1-assets/warning-logic.png",
+      "sha256": "d250c422f4c2f26ab1b1a02b16914c35ecc69e890b88a7ae47ef210bdb6d4317",
+      "size": 8204,
+      "status": "reviewed"
+    },
+    {
+      "category": "notebook",
+      "coverage": "all cells, saved outputs, attachments, dependencies, side effects",
+      "git_blob": "4ee586367904e4a7a7698069e01419123c3fdf69",
+      "mode": "100644",
+      "notebook": {
+        "attachments": 3,
+        "code_cells": 1,
+        "markdown_cells": 2,
+        "saved_error_outputs": 0,
+        "saved_outputs": 1
+      },
+      "path": "phase1.ipynb",
+      "sha256": "60f424df150dc3c133328226275d50c00217764d816af355519822563f95e9bc",
+      "size": 174985,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "147011459d9b65c34ae766e00a091dcead780e53",
+      "image": {
+        "format": "PNG",
+        "height": 590,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 660
+      },
+      "mode": "100644",
+      "path": "phase2-assets/chess.png",
+      "sha256": "a233c888f30182c5e29af2176a3df1de36b6752233d40197fe8495bc1fdfa5df",
+      "size": 83207,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "7bede054be44427d6660ffebea76da90d9e4a2c1",
+      "image": {
+        "format": "PNG",
+        "height": 941,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 638
+      },
+      "mode": "100644",
+      "path": "phase2-assets/part1-google-search-1.png",
+      "sha256": "bed575656013558454d4a23d1c37109b1555e621b3fd578c8d1aa035508788a4",
+      "size": 155887,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "a99c5bcf04201c7e1ac403409228f789de5360db",
+      "image": {
+        "format": "PNG",
+        "height": 935,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 679
+      },
+      "mode": "100644",
+      "path": "phase2-assets/part1-google-search-2.png",
+      "sha256": "09b9dd3d9769688fb7ae866ffd089eda11125d83b4590a3ae1f6094fa138369e",
+      "size": 209462,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "f72a3b314b9c0b10bcec1fc3a31220b03fbd8740",
+      "image": {
+        "format": "PNG",
+        "height": 960,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 687
+      },
+      "mode": "100644",
+      "path": "phase2-assets/part1-google-search-3.png",
+      "sha256": "51ee5a93d9b91b014e06b218a23dcc6c59395ce43e62dcac50adbf0ff9c1e810",
+      "size": 175887,
+      "status": "reviewed"
+    },
+    {
+      "category": "text",
+      "coverage": "full-text review, digest, relationship to notebook outputs",
+      "git_blob": "c6eb7b3963a7fc699cbd780f2f0ed197746b13c1",
+      "mode": "100644",
+      "path": "phase2-assets/phase2.1.txt",
+      "sha256": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+      "size": 648,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "ebe416b2d1bee4e5d6e076db01171efaab1bb8b6",
+      "image": {
+        "format": "PNG",
+        "height": 850,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 896
+      },
+      "mode": "100644",
+      "path": "phase2-assets/phase2.png",
+      "sha256": "04859b383075fcd5bd42b90d27266cf811590d52a02a37267b9e8440ecaeaa93",
+      "size": 312826,
+      "status": "reviewed"
+    },
+    {
+      "category": "encrypted_payload",
+      "coverage": "full bytes, base64 envelope, safe in-memory decrypt where solved",
+      "git_blob": "343717e4f3792871308d68b11c01f76536d568b3",
+      "mode": "100644",
+      "path": "phase2-assets/phase2_aes.txt",
+      "sha256": "5e583d5b8626aa80f8a1ae61e7ad62fb2640bedb73fcc12ba68fa13b15dfa94d",
+      "size": 910,
+      "status": "reviewed"
+    },
+    {
+      "category": "text",
+      "coverage": "full-text review, digest, relationship to notebook outputs",
+      "git_blob": "76ae14a300dd0538a93c6cec24810af821a4fdfe",
+      "mode": "100644",
+      "path": "phase2-assets/phase3.txt",
+      "sha256": "c4ad94559a44a927c1032cc0e024515f9510a0806a2d14458dbf4a360af9865f",
+      "size": 4090,
+      "status": "reviewed"
+    },
+    {
+      "category": "encrypted_payload",
+      "coverage": "full bytes, base64 envelope, safe in-memory decrypt where solved",
+      "git_blob": "e8c32d44e45b5250c35fa477375de28847551f0b",
+      "mode": "100644",
+      "path": "phase2-assets/phase3_aes.txt",
+      "sha256": "bb357b4a78cdf7f73255ac81046a9a05ffccebeaf1e98b79fa4f8b7f2ad3912f",
+      "size": 5569,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "f9676f9b2f9332e38314de4ebde58539e9a3aa32",
+      "image": {
+        "format": "PNG",
+        "height": 984,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 688
+      },
+      "mode": "100644",
+      "path": "phase2.1-assets/H-guide.png",
+      "sha256": "8d2ee646ae76efc30b41a94ce3b1062dd2c482a1c3e8c2cd5e9a4e412e79b819",
+      "size": 188413,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "97155b76ceb17ecd0e9be69c8b4d1c0ec484e997",
+      "image": {
+        "format": "PNG",
+        "height": 984,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 688
+      },
+      "mode": "100644",
+      "path": "phase2.1-assets/H-nothing-useful.png",
+      "sha256": "e1ce52c49cef5d40a2ad9a8fcba4328e154b2c017279c65abafc2e0b2a68e86e",
+      "size": 192332,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "2aef4644237177e1f481e0ffc069e6c1f9386830",
+      "image": {
+        "format": "PNG",
+        "height": 611,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 1161
+      },
+      "mode": "100644",
+      "path": "phase2.1-assets/coords.png",
+      "sha256": "798784393edb5850f201d712ca3a85038611b5a16e24c64e5abb1942a7b9ae39",
+      "size": 325831,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "8b2af554b8bf6a31817d13a07fcb0b5b534f51d8",
+      "image": {
+        "format": "PNG",
+        "height": 512,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 708
+      },
+      "mode": "100644",
+      "path": "phase2.1-assets/intel-i5.png",
+      "sha256": "b14180c1ae1d182f0670c2d020fd3180c4562010d4e9a88c39f03129b095547f",
+      "size": 129786,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "2f49b797f89bb1c1c2dce60f08642c9278c25e57",
+      "image": {
+        "format": "PNG",
+        "height": 787,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 685
+      },
+      "mode": "100644",
+      "path": "phase2.1-assets/klingon.png",
+      "sha256": "4ed935f6cb7ac10e578769da0901238d07b302e37783375c7781f4de3dfdfa6e",
+      "size": 118894,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "4b4476d8a8d468651e8f1ad4bf6b1dfe221ffd82",
+      "image": {
+        "format": "PNG",
+        "height": 985,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 724
+      },
+      "mode": "100644",
+      "path": "phase2.1-assets/mr-robot-hsm.png",
+      "sha256": "79d7e9f38ae0c0e3835b58de1bdd43e7f0b2dd046474745b89a22135e87c435f",
+      "size": 165662,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "8267fd57da1269b9c009ed48a6cbb364ce4ec99f",
+      "image": {
+        "format": "PNG",
+        "height": 766,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 717
+      },
+      "mode": "100644",
+      "path": "phase2.1-assets/mr-robot-search-1.png",
+      "sha256": "9253777d78c83e6c0397c88f68139c18a52972b05047f1ce2963613de5ba7823",
+      "size": 140012,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "b4aa744c90713d0140982ba910b183162cdc4131",
+      "image": {
+        "format": "PNG",
+        "height": 888,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 694
+      },
+      "mode": "100644",
+      "path": "phase2.1-assets/qwerty.png",
+      "sha256": "4048e84b3ce5bab5c80bc2e8b16d451ad545ab730f2f6d504c230cb6264ad80b",
+      "size": 189004,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "46e98605ddf52e49aa0c347c57cacc72295e81fc",
+      "image": {
+        "format": "PNG",
+        "height": 611,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 1135
+      },
+      "mode": "100644",
+      "path": "phase2.1-assets/safenet-coords.png",
+      "sha256": "ec8d07dbbecaad5f6f5946d7d06c2a176b0066303ce0b3166ac9540165fba901",
+      "size": 391448,
+      "status": "reviewed"
+    },
+    {
+      "category": "notebook",
+      "coverage": "all cells, saved outputs, attachments, dependencies, side effects",
+      "git_blob": "4466829346b36985a0fc072466e189b6c2ba55cd",
+      "mode": "100644",
+      "notebook": {
+        "attachments": 14,
+        "code_cells": 3,
+        "markdown_cells": 10,
+        "saved_error_outputs": 0,
+        "saved_outputs": 3
+      },
+      "path": "phase2.ipynb",
+      "sha256": "fa884a087430deaeef17234c82c82d9e83e9bffd806dd2853b8680a7d9a1f1de",
+      "size": 3739609,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "6265926b40804e5e47401fde4c68274ced9087db",
+      "image": {
+        "format": "PNG",
+        "height": 924,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 747
+      },
+      "mode": "100644",
+      "path": "phase3-assets/google-3.1.1.png",
+      "sha256": "5ea67d6c2b3bef8ca6ba05e3a35ff7c254d19e353cc413dc475926e0e81dd3f0",
+      "size": 176524,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "294ee53edb894e9bcdad8a9a10ad8e3cb692b1f7",
+      "image": {
+        "format": "PNG",
+        "height": 874,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 816
+      },
+      "mode": "100644",
+      "path": "phase3-assets/google-3.1.3.png",
+      "sha256": "c464f671697840f330d8942811b31556afadb2127f2557029efa21ac2bac598f",
+      "size": 186769,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "85f45c81fac6c671245e5415f23e53a5a3126ff3",
+      "image": {
+        "format": "PNG",
+        "height": 739,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 811
+      },
+      "mode": "100644",
+      "path": "phase3-assets/just-one-second.png",
+      "sha256": "d820ef1584fa6abed8dd9ac71a943852c6dc32452e7a9ca9e5ce8c16d00893c6",
+      "size": 184607,
+      "status": "reviewed"
+    },
+    {
+      "category": "encrypted_payload",
+      "coverage": "full bytes, base64 envelope, safe in-memory decrypt where solved",
+      "git_blob": "896b783511dcd5dc16b9354b666e6fe146886169",
+      "mode": "100644",
+      "path": "phase3-assets/phase3.2-aes.txt",
+      "sha256": "a14a0efac8e6bfd43ed892a21f52806aa27d913c0222dfa46333617fd4b58640",
+      "size": 3316,
+      "status": "reviewed"
+    },
+    {
+      "category": "text",
+      "coverage": "full-text review, digest, relationship to notebook outputs",
+      "git_blob": "822ed6da399b03ef817be1c0aaf76df00130079f",
+      "mode": "100644",
+      "path": "phase3-assets/phase3.2.txt",
+      "sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+      "size": 2422,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "0982793d1b31b6c0c163f6894851cf66616b1edb",
+      "image": {
+        "format": "PNG",
+        "height": 676,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 888
+      },
+      "mode": "100644",
+      "path": "phase3-assets/venus-project.png",
+      "sha256": "6d42406e8f1be2f647ca44a2fac40e483d2b434918941d2013a2e2bccf6e91f4",
+      "size": 211263,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "7419ed074fd20cb3547afab6a7ae037f147f74b3",
+      "image": {
+        "format": "PNG",
+        "height": 836,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 841
+      },
+      "mode": "100644",
+      "path": "phase3.2-assets/beaufort-success.png",
+      "sha256": "7f2181ec6d3cba09c46bd58d04969c345e156a629934e709f15a4f863e7bbda3",
+      "size": 351176,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "eb4e24a9cd15cceda0ad45a22df1f28c959b00be",
+      "image": {
+        "format": "PNG",
+        "height": 769,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 835
+      },
+      "mode": "100644",
+      "path": "phase3.2-assets/beaufort1.png",
+      "sha256": "445124ef254045e74eab343e4f477be4b7d12414edb2c64f70a8104cb964b683",
+      "size": 306552,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "80db4c963100d4cfdd72d6879fecf9d494d84dbd",
+      "image": {
+        "format": "PNG",
+        "height": 966,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 849
+      },
+      "mode": "100644",
+      "path": "phase3.2-assets/google-1.png",
+      "sha256": "e9274dcb56c3d166489e3481d30daaa51eee31275a0b87afef9928a7c73cd5cf",
+      "size": 186657,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "8d3b1e0cc81a435a7d2c2136aaa65039c491cb2f",
+      "image": {
+        "format": "PNG",
+        "height": 262,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 792
+      },
+      "mode": "100644",
+      "path": "phase3.2-assets/in-case.png",
+      "sha256": "9aaebb937c82eb760814b0257bb62503b7ce3ca50ca6e25dfb7574c6e617707b",
+      "size": 74672,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "2abed9683c32f39f9ad6c547e675a62a424ff53d",
+      "image": {
+        "format": "PNG",
+        "height": 728,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 847
+      },
+      "mode": "100644",
+      "path": "phase3.2-assets/phase3.2-screenshot-utf8.png",
+      "sha256": "66e9463973269d31b35beaecc6a1ca80cf4924e6a088bbaa6c3c97e11b1b79dd",
+      "size": 197803,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "3898b71f3ea6e97de64add2e0e197fe216e64c6c",
+      "image": {
+        "format": "PNG",
+        "height": 392,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 1068
+      },
+      "mode": "100644",
+      "path": "phase3.2-assets/wake-up-neo.png",
+      "sha256": "02d8b91266322d06c1b668360632d2484885056c9032546bf08cc186a60d4b26",
+      "size": 80953,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "b9a7f2a09e842e121de4ac9c9e71f5b4bfb9d495",
+      "image": {
+        "format": "PNG",
+        "height": 362,
+        "metadata_keys": [
+          "Creation Time",
+          "Software"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 619
+      },
+      "mode": "100644",
+      "path": "phase3.2-assets/why-am-i-here.png",
+      "sha256": "adfa1004272e064d5e257c84b30add71a8bd475958c8113413868393acc028ed",
+      "size": 78996,
+      "status": "reviewed"
+    },
+    {
+      "category": "notebook",
+      "coverage": "all cells, saved outputs, attachments, dependencies, side effects",
+      "git_blob": "b17a0c00a7d3fbfa5e01d3745f765cddec8b3953",
+      "mode": "100644",
+      "notebook": {
+        "attachments": 7,
+        "code_cells": 7,
+        "markdown_cells": 13,
+        "saved_error_outputs": 0,
+        "saved_outputs": 7
+      },
+      "path": "phase3.2.ipynb",
+      "sha256": "f8f6d01a87d47f754a0ed68b5daebf57f6f5b049281c445b97d7ea1cd38274ef",
+      "size": 1754587,
+      "status": "reviewed"
+    },
+    {
+      "category": "notebook",
+      "coverage": "all cells, saved outputs, attachments, dependencies, side effects",
+      "git_blob": "c96d08184b1298a3e5d745f1d41f4bca7c02d216",
+      "mode": "100644",
+      "notebook": {
+        "attachments": 4,
+        "code_cells": 1,
+        "markdown_cells": 7,
+        "saved_error_outputs": 0,
+        "saved_outputs": 1
+      },
+      "path": "phase3.ipynb",
+      "sha256": "17f72c9538bd158a5462c39261a3dc00c6bd07e33ae955827d0958e1e998a603",
+      "size": 1020572,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "4e727182dc7cd07e5d3e6d999ed585d740ea891a",
+      "image": {
+        "format": "PNG",
+        "height": 1556,
+        "metadata_keys": [
+          "dpi",
+          "gamma",
+          "srgb"
+        ],
+        "mode": "RGBA",
+        "trailing_bytes": 0,
+        "width": 1048
+      },
+      "mode": "100644",
+      "path": "puzzle.png",
+      "sha256": "38125bbdf1ea58b9b30b075bc6bf71e4089d04bba37098317e47097e2f2a1830",
+      "size": 29931,
+      "status": "reviewed"
+    },
+    {
+      "category": "walkthrough_image",
+      "coverage": "visual review, metadata, boundary, digest, attachment match",
+      "git_blob": "49bf1e7268808fbba8f83ff04d1f524f30b9f795",
+      "image": {
+        "format": "PNG",
+        "height": 619,
+        "metadata_keys": [
+          "dpi",
+          "gamma",
+          "srgb"
+        ],
+        "mode": "RGB",
+        "trailing_bytes": 0,
+        "width": 668
+      },
+      "mode": "100644",
+      "path": "salphaseion-assets/SalPhaselonCosmicDuality.png",
+      "sha256": "a3810ba24250c5a04908e1281c2202e73f7487f9d19f41bfd2c3e55fa9be57ed",
+      "size": 49970,
+      "status": "reviewed"
+    },
+    {
+      "category": "notebook",
+      "coverage": "all cells, saved outputs, attachments, dependencies, side effects",
+      "git_blob": "242cccd7a30af797c6ff811ba051021e65616766",
+      "mode": "100644",
+      "notebook": {
+        "attachments": 1,
+        "code_cells": 6,
+        "markdown_cells": 8,
+        "saved_error_outputs": 0,
+        "saved_outputs": 7
+      },
+      "path": "salphaseion.ipynb",
+      "sha256": "2c4b2e6aa4aa3d8d3f5b5ee49ffc6a2c03e894efccdffc6dc30bc2536c384b14",
+      "size": 85624,
+      "status": "reviewed"
+    },
+    {
+      "category": "placeholder",
+      "coverage": "presence, size, digest",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "path": "unverified/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "status": "reviewed"
+    },
+    {
+      "category": "text",
+      "coverage": "full-text review, digest, relationship to notebook outputs",
+      "git_blob": "3898cf5ea18e1466b75216466ae2ca400277b6fa",
+      "mode": "100644",
+      "path": "unverified/README.md",
+      "sha256": "2fb7be454eabc39df92cc7af623e5fa41408b84c8a0a00ffae0954933e354a23",
+      "size": 681,
+      "status": "reviewed"
+    },
+    {
+      "category": "text",
+      "coverage": "full-text review, digest, relationship to notebook outputs",
+      "git_blob": "825c5abb51a454767aaa396d4c32ef3aebe42e83",
+      "mode": "100644",
+      "path": "unverified/phase3.2_1141.md",
+      "sha256": "05b428be66f073f3e61ed49824275dd42c9ecd2edb343f81e97effdb622cb5cb",
+      "size": 2293,
+      "status": "reviewed"
+    },
+    {
+      "category": "text",
+      "coverage": "full-text review, digest, relationship to notebook outputs",
+      "git_blob": "22438b712e8768416c9615431ecdf092a0dd3e29",
+      "mode": "100644",
+      "path": "unverified/sample_3.2_attempt_1.md",
+      "sha256": "2a3f010d77dfe9c64bac81bd0494eb68ea4cab525c1bec235c2571722bd85bd1",
+      "size": 138,
+      "status": "reviewed"
+    }
+  ],
+  "images": {
+    "count": 66,
+    "files_with_trailing_bytes": [],
+    "formats": {
+      "JPEG": 1,
+      "PNG": 65
+    },
+    "metadata_key_counts": {
+      "Comment": 1,
+      "Creation Time": 59,
+      "Software": 59,
+      "dpi": 5,
+      "gamma": 3,
+      "icc_profile": 1,
+      "jfif": 1,
+      "jfif_density": 1,
+      "jfif_unit": 1,
+      "jfif_version": 1,
+      "srgb": 3
+    }
+  },
+  "notebooks": {
+    "all_attachments_match_standalone_bytes": true,
+    "attachment_count": 32,
+    "attachments": [
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "01-show-interactive.png",
+        "notebook": "decentraland.ipynb",
+        "sha256": "3dc545d09717041004a956618e14b0daf55de75376e7cd00a80b0a14b08a94ed",
+        "standalone_exact_matches": [
+          "decentraland-assets/01-show-interactive.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "decentraland-tg.png",
+        "notebook": "decentraland.ipynb",
+        "sha256": "e0e9d0ea66a1e867032a54217fc57833a4b1bfcb114fd3d67a029776a19f60f6",
+        "standalone_exact_matches": [
+          "hints/decentraland-tg.png"
+        ]
+      },
+      {
+        "cell_index": 1,
+        "mime": "image/png",
+        "name": "02-dcl-info.png",
+        "notebook": "decentraland.ipynb",
+        "sha256": "60fc0db5a9f708dcaf7bbb3df5abdbe313e9fa3cfecd62e691ea90096f3637c4",
+        "standalone_exact_matches": [
+          "decentraland-assets/02-dcl-info.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "phase1-source.png",
+        "notebook": "phase1.ipynb",
+        "sha256": "42139a8e1a32c99b1f76cc9ff02050f2c120c6ed1498644324d0803d4c45807c",
+        "standalone_exact_matches": [
+          "phase1-assets/phase1-source.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "theseedisplanted.png",
+        "notebook": "phase1.ipynb",
+        "sha256": "6230f079b0127877aaa19988316d0338a7a8b72280417b3afd6d5fe632ea2993",
+        "standalone_exact_matches": [
+          "phase1-assets/theseedisplanted.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "warning-logic.png",
+        "notebook": "phase1.ipynb",
+        "sha256": "d250c422f4c2f26ab1b1a02b16914c35ecc69e890b88a7ae47ef210bdb6d4317",
+        "standalone_exact_matches": [
+          "phase1-assets/warning-logic.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "part1-google-search-1.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "bed575656013558454d4a23d1c37109b1555e621b3fd578c8d1aa035508788a4",
+        "standalone_exact_matches": [
+          "phase2-assets/part1-google-search-1.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "part1-google-search-2.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "09b9dd3d9769688fb7ae866ffd089eda11125d83b4590a3ae1f6094fa138369e",
+        "standalone_exact_matches": [
+          "phase2-assets/part1-google-search-2.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "part1-google-search-3.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "51ee5a93d9b91b014e06b218a23dcc6c59395ce43e62dcac50adbf0ff9c1e810",
+        "standalone_exact_matches": [
+          "phase2-assets/part1-google-search-3.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "phase2.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "04859b383075fcd5bd42b90d27266cf811590d52a02a37267b9e8440ecaeaa93",
+        "standalone_exact_matches": [
+          "phase2-assets/phase2.png"
+        ]
+      },
+      {
+        "cell_index": 3,
+        "mime": "image/png",
+        "name": "mr-robot-hsm.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "79d7e9f38ae0c0e3835b58de1bdd43e7f0b2dd046474745b89a22135e87c435f",
+        "standalone_exact_matches": [
+          "phase2.1-assets/mr-robot-hsm.png"
+        ]
+      },
+      {
+        "cell_index": 3,
+        "mime": "image/png",
+        "name": "mr-robot-search-1.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "9253777d78c83e6c0397c88f68139c18a52972b05047f1ce2963613de5ba7823",
+        "standalone_exact_matches": [
+          "phase2.1-assets/mr-robot-search-1.png"
+        ]
+      },
+      {
+        "cell_index": 4,
+        "mime": "image/png",
+        "name": "H-guide.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "8d2ee646ae76efc30b41a94ce3b1062dd2c482a1c3e8c2cd5e9a4e412e79b819",
+        "standalone_exact_matches": [
+          "phase2.1-assets/H-guide.png"
+        ]
+      },
+      {
+        "cell_index": 4,
+        "mime": "image/png",
+        "name": "H-nothing-useful.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "e1ce52c49cef5d40a2ad9a8fcba4328e154b2c017279c65abafc2e0b2a68e86e",
+        "standalone_exact_matches": [
+          "phase2.1-assets/H-nothing-useful.png"
+        ]
+      },
+      {
+        "cell_index": 4,
+        "mime": "image/png",
+        "name": "coords.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "798784393edb5850f201d712ca3a85038611b5a16e24c64e5abb1942a7b9ae39",
+        "standalone_exact_matches": [
+          "phase2.1-assets/coords.png"
+        ]
+      },
+      {
+        "cell_index": 4,
+        "mime": "image/png",
+        "name": "intel-i5.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "b14180c1ae1d182f0670c2d020fd3180c4562010d4e9a88c39f03129b095547f",
+        "standalone_exact_matches": [
+          "phase2.1-assets/intel-i5.png"
+        ]
+      },
+      {
+        "cell_index": 4,
+        "mime": "image/png",
+        "name": "klingon.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "4ed935f6cb7ac10e578769da0901238d07b302e37783375c7781f4de3dfdfa6e",
+        "standalone_exact_matches": [
+          "phase2.1-assets/klingon.png"
+        ]
+      },
+      {
+        "cell_index": 4,
+        "mime": "image/png",
+        "name": "qwerty.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "4048e84b3ce5bab5c80bc2e8b16d451ad545ab730f2f6d504c230cb6264ad80b",
+        "standalone_exact_matches": [
+          "phase2.1-assets/qwerty.png"
+        ]
+      },
+      {
+        "cell_index": 4,
+        "mime": "image/png",
+        "name": "safenet-coords.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "ec8d07dbbecaad5f6f5946d7d06c2a176b0066303ce0b3166ac9540165fba901",
+        "standalone_exact_matches": [
+          "phase2.1-assets/safenet-coords.png"
+        ]
+      },
+      {
+        "cell_index": 7,
+        "mime": "image/png",
+        "name": "chess.png",
+        "notebook": "phase2.ipynb",
+        "sha256": "a233c888f30182c5e29af2176a3df1de36b6752233d40197fe8495bc1fdfa5df",
+        "standalone_exact_matches": [
+          "phase2-assets/chess.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "google-1.png",
+        "notebook": "phase3.2.ipynb",
+        "sha256": "e9274dcb56c3d166489e3481d30daaa51eee31275a0b87afef9928a7c73cd5cf",
+        "standalone_exact_matches": [
+          "phase3.2-assets/google-1.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "phase3.2-screenshot-utf8.png",
+        "notebook": "phase3.2.ipynb",
+        "sha256": "66e9463973269d31b35beaecc6a1ca80cf4924e6a088bbaa6c3c97e11b1b79dd",
+        "standalone_exact_matches": [
+          "phase3.2-assets/phase3.2-screenshot-utf8.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "wake-up-neo.png",
+        "notebook": "phase3.2.ipynb",
+        "sha256": "02d8b91266322d06c1b668360632d2484885056c9032546bf08cc186a60d4b26",
+        "standalone_exact_matches": [
+          "phase3.2-assets/wake-up-neo.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "why-am-i-here.png",
+        "notebook": "phase3.2.ipynb",
+        "sha256": "adfa1004272e064d5e257c84b30add71a8bd475958c8113413868393acc028ed",
+        "standalone_exact_matches": [
+          "phase3.2-assets/why-am-i-here.png"
+        ]
+      },
+      {
+        "cell_index": 14,
+        "mime": "image/png",
+        "name": "beaufort-success.png",
+        "notebook": "phase3.2.ipynb",
+        "sha256": "7f2181ec6d3cba09c46bd58d04969c345e156a629934e709f15a4f863e7bbda3",
+        "standalone_exact_matches": [
+          "phase3.2-assets/beaufort-success.png"
+        ]
+      },
+      {
+        "cell_index": 14,
+        "mime": "image/png",
+        "name": "beaufort1.png",
+        "notebook": "phase3.2.ipynb",
+        "sha256": "445124ef254045e74eab343e4f477be4b7d12414edb2c64f70a8104cb964b683",
+        "standalone_exact_matches": [
+          "phase3.2-assets/beaufort1.png"
+        ]
+      },
+      {
+        "cell_index": 16,
+        "mime": "image/png",
+        "name": "in-case.png",
+        "notebook": "phase3.2.ipynb",
+        "sha256": "9aaebb937c82eb760814b0257bb62503b7ce3ca50ca6e25dfb7574c6e617707b",
+        "standalone_exact_matches": [
+          "phase3.2-assets/in-case.png"
+        ]
+      },
+      {
+        "cell_index": 2,
+        "mime": "image/png",
+        "name": "google-3.1.1.png",
+        "notebook": "phase3.ipynb",
+        "sha256": "5ea67d6c2b3bef8ca6ba05e3a35ff7c254d19e353cc413dc475926e0e81dd3f0",
+        "standalone_exact_matches": [
+          "phase3-assets/google-3.1.1.png"
+        ]
+      },
+      {
+        "cell_index": 2,
+        "mime": "image/png",
+        "name": "venus-project.png",
+        "notebook": "phase3.ipynb",
+        "sha256": "6d42406e8f1be2f647ca44a2fac40e483d2b434918941d2013a2e2bccf6e91f4",
+        "standalone_exact_matches": [
+          "phase3-assets/venus-project.png"
+        ]
+      },
+      {
+        "cell_index": 3,
+        "mime": "image/png",
+        "name": "just-one-second.png",
+        "notebook": "phase3.ipynb",
+        "sha256": "d820ef1584fa6abed8dd9ac71a943852c6dc32452e7a9ca9e5ce8c16d00893c6",
+        "standalone_exact_matches": [
+          "phase3-assets/just-one-second.png"
+        ]
+      },
+      {
+        "cell_index": 4,
+        "mime": "image/png",
+        "name": "google-3.1.3.png",
+        "notebook": "phase3.ipynb",
+        "sha256": "c464f671697840f330d8942811b31556afadb2127f2557029efa21ac2bac598f",
+        "standalone_exact_matches": [
+          "phase3-assets/google-3.1.3.png"
+        ]
+      },
+      {
+        "cell_index": 0,
+        "mime": "image/png",
+        "name": "SalPhaselonCosmicDuality.png",
+        "notebook": "salphaseion.ipynb",
+        "sha256": "a3810ba24250c5a04908e1281c2202e73f7487f9d19f41bfd2c3e55fa9be57ed",
+        "standalone_exact_matches": [
+          "salphaseion-assets/SalPhaselonCosmicDuality.png"
+        ]
+      }
+    ],
+    "count": 7,
+    "totals": {
+      "attachments": 32,
+      "code_cells": 26,
+      "markdown_cells": 51,
+      "saved_error_outputs": 0,
+      "saved_outputs": 27
+    }
+  },
+  "source": "https://github.com/Naddiseo/gsmgio-5btc-puzzle",
+  "tracked_file_count": 85,
+  "tree": "0cd1e900038246a4ff3f1b5817f34fa212c49d92"
+}
