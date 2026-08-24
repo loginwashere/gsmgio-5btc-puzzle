@@ -224,7 +224,11 @@ import phase389_btcseed_kmodest_authentication_selection_bias_audit
 import phase390_p32_transaction_fingerprint_audit
 import phase391_bounded_numeric_temporal_p32trailing_audit
 import phase392_seed7_representation_residue_evidence_gate
+import phase394_telegram_recipe_leads_authentication_audit
+import phase395_youwon_vic_dual_rail_convergence_audit
+import phase396_p91_header_aware_block_audit
 import telegram_export_all_hit_context_clusters
+import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
 import telegram_stage1_residual_classification_audit
 from page_structure_audit import DEFAULT_HTML
@@ -753,6 +757,45 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertFalse(v["html_entity_pathway_applicable"])
         self.assertFalse(v["utf16_low_byte_pathway_applicable"])
         self.assertFalse(v["textcontent_vs_copy_pathway_applicable"])
+
+    @unittest.skipUnless(
+        (Path(DEFAULT_EXPORT_DIR) / "result.json").exists(),
+        "Telegram export is unavailable",
+    )
+    def test_phase393_telegram_executable_recipe_residual(self):
+        report = telegram_executable_recipe_residual_audit.audit()
+        telegram_executable_recipe_residual_audit.corpus_self_test(report)
+        self.assertEqual(
+            report["classification_counts"],
+            {"covered": 88, "noise_or_incomplete": 51, "new_lead": 3},
+        )
+
+    def test_phase394_telegram_recipe_leads_authentication(self):
+        report = phase394_telegram_recipe_leads_authentication_audit.self_test(
+            run_oracle=False
+        )
+        self.assertEqual(report["matrix"]["rank12_flip_count"], 27)
+        self.assertEqual(report["bip39"]["mapping_window_trials"], 3696)
+        self.assertEqual(report["bip39"]["checksum_valid_count"], 13)
+        self.assertEqual(report["wallet"]["derived_private_key_count"], 6000)
+        self.assertEqual(report["wallet"]["derived_hits"], [])
+
+    def test_phase395_youwon_vic_dual_rail_convergence(self):
+        report = phase395_youwon_vic_dual_rail_convergence_audit.self_test(
+            run_oracle=True
+        )
+        self.assertEqual(report["borrow_rail"]["runs_len_ge7"], [(21, 7)])
+        self.assertTrue(report["borrow_rail"]["forced_matches_actual"])
+        self.assertEqual(report["vic_rail"]["max_run_start"], 21)
+        self.assertEqual(report["vic_rail"]["second_longest"], 6)
+        self.assertEqual(report["final_candidate_oracle"]["total_hits"], 0)
+
+    def test_phase396_p91_header_aware_block(self):
+        report = phase396_p91_header_aware_block_audit.self_test(run_oracle=True)
+        self.assertTrue(report["structure"]["p91_matches_dbbi_m91_length"])
+        for entry in report["combinators"].values():
+            self.assertEqual(entry["keyword_hits"], [])
+        self.assertEqual(report["oracle"]["total_hits"], 0)
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()

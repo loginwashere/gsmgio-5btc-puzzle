@@ -68,9 +68,9 @@ note: "83-candidate pinned manifest (7 site assets with pre-2023 provenance -- f
 ```yaml
 item: "P32 Family 4 -- numeric/temporal metadata as password material"
 source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
-status: genuinely-unrun
-verified_against: n/a
-note: "exact and bounded (declared decimal/hex/ISO-date serializations only) but poorly selected -- no clue names a specific number as password material, so this is a coverage sweep, not a targeted test"
+status: executed
+verified_against: "FINDINGS.md Phase 391"
+note: "15 already-authenticated message IDs/block heights/block times/date integers in four declared decimal/hex/padded forms plus 9 literal ISO/HTTP date strings = 69 materials; P32TRAILING only under the full current oracle; 0 hits"
 ```
 
 ```yaml
@@ -108,9 +108,9 @@ note: "22 nodes, 26 edges across contains/published-before/same-authenticated-ob
 ```yaml
 item: "P32 Family 9 -- transaction serialization and wallet-style fingerprint"
 source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
-status: genuinely-unrun
-verified_against: n/a
-note: "version/nLockTime/sequence/pubkey-encoding/sighash-style/repeated-ECDSA-r comparison; Family 2's prerequisite is now satisfied by the exact two-transaction raw cache in doc/evidence/GSMG_P32_FAMILY2_SIGNED_TRANSACTION_CACHE.json, so this family is unblocked"
+status: executed
+verified_against: "FINDINGS.md Phase 390"
+note: "parsed the exact two-transaction raw cache: 6 signing inputs, 0 repeated ECDSA r, all strict-DER/low-S/SIGHASH_ALL, ordinary version/sequence/nLockTime/change behavior. Durable formatting fact only: the same uncompressed public key is used throughout 2020 and 2024"
 ```
 
 ```yaml
@@ -267,24 +267,24 @@ those checkboxes are demonstrably prone to going stale across documents.
 
 ## Recommended next bounded experiment
 
-**P32 Family 3 (raw authenticated asset bytes)** was executed 2026-08-23
-as Phase 381 — negative, see that row above. Its own source document's
-bounding rules (2026-08-14) were applied as written: only two provenance
-classes (authenticated site-response bytes, one creator-posted Telegram
-original) as core candidates, exclude thumbnails/OCR/renders/research-
-generated files, deduplicate by SHA-256, exactly three byte forms
-(literal file bytes, binary SHA-256, lowercase SHA-256 hex), `P32TRAILING`
-only, and a chronology exclusion for assets tied to later-reached puzzle
-stages. This closes the family as scoped — it does not reopen without new
-evidence about one of the excluded files' provenance (see the
-`P32 Family 3 raw-asset-byte manifest, excluded-file classes` row above).
+**P32 Family 5 (external community candidate mining, fabrication-checked)**
+is now the strongest genuinely-unrun finite row. Phase 393/394 has already
+closed the local Telegram technique-only residue: 142 messages fully reviewed,
+two reproducible constructions controlled negative, and 22 exact claim roots
+run through 31,680 four-blob oracle attempts with zero hits. Family 5 should
+therefore not reread or retune that corpus. Its remaining scope is external
+community sources that claim a specific P32TRAILING password/construction,
+with the source document's four mandatory checks: exact reproducibility,
+claimant/spam-campaign cross-check, structural-oracle verification, and a
+complete considered/disposition ledger.
 
-**P32 Family 2 (transaction-graph trace)** was executed as Phase 383. The
-125+44 histories contain only two seed-signed transactions, both already-known
-halving self-spends, with zero additional co-input or output addresses. Its
-negative result closes the evidence-acquisition family and produces the exact
-raw-transaction cache that unblocks Family 9 (transaction serialization
-fingerprint).
+After Family 5, the only ungated deliverable of comparable scope is the
+dedicated **P32 Family 7 / Post-Phase-340 Seed 3 authoring-toolchain
+provenance artifact**. Its core cryptographic profile is already known, so
+that task improves evidence organization/ranking rather than generating a
+new password. The Phase-163 whitespace `-nopad` rerun remains a real but
+low-value compute backlog row; Seed 9 remains correctly parked until a
+near-valid checksummed object exists.
 
 ## Related documents
 

@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **392** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **396** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -410,3 +410,7 @@ A phase whose original heading was later corrected without editing the heading i
 | 390 | P390 | 2026-08-24 | P32 Family 9 | transaction serialization / wallet-style fingerprint, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-390----p32-family-9-transaction-serialization-wallet-style-fingerprint-closed-negative-2026-08-24) | [GSMG_P32_FAMILY2_TRANSACTION_GRAPH_AUDIT](GSMG_P32_FAMILY2_TRANSACTION_GRAPH_AUDIT.md) |
 | 391 | P391 | 2026-08-24 | bounded numeric/temporal material against P32TRAILING, closed negative | — | [link](../tools/gsmg/FINDINGS.md#phase-391----bounded-numerictemporal-material-against-p32trailing-closed-negative-2026-08-24) | — |
 | 392 | P392 | 2026-08-24 | Seed 7's representation-residue evidence gate | all three pathways inapplicable, no encoding sweep warranted | [link](../tools/gsmg/FINDINGS.md#phase-392----seed-7s-representation-residue-evidence-gate-all-three-pathways-inapplicable-no-encoding-sweep-warranted-2026-08-24) | — |
+| 393 | P393 | 2026-08-24 | technique-only Telegram executable-recipe residual | 142-message lane fully classified, two reproducible constructions surfaced | [link](../tools/gsmg/FINDINGS.md#phase-393----technique-only-telegram-executable-recipe-residual-142-message-lane-fully-classified-two-reproducible-constructions-surfaced-2026-08-24) | [GSMG_TELEGRAM_EXECUTABLE_RECIPE_RESIDUAL_AUDIT](GSMG_TELEGRAM_EXECUTABLE_RECIPE_RESIDUAL_AUDIT.md) |
+| 394 | P394 | 2026-08-24 | Phase-393 lead authentication | FEFE/GF(2) ordinary; BIP39 checksum expected and prize-address negative; exact claim oracle 0 hits | [link](../tools/gsmg/FINDINGS.md#phase-394----phase-393-lead-authentication-fefegf2-ordinary-bip39-checksum-expected-and-prize-address-negative-exact-claim-oracle-0-hits-2026-08-24) | — |
+| 395 | P395 | 2026-08-25 | Telegram 66722's "dual-rail" convergence on offset 21 | mostly a restatement of Phase 75, one modest un-pre-registered addition, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-395----telegram-66722s-dual-rail-convergence-on-offset-21-mostly-a-restatement-of-phase-75-one-modest-un-pre-registered-addition-closed-negative-2026-08-25) | — |
+| 396 | P396 | 2026-08-25 | header-aware `P91 = decoded[7 | 98]` block: 91-character length match to DBBI/M91 confirmed real, no signal, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-396----header-aware-p91-decoded798-block-91-character-length-match-to-dbbim91-confirmed-real-no-signal-closed-negative-2026-08-25) | — |

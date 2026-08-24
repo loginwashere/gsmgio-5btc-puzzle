@@ -25197,3 +25197,231 @@ here.
 
 **Artifacts:**
 `tools/gsmg/phase392_seed7_representation_residue_evidence_gate.py`.
+
+## Phase 393 -- technique-only Telegram executable-recipe residual: 142-message lane fully classified, two reproducible constructions surfaced (2026-08-24)
+
+**Question:** Phase 388 exhausted the original 1,828-message Stage-1 keyword
+universe and the 77-message technique-plus-surprise intersection, but left a
+distinct set of technique hits outside both. Does that technique-only residual
+contain a complete result/password/key construction that the project's prior
+keyword, reaction, and sender axes missed?
+
+**Method:** wrote
+`tools/gsmg/telegram_executable_recipe_residual_audit.py`. Before reading any
+selected text for substance, froze a gate requiring both a result/password/
+key-style claim and independently executable-looking material (`sha256(...)`,
+OpenSSL/AES, `key=`/`iv=`, 64 hex, Salted__ Base64, or a Bitcoin address).
+The exact partition is: 1,629 technique hits; 1,475 outside Stage 1; 59 of
+those already inside Phase 388's surprise intersection; **1,416 technique-only
+residual messages**; **142 selected for full-text review**. Pinned the selected
+ID digest (`dbc380cd...50287`) and ID+full-text-content digest
+(`759e491c...c836`) before emitting or reviewing the lane.
+
+**Result:** all 142 messages were read in full and stored in a message-level
+ledger by ID, full-text SHA-256, disposition, and reason: **88 covered**, **51
+noise/incomplete**, and **3 messages forming two reproducible constructions**.
+The 88 include authenticated solved-step reposts, known artifacts, already-run
+finite cipher/format families, and 18 messages whose exact unauthenticated
+passphrase/key claims are closed by Phase 394's oracle. The 51 are questions,
+jokes/unrelated examples, acknowledged gibberish false positives, or claims
+missing a reproducible input-operation-output-verifier chain.
+
+The two promoted-for-verification constructions are: Telegram `65082`, which
+flips the unique FEFE cell in the authenticated Stage-0 matrix and reports
+GF(2) dependencies; and Telegram `66244`/`66245`, one explanation/code pair
+that converts the BTCSEED Bifid output's four-symbol alternating rail into a
+checksum-valid 24-word BIP39 mnemonic. Both are assessed independently in
+Phase 394 rather than being treated as results merely because the discovery
+gate selected them.
+
+**Disposition:** discovery lane complete. It did what the new axis was meant
+to do and found two reproducible constructions, but neither is promoted until
+Phase 394's authentication/control results. Do not widen or retune the gate
+post-hoc; any later claim should enter a separately declared evidence lane.
+
+**Artifacts:**
+`doc/GSMG_TELEGRAM_EXECUTABLE_RECIPE_RESIDUAL_AUDIT.md`;
+`tools/gsmg/telegram_executable_recipe_residual_audit.py`.
+
+## Phase 394 -- Phase-393 lead authentication: FEFE/GF(2) ordinary; BIP39 checksum expected and prize-address negative; exact claim oracle 0 hits (2026-08-24)
+
+**Question:** do either of Phase 393's reproducible constructions survive the
+natural control family and downstream authentication? Separately, does any
+exact unauthenticated password/key claim in the 142-message lane open a tracked
+blob when tested by the current oracle rather than judged from reported
+padding/gibberish?
+
+**Method:** wrote
+`tools/gsmg/phase394_telegram_recipe_leads_authentication_audit.py`, with three
+closed parts.
+
+1. Reconstruct the README's authenticated 14x14 Stage-0 binary matrix, change
+   only FEFE at row 8/column 5 from 0 to 1 exactly as message `65082` does,
+   enumerate its GF(2) row/column zero subsets, survey all 196 possible
+   one-cell changes, and compute the exact uniform-random 14x14 GF(2) rank
+   distribution.
+2. Reproduce messages `66244`/`66245` from Phase 386's independently decoded
+   570-character Bifid output and the SHA-256-pinned 2,048-word English BIP39
+   list. Enumerate the complete natural selection family: the unique
+   alternating rail with alphabet `{b,c,d,e}`, all 24 symbol-to-dibit
+   bijections, and all 154 length-132 windows. Then test the posted mnemonic
+   as raw entropy, BIP39 seed material, BIP32 master material, and 6 fixed
+   legacy derivation templates through index 999, conservatively checking both
+   compressed and uncompressed P2PKH encodings against the prize address.
+3. Freeze 22 exact unauthenticated roots from the review lane, expand only to
+   the established literal/single-SHA/double-SHA forms (66 materials), and run
+   them against all four tracked blobs under CBC extended, ECB, stream modes,
+   and AES Key Wrap.
+
+**FEFE result:** the algebra is real. Source rank is 13; flipping FEFE gives
+rank 12 and reproduces both posted dependencies (plus the third nonzero kernel
+combination). It is not exceptional or compatible with the known decode.
+Changing that bit changes authenticated `gsmg.io/theseedisplanted` to
+`gsmg.io/theseedispla~ted`; **27/196** possible single-cell changes produce
+the same rank-12 outcome (`13.78%`). A uniform random 14x14 matrix has
+exact-rank-12 probability **12.833%** and rank-at-most-12 probability
+**13.362%**. Verified, non-discriminating, not promoted.
+
+**BIP39 result:** the exact mnemonic, entropy, and eight checksum bits all
+reproduce:
+
+```text
+dust trophy mule tragic corn cupboard sand crunch salt like inspire radar
+hunt twice wolf empower sweet glimpse update turtle copy satoshi fee allow
+entropy 445d1e457373066bafc9a7beb035d55856f7d6bf3248dbac67ba7573017ed520
+```
+
+The adjacent `satoshi fee` words are semantically interesting, but no source
+fixes the mapping (`d,c,b,e -> 0,1,2,3`) or offset before the words are seen.
+The complete mapping/window family contains **3,696 trials and 13 valid BIP39
+checksums**, versus chance expectation `3696/256 = 14.4375`; the checksum is
+therefore expected under the real search, not unique authentication. Direct
+entropy/seed/master interpretations produce 0 prize-address matches. Six
+fixed derivation templates (`m/44'/0'/0'/{0,1}/i`, `m/0'/{0,1}/i`,
+`m/{0,1}/i`) through index 999 produce **6,000 child keys / 12,000
+compressed-or-uncompressed address checks, 0 hits**. This is already
+conservative because BIP32 uses compressed public keys whereas Phase 390
+established that the real prize key was used uncompressed. Arbitrary BIP39
+passphrases and hidden paths remain excluded because no source selects them.
+
+**Exact-claim oracle:** **22 roots / 66 materials / 31,680 effective decrypt
+attempts / 0 hits** against SALPH, COSMIC, P32TRAILING, and URLBLOB.
+
+**Disposition:** both newly discovered constructions are mechanically real;
+neither authenticates. FEFE/GF(2) is an ordinary rank event that breaks a
+positive control. The BIP39 checksum is expected after mapping/window
+selection and its standard wallet outputs do not match the target. The exact
+literal claim residue is also closed negative. No registered gap closes.
+
+**Artifacts:**
+`doc/GSMG_TELEGRAM_EXECUTABLE_RECIPE_RESIDUAL_AUDIT.md`;
+`tools/gsmg/phase394_telegram_recipe_leads_authentication_audit.py`.
+
+## Phase 395 -- Telegram 66722's "dual-rail" convergence on offset 21: mostly a restatement of Phase 75, one modest un-pre-registered addition, closed negative (2026-08-25)
+
+**Question:** message `66722` (Vasilis Dragon, 2026-07-13) -- already
+partially audited by Phase 387/389 for its `KMODEST`/`BE MODEST` back half
+-- also claims its front half: a "borrow rail" (the underflow bit of
+`DBBI - VALIDATION_ANSWER mod 26`) and a "vic rail" (`ALPHA_322`'s single-
+digit/two-digit codeword width applied to `VALIDATION_ANSWER`) each
+independently produce their longest run starting at offset 21 -- the same
+offset as Phase 75's already-registered `YOUWON` hit. Presented together,
+three "independent" landmarks at the same index reads as a strong
+coincidence. Is it?
+
+**Method:** wrote
+`tools/gsmg/phase395_youwon_vic_dual_rail_convergence_audit.py`, reusing
+Phase 75's own `exact_target_probability()`, `subtract_mod26()`, and `runs()`
+helpers rather than re-deriving them.
+
+**Borrow rail: not independent.** The borrow bit at each offset is `1` iff
+`dbbi_i < answer_i` -- fully determined once `dbbi_i` is fixed. Phase 75's
+own `exact_target_probability(ROW_TEXT)` already fixes the exact `DBBI`
+values required for the full `YOUWONX` row (offsets 21-27, probability
+75/111093983, already registered and already tested negative in Phase
+75/368). Computing the borrow bits directly from those *already-required*
+values (not the real `DBBI`) reproduces the real borrow-rail's run of 7
+exactly. The "second rail" is mathematically entailed by the first, already-
+known one -- it adds only two free bits: the boundary offsets 20 and 28 are
+both confirmed 0 in the real data, which is what stops the run at length 7
+rather than longer. This is not two independent constructions converging;
+it is one already-registered fact restated, plus two boundary bits.
+
+**Vic rail: real, but far weaker than presented, and off a different
+(weaker) null.** This rail depends only on `VALIDATION_ANSWER` and
+`ALPHA_322`, not on `DBBI` at all -- there is no DBBI-shuffle null for it.
+Calibrated instead by permuting `VALIDATION_ANSWER`'s own 91-letter multiset
+(100,000 trials, seed `0x395`, this project's established convention): at
+the real answer's 63.7% "wide-codeword" density, a run of length >= 9 appears
+*somewhere* in **40.8%** of shuffles -- unremarkable in isolation. Requiring
+it to land at the specific offset 21 drops that to **0.47% (about 1 in
+212)** -- real, but three orders of magnitude weaker than Phase 75's
+`YOUWONX` figure, and offset 21 was not a blind target: `YOUWON` at 21 has
+been community-known since 2024 (message `23912`), four Telegram-years
+before this rail was constructed, with no declared universe of alternative
+rails that were tried and discarded. This is the look-elsewhere pattern
+this project's brainstorm-discipline standard exists to catch; the 1-in-212
+figure should be read as an upper bound on how impressed to be, not a
+pre-registered hit rate.
+
+**Authentication:** the message's own synthesis (`YOUWONBEMODEST`, from
+`YOUWON` + Phase 387's already-downgraded `BE MODEST`) and 7 case/spacing
+variants, literal + SHA-256 + double-SHA-256, tested against all four
+tracked blobs under the full CBC/ECB/stream/Key Wrap oracle: **24 materials,
+11,520 effective decrypt attempts, 0 hits**.
+
+**Disposition:** the "three-way convergence" collapses mostly into Phase
+75's own long-registered `YOUWONX` figure (already tested negative for
+passphrase material) plus one modest, un-pre-registered, likely post-hoc-
+searched addition. Neither changes Phase 75/387/389's verdicts, and the
+final candidate does not authenticate. No registered gap closes; `YOUWON`/
+`KMODEST`/`YOUWONBEMODEST` remain closed negative.
+
+**Artifacts:**
+`tools/gsmg/phase395_youwon_vic_dual_rail_convergence_audit.py`; permanent
+regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 396 -- header-aware `P91 = decoded[7:98]` block: 91-character length match to DBBI/M91 confirmed real, no signal, closed negative (2026-08-25)
+
+**Question, prompted by the user:** Phase 386 describes the Bifid decode's
+structure counted from the start of the string (`BTCSEED` (7) + prefix (90)
+= 97 characters before the single `Z`). Re-parsed "header-aware" instead --
+`BTCSEED` as a fixed 7-character header, everything from there through and
+including `Z` as one block -- that block is exactly 91 characters, matching
+`DBBI` and the already-authenticated Phase 3.2 plaintext
+(`VALIDATION_ANSWER`, `M91`). Nobody had isolated `decoded[7:98]` on its own
+and compared it to the project's other two known 91-character objects the
+way Phase 75 already compares `DBBI` against `M91` itself.
+
+**Method:** wrote
+`tools/gsmg/phase396_p91_header_aware_block_audit.py`. `P91 =
+decoded[7:98]`, not treating `Z` as padding or a delimiter. Reused Phase
+75's own `subtract_mod26()` combinator both directions against both `DBBI`
+and `VALIDATION_ANSWER` (4 combinations, since it isn't symmetric); reused
+Phase 386's own dictionary-word scanner and letter-frequency baseline
+generator verbatim; reused `cb_common.keystr_forms()` for the oracle sweep
+(literal/SHA-256/double-SHA-256) in upper, lower, and as-decoded case -- the
+one axis Phase 386/387/394 left untested for this specific object.
+
+**Result:** confirmed `P91` is exactly 91 characters, matching `DBBI`/`M91`
+length exactly. No target keyword (`YOUWON`, `KMODEST`, `BTCSEED`,
+`MODEST`, `SATOSHI`, `SEED`, `KEY`, `WALLET`) appears in `P91` or in any of
+its 4 subtraction outputs. Dictionary-word density in all five strings sits
+at or below each string's own random-letter baseline -- unremarkable, no
+sign of deliberate embedded plaintext. `P91` and the four subtraction
+outputs, each in literal/upper/lower case and as SHA-256/double-SHA-256:
+**45 materials, 21,600 effective decrypt attempts against all four tracked
+blobs, 0 hits.**
+
+**Disposition:** the length match is real and was genuinely untested, but
+produces no keyword hit, no above-baseline word structure, and no blob
+authentication under any tested combinator or form. Closes the specific
+bounded gap identified. Does not retract Phase 386's own "97 characters
+counted from the start" statement, which is independently correct; this
+just confirms the header-aware re-framing does not surface anything
+further. The 472-character post-`Z` suffix remains explicitly out of
+scope -- it was not the bounded object identified and is not opened here.
+
+**Artifacts:**
+`tools/gsmg/phase396_p91_header_aware_block_audit.py`; permanent
+regression in `tools/gsmg/test_recent_audits.py`.
