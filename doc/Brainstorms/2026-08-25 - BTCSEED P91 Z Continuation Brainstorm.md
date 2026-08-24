@@ -406,6 +406,15 @@ negative.
 
 ### Priority 5: P91 against the YOUWON-bearing difference
 
+> [!info] Executed as Phase 401 (2026-08-25)
+> Both planted positives fire. Real data: zero keyword hits, family-max
+> quadgram score -649.21, 6,007/100,000 (6.01%) shuffles reach at least
+> that score -- far above the 0.5% promotion bound. Oracle: 17,280
+> attempts, zero hits. Direct-key: 24 address checks, zero hits. Closed
+> negative per the contract's own promotion rule. See
+> [Phase 401](../../tools/gsmg/FINDINGS.md#phase-401----btcseedp91z-brainstorm-priority-5-p91-against-the-youwon-bearing-dbbi-m91-difference-closed-negative-2026-08-25)
+> and [its implementation](../../tools/gsmg/phase401_p91z_priority5_youwon_difference_algebra_audit.py).
+
 Freeze `A=DBBI-M91` and test only the small ternary/modulo-5 family named above.
 This is more grounded than inventing another arbitrary P91/DBBI operator.
 
@@ -451,15 +460,16 @@ Before executing any item:
 
 ## Outcome
 
-- Status: Priorities 1--4 executed and closed negative; Priorities 5--6
-  and the 100-item idea bank remain an untested portfolio
+- Status: Priorities 1--5 executed and closed negative; Priority 6 and
+  the 100-item idea bank remain an untested portfolio
 - Promoted phases: [Phase 397](../../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25)
   (Priority 1), [Phase 398](../../tools/gsmg/FINDINGS.md#phase-398----btcseedp91z-brainstorm-priority-2-bip39-checksum-recalibration-under-the-two-grid-native-mappings-closed-negative-2026-08-25)
   (Priority 2), [Phase 399](../../tools/gsmg/FINDINGS.md#phase-399----btcseedp91z-brainstorm-priority-3-98-letter-to-14x14-coordinate-matrix-closed-negative-2026-08-25)
   (Priority 3), [Phase 400](../../tools/gsmg/FINDINGS.md#phase-400----btcseedp91z-brainstorm-priority-4-p90p91q472full-stream-as-direct-bitcoin-key-material-closed-negative-2026-08-25)
-  (Priority 4)
-- Canonical findings changed: Phases 397--400 added; no prior phase
+  (Priority 4), [Phase 401](../../tools/gsmg/FINDINGS.md#phase-401----btcseedp91z-brainstorm-priority-5-p91-against-the-youwon-bearing-dbbi-m91-difference-closed-negative-2026-08-25)
+  (Priority 5)
+- Canonical findings changed: Phases 397--401 added; no prior phase
   retracted
-- Highest-value next experiment: Priority 5 (P91 against the
-  YOUWON-bearing difference)
+- Highest-value next experiment: Priority 6 (control/data digraph
+  machine)
 

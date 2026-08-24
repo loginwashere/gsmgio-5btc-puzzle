@@ -231,6 +231,7 @@ import phase397_p91z_priority1_control_channel_audit
 import phase398_p91z_priority2_bip39_recalibration_audit
 import phase399_p91z_priority3_coordinate_matrix_audit
 import phase400_p91z_priority4_direct_bitcoin_consumer_audit
+import phase401_p91z_priority5_youwon_difference_algebra_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -830,6 +831,16 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertFalse(report["any_hit"])
         self.assertEqual(len(report["planted_direct_key_positive"]["hits"]), 1)
         self.assertEqual(len(report["planted_bip32_path_positive"]["hits"]), 1)
+
+    def test_phase401_p91z_priority5_youwon_difference_algebra(self):
+        report = phase401_p91z_priority5_youwon_difference_algebra_audit.self_test()
+        self.assertTrue(report["as1_roundtrip_matches_p91"])
+        self.assertTrue(report["cs1_roundtrip_matches_p91"])
+        self.assertEqual(report["real_keyword_hits"], {})
+        self.assertEqual(report["oracle"]["hits"], [])
+        self.assertEqual(report["direct_key"]["hits"], [])
+        self.assertGreater(report["family_wise_rate"], 0.005)
+        self.assertIn("SATOSHI", report["planted_synthetic_english_positive"]["keyword_hits"])
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()
