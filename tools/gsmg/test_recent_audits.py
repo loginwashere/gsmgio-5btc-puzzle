@@ -220,6 +220,10 @@ import phase382_1141_offset_audit
 import phase385_stream_compression_length_envelope_audit
 import phase386_btcseed_bifid_faed_decode_audit
 import phase387_btcseed_kmodest_checkpoint_audit
+import phase389_btcseed_kmodest_authentication_selection_bias_audit
+import phase390_p32_transaction_fingerprint_audit
+import phase391_bounded_numeric_temporal_p32trailing_audit
+import phase392_seed7_representation_residue_evidence_gate
 import telegram_export_all_hit_context_clusters
 import telegram_export_technique_surprise_sweep
 import telegram_stage1_residual_classification_audit
@@ -716,6 +720,37 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(observed["prefix_length_through_z"], 98)
         self.assertEqual(observed["candidate"], "KMODEST")
 
+    def test_phase389_btcseed_kmodest_authentication_selection_bias(self):
+        phase389_btcseed_kmodest_authentication_selection_bias_audit.self_test()
+        observed = phase389_btcseed_kmodest_authentication_selection_bias_audit.observed_family_report()
+        self.assertEqual(observed["family_size"], 224)
+        self.assertNotEqual(observed["family_max_text"], "KMODEST")
+        self.assertGreater(observed["family_max_score"], observed["target_score"])
+
+    def test_phase390_p32_transaction_fingerprint(self):
+        phase390_p32_transaction_fingerprint_audit.self_test()
+        result = phase390_p32_transaction_fingerprint_audit.audit()
+        self.assertEqual(result["total_signing_inputs"], 6)
+        self.assertFalse(result["repeated_r"])
+        self.assertTrue(result["all_strict_der"])
+        self.assertTrue(result["all_low_s"])
+        self.assertEqual(result["pubkey_encodings"], ["uncompressed"])
+
+    def test_phase391_bounded_numeric_temporal_p32trailing(self):
+        phase391_bounded_numeric_temporal_p32trailing_audit.self_test()
+        result = phase391_bounded_numeric_temporal_p32trailing_audit.run_oracle()
+        self.assertEqual(result["material_count"], 69)
+        self.assertEqual(result["blobs"], ("P32TRAILING",))
+        self.assertEqual(result["total_hits"], 0)
+
+    def test_phase392_seed7_representation_residue_evidence_gate(self):
+        phase392_seed7_representation_residue_evidence_gate.self_test()
+        report = phase392_seed7_representation_residue_evidence_gate.evidence_gate_report()
+        v = report["verdict"]
+        self.assertFalse(v["html_entity_pathway_applicable"])
+        self.assertFalse(v["utf16_low_byte_pathway_applicable"])
+        self.assertFalse(v["textcontent_vs_copy_pathway_applicable"])
+
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()
 
@@ -906,9 +941,9 @@ class CorrectedClaimTests(unittest.TestCase):
     def test_excluded_wordlist_coverage_matrix_and_menu_gap_scope(self):
         report = excluded_wordlist_coverage_audit.audit()
         scope = report["menu_gap_scope"]
-        # 28, not 26 -- see the matching comment in
+        # 29, not 26 -- see the matching comment in
         # test_curated_candidate_corpus_identity_and_provenance below.
-        self.assertEqual(report["excluded_wordlist_count"], 28)
+        self.assertEqual(report["excluded_wordlist_count"], 29)
         self.assertEqual(
             (scope["candidate_count"], scope["candidate_digest"]),
             (625, "854bffab41ecb1ef"),
@@ -958,14 +993,17 @@ class CorrectedClaimTests(unittest.TestCase):
             base["first_source_tier_counts"],
             {"direct": 98, "bounded": 243, "thematic": 225, "mixed": 82},
         )
-        # 28, not 26: macro_clue_permutation_combinations.txt (Phase 322) and
+        # 29, not 26: macro_clue_permutation_combinations.txt (Phase 322) and
         # macro_clue_permutation_combinations_k8.txt (Phase 334) added
         # 2026-08-20 by a concurrent session, classified "dedicated-audit"
         # (both already swept separately via tools/gpu_oracle, both
-        # rejected) -- doesn't touch the 648-candidate corpus itself.
+        # rejected); phase382_1141_offset_candidates.txt (Phase 382) added
+        # 2026-08-24, classified "dedicated-audit" (swept separately by
+        # phase382_1141_offset_audit.py, rejected) -- none of these touches
+        # the 648-candidate corpus itself.
         self.assertEqual(
             (base["included_wordlist_count"], base["excluded_wordlist_count"]),
-            (23, 28),
+            (23, 29),
         )
         self.assertEqual(base["oracle_overlap_groups"], 104)
         self.assertEqual(base["oracle_overlap_candidates"], 245)

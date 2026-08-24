@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **388** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **392** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -406,3 +406,7 @@ A phase whose original heading was later corrected without editing the heading i
 | 386 | P386 | 2026-08-24 | the community "btcseed" Bifid-decode theory | mechanically real, improbability claims do not hold up, not promoted | [link](../tools/gsmg/FINDINGS.md#phase-386----the-community-btcseed-bifid-decode-theory-mechanically-real-improbability-claims-do-not-hold-up-not-promoted-2026-08-24) | — |
 | 387 | P387 | 2026-08-24 | post-BTCSEED `KMODEST` checkpoint | mechanically real and moderately unusual; `BE MODEST` continuation not promoted | [link](../tools/gsmg/FINDINGS.md#phase-387----post-btcseed-kmodest-checkpoint-mechanically-real-and-moderately-unusual-be-modest-continuation-not-promoted-2026-08-24) | — |
 | 388 | P388 | 2026-08-24 | Telegram residual-discovery audit | one new reproducible lead; low-engagement blind spot closed by independent axes | [link](../tools/gsmg/FINDINGS.md#phase-388----telegram-residual-discovery-audit-one-new-reproducible-lead-low-engagement-blind-spot-closed-by-independent-axes-2026-08-24) | [GSMG_TELEGRAM_RESIDUAL_DISCOVERY_AUDIT](GSMG_TELEGRAM_RESIDUAL_DISCOVERY_AUDIT.md) |
+| 389 | P389 | 2026-08-24 | BTCSEED/KMODEST authentication and selection-bias audit | no decrypt, KMODEST is not even its own family's best extraction | [link](../tools/gsmg/FINDINGS.md#phase-389----btcseedkmodest-authentication-and-selection-bias-audit-no-decrypt-kmodest-is-not-even-its-own-familys-best-extraction-2026-08-24) | [GSMG_CIAO_SELECTION_COVERAGE_AUDIT](GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md) |
+| 390 | P390 | 2026-08-24 | P32 Family 9 | transaction serialization / wallet-style fingerprint, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-390----p32-family-9-transaction-serialization-wallet-style-fingerprint-closed-negative-2026-08-24) | [GSMG_P32_FAMILY2_TRANSACTION_GRAPH_AUDIT](GSMG_P32_FAMILY2_TRANSACTION_GRAPH_AUDIT.md) |
+| 391 | P391 | 2026-08-24 | bounded numeric/temporal material against P32TRAILING, closed negative | — | [link](../tools/gsmg/FINDINGS.md#phase-391----bounded-numerictemporal-material-against-p32trailing-closed-negative-2026-08-24) | — |
+| 392 | P392 | 2026-08-24 | Seed 7's representation-residue evidence gate | all three pathways inapplicable, no encoding sweep warranted | [link](../tools/gsmg/FINDINGS.md#phase-392----seed-7s-representation-residue-evidence-gate-all-three-pathways-inapplicable-no-encoding-sweep-warranted-2026-08-24) | — |

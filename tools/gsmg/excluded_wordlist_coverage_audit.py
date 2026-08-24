@@ -57,6 +57,7 @@ COVERAGE = {
     "medium_curated_tier1_primary.txt": ("generated Tier 1", "binary_key_material_backfill.py / nopad_window_sweep.py", "Phases 83/94/164", "padded binary CBC/ECB, nopad windows, literal raw key"),
     "medium_curated_tier2_derived.txt": ("generated Tier 2", "binary_key_material_backfill.py / nopad_window_sweep.py", "Phases 90/144/164", "padded binary CBC/ECB, nopad windows, literal raw key"),
     "medium_curated_tier3_broad.txt": ("generated Tier 3", "literal_raw_key_material_audit.py via combined union", "Phase 164", "literal raw key only as a complete tier"),
+    "phase382_1141_offset_candidates.txt": ("dedicated exact list", "phase382_1141_offset_audit.py", "Phase 382", "cosmic_sweep_9ary.py checkerboard oracle against DBBI/FAED under 3 target/escape-pair runs (dbbi {b,e}; faed {g,i}; faed {h,e}); rejected, not the AES-blob oracle"),
     "safenet_luna_hsm_candidates.txt": ("dedicated exact list", "safenet_luna_hsm_audit.py", "Phase 116", "legacy/extended CBC, AES ECB, AES CFB/OFB/CTR, AES Key Wrap; newline forms"),
     "session_combined_for_chain.txt": ("medium Tier 2 input", "build_medium_curated_candidates.py", "Phases 90/144/164", "derived candidates: padded binary CBC/ECB, nopad windows, literal raw key"),
     "curated_v2_core.txt": ("generated V2 registry output", "curated_candidate_registry.py", "Phase 256", "own dedicated V2 sweep and self-test, not this module's scope"),

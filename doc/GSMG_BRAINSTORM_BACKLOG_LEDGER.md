@@ -188,9 +188,9 @@ note: "18,144 pair hypotheses, real maximum 0 events, 1,000-trial permutation nu
 ```yaml
 item: "Post-Phase-340 Seed 7 -- input-byte pathway reconstruction"
 source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
-status: partially-executed
-verified_against: "FINDINGS.md Phase 378, corrected/completed by Phase 379"
-note: "only the evidence-backed subset run: raw SHA-256 digest bytes (COSMIC precedent) and trailing space/LF/CRLF bases (Phase 163 hash-tool finding), 756 new materials against the frozen 42-candidate P0A/P1A corpus, 0 hits. Phase 378 understated as full-oracle (missed 18 CBC-extended configs) and had an unexercised Key Wrap result-handling bug; Phase 379 fixed the bug (with a synthetic positive-path regression) and ran the missing 54,432-application delta, still 0 hits -- 362,880 effective decrypt attempts total across CBC+ECB+stream+Key Wrap. textContent-vs-selection, HTML entity decoding, and any UTF-16/low-byte path remain genuinely unrun -- no puzzle-era evidence found for them (grepped, zero hits), not disproven"
+status: executed
+verified_against: "FINDINGS.md Phase 378, corrected/completed by Phase 379, closed by Phase 392"
+note: "evidence-backed subset run: raw SHA-256 digest bytes (COSMIC precedent) and trailing space/LF/CRLF bases (Phase 163 hash-tool finding), 756 new materials against the frozen 42-candidate P0A/P1A corpus, 0 hits. Phase 378 understated as full-oracle (missed 18 CBC-extended configs) and had an unexercised Key Wrap result-handling bug; Phase 379 fixed the bug (with a synthetic positive-path regression) and ran the missing 54,432-application delta, still 0 hits -- 362,880 effective decrypt attempts total across CBC+ECB+stream+Key Wrap. The remaining three pathways (textContent-vs-selection, HTML entity decoding, JS UTF-16/low-byte conversion) were left genuinely unrun pending evidence; Phase 392 checked the actual authenticated SalPhaseIon source directly and found zero HTML entities, zero non-ASCII bytes, zero inline scripts (one external Cloudflare beacon only), and zero nested child tags inside either DBBI/FAED textarea -- all three pathways are inapplicable to this source, so no encoding sweep was run. Seed 7 is now fully closed."
 ```
 
 ```yaml

@@ -24942,3 +24942,258 @@ gap closes.  The reaction cutoff remains unchanged.
 `tools/gsmg/telegram_stage1_residual_classification_audit.py`;
 `tools/gsmg/telegram_export_all_hit_context_clusters.py`;
 `tools/gsmg/telegram_export_technique_surprise_sweep.py`.
+
+## Phase 389 -- BTCSEED/KMODEST authentication and selection-bias audit: no decrypt, KMODEST is not even its own family's best extraction (2026-08-24)
+
+**Question:** two parts, both declared closed families before running.
+(1) Does `BTCSEED` or `KMODEST` -- the only two strings this project has
+actually derived and mechanically reproduced from Phase 386/387 -- open any
+of the four tracked blobs under this project's full current oracle? (2)
+Phase 387's Monte Carlo measured only the one specific extraction ("second
+digraph rail, 7x7 grid, row 1 reversed") against shuffles. That extraction
+was itself picked, after the fact, from a small family of equally natural
+extractions of the same 98-character/7x7 geometry. Does the real decode's
+best-scoring member of that whole family still look unusual once shuffled
+controls are held to the same family-wide standard, not just to the one
+path a human happened to try?
+
+**Method:** wrote
+`tools/gsmg/phase389_btcseed_kmodest_authentication_selection_bias_audit.py`.
+
+Part 1: 12 candidate materials -- `BTCSEED` and `KMODEST`, each in upper and
+lower case, each run through `cb_common.keystr_forms()`'s three established
+forms (literal, single SHA-256 hex, double SHA-256 hex). Explicitly excluded
+per this project's closed-candidate-universe discipline: `MODEST`,
+`BE MODEST` (already marked post-hoc in Phase 387), concatenations,
+coordinate reinterpretations, mnemonic/BIP39 generation, and any further
+Bifid-grid variation -- none of these is the actual signal Phase 386/387
+produced. Each material was tried against all four tracked blobs (SALPH,
+COSMIC, P32TRAILING, URLBLOB) under this project's full current oracle
+(CBC with `KDF_VARIANTS` + `EXTENDED_CIPHER_VARIANTS`, ECB, the three stream
+modes, and AES Key Wrap with/without padding under both IV conventions) --
+the same convention `input_byte_pathway_reconstruction_audit.py` (Phase
+378) established, 5,760 effective decrypt attempts total.
+
+Part 2: generalized Phase 387's single fixed extraction to the complete
+natural extraction family it was drawn from -- both digraph rails (first
+and second character of each of the 98-prefix's 49 digraph pairs) laid out
+as a 7x7 grid, all 8 square symmetries (identity, 3 rotations, 2 mirrors, 2
+diagonal reflections) applied to each grid, then every one of the resulting
+7 rows and 7 columns read off -- 2 rails x 8 symmetries x 14 lines = 224
+candidate strings per decode. "Reverse row 1" is exactly one member of this
+family (second rail, horizontal-mirror symmetry, row 0). For 100,000
+multiset-preserving shuffles of `FAED` (same fixed DBBI-derived Bifid grid
+as Phase 386/387), computed the maximum quadgram score across all 224
+family members and compared against the real decode's own family maximum.
+
+**Result:** self-test passes; full 100,000-trial run reproduced
+independently (seed `0x389`: 15,025/100,000 = 15.025%; seed `913`:
+15,100/100,000 = 15.1% -- stable across seeds).
+
+Part 1: **zero hits.** None of the 12 materials opens any of the four blobs
+under any of the 84 KDF/cipher/mode configurations tried (5,760 effective
+attempts). `BTCSEED`/`KMODEST` do not authenticate as a passphrase, hash
+input, or AES Key Wrap KEK against SALPH, COSMIC, P32TRAILING, or URLBLOB.
+
+Part 2: a genuinely new fact emerged before the Monte Carlo even ran.
+`KMODEST` is **not the family maximum of the real decode.** Among the 224
+extractions, `second`-rail/`identity`-symmetry/`col0` yields `TAKISSU`,
+which scores higher under the project's frozen quadgram table
+(-17.75 vs. `KMODEST`'s -18.20) than `KMODEST` itself. (`KMODEST` does
+recur four times in the enumeration under different symmetry/line labels --
+`rot180`/row6, `rot270`/col0, `flip_h`/row0, `anti_transpose`/col6 -- a
+mechanical consequence of the dihedral group's symmetry on edge rows/
+columns, not four independent hits.) Comparing the real decode's family
+maximum against 100,000 shuffled controls' own family maxima: **15.0-15.1%
+of shuffles produce a family maximum at least as English-like** as the real
+decode's. Per the pre-declared threshold (family-wise rate above `p=0.005`
+downgrades significance), this is not close: the family-wise rate is roughly
+30x above that bound. `family_exact` (any of the 224 lines from a shuffle
+exactly equalling `KMODEST`) was 0/100,000, matching Phase 387's exact-match
+finding, but exact-match rarity was never in question -- the quadgram-score
+comparison is.
+
+**Disposition:** Part 1 closes negative -- `BTCSEED`/`KMODEST` open no
+blob. Part 2 sharpens Phase 387's own caveat into a concrete number: once
+KMODEST's extraction is measured against the natural family it belongs to
+rather than in isolation, it is not even the best candidate the real decode
+produces, and the family-wise significance collapses (15% vs. the
+declared 0.5% downgrade threshold). This does not contradict Phase 387's
+narrower, correctly-scoped claim (the *specific* fixed extraction remains
+rare among shuffles, 603/100,000) -- it demonstrates that claim was
+measuring the wrong null model for the real question ("is this checkpoint
+meaningful"), and the right null model shows it is not. `KMODEST` downgrades
+from "moderately unusual, not promoted" (Phase 387) to "unremarkable under
+family-wise correction, not promoted" (here). No registered gap closes,
+`DBBI`/`FAED` remain otherwise unresolved.
+
+**Facts affected:** revises Phase 387's statistical framing (does not
+retract its mechanical reproduction, which stands). Confirms `BTCSEED`/
+`KMODEST` are not literal blob passphrases.
+
+**Artifacts:**
+`tools/gsmg/phase389_btcseed_kmodest_authentication_selection_bias_audit.py`.
+
+## Phase 390 -- P32 Family 9: transaction serialization / wallet-style fingerprint, closed negative (2026-08-24)
+
+**Question:** executes P32 Family 9 from the Brainstorm Backlog Ledger,
+unblocked by Phase 383's exact raw-transaction cache. Do the two known
+creator-signed transactions (the 2020 and 2024 halving self-spends) show
+any cryptographic anomaly or wallet-software fingerprint: repeated ECDSA
+`r` values (a real key-recovery break), non-strict DER or high-S
+signatures, unusual SIGHASH flags, public-key encoding, `version`/
+`sequence`/`nLockTime` values, or input/output/fee/change patterns?
+
+**Method:** wrote `tools/gsmg/phase390_p32_transaction_fingerprint_audit.py`.
+Hand-parses the two raw transactions Phase 383 cross-source-verified
+(`doc/evidence/GSMG_P32_FAMILY2_SIGNED_TRANSACTION_CACHE.json`) -- both are
+legacy version-2, non-SegWit, P2PKH-only, so no external library is needed.
+For each of the 6 total signing inputs (3 per transaction), splits the
+P2PKH scriptSig into its DER signature and public key, parses the DER
+grammar directly against BIP66's exact byte layout (strict-DER check),
+extracts `r`/`s`/SIGHASH, and checks `s` against `secp256k1_order // 2`
+(low-S). Deliberately narrow: no address clustering, no wallet-fingerprint
+heuristics library, no key/password derivation from the results.
+
+**Result:** self-test passes. Across all 6 signing inputs: **0 repeated
+`r` values** (all 6 distinct); **strict DER on every signature**; **low-S
+on every signature**; **SIGHASH_ALL (0x01) on every input, no other flag**;
+**every input uses the same public key**, confirming Phase 383's
+address-level "every input is the prize address itself" at the pubkey
+level too; that public key is **uncompressed** (65 bytes, `0x04` prefix) on
+every input, in both the 2020 and 2024 transaction -- the private key
+behind the prize address was used with the uncompressed WIF/pubkey
+convention throughout, not compressed. Both transactions are `version 2`;
+every input's `sequence` is `0xfffffffd` (RBF-signaling, `nSequence <=
+0xfffffffe`); `nLockTime` is `629998` (2020) and `840003` (2024), both
+below their respective confirmation heights (`630001` / `840725`,
+consistent with a non-final locktime) but by different margins -- 3 blocks
+for the 2020 spend, 722 blocks (~5 days) for the 2024 spend. The 2020
+margin matches ordinary anti-fee-sniping behavior (locktime set to the tip
+at creation time, confirmed a few blocks later); the 2024 transaction's
+much larger gap only means it was created roughly 5 days before it
+actually confirmed, which is unremarkable on its own (no evidence it was
+rebroadcast, malleated, or delayed for any puzzle-relevant reason) and is
+recorded here rather than characterized further, since Family 9's scope
+does not extend to broadcast-history reconstruction. Neither `nLockTime`
+matches one of the inputs' own heights or any puzzle-adjacent number. Change behavior matches
+Phase 383 exactly: each spend returns the leftover to the prize address
+itself as one of the two outputs, with the other output going to the
+halving-storage address; fees (from Phase 383's independently confirmed
+figures) are 185,400 sat (2020) and 27,832 sat (2024) -- ordinary
+fee-rate-scaled amounts, nothing decimal- or puzzle-adjacent about either.
+
+**Disposition:** closed negative. No repeated `r` (no key recovery
+possible), no DER/low-S/SIGHASH anomaly, no unusual `version`/`sequence`/
+`nLockTime`, no anomalous fee or change pattern. The one durable, genuinely
+new fact -- **uncompressed public-key encoding on the real signing key** --
+is recorded as a wallet-style convention fact for any future private-key-
+material candidate (an uncompressed WIF/address form should be preferred
+over compressed when testing any recovered 32-byte scalar against P32
+targets), not as a puzzle clue in itself. Per this project's discipline, a
+wallet-style match corroborates a workflow; it does not prove common
+ownership or generate a password by itself. No registered gap closes.
+
+**Facts affected:** adds an uncompressed-pubkey convention fact to the
+project's key-material-formatting record; does not create or close any
+password/key candidate.
+
+**Artifacts:** `tools/gsmg/phase390_p32_transaction_fingerprint_audit.py`.
+
+## Phase 391 -- bounded numeric/temporal material against P32TRAILING, closed negative (2026-08-24)
+
+**Question:** does any already-authenticated milestone number or date this
+project has named -- Telegram message IDs, block heights, block times,
+capture dates, HTTP dates -- open P32TRAILING under a small, declared set
+of representations (decimal, hex, zero-padded, ISO/RFC-1123 literal)? No
+new number generation, no arithmetic on these values, no combination.
+
+**Method:** wrote
+`tools/gsmg/phase391_bounded_numeric_temporal_p32trailing_audit.py`. Froze
+a 15-number manifest, each cited to its own established source: 5 Telegram
+message IDs (`8774` JRK quote, `43248` Sycorax origin, `43671` result
+naming, `61439` media-shortlist caption, `66722` KMODEST derivation --
+Phase 386/387's own constants), 2 block heights and 2 block-time epochs
+(the two creator-signed self-spends' confirmation heights/times, Phase
+383/390's cross-source-verified cache), and 6 dates-as-`YYYYMMDD` integers
+(the same Telegram messages' dates, plus the `gsmg.io/puzzle` HTTP
+`Last-Modified` date and two Wayback capture dates from FINDINGS.md's
+`gsmg.io/puzzle` provenance section). Each number tried in exactly 4 forms
+(decimal, lowercase hex, zero-padded decimal, zero-padded hex -- pad width
+is the longest value's own natural width within its category, not an
+arbitrary fixed width) = 60 materials. Separately, 9 literal date/HTTP-date
+strings already used verbatim elsewhere in this project's code or docs
+(e.g. `"2023-08-03T22:51:33"`, `"2020-10-21"`,
+`"Wed, 21 Oct 2020 15:52:41 GMT"`) tried as-is = 9 materials. 69 total.
+Ran through the same full current oracle (CBC extended, ECB, stream, AES
+Key Wrap) as Phase 389/390, scoped to P32TRAILING only per the declared
+question -- not a repeat of the four-blob sweep.
+
+**Result:** self-test passes: 69 materials confirmed, **0 hits**.
+
+**Disposition:** closed negative. None of this project's already-
+authenticated milestone numbers or dates, in any of the four declared
+representations, opens P32TRAILING. No registered gap closes.
+
+**Facts affected:** none.
+
+**Artifacts:**
+`tools/gsmg/phase391_bounded_numeric_temporal_p32trailing_audit.py`.
+
+## Phase 392 -- Seed 7's representation-residue evidence gate: all three pathways inapplicable, no encoding sweep warranted (2026-08-24)
+
+**Question:** Post-Phase-340 Seed 7 (Phase 378/379) left three byte-pathway
+hypotheses genuinely unrun -- DOM `textContent`-vs-copied-text divergence,
+HTML-entity decoding, and a JavaScript UTF-16/low-byte conversion --
+because no puzzle-era evidence for any of them turned up in this project's
+own records. Rather than running an open-ended encoding-menu sweep on that
+absence, does the actual archived HTML source DBBI/FAED live in give any of
+the three pathways something to act on in the first place?
+
+**Method:** wrote
+`tools/gsmg/phase392_seed7_representation_residue_evidence_gate.py`. Reused
+the exact SHA-256-pinned local mirror file `salphaseion_presentation_
+binding_audit.py`/`page_structure_audit.py` already treat as this
+project's authenticated SalPhaseIon page copy. Checked, directly against
+that source: (1) a regex scan for any HTML entity reference at all; (2) a
+byte-level scan for any byte above `0x7F` (a UTF-16/low-byte conversion
+pathway needs a non-ASCII/multi-byte source character to diverge on in the
+first place -- over pure ASCII, UTF-16 code units, UTF-8 bytes, and Latin-1
+bytes are identical); (3) every `<script>` tag, separately flagging inline
+(non-`src`) scripts containing byte/encoding-conversion tokens
+(`charCodeAt`, `fromCharCode`, `TextEncoder`, `btoa`/`atob`, etc.); (4) the
+two `<textarea>` elements holding DBBI/FAED, for any nested child tag that
+could make a `.textContent`/`.value` read diverge from what a user visually
+copies.
+
+**Result:** self-test passes. **Zero HTML entities** anywhere in the
+4,422-byte source. **Zero non-ASCII bytes** in the entire file (pure
+ASCII throughout). **One `<script>` tag total, and it is external**
+(Cloudflare's `beacon.min.js` analytics beacon, standard third-party
+content, not creator code) -- **zero inline scripts**, so there is no
+custom JavaScript of any kind on this page, let alone one performing byte
+conversion. **Both `<textarea>` elements have zero nested child tags** --
+DBBI and FAED sit as flat, unstyled text nodes with no CSS-generated
+content, `<br>`, or hidden span that could make copied text differ from
+the DOM's own report of it.
+
+**Disposition:** closed, evidence-gated. All three Seed 7 pathways are
+**inapplicable to this source**: there is no entity to decode, no non-ASCII
+character or inline script for a UTF-16/byte-conversion path to run
+against, and no DOM structure capable of producing a textContent-vs-copy
+divergence. Per the declared rule, none of the three survives the gate, so
+none is swept with new candidate material -- this closes the *ambiguity*
+Phase 378/379 left open (formally unrun) without inflating it into a
+disproof of the general hypothesis for every possible source. If a
+different archived capture of this page (a different date, a differently
+rendered mirror) is ever found to differ structurally, this gate would
+need to be re-run against that source specifically. Seed 7 is now fully
+closed: its evidence-backed subset (Phase 378/379, 362,880 attempts) ran
+negative, and its remaining three pathways are confirmed inapplicable
+here.
+
+**Facts affected:** closes the last open item of Post-Phase-340 Seed 7 in
+`doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md`.
+
+**Artifacts:**
+`tools/gsmg/phase392_seed7_representation_residue_evidence_gate.py`.
