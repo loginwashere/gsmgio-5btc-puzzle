@@ -354,6 +354,16 @@ or coherent plaintext with a checksum. Printability alone is insufficient.
 
 ### Priority 2: coordinate-selected BIP39 recalibration
 
+> [!info] Executed as Phase 398 (2026-08-25)
+> 308 trials (2 mappings x 154 windows), expected 1.203. Exactly 1
+> checksum-valid mnemonic reproduces -- the same previously-posted one,
+> under column-major at offset 30; row-major produces zero hits. Offset 30
+> matches none of 6 pre-declared natural-boundary candidates. Closed per
+> this section's own stated criterion: the mnemonic is within the expected
+> count and offset 30 remains unselected. See
+> [Phase 398](../../tools/gsmg/FINDINGS.md#phase-398----btcseedp91z-brainstorm-priority-2-bip39-checksum-recalibration-under-the-two-grid-native-mappings-closed-negative-2026-08-25)
+> and [its implementation](../../tools/gsmg/phase398_p91z_priority2_bip39_recalibration_audit.py).
+
 Separate two questions:
 
 1. does the keyed square genuinely reduce the 24 mappings to two natural
@@ -423,11 +433,13 @@ Before executing any item:
 
 ## Outcome
 
-- Status: Priority 1 executed and closed negative; Priorities 2--6 and the
-  100-item idea bank remain an untested portfolio
-- Promoted phase: [Phase 397](../../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25)
-  (Priority 1 only)
-- Canonical findings changed: Phase 397 added; no prior phase retracted
-- Highest-value next experiment: Priority 2 (coordinate-selected BIP39
-  recalibration under the two grid-native mappings)
+- Status: Priorities 1--2 executed and closed negative; Priorities 3--6
+  and the 100-item idea bank remain an untested portfolio
+- Promoted phases: [Phase 397](../../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25)
+  (Priority 1), [Phase 398](../../tools/gsmg/FINDINGS.md#phase-398----btcseedp91z-brainstorm-priority-2-bip39-checksum-recalibration-under-the-two-grid-native-mappings-closed-negative-2026-08-25)
+  (Priority 2)
+- Canonical findings changed: Phases 397--398 added; no prior phase
+  retracted
+- Highest-value next experiment: Priority 3 (98 letters -> 196 coordinates
+  -> 14x14 construction)
 

@@ -228,6 +228,7 @@ import phase394_telegram_recipe_leads_authentication_audit
 import phase395_youwon_vic_dual_rail_convergence_audit
 import phase396_p91_header_aware_block_audit
 import phase397_p91z_priority1_control_channel_audit
+import phase398_p91z_priority2_bip39_recalibration_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -806,6 +807,13 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(report["candidate_count"], 8)
         self.assertFalse(report["any_parser_valid"])
         self.assertFalse(report["any_exact_target_hit"])
+
+    def test_phase398_p91z_priority2_bip39_recalibration(self):
+        report = phase398_p91z_priority2_bip39_recalibration_audit.self_test()
+        self.assertEqual(report["total_trials"], 308)
+        self.assertEqual(report["column_major_bcde"], (2, 1, 0, 3))
+        self.assertEqual(report["row_major_bcde"], (1, 2, 0, 3))
+        self.assertIsNone(report["natural_offset_selects_30"])
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()
