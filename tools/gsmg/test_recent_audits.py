@@ -230,6 +230,7 @@ import phase396_p91_header_aware_block_audit
 import phase397_p91z_priority1_control_channel_audit
 import phase398_p91z_priority2_bip39_recalibration_audit
 import phase399_p91z_priority3_coordinate_matrix_audit
+import phase400_p91z_priority4_direct_bitcoin_consumer_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -821,6 +822,14 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertTrue(report["planted_parity_a_exact"])
         self.assertFalse(report["real_any_exact"])
         self.assertGreater(report["family_wise_rate"], 0.005)
+
+    def test_phase400_p91z_priority4_direct_bitcoin_consumer(self):
+        report = phase400_p91z_priority4_direct_bitcoin_consumer_audit.self_test()
+        self.assertEqual(report["root_count"], 8)
+        self.assertEqual(report["total_address_checks"], 96032)
+        self.assertFalse(report["any_hit"])
+        self.assertEqual(len(report["planted_direct_key_positive"]["hits"]), 1)
+        self.assertEqual(len(report["planted_bip32_path_positive"]["hits"]), 1)
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()

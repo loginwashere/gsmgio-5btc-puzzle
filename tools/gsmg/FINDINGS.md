@@ -25587,3 +25587,47 @@ follows from this result without its own fresh promotion.
 **Artifacts:**
 `tools/gsmg/phase399_p91z_priority3_coordinate_matrix_audit.py`; permanent
 regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 400 -- BTCSEED/P91/Z brainstorm Priority 4: P90/P91/Q472/full-stream as direct Bitcoin key material, closed negative (2026-08-25)
+
+**Question:** Priority 4 of the 2026-08-25 BTCSEED/P91/Z continuation
+brainstorm tests the literal reading of the `BTCSEED` header: do `P90`,
+`P91`, `Q472`, or the full 570-character decode work as raw Bitcoin key
+material (a direct private-key scalar or BIP32 seed), rather than the AES
+blob passphrase material Phase 396 already tested?
+
+**Method:** wrote
+`tools/gsmg/phase400_p91z_priority4_direct_bitcoin_consumer_audit.py`
+against a contract the user froze in full before any code was written:
+4 source objects (`P90`, `P91`, `Q472`, full 570-char decode) x 2 case
+forms (as-decoded, lowercase) = 8 roots; binary `SHA256(text)` digest only
+(no hex-text hashes, double hashes, whitespace variants, truncation); each
+digest tested as a direct secp256k1 scalar (rejected, not reduced, outside
+`1..n-1`) and as BIP32 seed material (`HMAC-SHA512("Bitcoin seed", seed)`);
+Phase 394's same six frozen derivation paths through index 999; both
+compressed and uncompressed P2PKH encodings against the exact prize
+address only. Reused Phase 394's own `base58_decode()`, `hash160()`,
+`public_key()`, `child_private_key()`, `derive_path()`,
+`SECP256K1_ORDER`, `HARDENED`, `TARGET_ADDRESS` verbatim. Two planted
+positives (a known scalar checked against its own address; a synthetic
+seed's own child key at a fixed path/index, run through the identical
+1,000-index derivation loop) confirm the detection pipeline actually
+fires before trusting a negative. Prize-address Base58Check structure
+(length, version byte, checksum) validated directly.
+
+**Result:** exact scope reproduced -- 16 direct-scalar checks + 16 BIP32-
+master checks + 96,000 child-address checks (across 48,000 derived keys)
+= **96,032 total address checks**. Both planted positives fire exactly at
+their known scalar/path/index. **Zero hits** against the real prize
+address across all 96,032 checks.
+
+**Disposition:** closes negative per the contract's own promotion rule
+(only an exact prize-address match promotes; none occurred). Does not
+weaken the structural `BTCSEED` observation itself -- a header naming a
+seed type is not evidence that the seed derivation from this specific
+material succeeds, and this closes that specific, narrow question without
+implying anything about the header's broader significance.
+
+**Artifacts:**
+`tools/gsmg/phase400_p91z_priority4_direct_bitcoin_consumer_audit.py`;
+permanent regression in `tools/gsmg/test_recent_audits.py`.

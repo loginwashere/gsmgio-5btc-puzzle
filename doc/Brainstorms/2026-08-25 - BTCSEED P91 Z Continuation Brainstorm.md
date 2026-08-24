@@ -391,6 +391,15 @@ family. Compare against the authenticated Stage-0 matrix and shuffled controls.
 
 ### Priority 4: direct Bitcoin consumers of P91
 
+> [!info] Executed as Phase 400 (2026-08-25)
+> 96,032 total address checks (16 direct scalars + 16 BIP32 masters +
+> 96,000 child addresses across 48,000 derived keys, 8 roots x 6 paths x
+> 1,000 indices) against the exact prize address. Both planted positives
+> fire exactly. Zero hits. Closed negative per the contract's own
+> promotion rule. See
+> [Phase 400](../../tools/gsmg/FINDINGS.md#phase-400----btcseedp91z-brainstorm-priority-4-p90p91q472full-stream-as-direct-bitcoin-key-material-closed-negative-2026-08-25)
+> and [its implementation](../../tools/gsmg/phase400_p91z_priority4_direct_bitcoin_consumer_audit.py).
+
 Test exact P91/P90/Q472/full-stream byte forms as raw SHA-derived scalars and
 BIP32 seeds. Do not confuse a Phase-396 AES-blob negative with an address/key
 negative.
@@ -442,14 +451,15 @@ Before executing any item:
 
 ## Outcome
 
-- Status: Priorities 1--3 executed and closed negative; Priorities 4--6
+- Status: Priorities 1--4 executed and closed negative; Priorities 5--6
   and the 100-item idea bank remain an untested portfolio
 - Promoted phases: [Phase 397](../../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25)
   (Priority 1), [Phase 398](../../tools/gsmg/FINDINGS.md#phase-398----btcseedp91z-brainstorm-priority-2-bip39-checksum-recalibration-under-the-two-grid-native-mappings-closed-negative-2026-08-25)
   (Priority 2), [Phase 399](../../tools/gsmg/FINDINGS.md#phase-399----btcseedp91z-brainstorm-priority-3-98-letter-to-14x14-coordinate-matrix-closed-negative-2026-08-25)
-  (Priority 3)
-- Canonical findings changed: Phases 397--399 added; no prior phase
+  (Priority 3), [Phase 400](../../tools/gsmg/FINDINGS.md#phase-400----btcseedp91z-brainstorm-priority-4-p90p91q472full-stream-as-direct-bitcoin-key-material-closed-negative-2026-08-25)
+  (Priority 4)
+- Canonical findings changed: Phases 397--400 added; no prior phase
   retracted
-- Highest-value next experiment: Priority 4 (direct Bitcoin consumers of
-  P91)
+- Highest-value next experiment: Priority 5 (P91 against the
+  YOUWON-bearing difference)
 
