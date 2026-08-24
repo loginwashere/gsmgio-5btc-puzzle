@@ -25737,3 +25737,46 @@ closes the brainstorm's entire ranked verification queue -- Priorities
 **Artifacts:**
 `tools/gsmg/phase402_p91z_priority6_control_data_digraph_machine_audit.py`;
 permanent regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 403 -- Phase 397's raw 59-byte control-channel outputs as BIP32 seed material: closed negative (2026-08-25)
+
+**Question:** a 2026-08-25 follow-up survey of the (now-exhausted) BTCSEED/
+P91/Z continuation brainstorm's 100-item idea bank identified one
+well-grounded coverage gap: Phase 397's eight raw 59-byte control-channel
+byte strings were only ever run through typed-container/key-format
+scanners (closed negative there), and Phase 400 tested `SHA256`-derived
+digests of `P90`/`P91`/`Q472`/`FULL570` as BIP32 seeds, but nobody fed the
+raw Phase-397 bytes themselves into a BIP32 derivation. 59 bytes = 472
+bits sits inside BIP32's standard 128-512-bit seed range, and the stream
+begins `BTCSEED`.
+
+**Method:** wrote
+`tools/gsmg/phase403_raw_control_channel_bip32_seed_audit.py` against a
+contract frozen before any code was written: reuse Phase 397's
+`build_candidates()` to regenerate its exact eight 59-byte strings
+byte-for-byte, no hashing or reinterpretation; consume each directly as
+`HMAC-SHA512("Bitcoin seed", raw_59_bytes)`; check the BIP32 master key
+and, through Phase 400's identical six frozen derivation-path templates,
+1,000 child indices each, both compressed and uncompressed P2PKH against
+the exact prize address -- 16 master checks + 96,000 child-address
+checks (8 seeds x 6 paths x 1,000 indices x 2 encodings) = 96,016 total.
+Explicitly excluded: direct-scalar interpretation of the raw bytes,
+BIP39, alternate coins, SegWit, arbitrary paths, blob-oracle tests. A
+planted BIP32-path positive (a synthetic seed's own child key at a fixed
+path/index, run through the identical 6-path/1,000-index loop) proves
+the detection pipeline fires before trusting a negative result.
+
+**Result:** the planted positive fires exactly at its known path/index.
+All 8 candidates reproduce as 59-byte strings identical to Phase 397's;
+96,016 total address checks against the exact prize address; **zero
+hits**.
+
+**Disposition:** closes negative -- the raw control-channel bytes do not
+work as a direct BIP32 seed under this frozen consumer either. This does
+not reopen or widen Phase 397's already-closed typed-container family;
+it closes the one distinct consumer (raw-byte BIP32 seed) that family
+never tested.
+
+**Artifacts:**
+`tools/gsmg/phase403_raw_control_channel_bip32_seed_audit.py`; permanent
+regression in `tools/gsmg/test_recent_audits.py`.

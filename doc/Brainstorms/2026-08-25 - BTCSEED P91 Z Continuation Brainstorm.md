@@ -1,6 +1,6 @@
 ---
 type: hypothesis
-status: live
+status: parked
 date: 2026-08-25
 topics:
   - brainstorm
@@ -25,6 +25,21 @@ topics:
 > Every executable direction below needs a frozen candidate family, controls,
 > success criteria, and stop rule before it can become a phase.
 
+> [!info] Ranked queue exhausted (2026-08-25)
+> All six ranked priorities below were executed as Phases 397--402, all
+> closed negative -- see each priority's own callout and the `## Outcome`
+> section at the bottom. Per this document's own promotion contract, that
+> does not authorize widening any closed family; it also does not close
+> the remaining 100-item idea bank, which was never itself ranked or
+> frozen. A follow-up survey of that bank (2026-08-25, not part of this
+> document) identified one well-grounded coverage gap -- Phase 397's raw
+> 59-byte control-channel outputs, never consumed as BIP32 seed material
+> -- as the strongest remaining candidate. That gap was itself frozen and
+> executed as [Phase 403](../../tools/gsmg/FINDINGS.md#phase-403----phase-397s-raw-59-byte-control-channel-outputs-as-bip32-seed-material-closed-negative-2026-08-25):
+> 96,016 address checks against the exact prize address, zero hits,
+> planted positive fires. The remaining ~99 idea-bank items are still
+> untested and still require their own fresh, separately-frozen contracts.
+
 ## Executive result
 
 The most productive continuation is to stop treating the 570-character Bifid
@@ -35,12 +50,15 @@ BTCSEED | P91 ending in Z | Q472
     7          91             472
 ```
 
-The strongest unverified structural direction is a control/data interpretation.
-One alternating rail contains only `B,C,D,E`, exactly the upper-left `2x2`
-of the keyed Bifid square. After `Z`, the 472-character suffix divides into
-236 control/data digraphs. The 236 four-symbol controls can encode exactly
-472 bits, or 59 bytes. That byte-perfect boundary deserves the first future
-test.
+The strongest structural direction identified at the time this document was
+written was a control/data interpretation: one alternating rail contains only
+`B,C,D,E`, exactly the upper-left `2x2` of the keyed Bifid square. After `Z`,
+the 472-character suffix divides into 236 control/data digraphs. The 236
+four-symbol controls can encode exactly 472 bits, or 59 bytes. That
+byte-perfect boundary was the first test run (Phase 397, Priority 1) and
+closed negative as a typed-container/key-format search; see the "ranked queue
+exhausted" note above for the one identified follow-up (raw-byte BIP32 seed
+consumption) it did not cover.
 
 Three other high-value directions follow:
 
@@ -91,10 +109,15 @@ Relevant records:
 - [Phase 396 implementation](../../tools/gsmg/phase396_p91_header_aware_block_audit.py)
 - [canonical phase findings](../../tools/gsmg/FINDINGS.md)
 
-## Mechanical observations to verify independently
+## Mechanical observations
 
-These relations follow directly from the registered lengths and square, but
-they have not yet received dedicated regression tests or null calibration.
+These relations follow directly from the registered lengths and square. At
+the time this document was written none had a dedicated regression test or
+null calibration; Phases 397 (control rail), 398 (BIP39 mapping), and 399
+(14x14 matrix) now cover the three below, each closed negative -- see the
+matching "### Priority N" section for the executed result. The relations
+themselves remain mechanically correct; only their status as untested is
+stale.
 
 ### The four-symbol rail is a square-native object
 

@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **402** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **403** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -420,3 +420,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 400 | P400 | 2026-08-25 | BTCSEED/P91/Z brainstorm Priority 4 | P90/P91/Q472/full-stream as direct Bitcoin key material, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-400----btcseedp91z-brainstorm-priority-4-p90p91q472full-stream-as-direct-bitcoin-key-material-closed-negative-2026-08-25) | — |
 | 401 | P401 | 2026-08-25 | BTCSEED/P91/Z brainstorm Priority 5 | P91 against the YOUWON-bearing DBBI-M91 difference, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-401----btcseedp91z-brainstorm-priority-5-p91-against-the-youwon-bearing-dbbi-m91-difference-closed-negative-2026-08-25) | — |
 | 402 | P402 | 2026-08-25 | BTCSEED/P91/Z brainstorm Priority 6 (final) | control/data digraph machine, closed negative | [link](../tools/gsmg/FINDINGS.md#phase-402----btcseedp91z-brainstorm-priority-6-final-controldata-digraph-machine-closed-negative-2026-08-25) | — |
+| 403 | P403 | 2026-08-25 | Phase 397's raw 59-byte control-channel outputs as BIP32 seed material | closed negative | [link](../tools/gsmg/FINDINGS.md#phase-403----phase-397s-raw-59-byte-control-channel-outputs-as-bip32-seed-material-closed-negative-2026-08-25) | — |
