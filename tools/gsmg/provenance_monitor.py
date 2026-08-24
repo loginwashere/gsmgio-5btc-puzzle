@@ -2,8 +2,17 @@
 """Phase 347: provenance-monitoring baseline for restored gsmg.io, the
 SalPhaseIon route, and the Hosterjack compendium/repository.
 
-Frozen per the user's explicit 2026-08-20 scope:
-  - Exactly 3 frozen URLs (FROZEN_URLS below) -- no crawling, no route
+Extended 2026-08-24 per explicit user request: added a 4th frozen URL,
+the `Naddiseo/gsmgio-5btc-puzzle` community repository (see
+[[reference_hosterjack_fork]]'s sibling note on early legitimate community
+sources), tracked the same way as Hosterjack -- commit-HEAD movement via
+GitHub's own passive commit history, not HTML content. The git-repo-head
+check/compare logic is shared by both repos (`check_git_repo_head`,
+`GIT_REPO_HEAD_URLS`, `KNOWN_HEADS`) rather than duplicated.
+
+Frozen per the user's explicit 2026-08-20 scope, now 4 URLs after the
+2026-08-24 extension above:
+  - Exactly 4 frozen URLs (FROZEN_URLS below) -- no crawling, no route
     discovery, no expansion beyond what's named.
   - Record raw-response hash, normalized content hash, HTTP status, the
     full redirect chain, an observation timestamp, and a source class for
@@ -55,7 +64,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 BASELINE_PATH = SCRIPT_DIR / "provenance_baseline.json"
 
 # ---------------------------------------------------------------------------
-# Frozen scope -- exactly 3 URLs, no more.
+# Frozen scope -- exactly 4 URLs, no more.
 # ---------------------------------------------------------------------------
 
 FROZEN_URLS = {
@@ -65,25 +74,43 @@ FROZEN_URLS = {
         "89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32"
     ),
     "hosterjack_repo": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
+    "naddiseo_repo": "https://github.com/Naddiseo/gsmgio-5btc-puzzle",
 }
 
 # Fixed, never inferred from fetched content. FINDINGS Phase 329: the
 # restored deployment's operator identity is explicitly unresolved.
 # [[reference_hosterjack_fork]]: Hosterjack is a community fork, not a
-# creator-controlled source.
+# creator-controlled source. Naddiseo is likewise a named community
+# researcher (Richard Eames), not the creator -- doc/GSMG_PUZZLE.md.
 ATTRIBUTION = {
     "gsmg_io_root": "unknown",
     "salphaseion_route": "unknown",
     "hosterjack_repo": "community",
+    "naddiseo_repo": "community",
 }
 
 ARCHIVE_SOURCE_LABEL = "authentic observation, not proof of creator operation"
 
+# Both tracked git repositories share one check/compare path
+# (check_git_repo_head, and the loop in assemble_report) rather than
+# duplicating near-identical logic per repo.
+GIT_REPO_HEAD_URLS = {
+    "hosterjack_repo": "HosterjackAGV/gsmg-5btc-puzzle",
+    "naddiseo_repo": "Naddiseo/gsmgio-5btc-puzzle",
+}
+
 # Most recent already-known reference points for change detection --
-# copied from already-completed phases, not guessed.
-HOSTERJACK_KNOWN_HEAD = "28d33cc"  # FINDINGS Phase 330 (2026-08-01), the
-# most recent of the two commits this project has recorded (supersedes the
-# older 1a27856... reference in doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md).
+# copied from already-completed phases/checks, not guessed.
+KNOWN_HEADS = {
+    "hosterjack_repo": "28d33cc",  # FINDINGS Phase 330 (2026-08-01), the
+    # most recent of the two commits this project has recorded (supersedes
+    # the older 1a27856... reference in doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md).
+    "naddiseo_repo": "15b43fc",  # 2026-08-24 live-verified HEAD ("Fix
+    # truncated phase 3 password in phase 2.2"), the first baseline this
+    # project has recorded for this repo -- confirmed the truncation never
+    # propagated into this project's own already-correct README.md/wordlist
+    # copies of the same password string.
+}
 
 USER_AGENT = "gsmg-puzzle-research-provenance-monitor/1.0 (read-only GET; no JS/forms/downloads executed)"
 
@@ -220,11 +247,12 @@ def check_gsmg_root_wayback():
     }
 
 
-def check_hosterjack_repo():
+def check_git_repo_head(api_repo_slug):
     """GitHub's commit history is the passive, content-addressed archive
     index for a git repo -- read-only API call, nothing executed. Fetch only;
-    assemble_report() compares HEAD with last-known-good state."""
-    api_url = "https://api.github.com/repos/HosterjackAGV/gsmg-5btc-puzzle/commits?per_page=1"
+    assemble_report() compares HEAD with last-known-good state. Shared by
+    every entry in GIT_REPO_HEAD_URLS."""
+    api_url = f"https://api.github.com/repos/{api_repo_slug}/commits?per_page=1"
     request = urllib.request.Request(api_url, headers={
         "User-Agent": USER_AGENT,
         "Accept": "application/vnd.github+json",
@@ -293,7 +321,7 @@ def assemble_report(live_checks, archive_checks, previous=None):
         entry = {
             "url": url,
             "attribution": ATTRIBUTION[name],
-            "attribution_note": ARCHIVE_SOURCE_LABEL if name != "hosterjack_repo" else "community-sourced, not creator-authenticated",
+            "attribution_note": ARCHIVE_SOURCE_LABEL if name not in GIT_REPO_HEAD_URLS else "community-sourced, not creator-authenticated",
             "live": current if current is not None else prior,
             "last_attempt": {"ok": current is not None, "attempted_at": _utcnow_iso()},
         }
@@ -310,7 +338,7 @@ def assemble_report(live_checks, archive_checks, previous=None):
                 "current_normalized_sha256": current.get("normalized_sha256"),
                 "prior_observed_at": prior["observed_at"],
             }
-            if name == "hosterjack_repo":
+            if name in GIT_REPO_HEAD_URLS:
                 # github.com repository HTML carries dynamic presentation
                 # state. The passive commit API below is content-addressed and
                 # authoritative for repository movement; HTML drift alone is
@@ -350,28 +378,29 @@ def assemble_report(live_checks, archive_checks, previous=None):
             "detail": root_current.get("detail", "Wayback query failed"),
         })
 
-    host_current = archive_checks["hosterjack_repo"]
-    host_prior = _previous_archive(previous, "hosterjack_repo")
-    if host_current.get("ok"):
-        known_head = ((host_prior or {}).get("current_head")
-                      or (host_prior or {}).get("known_head") or HOSTERJACK_KNOWN_HEAD)
-        changed = not host_current["current_head"].startswith(known_head)
-        host_state = {
-            **host_current,
-            "previous_head": known_head,
-            "alert": changed,
-            "detail": (f"new commits since accepted HEAD {known_head}"
-                       if changed else f"HEAD unchanged from accepted reference {known_head}"),
-        }
-        if changed:
-            new_capture_alerts.append({"target": "hosterjack_repo", **host_state})
-        archive_state["hosterjack_repo"] = host_state
-    else:
-        archive_state["hosterjack_repo"] = host_prior
-        operational_errors.append({
-            "target": "hosterjack_repo", "source": "github_commits",
-            "detail": host_current.get("detail", "GitHub query failed"),
-        })
+    for repo_name in GIT_REPO_HEAD_URLS:
+        repo_current = archive_checks[repo_name]
+        repo_prior = _previous_archive(previous, repo_name)
+        if repo_current.get("ok"):
+            known_head = ((repo_prior or {}).get("current_head")
+                          or (repo_prior or {}).get("known_head") or KNOWN_HEADS[repo_name])
+            changed = not repo_current["current_head"].startswith(known_head)
+            repo_state = {
+                **repo_current,
+                "previous_head": known_head,
+                "alert": changed,
+                "detail": (f"new commits since accepted HEAD {known_head}"
+                           if changed else f"HEAD unchanged from accepted reference {known_head}"),
+            }
+            if changed:
+                new_capture_alerts.append({"target": repo_name, **repo_state})
+            archive_state[repo_name] = repo_state
+        else:
+            archive_state[repo_name] = repo_prior
+            operational_errors.append({
+                "target": repo_name, "source": "github_commits",
+                "detail": repo_current.get("detail", "GitHub query failed"),
+            })
 
     salph = archive_checks["salphaseion_route"]
     for source in ("wayback", "urlscan"):
@@ -420,7 +449,7 @@ def run_baseline(previous=None):
     archive_checks = {
         "salphaseion_route": check_salphaseion_archives(),
         "gsmg_io_root": check_gsmg_root_wayback(),
-        "hosterjack_repo": check_hosterjack_repo(),
+        **{name: check_git_repo_head(slug) for name, slug in GIT_REPO_HEAD_URLS.items()},
         "live_errors": live_errors,
     }
     return assemble_report(live_checks, archive_checks, previous=previous)
@@ -448,15 +477,20 @@ def load_baseline(path=BASELINE_PATH):
 # ---------------------------------------------------------------------------
 
 def self_test():
-    # 1. Frozen scope: exactly 3 URLs, matching the exact strings verified
+    # 1. Frozen scope: exactly 4 URLs, matching the exact strings verified
     #    against this repo's own git history / doc citations, not retyped
     #    from memory.
-    assert set(FROZEN_URLS) == {"gsmg_io_root", "salphaseion_route", "hosterjack_repo"}
+    assert set(FROZEN_URLS) == {
+        "gsmg_io_root", "salphaseion_route", "hosterjack_repo", "naddiseo_repo",
+    }
     assert FROZEN_URLS["gsmg_io_root"] == "https://gsmg.io/"
     assert FROZEN_URLS["salphaseion_route"] == (
         "https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32"
     )
     assert FROZEN_URLS["hosterjack_repo"] == "https://github.com/HosterjackAGV/gsmg-5btc-puzzle"
+    assert FROZEN_URLS["naddiseo_repo"] == "https://github.com/Naddiseo/gsmgio-5btc-puzzle"
+    assert set(GIT_REPO_HEAD_URLS) == {"hosterjack_repo", "naddiseo_repo"}
+    assert set(KNOWN_HEADS) == set(GIT_REPO_HEAD_URLS)
 
     # 2. Attribution policy is fixed and complete -- never "creator" for
     #    the restored site (Phase 329 left it unresolved), always
@@ -467,6 +501,7 @@ def self_test():
     assert ATTRIBUTION["gsmg_io_root"] == "unknown"
     assert ATTRIBUTION["salphaseion_route"] == "unknown"
     assert ATTRIBUTION["hosterjack_repo"] == "community"
+    assert ATTRIBUTION["naddiseo_repo"] == "community"
     original = ATTRIBUTION["gsmg_io_root"]
     ATTRIBUTION["gsmg_io_root"] = "creator"
     try:
@@ -522,16 +557,18 @@ def self_test():
     assert _changed_bytes(fake_previous, fake_current_changed) == ["gsmg_io_root"]
     assert _changed_bytes(fake_previous, fake_current_same) == []
 
-    # 6. Hosterjack change-detection: planted matching and mismatching SHA
-    #    (offline, direct string comparison against the frozen reference).
-    assert "28d33ccabc123def".startswith(HOSTERJACK_KNOWN_HEAD)
-    assert not "ffffffffffffff".startswith(HOSTERJACK_KNOWN_HEAD)
+    # 6. Git-repo change-detection: planted matching and mismatching SHA
+    #    (offline, direct string comparison against each frozen reference).
+    assert "28d33ccabc123def".startswith(KNOWN_HEADS["hosterjack_repo"])
+    assert not "ffffffffffffff".startswith(KNOWN_HEADS["hosterjack_repo"])
+    assert "15b43fc859c33170".startswith(KNOWN_HEADS["naddiseo_repo"])
+    assert not "ffffffffffffff".startswith(KNOWN_HEADS["naddiseo_repo"])
 
     # 7. No network call happens during self_test(): monkeypatch
     #    urlopen to raise if invoked, run the whole self-test body's
     #    network-adjacent helper functions are NOT called here (proven by
     #    construction -- self_test() above never calls fetch_live,
-    #    check_gsmg_root_wayback, check_hosterjack_repo, or
+    #    check_gsmg_root_wayback, check_git_repo_head, or
     #    check_salphaseion_archives). Verified by a guard: patch urlopen to
     #    explode, confirm self-test-only logic still runs to this point.
     original_urlopen = urllib.request.urlopen
@@ -561,16 +598,17 @@ def self_test():
         "schema_version": 2,
         "baseline": {
             name: {"live": live_result(name, character * 64)}
-            for name, character in zip(FROZEN_URLS, "abc")
+            for name, character in zip(FROZEN_URLS, "abcd")
         },
         "archive_baseline": {
             "gsmg_io_root": {"ok": True, "captures": [capture_1]},
             "hosterjack_repo": {"ok": True, "current_head": "28d33ccba517"},
+            "naddiseo_repo": {"ok": True, "current_head": "15b43fc859c3"},
         },
     }
     same_live = {
         name: live_result(name, character * 64)
-        for name, character in zip(FROZEN_URLS, "abc")
+        for name, character in zip(FROZEN_URLS, "abcd")
     }
     quiet_archives = {
         "salphaseion_route": {
@@ -579,6 +617,7 @@ def self_test():
         },
         "gsmg_io_root": {"ok": True, "captures": [capture_1]},
         "hosterjack_repo": {"ok": True, "current_head": "28d33ccba517", "current_head_date": "2026-08-01"},
+        "naddiseo_repo": {"ok": True, "current_head": "15b43fc859c3", "current_head_date": "2026-08-20"},
         "live_errors": {},
     }
     unchanged = assemble_report(same_live, quiet_archives, previous=prior)
@@ -632,6 +671,19 @@ def self_test():
     assert not any(row["target"] == "hosterjack_repo"
                    for row in host_quiet["alerts"]["newly_discovered_captures"])
 
+    # Symmetric check for the newer naddiseo_repo target, proving the
+    # generalized GIT_REPO_HEAD_URLS loop treats both repos identically.
+    naddiseo_changed_archives = {
+        **quiet_archives,
+        "naddiseo_repo": {"ok": True, "current_head": "ffffffffffff", "current_head_date": "2026-09-01"},
+    }
+    naddiseo_changed = assemble_report(same_live, naddiseo_changed_archives, previous=prior)
+    assert any(row["target"] == "naddiseo_repo"
+               for row in naddiseo_changed["alerts"]["newly_discovered_captures"])
+    naddiseo_quiet = assemble_report(same_live, naddiseo_changed_archives, previous=naddiseo_changed)
+    assert not any(row["target"] == "naddiseo_repo"
+                   for row in naddiseo_quiet["alerts"]["newly_discovered_captures"])
+
     # 9. Atomic write/load round-trip leaves no temporary file behind.
     import tempfile
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -652,7 +704,7 @@ def self_test():
         assert cand not in module_text, f"leaked candidate literal: {cand!r}"
     assert not wif_like.search(module_text), "WIF-shaped string found in module source"
 
-    print("[*] self-test OK (fully offline, no network call): frozen 3-URL scope verified against real "
+    print("[*] self-test OK (fully offline, no network call): frozen 4-URL scope verified against real "
           "commit/doc citations; attribution policy fixed and non-vacuous; whitespace normalization "
           "matches page_structure_audit's own convention; redirect-chain recorder proven; changed-bytes "
           "alert logic proven with complete nested-report unchanged/changed controls; root new-capture "

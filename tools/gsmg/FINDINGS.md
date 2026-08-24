@@ -24522,3 +24522,59 @@ PROVENANCE.json` (source manifest SHA-256 + 6 accepted rows); permanent
 regression `test_raw_asset_byte_password_audit` added to
 `tools/gsmg/test_recent_audits.py`, guarded by `skipUnless` on both
 Telegram export directories' presence.
+
+## Phase 382 -- the "1141-offset" candidate family against DBBI/FAED: closed, negative (2026-08-24)
+
+**Question:** Phase 378 (2026-08-23) mentioned in passing "the ad-hoc,
+unlogged 1141-offset check discussed 2026-08-23" as an example of a
+candidate family not covered by that phase's byte-pathway sweep -- and left
+no other trace anywhere in this repo. Separately, a routine freshness check
+of the community `Naddiseo/gsmgio-5btc-puzzle` repository (this project's
+early, legitimate source for the pre-Cosmic-Duality phases) surfaced
+`unverified/phase3.2_1141.md`, added there 2026-04-16: it hypothesizes that
+`sha256(plaintext[1141:x])` -- a slice of the already-authenticated
+Architect/Cosmic-Duality plaintext starting at character offset 1141 -- is
+password/key material, with `x` and the target left unfixed, and reports
+"Nothing found" with no further detail. Rather than treat either party's
+thin, unreproducible prior attempt as closing the question, this phase ran
+one real, fully-specified, falsifiable test.
+
+**Provenance check first:** re-derived this project's own copy of the
+Architect plaintext from `README.md` via the already-existing
+`telegram_matrix_sum_passage_audit.extract_phase_plaintext`, flattened to
+lowercase-no-punctuation (this project's standard wordlist normalization),
+and confirmed it is byte-for-byte identical (1,539 characters) to the
+string Naddiseo's file quotes -- so the candidate family is built from this
+project's own already-authenticated source, not retyped from the community
+file.
+
+**Method:** wrote `tools/gsmg/phase382_1141_offset_audit.py`. Declared a
+closed, exhaustively-bounded candidate family: `plaintext[1141:x]` for
+every `x` from 1142 to 1539 inclusive -- 398 candidates, one per possible
+suffix-slice starting at offset 1141, each pairwise-distinct and a
+prefix-extension of the shortest (self-tested). Ran all 398 through the
+already-validated `cosmic_sweep_9ary.py` checkerboard-password oracle
+under exactly 3 pre-declared target/escape-pair runs -- dbbi `{b,e}`, faed
+`{g,i}` (its best-fit pair), and faed `{h,e}` (the unreconciled mirror
+hypothesis, Gap `G-ESC-001`) -- with every other axis (topology, tail-fill,
+merge-direction, drop-letter, KDF) left at that tool's own calibrated
+defaults. No parameter tuning after seeing a result.
+
+**Result:** self-test passes (flattened-plaintext reference hash,
+candidate count/distinctness, declared run tuple). Real run: 398/398
+candidates attempted against each of the 3 declared target/escape-pair
+combinations, **0 hits** in all 3.
+
+**Disposition:** closed, negative, for this exact candidate family and
+these 3 declared runs. Closes the dangling "1141-offset" reference from
+Phase 378 with a real, reproducible result rather than an unverifiable
+echo of a thin community attempt. Does not extend to other targets (the
+still-open P32TRAILING/SALPH/COSMIC AES blobs, which is what Naddiseo's
+own file actually targeted, unspecified) or to other axis combinations
+beyond the 3 declared escape-pair runs -- those remain untested, not
+disproven, and are out of this phase's declared scope.
+
+**Facts affected:** no puzzle fact changes.
+
+**Artifacts:** `tools/gsmg/phase382_1141_offset_audit.py`;
+`wordlists/gsmg/phase382_1141_offset_candidates.txt` (398 candidates).

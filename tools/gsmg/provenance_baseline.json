@@ -1,10 +1,11 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-20T15:35:29Z",
+  "generated_at": "2026-08-24T08:47:52Z",
   "frozen_urls": {
     "gsmg_io_root": "https://gsmg.io/",
     "salphaseion_route": "https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32",
-    "hosterjack_repo": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle"
+    "hosterjack_repo": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
+    "naddiseo_repo": "https://github.com/Naddiseo/gsmgio-5btc-puzzle"
   },
   "baseline": {
     "gsmg_io_root": {
@@ -19,12 +20,12 @@
         "raw_sha256": "2f896807a859e2f71a2f6e1e8277986af73b80dc0dd79a685a67c7f7f8c3303b",
         "normalized_sha256": "5a3e6521f5f932878de7e3833d3b39df886f49f22c028854ba84a1d723f5036c",
         "content_length": 35785,
-        "observed_at": "2026-08-20T15:34:31Z",
+        "observed_at": "2026-08-24T08:46:28Z",
         "source_class": "live_fetch"
       },
       "last_attempt": {
         "ok": true,
-        "attempted_at": "2026-08-20T15:35:29Z"
+        "attempted_at": "2026-08-24T08:47:52Z"
       }
     },
     "salphaseion_route": {
@@ -39,12 +40,12 @@
         "raw_sha256": "a83d3de7810f26b19b4965339b76d403e44f6b6877e5d7de2555480ca1779d77",
         "normalized_sha256": "5a6a1d41f82bbfeb9d8e850a7a660a919a4e1678e16d6c5a6a108bdfad66446d",
         "content_length": 4536,
-        "observed_at": "2026-08-20T15:34:31Z",
+        "observed_at": "2026-08-24T08:46:28Z",
         "source_class": "live_fetch"
       },
       "last_attempt": {
         "ok": true,
-        "attempted_at": "2026-08-20T15:35:29Z"
+        "attempted_at": "2026-08-24T08:47:52Z"
       }
     },
     "hosterjack_repo": {
@@ -56,15 +57,35 @@
         "final_url": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
         "status": 200,
         "redirect_chain": [],
-        "raw_sha256": "d1e6151fb423f67451941723a59d3e63469a26a9213a66516bdc4091b16decb6",
-        "normalized_sha256": "226b01ea7f1142f4f3dfd5bac7549138fb862c59c628d320ad9b3b2ec8a9136f",
-        "content_length": 291961,
-        "observed_at": "2026-08-20T15:34:32Z",
+        "raw_sha256": "8f7fd169523c938d1382c76a41994531ded2e8f82b817d6c34cce4455a704e07",
+        "normalized_sha256": "b1cb67a465d32d226edd4f0ae9717653a226d3d840cfb30de0b36668220e7fbc",
+        "content_length": 292897,
+        "observed_at": "2026-08-24T08:46:29Z",
         "source_class": "live_fetch"
       },
       "last_attempt": {
         "ok": true,
-        "attempted_at": "2026-08-20T15:35:29Z"
+        "attempted_at": "2026-08-24T08:47:52Z"
+      }
+    },
+    "naddiseo_repo": {
+      "url": "https://github.com/Naddiseo/gsmgio-5btc-puzzle",
+      "attribution": "community",
+      "attribution_note": "community-sourced, not creator-authenticated",
+      "live": {
+        "requested_url": "https://github.com/Naddiseo/gsmgio-5btc-puzzle",
+        "final_url": "https://github.com/Naddiseo/gsmgio-5btc-puzzle",
+        "status": 200,
+        "redirect_chain": [],
+        "raw_sha256": "3f266813b4263c5c27a05dce8cf35327f02a053fedb5c5a8f40a014f2904faab",
+        "normalized_sha256": "9a6fd8899b77f61761681f6aab53b244c4f8491847aa1d88f0c043b4d58fd9ac",
+        "content_length": 424500,
+        "observed_at": "2026-08-24T08:46:29Z",
+        "source_class": "live_fetch"
+      },
+      "last_attempt": {
+        "ok": true,
+        "attempted_at": "2026-08-24T08:47:52Z"
       }
     }
   },
@@ -915,8 +936,7 @@
         }
       ],
       "alert": false,
-      "new_capture_count": 0,
-      "first_successful_observation": true
+      "new_capture_count": 0
     },
     "hosterjack_repo": {
       "ok": true,
@@ -925,6 +945,14 @@
       "previous_head": "28d33ccba517",
       "alert": false,
       "detail": "HEAD unchanged from accepted reference 28d33ccba517"
+    },
+    "naddiseo_repo": {
+      "ok": true,
+      "current_head": "15b43fc859c3",
+      "current_head_date": "2026-08-22T03:28:09Z",
+      "previous_head": "15b43fc",
+      "alert": false,
+      "detail": "HEAD unchanged from accepted reference 15b43fc"
     }
   },
   "checks": {
@@ -937,7 +965,7 @@
         "raw_sha256": "2f896807a859e2f71a2f6e1e8277986af73b80dc0dd79a685a67c7f7f8c3303b",
         "normalized_sha256": "5a3e6521f5f932878de7e3833d3b39df886f49f22c028854ba84a1d723f5036c",
         "content_length": 35785,
-        "observed_at": "2026-08-20T15:34:31Z",
+        "observed_at": "2026-08-24T08:46:28Z",
         "source_class": "live_fetch"
       },
       "salphaseion_route": {
@@ -948,7 +976,7 @@
         "raw_sha256": "a83d3de7810f26b19b4965339b76d403e44f6b6877e5d7de2555480ca1779d77",
         "normalized_sha256": "5a6a1d41f82bbfeb9d8e850a7a660a919a4e1678e16d6c5a6a108bdfad66446d",
         "content_length": 4536,
-        "observed_at": "2026-08-20T15:34:31Z",
+        "observed_at": "2026-08-24T08:46:28Z",
         "source_class": "live_fetch"
       },
       "hosterjack_repo": {
@@ -956,10 +984,21 @@
         "final_url": "https://github.com/HosterjackAGV/gsmg-5btc-puzzle",
         "status": 200,
         "redirect_chain": [],
-        "raw_sha256": "d1e6151fb423f67451941723a59d3e63469a26a9213a66516bdc4091b16decb6",
-        "normalized_sha256": "226b01ea7f1142f4f3dfd5bac7549138fb862c59c628d320ad9b3b2ec8a9136f",
-        "content_length": 291961,
-        "observed_at": "2026-08-20T15:34:32Z",
+        "raw_sha256": "8f7fd169523c938d1382c76a41994531ded2e8f82b817d6c34cce4455a704e07",
+        "normalized_sha256": "b1cb67a465d32d226edd4f0ae9717653a226d3d840cfb30de0b36668220e7fbc",
+        "content_length": 292897,
+        "observed_at": "2026-08-24T08:46:29Z",
+        "source_class": "live_fetch"
+      },
+      "naddiseo_repo": {
+        "requested_url": "https://github.com/Naddiseo/gsmgio-5btc-puzzle",
+        "final_url": "https://github.com/Naddiseo/gsmgio-5btc-puzzle",
+        "status": 200,
+        "redirect_chain": [],
+        "raw_sha256": "3f266813b4263c5c27a05dce8cf35327f02a053fedb5c5a8f40a014f2904faab",
+        "normalized_sha256": "9a6fd8899b77f61761681f6aab53b244c4f8491847aa1d88f0c043b4d58fd9ac",
+        "content_length": 424500,
+        "observed_at": "2026-08-24T08:46:29Z",
         "source_class": "live_fetch"
       }
     },
@@ -1828,6 +1867,11 @@
         "ok": true,
         "current_head": "28d33ccba517",
         "current_head_date": "2026-08-01T16:56:09Z"
+      },
+      "naddiseo_repo": {
+        "ok": false,
+        "alert": false,
+        "detail": "query failed: <HTTPError 504: 'Gateway Timeout'>"
       }
     }
   },
@@ -1837,15 +1881,30 @@
     "informational_changes": [
       {
         "target": "hosterjack_repo",
-        "prior_sha256": "3d4276583926e403912dbf4d3e0d994c53e8caa8d6e97ab7ff199d4747756b6d",
-        "current_sha256": "d1e6151fb423f67451941723a59d3e63469a26a9213a66516bdc4091b16decb6",
-        "prior_normalized_sha256": "e1a6186b954b0f22fa7bdb576013b5f1f2b6a42042ccd106cf4bc733cfe8de0d",
-        "current_normalized_sha256": "226b01ea7f1142f4f3dfd5bac7549138fb862c59c628d320ad9b3b2ec8a9136f",
-        "prior_observed_at": "2026-08-20T14:24:54Z",
+        "prior_sha256": "f10e2f69661dba2f5040f9a1088de6be6473f0d1670d41835b2bb494d2ce8687",
+        "current_sha256": "8f7fd169523c938d1382c76a41994531ded2e8f82b817d6c34cce4455a704e07",
+        "prior_normalized_sha256": "3c6ff522a56ebe3d95a446821a5035c8d1c607f1a5f09c1b8d632c94e6b443a0",
+        "current_normalized_sha256": "b1cb67a465d32d226edd4f0ae9717653a226d3d840cfb30de0b36668220e7fbc",
+        "prior_observed_at": "2026-08-24T08:44:53Z",
+        "reason": "dynamic GitHub HTML; repository movement is gated by commit HEAD"
+      },
+      {
+        "target": "naddiseo_repo",
+        "prior_sha256": "d2564f1687064fec6b06ed65b6e2a6c9e826e74e584c2a899c1b0d02c8572f8a",
+        "current_sha256": "3f266813b4263c5c27a05dce8cf35327f02a053fedb5c5a8f40a014f2904faab",
+        "prior_normalized_sha256": "9e0d437d60bb87d7abe1a0d12ae06bace5daeb9901498b0ad29136c2fe746d51",
+        "current_normalized_sha256": "9a6fd8899b77f61761681f6aab53b244c4f8491847aa1d88f0c043b4d58fd9ac",
+        "prior_observed_at": "2026-08-24T08:44:53Z",
         "reason": "dynamic GitHub HTML; repository movement is gated by commit HEAD"
       }
     ],
-    "operational_errors": []
+    "operational_errors": [
+      {
+        "target": "naddiseo_repo",
+        "source": "github_commits",
+        "detail": "query failed: <HTTPError 504: 'Gateway Timeout'>"
+      }
+    ]
   },
   "new_evidence_found": false
 }
