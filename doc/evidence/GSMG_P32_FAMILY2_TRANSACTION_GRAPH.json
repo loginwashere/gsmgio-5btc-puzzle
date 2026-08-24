@@ -1,0 +1,132 @@
+{
+  "address_history": {
+    "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa": {
+      "full_history_sources": {
+        "blockcypher_count": 44,
+        "blockstream": 44
+      },
+      "mempool_authenticated_subset_count": 44,
+      "mempool_subset_normalized_sha256": "d438975eb439c4934b57582e714bd3d7bdab45a1f81551953ca607b3f83ec28d",
+      "normalized_history_sha256": "d438975eb439c4934b57582e714bd3d7bdab45a1f81551953ca607b3f83ec28d",
+      "transaction_count": 44,
+      "transaction_ids_sha256": "428f32c9f88293724ea82b020d080a802364d6f40f0f7d4ce4b0ec42429e3979"
+    },
+    "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe": {
+      "full_history_sources": {
+        "blockcypher_count": 125,
+        "blockstream": 125
+      },
+      "mempool_authenticated_subset_count": 50,
+      "mempool_subset_normalized_sha256": "57aac21fcdebfa372e90b12481e37a12bbae3518ad67a1cd5efce0069e840448",
+      "normalized_history_sha256": "9d1568823e0cba61bca705a11b3fde2289e1add588ac173fadc957b6c113b2fb",
+      "transaction_count": 125,
+      "transaction_ids_sha256": "1636f18971d50ed5b127592de4b24faa8aa43035166062306c82597ffe5e4c57"
+    }
+  },
+  "all_creator_signed_transactions_match_preexisting_record": true,
+  "creator_signed_transaction_count": 2,
+  "creator_signed_transactions": [
+    {
+      "block_height": 630001,
+      "block_time": 1589227370,
+      "fee_sats": 185400,
+      "input_addresses": [
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe"
+      ],
+      "input_count": 3,
+      "input_value_sats": 500001366,
+      "matches_preexisting_self_spend_record": true,
+      "output_value_sats": 499815966,
+      "outputs": [
+        {
+          "address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+          "spending_txid": "88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3",
+          "spending_vin": 0,
+          "spent": true,
+          "type": "p2pkh",
+          "value_sats": 249815966,
+          "vout": 0
+        },
+        {
+          "address": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+          "spending_txid": null,
+          "spending_vin": null,
+          "spent": false,
+          "type": "p2pkh",
+          "value_sats": 250000000,
+          "vout": 1
+        }
+      ],
+      "raw_byte_length": 617,
+      "raw_sha256": "6865119e0a5de3d81268b535662b4a00f2da07eba948ce9a8ef7464d92df9a04",
+      "txid": "2aa9a4a90be819d5122d70c993280785a0508f163521e7b38cebb4db0b071b13"
+    },
+    {
+      "block_height": 840725,
+      "block_time": 1713995247,
+      "fee_sats": 27832,
+      "input_addresses": [
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe"
+      ],
+      "input_count": 3,
+      "input_value_sats": 250352132,
+      "matches_preexisting_self_spend_record": true,
+      "output_value_sats": 250324300,
+      "outputs": [
+        {
+          "address": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+          "spending_txid": null,
+          "spending_vin": null,
+          "spent": false,
+          "type": "p2pkh",
+          "value_sats": 125000000,
+          "vout": 0
+        },
+        {
+          "address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+          "spending_txid": null,
+          "spending_vin": null,
+          "spent": false,
+          "type": "p2pkh",
+          "value_sats": 125324300,
+          "vout": 1
+        }
+      ],
+      "raw_byte_length": 615,
+      "raw_sha256": "b1653abd30454dc647ddee19ad1b846568ffecc31868eed773167d7308906352",
+      "txid": "88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3"
+    }
+  ],
+  "cross_source_agreement": true,
+  "cross_source_contract": "Blockstream's full enumeration count agrees with BlockCypher; mempool.space's available newest subset agrees semantically; all creator-signed raw bytes agree across all three",
+  "direct_common_input_candidate_addresses": [],
+  "independent_history_count_api": "https://api.blockcypher.com/v1/btc/main",
+  "new_authenticated_address_found": false,
+  "new_output_addresses": [],
+  "observed_at_utc": "2026-08-24T12:19:31+00:00",
+  "one_hop_spenders": [
+    {
+      "input_addresses": [
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe"
+      ],
+      "output_addresses": [
+        "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe"
+      ],
+      "seed_signed": true,
+      "txid": "88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3"
+    }
+  ],
+  "schema_version": 1,
+  "seed_addresses": [
+    "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+    "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+  ],
+  "shared_transaction_count": 5,
+  "source_apis": {
+    "blockstream": "https://blockstream.info/api",
+    "mempool": "https://mempool.space/api"
+  },
+  "union_transaction_count": 164,
+  "verdict": "closed-negative-no-new-address-or-route"
+}

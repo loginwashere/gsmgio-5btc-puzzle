@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **381** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **384** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -85,7 +85,7 @@ A phase whose original heading was later corrected without editing the heading i
 | 64 | P064 | 2026-07-26 | a 2020 diagram independently corroborates FEFE and names the "nest" cells | **nest cells corrected to 4/4 white by Phase 127** | [link](../tools/gsmg/FINDINGS.md#phase-64----a-2020-diagram-independently-corroborates-fefe-and-names-the-nest-cells-2026-07-26) | — |
 | 65 | P065 | 2026-07-26 | rabbit-nest leftover nibble | exact `4/B` checksum, direct bit-4 zeroing negative — **retracted by Phase 127 -- nibble is trivial all-zero, no signal** | [link](../tools/gsmg/FINDINGS.md#phase-65----rabbit-nest-leftover-nibble-exact-4b-checksum-direct-bit-4-zeroing-negative-2026-07-26) | — |
 | 66 | P066 | 2026-07-26 | creator clue index expanded to 80 records; one real provenance upgrade | — | [link](../tools/gsmg/FINDINGS.md#phase-66----creator-clue-index-expanded-to-80-records-one-real-provenance-upgrade-2026-07-26) | [GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX](GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md) |
-| 67 | P067 | 2026-07-26 | full 2020 rabbit-diagram transcription audit | — | [link](../tools/gsmg/FINDINGS.md#phase-67----full-2020-rabbit-diagram-transcription-audit-2026-07-26) | — |
+| 67 | P067 | 2026-07-26 | full 2020 rabbit-diagram transcription audit | — | [link](../tools/gsmg/FINDINGS.md#phase-67----full-2020-rabbit-diagram-transcription-audit-2026-07-26) | [GSMG_NADDISEO_REPOSITORY_FULL_AUDIT](GSMG_NADDISEO_REPOSITORY_FULL_AUDIT.md) |
 | 68 | P068 | 2026-07-26 | reaction-signal and success-claim sweeps of the complete export | — | [link](../tools/gsmg/FINDINGS.md#phase-68----reaction-signal-and-success-claim-sweeps-of-the-complete-export-2026-07-26) | — |
 | 69 | P069 | 2026-07-26 | calibrating the `-41+-17=-58` coincidence | base rate is not low | [link](../tools/gsmg/FINDINGS.md#phase-69----calibrating-the--41-17-58-coincidence-base-rate-is-not-low-2026-07-26) | — |
 | 70 | P070 | 2026-07-26 | `{b,e}` x `7x13/13x7` historical-coverage audit | — | [link](../tools/gsmg/FINDINGS.md#phase-70----be-x-7x1313x7-historical-coverage-audit-2026-07-26) | [GSMG_CIAO_SELECTION_COVERAGE_AUDIT](GSMG_CIAO_SELECTION_COVERAGE_AUDIT.md) |
@@ -399,4 +399,6 @@ A phase whose original heading was later corrected without editing the heading i
 | 379 | P379 | 2026-08-23 | Phase 378 coverage repair | CBC-extended delta, Key Wrap fix, negative | [link](../tools/gsmg/FINDINGS.md#phase-379----phase-378-coverage-repair-cbc-extended-delta-key-wrap-fix-negative-2026-08-23) | — |
 | 380 | P380 | 2026-08-23 | raw-key chunk audit over Phase 378/379's byte-pathway materials | negative | [link](../tools/gsmg/FINDINGS.md#phase-380----raw-key-chunk-audit-over-phase-378379s-byte-pathway-materials-negative-2026-08-23) | [GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT](GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md) |
 | 381 | P381 | 2026-08-23 | P32 Family 3 | raw authenticated asset bytes as password material, negative | [link](../tools/gsmg/FINDINGS.md#phase-381----p32-family-3-raw-authenticated-asset-bytes-as-password-material-negative-2026-08-23-corrected-three-times-same-day-plus-2-non-blocking-nits) | — |
-| 382 | P382 | 2026-08-24 | the "1141-offset" candidate family against DBBI/FAED | closed, negative | [link](../tools/gsmg/FINDINGS.md#phase-382----the-1141-offset-candidate-family-against-dbbifaed-closed-negative-2026-08-24) | — |
+| 382 | P382 | 2026-08-24 | the "1141-offset" candidate family against DBBI/FAED | closed, negative | [link](../tools/gsmg/FINDINGS.md#phase-382----the-1141-offset-candidate-family-against-dbbifaed-closed-negative-2026-08-24) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
+| 383 | P383 | 2026-08-24 | P32 Family 2 transaction-graph trace | authenticated, no new creator address or route | [link](../tools/gsmg/FINDINGS.md#phase-383----p32-family-2-transaction-graph-trace-authenticated-no-new-creator-address-or-route-2026-08-24) | [GSMG_P32_FAMILY2_TRANSACTION_GRAPH_AUDIT](GSMG_P32_FAMILY2_TRANSACTION_GRAPH_AUDIT.md) |
+| 384 | P384 | 2026-08-24 | X2SH4Y0QB15 fork-resolution delta | B=25/H=42 retest, negative | [link](../tools/gsmg/FINDINGS.md#phase-384----x2sh4y0qb15-fork-resolution-delta-b25h42-retest-negative-2026-08-24) | — |

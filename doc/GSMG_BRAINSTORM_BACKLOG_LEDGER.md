@@ -52,9 +52,9 @@ note: "closed by the independent HosterjackAGV fork's own ~35,000-combination sa
 ```yaml
 item: "P32 Family 2 -- transaction-graph trace beyond the first hop"
 source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
-status: genuinely-unrun
-verified_against: n/a
-note: "common-input-ownership clustering and output-following over the two known creator addresses' full transaction histories -- not executed; priority 6 of 8 in the source doc's own execution order"
+status: executed
+verified_against: "GSMG_P32_FAMILY2_TRANSACTION_GRAPH_AUDIT.md (Phase 383)"
+note: "three-source authenticated trace over 125 prize-address and 44 halving-address transactions (164 unique): only the two pre-existing 2020/2024 halving self-spends are signed by a seed address; both use only prize-address inputs and output only to the prize/halving addresses; 0 direct co-input candidates, 0 new output addresses, 0 new route. Exact raw bytes for both signed transactions are pinned for Family 9"
 ```
 
 ```yaml
@@ -110,7 +110,7 @@ item: "P32 Family 9 -- transaction serialization and wallet-style fingerprint"
 source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
 status: genuinely-unrun
 verified_against: n/a
-note: "version/nLockTime/sequence/pubkey-encoding/sighash-style/repeated-ECDSA-r comparison; best run from the raw transaction cache Family 2 would produce, so realistically gated on Family 2 running first"
+note: "version/nLockTime/sequence/pubkey-encoding/sighash-style/repeated-ECDSA-r comparison; Family 2's prerequisite is now satisfied by the exact two-transaction raw cache in doc/evidence/GSMG_P32_FAMILY2_SIGNED_TRANSACTION_CACHE.json, so this family is unblocked"
 ```
 
 ```yaml
@@ -279,13 +279,12 @@ stages. This closes the family as scoped — it does not reopen without new
 evidence about one of the excluded files' provenance (see the
 `P32 Family 3 raw-asset-byte manifest, excluded-file classes` row above).
 
-**P32 Family 2 (transaction-graph trace)** is now the strongest remaining
-`genuinely-unrun` item, and the best remaining evidence-acquisition
-project overall — it can surface a new authenticated fact rather than
-only closing coverage. It is more expensive than Family 3 was (external
-API calls, cross-source provenance checks) and is not itself a bounded
-password-material test; Family 9 (transaction serialization fingerprint)
-is gated on it running first.
+**P32 Family 2 (transaction-graph trace)** was executed as Phase 383. The
+125+44 histories contain only two seed-signed transactions, both already-known
+halving self-spends, with zero additional co-input or output addresses. Its
+negative result closes the evidence-acquisition family and produces the exact
+raw-transaction cache that unblocks Family 9 (transaction serialization
+fingerprint).
 
 ## Related documents
 

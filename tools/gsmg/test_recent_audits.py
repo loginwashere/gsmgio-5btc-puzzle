@@ -139,6 +139,7 @@ import native_favicon_shadow_audit
 import nibble_packing_audit
 import nopad_window_sweep
 import onchain_op_return_provenance_audit
+import p32_transaction_graph_audit
 import p32_sibling_password_audit
 import p32_solved_boundary_grammar_transfer_audit
 import page_syntax_house_style_audit
@@ -207,6 +208,7 @@ import triangular_matrixsumlist_audit
 import urlblob_keywrap_backfill
 import visible_referent_delta_audit
 import x2sh4y0qb15_p32_candidate_audit
+import x2sh4y0qb15_fork_resolution_delta_audit
 import yinyang_cosmic_phase_label_audit
 import yin_yang_transition_audit
 import yin_yang_next_edge_audit
@@ -667,6 +669,19 @@ class CorrectedClaimTests(unittest.TestCase):
             self.assertNotIn("\\b", earliest_text)
             later_text = flatten(messages[38301]["text"])
             self.assertEqual(later_text.count("\\b"), 8)
+
+    def test_x2sh4y0qb15_fork_resolution_delta_negative(self):
+        report = x2sh4y0qb15_fork_resolution_delta_audit.self_test()
+        self.assertEqual(report["resolved_values"], {"S": 32, "H": 42, "B": 25, "Q": 82})
+        self.assertEqual(report["candidate_count"], 26)
+        self.assertIn("5152280Y424232X", report["candidates"])
+        self.assertEqual(report["hits"], [])
+
+    def test_p32_transaction_graph_snapshot(self):
+        p32_transaction_graph_audit.self_test()
+        report = json.loads(p32_transaction_graph_audit.DEFAULT_REPORT.read_text())
+        cache = json.loads(p32_transaction_graph_audit.DEFAULT_CACHE.read_text())
+        self.assertTrue(p32_transaction_graph_audit.validate_artifacts(report, cache))
 
     def test_p32_sibling_password_negative(self):
         p32_sibling_password_audit.self_test()
