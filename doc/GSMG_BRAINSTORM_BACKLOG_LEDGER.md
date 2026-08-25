@@ -301,6 +301,7 @@ actual new evidence.
 
 ## Related documents
 
+- [GSMG Scientific Theory Registry](GSMG_SCIENTIFIC_THEORY_REGISTRY.md)
 - [GSMG Frontier Assumption Ledger](GSMG_FRONTIER_ASSUMPTION_LEDGER.md)
 - [GSMG Topology Audit](GSMG_TOPOLOGY_AUDIT.md)
 - [GSMG Open Gap Registry](GSMG_OPEN_GAP_REGISTRY.md)

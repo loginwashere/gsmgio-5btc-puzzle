@@ -26210,3 +26210,73 @@ AUDIT.md`; permanent regression in `tools/gsmg/test_recent_audits.py`.
 **Reopen condition:** a fourth authenticated solved AES boundary
 appears, or new evidence establishes the creator's actual toolchain
 beyond the mechanical facts pinned here.
+
+## Phase 411 -- GSMG Scientific Theory Registry: T0-T5 populated from existing phase evidence, no new cipher execution (2026-08-25)
+
+**Question:** the user proposed a methodological shift after Phase 410's
+pause -- stop treating each cipher transformation as a standalone
+hypothesis and instead frame the DBBI/FAED/`matrixsumlist`/BTCSEED
+frontier as a small set of competing generative theories, each experiment
+justified as discriminating between theories rather than as a candidate
+search. The recommended first deliverable: build a theory registry
+populating T0-T5 from existing evidence, explicitly separating facts used
+to *construct* each theory from facts that could *confirm* it -- no new
+cipher execution.
+
+**Method:** read `doc/GSMG_TOPOLOGY_AUDIT.md` (the existing 9-topology
+structural comparison for DBBI/FAED), `doc/GSMG_OPEN_GAP_REGISTRY.md`,
+both DBBI/FAED object pages, and the full text of Phases 341, 371, 372,
+386-388, 396-410 in `tools/gsmg/FINDINGS.md`. Wrote
+`doc/GSMG_SCIENTIFIC_THEORY_REGISTRY.md`, populating the user's six
+theories (T0 statistical artifact, T1 independent consumers, T2 joint
+Yin/Yang generator, T3 BTCSEED typed stream, T4 matrix instruction
+pipeline, T5 solved-stage creator grammar) with the nine required fields
+each (authenticated inputs, source-supported assumptions, free
+parameters, facts used to construct, new predictions, falsification
+conditions, completed experiments, complexity cost, current status),
+citing only already-recorded phases. Explicitly did not re-derive,
+re-run, or re-score anything cryptographically.
+
+**Result:** T0/T1 are jointly favored (zero/near-zero free parameters,
+no failed prediction -- twelve consumer families across Phases 397-407
+and Phase 371's direct asymmetry test land exactly where both predict).
+T2 is stopped (no better than the T0/T1 null once its one supporting fact,
+Phase 262's `YIN`, is weighed against its unselected operator/scope
+parameters and the ~45-model negative sweep, Phases 271-321). T3 is
+stopped per the framework's own "depends on an unselected convention"
+rule -- Phase 408 shows the `BTCSEED`/`Z@97` package survives only under
+the single period used to discover it, and Phases 397-407 exhaust twelve
+frozen consumer families at zero hits. T4 is blocked, not falsified --
+gap `G-MSL-001`'s last primary source (Phase 259) was reviewed and found
+empty; no experiment currently distinguishes "unsourced pipeline" from
+"no pipeline." T5 is validated as a calibration tool (Phase 341's
+leave-one-stage-out reconstruction of all 3 solved boundaries at rank 1,
+Phase 410's uniform cryptographic profile) but has no further eligible
+target -- every other candidate boundary is blocked by its own separate
+open gap, not by a limit of the grammar itself.
+
+**Disposition:** documentation-only deliverable, no promotion rule to
+trigger and no puzzle progress claimed. Cross-linked from
+`doc/GSMG_TOPOLOGY_AUDIT.md` (which this registry extends for the
+BTCSEED-specific branch, without duplicating its T0/T3/T6 structural
+scoring) and `doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md`'s related-documents
+list. Per the user's own 2026-08-25 pause instruction, none of the six
+theories' reopen conditions are currently met, so this deliverable does
+not itself license new candidate generation -- the framework's own
+recommended next experiment (a held-out generative-model comparison over
+DBBI/FAED's full letter and transition distributions) is named but
+deliberately not started here.
+
+**Facts affected:** none -- no unresolved blob was queried, no new
+transform was run.
+
+**Artifacts:** `doc/GSMG_SCIENTIFIC_THEORY_REGISTRY.md`; cross-link
+additions to `doc/GSMG_TOPOLOGY_AUDIT.md` and
+`doc/GSMG_BRAINSTORM_BACKLOG_LEDGER.md`.
+
+**Reopen condition:** any of the six theories' individually listed reopen
+conditions in the registry itself (a demonstrated cross-stream
+dependence for T0/T1; a `YANG` counterpart or independent operator/scope
+selector for T2; an independently-motivated period or exact consumer hit
+for T3; gap `G-MSL-001`'s closure condition for T4; a fourth solved AES
+boundary or a newly-eligible unresolved boundary for T5).

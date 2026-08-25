@@ -22,6 +22,15 @@ below is a structural/evidentiary comparison over already-authenticated
 facts and already-completed phases, per the project's own discipline of not
 letting candidate-generation choices be tuned by oracle feedback.
 
+**Extended by:** [GSMG Scientific Theory Registry](GSMG_SCIENTIFIC_THEORY_REGISTRY.md)
+reframes this audit's T0/T3/T6 (relabeled T0-T2 there) alongside three
+BTCSEED-branch-specific theories (T3-T5) this audit does not cover, adding
+explicit falsification conditions and a facts-used-to-construct/facts-that-
+confirm separation. Read that document for anything specific to the
+`BTCSEED` Bifid-decode branch (Phases 386-408); this document remains the
+canonical structural comparison for DBBI/FAED/SALPH/COSMIC/P32TRAILING more
+broadly.
+
 **Candidate topologies** (T0 = null, T1-T8 as specified):
 
 - **T0 — Null.** DBBI and FAED (and, by extension, other frontier objects)
