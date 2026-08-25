@@ -241,6 +241,7 @@ import phase407_p91_repeated_vigenere_key_over_q472_audit
 import phase408_bifid_period_robustness_audit
 import phase410_solved_vector_toolchain_provenance_audit
 import phase412_dbbi_faed_generative_model_comparison_audit
+import phase413_i0_s0_signal_localization_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -957,6 +958,23 @@ class CorrectedClaimTests(unittest.TestCase):
             report["result_branch"],
             "independent_iid_narrow_support_no_predictive_sequential_language",
         )
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
+
+    def test_phase413_i0_s0_signal_localization(self):
+        report = phase413_i0_s0_signal_localization_audit.audit()
+        self.assertTrue(report["controls"]["permutation_positive"]["passes_frozen_requirement"])
+        self.assertTrue(report["controls"]["permutation_negative"]["passes_frozen_requirement"])
+        self.assertTrue(report["controls"]["lolo_concentration"]["passes_frozen_requirement"])
+        self.assertAlmostEqual(
+            report["diagnostic1"]["reconciliation_reference"], 0.05665641280022804, places=10
+        )
+        self.assertEqual(report["diagnostic1"]["letter_concentration"]["top_letter"], "b")
+        self.assertTrue(report["diagnostic2"]["significant"])
+        self.assertEqual(report["diagnostic3"]["significant_count"], 5)
+        self.assertFalse(report["diagnostic3"]["rows"]["b"]["promoted"])
+        self.assertEqual(report["diagnostic5"]["fold_agree_count"], 4)
+        self.assertEqual(report["branch"], "mixed_inconclusive")
         self.assertFalse(report["candidate_text_generated"])
         self.assertFalse(report["password_oracle_run"])
 

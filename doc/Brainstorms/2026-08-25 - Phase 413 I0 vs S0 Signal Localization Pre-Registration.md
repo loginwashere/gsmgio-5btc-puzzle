@@ -1,6 +1,6 @@
 ---
 type: worksheet
-status: live
+status: closed
 date: 2026-08-25
 topics:
   - brainstorm
@@ -19,6 +19,22 @@ topics:
 > contrast: `0.0566564`, `p_family=0.000599994`), not a new cipher
 > search. It localizes and stress-tests that one result. No new model,
 > transform, decode, or oracle is introduced.
+
+> [!info] Executed as Phase 413 (2026-08-25)
+> All three frozen fixtures and Diagnostic 1's reconciliation invariant
+> passed before the real-data diagnostics ran. On the real streams: letter
+> `b` alone contributes `+0.151725` (more than the entire observed
+> `0.0566564` contrast), and removing it flips the sign negative and
+> non-significant. 5 of 9 conditional-K=8 leave-one-letter-out removal
+> analyses remain significant (`p_family<=0.005`); 4 of 5 folds still
+> agree in direction. The two frozen localization gates (`lolo_significant
+> >= 7` / `<= 6`, `fold_agree >= 4` / `<= 3`) disagree
+> (`lolo_significant=5`, `fold_agree=4`), so the result is
+> `mixed_inconclusive` per this document's own three-way rule — neither
+> fully distributed nor cleanly localized. This does not license
+> plaintext generation, a new DBBI/FAED combinator, or a key search, and
+> does not retract Phase 412's own topology-contrast finding; it
+> qualifies how that finding should be read.
 
 ## Scope and motivation
 

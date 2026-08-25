@@ -182,14 +182,29 @@ undiscovered) consumer; they are not required to combine with each other.
   comparison — `I0`, the independent-IID model, has the lowest macro
   loss; independent parameters beat the best shared model with topology
   contrast `0.0566564`, `p_family=0.000599994`; first-order memory does
-  not promote).
+  not promote); Phase 413 (diagnostic localization of Phase 412's own
+  topology contrast — letter `b` alone contributes `+0.151725`, more
+  than 2.5x the entire observed effect, offset by several negative-
+  contributing letters; removing `b` flips the contrast negative and
+  non-significant; 5 of 9 removal analyses remain significant under a
+  Bonferroni-corrected, conditional-K=8 leave-one-letter-out sweep;
+  4 of 5 folds still agree in direction;
+  the two frozen localization gates disagree, so the result is
+  `mixed_inconclusive` by the diagnostic's own preregistered rule, not
+  resolved by picking the more flattering gate).
 - **Complexity cost:** low (no combinator invented).
 - **Current status:** **favored**, jointly with T0. Corresponds to the
   Topology Audit's **T6** (Independent consumers), which the audit itself
   ranks second only to T8 (checkpoints, not operands) on real, non-inherited
   support. Phase 412 adds narrow predictive support for *distinct emission
-  profiles*, not direct proof that the two adjacent page instructions are
-  their final consumers.
+  profiles*; Phase 413 qualifies that support rather than retracting it —
+  the same-data permutation statistic also detects the difference
+  (`p_raw=1.99998e-05`, corroboration on the same 661 characters, not
+  external replication) but the effect is substantially, not exclusively, carried by
+  one letter, so it should be read as *letter-b-driven with partial
+  distributed support*, not as fully robust distributed evidence across
+  the alphabet. Neither Phase 412 nor Phase 413 is direct proof that the
+  two adjacent page instructions are the streams' final consumers.
 - **Compatibility note:** T0 and T1 are not competitors. T0 is a claim
   about whether internal structure implies *any* designed continuation;
   T1 is a claim about whether the two streams must combine with *each
@@ -429,7 +444,7 @@ profile (KDF, cipher, padding) that the three *solved* boundaries
 | Theory | Free params | Status | Key discriminating result |
 |---|---|---|---|
 | T0 — Statistical artifact | 0 | favored | Phase 412: IID skew predicts held-out symbols; first-order memory not promoted |
-| T1 — Independent consumers | ~0 (topology itself) | favored | Phase 412: independent IID beats shared, `p_family=0.000599994`; Phase 371 supplies the page-topology asymmetry |
+| T1 — Independent consumers | ~0 (topology itself) | favored | Phase 412: independent IID beats shared, `p_family=0.000599994`; Phase 413: letter `b` drives 2.5x the effect alone, localization is mixed/inconclusive; Phase 371 supplies the page-topology asymmetry |
 | T2 — Joint Yin/Yang generator | operator + scope | stopped | Phase 412 rejects the narrow shared-parameter null; no `YANG`, selector, or surviving joint operator |
 | T3 — BTCSEED typed stream | period + consumer family | stopped | Phase 408: package survives only under the period used to discover it |
 | T4 — Matrix instruction pipeline | 7/7 unbound | blocked | Phase 259: last primary source reviewed, empty |
@@ -448,7 +463,10 @@ blocked on missing primary evidence, not falsified.
 ## Reopen conditions (per theory)
 
 - **T0/T1:** a demonstrated cross-stream statistical dependence, or an
-  authenticated consumer for either stream individually.
+  authenticated consumer for either stream individually. Per Phase 413,
+  a separately preregistered diagnostic that resolves the localization
+  gate disagreement (currently `mixed_inconclusive`) would sharpen, but
+  is not itself required to reopen, T1's existing favored status.
 - **T2:** a `YANG` counterpart to Phase 262's finding, or a page/creator
   source that independently selects a combining operator or scope.
 - **T3:** an independently-motivated period (not `570`, not selected
@@ -474,7 +492,16 @@ full letter and transition distributions against held-out positions — was
 subsequently preregistered and executed as Phase 412. It supports distinct
 IID emission profiles but not first-order sequential memory, so its own
 stopping rule does not license a mechanism-comparison follow-up or reopen the
-active search.
+active search. Phase 412's own recommended follow-up — localizing and
+stress-testing that topology contrast rather than opening a new transform
+family — was subsequently preregistered and executed as Phase 413. Its
+result is `mixed_inconclusive` by its own frozen, exact criteria (one
+letter drives most of the effect; fold-level direction remains largely
+consistent). Per its own preregistered rule, neither this nor Phase 412's
+outcome licenses plaintext generation, a new DBBI/FAED combinator, or a
+key search; the next useful evidence is external provenance or
+identification of the two independent consumers, not another transform
+on this branch.
 
 ## Related documents
 
