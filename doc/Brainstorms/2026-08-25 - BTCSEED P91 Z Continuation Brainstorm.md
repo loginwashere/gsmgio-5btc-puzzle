@@ -90,10 +90,38 @@ topics:
 > deduplicated second squares, ordered key schedules -- all constructions
 > that would need this checkpoint to be period-robust to motivate
 > spending further effort on them) are parked unless an independent clue
-> specifically selects one of them. The remaining ~95 idea-bank items
-> (82-89 in the same "P91 as a key" section, plus idea banks A-D and F)
-> are still untested and still require their own fresh, separately-
-> frozen contracts.
+> specifically selects one of them. The remaining unfrozen items still
+> require their own fresh, separately-frozen contracts.
+
+> [!warning] Branch paused (2026-08-25)
+> Per the user's own review, this branch is paused here -- Phase 408
+> removes the evidentiary basis for spending further effort on its
+> remaining variants, across every idea bank still open:
+>
+> - **Bank A** (boundary/geometry, items 1-18): its routes/geometries are
+>   weaker versions of the Phase 399 matrix test, already closed negative.
+> - **Bank B** (control/data stream): its strongest control/data readings
+>   were covered by Phases 397 and 402-406.
+> - **Bank C** (`BTCSEED` as a typed consumer): its standard Bitcoin
+>   consumers were covered by Phases 400, 403, and 406; the remaining
+>   salts/domain separators it would need are unsourced.
+> - **Bank D** (three aligned 91-character objects): its strongest
+>   algebraic relation was Phase 401; coordinate splices and majority
+>   rules beyond that add arbitrary, unmotivated axes.
+> - **Bank F** items 93-100 (Bifid continuation rules beyond the period
+>   sweep itself): each compounds a checkpoint Phase 408 showed only
+>   exists under period 570 with post-selected coordinate swaps, second
+>   Bifid passes, or new keyed squares -- exactly the widening this
+>   document's own promotion contract rejects.
+>
+> None of the remaining items has a uniquely freezeable family or an
+> independent selector distinguishing it from the many nearby variants
+> it wasn't. Continuing would be exploration for its own sake, not a
+> strong attempt to solve the puzzle. This branch stays paused unless an
+> independent clue (not another self-generated idea-bank entry) reopens
+> a specific item. Project effort moves to **P32 Family 5** (external
+> community candidate mining, fabrication-checked) -- see
+> [GSMG Brainstorm Backlog Ledger](../GSMG_BRAINSTORM_BACKLOG_LEDGER.md).
 
 ## Executive result
 
@@ -565,21 +593,36 @@ Before executing any item:
 ## Outcome
 
 - Status: Priorities 1--6 (the entire ranked verification queue)
-  executed and closed negative; the 100-item idea bank beyond this
-  ranked queue remains an untested portfolio, but per this contract's
-  own instruction, closing Priority 6 negative does not open a
-  Priority 7
+  executed and closed negative. Six further residuals from the 100-item
+  idea bank beyond the ranked queue were each frozen and executed
+  (Phases 403-407, all closed negative), followed by a branch-level
+  robustness gate on the `BTCSEED` checkpoint itself (Phase 408:
+  full-block-convention-dependent, not disproven). Per the user's own
+  review (2026-08-25), the branch is now **paused** -- see the
+  "Branch paused" callout near the top of this document for the
+  per-idea-bank reasoning. No remaining idea-bank item has a uniquely
+  freezeable family or an independent selector; reopening any of them
+  requires an independent clue, not another self-generated entry.
 - Promoted phases: [Phase 397](../../tools/gsmg/FINDINGS.md#phase-397----btcseedp91z-brainstorm-priority-1-post-z-59-byte-control-channel-closed-negative-2026-08-25)
   (Priority 1), [Phase 398](../../tools/gsmg/FINDINGS.md#phase-398----btcseedp91z-brainstorm-priority-2-bip39-checksum-recalibration-under-the-two-grid-native-mappings-closed-negative-2026-08-25)
   (Priority 2), [Phase 399](../../tools/gsmg/FINDINGS.md#phase-399----btcseedp91z-brainstorm-priority-3-98-letter-to-14x14-coordinate-matrix-closed-negative-2026-08-25)
   (Priority 3), [Phase 400](../../tools/gsmg/FINDINGS.md#phase-400----btcseedp91z-brainstorm-priority-4-p90p91q472full-stream-as-direct-bitcoin-key-material-closed-negative-2026-08-25)
   (Priority 4), [Phase 401](../../tools/gsmg/FINDINGS.md#phase-401----btcseedp91z-brainstorm-priority-5-p91-against-the-youwon-bearing-dbbi-m91-difference-closed-negative-2026-08-25)
   (Priority 5), [Phase 402](../../tools/gsmg/FINDINGS.md#phase-402----btcseedp91z-brainstorm-priority-6-final-controldata-digraph-machine-closed-negative-2026-08-25)
-  (Priority 6)
-- Canonical findings changed: Phases 397--402 added; no prior phase
+  (Priority 6), [Phase 403](../../tools/gsmg/FINDINGS.md#phase-403----phase-397s-raw-59-byte-control-channel-outputs-as-bip32-seed-material-closed-negative-2026-08-25)
+  (raw 59-byte control channel as BIP32 seed), [Phase 404](../../tools/gsmg/FINDINGS.md#phase-404----q472s-native-order-data-rail-as-an-identity-messagekey-candidate-closed-negative-2026-08-25)
+  (`Q472` native-order data rail), [Phase 405](../../tools/gsmg/FINDINGS.md#phase-405----bcde-control-rail-as-a-base64-sextet-channel-closed-negative-2026-08-25)
+  (Base64 sextet channel), [Phase 406](../../tools/gsmg/FINDINGS.md#phase-406----four-structurally-anchored-256-bit-windows-of-the-full-control-rail-closed-negative-2026-08-25)
+  (structurally-anchored 256-bit windows), [Phase 407](../../tools/gsmg/FINDINGS.md#phase-407----p91-repeated-as-a-vigenere-style-key-over-q472-idea-bank-items-80-81-closed-negative-2026-08-25)
+  (`P91` repeated as a Vigenere-style key over `Q472`, idea-bank items
+  80-81), [Phase 408](../../tools/gsmg/FINDINGS.md#phase-408----bifid-period-robustness-audit-of-the-btcseed-checkpoint-full-block-convention-dependent-not-disproven-2026-08-25)
+  (Bifid period-robustness audit)
+- Canonical findings changed: Phases 397--408 added; no prior phase
   retracted
-- Highest-value next experiment: none within this contract's scope --
-  the ranked queue is exhausted. Any further work on the 100-item idea
-  bank requires a fresh, separately-frozen contract, not a quiet
-  extension of this one.
+- Highest-value next experiment: none within this branch -- it is
+  paused. Project effort moves to **P32 Family 5** (external community
+  candidate mining, fabrication-checked); see
+  [GSMG Brainstorm Backlog Ledger](../GSMG_BRAINSTORM_BACKLOG_LEDGER.md).
+  Reopening any item in this branch requires an independent clue, not a
+  quiet extension of this contract.
 
