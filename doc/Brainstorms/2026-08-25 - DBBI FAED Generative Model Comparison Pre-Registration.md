@@ -1,6 +1,6 @@
 ---
 type: worksheet
-status: live
+status: closed
 date: 2026-08-25
 topics:
   - brainstorm
@@ -20,6 +20,18 @@ topics:
 > transformation-hunting pattern the
 > [GSMG Scientific Theory Registry](../GSMG_SCIENTIFIC_THEORY_REGISTRY.md)
 > exists to move away from.
+
+> [!info] Executed as Phase 412 (2026-08-25)
+> All four frozen controls recovered their planted structures under the full
+> 100,000-replicate calibration. On the real streams, `I0` (independent IID)
+> has the lowest macro loss (`3.093984`). The topology contrast is positive
+> (`0.0566564`) and significant after the frozen two-test correction
+> (`29/100,000` null replicates at least as large; `p_family=0.000599994`).
+> The memory contrast is slightly negative (`-0.00648258`) and does not clear
+> the corrected bound (`482/100,000`; `p_family=0.00965990`). This follows the
+> preregistered narrow branch exactly: DBBI and FAED have predictively distinct
+> frequency profiles, with no promoted first-order sequential memory. T1 gains
+> narrow support; no mechanism-comparison or transform search is licensed.
 
 ## Scope and motivation
 
@@ -385,9 +397,9 @@ implementing exactly the protocol above, with:
   correction;
 - a permanent regression in `tools/gsmg/test_recent_audits.py`.
 
-Results will be recorded in `tools/gsmg/FINDINGS.md` as Phase 412 once
-computed, and the theory registry updated per whichever interpretation
-rule above actually applies.
+Results are recorded in `tools/gsmg/FINDINGS.md` as Phase 412, and the
+theory registry is updated under the preregistered independent-IID/no-
+promoted-memory interpretation branch.
 
 ## Related notes
 

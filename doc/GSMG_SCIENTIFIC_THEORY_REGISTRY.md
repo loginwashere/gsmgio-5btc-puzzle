@@ -134,7 +134,10 @@ through a 9-symbol alphabet), but that structure does not encode a
   `Q472`/`CONTROL285`/`decoded` — zero exact hits, and every
   statistically-scored family's real result sits at 6%-90% under its
   own multiset-preserving shuffle null, nowhere near the 0.5% promotion
-  bound).
+  bound); Phase 412 (held-out generative comparison — the independent
+  IID model is best, while the first-order-memory contrast is slightly
+  negative and not promoted at `p_family=0.00965990`, consistent with
+  frequency skew without predictive sequential language).
 - **Complexity cost:** lowest of all six theories (zero free parameters).
 - **Current status:** **favored.** No prediction has failed; twelve
   independent consumer families (Phases 397-407) and the period-robustness
@@ -175,12 +178,18 @@ undiscovered) consumer; they are not required to combine with each other.
   matrices, mirror9 substitution, positional co-occurrence, GF(9)/
   base-27/base-81/FSM presentations, Bacon, Nihilist, Bellaso, ADFGVX,
   Gronsfeld — essentially all negative or null-like, none supplying a
-  required joint construction).
+  required joint construction); Phase 412 (five-model held-out
+  comparison — `I0`, the independent-IID model, has the lowest macro
+  loss; independent parameters beat the best shared model with topology
+  contrast `0.0566564`, `p_family=0.000599994`; first-order memory does
+  not promote).
 - **Complexity cost:** low (no combinator invented).
 - **Current status:** **favored**, jointly with T0. Corresponds to the
   Topology Audit's **T6** (Independent consumers), which the audit itself
   ranks second only to T8 (checkpoints, not operands) on real, non-inherited
-  support.
+  support. Phase 412 adds narrow predictive support for *distinct emission
+  profiles*, not direct proof that the two adjacent page instructions are
+  their final consumers.
 - **Compatibility note:** T0 and T1 are not competitors. T0 is a claim
   about whether internal structure implies *any* designed continuation;
   T1 is a claim about whether the two streams must combine with *each
@@ -220,7 +229,10 @@ complementary parameters, or measurable cross-stream dependence.
   null models across all 16 divisor widths); Phases 271-321 (~45 models,
   all negative, including several explicit cross-stream coupling
   presentations); Phase 371 (`escape_pairs_independent = True`,
-  `either_stream_requires_the_other_as_input = False`).
+  `either_stream_requires_the_other_as_input = False`); Phase 412 (the
+  best independent emission model significantly outpredicts the best
+  shared model, `p_family=0.000599994`; this rejects the narrow shared-
+  parameter null, not every possible asymmetric joint generator).
 - **Complexity cost:** highest of T0-T2 (an operator plus a scope
   selector, both unresolved).
 - **Current status:** **stopped** — meets two of the framework's own stop
@@ -416,9 +428,9 @@ profile (KDF, cipher, padding) that the three *solved* boundaries
 
 | Theory | Free params | Status | Key discriminating result |
 |---|---|---|---|
-| T0 — Statistical artifact | 0 | favored | 12 consumer families (Phases 397-407), all negative at 6-90% shuffle-null p |
-| T1 — Independent consumers | ~0 (topology itself) | favored | Phase 371: asymmetric adjacency, independent escape pairs, no forced cross-dependency |
-| T2 — Joint Yin/Yang generator | operator + scope | stopped | Phase 262: no `YANG`; Phase 240: no shared geometric dimension; ~45 models negative |
+| T0 — Statistical artifact | 0 | favored | Phase 412: IID skew predicts held-out symbols; first-order memory not promoted |
+| T1 — Independent consumers | ~0 (topology itself) | favored | Phase 412: independent IID beats shared, `p_family=0.000599994`; Phase 371 supplies the page-topology asymmetry |
+| T2 — Joint Yin/Yang generator | operator + scope | stopped | Phase 412 rejects the narrow shared-parameter null; no `YANG`, selector, or surviving joint operator |
 | T3 — BTCSEED typed stream | period + consumer family | stopped | Phase 408: package survives only under the period used to discover it |
 | T4 — Matrix instruction pipeline | 7/7 unbound | blocked | Phase 259: last primary source reviewed, empty |
 | T5 — Solved-stage creator grammar | 0 (derived) | validated, no eligible target | Phase 341/410: leave-one-out calibration passes on all 3 solved boundaries |
@@ -456,11 +468,13 @@ blocked on missing primary evidence, not falsified.
 Per the user's 2026-08-25 instruction (`GSMG_BRAINSTORM_BACKLOG_LEDGER.md`,
 "Active searching paused"), this registry is documentation, not a new
 search. None of the reopen conditions above are met by existing evidence,
-so none license new candidate generation on their own. The next genuinely
-scientific experiment this framework recommends — comparing generative
-models of DBBI/FAED's full letter and transition distributions against
-held-out positions — is deliberately not started here; it is a distinct,
-separately-scoped deliverable the user would need to authorize.
+so none license new candidate generation on their own. The first experiment
+recommended by this framework — comparing generative models of DBBI/FAED's
+full letter and transition distributions against held-out positions — was
+subsequently preregistered and executed as Phase 412. It supports distinct
+IID emission profiles but not first-order sequential memory, so its own
+stopping rule does not license a mechanism-comparison follow-up or reopen the
+active search.
 
 ## Related documents
 

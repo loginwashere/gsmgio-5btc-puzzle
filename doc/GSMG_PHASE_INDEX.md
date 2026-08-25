@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **411** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **412** `## Phase` headings in [tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -429,3 +429,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 409 | P409 | 2026-08-25 | P32 Family 5 | external community candidate mining, fabrication-checked: zero survivors after a bounded 15-query/12-source search | [link](../tools/gsmg/FINDINGS.md#phase-409----p32-family-5-external-community-candidate-mining-fabrication-checked-zero-survivors-after-a-bounded-15-query12-source-search-2026-08-25) | — |
 | 410 | P410 | 2026-08-25 | P32 Family 7 / Post-Phase-340 Seed 3 | solved-vector authoring-toolchain provenance audit: one consistent three-vector profile | [link](../tools/gsmg/FINDINGS.md#phase-410----p32-family-7-post-phase-340-seed-3-solved-vector-authoring-toolchain-provenance-audit-one-consistent-three-vector-profile-2026-08-25) | [GSMG_SOLVED_VECTOR_TOOLCHAIN_PROVENANCE_AUDIT](GSMG_SOLVED_VECTOR_TOOLCHAIN_PROVENANCE_AUDIT.md) |
 | 411 | P411 | 2026-08-25 | GSMG Scientific Theory Registry | T0-T5 populated from existing phase evidence, no new cipher execution | [link](../tools/gsmg/FINDINGS.md#phase-411----gsmg-scientific-theory-registry-t0-t5-populated-from-existing-phase-evidence-no-new-cipher-execution-2026-08-25) | [GSMG_SCIENTIFIC_THEORY_REGISTRY](GSMG_SCIENTIFIC_THEORY_REGISTRY.md) |
+| 412 | P412 | 2026-08-25 | preregistered held-out DBBI/FAED generative-model comparison | distinct IID profiles, no promoted first-order memory | [link](../tools/gsmg/FINDINGS.md#phase-412----preregistered-held-out-dbbifaed-generative-model-comparison-distinct-iid-profiles-no-promoted-first-order-memory-2026-08-25) | [GSMG_SCIENTIFIC_THEORY_REGISTRY](GSMG_SCIENTIFIC_THEORY_REGISTRY.md) |

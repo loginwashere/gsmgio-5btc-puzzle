@@ -240,6 +240,7 @@ import phase406_control285_natural_boundary_256bit_windows_audit
 import phase407_p91_repeated_vigenere_key_over_q472_audit
 import phase408_bifid_period_robustness_audit
 import phase410_solved_vector_toolchain_provenance_audit
+import phase412_dbbi_faed_generative_model_comparison_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -942,6 +943,22 @@ class CorrectedClaimTests(unittest.TestCase):
                 label for label, r in entry["controls"].items() if r["padding_valid"]
             ]
             self.assertEqual(successes, ["representation_lowercase_hex"], key)
+
+    def test_phase412_preregistered_generative_model_comparison(self):
+        report = phase412_dbbi_faed_generative_model_comparison_audit.audit()
+        self.assertTrue(all(
+            row["passes_frozen_requirement"]
+            for row in report["controls"].values()
+        ))
+        self.assertEqual(report["real"]["lowest_macro_model"], "I0")
+        self.assertTrue(report["real"]["contrasts"]["topology"]["promoted"])
+        self.assertFalse(report["real"]["contrasts"]["memory"]["promoted"])
+        self.assertEqual(
+            report["result_branch"],
+            "independent_iid_narrow_support_no_predictive_sequential_language",
+        )
+        self.assertFalse(report["candidate_text_generated"])
+        self.assertFalse(report["password_oracle_run"])
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()

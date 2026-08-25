@@ -26280,3 +26280,94 @@ dependence for T0/T1; a `YANG` counterpart or independent operator/scope
 selector for T2; an independently-motivated period or exact consumer hit
 for T3; gap `G-MSL-001`'s closure condition for T4; a fourth solved AES
 boundary or a newly-eligible unresolved boundary for T5).
+
+<!-- audit_doc_override: GSMG_SCIENTIFIC_THEORY_REGISTRY.md -->
+## Phase 412 -- preregistered held-out DBBI/FAED generative-model comparison: distinct IID profiles, no promoted first-order memory (2026-08-25)
+
+**Question:** Phase 411's Scientific Theory Registry changes the unit of
+work from a standalone transform to a competing generative theory. Its
+first proposed experiment asks whether raw `DBBI`/`FAED` are better
+predicted by a uniform generator, one shared or two independent letter
+profiles, or one shared or two independent first-order transition
+models. Can a held-out comparison discriminate registry T0/T1's
+independent/profile-skew account from the narrow shared-parameter submodel
+of T2 without decoding text or querying a cryptographic oracle?
+
+**Preregistration:** committed the complete protocol separately as
+`487c035` before implementing or computing any real score:
+`doc/Brainstorms/2026-08-25 - DBBI FAED Generative Model Comparison
+Pre-Registration.md`. It freezes five models (`U0`, `S0`, `I0`, `S1`,
+`I1`), Krichevsky-Trofimov smoothing at `alpha=0.5`, contiguous five-fold
+splits (`19,18,18,18,18` for DBBI and `5x114` for FAED), gap-safe Markov
+training and held-block boundary scoring, an equal-stream macro loss,
+length-weighted micro loss, two independently defined contrasts, 100,000
+parametric-bootstrap replicates per contrast, fixed seeds, one-sided
+add-one p-values, Bonferroni correction across exactly two contrasts,
+four fully numeric synthetic controls, and a family-wise promotion bound
+of `p<=0.005`. This is computationally held out, not historically blind;
+the strings had been studied before the test was designed.
+
+**Method:** wrote
+`tools/gsmg/phase412_dbbi_faed_generative_model_comparison_audit.py`.
+For each fold, sufficient statistics are fit only on the surviving
+contiguous training chunks; no transition is invented across the held-out
+gap or between DBBI and FAED. The primary score is exactly
+`0.5*(DBBI_bits/91 + FAED_bits/570)`. The topology contrast is
+`min(S0,S1)-min(I0,I1)` (positive favors independent parameters); the
+memory contrast is `min(S0,I0)-min(S1,I1)` (positive favors first-order
+memory). Each null generator is selected once by real-data CV loss,
+refit on the complete real streams, and used to generate its own frozen-
+seed 100,000-pair bootstrap; every replicate reruns all five models and
+both selection minima. No candidate string, password, or key is produced.
+
+**Controls:** all four frozen controls pass without changing a parameter
+or seed. Shared-IID and shared-Markov fixtures do not reject the shared
+null; the independent-IID fixture promotes only the topology contrast;
+the shared-Markov fixture promotes only memory; and the independent-
+Markov fixture promotes both topology and memory. Every required positive
+therefore fires at the real test's own resolution and correction, before
+the real result is interpreted.
+
+**Real model losses (bits per character, primary macro score):**
+
+| Model | Meaning | Macro loss |
+|---|---|---:|
+| `U0` | uniform IID | 3.169925001 |
+| `S0` | shared IID | 3.150640716 |
+| `I0` | independent IID | **3.093984303** |
+| `S1` | shared first-order Markov | 3.184055468 |
+| `I1` | independent first-order Markov | 3.100466879 |
+
+`I0` is the lowest-loss model. The topology contrast is `0.056656413`;
+only `29/100,000` shared-null replicates reach at least that value, giving
+`p_raw=0.000299997` and frozen two-test `p_family=0.000599994`. Independent
+letter profiles therefore predict held-out symbols significantly better
+than the best shared profile/order model under this declared family.
+
+The memory contrast is slightly **negative**, `-0.006482576`: the best
+Markov model does not beat `I0`. Although only `482/100,000` IID-null
+replicates reach at least that calibrated value (`p_raw=0.004829952`), the
+frozen correction gives `p_family=0.009659903`, outside the `0.005` bound;
+the sign is also not in the preregistered Markov-favoring direction. No
+first-order sequential-memory claim promotes.
+
+**Disposition:** follows the preregistered narrow branch exactly. T1 gains
+support only as “different independent frequency profiles”; this is not
+direct proof that the page-adjacent tokens are the final consumers. T0's
+frequency-skew/no-sequential-language account remains compatible. The
+narrow shared-parameter null is rejected, strengthening T2's stopped
+status, but this does not disprove every asymmetric joint generator. Since
+`I1`/memory did not promote, the contract licenses no mechanism-comparison
+follow-up, new transform family, plaintext search, or oracle run. Active
+searching remains paused.
+
+**Artifacts:**
+`tools/gsmg/phase412_dbbi_faed_generative_model_comparison_audit.py`;
+the separately committed preregistration; permanent regression in
+`tools/gsmg/test_recent_audits.py`; interpretation update in
+`doc/GSMG_SCIENTIFIC_THEORY_REGISTRY.md`.
+
+**Reopen condition:** an independent, genuinely out-of-sample observation
+that distinguishes a specific generator, or a separately preregistered
+higher-order/mechanistic model justified by new source evidence. Phase 412's
+non-promoted memory contrast does not itself satisfy that condition.
