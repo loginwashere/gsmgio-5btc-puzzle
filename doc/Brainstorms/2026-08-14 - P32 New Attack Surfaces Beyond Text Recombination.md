@@ -352,6 +352,19 @@ expand to fuzzy fragments shorter than a full salt or AES block.
 
 ## Candidate family 7 — authoring-toolchain calibration from solved stages
 
+**Status: EXECUTED (2026-08-25).** See FINDINGS.md Phase 410 and
+`doc/GSMG_SOLVED_VECTOR_TOOLCHAIN_PROVENANCE_AUDIT.md` for the full
+standalone writeup (this consolidates the 2026-08-20 Post-Phase-340
+Seed 3 investigation pass, a duplicate of this same item, into one
+deliverable). Result: all three solved AES boundaries (Phase 2/3/3.2)
+share one observable profile -- lowercase-hex SHA-256 digest password,
+legacy single-round `EVP_BytesToKey`/SHA-256, AES-256-CBC, PKCS#7 --
+each decrypts exactly and byte-for-byte round-trips; a 24-test
+representation/KDF control matrix (8 per vector) has exactly 3
+successes, all lowercase-hex/SHA-256. Ranked (not exclusive) oracle
+guidance recorded for `cb_common.KDF_VARIANTS`. Below is the original
+pre-registered method, preserved for reference.
+
 **Priority: 3 (mainly a ranking tool, but it can eliminate unjustified KDF
 and byte-encoding branches from future work).**
 
@@ -590,10 +603,9 @@ against a different source.
 2. ~~Family 3 (raw authenticated asset bytes)~~ — **executed 2026-08-23,
    negative**, see FINDINGS.md Phase 381 and `doc/GSMG_BRAINSTORM_BACKLOG_
    LEDGER.md`.
-3. Family 7 (authoring-toolchain calibration) — narrows future cryptographic
-   assumptions using solved controls. **Core cryptographic finding complete**
-   (Post-Phase-340 Seed 3's three-vector profile, 2026-08-20) **but not
-   consolidated into a standalone audit** — see backlog ledger.
+3. ~~Family 7 (authoring-toolchain calibration)~~ — **executed 2026-08-25**,
+   see FINDINGS.md Phase 410: standalone artifact, one consistent
+   three-vector profile, 24-test control matrix.
 4. ~~Family 8 (first-appearance/co-occurrence graph)~~ — **executed
    2026-08-20 as Post-Phase-340 Seed 5**, see FINDINGS.md Phase 344 above.
 5. Family 4 (numeric/temporal metadata) — reuses the existing pipeline with

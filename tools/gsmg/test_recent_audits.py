@@ -239,6 +239,7 @@ import phase405_bcde_base64_sextet_channel_audit
 import phase406_control285_natural_boundary_256bit_windows_audit
 import phase407_p91_repeated_vigenere_key_over_q472_audit
 import phase408_bifid_period_robustness_audit
+import phase410_solved_vector_toolchain_provenance_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -930,6 +931,17 @@ class CorrectedClaimTests(unittest.TestCase):
         for label, result in report["planted_btcseed_roundtrip_positives"].items():
             self.assertTrue(result["recovered_matches_plaintext"], label)
             self.assertTrue(result["recovered_starts_with_btcseed"], label)
+
+    def test_phase410_solved_vector_toolchain_provenance(self):
+        report = phase410_solved_vector_toolchain_provenance_audit.self_test()
+        self.assertEqual(report["vector_count"], 3)
+        for key, entry in report["manifest"].items():
+            self.assertTrue(entry["roundtrip_matches_original_container"], key)
+            self.assertTrue(entry["plaintext_prefix_matches"], key)
+            successes = [
+                label for label, r in entry["controls"].items() if r["padding_valid"]
+            ]
+            self.assertEqual(successes, ["representation_lowercase_hex"], key)
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()

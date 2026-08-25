@@ -92,9 +92,9 @@ note: "run against the pinned HosterjackAGV fork tree; no hidden decrypt call/or
 ```yaml
 item: "P32 Family 7 -- authoring-toolchain calibration from solved stages"
 source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
-status: partially-executed
-verified_against: "Post-Phase-340 Future Search Portfolio.md, Seed 3 investigation pass (2026-08-20, not a separate FINDINGS phase)"
-note: "core cryptographic finding complete: all three solved AES boundaries (Phase 2/3/3.2) share one observable profile -- SHA-256 digest as lowercase hex text, legacy single-round EVP_BytesToKey/SHA-256, AES-256-CBC, PKCS#7, OpenSSL Salted__ Base64. NOT yet consolidated into a standalone, complete provenance audit artifact -- genuinely unrun as a dedicated deliverable"
+status: executed
+verified_against: "FINDINGS.md Phase 410"
+note: "standalone artifact built: all three solved AES boundaries (Phase 2/3/3.2) share one observable profile -- lowercase-hex SHA-256 digest password, legacy single-round EVP_BytesToKey/SHA-256, AES-256-CBC, PKCS#7; each decrypts exactly AND byte-for-byte round-trips (re-encrypt with original salt reproduces the complete original container); 24-test representation/KDF control matrix (8 per vector), exactly 3 successes, all lowercase-hex/SHA-256; machine-readable manifest at tools/gsmg/solved_vector_manifest.json, full writeup at doc/GSMG_SOLVED_VECTOR_TOOLCHAIN_PROVENANCE_AUDIT.md"
 ```
 
 ```yaml
@@ -156,8 +156,8 @@ note: "150,141 segments across the full Phase 336-338 corpus; 0 structural findi
 ```yaml
 item: "Post-Phase-340 Seed 3 -- solved-vector authoring-toolchain calibration"
 source: "2026-08-20 - Post-Phase-340 Future Search Portfolio.md"
-status: partially-executed
-verified_against: "in-document investigation pass, 2026-08-20 (same item as P32 Family 7 above)"
+status: executed
+verified_against: "FINDINGS.md Phase 410 (same item as P32 Family 7 above)"
 note: "duplicate of P32 Family 7 -- see that row for status detail"
 ```
 
@@ -265,32 +265,39 @@ independently re-derived from a brainstorm document's own checkboxes
 without checking this ledger (or `git log`/`FINDINGS.md`) first, since
 those checkboxes are demonstrably prone to going stale across documents.
 
-## Recommended next bounded experiment
+## Active searching paused (2026-08-25)
 
-**P32 Family 5 (external community candidate mining, fabrication-checked)**
-executed 2026-08-25 as Phase 409: 15 search queries, ~12 sources fetched
-(including a full `HosterjackAGV` fork re-mine, 153 files), every claim
-considered and dispositioned against the frozen 4-step discipline, zero
-survivors -- no external claim both targeted `P32TRAILING` specifically and
-was independent of the documented spam/fabrication network. This closes the
-last genuinely-unrun *finite* row this ledger had tracked. The BTCSEED/P91/Z
-brainstorm branch (idea-bank items 80-100, Phases 397-408) is also now
-paused per the user's own review (2026-08-25) -- see that document's
-"Branch paused" callout; no remaining item there has a uniquely freezeable
-family or independent selector either.
+Per the user's own instruction, active searching is paused after Phase
+410. The three closures below happened in sequence on 2026-08-25 and
+between them exhaust every genuinely-unrun finite row this ledger was
+tracking:
 
-The only ungated deliverable of comparable scope remaining is the dedicated
-**P32 Family 7 / Post-Phase-340 Seed 3 authoring-toolchain provenance
-artifact**. Its core cryptographic profile is already known, so that task
-improves evidence organization/ranking rather than generating a new
-password. The Phase-163 whitespace `-nopad` rerun remains a real but
-low-value compute backlog row; Seed 9 remains correctly parked until a
-near-valid checksummed object exists. With Family 5 and the BTCSEED branch
-both closed, this ledger currently has no other genuinely-unrun *finite*
-row of comparable scope -- new work here now depends on an independent
-clue (a fork re-mine surfacing something new, a fresh community claim, or
-a puzzle-side event) rather than this project's own remaining self-generated
-backlog.
+1. **BTCSEED/P91/Z brainstorm branch** (idea-bank items 80-100, Phases
+   397-408) -- paused; see that document's "Branch paused" callout. No
+   remaining item has a uniquely freezeable family or independent
+   selector.
+2. **P32 Family 5** (external community candidate mining,
+   fabrication-checked) -- executed as Phase 409: 15 search queries, ~12
+   sources fetched (including a full `HosterjackAGV` fork re-mine, 153
+   files), zero survivors.
+3. **P32 Family 7 / Post-Phase-340 Seed 3** (solved-vector
+   authoring-toolchain provenance) -- executed as Phase 410: standalone
+   artifact, one consistent three-vector profile (Phase 2/3/3.2 share
+   the identical lowercase-hex-SHA-256/legacy-EVP/AES-256-CBC/PKCS#7
+   construction, each byte-for-byte round-tripped), 24-test control
+   matrix with exactly 3 successes. Generated no new password by design
+   -- it ranks existing oracle KDF priority, it does not search.
+
+The Phase-163 whitespace `-nopad` rerun remains a real but low-value
+compute backlog row; Seed 9 remains correctly parked until a near-valid
+checksummed object exists. Neither is comparable in scope to the three
+items above. With all three closed, **this ledger currently has no
+genuinely-unrun finite row of comparable scope** -- new work now depends
+on an independent clue (a fork re-mine surfacing something new, a fresh
+community claim, or a puzzle-side event), not this project's own
+remaining self-generated backlog. Do not restart searching from this
+ledger's own remaining low-value rows as a substitute for waiting on
+actual new evidence.
 
 ## Related documents
 

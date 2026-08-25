@@ -26138,3 +26138,75 @@ is noted above as corroboration only.
 surfaces from an external source that is not linked to the documented
 spam/fabrication network -- not a periodic re-search on a fixed
 schedule.
+
+## Phase 410 -- P32 Family 7 / Post-Phase-340 Seed 3: solved-vector authoring-toolchain provenance audit: one consistent three-vector profile (2026-08-25)
+
+**Question:** requested directly by the user as the final finite
+deliverable after Phase 408 (BTCSEED branch paused) and Phase 409 (P32
+Family 5 closed negative): consolidate the 2026-08-20 "three-vector KDF
+profile" investigation pass -- which found the result but never became a
+standalone, machine-verified artifact -- into the dedicated deliverable
+both P32 Family 7 and its duplicate, Post-Phase-340 Seed 3, have called
+for since 2026-08-14/2026-08-20. Generates no new password; formally
+closes the last finite backlog item and ranks future oracle KDF priority.
+
+**Method:** wrote
+`tools/gsmg/phase410_solved_vector_toolchain_provenance_audit.py`
+against a contract frozen before any code was written. Extracted the
+Phase 2 and Phase 3 ciphertexts directly from the two `<textarea>`
+elements of the authenticated Wayback HTML artifact `doc/html/
+choiceisanillusion...html` (file SHA-256 `647744a2957219a4084ede994719
+124e7445bab1dfdeb68258fbeff2615a8d43`, independently reproduced, not
+assumed), recording exact Base64 layout (line length, trailing-newline
+presence, CR/LF) directly from the raw bytes. Used the Phase 3.2 vector
+from pinned project data (`data.PHASE32_BLOB_B64`/`PHASE32_PASSWORD`),
+one provenance tier below the Wayback-authenticated pair since it is a
+community-repo transcription per `data.py`'s own comment, not an
+independently pinned capture. For each vector: `password =
+SHA256(preimage).hexdigest().encode("ascii")`, legacy single-round
+`EVP_BytesToKey`/SHA-256, AES-256-CBC, PKCS#7 -- decrypt, confirm the
+documented plaintext prefix, then re-encrypt the recovered plaintext
+with its own original salt and confirm the result reproduces the
+**complete original container byte-for-byte** (not just valid padding).
+Reused `cb_common.evp_bytes_to_key()`/`_load_blob()` verbatim -- no
+crypto primitive re-derived. Ran a pre-declared 8-way control matrix per
+vector (24 total): 6 password representations (lowercase hex, uppercase
+hex, raw 32-byte digest, lowercase hex +LF, +CRLF, literal preimage
+bytes) under the correct SHA-256 KDF, plus 2 KDF-digest controls (MD5,
+SHA-1) under the one representation that works. Explicitly out of
+scope, per the frozen contract: any PBKDF2 iteration sweep (a successful
+exact EVP reproduction already establishes compatibility; an absent
+PBKDF2 hit cannot prove every parameter impossible) and any inference
+about OpenSSL version, operating system, or command line beyond the
+mechanical facts the artifacts themselves demonstrate. The community
+README's `openssl enc ...` commands are recorded as community-authored
+reproduction instructions, not creator-toolchain evidence.
+
+**Result:** all three vectors (Phase 2: salt `06286612d43ed7ed`, 672/656
+bytes; Phase 3: salt `9fbc451d13d071f4`, 4,112/4,096 bytes; Phase 3.2:
+salt `eefc4c5befc1656a`, 2,448/2,432 bytes) decrypt exactly under the
+identical construction and byte-for-byte round-trip. Across all 24
+control tests, **exactly 3 succeed -- one per vector, always the same
+one (lowercase hex, SHA-256 KDF)** -- confirming this project's own
+prior finding under a complete, pre-declared control set rather than an
+ad hoc check. One consistent three-vector profile; no incompatibility
+found.
+
+**Disposition:** closes P32 Family 7 and Post-Phase-340 Seed 3 as
+executed. Standalone writeup with full provenance tiering (creator-
+authenticated vs. community-transcribed), the exact Base64-layout facts,
+and ranked (not exclusive) oracle guidance for `cb_common.KDF_VARIANTS`
+in [doc/GSMG_SOLVED_VECTOR_TOOLCHAIN_PROVENANCE_AUDIT.md](../../doc/GSMG_SOLVED_VECTOR_TOOLCHAIN_PROVENANCE_AUDIT.md).
+Per the user's own instruction, active searching pauses after this
+phase pending independent evidence -- this artifact organizes and ranks
+already-known evidence; it is not itself a new lead.
+
+**Artifacts:**
+`tools/gsmg/phase410_solved_vector_toolchain_provenance_audit.py`;
+`tools/gsmg/solved_vector_manifest.json` (machine-readable, content-
+digest-only manifest); `doc/GSMG_SOLVED_VECTOR_TOOLCHAIN_PROVENANCE_
+AUDIT.md`; permanent regression in `tools/gsmg/test_recent_audits.py`.
+
+**Reopen condition:** a fourth authenticated solved AES boundary
+appears, or new evidence establishes the creator's actual toolchain
+beyond the mechanical facts pinned here.

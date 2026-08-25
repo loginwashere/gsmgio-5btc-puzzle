@@ -259,6 +259,13 @@ authenticated puzzle context can promote it.
 
 ### 3. Solved-vector authoring-toolchain calibration
 
+**Status: EXECUTED (2026-08-25).** See FINDINGS.md Phase 410 and
+`doc/GSMG_SOLVED_VECTOR_TOOLCHAIN_PROVENANCE_AUDIT.md` -- the standalone
+artifact this section's own investigation pass (below) called for but
+never became. One consistent three-vector profile confirmed under a
+full 24-test control matrix; this duplicate of P32 Family 7 and that
+item are both closed as the same execution.
+
 Complete the still-open 2026-08-14 family 7 before broadening E2/E3. Assemble
 every authenticated solved ciphertext/password pair and clearly distinguish
 creator-page instructions from community-authored decryption commands. Record

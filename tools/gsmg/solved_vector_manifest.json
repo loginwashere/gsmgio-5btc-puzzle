@@ -1,0 +1,113 @@
+{
+  "artifact_path": "doc/html/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself.html",
+  "artifact_sha256": "647744a2957219a4084ede994719124e7445bab1dfdeb68258fbeff2615a8d43",
+  "vectors": {
+    "phase2": {
+      "base64_layout": {
+        "full_line_lengths": [
+          64
+        ],
+        "has_cr": false,
+        "has_trailing_newline": true,
+        "last_line_length": 64,
+        "line_count": 14,
+        "total_bytes": 910
+      },
+      "ciphertext_length": 656,
+      "container_length": 672,
+      "container_sha256": "a089144531c666e59770c799427c05d1ea4ae074857b97d61b8d3924ff14c7e7",
+      "control_summary": {
+        "kdf_md5": false,
+        "kdf_sha1": false,
+        "representation_literal_preimage": false,
+        "representation_lowercase_hex": true,
+        "representation_lowercase_hex_crlf": false,
+        "representation_lowercase_hex_lf": false,
+        "representation_raw_digest": false,
+        "representation_uppercase_hex": false
+      },
+      "iv_sha256": "29dd053d9f95966192816c9023abb3a9345e6810f596c5ff7450c8827082db69",
+      "key_sha256": "1706e1be7d2805fc3c1c03999afdd38a1e8ce9434be3b8f3cab24ace8f78517e",
+      "label": "Phase 2",
+      "password_hex": "eb3efb5151e6255994711fe8f2264427ceeebf88109e1d7fad5b0a8b6d07e5bf",
+      "plaintext_length": 648,
+      "plaintext_prefix_matches": true,
+      "plaintext_sha256": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+      "preimage_source": "community README (puzzlehunt/gsmgio-5btc-puzzle, lines 92-105) -- narrative password-derivation VALUE not present verbatim in the pinned Wayback artifact itself, which contains only the ciphertext and the follow-on Phase-2-vs-Phase-3 riddle text",
+      "roundtrip_matches_original_container": true,
+      "salt_hex": "06286612d43ed7ed",
+      "source": "authenticated Wayback HTML artifact"
+    },
+    "phase3": {
+      "base64_layout": {
+        "full_line_lengths": [
+          64
+        ],
+        "has_cr": false,
+        "has_trailing_newline": false,
+        "last_line_length": 44,
+        "line_count": 86,
+        "total_bytes": 5569
+      },
+      "ciphertext_length": 4096,
+      "container_length": 4112,
+      "container_sha256": "9163a38d8c49038d01005bc468d9c677183b49b14d7a88fdf3bade75d1443f30",
+      "control_summary": {
+        "kdf_md5": false,
+        "kdf_sha1": false,
+        "representation_literal_preimage": false,
+        "representation_lowercase_hex": true,
+        "representation_lowercase_hex_crlf": false,
+        "representation_lowercase_hex_lf": false,
+        "representation_raw_digest": false,
+        "representation_uppercase_hex": false
+      },
+      "iv_sha256": "478d9a6031212bcf0e0fd21d674c5e642c5940c143a01401a3d4f2520be00c6c",
+      "key_sha256": "deaeab5b2c7cc46302cbdafab7b40f18a05d0eab428edd96aaaf4313d2eb2926",
+      "label": "Phase 3",
+      "password_hex": "1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5",
+      "plaintext_length": 4090,
+      "plaintext_prefix_matches": true,
+      "plaintext_sha256": "c4ad94559a44a927c1032cc0e024515f9510a0806a2d14458dbf4a360af9865f",
+      "preimage_source": "community README (puzzlehunt/gsmgio-5btc-puzzle, lines 172-192) for parts 1-6 and the worked concatenation; the derivation STRUCTURE (concatenate 7 parts, SHA-256, AES-256-CBC/Base64) and part 7's pre-move FEN/riddle text ARE present verbatim in the pinned Wayback artifact -- the post-move FEN (part 7's actual value) requires solving a well-known chess problem the artifact poses but does not itself state the answer to",
+      "roundtrip_matches_original_container": true,
+      "salt_hex": "9fbc451d13d071f4",
+      "source": "authenticated Wayback HTML artifact"
+    },
+    "phase32": {
+      "base64_layout": {
+        "full_line_lengths": [],
+        "has_cr": false,
+        "has_trailing_newline": false,
+        "last_line_length": 3264,
+        "line_count": 1,
+        "note": "stored pre-flattened in data.py; original page-native wrapping not independently pinned by this audit",
+        "total_bytes": 3264
+      },
+      "ciphertext_length": 2432,
+      "container_length": 2448,
+      "container_sha256": "9d172dc017034564b40eb381fa61e31421f509a08430864c77ccf86cfc8fe784",
+      "control_summary": {
+        "kdf_md5": false,
+        "kdf_sha1": false,
+        "representation_literal_preimage": false,
+        "representation_lowercase_hex": true,
+        "representation_lowercase_hex_crlf": false,
+        "representation_lowercase_hex_lf": false,
+        "representation_raw_digest": false,
+        "representation_uppercase_hex": false
+      },
+      "iv_sha256": "32ea0b46a3981d5ec126a98749b3b0d9070519c991d3c6d58ebdd6caf45a215f",
+      "key_sha256": "b9b258a7338801f58ddf56d496f6f32394d8672642b82a26fd3b37f227c31bf8",
+      "label": "Phase 3.2",
+      "password_hex": "250f37726d6862939f723edc4f993fde9d33c6004aab4f2203d9ee489d61ce4c",
+      "plaintext_length": 2422,
+      "plaintext_prefix_matches": true,
+      "plaintext_sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+      "preimage_source": "pinned project data (data.py's own comment cites the community README as the source of the two clue-answer tokens); this project has no separate Wayback-authenticated capture of the Phase-3.2 entry page pinned alongside the Phase-2/3 artifact",
+      "roundtrip_matches_original_container": true,
+      "salt_hex": "eefc4c5befc1656a",
+      "source": "pinned project data (data.PHASE32_BLOB_B64)"
+    }
+  }
+}
