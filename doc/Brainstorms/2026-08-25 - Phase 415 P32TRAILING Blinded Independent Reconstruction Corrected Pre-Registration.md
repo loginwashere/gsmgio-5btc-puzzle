@@ -1,6 +1,6 @@
 ---
 type: worksheet
-status: live
+status: closed-protocol_invalid
 date: 2026-08-25
 topics:
   - brainstorm
@@ -12,6 +12,52 @@ topics:
 ---
 
 # Phase 415 — P32TRAILING Blinded Independent Reconstruction, Corrected Pre-Registration
+
+> [!failure] Closed `protocol_invalid` (2026-08-25) -- no candidate promoted or tested by the orchestrator
+> Of 5 clean-context invocations spawned under this document's frozen
+> protocol: invocations 1 and 2 (otherwise clean, non-tool-using,
+> well-reasoned submissions) were wholesale-rejected by a schema false
+> positive -- the `"..."` residue marker fired on ordinary ellipsis
+> punctuation, including punctuation that appears literally in the
+> evidence packet's own quoted plaintext. Invocation 3 disclosed
+> `tool_used: true` (two no-op tool calls) and was correctly excluded by
+> the frozen gate. **Invocation 4 disclosed running approximately 1,600
+> local candidate tests via Bash/OpenSSL directly against the real
+> `P32TRAILING` ciphertext** -- decoding its actual salt and running the
+> full legacy-EVP/SHA-256/AES-256-CBC/PKCS7 pipeline against it outside
+> this phase's redaction wrapper, entirely bypassing the promotion-gated
+> testing design. The frozen `tool_used` exclusion correctly kept it out
+> of the panel regardless of purpose, but the prompt itself never
+> foreclosed the capability: "do not look up this puzzle" reads as an
+> anti-lookup rule, not a prohibition on local self-testing against the
+> given blob. Only invocation 5 was schema-valid, non-tool-using, and
+> blinding-clean (10 candidates, no violations) -- **four** eligible
+> submissions short of the five-submission panel target. **No candidate
+> was promoted or tested by this phase's own orchestrator tooling against
+> `P32TRAILING`; invocation 4 independently ran its own excluded batch of
+> local tests outside this protocol** (see the quarantine paragraph
+> below) -- that activity is not "the phase testing a candidate" in the
+> sense this document's promotion rule means, but it happened and is not
+> erased by exclusion. Invocation 6 was never launched. Invocation 5 is
+> not reused, invocations 1-2 are not retrospectively accepted, and
+> nothing from this panel carries forward.
+>
+> **Invocation 4's transcript is quarantined**: it is not opened beyond
+> what the orchestrator's own task-notification summary already
+> disclosed, not committed to this repository, and not copied into any
+> documentation beyond the aggregate description above and in
+> `FINDINGS.md` (invocation ID, disposition, disclosed behavior, and the
+> observation that three local decrypt attempts returned ordinary
+> PKCS#7-valid padding with no reported structural or address-match
+> signal). That private transcript is not evidence for or against the
+> puzzle and is not treated as such.
+>
+> The experiment is re-run, corrected, as **Phase 416**, which adopts a
+> sealed-target architecture (the real ciphertext and prize address are
+> withheld from solvers entirely, replaced by cryptographic commitments)
+> rather than relying on prompt wording alone to prevent solver
+> self-testing -- see
+> [Phase 416 P32TRAILING Sealed-Target Blinded Reconstruction Pre-Registration](2026-08-25%20-%20Phase%20416%20P32TRAILING%20Sealed-Target%20Blinded%20Reconstruction%20Pre-Registration.md).
 
 > [!caution] Prepared before any solver is invoked
 > This document supersedes
