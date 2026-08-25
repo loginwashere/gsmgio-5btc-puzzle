@@ -230,6 +230,12 @@ non-significant (`p_family_0 > 0.005`). At least one other LOLO index
 non-dominant letter leaves `a`'s asymmetry intact. This validates that
 the K=8 procedure can actually detect single-letter concentration when
 it is known to exist, before trusting its verdict on the real streams.
+The fixture's own 9 per-letter bootstrap nulls (same 100,000-trial,
+Bonferroni-x9 procedure as the real-data LOLO sweep) use seeds
+`0x413C0 + L` (`L`=0..8) — a fresh block, distinct from the real-data
+sweep's `0x413B0 + L` and the fixture's own generation seed `0x413B9`,
+following the same B-block/C-block seed-numbering convention Phase 412
+already established for its fixtures.
 (A K=9 scoring-only version of this same fixture would **not** cleanly
 validate the procedure, since changing `a` from `1/9` to `.50`
 necessarily changes the fitted probability of every other letter too
