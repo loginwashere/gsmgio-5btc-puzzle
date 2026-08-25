@@ -237,6 +237,7 @@ import phase403_raw_control_channel_bip32_seed_audit
 import phase404_q472_native_data_rail_identity_audit
 import phase405_bcde_base64_sextet_channel_audit
 import phase406_control285_natural_boundary_256bit_windows_audit
+import phase407_p91_repeated_vigenere_key_over_q472_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -903,6 +904,19 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertTrue(report["planted_roundtrip_positive"]["matches"])
         self.assertEqual(len(report["planted_direct_key_positive"]["hits"]), 1)
         self.assertEqual(len(report["planted_bip32_path_positive"]["hits"]), 1)
+
+    def test_phase407_p91_repeated_vigenere_key_over_q472(self):
+        report = phase407_p91_repeated_vigenere_key_over_q472_audit.self_test()
+        self.assertEqual(report["p91_length"], 91)
+        self.assertEqual(report["q472_length"], 472)
+        self.assertTrue(report["as1_roundtrip_matches_q472"])
+        self.assertTrue(report["cs1_roundtrip_matches_q472"])
+        self.assertEqual(report["real_keyword_hits"], {})
+        self.assertEqual(report["oracle"]["hits"], [])
+        self.assertEqual(report["direct_key"]["hits"], [])
+        self.assertGreater(report["family_wise_rate"], 0.005)
+        self.assertIn("SATOSHI", report["planted_synthetic_english_positive"]["keyword_hits"])
+        self.assertEqual(len(report["planted_direct_key_positive"]["hits"]), 1)
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()

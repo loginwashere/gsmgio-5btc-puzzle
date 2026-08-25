@@ -60,9 +60,19 @@ topics:
 > 16 candidates (4 windows x 2 grid-native mappings x 2 bit-packings, all
 > 16 byte-distinct), consumed as both a direct scalar and raw BIP32 seed
 > material through Phase 400's six frozen paths, 192,064 address checks,
-> zero hits, all three planted positives fire. The remaining ~96
-> idea-bank items are still untested and still require their own fresh,
-> separately-frozen contracts.
+> zero hits, all three planted positives fire. A fifth residual --
+> "Idea bank E" items 80-81, `P91` repeated as a Vigenere-style key over
+> `Q472` in both the standard alphabet index and the DBBI-keyed square's
+> native coordinate space -- was frozen and executed as
+> [Phase 407](../../tools/gsmg/FINDINGS.md#phase-407----p91-repeated-as-a-vigenere-style-key-over-q472-idea-bank-items-80-81-closed-negative-2026-08-25):
+> 6 candidates (3 alphabet-space x 3 coordinate-space, mirroring Phase
+> 401's own `P91`/`A26`/`A5` construction with `P91REP` in place of the
+> fixed difference), family-wise rate 43.41% (far above the 0.5% bound),
+> 17,280 oracle attempts and 24 address checks, zero hits, all three
+> planted positives fire. The remaining ~95 idea-bank items (82-89 in
+> the same "P91 as a key" section, plus idea banks A-D and F) are still
+> untested and still require their own fresh, separately-frozen
+> contracts.
 
 ## Executive result
 

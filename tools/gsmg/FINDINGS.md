@@ -25927,3 +25927,56 @@ rather than another key search.
 **Artifacts:**
 `tools/gsmg/phase406_control285_natural_boundary_256bit_windows_audit.py`;
 permanent regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 407 -- P91 repeated as a Vigenere-style key over Q472 (idea bank items 80-81): closed negative (2026-08-25)
+
+**Question:** the strongest genuinely untested residual once Phase 406
+closed the last natural-boundary raw-byte gap: "Idea bank E" items 80-81
+of the BTCSEED/P91/Z brainstorm's 100-item idea bank -- `P91` repeated
+as a Vigenere-style key over `Q472`, tested in both the standard
+26-letter alphabet index (item 80) and the DBBI-keyed square's native
+`(row, col)` coordinate space (item 81) -- direct siblings of Phase
+401's own `P91` vs. `A26`/`A5` construction, with `P91` tiled to
+`Q472`'s length taking the place of the fixed `A26`/`A5` difference.
+
+**Method:** wrote
+`tools/gsmg/phase407_p91_repeated_vigenere_key_over_q472_audit.py`
+against a contract frozen before any code was written: `P91REP = (P91 *
+ceil(472/91))[:472]`, no reversal/autokeying/block partitioning; 3
+alphabet-space candidates (`Q472-P91REP`, `Q472+P91REP`,
+`P91REP-Q472`, mod 26, reusing `external_archive_lead_audit.
+subtract_mod26`'s own established plain-ASCII convention) + 3
+coordinate-space candidates (the same three ops, mod 5, component-wise,
+through Phase 386's DBBI-keyed 5x5 square) = 6 candidates total,
+reusing Phase 401's own `mod26()`/`coords_of()`/`coords_op()`/
+`map_back()` verbatim. Evaluated with Phase 396's frozen keyword list,
+Phase 387's `quadgram_score`, and a 100,000-trial `Q472`-multiset-
+preserving shuffle (`P91REP` held fixed as the key), giving a
+family-wise empirical p-value exactly as Phase 401 computes it. Blob
+oracle and direct-key sweep at Phase 401's identical scale (36
+materials, 17,280 effective attempts; 12 digests, 24 address checks),
+no BIP32 tree per the frozen contract. Three planted positives: the
+mod-26 and coordinate-space inverse identities verified by construction;
+a synthetic identity-keyed (`P91REP` = all `A`s) planted-English string
+proving the keyword/quadgram detector fires through the real tiling-
+and-combining pipeline; a known scalar/address pair for the direct-key
+detector.
+
+**Result:** both roundtrip identities hold; all three planted positives
+fire correctly. Real data: zero keyword hits across all 6 candidates;
+family max quadgram score `-3578.46`, **43,412/100,000 (43.41%)** of
+`Q472`-multiset-preserving shuffles reach at least that score
+(`p=0.4341`) -- nowhere near the `0.005` promotion bound; oracle 17,280
+effective attempts across 36 materials, zero hits; direct-key 24
+address checks, zero hits.
+
+**Disposition:** closes negative per the contract's own stopping rule --
+neither an exact blob/address hit nor statistical significance obtains.
+Per the contract, this does not extend to idea-bank items 82-89
+(autokey seeding, deduplicated second squares, ordered key schedules,
+block partitioning, terminal-`Z` direction changes); each remains a
+separate, unfrozen expansion.
+
+**Artifacts:**
+`tools/gsmg/phase407_p91_repeated_vigenere_key_over_q472_audit.py`;
+permanent regression in `tools/gsmg/test_recent_audits.py`.
