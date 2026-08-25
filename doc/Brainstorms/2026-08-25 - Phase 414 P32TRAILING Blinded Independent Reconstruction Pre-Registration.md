@@ -1,6 +1,6 @@
 ---
 type: worksheet
-status: live
+status: closed-protocol_invalid
 date: 2026-08-25
 topics:
   - brainstorm
@@ -12,6 +12,32 @@ topics:
 ---
 
 # Phase 414 — P32TRAILING Blinded Independent Reconstruction Pre-Registration
+
+> [!failure] Closed `protocol_invalid` (2026-08-25) -- no candidate tested
+> Of the first 5 clean-context invocations spawned under this frozen
+> protocol, 3 (invocations 1, 2, 5) failed `parse_submission()` /
+> `validate_submission_schema()` -- each confirmed by actually running the
+> real functions against the exact raw response text, not by inspection.
+> All three failures traced to one root cause: the frozen schema required
+> each solver to hand-compute `preimage_utf8_hex` (the UTF-8 bytes of its
+> own `display` string, as lowercase hex) with no tool access. That field
+> carries zero interpretive content -- it is a pure, mechanical encoding
+> of a string the solver already stated unambiguously in `display` -- so
+> requiring solvers to compute it by hand introduced a large, avoidable
+> failure surface that is not evidence about `P32TRAILING` itself. A
+> sixth invocation was also spoiled by an unauthorized on-the-fly prompt
+> amendment (an added corrective sentence), a separate protocol violation
+> on the orchestrator's part, independent of the schema defect above.
+> Per this document's own `protocol_invalid` branch (see Interpretation
+> rules), this is recorded as a methodology note, **not** as evidence of
+> non-identifiability, and does **not** count toward the "no convergence"
+> result. No candidate from any of the 6 invocations was tested against
+> `P32TRAILING`; no oracle call was made. The experiment is re-run,
+> corrected, as **Phase 415** -- see
+> [Phase 415 P32TRAILING Blinded Independent Reconstruction, Corrected Pre-Registration](2026-08-25%20-%20Phase%20415%20P32TRAILING%20Blinded%20Independent%20Reconstruction%20Corrected%20Pre-Registration.md),
+> which inherits this document's evidence packet, promotion rule, testing
+> protocol, redaction contract, and interpretation rules unchanged, and
+> corrects only the submission schema and frozen prompt.
 
 > [!caution] Prepared before any solver is invoked
 > This is a **methodology change, not another internal transform**. It
