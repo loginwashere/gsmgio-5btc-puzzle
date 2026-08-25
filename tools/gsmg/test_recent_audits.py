@@ -243,6 +243,7 @@ import phase410_solved_vector_toolchain_provenance_audit
 import phase412_dbbi_faed_generative_model_comparison_audit
 import phase413_i0_s0_signal_localization_audit
 import phase414_p32trailing_blinded_reconstruction_audit
+import phase415_p32trailing_blinded_reconstruction_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -989,6 +990,15 @@ class CorrectedClaimTests(unittest.TestCase):
 
     def test_phase414_promotion_rule_and_classifier_fixtures(self):
         phase414_p32trailing_blinded_reconstruction_audit.self_test()
+
+    def test_phase415_evidence_packet_reused_unchanged(self):
+        module = phase415_p32trailing_blinded_reconstruction_audit
+        packet_text, digest = module.build_evidence_packet()
+        self.assertEqual(digest, module.EVIDENCE_PACKET_SHA256)
+        self.assertEqual(digest, phase414_p32trailing_blinded_reconstruction_audit.EVIDENCE_PACKET_SHA256)
+
+    def test_phase415_corrected_schema_and_pipeline_fixtures(self):
+        phase415_p32trailing_blinded_reconstruction_audit.self_test()
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()
