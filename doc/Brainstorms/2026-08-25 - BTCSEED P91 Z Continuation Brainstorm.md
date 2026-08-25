@@ -51,8 +51,18 @@ topics:
 > [Phase 405](../../tools/gsmg/FINDINGS.md#phase-405----bcde-control-rail-as-a-base64-sextet-channel-closed-negative-2026-08-25):
 > 4 candidates (2 sources x 2 grid-native mappings), zero magic-byte,
 > structural, key-format, or target-address hits, both planted positives
-> fire. The remaining ~97 idea-bank items are still untested and still
-> require their own fresh, separately-frozen contracts.
+> fire. A fourth residual -- the full 285-symbol control rail split into
+> four 128-symbol/256-bit windows, each anchored to an existing
+> structural boundary (stream start, first control symbol after the
+> `BTCSEED` header, first control symbol after the stream's unique `Z`,
+> end-aligned) rather than an arbitrary offset -- was frozen and executed
+> as [Phase 406](../../tools/gsmg/FINDINGS.md#phase-406----four-structurally-anchored-256-bit-windows-of-the-full-control-rail-closed-negative-2026-08-25):
+> 16 candidates (4 windows x 2 grid-native mappings x 2 bit-packings, all
+> 16 byte-distinct), consumed as both a direct scalar and raw BIP32 seed
+> material through Phase 400's six frozen paths, 192,064 address checks,
+> zero hits, all three planted positives fire. The remaining ~96
+> idea-bank items are still untested and still require their own fresh,
+> separately-frozen contracts.
 
 ## Executive result
 

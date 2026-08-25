@@ -236,6 +236,7 @@ import phase402_p91z_priority6_control_data_digraph_machine_audit
 import phase403_raw_control_channel_bip32_seed_audit
 import phase404_q472_native_data_rail_identity_audit
 import phase405_bcde_base64_sextet_channel_audit
+import phase406_control285_natural_boundary_256bit_windows_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -891,6 +892,17 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertTrue(report["planted_typed_parser_positive"]["result"]["parser_valid"])
         for entry in report["candidates"].values():
             self.assertEqual(entry["discarded_terminal_bits"], 2)
+
+    def test_phase406_control285_natural_boundary_256bit_windows(self):
+        report = phase406_control285_natural_boundary_256bit_windows_audit.self_test()
+        self.assertEqual(report["control285_length"], 285)
+        self.assertEqual(report["window_offsets"], [0, 4, 49, 157])
+        self.assertEqual(report["candidate_count"], 16)
+        self.assertEqual(report["total_address_checks"], 192064)
+        self.assertFalse(report["any_hit"])
+        self.assertTrue(report["planted_roundtrip_positive"]["matches"])
+        self.assertEqual(len(report["planted_direct_key_positive"]["hits"]), 1)
+        self.assertEqual(len(report["planted_bip32_path_positive"]["hits"]), 1)
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()
