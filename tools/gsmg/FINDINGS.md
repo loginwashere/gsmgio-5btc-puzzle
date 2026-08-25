@@ -26047,3 +26047,94 @@ specifically selects one of those constructions.
 **Artifacts:**
 `tools/gsmg/phase408_bifid_period_robustness_audit.py`; permanent
 regression in `tools/gsmg/test_recent_audits.py`.
+
+## Phase 409 -- P32 Family 5: external community candidate mining, fabrication-checked: zero survivors after a bounded 15-query/12-source search (2026-08-25)
+
+**Question:** `doc/Brainstorms/2026-08-14 - P32 New Attack Surfaces
+Beyond Text Recombination.md`'s Candidate family 5 (Priority 9, lowest,
+"high noise, but occasionally real signal, and cheap to bound"): does
+any *external* (non-Telegram -- Phases 393/394 already fully mined the
+local Telegram export) community source contain a specific, reproducible
+password/construction claim aimed at `P32TRAILING` (the 80-byte
+AES-CBC blob, salt `b45a5e3d827593ca`, confirmed against
+`cb_common.BLOBS['P32TRAILING']` directly) that this project's own
+self-generated reasoning would not produce? Per the backlog ledger, this
+was the only substantive genuinely-unrun finite row remaining after the
+BTCSEED/P91/Z branch was paused (Phase 408).
+
+**Method:** applied the family's own frozen four-step provenance
+discipline: (1) require a specific, reproducible candidate string/
+construction, discard vague claims; (2) cross-check the claimant's
+identity/address against this project's already-documented spam-campaign
+indicators (the two OP_RETURN spam payer addresses from Phase 156,
+`1JG648yaB7Wp2dpUfcZoRSD4q35oq47vCu`/`145ZQ9siLrsXBKf465wjdyQYAP5dRwhRhQ`;
+the mutually-citing fabricated-"SOLVED" GitHub account cluster from
+`GSMG_PUZZLE.md`, `GalloClaudio64`/`andersonbig`/`WabiLipa`/
+`valleytainment`/`robotixcoder`/`zemnovodnuy` across issues #55/#69/#72/
+#79/#80/#81/#88/#91/#92; recurring-verbatim/no-falsification/isolated-
+inactive-account red flags); (3) only test a surviving candidate through
+the existing structural oracle -- never skip the padding/decrypt check
+because "someone else believes this"; (4) record every claim considered
+and its disposition, so this stays a bounded search, not an open-ended
+rolling one. Ran 15 search queries (general GSMG/P32TRAILING terms,
+`site:bitcointalk.org`, `site:github.com`, `site:reddit.com`, named-
+claimant variants, and an explicit re-mine of the `HosterjackAGV/
+gsmg-5btc-puzzle` fork per this project's own periodic-re-mining
+practice) and fetched ~12 sources directly: 6 GitHub issues on
+`puzzlehunt/gsmgio-5btc-puzzle` (#21, #50, #56, #62, #69, #84), one
+bitcointalk topic (`5532424.0`), three newly-discovered forks
+(`dinhoka/gsmgio-5btc-puzzle`, `kaibuzz0/Gsmg.io-solution`,
+`floflo777/open-crypto-puzzles`), and a full re-mine of `HosterjackAGV`'s
+current tree (153 files, up from ~20 at the last pass -- new since then:
+`docs/ATTEMPTS.md`, `ANALYTICS.md`, `SCOREBOARD.md`, `WALKTHROUGH.md`,
+`verify-findings.json`, and an `assets/walkthrough/unverified/`
+community-submission folder, all read in full).
+
+**Considered claims (every one, with disposition):**
+
+| Source | Claimant | Candidate | Disposition |
+|---|---|---|---|
+| GitHub #69 "SOLVED" | `nightidn641` ("MUHAMMAD RIVAN/ZT4") | key `818af53d...76bb402` | discarded-as-spam -- already-documented fabrication (`GSMG_PUZZLE.md`, Phase 156); independently re-falsified by HosterjackAGV; never addresses P32TRAILING |
+| bitcointalk 5532424, `jeremy97` | `jeremy97` | the two known spam addresses; "1327 bytes -> 103x103 matrix" | discarded-as-spam -- repost of the same construction Phase 156 already traced to the OP_RETURN spam campaign |
+| GitHub #56 | `dgk5902a-boop` | 7-token concatenation (`matrixsumlist`/`enter`/`lastwordsbeforearchichoice`/`thispassword`/...) | discarded-as-out-of-scope -- targets the already-tested Cosmic/Salphaseion blob, never extended to P32TRAILING; independently re-falsified by HosterjackAGV |
+| `kaibuzz0/Gsmg.io-solution` | kaibuzz0 | full alternate phase chain, silent PBKDF1->PBKDF2 claim, Phase-2 password `thekeymakertheveninbarrowmatrixoverlordcxb7chancellor` | discarded-as-fabricated -- self-labeled "Reconstructed from Memory," contradicts this project's independently-verified KDF (single-round EVP_BytesToKey/SHA-256) and real Phase-2 password (`causality`); never reaches P32TRAILING |
+| GitHub #84, #50, #21, #62 | `a11yot`, `Kaizko`, `KrazzyK29`, `dwdashish2` | none given | discarded-as-unreproducible -- honest negative writeup, clarification question, fishing post, incomplete writeup |
+| `HosterjackAGV` `docs/ATTEMPTS.md` | HosterjackAGV (self) | ~15 documented batteries explicitly run against `p32_trailing` (288 phase-3.2 strings, chess/VIC constructions, 370k-word dictionary, XOR-of-7-tokens, non-standard KDFs, salt permutations) | discarded-as-already-tested-negative -- the source's own negative-result archive, corroborates rather than requires our retest |
+| `HosterjackAGV` `assets/walkthrough/unverified/phase3.2_1141.md` | HosterjackAGV (self) | `sha256(s[1141:x])`, unfixed `x` | discarded-as-unreproducible -- unparametrized, author's own label "coincidence," own result "Nothing found" |
+| `HosterjackAGV` `LOOSE-ENDS.md`/`ENDGAME-ANALYSIS.md` | HosterjackAGV (self) | "p32_trailing key is likely a board CONSTRUCTION from the chess clue" | discarded-as-out-of-scope-not-a-claim -- an open research idea, no fixed byte string; same doc self-contradicts elsewhere by calling this lead "CLOSED," a stale-merge artifact this project's own memory already flagged |
+| `floflo777/open-crypto-puzzles` | floflo777 (self) | multiple `[OPEN]`-labeled leads, no final answer | discarded-as-out-of-scope-not-a-claim -- honest, organized, explicitly unsolved |
+| Misc SEO/aggregator pages (`docsbot.ai`, `privatekeys.pw`, Scribd reposts), `dinhoka` empty mirror fork | -- | -- | discarded-as-unreproducible/low-value -- mirror already-public phase info, no P32TRAILING-specific claim |
+
+**Result:** zero surviving candidates. No claim across 15 queries and
+~12 fetched sources both (a) actually targets `P32TRAILING` specifically
+(not the already-tested Cosmic/Salphaseion blob) and (b) is independent
+of the already-documented spam/fabrication network. Search saturated --
+the final query variants surfaced only the same already-catalogued
+sources repeating. No candidate reached the local oracle (`cb_common`'s
+established `aes_try_open_bytes`/`aes_try_open_ecb_bytes`/
+`aes_try_open_stream_bytes`/`aes_keywrap_try_open_bytes` sweep against
+`BLOBS`), since none survived the fabrication/reproducibility gate to
+require it -- consistent with the contract's own instruction never to
+skip that check for a survivor, not an instruction to invent one to
+test. `HosterjackAGV`'s independent falsifications of issues #56 and
+#69 (using its own harness, not this project's) corroborate this
+project's prior findings from a fully independent codebase.
+
+**Disposition:** closes negative per the family's own contract -- a
+genuinely bounded search (15 queries, considered-claims ledger above)
+found no candidate meeting both the reproducibility and independence
+bars. Per the backlog ledger, the next comparable-scope deliverable is
+the dedicated P32 Family 7 / Post-Phase-340 Seed 3 authoring-toolchain
+provenance artifact (organizes already-known evidence, not a new
+password search).
+
+**Artifacts:** none -- all fetched external content remained temporary,
+per this project's established practice for external-source audits
+(Phase 330). The `HosterjackAGV` re-mine surfaced no artifact this
+project needs to import; its `docs/ATTEMPTS.md` negative-result archive
+is noted above as corroboration only.
+
+**Reopen condition:** a specific, reproducible P32TRAILING candidate
+surfaces from an external source that is not linked to the documented
+spam/fabrication network -- not a periodic re-search on a fixed
+schedule.

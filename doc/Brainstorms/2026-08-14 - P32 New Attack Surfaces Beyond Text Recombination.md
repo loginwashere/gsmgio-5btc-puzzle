@@ -265,6 +265,16 @@ trap already flagged in the sibling-output document.
 
 ## Candidate family 5 — external community candidate mining, fabrication-checked
 
+**Status: EXECUTED (2026-08-25).** See FINDINGS.md Phase 409 for the full
+writeup. Result: 15 search queries, ~12 sources fetched (6 GitHub issues,
+1 bitcointalk topic, 3 newly-discovered forks, a full `HosterjackAGV`
+re-mine at 153 files), every claim considered and dispositioned against
+the four mandatory checks below, zero candidates both targeted
+`P32TRAILING` specifically and were independent of the documented spam/
+fabrication network. Search saturated; zero reached the local oracle.
+Below is the original pre-registered method, preserved for how to repeat
+this if a genuinely new external source appears later.
+
 **Priority: 9, lowest — high noise, but occasionally real signal, and cheap to bound.**
 
 This project has already demonstrated, more than once (the debunked
@@ -592,8 +602,9 @@ against a different source.
    provenance cross-checks), higher potential value. Still genuinely unrun.
 7. Family 9 (transaction serialization fingerprint) — best run from the raw
    transaction cache produced by family 2. Still genuinely unrun.
-8. Family 5 (external community mining) — lowest priority, explicitly
-   bounded and skepticism-gated. Still genuinely unrun.
+8. ~~Family 5 (external community mining)~~ — **executed 2026-08-25**, see
+   FINDINGS.md Phase 409: 15 queries, ~12 sources fetched, zero survivors
+   after the frozen 4-step provenance discipline.
 
 Record candidate counts, exact byte/number sources, and negative results
 for each family in FINDINGS.md as it is run, following this project's

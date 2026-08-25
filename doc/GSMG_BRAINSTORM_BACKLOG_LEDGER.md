@@ -76,9 +76,9 @@ note: "15 already-authenticated message IDs/block heights/block times/date integ
 ```yaml
 item: "P32 Family 5 -- external community candidate mining, fabrication-checked"
 source: "2026-08-14 - P32 New Attack Surfaces Beyond Text Recombination.md"
-status: genuinely-unrun
-verified_against: n/a
-note: "lowest priority in source doc (9 of 8+1); high noise given this project's own demonstrated spam/fabrication history (debunked GitHub/bitcointalk campaign), but cheap and bounded if run with the declared provenance discipline"
+status: executed
+verified_against: "FINDINGS.md Phase 409"
+note: "15 search queries, ~12 sources fetched (6 GitHub issues, 1 bitcointalk topic, 3 newly-discovered forks, full HosterjackAGV re-mine at 153 files); every claim considered and dispositioned per the frozen 4-step discipline; zero candidates both targeted P32TRAILING specifically and were independent of the documented spam/fabrication network, so zero reached the local oracle; search saturated"
 ```
 
 ```yaml
@@ -268,23 +268,29 @@ those checkboxes are demonstrably prone to going stale across documents.
 ## Recommended next bounded experiment
 
 **P32 Family 5 (external community candidate mining, fabrication-checked)**
-is now the strongest genuinely-unrun finite row. Phase 393/394 has already
-closed the local Telegram technique-only residue: 142 messages fully reviewed,
-two reproducible constructions controlled negative, and 22 exact claim roots
-run through 31,680 four-blob oracle attempts with zero hits. Family 5 should
-therefore not reread or retune that corpus. Its remaining scope is external
-community sources that claim a specific P32TRAILING password/construction,
-with the source document's four mandatory checks: exact reproducibility,
-claimant/spam-campaign cross-check, structural-oracle verification, and a
-complete considered/disposition ledger.
+executed 2026-08-25 as Phase 409: 15 search queries, ~12 sources fetched
+(including a full `HosterjackAGV` fork re-mine, 153 files), every claim
+considered and dispositioned against the frozen 4-step discipline, zero
+survivors -- no external claim both targeted `P32TRAILING` specifically and
+was independent of the documented spam/fabrication network. This closes the
+last genuinely-unrun *finite* row this ledger had tracked. The BTCSEED/P91/Z
+brainstorm branch (idea-bank items 80-100, Phases 397-408) is also now
+paused per the user's own review (2026-08-25) -- see that document's
+"Branch paused" callout; no remaining item there has a uniquely freezeable
+family or independent selector either.
 
-After Family 5, the only ungated deliverable of comparable scope is the
-dedicated **P32 Family 7 / Post-Phase-340 Seed 3 authoring-toolchain
-provenance artifact**. Its core cryptographic profile is already known, so
-that task improves evidence organization/ranking rather than generating a
-new password. The Phase-163 whitespace `-nopad` rerun remains a real but
+The only ungated deliverable of comparable scope remaining is the dedicated
+**P32 Family 7 / Post-Phase-340 Seed 3 authoring-toolchain provenance
+artifact**. Its core cryptographic profile is already known, so that task
+improves evidence organization/ranking rather than generating a new
+password. The Phase-163 whitespace `-nopad` rerun remains a real but
 low-value compute backlog row; Seed 9 remains correctly parked until a
-near-valid checksummed object exists.
+near-valid checksummed object exists. With Family 5 and the BTCSEED branch
+both closed, this ledger currently has no other genuinely-unrun *finite*
+row of comparable scope -- new work here now depends on an independent
+clue (a fork re-mine surfacing something new, a fresh community claim, or
+a puzzle-side event) rather than this project's own remaining self-generated
+backlog.
 
 ## Related documents
 
