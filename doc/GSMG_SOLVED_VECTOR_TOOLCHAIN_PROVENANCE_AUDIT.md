@@ -1,6 +1,8 @@
 ---
 type: audit
 status: closed
+result: positive
+disposition: provenance-only
 date: 2026-08-25
 topics:
   - provenance
