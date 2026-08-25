@@ -238,6 +238,7 @@ import phase404_q472_native_data_rail_identity_audit
 import phase405_bcde_base64_sextet_channel_audit
 import phase406_control285_natural_boundary_256bit_windows_audit
 import phase407_p91_repeated_vigenere_key_over_q472_audit
+import phase408_bifid_period_robustness_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -917,6 +918,18 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertGreater(report["family_wise_rate"], 0.005)
         self.assertIn("SATOSHI", report["planted_synthetic_english_positive"]["keyword_hits"])
         self.assertEqual(len(report["planted_direct_key_positive"]["hits"]), 1)
+
+    def test_phase408_bifid_period_robustness(self):
+        report = phase408_bifid_period_robustness_audit.self_test()
+        self.assertEqual(report["schedule_count"], 8)
+        self.assertTrue(report["period_570_matches_baseline"])
+        self.assertEqual(report["schedules_starting_with_btcseed"], ["period_570"])
+        self.assertFalse(report["period_robust"])
+        for label, entry in report["candidates"].items():
+            self.assertTrue(entry["roundtrip_matches_real_ciphertext"], label)
+        for label, result in report["planted_btcseed_roundtrip_positives"].items():
+            self.assertTrue(result["recovered_matches_plaintext"], label)
+            self.assertTrue(result["recovered_starts_with_btcseed"], label)
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()

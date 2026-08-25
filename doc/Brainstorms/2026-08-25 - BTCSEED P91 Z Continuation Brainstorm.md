@@ -69,10 +69,31 @@ topics:
 > 401's own `P91`/`A26`/`A5` construction with `P91REP` in place of the
 > fixed difference), family-wise rate 43.41% (far above the 0.5% bound),
 > 17,280 oracle attempts and 24 address checks, zero hits, all three
-> planted positives fire. The remaining ~95 idea-bank items (82-89 in
-> the same "P91 as a key" section, plus idea banks A-D and F) are still
-> untested and still require their own fresh, separately-frozen
-> contracts.
+> planted positives fire. Per the user's own request, the next step was
+> a branch-level gate rather than another idea-bank item: does the
+> `BTCSEED` checkpoint itself (Phase 386) survive alternate Bifid
+> block/period conventions, or does it exist only under the single-
+> 570-character-block reading Phase 386 happened to use? Executed as
+> [Phase 408](../../tools/gsmg/FINDINGS.md#phase-408----bifid-period-robustness-audit-of-the-btcseed-checkpoint-full-block-convention-dependent-not-disproven-2026-08-25):
+> 8 block schedules (the 7 standard periods `7,13,49,91,98,472,570` plus
+> a custom `[98,472]` Z-boundary schedule), all round-tripping correctly
+> against both the real ciphertext and a synthetic planted positive.
+> Only period 570 produces output starting with `BTCSEED`, with `Z`
+> uniquely at index 97; every other schedule's longest common prefix
+> with `BTCSEED` is 0-1 characters (chance, given `B`'s high frequency
+> in this skewed alphabet). Result: the checkpoint is classified
+> **full-block-convention-dependent, not disproven** -- real and
+> reproducible at period 570 (the whole-ciphertext boundary), but its
+> `BTCSEED`/`Z@97`/rail-alternation package does not independently
+> reappear under any other tested period. Per the contract's own
+> interpretation rule, idea-bank items 82-89 (autokey seeding,
+> deduplicated second squares, ordered key schedules -- all constructions
+> that would need this checkpoint to be period-robust to motivate
+> spending further effort on them) are parked unless an independent clue
+> specifically selects one of them. The remaining ~95 idea-bank items
+> (82-89 in the same "P91 as a key" section, plus idea banks A-D and F)
+> are still untested and still require their own fresh, separately-
+> frozen contracts.
 
 ## Executive result
 
@@ -357,6 +378,19 @@ P91
 
 80. Repeat P91 over Q472 as a Vigenere-style key.
 81. Repeat it in native modulo-5 coordinates instead of modulo 26.
+
+> [!info] Items 80-81 executed as Phase 407 (2026-08-25); items 82-89 parked
+> Items 80-81 closed negative -- see the "Ranked queue exhausted"
+> callout above. Items 82-89 below (autokey seeding, deduplicated
+> second squares, ordered key schedules, block partitioning) were then
+> gated by Phase 408, a Bifid period-robustness audit of the Phase 386
+> `BTCSEED` checkpoint itself: only period 570 (the whole-ciphertext
+> block) reproduces `BTCSEED`/`Z@97`/the rail alternation; no other
+> tested period or the custom Z-boundary schedule does. Per the
+> contract's own interpretation rule, items 82-89 are parked unless an
+> independent clue specifically selects one of these constructions --
+> they are unexecuted, not disproven.
+
 82. Use P91 as an autokey seed.
 83. Deduplicate P91 into a new keyed square and decode Q472 with it.
 84. Apply DBBI, M91, and P91 as three ordered key schedules.
