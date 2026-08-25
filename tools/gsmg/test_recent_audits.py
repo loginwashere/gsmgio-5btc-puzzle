@@ -244,6 +244,7 @@ import phase412_dbbi_faed_generative_model_comparison_audit
 import phase413_i0_s0_signal_localization_audit
 import phase414_p32trailing_blinded_reconstruction_audit
 import phase415_p32trailing_blinded_reconstruction_audit
+import phase416_p32trailing_sealed_target_reconstruction_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -999,6 +1000,28 @@ class CorrectedClaimTests(unittest.TestCase):
 
     def test_phase415_corrected_schema_and_pipeline_fixtures(self):
         phase415_p32trailing_blinded_reconstruction_audit.self_test()
+
+    def test_phase416_sealed_packet_withholds_real_secrets(self):
+        module = phase416_p32trailing_sealed_target_reconstruction_audit
+        packet_text, digest = module.build_sealed_evidence_packet()
+        self.assertEqual(digest, module.SEALED_EVIDENCE_PACKET_SHA256)
+        from first_hint_hash_audit import HALVING_ADDRESS, PRIZE_ADDRESS
+        self.assertNotIn(PRIZE_ADDRESS, packet_text)
+        self.assertNotIn(HALVING_ADDRESS, packet_text)
+        self.assertIn(module.SALT_COMMITMENT_SHA256, packet_text)
+        self.assertIn(module.CIPHERTEXT_COMMITMENT_SHA256, packet_text)
+        self.assertIn(module.ADDRESS_COMMITMENT_SHA256, packet_text)
+
+    def test_phase416_frozen_prompt_matches_committed_artifact(self):
+        module = phase416_p32trailing_sealed_target_reconstruction_audit
+        prompt_text, digest = module.build_solver_prompt()
+        self.assertEqual(digest, module.SOLVER_PROMPT_SHA256)
+        self.assertEqual(len(prompt_text), module.SOLVER_PROMPT_LENGTH)
+        committed = module.FROZEN_PROMPT_ARTIFACT_PATH.read_bytes()
+        self.assertEqual(committed, prompt_text.encode("utf-8"))
+
+    def test_phase416_sealed_schema_and_pipeline_fixtures(self):
+        phase416_p32trailing_sealed_target_reconstruction_audit.self_test()
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()
