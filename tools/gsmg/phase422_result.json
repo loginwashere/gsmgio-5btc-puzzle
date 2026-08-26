@@ -1,0 +1,57 @@
+{
+  "phase": 422,
+  "outcome": "protocol_invalid",
+  "protocol_invalid_reason": "all five launched submissions were rejected by the inherited residue filter for repeating newly solver-visible macro terms; only three invocation IDs remained, fewer than the five eligible submissions still required",
+  "invocations_launched": 5,
+  "unlaunched_invocation_ids": [
+    "phase422_invocation_6",
+    "phase422_invocation_7",
+    "phase422_invocation_8"
+  ],
+  "eligible_count": 0,
+  "candidate_occurrence_count": 50,
+  "distinct_candidate_count": 30,
+  "promoted_count": 0,
+  "oracle_calls": 0,
+  "terminal_hits": 0,
+  "structural_hits": 0,
+  "eligibility": {
+    "phase422_invocation_1": {
+      "eligible": false,
+      "reason": "submission contains blinded-target residue",
+      "blinding_violations": [
+        "yinyang"
+      ]
+    },
+    "phase422_invocation_2": {
+      "eligible": false,
+      "reason": "submission contains blinded-target residue",
+      "blinding_violations": [
+        "yinyang"
+      ]
+    },
+    "phase422_invocation_3": {
+      "eligible": false,
+      "reason": "submission contains blinded-target residue",
+      "blinding_violations": [
+        "yinyang"
+      ]
+    },
+    "phase422_invocation_4": {
+      "eligible": false,
+      "reason": "submission contains blinded-target residue",
+      "blinding_violations": [
+        "SALPH",
+        "SALPHASEION",
+        "SalPhaseIon"
+      ]
+    },
+    "phase422_invocation_5": {
+      "eligible": false,
+      "reason": "submission contains blinded-target residue",
+      "blinding_violations": [
+        "yinyang"
+      ]
+    }
+  }
+}

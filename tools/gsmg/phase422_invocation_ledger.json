@@ -1,0 +1,145 @@
+{
+  "phase": 422,
+  "launcher_sha256": "050ab622f7e6cd355df71ebf5d819e334db7c206972c08a39e68a7c5672ab200",
+  "launcher_length": 672,
+  "prompt_sha256": "f97756c690ad5172780a71152dae1bf705bf4cbe63c3eebcd0746d27ce728dc3",
+  "prompt_length": 16551,
+  "configuration": {
+    "agent_class": "general-purpose",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "service_configuration": "default",
+    "delivery": "escalated_one_file_bootstrap",
+    "cmd": "sed -n '1,320p' /home/loginwashere/projects/gsmgio-5btc-puzzle/tools/gsmg/phase422_frozen_solver_prompt.txt",
+    "workdir": "/home/loginwashere/projects/gsmgio-5btc-puzzle",
+    "sandbox_permissions": "require_escalated",
+    "justification": "May I perform the preregistered read-only prompt bootstrap outside the unavailable sandbox?",
+    "prefix_rule": null
+  },
+  "invocations_launched": 5,
+  "records": {
+    "phase422_invocation_1": {
+      "task_path": "/root/phase422_invocation_1",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": false,
+      "candidate_count": 10,
+      "candidate_displays": [
+        "THEONE",
+        "CIAOBELLAO",
+        "HALFANDBETTERHALF",
+        "PROMISED",
+        "SALVATION",
+        "BUTULTIMATELYTHE",
+        "BUTHYE",
+        "verylaststepisatruegiveawaypromised",
+        "GOODLUCKNEVERTHELESSIREALLYHOPEYOURETHEONECIAOBELLAO",
+        "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyangwewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised"
+      ],
+      "blinding_violations": [
+        "yinyang"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes, ranks, and eligibility-relevant residue"
+    },
+    "phase422_invocation_2": {
+      "task_path": "/root/phase422_invocation_2",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": false,
+      "candidate_count": 10,
+      "candidate_displays": [
+        "promised",
+        "verylaststepisatruegiveawaypromised",
+        "wewontgiveawaythepassword",
+        "itsinfrontofyoureyesbutyourenotseeingit",
+        "yinyangpromised",
+        "BUTHYEpromised",
+        "BOTHULTIMATELYTHEpromised",
+        "BYEpromised",
+        "SALVATION",
+        "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyangwewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised"
+      ],
+      "blinding_violations": [
+        "yinyang"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes, ranks, and eligibility-relevant residue"
+    },
+    "phase422_invocation_3": {
+      "task_path": "/root/phase422_invocation_3",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": false,
+      "candidate_count": 10,
+      "candidate_displays": [
+        "BUTHYE",
+        "BUTBYE",
+        "promised",
+        "HYE",
+        "BYE",
+        "CIAOBELLAO",
+        "itsinfrontofyoureyesbutyourenotseeingit",
+        "yinyang",
+        "SALVATION",
+        "wewontgiveawaythepassword"
+      ],
+      "blinding_violations": [
+        "yinyang"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes, ranks, and eligibility-relevant residue"
+    },
+    "phase422_invocation_4": {
+      "task_path": "/root/phase422_invocation_4",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": false,
+      "candidate_count": 10,
+      "candidate_displays": [
+        "promised",
+        "verylaststepisatruegiveawaypromised",
+        "salvation",
+        "BUTHYE",
+        "BYE",
+        "CIAOBELLAO",
+        "FUNDSTOLIVE",
+        "CIAOBELLAOFUNDSTOLIVE",
+        "oneforonefourforone",
+        "itsinfrontofyoureyesbutyourenotseeingit"
+      ],
+      "blinding_violations": [
+        "SALPH",
+        "SALPHASEION",
+        "SalPhaseIon"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes, ranks, and eligibility-relevant residue"
+    },
+    "phase422_invocation_5": {
+      "task_path": "/root/phase422_invocation_5",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": false,
+      "candidate_count": 10,
+      "candidate_displays": [
+        "BOTHULTIMATELYTHESALVATION",
+        "BUTHYESALVATION",
+        "SALVATION",
+        "verylaststepisatruegiveawaypromised",
+        "itsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised",
+        "wewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised",
+        "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyang",
+        "BUTHYE",
+        "CIAOBELLAO",
+        "promised"
+      ],
+      "blinding_violations": [
+        "yinyang"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes, ranks, and eligibility-relevant residue"
+    }
+  }
+}
