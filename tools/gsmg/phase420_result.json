@@ -1,0 +1,15 @@
+{
+  "phase": 420,
+  "outcome": "protocol_invalid",
+  "protocol_invalid_reason": "five eligible submissions not obtained within eight invocations",
+  "invocations_used": 8,
+  "eligible_count": 0,
+  "bootstrap_failures": 8,
+  "panel_completed": false,
+  "promoted_count": 0,
+  "oracle_calls": 0,
+  "puzzle_inference": null,
+  "failure_boundary": "The exact permitted sed read failed during sandbox initialization in all eight invocations before the frozen prompt was returned.",
+  "common_error": "bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted"
+}
+

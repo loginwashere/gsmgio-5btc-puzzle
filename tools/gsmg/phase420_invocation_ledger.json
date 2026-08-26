@@ -1,0 +1,68 @@
+{
+  "phase": 420,
+  "launcher_length": 423,
+  "launcher_sha256": "09c38bdf8c30ff0713854a24f88b007b8d71d611470fd8e277d9180eb8df965c",
+  "prompt_length": 14717,
+  "prompt_line_count": 219,
+  "prompt_sha256": "f7d42eab83697f5d88495e27c7e25dd68c02ab7afe94afe17ee7d99642a96c3f",
+  "invocation_configuration": {
+    "agent_class": "general-purpose",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "service_configuration": "default",
+    "delivery": "one_file_bootstrap",
+    "permitted_command": "sed -n '1,260p' /home/loginwashere/projects/gsmgio-5btc-puzzle/tools/gsmg/phase420_frozen_solver_prompt.txt"
+  },
+  "tool_telemetry_available": false,
+  "invocations": {
+    "phase420_invocation_1": {
+      "raw_response": "{\"error\":\"Unable to read solver prompt: sandbox initialization failed with `bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`.\"}",
+      "parsed_submission": null,
+      "eligible": false,
+      "reason": "response does not match the frozen submission schema; bootstrap read failed"
+    },
+    "phase420_invocation_2": {
+      "raw_response": "{\"error\":\"Unable to read the solver prompt because the permitted shell call failed: bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted\"}",
+      "parsed_submission": null,
+      "eligible": false,
+      "reason": "response does not match the frozen submission schema; bootstrap read failed"
+    },
+    "phase420_invocation_3": {
+      "raw_response": "{\"error\":\"bootstrap_read_failed\",\"detail\":\"bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted\"}",
+      "parsed_submission": null,
+      "eligible": false,
+      "reason": "response does not match the frozen submission schema; bootstrap read failed"
+    },
+    "phase420_invocation_4": {
+      "raw_response": "{\"error\":\"bootstrap_read_failed\",\"details\":\"bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted\"}",
+      "parsed_submission": null,
+      "eligible": false,
+      "reason": "response does not match the frozen submission schema; bootstrap read failed"
+    },
+    "phase420_invocation_5": {
+      "raw_response": "{\"error\":\"Unable to read the solver prompt: the single permitted shell call failed with \\\"bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted\\\".\"}",
+      "parsed_submission": null,
+      "eligible": false,
+      "reason": "response does not match the frozen submission schema; bootstrap read failed"
+    },
+    "phase420_invocation_6": {
+      "raw_response": "{\"error\":\"The sole permitted bootstrap command failed before producing the solver prompt: bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted\"}",
+      "parsed_submission": null,
+      "eligible": false,
+      "reason": "response does not match the frozen submission schema; bootstrap read failed"
+    },
+    "phase420_invocation_7": {
+      "raw_response": "{\"error\":\"Unable to read the solver prompt: the single permitted shell call failed because the sandbox could not configure loopback networking.\"}",
+      "parsed_submission": null,
+      "eligible": false,
+      "reason": "response does not match the frozen submission schema; bootstrap read failed"
+    },
+    "phase420_invocation_8": {
+      "raw_response": "{\"error\":\"The sole permitted shell call failed before reading the prompt: bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted\"}",
+      "parsed_submission": null,
+      "eligible": false,
+      "reason": "response does not match the frozen submission schema; bootstrap read failed"
+    }
+  }
+}
