@@ -246,6 +246,7 @@ import phase414_p32trailing_blinded_reconstruction_audit
 import phase415_p32trailing_blinded_reconstruction_audit
 import phase416_p32trailing_sealed_target_reconstruction_audit
 import phase417_blinded_panel_sensitivity_calibration_audit
+import phase419_incase_bifid_grid_faed_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -937,6 +938,16 @@ class CorrectedClaimTests(unittest.TestCase):
         for label, result in report["planted_btcseed_roundtrip_positives"].items():
             self.assertTrue(result["recovered_matches_plaintext"], label)
             self.assertTrue(result["recovered_starts_with_btcseed"], label)
+
+    def test_phase419_incase_bifid_grid_faed(self):
+        report = phase419_incase_bifid_grid_faed_audit.self_test()
+        self.assertFalse(report["any_starts_with_btcseed"])
+        self.assertFalse(report["any_contains_btcseed"])
+        self.assertFalse(report["any_grid_matches_dbbi_grid"])
+        self.assertTrue(report["all_roundtrips_ok"])
+        for label, entry in report["candidates"].items():
+            self.assertTrue(entry["roundtrip_matches_real_ciphertext"], label)
+            self.assertTrue(entry["embedded_count_within_baseline_range"], label)
 
     def test_phase410_solved_vector_toolchain_provenance(self):
         report = phase410_solved_vector_toolchain_provenance_audit.self_test()

@@ -26781,3 +26781,58 @@ separate comparison.
 **Artifacts:** `phase417_blinded_panel_sensitivity_calibration_audit.py`;
 `phase417_sealed_evidence_packet.txt`; `phase417_frozen_solver_prompt.txt`;
 `phase417_invocation_ledger.json`; `phase417_result.json`.
+
+## Phase 419 -- Bifid grid keyword swap (DBBI -> Phase 3.2.2 VALIDATION_ANSWER) over FAED: closed negative, no structural signal (2026-08-26)
+
+**Question:** raised directly by the user while reviewing the P32TRAILING
+hint summary. Phase 386's community "btcseed" Bifid decode builds its
+keyed 5x5 square from `DBBI[:13]` (`build_grid(DBBI[:13])` ->
+`DBIFHCEGAKLMNOPQRSTUVWXYZ`) because DBBI and FAED are page-siblings on
+the same SalPhaseIon textarea. The authenticated Phase 3.2.2
+`VALIDATION_ANSWER` (`INCASEYOUMANAGETOCRACKTHIS...HALFANDBETTERHALF...`,
+91 characters) is a different real artifact from an unrelated decrypted
+stage, with no established relationship to FAED. Does substituting it as
+the Bifid grid keyword source, in place of DBBI, turn the same decrypt
+into anything structured?
+
+**Method:** `tools/gsmg/phase419_incase_bifid_grid_faed_audit.py` reuses
+Phase 386's own `build_grid()`, `find_embedded_words()`,
+`load_dictionary()`, and `random_letter_baseline()`, and Phase 408's
+proven `bifid_decrypt_block()`/`bifid_encrypt_block()` inverse pair,
+verbatim -- no primitive re-derived. Two keyword-source candidates were
+fixed before any output was inspected: `VALIDATION_ANSWER[:13]` (the same
+13-character slice length Phase 386 used on DBBI, for a like-for-like
+construction) and the full 91-character `VALIDATION_ANSWER` (letters only,
+deduplicated in order). `FAED` (570 letters) was Bifid-decrypted as one
+block under each resulting grid, identical to Phase 386's own
+single-block convention -- no alternate period/schedule was combined in
+(Phase 408 already covers that axis against the DBBI grid; combining both
+axes here would be an unbounded two-way sweep). Each decode was
+round-tripped back through the proven Bifid-encrypt inverse and confirmed
+to reproduce the real `FAED` ciphertext exactly before being trusted, and
+scored against Phase 386's own dictionary-substring scan and its
+empirical-frequency random-letter baseline, unchanged.
+
+**Result:** the two candidates produce two distinct, round-trip-verified
+grids -- `INCASEYOUMBDFGHKLPQRTVWXZ` (13-character slice) and
+`INCASEYOUMGTRKHPVBLFDQWXZ` (full sentence) -- neither of which matches
+Phase 386's DBBI-keyed grid. Neither decode starts with or contains
+`BTCSEED`, or any other recognizable token. Embedded-dictionary-word
+counts (3 for each candidate: `boon`/`dion`/`funk` and `iris`/`puss`/`sips`
+respectively) fall within Phase 386's own established random-letter
+baseline range for this exact alphabet/decode shape -- no signal above
+the noise floor either construction predicts.
+
+**Interpretation:** mechanically real, cleanly negative. This does not
+reopen or narrow the already-parked BTCSEED theory, and it does not
+suggest a real relationship between the Phase 3.2.2 sentence and FAED --
+it closes the specific, cheap, well-defined substitution the user asked
+about, so it is not left as an unexamined gap. The substitution was never
+motivated by an authenticated clue in the first place (unlike DBBI, which
+is at least FAED's page-sibling); this result removes it from
+consideration entirely rather than leaving it merely untested.
+
+**Facts affected:** none. `DBBI`/`FAED` remain otherwise-unresolved per
+existing findings; `P32TRAILING` is untouched by this audit.
+
+**Artifacts:** `tools/gsmg/phase419_incase_bifid_grid_faed_audit.py`.
