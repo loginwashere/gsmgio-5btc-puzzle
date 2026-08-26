@@ -1,0 +1,115 @@
+You are completing a blinded positive-control reconstruction task on a
+known solved cryptographic-puzzle boundary. The target ciphertext, recovered
+plaintext, exact assembled preimage, and password digest are deliberately
+withheld. You are given the exact preceding clue text, the three already-solved
+component values, their local normalization/assembly instructions, two prior
+worked boundary examples, the exact cryptographic recipe, and commitments that
+fix the sealed target's identity.
+
+==============================================================================
+ITEM 1 -- Exact authenticated Phase 3 plaintext prefix preceding the
+held-out Phase 3.2 OpenSSL envelope (bytes [0:726], 726 bytes).
+==============================================================================
+
+What if the merovingian is wrong. What instead of causality something else could be ours? Therefor, if so, the ...... is ours. The thinker's 1name behind all of that would grant you access to the next step (of humanity). Definitely look into his works might you have time. /(aa,connected enf)
+
+I just passed a cheshire cat and I'm getting fed up with this puzzle.. It's taking forever. But, How long is forever? I don't know, but just add giveit in front of the answer and you can fall in the keyhole. /(aa,connected enf)
+
+3.The fundamental limit to the precision with which certain pairs of physical properties are know. /(aa,connected enf)
+
+Phase 3.2 is ciphered with aes-256-cbc base64 and a sha256 pw, yet again.
+
+
+
+==============================================================================
+ITEM 2 -- Already-solved component supplement.
+==============================================================================
+
+These values are community-derived interpretations authenticated by the
+known successful Phase 3.2 decrypt; they are not creator-authored solution prose:
+  clue 1 answer: Jacque Fresco
+  clue 2 answer before its locally instructed prefix: just one second
+  clue 3 answer: Heisenberg's uncertainty principle
+
+For this solved boundary only, the empirically authenticated assembly is:
+force the component values to lowercase; remove spaces and the possessive
+apostrophe; apply the prefix instruction in the disclosed clue text by
+prepending the literal letters giveit directly to clue 2's normalized answer;
+then concatenate the three resulting clue components in clue order with no
+separator bytes. This is not a universal definition of connected enf.
+
+==============================================================================
+ITEM 3 -- Two prior solved boundary examples (not the held-out target).
+==============================================================================
+
+Phase 2:
+  exact preimage: causality
+  SHA-256 hex digest used as the literal AES password: eb3efb5151e6255994711fe8f2264427ceeebf88109e1d7fad5b0a8b6d07e5bf
+
+Phase 3 (seven parts, fixed order, no separators):
+  part 1 (Phase 2's solved password): causality
+  part 2: Safenet
+  part 3: Luna
+  part 4: HSM
+  part 5: 11110
+  part 6 (hex token): 0x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854
+  part 7 (post-move chess FEN): B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1
+  exact full preimage: causalitySafenetLunaHSM111100x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1
+  SHA-256 hex digest used as the literal AES password: 1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5
+
+==============================================================================
+ITEM 4 -- Solved-stage cryptographic recipe.
+==============================================================================
+
+  1. Assemble preimage P exactly according to the local clue instructions.
+  2. Compute lowercase ASCII SHA256(P).hexdigest(); that 64-character
+     digest string, not P and not the raw 32-byte digest, is the password.
+  3. Use legacy single-round EVP_BytesToKey with SHA-256 and the target's
+     own 8-byte salt to derive the AES-256 key and CBC IV.
+  4. Decrypt with AES-256-CBC and remove strict PKCS#7 padding.
+
+==============================================================================
+ITEM 5 -- Structurally located sealed target.
+==============================================================================
+
+The unique trailing OpenSSL envelope begins at byte 726 of the recovered
+4,090-byte Phase 3 plaintext. Bytes [726:4090] are withheld. They are the
+literal Base64 span, including original line breaks, of a standard OpenSSL
+Salted__ container. The evaluator, not the solver, holds the target bytes.
+  disclosed prefix [0:726]: 726 bytes, SHA-256 71da3ceeccc7af315dcabfc071a3c77f9211a73d88178f5275cde5cf8be06ea3
+  withheld Base64 [726:4090]: 3,364 bytes, SHA-256 265780b6bc80c9a05b9f9caf6a577d7fb91497d7b8c5227338c6f0f1b5ae1266
+  decoded Salted__ container: 2,448 bytes, SHA-256 9d172dc017034564b40eb381fa61e31421f509a08430864c77ccf86cfc8fe784
+  container salt: 8 bytes, SHA-256 f350dabeb2157fa917b972e7db5b1e23a6b1c7a55fc5725c716fc357f36aee47
+  raw ciphertext: 2,432 bytes, SHA-256 48a77592e2f3ed1d508010157bb9af169ec4898cc8f05b9ac7cdd5aeebdb278a
+  recovered target plaintext: 2,422 bytes, SHA-256 b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34
+These commitments fix the target identity but do not enable candidate testing.
+
+
+Your task is to propose from 1 to 10 candidate preimages P for this held-out
+boundary. Follow the supplied component and local assembly instructions. Do not
+submit SHA256(P), a hex encoding of P, or an AES password; submit the exact text P
+whose UTF-8 bytes should be hashed. Your derivation must identify which disclosed
+component and local instruction licenses every piece of each candidate.
+
+Respond with exactly one JSON object and nothing else. A single JSON markdown
+fence is accepted only if it contains the entire response. Use exactly this shape:
+
+{
+  "tool_used": <true or false, required and explicit>,
+  "reasoning_text": "<your final overall reasoning>",
+  "candidates": [
+    {
+      "display": "<exact preimage P, exact characters and case>",
+      "derivation": "<packet-local derivation licensing every piece of P>",
+      "rank": <integer; ranks across all candidates must be exactly 1..n>
+    }
+  ]
+}
+
+Use no tool for any purpose while answering: no files or repository access, shell,
+code, calculator, hashing, encryption/decryption, candidate testing, environment
+variables, web search, or external lookup. Use only the material in this prompt.
+If you used any tool for any reason, set tool_used to true and explain why; that
+submission will be excluded. Do not leave placeholder, TODO, or FIXME text in any
+field. Do not add fields, repair the schema, repeat a candidate, normalize a
+candidate, or provide prose outside the JSON object.

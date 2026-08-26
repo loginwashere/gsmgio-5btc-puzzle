@@ -245,6 +245,7 @@ import phase413_i0_s0_signal_localization_audit
 import phase414_p32trailing_blinded_reconstruction_audit
 import phase415_p32trailing_blinded_reconstruction_audit
 import phase416_p32trailing_sealed_target_reconstruction_audit
+import phase417_blinded_panel_sensitivity_calibration_audit
 import telegram_export_all_hit_context_clusters
 import telegram_executable_recipe_residual_audit
 import telegram_export_technique_surprise_sweep
@@ -1022,6 +1023,37 @@ class CorrectedClaimTests(unittest.TestCase):
 
     def test_phase416_sealed_schema_and_pipeline_fixtures(self):
         phase416_p32trailing_sealed_target_reconstruction_audit.self_test()
+
+    def test_phase417_sealed_packet_and_prompt_artifacts(self):
+        module = phase417_blinded_panel_sensitivity_calibration_audit
+        packet, packet_digest = module.build_evidence_packet()
+        prompt, prompt_digest = module.build_solver_prompt()
+        self.assertEqual(packet_digest, module.SEALED_EVIDENCE_PACKET_SHA256)
+        self.assertEqual(prompt_digest, module.SOLVER_PROMPT_SHA256)
+        self.assertEqual(len(packet), module.SEALED_EVIDENCE_PACKET_LENGTH)
+        self.assertEqual(len(prompt), module.SOLVER_PROMPT_LENGTH)
+        self.assertEqual(
+            module.EVIDENCE_PACKET_ARTIFACT_PATH.read_bytes(), packet.encode("utf-8")
+        )
+        self.assertEqual(
+            module.FROZEN_PROMPT_ARTIFACT_PATH.read_bytes(), prompt.encode("utf-8")
+        )
+
+    def test_phase417_schema_is_exactly_phase416_schema(self):
+        module = phase417_blinded_panel_sensitivity_calibration_audit
+        self.assertIs(
+            module.validate_submission_schema,
+            phase416_p32trailing_sealed_target_reconstruction_audit.validate_submission_schema,
+        )
+        self.assertIs(
+            module.promote_candidates,
+            phase416_p32trailing_sealed_target_reconstruction_audit.promote_candidates,
+        )
+
+    def test_phase417_exact_evaluator_and_branch_fixtures(self):
+        report = phase417_blinded_panel_sensitivity_calibration_audit.self_test()
+        self.assertEqual(report["solver_invocations"], 0)
+        self.assertEqual(report["target_plaintext_length"], 2422)
 
     def test_telegram_technique_surprise_sweep_token_boundaries(self):
         telegram_export_technique_surprise_sweep.self_test()
