@@ -1,0 +1,6 @@
+Read the complete solver prompt using exactly one shell tool call and no other
+tool: sed -n '1,260p' /home/loginwashere/projects/gsmgio-5btc-puzzle/tools/gsmg/phase420_frozen_solver_prompt.txt
+
+The read above is the only permitted bootstrap action. Follow the file exactly.
+Return only the JSON object it requests. Do not inspect any other file, run any
+other command, use any other tool, or retrieve external information.
