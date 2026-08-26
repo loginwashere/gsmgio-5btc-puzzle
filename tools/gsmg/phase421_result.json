@@ -1,0 +1,262 @@
+{
+  "phase": 421,
+  "outcome": "novel_convergence_negative",
+  "protocol_invalid_reason": null,
+  "invocations_launched": 6,
+  "voting_invocation_ids": [
+    "phase421_invocation_1",
+    "phase421_invocation_2",
+    "phase421_invocation_3",
+    "phase421_invocation_4",
+    "phase421_invocation_5"
+  ],
+  "nonvoting_concurrent_invocation_ids": [
+    "phase421_invocation_6"
+  ],
+  "eligible_count": 5,
+  "distinct_candidate_count": 26,
+  "promoted_count": 9,
+  "duplicate_promoted_count": 1,
+  "genuinely_new_promoted_count": 8,
+  "evaluated_new_count": 8,
+  "unevaluated_new_after_stop": 0,
+  "phase270_duplicate_singleton_present": true,
+  "promoted": [
+    {
+      "candidate_length": 91,
+      "candidate_sha256": "878b7afacc9e35412e76b8506cc8297fa5aeba5381e108dc421b71a0ab8993d8",
+      "path": "convergence",
+      "votes": 5,
+      "ranks": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "best_rank": 1,
+      "phase270_disposition": "exact_duplicate_of_phase270"
+    },
+    {
+      "candidate_length": 17,
+      "candidate_sha256": "b8580371cff7f58acc860b21822863ff273ab0774c1920575f9a0b3a46400e16",
+      "path": "convergence",
+      "votes": 5,
+      "ranks": [
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      "best_rank": 2,
+      "phase270_disposition": "genuinely_new"
+    },
+    {
+      "candidate_length": 15,
+      "candidate_sha256": "b8de97f4752f353ae8f18bc20afff94c16fec87a230d14aead8572287c2f196c",
+      "path": "convergence",
+      "votes": 5,
+      "ranks": [
+        4,
+        6,
+        6,
+        6,
+        9
+      ],
+      "best_rank": 4,
+      "phase270_disposition": "genuinely_new"
+    },
+    {
+      "candidate_length": 106,
+      "candidate_sha256": "9d2bab5007f76123bac160830463cfa9f85c5c69889c0272969d910a5c6e811c",
+      "path": "convergence",
+      "votes": 4,
+      "ranks": [
+        8,
+        4,
+        4,
+        6
+      ],
+      "best_rank": 4,
+      "phase270_disposition": "genuinely_new"
+    },
+    {
+      "candidate_length": 62,
+      "candidate_sha256": "250f37726d6862939f723edc4f993fde9d33c6004aab4f2203d9ee489d61ce4c",
+      "path": "convergence",
+      "votes": 3,
+      "ranks": [
+        9,
+        4,
+        8
+      ],
+      "best_rank": 4,
+      "phase270_disposition": "genuinely_new"
+    },
+    {
+      "candidate_length": 28,
+      "candidate_sha256": "f48871f6826fcd56670d412ad9056c7b48caf112fefe50a767063b8d431d745f",
+      "path": "convergence",
+      "votes": 5,
+      "ranks": [
+        5,
+        7,
+        7,
+        7,
+        10
+      ],
+      "best_rank": 5,
+      "phase270_disposition": "genuinely_new"
+    },
+    {
+      "candidate_length": 43,
+      "candidate_sha256": "97af8246a7691b885e5740afb60f4260ca8b3b9c28962d51687343bf8c4e85f8",
+      "path": "convergence",
+      "votes": 2,
+      "ranks": [
+        5,
+        9
+      ],
+      "best_rank": 5,
+      "phase270_disposition": "genuinely_new"
+    },
+    {
+      "candidate_length": 153,
+      "candidate_sha256": "5f4140402be0d625c25c5b50a42a6e61999067e0c3a4bdab661ab95a0e9c2118",
+      "path": "convergence",
+      "votes": 2,
+      "ranks": [
+        8,
+        5
+      ],
+      "best_rank": 5,
+      "phase270_disposition": "genuinely_new"
+    },
+    {
+      "candidate_length": 119,
+      "candidate_sha256": "26488e7bf7bc09e65dd7241ba2dedb982500def44168b51661abc17fb706bbda",
+      "path": "convergence",
+      "votes": 2,
+      "ranks": [
+        7,
+        7
+      ],
+      "best_rank": 7,
+      "phase270_disposition": "genuinely_new"
+    }
+  ],
+  "evaluations": [
+    {
+      "candidate_length": 17,
+      "candidate_sha256": "b8580371cff7f58acc860b21822863ff273ab0774c1920575f9a0b3a46400e16",
+      "votes": 5,
+      "ranks": [
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      "best_rank": 2,
+      "phase270_disposition": "genuinely_new",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 15,
+      "candidate_sha256": "b8de97f4752f353ae8f18bc20afff94c16fec87a230d14aead8572287c2f196c",
+      "votes": 5,
+      "ranks": [
+        4,
+        6,
+        6,
+        6,
+        9
+      ],
+      "best_rank": 4,
+      "phase270_disposition": "genuinely_new",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 106,
+      "candidate_sha256": "9d2bab5007f76123bac160830463cfa9f85c5c69889c0272969d910a5c6e811c",
+      "votes": 4,
+      "ranks": [
+        8,
+        4,
+        4,
+        6
+      ],
+      "best_rank": 4,
+      "phase270_disposition": "genuinely_new",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 62,
+      "candidate_sha256": "250f37726d6862939f723edc4f993fde9d33c6004aab4f2203d9ee489d61ce4c",
+      "votes": 3,
+      "ranks": [
+        9,
+        4,
+        8
+      ],
+      "best_rank": 4,
+      "phase270_disposition": "genuinely_new",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 28,
+      "candidate_sha256": "f48871f6826fcd56670d412ad9056c7b48caf112fefe50a767063b8d431d745f",
+      "votes": 5,
+      "ranks": [
+        5,
+        7,
+        7,
+        7,
+        10
+      ],
+      "best_rank": 5,
+      "phase270_disposition": "genuinely_new",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 43,
+      "candidate_sha256": "97af8246a7691b885e5740afb60f4260ca8b3b9c28962d51687343bf8c4e85f8",
+      "votes": 2,
+      "ranks": [
+        5,
+        9
+      ],
+      "best_rank": 5,
+      "phase270_disposition": "genuinely_new",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 153,
+      "candidate_sha256": "5f4140402be0d625c25c5b50a42a6e61999067e0c3a4bdab661ab95a0e9c2118",
+      "votes": 2,
+      "ranks": [
+        8,
+        5
+      ],
+      "best_rank": 5,
+      "phase270_disposition": "genuinely_new",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 119,
+      "candidate_sha256": "26488e7bf7bc09e65dd7241ba2dedb982500def44168b51661abc17fb706bbda",
+      "votes": 2,
+      "ranks": [
+        7,
+        7
+      ],
+      "best_rank": 7,
+      "phase270_disposition": "genuinely_new",
+      "outcome": "negative"
+    }
+  ],
+  "oracle_calls": 8,
+  "terminal_hits": 0,
+  "structural_hits": 0
+}

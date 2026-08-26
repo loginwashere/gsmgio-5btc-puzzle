@@ -26878,3 +26878,66 @@ exceeding the eight-ID cap.
 `phase420_frozen_solver_prompt.txt`;
 `phase420_p32trailing_one_file_bootstrap_panel_audit.py`;
 `phase420_invocation_ledger.json`; `phase420_result.json`.
+
+## Phase 421 -- P32TRAILING escalated one-file-bootstrap panel: closed `novel_convergence_negative` (2026-08-26)
+
+**Question:** after correcting Phase 420's sandbox-initialization failure with
+the exact escalated read envelope proven by an excluded diagnostic, does the
+solution-complete sealed-target panel converge on any genuinely new preimage
+that opens P32TRAILING?
+
+**Method:** a pre-registration diagnostic, permanently excluded from panel
+evidence, proved that one `exec_command` call using the fixed `sed` command,
+working directory, `sandbox_permissions: require_escalated`, and fixed
+justification could read a committed file. Phase 421 froze that exact
+672-character launcher (`sha256 3bf3c9cb...1cc82`) before implementation and
+otherwise imported Phase 420 by identity: the same 14,717-character/219-line
+prompt (`sha256 f7d42eab...6c3f`), Phase 418 evidence packet, four-key schema,
+five-submission panel, two-vote gate, Phase 270 exact duplicate classifier,
+Phase 416 redacted evaluator, and outcome rules.
+
+Six invocations were launched while earlier IDs were still pending. IDs 1-5
+were all schema-valid and self-reported exactly the permitted bootstrap read
+and no other tool use; tool-call telemetry was not exposed to the orchestrator,
+so compliance is self-attested rather than independently verified. The frozen
+panel logic selected those first five eligible IDs. ID 6 completed concurrently
+but was excluded from eligibility, voting, promotion, and evaluation.
+
+**Result:** the five voting submissions contained 50 candidate occurrences and
+26 distinct byte strings. Nine candidates crossed the two-vote gate. The
+91-byte Phase-3.2.2 answer converged unanimously (5/5, best rank 1) but was an
+exact Phase 270 duplicate and received no repeat oracle call. Eight promotions
+were genuinely new under the exact classifier:
+
+- 17 bytes, `sha256 b8580371...0e16`, 5 votes, best rank 2;
+- 15 bytes, `sha256 b8de97f4...196c`, 5 votes, best rank 4;
+- 106 bytes, `sha256 9d2bab50...811c`, 4 votes, best rank 4;
+- 62 bytes, `sha256 250f3772...ce4c`, 3 votes, best rank 4;
+- 28 bytes, `sha256 f48871f6...45f`, 5 votes, best rank 5;
+- 43 bytes, `sha256 97af8246...85f8`, 2 votes, best rank 5;
+- 153 bytes, `sha256 5f414040...2118`, 2 votes, best rank 5; and
+- 119 bytes, `sha256 26488e7b...bda`, 2 votes, best rank 7.
+
+All eight genuinely new promotions were evaluated in deterministic order
+through the complete inherited redacted oracle. Every one returned `negative`:
+no terminal address-confirmed hit and no preregistered structural hit. Because
+there was no stop event, all eight were evaluated.
+
+**Branch:** `novel_convergence_negative` -- at least one genuinely new
+candidate converged, every genuinely new promotion tested negative, and no hit
+occurred.
+
+**Interpretation:** the corrected delivery mechanism worked, and the calibrated
+panel reproducibly stabilized on several new surface constructions after being
+given all known nested-stage outputs. None is the P32TRAILING preimage under the
+frozen oracle. This closes the solution-complete comparison negative under this
+instrument and directionally corroborates Phase 416's earlier surface-packet
+negative while retaining both panels' instruction-level, same-environment
+limitations. It does not prove P32TRAILING non-identifiable or exhaust arbitrary
+constructions. The macro-clue experiment remains separately blocked; Phase 421
+does not authorize it.
+
+**Artifacts:** `phase421_frozen_launcher.txt`;
+`phase421_p32trailing_escalated_bootstrap_panel_audit.py`;
+`phase421_execution_replay.py`; `phase421_invocation_ledger.json`;
+`phase421_result.json`.
