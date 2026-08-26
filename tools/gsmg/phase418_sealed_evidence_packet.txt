@@ -1,0 +1,175 @@
+==============================================================================
+ITEM 1 -- Exact Phase 3.2 plaintext (2422 bytes total) up to the final
+ciphertext block, which is DELIBERATELY WITHHELD (see the sealed-target
+note at its position below). Everything else below is confirmed,
+already-decrypted output from earlier, SOLVED stages of this puzzle
+(Phase 2 through Phase 3.2).
+==============================================================================
+
+[bytes 0-447, literal text]
+I've been waiting for you. You have many questions, and although the process has altered your consciousness, you remain irrevocably human. Ergo, some of my answers you will understand, and some of them you will not. Concordantly, while your first question may be the most pertinent, you may or may not realize it is also irrelevant.
+
+... am I here? Wake up, you... I've designed you a beautiful strategic position. One for one, four for one.
+
+
+
+[bytes 447-1986, 1539 bytes, an embedded ciphertext sub-block from an earlier solved stage -- non-ASCII, rendered as hex, 32 bytes per line, so this packet stays valid UTF-8]
+cec82ccef8255fc1f8f8c725cdcf2fc7c83a5ff6f8c3d1f8cdcc3fc72ff8c8cd
+2c3a3ac8c5d12cc3cff8cd602fc83fcf603e25c1c2c8c9cfc3c3cec52f2f2fcc
+f6c325caccce3f2c25d1c53f3fccc1d1c1ccf660cfcfcd2ccdcd5bc025c3cff8
+cfc12c3fc5cb3ec5c2cec83a5f3ec8c1cd25c7f8cd5bc75fca2fc2d1d1c1f6f8
+c8ce5b2fc9c2cbf8c92fcdc7f85fc0f6c9c72fc9c7cd60c0c0d1cfc5ccceccc5
+f83fc32fc9d13acbc13ec860c1cbc95fc55bc7cd2f3a5f60c75f3ecac23ad13f
+60c7cd5bcec93a5bc35fcfcc3fc83f5f3fc225c3c1c2255b3ec5f8f8cbc125cb
+3e25cf2fc1c75b3ecfcc3a3e2f603e2f5bc12f3ac7c33ac1cd3ef8c1c1cff6ce
+c7f660cbc9f6f8f83fcb2f252fc23acd2ff825f8f8f8c8c12fc3cece3e3af8ca
+60c7cb3e2cf6cdcccb5f2ccdc23e3ed15f3ff8cd2c3ff6c13ecb3e25c3ccc32f
+c2c5c1cdf65f60c9c2c9cfc83e5f3ad1c8c2c8c9cfcd2ccdcfc33ecc5fc3f8c1
+f8cccdd1cfcdccc9c9cec5cfc5f83af8f8c83ec5cd602f253f2fcecb3e2cf8f8
+cdc73fc72c5b2f3acac5c75fcaf8c2c7d15bc1c5cbf6c03ec8c8c8c1f8c9c05f
+3aca2cc0c2cbc8d12fc23e2fcbf65f60c8c5c7c9c7d15f5b2fc0c5f6ce25c7cd
+cec92f2f2fc22fc260c8ccc9c7c1c8ce3ef8cb2c3ec2d13ef8cccccf3aca2cc3
+5b3af65fc7f8c7c13af65f60c02cc9c8c9cad1cc2560c7c03f25c7cd3f5bf83f
+c15bcf2f2c2fc33f5f25cd3fc02f3fcc5fc7cc2cd1c1c7c12cc52cd1c8cdc125
+5f603ec2f8cdc73fce3fc225f8d160f62f2cc2c0cdccc2cd25f8c33e3ec85bc3
+5ff8c9c0cbc3c02c5b2fce2f3ac72f2cd1c1f8c12560ce2fc2c22c3fd1c8605b
+c3cecdcbc72cc25bf6cf3acd2fc0d1cec35fc5f6c05fc22fcf3ac75f3ec12cc1
+25c7cd3f5bf8602ccdc75f3eccd13ed1cac1c5f6c93a25c13ec260c1ccc15f3e
+f8cd5b2f25c1c1d12ff6cecaf65f60c7c05f3fc025c13ff8c92cc93e3e3ac9c2
+3f3fc83ec95f5b60c25fc0d12ff6cc5fcac05f5f3ec960c2c5c82525c92c5bd1
+3acdd1c75ff6c9f8ced1c1c7cccf2fc825d1f8d1c8cdc03fc8cbc3c9c53a5f2f
+2c5fc73ef8c93ad13e60ccc83a3fc560c5d1c5cec85fcfc2c8c5c725f8ccc8c8
+f8c5d1c33fc7cbc5c15ff82cf8d1602fc8cdc03f5f2f60c9c83acfc8cdc82560
+5fc8cff8f8cdc25fc8cfcfcdc75f3ecff6f8c7c0c72cca25c3255f3ad13ecdcb
+c7f8c7cacdd1c8cd3ed1d1c1c0cec3c0d1cac1cec0f8f8255fd1c2cccac8c1c7
+25c9cf6025cfc83a5f2fc9c1c12fcfc760cfc22f3acbd1cb5fca3ec8c1cf2fc3
+ccc5cec0c25ff6f83af85fc0d12fc52f2fd1c7caf6cb5fca3ec8c5cfc92c5bc9
+f82c5bd1cfc9f6cecacf5b3fc8f65fca3a2f3ac7c8602fc13fc83fc8cdc7ca3f
+cf603ec35ff8c9c05bc1c1c55bc5c8d1c85f5b3ef8c0c93e3a2cce3ef8f8c9cb
+f6ca3ec5f6c1cf2f60c0f6c325cf3acdc860c125cb5fc260cccfc93a5fcdcfc7
+f6cecc3fcbc1252ff82f2f2f2c5fc93e2cf63ec8c1f62cf83acfc83f60c82fca
+3ac9cf2c25cfc95b3fcf3acd2f2cc1d1c9cbc5cd3ecdc23a5bcd2f3f60c1c525
+c82ccfc7cfc33ed1c1f8d1c9c1c5c02c60c9ccc9c93fc9cdcfd13ec5c15bf6c1
+5f2f3af8c925c9cfc5602cc12ff63fcd5f5fc12f2fced1c2f625c1c0cfc3cdc2
+cb5bf6f8c8cbc3c1c9cccdccc1c7cfc960c0cac13e2f3ecac125cbc3cd25c3c8
+f85fc95f5b3fc9c1c8ce2c2525c25fc0c12cc73acaccd1c9cbcc60cec9f6c0c5
+3a5f2f3ef8c9c7c7cb3ecfc5cbc92cc8cf3fc0cace3a3e5f5fc53f5f3fc0d1f6
+f8c23ff8c9cff8c83f5fd13e3ed1c7c3f8cd25cbf8cd5bc5c25f3fccc1d1c12f
+cdcec0d12f5bc5f6d1c92fcdc5d1602f2cc760cbc33fcbd1f65f2fcbca3a2cc3
+3fcfc5cfcccdc22fcdc1f8d1f6cecaf65f60c7cb5fd1cff860c1f82f5fc93a60
+25cf2f2fc1cf2ff6c12560c2c12fcf3fc2cec95bcecf3a2f2ff6cd2cc8cecd2c
+cdc0cc3ac8c2c7c3c52f5bc02fc3cecb5fd1cf2cc2c725c3d1c1c0f8cdc72c5b
+3acf25c13e2f2cc1c82cc72c255fc225c8ca60ce2f2cc1c8cdc72cc72cc7f8f8
+5f60cecec03fc5f8cfc7c8cfc9d15b60605fc9c53fcecc3e3fc02cc02f2f2fc2
+cfc23a2fc5c02fc73ec93ec3cb2f3f5f3a2fc1c12fcfc1252ccb25c7c925cfd1
+c5d1f6
+
+[bytes 1986-2292, literal text]
+
+
+15165943121972409169171213758951813141543131412428154191312181219433121171617137149110916631213131281491109166131412199114371612126021664313711154112
+
+Raising the stakes without extra chances of winning. A fubcd-king & oracle-queen, thingky mvps, on a sad board but as wide as the first one seen.
+
+[bytes 2292-2422 -- SEALED TARGET, WITHHELD.
+This is where the final unsolved ciphertext block sits in the confirmed
+plaintext, immediately after the text above. Its bytes are deliberately
+NOT included in this packet. What you are told instead:
+  - format: base64 encoding of OpenSSL's standard "Salted__" + 8-byte
+    salt + ciphertext layout (the same format named in ITEM 3 below);
+  - length: 80 bytes of raw ciphertext after the "Salted__"+salt header (5 AES blocks of 16 bytes each);
+  - a SHA-256 commitment of the 8-byte salt (not the ciphertext):
+    6a466725507fbd85afa11f4dedd438e6e7a2ee3079338ebe623f49a4b68546e2
+  - a SHA-256 commitment of the raw ciphertext bytes (not the base64 text, not the header, not the salt):
+    cbbf945223b0c7a60e31b6ba7f5dfbc17f68f545bec059e937c11e7465d0117b
+You cannot verify any candidate against either commitment yourself -- they are one-way hashes, given only so the withheld material's identity is fixed and auditable. Do not attempt to guess, reconstruct, or brute-force the salt or ciphertext bytes from these hashes; propose a preimage candidate instead, exactly as instructed below.]
+
+==============================================================================
+ITEM 1B -- Solution-complete supplement for the nested solved stages.
+==============================================================================
+
+These are community-derived values authenticated by their successful solved
+boundaries. They are not relabeled as creator-authored solution prose.
+
+Phase 3.2.1:
+  CP1141 conversion followed by Beaufort with key THEMATRIXHASYOU yields
+  this exact 1,539-character uppercase letters-only plaintext:
+  YOURLIFEISTHESUMOFAREMAINDEROFANUNBALANCEDEQUATIONINHERENTTOTHEPROGRAMMINGOFTHISPUZZLEYOUARETHEEVENTUALITYOFANANOMALYWHICHDESPITEMYSINCERESTEFFORTSIHAVEBEENUNABLETOELIMINATEFROMWHATISOTHERWISEAHARMONYOFMATHEMATICALPRECISIONWHILEITREMAINSABURDENTOSEDULOUSLYAVOIDITITISNOTUNEXPECTEDANDTHUSNOTBEYONDAMEASUREOFCONTROLWHICHHASLEDYOUINEXORABLYHEREYOUYOUHAVENTANSWEREDMYQUESTIONMEQUITERIGHTINTERESTINGTHATWASQUICKERTHANTHEOTHERSPLEASEIFYOUFINDAWAYTOCOMPLETETHELASTPARTOFTHEPUZZLETAKETHEPRIVATEKEYYOUVEEARNEDITBUTPLEASETAKETHISTOHEARTTHATWHATAWISEMANABOVEHINTEDATISWORTHHUNDREDFOURTYOFTHEINVESTMENTTHATSWHATUSGUYSATGSMGARETRYINGTOACCOMPLISHINTHEENDPLEASEJUSTHELPUSBUILDITINSTEADOFJUSTWAISTINGYOURLIFETIMEBYHUNTINGFORWORTHLESSPRICESANDTHROPHIESLIKETHISIMSORRYTOTELLYOUTHATYOUVECOMETHISFARBUTYOULLNEVERFINISHTHELASTTASKIEXPECTYOUTOSAYBULLSHITWELLDENIALISTHEMOSTPREDICTABLEOFALLHUMANRESPONSESBUTRESTASSUREDTHISWILLNOTBETHELASTTIMEIHAVEDESTROYEDARESTLESSSOULANDIHAVEBECOMEEXCEEDINGLYEFFICIENTATITTHEFUNCTIONOFTHEYOUISNOWTORETURNTOTHESOURCECODESALLOWINGATEMPORARYDISSEMINATIONOFTHECODEYOUHOPEFULLYCARRYREINSERTINGTHEPRIMEBASICSAFTERWHICHYOUWILLBEREQUIREDTOSELECTFROMOVERTWENTYTHREECIPHERSSIXTEENENCRYPTIONSANDORSEVENINTERTWINEDPASSWORDSTOFINDTHEACTUALPRIVATEKEYNOTETHATALSOBRUTEFORCINGMIGHTBEREQUIREDFAILURETOCOMPLYWITHTHISPROCESSWILLRESULTINACATACLYSMICSYSTEMCRASHKILLINGYOURWILLPOWERWHICHCOUPLEDWITHTHEEXTERMINATIONOFYOURWILLTOLIVEANDWILLULTIMATELYRESULTINTHEEXTINCTIONOFTHEENTIRENESSOFYOURSELFSELFGOODLUCKNEVERTHELESSIREALLYHOPEYOURETHEONECIAOBELLAO
+  SHA-256 commitment: 56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241
+
+Phase 3.2.2:
+  exact keyed alphabet: FUBCDORA.LETHINGKYMVPS.JQZXW
+  ordered escape digits: (1, 4)
+  exact 91-character decoded answer: INCASEYOUMANAGETOCRACKTHISTHEPRIVATEKEYSBELONGTOHALFANDBETTERHALFANDTHEYALSONEEDFUNDSTOLIVE
+  SHA-256 commitment: 878b7afacc9e35412e76b8506cc8297fa5aeba5381e108dc421b71a0ab8993d8
+
+==============================================================================
+ITEM 2 -- Three solved AES boundaries, worked calibration examples.
+Case in each preimage is fixed by that stage's own instruction, not a
+free choice -- e.g. Phase 3.2's instruction forces all-lowercase.
+==============================================================================
+
+Phase 2:
+  preimage (exact):  causality
+  SHA-256 hex digest (= the literal AES password): eb3efb5151e6255994711fe8f2264427ceeebf88109e1d7fad5b0a8b6d07e5bf
+
+Phase 3 (seven parts, concatenated in this exact order, no separators):
+  part 1 (Phase 2's own solved password): causality
+  part 2: Safenet
+  part 3: Luna
+  part 4: HSM
+  part 5: 11110
+  part 6 (hex token): 0x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854
+  part 7 (chess FEN): B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1
+  full preimage (exact): causalitySafenetLunaHSM111100x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1
+  SHA-256 hex digest (= the literal AES password): 1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5
+
+Phase 3.2 (four parts, concatenated in this exact order, no separators,
+all lowercase per that stage's own instruction):
+  preimage (exact): jacquefrescogiveitjustonesecondheisenbergsuncertaintyprinciple
+  SHA-256 hex digest (= the literal AES password): 250f37726d6862939f723edc4f993fde9d33c6004aab4f2203d9ee489d61ce4c
+
+==============================================================================
+ITEM 3 -- The solved-stage assembly instructions (the recipe, stated
+once, generically -- all three examples above follow it exactly):
+==============================================================================
+
+  1. A candidate preimage is one or more tokens, concatenated in a
+     fixed order with NO separator characters between them, in
+     whatever case that token's own originating instruction fixes.
+  2. The AES password actually used is NOT the preimage's raw bytes --
+     it is the LOWERCASE HEX SHA-256 DIGEST STRING of the preimage,
+     itself treated as an ASCII string.
+  3. That hex-digest string is the password argument to OpenSSL's
+     legacy EVP_BytesToKey key derivation (digest = SHA-256, 32-byte
+     key + 16-byte IV) against the blob's own salt.
+  4. The blob is base64 of "Salted__" + 8-byte salt + ciphertext,
+     standard OpenSSL CLI format; decrypt with AES-256-CBC, then
+     remove standard PKCS#7 padding.
+
+==============================================================================
+ITEM 4 -- Output requirement, verbatim from the puzzle's own creator
+description. The prize address itself is SEALED TARGET, WITHHELD --
+only its commitment is given.
+==============================================================================
+
+  The creator explicitly described the final result as "a regular
+  Bitcoin private key". The address that key controls is withheld;
+  its SHA-256 commitment (of the address string itself) is:
+  951209e1cf5a1feff85eea755e16b3481c174a75f45ddbbb35b67b92b46bfde2
+  You cannot verify any candidate against this commitment yourself.
+
+==============================================================================
+ITEM 5 -- Prior-coverage scope note.
+==============================================================================
+
+Obvious direct uses and sibling concatenations were already tested in an
+earlier bounded audit. This packet deliberately does not list those candidate
+values or labels, because doing so would anchor reconstruction to prior guesses.
+The orchestrator will compare every convergent candidate by exact bytes against
+that prior inventory and will not test an exact duplicate again.
+
+Do not self-censor a candidate merely because it appears straightforward or
+possibly prior-tested: submit every packet-supported candidate you actually
+judge among your best. Exact duplicate handling is mechanical and happens only
+after the five-submission panel closes.
