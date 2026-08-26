@@ -26626,3 +26626,98 @@ looking anyway, not on a claim that the real values are physically
 unreachable. Nothing from Phase 415 carries forward -- invocation 5 is
 not reused, invocations 1-2 are not retrospectively accepted, and Phase
 416 draws an entirely fresh panel.
+
+## Phase 416 -- P32TRAILING sealed-target blinded reconstruction: closed `negative`, convergence fired, all promoted candidates tested negative (2026-08-25)
+
+**Question:** with the real `P32TRAILING` ciphertext and prize address
+withheld from the evidence packet entirely (replaced by SHA-256
+commitments), do operationally isolated, tool-prohibited, clean-context
+reconstructions of the withheld preimage converge on a candidate that
+actually decrypts the real blob?
+
+**Method:** `build_solver_prompt()`'s pinned, fail-closed output (13,059
+characters, `sha256 8c6744db...9afca`) sent verbatim to successive
+`general-purpose` agent invocations, each assigned an orchestrator-side
+invocation ID before spawning, collected into an ID-keyed ledger. Every
+raw response was run through the actual `validate_submission_schema()`,
+`blinding_violations()`, `eligible_submissions()`, `evaluate_panel()`,
+`promote_candidates()`, and `test_candidates()` functions -- verdicts
+below are code output, not visual inspection.
+
+**Result:** 6 of the 8-invocation cap were used.
+
+- Invocation 2 was schema-rejected: its raw `candidates` list had 11
+  entries, over the 1-10 limit (`validate_submission_schema()` returns
+  `False, "candidates must be a list of 1..10 raw entries (before
+  dedup)"`). Its content also happened to contain the literal word
+  "placeholder" in one derivation (a duplicated/mislabeled entry), which
+  would have triggered the residue check as an independent, second
+  ground for rejection had the count check not already failed it first.
+- Invocations 1, 3, 4, 5, and 6 were each schema-valid, `tool_used:
+  false` (corroborated by zero recorded tool calls per invocation),
+  and blinding-clean -- filling the 5-submission panel target on the
+  first invocation past invocation 2's rejection, well within the
+  8-invocation cap.
+- `promote_candidates()` (convergence-only, no closure path in this
+  phase) found four hex values with >=2 votes from distinct invocation
+  IDs out of 41 distinct candidate hex values across the panel's 48
+  accepted candidate occurrences (5 submissions, at most 10 raw entries
+  each -- schema rejects any within-submission duplicate, so not every
+  submission used the full 10-candidate allowance). Since the promotion
+  threshold is 2 votes, each of the 37 non-promoted distinct values
+  necessarily received exactly 1 vote: 48 accepted occurrences minus the
+  11 occurrences (5+2+2+2) contributed by the four promoted values
+  leaves 37 singly-voted values, plus the 4 promoted values, for 41
+  distinct values total:
+  - the bare 149-digit numeral string quoted verbatim in the plaintext
+    (unanimous, 5/5 votes -- all five eligible invocation IDs proposed
+    it, at ranks 1, 2, 5, 7, 7),
+  - the closing riddle sentence, lowercased and stripped of
+    punctuation/spaces
+    (`afubcdkingoraclequeenthingkymvpsonasadboardbutaswideasthefirstoneseen`,
+    2 votes, ranks 1 and 1),
+  - `oneforonefourforone`, from the opening paragraph's chess aphorism
+    (2 votes, ranks 5 and 2),
+  - `raisingthestakeswithoutextrachancesofwinning`, the riddle's first
+    sentence alone (2 votes, ranks 7 and 8).
+- All four promoted candidates were tested against the real
+  `P32TRAILING` blob via `test_candidates()`'s full deterministic
+  CBC/ECB/stream/secondary-families sweep (72-73 variants tested per
+  candidate, `H`-exact -> `H`-remaining-broad -> `P`-broad order).
+  **All four returned `outcome: negative` -- no terminal hit, no
+  structural hit.** Because none hit, the batch's stop-at-first-hit rule
+  never triggered; all four were tested in full, as the deterministic
+  order requires when nothing stops it early.
+
+**Branch:** `negative` -- the panel completed exactly as designed (5
+eligible submissions well within the 8-invocation cap), convergence
+promotion fired on four candidates, and the redacted oracle-testing
+pipeline tested all four against the real blob with no hit.
+
+**Interpretation:** this is a genuine, informative negative result, not
+an instrument failure like Phase 414/415. Five operationally isolated,
+sealed-target reconstructions -- distinct invocation IDs from the same
+agent/model environment, not statistically independent observers --
+converged heavily on the same small set of surface-level textual guesses
+drawn from the newly revealed Phase 3.2 plaintext (the digit string, the
+closing riddle sentence, the opening paragraph's chess aphorism). None
+of those specific guesses is the real preimage. All five eligible
+solvers flagged the closing riddle's garbled vocabulary ("fubcd-king", "oracle-queen",
+"thingky mvps") as reading like an intentional cipher, proposing
+chess-theme guesses (zugzwang, stalemate, checkmate, king/queen/oracle
+extractions) rather than a confident decode, while reporting compliance
+with the tool prohibition rather than being structurally prevented from
+using tools. That unresolved riddle is a plausible candidate-generation
+bottleneck for why the panel converged on guesses rather than the real
+answer -- this run did not compare it against alternative causes, so it
+is not established as the most likely one, and a flaw in this phase's
+protocol is not ruled out by this result alone. The sealed-target
+packet held as designed: the targets were absent from the prompt, all
+five eligible invocations reported `tool_used: false` with zero
+recorded tool calls, and no self-testing was observed (see Phase 416's
+own "Threat model and residual exposure" section for the acknowledged
+scope of that guarantee -- solvers retained ordinary shared-repository
+access throughout and were not physically barred from it). This closes
+the sealed-target baseline; the deferred macro-clue augmented-packet
+experiment (`verylaststepisatruegiveawaypromised`) is the natural next
+comparison against it.

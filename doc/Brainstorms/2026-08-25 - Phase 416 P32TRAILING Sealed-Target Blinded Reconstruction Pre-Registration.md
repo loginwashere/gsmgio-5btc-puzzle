@@ -1,6 +1,6 @@
 ---
 type: worksheet
-status: live
+status: closed-negative
 date: 2026-08-25
 topics:
   - brainstorm
@@ -12,6 +12,49 @@ topics:
 ---
 
 # Phase 416 — P32TRAILING Sealed-Target Blinded Reconstruction Pre-Registration
+
+> [!failure] Closed `negative` (2026-08-25) -- panel completed, convergence fired, all promoted candidates tested negative
+> Six invocations were run (within the 8-invocation cap): invocation 2 was
+> schema-rejected (its raw `candidates` list had 11 entries, over the 1-10
+> limit -- confirmed by `validate_submission_schema()` directly, not by
+> inspection); invocations 1, 3, 4, 5, and 6 were all schema-valid,
+> non-tool-using (`tool_used: false`, corroborated by zero tool calls in
+> each transcript), and blinding-clean, filling the 5-submission panel on
+> the first attempt past invocation 2's rejection. All five eligible
+> invocations complied with the tool prohibition (zero recorded tool
+> calls each) and no self-testing was observed; the real ciphertext and
+> address were absent from the sealed packet and prompt. Solvers retained
+> ordinary shared-repository access throughout -- see "Threat model and
+> residual exposure" below for what this run does and does not establish
+> about that access.
+>
+> `promote_candidates()` found four hex values with >=2 votes from
+> distinct invocation IDs: the bare 149-digit numeral string (unanimous, 5/5 votes), the closing
+> riddle sentence lowercased and stripped of punctuation/spaces
+> (`afubcdkingoraclequeenthingkymvpsonasadboardbutaswideasthefirstoneseen`,
+> 2 votes), `oneforonefourforone` (2 votes), and
+> `raisingthestakeswithoutextrachancesofwinning` (2 votes). All four were
+> tested against the real `P32TRAILING` blob via `test_candidates()`'s
+> full CBC/ECB/stream/secondary-families sweep (72-73 variants each,
+> `H`-exact -> `H`-remaining-broad -> `P`-broad order): **all four
+> returned `outcome: negative`, no terminal hit, no structural hit.**
+> Since none hit, the batch's stop-at-first-hit rule never triggered --
+> all four were tested in full, as the deterministic order requires when
+> nothing stops it early.
+>
+> This does not mean `P32TRAILING` is unsolvable, nor that the sealed-
+> target architecture failed -- it means five operationally isolated
+> replicates (distinct invocation IDs, not statistically independent
+> observers) converged on the same handful of surface-level textual
+> guesses (the riddle sentence, the digit string, "one for one, four for
+> one"), and none of those specific guesses is the real preimage. The
+> five solvers largely agreed the closing riddle ("fubcd-king", "oracle-
+> queen", "thingky mvps") reads as an intentionally garbled cipher none
+> reported cracking by hand under the tool prohibition. That unresolved
+> riddle is a plausible candidate-generation bottleneck for why the
+> panel converged on guesses rather than the real answer -- this run did
+> not compare it against alternative causes, so it is not established as
+> the most likely one.
 
 > [!caution] Prepared before any solver is invoked
 > This document supersedes
