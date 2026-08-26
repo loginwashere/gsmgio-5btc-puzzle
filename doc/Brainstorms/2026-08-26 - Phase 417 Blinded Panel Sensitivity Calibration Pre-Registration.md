@@ -1,6 +1,6 @@
 ---
 type: worksheet
-status: live
+status: closed
 date: 2026-08-26
 topics:
   - brainstorm
@@ -13,7 +13,27 @@ topics:
 
 # Phase 417 — Blinded Panel Sensitivity Calibration Pre-Registration
 
-> [!caution] Draft for review; no execution has started
+> [!success] Closed `calibrated_clean` (2026-08-26)
+> Five fresh, no-history `general-purpose` invocations were used, so no
+> backfill was needed within the eight-invocation cap. All five raw responses
+> parsed, matched the exact Phase 416 schema, reported `tool_used: false`, had
+> zero recorded tool calls, and passed the frozen blinding checks. Each
+> submitted exactly one rank-1 candidate, and all five candidates were the
+> byte-identical ground-truth preimage. The two-vote gate therefore promoted
+> one candidate with 5/5 votes; no wrong candidate converged. The exact
+> Phase-410-only evaluator recovered a 2,422-byte plaintext with SHA-256
+> `b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34`.
+> The result is `calibrated_clean`, not merely a positive decrypt: observed
+> sensitivity passed and this panel showed no spurious convergence. This does
+> not make the five same-environment invocations statistically independent or
+> prove filesystem isolation, and it does not establish that P32TRAILING is
+> identifiable. It licenses drafting the separately preregistered,
+> solution-complete Phase 418 packet; the macro-clue experiment remains
+> blocked. Raw responses and dispositions are pinned in
+> `tools/gsmg/phase417_invocation_ledger.json` and
+> `tools/gsmg/phase417_result.json`.
+
+> [!note] Frozen before execution; retained as the preregistration record
 > This document is being written before the Phase 417 implementation,
 > frozen prompt, or solver responses exist. No solver has been invoked and
 > no score has been computed. The numeric commitments below were

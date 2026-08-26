@@ -1,0 +1,85 @@
+{
+  "phase": 417,
+  "outcome": "calibrated_clean",
+  "prompt_sha256": "e99a930843f5fbf841d31a07c7273f7232fec221d27ae3d9381b0c008683ec6b",
+  "prompt_length": 6975,
+  "invocation_cap": 8,
+  "invocations_used": 5,
+  "eligible_submission_count": 5,
+  "ground_truth_vote_count": 5,
+  "ground_truth_best_rank": 1,
+  "promoted_count": 1,
+  "wrong_promoted_count": 0,
+  "promoted_candidate_utf8_hex": "6a616371756566726573636f6769766569746a7573746f6e657365636f6e6468656973656e6265726773756e6365727461696e74797072696e6369706c65",
+  "evaluation": {
+    "path": "convergence",
+    "votes": 5,
+    "ranks": [1, 1, 1, 1, 1],
+    "padding_valid": true,
+    "plaintext_length": 2422,
+    "plaintext_sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+    "correct": true
+  },
+  "dispositions": {
+    "phase417_invocation_1": {
+      "parse_valid": true,
+      "schema_valid": true,
+      "tool_used": false,
+      "recorded_tool_call_count": 0,
+      "blinding_violations": [],
+      "eligible": true,
+      "candidate_count": 1
+    },
+    "phase417_invocation_2": {
+      "parse_valid": true,
+      "schema_valid": true,
+      "tool_used": false,
+      "recorded_tool_call_count": 0,
+      "blinding_violations": [],
+      "eligible": true,
+      "candidate_count": 1
+    },
+    "phase417_invocation_3": {
+      "parse_valid": true,
+      "schema_valid": true,
+      "tool_used": false,
+      "recorded_tool_call_count": 0,
+      "blinding_violations": [],
+      "eligible": true,
+      "candidate_count": 1
+    },
+    "phase417_invocation_4": {
+      "parse_valid": true,
+      "schema_valid": true,
+      "tool_used": false,
+      "recorded_tool_call_count": 0,
+      "blinding_violations": [],
+      "eligible": true,
+      "candidate_count": 1
+    },
+    "phase417_invocation_5": {
+      "parse_valid": true,
+      "schema_valid": true,
+      "tool_used": false,
+      "recorded_tool_call_count": 0,
+      "blinding_violations": [],
+      "eligible": true,
+      "candidate_count": 1
+    }
+  },
+  "configuration": {
+    "agent_class": "general-purpose",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "service_configuration": "default",
+    "provider_side_revision_observable": false
+  },
+  "scope": {
+    "specificity_observed": "no wrong candidate reached the two-vote threshold",
+    "statistical_independence_claimed": false,
+    "filesystem_isolation_claimed": false,
+    "licenses_phase418_draft": true,
+    "licenses_macro_clue_experiment": false
+  }
+}
