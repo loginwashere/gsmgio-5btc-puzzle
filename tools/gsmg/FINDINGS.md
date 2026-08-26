@@ -26707,17 +26707,28 @@ solvers flagged the closing riddle's garbled vocabulary ("fubcd-king", "oracle-q
 chess-theme guesses (zugzwang, stalemate, checkmate, king/queen/oracle
 extractions) rather than a confident decode, while reporting compliance
 with the tool prohibition rather than being structurally prevented from
-using tools. That unresolved riddle is a plausible candidate-generation
-bottleneck for why the panel converged on guesses rather than the real
-answer -- this run did not compare it against alternative causes, so it
-is not established as the most likely one, and a flaw in this phase's
-protocol is not ruled out by this result alone. The sealed-target
-packet held as designed: the targets were absent from the prompt, all
-five eligible invocations reported `tool_used: false` with zero
+using tools. At project level, however, that nested Phase-3.2.2 riddle is
+**not unresolved**: `data.py` already pins the known-good alphabet
+`FUBCDORA.LETHINGKYMVPS.JQZXW`, escape pair `(1,4)`, and decoded
+91-character answer beginning `INCASEYOUMANAGE`. Phase 416's packet gave
+the panel only the raw numeral string and raw riddle, and likewise omitted
+the already-solved Phase-3.2.1 Beaufort output. The no-tool panel therefore
+received an incomplete representation of the project's currently known
+upstream solved state. This is a real candidate-generation confound: the
+run remains a valid negative for its exact, surface-input packet, but it
+does not measure reconstruction from all already-solved nested-stage
+outputs. Phase 270 already tested the obvious direct sibling-output
+compositions with zero hits; the still-unrun question is whether a
+solution-complete packet lets a calibrated panel derive a *novel*
+assembly. The sealed-target packet held as designed: the targets were
+absent from the prompt, all five eligible invocations reported
+`tool_used: false` with zero
 recorded tool calls, and no self-testing was observed (see Phase 416's
 own "Threat model and residual exposure" section for the acknowledged
 scope of that guarantee -- solvers retained ordinary shared-repository
 access throughout and were not physically barred from it). This closes
-the sealed-target baseline; the deferred macro-clue augmented-packet
-experiment (`verylaststepisatruegiveawaypromised`) is the natural next
-comparison against it.
+the surface-input sealed-target baseline. The next comparison must first
+calibrate the panel on a held-out solved boundary, then supply P32TRAILING
+with its already-solved nested-stage outputs. The deferred macro-clue
+augmentation remains a later, separately controlled condition rather than
+the immediate next run.

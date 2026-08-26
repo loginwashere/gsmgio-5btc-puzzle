@@ -1,6 +1,6 @@
 ---
 type: worksheet
-status: closed-protocol_invalid
+status: closed
 date: 2026-08-25
 topics:
   - brainstorm

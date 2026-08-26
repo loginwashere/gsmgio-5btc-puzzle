@@ -1,6 +1,6 @@
 ---
 type: worksheet
-status: closed-negative
+status: closed
 date: 2026-08-25
 topics:
   - brainstorm
@@ -50,11 +50,23 @@ topics:
 > one"), and none of those specific guesses is the real preimage. The
 > five solvers largely agreed the closing riddle ("fubcd-king", "oracle-
 > queen", "thingky mvps") reads as an intentionally garbled cipher none
-> reported cracking by hand under the tool prohibition. That unresolved
-> riddle is a plausible candidate-generation bottleneck for why the
-> panel converged on guesses rather than the real answer -- this run did
-> not compare it against alternative causes, so it is not established as
-> the most likely one.
+> reported deriving by hand under the tool prohibition. At project level,
+> however, that nested Phase-3.2.2 riddle is **not unresolved**: the
+> repository already pins its keyed alphabet
+> `FUBCDORA.LETHINGKYMVPS.JQZXW`, escape pair `(1,4)`, and 91-character
+> decoded answer beginning `INCASEYOUMANAGE` as a known-good validation
+> vector. Phase 416's packet supplied only the raw numeral string and raw
+> riddle, while also omitting the already-solved Phase-3.2.1 Beaufort
+> output. Under the no-tool rule, the panel therefore saw an incomplete
+> representation of the project's currently known upstream solved state.
+> This is a real candidate-generation confound: the run remains a valid
+> negative for its exact, surface-input packet, but it does not measure
+> reconstruction from all already-solved nested-stage outputs. Phase 270
+> already tested the obvious direct sibling-output compositions with zero
+> hits; the still-unrun question is whether a solution-complete packet lets
+> a calibrated panel derive a *novel* assembly. A held-out solved-boundary
+> sensitivity calibration must precede that comparison; the macro-clue
+> augmentation is deferred until after both steps.
 
 > [!caution] Prepared before any solver is invoked
 > This document supersedes
