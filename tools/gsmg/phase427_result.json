@@ -1,0 +1,115 @@
+{
+  "calibration": {
+    "family_corrected_p": 0.0040995900409959,
+    "family_tail_count_including_observed": 41,
+    "individual_p": {
+      "english_quadgram_mean": 0.130986901309869,
+      "lag1_mutual_information_bits": 0.0013998600139986002,
+      "longest_repeated_substring": 0.8472152784721528,
+      "raw_deflate_saving": 0.06829317068293171
+    },
+    "observed_extremeness_suppliers": [
+      "lag1_mutual_information_bits"
+    ],
+    "observed_min_marginal_p": 0.0013998600139986002
+  },
+  "interpretation": "This post-Phase-426 attribution control preserves the known Bifid parity-rail composition. It tests residual within-rail ordering only and cannot promote plaintext.",
+  "null_summaries": {
+    "english_quadgram_mean": {
+      "max": -6.85028693363351,
+      "mean": -7.047307497412398,
+      "median": -7.047226887132052,
+      "min": -7.266136110094412
+    },
+    "lag1_mutual_information_bits": {
+      "max": 0.8130865212116828,
+      "mean": 0.71734714898474,
+      "median": 0.7166863795428255,
+      "min": 0.6457251678083555
+    },
+    "longest_repeated_substring": {
+      "max": 9,
+      "mean": 5.0038,
+      "median": 5,
+      "min": 4
+    },
+    "raw_deflate_saving": {
+      "max": 253,
+      "mean": 243.5698,
+      "median": 243,
+      "min": 236
+    }
+  },
+  "null_ties_with_observed": {
+    "english_quadgram_mean": 0,
+    "lag1_mutual_information_bits": 0,
+    "longest_repeated_substring": 7173,
+    "raw_deflate_saving": 435
+  },
+  "observed": {
+    "english_quadgram_mean": -6.986327666037144,
+    "lag1_mutual_information_bits": 0.7886268425353293,
+    "longest_repeated_substring": 5,
+    "raw_deflate_saving": 247
+  },
+  "outcome": "residual_structure_positive",
+  "phase": 427,
+  "protocol": {
+    "family_correction": "inclusive_upper_tail_rank_max_permutation",
+    "null": "independent_exact_multiset_permutations_within_tail_parity_rails",
+    "oracle_calls": 0,
+    "seed": 1062,
+    "statistics": [
+      "english_quadgram_mean",
+      "raw_deflate_saving",
+      "lag1_mutual_information_bits",
+      "longest_repeated_substring"
+    ],
+    "tail_length": 563,
+    "tested_slice": "decoded[7:]",
+    "trials": 10000
+  },
+  "provenance": {
+    "decoded_sha256": "0c5d984f90e9baefc09f1d3888e62acbd101f9b0194887e2ae88fc6c9967745e",
+    "tail_sha256": "18ca76bf19bb791af556ff4daed3436f39ba3398bcbcfa162af4f77c67d22fb5"
+  },
+  "rails": {
+    "local_even_alphabet": "ABCDEFGHIKLMNOPQRSTUVWXYZ",
+    "local_even_counts": {
+      "A": 15,
+      "B": 12,
+      "C": 6,
+      "D": 15,
+      "E": 8,
+      "F": 6,
+      "G": 20,
+      "H": 6,
+      "I": 13,
+      "K": 9,
+      "L": 18,
+      "M": 18,
+      "N": 26,
+      "O": 16,
+      "P": 14,
+      "Q": 6,
+      "R": 15,
+      "S": 25,
+      "T": 6,
+      "U": 9,
+      "V": 4,
+      "W": 5,
+      "X": 5,
+      "Y": 4,
+      "Z": 1
+    },
+    "local_even_length": 282,
+    "local_odd_alphabet": "BCDE",
+    "local_odd_counts": {
+      "B": 53,
+      "C": 89,
+      "D": 71,
+      "E": 68
+    },
+    "local_odd_length": 281
+  }
+}

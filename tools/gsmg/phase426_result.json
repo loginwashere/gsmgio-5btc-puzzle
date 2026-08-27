@@ -1,0 +1,79 @@
+{
+  "calibration": {
+    "family_corrected_p": 0.00029997000299970003,
+    "family_tail_count_including_observed": 3,
+    "individual_p": {
+      "english_quadgram_mean": 0.31496850314968505,
+      "lag1_mutual_information_bits": 9.999000099990002e-05,
+      "longest_repeated_substring": 0.6300369963003699,
+      "raw_deflate_saving": 9.999000099990002e-05
+    },
+    "observed_extremeness_suppliers": [
+      "raw_deflate_saving",
+      "lag1_mutual_information_bits"
+    ],
+    "observed_min_marginal_p": 9.999000099990002e-05
+  },
+  "interpretation": "This tests only ordering structure in the fixed 563-character continuation, conditional on its exact letter multiset and excluding BTCSEED. It does not search decoder variants or promote plaintext, KMODEST, or a downstream consumer.",
+  "null_summaries": {
+    "english_quadgram_mean": {
+      "max": -6.8049984309224065,
+      "mean": -7.013445197407852,
+      "median": -7.014597053931615,
+      "min": -7.228678522135269
+    },
+    "lag1_mutual_information_bits": {
+      "max": 0.672039859566701,
+      "mean": 0.5658408501952678,
+      "median": 0.5653026195256498,
+      "min": 0.47061536778238894
+    },
+    "longest_repeated_substring": {
+      "max": 10,
+      "mean": 4.7281,
+      "median": 5,
+      "min": 4
+    },
+    "raw_deflate_saving": {
+      "max": 244,
+      "mean": 236.4298,
+      "median": 236,
+      "min": 231
+    }
+  },
+  "null_ties_with_observed": {
+    "english_quadgram_mean": 0,
+    "lag1_mutual_information_bits": 0,
+    "longest_repeated_substring": 5427,
+    "raw_deflate_saving": 0
+  },
+  "observed": {
+    "english_quadgram_mean": -6.986327666037144,
+    "lag1_mutual_information_bits": 0.7886268425353293,
+    "longest_repeated_substring": 5,
+    "raw_deflate_saving": 247
+  },
+  "outcome": "continuation_structure_positive",
+  "phase": 426,
+  "protocol": {
+    "family_correction": "inclusive_upper_tail_rank_max_permutation",
+    "null": "exact_multiset_permutations_of_563_character_tail",
+    "oracle_calls": 0,
+    "seed": 1062,
+    "statistics": [
+      "english_quadgram_mean",
+      "raw_deflate_saving",
+      "lag1_mutual_information_bits",
+      "longest_repeated_substring"
+    ],
+    "tail_length": 563,
+    "tested_slice": "decoded[7:]",
+    "trials": 10000
+  },
+  "provenance": {
+    "decoded_prefix": "BTCSEEDDEOEMCKEADHBSCHDKBDCSDKDV",
+    "decoded_sha256": "0c5d984f90e9baefc09f1d3888e62acbd101f9b0194887e2ae88fc6c9967745e",
+    "quadgram_table_sha256": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+    "tail_sha256": "18ca76bf19bb791af556ff4daed3436f39ba3398bcbcfa162af4f77c67d22fb5"
+  }
+}

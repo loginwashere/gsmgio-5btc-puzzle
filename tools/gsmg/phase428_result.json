@@ -1,0 +1,79 @@
+{
+  "calibration": {
+    "family_corrected_p": 0.5363463653634637,
+    "family_tail_count_including_observed": 5364,
+    "individual_p": {
+      "english_quadgram_mean": 0.37746225377462256,
+      "lag1_mutual_information_bits": 0.42585741425857415,
+      "longest_repeated_substring": 0.8856114388561144,
+      "raw_deflate_saving": 0.18998100189981001
+    },
+    "observed_extremeness_suppliers": [
+      "raw_deflate_saving"
+    ],
+    "observed_min_marginal_p": 0.18998100189981001
+  },
+  "interpretation": "This attribution control preserves the full-block Bifid transform's aligned output-digraph coupling and tests only ordering between those digraphs.",
+  "null_summaries": {
+    "english_quadgram_mean": {
+      "max": -6.839763405928769,
+      "mean": -7.000493758494556,
+      "median": -7.0001896844193245,
+      "min": -7.1865106283545135
+    },
+    "lag1_mutual_information_bits": {
+      "max": 0.8491788566109894,
+      "mean": 0.786087363480661,
+      "median": 0.7853316617022381,
+      "min": 0.7357053094263786
+    },
+    "longest_repeated_substring": {
+      "max": 11,
+      "mean": 5.083,
+      "median": 5,
+      "min": 4
+    },
+    "raw_deflate_saving": {
+      "max": 253,
+      "mean": 244.7891,
+      "median": 245,
+      "min": 237
+    }
+  },
+  "null_ties_with_observed": {
+    "english_quadgram_mean": 0,
+    "lag1_mutual_information_bits": 0,
+    "longest_repeated_substring": 7241,
+    "raw_deflate_saving": 1020
+  },
+  "observed": {
+    "english_quadgram_mean": -6.986327666037144,
+    "lag1_mutual_information_bits": 0.7886268425353293,
+    "longest_repeated_substring": 5,
+    "raw_deflate_saving": 247
+  },
+  "outcome": "digraph_mechanical_attribution",
+  "phase": 428,
+  "protocol": {
+    "family_correction": "inclusive_upper_tail_rank_max_permutation",
+    "fixed_leading_singleton": "D",
+    "globally_aligned_digraph_count": 281,
+    "null": "permutations_of_281_intact_global_bifid_output_digraphs_after_fixed_singleton",
+    "oracle_calls": 0,
+    "seed": 1062,
+    "statistics": [
+      "english_quadgram_mean",
+      "raw_deflate_saving",
+      "lag1_mutual_information_bits",
+      "longest_repeated_substring"
+    ],
+    "tail_length": 563,
+    "tested_slice": "decoded[7:]",
+    "trials": 10000
+  },
+  "provenance": {
+    "decoded_sha256": "0c5d984f90e9baefc09f1d3888e62acbd101f9b0194887e2ae88fc6c9967745e",
+    "digraph_multiset_sha256": "64514112b6f0a3434be6757576e7dc87108942f3c94e18493652dc04c1aa5bf2",
+    "tail_sha256": "18ca76bf19bb791af556ff4daed3436f39ba3398bcbcfa162af4f77c67d22fb5"
+  }
+}

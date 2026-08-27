@@ -27138,3 +27138,46 @@ positions 7 onward.
 `doc/GSMG_PHASE425_BTCSEED_FAMILYWIDE_SIGNIFICANCE_AUDIT.md`; and the frozen
 pre-registration in `doc/Brainstorms/`.
 
+## Phases 426–428 -- held-out `BTCSEED` continuation structure resolves to Bifid digraph mechanics (2026-08-27)
+
+**Question:** with Phase 386's exact decoder and the seven-character
+`BTCSEED` checkpoint frozen, does the untouched `decoded[7:]` continuation
+contain independently meaningful sequential structure?
+
+**Method:** Phase 426 removed the prefix and tested the complete remaining 563
+characters with four predeclared whole-tail statistics: frozen English
+quadgram mean, raw-DEFLATE saving, lag-1 mutual information, and longest exact
+repeated substring. Its 10,000-trial conditional null permuted the tail's exact
+letter multiset, with an inclusive permutation rank-max correction across all
+four statistics. It tried no alternate decoder, window, boundary, orientation,
+keyword, password, or oracle. After that broad test fired, two separately
+pre-registered attribution controls retained the same statistics and gates:
+Phase 427 shuffled only within the two parity rails; Phase 428 held the leading
+global-position-7 singleton fixed and permuted all 281 intact, globally aligned
+Bifid output digraphs.
+
+**Result:** Phase 426 was positive (`p=3/10001`), through compression and lag-1
+dependence rather than English or repeat length. Preserving parity rails in
+Phase 427 removed the compression extremum but retained lag-1 dependence
+(`p=41/10001`). Preserving the transform's intact output digraphs in Phase 428
+removed the last signal: corrected `p=5364/10001=0.536346`; individual p-values
+were English `0.377462`, compression `0.189981`, mutual information `0.425857`,
+and repeated substring `0.885611`.
+
+**Disposition:** `digraph_mechanical_attribution`. In the one-block Bifid
+algebra, each aligned output digraph is the row-pair/column-pair projection of
+the same two FAED letters separated by half the block. The broad shuffle and
+rail-only shuffle break that built-in coupling; the intact-digraph null keeps
+it and shows no exceptional ordering between digraphs. The requested held-out
+continuation gate therefore supplies no plaintext or consumer promotion. This
+does not retract Phase 425's separately significant exact prefix and does not
+exclude every conceivable encoding; a new continuation experiment now needs
+an independent clue selecting its operation.
+
+**Artifacts:** `phase426_btcseed_heldout_continuation_structure_audit.py`,
+`phase427_btcseed_continuation_rail_attribution_audit.py`,
+`phase428_btcseed_continuation_digraph_attribution_audit.py`; their three JSON
+results; `test_phase426_btcseed_heldout_continuation_structure_audit.py`;
+`doc/GSMG_PHASE426_BTCSEED_HELDOUT_CONTINUATION_STRUCTURE_AUDIT.md`; and three
+frozen pre-registrations in `doc/Brainstorms/`.
+
