@@ -27096,3 +27096,45 @@ constrain a FAED decoder or explicitly define the DBBI/FAED relationship.
 `test_phase424_semantic_checkpoint_consumer_audit.py`; `phase424_result.json`;
 `doc/GSMG_PHASE424_SEMANTIC_CHECKPOINT_CONSUMER_AUDIT.md`; and the Phase-424
 pre-registration worksheet.
+
+## Phase 425 -- family-wide `BTCSEED` Bifid significance: positive checkpoint only, no decoder promotion (2026-08-27)
+
+**Question:** does Phase 386's exact `BTCSEED` prefix remain unusual after a
+family-wise correction over a bounded set of page-local Bifid keyword sources,
+block schedules, and common orientation conventions, rather than only under
+the configuration in which the prefix was first noticed?
+
+**Method:** pre-registered ten literal page-local keyword sources under
+first-13 and full-source scopes, deduplicating to 12 keyed squares. Crossed
+those with Phase 408's 8 schedules, decrypt/encrypt, row-column/column-row
+coordinate streams, forward/reversed ciphertext, and forward/reversed output:
+1,536 labeled configurations and 1,248 distinct real outputs. The matched null
+uses 10,000 deterministic exact-multiset shuffles of the 570-letter `FAED`,
+runs the whole family on every shuffle, and retains the family-maximum leading
+match to fixed `BTCSEED`. No output-derived keywords, arbitrary squares,
+passwords, Bitcoin derivations, or blob-oracle calls were allowed.
+
+**Result:** the real family reaches all seven letters. Exactly one distinct
+output starts with or contains `BTCSEED`: Phase 386's DBBI-derived square,
+period 570 output (represented by two symmetry-equivalent configuration
+labels). Null family-maximum prefix histogram: length 1 = 3,737 trials; 2 =
+5,065; 3 = 1,156; 4 = 37; 5 = 4; 6 = 1; 7 = 0. The registered add-one
+family-wise estimate is `p=1/10001=0.00009999`, passing the positive gate.
+All primitive round trips, accelerated-boundary/full-transform equivalence,
+the Phase-386 byte-perfect regression, and a planted positive pass.
+
+**Disposition:** `family_corrected_positive_checkpoint_only`. This materially
+strengthens `BTCSEED` within the declared Bifid family, but does not show that
+the remaining 563 characters are plaintext, select an intended decoder, or
+promote `KMODEST` or any consumer. The audit does not correct for every
+unrecorded historical non-Bifid technique, and Phase 408 still shows that the
+hit is full-block-convention-dependent. The next admissible internal test is a
+strict held-out continuation audit with the decoder frozen and no tuning on
+positions 7 onward.
+
+**Artifacts:** `phase425_btcseed_familywide_significance_audit.py`;
+`test_phase425_btcseed_familywide_significance_audit.py`;
+`phase425_result.json`;
+`doc/GSMG_PHASE425_BTCSEED_FAMILYWIDE_SIGNIFICANCE_AUDIT.md`; and the frozen
+pre-registration in `doc/Brainstorms/`.
+

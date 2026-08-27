@@ -1,0 +1,430 @@
+{
+  "phase": 425,
+  "target": "BTCSEED",
+  "outcome": "family_corrected_positive_checkpoint_only",
+  "keyword_source_count": 10,
+  "distinct_square_count": 12,
+  "square_manifest": [
+    {
+      "square_id": "square_00",
+      "grid_keyword": "DBIFHCEGAKLMNOPQRSTUVWXYZ",
+      "provenance": [
+        {
+          "source": "dbbi",
+          "scope": "first13",
+          "normalized_keyword": "DBBIBFBHCCBEG"
+        },
+        {
+          "source": "dbbi",
+          "scope": "full",
+          "normalized_keyword": "DBBIBFBHCCBEGBIHABEBEIHBEGGEGEBEBBGEHHEBHHFBABFDHBEFFCDBBFCCCGBFBEEGGECBEDCIBFBFFGIGBEEEABE"
+        }
+      ]
+    },
+    {
+      "square_id": "square_01",
+      "grid_keyword": "FAEDGCBHIKLMNOPQRSTUVWXYZ",
+      "provenance": [
+        {
+          "source": "faed",
+          "scope": "first13",
+          "normalized_keyword": "FAEDGGEEDFCBD"
+        },
+        {
+          "source": "faed",
+          "scope": "full",
+          "normalized_keyword": "FAEDGGEEDFCBDABHHGGCADCFEDDGFDGBGIGAAEDGGIAFAECGHGGCDAIHEHAHBAHIGCEIFGBFGEFGAIFABIFAGAEGEACGBBEAGFGGEEGGAFBACGFCDBEIFFAAFCIDAHGDEEFGHHCGGAEGDEBHHEGEGHCEGADFBDIAGEFCICGGIFDCGAAGGFBIGAICFBHECAECBCEIAICEBGBGIECDEGGFGEGAEDGGFIICIIIFIFHGGCGFGDCDGGEFCBEEIGEFIBGIBGGGHHFBCGIFDEHEDFDAGICDBHICGAIEDAEHAHGHHCIHDGHFHBIICECBIICHIHIIIGIDDGEHHDFDCHCBAFGFBHAHEAGEGECAFEHGCFGGGGCAGFHHGHBAIHIDIEHHFDEGGDGCIHGGGGGHADAHIGIGBGECGEDFCDGGACCDEHIICIGFBFFHGGAEIDBBEIBBEIIFDGFDHIEEEIEEECIFDGDAHDIGGFHEGFIAFFIGGBCBCEHCEABFBEDBIIBFBFDEDEEHGIGFAAIGGAGBEIICHIEDIFBEHGBCCAHHBIIBIBBIBDCBAHAIDHFAHIIHIC"
+        }
+      ]
+    },
+    {
+      "square_id": "square_02",
+      "grid_keyword": "MATRIXSULBCDEFGHKNOPQVWYZ",
+      "provenance": [
+        {
+          "source": "matrixsumlist",
+          "scope": "first13",
+          "normalized_keyword": "MATRIXSUMLIST"
+        },
+        {
+          "source": "matrixsumlist",
+          "scope": "full",
+          "normalized_keyword": "MATRIXSUMLIST"
+        }
+      ]
+    },
+    {
+      "square_id": "square_03",
+      "grid_keyword": "LASTWORDBEFCGHIKMNPQUVXYZ",
+      "provenance": [
+        {
+          "source": "lastwordsbeforearchichoice",
+          "scope": "first13",
+          "normalized_keyword": "LASTWORDSBEFO"
+        }
+      ]
+    },
+    {
+      "square_id": "square_04",
+      "grid_keyword": "LASTWORDBEFCHIGKMNPQUVXYZ",
+      "provenance": [
+        {
+          "source": "lastwordsbeforearchichoice",
+          "scope": "full",
+          "normalized_keyword": "LASTWORDSBEFOREARCHICHOICE"
+        }
+      ]
+    },
+    {
+      "square_id": "square_05",
+      "grid_keyword": "THISPAWORDBCEFGKLMNQUVXYZ",
+      "provenance": [
+        {
+          "source": "thispassword",
+          "scope": "first13",
+          "normalized_keyword": "THISPASSWORD"
+        },
+        {
+          "source": "thispassword",
+          "scope": "full",
+          "normalized_keyword": "THISPASSWORD"
+        }
+      ]
+    },
+    {
+      "square_id": "square_06",
+      "grid_keyword": "ENTRABCDFGHIKLMOPQSUVWXYZ",
+      "provenance": [
+        {
+          "source": "enter",
+          "scope": "first13",
+          "normalized_keyword": "ENTER"
+        },
+        {
+          "source": "enter",
+          "scope": "full",
+          "normalized_keyword": "ENTER"
+        }
+      ]
+    },
+    {
+      "square_id": "square_07",
+      "grid_keyword": "SHABEFOURICDGKLMNPQTVWXYZ",
+      "provenance": [
+        {
+          "source": "hash_prefix",
+          "scope": "first13",
+          "normalized_keyword": "SHABEFOURFIRS"
+        }
+      ]
+    },
+    {
+      "square_id": "square_08",
+      "grid_keyword": "SHABEFOURITNYLCMDGKPQVWXZ",
+      "provenance": [
+        {
+          "source": "hash_prefix",
+          "scope": "full",
+          "normalized_keyword": "SHABEFOURFIRSTHINTISYOURLASTCOMMAND"
+        }
+      ]
+    },
+    {
+      "square_id": "square_09",
+      "grid_keyword": "SHABEFNTOCDGIKLMPQRUVWXYZ",
+      "provenance": [
+        {
+          "source": "hash_suffix",
+          "scope": "first13",
+          "normalized_keyword": "SHABEFANSTOO"
+        },
+        {
+          "source": "hash_suffix",
+          "scope": "full",
+          "normalized_keyword": "SHABEFANSTOO"
+        }
+      ]
+    },
+    {
+      "square_id": "square_10",
+      "grid_keyword": "SALPHEIONBCDFGKMQRTUVWXYZ",
+      "provenance": [
+        {
+          "source": "salphaseion",
+          "scope": "first13",
+          "normalized_keyword": "SALPHASEION"
+        },
+        {
+          "source": "salphaseion",
+          "scope": "full",
+          "normalized_keyword": "SALPHASEION"
+        }
+      ]
+    },
+    {
+      "square_id": "square_11",
+      "grid_keyword": "COSMIDUALTYBEFGHKNPQRVWXZ",
+      "provenance": [
+        {
+          "source": "cosmic_duality",
+          "scope": "first13",
+          "normalized_keyword": "COSMICDUALITY"
+        },
+        {
+          "source": "cosmic_duality",
+          "scope": "full",
+          "normalized_keyword": "COSMICDUALITY"
+        }
+      ]
+    }
+  ],
+  "schedule_manifest": {
+    "period_7": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      3
+    ],
+    "period_13": [
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      11
+    ],
+    "period_49": [
+      49,
+      49,
+      49,
+      49,
+      49,
+      49,
+      49,
+      49,
+      49,
+      49,
+      49,
+      31
+    ],
+    "period_91": [
+      91,
+      91,
+      91,
+      91,
+      91,
+      91,
+      24
+    ],
+    "period_98": [
+      98,
+      98,
+      98,
+      98,
+      98,
+      80
+    ],
+    "period_472": [
+      472,
+      98
+    ],
+    "period_570": [
+      570
+    ],
+    "custom_98_472": [
+      98,
+      472
+    ]
+  },
+  "configuration_axes": {
+    "operation": [
+      "decrypt",
+      "encrypt"
+    ],
+    "coordinate_order": [
+      "rc",
+      "cr"
+    ],
+    "input_orientation": [
+      "forward",
+      "reverse"
+    ],
+    "output_orientation": [
+      "forward",
+      "reverse"
+    ]
+  },
+  "observed": {
+    "configuration_count": 1536,
+    "distinct_output_count": 1248,
+    "maximum_lcp": 7,
+    "exact_prefix_output_count": 1,
+    "anywhere_output_count": 1,
+    "exact_prefix_outputs": [
+      {
+        "output_sha256": "0c5d984f90e9baefc09f1d3888e62acbd101f9b0194887e2ae88fc6c9967745e",
+        "first_32": "BTCSEEDDEOEMCKEADHBSCHDKBDCSDKDV",
+        "lcp_with_btcseed": 7,
+        "starts_with_btcseed": true,
+        "contains_btcseed": true,
+        "config_labels": [
+          "square_00/period_570/decrypt/rc/forward/forward",
+          "square_00/period_570/decrypt/cr/reverse/reverse"
+        ]
+      }
+    ],
+    "anywhere_outputs": [
+      {
+        "output_sha256": "0c5d984f90e9baefc09f1d3888e62acbd101f9b0194887e2ae88fc6c9967745e",
+        "first_32": "BTCSEEDDEOEMCKEADHBSCHDKBDCSDKDV",
+        "lcp_with_btcseed": 7,
+        "starts_with_btcseed": true,
+        "contains_btcseed": true,
+        "config_labels": [
+          "square_00/period_570/decrypt/rc/forward/forward",
+          "square_00/period_570/decrypt/cr/reverse/reverse"
+        ]
+      }
+    ],
+    "original_config_label": "square_00/period_570/decrypt/rc/forward/forward",
+    "original_matches_phase386": true
+  },
+  "null": {
+    "trials": 10000,
+    "seed": 1061,
+    "maximum_lcp_histogram": {
+      "1": 3737,
+      "2": 5065,
+      "3": 1156,
+      "4": 37,
+      "5": 4,
+      "6": 1
+    },
+    "null_maximum_lcp": 6,
+    "null_trials_reaching_exact_target": 0
+  },
+  "tail_count": 0,
+  "empirical_familywise_p": 9.999000099990002e-05,
+  "planted_positive": {
+    "roundtrip_matches": true,
+    "recovered_prefix": "BTCSEED",
+    "detector_lcp": 7
+  },
+  "oracle_calls": 0
+}
