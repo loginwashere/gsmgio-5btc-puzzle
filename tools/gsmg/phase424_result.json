@@ -1,0 +1,244 @@
+{
+  "phase": 424,
+  "outcome": "recognition_only_no_forward_edge",
+  "oracle_calls": 0,
+  "phase423_input": {
+    "result_sha256": "b1da26548f2acd24d4234ac19283d9114d9f6f7e89b81c332be97b18e30404da",
+    "outcome": "comparison_new_convergence_negative",
+    "eligible_count": 5,
+    "distinct_candidate_count": 18,
+    "promoted_count": 12,
+    "duplicate_promoted_count": 5,
+    "comparison_new_promoted_count": 7,
+    "evaluated_new_count": 7,
+    "terminal_hits": 0,
+    "structural_hits": 0
+  },
+  "semantic_family_count": 5,
+  "families": [
+    {
+      "family": "farewell",
+      "members": [
+        {
+          "display": "BYE",
+          "votes": 5,
+          "best_rank": 1,
+          "comparator_disposition": "not_in_frozen_comparator",
+          "candidate_sha256": "5788ee465175ce1155ebbdf69055180afabfdad45f6fd06d8a125b94f67f0b6c"
+        },
+        {
+          "display": "CIAOBELLAO",
+          "votes": 5,
+          "best_rank": 1,
+          "comparator_disposition": "not_in_frozen_comparator",
+          "candidate_sha256": "9b319371677826efd518d3dd978f12c090f812cf3557fcf2b66d227e5613e865"
+        }
+      ],
+      "total_votes": 10,
+      "gates": {
+        "source_grounded": true,
+        "correct_boundary": true,
+        "independent_discriminator": true,
+        "unique_referent": false,
+        "executable_consumer": false,
+        "classification": "recognition_echo_no_forward_edge",
+        "basis": "HYE->BYE is a controlled boundary result and historical community discussion independently links BYE with the authenticated CIAO BELLA O tail, but no creator source selects that translation, no deterministic BYE->CIAO operation exists, and no downstream consumer is fixed."
+      },
+      "all_gates": false
+    },
+    {
+      "family": "title_salvation",
+      "members": [
+        {
+          "display": "SALVATION",
+          "votes": 5,
+          "best_rank": 1,
+          "comparator_disposition": "not_in_frozen_comparator",
+          "candidate_sha256": "d1f97b88573f7367c3da5a90628b86d37dea9ddb3dec795f0a3ed08c21d2a70e"
+        },
+        {
+          "display": "SALVATIONpromised",
+          "votes": 2,
+          "best_rank": 3,
+          "comparator_disposition": "not_in_frozen_comparator",
+          "candidate_sha256": "c283769d770f8adb4786110ad0000dd33923ff713c4753c77783442f4ef3fea9"
+        }
+      ],
+      "total_votes": 7,
+      "gates": {
+        "source_grounded": true,
+        "correct_boundary": false,
+        "independent_discriminator": false,
+        "unique_referent": true,
+        "executable_consumer": false,
+        "classification": "container_theme_echo",
+        "basis": "SalPhaseIon is the authenticated page title and SALVATION is a bounded researcher-established rebus, but the title is the containing artifact, not an output reached from lastwords; its only open role is an untestable post-decryption checksum."
+      },
+      "all_gates": false
+    },
+    {
+      "family": "architect_rails",
+      "members": [
+        {
+          "display": "BUTHYE",
+          "votes": 4,
+          "best_rank": 1,
+          "comparator_disposition": "not_in_frozen_comparator",
+          "candidate_sha256": "1ead3499d871a51cd73bcf35ac5f34902b28e4b78bb516fed118c3c70e1dc153"
+        },
+        {
+          "display": "BOTHULTIMATELYTHE",
+          "votes": 4,
+          "best_rank": 2,
+          "comparator_disposition": "not_in_frozen_comparator",
+          "candidate_sha256": "285d991e6b09787b1d24b23f217f2f18de9e3045761befaa9a65fd3c5e7cc9af"
+        }
+      ],
+      "total_votes": 8,
+      "gates": {
+        "source_grounded": true,
+        "correct_boundary": true,
+        "independent_discriminator": false,
+        "unique_referent": true,
+        "executable_consumer": false,
+        "classification": "same_boundary_restatement",
+        "basis": "BUTHYE and BOTHULTIMATELYTHE restate the mechanically reconstructed boundary. The artifact inventory finds no independent yin-yang discriminator and no surviving deterministic downstream operation."
+      },
+      "all_gates": false
+    },
+    {
+      "family": "creator_macro_literals",
+      "members": [
+        {
+          "display": "promised",
+          "votes": 5,
+          "best_rank": 1,
+          "comparator_disposition": "exact_duplicate_in_frozen_comparator",
+          "candidate_sha256": "1e0222143c6f7f6f2ed8f92325e6b614e7223a6ab25edf03612096e4b0a92f61"
+        },
+        {
+          "display": "verylaststepisatruegiveaway",
+          "votes": 4,
+          "best_rank": 7,
+          "comparator_disposition": "exact_duplicate_in_frozen_comparator",
+          "candidate_sha256": "ccd41b572c0c0f70bb276f4b6eee53572d9d6203e4c2fb70d39ace2546418654"
+        },
+        {
+          "display": "itsinfrontofyoureyesbutyourenotseeingit",
+          "votes": 2,
+          "best_rank": 7,
+          "comparator_disposition": "exact_duplicate_in_frozen_comparator",
+          "candidate_sha256": "a3116564a2f81e9a6f06bcb019d57040b931fc0e41dc9fe1d29b2ef84a987ab4"
+        },
+        {
+          "display": "yinyang",
+          "votes": 3,
+          "best_rank": 9,
+          "comparator_disposition": "exact_duplicate_in_frozen_comparator",
+          "candidate_sha256": "9f9d79ece6f5c956063beff2130631da40a37d050cb3813190b58abb17fec3db"
+        }
+      ],
+      "total_votes": 14,
+      "gates": {
+        "source_grounded": true,
+        "correct_boundary": true,
+        "independent_discriminator": false,
+        "unique_referent": false,
+        "executable_consumer": false,
+        "classification": "prompt_literal_no_referent",
+        "basis": "These are exact creator-authored macro literals, but the prompt exposed them verbatim and the referents of yinyang and in-front-of-your-eyes remain unresolved; convergence adds no independent selector."
+      },
+      "all_gates": false
+    },
+    {
+      "family": "solved_tail_extraction",
+      "members": [
+        {
+          "display": "HALFANDBETTERHALF",
+          "votes": 2,
+          "best_rank": 4,
+          "comparator_disposition": "exact_duplicate_in_frozen_comparator",
+          "candidate_sha256": "b8580371cff7f58acc860b21822863ff273ab0774c1920575f9a0b3a46400e16"
+        },
+        {
+          "display": "LIVE",
+          "votes": 2,
+          "best_rank": 4,
+          "comparator_disposition": "not_in_frozen_comparator",
+          "candidate_sha256": "35e0d0360a0af6d115f9df30e1b00b5b544ebf4bb93272aa02cd5d64b064a64b"
+        }
+      ],
+      "total_votes": 4,
+      "gates": {
+        "source_grounded": true,
+        "correct_boundary": false,
+        "independent_discriminator": false,
+        "unique_referent": true,
+        "executable_consumer": false,
+        "classification": "backward_solved_output_echo",
+        "basis": "HALFANDBETTERHALF and LIVE are exact substrings of the already-solved Phase 3.2.2 answer. No creator instruction reselects them after the Architect boundary or specifies a new consumer."
+      },
+      "all_gates": false
+    }
+  ],
+  "promoted_families": [],
+  "consumer_count": 6,
+  "consumers": [
+    {
+      "consumer": "recognition_output_is_thispassword",
+      "status": "closed_for_direct_literal_forms_only",
+      "selected_by_phase423": false
+    },
+    {
+      "consumer": "faed_plaintext_is_thispassword",
+      "status": "live_but_decoder_unknown",
+      "selected_by_phase423": false
+    },
+    {
+      "consumer": "dbbi_faed_joint_result_is_thispassword",
+      "status": "live_but_operator_unknown",
+      "selected_by_phase423": false
+    },
+    {
+      "consumer": "paired_page_objects_are_yinyang",
+      "status": "not_qualified",
+      "selected_by_phase423": false,
+      "qualification": {
+        "primary": true,
+        "visible": true,
+        "dual": false,
+        "correct_boundary": false,
+        "independent_discriminator": false,
+        "reason": "The two authenticated textareas are visible together, but DOM adjacency alone supplies neither complementarity nor a consumer edge.",
+        "all_core": false,
+        "qualifies_for_local_mechanics": false
+      }
+    },
+    {
+      "consumer": "cosmic_duality_book_is_reached_artifact",
+      "status": "wrong_boundary_no_operation",
+      "selected_by_phase423": false,
+      "qualification": {
+        "primary": true,
+        "visible": true,
+        "dual": true,
+        "correct_boundary": false,
+        "independent_discriminator": true,
+        "reason": "Creator-confirmed physical clue with explicit yin/yang content, but no established operation connects it to the Architect boundary. Phase 260/261: the book's gold/black yin-yang drop-cap design (pixel-confirmed) decorates the title's C/D initials AND ordinary body paragraphs book-wide -- a house style, not title-unique. Roman CD=400 matches the yellow prime sum, but as corroboration/possible coincidence rather than an independent echo. Phase 262: (page-A1Z26(letter)) mod 26 over Chapter 2's first three drop caps spells YIN exactly (pixel-confirmed); no YANG counterpart found, bounded lead only. Still no operation.",
+        "all_core": false,
+        "qualifies_for_local_mechanics": false
+      }
+    },
+    {
+      "consumer": "salphaseion_title_is_reached_artifact",
+      "status": "container_not_forward_edge",
+      "selected_by_phase423": false,
+      "salvation_checksum_role": "open_untestable"
+    }
+  ],
+  "selected_consumers": [],
+  "strongest_recognition_family": "farewell",
+  "most_local_live_role": "faed_plaintext_is_password",
+  "missing_edge": "a source-grounded FAED decoder or DBBI/FAED relationship",
+  "verdict": "Phase 423 convergence strengthens the BYE/CIAO farewell family as the best recognition echo because it also has independent historical community support. It does not select a unique referent or executable forward edge. The other families are prompt literals, same-boundary restatements, page themes, or backward echoes. No known consumer is selected; the live frontier remains FAED plaintext as thispassword with its decoder unknown."
+}
