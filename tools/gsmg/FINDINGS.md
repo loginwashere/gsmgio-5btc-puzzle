@@ -27181,3 +27181,40 @@ results; `test_phase426_btcseed_heldout_continuation_structure_audit.py`;
 `doc/GSMG_PHASE426_BTCSEED_HELDOUT_CONTINUATION_STRUCTURE_AUDIT.md`; and three
 frozen pre-registrations in `doc/Brainstorms/`.
 
+## Phase 429 -- reproducible `BTCSEED` Bifid alphabet-completion GPU search implementation (2026-08-27)
+
+**Question:** can the crib-preserving pure-output-relabeling family be searched
+exactly and reproducibly on the attached RTX 5070 without extending to the
+coordinate-changing `16!` family or invoking any downstream oracle?
+
+**Method:** froze all Bifid-square cells used by the nine FAED source symbols
+plus `S,T`, leaving `KLMNOPQRUVWXYZ` to permute lexicographically over fourteen
+free cells (`14! = 87,178,291,200`). Every candidate therefore preserves exact
+leading `BTCSEED`; only `decoded[7:]` is scored by the pinned English quadgram
+table. Implemented a Rust/CUDA device-resident Lehmer search with exact global
+block-max reduction, fingerprint-bound atomic checkpoints, an independent CPU
+reference, and pinned CUDA/Rust Docker build for `sm_120`.
+
+**Validation:** six Rust tests pass in both the host CPU build and Docker
+builder. GPU self-test passes isolated score comparisons, deterministic replay,
+and exhaustive CPU/GPU agreement on the best rank in `0:10000`. Checkpoint and
+zero-work completed resume passed. A bounded one-billion-candidate benchmark
+sustained `1.122` billion candidates/second and projects `77.70` seconds of raw
+scan time for the full family; operational wall time will be higher.
+
+**Full result:** after separate explicit authorization, all
+`87,178,291,200` ranks completed in `78.354445772` seconds. The exact global
+quadgram maximum is rank `1013932382`, mean `-6.812621634`, square
+`DBIFHCEGAKNMRUOPLSTWXYVQZ`, independently reproduced by the CPU reference.
+Its continuation remains mechanically structured and non-readable.
+
+**Disposition:** `full_family_completed_no_plaintext_promotion`. The retained
+block-winner list is not an exact global top-K, but the first entry is the exact
+global maximum. The result does not supply coherent held-out plaintext and is
+not promoted as a puzzle solution. No password, Bitcoin, blob-oracle, or `16!`
+search was performed.
+
+**Artifacts:** `tools/bifid_gpu_search/`, including
+`phase429_full_result.json` and `phase429_terminal_checkpoint.json`;
+`doc/GSMG_PHASE429_BTCSEED_BIFID_GPU_SEARCH.md`, and the frozen Phase-429
+pre-registration in `doc/Brainstorms/`.

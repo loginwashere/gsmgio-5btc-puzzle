@@ -1,0 +1,1038 @@
+{
+  "tool": "bifid_gpu_search",
+  "mode": "benchmark",
+  "device": "NVIDIA GeForce RTX 5070",
+  "range_start": 0,
+  "range_end_exclusive": 1000000000,
+  "candidates_processed_this_run": 1000000000,
+  "elapsed_seconds": 0.891254796,
+  "candidates_per_second": 1122013597.5571232,
+  "projected_full_14factorial_seconds": 77.6980701390846,
+  "projected_full_14factorial_hours": 0.021582797260856833,
+  "exact_global_winner_for_completed_range": {
+    "rank": 974015582,
+    "score_total": -3823.6887,
+    "score_mean": -6.828015572684151,
+    "square": "DBIFHCEGAKNLRUOPMSTWXYVQZ",
+    "decoded_sha256": "4ce757d6deb6e3b43ed2d5c6d32cd3df58215df2c846e8c5b659280142bc6b68",
+    "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBPEEBDDBCRDSBDCODG",
+    "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBPEEBDDBCRDSBDCODGCODRCRC",
+    "starts_with_btcseed": true
+  },
+  "retained_block_winners": [
+    {
+      "rank": 974015582,
+      "score_total": -3823.6887,
+      "score_mean": -6.828015572684151,
+      "square": "DBIFHCEGAKNLRUOPMSTWXYVQZ",
+      "decoded_sha256": "4ce757d6deb6e3b43ed2d5c6d32cd3df58215df2c846e8c5b659280142bc6b68",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 974040914,
+      "score_total": -3824.041,
+      "score_mean": -6.828644670758929,
+      "square": "DBIFHCEGAKNLRUOYMSTWXPVQZ",
+      "decoded_sha256": "60573363b0d1291ed15af06958ccbcc9484dd427bcba0e8a548493ac15539708",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBYEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBYEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 974045613,
+      "score_total": -3824.2178,
+      "score_mean": -6.828960309709822,
+      "square": "DBIFHCEGAKNLRUOZMSTPXYVWQ",
+      "decoded_sha256": "60682c90630d6f4dc17e6127c797045b3641f386b9d781aa89bcd243aae65ea0",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 972545052,
+      "score_total": -3827.7878,
+      "score_mean": -6.835335431780134,
+      "square": "DBIFHCEGAKNLRMOXUSTPQYVWZ",
+      "decoded_sha256": "cfa86d1baf2fbeeb383190485cca6b1696e0c5f1272fb821d102663cd97e5b04",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDQBVCOCMCHCUDICIBXEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDQBVCOCMCHCUDICIBXEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 972555213,
+      "score_total": -3828.417,
+      "score_mean": -6.836458914620536,
+      "square": "DBIFHCEGAKNLRMOZUSTPXYVWQ",
+      "decoded_sha256": "80bea912fade7a169bd0938a7ee21f246104a8069ce97b581a8dc59339ff03da",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCOCMCHCUDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCOCMCHCUDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 972519422,
+      "score_total": -3828.5137,
+      "score_mean": -6.8366315569196425,
+      "square": "DBIFHCEGAKNLRMOPUSTWXYVQZ",
+      "decoded_sha256": "835034f3ff7d2b36db96a3d74f70585ae5782542f3442f80c794135cde937eb8",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCOCMCHCUDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCOCMCHCUDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 972535260,
+      "score_total": -3830.0273,
+      "score_mean": -6.839334542410715,
+      "square": "DBIFHCEGAKNLRMOVUSTWXYPQZ",
+      "decoded_sha256": "605085475c94a30e1e4b4562bbcd5397394d304b942fc02eb4360a4427822801",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBPCOCMCHCUDICIBVEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBPCOCMCHCUDICIBVEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 973306143,
+      "score_total": -3833.0913,
+      "score_mean": -6.844805908203125,
+      "square": "DBIFHCEGAKNLRPOWUSTMXYVZQ",
+      "decoded_sha256": "2b6ea30ef6b0ccf88c7ee504481f855266151e1eb884fc60e10f2b4193bf1488",
+      "decoded_prefix_64": "BTCSEEDDEPELCKEADHBSCHDKBDCSDKDXBVCOCPCHCUDICIBWEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEPELCKEADHBSCHDKBDCSDKDXBVCOCPCHCUDICIBWEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 975468326,
+      "score_total": -3833.5256,
+      "score_mean": -6.845581490652902,
+      "square": "DBIFHCEGAKNLRYOPUSTMXWVQZ",
+      "decoded_sha256": "bcd1adb2c86404cf89e65a21ec65a1dea50a1b85f505b28b3e04574a0594f3ac",
+      "decoded_prefix_64": "BTCSEEDDEYELCKEADHBSCHDKBDCSDKDXBVCOCYCHCUDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEYELCKEADHBSCHDKBDCSDKDXBVCOCYCHCUDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 973314926,
+      "score_total": -3834.0708,
+      "score_mean": -6.846555001395089,
+      "square": "DBIFHCEGAKNLRPOYMSTUXWVQZ",
+      "decoded_sha256": "acfb834b383e60528418addd2bcbe8059bd3d9a1689a9f92ef713558fed144ea",
+      "decoded_prefix_64": "BTCSEEDDEPELCKEADHBSCHDKBDCSDKDXBVCOCPCHCMDICIBYEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEPELCKEADHBSCHDKBDCSDKDXBVCOCPCHCMDICIBYEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 975499309,
+      "score_total": -3834.258,
+      "score_mean": -6.846889386858259,
+      "square": "DBIFHCEGAKNLRYOZUSTMXVPWQ",
+      "decoded_sha256": "343f4a22e0fddd70ea78854a4359630e61c397ea50d4f29515642373ea6fbbd7",
+      "decoded_prefix_64": "BTCSEEDDEYELCKEADHBSCHDKBDCSDKDXBPCOCYCHCUDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEYELCKEADHBSCHDKBDCSDKDXBPCOCYCHCUDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 973285503,
+      "score_total": -3836.4111,
+      "score_mean": -6.850734165736607,
+      "square": "DBIFHCEGAKNLRPOMUSTWXYVZQ",
+      "decoded_sha256": "eddeee657bfe2c2f9c942f71256e94c2505d699a01f31af6cc12b680e03cfa6a",
+      "decoded_prefix_64": "BTCSEEDDEPELCKEADHBSCHDKBDCSDKDXBVCOCPCHCUDICIBMEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEPELCKEADHBSCHDKBDCSDKDXBVCOCPCHCUDICIBMEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 999045453,
+      "score_total": -3837.7827,
+      "score_mean": -6.853183419363839,
+      "square": "DBIFHCEGAKNMLROZUSTPXYVWQ",
+      "decoded_sha256": "7154e835ec4b753ac2bd83cacb1f1a065b6b47536fdddfbc3d614b8fe901915e",
+      "decoded_prefix_64": "BTCSEEDDEREMCKEADHBSCHDKBDCSDKDXBVCOCRCHCUDICIBZEEBDDBCLDSBDCODG",
+      "tail_prefix_64": "DEREMCKEADHBSCHDKBDCSDKDXBVCOCRCHCUDICIBZEEBDDBCLDSBDCODGCODLCLC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 975484164,
+      "score_total": -3838.1882,
+      "score_mean": -6.853907557896205,
+      "square": "DBIFHCEGAKNLRYOVUSTMXWPQZ",
+      "decoded_sha256": "fe6007b34300e40eca150655cd3e882122c4f3aff5e05f7eee1a2efc5989b9f5",
+      "decoded_prefix_64": "BTCSEEDDEYELCKEADHBSCHDKBDCSDKDXBPCOCYCHCUDICIBVEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEYELCKEADHBSCHDKBDCSDKDXBPCOCYCHCUDICIBVEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 974012412,
+      "score_total": -3839.284,
+      "score_mean": -6.855864170619419,
+      "square": "DBIFHCEGAKNLRUOMWSTPQYVXZ",
+      "decoded_sha256": "0ea73380a28253fd0b6bdf17ed0e5b15676090d05ad75145c85557252674cd99",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDQBVCOCUCHCWDICIBMEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDQBVCOCUCHCWDICIBMEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 896722046,
+      "score_total": -3840.648,
+      "score_mean": -6.8582999093191965,
+      "square": "DBIFHCEGAKMYRNOPLSTUXWVQZ",
+      "decoded_sha256": "f161fd2d83a5f0aebc45c3d12d87090a8786f52f0e79b7110d185209008e7a00",
+      "decoded_prefix_64": "BTCSEEDDENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCLDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCLDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 999025214,
+      "score_total": -3840.9211,
+      "score_mean": -6.858787754603795,
+      "square": "DBIFHCEGAKNMLROVUSTPQYXWZ",
+      "decoded_sha256": "4a118a6be5f183776ec99cd5f5e5608e1db13e805f535d365bd1a38e89cb883e",
+      "decoded_prefix_64": "BTCSEEDDEREMCKEADHBSCHDKBDCSDKDQBXCOCRCHCUDICIBVEEBDDBCLDSBDCODG",
+      "tail_prefix_64": "DEREMCKEADHBSCHDKBDCSDKDQBXCOCRCHCUDICIBVEEBDDBCLDSBDCODGCODLCLC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 534930782,
+      "score_total": -3841.732,
+      "score_mean": -6.860235595703125,
+      "square": "DBIFHCEGAKMNRUOPLSTWXYVQZ",
+      "decoded_sha256": "3b57b8b2ccd6bfa209d91f0397ad4172558dc65012b6b61e710c5749cfb24adf",
+      "decoded_prefix_64": "BTCSEEDDEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCLDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCLDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 999009663,
+      "score_total": -3841.7659,
+      "score_mean": -6.860296194893973,
+      "square": "DBIFHCEGAKNMLROPUSTWXYVZQ",
+      "decoded_sha256": "3e8cae32abd62214637370649865659e42e4f5fcc821d587ffc0413c2a647ff1",
+      "decoded_prefix_64": "BTCSEEDDEREMCKEADHBSCHDKBDCSDKDXBVCOCRCHCUDICIBPEEBDDBCLDSBDCODG",
+      "tail_prefix_64": "DEREMCKEADHBSCHDKBDCSDKDXBVCOCRCHCUDICIBPEEBDDBCLDSBDCODGCODLCLC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 14516223,
+      "score_total": -3841.9634,
+      "score_mean": -6.8606488909040175,
+      "square": "DBIFHCEGAKLMRNOPUSTWXYVZQ",
+      "decoded_sha256": "f2295901ee4c356d3b6dab641ac17eb95e5b47d4a7ce29be4a260cbc0d4260cd",
+      "decoded_prefix_64": "BTCSEEDDENEMCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEMCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 534956114,
+      "score_total": -3842.0847,
+      "score_mean": -6.860865565708705,
+      "square": "DBIFHCEGAKMNRUOYLSTWXPVQZ",
+      "decoded_sha256": "4dc10eed50bf7ea84ad22246eb9ae7c148b8b350364f837b2c7cf8667dab59c0",
+      "decoded_prefix_64": "BTCSEEDDEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCLDICIBYEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCLDICIBYEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 999408333,
+      "score_total": -3842.4434,
+      "score_mean": -6.861505998883929,
+      "square": "DBIFHCEGAKNMLUOZRSTPXYVWQ",
+      "decoded_sha256": "da88fe4423eb83c7d6e819e3e9627abc857228fc643bcb56850fa4b12be470cc",
+      "decoded_prefix_64": "BTCSEEDDEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBZEEBDDBCLDSBDCODG",
+      "tail_prefix_64": "DEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBZEEBDDBCLDSBDCODGCODLCLC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 14552013,
+      "score_total": -3842.5088,
+      "score_mean": -6.861622837611607,
+      "square": "DBIFHCEGAKLMRNOZUSTPXYVWQ",
+      "decoded_sha256": "6b04a75b9e19360d9d010d2303a6580059ceafa9ff8354af000a70088715e89c",
+      "decoded_prefix_64": "BTCSEEDDENEMCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEMCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 16042413,
+      "score_total": -3842.7356,
+      "score_mean": -6.862027849469866,
+      "square": "DBIFHCEGAKLMRUOZNSTPXYVWQ",
+      "decoded_sha256": "5157d7a1876a71099de2b7fe1b8b9bba0637924f870e7002d17420e71d74323e",
+      "decoded_prefix_64": "BTCSEEDDEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 14536863,
+      "score_total": -3843.0593,
+      "score_mean": -6.862605939592634,
+      "square": "DBIFHCEGAKLMRNOWUSTPXYVZQ",
+      "decoded_sha256": "ff8ae03cf0a78fce9f9adb445a842079fe93634eb5018cfa22c18ebc703ab03f",
+      "decoded_prefix_64": "BTCSEEDDENEMCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBWEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEMCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBWEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 14532061,
+      "score_total": -3843.2383,
+      "score_mean": -6.862925502232143,
+      "square": "DBIFHCEGAKLMRNOVUSTWXYPZQ",
+      "decoded_sha256": "e592e23f84dfb93144d8544ddf6c4c7558deeceab3cf38042b6c07a113cd820f",
+      "decoded_prefix_64": "BTCSEEDDENEMCKEADHBSCHDKBDCSDKDXBPCOCNCHCUDICIBVEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEMCKEADHBSCHDKBDCSDKDXBPCOCNCHCUDICIBVEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 896742314,
+      "score_total": -3843.3948,
+      "score_mean": -6.8632049560546875,
+      "square": "DBIFHCEGAKMYRNOWLSTUXPVQZ",
+      "decoded_sha256": "92545cd46e44d5728e1ae209c3e47285a503345752f04a08d8755b6fa7a50dbc",
+      "decoded_prefix_64": "BTCSEEDDENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCLDICIBWEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCLDICIBWEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 16012382,
+      "score_total": -3843.586,
+      "score_mean": -6.863546316964285,
+      "square": "DBIFHCEGAKLMRUOPNSTWXYVQZ",
+      "decoded_sha256": "2258ad57f1e55f3c29c52f31242c8727677b7ef74b990dff2e1787afd755658a",
+      "decoded_prefix_64": "BTCSEEDDEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 16037714,
+      "score_total": -3843.938,
+      "score_mean": -6.864174979073661,
+      "square": "DBIFHCEGAKLMRUOYNSTWXPVQZ",
+      "decoded_sha256": "3f821a22937e418320df15d100b484b2b347b3e03a6c6fc8ca3b80ae5f350fdf",
+      "decoded_prefix_64": "BTCSEEDDEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBYEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBYEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 534945663,
+      "score_total": -3844.0056,
+      "score_mean": -6.864295741489955,
+      "square": "DBIFHCEGAKMNRUOWLSTPXYVZQ",
+      "decoded_sha256": "323f0039100a0afb35a2b86fd72e11096457cf088d223305c5485634d6346458",
+      "decoded_prefix_64": "BTCSEEDDEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCLDICIBWEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCLDICIBWEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 959491533,
+      "score_total": -3844.1248,
+      "score_mean": -6.864508492606027,
+      "square": "DBIFHCEGAKNLMUOZRSTPXYVWQ",
+      "decoded_sha256": "31a67eb333ac7b6c86596ff881fd4388995725642c23d355200d902645057b52",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBZEEBDDBCMDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBZEEBDDBCMDSBDCODGCODMCMC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 999372542,
+      "score_total": -3844.1763,
+      "score_mean": -6.8646004813058035,
+      "square": "DBIFHCEGAKNMLUOPRSTWXYVQZ",
+      "decoded_sha256": "2d32adc5d9444aab45fb206a5e50206b5f93ce8644eeb802f770a34fb5a3e113",
+      "decoded_prefix_64": "BTCSEEDDEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBPEEBDDBCLDSBDCODG",
+      "tail_prefix_64": "DEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBPEEBDDBCLDSBDCODGCODLCLC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 959128653,
+      "score_total": -3844.2488,
+      "score_mean": -6.8647299630301335,
+      "square": "DBIFHCEGAKNLMROZUSTPXYVWQ",
+      "decoded_sha256": "b9bcf8a07848bdd1e0b0e116185944fab8573f324314508ac81925ed6c8f5316",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCOCRCHCUDICIBZEEBDDBCMDSBDCODG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCOCRCHCUDICIBZEEBDDBCMDSBDCODGCODMCMC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 959455742,
+      "score_total": -3844.4224,
+      "score_mean": -6.865039934430803,
+      "square": "DBIFHCEGAKNLMUOPRSTWXYVQZ",
+      "decoded_sha256": "437cdfa8f91aea84a25b6efaebb1d3608d5f28eacfa5a25819e66900255cfb2d",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBPEEBDDBCMDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBPEEBDDBCMDSBDCODGCODMCMC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 974742543,
+      "score_total": -3844.551,
+      "score_mean": -6.865269688197545,
+      "square": "DBIFHCEGAKNLRWOPUSTMXYVZQ",
+      "decoded_sha256": "f80a369a964a62a330a9d0870613bf6916d191952df52ed274015fc4f6daf0ca",
+      "decoded_prefix_64": "BTCSEEDDEWELCKEADHBSCHDKBDCSDKDXBVCOCWCHCUDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEWELCKEADHBSCHDKBDCSDKDXBVCOCWCHCUDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 999393183,
+      "score_total": -3844.6958,
+      "score_mean": -6.865528215680803,
+      "square": "DBIFHCEGAKNMLUOWRSTPXYVZQ",
+      "decoded_sha256": "75ad99c67a18b1cb38f7ef78cfd8f3747e3a15ff6cd0e01cd03d92c44e8e56b4",
+      "decoded_prefix_64": "BTCSEEDDEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBWEEBDDBCLDSBDCODG",
+      "tail_prefix_64": "DEUEMCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBWEEBDDBCLDSBDCODGCODLCLC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 974758381,
+      "score_total": -3845.3801,
+      "score_mean": -6.866750226702009,
+      "square": "DBIFHCEGAKNLRWOVUSTMXYPZQ",
+      "decoded_sha256": "0b2aea8596f0d55198288d67ced3091af4c0fdc4de6130977ecc551f4476a029",
+      "decoded_prefix_64": "BTCSEEDDEWELCKEADHBSCHDKBDCSDKDXBPCOCWCHCUDICIBVEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEWELCKEADHBSCHDKBDCSDKDXBPCOCWCHCUDICIBVEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 495044013,
+      "score_total": -3845.3936,
+      "score_mean": -6.866774204799107,
+      "square": "DBIFHCEGAKMLRUOZNSTPXYVWQ",
+      "decoded_sha256": "c6d0e5e0d6c69b41404e8ef63f00bab6ccb45979e6b587acdbc0a4c4f50f9f57",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 495013982,
+      "score_total": -3845.4187,
+      "score_mean": -6.866819109235491,
+      "square": "DBIFHCEGAKMLRUOPNSTWXYVQZ",
+      "decoded_sha256": "a78fb4fe890d84321c725d072db1da3990645ce60b32574d5fff16b2acf7da58",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 963040429,
+      "score_total": -3845.4849,
+      "score_mean": -6.866937255859375,
+      "square": "DBIFHCEGAKNLORYZUSTMXVPWQ",
+      "decoded_sha256": "0bb6b6ae4a2792271bf15683f5ed5008a766da94c2876d238a69be3bb83edf05",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBPCYCRCHCUDICIBZEEBDDBCODSBDCYDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBPCYCRCHCUDICIBZEEBDDBCODSBDCYDGCYDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 54468813,
+      "score_total": -3845.5684,
+      "score_mean": -6.867086356026785,
+      "square": "DBIFHCEGAKLNRMOZUSTPXYVWQ",
+      "decoded_sha256": "6377c51a986afbf1e3753d9c86f75b22743a94f6af89e3dd08c777e5de90b688",
+      "decoded_prefix_64": "BTCSEEDDEMENCKEADHBSCHDKBDCSDKDXBVCOCMCHCUDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEMENCKEADHBSCHDKBDCSDKDXBVCOCMCHCUDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 495039314,
+      "score_total": -3845.7712,
+      "score_mean": -6.86744864327567,
+      "square": "DBIFHCEGAKMLRUOYNSTWXPVQZ",
+      "decoded_sha256": "b2d6eefcd17c75f281ec15bf4602af7f15931408abb6a5e7643ee8ece0435408",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBYEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBYEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 963009362,
+      "score_total": -3845.9683,
+      "score_mean": -6.867800467354911,
+      "square": "DBIFHCEGAKNLORYPUSTMQVXWZ",
+      "decoded_sha256": "43cda16e4f75ff8a52836d6fdbd6d6808a386b45906f797cb3bef2a1f8189fe7",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDQBXCYCRCHCUDICIBPEEBDDBCODSBDCYDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDQBXCYCRCHCUDICIBPEEBDDBCODSBDCYDGCYDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 959118492,
+      "score_total": -3846.0652,
+      "score_mean": -6.86797354561942,
+      "square": "DBIFHCEGAKNLMROXUSTPQYVWZ",
+      "decoded_sha256": "925e33796b36f27b2c19d3d6097c6331495390a0e6a06a5f5fadc1fac7cf1253",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDQBVCOCRCHCUDICIBXEEBDDBCMDSBDCODG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDQBVCOCRCHCUDICIBXEEBDDBCMDSBDCODGCODMCMC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 959476383,
+      "score_total": -3846.075,
+      "score_mean": -6.867990984235491,
+      "square": "DBIFHCEGAKNLMUOWRSTPXYVZQ",
+      "decoded_sha256": "dc80452c9971a70c510294e81b32eb9fbafb25140eeb6b399bd3f798ec29633a",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBWEEBDDBCMDSBDCODG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCOCUCHCRDICIBWEEBDDBCMDSBDCODGCODMCMC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 54433023,
+      "score_total": -3846.345,
+      "score_mean": -6.868473161969866,
+      "square": "DBIFHCEGAKLNRMOPUSTWXYVZQ",
+      "decoded_sha256": "3fc80ff337be5e80bbcd3389cf987747c0b3598a4be73552c876ca3a5552eb1d",
+      "decoded_prefix_64": "BTCSEEDDEMENCKEADHBSCHDKBDCSDKDXBVCOCMCHCUDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEMENCKEADHBSCHDKBDCSDKDXBVCOCMCHCUDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 54458652,
+      "score_total": -3846.4543,
+      "score_mean": -6.8686684744698665,
+      "square": "DBIFHCEGAKLNRMOXUSTPQYVWZ",
+      "decoded_sha256": "16cb14e9bc1a91dce3aa560f4545f423e7c79785f61956fd9138d5dd230f41d1",
+      "decoded_prefix_64": "BTCSEEDDEMENCKEADHBSCHDKBDCSDKDQBVCOCMCHCUDICIBXEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEMENCKEADHBSCHDKBDCSDKDQBVCOCMCHCUDICIBXEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 959092863,
+      "score_total": -3846.7,
+      "score_mean": -6.869107055664062,
+      "square": "DBIFHCEGAKNLMROPUSTWXYVZQ",
+      "decoded_sha256": "bf2579b689d870527143d28f9d94f046767b4268fe6eee0eab69cf0415c38f4a",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCOCRCHCUDICIBPEEBDDBCMDSBDCODG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCOCRCHCUDICIBPEEBDDBCMDSBDCODGCODMCMC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 973975262,
+      "score_total": -3846.7263,
+      "score_mean": -6.869154139927455,
+      "square": "DBIFHCEGAKNLRUMPOSTWXYVQZ",
+      "decoded_sha256": "d02550e1797fe481542d75c4c009ea78434e9fe550db11675635580088eea4c5",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCMCUCHCODICIBPEEBDDBCRDSBDCMDG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCMCUCHCODICIBPEEBDDBCRDSBDCMDGCMDRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 962781303,
+      "score_total": -3846.9678,
+      "score_mean": -6.869585309709821,
+      "square": "DBIFHCEGAKNLORPWMSTUXYVZQ",
+      "decoded_sha256": "1b7b7b20a1e1ed8eadafbf4abd7758687f2276bce115148ad5acd24cb5605e47",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCPCRCHCMDICIBWEEBDDBCODSBDCPDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCPCRCHCMDICIBWEEBDDBCODSBDCPDGCPDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 962876973,
+      "score_total": -3847.2625,
+      "score_mean": -6.870111519949777,
+      "square": "DBIFHCEGAKNLORUZMSTPXYVWQ",
+      "decoded_sha256": "dcda58734ee37e609b91842bd4bdfbaa28471f3e6c52e28d2c9417dd30e53012",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCUCRCHCMDICIBZEEBDDBCODSBDCUDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCUCRCHCMDICIBZEEBDDBCODSBDCUDGCUDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 961653063,
+      "score_total": -3847.309,
+      "score_mean": -6.870194789341518,
+      "square": "DBIFHCEGAKNLOMPWRSTUXYVZQ",
+      "decoded_sha256": "c23bb75d96529c0d0239f83f644083581775e65fe9db9a415f9095819953cab3",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCPCMCHCRDICIBWEEBDDBCODSBDCPDG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCPCMCHCRDICIBWEEBDDBCODSBDCPDGCPDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 896752419,
+      "score_total": -3847.3481,
+      "score_mean": -6.870264543805804,
+      "square": "DBIFHCEGAKMYRNOZLSTUXPVWQ",
+      "decoded_sha256": "851ce512c17f037e042a6d8bf5a69e29f2c45e3434174c77a3bfd08df78efcfc",
+      "decoded_prefix_64": "BTCSEEDDENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCLDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCLDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 417720446,
+      "score_total": -3847.4028,
+      "score_mean": -6.870362200055804,
+      "square": "DBIFHCEGAKLYRNOPMSTUXWVQZ",
+      "decoded_sha256": "2b4c762a5f339e821346ffa4003c823b6f847f38194df344e744f128624ff221",
+      "decoded_prefix_64": "BTCSEEDDENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCMDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCMDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 962737214,
+      "score_total": -3847.6687,
+      "score_mean": -6.870836966378349,
+      "square": "DBIFHCEGAKNLORMVUSTPQYXWZ",
+      "decoded_sha256": "b1b136a7065ca2e95a4bdecb1d902c5f826152e8515f1b6dd000a8510edde31c",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDQBXCMCRCHCUDICIBVEEBDDBCODSBDCMDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDQBXCMCRCHCUDICIBVEEBDDBCODSBDCMDGCMDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 962721663,
+      "score_total": -3847.673,
+      "score_mean": -6.87084481375558,
+      "square": "DBIFHCEGAKNLORMPUSTWXYVZQ",
+      "decoded_sha256": "2cbed7153de3e95e6a575bdd99841be0ec774a9217259ff1ecefa3e492ede9c1",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCMCRCHCUDICIBPEEBDDBCODSBDCMDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCMCRCHCUDICIBPEEBDDBCODSBDCMDGCMDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 998303943,
+      "score_total": -3847.6829,
+      "score_mean": -6.870862252371651,
+      "square": "DBIFHCEGAKNMLPOWRSTUXYVZQ",
+      "decoded_sha256": "2af96fcde220ade6476eb5c26368c1e9bbf2c8874cd849284fd099d7ee557bad",
+      "decoded_prefix_64": "BTCSEEDDEPEMCKEADHBSCHDKBDCSDKDXBVCOCPCHCRDICIBWEEBDDBCLDSBDCODG",
+      "tail_prefix_64": "DEPEMCKEADHBSCHDKBDCSDKDXBVCOCPCHCRDICIBWEEBDDBCLDSBDCODGCODLCLC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 963084543,
+      "score_total": -3848.054,
+      "score_mean": -6.871524919782366,
+      "square": "DBIFHCEGAKNLOUMPRSTWXYVZQ",
+      "decoded_sha256": "9a2044a0829278bd91b6d17760a0c49ae1abcaf2168a86490f45b79c2ec09aa1",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCMCUCHCRDICIBPEEBDDBCODSBDCMDG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCMCUCHCRDICIBPEEBDDBCODSBDCMDGCMDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 977674413,
+      "score_total": -3848.0579,
+      "score_mean": -6.871531895228794,
+      "square": "DBIFHCEGAKNLUROZMSTPXYVWQ",
+      "decoded_sha256": "24c95f545705753c197b244d9c7134168c0a0b9408a4b5492a596c475471fae9",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCOCRCHCMDICIBZEEBDDBCUDSBDCODG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCOCRCHCMDICIBZEEBDDBCUDSBDCODGCODUCUC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 534220023,
+      "score_total": -3848.2234,
+      "score_mean": -6.871827479771206,
+      "square": "DBIFHCEGAKMNRPOWLSTUXYVZQ",
+      "decoded_sha256": "8562d4e6b2b9417b85bce5c2e5abe1082bf8c62f5555e4a4d0ca396f8cfca398",
+      "decoded_prefix_64": "BTCSEEDDEPENCKEADHBSCHDKBDCSDKDXBVCOCPCHCLDICIBWEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEPENCKEADHBSCHDKBDCSDKDXBVCOCPCHCLDICIBWEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 963030325,
+      "score_total": -3848.2866,
+      "score_mean": -6.8719403948102675,
+      "square": "DBIFHCEGAKNLORYWUSTMXVPZQ",
+      "decoded_sha256": "1b04d472b3f8970498586cfb53dbf28f359f71633763498d5edcda1a5055e401",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBPCYCRCHCUDICIBWEEBDDBCODSBDCYDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBPCYCRCHCUDICIBWEEBDDBCODSBDCYDGCYDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 493517822,
+      "score_total": -3848.295,
+      "score_mean": -6.8719552176339285,
+      "square": "DBIFHCEGAKMLRNOPUSTWXYVQZ",
+      "decoded_sha256": "c4a4265d5c4a0fd77cf855c868e5ab8f5c0c369f98e83cf29e29bb82f803a490",
+      "decoded_prefix_64": "BTCSEEDDENELCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENELCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 15301623,
+      "score_total": -3848.4465,
+      "score_mean": -6.872225952148438,
+      "square": "DBIFHCEGAKLMRPOWNSTUXYVZQ",
+      "decoded_sha256": "d7fccceb5665f043670f4cc44a8ecd0a6b5398de63e70a862d67b239574aa5f0",
+      "decoded_prefix_64": "BTCSEEDDEPEMCKEADHBSCHDKBDCSDKDXBVCOCPCHCNDICIBWEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEPEMCKEADHBSCHDKBDCSDKDXBVCOCPCHCNDICIBWEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 962742303,
+      "score_total": -3848.4768,
+      "score_mean": -6.872280011858259,
+      "square": "DBIFHCEGAKNLORMWUSTPXYVZQ",
+      "decoded_sha256": "868b1b71a7d520ea664f40aa8892a1ff05de63f764b66a1232b6d1b637f148fa",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCMCRCHCUDICIBWEEBDDBCODSBDCMDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCMCRCHCUDICIBWEEBDDBCODSBDCMDGCMDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 962796453,
+      "score_total": -3848.51,
+      "score_mean": -6.872339303152902,
+      "square": "DBIFHCEGAKNLORPZMSTUXYVWQ",
+      "decoded_sha256": "f703b8291fc28a826416ff484cdde711505f7c74c91384b6f5f5baa4c2242fe7",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCPCRCHCMDICIBZEEBDDBCODSBDCPDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCPCRCHCMDICIBZEEBDDBCODSBDCPDGCPDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 55959213,
+      "score_total": -3848.5999,
+      "score_mean": -6.872499738420759,
+      "square": "DBIFHCEGAKLNRUOZMSTPXYVWQ",
+      "decoded_sha256": "be6071087ad0f01877e8b685202d56b947436e9aa616bba5bbc02af3d4077653",
+      "decoded_prefix_64": "BTCSEEDDEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 493519143,
+      "score_total": -3848.6023,
+      "score_mean": -6.872504098074777,
+      "square": "DBIFHCEGAKMLRNOPWSTUXYVZQ",
+      "decoded_sha256": "b5aa429de98b6afc70ed5cc422df297b32a4a3854eb4056db97338949be56ac9",
+      "decoded_prefix_64": "BTCSEEDDENELCKEADHBSCHDKBDCSDKDXBVCOCNCHCWDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENELCKEADHBSCHDKBDCSDKDXBVCOCNCHCWDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 960907166,
+      "score_total": -3848.6365,
+      "score_mean": -6.872565133231027,
+      "square": "DBIFHCEGAKNLMYOPRSTUXWVQZ",
+      "decoded_sha256": "443929104f87b0b80544876b9a3e188926c2b793322ca4d3311cbb9f3b894074",
+      "decoded_prefix_64": "BTCSEEDDEYELCKEADHBSCHDKBDCSDKDXBVCOCYCHCRDICIBPEEBDDBCMDSBDCODG",
+      "tail_prefix_64": "DEYELCKEADHBSCHDKBDCSDKDXBVCOCYCHCRDICIBPEEBDDBCMDSBDCODGCODMCMC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 976184013,
+      "score_total": -3848.916,
+      "score_mean": -6.873064313616071,
+      "square": "DBIFHCEGAKNLUMOZRSTPXYVWQ",
+      "decoded_sha256": "6ade9a6b5749900fde4d9fb13b023f37c422c65a89f16ca7beb1ad92c3aa484f",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCOCMCHCRDICIBZEEBDDBCUDSBDCODG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCOCMCHCRDICIBZEEBDDBCUDSBDCODGCODUCUC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 493553613,
+      "score_total": -3849.0398,
+      "score_mean": -6.873285348074777,
+      "square": "DBIFHCEGAKMLRNOZUSTPXYVWQ",
+      "decoded_sha256": "3d4cf26b820424ea237a769ff8e484dd2dcee4838f7ab2ac2ea4e4f4bc93fff5",
+      "decoded_prefix_64": "BTCSEEDDENELCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBZEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENELCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBZEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 973985340,
+      "score_total": -3849.0664,
+      "score_mean": -6.873332868303572,
+      "square": "DBIFHCEGAKNLRUMVOSTWXYPQZ",
+      "decoded_sha256": "13a51f180796455b16e15866119b56d4ec88e81b2e117b1cbda33dd70f78e83c",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBPCMCUCHCODICIBVEEBDDBCRDSBDCMDG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBPCMCUCHCODICIBVEEBDDBCRDSBDCMDGCMDRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 55929182,
+      "score_total": -3849.1794,
+      "score_mean": -6.873534720284598,
+      "square": "DBIFHCEGAKLNRUOPMSTWXYVQZ",
+      "decoded_sha256": "0cf24f9e8d94435ac5082cba250063852d75ef7fbecece2c29604ba52a403b8c",
+      "decoded_prefix_64": "BTCSEEDDEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 963145503,
+      "score_total": -3849.215,
+      "score_mean": -6.873598371233259,
+      "square": "DBIFHCEGAKNLOUPWRSTMXYVZQ",
+      "decoded_sha256": "d05ef93764083372a2469a3a11411be1f21fb30c47ab015c9174e203befc228a",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCPCUCHCRDICIBWEEBDDBCODSBDCPDG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCPCUCHCRDICIBWEEBDDBCODSBDCPDGCPDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 999388380,
+      "score_total": -3849.253,
+      "score_mean": -6.873665945870536,
+      "square": "DBIFHCEGAKNMLUOVRSTWXYPQZ",
+      "decoded_sha256": "ea322b58714b2d79dfc3422745640858375e650b0a6f34712139ad7c29d58791",
+      "decoded_prefix_64": "BTCSEEDDEUEMCKEADHBSCHDKBDCSDKDXBPCOCUCHCRDICIBVEEBDDBCLDSBDCODG",
+      "tail_prefix_64": "DEUEMCKEADHBSCHDKBDCSDKDXBPCOCUCHCRDICIBVEEBDDBCLDSBDCODGCODLCLC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 974403684,
+      "score_total": -3849.2686,
+      "score_mean": -6.87369384765625,
+      "square": "DBIFHCEGAKNLRVOYMSTUXWPQZ",
+      "decoded_sha256": "f927814bc644bcc4ee32e47f4c61d152faa337a0f2ca8957d37abed1dec43b82",
+      "decoded_prefix_64": "BTCSEEDDEVELCKEADHBSCHDKBDCSDKDXBPCOCVCHCMDICIBYEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEVELCKEADHBSCHDKBDCSDKDXBPCOCVCHCMDICIBYEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 976148223,
+      "score_total": -3849.2754,
+      "score_mean": -6.8737060546875,
+      "square": "DBIFHCEGAKNLUMOPRSTWXYVZQ",
+      "decoded_sha256": "174815c7732d9daed1f0365c05857225544885ab963dac587ba4c016b9acbca1",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCOCMCHCRDICIBPEEBDDBCUDSBDCODG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCOCMCHCRDICIBPEEBDDBCUDSBDCODGCODUCUC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 493548914,
+      "score_total": -3849.3823,
+      "score_mean": -6.873897007533482,
+      "square": "DBIFHCEGAKMLRNOYUSTWXPVQZ",
+      "decoded_sha256": "aba85fa71de3cecb4dadd19b4e675a9cb21aeb9e228443a9d7be2588bfacf713",
+      "decoded_prefix_64": "BTCSEEDDENELCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBYEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENELCKEADHBSCHDKBDCSDKDXBVCOCNCHCUDICIBYEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 961789773,
+      "score_total": -3849.4158,
+      "score_mean": -6.873956734793527,
+      "square": "DBIFHCEGAKNLOMUZRSTPXYVWQ",
+      "decoded_sha256": "fc3cc3e560c92f938c6e8d40a7578aa18cda649387008411e263cf0076556d87",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCUCMCHCRDICIBZEEBDDBCODSBDCUDG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCUCMCHCRDICIBZEEBDDBCODSBDCUDGCUDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 419217926,
+      "score_total": -3849.5076,
+      "score_mean": -6.874120657784598,
+      "square": "DBIFHCEGAKLYRUOPNSTMXWVQZ",
+      "decoded_sha256": "2f7f049a3def052f1dd169bb809724dafe4bd141c9a513863fe9c177b3d70be3",
+      "decoded_prefix_64": "BTCSEEDDEUEYCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUEYCKEADHBSCHDKBDCSDKDXBVCOCUCHCNDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 963105183,
+      "score_total": -3849.5847,
+      "score_mean": -6.874258422851563,
+      "square": "DBIFHCEGAKNLOUMWRSTPXYVZQ",
+      "decoded_sha256": "580c0c54274c31254dbd8faf1d2958c15af57d432c3118183e868ad5f86093a3",
+      "decoded_prefix_64": "BTCSEEDDEUELCKEADHBSCHDKBDCSDKDXBVCMCUCHCRDICIBWEEBDDBCODSBDCMDG",
+      "tail_prefix_64": "DEUELCKEADHBSCHDKBDCSDKDXBVCMCUCHCRDICIBWEEBDDBCODSBDCMDGCMDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 962757453,
+      "score_total": -3849.6855,
+      "score_mean": -6.8744384765625,
+      "square": "DBIFHCEGAKNLORMZUSTPXYVWQ",
+      "decoded_sha256": "45a39dadf801bbd712670ebd334727e8c26fb7bc1d8aa8f9c7abfa33d1f271b0",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCMCRCHCUDICIBZEEBDDBCODSBDCMDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCMCRCHCUDICIBZEEBDDBCODSBDCMDGCMDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 961753983,
+      "score_total": -3849.7417,
+      "score_mean": -6.874538748604911,
+      "square": "DBIFHCEGAKNLOMUPRSTWXYVZQ",
+      "decoded_sha256": "0224e4aea05fa7fe0a875f43ff763a031088a9411149f1b5c7712e6da162d80c",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCUCMCHCRDICIBPEEBDDBCODSBDCUDG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCUCMCHCRDICIBPEEBDDBCODSBDCUDGCUDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 974766554,
+      "score_total": -3849.7483,
+      "score_mean": -6.874550519670759,
+      "square": "DBIFHCEGAKNLRWOYMSTUXPVQZ",
+      "decoded_sha256": "ed3c4ebb3ce6c075672c3f1e476ec8c3bda1f83aad12e36df748af1da48c648e",
+      "decoded_prefix_64": "BTCSEEDDEWELCKEADHBSCHDKBDCSDKDXBVCOCWCHCMDICIBYEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEWELCKEADHBSCHDKBDCSDKDXBVCOCWCHCMDICIBYEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 962861823,
+      "score_total": -3849.996,
+      "score_mean": -6.8749930245535715,
+      "square": "DBIFHCEGAKNLORUWMSTPXYVZQ",
+      "decoded_sha256": "c82a5e6a2f61baed66e76edbb86b7c3d4e00e3af8e77717aa46b36b72a40d8d8",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCUCRCHCMDICIBWEEBDDBCODSBDCUDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCUCRCHCMDICIBWEEBDDBCODSBDCUDGCUDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 972941943,
+      "score_total": -3850.0107,
+      "score_mean": -6.875019182477678,
+      "square": "DBIFHCEGAKNLROPWMSTUXYVZQ",
+      "decoded_sha256": "cdd5653d8226c2f2afaf57e6da7d8bd51d0105773023ae1aa2a15695f652cf38",
+      "decoded_prefix_64": "BTCSEEDDEOELCKEADHBSCHDKBDCSDKDXBVCPCOCHCMDICIBWEEBDDBCRDSBDCPDG",
+      "tail_prefix_64": "DEOELCKEADHBSCHDKBDCSDKDXBVCPCOCHCMDICIBWEEBDDBCRDSBDCPDGCPDRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 417357566,
+      "score_total": -3850.088,
+      "score_mean": -6.875156947544643,
+      "square": "DBIFHCEGAKLYRMOPNSTUXWVQZ",
+      "decoded_sha256": "e8c2e444751e36aa7726dab825fa26800ad2f97ceb14571c793c4495860df86a",
+      "decoded_prefix_64": "BTCSEEDDEMEYCKEADHBSCHDKBDCSDKDXBVCOCMCHCNDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEMEYCKEADHBSCHDKBDCSDKDXBVCOCMCHCNDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 961668213,
+      "score_total": -3850.1118,
+      "score_mean": -6.875199672154018,
+      "square": "DBIFHCEGAKNLOMPZRSTUXYVWQ",
+      "decoded_sha256": "ef0b003579c6268c17c0514d236114c7d82be9aaa18a8c08f8ddd407433fde71",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCPCMCHCRDICIBZEEBDDBCODSBDCPDG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCPCMCHCRDICIBZEEBDDBCODSBDCPDGCPDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 417740714,
+      "score_total": -3850.15,
+      "score_mean": -6.8752676827566965,
+      "square": "DBIFHCEGAKLYRNOWMSTUXPVQZ",
+      "decoded_sha256": "48e2a100e5ec93e2aa60a960c535abe29e788a69f66b92c7d3b1718a34c2b61b",
+      "decoded_prefix_64": "BTCSEEDDENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCMDICIBWEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEYCKEADHBSCHDKBDCSDKDXBVCOCNCHCMDICIBWEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 962846943,
+      "score_total": -3850.1807,
+      "score_mean": -6.875322614397321,
+      "square": "DBIFHCEGAKNLORUPMSTWXYVZQ",
+      "decoded_sha256": "0d1785b331f241f2b8024c79d2c07358fee8b768c346343494f042020bf277aa",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCUCRCHCMDICIBPEEBDDBCODSBDCUDG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCUCRCHCMDICIBPEEBDDBCODSBDCUDGCUDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 683736914,
+      "score_total": -3850.2283,
+      "score_mean": -6.875407627650669,
+      "square": "DBIFHCEGAKMRNUOYLSTWXPVQZ",
+      "decoded_sha256": "1d73b0fa80c657c7f0117a66d33f5eff823be308726661e9da94f8fb280b2b48",
+      "decoded_prefix_64": "BTCSEEDDEUERCKEADHBSCHDKBDCSDKDXBVCOCUCHCLDICIBYEEBDDBCNDSBDCODG",
+      "tail_prefix_64": "DEUERCKEADHBSCHDKBDCSDKDXBVCOCUCHCLDICIBYEEBDDBCNDSBDCODGCODNCNC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 972897959,
+      "score_total": -3850.3376,
+      "score_mean": -6.87560294015067,
+      "square": "DBIFHCEGAKNLROMVUSTPZYXWQ",
+      "decoded_sha256": "2fbf9be1c956cb55fd950b3bc0dd413b85f08322060daf4cd6a42e5ffe0cb41e",
+      "decoded_prefix_64": "BTCSEEDDEOELCKEADHBSCHDKBDCSDKDZBXCMCOCHCUDICIBVEEBDDBCRDSBDCMDG",
+      "tail_prefix_64": "DEOELCKEADHBSCHDKBDCSDKDZBXCMCOCHCUDICIBVEEBDDBCRDSBDCMDGCMDRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 998319093,
+      "score_total": -3850.4329,
+      "score_mean": -6.875772966657366,
+      "square": "DBIFHCEGAKNMLPOZRSTUXYVWQ",
+      "decoded_sha256": "662d7ffe72824ea2e2679ab47f5690127d7cc6d93e489e964de24a936496ef6a",
+      "decoded_prefix_64": "BTCSEEDDEPEMCKEADHBSCHDKBDCSDKDXBVCOCPCHCRDICIBZEEBDDBCLDSBDCODG",
+      "tail_prefix_64": "DEPEMCKEADHBSCHDKBDCSDKDXBVCOCPCHCRDICIBZEEBDDBCLDSBDCODGCODLCLC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 55944063,
+      "score_total": -3850.4917,
+      "score_mean": -6.8758780343191965,
+      "square": "DBIFHCEGAKLNRUOWMSTPXYVZQ",
+      "decoded_sha256": "8d5a90ef5ad9a5d41253a52d555a6b4db86d62e58269474cc3e7572be11799c1",
+      "decoded_prefix_64": "BTCSEEDDEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBWEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEUENCKEADHBSCHDKBDCSDKDXBVCOCUCHCMDICIBWEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 737054942,
+      "score_total": -3850.5237,
+      "score_mean": -6.875935145786831,
+      "square": "DBIFHCEGAKMURNOPLSTWXYVQZ",
+      "decoded_sha256": "b577e904b47dca417bd9513a410d7fbdca5d22573edf2909fa7a4166967ccb34",
+      "decoded_prefix_64": "BTCSEEDDENEUCKEADHBSCHDKBDCSDKDXBVCOCNCHCLDICIBPEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DENEUCKEADHBSCHDKBDCSDKDXBVCOCNCHCLDICIBPEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 972579063,
+      "score_total": -3850.6394,
+      "score_mean": -6.876141793387276,
+      "square": "DBIFHCEGAKNLRMPWOSTUXYVZQ",
+      "decoded_sha256": "a137a113c80b1021b94314526fe923f45694eeebd7b36659226f57aa9bc7c9cd",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCPCMCHCODICIBWEEBDDBCRDSBDCPDG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCPCMCHCODICIBWEEBDDBCRDSBDCPDGCPDRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 15311726,
+      "score_total": -3850.9067,
+      "score_mean": -6.876619175502232,
+      "square": "DBIFHCEGAKLMRPOYNSTUXWVQZ",
+      "decoded_sha256": "4bbe5f4a5daf410394b26fead5456e431f16b5a2e700384bcfab542e191915ef",
+      "decoded_prefix_64": "BTCSEEDDEPEMCKEADHBSCHDKBDCSDKDXBVCOCPCHCNDICIBYEEBDDBCRDSBDCODG",
+      "tail_prefix_64": "DEPEMCKEADHBSCHDKBDCSDKDXBVCOCPCHCNDICIBYEEBDDBCRDSBDCODGCODRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 961951309,
+      "score_total": -3850.9192,
+      "score_mean": -6.876641409737723,
+      "square": "DBIFHCEGAKNLOMYZRSTUXVPWQ",
+      "decoded_sha256": "d493869980c8655d24ca902f94e9985b764bc16deba073b215201bb8ec393c07",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBPCYCMCHCRDICIBZEEBDDBCODSBDCYDG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBPCYCMCHCRDICIBZEEBDDBCODSBDCYDGCYDOCOC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 977644383,
+      "score_total": -3851.0098,
+      "score_mean": -6.876803152901786,
+      "square": "DBIFHCEGAKNLUROPMSTWXYVZQ",
+      "decoded_sha256": "c534355b998897271e629c9c875f3d9787fac3fd2a3b004cb52d8262264acb03",
+      "decoded_prefix_64": "BTCSEEDDERELCKEADHBSCHDKBDCSDKDXBVCOCRCHCMDICIBPEEBDDBCUDSBDCODG",
+      "tail_prefix_64": "DERELCKEADHBSCHDKBDCSDKDXBVCOCRCHCMDICIBPEEBDDBCUDSBDCODGCODUCUC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 972908037,
+      "score_total": -3851.017,
+      "score_mean": -6.876816231863839,
+      "square": "DBIFHCEGAKNLROMXUSTPZYVWQ",
+      "decoded_sha256": "02d5182efb16cf867fb22edfefa325196d597a451eb9a1d6bce9da1503bd5f23",
+      "decoded_prefix_64": "BTCSEEDDEOELCKEADHBSCHDKBDCSDKDZBVCMCOCHCUDICIBXEEBDDBCRDSBDCMDG",
+      "tail_prefix_64": "DEOELCKEADHBSCHDKBDCSDKDZBVCMCOCHCUDICIBXEEBDDBCRDSBDCMDGCMDRCRC",
+      "starts_with_btcseed": true
+    },
+    {
+      "rank": 961915167,
+      "score_total": -3851.018,
+      "score_mean": -6.876817975725446,
+      "square": "DBIFHCEGAKNLOMYPRSTUXWVZQ",
+      "decoded_sha256": "e7eed8922725b265f3f698163fab117c04b024bc217a703e5afd1ee98589798e",
+      "decoded_prefix_64": "BTCSEEDDEMELCKEADHBSCHDKBDCSDKDXBVCYCMCHCRDICIBPEEBDDBCODSBDCYDG",
+      "tail_prefix_64": "DEMELCKEADHBSCHDKBDCSDKDXBVCYCMCHCRDICIBPEEBDDBCODSBDCYDGCYDOCOC",
+      "starts_with_btcseed": true
+    }
+  ],
+  "shortlist_is_exact_top_k": false,
+  "fingerprint": {
+    "version": 1,
+    "family": "bifid_14factorial_fixed_source_cells_lexicographic;range_start=0",
+    "range_end_exclusive": 1000000000,
+    "faed_sha256": "585ee5d801486348f3396b3301bc87f14420204ed3242e67bc53d60cfed14664",
+    "decoded_cells_sha256": "b0bf2115116590f790cff303467413073c66a48843f2a0d7de95011545a8d85a",
+    "quadgram_sha256": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+    "kernel_sha256": "a17230ee4c0ca392dd74f7ceb9d12a415735bac671c221d3c455ac2cfdf86742",
+    "driver_sha256": "c84de51d80eab88f0b46b0cb9f3b0ee03012259d7a4e1864e1408771748fb26e",
+    "cuda_arch": "sm_120",
+    "score": "tail[7:];mean_log10_english_quadgram;f32_accumulation"
+  },
+  "interrupted": false
+}
