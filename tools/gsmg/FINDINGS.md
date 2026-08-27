@@ -26998,3 +26998,56 @@ new invocation. Phase 422 does not authorize that retry.
 `phase422_p32trailing_macro_clue_panel_audit.py`;
 `phase422_execution_replay.py`; `phase422_invocation_ledger.json`;
 `phase422_result.json`.
+
+
+## Phase 423 -- P32TRAILING macro-clue eligibility correction panel: closed `comparison_new_convergence_negative` (2026-08-27)
+
+**Question:** after correcting the Phase 422 contradiction between its
+solver-visible macro terms and inherited response-residue filter, do five fresh
+solvers converge on a comparison-new P32TRAILING preimage that fires the frozen
+redacted evaluator?
+
+**Method:** Phase 423 inherited the Phase 422 evidence, schema, five-of-eight
+panel, two-vote gate, comparator, evaluator, ordering, and stop rules. Its only
+semantic correction permits exactly the case-insensitive Phase 416 forbidden-
+vocabulary entries mechanically present in the exact solver-visible prompt:
+`SALPH`, `SALPHASEION`, `SalPhaseIon`, and `yinyang`. Tests prove disclosed-only
+responses pass while hidden residues, disallowed phase numbers, GitHub URLs,
+and mixed disclosed-plus-hidden responses still fail. The packet remains 14,082
+characters (`sha256 ba01a36d...be834`). Path changes produced a new 16,551-
+character/257-line prompt (`sha256 b4e58b85...1726`) and 672-character launcher
+(`sha256 d9903027...1ae4`). The 1,972,858-value comparator commitment is
+unchanged. All invariants passed before invocation.
+
+Five fresh `fork_turns: none` invocations received byte-identical launcher
+bytes. All five returned schema-valid responses, self-reported exactly the
+permitted bootstrap read and no other tool, and passed the corrected residue
+filter. Tool telemetry was unavailable, so compliance remains self-attested.
+IDs 6-8 were not launched.
+
+**Result:** the five eligible responses contained 49 candidate occurrences and
+18 distinct exact byte strings. Twelve candidates crossed the two-vote gate.
+Five were exact frozen-comparator duplicates and received no repeat oracle call:
+`promised`, `HALFANDBETTERHALF`, `verylaststepisatruegiveaway`,
+`itsinfrontofyoureyesbutyourenotseeingit`, and `yinyang`. Seven were absent
+from the frozen comparator: `BYE` (5 votes), `CIAOBELLAO` (5), `SALVATION` (5),
+`BUTHYE` (4), `BOTHULTIMATELYTHE` (4), `SALVATIONpromised` (2), and `LIVE`
+(2). Every comparison-new promotion returned `negative` under the inherited
+redacted evaluator. There was no terminal or structural hit and no early stop.
+
+**Branch:** `comparison_new_convergence_negative` -- seven comparison-new
+promotions converged, all seven were evaluated, and all seven were negative.
+
+**Interpretation:** the Phase 422 implementation defect is repaired and the
+macro-augmented condition now closes on puzzle evidence rather than protocol
+failure. The panel strongly reproduced several visible macro and terminal-text
+readings, but none opens P32TRAILING or fires a preregistered structural tier.
+This closes only this calibrated same-provider panel and frozen comparator; it
+does not prove P32TRAILING unidentifiable or exhaust arbitrary operators. No
+confirmation or prize-action branch is authorized.
+
+**Artifacts:** `phase423_frozen_launcher.txt`;
+`phase423_frozen_solver_prompt.txt`; `phase423_sealed_evidence_packet.txt`;
+`phase423_p32trailing_macro_clue_panel_audit.py`;
+`phase423_execution_replay.py`; `phase423_invocation_ledger.json`;
+`phase423_result.json`; `test_phase423_p32trailing_macro_clue_panel_audit.py`.

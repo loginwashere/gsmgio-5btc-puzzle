@@ -1,0 +1,292 @@
+{
+  "phase": 423,
+  "outcome": "comparison_new_convergence_negative",
+  "protocol_invalid_reason": null,
+  "invocations_launched": 5,
+  "unlaunched_invocation_ids": [
+    "phase423_invocation_6",
+    "phase423_invocation_7",
+    "phase423_invocation_8"
+  ],
+  "voting_invocation_ids": [
+    "phase423_invocation_1",
+    "phase423_invocation_2",
+    "phase423_invocation_3",
+    "phase423_invocation_4",
+    "phase423_invocation_5"
+  ],
+  "eligible_count": 5,
+  "distinct_candidate_count": 18,
+  "promoted_count": 12,
+  "duplicate_promoted_count": 5,
+  "comparison_new_promoted_count": 7,
+  "evaluated_new_count": 7,
+  "unevaluated_new_after_stop": 0,
+  "promoted": [
+    {
+      "candidate_length": 3,
+      "candidate_sha256": "5788ee465175ce1155ebbdf69055180afabfdad45f6fd06d8a125b94f67f0b6c",
+      "path": "convergence",
+      "votes": 5,
+      "ranks": [
+        3,
+        3,
+        5,
+        10,
+        1
+      ],
+      "best_rank": 1,
+      "comparator_disposition": "not_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 10,
+      "candidate_sha256": "9b319371677826efd518d3dd978f12c090f812cf3557fcf2b66d227e5613e865",
+      "path": "convergence",
+      "votes": 5,
+      "ranks": [
+        4,
+        1,
+        6,
+        7,
+        4
+      ],
+      "best_rank": 1,
+      "comparator_disposition": "not_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 9,
+      "candidate_sha256": "d1f97b88573f7367c3da5a90628b86d37dea9ddb3dec795f0a3ed08c21d2a70e",
+      "path": "convergence",
+      "votes": 5,
+      "ranks": [
+        5,
+        2,
+        2,
+        1,
+        5
+      ],
+      "best_rank": 1,
+      "comparator_disposition": "not_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 8,
+      "candidate_sha256": "1e0222143c6f7f6f2ed8f92325e6b614e7223a6ab25edf03612096e4b0a92f61",
+      "path": "convergence",
+      "votes": 5,
+      "ranks": [
+        6,
+        8,
+        1,
+        8,
+        2
+      ],
+      "best_rank": 1,
+      "comparator_disposition": "exact_duplicate_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 6,
+      "candidate_sha256": "1ead3499d871a51cd73bcf35ac5f34902b28e4b78bb516fed118c3c70e1dc153",
+      "path": "convergence",
+      "votes": 4,
+      "ranks": [
+        1,
+        7,
+        3,
+        8
+      ],
+      "best_rank": 1,
+      "comparator_disposition": "not_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 17,
+      "candidate_sha256": "285d991e6b09787b1d24b23f217f2f18de9e3045761befaa9a65fd3c5e7cc9af",
+      "path": "convergence",
+      "votes": 4,
+      "ranks": [
+        2,
+        6,
+        4,
+        9
+      ],
+      "best_rank": 2,
+      "comparator_disposition": "not_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 17,
+      "candidate_sha256": "c283769d770f8adb4786110ad0000dd33923ff713c4753c77783442f4ef3fea9",
+      "path": "convergence",
+      "votes": 2,
+      "ranks": [
+        10,
+        3
+      ],
+      "best_rank": 3,
+      "comparator_disposition": "not_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 17,
+      "candidate_sha256": "b8580371cff7f58acc860b21822863ff273ab0774c1920575f9a0b3a46400e16",
+      "path": "convergence",
+      "votes": 2,
+      "ranks": [
+        4,
+        5
+      ],
+      "best_rank": 4,
+      "comparator_disposition": "exact_duplicate_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 4,
+      "candidate_sha256": "35e0d0360a0af6d115f9df30e1b00b5b544ebf4bb93272aa02cd5d64b064a64b",
+      "path": "convergence",
+      "votes": 2,
+      "ranks": [
+        5,
+        4
+      ],
+      "best_rank": 4,
+      "comparator_disposition": "not_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 27,
+      "candidate_sha256": "ccd41b572c0c0f70bb276f4b6eee53572d9d6203e4c2fb70d39ace2546418654",
+      "path": "convergence",
+      "votes": 4,
+      "ranks": [
+        8,
+        10,
+        7,
+        10
+      ],
+      "best_rank": 7,
+      "comparator_disposition": "exact_duplicate_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 39,
+      "candidate_sha256": "a3116564a2f81e9a6f06bcb019d57040b931fc0e41dc9fe1d29b2ef84a987ab4",
+      "path": "convergence",
+      "votes": 2,
+      "ranks": [
+        7,
+        8
+      ],
+      "best_rank": 7,
+      "comparator_disposition": "exact_duplicate_in_frozen_comparator"
+    },
+    {
+      "candidate_length": 7,
+      "candidate_sha256": "9f9d79ece6f5c956063beff2130631da40a37d050cb3813190b58abb17fec3db",
+      "path": "convergence",
+      "votes": 3,
+      "ranks": [
+        9,
+        9,
+        9
+      ],
+      "best_rank": 9,
+      "comparator_disposition": "exact_duplicate_in_frozen_comparator"
+    }
+  ],
+  "evaluations": [
+    {
+      "candidate_length": 3,
+      "candidate_sha256": "5788ee465175ce1155ebbdf69055180afabfdad45f6fd06d8a125b94f67f0b6c",
+      "votes": 5,
+      "ranks": [
+        3,
+        3,
+        5,
+        10,
+        1
+      ],
+      "best_rank": 1,
+      "comparator_disposition": "not_in_frozen_comparator",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 10,
+      "candidate_sha256": "9b319371677826efd518d3dd978f12c090f812cf3557fcf2b66d227e5613e865",
+      "votes": 5,
+      "ranks": [
+        4,
+        1,
+        6,
+        7,
+        4
+      ],
+      "best_rank": 1,
+      "comparator_disposition": "not_in_frozen_comparator",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 9,
+      "candidate_sha256": "d1f97b88573f7367c3da5a90628b86d37dea9ddb3dec795f0a3ed08c21d2a70e",
+      "votes": 5,
+      "ranks": [
+        5,
+        2,
+        2,
+        1,
+        5
+      ],
+      "best_rank": 1,
+      "comparator_disposition": "not_in_frozen_comparator",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 6,
+      "candidate_sha256": "1ead3499d871a51cd73bcf35ac5f34902b28e4b78bb516fed118c3c70e1dc153",
+      "votes": 4,
+      "ranks": [
+        1,
+        7,
+        3,
+        8
+      ],
+      "best_rank": 1,
+      "comparator_disposition": "not_in_frozen_comparator",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 17,
+      "candidate_sha256": "285d991e6b09787b1d24b23f217f2f18de9e3045761befaa9a65fd3c5e7cc9af",
+      "votes": 4,
+      "ranks": [
+        2,
+        6,
+        4,
+        9
+      ],
+      "best_rank": 2,
+      "comparator_disposition": "not_in_frozen_comparator",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 17,
+      "candidate_sha256": "c283769d770f8adb4786110ad0000dd33923ff713c4753c77783442f4ef3fea9",
+      "votes": 2,
+      "ranks": [
+        10,
+        3
+      ],
+      "best_rank": 3,
+      "comparator_disposition": "not_in_frozen_comparator",
+      "outcome": "negative"
+    },
+    {
+      "candidate_length": 4,
+      "candidate_sha256": "35e0d0360a0af6d115f9df30e1b00b5b544ebf4bb93272aa02cd5d64b064a64b",
+      "votes": 2,
+      "ranks": [
+        5,
+        4
+      ],
+      "best_rank": 4,
+      "comparator_disposition": "not_in_frozen_comparator",
+      "outcome": "negative"
+    }
+  ],
+  "oracle_calls": 7,
+  "terminal_hits": 0,
+  "structural_hits": 0
+}

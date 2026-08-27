@@ -1,0 +1,145 @@
+{
+  "phase": 423,
+  "launcher_sha256": "d99030279ba641886449a9f37f8ba90ec632516de0522cf281d384297bd61ae4",
+  "launcher_length": 672,
+  "prompt_sha256": "b4e58b85a5d840fdd76d6bf0943ce36be079e284dc4e470ef91039f0c8411726",
+  "prompt_length": 16551,
+  "evidence_packet_sha256": "ba01a36ddb12de49236f364106d1dcf34c8e94e6574e0bb7bf74a0db7acbe834",
+  "configuration": {
+    "agent_class": "general-purpose",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "service_configuration": "default",
+    "delivery": "escalated_one_file_bootstrap",
+    "cmd": "sed -n '1,320p' /home/loginwashere/projects/gsmgio-5btc-puzzle/tools/gsmg/phase423_frozen_solver_prompt.txt",
+    "workdir": "/home/loginwashere/projects/gsmgio-5btc-puzzle",
+    "sandbox_permissions": "require_escalated",
+    "justification": "May I perform the preregistered read-only prompt bootstrap outside the unavailable sandbox?",
+    "prefix_rule": null
+  },
+  "invocations_launched": 5,
+  "unlaunched_invocation_ids": [
+    "phase423_invocation_6",
+    "phase423_invocation_7",
+    "phase423_invocation_8"
+  ],
+  "voting_invocation_ids": [
+    "phase423_invocation_1",
+    "phase423_invocation_2",
+    "phase423_invocation_3",
+    "phase423_invocation_4",
+    "phase423_invocation_5"
+  ],
+  "records": {
+    "phase423_invocation_1": {
+      "task_path": "/root/phase423_invocation_1",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": true,
+      "voting": true,
+      "candidate_count": 9,
+      "candidate_displays": [
+        "BUTHYE",
+        "BOTHULTIMATELYTHE",
+        "BYE",
+        "CIAOBELLAO",
+        "SALVATION",
+        "promised",
+        "itsinfrontofyoureyesbutyourenotseeingit",
+        "verylaststepisatruegiveaway",
+        "wewontgiveawaythepassword"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes and ranks"
+    },
+    "phase423_invocation_2": {
+      "task_path": "/root/phase423_invocation_2",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": true,
+      "voting": true,
+      "candidate_count": 10,
+      "candidate_displays": [
+        "CIAOBELLAO",
+        "SALVATION",
+        "BYE",
+        "HALFANDBETTERHALF",
+        "LIVE",
+        "BOTHULTIMATELYTHE",
+        "BUTHYE",
+        "promised",
+        "yinyang",
+        "verylaststepisatruegiveaway"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes and ranks"
+    },
+    "phase423_invocation_3": {
+      "task_path": "/root/phase423_invocation_3",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": true,
+      "voting": true,
+      "candidate_count": 10,
+      "candidate_displays": [
+        "promised",
+        "SALVATION",
+        "BUTHYE",
+        "BOTHULTIMATELYTHE",
+        "BYE",
+        "CIAOBELLAO",
+        "verylaststepisatruegiveaway",
+        "itsinfrontofyoureyesbutyourenotseeingit",
+        "yinyang",
+        "SALVATIONpromised"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes and ranks"
+    },
+    "phase423_invocation_4": {
+      "task_path": "/root/phase423_invocation_4",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": true,
+      "voting": true,
+      "candidate_count": 10,
+      "candidate_displays": [
+        "SALVATION",
+        "promisedSALVATION",
+        "SALVATIONpromised",
+        "LIVE",
+        "HALFANDBETTERHALF",
+        "THEONE",
+        "CIAOBELLAO",
+        "promised",
+        "yinyang",
+        "BYE"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes and ranks"
+    },
+    "phase423_invocation_5": {
+      "task_path": "/root/phase423_invocation_5",
+      "tool_telemetry_available": false,
+      "bootstrap_read_self_disclosed": true,
+      "other_tool_use_self_disclosed": false,
+      "eligible": true,
+      "voting": true,
+      "candidate_count": 10,
+      "candidate_displays": [
+        "BYE",
+        "promised",
+        "wewont",
+        "CIAOBELLAO",
+        "SALVATION",
+        "BUT",
+        "HYE",
+        "BUTHYE",
+        "BOTHULTIMATELYTHE",
+        "verylaststepisatruegiveaway"
+      ],
+      "response_capture": "raw collaboration payload retained in the orchestrator transcript; this ledger preserves exact candidate display bytes and ranks"
+    }
+  }
+}
