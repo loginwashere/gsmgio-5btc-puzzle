@@ -1,0 +1,37 @@
+{
+  "correction": "Phase 442's pure-single-case-letter precedent leaves two eligible Phase-3.2.1 representations, not one: CP1141 ciphertext and decoded answer_321.",
+  "source": {
+    "id": "decoded_answer_321",
+    "length": 1539,
+    "sha256": "56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241",
+    "is_pure_uppercase_letters": true
+  },
+  "colors": "BBBBYBBBYYBBBBYBBYYBBYB",
+  "answer321_prime_rule_selection": "OULFTHSFRINANNCQANINEROINTILEA",
+  "candidate_count": 3,
+  "material_count": 6,
+  "candidate_summaries": [
+    {
+      "label": "answer321_prime_rule_selection",
+      "length": 30,
+      "sha256": "2cf68df4bf3ca47b2996f8889ce45f81f3a1e837a48f31ef0171ec047d7eb898"
+    },
+    {
+      "label": "answer321_selection_then_322",
+      "length": 121,
+      "sha256": "97c62837f4ba8a74bc3b5a9449684a546dd81aae2a31a376f57c9a110b8873e9"
+    },
+    {
+      "label": "321_then_answer321_selection",
+      "length": 1569,
+      "sha256": "f5bcae454bff2aae950a9d509f0d22f9c2fa06363ca63172438237a538d57d88"
+    }
+  ],
+  "overlap_with_phase270_materials": 0,
+  "overlap_with_phase442_materials": 0,
+  "structural_oracle": {
+    "trial_count": 36,
+    "hits": 0
+  },
+  "disposition": "two_representation_precedent_family_exhausted_negative"
+}

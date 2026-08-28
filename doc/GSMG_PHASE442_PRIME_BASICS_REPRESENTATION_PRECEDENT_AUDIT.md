@@ -15,6 +15,13 @@ related_phases:
 
 # Phase 442 — `PRIME BASICS` Representation Precedent Audit
 
+> **Correction (Phase 443):** The closure claim below was too narrow.
+> answer_321 is also a pure single-case 1,539-letter stream and had not
+> received this exact split-final-BE prime-selection rule. Phase 443 runs
+> that omitted symmetric case. Read Phase 442 and Phase 443 together: the
+> corrected precedent-bound set has two eligible representations, and both
+> are negative.
+
 Phase 437 registered two genuinely untested candidate representations for
 `RETURN TO THE SOURCE CODES ... REINSERTING THE PRIME BASICS`: the raw
 1,539-byte Phase 3.2.1 block, and its CP1141-transcoded 1,539-letter
