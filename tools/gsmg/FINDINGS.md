@@ -27432,3 +27432,59 @@ Two authenticated families are genuinely uncovered: the raw 1,539-byte Phase 3.2
 **Disposition:** `exact_16factorial_negative_quadgram_selection_pathology_confirmed`. All four frozen promotion gates fail. This closes the sealed Phase-430 family under its declared Bifid construction and score; reopening needs independently selected mechanics or held-out coherent language, not another score-only sweep. Zero password materials, zero oracle calls, no Docker mutation, and no new GPU work.
 
 **Artifacts:** frozen Phase-441 protocol; `phase432_final_review.json`; `phase441_completed_bifid16_run_analysis.py`; `test_phase441_completed_bifid16_run_analysis.py`; `phase441_result.json`; and `doc/GSMG_PHASE441_COMPLETED_BIFID16_RUN_ANALYSIS.md`.
+
+## Phase 442 -- `PRIME BASICS` representation precedent audit: raw block eliminated, one precedent-bound candidate negative (2026-08-28)
+
+**Question:** Phase 437 registered the raw 1,539-byte Phase 3.2.1 block and
+its CP1141-transcoded 1,539-letter Beaufort ciphertext as genuinely
+untested `SOURCE CODES`/`PRIME BASICS` representations, but left every
+parameter (representation, unit, base, direction, boundary) unfixed. Does
+the puzzle's own prior "prime" mechanics already settle any of that by
+precedent, rather than by a fresh analyst choice?
+
+**Method:** `phase442_prime_basics_representation_precedent_audit.py`
+compares the three places a "prime" selection rule is actually established
+in the solved chain: the original first-piece prime walk (sequential
+primes assigned by spiral-ordered event rank, position = prime + cumulative
+prior-yellow offset, 1-based, forward, validated against DBBI); the Stage-0
+"prime cells" reading (a structurally different index-is-prime filter, used
+once, only to derive DBBI/FAED itself); and the split-final-`BE` guide
+retarget from Phase 270, which reuses the first mechanism's mechanics
+verbatim against a different, already-established 23-endpoint color
+sequence. Only the first mechanism has ever been picked up a second time
+and reapplied unchanged, and every one of its applications has selected
+from a pure single-case letter stream.
+
+**Result:** the raw 1,539-byte block's charset (`%,/:>?[_`` plus high
+Latin-1 bytes) fails that letter-stream precedent outright; the CP1141
+ciphertext (pure lowercase a-z, same length) matches it. This eliminates
+the raw block by evidence, not preference, and leaves the CP1141 ciphertext
+as the one representation consistent with how the reused rule has always
+been applied. Reapplying the split-final-`BE` guide's exact established
+colors and positioning rule -- zero new parameters chosen -- to the CP1141
+ciphertext instead of the already-tested Phase 3.2.2 answer produces
+`tkpmhlwzjputuzfytnlfajfkloewwu` (30 characters). Three candidates were
+built mirroring Phase 270's own sibling-order pattern (selection alone,
+selection-then-322, 321-then-selection); diffed against Phase 270's
+25-candidate/50-material inventory, **zero overlap** -- genuinely new
+material. Run through the same structural two-key padding oracle (6
+materials x 6 KDF/cipher-size specs = 36 trials): **0 hits.**
+
+**Disposition:** `precedent_narrowed_negative`. Precedent resolves the
+representation question (letters, not raw bytes) and, by requiring zero
+deviation from the only mechanism this puzzle has ever reused, collapses
+every other previously-open parameter to values already fixed by that
+mechanism -- no analyst choice was exercised in building this candidate.
+This closes the representation question Phase 437 raised as far as
+precedent can settle it, but does not close Phase 437's broader referent
+question: "reuse the existing rule with zero deviation" is itself a
+principle, not a certainty. Reopening requires new evidence for a
+genuinely different rule, not another representation guess. Zero overlap
+with prior material, zero GPU work, zero live-leader or P32TRAILING
+mutation (a read-only decrypt attempt against already-authenticated
+ciphertext).
+
+**Artifacts:** `phase442_prime_basics_representation_precedent_audit.py`;
+`test_phase442_prime_basics_representation_precedent_audit.py`;
+`phase442_result.json`; and
+`doc/GSMG_PHASE442_PRIME_BASICS_REPRESENTATION_PRECEDENT_AUDIT.md`.
