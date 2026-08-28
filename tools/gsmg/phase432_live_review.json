@@ -1,0 +1,410 @@
+{
+  "checkpoint": {
+    "full_progress_fraction": 0.3804776904459444,
+    "next_rank": 7960654774272,
+    "path": "../bifid_gpu_search16/checkpoints/bifid_16factorial.json",
+    "retained_rows": 1000,
+    "snapshot_sha256": "32e6df6cdf7f3886980d9562b6a3d43c63605d4e5c8c253283b862fcd5f3b35f"
+  },
+  "delta_from_previous": null,
+  "distinct_candidates": [
+    {
+      "best_rank": 6734809711440,
+      "best_score_total": -3507.5981,
+      "decoded_prefix_72": "BTCSEEDDHTHRNEEAIBITNBIEBDCSIEUCOAORUTNBCRDICIBLEEBDDBUSDSBDORDNORDOUSCS",
+      "decoded_sha256": "3000403031f93a17771028e557c7481614028820db51ac1542814332da894a27",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 358,
+          "mean": 201.495,
+          "min": 80
+        },
+        "null_substring_count": {
+          "max": 7,
+          "mean": 1.63,
+          "min": 0
+        },
+        "seed": 3458835089561566757,
+        "segmentation": {
+          "covered_characters": 57,
+          "covered_fraction": 0.10124333925399645,
+          "score": 233,
+          "tokens": [
+            {
+              "start": 92,
+              "word": "LURE"
+            },
+            {
+              "start": 124,
+              "word": "DEAD"
+            },
+            {
+              "start": 212,
+              "word": "TIRE"
+            },
+            {
+              "start": 219,
+              "word": "BANE"
+            },
+            {
+              "start": 232,
+              "word": "RITE"
+            },
+            {
+              "start": 265,
+              "word": "ORCS"
+            },
+            {
+              "start": 273,
+              "word": "DINA"
+            },
+            {
+              "start": 326,
+              "word": "LORD"
+            },
+            {
+              "start": 338,
+              "word": "SERER"
+            },
+            {
+              "start": 403,
+              "word": "NEED"
+            },
+            {
+              "start": 408,
+              "word": "BEAU"
+            },
+            {
+              "start": 430,
+              "word": "TURD"
+            },
+            {
+              "start": 474,
+              "word": "SUSE"
+            },
+            {
+              "start": 544,
+              "word": "LORD"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.2935323383084577,
+        "substring_count": 1,
+        "substring_inclusive_p": 0.8059701492537313,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 338,
+          "word": "SERER"
+        }
+      ],
+      "index_of_coincidence": 0.07153467380517436,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 522,
+      "square": "DBIFKCENAMUHOGPLRSTQVWXYZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.13903743315508021,
+          "lag": 2,
+          "matches": 78
+        },
+        {
+          "fraction": 0.13416815742397137,
+          "lag": 4,
+          "matches": 75
+        },
+        {
+          "fraction": 0.11754068716094032,
+          "lag": 10,
+          "matches": 65
+        },
+        {
+          "fraction": 0.1141804788213628,
+          "lag": 20,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11310592459605028,
+          "lag": 6,
+          "matches": 63
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEHLB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EEAIB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "RCSCN"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEHL"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCNA"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DOIT"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADG"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EAIB"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EEAI"
+        }
+      ],
+      "tail_sha256": "4ca9c55bbaafab22a071e29d09f4ec0a1f6884d661e49025eb020f58737f5244"
+    },
+    {
+      "best_rank": 4113233954640,
+      "best_score_total": -3519.4343,
+      "decoded_prefix_72": "BTCSEEDDHTHRLEEAIBITLBIEBDCSIEUCOAORUTLBCRDICIBNEEBDDBUSDSBDORDLORDOUSCS",
+      "decoded_sha256": "3f92542ffeb75453fd735f18da62924216dd3f7415f397342ae73f25fa4733e8",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 342,
+          "mean": 208.61,
+          "min": 80
+        },
+        "null_substring_count": {
+          "max": 6,
+          "mean": 1.445,
+          "min": 0
+        },
+        "seed": 4580816336102838369,
+        "segmentation": {
+          "covered_characters": 55,
+          "covered_fraction": 0.09769094138543517,
+          "score": 235,
+          "tokens": [
+            {
+              "start": 56,
+              "word": "LORD"
+            },
+            {
+              "start": 124,
+              "word": "DEAD"
+            },
+            {
+              "start": 180,
+              "word": "ELECT"
+            },
+            {
+              "start": 212,
+              "word": "TIRE"
+            },
+            {
+              "start": 219,
+              "word": "BALED"
+            },
+            {
+              "start": 232,
+              "word": "RITE"
+            },
+            {
+              "start": 265,
+              "word": "ORCS"
+            },
+            {
+              "start": 338,
+              "word": "SERER"
+            },
+            {
+              "start": 372,
+              "word": "REEL"
+            },
+            {
+              "start": 391,
+              "word": "LADE"
+            },
+            {
+              "start": 408,
+              "word": "BEAU"
+            },
+            {
+              "start": 430,
+              "word": "TURD"
+            },
+            {
+              "start": 474,
+              "word": "SUSE"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.3482587064676617,
+        "substring_count": 3,
+        "substring_inclusive_p": 0.17412935323383086,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 180,
+          "word": "ELECT"
+        },
+        {
+          "start": 219,
+          "word": "BALED"
+        },
+        {
+          "start": 338,
+          "word": "SERER"
+        }
+      ],
+      "index_of_coincidence": 0.07153467380517436,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 478,
+      "square": "DBIFKCELAMUHOGPNRSTQVWXYZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.13903743315508021,
+          "lag": 2,
+          "matches": 78
+        },
+        {
+          "fraction": 0.13416815742397137,
+          "lag": 4,
+          "matches": 75
+        },
+        {
+          "fraction": 0.11754068716094032,
+          "lag": 10,
+          "matches": 65
+        },
+        {
+          "fraction": 0.1141804788213628,
+          "lag": 20,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11310592459605028,
+          "lag": 6,
+          "matches": 63
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEHNB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EEAIB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "RCSCL"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEHN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCLA"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCL"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DOIT"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADG"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EAIB"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EEAI"
+        }
+      ],
+      "tail_sha256": "c99272e1b4365349b70957101f0657663a1e12abb14fd2f1ab2c312b1213aaa8"
+    }
+  ],
+  "phase": 432,
+  "protocol": {
+    "dictionary_path": "/usr/share/dict/words",
+    "dictionary_sha256": "9f513f1ceadb6a01c5485b7dbdfd5118dc66cd70b59cae2851292112d4066a32",
+    "keywords": [
+      "ADDRESS",
+      "ARCHITECT",
+      "BITCOIN",
+      "BLOCK",
+      "BLUE",
+      "CHOICE",
+      "CIPHER",
+      "COIN",
+      "FAED",
+      "FEFE",
+      "KEY",
+      "MATRIX",
+      "PASSWORD",
+      "PRIME",
+      "PRIVATE",
+      "PUBLIC",
+      "SALVATION",
+      "SATOSHI",
+      "SEED",
+      "SPIRAL",
+      "WALLET",
+      "YELLOW",
+      "YINYANG"
+    ],
+    "oracle_calls": 0,
+    "review_limit": 25,
+    "shortlist_is_exact_top_k": false,
+    "tail_start": 7,
+    "trials": 200
+  },
+  "summary": {
+    "distinct_decodes": 2,
+    "duplicate_rows_collapsed": 998,
+    "reviewed_distinct_decodes": 2
+  }
+}

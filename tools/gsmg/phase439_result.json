@@ -1,0 +1,433 @@
+{
+  "phase": 439,
+  "files": {
+    "raw_seed": {
+      "path": "/home/loginwashere/projects/gsmg-site-mirror/theseedisplanted.html",
+      "length": 1585,
+      "sha256": "5356c88769137ec82953888d7c5b9f18b0fa00019fad7591cc6aaaaf91463136"
+    },
+    "raw_choice": {
+      "path": "/home/loginwashere/projects/gsmg-site-mirror/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself.html",
+      "length": 9902,
+      "sha256": "7237ce18a62f16dc55d94a2594da4256543b7dc7b34e4e59783473c34c7fbf9b"
+    },
+    "normalized_seed": {
+      "path": "/home/loginwashere/projects/gsmgio-5btc-puzzle/doc/html/theseedisplanted.html",
+      "length": 1153,
+      "sha256": "c38fa27671a2040120b45bf70c6f7c04749087255ffe86673b28322970ad2bb4"
+    },
+    "normalized_choice": {
+      "path": "/home/loginwashere/projects/gsmgio-5btc-puzzle/doc/html/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself.html",
+      "length": 9134,
+      "sha256": "647744a2957219a4084ede994719124e7445bab1dfdeb68258fbeff2615a8d43"
+    }
+  },
+  "raw_source_structures": {
+    "seed": {
+      "comments": [
+        "Nice to see you around! Good luck little bunny hunter ;)"
+      ],
+      "forms": [
+        {
+          "method": "POST",
+          "action": "https://gsmg.io/phase1verification",
+          "accept-charset": "UTF-8"
+        }
+      ],
+      "inputs": [
+        {
+          "name": "_token",
+          "type": "hidden",
+          "value": "xq0K6y2tiigRgXSPeKoWeZIRhR0ucSeF2JQcpa9Y"
+        },
+        {
+          "type": "password",
+          "name": "password"
+        },
+        {
+          "type": "submit"
+        }
+      ],
+      "csrf_meta_values": [
+        "xq0K6y2tiigRgXSPeKoWeZIRhR0ucSeF2JQcpa9Y"
+      ],
+      "csrf_input_values": [
+        "xq0K6y2tiigRgXSPeKoWeZIRhR0ucSeF2JQcpa9Y"
+      ],
+      "scripts": [
+        {
+          "defer": null,
+          "src": "https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516",
+          "integrity": "sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==",
+          "data-cf-beacon": "{\"version\":\"2024.11.0\",\"token\":\"014f7acd97844c3086619468788d4e0d\",\"r\":1,\"server_timing\":{\"name\":{\"cfCacheStatus\":true,\"cfEdge\":true,\"cfExtPri\":true,\"cfL4\":true,\"cfOrigin\":true,\"cfSpeedBrain\":true},\"location_startswith\":null}}",
+          "crossorigin": "anonymous"
+        }
+      ],
+      "textarea_count": 0,
+      "external_script_count": 1,
+      "inline_script_count": 0,
+      "puzzle_authored_script_count": 0
+    },
+    "choice": {
+      "comments": [
+        "You made it to the next step! Good luck little bunny hunter ;)"
+      ],
+      "forms": [],
+      "inputs": [],
+      "csrf_meta_values": [
+        "YxHTt3LKlYvWt4qm0ItTSUkCn5aB0DInmTnfTJ14"
+      ],
+      "csrf_input_values": [],
+      "scripts": [
+        {
+          "defer": null,
+          "src": "https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516",
+          "integrity": "sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==",
+          "data-cf-beacon": "{\"version\":\"2024.11.0\",\"token\":\"014f7acd97844c3086619468788d4e0d\",\"r\":1,\"server_timing\":{\"name\":{\"cfCacheStatus\":true,\"cfEdge\":true,\"cfExtPri\":true,\"cfL4\":true,\"cfOrigin\":true,\"cfSpeedBrain\":true},\"location_startswith\":null}}",
+          "crossorigin": "anonymous"
+        }
+      ],
+      "textarea_count": 2,
+      "external_script_count": 1,
+      "inline_script_count": 0,
+      "puzzle_authored_script_count": 0
+    }
+  },
+  "comment_pair": {
+    "stage_order": [
+      "Nice to see you around! Good luck little bunny hunter ;)",
+      "You made it to the next step! Good luck little bunny hunter ;)"
+    ],
+    "common_suffix": "Good luck little bunny hunter ;)",
+    "page_specific_prefixes": {
+      "seed": "Nice to see you around!",
+      "choice": "You made it to the next step!"
+    },
+    "source_only": true
+  },
+  "support_creator_constraints": {
+    "28703": {
+      "date": "2019-04-20T19:18:24",
+      "reply_to": null,
+      "text": "Can imagine. We had to do something against bruteforcing. Just find the right next hint, good luck 😉"
+    },
+    "28794": {
+      "date": "2019-04-21T15:49:57",
+      "reply_to": 28791,
+      "text": "Won't work 😉"
+    },
+    "28812": {
+      "date": "2019-04-21T16:18:26",
+      "reply_to": null,
+      "text": "gsmg.io/puzzle\n\nAll the info you need is there."
+    }
+  },
+  "solver_fixed_term_evidence": {
+    "nice to see you around": {
+      "hit_count": 10,
+      "creator_authored_hit_ids": [],
+      "creator_direct_reply_ids": []
+    },
+    "you made it to the next step": {
+      "hit_count": 4,
+      "creator_authored_hit_ids": [],
+      "creator_direct_reply_ids": []
+    },
+    "good luck little bunny hunter": {
+      "hit_count": 15,
+      "creator_authored_hit_ids": [],
+      "creator_direct_reply_ids": []
+    },
+    "html source": {
+      "hit_count": 3,
+      "creator_authored_hit_ids": [],
+      "creator_direct_reply_ids": []
+    },
+    "source code": {
+      "hit_count": 141,
+      "creator_authored_hit_ids": [],
+      "creator_direct_reply_ids": []
+    }
+  },
+  "candidate_count": 11,
+  "gate_names": [
+    "creator_puzzle_artifact",
+    "chronologically_returnable",
+    "stable_representation",
+    "locally_selected",
+    "operator_fixed",
+    "unit_boundary_fixed",
+    "consumer_fixed",
+    "genuinely_uncovered"
+  ],
+  "candidates": [
+    {
+      "id": "raw_seed_html",
+      "object": "raw historical theseedisplanted HTML response",
+      "coverage": "Page mechanics and visible rebus are audited; whole raw source as a prime operand is unregistered.",
+      "gates": {
+        "creator_puzzle_artifact": true,
+        "chronologically_returnable": true,
+        "stable_representation": false,
+        "genuinely_uncovered": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false
+      },
+      "failed_gates": [
+        "stable_representation",
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "raw_choice_html",
+      "object": "raw historical choice...iwroteitmyself HTML response",
+      "coverage": "Textarea payloads are solved/audited; whole raw source as a prime operand is unregistered.",
+      "gates": {
+        "creator_puzzle_artifact": true,
+        "chronologically_returnable": true,
+        "stable_representation": false,
+        "genuinely_uncovered": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false
+      },
+      "failed_gates": [
+        "stable_representation",
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "ordered_prior_html_pair",
+      "object": "seed HTML followed by choice HTML",
+      "coverage": "No registered whole-source pair extraction; deployment/request fields make raw concatenation noncanonical.",
+      "gates": {
+        "creator_puzzle_artifact": true,
+        "chronologically_returnable": true,
+        "stable_representation": false,
+        "genuinely_uncovered": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false
+      },
+      "failed_gates": [
+        "stable_representation",
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "ordered_source_comment_pair",
+      "object": "the two prior source-only bunny-hunter comments in stage order",
+      "coverage": "Exact source-only pair is not in a registered prime or password family.",
+      "gates": {
+        "creator_puzzle_artifact": true,
+        "chronologically_returnable": true,
+        "stable_representation": true,
+        "genuinely_uncovered": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false
+      },
+      "failed_gates": [
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "csrf_values",
+      "object": "CSRF metadata/input token values",
+      "coverage": "Creator identifies the changing mechanism as anti-bruteforce state, not puzzle material.",
+      "gates": {
+        "creator_puzzle_artifact": false,
+        "chronologically_returnable": true,
+        "stable_representation": false,
+        "genuinely_uncovered": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false
+      },
+      "failed_gates": [
+        "creator_puzzle_artifact",
+        "stable_representation",
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "markup_and_cloudflare",
+      "object": "HTML tags/attributes plus Cloudflare beacon material",
+      "coverage": "Page structure is audited; Cloudflare is external deployment analytics and normalization is unfixed.",
+      "gates": {
+        "creator_puzzle_artifact": false,
+        "chronologically_returnable": true,
+        "stable_representation": false,
+        "genuinely_uncovered": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false
+      },
+      "failed_gates": [
+        "creator_puzzle_artifact",
+        "stable_representation",
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "textarea_ciphertexts",
+      "object": "Phase 2 and Phase 3 textarea ciphertexts",
+      "coverage": "Authenticated exact containers and their solved toolchain are covered by Phase 410.",
+      "gates": {
+        "creator_puzzle_artifact": true,
+        "chronologically_returnable": true,
+        "stable_representation": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": false
+      },
+      "failed_gates": [
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "original_lowercase_puzzle",
+      "object": "original lowercase /puzzle response",
+      "coverage": "It is a bare PNG and its grounded prime/color projections are already audited.",
+      "gates": {
+        "creator_puzzle_artifact": true,
+        "chronologically_returnable": true,
+        "stable_representation": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": false
+      },
+      "failed_gates": [
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "restored_puzzle_html",
+      "object": "post-restoration Puzzle.html",
+      "coverage": "Postdates the instruction and operator attribution is unresolved.",
+      "gates": {
+        "creator_puzzle_artifact": false,
+        "chronologically_returnable": false,
+        "stable_representation": true,
+        "genuinely_uncovered": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false
+      },
+      "failed_gates": [
+        "creator_puzzle_artifact",
+        "chronologically_returnable",
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "salphaseion_html",
+      "object": "SalPhaseIon/Cosmic HTML source",
+      "coverage": "Extensively audited, but downstream of the Architect instruction under literal RETURN chronology.",
+      "gates": {
+        "creator_puzzle_artifact": true,
+        "chronologically_returnable": false,
+        "stable_representation": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": false
+      },
+      "failed_gates": [
+        "chronologically_returnable",
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "general_site_javascript",
+      "object": "general GSMG JavaScript and site assets",
+      "coverage": "Broad site scanning is creator-disfavored; no selected historical JS operand is authenticated.",
+      "gates": {
+        "creator_puzzle_artifact": false,
+        "chronologically_returnable": true,
+        "stable_representation": false,
+        "genuinely_uncovered": true,
+        "locally_selected": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false
+      },
+      "failed_gates": [
+        "creator_puzzle_artifact",
+        "stable_representation",
+        "locally_selected",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed"
+      ],
+      "eligible": false
+    }
+  ],
+  "eligible_referents": [],
+  "newly_registered_historical_source_referents": [
+    "raw_seed_html",
+    "raw_choice_html",
+    "ordered_prior_html_pair",
+    "ordered_source_comment_pair"
+  ],
+  "decision": "new_source_referent_registered_but_ineligible",
+  "next_trigger": "new primary evidence must select comments or normalized prior-page source and fix prime mechanics plus consumer",
+  "prime_extractions_generated": 0,
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "docker_touched": false,
+  "gpu_touched": false
+}

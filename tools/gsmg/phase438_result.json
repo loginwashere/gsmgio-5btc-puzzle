@@ -1,0 +1,129 @@
+{
+  "phase": 438,
+  "representations": {
+    "raw_encoded_321": {
+      "length": 1539,
+      "sha256": "bd7a29432546c67c4170e0c523ddbf43ae82d20ee187d1b4dbf7907a0faf4c7b",
+      "distinct_symbols": 26,
+      "evidence_class": "creator_delivered",
+      "workflow_role": "encoded input"
+    },
+    "cp1141_beaufort_ciphertext": {
+      "length": 1539,
+      "sha256": "6d66e0e0e2dfdb812d5ecee2be6f54c1f3b8c84b0d74580686cf2053d76a200e",
+      "distinct_symbols": 26,
+      "evidence_class": "clue_selected_derived",
+      "workflow_role": "Beaufort ciphertext intermediate"
+    },
+    "decoded_architect_letters": {
+      "length": 1539,
+      "sha256": "56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241",
+      "distinct_symbols": 26,
+      "evidence_class": "decoded_output",
+      "workflow_role": "plaintext containing SOURCE CODES instruction"
+    }
+  },
+  "transcoding_comparison": {
+    "cp273_equals_cp1141": true,
+    "differing_position_count": 0,
+    "differing_positions": [],
+    "cp273_equals_pinned_ciphertext": true,
+    "cp1141_equals_pinned_ciphertext": true,
+    "implication": "CP1141 labels the clue-selected route but does not uniquely select a different letter stream from CP273 on these bytes"
+  },
+  "notebook": {
+    "repository_role": "community_solve_walkthrough_not_creator_primary",
+    "history": [
+      {
+        "commit": "dcb66952de3157f6e68cb00aa047dd2e4ff8ae39",
+        "timestamp": "2023-08-19T06:26:51+00:00",
+        "subject": "- Reorganize the README - Phase 0 and 1 - Phase 2, and 2.1 - Finish 3.1 - Phase 3.2 - Expand on all the hints given 2020 on wards - decentraland - Salphaseion - Hints and timeline"
+      },
+      {
+        "commit": "b948ce32c0f4fcea59778f156a170cef66cb0589",
+        "timestamp": "2024-04-21T11:53:42-06:00",
+        "subject": "new hints"
+      },
+      {
+        "commit": "f64394f89c8f58c31fb4c73ecab8ee77b17021fe",
+        "timestamp": "2026-01-05T08:31:58-07:00",
+        "subject": "Misc text"
+      }
+    ],
+    "first_commit": {
+      "commit": "dcb66952de3157f6e68cb00aa047dd2e4ff8ae39",
+      "timestamp": "2023-08-19T06:26:51+00:00",
+      "subject": "- Reorganize the README - Phase 0 and 1 - Phase 2, and 2.1 - Finish 3.1 - Phase 3.2 - Expand on all the hints given 2020 on wards - decentraland - Salphaseion - Hints and timeline"
+    },
+    "workflow_anchors": {
+      "cp273 1.0": true,
+      "cp1141 1.0": true,
+      "one** for **one**, **four** for **one": true,
+      "encode('cp1141')": true,
+      "beautiful strategic position": true,
+      "**beau**fort": true,
+      "There isn't really a puzzle in that, but maybe it'll be useful in the future": true,
+      "The puzzle was solved to this point by the end of 2019": true
+    }
+  },
+  "telegram": {
+    "export_group": "GSMG Puzzle Solvers",
+    "export_group_id": 1166734859,
+    "fixed_terms": [
+      "1141",
+      "ebcdic",
+      "beaufort",
+      "one for one",
+      "source codes"
+    ],
+    "union_hit_count": 201,
+    "per_term": {
+      "1141": {
+        "count": 65,
+        "earliest_id": 3301,
+        "earliest_date": "2020-04-06T19:02:24"
+      },
+      "ebcdic": {
+        "count": 20,
+        "earliest_id": 3856,
+        "earliest_date": "2020-05-11T16:51:11"
+      },
+      "beaufort": {
+        "count": 51,
+        "earliest_id": 6215,
+        "earliest_date": "2021-03-05T15:09:26"
+      },
+      "one for one": {
+        "count": 23,
+        "earliest_id": 2872,
+        "earliest_date": "2020-03-24T22:26:23"
+      },
+      "source codes": {
+        "count": 67,
+        "earliest_id": 5881,
+        "earliest_date": "2021-02-19T13:38:32"
+      }
+    },
+    "creator_authored_hit_ids": [],
+    "creator_direct_reply_ids": []
+  },
+  "creator_primary_downstream_binding_found": false,
+  "phase437_gate_updates": {
+    "raw_encoded_321": {
+      "locally_selected": false,
+      "unique_representation": false
+    },
+    "cp1141_beaufort_ciphertext": {
+      "locally_selected": false,
+      "unique_representation": false
+    },
+    "decoded_answer_321": {
+      "locally_selected": false,
+      "unique_representation": false
+    }
+  },
+  "decision": "workflow_privilege_without_downstream_binding",
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "gpu_touched": false
+}

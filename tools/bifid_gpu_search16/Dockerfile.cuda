@@ -1,0 +1,42 @@
+# Reproducible CUDA-13 / RTX-5070 (sm_120) build.
+# Digests recorded from the exact images used on 2026-08-27.
+FROM nvidia/cuda:13.0.0-devel-ubuntu22.04@sha256:1470d2d7904fac4e5cb3bdfd4993305c46d3ee76deb0213eaaf248e5cf9c7400 AS builder
+
+ARG RUST_VERSION=1.94.1
+ARG BIFID_CUDA_ARCH=sm_120
+
+RUN echo 'Acquire::ForceIPv4 "true";' > /etc/apt/apt.conf.d/99force-ipv4; \
+    rm -f /etc/apt/sources.list.d/cuda*.list /etc/apt/sources.list.d/nvidia*.list 2>/dev/null; \
+    apt-get update && apt-get install -y --no-install-recommends curl gcc pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain "${RUST_VERSION}"
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+WORKDIR /build/tools/bifid_gpu_search16
+
+# Cache the locked dependency graph and PTX compilation first.
+COPY tools/bifid_gpu_search16/Cargo.toml tools/bifid_gpu_search16/Cargo.lock \
+     tools/bifid_gpu_search16/build.rs tools/bifid_gpu_search16/rust-toolchain.toml ./
+COPY tools/bifid_gpu_search16/kernels ./kernels
+RUN mkdir -p src \
+    && echo 'fn main(){}' > src/main.rs \
+    && BIFID_CUDA_ARCH="${BIFID_CUDA_ARCH}" cargo build --locked --release --features cuda \
+    && rm -rf src
+
+# The Rust source embeds the pinned repository quadgram table at compile time.
+COPY tools/bifid_gpu_search16/src ./src
+COPY tools/gsmg/data_files/english_quadgrams.txt /build/tools/gsmg/data_files/english_quadgrams.txt
+RUN touch src/main.rs \
+    && BIFID_CUDA_ARCH="${BIFID_CUDA_ARCH}" cargo build --locked --release --features cuda \
+    && BIFID_CUDA_ARCH="${BIFID_CUDA_ARCH}" cargo test --locked --release --features cuda
+
+FROM nvidia/cuda:13.0.0-runtime-ubuntu22.04@sha256:3e7f34f5e9dd5315b67ab30d71a92e578c5911236e14370647df020bdee2ca8a
+
+LABEL org.opencontainers.image.title="GSMG BTCSEED Bifid 16-Factorial GPU Search" \
+      org.opencontainers.image.description="Reproducible sm_120 search of the frozen 16! Bifid alphabet-completion family"
+
+COPY --from=builder /build/tools/bifid_gpu_search16/target/release/bifid_gpu_search16 /usr/local/bin/bifid_gpu_search16
+RUN mkdir -p /data/output /data/checkpoints
+WORKDIR /data
+ENTRYPOINT ["bifid_gpu_search16"]
+CMD ["--help"]

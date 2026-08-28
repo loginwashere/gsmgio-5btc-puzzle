@@ -1,0 +1,2263 @@
+{
+  "checkpoint": {
+    "full_progress_fraction": 1.0,
+    "next_rank": 20922789888000,
+    "path": "tools/bifid_gpu_search16/checkpoints/bifid_16factorial.json",
+    "retained_rows": 1000,
+    "snapshot_sha256": "2735d25f3b06805f02a0bb2981cd0d60d3db724317ddf598e720f57519d17770"
+  },
+  "delta_from_previous": {
+    "departed_decoded_sha256": [
+      "3000403031f93a17771028e557c7481614028820db51ac1542814332da894a27",
+      "3f92542ffeb75453fd735f18da62924216dd3f7415f397342ae73f25fa4733e8"
+    ],
+    "leader_changed": true,
+    "leader_score_delta": 42.071699999999964,
+    "new_decoded_sha256": [
+      "008c620efc58ff135ecbf0538d420bb83a6edd605a0fcd54d4a5f8711d21fd5d",
+      "3d3321445382fcf4de64de95418ad3cd1b2e716b2ead7456f2686c15eddb4186",
+      "4624e187ee776f27cdfe12d24694fae452dcd8210a2503ed95a85634f94fea3d",
+      "602a9a9ab1504ab4d9c6db471eb26f5502fe678d01f58423a402594819858d32",
+      "78887b4d2dc945937b2a6cd80a1733393f673605b60f4b47164d2c38d86f6213",
+      "8c5b1883cd027c7d947a0cabff1eb72064bbc4aa286473dd11bd3bf9497096ea",
+      "98f2b76e17385faf0aec5b7cfdb4d1fe158f7e3656488705d9c87294f1327c5e",
+      "cb79672cecfd10f55f9c80b63357217c1c95bfcaecd28b70801d1744557de537",
+      "f695f7a1cf8bb4ce7a3b654181277e1037fef40949605a45b48c03b27da1acc8"
+    ]
+  },
+  "distinct_candidates": [
+    {
+      "best_rank": 8041961541600,
+      "best_score_total": -3465.5264,
+      "decoded_prefix_72": "BTCSEEDDGAGEOAEAIFINOFIABDCSIARULNLARAOFCNDICIBUEEBDDBRODSBDLADOLADLROCS",
+      "decoded_sha256": "602a9a9ab1504ab4d9c6db471eb26f5502fe678d01f58423a402594819858d32",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 356,
+          "mean": 226.91,
+          "min": 105
+        },
+        "null_substring_count": {
+          "max": 6,
+          "mean": 1.54,
+          "min": 0
+        },
+        "seed": 6929520965853400710,
+        "segmentation": {
+          "covered_characters": 97,
+          "covered_fraction": 0.17229129662522202,
+          "score": 415,
+          "tokens": [
+            {
+              "start": 1,
+              "word": "GAGE"
+            },
+            {
+              "start": 27,
+              "word": "LARA"
+            },
+            {
+              "start": 47,
+              "word": "RODS"
+            },
+            {
+              "start": 92,
+              "word": "CREE"
+            },
+            {
+              "start": 98,
+              "word": "FOND"
+            },
+            {
+              "start": 121,
+              "word": "GEED"
+            },
+            {
+              "start": 143,
+              "word": "LEON"
+            },
+            {
+              "start": 162,
+              "word": "ACNE"
+            },
+            {
+              "start": 175,
+              "word": "ROBE"
+            },
+            {
+              "start": 199,
+              "word": "ROOT"
+            },
+            {
+              "start": 208,
+              "word": "NOBLE"
+            },
+            {
+              "start": 224,
+              "word": "LIND"
+            },
+            {
+              "start": 232,
+              "word": "NINE"
+            },
+            {
+              "start": 237,
+              "word": "BRIBE"
+            },
+            {
+              "start": 277,
+              "word": "DARN"
+            },
+            {
+              "start": 326,
+              "word": "CLAD"
+            },
+            {
+              "start": 335,
+              "word": "EBRO"
+            },
+            {
+              "start": 389,
+              "word": "OBOE"
+            },
+            {
+              "start": 408,
+              "word": "BEARER"
+            },
+            {
+              "start": 429,
+              "word": "RARED"
+            },
+            {
+              "start": 446,
+              "word": "HIND"
+            },
+            {
+              "start": 508,
+              "word": "ALAR"
+            },
+            {
+              "start": 522,
+              "word": "BRED"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.004975124378109453,
+        "substring_count": 4,
+        "substring_inclusive_p": 0.07960199004975124,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 208,
+          "word": "NOBLE"
+        },
+        {
+          "start": 237,
+          "word": "BRIBE"
+        },
+        {
+          "start": 408,
+          "word": "BEARER"
+        },
+        {
+          "start": 429,
+          "word": "RARED"
+        }
+      ],
+      "index_of_coincidence": 0.0769011965639084,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 524,
+      "square": "DBIFKCEOAMRGLHPUNSTQVWXYZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.12834224598930483,
+          "lag": 2,
+          "matches": 72
+        },
+        {
+          "fraction": 0.12338858195211787,
+          "lag": 20,
+          "matches": 67
+        },
+        {
+          "fraction": 0.11806797853309481,
+          "lag": 4,
+          "matches": 66
+        },
+        {
+          "fraction": 0.11632270168855535,
+          "lag": 30,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11252268602540835,
+          "lag": 12,
+          "matches": 62
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEGCB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EINGA"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEGC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "ABDC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "ACSC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "ARER"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCOE"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCO"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DLIN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADH"
+        }
+      ],
+      "tail_sha256": "720e07b4f155a530c720075c934e286c415704c9ee82bf36430912dc516b2dfa"
+    },
+    {
+      "best_rank": 8696763296904,
+      "best_score_total": -3467.7266,
+      "decoded_prefix_72": "BTCSEEDDGAGEWEEAUBINWBUEBDCSUEPCVEMERAWBCNDICIBKEEBDDBRODSBDMEDOMEDLROCS",
+      "decoded_sha256": "3d3321445382fcf4de64de95418ad3cd1b2e716b2ead7456f2686c15eddb4186",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 372,
+          "mean": 204.53,
+          "min": 48
+        },
+        "null_substring_count": {
+          "max": 6,
+          "mean": 1.615,
+          "min": 0
+        },
+        "seed": 4409905037468432582,
+        "segmentation": {
+          "covered_characters": 116,
+          "covered_fraction": 0.20603907637655416,
+          "score": 506,
+          "tokens": [
+            {
+              "start": 1,
+              "word": "GAGE"
+            },
+            {
+              "start": 47,
+              "word": "RODS"
+            },
+            {
+              "start": 55,
+              "word": "DOMED"
+            },
+            {
+              "start": 92,
+              "word": "CREE"
+            },
+            {
+              "start": 98,
+              "word": "FOND"
+            },
+            {
+              "start": 121,
+              "word": "GEED"
+            },
+            {
+              "start": 143,
+              "word": "LEON"
+            },
+            {
+              "start": 164,
+              "word": "NEAR"
+            },
+            {
+              "start": 175,
+              "word": "ROBE"
+            },
+            {
+              "start": 198,
+              "word": "CROWN"
+            },
+            {
+              "start": 208,
+              "word": "NOBLE"
+            },
+            {
+              "start": 220,
+              "word": "AWED"
+            },
+            {
+              "start": 224,
+              "word": "LIND"
+            },
+            {
+              "start": 232,
+              "word": "NINE"
+            },
+            {
+              "start": 237,
+              "word": "BRIBE"
+            },
+            {
+              "start": 244,
+              "word": "CRAB"
+            },
+            {
+              "start": 283,
+              "word": "CAMEO"
+            },
+            {
+              "start": 335,
+              "word": "EBRO"
+            },
+            {
+              "start": 363,
+              "word": "DOVE"
+            },
+            {
+              "start": 389,
+              "word": "OBOE"
+            },
+            {
+              "start": 403,
+              "word": "WEED"
+            },
+            {
+              "start": 408,
+              "word": "BEARER"
+            },
+            {
+              "start": 429,
+              "word": "RARED"
+            },
+            {
+              "start": 487,
+              "word": "CODY"
+            },
+            {
+              "start": 507,
+              "word": "MEME"
+            },
+            {
+              "start": 522,
+              "word": "BRED"
+            },
+            {
+              "start": 541,
+              "word": "DICK"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.004975124378109453,
+        "substring_count": 7,
+        "substring_inclusive_p": 0.004975124378109453,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 55,
+          "word": "DOMED"
+        },
+        {
+          "start": 198,
+          "word": "CROWN"
+        },
+        {
+          "start": 208,
+          "word": "NOBLE"
+        },
+        {
+          "start": 237,
+          "word": "BRIBE"
+        },
+        {
+          "start": 283,
+          "word": "CAMEO"
+        },
+        {
+          "start": 408,
+          "word": "BEARER"
+        },
+        {
+          "start": 429,
+          "word": "RARED"
+        }
+      ],
+      "index_of_coincidence": 0.07978989020435769,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 1,
+      "square": "DBIFUCEOAWRGLYMKNSTQPHVXZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.12834224598930483,
+          "lag": 2,
+          "matches": 72
+        },
+        {
+          "fraction": 0.1200750469043152,
+          "lag": 30,
+          "matches": 64
+        },
+        {
+          "fraction": 0.11270125223613596,
+          "lag": 4,
+          "matches": 63
+        },
+        {
+          "fraction": 0.11252268602540835,
+          "lag": 12,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11233885819521179,
+          "lag": 20,
+          "matches": 61
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEGCB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "ECSCO"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EEAUB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EINGA"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEGC"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "ECSC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCOE"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCO"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DLIN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADY"
+        }
+      ],
+      "tail_sha256": "2758a2bf818173c75f3800096aa84db88a266745d39d48352d3b196a5d8edff0"
+    },
+    {
+      "best_rank": 8696761993128,
+      "best_score_total": -3469.8167,
+      "decoded_prefix_72": "BTCSEEDDGAGEWEEAUBINWBUEBDCSUEMCKEVERAWBCNDICIBYEEBDDBRODSBDVEDOVEDLROCS",
+      "decoded_sha256": "98f2b76e17385faf0aec5b7cfdb4d1fe158f7e3656488705d9c87294f1327c5e",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 333,
+          "mean": 197.01,
+          "min": 64
+        },
+        "null_substring_count": {
+          "max": 6,
+          "mean": 1.465,
+          "min": 0
+        },
+        "seed": 11021072921592880029,
+        "segmentation": {
+          "covered_characters": 110,
+          "covered_fraction": 0.19538188277087035,
+          "score": 472,
+          "tokens": [
+            {
+              "start": 1,
+              "word": "GAGE"
+            },
+            {
+              "start": 26,
+              "word": "EVER"
+            },
+            {
+              "start": 47,
+              "word": "RODS"
+            },
+            {
+              "start": 55,
+              "word": "DOVE"
+            },
+            {
+              "start": 92,
+              "word": "CREE"
+            },
+            {
+              "start": 98,
+              "word": "FOND"
+            },
+            {
+              "start": 121,
+              "word": "GEED"
+            },
+            {
+              "start": 143,
+              "word": "LEON"
+            },
+            {
+              "start": 164,
+              "word": "NEAR"
+            },
+            {
+              "start": 175,
+              "word": "ROBE"
+            },
+            {
+              "start": 198,
+              "word": "CROWN"
+            },
+            {
+              "start": 208,
+              "word": "NOBLE"
+            },
+            {
+              "start": 220,
+              "word": "AWED"
+            },
+            {
+              "start": 224,
+              "word": "LIND"
+            },
+            {
+              "start": 232,
+              "word": "NINE"
+            },
+            {
+              "start": 237,
+              "word": "BRIBE"
+            },
+            {
+              "start": 244,
+              "word": "CRAB"
+            },
+            {
+              "start": 276,
+              "word": "EDAM"
+            },
+            {
+              "start": 283,
+              "word": "CAVE"
+            },
+            {
+              "start": 335,
+              "word": "EBRO"
+            },
+            {
+              "start": 389,
+              "word": "OBOE"
+            },
+            {
+              "start": 403,
+              "word": "WEED"
+            },
+            {
+              "start": 408,
+              "word": "BEARER"
+            },
+            {
+              "start": 429,
+              "word": "RARED"
+            },
+            {
+              "start": 508,
+              "word": "EVER"
+            },
+            {
+              "start": 522,
+              "word": "BRED"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.004975124378109453,
+        "substring_count": 5,
+        "substring_inclusive_p": 0.024875621890547265,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 198,
+          "word": "CROWN"
+        },
+        {
+          "start": 208,
+          "word": "NOBLE"
+        },
+        {
+          "start": 237,
+          "word": "BRIBE"
+        },
+        {
+          "start": 408,
+          "word": "BEARER"
+        },
+        {
+          "start": 429,
+          "word": "RARED"
+        }
+      ],
+      "index_of_coincidence": 0.07978989020435769,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 1,
+      "square": "DBIFUCEOAWRGLPVYNSTQMHKXZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.12834224598930483,
+          "lag": 2,
+          "matches": 72
+        },
+        {
+          "fraction": 0.1200750469043152,
+          "lag": 30,
+          "matches": 64
+        },
+        {
+          "fraction": 0.11270125223613596,
+          "lag": 4,
+          "matches": 63
+        },
+        {
+          "fraction": 0.11252268602540835,
+          "lag": 12,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11233885819521179,
+          "lag": 20,
+          "matches": 61
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEGCB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "ECSCO"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EEAUB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EINGA"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEGC"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "ECSC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCOE"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCO"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DLIN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADP"
+        }
+      ],
+      "tail_sha256": "8a53ddd872987adb1eac97e79f39384b461055a30127f59f79d621563422da49"
+    },
+    {
+      "best_rank": 8696763378264,
+      "best_score_total": -3470.2456,
+      "decoded_prefix_72": "BTCSEEDDGAGEWEEAUBINWBUEBDCSUEMCVEPERAWBCNDICIBKEEBDDBRODSBDPEDOPEDLROCS",
+      "decoded_sha256": "f695f7a1cf8bb4ce7a3b654181277e1037fef40949605a45b48c03b27da1acc8",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 345,
+          "mean": 203.675,
+          "min": 89
+        },
+        "null_substring_count": {
+          "max": 7,
+          "mean": 1.54,
+          "min": 0
+        },
+        "seed": 17768380179203993852,
+        "segmentation": {
+          "covered_characters": 119,
+          "covered_fraction": 0.2113676731793961,
+          "score": 513,
+          "tokens": [
+            {
+              "start": 1,
+              "word": "GAGE"
+            },
+            {
+              "start": 47,
+              "word": "RODS"
+            },
+            {
+              "start": 55,
+              "word": "DOPED"
+            },
+            {
+              "start": 92,
+              "word": "CREE"
+            },
+            {
+              "start": 98,
+              "word": "FOND"
+            },
+            {
+              "start": 121,
+              "word": "GEED"
+            },
+            {
+              "start": 143,
+              "word": "LEON"
+            },
+            {
+              "start": 164,
+              "word": "NEAR"
+            },
+            {
+              "start": 175,
+              "word": "ROBE"
+            },
+            {
+              "start": 198,
+              "word": "CROWN"
+            },
+            {
+              "start": 208,
+              "word": "NOBLE"
+            },
+            {
+              "start": 220,
+              "word": "AWED"
+            },
+            {
+              "start": 224,
+              "word": "LIND"
+            },
+            {
+              "start": 232,
+              "word": "NINE"
+            },
+            {
+              "start": 237,
+              "word": "BRIBE"
+            },
+            {
+              "start": 244,
+              "word": "CRAB"
+            },
+            {
+              "start": 265,
+              "word": "PECS"
+            },
+            {
+              "start": 276,
+              "word": "EDAM"
+            },
+            {
+              "start": 283,
+              "word": "CAPE"
+            },
+            {
+              "start": 335,
+              "word": "EBRO"
+            },
+            {
+              "start": 363,
+              "word": "DOVE"
+            },
+            {
+              "start": 389,
+              "word": "OBOE"
+            },
+            {
+              "start": 403,
+              "word": "WEED"
+            },
+            {
+              "start": 408,
+              "word": "BEARER"
+            },
+            {
+              "start": 429,
+              "word": "RARED"
+            },
+            {
+              "start": 487,
+              "word": "CODY"
+            },
+            {
+              "start": 522,
+              "word": "BRED"
+            },
+            {
+              "start": 541,
+              "word": "DICK"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.004975124378109453,
+        "substring_count": 6,
+        "substring_inclusive_p": 0.009950248756218905,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 55,
+          "word": "DOPED"
+        },
+        {
+          "start": 198,
+          "word": "CROWN"
+        },
+        {
+          "start": 208,
+          "word": "NOBLE"
+        },
+        {
+          "start": 237,
+          "word": "BRIBE"
+        },
+        {
+          "start": 408,
+          "word": "BEARER"
+        },
+        {
+          "start": 429,
+          "word": "RARED"
+        }
+      ],
+      "index_of_coincidence": 0.07978989020435769,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 1,
+      "square": "DBIFUCEOAWRGLYPKNSTQMHVXZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.12834224598930483,
+          "lag": 2,
+          "matches": 72
+        },
+        {
+          "fraction": 0.1200750469043152,
+          "lag": 30,
+          "matches": 64
+        },
+        {
+          "fraction": 0.11270125223613596,
+          "lag": 4,
+          "matches": 63
+        },
+        {
+          "fraction": 0.11252268602540835,
+          "lag": 12,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11233885819521179,
+          "lag": 20,
+          "matches": 61
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEGCB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "ECSCO"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EEAUB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EINGA"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEGC"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "ECSC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCOE"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCO"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DLIN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADY"
+        }
+      ],
+      "tail_sha256": "aecb8177fc9446794d3ed89d845a0ff359e39911b12f20490f825d6b0369a4f1"
+    },
+    {
+      "best_rank": 8696763459029,
+      "best_score_total": -3473.0605,
+      "decoded_prefix_72": "BTCSEEDDGAGEWEEAUBINWBUEBDCSUEMCZEVERAWBCNDICIBKEEBDDBRODSBDVEDOVEDLROCS",
+      "decoded_sha256": "cb79672cecfd10f55f9c80b63357217c1c95bfcaecd28b70801d1744557de537",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 326,
+          "mean": 194.635,
+          "min": 80
+        },
+        "null_substring_count": {
+          "max": 5,
+          "mean": 1.47,
+          "min": 0
+        },
+        "seed": 14661863504533591239,
+        "segmentation": {
+          "covered_characters": 122,
+          "covered_fraction": 0.216696269982238,
+          "score": 520,
+          "tokens": [
+            {
+              "start": 1,
+              "word": "GAGE"
+            },
+            {
+              "start": 26,
+              "word": "EVER"
+            },
+            {
+              "start": 47,
+              "word": "RODS"
+            },
+            {
+              "start": 55,
+              "word": "DOVE"
+            },
+            {
+              "start": 92,
+              "word": "CREE"
+            },
+            {
+              "start": 98,
+              "word": "FOND"
+            },
+            {
+              "start": 121,
+              "word": "GEED"
+            },
+            {
+              "start": 143,
+              "word": "LEON"
+            },
+            {
+              "start": 164,
+              "word": "NEAR"
+            },
+            {
+              "start": 175,
+              "word": "ROBE"
+            },
+            {
+              "start": 198,
+              "word": "CROWN"
+            },
+            {
+              "start": 208,
+              "word": "NOBLE"
+            },
+            {
+              "start": 220,
+              "word": "AWED"
+            },
+            {
+              "start": 224,
+              "word": "LIND"
+            },
+            {
+              "start": 232,
+              "word": "NINE"
+            },
+            {
+              "start": 237,
+              "word": "BRIBE"
+            },
+            {
+              "start": 244,
+              "word": "CRAB"
+            },
+            {
+              "start": 276,
+              "word": "EDAM"
+            },
+            {
+              "start": 283,
+              "word": "CAVE"
+            },
+            {
+              "start": 335,
+              "word": "EBRO"
+            },
+            {
+              "start": 363,
+              "word": "DOZE"
+            },
+            {
+              "start": 389,
+              "word": "OBOE"
+            },
+            {
+              "start": 403,
+              "word": "WEED"
+            },
+            {
+              "start": 408,
+              "word": "BEARER"
+            },
+            {
+              "start": 429,
+              "word": "RARED"
+            },
+            {
+              "start": 487,
+              "word": "CODY"
+            },
+            {
+              "start": 508,
+              "word": "EVER"
+            },
+            {
+              "start": 522,
+              "word": "BRED"
+            },
+            {
+              "start": 541,
+              "word": "DICK"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.004975124378109453,
+        "substring_count": 5,
+        "substring_inclusive_p": 0.014925373134328358,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 198,
+          "word": "CROWN"
+        },
+        {
+          "start": 208,
+          "word": "NOBLE"
+        },
+        {
+          "start": 237,
+          "word": "BRIBE"
+        },
+        {
+          "start": 408,
+          "word": "BEARER"
+        },
+        {
+          "start": 429,
+          "word": "RARED"
+        }
+      ],
+      "index_of_coincidence": 0.07978989020435769,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 1,
+      "square": "DBIFUCEOAWRGLYVKNSTQMHZXP",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.12834224598930483,
+          "lag": 2,
+          "matches": 72
+        },
+        {
+          "fraction": 0.1200750469043152,
+          "lag": 30,
+          "matches": 64
+        },
+        {
+          "fraction": 0.11270125223613596,
+          "lag": 4,
+          "matches": 63
+        },
+        {
+          "fraction": 0.11252268602540835,
+          "lag": 12,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11233885819521179,
+          "lag": 20,
+          "matches": 61
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEGCB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "ECSCO"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EEAUB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EINGA"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEGC"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "ECSC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCOE"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCO"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DLIN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADY"
+        }
+      ],
+      "tail_sha256": "69ce4a14880549b09dba58de15e7d3304dbdd2461cadaeda2b8f926cfd84afb6"
+    },
+    {
+      "best_rank": 8696766925704,
+      "best_score_total": -3475.0393,
+      "decoded_prefix_72": "BTCSEEDDGAGEWEEAUBINWBUEBDCSUEPCVELERAWBCNDICIBKEEBDDBRODSBDLEDOLEDMROCS",
+      "decoded_sha256": "4624e187ee776f27cdfe12d24694fae452dcd8210a2503ed95a85634f94fea3d",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 356,
+          "mean": 196.835,
+          "min": 64
+        },
+        "null_substring_count": {
+          "max": 5,
+          "mean": 1.44,
+          "min": 0
+        },
+        "seed": 5054412655754177301,
+        "segmentation": {
+          "covered_characters": 107,
+          "covered_fraction": 0.19005328596802842,
+          "score": 465,
+          "tokens": [
+            {
+              "start": 1,
+              "word": "GAGE"
+            },
+            {
+              "start": 47,
+              "word": "RODS"
+            },
+            {
+              "start": 55,
+              "word": "DOLED"
+            },
+            {
+              "start": 92,
+              "word": "CREE"
+            },
+            {
+              "start": 98,
+              "word": "FOND"
+            },
+            {
+              "start": 121,
+              "word": "GEED"
+            },
+            {
+              "start": 164,
+              "word": "NEAR"
+            },
+            {
+              "start": 175,
+              "word": "ROBE"
+            },
+            {
+              "start": 189,
+              "word": "MEME"
+            },
+            {
+              "start": 198,
+              "word": "CROWN"
+            },
+            {
+              "start": 220,
+              "word": "AWED"
+            },
+            {
+              "start": 224,
+              "word": "MINDS"
+            },
+            {
+              "start": 232,
+              "word": "NINE"
+            },
+            {
+              "start": 237,
+              "word": "BRIBE"
+            },
+            {
+              "start": 244,
+              "word": "CRAB"
+            },
+            {
+              "start": 335,
+              "word": "EBRO"
+            },
+            {
+              "start": 363,
+              "word": "DOVE"
+            },
+            {
+              "start": 389,
+              "word": "OBOE"
+            },
+            {
+              "start": 403,
+              "word": "WEED"
+            },
+            {
+              "start": 408,
+              "word": "BEARER"
+            },
+            {
+              "start": 429,
+              "word": "RARED"
+            },
+            {
+              "start": 487,
+              "word": "CODY"
+            },
+            {
+              "start": 505,
+              "word": "BALE"
+            },
+            {
+              "start": 522,
+              "word": "BRED"
+            },
+            {
+              "start": 541,
+              "word": "DICK"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.004975124378109453,
+        "substring_count": 6,
+        "substring_inclusive_p": 0.004975124378109453,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 55,
+          "word": "DOLED"
+        },
+        {
+          "start": 198,
+          "word": "CROWN"
+        },
+        {
+          "start": 224,
+          "word": "MINDS"
+        },
+        {
+          "start": 237,
+          "word": "BRIBE"
+        },
+        {
+          "start": 408,
+          "word": "BEARER"
+        },
+        {
+          "start": 429,
+          "word": "RARED"
+        }
+      ],
+      "index_of_coincidence": 0.07978989020435769,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 1,
+      "square": "DBIFUCEOAWRGMYLKNSTQPHVXZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.12834224598930483,
+          "lag": 2,
+          "matches": 72
+        },
+        {
+          "fraction": 0.1200750469043152,
+          "lag": 30,
+          "matches": 64
+        },
+        {
+          "fraction": 0.11270125223613596,
+          "lag": 4,
+          "matches": 63
+        },
+        {
+          "fraction": 0.11252268602540835,
+          "lag": 12,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11233885819521179,
+          "lag": 20,
+          "matches": 61
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEGCB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "ECSCO"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EEAUB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EINGA"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEGC"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "ECSC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCOE"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCO"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DMIN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADY"
+        }
+      ],
+      "tail_sha256": "22620b12a4869b358bb494a147d95a207b54b9254038ff820566d3c6ebc1a03c"
+    },
+    {
+      "best_rank": 8652711989928,
+      "best_score_total": -3475.3271,
+      "decoded_prefix_72": "BTCSEEDDGAGELEEAUBINLBUEBDCSUEMCKEVERALBCNDICIBYEEBDDBRODSBDVEDOVEDWROCS",
+      "decoded_sha256": "008c620efc58ff135ecbf0538d420bb83a6edd605a0fcd54d4a5f8711d21fd5d",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 340,
+          "mean": 196.465,
+          "min": 64
+        },
+        "null_substring_count": {
+          "max": 7,
+          "mean": 1.435,
+          "min": 0
+        },
+        "seed": 39514313242245921,
+        "segmentation": {
+          "covered_characters": 103,
+          "covered_fraction": 0.18294849023090587,
+          "score": 449,
+          "tokens": [
+            {
+              "start": 1,
+              "word": "GAGE"
+            },
+            {
+              "start": 26,
+              "word": "EVER"
+            },
+            {
+              "start": 47,
+              "word": "RODS"
+            },
+            {
+              "start": 55,
+              "word": "DOVE"
+            },
+            {
+              "start": 92,
+              "word": "CREE"
+            },
+            {
+              "start": 98,
+              "word": "FOND"
+            },
+            {
+              "start": 121,
+              "word": "GEED"
+            },
+            {
+              "start": 164,
+              "word": "NEAR"
+            },
+            {
+              "start": 175,
+              "word": "ROBE"
+            },
+            {
+              "start": 180,
+              "word": "ELECT"
+            },
+            {
+              "start": 219,
+              "word": "BALED"
+            },
+            {
+              "start": 224,
+              "word": "WINDS"
+            },
+            {
+              "start": 232,
+              "word": "NINE"
+            },
+            {
+              "start": 237,
+              "word": "BRIBE"
+            },
+            {
+              "start": 244,
+              "word": "CRAB"
+            },
+            {
+              "start": 276,
+              "word": "EDAM"
+            },
+            {
+              "start": 283,
+              "word": "CAVE"
+            },
+            {
+              "start": 335,
+              "word": "EBRO"
+            },
+            {
+              "start": 389,
+              "word": "OBOE"
+            },
+            {
+              "start": 402,
+              "word": "GLEE"
+            },
+            {
+              "start": 408,
+              "word": "BEARER"
+            },
+            {
+              "start": 429,
+              "word": "RARED"
+            },
+            {
+              "start": 508,
+              "word": "EVER"
+            },
+            {
+              "start": 522,
+              "word": "BRED"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.004975124378109453,
+        "substring_count": 7,
+        "substring_inclusive_p": 0.014925373134328358,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 180,
+          "word": "ELECT"
+        },
+        {
+          "start": 219,
+          "word": "BALED"
+        },
+        {
+          "start": 222,
+          "word": "EDWIN"
+        },
+        {
+          "start": 224,
+          "word": "WINDS"
+        },
+        {
+          "start": 237,
+          "word": "BRIBE"
+        },
+        {
+          "start": 408,
+          "word": "BEARER"
+        },
+        {
+          "start": 429,
+          "word": "RARED"
+        }
+      ],
+      "index_of_coincidence": 0.07978989020435769,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 1,
+      "square": "DBIFUCEOALRGWPVYNSTQMHKXZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.12834224598930483,
+          "lag": 2,
+          "matches": 72
+        },
+        {
+          "fraction": 0.1200750469043152,
+          "lag": 30,
+          "matches": 64
+        },
+        {
+          "fraction": 0.11270125223613596,
+          "lag": 4,
+          "matches": 63
+        },
+        {
+          "fraction": 0.11252268602540835,
+          "lag": 12,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11233885819521179,
+          "lag": 20,
+          "matches": 61
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEGCB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "ECSCO"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EEAUB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EINGA"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEGC"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "ECSC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCOE"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCO"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DWIN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADP"
+        }
+      ],
+      "tail_sha256": "bf1eac139c2754423d273063bb23161331c30bffd9945f9f7b03387fa7411da9"
+    },
+    {
+      "best_rank": 8652713293704,
+      "best_score_total": -3475.3813,
+      "decoded_prefix_72": "BTCSEEDDGAGELEEAUBINLBUEBDCSUEPCVEMERALBCNDICIBKEEBDDBRODSBDMEDOMEDWROCS",
+      "decoded_sha256": "8c5b1883cd027c7d947a0cabff1eb72064bbc4aa286473dd11bd3bf9497096ea",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 347,
+          "mean": 203.42,
+          "min": 80
+        },
+        "null_substring_count": {
+          "max": 8,
+          "mean": 1.555,
+          "min": 0
+        },
+        "seed": 10113704342549854287,
+        "segmentation": {
+          "covered_characters": 113,
+          "covered_fraction": 0.20071047957371227,
+          "score": 499,
+          "tokens": [
+            {
+              "start": 1,
+              "word": "GAGE"
+            },
+            {
+              "start": 47,
+              "word": "RODS"
+            },
+            {
+              "start": 55,
+              "word": "DOMED"
+            },
+            {
+              "start": 92,
+              "word": "CREE"
+            },
+            {
+              "start": 98,
+              "word": "FOND"
+            },
+            {
+              "start": 103,
+              "word": "PELE"
+            },
+            {
+              "start": 121,
+              "word": "GEED"
+            },
+            {
+              "start": 164,
+              "word": "NEAR"
+            },
+            {
+              "start": 175,
+              "word": "ROBE"
+            },
+            {
+              "start": 180,
+              "word": "ELECT"
+            },
+            {
+              "start": 219,
+              "word": "BALED"
+            },
+            {
+              "start": 224,
+              "word": "WINDS"
+            },
+            {
+              "start": 232,
+              "word": "NINE"
+            },
+            {
+              "start": 237,
+              "word": "BRIBE"
+            },
+            {
+              "start": 244,
+              "word": "CRAB"
+            },
+            {
+              "start": 283,
+              "word": "CAMEO"
+            },
+            {
+              "start": 335,
+              "word": "EBRO"
+            },
+            {
+              "start": 363,
+              "word": "DOVE"
+            },
+            {
+              "start": 389,
+              "word": "OBOE"
+            },
+            {
+              "start": 402,
+              "word": "GLEE"
+            },
+            {
+              "start": 408,
+              "word": "BEARER"
+            },
+            {
+              "start": 429,
+              "word": "RARED"
+            },
+            {
+              "start": 487,
+              "word": "CODY"
+            },
+            {
+              "start": 507,
+              "word": "MEME"
+            },
+            {
+              "start": 522,
+              "word": "BRED"
+            },
+            {
+              "start": 541,
+              "word": "DICK"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.004975124378109453,
+        "substring_count": 9,
+        "substring_inclusive_p": 0.004975124378109453,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 55,
+          "word": "DOMED"
+        },
+        {
+          "start": 180,
+          "word": "ELECT"
+        },
+        {
+          "start": 219,
+          "word": "BALED"
+        },
+        {
+          "start": 222,
+          "word": "EDWIN"
+        },
+        {
+          "start": 224,
+          "word": "WINDS"
+        },
+        {
+          "start": 237,
+          "word": "BRIBE"
+        },
+        {
+          "start": 283,
+          "word": "CAMEO"
+        },
+        {
+          "start": 408,
+          "word": "BEARER"
+        },
+        {
+          "start": 429,
+          "word": "RARED"
+        }
+      ],
+      "index_of_coincidence": 0.07978989020435769,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 1,
+      "square": "DBIFUCEOALRGWYMKNSTQPHVXZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.12834224598930483,
+          "lag": 2,
+          "matches": 72
+        },
+        {
+          "fraction": 0.1200750469043152,
+          "lag": 30,
+          "matches": 64
+        },
+        {
+          "fraction": 0.11270125223613596,
+          "lag": 4,
+          "matches": 63
+        },
+        {
+          "fraction": 0.11252268602540835,
+          "lag": 12,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11233885819521179,
+          "lag": 20,
+          "matches": 61
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEGCB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "ECSCO"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EEAUB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EINGA"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEGC"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "ECSC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCOE"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCO"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DWIN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADY"
+        }
+      ],
+      "tail_sha256": "168e08b641ed2a9c0e1a9aebfc5d915df7a3600ed044e49bf3d1994a916ec975"
+    },
+    {
+      "best_rank": 8035734520800,
+      "best_score_total": -3476.0571,
+      "decoded_prefix_72": "BTCSEEDDGAGEOAEAIFINOFIABDCSIARUMNMARAOFCNDICIBUEEBDDBRODSBDMADOMADMROCS",
+      "decoded_sha256": "78887b4d2dc945937b2a6cd80a1733393f673605b60f4b47164d2c38d86f6213",
+      "dictionary_calibration": {
+        "null_segmentation_score": {
+          "max": 422,
+          "mean": 210.37,
+          "min": 73
+        },
+        "null_substring_count": {
+          "max": 7,
+          "mean": 1.585,
+          "min": 0
+        },
+        "seed": 8685327452794864033,
+        "segmentation": {
+          "covered_characters": 94,
+          "covered_fraction": 0.1669626998223801,
+          "score": 408,
+          "tokens": [
+            {
+              "start": 1,
+              "word": "GAGE"
+            },
+            {
+              "start": 27,
+              "word": "MARA"
+            },
+            {
+              "start": 47,
+              "word": "RODS"
+            },
+            {
+              "start": 92,
+              "word": "CREE"
+            },
+            {
+              "start": 98,
+              "word": "FOND"
+            },
+            {
+              "start": 121,
+              "word": "GEED"
+            },
+            {
+              "start": 162,
+              "word": "ACNE"
+            },
+            {
+              "start": 175,
+              "word": "ROBE"
+            },
+            {
+              "start": 189,
+              "word": "MEME"
+            },
+            {
+              "start": 199,
+              "word": "ROOT"
+            },
+            {
+              "start": 222,
+              "word": "ADMIN"
+            },
+            {
+              "start": 232,
+              "word": "NINE"
+            },
+            {
+              "start": 237,
+              "word": "BRIBE"
+            },
+            {
+              "start": 264,
+              "word": "EMACS"
+            },
+            {
+              "start": 277,
+              "word": "DARN"
+            },
+            {
+              "start": 335,
+              "word": "EBRO"
+            },
+            {
+              "start": 389,
+              "word": "OBOE"
+            },
+            {
+              "start": 408,
+              "word": "BEARER"
+            },
+            {
+              "start": 429,
+              "word": "RARED"
+            },
+            {
+              "start": 446,
+              "word": "HIND"
+            },
+            {
+              "start": 507,
+              "word": "MAMA"
+            },
+            {
+              "start": 522,
+              "word": "BRED"
+            }
+          ]
+        },
+        "segmentation_inclusive_p": 0.009950248756218905,
+        "substring_count": 6,
+        "substring_inclusive_p": 0.024875621890547265,
+        "trials": 200
+      },
+      "dictionary_hits_5_to_12": [
+        {
+          "start": 222,
+          "word": "ADMIN"
+        },
+        {
+          "start": 224,
+          "word": "MINDS"
+        },
+        {
+          "start": 237,
+          "word": "BRIBE"
+        },
+        {
+          "start": 264,
+          "word": "EMACS"
+        },
+        {
+          "start": 408,
+          "word": "BEARER"
+        },
+        {
+          "start": 429,
+          "word": "RARED"
+        }
+      ],
+      "index_of_coincidence": 0.0769011965639084,
+      "keyword_hits": [],
+      "longest_repeated_substring": 5,
+      "raw_member_count": 469,
+      "square": "DBIFKCEOALRGMHPUNSTQVWXYZ",
+      "strongest_lags_1_to_40": [
+        {
+          "fraction": 0.12834224598930483,
+          "lag": 2,
+          "matches": 72
+        },
+        {
+          "fraction": 0.12338858195211787,
+          "lag": 20,
+          "matches": 67
+        },
+        {
+          "fraction": 0.11806797853309481,
+          "lag": 4,
+          "matches": 66
+        },
+        {
+          "fraction": 0.11632270168855535,
+          "lag": 30,
+          "matches": 62
+        },
+        {
+          "fraction": 0.11252268602540835,
+          "lag": 12,
+          "matches": 62
+        }
+      ],
+      "strongest_repeated_ngrams": [
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "DEGCB"
+        },
+        {
+          "count": 2,
+          "length": 5,
+          "ngram": "EINGA"
+        },
+        {
+          "count": 3,
+          "length": 4,
+          "ngram": "DEGC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "ABDC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "ACSC"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "ARER"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CCOE"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "CSCO"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "DMIN"
+        },
+        {
+          "count": 2,
+          "length": 4,
+          "ngram": "EADH"
+        }
+      ],
+      "tail_sha256": "7be9645831b81d1440fdcc5fed995b3cbeca36d7dcd801eb330df67411fa77cb"
+    }
+  ],
+  "phase": 432,
+  "protocol": {
+    "dictionary_path": "/usr/share/dict/words",
+    "dictionary_sha256": "9f513f1ceadb6a01c5485b7dbdfd5118dc66cd70b59cae2851292112d4066a32",
+    "keywords": [
+      "ADDRESS",
+      "ARCHITECT",
+      "BITCOIN",
+      "BLOCK",
+      "BLUE",
+      "CHOICE",
+      "CIPHER",
+      "COIN",
+      "FAED",
+      "FEFE",
+      "KEY",
+      "MATRIX",
+      "PASSWORD",
+      "PRIME",
+      "PRIVATE",
+      "PUBLIC",
+      "SALVATION",
+      "SATOSHI",
+      "SEED",
+      "SPIRAL",
+      "WALLET",
+      "YELLOW",
+      "YINYANG"
+    ],
+    "oracle_calls": 0,
+    "review_limit": 25,
+    "shortlist_is_exact_top_k": false,
+    "tail_start": 7,
+    "trials": 200
+  },
+  "summary": {
+    "distinct_decodes": 9,
+    "duplicate_rows_collapsed": 991,
+    "reviewed_distinct_decodes": 9
+  }
+}

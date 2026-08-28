@@ -1,0 +1,189 @@
+{
+  "phase": 435,
+  "word_boundary_authority": "README transcription; letters/order authenticated by fresh Beaufort derivation",
+  "word_count": 336,
+  "connected_letter_count": 1539,
+  "be_required": {
+    "count": 2,
+    "connected_positions_0": [
+      1131,
+      1277
+    ],
+    "connected_positions_1": [
+      1132,
+      1278
+    ],
+    "word_positions_0": [
+      256,
+      283
+    ],
+    "word_positions_1": [
+      257,
+      284
+    ],
+    "contexts": [
+      "PRIME BASICS AFTER WHICH YOU WILL BE REQUIRED TO SELECT FROM OVER TWENTY THREE",
+      "KEYNOTE THAT ALSO BRUTE FORCING MIGHT BE REQUIRED FAILURE TO COMPLY WITH THIS PROCESS"
+    ]
+  },
+  "be_counts": {
+    "whole_word_be": 3,
+    "whole_word_be_positions_0": [
+      207,
+      256,
+      283
+    ],
+    "raw_connected_be": 7,
+    "raw_connected_be_positions_0": [
+      152,
+      290,
+      906,
+      954,
+      1131,
+      1277,
+      1533
+    ],
+    "whole_word_be_required": 2
+  },
+  "repeated_bigrams": [
+    {
+      "words": [
+        "IS",
+        "THE"
+      ],
+      "count": 2
+    },
+    {
+      "words": [
+        "OF",
+        "AN"
+      ],
+      "count": 2
+    },
+    {
+      "words": [
+        "TO",
+        "THE"
+      ],
+      "count": 2
+    },
+    {
+      "words": [
+        "I",
+        "HAVE"
+      ],
+      "count": 3
+    },
+    {
+      "words": [
+        "THE",
+        "LAST"
+      ],
+      "count": 3
+    },
+    {
+      "words": [
+        "OF",
+        "THE"
+      ],
+      "count": 5
+    },
+    {
+      "words": [
+        "IN",
+        "THE"
+      ],
+      "count": 2
+    },
+    {
+      "words": [
+        "BE",
+        "REQUIRED"
+      ],
+      "count": 2
+    },
+    {
+      "words": [
+        "RESULT",
+        "IN"
+      ],
+      "count": 2
+    }
+  ],
+  "repeated_trigrams": [],
+  "mixed_provenance_repeated_bigrams": [
+    [
+      "BE",
+      "REQUIRED"
+    ],
+    [
+      "RESULT",
+      "IN"
+    ]
+  ],
+  "be_required_unique_under_mixed_provenance_test": false,
+  "provenance": [
+    {
+      "occurrence": 1,
+      "classification": "Matrix-inherited sentence skeleton",
+      "film_contains_phrase": true,
+      "phrase": "AFTER WHICH YOU WILL BE REQUIRED TO SELECT"
+    },
+    {
+      "occurrence": 2,
+      "classification": "creator-added method warning",
+      "film_contains_phrase": false,
+      "phrase": "BRUTE FORCING MIGHT BE REQUIRED"
+    }
+  ],
+  "registered_mechanisms": [
+    {
+      "mechanism": "Phase 3.2.2 checkerboard escapes",
+      "markers": [
+        1,
+        4
+      ],
+      "relation_to_two_be": "Numeric escapes (1,4), not two BE phrase markers.",
+      "supplies_matching_consumer": false
+    },
+    {
+      "mechanism": "DBBI B/BE tokenization",
+      "markers": [
+        "B",
+        "BE"
+      ],
+      "relation_to_two_be": "A token alphabet/segmentation, not an instruction to use exactly two BE occurrences.",
+      "supplies_matching_consumer": false
+    },
+    {
+      "mechanism": "split-final-BE guide",
+      "markers": [
+        "b",
+        "e"
+      ],
+      "relation_to_two_be": "One terminal BE token is split into B and E; it is not two BE tokens.",
+      "supplies_matching_consumer": false
+    },
+    {
+      "mechanism": "Architect BUT/HYE choice extraction",
+      "markers": [
+        "BUT",
+        "HYE"
+      ],
+      "relation_to_two_be": "A solved dialogue-choice boundary with different markers and consumer.",
+      "supplies_matching_consumer": false
+    }
+  ],
+  "decision_criteria": {
+    "exact_repetition_with_authenticated_letters": true,
+    "unambiguous_operation_without_new_choices": false,
+    "registered_consumer_independently_requires_two_markers": false,
+    "not_duplicate_of_registered_mechanism": true
+  },
+  "promoted": false,
+  "classification": "real textual repetition, not an actionable selector",
+  "reason": "BE REQUIRED repeats exactly, but it does not define an operation or independently fixed consumer. RESULT IN is also a repeated mixed-provenance bigram, weakening uniqueness, and none of the four registered nearby mechanisms requires exactly two BE markers.",
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "gpu_touched": false
+}

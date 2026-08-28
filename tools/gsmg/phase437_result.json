@@ -1,0 +1,322 @@
+{
+  "phase": 437,
+  "correction": {
+    "phase436_decision": "protocol_invalid",
+    "phase418_protocol_exists": true,
+    "phase418_completed_finding_exists": false,
+    "eligibility_rules_changed": false
+  },
+  "authenticated_sources": {
+    "phase32_plaintext": {
+      "length": 2422,
+      "sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34"
+    },
+    "encoded_321": {
+      "length": 1539,
+      "sha256": "bd7a29432546c67c4170e0c523ddbf43ae82d20ee187d1b4dbf7907a0faf4c7b"
+    },
+    "cipher_321": {
+      "length": 1539,
+      "sha256": "6d66e0e0e2dfdb812d5ecee2be6f54c1f3b8c84b0d74580686cf2053d76a200e"
+    },
+    "answer_321": {
+      "length": 1539,
+      "sha256": "56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241"
+    },
+    "validation_num": {
+      "length": 149,
+      "sha256": "71e3af174d533ad2c1c79fce64308f5fdf200f3cc50f059b2f1485a2c5f1765d"
+    },
+    "answer_322": {
+      "length": 91,
+      "sha256": "878b7afacc9e35412e76b8506cc8297fa5aeba5381e108dc421b71a0ab8993d8"
+    }
+  },
+  "phase270_inventory": {
+    "base_count": 25,
+    "material_count": 50
+  },
+  "gate_names": [
+    "authenticated",
+    "locally_selected",
+    "unique_representation",
+    "operator_fixed",
+    "unit_boundary_fixed",
+    "consumer_fixed",
+    "genuinely_uncovered"
+  ],
+  "referent_count": 11,
+  "referents": [
+    {
+      "id": "matrix_film_screenplay_difference",
+      "object": "Matrix film/screenplay dialogue compared with the custom monologue",
+      "coverage": "Phase 118 fixed a screenplay/custom word-LCS and tested shared/custom-only prime retention under bases 0 and 1; negative. Phase 235 proves the custom text blends film and screenplay.",
+      "status": "covered and representation-nonunique",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": true,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false,
+        "genuinely_uncovered": false
+      },
+      "failed_gate_reason": "Film versus screenplay and alignment/unit alternatives remain; the strongest fixed family is already negative.",
+      "failed_gates": [
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "raw_encoded_321",
+      "object": "Raw 1,539-byte Phase 3.2.1 encoded block",
+      "coverage": "Pinned and exposed as evidence in Phase 418; not an individual Phase 270 candidate and no prime-derived family is registered.",
+      "status": "uncovered but ineligible",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": false,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": true
+      },
+      "failed_gate_reason": "SOURCE CODES does not distinguish raw high bytes from CP1141 ciphertext or decoded letters; prime base/direction/rail are unset.",
+      "failed_gates": [
+        "locally_selected",
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "cp1141_beaufort_ciphertext",
+      "object": "CP1141-transcoded 1,539-letter Beaufort ciphertext",
+      "coverage": "Pinned and exposed as evidence in Phase 418; used to derive the answer but absent as an individual Phase 270 candidate and prime source.",
+      "status": "uncovered but ineligible",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": false,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": true
+      },
+      "failed_gate_reason": "Equally local raw/transcoded/decoded representations exist; no clause fixes prime base, direction, complement, or extent.",
+      "failed_gates": [
+        "locally_selected",
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "decoded_answer_321",
+      "object": "Decoded 1,539-letter Phase 3.2.1 Architect answer",
+      "coverage": "Direct whole-answer material is Phase 270-negative; line/word/reverse/whole-block forms are closed by Phases 265, 267, 295, 307, and 314. Pure prime indexing over the whole answer is not registered.",
+      "status": "direct use covered; transformed self-source ineligible",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": false,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": false
+      },
+      "failed_gate_reason": "Reading an instruction as its own SOURCE CODES operand is self-referential and not uniquely selected.",
+      "failed_gates": [
+        "locally_selected",
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "raw_validation_num",
+      "object": "Raw 149-digit Phase 3.2.2 validation number",
+      "coverage": "Direct passphrase family closed by Phase 265; also unanimous but negative in the Phase 416 panel.",
+      "status": "covered direct material",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": false,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": false
+      },
+      "failed_gate_reason": "The adjacent numeric code is plausible but not selected over its decoded answer, and prime semantics are not fixed.",
+      "failed_gates": [
+        "locally_selected",
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "decoded_answer_322",
+      "object": "Decoded 91-letter Phase 3.2.2 answer",
+      "coverage": "Phase 270 tested direct use, pure base-0/base-1 primes, established prime-walk selection, sibling compositions, and guide projections; negative.",
+      "status": "strongest adjacent-data constructions covered",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": false,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": false
+      },
+      "failed_gate_reason": "Adjacency does not uniquely select decoded rather than raw data; declared grounded prime consumers are already negative.",
+      "failed_gates": [
+        "locally_selected",
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "parent_prefix",
+      "object": "Exact authenticated Phase 3.2 bytes before P32, with/without separator",
+      "coverage": "Both exact parent-prefix boundaries were tested raw and SHA-256-hex across six specs in Phase 270; negative.",
+      "status": "covered exact boundary",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": true,
+        "unique_representation": true,
+        "operator_fixed": true,
+        "unit_boundary_fixed": true,
+        "consumer_fixed": true,
+        "genuinely_uncovered": false
+      },
+      "failed_gate_reason": "The only failed eligibility gate is novelty: this exact source-order reading is closed.",
+      "failed_gates": [
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "first_piece_stage0",
+      "object": "First-piece/Stage-0 prime cells and their projection",
+      "coverage": "Phase 270 tested prime source characters, blue/yellow subsets, projection to 3.2.2, and composition; negative.",
+      "status": "covered grounded projections",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": false,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": false
+      },
+      "failed_gate_reason": "A separate creator clue returns to the first piece, but this Architect clause does not choose its grid convention or consumer.",
+      "failed_gates": [
+        "locally_selected",
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "split_final_be_guide",
+      "object": "Recovered split-final-BE guide with 23 endpoints / 16 blue / 7 yellow",
+      "coverage": "Phase 270 tested prime-rule, token-endpoint, raw-endpoint, and sibling-composition readings; negative.",
+      "status": "checkpoint covered under direct consumers",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": false,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": true,
+        "genuinely_uncovered": false
+      },
+      "failed_gate_reason": "The count checkpoint is real but the monologue does not bind endpoint mapping, source string, direction, or AND/OR serialization.",
+      "failed_gates": [
+        "locally_selected",
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "x2sh4y0qb15",
+      "object": "Earlier X2SH4Y0QB15 code/riddle block",
+      "coverage": "Phases 268-269 tested literal, solved, coordinate, reversal, full-block, and source-order forms; negative.",
+      "status": "distant carried-code reading covered",
+      "gates": {
+        "authenticated": true,
+        "locally_selected": false,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false,
+        "genuinely_uncovered": false
+      },
+      "failed_gate_reason": "It is several stages distant and no creator edge identifies it as THE CODE YOU CARRY.",
+      "failed_gates": [
+        "locally_selected",
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed",
+        "genuinely_uncovered"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "repository_source_files",
+      "object": "Repository implementation/source files",
+      "coverage": "Not eligible puzzle bytes; the repository is a later reconstruction and audit environment.",
+      "status": "excluded provenance",
+      "gates": {
+        "authenticated": false,
+        "locally_selected": false,
+        "unique_representation": false,
+        "operator_fixed": false,
+        "unit_boundary_fixed": false,
+        "consumer_fixed": false,
+        "genuinely_uncovered": true
+      },
+      "failed_gate_reason": "SOURCE CODES cannot authenticate later solver/repository implementation files as creator-authored operands.",
+      "failed_gates": [
+        "authenticated",
+        "locally_selected",
+        "unique_representation",
+        "operator_fixed",
+        "unit_boundary_fixed",
+        "consumer_fixed"
+      ],
+      "eligible": false
+    }
+  ],
+  "eligible_referents": [],
+  "authenticated_uncovered_but_ineligible": [
+    "raw_encoded_321",
+    "cp1141_beaufort_ciphertext"
+  ],
+  "decision": "no_source_referent_passes_all_gates",
+  "next_trigger": "new evidence must select raw versus CP1141 versus decoded source and fix prime unit/base/direction/rail/boundary",
+  "and_or_authorized": false,
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "gpu_touched": false
+}

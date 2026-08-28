@@ -27218,3 +27218,217 @@ search was performed.
 `phase429_full_result.json` and `phase429_terminal_checkpoint.json`;
 `doc/GSMG_PHASE429_BTCSEED_BIFID_GPU_SEARCH.md`, and the frozen Phase-429
 pre-registration in `doc/Brainstorms/`.
+
+
+## Phase 431 -- exact output-equivalence census for the Phase-430 `16!` family (2026-08-27)
+
+**Question:** how many Phase-430 alphabet ranks produce genuinely distinct
+570-character Bifid decodes, and why does the live retained shortlist contain
+large clusters of identical outputs?
+
+**Method:** separated the family into all 240 ordered `G/H` placements. For
+each placement, canonicalized the fixed 570-cell output path as literal
+fixed/`G/H` letters plus first-occurrence-numbered placeholders for visited
+non-`G/H` free cells. A template visiting `m` of those fourteen cells has
+exactly `14!/(14-m)!` injective visible assignments and `(14-m)!` raw-rank
+representations per decoded output. The disjoint literal and placeholder
+alphabets make canonical-template identity an exact cross-placement collision
+test.
+
+**Result:** all 240 placement templates are distinct. Their visible-cell
+histogram is `m=5:42`, `10:6`, `11:12`, `12:38`, `13:12`, `14:130`. The raw
+`20,922,789,888,000` ranks collapse to exactly `14,231,866,128,480` unique
+decoded strings (`68.02088155864198%`), leaving `6,690,923,759,520`
+equivalence duplicates (`31.979118441358023%`). Multiplicity ranges from one
+to `9! = 362,880`; the 42 five-visible-cell placements account for the large
+duplicate clusters seen among live retained winners. Three regressions pass,
+including byte-identical output after an invisible-cell swap and changed
+output after a visible-cell swap. Weighted class counts reconstruct `16!`
+exactly.
+
+**Disposition:** `exact_quotient_characterized_no_restart`. A future
+equivalence-aware kernel can reduce this family by 31.98%, and shortlist review
+should collapse decoded-string duplicates. The already-running Phase-430 raw
+sweep remains exact and should continue; this audit changes neither its score
+nor its evidential scope.
+
+**Artifacts:** `phase431_bifid16_equivalence_class_audit.py`;
+`test_phase431_bifid16_equivalence_class_audit.py`; `phase431_result.json`;
+and `doc/GSMG_PHASE431_BIFID16_EQUIVALENCE_CLASS_AUDIT.md`.
+
+
+## Phase 432 -- automatic deduplicated review of the live Phase-430 shortlist (2026-08-27)
+
+**Method:** froze and implemented a CPU-only checkpoint reviewer that validates
+the complete Phase-430 fingerprint, independently decodes retained ranks,
+collapses full-decoded-SHA duplicates, and removes `BTCSEED` before every
+metric. At most 25 distinct tails receive exact dictionary and segmentation
+checks calibrated separately against 200 deterministic exact-multiset
+shuffles, fixed Bitcoin/puzzle keyword matching, IC, lag, and repeat metrics.
+An optional previous report supplies deterministic leader/new/departed deltas.
+
+**First snapshot:** at next rank `7,960,654,774,272` (`38.047769%`), all 1,000
+retained rows collapsed to two decoded strings. A new completed-range leader,
+rank `6,734,809,711,440`, score `-3507.5981`, begins
+`BTCSEEDDHTHRNEEAIBITNBIE...`. Its tail has zero fixed keywords, only one
+length-5+ dictionary fragment (`SERER`), dictionary-count `p=0.80597`,
+segmentation `p=0.29353`, and longest repeat five. The other decode is also
+null-like. No semantic promotion fires.
+
+**Disposition:** `live_reviewer_operational_no_interesting_candidate`. The
+exact completed-range maximum remains available, but 998 duplicate retained
+rows demonstrate that the non-top block-winner shortlist is diversity-poor.
+Future quotient-aware searches should deduplicate before host retention;
+Phase 432 can monitor the current run but cannot recover distinct candidates
+already crowded out of its 1,000-row checkpoint.
+
+**Artifacts:** the Phase-432 frozen protocol;
+`phase432_bifid16_candidate_reviewer.py`;
+`test_phase432_bifid16_candidate_reviewer.py`; `phase432_live_review.json`;
+and `doc/GSMG_PHASE432_BIFID16_LIVE_CANDIDATE_REVIEW.md`.
+
+
+## Phase 433 -- quadgram gain is selection-driven relabeling, not plaintext (2026-08-28)
+
+**Question:** why does the Phase-430 quadgram maximum improve while its decode
+remains unreadable?
+
+**Method:** froze rank zero, the completed Phase-429 winner, and the Phase-432
+snapshot leader before inspecting any newer result. Compared each tail (always
+excluding `BTCSEED`) with 1,000 exact-multiset shuffles, 1,000 intact aligned
+Bifid-digraph shuffles, 10,000 uniform Phase-430 ranks, and 10,000 random
+assignments conditional on its exact `G/H` placement. A hash-pinned 563-letter
+Phase-425 report slice supplied an absolute English reference. Decomposed
+floor use, entropy, IC, vowels, MI, compression, n-gram diversity, repeats, and
+quadgram contributions.
+
+**Result:** the Phase-432 leader is extreme against sampled global and
+same-`G/H` assignments (`p=1/10001` each), as expected for the explicitly
+optimized statistic. It is also high against exact-multiset (`p=0.002997`) and
+intact-digraph (`p=0.009990`) controls. But its mean `-6.2636` remains 1.8016
+log10 units per window (about 63-fold) below pinned English at `-4.4620`. It
+uses only 16 letters, has 543 distinct quadgrams among 560 windows, longest
+repeat five, and lag-1 MI `0.689` versus English `1.076`. Its top ten repeated
+quadgrams supply only 4.33% of above-floor score. The gain is broadly
+spread across locally less-impossible relabelings, not supplied by a coherent
+word or phrase. The completed unreadable Phase-429 winner shows the same
+control pattern.
+
+**Disposition:** `quadgram_gain_is_selection_driven_local_relabeling_not_plaintext`.
+The score is implemented correctly and the GPU maximum remains exact, but a
+still higher maximum of this same objective cannot by itself promote language.
+A new promotion requires coherent held-out structure or independent evidence
+selecting another operation.
+
+**Artifacts:** the frozen Phase-433 protocol;
+`phase433_quadgram_score_pathology_audit.py`;
+`test_phase433_quadgram_score_pathology_audit.py`; `phase433_result.json`;
+and `doc/GSMG_PHASE433_QUADGRAM_SCORE_PATHOLOGY_AUDIT.md`.
+
+
+## Phase 434 -- Architect instruction and coverage matrix: role declaration retained, source-bound operations still gated (2026-08-28)
+
+**Question:** after Phases 270, 307, 308, 314, and 370, which clauses in the Phase 3.2.1 Architect tail still function as plausible instructions, and which concrete consumers have actually been tested?
+
+**Method:** `phase434_architect_instruction_coverage_matrix.py` freshly derives the 1,539 connected Beaufort letters from the authenticated Phase 3.2 plaintext, asserts eight displayed instruction clauses in order, and attaches a source, proposed role, boundary, tested family, status, and reopen condition to each. README whitespace is used only after letter-equivalence is asserted. No password material or oracle call is permitted.
+
+**Result:** the literal-passphrase model is broadly closed. The macro-routing model is valid only for the already-established 23/16/7-to-Architect chain. The role-separation model remains architecturally plausible but its 25 candidates / 50 materials / 6 specs were negative in Phase 270 and Phase 370 adds no new material. The semantic-instruction reading fits best: `PRIVATE KEY` describes output, `NOTE THAT` plausibly marks meta-instruction, and `BRUTE FORCING` describes method. `PRIME BASICS` and `SELECT FROM` still fail to fix source, base, direction, boundary, or serialization.
+
+**AND/OR gate:** blue and yellow partition the 23 split-guide endpoints, so source-free union is all 23 and intersection is empty. A decoded-string experiment is not defined until source, endpoint-to-character mapping, direction, boundary, and serialization are independently fixed.
+
+**Disposition:** `synthesis_complete_source_bound_operations_gated`. The historical Phase-270 brainstorm is preserved; this dated addendum supersedes only its stale coverage summary.
+
+**Artifacts:** `phase434_architect_instruction_coverage_matrix.py`; `test_phase434_architect_instruction_coverage_matrix.py`; `phase434_result.json`; and `doc/GSMG_PHASE434_ARCHITECT_INSTRUCTION_COVERAGE_MATRIX.md`.
+
+## Phase 435 -- doubled `BE REQUIRED` is exact but does not select an operation (2026-08-28)
+
+**Question:** does the twice-occurring `BE REQUIRED` phrase provide the new authenticated selector required to reopen the Architect role-separation family?
+
+**Method:** froze the protocol before execution. Freshly derived the connected Phase 3.2.1 plaintext; admitted README word boundaries only after exact letter equivalence; enumerated all repeated word bigrams/trigrams; checked film provenance; and compared the phrase with Phase 3.2.2 escapes, DBBI `B/BE`, split-final-`BE`, and Architect `BUT/HYE`. No password generation, blob oracle, live-leader inspection, or GPU work occurred.
+
+**Result:** connected `BEREQUIRED` occurs twice at zero-based positions 1131 and 1277, or one-based 1132 and 1278. Under README segmentation the pair starts at zero-based word positions 256 and 283. But whole-word `BE` occurs three times and raw connected `BE` seven times. The 336-word transcription has nine repeated bigrams and no repeated trigrams. The first `BE REQUIRED` is in the Matrix-inherited selection sentence; the second is creator-added brute-force language absent from the film. This mixed provenance is not unique: `RESULT IN` is another repeated bigram spanning creator-added and inherited sentence contexts.
+
+None of the four registered nearby mechanisms independently requires exactly two `BE` markers. The split-final-`BE` guide in particular contains one terminal `BE` split into `B`,`E`; it is not a two-`BE` consumer. The phrase supplies neither an unambiguous operation nor a fixed operand/boundary.
+
+**Disposition:** `real_textual_repetition_not_actionable_selector`. Only the exact-repetition gate passes; the unique-operation and registered-consumer gates fail. This closes the exact doubled-phrase reading. Reopening requires new evidence fixing both an operation and a two-marker consumer. The source-bound `AND/OR` string branch remains gated.
+
+**Artifacts:** the frozen Phase-435 protocol; `phase435_be_required_operator_selector_audit.py`; `test_phase435_be_required_operator_selector_audit.py`; `phase435_result.json`; and `doc/GSMG_PHASE435_BE_REQUIRED_OPERATOR_SELECTOR_AUDIT.md`.
+
+
+## Phase 436 -- `SOURCE CODES` referent eligibility audit: protocol invalid on nonexistent Phase-418 findings requirement (2026-08-28)
+
+**Question:** does `RETURN TO THE SOURCE CODES ... REINSERTING THE PRIME BASICS` select a unique authenticated source and executable operation?
+
+**Method/result:** the protocol was frozen before execution and required completed findings for Phase 418. Live execution successfully re-derived the authenticated Phase 3.2 objects and rebuilt Phase 270 at 25 base candidates / 50 materials, then failed closed because `FINDINGS.md` has no Phase 418 heading or completed result. Phase 418 has protocol/implementation artifacts and is referenced by later phases, but cannot be cited as a completed finding.
+
+**Disposition:** `protocol_invalid_no_puzzle_result`. Zero password materials, zero oracle calls, and no GPU activity. Phase 437 corrects only the documentary assertion; all referents and eligibility gates remain unchanged.
+
+**Artifacts:** frozen Phase-436 protocol; `phase436_source_codes_referent_eligibility_audit.py`; `test_phase436_source_codes_referent_eligibility_audit.py`; `phase436_result.json`; and `doc/GSMG_PHASE436_SOURCE_CODES_REFERENT_ELIGIBILITY_AUDIT.md`.
+
+## Phase 437 -- corrected `SOURCE CODES` eligibility audit: 11 referents, 0 eligible, two authenticated raw-source gaps remain gated (2026-08-28)
+
+**Question:** after correcting Phase 436s false documentary requirement, does any proposed referent pass all seven frozen gates: authenticated, locally selected, unique representation, fixed operator, fixed unit/boundary, fixed consumer, and genuinely uncovered?
+
+**Method:** retained the same eleven referents and gates. Required completed findings for Phases 118, 265, 268, 269, 270, 370, 416, 417, 421, and 423; required the actual Phase 418 preregistration artifact; and asserted Phase 418 still has no completed findings heading. Freshly re-derived and digest-pinned the parent plaintext, raw 3.2.1 block, CP1141 ciphertext, decoded 3.2.1 answer, validation number, and decoded 3.2.2 answer. Rebuilt Phase 270 live and proved the raw block and CP1141 ciphertext are absent from its exact 25-base/50-material inventory.
+
+**Result:** zero of eleven referents passes every gate. Matrix film/screenplay difference, decoded sibling outputs, exact parent prefix, Stage-0, split-guide, and X2SH4Y0QB15 readings all have direct prior negative coverage or unresolved source/operator choices. Repository source files fail authentication as creator puzzle bytes.
+
+Two authenticated families are genuinely uncovered: the raw 1,539-byte Phase 3.2.1 block and the CP1141-transcoded 1,539-letter Beaufort ciphertext as individual prime-selection sources. Both are `uncovered but ineligible`: `SOURCE CODES` does not choose raw versus transcoded versus decoded representation, and `PRIME BASICS` does not fix byte/letter/word unit, zero/one base, direction, retained/complement rail, or output boundary.
+
+**Disposition:** `no_source_referent_passes_all_gates`. The raw/ciphertext gap is registered rather than overstated as closed, but no Cartesian-product sweep is licensed. The blue/yellow `AND/OR` string branch remains gated. Reopening requires new evidence that fixes both source representation and prime mechanics. Zero password materials, zero oracle calls, and no GPU activity.
+
+**Artifacts:** corrected Phase-437 protocol; `phase437_source_codes_referent_eligibility_corrected_audit.py`; `test_phase437_source_codes_referent_eligibility_corrected_audit.py`; `phase437_result.json`; and `doc/GSMG_PHASE437_SOURCE_CODES_REFERENT_ELIGIBILITY_CORRECTED_AUDIT.md`.
+
+
+## Phase 438 -- Phase 3.2 representation provenance: workflow privilege without downstream binding (2026-08-28)
+
+**Question:** does primary or reproducible historical evidence select the raw 1,539-byte Phase 3.2.1 block, its CP1141-labelled lowercase Beaufort ciphertext, or the decoded Architect letters as the operand of `RETURN TO THE SOURCE CODES`?
+
+**Method:** froze a provenance-only protocol and freshly re-derived all three exact representations. Reconstructed the local `naddiseo/master` notebook history and its fixed raw -> codec -> Beaufort workflow anchors. Compared GNU iconv CP273 and CP1141 conversions byte-for-byte. Searched the pinned complete Telegram export for the fixed case-insensitive terms `1141`, `ebcdic`, `beaufort`, `one for one`, and `source codes`, then checked creator authorship and direct reply edges by stable ID `user9815232`.
+
+**Result:** the raw block has 26 symbols. CP273 and CP1141 yield the same 1,539-letter stream on these bytes, with zero differing positions; both equal the pinned Beaufort ciphertext. The notebook first appears in commit `dcb66952de3157f6e68cb00aa047dd2e4ff8ae39` (2023-08-19) and reproducibly documents raw input -> CP1141-labelled intermediate -> Beaufort/`THEMATRIXHASYOU` -> Architect plaintext, but it is community solve documentation rather than creator-primary evidence. The five Telegram terms produce 201 union hits: zero creator-authored hits and zero direct creator replies to a hit.
+
+**Disposition:** `workflow_privilege_without_downstream_binding`. The raw bytes are creator-delivered input, the lowercase ciphertext is a clue-selected derived intermediate, and the Architect letters are decoded output; none is selected as a later `SOURCE CODES` operand. This refines Phase 437s broad `authenticated` label without changing its gates: all three representations still fail `locally_selected` and `unique_representation`, and prime mechanics remain unfixed. Zero password materials, zero oracle calls, GPU untouched.
+
+**Artifacts:** frozen Phase-438 protocol; `phase438_phase32_representation_provenance_audit.py`; `test_phase438_phase32_representation_provenance_audit.py`; `phase438_result.json`; and `doc/GSMG_PHASE438_PHASE32_REPRESENTATION_PROVENANCE_AUDIT.md`.
+
+
+## Phase 439 -- historical web source referents: four genuine gaps registered, zero executable (2026-08-28)
+
+**Question:** does `RETURN TO THE SOURCE CODES` select creator-served historical HTML/JavaScript as a distinct referent omitted by Phase 437, and does any such object become sufficiently specified for prime extraction?
+
+**Method:** froze an oracle-free eligibility protocol over exactly eleven web-source objects. Pinned and parsed the raw Wayback-mirror `theseedisplanted` and `choice...iwroteitmyself` responses plus their normalized committed copies; inventoried comments, forms, CSRF fields, scripts, and textareas; imposed stage chronology; verified creator support-group constraints at messages 28703, 28794, and 28812; and checked five fixed source/comment terms in the complete solver export for creator authorship and direct reply edges.
+
+**Result:** original lowercase `/puzzle` was a PNG, restored `Puzzle.html` postdates the instruction with unresolved authorship, and SalPhaseIon HTML is downstream. The only two prior HTML stages contain an ordered source-only comment pair: `Nice to see you around! Good luck little bunny hunter ;)` and `You made it to the next step! Good luck little bunny hunter ;)`. The pair is stable, literal source-only content and was absent from registered prime/password families. Full raw responses are noncanonical because they also include CSRF/request state and external Cloudflare deployment markup. There is zero inline or puzzle-authored JavaScript. All five solver-export term families have zero creator-authored hits and zero direct creator replies.
+
+**Disposition:** `new_source_referent_registered_but_ineligible`. Four genuine gaps are now explicit: raw seed HTML, raw choice HTML, their ordered full-response pair, and their ordered comment pair. Zero of eleven objects passes all eight gates. The comment pair comes closest but still fails local selection, operator, unit/boundary, and consumer; the full HTML families also fail stable representation. Creator message 28703 classifies the changing token as anti-bruteforce state, 28794 says broad GSMG scanning will not work, and 28812 says `/puzzle` contains all needed information. No extraction, password material, oracle, network, Docker, or GPU activity.
+
+**Artifacts:** frozen Phase-439 protocol; `phase439_historical_web_source_referent_audit.py`; `test_phase439_historical_web_source_referent_audit.py`; `phase439_result.json`; and `doc/GSMG_PHASE439_HISTORICAL_WEB_SOURCE_REFERENT_AUDIT.md`.
+
+
+## Phase 440 -- source-comment prime readings: 32 variants, only inherited/flavor tokens (2026-08-28)
+
+**Question:** what do the smallest natural `PRIME BASICS` readings produce over Phase 439s exact ordered pair of source-only comments?
+
+**Method:** froze an explicitly exploratory, non-instruction-licensed family before execution. Re-extracted both comments from the pinned raw historical HTML. Tested ASCII-letter and whole-word units; global concatenation versus per-comment index reset; bases 0/1; forward/reverse direction; and prime/non-prime rails, for exactly 32 rows. Recorded every full output, count, digest, vowel fraction, IoC, fixed-vocabulary occurrence, and exact/reverse equality class. Language-model and dictionary ranking were forbidden because the input is already English.
+
+**Result:** no output contains a newly formed `SOURCE`, `CODE`, `PRIME`, `KEY`, `PASSWORD`, `BLUE`, or `YELLOW`. The only character-row vocabulary hit is inherited `STEP`; word-row hits are necessarily retained source words such as `GOOD`, `LUCK`, `HUNTER`, `NEXT`, and `STEP`. No two distinct rows are exactly equal or reverse-equal. Prime and complement rails partition every source exactly, and no metric selects a unique convention.
+
+**Disposition:** `only_inherited_or_flavor_tokens`. The complete two-table result is preserved, but it supplies no evidence for choosing the comments, unit, base, direction, boundary, or rail. Phase 439 remains gated. Zero password materials, zero oracle calls, Docker and GPU untouched.
+
+**Artifacts:** frozen Phase-440 protocol; `phase440_source_comment_prime_reading.py`; `test_phase440_source_comment_prime_reading.py`; `phase440_result.json`; and `doc/GSMG_PHASE440_SOURCE_COMMENT_PRIME_READING.md`.
+
+
+## Phase 441 -- completed Bifid-16 run: exact 16! negative, quadgram selection pathology confirmed (2026-08-28)
+
+**Question:** did the exact completed Phase-430 `16!` search recover coherent plaintext beyond sealed `BTCSEED`, or strengthen Phase 433s selection-pathology diagnosis?
+
+**Completion:** the checkpoint ends exactly at `20,922,789,888,000 = 16!`, and the result says `interrupted=false`. The resumed invocation processed `12,962,135,113,728` candidates in 30,879.58 seconds on the RTX 5070, `419,763,980/s`; measured full-domain projection is 13 h 50 m 44 s. The final exact winner is rank `8,041,961,541,600`, square `DBIFKCEOAMRGLHPUNSTQVWXYZ`, total `-3465.5264`, mean `-6.18843994`, decode SHA-256 `602a9a9a...58d32`. Its tail begins `DGAGEOAEAIFINOFIABDCSIARULNLARAOFCNDICIBUEEBDDBRODS...` and is not coherent prose.
+
+**Controls:** reran Phase 433s definitions over the final winner: 1,000 exact-multiset shuffles, 1,000 intact-digraph shuffles, 10,000 uniform ranks, 10,000 same-G/H assignments, and the pinned English control. The winner is better than random ranks, as an exhaustive maximum must be, but is non-exceptional under intact-digraph shuffling (`p=0.09191`). It remains 1.72644 log10 units per quadgram below English, about a 53-fold deficit per window. Lag-1 mutual information worsens from the 38% leaders 0.689 to 0.572 while English is 1.076; longest repeat remains five. The optimized statistic improved without sequential syntax.
+
+**Equivalence/template result:** the independent CPU reviewer collapses the 1,000 retained block winners to nine decodes with class sizes `524,469,1,1,1,1,1,1,1`; the shortlist is not an exact top-K. Across those nine tails, 423/563 positions (75.13%) are invariant. No fixed Bitcoin/puzzle keyword occurs, every longest repeat is five, and apparent words `BRIBE` at 237, `BEARER` at 408, and `RARED` at 429 occur in all nine. The low within-candidate dictionary p-values therefore describe a shared quadgram-optimized template and are not multiplicity-corrected plaintext evidence.
+
+**Disposition:** `exact_16factorial_negative_quadgram_selection_pathology_confirmed`. All four frozen promotion gates fail. This closes the sealed Phase-430 family under its declared Bifid construction and score; reopening needs independently selected mechanics or held-out coherent language, not another score-only sweep. Zero password materials, zero oracle calls, no Docker mutation, and no new GPU work.
+
+**Artifacts:** frozen Phase-441 protocol; `phase432_final_review.json`; `phase441_completed_bifid16_run_analysis.py`; `test_phase441_completed_bifid16_run_analysis.py`; `phase441_result.json`; and `doc/GSMG_PHASE441_COMPLETED_BIFID16_RUN_ANALYSIS.md`.

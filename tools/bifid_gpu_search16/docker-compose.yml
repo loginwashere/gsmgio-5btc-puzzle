@@ -1,0 +1,26 @@
+services:
+  bifid-search16:
+    build:
+      context: ../..
+      dockerfile: tools/bifid_gpu_search16/Dockerfile.cuda
+      args:
+        RUST_VERSION: "1.94.1"
+        BIFID_CUDA_ARCH: "sm_120"
+    image: gsmg-bifid-search16:cuda13-sm120
+    runtime: nvidia
+    init: true
+    command: ["--help"]
+    working_dir: /data
+    volumes:
+      - ./output:/data/output
+      - ./checkpoints:/data/checkpoints
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

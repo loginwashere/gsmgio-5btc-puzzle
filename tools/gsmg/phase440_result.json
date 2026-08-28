@@ -1,0 +1,1015 @@
+{
+  "phase": 440,
+  "classification": "exploratory_not_instruction_licensed",
+  "source_comments": [
+    "Nice to see you around! Good luck little bunny hunter ;)",
+    "You made it to the next step! Good luck little bunny hunter ;)"
+  ],
+  "variant_count": 32,
+  "rows": [
+    {
+      "id": "letters:global:base0:forward:prime",
+      "unit": "letters",
+      "boundary": "global",
+      "index_base": 0,
+      "direction": "forward",
+      "rail": "prime",
+      "source_unit_count": 90,
+      "selected_unit_count": 24,
+      "selected_words": [],
+      "display": "CEOEURDOUTEHEYAOXSOCLBYR",
+      "machine": "CEOEURDOUTEHEYAOXSOCLBYR",
+      "machine_length": 24,
+      "sha256": "5af93906e564c417727c95099fe0e251b7a910867a78bbc9ac4506b7f700a29e",
+      "vowel_fraction": 0.4583333333333333,
+      "index_of_coincidence": 0.057971014492753624,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:global:base0:forward:nonprime",
+      "unit": "letters",
+      "boundary": "global",
+      "index_base": 0,
+      "direction": "forward",
+      "rail": "nonprime",
+      "source_unit_count": 90,
+      "selected_unit_count": 66,
+      "selected_words": [],
+      "display": "NITSEYOAOUNGODLCKLITLBUNNYUNTROUMDEITTTHENETTEPGODLUKITTLEUNNHUNTE",
+      "machine": "NITSEYOAOUNGODLCKLITLBUNNYUNTROUMDEITTTHENETTEPGODLUKITTLEUNNHUNTE",
+      "machine_length": 66,
+      "sha256": "a569365c0c0f0fdc839a4734ddb7767432cf265b0d192dc8f41effc6a4796285",
+      "vowel_fraction": 0.36363636363636365,
+      "index_of_coincidence": 0.0773892773892774,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:global:base0:reverse:prime",
+      "unit": "letters",
+      "boundary": "global",
+      "index_base": 0,
+      "direction": "reverse",
+      "rail": "prime",
+      "source_unit_count": 90,
+      "selected_unit_count": 24,
+      "selected_words": [],
+      "display": "TNHNETKUOTETDMRYLTLGNOSN",
+      "machine": "TNHNETKUOTETDMRYLTLGNOSN",
+      "machine_length": 24,
+      "sha256": "30c06e169d860bce9ea5c2fbdddabe2444eb17baa7ad3e2f374a0ef8dae5c9e7",
+      "vowel_fraction": 0.20833333333333334,
+      "index_of_coincidence": 0.06884057971014493,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:global:base0:reverse:nonprime",
+      "unit": "letters",
+      "boundary": "global",
+      "index_base": 0,
+      "direction": "reverse",
+      "rail": "nonprime",
+      "source_unit_count": 90,
+      "selected_unit_count": 66,
+      "selected_words": [],
+      "display": "REUYNUBLTILCLDOGPETSXNEHTOTIEAUOYETNUHNNUBETILKCUDOODUORAUYEEOTECI",
+      "machine": "REUYNUBLTILCLDOGPETSXNEHTOTIEAUOYETNUHNNUBETILKCUDOODUORAUYEEOTECI",
+      "machine_length": 66,
+      "sha256": "2603a88a3466e200273d2dff2e8fc59927d413e5acea7f9645d18f1046f71347",
+      "vowel_fraction": 0.45454545454545453,
+      "index_of_coincidence": 0.06573426573426573,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:global:base1:forward:prime",
+      "unit": "letters",
+      "boundary": "global",
+      "index_base": 1,
+      "direction": "forward",
+      "rail": "prime",
+      "source_unit_count": 90,
+      "selected_unit_count": 24,
+      "selected_words": [],
+      "display": "ICTSOANGLTLYTRMTETOUKENE",
+      "machine": "ICTSOANGLTLYTRMTETOUKENE",
+      "machine_length": 24,
+      "sha256": "dd057058a6f4d76a4285191875d8b9e68d0162d6104096a57ba295d481fe1525",
+      "vowel_fraction": 0.3333333333333333,
+      "index_of_coincidence": 0.057971014492753624,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:global:base1:forward:nonprime",
+      "unit": "letters",
+      "boundary": "global",
+      "index_base": 1,
+      "direction": "forward",
+      "rail": "nonprime",
+      "source_unit_count": 90,
+      "selected_unit_count": 66,
+      "selected_words": [],
+      "display": "NEOEEYUROUDOODUCKLITEBUNNHUNEYOUADEITOTHENXSTEPGODLCLITTLBUNYHUNTR",
+      "machine": "NEOEEYUROUDOODUCKLITEBUNNHUNEYOUADEITOTHENXSTEPGODLCLITTLBUNYHUNTR",
+      "machine_length": 66,
+      "sha256": "33270b996693a97bcb1c028e6ed55ab35bd26e5014351b463286af6708080566",
+      "vowel_fraction": 0.4090909090909091,
+      "index_of_coincidence": 0.06666666666666667,
+      "vocabulary_occurrences": {
+        "STEP": 1
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:global:base1:reverse:prime",
+      "unit": "letters",
+      "boundary": "global",
+      "index_base": 1,
+      "direction": "reverse",
+      "rail": "prime",
+      "source_unit_count": 90,
+      "selected_unit_count": 24,
+      "selected_words": [],
+      "display": "ETUYBLLCOSXOEAYHETUODUEI",
+      "machine": "ETUYBLLCOSXOEAYHETUODUEI",
+      "machine_length": 24,
+      "sha256": "6654abe89549134ffe94852ea09f3c78457232a5b289418ffad88a1b48cab7ac",
+      "vowel_fraction": 0.5,
+      "index_of_coincidence": 0.05434782608695652,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:global:base1:reverse:nonprime",
+      "unit": "letters",
+      "boundary": "global",
+      "index_base": 1,
+      "direction": "reverse",
+      "rail": "nonprime",
+      "source_unit_count": 90,
+      "selected_unit_count": 66,
+      "selected_words": [],
+      "display": "RNHNNUETTIKULDOGPETTENEHTTTIDMUORETNUYNNUBLTILKCLDOGNUORAOYESOTECN",
+      "machine": "RNHNNUETTIKULDOGPETTENEHTTTIDMUORETNUYNNUBLTILKCLDOGNUORAOYESOTECN",
+      "machine_length": 66,
+      "sha256": "735137d7784a91da961d60af06412a904114afb099aad96048b2ecc29aa67f05",
+      "vowel_fraction": 0.3484848484848485,
+      "index_of_coincidence": 0.07086247086247087,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:reset_each_comment:base0:forward:prime",
+      "unit": "letters",
+      "boundary": "reset_each_comment",
+      "index_base": 0,
+      "direction": "forward",
+      "rail": "prime",
+      "source_unit_count": 90,
+      "selected_unit_count": 27,
+      "selected_words": [],
+      "display": "CEOEURDOUTEHEUMDITETTOKIUHN",
+      "machine": "CEOEURDOUTEHEUMDITETTOKIUHN",
+      "machine_length": 27,
+      "sha256": "fb533f85420c569dcb1911555d3038f7dad919b953c60e8b5a1ed5c48bb108cf",
+      "vowel_fraction": 0.5185185185185185,
+      "index_of_coincidence": 0.07977207977207977,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:reset_each_comment:base0:forward:nonprime",
+      "unit": "letters",
+      "boundary": "reset_each_comment",
+      "index_base": 0,
+      "direction": "forward",
+      "rail": "nonprime",
+      "source_unit_count": 90,
+      "selected_unit_count": 63,
+      "selected_words": [],
+      "display": "NITSEYOAOUNGODLCKLITLBUNNYUNTRYOAETTOHNEXSEPGODLUCLTTLEBNNYUTER",
+      "machine": "NITSEYOAOUNGODLCKLITLBUNNYUNTRYOAETTOHNEXSEPGODLUCLTTLEBNNYUTER",
+      "machine_length": 63,
+      "sha256": "844bd8d979a6a5ef3ae2202e3a8f5c73921d03edd6a4938762240eed0411f478",
+      "vowel_fraction": 0.3333333333333333,
+      "index_of_coincidence": 0.06400409626216078,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:reset_each_comment:base0:reverse:prime",
+      "unit": "letters",
+      "boundary": "reset_each_comment",
+      "index_base": 0,
+      "direction": "reverse",
+      "rail": "prime",
+      "source_unit_count": 90,
+      "selected_unit_count": 27,
+      "selected_words": [],
+      "display": "TNHNETKUORUOITNHNETKUOTETDM",
+      "machine": "TNHNETKUORUOITNHNETKUOTETDM",
+      "machine_length": 27,
+      "sha256": "c20035cc9ffda25262e032db583f1949f862dc5ed8aad3953466cb38ed711d2e",
+      "vowel_fraction": 0.37037037037037035,
+      "index_of_coincidence": 0.09116809116809117,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:reset_each_comment:base0:reverse:nonprime",
+      "unit": "letters",
+      "boundary": "reset_each_comment",
+      "index_base": 0,
+      "direction": "reverse",
+      "rail": "nonprime",
+      "source_unit_count": 90,
+      "selected_unit_count": 63,
+      "selected_words": [],
+      "display": "REUYNUBLTILCLDOGDNUOAOYEESTECNREUYNUBLTILCLDOGPETSXNEHTOTIEAUOY",
+      "machine": "REUYNUBLTILCLDOGDNUOAOYEESTECNREUYNUBLTILCLDOGPETSXNEHTOTIEAUOY",
+      "machine_length": 63,
+      "sha256": "6d0f039db7ce8ba5a4d09ab9ffbbb05c374cbebc090900bb973f1061d06b6576",
+      "vowel_fraction": 0.3968253968253968,
+      "index_of_coincidence": 0.06041986687147977,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:reset_each_comment:base1:forward:prime",
+      "unit": "letters",
+      "boundary": "reset_each_comment",
+      "index_base": 1,
+      "direction": "forward",
+      "rail": "prime",
+      "source_unit_count": 90,
+      "selected_unit_count": 29,
+      "selected_words": [],
+      "display": "ICTSOANGLTLYTROUAEOHXSGCLBYUR",
+      "machine": "ICTSOANGLTLYTROUAEOHXSGCLBYUR",
+      "machine_length": 29,
+      "sha256": "23d67017a0eec8cd365cfe295c7ade40d031fff0dd4a2b450e25e8ec1e628a88",
+      "vowel_fraction": 0.3103448275862069,
+      "index_of_coincidence": 0.03940886699507389,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:reset_each_comment:base1:forward:nonprime",
+      "unit": "letters",
+      "boundary": "reset_each_comment",
+      "index_base": 1,
+      "direction": "forward",
+      "rail": "nonprime",
+      "source_unit_count": 90,
+      "selected_unit_count": 61,
+      "selected_words": [],
+      "display": "NEOEEYUROUDOODUCKLITEBUNNHUNEYMDITTTENETTEPOODLUKITTLEUNNHNTE",
+      "machine": "NEOEEYUROUDOODUCKLITEBUNNHUNEYMDITTTENETTEPOODLUKITTLEUNNHNTE",
+      "machine_length": 61,
+      "sha256": "60914feab7be1ed4432d6ad286ca750a074d755cf5d0eb501f0b52723501bf08",
+      "vowel_fraction": 0.4262295081967213,
+      "index_of_coincidence": 0.08743169398907104,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:reset_each_comment:base1:reverse:prime",
+      "unit": "letters",
+      "boundary": "reset_each_comment",
+      "index_base": 1,
+      "direction": "reverse",
+      "rail": "prime",
+      "source_unit_count": 90,
+      "selected_unit_count": 29,
+      "selected_words": [],
+      "display": "ETUYBLLCOOASCNETUYBLLCOSXOEAY",
+      "machine": "ETUYBLLCOOASCNETUYBLLCOSXOEAY",
+      "machine_length": 29,
+      "sha256": "d81b68832512d53b68882967752a8a00c2d397b1daa29e1a10ee7cfb9e888fe3",
+      "vowel_fraction": 0.3793103448275862,
+      "index_of_coincidence": 0.06403940886699508,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "letters:reset_each_comment:base1:reverse:nonprime",
+      "unit": "letters",
+      "boundary": "reset_each_comment",
+      "index_base": 1,
+      "direction": "reverse",
+      "rail": "nonprime",
+      "source_unit_count": 90,
+      "selected_unit_count": 61,
+      "selected_words": [],
+      "display": "RNHNNUETTIKULDOGDNURUOYEEOTEIRNHNNUETTIKULDOGPETTENEHTTTIDMUO",
+      "machine": "RNHNNUETTIKULDOGDNURUOYEEOTEIRNHNNUETTIKULDOGPETTENEHTTTIDMUO",
+      "machine_length": 61,
+      "sha256": "9fd3af3e1f9cd51aa6a8d6651499a6dd4f92725dec972aac58a216cf7d83084e",
+      "vowel_fraction": 0.39344262295081966,
+      "index_of_coincidence": 0.08360655737704918,
+      "vocabulary_occurrences": {},
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:global:base0:forward:prime",
+      "unit": "words",
+      "boundary": "global",
+      "index_base": 0,
+      "direction": "forward",
+      "rail": "prime",
+      "source_unit_count": 22,
+      "selected_unit_count": 8,
+      "selected_words": [
+        "SEE",
+        "YOU",
+        "GOOD",
+        "LITTLE",
+        "MADE",
+        "TO",
+        "GOOD",
+        "LITTLE"
+      ],
+      "display": "SEE YOU GOOD LITTLE MADE TO GOOD LITTLE",
+      "machine": "SEEYOUGOODLITTLEMADETOGOODLITTLE",
+      "machine_length": 32,
+      "sha256": "4cdb7cfb8ea2f58c1596707eef56ae89ba8fd0ad781ebb3260151ea16d31ea94",
+      "vowel_fraction": 0.46875,
+      "index_of_coincidence": 0.09274193548387097,
+      "vocabulary_occurrences": {
+        "GOOD": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:global:base0:forward:nonprime",
+      "unit": "words",
+      "boundary": "global",
+      "index_base": 0,
+      "direction": "forward",
+      "rail": "nonprime",
+      "source_unit_count": 22,
+      "selected_unit_count": 14,
+      "selected_words": [
+        "NICE",
+        "TO",
+        "AROUND",
+        "LUCK",
+        "BUNNY",
+        "HUNTER",
+        "YOU",
+        "IT",
+        "THE",
+        "NEXT",
+        "STEP",
+        "LUCK",
+        "BUNNY",
+        "HUNTER"
+      ],
+      "display": "NICE TO AROUND LUCK BUNNY HUNTER YOU IT THE NEXT STEP LUCK BUNNY HUNTER",
+      "machine": "NICETOAROUNDLUCKBUNNYHUNTERYOUITTHENEXTSTEPLUCKBUNNYHUNTER",
+      "machine_length": 58,
+      "sha256": "583e23ee704f9267ff6e09f6aae6aaba8da77c4f6bdde22ef65c2b9ed2664204",
+      "vowel_fraction": 0.3448275862068966,
+      "index_of_coincidence": 0.07199032062915911,
+      "vocabulary_occurrences": {
+        "HUNTER": 2,
+        "NEXT": 1,
+        "STEP": 1,
+        "LUCK": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:global:base0:reverse:prime",
+      "unit": "words",
+      "boundary": "global",
+      "index_base": 0,
+      "direction": "reverse",
+      "rail": "prime",
+      "source_unit_count": 22,
+      "selected_unit_count": 8,
+      "selected_words": [
+        "LITTLE",
+        "LUCK",
+        "STEP",
+        "THE",
+        "YOU",
+        "BUNNY",
+        "AROUND",
+        "SEE"
+      ],
+      "display": "LITTLE LUCK STEP THE YOU BUNNY AROUND SEE",
+      "machine": "LITTLELUCKSTEPTHEYOUBUNNYAROUNDSEE",
+      "machine_length": 34,
+      "sha256": "94723cb990802914e064d3bf9da06a005396877e66569238e2842595b63e2965",
+      "vowel_fraction": 0.38235294117647056,
+      "index_of_coincidence": 0.05525846702317291,
+      "vocabulary_occurrences": {
+        "STEP": 1,
+        "LUCK": 1
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:global:base0:reverse:nonprime",
+      "unit": "words",
+      "boundary": "global",
+      "index_base": 0,
+      "direction": "reverse",
+      "rail": "nonprime",
+      "source_unit_count": 22,
+      "selected_unit_count": 14,
+      "selected_words": [
+        "HUNTER",
+        "BUNNY",
+        "GOOD",
+        "NEXT",
+        "TO",
+        "IT",
+        "MADE",
+        "HUNTER",
+        "LITTLE",
+        "LUCK",
+        "GOOD",
+        "YOU",
+        "TO",
+        "NICE"
+      ],
+      "display": "HUNTER BUNNY GOOD NEXT TO IT MADE HUNTER LITTLE LUCK GOOD YOU TO NICE",
+      "machine": "HUNTERBUNNYGOODNEXTTOITMADEHUNTERLITTLELUCKGOODYOUTONICE",
+      "machine_length": 56,
+      "sha256": "7acdc06d1dda1dc8a161d06a89806dcd57e3d69488482a692b8cee619d9addd7",
+      "vowel_fraction": 0.39285714285714285,
+      "index_of_coincidence": 0.06688311688311688,
+      "vocabulary_occurrences": {
+        "HUNTER": 2,
+        "NEXT": 1,
+        "GOOD": 2,
+        "LUCK": 1
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:global:base1:forward:prime",
+      "unit": "words",
+      "boundary": "global",
+      "index_base": 1,
+      "direction": "forward",
+      "rail": "prime",
+      "source_unit_count": 22,
+      "selected_unit_count": 8,
+      "selected_words": [
+        "TO",
+        "SEE",
+        "AROUND",
+        "LUCK",
+        "YOU",
+        "IT",
+        "STEP",
+        "LUCK"
+      ],
+      "display": "TO SEE AROUND LUCK YOU IT STEP LUCK",
+      "machine": "TOSEEAROUNDLUCKYOUITSTEPLUCK",
+      "machine_length": 28,
+      "sha256": "beeb331e39f0cf78139aaf7d1cc3003bedd854722399c242334d52497c710209",
+      "vowel_fraction": 0.42857142857142855,
+      "index_of_coincidence": 0.05026455026455026,
+      "vocabulary_occurrences": {
+        "STEP": 1,
+        "LUCK": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:global:base1:forward:nonprime",
+      "unit": "words",
+      "boundary": "global",
+      "index_base": 1,
+      "direction": "forward",
+      "rail": "nonprime",
+      "source_unit_count": 22,
+      "selected_unit_count": 14,
+      "selected_words": [
+        "NICE",
+        "YOU",
+        "GOOD",
+        "LITTLE",
+        "BUNNY",
+        "HUNTER",
+        "MADE",
+        "TO",
+        "THE",
+        "NEXT",
+        "GOOD",
+        "LITTLE",
+        "BUNNY",
+        "HUNTER"
+      ],
+      "display": "NICE YOU GOOD LITTLE BUNNY HUNTER MADE TO THE NEXT GOOD LITTLE BUNNY HUNTER",
+      "machine": "NICEYOUGOODLITTLEBUNNYHUNTERMADETOTHENEXTGOODLITTLEBUNNYHUNTER",
+      "machine_length": 62,
+      "sha256": "265bde65578de6f2564b7d63c9b5f89c4682ec3d47c109a2677301aa4d8a7eca",
+      "vowel_fraction": 0.3709677419354839,
+      "index_of_coincidence": 0.07297726070861978,
+      "vocabulary_occurrences": {
+        "HUNTER": 2,
+        "NEXT": 1,
+        "GOOD": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:global:base1:reverse:prime",
+      "unit": "words",
+      "boundary": "global",
+      "index_base": 1,
+      "direction": "reverse",
+      "rail": "prime",
+      "source_unit_count": 22,
+      "selected_unit_count": 8,
+      "selected_words": [
+        "BUNNY",
+        "LITTLE",
+        "GOOD",
+        "NEXT",
+        "MADE",
+        "HUNTER",
+        "GOOD",
+        "YOU"
+      ],
+      "display": "BUNNY LITTLE GOOD NEXT MADE HUNTER GOOD YOU",
+      "machine": "BUNNYLITTLEGOODNEXTMADEHUNTERGOODYOU",
+      "machine_length": 36,
+      "sha256": "c2230d7e6f0540fdf19f51677e3a35629d438df6384b32933f971f8c3ff3ac14",
+      "vowel_fraction": 0.3888888888888889,
+      "index_of_coincidence": 0.05873015873015873,
+      "vocabulary_occurrences": {
+        "HUNTER": 1,
+        "NEXT": 1,
+        "GOOD": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:global:base1:reverse:nonprime",
+      "unit": "words",
+      "boundary": "global",
+      "index_base": 1,
+      "direction": "reverse",
+      "rail": "nonprime",
+      "source_unit_count": 22,
+      "selected_unit_count": 14,
+      "selected_words": [
+        "HUNTER",
+        "LUCK",
+        "STEP",
+        "THE",
+        "TO",
+        "IT",
+        "YOU",
+        "BUNNY",
+        "LITTLE",
+        "LUCK",
+        "AROUND",
+        "SEE",
+        "TO",
+        "NICE"
+      ],
+      "display": "HUNTER LUCK STEP THE TO IT YOU BUNNY LITTLE LUCK AROUND SEE TO NICE",
+      "machine": "HUNTERLUCKSTEPTHETOITYOUBUNNYLITTLELUCKAROUNDSEETONICE",
+      "machine_length": 54,
+      "sha256": "4d86344ecbc5a8ac79bc8943d57c3abafe31f0e5b2c3501f47fb774c92d42a51",
+      "vowel_fraction": 0.3888888888888889,
+      "index_of_coincidence": 0.06778476589797344,
+      "vocabulary_occurrences": {
+        "HUNTER": 1,
+        "STEP": 1,
+        "LUCK": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:reset_each_comment:base0:forward:prime",
+      "unit": "words",
+      "boundary": "reset_each_comment",
+      "index_base": 0,
+      "direction": "forward",
+      "rail": "prime",
+      "source_unit_count": 22,
+      "selected_unit_count": 9,
+      "selected_words": [
+        "SEE",
+        "YOU",
+        "GOOD",
+        "LITTLE",
+        "IT",
+        "TO",
+        "NEXT",
+        "GOOD",
+        "HUNTER"
+      ],
+      "display": "SEE YOU GOOD LITTLE IT TO NEXT GOOD HUNTER",
+      "machine": "SEEYOUGOODLITTLEITTONEXTGOODHUNTER",
+      "machine_length": 34,
+      "sha256": "05bc697d3bd91cf26861c1107b70eeec384e771c50fff50cb99cf65ed6955418",
+      "vowel_fraction": 0.4411764705882353,
+      "index_of_coincidence": 0.08199643493761141,
+      "vocabulary_occurrences": {
+        "HUNTER": 1,
+        "NEXT": 1,
+        "GOOD": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:reset_each_comment:base0:forward:nonprime",
+      "unit": "words",
+      "boundary": "reset_each_comment",
+      "index_base": 0,
+      "direction": "forward",
+      "rail": "nonprime",
+      "source_unit_count": 22,
+      "selected_unit_count": 13,
+      "selected_words": [
+        "NICE",
+        "TO",
+        "AROUND",
+        "LUCK",
+        "BUNNY",
+        "HUNTER",
+        "YOU",
+        "MADE",
+        "THE",
+        "STEP",
+        "LUCK",
+        "LITTLE",
+        "BUNNY"
+      ],
+      "display": "NICE TO AROUND LUCK BUNNY HUNTER YOU MADE THE STEP LUCK LITTLE BUNNY",
+      "machine": "NICETOAROUNDLUCKBUNNYHUNTERYOUMADETHESTEPLUCKLITTLEBUNNY",
+      "machine_length": 56,
+      "sha256": "e4b26e1d02c164ab18cbd4fe3362e3ea4229d4ade9479fca2e5e787657f916a0",
+      "vowel_fraction": 0.35714285714285715,
+      "index_of_coincidence": 0.06103896103896104,
+      "vocabulary_occurrences": {
+        "HUNTER": 1,
+        "STEP": 1,
+        "LUCK": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:reset_each_comment:base0:reverse:prime",
+      "unit": "words",
+      "boundary": "reset_each_comment",
+      "index_base": 0,
+      "direction": "reverse",
+      "rail": "prime",
+      "source_unit_count": 22,
+      "selected_unit_count": 9,
+      "selected_words": [
+        "LITTLE",
+        "LUCK",
+        "AROUND",
+        "SEE",
+        "LITTLE",
+        "LUCK",
+        "STEP",
+        "THE",
+        "YOU"
+      ],
+      "display": "LITTLE LUCK AROUND SEE LITTLE LUCK STEP THE YOU",
+      "machine": "LITTLELUCKAROUNDSEELITTLELUCKSTEPTHEYOU",
+      "machine_length": 39,
+      "sha256": "4b4298ec53cf77dc1772bb26f5e439720f4d81caea77436641f0cae70fa1b54b",
+      "vowel_fraction": 0.38461538461538464,
+      "index_of_coincidence": 0.07557354925775979,
+      "vocabulary_occurrences": {
+        "STEP": 1,
+        "LUCK": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:reset_each_comment:base0:reverse:nonprime",
+      "unit": "words",
+      "boundary": "reset_each_comment",
+      "index_base": 0,
+      "direction": "reverse",
+      "rail": "nonprime",
+      "source_unit_count": 22,
+      "selected_unit_count": 13,
+      "selected_words": [
+        "HUNTER",
+        "BUNNY",
+        "GOOD",
+        "YOU",
+        "TO",
+        "NICE",
+        "HUNTER",
+        "BUNNY",
+        "GOOD",
+        "NEXT",
+        "TO",
+        "IT",
+        "MADE"
+      ],
+      "display": "HUNTER BUNNY GOOD YOU TO NICE HUNTER BUNNY GOOD NEXT TO IT MADE",
+      "machine": "HUNTERBUNNYGOODYOUTONICEHUNTERBUNNYGOODNEXTTOITMADE",
+      "machine_length": 51,
+      "sha256": "128a3f08e37b99828ce33d13861c5f99868bba48be604674ecc86d701d6a9aa3",
+      "vowel_fraction": 0.39215686274509803,
+      "index_of_coincidence": 0.07450980392156863,
+      "vocabulary_occurrences": {
+        "HUNTER": 2,
+        "NEXT": 1,
+        "GOOD": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:reset_each_comment:base1:forward:prime",
+      "unit": "words",
+      "boundary": "reset_each_comment",
+      "index_base": 1,
+      "direction": "forward",
+      "rail": "prime",
+      "source_unit_count": 22,
+      "selected_unit_count": 9,
+      "selected_words": [
+        "TO",
+        "SEE",
+        "AROUND",
+        "LUCK",
+        "MADE",
+        "IT",
+        "THE",
+        "STEP",
+        "BUNNY"
+      ],
+      "display": "TO SEE AROUND LUCK MADE IT THE STEP BUNNY",
+      "machine": "TOSEEAROUNDLUCKMADEITTHESTEPBUNNY",
+      "machine_length": 33,
+      "sha256": "ea2e91b090d5d7f776d87a5b0d03505ec03938c264929cd029119fdc837b3488",
+      "vowel_fraction": 0.3939393939393939,
+      "index_of_coincidence": 0.04924242424242424,
+      "vocabulary_occurrences": {
+        "STEP": 1,
+        "LUCK": 1
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:reset_each_comment:base1:forward:nonprime",
+      "unit": "words",
+      "boundary": "reset_each_comment",
+      "index_base": 1,
+      "direction": "forward",
+      "rail": "nonprime",
+      "source_unit_count": 22,
+      "selected_unit_count": 13,
+      "selected_words": [
+        "NICE",
+        "YOU",
+        "GOOD",
+        "LITTLE",
+        "BUNNY",
+        "HUNTER",
+        "YOU",
+        "TO",
+        "NEXT",
+        "GOOD",
+        "LUCK",
+        "LITTLE",
+        "HUNTER"
+      ],
+      "display": "NICE YOU GOOD LITTLE BUNNY HUNTER YOU TO NEXT GOOD LUCK LITTLE HUNTER",
+      "machine": "NICEYOUGOODLITTLEBUNNYHUNTERYOUTONEXTGOODLUCKLITTLEHUNTER",
+      "machine_length": 57,
+      "sha256": "eb3228584dc54873504f869d515ccd0137252c219cc1d4a077092848030f3493",
+      "vowel_fraction": 0.38596491228070173,
+      "index_of_coincidence": 0.07205513784461152,
+      "vocabulary_occurrences": {
+        "HUNTER": 2,
+        "NEXT": 1,
+        "GOOD": 2,
+        "LUCK": 1
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:reset_each_comment:base1:reverse:prime",
+      "unit": "words",
+      "boundary": "reset_each_comment",
+      "index_base": 1,
+      "direction": "reverse",
+      "rail": "prime",
+      "source_unit_count": 22,
+      "selected_unit_count": 9,
+      "selected_words": [
+        "BUNNY",
+        "LITTLE",
+        "GOOD",
+        "YOU",
+        "BUNNY",
+        "LITTLE",
+        "GOOD",
+        "NEXT",
+        "MADE"
+      ],
+      "display": "BUNNY LITTLE GOOD YOU BUNNY LITTLE GOOD NEXT MADE",
+      "machine": "BUNNYLITTLEGOODYOUBUNNYLITTLEGOODNEXTMADE",
+      "machine_length": 41,
+      "sha256": "426c5cc1e7c365c7174353b817f0c0c916f901df80c832c3e2ee0d544242212b",
+      "vowel_fraction": 0.36585365853658536,
+      "index_of_coincidence": 0.06585365853658537,
+      "vocabulary_occurrences": {
+        "NEXT": 1,
+        "GOOD": 2
+      },
+      "new_instruction_tokens": []
+    },
+    {
+      "id": "words:reset_each_comment:base1:reverse:nonprime",
+      "unit": "words",
+      "boundary": "reset_each_comment",
+      "index_base": 1,
+      "direction": "reverse",
+      "rail": "nonprime",
+      "source_unit_count": 22,
+      "selected_unit_count": 13,
+      "selected_words": [
+        "HUNTER",
+        "LUCK",
+        "AROUND",
+        "SEE",
+        "TO",
+        "NICE",
+        "HUNTER",
+        "LUCK",
+        "STEP",
+        "THE",
+        "TO",
+        "IT",
+        "YOU"
+      ],
+      "display": "HUNTER LUCK AROUND SEE TO NICE HUNTER LUCK STEP THE TO IT YOU",
+      "machine": "HUNTERLUCKAROUNDSEETONICEHUNTERLUCKSTEPTHETOITYOU",
+      "machine_length": 49,
+      "sha256": "842fe826f63010ca925614ab89774699bdc67472a53f56433498e5f67c9dfb05",
+      "vowel_fraction": 0.40816326530612246,
+      "index_of_coincidence": 0.06972789115646258,
+      "vocabulary_occurrences": {
+        "HUNTER": 2,
+        "STEP": 1,
+        "LUCK": 2
+      },
+      "new_instruction_tokens": []
+    }
+  ],
+  "new_instruction_token_hits": [],
+  "inherited_or_flavor_token_hits": [
+    {
+      "id": "letters:global:base1:forward:nonprime",
+      "tokens": [
+        "STEP"
+      ]
+    },
+    {
+      "id": "words:global:base0:forward:prime",
+      "tokens": [
+        "GOOD"
+      ]
+    },
+    {
+      "id": "words:global:base0:forward:nonprime",
+      "tokens": [
+        "HUNTER",
+        "NEXT",
+        "STEP",
+        "LUCK"
+      ]
+    },
+    {
+      "id": "words:global:base0:reverse:prime",
+      "tokens": [
+        "STEP",
+        "LUCK"
+      ]
+    },
+    {
+      "id": "words:global:base0:reverse:nonprime",
+      "tokens": [
+        "HUNTER",
+        "NEXT",
+        "GOOD",
+        "LUCK"
+      ]
+    },
+    {
+      "id": "words:global:base1:forward:prime",
+      "tokens": [
+        "STEP",
+        "LUCK"
+      ]
+    },
+    {
+      "id": "words:global:base1:forward:nonprime",
+      "tokens": [
+        "HUNTER",
+        "NEXT",
+        "GOOD"
+      ]
+    },
+    {
+      "id": "words:global:base1:reverse:prime",
+      "tokens": [
+        "HUNTER",
+        "NEXT",
+        "GOOD"
+      ]
+    },
+    {
+      "id": "words:global:base1:reverse:nonprime",
+      "tokens": [
+        "HUNTER",
+        "STEP",
+        "LUCK"
+      ]
+    },
+    {
+      "id": "words:reset_each_comment:base0:forward:prime",
+      "tokens": [
+        "HUNTER",
+        "NEXT",
+        "GOOD"
+      ]
+    },
+    {
+      "id": "words:reset_each_comment:base0:forward:nonprime",
+      "tokens": [
+        "HUNTER",
+        "STEP",
+        "LUCK"
+      ]
+    },
+    {
+      "id": "words:reset_each_comment:base0:reverse:prime",
+      "tokens": [
+        "STEP",
+        "LUCK"
+      ]
+    },
+    {
+      "id": "words:reset_each_comment:base0:reverse:nonprime",
+      "tokens": [
+        "HUNTER",
+        "NEXT",
+        "GOOD"
+      ]
+    },
+    {
+      "id": "words:reset_each_comment:base1:forward:prime",
+      "tokens": [
+        "STEP",
+        "LUCK"
+      ]
+    },
+    {
+      "id": "words:reset_each_comment:base1:forward:nonprime",
+      "tokens": [
+        "HUNTER",
+        "NEXT",
+        "GOOD",
+        "LUCK"
+      ]
+    },
+    {
+      "id": "words:reset_each_comment:base1:reverse:prime",
+      "tokens": [
+        "NEXT",
+        "GOOD"
+      ]
+    },
+    {
+      "id": "words:reset_each_comment:base1:reverse:nonprime",
+      "tokens": [
+        "HUNTER",
+        "STEP",
+        "LUCK"
+      ]
+    }
+  ],
+  "collisions": {
+    "exact_equality_classes": [],
+    "reverse_equality_pairs": []
+  },
+  "decision": "only_inherited_or_flavor_tokens",
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "docker_touched": false,
+  "gpu_touched": false
+}

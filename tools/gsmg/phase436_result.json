@@ -1,0 +1,41 @@
+{
+  "phase": 436,
+  "decision": "protocol_invalid",
+  "reason": "frozen required findings are absent",
+  "missing_phase_findings": [
+    418
+  ],
+  "authenticated_sources": {
+    "phase32_plaintext": {
+      "length": 2422,
+      "sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34"
+    },
+    "encoded_321": {
+      "length": 1539,
+      "sha256": "bd7a29432546c67c4170e0c523ddbf43ae82d20ee187d1b4dbf7907a0faf4c7b"
+    },
+    "cipher_321": {
+      "length": 1539,
+      "sha256": "6d66e0e0e2dfdb812d5ecee2be6f54c1f3b8c84b0d74580686cf2053d76a200e"
+    },
+    "answer_321": {
+      "length": 1539,
+      "sha256": "56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241"
+    },
+    "validation_num": {
+      "length": 149,
+      "sha256": "71e3af174d533ad2c1c79fce64308f5fdf200f3cc50f059b2f1485a2c5f1765d"
+    },
+    "answer_322": {
+      "length": 91,
+      "sha256": "878b7afacc9e35412e76b8506cc8297fa5aeba5381e108dc421b71a0ab8993d8"
+    }
+  },
+  "phase270_inventory": {
+    "base_count": 25,
+    "material_count": 50
+  },
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "gpu_touched": false
+}

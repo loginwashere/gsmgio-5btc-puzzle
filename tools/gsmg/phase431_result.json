@@ -1,0 +1,73 @@
+{
+  "inputs": {
+    "base_square": "DBIFHCEGAKLMNOPQRSTUVWXYZ",
+    "faed_length": 570,
+    "faed_sha256": "585ee5d801486348f3396b3301bc87f14420204ed3242e67bc53d60cfed14664",
+    "free_positions": [
+      7,
+      4,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "free_symbols": "GHKLMNOPQRUVWXYZ",
+    "rank_count_16_factorial": 20922789888000
+  },
+  "interpretation": {
+    "global": "Exact quotienting removes 31.98% of Phase-430 ranks; most of the family remains genuinely output-distinct.",
+    "local": "The 42 placements with only five visible other free cells have 9! = 362880 rank representations per decoded output, explaining large duplicate clusters in retained block winners.",
+    "scope": "This is output identity only. It neither evaluates readability nor changes the sealed Phase-430 exhaustive result."
+  },
+  "method": {
+    "canonical_template_definition": "decoded literals plus first-occurrence-numbered placeholders for visited non-G/H free cells",
+    "ordered_g_h_placements": 240,
+    "outputs_per_template": "14! / (14-m)!, where m is the visible non-G/H free-cell count",
+    "rank_multiplicity_per_output": "canonical-template group size times (14-m)!"
+  },
+  "phase": 431,
+  "question": "exact decoded-output equivalence census for the sealed Phase-430 16! family",
+  "results": {
+    "canonical_template_count": 240,
+    "cross_placement_template_collisions": 0,
+    "output_count_by_rank_multiplicity": {
+      "1": 12379317350400,
+      "2": 1656387532800,
+      "24": 21794572800,
+      "362880": 10090080,
+      "6": 174356582400
+    },
+    "placement_count_by_visible_other_free_cells": {
+      "10": 6,
+      "11": 12,
+      "12": 38,
+      "13": 12,
+      "14": 130,
+      "5": 42
+    },
+    "rank_count_reconstructed_from_classes": 20922789888000,
+    "raw_to_unique_ratio": 1.4701367831257564,
+    "removable_duplicate_ranks": 6690923759520,
+    "removable_fraction": 0.31979118441358023,
+    "template_count_by_visible_cells_and_group_size": {
+      "m=10,group=1": 6,
+      "m=11,group=1": 12,
+      "m=12,group=1": 38,
+      "m=13,group=1": 12,
+      "m=14,group=1": 130,
+      "m=5,group=1": 42
+    },
+    "unique_decoded_outputs": 14231866128480,
+    "unique_fraction_of_16_factorial": 0.6802088155864198
+  }
+}
