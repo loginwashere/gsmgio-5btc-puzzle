@@ -36,12 +36,12 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from findings_store import read_findings  # noqa: E402
 from generate_phase_index import (  # noqa: E402
     HEADING_RE, parse_phases, assign_stable_ids, PhaseIdError,
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-FINDINGS = REPO_ROOT / "tools" / "gsmg" / "FINDINGS.md"
 GRAPH_JSON = REPO_ROOT / "tools" / "gsmg" / "phase_citation_graph.json"
 REPORT_MD = REPO_ROOT / "doc" / "GSMG_PHASE_CITATION_GRAPH.md"
 
@@ -147,7 +147,7 @@ def extract_citations(body_text):
 
 
 def build_graph():
-    text = FINDINGS.read_text(encoding="utf-8")
+    text = read_findings()
     lines = text.splitlines()
     rows = parse_phases(text)
     rows = assign_stable_ids(rows)

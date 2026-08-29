@@ -5,13 +5,13 @@ import argparse
 import json
 from pathlib import Path
 
+from findings_store import read_findings
 import phase436_source_codes_referent_eligibility_audit as phase436
 import p32_sibling_password_audit as phase270
 from data import VALIDATION_NUM
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-FINDINGS_PATH = REPO_ROOT / "tools" / "gsmg" / "FINDINGS.md"
 PHASE418_PROTOCOL = REPO_ROOT / "doc" / "Brainstorms" / "2026-08-26 - Phase 418 P32TRAILING Solution-Complete Blinded Reconstruction Pre-Registration.md"
 REQUIRED_COMPLETED_PHASES = (118, 265, 268, 269, 270, 370, 416, 417, 421, 423)
 
@@ -51,7 +51,7 @@ def audit():
         if value in base_values or value in material_values:
             raise AssertionError(f"{label} unexpectedly entered Phase 270 inventory")
 
-    findings = FINDINGS_PATH.read_text(encoding="utf-8")
+    findings = read_findings()
     missing_completed = tuple(
         phase for phase in REQUIRED_COMPLETED_PHASES
         if f"## Phase {phase} --" not in findings

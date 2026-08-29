@@ -105,6 +105,7 @@ import grid_spiral
 import half_better_half_algebra_audit
 import hash_duality_corrected_oracle_backfill
 import generate_phase_index
+import findings_store
 import gameoflogic_source_audit
 import validate_vault_metadata
 import first_piece_even_odd_alphabet_gate_audit
@@ -2813,7 +2814,7 @@ class CorrectedClaimTests(unittest.TestCase):
         self.assertEqual(report["errors"], {})
 
     def test_duplicate_phase_numbers_have_explicit_stable_ids(self):
-        text = generate_phase_index.FINDINGS.read_text(encoding="utf-8")
+        text = findings_store.read_findings()
         rows = generate_phase_index.parse_phases(text)
         rows = generate_phase_index.assign_stable_ids(rows)  # raises if unstable
         stable_ids = [row["stable_id"] for row in rows]

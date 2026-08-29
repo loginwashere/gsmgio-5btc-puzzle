@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Generate doc/GSMG_PHASE_INDEX.md from tools/gsmg/FINDINGS.md's phase headings.
+"""Generate doc/GSMG_PHASE_INDEX.md from the canonical findings store.
 
-FINDINGS.md is not split into per-phase files (tests and other docs already
-depend on its current layout), so this script builds a navigable table from
-its existing "## Phase N -- Subject: Result (date)" headings instead, without
-changing FINDINGS.md itself. Re-run after adding new phases; the index is
-derived, not hand-maintained.
+Per-phase files under tools/gsmg/findings are canonical; FINDINGS.md is their
+generated compatibility concatenation. This script reads through the shared
+loader, so index generation works from the canonical source while preserving
+the historical monolith links and anchors.
 
 Link targets use GitHub's heading-slug algorithm so the index works on
 GitHub as a plain relative link; Obsidian's own heading search/Outline panel
@@ -18,8 +17,9 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from findings_store import load_manifest, read_findings
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
-FINDINGS = REPO_ROOT / "tools" / "gsmg" / "FINDINGS.md"
 OUTPUT = REPO_ROOT / "doc" / "GSMG_PHASE_INDEX.md"
 
 HEADING_RE = re.compile(r"^## Phase (\S+)\s+[—-]{1,2}\s*(.+)$")
@@ -158,6 +158,9 @@ def assign_stable_ids(rows):
 
 
 def build_index(rows, doc_dir):
+    fragment_by_id = {
+        entry["stable_id"]: entry["file"] for entry in load_manifest()["entries"]
+    }
     duplicate_numbers = sorted(
         number for number, count in Counter(row["number"] for row in rows).items()
         if count > 1
@@ -166,15 +169,16 @@ def build_index(rows, doc_dir):
         "---",
         "type: index",
         "status: live",
-        "generated_from: tools/gsmg/FINDINGS.md",
+        "generated_from: tools/gsmg/findings/manifest.json",
         "generator: tools/gsmg/generate_phase_index.py",
         "---",
         "",
         "# GSMG Phase Index",
         "",
-        f"Generated from **{len(rows)}** `## Phase` headings in "
-        "[tools/gsmg/FINDINGS.md](../tools/gsmg/FINDINGS.md). This table is "
-        "derived, not hand-maintained — re-run "
+        f"Generated from **{len(rows)}** canonical per-phase files under "
+        "[tools/gsmg/findings](../tools/gsmg/findings/README.md). "
+        "[FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated "
+        "compatibility view. This table is derived, not hand-maintained — re-run "
         "`python3 tools/gsmg/generate_phase_index.py` after adding a phase "
         "rather than editing this file directly.",
         "",
@@ -185,7 +189,7 @@ def build_index(rows, doc_dir):
         "A phase whose original heading was later corrected without editing "
         "the heading itself can carry `<!-- index_note: ... -->` and/or "
         "`<!-- audit_doc_override: FILENAME.md -->` marker comments stacked "
-        "directly above its `## Phase N` line in FINDINGS.md; this generator "
+        "directly above its `## Phase N` line in the canonical fragment; this generator "
         "reads them into the Result/Audit-doc cells below.",
         "",
     ]
@@ -200,11 +204,15 @@ def build_index(rows, doc_dir):
             "",
         ]
     lines += [
-        "| Phase | Stable ID | Date | Subject | Result | FINDINGS | Audit doc |",
-        "|---|---|---|---|---|---|---|",
+        "| Phase | Stable ID | Date | Subject | Result | Source | FINDINGS | Audit doc |",
+        "|---|---|---|---|---|---|---|---|",
     ]
     for row in rows:
         findings_link = f"[link](../tools/gsmg/FINDINGS.md#{row['slug']})"
+        fragment = fragment_by_id.get(row["stable_id"])
+        source_link = (
+            f"[source](../tools/gsmg/findings/{fragment})" if fragment else "—"
+        )
         override = row.get("audit_doc_override")
         if override:
             override_path = doc_dir / override
@@ -220,7 +228,7 @@ def build_index(rows, doc_dir):
         date = row["date"] or "—"
         lines.append(
             f"| {row['number']} | {row['stable_id']} | {date} | {subject} | "
-            f"{result} | {findings_link} | {audit_link} |"
+            f"{result} | {source_link} | {findings_link} | {audit_link} |"
         )
     lines.append("")
     return "\n".join(lines)
@@ -232,7 +240,7 @@ def main():
                          help="exit 1 if the generated file would differ from disk")
     args = parser.parse_args()
 
-    text = FINDINGS.read_text(encoding="utf-8")
+    text = read_findings()
     rows = parse_phases(text)
     if not rows:
         print("[!] no phase headings found", file=sys.stderr)

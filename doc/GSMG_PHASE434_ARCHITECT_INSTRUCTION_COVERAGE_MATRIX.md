@@ -10,6 +10,12 @@ script: tools/gsmg/phase434_architect_instruction_coverage_matrix.py
 
 # Phase 434 — Architect Instruction and Coverage Matrix
 
+> **Subsequent update (Phase 445):** A native Phase-3.2 transport graph finds
+> two, not one, outputs that satisfy every frozen `CODE YOU ... CARRY` gate:
+> decoded `answer_321` and decoded `answer_322`. Neither has an established
+> consumer binding or transform to P32, so the transport reading remains
+> gated and does not authorize candidate generation.
+
 > **Subsequent update (Phase 444):** Phases 442–443 fixed two eligible source
 > strings and the exact split-final-BE prime mapping. Phase 444 therefore ran
 > the previously gated minimal source-bound AND/OR rail family for both
@@ -34,7 +40,7 @@ material and makes no oracle calls.
 |---|---|---|---|---|
 | `THE FUNCTION OF THE YOU IS` | Addressing/routing frame | Film's ONE→YOU parody is visible | Line, whole-block, and creator-row password families negative | Thematic frame; no general substitution consumer |
 | `NOW TO RETURN TO THE SOURCE CODES` | Possible source selection | Only the pluralization of film's SOURCE is visible | Literal forms negative; earlier reinsertion readings unstable | Underdefined until source, unit, order, and boundary are fixed |
-| `ALLOWING A TEMPORARY ... HOPEFULLY CARRY` | Provenance/narrative texture | TEMPORARY is screenplay-derived; HOPEFULLY creator-added | Phase 235 provenance plus direct/whole-text negatives | Recognition-only |
+| `ALLOWING A TEMPORARY ... HOPEFULLY CARRY` | Possible transport-role declaration | TEMPORARY/transport wording is screenplay-derived; HOPEFULLY creator-added | Phase 235 provenance, direct/whole-text negatives, and Phase 445 native transport graph | Two eligible decoded carriers but no established consumer binding; gated |
 | `REINSERTING THE PRIME BASICS` | Prime-selection candidate | Prime vocabulary, but no local rail/base/serialization | Phase 265 literal negative; Phase 270 prime walk, pure prime, Stage-0, and split-guide consumers negative | Tested constructions closed; general phrase still underdefined |
 | `AFTER WHICH ... BE REQUIRED TO SELECT FROM` | Operator framing | SELECT is explicit; rule and object are absent | Phase 270 selection constructions negative | Phase 435 finds the repetition real but non-selecting |
 | `23 CIPHERS / 16 ENCRYPTIONS / 7 ... PASSWORDS` | Structural checkpoint | Inherited film count; split guide has 23 endpoints = 16 blue + 7 yellow | Phase 61 classification; Phase 270 direct consumers negative | Checkpoint real, downstream consumer unbound |

@@ -10,6 +10,12 @@ script: tools/gsmg/phase438_phase32_representation_provenance_audit.py
 
 # Phase 438 — Phase 3.2 Representation Provenance Audit
 
+> **Subsequent update (Phase 445):** Applying a distinct transport-role gate
+> across the full native Phase-3.2 graph does not choose among Phase 438's
+> three 3.2.1 representations alone. It identifies decoded `answer_321` and
+> sibling decoded `answer_322` as two eligible carried outputs, with no
+> established binding or transform from either one to P32.
+
 The Phase 3.2 solve workflow privileges three different roles, but no primary
 evidence identifies any one of them as the downstream operand of `SOURCE CODES`.
 

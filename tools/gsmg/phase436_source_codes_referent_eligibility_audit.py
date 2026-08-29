@@ -6,12 +6,12 @@ import hashlib
 import json
 from pathlib import Path
 
+from findings_store import read_findings
 import p32_sibling_password_audit as phase270
 from data import VALIDATION_NUM
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-FINDINGS_PATH = REPO_ROOT / "tools" / "gsmg" / "FINDINGS.md"
 
 EXPECTED = {
     "phase32_plaintext": (2422, "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34"),
@@ -172,7 +172,7 @@ def audit():
         if raw_value in base_values or raw_value in material_values:
             raise AssertionError(f"{raw_name} unexpectedly entered Phase 270 inventory")
 
-    findings = FINDINGS_PATH.read_text(encoding="utf-8")
+    findings = read_findings()
     missing_phases = tuple(
         phase for phase in REQUIRED_PHASES
         if f"## Phase {phase} --" not in findings

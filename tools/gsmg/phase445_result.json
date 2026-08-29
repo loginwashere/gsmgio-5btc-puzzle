@@ -1,0 +1,388 @@
+{
+  "phrase_control": {
+    "connected_clause": "ALLOWINGATEMPORARYDISSEMINATIONOFTHECODEYOUHOPEFULLYCARRY",
+    "temporary_dissemination_code_you_carry": "screenplay-inherited",
+    "hopefully": "creator-added",
+    "independent_object_selector": false
+  },
+  "nodes": [
+    {
+      "id": "phase32_password",
+      "length": 64,
+      "sha256": "e06146aee02e11ba83a2d0e2f4a6ada7e0bd9a501e7f5fde0208211be4ae740b",
+      "role": "inbound SHA-256-derived decryption password",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": true,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "phase32_blob",
+      "length": 2448,
+      "sha256": "9d172dc017034564b40eb381fa61e31421f509a08430864c77ccf86cfc8fe784",
+      "role": "authenticated encrypted Phase-3.2 container",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": false,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "phase32_plaintext",
+      "length": 2422,
+      "sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+      "role": "authenticated decrypted parent container",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": true,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "raw_encoded_321",
+      "length": 1539,
+      "sha256": "bd7a29432546c67c4170e0c523ddbf43ae82d20ee187d1b4dbf7907a0faf4c7b",
+      "role": "creator-delivered 3.2.1 encoded child block",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": false,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "cp1141_ciphertext",
+      "length": 1539,
+      "sha256": "6d66e0e0e2dfdb812d5ecee2be6f54c1f3b8c84b0d74580686cf2053d76a200e",
+      "role": "clue-selected EBCDIC intermediate",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": true,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "beaufort_key",
+      "length": 15,
+      "sha256": "b8de97f4752f353ae8f18bc20afff94c16fec87a230d14aead8572287c2f196c",
+      "role": "clue-derived Beaufort parameter",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": true,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "answer_321",
+      "length": 1539,
+      "sha256": "56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241",
+      "role": "decoded Architect instruction output",
+      "native_consumed": false,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": true,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": true,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": true
+    },
+    {
+      "id": "validation_num",
+      "length": 149,
+      "sha256": "71e3af174d533ad2c1c79fce64308f5fdf200f3cc50f059b2f1485a2c5f1765d",
+      "role": "creator-delivered 3.2.2 digit child stream",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": false,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "clue_322",
+      "length": 145,
+      "sha256": "fe2ee9e1d2218db842b5973f7761760d799ad6992cff4b6037fb0e940c7d358a",
+      "role": "creator-delivered 3.2.2 decoder clue",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": false,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "alpha_322",
+      "length": 28,
+      "sha256": "f48871f6826fcd56670d412ad9056c7b48caf112fefe50a767063b8d431d745f",
+      "role": "clue-derived keyed checkerboard alphabet",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": true,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "answer_322",
+      "length": 91,
+      "sha256": "878b7afacc9e35412e76b8506cc8297fa5aeba5381e108dc421b71a0ab8993d8",
+      "role": "decoded two-private-key semantic output",
+      "native_consumed": false,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": true,
+        "available_before_p32": true,
+        "not_fully_consumed_by_native_solve": true,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": true
+      },
+      "carrier_eligible": true
+    },
+    {
+      "id": "p32_text",
+      "length": 130,
+      "sha256": "3c18b97e8481a3d1e4dc8823d66a625fb2aba83b786461b4e2c52751ad1191f3",
+      "role": "textual Base64 form of unresolved trailing target",
+      "native_consumed": true,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": false,
+        "available_before_p32": false,
+        "not_fully_consumed_by_native_solve": false,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": false
+      },
+      "carrier_eligible": false
+    },
+    {
+      "id": "p32_envelope",
+      "length": 96,
+      "sha256": "291dfd6f3e759ec2e272b35a00c24907da70c3e7a9291b4c13605c7b0b4f3de9",
+      "role": "binary unresolved P32TRAILING target",
+      "native_consumed": false,
+      "carrier_gates": {
+        "exact_reproducible": true,
+        "established_transform_output": true,
+        "available_before_p32": false,
+        "not_fully_consumed_by_native_solve": true,
+        "serializable_without_new_choice": true,
+        "not_the_target_itself": false
+      },
+      "carrier_eligible": false
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "phase32_password",
+        "phase32_blob"
+      ],
+      "to": "phase32_plaintext",
+      "operation": "SHA256-EVP AES-256-CBC decryption",
+      "status": "established"
+    },
+    {
+      "from": [
+        "phase32_plaintext"
+      ],
+      "to": "raw_encoded_321",
+      "operation": "authenticated delimiter extraction",
+      "status": "container"
+    },
+    {
+      "from": [
+        "phase32_plaintext"
+      ],
+      "to": "validation_num",
+      "operation": "authenticated delimiter extraction",
+      "status": "container"
+    },
+    {
+      "from": [
+        "phase32_plaintext"
+      ],
+      "to": "clue_322",
+      "operation": "authenticated delimiter extraction",
+      "status": "container"
+    },
+    {
+      "from": [
+        "phase32_plaintext"
+      ],
+      "to": "p32_text",
+      "operation": "authenticated trailing extraction",
+      "status": "container"
+    },
+    {
+      "from": [
+        "raw_encoded_321"
+      ],
+      "to": "cp1141_ciphertext",
+      "operation": "ISO-8859-1 to CP1141 transcode",
+      "status": "established"
+    },
+    {
+      "from": [
+        "cp1141_ciphertext",
+        "beaufort_key"
+      ],
+      "to": "answer_321",
+      "operation": "classical Beaufort decrypt",
+      "status": "established"
+    },
+    {
+      "from": [
+        "clue_322"
+      ],
+      "to": "alpha_322",
+      "operation": "solve keyed-alphabet and escape-digit clue",
+      "status": "established"
+    },
+    {
+      "from": [
+        "validation_num",
+        "alpha_322"
+      ],
+      "to": "answer_322",
+      "operation": "keyed 9-ary checkerboard decode",
+      "status": "established"
+    },
+    {
+      "from": [
+        "p32_text"
+      ],
+      "to": "p32_envelope",
+      "operation": "Base64 decode",
+      "status": "established"
+    },
+    {
+      "from": [
+        "answer_321"
+      ],
+      "to": "p32_envelope",
+      "operation": "direct or SHA-256 password transport",
+      "status": "tested-negative"
+    },
+    {
+      "from": [
+        "answer_322"
+      ],
+      "to": "p32_envelope",
+      "operation": "direct or SHA-256 password transport",
+      "status": "tested-negative"
+    },
+    {
+      "from": [
+        "answer_321",
+        "answer_322"
+      ],
+      "to": "p32_envelope",
+      "operation": "ordered sibling composition",
+      "status": "tested-negative"
+    }
+  ],
+  "edge_class_counts": {
+    "established": 6,
+    "container": 4,
+    "semantic": 0,
+    "tested-negative": 3,
+    "hypothetical": 0
+  },
+  "eligible_carried_outputs": [
+    "answer_321",
+    "answer_322"
+  ],
+  "eligible_carried_output_count": 2,
+  "eligible_roles": {
+    "answer_321": "decoded Architect instruction output",
+    "answer_322": "decoded two-private-key semantic output"
+  },
+  "unresolved_target": "p32_envelope",
+  "established_consumer_bindings": [],
+  "established_consumer_binding_count": 0,
+  "established_transforms_to_target": [],
+  "unique_transport_edge_selected": false,
+  "saved_negative_coverage": [
+    {
+      "phase": 270,
+      "artifact": "tools/gsmg/FINDINGS.md and p32_sibling_password_audit.py",
+      "candidate_count": 25,
+      "material_count": 50,
+      "trial_count": 300,
+      "hits": 0,
+      "machine_verified": false,
+      "note": "documented historical result; deliberately not re-executed"
+    },
+    {
+      "phase": 442,
+      "artifact": "tools/gsmg/phase442_result.json",
+      "trial_count": 36,
+      "hits": 0,
+      "machine_verified": true
+    },
+    {
+      "phase": 443,
+      "artifact": "tools/gsmg/phase443_result.json",
+      "trial_count": 36,
+      "hits": 0,
+      "machine_verified": true
+    },
+    {
+      "phase": 444,
+      "artifact": "tools/gsmg/phase444_result.json",
+      "trial_count": 216,
+      "hits": 0,
+      "machine_verified": true
+    }
+  ],
+  "experimental_derivatives_are_native_outputs": false,
+  "decision": "two_native_carriers_no_established_consumer_binding",
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "gpu_touched": false,
+  "docker_touched": false
+}

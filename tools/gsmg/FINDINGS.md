@@ -1,5 +1,9 @@
 # GSMG.io "Cosmic Duality" — Dictionary-Scale Sweep: Findings
 
+> **Generated compatibility notice:** Canonical phase entries live in
+> `tools/gsmg/findings/P*.md`, ordered by `manifest.json`. Rebuild this file
+> with `python3 tools/gsmg/findings_store.py build`; do not edit it directly.
+
 Run date: 2026-07-03. Companion to [doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md).
 
 ## TL;DR
@@ -7,7 +11,6 @@ Run date: 2026-07-03. Companion to [doc/GSMG_PUZZLE.md](../../doc/GSMG_PUZZLE.md
 **Negative result across every phase.** No candidate — hand-picked or dictionary-scale —
 opened either the `SALPH` or `COSMIC` AES blob. This corroborates the community's own
 `FINDINGS.md` conclusion: the endgame is not a simple missing-keyword problem.
-
 ## Phase 0.1 — "your last command" direct probe
 
 `lastcommand_probe.py`: tested 28 curated candidates (derived from the decoded hint
@@ -27568,3 +27571,117 @@ mutation occurred.
 `phase444_source_bound_and_or_rail_audit.py`;
 `test_phase444_source_bound_and_or_rail_audit.py`; `phase444_result.json`;
 and `doc/GSMG_P444_ANDOR.md`.
+
+<!-- audit_doc_override: GSMG_P445_TRANSPORT.md -->
+## Phase 445 -- `CODE YOU ... CARRY` transport audit: two native carriers, no established consumer binding (2026-08-29)
+
+**Question:** does `ALLOWING A TEMPORARY DISSEMINATION OF THE CODE YOU
+HOPEFULLY CARRY` identify a unique Phase-3.2 object and a unique established
+consumer for it?
+
+**Method:** froze an oracle-free native graph before evaluation. Pinned 13
+Phase-3.2 objects by length and SHA-256, classified six established transform
+edges, four authenticated container edges, and three previously tested
+negative P32 edges. A carried object had to be reproducible, be an established
+transform output, exist before P32, remain unconsumed by its native mini-solve,
+serialize without a new choice, and not be the target itself. Promotion
+required exactly one carrier, one established consumer, and one established
+transform.
+
+**Result:** exactly two objects pass all carrier gates: the 1,539-letter
+decoded Architect output `answer_321` and the 91-character decoded two-key
+output `answer_322`. No established edge binds either one to the P32 envelope,
+and no established transform maps either one to it. Phase 270's documented 300
+negative trials and Phases 442/443/444's machine-verified 36/36/216 negative
+trials were registered as prior coverage, not rerun. The transport clause's
+core wording is screenplay-inherited; creator-added `HOPEFULLY` does not
+select between the two outputs.
+
+**Disposition:** `two_native_carriers_no_established_consumer_binding`. The
+transport model is plausible as a role description but remains non-executable.
+It needs new primary evidence fixing a unique carried object, consumer, and
+transform. Zero password materials, zero oracle calls, Docker and GPU
+untouched.
+
+**Artifacts:** frozen Phase-445 protocol;
+`phase445_code_you_carry_transport_audit.py`;
+`test_phase445_code_you_carry_transport_audit.py`; `phase445_result.json`;
+and `doc/GSMG_P445_TRANSPORT.md`.
+
+<!-- audit_doc_override: GSMG_P446_P32_REOPENING_GATES.md -->
+## Phase 446 -- P32 reopening-gate synthesis: one finite runnable residual, all other reopenings gated (2026-08-29)
+
+**Question:** across all completed work, which materially distinct
+P32TRAILING families have actually been tested, what remains genuinely
+untested, and what evidence would license each residual?
+
+**Method:** froze family aggregation and reopening rules before
+classification. Included explicit P32 attacks, target-mechanics calibration,
+both canonical P32 brainstorms, and backlog/frontier residuals. Grouped phases
+that differ only by mode, KDF, form, detector, repair, or corpus backfill, but
+kept distinct source objects, construction rules, and evidence channels
+separate. Every one of the 15 rows cites existing Findings phases and is
+machine-validated against their headings. No prior oracle was rerun.
+
+**Result:** 15 families divide into one `finite_unrun`, four
+`conditional_unrun`, six `unselected_variants`, and four `new_evidence_only`.
+The sole already-runnable finite residual is Phase 163's Tier-1
+`-nopad --whitespace-variants` backfill: about 700,000 keystrings, historically
+estimated at 1–2 CPU hours. Conditional residuals cover separately
+unauthorized cipher/mode widening, provenance-gated raw responses/assets,
+larger Bitcoin key/container classifiers requiring a prerequisite or separate
+authorization, and historical source referents lacking a bound operator and
+consumer. Sibling halves/interleaves, Architect reversals/yellow-first rails,
+arbitrary salt relations, and extra panel samples remain unselected variants,
+not executable backlog merely because they were not enumerated.
+
+**Disposition:** `one_finite_runnable_residual_all_other_reopenings_gated`.
+A family reopens only when independent evidence changes a source object,
+boundary/normalization, operation/order, downstream consumer/output role, or
+target/validator. More permutations, dictionaries, model samples, cipher
+menus, or score thresholds alone do not qualify. Zero password materials,
+zero oracle calls, Docker/GPU/network/external agents untouched.
+
+**Artifacts:** frozen Phase-446 protocol;
+`phase446_p32_reopening_gate_synthesis.py`;
+`test_phase446_p32_reopening_gate_synthesis.py`; `phase446_result.json`; and
+`doc/GSMG_P446_P32_REOPENING_GATES.md`.
+<!-- audit_doc_override: GSMG_P447_FINDINGS_STORE_MIGRATION.md -->
+## Phase 447 -- canonical per-phase findings store with generated compatibility view (2026-08-29)
+
+**Question:** should the 1.6-MB, 27,645-line monolithic findings log be split
+without breaking its many existing links, anchors, and code readers?
+
+**Method:** froze five-digit filenames, duplicate/fractional naming, exact
+initial round-trip, stable-ID, manifest-order, dual-location relative-link,
+and compatibility requirements before migration. Split all 441 existing
+headings into canonical files under `tools/gsmg/findings/`, retained the
+preamble separately, and recorded order in `manifest.json`. The initial store
+reconstructed the pre-migration monolith byte-for-byte. Added a reversible
+one-directory Markdown-link transform so canonical fragments and the generated
+monolith both resolve their relative links. Migrated the six production
+consumers, including the index and citation-graph generators, plus the direct
+regression-suite reader to a shared loader.
+
+The initial 441-entry compatibility SHA-256 was
+`f9c8754031656406edf74f2ac0e6c26c2c83dd51ca27154c6a11773251d6fda4` and is
+pinned in `manifest.json`.
+
+**Result:** Phase 447 registers as canonical entry 442 in `P00447.md`.
+Integer files use five digits; fractional Phases 0.1/0.2 use
+`P00000-1.md`/`P00000-2.md`; duplicate Phases 8 and 19 preserve their existing
+stable suffixes as `P00008-A/B.md` and `P00019-A/B.md`. Missing phase numbers
+remain absent. `FINDINGS.md` is a tracked generated compatibility view, and
+the phase index links to both each canonical source and the historical anchor.
+
+**Disposition:** `canonical_per_phase_store_with_generated_compatibility_view`.
+The migration changes storage only, not any historical result. Drift,
+manifest, filename, heading, stable-ID, exceptional-name, and dual-location
+link checks are automated. No puzzle candidate, oracle, network, Docker, GPU,
+or external-agent activity.
+
+**Artifacts:** frozen Phase-447 protocol; `findings_store.py`;
+`test_findings_store.py`; `tools/gsmg/findings/README.md`;
+`tools/gsmg/findings/manifest.json`; 442 canonical phase fragments;
+generated `tools/gsmg/FINDINGS.md`; updated phase index; and
+`doc/GSMG_P447_FINDINGS_STORE_MIGRATION.md`.

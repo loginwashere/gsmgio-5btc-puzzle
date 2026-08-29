@@ -12,11 +12,11 @@ import json
 import re
 from pathlib import Path
 
+from findings_store import read_findings
 from p32_sibling_password_audit import derive_sibling_outputs
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-FINDINGS_PATH = REPO_ROOT / "tools" / "gsmg" / "FINDINGS.md"
 
 CLAUSES = (
     {
@@ -146,7 +146,7 @@ def audit():
         offsets.append({"id": row["id"], "start_0": position, "end_exclusive_0": position + len(needle)})
         cursor = position + len(needle)
 
-    findings = FINDINGS_PATH.read_text(encoding="utf-8")
+    findings = read_findings()
     for phase, heading in REQUIRED_PHASE_HEADINGS.items():
         if heading not in findings:
             raise AssertionError(f"required Phase {phase} finding is absent")

@@ -1,0 +1,245 @@
+#!/usr/bin/env python3
+"""Phase 446 -- family-level P32TRAILING reopening-gate synthesis."""
+
+import argparse
+import json
+import re
+from collections import Counter
+from pathlib import Path
+
+from findings_store import read_findings
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+RESIDUAL_CLASSES = {
+    "none_within_scope",
+    "finite_unrun",
+    "conditional_unrun",
+    "unselected_variants",
+    "new_evidence_only",
+}
+
+
+FAMILIES = (
+    {
+        "id": "P32-F01",
+        "family": "Envelope, KDF, cipher modes, and output detectors",
+        "phases": (25, 26, 77, 78, 79, 80, 83, 94, 192, 193, 257, 323, 327, 331, 368, 385, 410),
+        "tested": "Authenticated Salted__ envelope; solved-stage SHA-256/legacy-EVP/AES-256-CBC profile; CBC/ECB/CFB/OFB/CTR, legacy ciphers, Key Wrap, binary/raw-key handling, structural/key-shape/address detectors over declared corpora.",
+        "result": "No P32 hit; established parent-stage profile remains the only positively calibrated profile.",
+        "residual_class": "conditional_unrun",
+        "untested": "Custom KDFs such as scrypt/bcrypt/Argon2 and several large-corpus mode widenings; Phase 374's exact ECB/stream/Key-Wrap Stage 4 was costed but not run.",
+        "license": "An authenticated cipher/KDF/toolchain clue, a new solved-vector precedent, or a separately preregistered finite widening with an explicit information-gain case.",
+    },
+    {
+        "id": "P32-F02",
+        "family": "Curated vocabulary, direct clues, and broad text corpora",
+        "phases": (54, 77, 83, 88, 94, 117, 121, 133, 134, 147, 148, 150, 163, 167, 179, 182, 184, 186, 189, 191, 227, 234, 237, 256, 257, 323, 374),
+        "tested": "Literal clue words, creator/Telegram material, page text, curated core/bounded pools, medium Tier 1-3 corpus, case/hash/newline forms, and corrected-oracle backfills.",
+        "result": "No hit in the currently authenticated and registered candidate universe.",
+        "residual_class": "new_evidence_only",
+        "untested": "Unknown future source material; arbitrary dictionaries or more formatting variants are not a genuine residual family.",
+        "license": "A new creator-authored artifact, changed authenticated corpus, or exact independently sourced P32 candidate.",
+    },
+    {
+        "id": "P32-F03",
+        "family": "Eight-fragment creator macro clue",
+        "phases": (79, 121, 158, 292, 317, 322, 334, 423, 424),
+        "tested": "Literal fragments, every order-sensitive P(8,k) concatenation for k=1..8, established form expansion, direct seven-part analogies, and macro-augmented convergent panel candidates.",
+        "result": "All declared concatenation families and converged semantic checkpoints are negative or recognition-only.",
+        "residual_class": "new_evidence_only",
+        "untested": "Unauthored separators, wrapping grammars, and new fragment semantics remain conceivable but unselected.",
+        "license": "A ninth creator-authored fragment or primary evidence fixing a grammar, separator, operator, and P32 consumer.",
+    },
+    {
+        "id": "P32-F04",
+        "family": "Solved Phase 2/3/3.2 prose and prior-password reuse",
+        "phases": (265, 266, 267, 268, 269, 314, 317, 341, 370),
+        "tested": "Architect residual words, full decrypted sentences, whole blocks, prior solved passwords, Phase 3's seven parts in canonical and all 5,040 orders, X2SH4Y0QB15 corrections, and solved-boundary grammar transfer.",
+        "result": "No hit; the forward grammar transfer generated no new material beyond Phase 270.",
+        "residual_class": "unselected_variants",
+        "untested": "Arbitrary subsets, cross-sentence splices, and alternative normalization combinations.",
+        "license": "A local instruction fixing the exact source boundary, ordering, normalization, and consumer.",
+    },
+    {
+        "id": "P32-F05",
+        "family": "Phase 3.2 sibling-output/operator-data constructions",
+        "phases": (270, 370, 416, 421),
+        "tested": "Whole sibling outputs in both orders; prime/Stage-0 readings; internal parameters; authenticated parent prefix; split-final-BE direct consumers; calibrated solution-complete panel promotions.",
+        "result": "Named role-separation constructions and independently converged candidates are negative.",
+        "residual_class": "unselected_variants",
+        "untested": "Half/interleave/restored-whitespace and unrestricted salient-part compositions; these are combinatorial possibilities, not selected candidates.",
+        "license": "Primary evidence selecting one source object, exact boundaries/order, one transform, and one downstream consumer.",
+    },
+    {
+        "id": "P32-F06",
+        "family": "Architect PRIME BASICS, 16/7 rails, and transport role",
+        "phases": (434, 435, 436, 437, 438, 439, 440, 442, 443, 444, 445),
+        "tested": "Clause coverage; BE REQUIRED selector; SOURCE CODES eligibility/provenance; exact split-final-BE prime rule on CP1141 and answer_321; blue, yellow, blue-then-yellow, intertwined rails; native transport graph.",
+        "result": "Prime and minimal AND/OR constructions are negative; transport leaves two carriers and no established binding.",
+        "residual_class": "unselected_variants",
+        "untested": "Yellow-first, reversals, other interleaves, another source/rule, or a transform from answer_321/answer_322 to a consumer.",
+        "license": "New primary evidence fixing the source, rule/direction/serialization, unique carrier, unique consumer, and transform.",
+    },
+    {
+        "id": "P32-F07",
+        "family": "Page-local rebuses and DBBI/FAED-derived materials",
+        "phases": (71, 75, 76, 96, 133, 147, 148, 150, 169, 170, 179, 186, 189, 191, 227, 228, 237, 272, 273, 290, 292, 319, 320, 321, 368, 374, 382, 389, 394, 419),
+        "tested": "YOUWON, title rebuses, checkerboard words, DBBI/FAED numeric/binary transports, nibble packing, route/transposition/classical-cipher probes, candidate outputs, and corrected-oracle backfills.",
+        "result": "No P32 hit; several local checkpoints survive only as recognition or unresolved upstream decode problems.",
+        "residual_class": "unselected_variants",
+        "untested": "The actual FAED decoder/DBBI relationship and Family-10 ordering-key reading; arbitrary new routes are not licensed.",
+        "license": "An authenticated decoder, a named reordering rule, or a demonstrated page-local edge from DBBI/FAED output to P32.",
+    },
+    {
+        "id": "P32-F08",
+        "family": "Binary/input-byte representations and raw assets",
+        "phases": (78, 83, 94, 163, 164, 272, 273, 378, 379, 380, 381, 392),
+        "tested": "Binary SHA-256 forms, raw keys, space/LF/CRLF bases, retained raw-key chunks, authenticated image/font and creator-media bytes, page-native numeric transports, and source-level encoding applicability.",
+        "result": "Declared byte representations and the pinned 83-asset P32 manifest are negative.",
+        "residual_class": "conditional_unrun",
+        "untested": "Historical scripts/CSS/maps and other files excluded by Family 3's scope; excluded media/assets lacking suitable chronology or creator provenance.",
+        "license": "A separately frozen raw-response family plus pre-P32 provenance/creator authorship, or a single excluded file whose provenance becomes authenticated.",
+    },
+    {
+        "id": "P32-F09",
+        "family": "Tier-1 nopad whitespace delta",
+        "phases": (84, 94, 163),
+        "tested": "Full Tier-1 nopad base scope and smaller curated whitespace variants.",
+        "result": "Existing nopad runs are negative; one declared coverage delta was never launched.",
+        "residual_class": "finite_unrun",
+        "untested": "The implementation-ready Tier-1 --whitespace-variants rerun: about 700,000 keystrings, historically estimated at roughly 1-2 CPU hours.",
+        "license": "Already licensed as bookkeeping completion; it needs only an explicit decision to spend the compute, not new puzzle evidence.",
+    },
+    {
+        "id": "P32-F10",
+        "family": "Cross-blob salts, envelope relations, and concordance",
+        "phases": (169, 170, 171, 192, 271, 348),
+        "tested": "Distinct salt/block inventory, salt-derived operands, pairwise/cross-blob constructions including an independent ~35,000-case sweep, and multi-blob structural concordance.",
+        "result": "No repeated-block, salt-construction, or exact concordance signal.",
+        "residual_class": "unselected_variants",
+        "untested": "Arbitrary salt arithmetic, offsets, shared-password theories, and Salt|Phase|Ion structural roles.",
+        "license": "A source specifying a particular salt relation, offset, shared structure, or cross-blob consumer.",
+    },
+    {
+        "id": "P32-F11",
+        "family": "Numeric and temporal metadata",
+        "phases": (117, 344, 391),
+        "tested": "Sixty-nine bounded materials from authenticated message IDs, block heights/times, date integers, and literal ISO/HTTP dates in declared forms.",
+        "result": "No P32 hit.",
+        "residual_class": "new_evidence_only",
+        "untested": "Other numbers, timestamps, padding widths, and date renderings not independently selected.",
+        "license": "A newly authenticated milestone value plus evidence fixing its serialization and P32 role.",
+    },
+    {
+        "id": "P32-F12",
+        "family": "Bitcoin/on-chain derivations, key shapes, and containers",
+        "phases": (156, 327, 331, 342, 350, 383, 390, 394),
+        "tested": "Signer-provenance filtering, creator transaction graph/fingerprint, EC neighbor targets, hex64/WIF/BIP39 classifiers, and exact BIP38/mini-key/SLIP-132/descriptor/Core-record parsers over frozen corpora.",
+        "result": "No new creator route, key recovery, valid secret container, key-shape hit, or exact prize-address match.",
+        "residual_class": "conditional_unrun",
+        "untested": "Larger-corpus classifier/parser scale-up, checksum-guided one-error repair without a near-valid object, and raw transaction bytes as password material.",
+        "license": "A parser-valid near-object, authenticated key/container clue, source-selected transaction-byte use, or separately authorized bounded scale-up.",
+    },
+    {
+        "id": "P32-F13",
+        "family": "External repositories, community claims, and chronology/code archaeology",
+        "phases": (156, 271, 344, 383, 390, 409),
+        "tested": "Archived headers/code context, pinned external fork, blob chronology graph, bounded community search, spam/fabrication checks, and creator-signed transaction routes.",
+        "result": "No independent reproducible P32 candidate or hidden code/route survived provenance checks.",
+        "residual_class": "new_evidence_only",
+        "untested": "Future fork commits, archive captures, creator media, historical DNS evidence, or independently published exact candidates.",
+        "license": "A changed authenticated artifact or a specific reproducible claim independent of the known fabrication network.",
+    },
+    {
+        "id": "P32-F14",
+        "family": "Blinded independent candidate reconstruction panels",
+        "phases": (414, 415, 416, 417, 420, 421, 422, 423),
+        "tested": "Successful sealed surface-input, calibrated solution-complete, and macro-augmented panels; only corrected valid runs count, with comparison-new promotions evaluated.",
+        "result": "All promoted candidates from valid panels were negative; invalid delivery/filter runs carry no puzzle evidence.",
+        "residual_class": "unselected_variants",
+        "untested": "More samples, another model/provider, or arbitrary packet rewrites; these are instrument variations, not new puzzle families by themselves.",
+        "license": "A primary-evidence packet delta or preregistered independent instrument whose expected information gain is distinct from repeating the same prompt.",
+    },
+    {
+        "id": "P32-F15",
+        "family": "Historical SOURCE CODES referents and source comments",
+        "phases": (436, 437, 438, 439, 440),
+        "tested": "Eleven source referents through eligibility gates and 32 bounded prime/complement readings of the exact ordered historical source-comment pair.",
+        "result": "Four source referents were newly registered but none became executable; prime readings produced only inherited/flavor tokens.",
+        "residual_class": "conditional_unrun",
+        "untested": "Using raw historical responses or the comment pair in downstream password constructions.",
+        "license": "Primary evidence selecting the referent, stable bytes, unit/boundary, operator, serialization, and a P32 consumer.",
+    },
+)
+
+
+def findings_phase_numbers():
+    text = read_findings()
+    return {int(value) for value in re.findall(r"(?m)^## Phase (\d+)\b", text)}
+
+
+def audit():
+    available = findings_phase_numbers()
+    rows = []
+    for family in FAMILIES:
+        missing = sorted(set(family["phases"]) - available)
+        if missing:
+            raise AssertionError(f"{family['id']} references missing phases: {missing}")
+        if family["residual_class"] not in RESIDUAL_CLASSES:
+            raise AssertionError(f"unknown residual class: {family['residual_class']}")
+        rows.append({**family, "phases": list(family["phases"])})
+    counts = Counter(row["residual_class"] for row in rows)
+    return {
+        "family_count": len(rows),
+        "families": rows,
+        "residual_class_counts": dict(sorted(counts.items())),
+        "directly_runnable_finite_residuals": [
+            row["id"] for row in rows if row["residual_class"] == "finite_unrun"
+        ],
+        "reopening_fields": [
+            "source_object_or_authenticated_bytes",
+            "operand_boundary_and_normalization",
+            "operation_kdf_cipher_direction_or_order",
+            "downstream_consumer_or_output_role",
+            "target_or_independently_fixed_validator",
+        ],
+        "password_materials_generated": 0,
+        "oracle_calls": 0,
+        "gpu_touched": False,
+        "docker_touched": False,
+        "network_touched": False,
+        "external_agents_used": False,
+    }
+
+
+def self_test():
+    report = audit()
+    ids = [row["id"] for row in report["families"]]
+    assert len(ids) == len(set(ids)) == report["family_count"] == 15
+    assert set(report["residual_class_counts"]) <= RESIDUAL_CLASSES
+    assert report["directly_runnable_finite_residuals"] == ["P32-F09"]
+    assert report["password_materials_generated"] == report["oracle_calls"] == 0
+    assert not any(
+        report[key]
+        for key in ("gpu_touched", "docker_touched", "network_touched", "external_agents_used")
+    )
+    print("[*] self-test OK: 15 P32 families, 1 directly runnable finite residual, no oracle")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--self-test", action="store_true")
+    parser.add_argument("--output", type=Path)
+    args = parser.parse_args()
+    report = audit()
+    if args.self_test:
+        self_test()
+    payload = json.dumps(report, indent=2, ensure_ascii=False) + "\n"
+    if args.output:
+        args.output.write_text(payload, encoding="utf-8")
+    elif not args.self_test:
+        print(payload, end="")
+
+
+if __name__ == "__main__":
+    main()

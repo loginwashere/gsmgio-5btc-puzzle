@@ -9,6 +9,13 @@ topics:
 
 # GSMG Brainstorm Backlog Ledger
 
+> **Phase 446 synthesis:** The P32 backlog is now normalized into 15
+> materially distinct families in
+> [GSMG_P446_P32_REOPENING_GATES](GSMG_P446_P32_REOPENING_GATES.md).
+> The only directly runnable finite residual is the Phase-163 Tier-1
+> `-nopad --whitespace-variants` rerun. All other residuals require a named
+> prerequisite, a separately authorized widening, or new primary evidence.
+
 **Purpose.** Brainstorm documents in `doc/Brainstorms/` record their own
 execution status inline (`[!info] Executed...` callouts, status tables,
 checkboxes), but that status frequently goes stale the moment a *later*
