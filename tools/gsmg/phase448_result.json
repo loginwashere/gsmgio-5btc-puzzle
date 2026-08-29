@@ -1,0 +1,435 @@
+{
+  "gate_names": [
+    "clue_selected_operands",
+    "fixed_operation_domain",
+    "fixed_serialization",
+    "fixed_consumer",
+    "fixed_validator",
+    "unresolved_not_exhausted",
+    "count_calculable_without_new_bounds"
+  ],
+  "open_gap_ids": [
+    "G-MSL-001",
+    "G-ARCH-001",
+    "G-ESC-001",
+    "G-YIN-001",
+    "G-PRIME-001",
+    "G-MATPROD-001",
+    "G-KIT-001",
+    "G-GGN-001",
+    "G-X2SH-001"
+  ],
+  "row_count": 15,
+  "rows": [
+    {
+      "id": "G-MSL-001",
+      "construction": "31-character DBBI selection -> matrixsumlist",
+      "finite_skeleton": false,
+      "gates": {
+        "clue_selected_operands": true,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "matrix dimensions, traversal, value map, aggregation, serialization, consumer, and validator",
+      "license": "primary source fixing all seven recorded G3 fields and a downstream target",
+      "passed_gate_count": 2,
+      "failed_gates": [
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "G-ARCH-001",
+      "construction": "Architect words -> BYE -> CIAO BELLA O",
+      "finite_skeleton": false,
+      "gates": {
+        "clue_selected_operands": false,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "creator-selected word boundary, beginnings/endings rule, B/H mirror, role, and consumer",
+      "license": "creator message or media explicitly selecting the operation and role",
+      "passed_gate_count": 1,
+      "failed_gates": [
+        "clue_selected_operands",
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "G-ESC-001",
+      "construction": "FAED escape-pair choice ({g,i} versus {h,e})",
+      "finite_skeleton": true,
+      "gates": {
+        "clue_selected_operands": false,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "a clue-selected pair, valid segmentation/decoder, serialization, consumer, and validator",
+      "license": "external primary source selecting one pair or explaining why reconciliation is unnecessary",
+      "passed_gate_count": 1,
+      "failed_gates": [
+        "clue_selected_operands",
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "G-YIN-001",
+      "construction": "DBBI/FAED -> yinyang relationship",
+      "finite_skeleton": false,
+      "gates": {
+        "clue_selected_operands": true,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "whether the streams combine at all, operation, parameter domain, output role, and consumer",
+      "license": "creator evidence defining the relationship or a structurally forced unique reading",
+      "passed_gate_count": 2,
+      "failed_gates": [
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "G-PRIME-001",
+      "construction": "prime-list sums -> 401/400/73",
+      "finite_skeleton": true,
+      "gates": {
+        "clue_selected_operands": true,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "selection of Roman/title-C projection, FEFE/73 role, serialization, and consumer",
+      "license": "clue consuming all three sums or independently selecting the complete construction",
+      "passed_gate_count": 2,
+      "failed_gates": [
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "G-MATPROD-001",
+      "construction": "matrix product -> (255,103) / FF67",
+      "finite_skeleton": true,
+      "gates": {
+        "clue_selected_operands": true,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "clue-selected multiplication, byte serialization, consumer, and validator",
+      "license": "clue selecting multiplication and naming a byte consumer",
+      "passed_gate_count": 2,
+      "failed_gates": [
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "G-KIT-001",
+      "construction": "second matrix-list difference -> reversed KIT",
+      "finite_skeleton": true,
+      "gates": {
+        "clue_selected_operands": true,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "selection of subtraction, A1Z26, reversal, consumer, and validator",
+      "license": "clue explicitly requesting difference/reversal or naming the rabbit reading",
+      "passed_gate_count": 2,
+      "failed_gates": [
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "G-GGN-001",
+      "construction": "FEFE tuple {1,4,21} -> ggn -> secp256k1",
+      "finite_skeleton": false,
+      "gates": {
+        "clue_selected_operands": true,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "index convention, case promotion, scalar k domain, negation, curve role, and consumer",
+      "license": "independent clue supplying k and selecting group order/negation",
+      "passed_gate_count": 2,
+      "failed_gates": [
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "G-X2SH-001",
+      "construction": "X2SH4Y0QB15 -> four-point Decentraland route",
+      "finite_skeleton": true,
+      "gates": {
+        "clue_selected_operands": true,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "creator selection of the slicing/route and resolution of the chronology conflict",
+      "license": "creator statement selecting the route or chronology evidence making it possible",
+      "passed_gate_count": 2,
+      "failed_gates": [
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "P32-UNSELECTED",
+      "construction": "P32 sibling/Architect reversal, interleave, source, and transport variants",
+      "finite_skeleton": false,
+      "gates": {
+        "clue_selected_operands": false,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": true,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "unique source/carrier, exact operation domain, serialization, and demonstrated P32 binding",
+      "license": "primary evidence fixing source, operation/direction/order, serialization, consumer, and transform",
+      "passed_gate_count": 2,
+      "failed_gates": [
+        "clue_selected_operands",
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "P32-CONDITIONAL",
+      "construction": "custom KDF/mode, raw-response, and larger classifier widenings",
+      "finite_skeleton": false,
+      "gates": {
+        "clue_selected_operands": false,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": true,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "clue-selected family and a preregistered complete parameter/corpus domain",
+      "license": "authenticated KDF/container/source clue or separately authorized finite scope with distinct information gain",
+      "passed_gate_count": 2,
+      "failed_gates": [
+        "clue_selected_operands",
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "P32-F09-BACKFILL",
+      "construction": "Tier-1 nopad whitespace-variant coverage delta",
+      "finite_skeleton": true,
+      "gates": {
+        "clue_selected_operands": false,
+        "fixed_operation_domain": true,
+        "fixed_serialization": true,
+        "fixed_consumer": true,
+        "fixed_validator": true,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": true
+      },
+      "missing": "clue selection: this is a curated-corpus coverage backfill, not a clue-defined construction",
+      "license": "already runnable as bookkeeping, but cannot be cited as the Architect-requested brute-force construction",
+      "passed_gate_count": 6,
+      "failed_gates": [
+        "clue_selected_operands"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "P32-NEW-SOURCES",
+      "construction": "future corpus, fragment, date, repository, archive, or external candidate",
+      "finite_skeleton": false,
+      "gates": {
+        "clue_selected_operands": false,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "the new authenticated bytes and every construction field that depends on them",
+      "license": "actual new primary evidence, not periodic re-search or a hypothetical source class",
+      "passed_gate_count": 1,
+      "failed_gates": [
+        "clue_selected_operands",
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "PANEL-RESAMPLING",
+      "construction": "more blinded-panel/model samples",
+      "finite_skeleton": false,
+      "gates": {
+        "clue_selected_operands": true,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": true,
+        "fixed_validator": true,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "deterministic generator domain, exhaustive stopping point, and evidence that resampling is a puzzle operation",
+      "license": "primary-evidence packet delta or independently justified instrument with distinct expected information gain",
+      "passed_gate_count": 4,
+      "failed_gates": [
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    },
+    {
+      "id": "ARCHITECT-METHOD",
+      "construction": "BRUTE FORCING MIGHT BE REQUIRED",
+      "finite_skeleton": false,
+      "gates": {
+        "clue_selected_operands": false,
+        "fixed_operation_domain": false,
+        "fixed_serialization": false,
+        "fixed_consumer": false,
+        "fixed_validator": false,
+        "unresolved_not_exhausted": true,
+        "count_calculable_without_new_bounds": false
+      },
+      "missing": "the operand, operation, parameter domain, serialization, consumer, validator, and candidate count",
+      "license": "another clue-supported construction passing the six non-method gates first",
+      "passed_gate_count": 1,
+      "failed_gates": [
+        "clue_selected_operands",
+        "fixed_operation_domain",
+        "fixed_serialization",
+        "fixed_consumer",
+        "fixed_validator",
+        "count_calculable_without_new_bounds"
+      ],
+      "bruteforce_eligible": false
+    }
+  ],
+  "computationally_finite_skeletons": [
+    "G-ESC-001",
+    "G-PRIME-001",
+    "G-MATPROD-001",
+    "G-KIT-001",
+    "G-X2SH-001",
+    "P32-F09-BACKFILL"
+  ],
+  "eligible_constructions": [],
+  "eligible_construction_count": 0,
+  "bookkeeping_exception": {
+    "id": "P32-F09-BACKFILL",
+    "estimated_keystrings": 700000,
+    "finite": true,
+    "clue_supported_construction": false
+  },
+  "closed_finite_control": {
+    "phase": 441,
+    "domain": "16!",
+    "candidate_count": 20922789888000,
+    "completed": true,
+    "negative": true,
+    "remaining": false
+  },
+  "method_evidence": {
+    "architect_phrase_creator_added": true,
+    "finite_space_supplied_by_phrase": false,
+    "creator_endorses_moderate_endgame_bruteforce": false,
+    "puzzle_specific_creator_bruteforce_context": "anti-bruteforce web state; find the right hint"
+  },
+  "decision": "no_clue_supported_finite_search_space",
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "gpu_touched": false,
+  "docker_touched": false,
+  "network_touched": false,
+  "external_agents_used": false
+}

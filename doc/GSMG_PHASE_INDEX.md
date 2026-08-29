@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **442** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **443** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -460,3 +460,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 445 | P445 | 2026-08-29 | `CODE YOU ... CARRY` transport audit | two native carriers, no established consumer binding | [source](../tools/gsmg/findings/P00445.md) | [link](../tools/gsmg/FINDINGS.md#phase-445----code-you-carry-transport-audit-two-native-carriers-no-established-consumer-binding-2026-08-29) | [GSMG_P445_TRANSPORT](GSMG_P445_TRANSPORT.md) |
 | 446 | P446 | 2026-08-29 | P32 reopening-gate synthesis | one finite runnable residual, all other reopenings gated | [source](../tools/gsmg/findings/P00446.md) | [link](../tools/gsmg/FINDINGS.md#phase-446----p32-reopening-gate-synthesis-one-finite-runnable-residual-all-other-reopenings-gated-2026-08-29) | [GSMG_P446_P32_REOPENING_GATES](GSMG_P446_P32_REOPENING_GATES.md) |
 | 447 | P447 | 2026-08-29 | canonical per-phase findings store with generated compatibility view | — | [source](../tools/gsmg/findings/P00447.md) | [link](../tools/gsmg/FINDINGS.md#phase-447----canonical-per-phase-findings-store-with-generated-compatibility-view-2026-08-29) | [GSMG_P447_FINDINGS_STORE_MIGRATION](GSMG_P447_FINDINGS_STORE_MIGRATION.md) |
+| 448 | P448 | 2026-08-29 | brute-force eligibility audit | no clue-supported finite search space | [source](../tools/gsmg/findings/P00448.md) | [link](../tools/gsmg/FINDINGS.md#phase-448----brute-force-eligibility-audit-no-clue-supported-finite-search-space-2026-08-29) | [GSMG_P448_BRUTEFORCE_ELIGIBILITY](GSMG_P448_BRUTEFORCE_ELIGIBILITY.md) |
