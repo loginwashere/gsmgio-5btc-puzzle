@@ -10,6 +10,13 @@ script: tools/gsmg/phase434_architect_instruction_coverage_matrix.py
 
 # Phase 434 — Architect Instruction and Coverage Matrix
 
+> **Subsequent update (Phase 444):** Phases 442–443 fixed two eligible source
+> strings and the exact split-final-BE prime mapping. Phase 444 therefore ran
+> the previously gated minimal source-bound AND/OR rail family for both
+> sources: blue alone, yellow alone, and blue-then-yellow, with the intertwined
+> weave retained as an already-tested regression. All 216 structural trials
+> were negative.
+
 This is a dated addendum to
 [P32 Trailing — Sibling-Output Password Path](Brainstorms/2026-08-14%20-%20P32%20Trailing%20Sibling-Output%20Password%20Path.md),
 not a rewrite of that historical hypothesis. It incorporates the closures

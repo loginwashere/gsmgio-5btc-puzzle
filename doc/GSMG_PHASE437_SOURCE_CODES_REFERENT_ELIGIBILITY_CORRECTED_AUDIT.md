@@ -10,6 +10,13 @@ script: tools/gsmg/phase437_source_codes_referent_eligibility_corrected_audit.py
 
 # Phase 437 — Corrected `SOURCE CODES` Referent Eligibility Audit
 
+> **Subsequent update (Phases 442–444):** The raw block remained ineligible,
+> while CP1141 ciphertext and decoded answer_321 became the two
+> precedent-eligible letter streams under the fixed split-final-BE prime rule.
+> Phase 444 used those bindings to execute the minimal source-bound AND/OR rail
+> family. All 216 structural trials were negative. This updates that bounded
+> branch only; the broader SOURCE CODES referent question remains gated.
+
 No currently authenticated `SOURCE CODES` referent is sufficiently specified
 to authorize a new extraction or password run.
 

@@ -27525,3 +27525,46 @@ rules. No GPU work and no state mutation occurred.
 **Artifacts:** `phase443_answer321_prime_basics_followup.py`;
 `test_phase443_answer321_prime_basics_followup.py`; `phase443_result.json`;
 and `doc/GSMG_PHASE443_ANSWER321_PRIME_BASICS_FOLLOWUP.md`.
+
+<!-- audit_doc_override: GSMG_P444_ANDOR.md -->
+## Phase 444 -- source-bound Architect AND/OR rails negative (2026-08-29)
+
+**Question:** Phases 434, 435, and 437 left the blue/yellow AND/OR string
+branch gated until a source, endpoint mapping, direction, boundary, and
+serialization were fixed. After Phases 442–443 fixed two eligible
+Phase-3.2.1 letter streams and the exact split-final-BE prime mechanics, does
+the minimal conventional SIXTEEN ... AND OR SEVEN rail reading open
+P32TRAILING?
+
+**Frozen method:** for each of CP1141 ciphertext and decoded answer_321,
+partition the exact 23 prime-rule selections into 16 one-character blue events
+and 7 two-character yellow events. OR admits blue-only and yellow-only; AND
+admits blue-then-yellow in textual 16-then-7 order. The original event-order
+intertwining is asserted against Phases 442–443 but not resubmitted. No
+reverse, yellow-first, case transform, alternate prime rule, or additional
+source was allowed. Each of the three new rails received Phase 442's unchanged
+three-form outer grammar, raw and SHA-256-hex treatment, and six fixed
+KDF/cipher-size trials.
+
+**Rails:** CP1141 gives blue `tkpmwzjzfytfaoeu`, yellow
+`hlputunljfklww`, and blue-then-yellow
+`tkpmwzjzfytfaoeuhlputunljfklww`. The plaintext gives blue
+`OULFSFRNCQANETIA`, yellow `THINANNIROINLE`, and blue-then-yellow
+`OULFSFRNCQANETIATHINANNIROINLE`. The intertwined regressions exactly match
+the Phase 442 and 443 selections.
+
+**Result:** 18 candidates produced 36 materials, all new relative to Phases
+270, 442, and 443. All 216 structural trials completed with **0 hits**.
+
+**Disposition:** `bounded_two_source_and_or_rail_family_negative`. The
+previously gated source-bound branch is now covered for blue alone, yellow
+alone, blue-then-yellow, and the already-tested intertwined weave under both
+precedent-eligible sources. This closes only that minimal serialization.
+Reopening requires evidence selecting yellow-first, reversal, another
+interleave, another source, or another prime rule. No GPU work and no state
+mutation occurred.
+
+**Artifacts:** frozen Phase-444 protocol;
+`phase444_source_bound_and_or_rail_audit.py`;
+`test_phase444_source_bound_and_or_rail_audit.py`; `phase444_result.json`;
+and `doc/GSMG_P444_ANDOR.md`.

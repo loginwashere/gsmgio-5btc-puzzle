@@ -1,0 +1,144 @@
+{
+  "protocol": {
+    "sources": 2,
+    "new_rail_serializations_per_source": 3,
+    "outer_forms_per_rail": 3,
+    "treatments_per_candidate": 2,
+    "kdf_specs_per_material": 6,
+    "excluded_regression": "intertwined"
+  },
+  "colors": "BBBBYBBBYYBBBBYBBYYBBYB",
+  "sources": {
+    "cp1141": {
+      "length": 1539,
+      "sha256": "6d66e0e0e2dfdb812d5ecee2be6f54c1f3b8c84b0d74580686cf2053d76a200e",
+      "blue_event_count": 16,
+      "yellow_event_count": 7,
+      "rails": {
+        "blue_only": "tkpmwzjzfytfaoeu",
+        "yellow_only": "hlputunljfklww",
+        "blue_then_yellow": "tkpmwzjzfytfaoeuhlputunljfklww",
+        "intertwined": "tkpmhlwzjputuzfytnlfajfkloewwu"
+      },
+      "intertwined_regression_only": true
+    },
+    "answer_321": {
+      "length": 1539,
+      "sha256": "56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241",
+      "blue_event_count": 16,
+      "yellow_event_count": 7,
+      "rails": {
+        "blue_only": "OULFSFRNCQANETIA",
+        "yellow_only": "THINANNIROINLE",
+        "blue_then_yellow": "OULFSFRNCQANETIATHINANNIROINLE",
+        "intertwined": "OULFTHSFRINANNCQANINEROINTILEA"
+      },
+      "intertwined_regression_only": true
+    }
+  },
+  "candidate_count": 18,
+  "material_count": 36,
+  "candidate_summaries": [
+    {
+      "label": "cp1141_blue_only_alone",
+      "length": 16,
+      "sha256": "f65e6b853d317625bc2aef3137ebca1a81a9ebdc1bda0df723ebe2f99635b317"
+    },
+    {
+      "label": "cp1141_blue_only_then_322",
+      "length": 107,
+      "sha256": "a476ab0939d3c70a601a940ce9d44abaa28ad1456041fa69f8e332cdd868c6f1"
+    },
+    {
+      "label": "cp1141_blue_only_after_321",
+      "length": 1555,
+      "sha256": "d1c628e2651107d136ffae2893c10da330bd3bba5f3fba51350b07d93cf661ae"
+    },
+    {
+      "label": "cp1141_yellow_only_alone",
+      "length": 14,
+      "sha256": "041e265d25bef94c4b78c585b6dd98afa522e8035ff3fa4a2f5c829a6fa29b12"
+    },
+    {
+      "label": "cp1141_yellow_only_then_322",
+      "length": 105,
+      "sha256": "dc05100ccb7d4ef5d7964fddce9f44cbce64aac04fc23f8fac851fe3a9f0d79f"
+    },
+    {
+      "label": "cp1141_yellow_only_after_321",
+      "length": 1553,
+      "sha256": "1e22dcffa6bd5b78555c08807bcb8ad4d4d34931014dbb5481b369ade2638f07"
+    },
+    {
+      "label": "cp1141_blue_then_yellow_alone",
+      "length": 30,
+      "sha256": "597cbbd64ae7313f67d085040e8ac427fe362f98469fc5a93aa98e8f2eb61d23"
+    },
+    {
+      "label": "cp1141_blue_then_yellow_then_322",
+      "length": 121,
+      "sha256": "6103eb43c78104811631f2a8f5cd4589f1ed3443dd2834b303d87f3ce0cdc4fc"
+    },
+    {
+      "label": "cp1141_blue_then_yellow_after_321",
+      "length": 1569,
+      "sha256": "1489344c0a0c1865f1499905d060fc3f4cd7f33708059550b3d121d6db16650a"
+    },
+    {
+      "label": "answer_321_blue_only_alone",
+      "length": 16,
+      "sha256": "84f128fe348ddde317b310aec43608b9f99c7a2a60afae1aa8b39386e55248c3"
+    },
+    {
+      "label": "answer_321_blue_only_then_322",
+      "length": 107,
+      "sha256": "4d16befba476d31554de23f40dd702889b3cbdcfd19f58ba463d97e85ea3703b"
+    },
+    {
+      "label": "answer_321_blue_only_after_321",
+      "length": 1555,
+      "sha256": "134de975853fcb343a0262812e095576bc528750737907474cba540055c98e60"
+    },
+    {
+      "label": "answer_321_yellow_only_alone",
+      "length": 14,
+      "sha256": "c356ffb7bacfef6156e14f6ea7e3c8b3ad2cafe47fd96e2fddb87ae6c0308120"
+    },
+    {
+      "label": "answer_321_yellow_only_then_322",
+      "length": 105,
+      "sha256": "21a6d4360f5e10934884759c269c27ddea07110dad4be45f5649225f3e1f149c"
+    },
+    {
+      "label": "answer_321_yellow_only_after_321",
+      "length": 1553,
+      "sha256": "b97122c5bbdad9709a2443a28a8fa9e0bb96cab94d518279ab963012429ccce2"
+    },
+    {
+      "label": "answer_321_blue_then_yellow_alone",
+      "length": 30,
+      "sha256": "f9c4fe0f53f16ef422be17e7263be4c2a16240c1cedd8e66047a507d77ff3bd5"
+    },
+    {
+      "label": "answer_321_blue_then_yellow_then_322",
+      "length": 121,
+      "sha256": "219488f245518439d7dad2ca003c8a91a62c98ada89c102be96d4bb364097a90"
+    },
+    {
+      "label": "answer_321_blue_then_yellow_after_321",
+      "length": 1569,
+      "sha256": "468bf59bf4c98308ba78c14b6a2f4292da706a74d4067597c94f55faca28efe2"
+    }
+  ],
+  "prior_overlap_material_counts": {
+    "phase270": 0,
+    "phase442": 0,
+    "phase443": 0
+  },
+  "new_material_count": 36,
+  "structural_oracle": {
+    "trial_count": 216,
+    "hits": 0
+  },
+  "disposition": "bounded_two_source_and_or_rail_family_negative"
+}

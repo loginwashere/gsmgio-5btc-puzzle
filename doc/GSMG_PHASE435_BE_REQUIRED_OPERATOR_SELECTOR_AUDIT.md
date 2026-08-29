@@ -10,6 +10,12 @@ script: tools/gsmg/phase435_be_required_operator_selector_audit.py
 
 # Phase 435 — `BE REQUIRED` Operator-Selector Audit
 
+> **Subsequent update (Phase 444):** The AND/OR branch that remained gated
+> here later acquired two precedent-bound source strings and fixed prime
+> mechanics in Phases 442–443. Its minimal blue-only, yellow-only, and
+> blue-then-yellow serializations were tested for both sources: 216 structural
+> trials, zero hits.
+
 The doubled phrase is real, but it does not select a new operation.
 
 This audit was frozen before execution in
