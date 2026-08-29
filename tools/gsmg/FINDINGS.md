@@ -27719,3 +27719,43 @@ network/external agents untouched.
 `phase448_bruteforce_eligibility_audit.py`;
 `test_phase448_bruteforce_eligibility_audit.py`; `phase448_result.json`; and
 `doc/GSMG_P448_BRUTEFORCE_ELIGIBILITY.md`.
+<!-- audit_doc_override: GSMG_P449_G_ESC_PAIR_DISCRIMINATION.md -->
+## Phase 449 -- G-ESC-001 pair discrimination: `{g,i}` is the working prior, gap remains unreconciled (2026-08-29)
+
+**Question:** can existing authenticated evidence select or contradict either
+FAED escape-pair candidate, `{g,i}` or `{h,e}`, without adding a decoder,
+consumer, or score target?
+
+**Method:** froze six evidence classes and four conjunctive selection gates,
+then recomputed complete FAED segmentation, code IC ranks, escape frequencies,
+and chi-square shares. Audited the Architect mirror derivation, creator
+`YING/YANG` parse, all page/archive selector closures, representative
+pair-specific decoder results, and the escape-independent `BTCSEED` Bifid
+checkpoint. Correlated checkerboard/profile measurements were kept in one
+independence group. Decoder negatives were not promoted to pair-level
+contradictions unless decoder, consumer, and validator were independently
+fixed.
+
+**Result:** both pairs segment complete FAED and use all 25 code types:
+`{g,i}` gives 436 codes, code IC `0.07429`, rank 1/29 valid pairs, 31.93%
+escape-character share, and 73.75% of FAED's non-uniform chi-square;
+`{h,e}` gives 469 codes, IC `0.09817`, rank 16/29, 22.28%, and 2.19%.
+Thus `{g,i}` strongly wins inside the ordinary-English checkerboard model.
+But `{h,e}`'s profile mismatch is model-conditional, not an unconditional
+pair contradiction. `{h,e}` is exactly produced by `mirror9({b,e})` only
+through the still-unselected G-ARCH-001 operation; the exact `YING -> IG`
+observation fails its authorship gate; page/archive evidence is neutral; and
+the Bifid `BTCSEED` checkpoint uses neither pair. Pair-specific decoder/oracle
+negatives do not fix the missing selector.
+
+**Disposition:** `remain_unreconciled_with_gi_as_working_prior`. `{g,i}` is
+the rational default if a future clue independently selects a FAED checkerboard
+decoder, but no candidate passes all four selection gates and no new compute is
+authorized. Reopen only for an external primary selector, an explanation that
+the pairs have different roles, or a clue-fixed decoder with a pair-independent
+validator. No passwords, oracle, GPU, Docker, network, or external agents.
+
+**Artifacts:** frozen Phase-449 protocol;
+`phase449_g_esc_pair_discrimination_audit.py`;
+`test_phase449_g_esc_pair_discrimination_audit.py`; `phase449_result.json`;
+and `doc/GSMG_P449_G_ESC_PAIR_DISCRIMINATION.md`.
