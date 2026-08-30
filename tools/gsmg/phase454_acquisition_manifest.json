@@ -1,0 +1,194 @@
+{
+  "phase": 454,
+  "date": "2026-08-29",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-08-29 - Phase 454 Recipient-Side Artifact Acquisition Protocol.md",
+    "sha256": "e2f3627b9733dc221617e70201d4424beb1fae943f8e0a253fe1e46a204a71d0"
+  },
+  "provenance_guard": {
+    "phase409_path": "tools/gsmg/findings/P00409.md",
+    "phase409_sha256": "00dbbe8ba3a57ab971dc570fae03370898375efcab313d300da6d8f7f9ae9f17",
+    "spam_addresses": [
+      "1JG648yaB7Wp2dpUfcZoRSD4q35oq47vCu",
+      "145ZQ9siLrsXBKf465wjdyQYAP5dRwhRhQ"
+    ],
+    "fabricated_claim_cluster": [
+      "GalloClaudio64",
+      "andersonbig",
+      "WabiLipa",
+      "valleytainment",
+      "robotixcoder",
+      "zemnovodnuy"
+    ]
+  },
+  "classification_vocabulary": [
+    "new_primary_artifact",
+    "new_recipient_copy_known_bytes",
+    "new_community_derivative",
+    "known_duplicate",
+    "metadata_or_recollection_only",
+    "fabricated_or_spam",
+    "access_limited",
+    "no_result"
+  ],
+  "lanes": {
+    "local_git_recovery": {
+      "snapshot_before_external_fetch": true,
+      "refs": 7,
+      "reflog_entries": 454,
+      "unreachable_blobs": 400,
+      "mapped_to_unreachable_tree": 397,
+      "unmapped": 3,
+      "binary_blobs": 1,
+      "binary_candidate": {
+        "git_oid": "968bf89351284262be1f72adca7bceee46f2bf15",
+        "sha256": "0294b56a1691e2b62e41e7ac796cfad878388baf36f3db28d2d270919ab34703",
+        "paths": [
+          "doc/img/gsmg_puzzle_stage1_383838_highlighted_red.png",
+          "img/gsmg_puzzle_stage1_383838_highlighted_red.png",
+          "gsmg_puzzle_stage1_383838_highlighted_red.png"
+        ],
+        "classification": "new_community_derivative"
+      },
+      "unmapped_blob_classes": [
+        "phase416_sealed_packet_variant",
+        "phase416_sealed_packet_variant",
+        "phase418_python_script"
+      ],
+      "result": "no_new_primary_artifact"
+    },
+    "github": {
+      "repository_queries": [
+        {"query": "gsmgio-5btc-puzzle", "total_count": 3},
+        {"query": "gsmg-5btc-puzzle", "total_count": 5},
+        {"query": "SalPhaseIon", "total_count": 0},
+        {"query": "theseedisplanted", "total_count": 0}
+      ],
+      "unique_repository_results": 5,
+      "canonical_repo": {
+        "full_name": "puzzlehunt/gsmgio-5btc-puzzle",
+        "advertised_forks": 83,
+        "public_forks_returned": 73,
+        "branches": 1,
+        "tags": 0,
+        "releases": 0
+      },
+      "repositories": [
+        {
+          "full_name": "puzzlehunt/gsmgio-5btc-puzzle",
+          "classification": "known_duplicate"
+        },
+        {
+          "full_name": "Mr-Crypto0o/gsmgio-5btc-puzzle",
+          "branches": 0,
+          "classification": "no_result"
+        },
+        {
+          "full_name": "dinhoka/gsmgio-5btc-puzzle",
+          "classification": "known_duplicate"
+        },
+        {
+          "full_name": "HosterjackAGV/gsmg-5btc-puzzle",
+          "head": "28d33ccba5173f1845177314b00c689569ef0332",
+          "branches": 3,
+          "tags": 0,
+          "releases": 0,
+          "classification": "known_duplicate"
+        },
+        {
+          "full_name": "mkno03/GSMG-5BTC-Crypto-Puzzle-Solver",
+          "head": "a9ea57b268b15a312619bc7132d624c91e67f821",
+          "paths": 12,
+          "classification": "new_community_derivative",
+          "claim_classification": "metadata_or_recollection_only",
+          "reason": "chat-derived reports and scripts are present, but the claimed blob.b64 and HIT_blob.bin inputs are absent"
+        }
+      ],
+      "fork_deltas": [
+        {
+          "full_name": "BESCLLC/gsmgio-5btc-puzzle",
+          "branch": "claude/rbb-aoi-final-steps-lrhddw",
+          "head": "1764ae61ee5641ca8ada03028c107e0f0ce2224e",
+          "historical_paths": 58,
+          "classification": "new_community_derivative",
+          "source_copy_check": "salphaseion_raw.txt equals the authenticated local first textarea after removing one terminal LF",
+          "new_primary_bytes": false
+        },
+        {
+          "full_name": "Naddiseo/gsmgio-5btc-puzzle",
+          "old_head": "15b43fc859c33170d7c45b9fe41789d77b7af974",
+          "new_head": "207e1e185ba7002a10d67026923a995d39f1f132",
+          "commits": 3,
+          "changed_paths": 4,
+          "classification": "known_duplicate",
+          "reason": "FEFE parity, yellow/blue counts, and the SalPhaseIon route repeat held observations and add no recipient artifact"
+        },
+        {
+          "full_name": "Udoka-AM/gsmgio-5btc-puzzle",
+          "head": "fb92dd15487c6e2d275adb8c923698b7166c328e",
+          "classification": "known_duplicate"
+        }
+      ],
+      "result": "no_new_primary_artifact"
+    },
+    "internet_archive_metadata": {
+      "queries": [
+        {"query": "\"gsmg.io\"", "num_found": 0},
+        {"query": "\"theseedisplanted\"", "num_found": 0},
+        {"query": "\"SalPhaseIon\"", "num_found": 0},
+        {"query": "title:(\"5 BTC puzzle\") AND gsmg", "num_found": 0}
+      ],
+      "classification": "no_result"
+    },
+    "fixed_discussion_roots": {
+      "reddit_posts": 2,
+      "reddit_new_artifact_links": 0,
+      "bitcointalk_topics": 1,
+      "bitcointalk_new_artifact_links": 0,
+      "github_issues": 95,
+      "attachment_ledger": {
+        "path": "tools/gsmg/phase454_attachment_ledger.json",
+        "sha256": "0d251386762fc84628197700d6b7e05b4a25d3d9066480109892386cb0d4dadb",
+        "unique_urls": 65,
+        "downloaded": 64,
+        "unique_downloaded_sha256": 35,
+        "new_community_derivative_urls": 15,
+        "fabricated_or_spam_urls": 49,
+        "access_limited_urls": 1
+      },
+      "result": "no_new_primary_artifact"
+    },
+    "search_engine": {
+      "queries_run": 8,
+      "urlscan_2019": {
+        "scan_id": "1d6c83ab-a73e-4177-b70e-627d57072839",
+        "capture_time": "2019-11-14T08:27:53Z",
+        "main_response_sha256": "51b2d93bc7e3ed2639e98f06ac6cfcf8041f35c254b1c59450444aeba8f856d3",
+        "recorded_icon_hashes": 8,
+        "exact_local_icon_matches": 8,
+        "payload_endpoints": "pruned_403_404",
+        "classification": "new_recipient_copy_known_bytes"
+      },
+      "server_daten_2025": {
+        "capture_time": "2025-07-12T11:47:30Z",
+        "screenshot_sha256": {
+          "mobile": "7b7a4dc43d2059690de1b66b1c551ddee4ed16e4d16b72a185707fa923be92fc",
+          "mobile_landscape": "0a13a7bd872949b13bca341f78f8112f1e7ef95d757e6c944922eafb2a02c0ee",
+          "desktop": "72d2ebc545261f0f9098c8ec7e7d5e18b35a29cecedea62f298cdb019e4c25e6"
+        },
+        "known_form_action_confirmed": "https://gsmg.io/phase1verification",
+        "classification": "new_recipient_copy_known_bytes"
+      },
+      "other_results": "known duplicates, community derivatives, unrelated collisions, or fabricated claims"
+    }
+  },
+  "summary": {
+    "new_primary_artifact": 0,
+    "new_recipient_copy_known_bytes": 2,
+    "gap_closures": 0,
+    "oracle_run": false,
+    "password_materials_generated": 0,
+    "external_outreach": false,
+    "disposition": "provenance_upgraded_no_new_clue_content"
+  }
+}

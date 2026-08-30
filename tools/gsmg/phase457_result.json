@@ -1,0 +1,49 @@
+{
+  "phase": 457,
+  "artifact": {
+    "path": "decentraland-assets/puzzlepiece.mp3",
+    "bytes": 212031,
+    "sha256": "ef17a96dce37b4dd7cbf79f210c5cbaf37fcae60e5faf8004de4e0832bd0dfee"
+  },
+  "decoded_audio": {
+    "sample_rate_hz": 44100,
+    "channels": 2,
+    "samples_per_channel": 229248,
+    "duration_seconds": 5.198367346938776
+  },
+  "periodic_difference_signal": {
+    "period_samples": 684,
+    "fundamental_hz": 64.47368421052632,
+    "lag_684_correlation": 0.918238151220151,
+    "lag_342_correlation": -0.9184493972551334,
+    "folded_half_wave_correlation": 0.9996937163160535,
+    "phase_average_dominant_fft_bin": 1,
+    "dominant_bin_power_fraction": 0.9474218118778587
+  },
+  "mpeg_frames": {
+    "count": 199,
+    "all_joint_stereo": true,
+    "mid_side_enabled_count": 193,
+    "mid_side_disabled_count": 6,
+    "mid_side_disabled_frames_1_based": [
+      1,
+      4,
+      15,
+      131,
+      198,
+      199
+    ],
+    "internal_mid_side_disabled_frames_1_based": [
+      4,
+      15,
+      131
+    ]
+  },
+  "interpretation": {
+    "structured_periodic_signal_reproduced": true,
+    "half_wave_is_creator_selected_yinyang": false,
+    "frames_4_15_131_contain_recovered_payload": false,
+    "known_channel_payload": "HASHTHETEXT",
+    "creator_authentication_changed": false
+  }
+}

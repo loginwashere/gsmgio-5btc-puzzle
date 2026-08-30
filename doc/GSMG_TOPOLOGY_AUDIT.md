@@ -70,7 +70,7 @@ ranking.
 | **T1 — Linear chain** | Real for *order* (Phase 218); false for *operation* | Yes — this IS the page order | High — every specific instantiation tested (11, 12, 217, 238) failed or was corrected | matrixsumlist unbound; `thispassword`'s attachment remains a genuine three-way unresolved tie — `password_for_faed`, `faed_answer_is_password`, and `password_for_salph_blob` each lack a direct role-selecting witness under the three declared primary-evidence tests (literal DOM bytes, solved-stage grammar, creator reply record — Phase 377, corrected same-day), and no hard contradiction was detected under those same declared checks (paraphrase-level creator evidence is explicitly unchecked), but this does not establish the tie is unresolvable by any possible model; no edge here has a standing default | Weak — solved boundaries are locally instructed, not built by concatenating prior-stage plaintext into next-stage key material | Low | High — which operator combines which pair is unresolved and unbounded | **Weakest topology in the ledger.** Phase 238: zero of six adjacency rules survive. Phase 220: no presentational binding. Phase 104: no conserved dual-pole model. The only real support is *order*, not *operation*, and Phase 218 says so itself |
 | **T2 — P32TRAILING parallel** | **Highest of any non-null topology** — P32TRAILING's position is a measured structural fact (embedded at the end of the already-solved Phase 3.2 plaintext), not a guess | Compatible — treats P32TRAILING as continuing the *solved* chain, not the unsolved one | **Low** — doesn't require inventing a DBBI/FAED combinator at all | P32TRAILING itself remains unresolved but requires no new topology to attack | **Strong** — directly reuses Phase 341's validated solved-boundary grammar | None new | **Low** — no combinator choice needed; SALPH/COSMIC treated as independently self-contained | Phase 220 (no cross-textarea binding) and Phase 224 (SALPH-self "nearer/unexplained" default) both support treating SALPH/COSMIC as independent rather than P32-chained |
 | **T3 — DBBI/FAED symmetric combine** | Moderate | Partial | Moderate-High | matrixsumlist, escape-pair reconciliation | Untested against Phase 341's grammar | None new | High — ~45 distinct operators tried | **Most heavily tested, least surviving.** ~45 negative operator tests (Phases 272-321). Phase 104/112 asymmetry (DBBI's real fit is direct; FAED's needs a code-IC oracle to surface) is evidence *against* treating them as symmetric peers |
-| **T4 — DBBI instructs FAED** | Moderate | Consistent with page order (DBBI precedes FAED) | Moderate | Same as T3 | Untested | None new | Moderate | No phase directly tests this vs. T5. Weak, low-confidence lean *toward* T4 from the escape-pair asymmetry (DBBI's `{b,e}` is directly legible; FAED's `{g,i}` only surfaces under a derived oracle, Phase 112) — my own inference from the ledger, not a project finding |
+| **T4 — DBBI instructs FAED** | Moderate | Consistent with page order (DBBI precedes FAED) | Moderate | Same as T3 | Untested | None new | Moderate | **Phase 386-408 directly executed a T4-shaped construction** (the community `BTCSEED` theory: a Bifid key square built from `DBBI[:13]`, decrypting `FAED` as ciphertext) — real and mechanically reproducible, but stopped, not promoted: the checkpoint survives only under the single period used to discover it (Phase 408, `period_robust = False`), and twelve frozen consumer families found zero hits (Phases 397-407). Phase 451 confirms this is T4-shaped, not T3-shaped, and does not reopen or narrow `G-YIN-001`. Weak, low-confidence lean *toward* T4 also comes from the escape-pair asymmetry (DBBI's `{b,e}` is directly legible; FAED's `{g,i}` only surfaces under a derived oracle, Phase 112) — see [GSMG_P451_G_YIN_BTCSEED_TOPOLOGY_SYNTHESIS](GSMG_P451_G_YIN_BTCSEED_TOPOLOGY_SYNTHESIS.md) |
 | **T5 — FAED instructs DBBI** | Moderate | Inconsistent with page order | Moderate | Same as T3 | Untested | None new | Moderate | No direct support found; weaker than T4 on the page-order criterion alone |
 | **T6 — Independent consumers** | Moderate-High | Compatible (each consumed where it sits) | Low | Reframes matrixsumlist/escape-pair gaps as per-object, not joint | Compatible with the "locally instructed" solved-boundary pattern | None new | Low | Phase 217/223's own finding of **two separate live routes** (six-digit-prime route vs. 31-char DBBI route) rather than one merged chain directly supports this over T1/T3. Phase 289 tests a selector variant of this and goes negative, but the general shape survives |
 | **T7 — SALPH self-contained -> COSMIC** | Moderate | Compatible | Low-Moderate (the *specific* tested handoff mechanism failed; the general idea is untested, not falsified) | COSMIC unresolved regardless | Compatible with locally-instructed solved boundaries for the SALPH-self half | None new | Low for the self-contained half; unresolved for the handoff half | Phase 224: SALPH-self reading is the "nearer/unexplained" **standing default** — this is real, if modest, support; the specific DOM-order handoff justification it tested is falsified, not the general claim |
@@ -117,9 +117,13 @@ come out weakest under this scoring — not because they're untested, but
 because the *specific* mechanisms other phases needed to make them true
 (adjacency-implies-operand, presentational binding, a conserved dual-pole
 model, a working combinator) have each been directly tested and failed.
-T4/T5/T6/T7 don't have enough direct evidence to rank confidently against
-each other; T6 gets modest real support from Phase 217/223's two-separate-
-routes finding.
+T5/T6/T7 don't have enough direct evidence to rank confidently against each
+other; T6 gets modest real support from Phase 217/223's two-separate-routes
+finding. **T4 is a partial exception** (Phase 451): Phases 386-408 directly
+executed a T4-shaped construction (`BTCSEED`) and it did not survive its own
+robustness/consumer checks, so T4 still isn't promoted — but unlike T5/T6/T7
+it now has real, executed, negative-for-promotion evidence rather than no
+direct test at all.
 
 ## Recommended next actions — status (updated 2026-08-22)
 
@@ -305,3 +309,28 @@ primary evidence appears (a newly surfaced creator statement naming
 `thispassword`, a changed Wayback capture, or an authenticated
 macro-chain source not previously in scope) — the practical stop rule
 holds even though the stronger ontological claim does not.
+
+## Typed semantic-checksum result (2026-08-29, Phase 455)
+
+Phase 455 added the explicitly separate fourth test proposed after Phases
+373/376/377: treat authenticated nearby terms as type constraints rather than
+candidate values or weighted topology features. The three existing roles were
+frozen and checked on literal page order, input/output type, enterability,
+hash state, result class, explicit cardinality/length, and object consumed.
+`compatible` earned no score; `unbound` was not a contradiction.
+
+The checker re-derived that `enter` reconstructs the two 64-character SALPH
+Base64 halves and that SALPH is an OpenSSL `Salted__` envelope. This types
+SALPH as a passphrase-consuming object, but does not bind `thispassword` to
+it. The separate SHA phrase cannot type `thispassword` by adjacency, FAED's
+lack of an entry interface does not forbid a keyed transform, no password
+length is stated, and no attachment target is authenticated.
+
+**Verdict: `all_roles_survive`.** Contradiction counts are zero for
+`password_for_faed`, `faed_answer_is_password`, and
+`password_for_salph_blob`. No role or operand is selected, no password or
+oracle work is licensed, and the practical Phase-377 stop rule remains in
+force. This adds a scoped negative—semantic types do not break the tie under
+the seven frozen axes—not a claim that future primary evidence could never do
+so. See
+[GSMG_P455_THISPASSWORD_TYPED_SEMANTIC_CHECKSUM](GSMG_P455_THISPASSWORD_TYPED_SEMANTIC_CHECKSUM.md).

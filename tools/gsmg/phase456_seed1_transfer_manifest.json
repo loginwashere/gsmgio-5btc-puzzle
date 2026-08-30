@@ -1,0 +1,100 @@
+{
+  "phase": 456,
+  "date": "2026-08-30",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-08-30 - Phase 456 Seed-1 Transfer to Three Unresolved Rules Protocol.md",
+    "sha256": "508384310384611715586818fcbd13ad5c3734f38fc63f6f884ba269a7c5a4ec"
+  },
+  "inputs": [
+    {
+      "path": "tools/gsmg/roman_rail_prime_sum_audit.py",
+      "sha256": "40047bb7ec71321f80b7269283aee337030fb221572f512232f5335f72270e89"
+    },
+    {
+      "path": "tools/gsmg/architect_hye_bye_audit.py",
+      "sha256": "3851c24fc6a8b423defa6eb46d2069cd39cd69581dd8d9ec10c2e6d9b78295c8"
+    },
+    {
+      "path": "tools/gsmg/first_piece_matrix_product_audit.py",
+      "sha256": "ee236bf6551b1b9b57aef248e61d78f4bd26f9f05f5eedab5977af427b42a959"
+    },
+    {
+      "path": "tools/gsmg/solved_boundary_rule_audit.py",
+      "sha256": "fbf19635f3be6ab8e94d259b5c4c5412e570523f54f33fd6d71e7cc408b51c85"
+    }
+  ],
+  "rules": [
+    "roman_title_c",
+    "architect_edges_mirror",
+    "matrix_product_ff67"
+  ],
+  "boundaries": [
+    "phase2",
+    "phase3",
+    "phase3_2"
+  ],
+  "applicability_gates": [
+    "native_input_type",
+    "local_operation_license",
+    "comparable_output_type"
+  ],
+  "expected_gate_matrix": {
+    "roman_title_c": {
+      "phase2": [true, false, false],
+      "phase3": [true, false, false],
+      "phase3_2": [true, false, false]
+    },
+    "architect_edges_mirror": {
+      "phase2": [false, false, false],
+      "phase3": [true, false, false],
+      "phase3_2": [true, false, false]
+    },
+    "matrix_product_ff67": {
+      "phase2": [false, false, false],
+      "phase3": [false, false, false],
+      "phase3_2": [false, false, false]
+    }
+  },
+  "source_replay_expectations": {
+    "roman_title_c": {
+      "output": ["CDI", "CD"],
+      "values": [401, 400],
+      "main_family_size": 14,
+      "exact_rows": 1
+    },
+    "architect_edges_mirror": {
+      "selected_words": ["both", "ultimately", "the"],
+      "rails": ["but", "hye"],
+      "output": "bye",
+      "fixed_order_permutations": 6,
+      "dictionary_winners": 1
+    },
+    "matrix_product_ff67": {
+      "output": [255, 103],
+      "serialized_hex": "FF67",
+      "vector_order_family_size": 6,
+      "exact_rows": 1
+    }
+  },
+  "phase341_gate": {
+    "maximum_rank": 10,
+    "maximum_candidates_per_boundary": 100,
+    "minimum_applicable_boundaries_for_rule_outcome": 2
+  },
+  "outcome_vocabulary": [
+    "seed1_transfer_supported",
+    "seed1_transfer_rejected",
+    "insufficient_comparable_boundaries",
+    "protocol_invalidated_by_new_precedent"
+  ],
+  "expected_applicable_cells": 0,
+  "prohibitions": {
+    "new_password_candidates": true,
+    "blob_oracle": true,
+    "decryption": true,
+    "language_scoring": true,
+    "invented_numeric_encoding": true,
+    "cross_page_title_import": true,
+    "invented_output_serialization": true
+  }
+}

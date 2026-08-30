@@ -27759,3 +27759,406 @@ validator. No passwords, oracle, GPU, Docker, network, or external agents.
 `phase449_g_esc_pair_discrimination_audit.py`;
 `test_phase449_g_esc_pair_discrimination_audit.py`; `phase449_result.json`;
 and `doc/GSMG_P449_G_ESC_PAIR_DISCRIMINATION.md`.
+<!-- audit_doc_override: GSMG_P450_G_PRIME_CONSUMER_SELECTOR_SWEEP.md -->
+## Phase 450 -- G-PRIME-001 consumer/selector sweep: naive FEFE extension gives 100 not 73, no consumer or selector found in corpus (2026-08-29)
+
+**Question:** does existing authenticated evidence, or a bounded pre-registered
+Telegram corpus sweep, supply a consumer for the fitted prime sums
+`401/400/73`, an independent selector for the winning Roman-rail construction
+(`GSMG_ROMAN_RAIL_PRIME_SUM_AUDIT.md`), or an account of FEFE's fitted `73`?
+
+**Method:** applied the exact winning rule (title `C` prefix + Roman-letter
+projection, no new choice) to FEFE itself, then ran a fixed-keyword sweep of
+the complete 55,963-message Telegram export for both target Roman forms
+(`CDI`/`CD`) co-occurring, the phrase `roman numeral(s)`/`title initial`, and
+all three standalone target numerals (`401`,`400`,`73`) co-occurring. Every
+hit was read in full and checked for creator authorship or a creator reply.
+
+**Result:** the naive rule gives `C + roman(FEFE) = C + "" = "C" = 100`, not
+`73` -- a checked negative, not merely "unexplained". The corpus sweep found
+zero co-occurring Roman-form hits, two phrase hits (both unrelated,
+non-creator: one about a different clue's letter/numeral reading, one about
+ROT-cipher arithmetic), and two standalone-triple hits (both non-creator and
+coincidental: a generic pasted prime-number reference table spanning 1-700,
+and an unrelated community letter-position frequency count over raw FAED). No
+hit is creator-authored or creator-endorsed.
+
+**Disposition:** `remains_unconsumed`. `G-PRIME-001` stays parked at P2,
+unchanged. No consumer, no selector, and the one natural candidate mechanism
+for FEFE's `73` is now checked-negative rather than merely unexplored. This is
+a bounded corpus/derivation check, not proof that no consumer or selector
+could ever exist. No passwords, oracle, GPU, Docker, network, or external
+agents.
+
+**Artifacts:** frozen Phase-450 protocol;
+`phase450_g_prime_consumer_selector_audit.py`;
+`test_phase450_g_prime_consumer_selector_audit.py`; `phase450_result.json`;
+and `doc/GSMG_P450_G_PRIME_CONSUMER_SELECTOR_SWEEP.md`.
+<!-- audit_doc_override: GSMG_P451_G_YIN_BTCSEED_TOPOLOGY_SYNTHESIS.md -->
+## Phase 451 -- G-YIN-001/BTCSEED topology synthesis: no contradiction, T4 re-filing, gap disposition unchanged (2026-08-29)
+
+**Question:** does the BTCSEED branch (Phases 386-408: a DBBI-keyed Bifid
+square applied to decrypt FAED) materially change the prior DBBI/FAED
+independent-consumer/topology assessment (Phase 371; `GSMG_TOPOLOGY_AUDIT`;
+Phase 412/413) underlying `G-YIN-001`? Is it correctly filed against the
+Topology Audit's T0-T8 taxonomy?
+
+**Method:** pure synthesis, no new decoder/statistic/oracle. Cross-referenced
+Phase 371's page-adjacency test, Phase 386's BTCSEED discovery, Phase 408's
+period-robustness audit, and Phase 412/413's generative-model comparison
+against `GSMG_TOPOLOGY_AUDIT.md`'s T0-T8 taxonomy and
+`GSMG_SCIENTIFIC_THEORY_REGISTRY.md`'s T2/T3. Every quoted claim was
+machine-verified byte-present in its source phase's own findings-store entry
+(`phase451_g_yin_btcseed_topology_synthesis.py`).
+
+**Result:** no contradiction found. Phase 371 (page-licensing) and BTCSEED
+(candidate-construction execution) test different evidence classes and reach
+compatible negatives. Phase 412/413 rejects only the narrow shared/pooled-
+distribution null and explicitly disclaims disproving "every asymmetric
+joint generator," so it has no bearing on a directional construction.
+BTCSEED's actual mechanism (DBBI supplies Bifid key material, FAED is
+decrypted as ciphertext) is topologically T4-shaped ("DBBI instructs FAED"),
+not T3-shaped ("DBBI/FAED combine symmetrically") -- a cross-mapping neither
+document previously stated. The Topology Audit's own T4 row (dated
+2026-08-22, predating Phase 386) called its evidence "not a project finding"
+and is now stale: Phases 386-408 directly executed a T4-shaped construction,
+though it did not promote (period-dependent, zero consumer hits across 12
+families).
+
+**Disposition:** `G-YIN-001` stays parked at P0, unchanged. Phase 386's own
+disposition already states BTCSEED "does not reopen or narrow any existing
+gap"; this synthesis corrects a documentation-filing gap, not the gap's
+evidentiary status. Updated `GSMG_TOPOLOGY_AUDIT.md`'s T4 row and verdict
+paragraph, `GSMG_SCIENTIFIC_THEORY_REGISTRY.md`'s T3 section (added a
+Topology-Audit-T4 cross-reference), and `GSMG_OPEN_GAP_REGISTRY.md`'s
+`G-YIN-001` row. No passwords, oracle, GPU, Docker, network, or external
+agents.
+
+**Addendum (2026-08-30):** `Naddiseo/gsmgio-5btc-puzzle` issue #13
+independently proposed the same DBBI-keyed-Bifid-of-FAED construction and
+was combinatorially rebutted in-thread: an exhaustive 362,880-permutation
+search found `BTCSEED`'s 7-character head at the same average rate as any
+other achievable head under the cipher's forced structure (8 of 362,880,
+mean 4.96 keys/head over 73,097 achievable heads), and the lone `z` is
+likewise forced by the ciphertext rather than evidence of a separator role.
+External, non-machine-verified corroboration of this phase's
+stopped/not-promoted verdict; does not change `G-YIN-001`'s disposition.
+
+**Artifacts:** frozen Phase-451 protocol;
+`phase451_g_yin_btcseed_topology_synthesis.py`;
+`test_phase451_g_yin_btcseed_topology_synthesis.py`; `phase451_result.json`;
+and `doc/GSMG_P451_G_YIN_BTCSEED_TOPOLOGY_SYNTHESIS.md`.
+<!-- audit_doc_override: GSMG_P452_G_ARCH_CROSS_GAP_DEPENDENCY_SYNTHESIS.md -->
+## Phase 452 -- G-ARCH-001 cross-gap dependency synthesis: new G-ESC-001 cross-reference recorded, priority unchanged (2026-08-29)
+
+**Question:** Phase 449's `G-ESC-001` pair-discrimination audit marks the
+`{h,e}` FAED escape pair as failing "no load-bearing parked-gap dependency"
+because its mirror derivation depends on `G-ARCH-001`. Does `G-ARCH-001`'s
+own registry row record this? Does Phase 451's BTCSEED/topology synthesis
+bear on `G-ARCH-001` at all?
+
+**Method:** pure synthesis, no new decoder/search/corpus sweep (all five
+`G-ARCH-001` Telegram/media lanes already exhausted per its own row).
+Cross-referenced Phase 449's "Independence audit"/"Selection gates" text
+and Phase 451's BTCSEED construction text against `G-ARCH-001`'s current
+registry row and the Phase 372 scope-separation note. Every quoted claim
+was machine-verified byte-present in its source
+(`phase452_g_arch_cross_gap_dependency_synthesis.py`).
+
+**Result:** confirmed new finding: `G-ARCH-001`'s registry row never
+mentions `G-ESC-001`'s dependency or Phase 449, despite Phase 449 stating
+`{h,e}`'s exact mirror derivation "depends on the still-unselected
+G-ARCH-001 mirror operation" and explicitly failing it on a "load-bearing
+parked-gap dependency" gate. This is a genuinely new, previously-unrecorded
+blocking relationship (`G-ARCH-001 -> G-ESC-001`), separate from
+`G-ARCH-001`'s already-recorded `thispassword`/SALPH dependency. No new
+primary evidence about the mirror operation itself was found -- Phase 449
+only uses `G-ARCH-001`'s existing unresolved status as a modeling input.
+Phase 451's BTCSEED construction is confirmed confined to DBBI/FAED (per
+its own text: "a Bifid square keyed from `DBBI` applied to decrypt
+`FAED`") and touches none of `thispassword`/`lastwordsbeforearchichoice`/
+`salph`/`architect` -- consistent with the Phase 372 scope-separation note,
+it has no bearing on `G-ARCH-001`.
+
+**Disposition:** `documentation-cross-reference-only-priority-unchanged`.
+`G-ARCH-001`'s row is updated to record the confirmed `G-ESC-001`
+dependency and the negative BTCSEED-bearing check. Priority held at P1 --
+a second confirmed dependent is a scope clarification, not new evidence
+toward resolving the mirror operation. Zero passwords, oracle, GPU,
+Docker, network, or external agents.
+
+**Artifacts:** frozen Phase-452 protocol;
+`phase452_g_arch_cross_gap_dependency_synthesis.py`;
+`test_phase452_g_arch_cross_gap_dependency_synthesis.py`;
+`phase452_result.json`; and
+`doc/GSMG_P452_G_ARCH_CROSS_GAP_DEPENDENCY_SYNTHESIS.md`.
+<!-- audit_doc_override: GSMG_P453_FALSE_DISCOVERY_CALIBRATION.md -->
+## Phase 453 -- symbolic false-discovery calibration: FF67 unusual but unselected; KIT null-sensitive; GGN/Roman common (2026-08-29)
+
+**Question:** when the project's actual symbolic discovery procedures are
+applied to matched null objects with their complete recorded choice budgets,
+how often do they manufacture observations at least as exact-looking as KIT,
+FF67, ggn, and 401/400/73?
+
+**Frozen inputs:** SHA-pinned four-case manifest
+`phase453_symbolic_manifest.json` (`22365a0e...63af`); canonical audit/code
+digests; repository BIP39 three-letter endpoint; literal master seed
+`45320260829`; 100,000 Monte Carlo objects per stochastic null; exact
+sensitivity universes where bounded; Holm correction across four cases at
+alpha 0.05. Symbolic lane only.
+
+**Method:** reconstructed each historical analyst-choice budget rather than
+testing only its winning path. KIT receives all eight row-order/traversal
+outputs; FF67 all 24 orientation/vector-order outputs; GGN both index bases;
+Roman both polarities and seven title contexts. Compared each against a
+primary matched null and a pre-registered sensitivity null. Planted full-path
+positives, no-hit, tie-retention, digest, preservation, and deterministic
+replay controls all passed. Null populations completed before real scoring.
+
+**Result:** KIT: primary `1608/100000`, Holm `p=0.048270`; observed-row-sum
+sensitivity `8/24`, Holm `p=0.36` -- `sensitive_to_null_design`. FF67:
+primary `348/100000`, Holm `p=0.013960`; exact all-distinct-decimal-matrix
+universe `492/151200`, Holm `p=0.013042` --
+`unusual_but_unselected`. GGN: shuffled-source `3770/100000`, Holm
+`p=0.075419`; fixed-source triples `36/2024`, Holm `p=0.054815` --
+`common_under_matched_null`; curve narrative explicitly uncalibrated. Roman:
+empirical-character tokens `6749/100000`, Holm `p=0.075419`; uniform-A..Z
+tokens `3489/100000`, Holm `p=0.069799` --
+`common_under_matched_null`; FEFE remains 100, not 73.
+
+**Same-run correction:** the first generated decision layer Holm-corrected
+primary p-values but compared sensitivity p-values to raw alpha, initially
+overcalling GGN/Roman as null-sensitive. Corrected before documentation to
+Holm-adjust both four-case families. Null histograms, seed, manifest, and KIT/
+FF67 decisions were unchanged. Final result SHA-256:
+`3c0f9208...e94c`.
+
+**Disposition:** `calibration_only_no_gap_closure`. FF67 gains calibrated
+corroborative weight but multiplication and a byte consumer remain unselected.
+KIT remains null-sensitive; GGN/Roman do not survive the frozen familywise
+calibration. `G-KIT-001`, `G-MATPROD-001`, `G-GGN-001`, and `G-PRIME-001`
+retain their priorities, states, and closure conditions. Zero passwords,
+oracle, GPU, Docker, network, external search, or external agents.
+
+**Artifacts:** Phase-453 protocol; `phase453_symbolic_manifest.json`;
+`phase453_false_discovery_calibration.py`;
+`test_phase453_false_discovery_calibration.py`; `phase453_result.json`; and
+`doc/GSMG_P453_FALSE_DISCOVERY_CALIBRATION.md`.
+
+**Reopen condition:** a corrected historical choice budget, omitted transform,
+new discovery family requiring a new null lane, or implementation/control
+defect that changes a rank.
+<!-- audit_doc_override: GSMG_P454_RECIPIENT_ARTIFACT_ACQUISITION.md -->
+## Phase 454 -- recipient-side artifact acquisition: two known-byte provenance upgrades, no new primary artifact (2026-08-29)
+
+**Question:** can a bounded search of recipient-controlled surfaces recover a
+primary GSMG artifact or genuinely new bytes capable of reopening an
+evidence-blocked P0 gap?
+
+**Frozen scope:** five lanes fixed in advance: local Git all-ref/reflog/
+unreachable-object recovery; four GitHub repository queries plus complete
+ref/fork/release enumeration; four Internet Archive metadata queries; two
+Reddit posts, one Bitcointalk topic, the canonical issue tracker, and the
+Hosterjack compendium; and eight exact search-engine queries with concrete
+one-hop expansion only. Phase 409's spam addresses, fabricated-claim cluster,
+claimant history, chronology, and reproducible-byte requirements were applied
+before interpretation. No outreach, private login, rolling search, password
+generation, or oracle.
+
+**Local/GitHub result:** 400 unreachable local blobs were inventoried; 397 map
+to unreachable trees, the three unmapped objects are generated Phase 416/418
+files, and the sole binary is an older
+`gsmg_puzzle_stage1_383838_highlighted_red.png` analytical derivative. GitHub
+returned five unique repository results. A previously unregistered BESCLLC
+analysis branch has 58 historical paths, but its claimed hand-retrieved
+SalPhaseIon stream equals the authenticated local textarea after removing one
+terminal LF; the rest is community analysis. Naddiseo's three-commit/four-path
+delta repeats held FEFE, color-count, and route observations. The mkno03 repo's
+claimed final chain lacks its stated `blob.b64` and `HIT_blob.bin` inputs and is
+classified derivative/recollection-only. Hosterjack is unchanged; newly
+created unmodified forks point exactly to upstream.
+
+**Discussion result:** the two Reddit roots and Bitcointalk root supplied no
+new artifact link. The canonical GitHub tracker contained 65 unique attachment
+URLs: 64 downloaded, 35 unique SHA-256 values; 15 URLs are community
+derivatives, 49 belong to documented reconstructed/fabricated claim contexts
+(issues 37, 38, 39, 40, 41, 44, 46, 55, 67, and 69),
+and one returns 404. Every URL, issue occurrence, author, date, status, digest,
+size, media dimensions, and classification is pinned in
+`phase454_attachment_ledger.json` (`0d251386...4dadb`). None is primary.
+
+**Recipient-copy result:** a manual urlscan capture from 2019-11-14 records the
+Stage-1 main response and eight resource hashes; all eight image hashes exactly
+match the project's local icons. Its old payload endpoints are now pruned. A
+second screenshot-service capture from 2025-07-12 preserves desktop/mobile
+renders, the same icon topology, and the known `/phase1verification` POST
+target. These are two genuine `new_recipient_copy_known_bytes` confirmations:
+independent chronology/provenance upgrades for solved Stage 1, not new clue
+content. All four Internet Archive metadata queries returned zero.
+
+**Disposition:** `provenance_upgraded_no_new_clue_content`. New primary
+artifacts `0`; recipient copies of known bytes `2`; gap closures `0`; oracle
+calls `0`; password materials `0`; outreach `false`. `G-MSL-001`, `G-ESC-001`,
+and `G-YIN-001` remain parked at P0 because no missing operation, selector,
+consumer, interaction, or genuinely new authenticated variant was recovered.
+Manifest `0a3ccbed...30b44`; result `58b46ae9...bc654e`.
+
+**Artifacts:** Phase-454 protocol; `phase454_acquisition_manifest.json`;
+`phase454_attachment_ledger.json`;
+`phase454_recipient_artifact_acquisition.py`;
+`test_phase454_recipient_artifact_acquisition.py`; `phase454_result.json`; and
+`doc/GSMG_P454_RECIPIENT_ARTIFACT_ACQUISITION.md`.
+
+**Reopen condition:** a concrete new repository/ref/release, attachment,
+archive identifier, source-map route, recipient bundle, or independently
+verifiable digest; never a scheduled rerun of the same fixed queries.
+<!-- audit_doc_override: GSMG_P455_THISPASSWORD_TYPED_SEMANTIC_CHECKSUM.md -->
+## Phase 455 -- typed semantic checksum: all three thispassword roles survive; no typed discriminant (2026-08-29)
+
+**Question:** can authenticated semantic types distinguish Phase 101's three
+unresolved `thispassword` roles without password generation, decryption, an
+oracle, or another subjective topology score?
+
+**Frozen design:** the roles `password_for_faed`,
+`faed_answer_is_password`, and `password_for_salph_blob` were checked on
+exactly seven axes: literal page order, input/output type, enterability, hash
+state, result class, explicit cardinality/length, and object consumed. Cells
+were restricted to `compatible`, `unbound`, or `contradicted`.
+Compatibility earned no score; unbound was not treated as contradiction.
+
+**Re-derived facts:** the exact local order is unchanged and contains no
+explicit attachment marker. `enter` remains embedded between two
+64-character SALPH Base64 halves and reconstructs the OpenSSL `Salted__`
+envelope; it does not license a password-entry interpretation. The explicit
+SHA phrase has its own operand and does not type `thispassword` by adjacency.
+No password length/target is stated, and the solved Phase 2/3/3.2 grammar has
+no postpositive-label analog.
+
+**Result:** contradiction counts are `0/0/0`; all three roles survive.
+`password_for_faed` has 1 compatible and 6 unbound cells;
+`faed_answer_is_password` and `password_for_salph_blob` each have 3
+compatible and 4 unbound cells. Those counts are descriptive, not a ranking.
+SALPH's passphrase-consuming type does not bind `thispassword` to SALPH;
+FAED's lack of an authenticated entry interface does not make a keyed
+transform impossible; and the literal password class does not select
+postpositive labeling.
+
+**Verdict:** `all_roles_survive`;
+`typed_constraints_confirm_underdetermination`. Selected role none; typed
+discriminants 0; gap closures 0; password materials 0; decryptions 0; oracle
+calls 0; weighted scores 0. This is consistent with Phases 373/377 and adds
+only that the seven authenticated type axes do not break the tie.
+
+**Artifacts:** Phase-455 protocol;
+`phase455_typed_constraint_manifest.json` (`4eaa983c...1590dd`);
+`phase455_thispassword_typed_semantic_checksum.py`;
+`test_phase455_thispassword_typed_semantic_checksum.py`;
+`phase455_result.json` (`2470ab0b...dc821f`); and
+`doc/GSMG_P455_THISPASSWORD_TYPED_SEMANTIC_CHECKSUM.md`.
+
+**Reopen condition:** a new authenticated attachment marker, creator
+statement, solved boundary with the same postpositive pattern, or primary
+artifact binding `thispassword` to a consumed object. Do not rank operands
+or generate passwords from this tie.
+<!-- audit_doc_override: GSMG_P456_SEED1_UNRESOLVED_RULE_TRANSFER.md -->
+## Phase 456 -- Seed-1 transfer to three unresolved rules: zero of nine cells applicable; calibration cannot discriminate (2026-08-30)
+
+**Question:** do the Roman/title-`C`, Architect edges/mirror9, or matrix
+product/`FF67` rules transfer to Phase 341's three solved AES boundaries
+under the same local-instruction discipline that recovered their exact
+preimages at rank 1?
+
+**Frozen method:** replay each exact source rule, then gate every rule × solved
+boundary cell on (1) native input type, (2) a locally licensed operation, and
+(3) an output directly comparable to password-preimage bytes. Only a cell
+passing all three could enumerate or hash-compare. Digit extraction, A1Z26,
+cross-page title `C`, invented selectors, and invented checkpoint-to-password
+serialization were prohibited.
+
+**Source controls:** all three rules replay exactly. Roman filtering recovers
+`CDI/CD = 401/400` in 1/14 rail rows; the Architect rule recovers
+`BUT/HYE -> BYE` in one of six fixed-word orders with no tied dictionary
+output; matrix multiplication recovers `(255,103) -> FF67` in one of six
+vector orders. Implementation replay is therefore clean.
+
+**Transfer result:** zero of nine cells are applicable. No solved boundary
+locally licenses Roman projection/title-`C` or numeral serialization. Phase 3
+and Phase 3.2 have enough components for an Architect triple but no
+three-index selector, edges/mirror instruction, or three-letter output role;
+Phase 2 lacks even the arity. No boundary has a native six-digit component
+with a licensed 2×3/sum-list/multiplication/byte pipeline (Phase 3's native
+numeric component is five-digit `11110`). Every cell therefore has candidate
+count/branching/ties `0`, rank `null`, and controls
+`not_run_no_eligible_main`.
+
+**Verdict:** all three independent outcomes are
+`insufficient_comparable_boundaries`; overall
+`all_three_insufficient_comparable_boundaries`. This is not rule rejection:
+no eligible prediction failed. Seed-1 support added false; rules rejected
+false; gap closures 0; password candidates 0; oracle calls 0; decryptions 0.
+`G-PRIME-001`, `G-ARCH-001`, and `G-MATPROD-001` remain unchanged.
+
+**Artifacts:** Phase-456 protocol; `phase456_seed1_transfer_manifest.json`
+(`3cee27de...cd9dc`); `phase456_seed1_unresolved_rule_transfer.py`;
+`test_phase456_seed1_unresolved_rule_transfer.py`; `phase456_result.json`
+(`51b5f351...3ac90`); and
+`doc/GSMG_P456_SEED1_UNRESOLVED_RULE_TRANSFER.md`.
+
+**Reopen condition:** a genuinely solved boundary with the same native input
+type, local operation instruction, and comparable output role—not a new
+conversion imposed on the existing three solved boundaries.
+<!-- audit_doc_override: GSMG_P457_DECENTRALAND_MP3_FRAME_SIGNAL_AUDIT.md -->
+## Phase 457 -- Decentraland MP3 periodicity and frame-header audit: real structure, no new payload (2026-08-30)
+
+**Question:** does the authenticated `puzzlepiece.mp3` reproduce the reported
+684-sample stereo-difference signal, and do historical frames 4/15/131 contain
+an unrecovered payload distinct from `HASHTHETEXT`?
+
+**Source discipline:** historical message IDs 5789, 6688, 6711, 47157,
+47569, 51648, 61244, and 61282 were verified in the pinned complete
+`ChatExport_2026-07-26`. Follow-up IDs 69850, 69852, 69853, and 69856 were
+verified only in the partial `ChatExport_2026-08-30` (IDs 68280–70186), and
+are explicitly cited as supplemental evidence. `MP3repack.py` only isolates
+selected MPEG frames; it implements no payload decode.
+
+**Signal result:** the canonical 212,031-byte MP3
+(`sha256 ef17a96d...d0dfee`) decodes to 229,248 stereo samples at 44.1 kHz.
+For `L−R`, lag-684 correlation is `0.9182381512`, lag-342 correlation is
+`−0.9184493973`, folded half-wave correlation is `0.9996937163`, and the
+684-sample phase average places `94.74218119%` of FFT power at its
+64.473684-Hz fundamental. The structured periodic signal is real.
+
+**Header result:** an independent byte parser finds 199 MPEG-1 Layer III
+frames, all joint stereo. Mid/side is enabled in 193 and disabled only in
+frames `1, 4, 15, 131, 198, 199`; excluding boundary frames leaves exactly
+the historical `4, 15, 131` set. The mode decision explains why their
+broadband stereo residual behaves differently, but not why the encoder chose
+those locations. Frames 131/15 are the strongest two
+low-frequency L−R windows; frame 4 is alignment-sensitive because the file
+has a 528-sample encoder delay, so no conclusion relies on an exact energy
+rank.
+
+**Timing correction (2026-08-30):** an exact notebook-style spectrogram plus
+a clean 10–20 kHz residual measurement places all three anomalies in blank
+space, not on glyph ink: frame 4/peak ~0.099 s precedes the first `4` (starts
+~0.142 s); frame 15/peak ~0.389 s is after the first `8` and before `41`;
+frame 131/peak ~3.42 s is between the digits of the eighth `54`. The
+conversation-level `H,H,T` / `4,8,5` mapping is withdrawn. Glyph strokes are
+narrowband dips while these are broadband inter-glyph peaks, so “glyph stroke
+caused M/S switch” is unsupported. The switch trigger remains unexplained;
+the verdict is unchanged.
+
+**Verdict:** `periodic_signal_and_frame_header_anomaly_reproduced_no_new_payload`.
+Half-wave antisymmetry is thematic, not a creator-selected yin-yang identity.
+The phrase “only payload is the parameters” is rejected because the known
+channel already carries `HASHTHETEXT`; no additional frame payload is
+recovered. No gap changes, candidates, oracle calls, or decryptions.
+
+**Artifacts:** canonical MP3 and checksum;
+`phase457_mp3_frame_signal_audit.py`;
+`test_phase457_mp3_frame_signal_audit.py`; `phase457_result.json`
+(`ac2cb6f4...a758f3`); and
+`doc/GSMG_P457_DECENTRALAND_MP3_FRAME_SIGNAL_AUDIT.md`.
+
+**Stop rule:** do not carve or interpret more frames without an authenticated
+selector or a codec-matched registered null that yields a stable payload.

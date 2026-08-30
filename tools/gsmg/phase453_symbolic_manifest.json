@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "phase": 453,
+  "status": "frozen_before_real_scoring",
+  "protocol": "doc/Brainstorms/2026-08-29 - Phase 453 False-Discovery Calibration Harness Protocol.md",
+  "scope": "symbolic_lane_only",
+  "phase_level_disposition": "calibration_only_no_gap_closure",
+  "master_seed": 45320260829,
+  "trials_per_monte_carlo_null": 100000,
+  "alpha": 0.05,
+  "multiple_comparisons": "holm_four_symbolic_cases",
+  "source_digests": {
+    "doc/GSMG_FIRST_PIECE_SECOND_MATRIXSUMLIST_AUDIT.md": "adf9659e33a3e7f81500e649cdf9f04c862332807a09145d47fd9ffcae732d9c",
+    "tools/gsmg/first_piece_second_matrixsumlist_audit.py": "bf85696e223cfb2adc44ec81d83c7fd3a292b6d06e342357cbd3e72799d06d1e",
+    "doc/GSMG_FIRST_PIECE_MATRIX_PRODUCT_AUDIT.md": "161587b49d5c42ab54543baa106440929ccc4936d44fc287bf8fd92138eb93a9",
+    "tools/gsmg/first_piece_matrix_product_audit.py": "ee236bf6551b1b9b57aef248e61d78f4bd26f9f05f5eedab5977af427b42a959",
+    "doc/GSMG_FIRST_PIECE_GGN_DISTINCTIVENESS_AUDIT.md": "3fbc87665cb3c8cf230613b5573bbb0750b7f6a87ea7522dec237e9e08b3b021",
+    "tools/gsmg/first_piece_ggn_distinctiveness_audit.py": "6d72e2591b729641caf940b5e63645b727655727969ce397078a520f4a4d2f5b",
+    "doc/GSMG_ROMAN_RAIL_PRIME_SUM_AUDIT.md": "9eb59eb0155bf1359aff7073160d698cdda512097ad8f1ab9b90f7bc1273e40f",
+    "tools/gsmg/roman_rail_prime_sum_audit.py": "40047bb7ec71321f80b7269283aee337030fb221572f512232f5335f72270e89",
+    "wordlists/bip39/english.txt": "2f5eed53a4727b4bf8880d8f3f199efc90e58503646d9ff8eff3a2ed3b24dbda"
+  },
+  "endpoint_registries": {
+    "word": {
+      "path": "wordlists/bip39/english.txt",
+      "normalization": "lowercase_exact_line",
+      "length": 3,
+      "reason": "repository-pinned standardized vocabulary containing kit; fixed independently of Phase 453"
+    },
+    "ascii_letter": {
+      "ranges": [[65, 90], [97, 122]]
+    },
+    "unsigned_byte": {
+      "minimum": 0,
+      "maximum": 255
+    },
+    "ggn_structure": {
+      "score_2": "first two characters equal, third differs, and third is globally unique in the source",
+      "score_1": "first two characters equal and third differs",
+      "score_0": "neither"
+    },
+    "roman_target": {
+      "ordered": [401, 400],
+      "either_order_score": 1,
+      "ordered_score": 2,
+      "none_score": 0
+    }
+  },
+  "cases": {
+    "S-KIT": {
+      "live_gap": "G-KIT-001",
+      "reconstructability": "conservative_upper_bound",
+      "real_source": {
+        "shadow_matrixsumlist": [43, 25, 18],
+        "prime_matrixsumlist": [23, 16, 7],
+        "difference_direct": [20, 9, 11],
+        "winning_output": "KIT"
+      },
+      "choice_budget": {
+        "new_row_orders": 2,
+        "old_row_orders": 2,
+        "traversals": ["direct", "reverse"],
+        "outputs_per_object": 8,
+        "operations": ["componentwise_subtraction", "A1Z26", "optional_reversal"]
+      },
+      "primary_null": {
+        "kind": "monte_carlo_additive_pair",
+        "draw": "four independent ordered positive row sums uniform on 1..25 inclusive; each source total is the sum of its two rows",
+        "preserves": ["two additive triples", "ordered rows", "observed maximum row sum", "full eight-output choice budget"]
+      },
+      "sensitivity_null": {
+        "kind": "exact_observed_row_sum_permutations",
+        "values": [25, 18, 16, 7],
+        "assignment_count": 24
+      },
+      "primary_score": "1 if any of eight eligible A1Z26 outputs is a three-letter BIP39 word, else 0",
+      "real_score": 1,
+      "diagnostics": ["exact KIT occurrence", "all word hits", "invalid A1Z26 output count"]
+    },
+    "S-FF67": {
+      "live_gap": "G-MATPROD-001",
+      "reconstructability": "conservative_upper_bound",
+      "real_source": {
+        "digits": [5, 7, 4, 0, 6, 1],
+        "matrix": [[5, 7, 4], [0, 6, 1]],
+        "derived_vector": [23, 16, 7],
+        "winning_output": [255, 103],
+        "winning_hex": "FF67"
+      },
+      "choice_budget": {
+        "rectangle_orientations": 4,
+        "derived_vector_orders": 6,
+        "outputs_per_object": 24,
+        "operations": ["derive total-row1-row2 vector", "matrix multiplication", "optional orientation", "vector permutation", "byte and ASCII classification"]
+      },
+      "primary_null": {
+        "kind": "monte_carlo_distinct_decimal_matrix",
+        "draw": "sample six distinct digits uniformly without replacement from 0..9, then uniformly order into a 2x3 matrix and derive its own total-row1-row2 vector",
+        "preserves": ["2x3 decimal-digit matrix", "six distinct digits", "self-derived vector", "full 24-output choice budget"]
+      },
+      "sensitivity_null": {
+        "kind": "exact_all_digit_subsets_and_canonical_orders",
+        "universe_note": "all six-distinct-digit decimal matrices with self-derived vectors; exact enumeration permitted if implementation cost is bounded"
+      },
+      "primary_score": "2 if any output contains 255 and the other value is an ASCII letter; 1 if any output is two unsigned bytes with at least one printable byte; else 0",
+      "real_score": 2,
+      "diagnostics": ["exact ordered 255,103", "either-order 255,103", "FF plus ASCII letter", "both unsigned bytes"]
+    },
+    "S-GGN": {
+      "live_gap": "G-GGN-001",
+      "reconstructability": "conservative_upper_bound",
+      "real_source": {
+        "text": "gsmg.io/theseedisplanted",
+        "tuple": [1, 4, 21],
+        "one_based": "ggn",
+        "zero_based": "s.t"
+      },
+      "choice_budget": {
+        "index_bases": [1, 0],
+        "outputs_per_object": 2,
+        "operations": ["flatten hierarchical tuple", "one-based or zero-based indexing", "structural repeated-character recognition"]
+      },
+      "primary_null": {
+        "kind": "monte_carlo_source_multiset_shuffle",
+        "draw": "uniform Fisher-Yates permutation of the 24 source characters; apply both recorded index bases to the fixed independently sourced tuple",
+        "preserves": ["source length", "complete character multiset", "fixed tuple", "two-base choice budget"]
+      },
+      "sensitivity_null": {
+        "kind": "exact_increasing_triples_fixed_source",
+        "family_size": 2024,
+        "reason": "canonical audit's complete conditional family"
+      },
+      "primary_score": "2 for first-pair-equal/distinct globally unique third; 1 for first-pair-equal/distinct third; else 0, taking best of both bases",
+      "real_score": 2,
+      "diagnostics": ["exact ggn", "BIP39 three-letter word", "canonical 2024-triple structural rates", "curve narrative explicitly uncalibrated"]
+    },
+    "S-ROMAN": {
+      "live_gap": "G-PRIME-001",
+      "reconstructability": "exact",
+      "real_source": {
+        "rails": ["DBBI", "FAED"],
+        "title_initials": "CD",
+        "target": [401, 400],
+        "winning_context": ["prefix", "C"],
+        "fefe_under_winning_rule": 100,
+        "fitted_fefe": 73
+      },
+      "choice_budget": {
+        "rail_polarities": 2,
+        "title_contexts": [["none", ""], ["prefix", "C"], ["suffix", "C"], ["prefix", "D"], ["suffix", "D"], ["prefix", "CD"], ["suffix", "CD"]],
+        "outputs_per_object": 14,
+        "operations": ["Roman-letter projection", "strict canonical parsing", "title context", "rail polarity"]
+      },
+      "primary_null": {
+        "kind": "monte_carlo_empirical_character_tokens",
+        "draw": "two distinct length-four tokens sampled IID from the uppercase character distribution of the 13 frozen high-salience control tokens",
+        "preserves": ["two token lengths", "empirical puzzle-label character distribution", "full 14-output choice budget"]
+      },
+      "sensitivity_null": {
+        "kind": "monte_carlo_uniform_AZ_tokens",
+        "draw": "two distinct length-four tokens sampled IID uniformly from A..Z"
+      },
+      "empirical_control": {
+        "tokens": ["DBBI", "FAED", "FEFE", "yellowblueprime", "matrixsumlist", "lastwordsbeforearchichoice", "yinyang", "thispassword", "SalPhaseIon", "CosmicDuality", "gsmg.io", "theseedisplanted", "architect"],
+        "configuration_count": 1092,
+        "ordered_target_hits": 2
+      },
+      "primary_score": "2 for any ordered 401,400 output under the 14 configurations; 1 for any either-order target if not already ordered; else 0",
+      "real_score": 2,
+      "diagnostics": ["matching contexts", "empirical-control hits", "FEFE 100 not 73"]
+    }
+  },
+  "decision_states": [
+    "common_under_matched_null",
+    "unusual_but_unselected",
+    "sensitive_to_null_design",
+    "uncalibratable_from_record",
+    "harness_failure"
+  ],
+  "stop_rules": [
+    "no passwords, keystrings, decryption, blob/address oracle, GPU, Docker, network, external search, or external agents",
+    "no transform, endpoint, null, feature, or case added after real ranks are observed",
+    "no seed-changing rerun because a result is inconvenient",
+    "harness failure on positive, digest, preservation, determinism, tie-retention, or no-hit control failure",
+    "do not execute dual-stream or artifact lanes under this manifest"
+  ]
+}

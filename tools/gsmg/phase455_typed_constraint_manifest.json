@@ -1,0 +1,75 @@
+{
+  "phase": 455,
+  "date": "2026-08-29",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-08-29 - Phase 455 Thispassword Typed Semantic Checksum Protocol.md",
+    "sha256": "6d3ffaee08ba2ea46c20b1ab438bbb3dfd8db9bfde771bd37b36035164c946be"
+  },
+  "inputs": [
+    {
+      "path": "tools/gsmg/page_structure_audit.py",
+      "sha256": "6a0501811eb90628c661b89b26bcab3f9f0d681ad40ecb4694d231d9acf5c853"
+    },
+    {
+      "path": "tools/gsmg/salphaseion_operand_binding_audit.py",
+      "sha256": "2356688c2a90b4cce3c0cf0e82e7b2371d8f78fa8972472f80bc1847c8aa1198"
+    },
+    {
+      "path": "tools/gsmg/thispassword_role_identifiability_audit.py",
+      "sha256": "0d0ca40da60cea6ad96a2ea71b31ba500a1dbafd0f7cfb1940d9f46ecc878a07"
+    },
+    {
+      "path": "tools/gsmg/solved_boundary_rule_audit.py",
+      "sha256": "fbf19635f3be6ab8e94d259b5c4c5412e570523f54f33fd6d71e7cc408b51c85"
+    }
+  ],
+  "authenticated_html_sha256": "b13cbc5c2935dc3e9ff8bf71681f2ef61317fefdce04159129877244a92a3947",
+  "roles": [
+    "password_for_faed",
+    "faed_answer_is_password",
+    "password_for_salph_blob"
+  ],
+  "axes": [
+    "literal_page_order",
+    "input_output_type",
+    "enterability",
+    "hash_state",
+    "result_class",
+    "explicit_cardinality_length",
+    "object_consumed"
+  ],
+  "cell_states": [
+    "compatible",
+    "unbound",
+    "contradicted"
+  ],
+  "verdict_vocabulary": [
+    "one_role_survives",
+    "multiple_roles_survive",
+    "all_roles_survive",
+    "constraint_system_inconsistent"
+  ],
+  "expected_preexecution_contradictions": {
+    "password_for_faed": 0,
+    "faed_answer_is_password": 0,
+    "password_for_salph_blob": 0
+  },
+  "positive_control": {
+    "boundaries": [
+      "phase2",
+      "phase3",
+      "phase3_2"
+    ],
+    "required_exact_rank": 1,
+    "interpretation": "explicit imperative and operand syntax can bind a solved operation; it does not calibrate postpositive thispassword attachment"
+  },
+  "prohibitions": {
+    "password_generation": true,
+    "candidate_hashing": true,
+    "decryption": true,
+    "oracle_calls": true,
+    "language_scoring": true,
+    "weighted_role_scoring": true,
+    "synonym_expansion": true
+  }
+}

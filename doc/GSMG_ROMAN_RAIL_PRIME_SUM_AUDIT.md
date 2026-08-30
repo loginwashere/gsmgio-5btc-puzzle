@@ -53,3 +53,16 @@ found so far, but it is not a solved transition:
 
 G-PRIME-001 therefore remains parked. Reopen if evidence selects the Roman
 projection and title `C`, or if the same mechanism accounts for FEFE/73.
+
+## Phase 450 update (2026-08-29)
+
+The "same mechanism accounts for FEFE/73" reopen path is now checked and
+closed negative: applying the exact winning rule (title `C` prefix, no new
+choice) to FEFE gives `C + roman(FEFE) = C + "" = "C" = 100`, not `73`. A
+pre-registered sweep of the complete Telegram export also found no
+creator-authored or creator-endorsed consumer of all three sums, no
+co-occurring `CDI`/`CD` mention, and no selector phrase for Roman filtering
+or title `C`. See
+[GSMG_P450_G_PRIME_CONSUMER_SELECTOR_SWEEP](GSMG_P450_G_PRIME_CONSUMER_SELECTOR_SWEEP.md).
+The remaining reopen condition is an independent selector for the
+Roman/title-`C` construction, or a genuinely new source.

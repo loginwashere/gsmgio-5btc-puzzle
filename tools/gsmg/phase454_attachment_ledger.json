@@ -1,0 +1,1333 @@
+{
+  "phase": 454,
+  "date": "2026-08-29",
+  "source": "https://github.com/puzzlehunt/gsmgio-5btc-puzzle/issues",
+  "issue_count": 95,
+  "classification_policy": {
+    "fabricated_or_spam_issues": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      44,
+      46,
+      55,
+      67,
+      69
+    ],
+    "other_downloaded_attachments": "new_community_derivative",
+    "failed_download": "access_limited"
+  },
+  "summary": {
+    "unique_urls": 65,
+    "downloaded": 64,
+    "access_limited": 1,
+    "unique_downloaded_sha256": 35,
+    "fabricated_or_spam_urls": 49,
+    "new_community_derivative_urls": 15
+  },
+  "attachments": [
+    {
+      "url": "https://github.com/user-attachments/assets/07d991a4-2ce9-479a-8eb1-20353dd1b6dc",
+      "occurrences": [
+        {
+          "issue": 39,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:52:56Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "aa75bf1cf7ce0e2973a7eec463a6037491492688511b2333c60eddcf2c1ac4c3",
+      "bytes": 19246,
+      "media": {
+        "format": "JPEG",
+        "width": 725,
+        "height": 101
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/0cd8580f-45ea-4b1b-9e76-94d8ec089054",
+      "occurrences": [
+        {
+          "issue": 39,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:52:56Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "9b105f16deea37f5473e7297159beec5766a6c2b59f071004de6cda743d98aaf",
+      "bytes": 23397,
+      "media": {
+        "format": "JPEG",
+        "width": 684,
+        "height": 122
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/15741092-21cc-4af2-81fd-bbfd1735b081",
+      "occurrences": [
+        {
+          "issue": 46,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-28T00:42:24Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "e6e943721b233d45b170331e510dd6556f7d79ca43a654b5e74f936d77845277",
+      "bytes": 3735844,
+      "media": {
+        "format": "JPEG",
+        "width": 4080,
+        "height": 3072
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/16591257-1c4d-4a0b-a0be-cd60cd1b3852",
+      "occurrences": [
+        {
+          "issue": 64,
+          "author": "dgk5902a-boop",
+          "created_at": "2025-11-01T04:40:32Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "48a970ecaf35dea5e22ed53506311aa97906d537b0cf0f12a9b89d0fa319409d",
+      "bytes": 18600,
+      "media": {
+        "format": "PNG",
+        "width": 749,
+        "height": 333
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/1ab79985-e379-48de-a9d5-4358b3dadddc",
+      "occurrences": [
+        {
+          "issue": 40,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:55:31Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "205ccfbeb1372e324b3120800d91368a78bfdb3ffd661fa8c6ff88ce379487da",
+      "bytes": 578500,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/1f956ebc-053e-4edd-96d0-3fcb7a816699",
+      "occurrences": [
+        {
+          "issue": 41,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T06:11:55Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "aa75bf1cf7ce0e2973a7eec463a6037491492688511b2333c60eddcf2c1ac4c3",
+      "bytes": 19246,
+      "media": {
+        "format": "JPEG",
+        "width": 725,
+        "height": 101
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/1fad124a-b5a9-42c0-a638-437a4b357ed6",
+      "occurrences": [
+        {
+          "issue": 52,
+          "author": "Hysean2",
+          "created_at": "2025-08-18T09:48:08Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "0500f6173398f3accf6f0a539c12523f71e6fd9a2255aa73e8038a969e7aa8b2",
+      "bytes": 2299,
+      "media": {
+        "format": "PNG",
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/2899091a-9dcc-4fc9-b3fd-0441347fd934",
+      "occurrences": [
+        {
+          "issue": 41,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T06:11:55Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "9b105f16deea37f5473e7297159beec5766a6c2b59f071004de6cda743d98aaf",
+      "bytes": 23397,
+      "media": {
+        "format": "JPEG",
+        "width": 684,
+        "height": 122
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/29d3954d-5445-4405-a4df-10b759cee886",
+      "occurrences": [
+        {
+          "issue": 55,
+          "author": "Naddiseo",
+          "created_at": "2025-08-26T23:38:52Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "0de1fc1a25733f579e4e1fe1e79d1a28cde6fb75ae68035bac526a5570a6b3cc",
+      "bytes": 43694,
+      "media": {
+        "format": "PNG",
+        "width": 471,
+        "height": 178
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/2ae11fa7-f98b-46c4-b78a-b54adca95fba",
+      "occurrences": [
+        {
+          "issue": 44,
+          "author": "Naddiseo",
+          "created_at": "2025-06-27T19:03:42Z"
+        },
+        {
+          "issue": 44,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T21:08:28Z"
+        },
+        {
+          "issue": 44,
+          "author": "Naddiseo",
+          "created_at": "2025-06-27T23:03:45Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "f22705bda058ca4717c468f1bd34cb787880612e3444e5695b9edf88d46b9c43",
+      "bytes": 43508,
+      "media": {
+        "format": "PNG",
+        "width": 1196,
+        "height": 340
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/327e3a1f-1f89-4fd5-bee6-595e655deab9",
+      "occurrences": [
+        {
+          "issue": 46,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-28T00:42:24Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "e8c29c581a1652bc61fcd0e3a097615e01c33369bc940dd9f38e1df8b24f7f50",
+      "bytes": 5663826,
+      "media": {
+        "format": "JPEG",
+        "width": 4080,
+        "height": 3072
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/339c4ae1-c525-48c6-b6ca-c67459be4fe6",
+      "occurrences": [
+        {
+          "issue": 55,
+          "author": "Naddiseo",
+          "created_at": "2025-08-26T23:38:52Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "e2b057a2203b2eaaff4882d251a794a9cea2ea4ba0ad4e02a35895442739a539",
+      "bytes": 49292,
+      "media": {
+        "format": "PNG",
+        "width": 471,
+        "height": 178
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/3fa6ce0c-2fcb-447c-8a44-283620d7a7dd",
+      "occurrences": [
+        {
+          "issue": 21,
+          "author": "mshsdev",
+          "created_at": "2025-01-20T18:43:24Z"
+        },
+        {
+          "issue": 21,
+          "author": "wrwqrwqr",
+          "created_at": "2025-01-20T19:34:22Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "11fee5e10299218f7b6ca1087d25868a47dd89d01bdeba0f78298d97765d9ef6",
+      "bytes": 87207,
+      "media": {
+        "format": "PNG",
+        "width": 1160,
+        "height": 932
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/41b98c35-1e76-45b6-a115-008f76621845",
+      "occurrences": [
+        {
+          "issue": 39,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:52:56Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "205ccfbeb1372e324b3120800d91368a78bfdb3ffd661fa8c6ff88ce379487da",
+      "bytes": 578500,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/49b3bc09-4079-4244-a28c-91b04fe546bf",
+      "occurrences": [
+        {
+          "issue": 46,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-28T00:42:24Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "3b1010275a2c27c7bd17607f515674252d8735c00e5476b82bb8ad8cd26da37d",
+      "bytes": 4228530,
+      "media": {
+        "format": "JPEG",
+        "width": 4080,
+        "height": 3072
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/53737812-3bfd-4417-95f6-23654b477ac3",
+      "occurrences": [
+        {
+          "issue": 64,
+          "author": "dgk5902a-boop",
+          "created_at": "2025-11-01T04:40:32Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "4e8fdb7876deda752440d7f5e8061a9952b1150c35e3c4908f61a26a9b5df374",
+      "bytes": 64480,
+      "media": {
+        "format": "PNG",
+        "width": 726,
+        "height": 643
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/5aedf710-03e0-42e9-b56e-f4fd1e9c3282",
+      "occurrences": [
+        {
+          "issue": 52,
+          "author": "Hysean2",
+          "created_at": "2025-08-18T09:48:08Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "fcea5b760f71ba135b305ac5de9cefe4620aaf2ff07ac57ba7e81aebf7c04eb6",
+      "bytes": 9546,
+      "media": {
+        "format": "PNG",
+        "width": 669,
+        "height": 170
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/5e07796d-4739-4ed1-8c34-4c986dc225a1",
+      "occurrences": [
+        {
+          "issue": 39,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:52:56Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "2a06a54b58e39ddc0fb3a25015fa2c952876dc4d890b2e33c36d4f2efc6db7b7",
+      "bytes": 1095738,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/5f5437d8-3070-4715-bb07-65694162f6d9",
+      "occurrences": [
+        {
+          "issue": 41,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T06:11:55Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "2a06a54b58e39ddc0fb3a25015fa2c952876dc4d890b2e33c36d4f2efc6db7b7",
+      "bytes": 1095738,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/64b46c60-186d-4a65-990c-108a5d38f3f3",
+      "occurrences": [
+        {
+          "issue": 39,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:52:56Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "6488bb3d00f9f44dd7971bf809d4ad8a629c56feaaaa7106f5c6f50f3eb82a89",
+      "bytes": 470845,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/669616f4-d284-46b2-9405-cd5b6b478e1f",
+      "occurrences": [
+        {
+          "issue": 27,
+          "author": "disbee00",
+          "created_at": "2025-05-24T23:13:08Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "a7fd62c50ed968983dd7e11c160d510b7d1f9e2cfeba8f6e5be0a58622457027",
+      "bytes": 101765,
+      "media": {
+        "format": "PNG",
+        "width": 828,
+        "height": 1792
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/6ba4e819-99c9-4de7-9216-0e074d742152",
+      "occurrences": [
+        {
+          "issue": 40,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:55:31Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "298cf3f3c4fe3e406401c122381937d391c5f87bf733e5228ed0cf656df1df43",
+      "bytes": 1235159,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/71a6c595-1dc8-4d63-8129-0dee09da0fb1",
+      "occurrences": [
+        {
+          "issue": 40,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:55:31Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "2a06a54b58e39ddc0fb3a25015fa2c952876dc4d890b2e33c36d4f2efc6db7b7",
+      "bytes": 1095738,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/767b648e-d6dc-4c1c-a135-c177d16f1df0",
+      "occurrences": [
+        {
+          "issue": 46,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-28T00:42:24Z"
+        }
+      ],
+      "classification": "access_limited",
+      "http_result": 404,
+      "sha256": null,
+      "bytes": null,
+      "media": null
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/772752bb-e1ac-44df-81dc-27aea281fb4a",
+      "occurrences": [
+        {
+          "issue": 38,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:38:13Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "205ccfbeb1372e324b3120800d91368a78bfdb3ffd661fa8c6ff88ce379487da",
+      "bytes": 578500,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/7fb937b0-5d5e-4a9d-a4dc-8722a8f164a3",
+      "occurrences": [
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:25:21Z"
+        },
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:37:27Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "205ccfbeb1372e324b3120800d91368a78bfdb3ffd661fa8c6ff88ce379487da",
+      "bytes": 578500,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/8164c4ea-ab9a-410e-942f-540468ed1428",
+      "occurrences": [
+        {
+          "issue": 69,
+          "author": "nightidn641",
+          "created_at": "2025-12-27T22:24:29Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "a4e7c3c5d42699cea6b64f2c5ed44ea5e7b09bf5b1720280a6b966c1d8619a66",
+      "bytes": 114083,
+      "media": {
+        "format": "PNG",
+        "width": 876,
+        "height": 490
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/83a15001-4aaf-4a8e-8961-23f5cd8eba3a",
+      "occurrences": [
+        {
+          "issue": 46,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-28T00:42:24Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "8337ce091db0784d69c3215e93aee042f73034bb55579ce8437a84d315b51445",
+      "bytes": 4359638,
+      "media": {
+        "format": "JPEG",
+        "width": 4080,
+        "height": 3072
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/8473c6bc-902a-4b44-8e78-71f6da57debc",
+      "occurrences": [
+        {
+          "issue": 41,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T06:11:55Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "205ccfbeb1372e324b3120800d91368a78bfdb3ffd661fa8c6ff88ce379487da",
+      "bytes": 578500,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/84d053fe-ed66-4e15-89f5-048a4ad61752",
+      "occurrences": [
+        {
+          "issue": 46,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-28T00:42:24Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "ffbc53dbe185f9e5d342414402a17a066ef323616b1ed937ed2d644a4656fb8c",
+      "bytes": 3722880,
+      "media": {
+        "format": "JPEG",
+        "width": 4080,
+        "height": 3072
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/874a65a1-5d62-40a2-83b8-209d7d13c737",
+      "occurrences": [
+        {
+          "issue": 39,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:52:56Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "298cf3f3c4fe3e406401c122381937d391c5f87bf733e5228ed0cf656df1df43",
+      "bytes": 1235159,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/8a8c155a-aca1-41ee-9dff-39e7775a2267",
+      "occurrences": [
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:25:21Z"
+        },
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:37:27Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "6488bb3d00f9f44dd7971bf809d4ad8a629c56feaaaa7106f5c6f50f3eb82a89",
+      "bytes": 470845,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/90a06f31-652f-46ac-885b-782f5e4e416f",
+      "occurrences": [
+        {
+          "issue": 40,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:55:31Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "aa75bf1cf7ce0e2973a7eec463a6037491492688511b2333c60eddcf2c1ac4c3",
+      "bytes": 19246,
+      "media": {
+        "format": "JPEG",
+        "width": 725,
+        "height": 101
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/91c4804f-b644-4c73-a4ca-93d3bed93f67",
+      "occurrences": [
+        {
+          "issue": 52,
+          "author": "Hysean2",
+          "created_at": "2025-08-18T09:48:08Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "d91be82bb0a74688971965c86ba7cdabcee546767c919488e0bca95de0c74632",
+      "bytes": 28387,
+      "media": {
+        "format": "PNG",
+        "width": 224,
+        "height": 210
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/9622c035-e0a9-40b2-81f7-ab9897b12b38",
+      "occurrences": [
+        {
+          "issue": 26,
+          "author": "mancingmania611",
+          "created_at": "2025-05-18T02:23:47Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "8e71f6630232a29372b5dc60baf1b59bbf30ebdf2372754c83bbd880182a9dcc",
+      "bytes": 37993,
+      "media": {
+        "format": "JPEG",
+        "width": 942,
+        "height": 345
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/a13b45dc-8d27-4dc6-b460-0451d9630351",
+      "occurrences": [
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:37:27Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "9b105f16deea37f5473e7297159beec5766a6c2b59f071004de6cda743d98aaf",
+      "bytes": 23397,
+      "media": {
+        "format": "JPEG",
+        "width": 684,
+        "height": 122
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/a7e2fad5-2c70-4191-8232-b07e9d5c887d",
+      "occurrences": [
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:37:27Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "aa75bf1cf7ce0e2973a7eec463a6037491492688511b2333c60eddcf2c1ac4c3",
+      "bytes": 19246,
+      "media": {
+        "format": "JPEG",
+        "width": 725,
+        "height": 101
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/a863c190-1116-4884-836e-1e24d15cb876",
+      "occurrences": [
+        {
+          "issue": 38,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:38:13Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "9b105f16deea37f5473e7297159beec5766a6c2b59f071004de6cda743d98aaf",
+      "bytes": 23397,
+      "media": {
+        "format": "JPEG",
+        "width": 684,
+        "height": 122
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/a8a37e17-385b-4c8f-beff-44767a2130f4",
+      "occurrences": [
+        {
+          "issue": 44,
+          "author": "Naddiseo",
+          "created_at": "2025-06-27T23:03:45Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "3abbbd6ee373db0147f37c219bb92ef4e1b9a60912e484bb5e32e43aaeecc046",
+      "bytes": 81611,
+      "media": {
+        "format": "PNG",
+        "width": 1107,
+        "height": 552
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/af569a53-cf05-4e9a-a786-0d1d6e475014",
+      "occurrences": [
+        {
+          "issue": 39,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:52:56Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "fd8794750b49dddb145bef458522d3dd12c884f9fb974939382f1d8118f09069",
+      "bytes": 1186498,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/afe0a92b-dcf8-4fa3-b1e8-02669e7e6721",
+      "occurrences": [
+        {
+          "issue": 41,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T06:11:55Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "6488bb3d00f9f44dd7971bf809d4ad8a629c56feaaaa7106f5c6f50f3eb82a89",
+      "bytes": 470845,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/b0c2035a-009d-40dd-9fc7-7f9837bf8d08",
+      "occurrences": [
+        {
+          "issue": 52,
+          "author": "Hysean2",
+          "created_at": "2025-08-18T09:48:08Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "9287e1c6aa4c31b4d7d15f11f28360e536fd7007f586803ea3807bbfe7194a1c",
+      "bytes": 5821,
+      "media": {
+        "format": "PNG",
+        "width": 419,
+        "height": 208
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/b3df5283-0af9-4367-8a01-203185fbef62",
+      "occurrences": [
+        {
+          "issue": 40,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:55:31Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "fd8794750b49dddb145bef458522d3dd12c884f9fb974939382f1d8118f09069",
+      "bytes": 1186498,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/b4b8d4d8-e71f-44d1-9790-76916d114faa",
+      "occurrences": [
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:25:21Z"
+        },
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:37:27Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "fd8794750b49dddb145bef458522d3dd12c884f9fb974939382f1d8118f09069",
+      "bytes": 1186498,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/b5941e00-ed2d-404c-9b45-730aed240f9c",
+      "occurrences": [
+        {
+          "issue": 67,
+          "author": "GalloClaudio64",
+          "created_at": "2025-12-14T10:56:56Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "74f02405066ef2f901d57d3ce467b69d8b4f0ad4b81a806ef03de3a83904fdb6",
+      "bytes": 108585,
+      "media": {
+        "format": "PNG",
+        "width": 1156,
+        "height": 815
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/b88bdcae-e593-4fc8-a596-5a69ece9af40",
+      "occurrences": [
+        {
+          "issue": 38,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:38:13Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "298cf3f3c4fe3e406401c122381937d391c5f87bf733e5228ed0cf656df1df43",
+      "bytes": 1235159,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/bb309728-c375-478c-bb20-a82fe88290b1",
+      "occurrences": [
+        {
+          "issue": 63,
+          "author": "PolishGold",
+          "created_at": "2025-10-12T15:11:13Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "cd4124a0b6267687dad5a0ccc78ccb5c94d17077474664d0f26c2876071dca0a",
+      "bytes": 92889,
+      "media": {
+        "format": "PNG",
+        "width": 755,
+        "height": 1005
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/bc917d4e-7b39-4486-a1e3-d48471e51754",
+      "occurrences": [
+        {
+          "issue": 41,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T06:11:55Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "fd8794750b49dddb145bef458522d3dd12c884f9fb974939382f1d8118f09069",
+      "bytes": 1186498,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/bd66843a-9c8d-4501-af30-486f1c05ae43",
+      "occurrences": [
+        {
+          "issue": 38,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:38:13Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "2a06a54b58e39ddc0fb3a25015fa2c952876dc4d890b2e33c36d4f2efc6db7b7",
+      "bytes": 1095738,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/beb06b06-1e48-4e8c-82bb-d1953ec8ac2f",
+      "occurrences": [
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:25:21Z"
+        },
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:37:27Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "2a06a54b58e39ddc0fb3a25015fa2c952876dc4d890b2e33c36d4f2efc6db7b7",
+      "bytes": 1095738,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/c09af128-befb-447b-892a-eea93f0be00b",
+      "occurrences": [
+        {
+          "issue": 67,
+          "author": "GalloClaudio64",
+          "created_at": "2025-12-14T10:56:56Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "e7c1aa344dec3985207d37aaf5662476a7b5539e1e1efe5e0c2fc31c750f1594",
+      "bytes": 6255,
+      "media": {
+        "format": "PNG",
+        "width": 794,
+        "height": 797
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/c336d546-548b-4565-b4b3-38d9fa1c01b7",
+      "occurrences": [
+        {
+          "issue": 38,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:38:13Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "fd8794750b49dddb145bef458522d3dd12c884f9fb974939382f1d8118f09069",
+      "bytes": 1186498,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/cc20538d-6767-4fe6-a4ae-b760b8351bed",
+      "occurrences": [
+        {
+          "issue": 38,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:38:13Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "aa75bf1cf7ce0e2973a7eec463a6037491492688511b2333c60eddcf2c1ac4c3",
+      "bytes": 19246,
+      "media": {
+        "format": "JPEG",
+        "width": 725,
+        "height": 101
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/d2bbe597-cf08-4620-a43e-3541843952ac",
+      "occurrences": [
+        {
+          "issue": 52,
+          "author": "Hysean2",
+          "created_at": "2025-08-18T09:48:08Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "1beddc2cdd71a003f522514305373d32a0d02083ac23ead27992e98e73dc01bd",
+      "bytes": 1023,
+      "media": {
+        "format": "PNG",
+        "width": 182,
+        "height": 84
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/d633c283-e33c-4ef6-96fa-efb1efba07a3",
+      "occurrences": [
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:25:21Z"
+        },
+        {
+          "issue": 37,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:37:27Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "298cf3f3c4fe3e406401c122381937d391c5f87bf733e5228ed0cf656df1df43",
+      "bytes": 1235159,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/e0d95e94-8e69-4804-9c77-b62e5e0fde63",
+      "occurrences": [
+        {
+          "issue": 40,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:55:31Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "6488bb3d00f9f44dd7971bf809d4ad8a629c56feaaaa7106f5c6f50f3eb82a89",
+      "bytes": 470845,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/e5adeea5-5ab1-468d-88f1-cbf5e72e9a9b",
+      "occurrences": [
+        {
+          "issue": 46,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-28T00:42:24Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "47b4ff7dc2373d506aec272d14fe9b580752cc1ebf9bd9480ec7ffdc72e5c98f",
+      "bytes": 3780106,
+      "media": {
+        "format": "JPEG",
+        "width": 4080,
+        "height": 3072
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/e8ca4635-2ed2-4380-be91-9e49a58343f5",
+      "occurrences": [
+        {
+          "issue": 46,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-28T00:42:24Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "31600d64aea0851ffd660b4d3cc9068f1516f5865841aa7f48dd5237df2fdc95",
+      "bytes": 3737670,
+      "media": {
+        "format": "JPEG",
+        "width": 4080,
+        "height": 3072
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/f4ca35d8-7484-4305-8e13-facf03837806",
+      "occurrences": [
+        {
+          "issue": 40,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:55:31Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "9b105f16deea37f5473e7297159beec5766a6c2b59f071004de6cda743d98aaf",
+      "bytes": 23397,
+      "media": {
+        "format": "JPEG",
+        "width": 684,
+        "height": 122
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/f5e2ee1b-328f-4263-a39c-e18f591863b2",
+      "occurrences": [
+        {
+          "issue": 38,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T05:38:13Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "6488bb3d00f9f44dd7971bf809d4ad8a629c56feaaaa7106f5c6f50f3eb82a89",
+      "bytes": 470845,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/f8aa79de-d73e-4212-9647-a2a17f5acfac",
+      "occurrences": [
+        {
+          "issue": 41,
+          "author": "kaibuzz0",
+          "created_at": "2025-06-27T06:11:55Z"
+        }
+      ],
+      "classification": "fabricated_or_spam",
+      "http_result": 200,
+      "sha256": "298cf3f3c4fe3e406401c122381937d391c5f87bf733e5228ed0cf656df1df43",
+      "bytes": 1235159,
+      "media": {
+        "format": "PNG",
+        "width": 1366,
+        "height": 691
+      }
+    },
+    {
+      "url": "https://user-images.githubusercontent.com/40121870/118528240-c70e5400-b74a-11eb-91d0-6b83a4818e59.png",
+      "occurrences": [
+        {
+          "issue": 6,
+          "author": "slonyarakmw",
+          "created_at": "2021-05-17T17:04:19Z"
+        },
+        {
+          "issue": 6,
+          "author": "Naddiseo",
+          "created_at": "2021-05-17T17:07:49Z"
+        },
+        {
+          "issue": 6,
+          "author": "edoardocoen",
+          "created_at": "2021-05-17T19:37:20Z"
+        },
+        {
+          "issue": 7,
+          "author": "slonyarakmw",
+          "created_at": "2021-05-17T21:00:47Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "74f02405066ef2f901d57d3ce467b69d8b4f0ad4b81a806ef03de3a83904fdb6",
+      "bytes": 108585,
+      "media": {
+        "format": "PNG",
+        "width": 1156,
+        "height": 815
+      }
+    },
+    {
+      "url": "https://user-images.githubusercontent.com/40121870/118528245-c83f8100-b74a-11eb-91cf-effe2a980e0b.png",
+      "occurrences": [
+        {
+          "issue": 6,
+          "author": "slonyarakmw",
+          "created_at": "2021-05-17T17:04:19Z"
+        },
+        {
+          "issue": 6,
+          "author": "Naddiseo",
+          "created_at": "2021-05-17T17:07:49Z"
+        },
+        {
+          "issue": 6,
+          "author": "edoardocoen",
+          "created_at": "2021-05-17T19:37:20Z"
+        },
+        {
+          "issue": 7,
+          "author": "slonyarakmw",
+          "created_at": "2021-05-17T21:00:47Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "59a733e524a71dff0581aee6bf605d949bb4a9824e877c060c80f458f3b1c28a",
+      "bytes": 79044,
+      "media": {
+        "format": "PNG",
+        "width": 1292,
+        "height": 757
+      }
+    },
+    {
+      "url": "https://user-images.githubusercontent.com/40121870/120228278-7bcc6900-c253-11eb-8ae8-b1ab81801ee8.jpg",
+      "occurrences": [
+        {
+          "issue": 7,
+          "author": "nukucux",
+          "created_at": "2021-06-02T19:01:53Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "7fa7bca84fc0366a4c5ac6542fa531099d6979d1cf69bdc413f2fe69fa6a185b",
+      "bytes": 355555,
+      "media": {
+        "format": "JPEG",
+        "width": 1048,
+        "height": 1047
+      }
+    },
+    {
+      "url": "https://user-images.githubusercontent.com/82031466/119490111-a8c9d900-bd86-11eb-9e58-e970bdaf39f8.png",
+      "occurrences": [
+        {
+          "issue": 7,
+          "author": "nukucux",
+          "created_at": "2021-05-25T11:26:17Z"
+        }
+      ],
+      "classification": "new_community_derivative",
+      "http_result": 200,
+      "sha256": "832df2951bfc83df493c183073a9c97ab5e6b820df7b643598b0e6fa76018601",
+      "bytes": 6091,
+      "media": {
+        "format": "PNG",
+        "width": 378,
+        "height": 378
+      }
+    }
+  ]
+}

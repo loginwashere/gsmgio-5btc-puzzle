@@ -1,0 +1,173 @@
+{
+  "contradiction_counts": {
+    "faed_answer_is_password": 0,
+    "password_for_faed": 0,
+    "password_for_salph_blob": 0
+  },
+  "date": "2026-08-29",
+  "decryptions_attempted": 0,
+  "disposition": "typed_constraints_confirm_underdetermination",
+  "facts": {
+    "decoded_local_terms": {
+      "enter": "enter",
+      "last_words": "lastwordsbeforearchichoice",
+      "matrix": "matrixsumlist",
+      "password": "thispassword",
+      "sha256": "sha256 our first hint is your last command"
+    },
+    "deictic_vocabulary_present": true,
+    "enter_is_between_salph_halves": true,
+    "enter_split_offsets": [
+      64,
+      64
+    ],
+    "explicit_attachment_marker_present": false,
+    "explicit_password_length_present": false,
+    "explicit_password_target_present": false,
+    "fixed_local_bindings": [
+      "dbbi [matrixsumlist] faed (fixity unresolved)",
+      "faed [lastwordsbeforearchichoice] [thispassword] (target/result role unresolved)",
+      "enter(aes_prefix,aes_suffix) -> salphaseion_blob",
+      "sha256 our first hint is your last command before salphaseion_blob",
+      "trailing raw shabefanstoo after salphaseion_blob (shabef -> sha256; anstoo unresolved)"
+    ],
+    "postpositive_solved_grammar_analog_exists": false,
+    "salph_decoded_bytes": 96,
+    "salph_openssl_salted_header": true,
+    "segment_order": [
+      "dbbi",
+      "abba_matrix_instruction",
+      "faed",
+      "z_separator_1",
+      "decimal_instruction_1",
+      "z_separator_2",
+      "decimal_instruction_2",
+      "z_separator_3",
+      "hash_prefix",
+      "salphaseion_aes_prefix",
+      "abba_enter_instruction",
+      "salphaseion_aes_suffix",
+      "hash_suffix"
+    ]
+  },
+  "gap_closures": 0,
+  "manifest_sha256": "4eaa983c5c1fc1415d4d78de0cea7ed16fbcd6b5cc2ef656d49bd2b3971590dd",
+  "matrix": {
+    "faed_answer_is_password": {
+      "enterability": {
+        "note": "the eventual consumer of the labeled password is absent",
+        "state": "unbound"
+      },
+      "explicit_cardinality_length": {
+        "note": "no authenticated password length or cardinality",
+        "state": "unbound"
+      },
+      "hash_state": {
+        "note": "the separate SHA instruction does not type this value",
+        "state": "unbound"
+      },
+      "input_output_type": {
+        "note": "a FAED-derived answer may carry the literal password class",
+        "state": "compatible"
+      },
+      "literal_page_order": {
+        "note": "requires an unmarked backward label on the prior result",
+        "state": "compatible"
+      },
+      "object_consumed": {
+        "note": "the role labels a result but supplies no local consumer",
+        "state": "unbound"
+      },
+      "result_class": {
+        "note": "thispassword is compatible with a password result class",
+        "state": "compatible"
+      }
+    },
+    "password_for_faed": {
+      "enterability": {
+        "note": "FAED has no authenticated entry interface",
+        "state": "unbound"
+      },
+      "explicit_cardinality_length": {
+        "note": "no authenticated password length or cardinality",
+        "state": "unbound"
+      },
+      "hash_state": {
+        "note": "the separate SHA instruction does not type this value",
+        "state": "unbound"
+      },
+      "input_output_type": {
+        "note": "password-like input and decoded-FAED output are not fixed",
+        "state": "unbound"
+      },
+      "literal_page_order": {
+        "note": "requires an unmarked backward reach across lastwords",
+        "state": "compatible"
+      },
+      "object_consumed": {
+        "note": "FAED is claimed by the role but attachment is unmarked",
+        "state": "unbound"
+      },
+      "result_class": {
+        "note": "decoded FAED content is not independently fixed",
+        "state": "unbound"
+      }
+    },
+    "password_for_salph_blob": {
+      "enterability": {
+        "note": "SALPH consumes a cryptographic passphrase; enter is only reconstruction",
+        "state": "compatible"
+      },
+      "explicit_cardinality_length": {
+        "note": "no authenticated password length or cardinality",
+        "state": "unbound"
+      },
+      "hash_state": {
+        "note": "the separate SHA instruction does not type this value",
+        "state": "unbound"
+      },
+      "input_output_type": {
+        "note": "a passphrase-like input fits the OpenSSL salted envelope",
+        "state": "compatible"
+      },
+      "literal_page_order": {
+        "note": "requires an unmarked forward reach to SALPH",
+        "state": "compatible"
+      },
+      "object_consumed": {
+        "note": "SALPH is consumable but thispassword attachment is unmarked",
+        "state": "unbound"
+      },
+      "result_class": {
+        "note": "the SALPH plaintext class is not independently fixed",
+        "state": "unbound"
+      }
+    }
+  },
+  "oracle_calls": 0,
+  "password_materials_generated": 0,
+  "phase": 455,
+  "role_selected": null,
+  "state_totals": {
+    "faed_answer_is_password": {
+      "compatible": 3,
+      "unbound": 4
+    },
+    "password_for_faed": {
+      "compatible": 1,
+      "unbound": 6
+    },
+    "password_for_salph_blob": {
+      "compatible": 3,
+      "unbound": 4
+    }
+  },
+  "surviving_roles": [
+    "password_for_faed",
+    "faed_answer_is_password",
+    "password_for_salph_blob"
+  ],
+  "typed_discriminant_found": false,
+  "verdict": "all_roles_survive",
+  "weighted_scores_computed": 0
+}

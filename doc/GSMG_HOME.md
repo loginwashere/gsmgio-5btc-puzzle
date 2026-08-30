@@ -1,7 +1,7 @@
 ---
 type: index
 status: live
-date: 2026-08-23
+date: 2026-08-30
 ---
 
 # GSMG 5 BTC Puzzle — Home
@@ -99,6 +99,11 @@ recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 457 | Decentraland MP3 periodicity and frame-header audit | 684-sample L−R signal and exact internal mid/side-disabled frames 4/15/131 reproduced; codec explanation, no new payload or gap change |
+| 456 | Seed-1 transfer to Roman, Architect, and matrix-product rules | All source rules replay; 0/9 solved-boundary cells applicable because native types/instructions/output roles do not match—no support and no rejection |
+| 455 | `thispassword` typed semantic checksum | All three roles survive seven authenticated type axes with zero contradictions; no role selected, zero password/oracle activity |
+| 454 | Recipient-side artifact acquisition | Two independent Stage-1 recipient copies strengthen known-byte provenance; zero new primary artifacts, zero new clue content, zero gap closures |
+| 453 | Symbolic false-discovery calibration | FF67 unusual but unselected; KIT null-sensitive; GGN and Roman common under matched familywise nulls |
 | 381 | P32 Family 3: raw authenticated asset bytes as password material | 83-candidate manifest (7 site assets with pre-2023 provenance -- 1 independently Wayback-confirmed, 6 asserted by the local mirror's own manifest and pinned in a committed `PROVENANCE.json` -- + 76 unique creator-authored Telegram payloads dated before P32TRAILING's chronology bound, content-pinned by a canonical digest enforced on both the self-test and the real `--run` path, drawn from Phase 248's frozen universe), 3 byte forms each, `P32TRAILING` only, 29,880 effective decrypt attempts, 0 hits. Corrected three times same-day (miscategorized provenance; 4 omitted eligible assets and an unpinned corpus; a digest pin that self-test checked but `--run` didn't enforce). Closes the backlog ledger's former top-ranked genuinely-unrun item |
 | 378-380 | Post-Phase-340 Seed 7 (input-byte pathway reconstruction) and a raw-key chunk audit over the same materials | Raw SHA-256 digest bytes/newline-space bases against the 42-candidate P0A/P1A corpus (362,880 effective attempts) and a first-two-32-byte-chunk secp256k1 scan of the same corpus's retained bodies (218,634 chunks) against the frozen 10-address known-target set -- both negative |
 | 364 | QR light-gray compositing/dither inversion | No 2×2–15×15 binary coverage grid reproduces all five grays; 16×16 is merely 8-bit alpha equivalence. Zero exact models across 2,226,048 Bayer and 19,456 Floyd–Steinberg/Atkinson candidates. Standard flat-tone dithering rejected. |

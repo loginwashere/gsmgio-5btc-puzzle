@@ -1,0 +1,35 @@
+{
+  "btcseed_bearing": {
+    "btcseed_bears_on_arch": false,
+    "p451_construction_citation_verified": true,
+    "p451_construction_touches_arch_branch_terms": [],
+    "scope_separation_note_present_in_registry": true
+  },
+  "evidentiary_status": {
+    "evidentiary_status_changed": false,
+    "new_evidence_markers_found": [],
+    "p449_supplies_only_modeling_dependency": true
+  },
+  "new_blocking_relationship": {
+    "all_citations_verified": true,
+    "citations_verified": {
+      "No load-bearing parked-gap dependency | pass | fail (`G-ARCH-001`)": true,
+      "depends on the still-unselected G-ARCH-001 mirror operation": true,
+      "the rule itself is exactly what G-ARCH-001 says no creator clue selects": true
+    },
+    "new_blocking_relationship_found": true,
+    "registry_row_contains_reference": true
+  },
+  "phase": 452,
+  "priority_gate": {
+    "priority_change_warranted": false,
+    "reasoning": "requires evidentiary_status_changed=True; a documentation-only cross-reference does not satisfy this gate"
+  },
+  "verdict": {
+    "btcseed_bears_on_arch": false,
+    "disposition": "documentation-cross-reference-only-priority-unchanged",
+    "evidentiary_status_changed": false,
+    "new_blocking_relationship_found": true,
+    "priority_change_warranted": false
+  }
+}

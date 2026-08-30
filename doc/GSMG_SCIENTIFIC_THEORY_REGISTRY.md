@@ -264,6 +264,13 @@ The full-570-character single-block Bifid result is the creator's intended
 reading, and the material after the unique `Z` at index 97 (`Q472`, 472
 characters) encodes a seed, container, or further instruction.
 
+**Topology correspondence (Phase 451):** this theory's own construction —
+`DBBI` supplies Bifid key material, `FAED` is decrypted as ciphertext — is
+directional/asymmetric, corresponding to the Topology Audit's **T4** ("DBBI
+instructs FAED"), not its T3 ("DBBI/FAED combine symmetrically," which this
+registry's own T2 corresponds to). This mapping was not previously stated
+anywhere in either document.
+
 - **Authenticated inputs:** `FAED`, `DBBI` (for the keyed square), the
   Bifid decode itself (`decoded`, reproduced exactly by Phase 386's
   from-scratch reimplementation).
@@ -418,7 +425,15 @@ profile (KDF, cipher, padding) that the three *solved* boundaries
   of Phase 0.1's own sweep, then widened to ECB/stream/Key Wrap: 0 hits;
   the `thispassword` branch's role remains three-way unreconciled per
   Phase 101/373/376-377, so the grammar has no second field set to apply
-  there yet); Phase 410 (cryptographic-profile calibration — one
+  there yet); Phase 455 (seven-axis typed semantic checksum — all three roles
+  survive with zero contradictions; SALPH's passphrase-consuming type does
+  not establish that `thispassword` supplies it); Phase 456 (Seed-1 transfer
+  audit — Roman/title-`C`, Architect edges/mirror9, and matrix-product rules
+  all replay on their source boundaries, but 0/9 solved-boundary transfer
+  cells have equivalent native inputs, local operation licenses, and
+  comparable output roles, so the calibration neither supports nor rejects
+  them); Phase 410
+  (cryptographic-profile calibration — one
   consistent three-vector profile, all three solved boundaries share
   identical construction, 24-test control matrix with exactly 3
   successes, ranked non-deleting oracle guidance recorded).

@@ -47,6 +47,11 @@ idea inside it is still open; read each file's own per-item status.
 | 2026-08-20 | [Post-Phase-340 Future Search Portfolio](2026-08-20%20-%20Post-Phase-340%20Future%20Search%20Portfolio.md) | live |
 | 2026-08-21 | [QR FAFAFA Full-Mask Pattern Identification Brainstorm](2026-08-21%20-%20QR%20FAFAFA%20Full-Mask%20Pattern%20Identification%20Brainstorm.md) | live |
 | 2026-08-25 | [BTCSEED P91 Z Continuation Brainstorm](2026-08-25%20-%20BTCSEED%20P91%20Z%20Continuation%20Brainstorm.md) | live |
+| 2026-08-29 | [Post-Phase-452 Scientific Experiment Portfolio](2026-08-29%20-%20Post-Phase-452%20Scientific%20Experiment%20Portfolio.md) | live |
+| 2026-08-29 | [Phase 453 False-Discovery Calibration Harness Protocol](2026-08-29%20-%20Phase%20453%20False-Discovery%20Calibration%20Harness%20Protocol.md) | executed |
+| 2026-08-29 | [Phase 454 Recipient-Side Artifact Acquisition Protocol](2026-08-29%20-%20Phase%20454%20Recipient-Side%20Artifact%20Acquisition%20Protocol.md) | executed |
+| 2026-08-29 | [Phase 455 Thispassword Typed Semantic Checksum Protocol](2026-08-29%20-%20Phase%20455%20Thispassword%20Typed%20Semantic%20Checksum%20Protocol.md) | executed |
+| 2026-08-30 | [Phase 456 Seed-1 Transfer to Three Unresolved Rules Protocol](2026-08-30%20-%20Phase%20456%20Seed-1%20Transfer%20to%20Three%20Unresolved%20Rules%20Protocol.md) | executed |
 
 `Templates/` holds the two starting-point templates (`TEMPLATE - Idea.md`,
 `TEMPLATE - Session Hub.md`) referenced above; they are not brainstorm
