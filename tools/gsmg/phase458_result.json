@@ -1,0 +1,19 @@
+{
+  "window_message_count": 2516,
+  "window_min_id": 67269,
+  "window_max_id": 70186,
+  "creator_messages": [],
+  "creator_message_count": 0,
+  "creator_media": [],
+  "gap_hits": {
+    "G-ARCH-001": [],
+    "G-YIN-001": [],
+    "G-ESC-001": [],
+    "G-MSL-001": [],
+    "G-PRIME-001": []
+  },
+  "any_creator_message": false,
+  "any_creator_media": false,
+  "any_gap_hit": false,
+  "verdict": "no_creator_activity_in_window"
+}

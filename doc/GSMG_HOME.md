@@ -76,6 +76,17 @@ already on hand:
   ([G-YIN-001](GSMG_OPEN_GAP_REGISTRY.md); `parked` — the Telegram corpora
   and every decoded-slot page-syntax rule are already exhausted).
 
+Phase 458 (2026-08-30) swept ids 67269–70186 (2,516 messages) against five
+Telegram-sensitive gaps' vocabularies at once — `G-ARCH-001`, `G-YIN-001`,
+`G-ESC-001`, `G-MSL-001`, `G-PRIME-001` — not the registry's other four
+parked gaps. Of that span, 952 messages (ids 67269–68343) duplicate Phase
+247's already-checked window; the genuinely new tail is 1,564 messages (ids
+68344–70186, `ChatExport_2026-08-30`). Result: zero creator-authored
+messages, zero creator media, and zero licensed hits across the full span.
+This is the "new export surfaces" reopen trigger checked and found negative
+for these five gaps against the current corpus, not a finding about every
+parked gap and not a new blocker.
+
 Between Phase 271 and Phase 321, ~50 further phases ran a broad
 cryptanalytic/structural sweep directly against this pair of gaps —
 transition matrices, mirror9 substitution, positional co-occurrence, GF(9),
@@ -99,6 +110,7 @@ recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 458 | Telegram window creator sweep for five selected gaps | ids 67269-70186 (2,516 messages; 1,564 genuinely new past Phase 247's cutoff) swept for G-ARCH-001/G-YIN-001/G-ESC-001/G-MSL-001/G-PRIME-001's vocabularies (three newly assembled, two reused verbatim); zero creator-authored messages, zero creator media, zero licensed hits — these five gaps unchanged |
 | 457 | Decentraland MP3 periodicity and frame-header audit | 684-sample L−R signal and exact internal mid/side-disabled frames 4/15/131 reproduced; codec explanation, no new payload or gap change |
 | 456 | Seed-1 transfer to Roman, Architect, and matrix-product rules | All source rules replay; 0/9 solved-boundary cells applicable because native types/instructions/output roles do not match—no support and no rejection |
 | 455 | `thispassword` typed semantic checksum | All three roles survive seven authenticated type axes with zero contradictions; no role selected, zero password/oracle activity |
