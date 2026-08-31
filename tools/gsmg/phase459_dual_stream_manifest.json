@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "phase": 459,
+  "status": "frozen_before_implementation_and_real_scoring",
+  "protocol": "doc/Brainstorms/2026-08-30 - Phase 459 Dual-Stream Escape-Pair Calibration Protocol.md",
+  "scope": "dual_stream_escape_pair_specialization_calibration_only",
+  "phase_level_disposition": "calibration_only_no_gap_closure",
+  "source_streams": {
+    "DBBI": {
+      "length": 91,
+      "sha256_utf8": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca",
+      "first": "d",
+      "last": "e",
+      "split": [45, 46]
+    },
+    "FAED": {
+      "length": 570,
+      "sha256_utf8": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+      "first": "f",
+      "last": "c",
+      "split": [285, 285]
+    }
+  },
+  "precedent_digests": {
+    "tools/gsmg/checkerboard_code_ic_oracle.py": "e6973edbb971d5ec970c0f4ea740f403372425e76886a88c536ad7ddde37b574",
+    "tools/gsmg/phase449_g_esc_pair_discrimination_audit.py": "844c7856d701d62f32a6825642ffb502f67e172e2f09f4a0c39dc96a00f9c050",
+    "tools/gsmg/phase412_dbbi_faed_generative_model_comparison_audit.py": "39f10f575056101976c5c0b38f886c2f935c24e6e3d4da5e9e338380ea479ea7"
+  },
+  "alphabet": "abcdefghi",
+  "candidate_pairs": "all_36_lexicographic_unordered_pairs",
+  "english_code_ic_reference": 0.067,
+  "directions": ["left_train_right_validate", "right_train_left_validate"],
+  "models": ["one_shared_pair", "independent_pair_per_stream"],
+  "primary_statistic": "mean_over_two_directions(shared_equal_stream_heldout_abs_ic_loss - independent_equal_stream_heldout_abs_ic_loss)",
+  "invalid_validation_loss": 1.0,
+  "tie_policy": "retain_all_equal_best_pairs_in_diagnostics_lexicographic_first_for_deterministic_validation",
+  "master_seed": 45920260830,
+  "trials_per_null": 20000,
+  "primary_null": "independent_randomized_euler_traversals_preserving_exact_directed_bigram_multigraph_and_start_symbol",
+  "sensitivity_null": "independent_endpoint_fixed_interior_shuffles_preserving_exact_unigrams",
+  "empirical_p": "plus_one_one_sided_high",
+  "promotion_threshold": 0.005,
+  "decision_rule": {
+    "robust_specialization": "contrast_positive_and_both_null_p_values_lte_0.005",
+    "null_sensitive": "contrast_positive_and_exactly_one_null_p_value_lte_0.005",
+    "no_calibrated_specialization": "otherwise",
+    "harness_failure": "any_integrity_or_control_failure"
+  },
+  "maximum_inference": "corroboration_only_no_pair_selection_no_gap_closure",
+  "prohibitions": [
+    "plaintext_generation",
+    "password_or_key_generation",
+    "blob_or_address_oracle",
+    "post_result_feature_or_null_addition",
+    "gpu",
+    "docker",
+    "network",
+    "external_agents"
+  ]
+}

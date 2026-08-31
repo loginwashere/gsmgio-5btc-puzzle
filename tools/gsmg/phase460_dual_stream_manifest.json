@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "phase": 460,
+  "status": "frozen_before_implementation_and_real_scoring",
+  "protocol": "doc/Brainstorms/2026-08-30 - Phase 460 Boundary-Safe Dual-Stream Calibration Protocol.md",
+  "corrects": "Phase 459 raw-half split crossed pair-dependent token boundaries",
+  "source_streams": {
+    "DBBI": {"length": 91, "sha256_utf8": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca"},
+    "FAED": {"length": 570, "sha256_utf8": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2"}
+  },
+  "precedent_digests": {
+    "tools/gsmg/checkerboard_code_ic_oracle.py": "e6973edbb971d5ec970c0f4ea740f403372425e76886a88c536ad7ddde37b574",
+    "tools/gsmg/phase449_g_esc_pair_discrimination_audit.py": "844c7856d701d62f32a6825642ffb502f67e172e2f09f4a0c39dc96a00f9c050",
+    "tools/gsmg/phase412_dbbi_faed_generative_model_comparison_audit.py": "39f10f575056101976c5c0b38f886c2f935c24e6e3d4da5e9e338380ea479ea7",
+    "tools/gsmg/phase459_dual_stream_escape_pair_calibration.py": "202297f7363ac1c6b0ee5c245da4f571dd28ea832a7340e8623971007d194ca8"
+  },
+  "alphabet": "abcdefghi",
+  "candidate_pairs": "all_36_lexicographic_unordered_pairs",
+  "token_boundary_policy": "tokenize_complete_stream_per_pair_then_split_token_sequence_at_floor_n_over_2",
+  "english_code_ic_reference": 0.067,
+  "directions": ["left_tokens_train_right_tokens_validate", "right_tokens_train_left_tokens_validate"],
+  "models": ["one_shared_pair", "independent_pair_per_stream"],
+  "primary_statistic": "mean_over_two_directions(shared_equal_stream_heldout_abs_ic_loss - independent_equal_stream_heldout_abs_ic_loss)",
+  "master_seed": 46020260830,
+  "trials_per_null": 20000,
+  "primary_null": "independent_randomized_euler_traversals_preserving_exact_directed_bigram_multigraph_and_start_symbol",
+  "sensitivity_null": "independent_endpoint_fixed_interior_shuffles_preserving_exact_unigrams",
+  "empirical_p": "plus_one_one_sided_high",
+  "promotion_threshold": 0.005,
+  "decision_rule": {
+    "robust_specialization": "contrast_positive_and_both_null_p_values_lte_0.005",
+    "null_sensitive": "contrast_positive_and_exactly_one_null_p_value_lte_0.005",
+    "no_calibrated_specialization": "otherwise",
+    "harness_failure": "any_integrity_or_control_failure"
+  },
+  "maximum_inference": "corroboration_only_no_pair_selection_no_gap_closure"
+}

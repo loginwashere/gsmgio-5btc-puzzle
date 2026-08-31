@@ -110,6 +110,8 @@ recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 460 | Boundary-safe dual-stream calibration | Small specialization advantage +0.00726 is common under both nulls (p=0.1375/0.3479); no calibrated specialization, two-role lane deferred |
+| 459 | Dual-stream escape-pair calibration | Protocol invalid: raw validation cut pair-dependent two-symbol tokens; superseded without inference by Phase 460 |
 | 458 | Telegram window creator sweep for five selected gaps | ids 67269-70186 (2,516 messages; 1,564 genuinely new past Phase 247's cutoff) swept for G-ARCH-001/G-YIN-001/G-ESC-001/G-MSL-001/G-PRIME-001's vocabularies (three newly assembled, two reused verbatim); zero creator-authored messages, zero creator media, zero licensed hits — these five gaps unchanged |
 | 457 | Decentraland MP3 periodicity and frame-header audit | 684-sample L−R signal and exact internal mid/side-disabled frames 4/15/131 reproduced; codec explanation, no new payload or gap change |
 | 456 | Seed-1 transfer to Roman, Architect, and matrix-product rules | All source rules replay; 0/9 solved-boundary cells applicable because native types/instructions/output roles do not match—no support and no rejection |

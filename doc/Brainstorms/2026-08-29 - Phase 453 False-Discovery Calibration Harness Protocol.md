@@ -18,8 +18,11 @@ topics:
 > [!info] Executed as Phase 453
 > The frozen symbolic lane was executed and recorded in
 > [GSMG_P453_FALSE_DISCOVERY_CALIBRATION](../GSMG_P453_FALSE_DISCOVERY_CALIBRATION.md).
-> The later dual-stream and artifact lanes remain unexecuted and require their
-> own phase numbers and frozen protocols.
+> The dual-stream extension's first execution (Phase 459) was protocol invalid;
+> its separately frozen token-boundary correction was executed as
+> [Phase 460](../GSMG_P460_BOUNDARY_SAFE_DUAL_STREAM_CALIBRATION.md), finding a
+> small, null-common held-out specialization advantage. The artifact lane
+> remains unexecuted and requires its own phase number and frozen protocol.
 
 ## Question
 
@@ -258,6 +261,12 @@ Registry priorities and closure conditions remain unchanged absent independent
 new evidence.
 
 ## Later extension D — dual-stream calibration
+
+> [!info] Executed as Phase 459, corrected by Phase 460
+> Phase 459's raw split crossed token boundaries and is protocol invalid. Phase
+> 460's token-first contrast was positive but common under both frozen nulls.
+> The two-role experiment remains deferred because its admission gate did not
+> pass.
 
 Required before the two-role escape experiment or asymmetric tournament. Its
 own protocol must freeze source bytes and tokenizations, statistics/topology

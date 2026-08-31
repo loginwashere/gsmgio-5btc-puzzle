@@ -28237,3 +28237,46 @@ frozen real-corpus counts below); `tools/gsmg/test_phase458_new_window_creator_s
 creator-authored message, creator media, or a creator reply matching any of
 the five vocabularies would reopen the corresponding gap's "new export
 surfaces" trigger. None currently exists.
+<!-- audit_doc_override: GSMG_P459_DUAL_STREAM_ESCAPE_PAIR_CALIBRATION.md -->
+## Phase 459 -- dual-stream escape-pair calibration: protocol invalid, raw split crossed token boundaries (2026-08-30)
+
+**Attempt:** compare one shared versus independently fitted DBBI/FAED escape
+pairs on opposite raw-position halves under two 20,000-replicate nulls.
+
+**Defect found before final disposition:** raw cuts `45|46` and `285|285` are
+not guaranteed checkerboard token boundaries. In one direction, complete-stream
+valid FAED pair `{g,i}` ends the artificial validation half on an escape whose
+consumed symbol is in the other half; the frozen loss `1.0` therefore
+manufactures a validation failure. The reproducible contrast `-0.4844868` is
+not interpretable as evidence against specialization.
+
+**Disposition:** `protocol_invalid_token_boundary_confound`; no inference, no
+gap change. Raw artifacts are retained. Phase 460 independently freezes and
+executes the token-first correction. Full correction report:
+[doc/GSMG_P459_DUAL_STREAM_ESCAPE_PAIR_CALIBRATION.md](../doc/GSMG_P459_DUAL_STREAM_ESCAPE_PAIR_CALIBRATION.md).
+
+<!-- audit_doc_override: GSMG_P460_BOUNDARY_SAFE_DUAL_STREAM_CALIBRATION.md -->
+## Phase 460 -- boundary-safe dual-stream calibration: small, null-common specialization advantage (2026-08-30)
+
+**Correction:** Phase 459 was protocol invalid because raw-position halves can
+split a two-symbol escape code. Phase 460 freezes the correction: tokenize each
+complete stream under each of all 36 pairs first, then split complete token
+sequences and score opposite held-out token halves.
+
+**Method:** compare one shared pair with independently fitted DBBI/FAED pairs
+using equal-stream absolute code-IC loss from `0.067`, in both directions.
+Repeat complete selection inside 20,000 exact-transition Euler surrogates and
+20,000 endpoint-fixed multiset shuffles. Robust promotion requires positive
+contrast and one-sided `p<=0.005` under both nulls.
+
+**Result:** shared loss `0.0238497`, independent loss `0.0165901`, contrast
+`+0.00725957`. Null p-values are `0.137543` and `0.347933`. Decision:
+`no_calibrated_specialization`. Pair identities vary by direction; only one
+independent fold selects standing FAED `{g,i}`.
+
+**Disposition:** calibration only. The proposed two-role experiment's own
+null/held-out admission gate does not pass and remains deferred absent new
+primary evidence plus a new authenticated prediction. `G-ESC-001` and
+`G-YIN-001` remain parked; no pair, role, decoder, consumer, plaintext,
+password, or oracle result is promoted. Full report:
+[doc/GSMG_P460_BOUNDARY_SAFE_DUAL_STREAM_CALIBRATION.md](../doc/GSMG_P460_BOUNDARY_SAFE_DUAL_STREAM_CALIBRATION.md).

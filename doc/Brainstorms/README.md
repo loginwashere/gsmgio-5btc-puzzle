@@ -52,6 +52,8 @@ idea inside it is still open; read each file's own per-item status.
 | 2026-08-29 | [Phase 454 Recipient-Side Artifact Acquisition Protocol](2026-08-29%20-%20Phase%20454%20Recipient-Side%20Artifact%20Acquisition%20Protocol.md) | executed |
 | 2026-08-29 | [Phase 455 Thispassword Typed Semantic Checksum Protocol](2026-08-29%20-%20Phase%20455%20Thispassword%20Typed%20Semantic%20Checksum%20Protocol.md) | executed |
 | 2026-08-30 | [Phase 456 Seed-1 Transfer to Three Unresolved Rules Protocol](2026-08-30%20-%20Phase%20456%20Seed-1%20Transfer%20to%20Three%20Unresolved%20Rules%20Protocol.md) | executed |
+| 2026-08-30 | [Phase 459 Dual-Stream Escape-Pair Calibration Protocol](2026-08-30%20-%20Phase%20459%20Dual-Stream%20Escape-Pair%20Calibration%20Protocol.md) | protocol-invalid; corrected by Phase 460 |
+| 2026-08-30 | [Phase 460 Boundary-Safe Dual-Stream Calibration Protocol](2026-08-30%20-%20Phase%20460%20Boundary-Safe%20Dual-Stream%20Calibration%20Protocol.md) | executed |
 
 `Templates/` holds the two starting-point templates (`TEMPLATE - Idea.md`,
 `TEMPLATE - Session Hub.md`) referenced above; they are not brainstorm

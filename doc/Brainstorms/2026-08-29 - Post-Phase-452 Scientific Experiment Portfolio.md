@@ -163,6 +163,15 @@ G-MATPROD-001.
 
 ## 3. Closed-list two-role escape-pair experiment
 
+> [!info] Calibration gate tested in Phases 459–460 — experiment deferred
+> Phase 459 was protocol invalid because raw halves cut pair-dependent escape
+> tokens. The separately frozen token-first correction, Phase 460, found only a
+> small held-out specialization advantage (`+0.007260`) that is common under
+> both nulls (`p=0.137543`, `0.347933`). Because this item's admission rule
+> requires beating the pre-registered dual-stream null, do not execute the role
+> list without a new primary-source role split and authenticated held-out
+> observable. See [Phase 460](../GSMG_P460_BOUNDARY_SAFE_DUAL_STREAM_CALIBRATION.md).
+
 Test whether FAED's preferred {g,i} and mirror-predicted {h,e} occupy different
 roles. Freeze a small candidate list before output inspection:
 
