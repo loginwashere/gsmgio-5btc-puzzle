@@ -1,0 +1,7 @@
+{
+  "phase": 470,
+  "status": "frozen_before_result",
+  "audit_script_sha256": "9165ba2730b32df21f6f721b5e1dab636805cb106348d0a5e349eefcb693b7d7",
+  "protocol_sha256": "e2903a837d631ba40930529b4b77c66305a4c5f04792af0364fab708505faaa9",
+  "pre_result_revision": "Two literal source anchors were corrected after the source-anchor self-test failed; no report had been produced. Selector catalog and classifications were unchanged."
+}

@@ -1,0 +1,7 @@
+{
+  "phase": 473,
+  "status": "frozen_before_output_run",
+  "note": "Only structural FFT/direct-contingency checks, family invariants, and a synthetic perfect-dependence control were run before this lock. No real/control association matrix or null result was produced or inspected.",
+  "audit_script_sha256": "cee8b5f73e64674fc8fe001a431ec15df049a727306dd4585ba271dffa3b4880",
+  "protocol_sha256": "37025ecae8bd1b3d65654f38295a866a5a46d7033291f89f365a5412f58dd700"
+}

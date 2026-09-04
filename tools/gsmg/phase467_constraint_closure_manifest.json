@@ -1,0 +1,36 @@
+{
+  "phase": 467,
+  "date": "2026-09-01",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-01 - Phase 467 Closed-System Constraint Closure Protocol.md",
+    "sha256": "5885ef22b2e21626696423b6affccc8ae48161aa064ad42a45cda1bc5f57cd72"
+  },
+  "inputs": [
+    {"path": "tools/gsmg/phase434_result.json", "sha256": "6dc10fb27df413498cbc3d9fc6043df56fb3df28fa941e082d50107aa2fb796f"},
+    {"path": "tools/gsmg/phase439_result.json", "sha256": "cf68aa64d71c344b908ebd48cea0fb865bc374a66d9566208ad99b23ce56cc95"},
+    {"path": "tools/gsmg/phase449_result.json", "sha256": "0c25de2f6d5681f8e039a6af0afd6f84cebda5f84232b883223166bf95f2e88c"},
+    {"path": "tools/gsmg/phase451_result.json", "sha256": "decd4eda770b376055a13d65aa2ff609ea8c9d9c2dd12fccbe0a2691105ff9a3"},
+    {"path": "tools/gsmg/phase455_result.json", "sha256": "2470ab0b5dd47db6882e36a9bc5bf27cbf1ff70977c2c080ce426bc0a3dc821f"},
+    {"path": "tools/gsmg/phase464_result.json", "sha256": "7f07ab0908748324eeadb0dcb08b561e57b6218ad9a1df0c59536cb075342a00"},
+    {"path": "tools/gsmg/phase465_result.json", "sha256": "68e4e8a8b9e6029ffbdcafe37c1fad06338dd400f2768d7668995ce938193fc1"},
+    {"path": "tools/gsmg/phase466_result.json", "sha256": "9b8de31a7a1bad2fff34f286735d419cd2fb65b2053c49f9f705012dd3802693"}
+  ],
+  "domains": {
+    "topology": ["independent_streams", "symmetric_dbbi_faed", "dbbi_guides_faed"],
+    "faed_escape": ["GI", "HE"],
+    "thispassword_role": ["password_for_faed", "faed_answer_is_password", "password_for_salph_blob"],
+    "architect_relation": ["unbound", "conditional_edge_mirror"],
+    "theflower_role": ["recognition_checksum"]
+  },
+  "contract_fields": ["source", "operand_boundary", "operation", "direction_representation", "output_type", "consumer"],
+  "states": ["bound", "conditional", "unbound", "rejected"],
+  "prohibitions": {
+    "password_generation": true,
+    "hashing": true,
+    "decryption": true,
+    "oracle_calls": true,
+    "language_scoring": true,
+    "weighted_scoring": true,
+    "new_source_referents": true
+  }
+}

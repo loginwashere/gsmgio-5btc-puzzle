@@ -1,0 +1,50 @@
+{
+  "phase": 472,
+  "date": "2026-09-02",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-02 - Phase 472 DBBI Route-Aware Plaintext Alignment Protocol.md",
+    "sha256": "f24807614609291b73474f88b1baffaa26d21fb66d85f0dab25c0c01ee437de5"
+  },
+  "audit_script": {
+    "path": "tools/gsmg/phase472_dbbi_route_plaintext_alignment_audit.py",
+    "sha256": "3fe9ab038e04cc0dae745fa33afa98e7097e27dd4c80fb3399bccceb9d406e72"
+  },
+  "pinned_inputs": [
+    {
+      "path": "tools/gsmg/data.py",
+      "sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2"
+    },
+    {
+      "path": "tools/gsmg/phase421_invocation_ledger.json",
+      "sha256": "2ca8099040d72a528c84b28eacb8eaff069c916e96837afa834541e46c71d564"
+    },
+    {
+      "path": "tools/gsmg/phase471_dbbi_route_structure_diagnostic_audit.py",
+      "sha256": "a1a6c1bdc1509342a441cfe4743e6f811dad1021a485e23abe559ff37c641d60"
+    }
+  ],
+  "route_registry": {
+    "expected_unique_permutations": 19686,
+    "mapping_conventions": 4,
+    "route_mapping_combinations_per_target": 78744
+  },
+  "targets": {
+    "real": "VALIDATION_ANSWER",
+    "control_offsets": [0, 273, 546, 819]
+  },
+  "calibration": {
+    "rng_seeds": [472, 473, 474, 475, 476],
+    "n_null_per_target": 2000,
+    "upper_tail_alpha": 0.001,
+    "null": "position shuffle preserving each target residue multiset; complete route/mapping maximum rerun"
+  },
+  "prohibitions": {
+    "no_derived_text_serialization": true,
+    "no_output_driven_maps_routes_scores_or_controls": true,
+    "no_password_generation": true,
+    "no_hash_candidate_generation": true,
+    "no_faed_usage": true,
+    "no_decryption": true,
+    "no_oracle_calls": true
+  }
+}

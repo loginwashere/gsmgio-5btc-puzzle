@@ -1,0 +1,664 @@
+{
+  "date": "2026-09-01",
+  "decryptions_attempted": 0,
+  "manifest_sha256": "0d52c76f989a326901aeb6a812b3cb0487f455178701030cdb5e2b9a587ec15b",
+  "oracle_calls": 0,
+  "output_1_typed_inventory": {
+    "eligible_ids": [
+      "dbbi_raw",
+      "faed_raw",
+      "ciao_bella_o",
+      "matrix_23_16_7",
+      "matrix_574_061",
+      "matrix_43_25_18",
+      "prime_574061",
+      "prime_311027",
+      "prime_33414671",
+      "theflower",
+      "sum_401",
+      "sum_400",
+      "sum_73_fefe",
+      "ff67_pair",
+      "kit_reversed",
+      "ggn_tuple",
+      "salph_103_digit_stream",
+      "btcseed_p90_p91_q472"
+    ],
+    "eligible_output_count": 18,
+    "gate_slot_matrix": {
+      "G-ARCH-001": {
+        "mirror_operation": {
+          "kind": "operator",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "thispassword_role": {
+          "kind": "selector",
+          "status": "not_applicable",
+          "value_fillable": false
+        }
+      },
+      "G-ESC-001": {
+        "escape_pair_selection": {
+          "kind": "selector",
+          "status": "not_applicable",
+          "value_fillable": false
+        }
+      },
+      "G-FLOWER-001": {
+        "consumer": {
+          "kind": "consumer_interface",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "frame_parity_affix_composition": {
+          "kind": "selector",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "quarter_turn_selection": {
+          "kind": "selector",
+          "status": "not_applicable",
+          "value_fillable": false
+        }
+      },
+      "G-GGN-001": {
+        "curve_selection": {
+          "kind": "selector",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "g_to_group_generator_mapping": {
+          "kind": "operator",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "indexing_convention": {
+          "kind": "selector",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "negation": {
+          "kind": "operator",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "scalar_k": {
+          "candidate_established_outputs": [
+            "dbbi_raw",
+            "faed_raw",
+            "ciao_bella_o",
+            "matrix_23_16_7",
+            "matrix_574_061",
+            "matrix_43_25_18",
+            "prime_574061",
+            "prime_311027",
+            "prime_33414671",
+            "theflower",
+            "sum_401",
+            "sum_400",
+            "sum_73_fefe",
+            "ff67_pair",
+            "kit_reversed",
+            "ggn_tuple",
+            "salph_103_digit_stream",
+            "btcseed_p90_p91_q472"
+          ],
+          "kind": "parameter_value",
+          "value_fillable": true
+        }
+      },
+      "G-KIT-001": {
+        "a1z26_mapping": {
+          "kind": "representation_or_serialization",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "subtraction_reversal_operator": {
+          "kind": "operator",
+          "status": "not_applicable",
+          "value_fillable": false
+        }
+      },
+      "G-MATPROD-001": {
+        "byte_consumer": {
+          "kind": "consumer_interface",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "multiplication_vs_other": {
+          "kind": "operator",
+          "status": "not_applicable",
+          "value_fillable": false
+        }
+      },
+      "G-MSL-001": {
+        "aggregation_op": {
+          "kind": "operator",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "consumer": {
+          "kind": "consumer_interface",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "matrix_dimensions": {
+          "candidate_established_outputs": [
+            "dbbi_raw",
+            "faed_raw",
+            "ciao_bella_o",
+            "matrix_23_16_7",
+            "matrix_574_061",
+            "matrix_43_25_18",
+            "prime_574061",
+            "prime_311027",
+            "prime_33414671",
+            "theflower",
+            "sum_401",
+            "sum_400",
+            "sum_73_fefe",
+            "ff67_pair",
+            "kit_reversed",
+            "ggn_tuple",
+            "salph_103_digit_stream",
+            "btcseed_p90_p91_q472"
+          ],
+          "kind": "parameter_value",
+          "value_fillable": true
+        },
+        "serialization": {
+          "kind": "representation_or_serialization",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "traversal_order": {
+          "kind": "selector",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "value_mapping_alphabet": {
+          "kind": "representation_or_serialization",
+          "status": "not_applicable",
+          "value_fillable": false
+        }
+      },
+      "G-PRIME-001": {
+        "consumer": {
+          "kind": "consumer_interface",
+          "status": "not_applicable",
+          "value_fillable": false
+        },
+        "roman_title_c_selector": {
+          "kind": "selector",
+          "status": "not_applicable",
+          "value_fillable": false
+        }
+      },
+      "G-X2SH-001": {
+        "excluded": "closed_secondary_reading_not_live_frontier"
+      },
+      "G-YIN-001": {
+        "cross_stream_operator": {
+          "kind": "operator",
+          "status": "not_applicable",
+          "value_fillable": false
+        }
+      }
+    },
+    "ineligible_ids_by_class": {
+      "analyst_generated_metadata": [
+        "dbbi_faed_sha256"
+      ],
+      "candidate_parameter": [
+        "faed_escape_gi",
+        "faed_escape_he",
+        "dbbi_escape_be"
+      ],
+      "recognition_only": [
+        "batch",
+        "youwon",
+        "exec_order_13224"
+      ],
+      "rule_template": [
+        "phase410_kdf_template"
+      ]
+    },
+    "ineligible_output_count": 8,
+    "parameter_value_slot_count": 2
+  },
+  "output_2_arithmetic_31": {
+    "does_not_rule_out": [
+      "padding",
+      "1x31_or_31x1_rail",
+      "ragged_rows",
+      "sub_selection_from_larger_matrix",
+      "independently_supplied_dimensions"
+    ],
+    "flagged_equalities_against_established_set": [
+      {
+        "pair": [
+          7,
+          13
+        ],
+        "value": 91
+      },
+      {
+        "pair": [
+          7,
+          13
+        ],
+        "value": 7
+      },
+      {
+        "pair": [
+          7,
+          31
+        ],
+        "value": 7
+      },
+      {
+        "pair": [
+          7,
+          91
+        ],
+        "value": 7
+      },
+      {
+        "pair": [
+          7,
+          91
+        ],
+        "value": 13.0
+      },
+      {
+        "pair": [
+          13,
+          31
+        ],
+        "value": 13
+      },
+      {
+        "pair": [
+          13,
+          91
+        ],
+        "value": 13
+      },
+      {
+        "pair": [
+          13,
+          91
+        ],
+        "value": 7.0
+      },
+      {
+        "pair": [
+          31,
+          91
+        ],
+        "value": 31
+      }
+    ],
+    "is_prime": true,
+    "n": 31,
+    "nondegenerate_rectangular_factorizations": [],
+    "operation_table": [
+      {
+        "difference": {
+          "a_minus_b": -6,
+          "b_minus_a": 6
+        },
+        "mod": {
+          "a_mod_b": 7,
+          "b_mod_a": 6
+        },
+        "pair": [
+          7,
+          13
+        ],
+        "product": 91,
+        "ratio": {
+          "a_div_b": null,
+          "b_div_a": null
+        },
+        "sum": 20
+      },
+      {
+        "difference": {
+          "a_minus_b": -24,
+          "b_minus_a": 24
+        },
+        "mod": {
+          "a_mod_b": 7,
+          "b_mod_a": 3
+        },
+        "pair": [
+          7,
+          31
+        ],
+        "product": 217,
+        "ratio": {
+          "a_div_b": null,
+          "b_div_a": null
+        },
+        "sum": 38
+      },
+      {
+        "difference": {
+          "a_minus_b": -84,
+          "b_minus_a": 84
+        },
+        "mod": {
+          "a_mod_b": 7,
+          "b_mod_a": 0
+        },
+        "pair": [
+          7,
+          91
+        ],
+        "product": 637,
+        "ratio": {
+          "a_div_b": null,
+          "b_div_a": 13.0
+        },
+        "sum": 98
+      },
+      {
+        "difference": {
+          "a_minus_b": -18,
+          "b_minus_a": 18
+        },
+        "mod": {
+          "a_mod_b": 13,
+          "b_mod_a": 5
+        },
+        "pair": [
+          13,
+          31
+        ],
+        "product": 403,
+        "ratio": {
+          "a_div_b": null,
+          "b_div_a": null
+        },
+        "sum": 44
+      },
+      {
+        "difference": {
+          "a_minus_b": -78,
+          "b_minus_a": 78
+        },
+        "mod": {
+          "a_mod_b": 13,
+          "b_mod_a": 0
+        },
+        "pair": [
+          13,
+          91
+        ],
+        "product": 1183,
+        "ratio": {
+          "a_div_b": null,
+          "b_div_a": 7.0
+        },
+        "sum": 104
+      },
+      {
+        "difference": {
+          "a_minus_b": -60,
+          "b_minus_a": 60
+        },
+        "mod": {
+          "a_mod_b": 31,
+          "b_mod_a": 29
+        },
+        "pair": [
+          31,
+          91
+        ],
+        "product": 2821,
+        "ratio": {
+          "a_div_b": null,
+          "b_div_a": null
+        },
+        "sum": 122
+      }
+    ]
+  },
+  "output_3_lane_a": {
+    "alpha": 0.005,
+    "conclusion_scope": "bears on FF67/G-ESC-001 relationship only, not G-MSL-001; no pair-selection claim",
+    "decision_rule": "holm_adjusted_p_lt_alpha_strict",
+    "hypotheses": {
+      "g_i_primary": [
+        103,
+        105
+      ],
+      "union_e_g_h_i": [
+        101,
+        103,
+        104,
+        105
+      ]
+    },
+    "observed": {
+      "digits": [
+        5,
+        7,
+        4,
+        0,
+        6,
+        1
+      ],
+      "hit_g_i_primary": true,
+      "hit_union_e_g_h_i": true
+    },
+    "populations": {
+      "exhaustive_151200": {
+        "counts": {
+          "g_i_primary": {
+            "extreme_count": 48,
+            "trials": 151200
+          },
+          "union_e_g_h_i": {
+            "extreme_count": 60,
+            "trials": 151200
+          }
+        },
+        "holm_p": {
+          "g_i_primary": 0.0006481438614823976,
+          "union_e_g_h_i": 0.0006481438614823976
+        },
+        "raw_p": {
+          "g_i_primary": 0.0003240719307411988,
+          "union_e_g_h_i": 0.0004034364852084312
+        },
+        "rejections_holm_p_lt_alpha": {
+          "g_i_primary": true,
+          "union_e_g_h_i": true
+        }
+      },
+      "sampled_100000": {
+        "counts": {
+          "g_i_primary": {
+            "extreme_count": 27,
+            "trials": 100000
+          },
+          "union_e_g_h_i": {
+            "extreme_count": 38,
+            "trials": 100000
+          }
+        },
+        "holm_p": {
+          "g_i_primary": 0.0005599944000559995,
+          "union_e_g_h_i": 0.0005599944000559995
+        },
+        "raw_p": {
+          "g_i_primary": 0.00027999720002799973,
+          "union_e_g_h_i": 0.0003899961000389996
+        },
+        "rejections_holm_p_lt_alpha": {
+          "g_i_primary": true,
+          "union_e_g_h_i": true
+        }
+      }
+    },
+    "salph_103_convention_fact": {
+      "conventions_giving_103": 1,
+      "conventions_tested": 4,
+      "note": "non-random enumerated fact, not a calibrated p-value; reported side-by-side, not combined"
+    }
+  },
+  "output_3_lane_b": {
+    "candidates": [
+      {
+        "bip32_seed_form_path_enumeration": {
+          "address_checks": 34,
+          "bip32_derivation_steps": 100,
+          "candidate_count": 1,
+          "candidate_digest": "2382f5837a2961ad",
+          "hardening_modes": 2,
+          "hits": [],
+          "path_count": 8,
+          "seed_forms": 2,
+          "total_hits": 0
+        },
+        "canonical_text": "574061",
+        "direct_bytes_as_scalar": {
+          "hit": null,
+          "status": "checked",
+          "valid_scalar": true
+        },
+        "id": "prime_574061",
+        "sha256_as_scalar": {
+          "hit": null,
+          "status": "checked",
+          "valid_scalar": true
+        },
+        "type": "integer"
+      },
+      {
+        "bip32_seed_form_path_enumeration": {
+          "address_checks": 34,
+          "bip32_derivation_steps": 100,
+          "candidate_count": 1,
+          "candidate_digest": "d3d043a359abb24d",
+          "hardening_modes": 2,
+          "hits": [],
+          "path_count": 8,
+          "seed_forms": 2,
+          "total_hits": 0
+        },
+        "canonical_text": "311027",
+        "direct_bytes_as_scalar": {
+          "hit": null,
+          "status": "checked",
+          "valid_scalar": true
+        },
+        "id": "prime_311027",
+        "sha256_as_scalar": {
+          "hit": null,
+          "status": "checked",
+          "valid_scalar": true
+        },
+        "type": "integer"
+      },
+      {
+        "bip32_seed_form_path_enumeration": {
+          "address_checks": 34,
+          "bip32_derivation_steps": 100,
+          "candidate_count": 1,
+          "candidate_digest": "844e55a4d447f34d",
+          "hardening_modes": 2,
+          "hits": [],
+          "path_count": 8,
+          "seed_forms": 2,
+          "total_hits": 0
+        },
+        "canonical_text": "33414671",
+        "direct_bytes_as_scalar": {
+          "hit": null,
+          "status": "checked",
+          "valid_scalar": true
+        },
+        "id": "prime_33414671",
+        "sha256_as_scalar": {
+          "hit": null,
+          "status": "checked",
+          "valid_scalar": true
+        },
+        "type": "integer"
+      },
+      {
+        "bip32_seed_form_path_enumeration": {
+          "address_checks": 34,
+          "bip32_derivation_steps": 100,
+          "candidate_count": 1,
+          "candidate_digest": "9a5135d0c61c7b7d",
+          "hardening_modes": 2,
+          "hits": [],
+          "path_count": 8,
+          "seed_forms": 2,
+          "total_hits": 0
+        },
+        "canonical_text": "THEFLOWER",
+        "direct_bytes_as_scalar": {
+          "hit": null,
+          "status": "checked",
+          "valid_scalar": true
+        },
+        "id": "theflower",
+        "sha256_as_scalar": {
+          "hit": null,
+          "status": "checked",
+          "valid_scalar": true
+        },
+        "type": "text"
+      },
+      {
+        "bip32_seed_form_path_enumeration": {
+          "address_checks": 34,
+          "bip32_derivation_steps": 100,
+          "candidate_count": 1,
+          "candidate_digest": "368d504a50cf2484",
+          "hardening_modes": 2,
+          "hits": [],
+          "path_count": 8,
+          "seed_forms": 2,
+          "total_hits": 0
+        },
+        "canonical_text": "2431611237214124471074211414221316122016161124131025122622123518414242545191121152243113224101217201971",
+        "direct_bytes_as_scalar": {
+          "status": "not_applicable_too_long"
+        },
+        "id": "salph_103_digit_stream",
+        "sha256_as_scalar": {
+          "hit": null,
+          "status": "checked",
+          "valid_scalar": true
+        },
+        "type": "text"
+      }
+    ],
+    "excluded_candidates": [
+      {
+        "id": "youwon",
+        "reason": "recognition_only, ineligible for Output-3 value matching"
+      },
+      {
+        "id": "exec_order_13224",
+        "reason": "recognition_only, ineligible for Output-3 value matching"
+      },
+      {
+        "id": "btcseed_p90_p91_q472",
+        "reason": "direct-scalar: N/A, exceeds 32 bytes for all four fields; sha256-scalar and bip32-seed: closed negative, Phase 400 (tools/gsmg/findings/P00400.md), 96032 checks, 0 hits -- cited, not re-run"
+      }
+    ],
+    "target_set_size": 10,
+    "target_set_source": "raw_key_chunk_audit.known_targets()",
+    "total_hits": 0
+  },
+  "password_materials_generated": 0,
+  "phase": 468
+}

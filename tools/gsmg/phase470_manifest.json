@@ -1,0 +1,35 @@
+{
+  "phase": 470,
+  "date": "2026-09-02",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-02 - Phase 470 Frontier Actionability Protocol.md",
+    "sha256": "e2903a837d631ba40930529b4b77c66305a4c5f04792af0364fab708505faaa9"
+  },
+  "audit_script": {
+    "path": "tools/gsmg/phase470_frontier_actionability_audit.py",
+    "sha256": "9165ba2730b32df21f6f721b5e1dab636805cb106348d0a5e349eefcb693b7d7"
+  },
+  "pinned_inputs": [
+    {"path": "doc/GSMG_PHASE467_CLOSED_SYSTEM_CONSTRAINT_CLOSURE.md", "sha256": "23c1682bd6c56e33dcadb7bd36c8b664965574202498fc78e8d15971cb553d11"},
+    {"path": "doc/GSMG_P456_SEED1_UNRESOLVED_RULE_TRANSFER.md", "sha256": "2e494fc312aac3a1a2c1de6372f5c89b38533054c39354dd0ffa962f8fa3cfa6"},
+    {"path": "doc/GSMG_P455_THISPASSWORD_TYPED_SEMANTIC_CHECKSUM.md", "sha256": "9385ee6b2fc525736985333de9f9aebb970f536145a270464306a8f79d508fa9"},
+    {"path": "doc/GSMG_P449_G_ESC_PAIR_DISCRIMINATION.md", "sha256": "50ea89a694cc3f3c2a8a505c60419670d7f5471902a7bdc40ca53e5d4d109775"},
+    {"path": "doc/GSMG_TOPOLOGY_AUDIT.md", "sha256": "388e5288186963bbda40e7ac7042d6b54ef07b2c8c23e41a913103678b8ff2f0"}
+  ],
+  "selector_ids": [
+    "dbbi_faed_topology",
+    "faed_escape_pair",
+    "thispassword_role",
+    "architect_edge_mirror_relation"
+  ],
+  "decision_rule": "executable only with unused held input satisfying native-type, local-operation, and comparable-output gates",
+  "prohibitions": {
+    "no_transforms": true,
+    "no_scoring": true,
+    "no_password_material": true,
+    "no_hash_candidates": true,
+    "no_decryptions": true,
+    "no_oracle_calls": true,
+    "no_corpus_rescans": true
+  }
+}

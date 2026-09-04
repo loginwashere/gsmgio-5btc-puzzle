@@ -1,0 +1,69 @@
+{
+  "phase": 468,
+  "date": "2026-09-01",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-01 - Phase 468 Known-Parts Cross-Reference Protocol.md",
+    "sha256": "4f0d3a9ce77f55896c3ccf8c9dd3660ca9b24f898a20497cb18f4a0fcbb3ae25"
+  },
+  "pinned_inputs": [
+    {
+      "path": "tools/gsmg/phase468_known_parts_catalog.py",
+      "sha256": "203a5503bb6cdb8e20230afb127300496329d669f069012f7841bd4e5b8ca2c5"
+    },
+    {
+      "path": "tools/gsmg/phase453_false_discovery_calibration.py",
+      "sha256": "96bb52b1669b596f45688982efc82efd88103ad286fb35a5f69119eefac110d1"
+    },
+    {
+      "path": "tools/gsmg/binary_key_material_backfill.py",
+      "sha256": "2d930bea3a8dabbc6e390d56e8c019ed968dbe301502fbbb4928f075aa9a8b02"
+    },
+    {
+      "path": "tools/gsmg/bip32_authenticated_number_paths_audit.py",
+      "sha256": "369c6ae9407c0021c242084433977c1fd72e217017a8ca62b15318725a89f4d2"
+    },
+    {
+      "path": "tools/gsmg/raw_key_chunk_audit.py",
+      "sha256": "9f658ac2e32e052550c3175c9a333a1d5dd661093d6f324810dffdb85c0d64d6"
+    }
+  ],
+  "environment": {
+    "python_version": "3.12.3"
+  },
+  "lane_a": {
+    "master_seed_derivation": "int(hashlib.sha256(b'phase468-lane-a-master-seed').hexdigest(), 16) % (2**32)",
+    "master_seed": 3983753029,
+    "primary_trials": 100000,
+    "primary_generator": "random.Random(master_seed).sample(range(10), 6)",
+    "exhaustive_generator": "itertools.permutations(range(10), 6)",
+    "population_digests": {
+      "sampled_100000": "38e44c3e37ad33fab1b408d72766b2b4b52e26dbe89f0a32f941793bd8442942",
+      "exhaustive_151200": "6c20ae374f8cdad78c1a9c6aca58d15c1f4c48fc7cdfcfbb80079f706629d54b"
+    },
+    "digest_serialization": "json.dumps(obj, sort_keys=True, separators=(',', ':')), utf-8, sha256",
+    "hypotheses": {
+      "g_i_primary": [103, 105],
+      "union_e_g_h_i": [101, 103, 104, 105]
+    },
+    "alpha": 0.005,
+    "decision_rule": "holm_adjusted_p_lt_alpha_strict",
+    "observed_digits": [5, 7, 4, 0, 6, 1]
+  },
+  "lane_b": {
+    "target_set_source": "tools/gsmg/raw_key_chunk_audit.py::known_targets()",
+    "target_set_size": 10,
+    "candidate_ids": [
+      "prime_574061", "prime_311027", "prime_33414671", "theflower", "salph_103_digit_stream"
+    ],
+    "excluded_candidate_ids": ["youwon", "exec_order_13224", "btcseed_p90_p91_q472"]
+  },
+  "prohibitions": {
+    "no_password_generation": true,
+    "no_oracle_beyond_existing_exact_target_check": true,
+    "no_rescoring_closed_phases_448_450_453_456_464_465_466_467": true,
+    "no_third_lane_a_hypothesis": true,
+    "no_pair_selection_or_favoring_claim": true,
+    "no_reuse_of_small_number_coincidence_calibration_statistic": true
+  },
+  "stop_rule": "one pass; no threshold shopping; no post-hoc hypothesis addition; reopen condition required regardless of outcome"
+}

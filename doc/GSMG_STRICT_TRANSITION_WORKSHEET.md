@@ -1,7 +1,7 @@
 ---
 type: worksheet
 status: live
-date: 2026-08-19
+date: 2026-09-01
 topics:
   - gates
   - evidence-discipline
@@ -12,13 +12,13 @@ aliases:
 
 # GSMG Strict Transition Worksheet
 
-**Date:** 2026-08-09 (rows refreshed through Phase 321 on 2026-08-19)  
+**Date:** 2026-08-09 (rows refreshed through Phase 466 on 2026-09-01)
 **Purpose:** prevent a reproducible or thematic side-reading from being
 silently promoted into a puzzle instruction, password, or cipher consumer.
 
 ## Current boundary
 
-The strongest unresolved creator-grounded transition is:
+The creator-grounded macro boundary is:
 
 ```text
 yellowblueprimes
@@ -27,6 +27,20 @@ yellowblueprimes
 -> matrixsumlist
 -> UNKNOWN OPERATION
 ```
+
+Phases 461/464 establish and provenance-test a separate, stronger recognition checkpoint under the default
+six-digit-prime grammar:
+
+```text
+574061 + quarter-turn inverse prime 311027
+-> BUTH / FLOW / TRUE
+-> THEFLOWER
+-> UNKNOWN CONSUMER
+```
+
+This second route reaches an authenticated old-password prefix but remains
+post hoc at its composition layer; it does not replace the missing operation
+on the 31-character route or establish the creator's `yinyang` state.
 
 The worksheet does not assume that every exact pattern must be consumed. A
 candidate advances only when its provenance, input, and complete operation are
@@ -145,6 +159,7 @@ community accounts is not a reopening condition.
 | Candidate transition | G1 source | G2 input | G3 operation | G4 output | G5 controls | Current disposition | Reopen trigger |
 |---|---|---|---|---|---|---|---|
 | 31-character DBBI selection -> proposed `matrixsumlist` consumer | **PARTIAL**: the selection and following macro token are real, but their operand relationship is not | **PASS**: `ncsyangcahiriasogaleafayanestve` | **FAIL**: no source binds the input to dimensions, traversal, values, and sum/index semantics (book pages 57–58, the only remaining uninspected primary source, reviewed Phase 259: no matrix content, 0/7 G3 fields fixed; Phase 454 recipient-side acquisition found no new primary operation/consumer artifact) | **FAIL**: no next-stage artifact; its broad-word cluster misses the promotion threshold (`p=0.005469995`) | **PASS** for disposition: seven G3 fields remain unbound and many bounded consumers are negative | **Structural checkpoint; parked (Phase 236, reviewed Phase 259)** | Primary evidence fixing the complete operation — a creator clue, recovered guide step, or pre-cutoff code artifact; the book's pages 57–58 no longer qualify as unexamined |
+| Rotated 24-aperture inverse-prime pair -> `THEFLOWER` | **PARTIAL**: first-piece colors, plural macro token, rose pole, and community grille observation are real; Phase 464's preregistered audit found no creator source selecting the 90-degree turn | **PASS**: exact apertures, four rotations, spiral order, both polarities, and frozen Architect source | **PARTIAL**: six-digit gate and orientation family are exhaustive, but total-word framing, parity/reversal, affix choice, and their composition were formalized after seeing outputs | **PARTIAL**: exactly one eligible orientation reaches the authenticated Phase-1 prefix `THEFLOWER`; no downstream consumer, direct blob families negative, bounded continuation cannot derive `BLOSSOMS` | **PASS** for disposition: all 16 geometry paths, row-major control, 729 row-sum pairs, 205,632 affix variants, 69,120 no-reuse `BLOSSOMS` variants, direct oracles, cyclic-controlled Phase-1 running-key reuse, and exact-crib reuse recorded | **Strong recognition checkpoint; parked (Phases 461/464-467; Phase 467 leaves operation, representation, and consumer unbound)** | Independent pre-discovery evidence selects the quarter-turn and another load-bearing operation, or an authenticated consumer accepts the result |
 | Historical 14x14 DBBI row sums -> `IZLKESEEDQPPEN` | **PASS**: recovered Telegram guide | **PASS**: exact matrix/token chunks | **PASS** for historical row-major sums | **FAIL**: non-language; opens no target | **PASS**: directions and Caesar family calibrated; `p≈0.119`/`0.713` | **Closed negative** | New clue selecting a distinct consumer, not another direction |
 | Prime lists -> `401/400/73` | **PARTIAL**: exact prime walk and literal list grammar, but alternative to historical guide | **PASS**: 14 blue, 8 yellow, 1 FEFE lists | **PASS**: partition and sums are fixed | **FAIL**: no instruction/key or downstream consumer (Phase 260/261: title `CD=400` is an exact but non-unique-style echo. Phase 263: Roman projections `DBBI->DI`, `FAED->D`, prefixed with title `C`, give canonical `CDI/CD=401/400` in exact color order; unique in 1/14 rail configurations but not globally unique -- 2/1,092 disclosed token controls, no selector for Roman filtering/title `C`, and FEFE/73 remains unexplained. Phase 450: the winning rule applied to FEFE with no new choice gives `C=100`, not `73` -- checked negative -- and a pre-registered Telegram corpus sweep found no creator-authored or creator-endorsed consumer, Roman-form co-occurrence, or selector phrase) | **PASS**: fixed-profile rate documented; FE normalization shown dependent; Phase 263 controls disclosed; Phase 453 Roman nulls common after four-case Holm correction; Phase 456 source replay exact but 0/3 solved boundaries have comparable local Roman/title-C/password grammar | **Structural checkpoint only** | Explicit clue consuming all three sums or selecting Roman projection/title `C` and explaining FEFE/73 |
 | Decimal matrix -> `[23,16,7]` -> Architect words | **PASS** for matrix sums and sourced dialogue | **PASS**: fixed matrix/list and scene | **PARTIAL**: word indexing fixed; beginnings/endings and polarity are not. Phase 232's bounded `partial_mirror9` (B↔H/D↔F/C↔G) audit found `HYE -> BYE` as the unique dictionary output (5/48 `BUT` rows; 36/35,904 stable triples; 1/6 fixed-word permutations). Phase 236 adds that only selected `BOTH`, among the three eligible B-initial words, has mirror endpoints B/H. This is real structural evidence, not a creator-selected operation | **PARTIAL**: `CIAO BELLA O` is authenticated page text; the `BYE -> Bella Ciao` association has genuine historical community precedent; their linkage is structurally supported, but not creator-selected. Phase 234 confirmed neither creator corpus ever selects CIAO, BELLA, or BYE as the yin-yang state. Still no authenticated consumer | **PASS**: associated FAED `{h,e}` model negative; direct-password checks for the CIAO/BELLA and KEY/NOTE/SELF families were negative (Phases 234-235); Phase 237 closed their legacy `pad28` checkerboard-keyword gap against P32TRAILING/URLBLOB (2,160 decoder configurations, 171,936 blob/KDF decryptions, zero strong or weak hits); Phase 456 source replay exact but 0/3 solved boundaries have a comparable selector/edges-mirror/output-role grammar | **Recognition checkpoint; parked** | Clue selecting beginnings/endings or B↔H operation — approached structurally by Phases 232/236, but remains evidentially unmet: no creator clue selects this operation or this output |

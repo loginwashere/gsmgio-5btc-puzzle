@@ -1,0 +1,57 @@
+{
+  "phase": 474,
+  "date": "2026-09-02",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-02 - Phase 474 Selected-31 Exact-Cover Anagram Protocol.md",
+    "sha256": "964769140520c156505ef2575af3f564ffb6662663eb3f24098e4baedff83dc9"
+  },
+  "audit_script": {
+    "path": "tools/gsmg/phase474_selected31_exact_cover_anagram_audit.py",
+    "sha256": "8b5dd1a4fc3a8d1ea8496b9f99054219667d21dd2398fcb32fb2bb8662225c1f"
+  },
+  "pinned_inputs": [
+    {
+      "path": "tools/gsmg/data.py",
+      "sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2"
+    },
+    {
+      "path": "tools/gsmg/denis_prime_extraction_audit.py",
+      "sha256": "4c1997fbeb1637c13cff95d7e82ec2d7bd90e16060faa4e0a3f7cd3670603e6c"
+    },
+    {
+      "path": "tools/gsmg/transition_evidence_recovery_audit.py",
+      "sha256": "bbfa63aa1d0bbedb279156c7a7944ff024617a4370ac77cf7073ebbcdcb56447"
+    },
+    {
+      "path": "wordlists/bip39/english.txt",
+      "sha256": "2f5eed53a4727b4bf8880d8f3f199efc90e58503646d9ff8eff3a2ed3b24dbda"
+    },
+    {
+      "path": "wordlists/gsmg/chat_mined_words.txt",
+      "sha256": "fffc5ecd4a11533ca69a62355464ab02d1ac4b51f94d988d4c22463059b65a60"
+    }
+  ],
+  "grammar": {
+    "exact_full_multiset": true,
+    "minimum_words": 1,
+    "maximum_words": 8,
+    "word_repetition_allowed": true,
+    "serialized_minimum_bag_cap": 200,
+    "phrase_order_scored": false
+  },
+  "calibration": {
+    "rng": "numpy.default_rng",
+    "seed": 474,
+    "control_count": 200,
+    "control_rule": "uniform 31-position subsets without replacement from VALIDATION_ANSWER",
+    "lower_tail_alpha": 0.005
+  },
+  "prohibitions": {
+    "no_output_driven_lexicon_or_score_changes": true,
+    "no_phrase_order_claim": true,
+    "no_password_generation": true,
+    "no_faed_usage": true,
+    "no_decryption": true,
+    "no_oracle_calls": true
+  }
+}

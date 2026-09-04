@@ -1,0 +1,12 @@
+{
+  "phase": 474,
+  "status": "technical_inconclusive_before_result",
+  "runtime_seconds": 4032.20,
+  "exit_code": 130,
+  "result_file_created": false,
+  "manifest_sha256": "9e0f5f4804fb131c11b4f13d382c053f6665542f9831f92045c8116e27ebf4f4",
+  "execution_lock_sha256": "9535106d003f76f2fe57e13d70e098038286aa52c21479a740ec15d3e6fb8c7b",
+  "output_inspected": false,
+  "traceback_stage": "independent-lexicon exact DFS fallback for a random control",
+  "reason": "Stopped after the predeclared practical one-hour cutoff. The target and discovery tiers had completed internally, but build_report had not returned and no control/calibration result was serialized or printed. The 200-control minimum-through-eight-word calibration is therefore unexecuted, not negative."
+}

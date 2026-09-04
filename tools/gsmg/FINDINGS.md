@@ -28280,3 +28280,667 @@ primary evidence plus a new authenticated prediction. `G-ESC-001` and
 `G-YIN-001` remain parked; no pair, role, decoder, consumer, plaintext,
 password, or oracle result is promoted. Full report:
 [doc/GSMG_P460_BOUNDARY_SAFE_DUAL_STREAM_CALIBRATION.md](../doc/GSMG_P460_BOUNDARY_SAFE_DUAL_STREAM_CALIBRATION.md).
+<!-- audit_doc_override: GSMG_ROSE_PRIME_CLOSED_CYCLE_AUDIT.md -->
+## Phase 461 -- rotated-prime orientation and `THEFLOWER` closed-loop checkpoint: unique in the frozen family, not a selected consumer (2026-09-01)
+
+**Question:** does the complete orientation/polarity family independently
+select the `574061 -> 311027 -> THEFLOWER` route, and does the resulting
+flower/rose loop establish an executable transition?
+
+**Frozen inputs:** the authenticated 14x14 first piece; its 24 colored URL-LSB
+apertures; the creator-established spiral order; the four physical 90-degree
+rotations; both bit polarities; the existing two-by-three decimal-matrix
+grammar; the frozen Architect source; and the previously enumerated
+frame/parity/affix family.
+
+**Method:** enumerate all 16 start/direction/polarity paths, require both
+adjacent readings to be six decimal digits, then apply the already-declared
+matrix, frame, parity, reversal, join, and nine-word affix operations. Run the
+same family in row-major order as a traversal control.
+
+**Result:** exactly two paths pass the six-decimal gate and both contain the
+same inverse-prime pair in opposite order: `574061` and `311027`. Exactly one
+of the two orders produces `THEFLOWER`; it begins at the established
+`F73D92` rose/pink pole and turns clockwise. Row-major order has no eligible
+two-value path. The hit is also the exact prefix of the authenticated Phase-1
+credential, but the target and rose interpretation predate this audit. Direct
+blob-password families remain negative, and the bounded continuation cannot
+derive the next authenticated word `BLOSSOMS` without target-driven reuse.
+
+**Disposition:** recognition-only; strong closed-loop checksum, parked. This
+does not identify `thispassword`, close `yinyang`, or select a downstream
+consumer.
+
+**Facts affected:** adds `F-CHAIN-019`; adds `G-FLOWER-001`; no existing gap
+closes.
+
+**Supersedes/corrects:** none. Consolidates the standalone Denis rotation,
+second-prime matrix, flower-prefix, and `BLOSSOMS` boundary audits under one
+canonical scope statement.
+
+**Artifacts:** `doc/GSMG_ROSE_PRIME_CLOSED_CYCLE_AUDIT.md`;
+`tools/gsmg/rose_prime_closed_cycle_audit.py`;
+`tools/gsmg/test_rose_prime_closed_cycle_audit.py`; supporting reports
+`doc/GSMG_DENIS_ROTATION_GRILLE_AUDIT.md`,
+`doc/GSMG_SECOND_PRIME_MATRIXSUMLIST_AUDIT.md`,
+`doc/GSMG_FLOWER_PREFIX_CHECKPOINT_AUDIT.md`, and
+`doc/GSMG_BLOSSOMS_BOUNDARY_AUDIT.md`.
+
+**Reopen condition:** creator-authored or otherwise independent pre-discovery
+evidence selects the 90-degree turn and at least one other load-bearing
+operation, an authenticated downstream artifact consumes the result, or a
+preregistered continuation predicts unseen material.
+<!-- audit_doc_override: GSMG_PERIODIC_GRILLE_FEFE_AUDIT.md -->
+## Phase 462 -- periodic 49-aperture grille and `FEFEFE`: full-grille extension closed negative (2026-09-01)
+
+**Question:** does extending the 24 colored apertures to the natural
+`(row-column) mod 4 = 3` turning grille produce another prime or make the
+`FEFEFE` anomaly select the rotated-prime chain?
+
+**Frozen inputs:** the exact 24 colored apertures, their 25-cell periodic
+completion, all four rotations, spiral and row-major orders, raw and inverse
+polarity, and one sensitivity toggle for the sole `FEFEFE` cell.
+
+**Method:** keep the colored, added, and full rails separate and test the
+complete four-turn by three-rail by two-polarity family without padding,
+truncation, language scoring, candidate generation, or oracle calls.
+
+**Result:** all eight complete 49-bit readings are composite. Toggling
+`FEFEFE` changes no primality result. One added-rail inverse value,
+`33414671` (`1FDDE0F`), is prime but occurs on a rotation that never touches
+`FEFEFE`, has no local occurrence or consumer, and is unsurprising at this
+scale. Row-major order produces no primes in the corresponding family.
+
+**Disposition:** rejected for a full-grille prime or `FEFEFE` selector; the
+49-aperture branch is parked.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `doc/GSMG_PERIODIC_GRILLE_FEFE_AUDIT.md`;
+`tools/gsmg/periodic_grille_fefe_audit.py`;
+`tools/gsmg/test_periodic_grille_fefe_audit.py`.
+
+**Reopen condition:** an independent artifact names `33414671`, `1FDDE0F`, a
+25-bit rail, or a consumer for the complete grille.
+<!-- audit_doc_override: GSMG_YOUWON_SALPH_103_ALIGNMENT_AUDIT.md -->
+## Phase 463 -- `YOUWON` tail and SALPH 103-character alignment: exact but boundary-dependent recognition (2026-09-01)
+
+**Question:** does the community-derived `YOUWON` output carry a constrained
+alignment to the six SalPhaseIon instruction fragments?
+
+**Frozen inputs:** the established 91-character DBBI-minus-validation-answer
+output; all 92 suffix cuts; A0Z25/A1Z26 in unpadded and fixed-width forms; and
+the six authenticated SALPH fragments in their existing order and lengths.
+
+**Method:** serialize every suffix under the four ordinary letter-number
+conventions and test exact total length and fixed-boundary alignment. Compare
+the winning lexical cut with the native 13x7 row boundary.
+
+**Result:** only unpadded A1Z26 and only the cut immediately after the lexical
+word `YOUWON` produce 103 digits. Under the established SALPH boundaries, the
+`enter` slice is uniquely `13224`, a coherent but retrospective reference to
+Executive Order 13224 and the `11 SEP 01` theme. The native grid boundary is
+instead `YOUWONX` and leaves 101 digits, so the result depends on moving the
+row-final `X` across the boundary. No creator source selects that move or the
+Executive-Order interpretation.
+
+**Disposition:** recognition-only; structural alignment retained, no
+transition, password, or new cipher search licensed.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `doc/GSMG_YOUWON_SALPH_103_ALIGNMENT_AUDIT.md`;
+`tools/gsmg/youwon_salph_103_alignment_audit.py`;
+`tools/gsmg/test_youwon_salph_103_alignment_audit.py`.
+
+**Reopen condition:** creator-authored evidence selects the `YOUWON | X...`
+boundary, unpadded A1Z26, and an Executive-Order consumer, or an authenticated
+downstream artifact consumes `13224` without additional choices.
+<!-- audit_doc_override: GSMG_PHASE464_ROTATED_PRIME_PROVENANCE_AUDIT.md -->
+## Phase 464 -- preregistered creator-provenance audit of `311027 -> THEFLOWER`: no independent selector or consumer (2026-09-01)
+
+**Question:** does pre-discovery creator evidence independently select the
+load-bearing operations in the rotated-prime chain, or does an authenticated
+downstream artifact consume `THEFLOWER`?
+
+**Frozen inputs:** four SHA-256-pinned Telegram exports; creator ID
+`user9815232`; solver cutoff `<65935`; seven explicit selector classes; all
+creator text, direct reply parents, and creator media. Promotion required an
+exact independent `311027`/`04BEF3`, a creator-selected quarter-turn plus a
+second operation, or an authenticated consumer.
+
+**Method:** audited 5,901 creator messages and their licensed reply contexts;
+hashed and freshly OCR-extracted all 88 creator-media records (83 unique, zero
+missing; five fixed frames per video); manually classified every one of 14
+rotation-plus-second-selector text candidates and both media keyword hits.
+The manual-review file is machine-checked for exact candidate coverage.
+
+**Result:** zero exact references. All 14 text candidates are ordinary
+philosophical, post-discovery joke, trading/product, or shutdown contexts;
+none specifies a 90-degree first-piece turn. The two media hits are an
+operation-free Matrix action/reaction clip and a dashboard's “Total account
+value.” The known rose clue authenticates first-piece/flower context only;
+the older Caesar/`esrever` precedent belongs to a different solved stage.
+No authenticated consumer was found. Zero password candidates and zero oracle
+calls were made.
+
+**Disposition:** negative; `THEFLOWER` remains a strong recognition checksum,
+and `G-FLOWER-001` remains parked. Do not extend to `BLOSSOMS`, password
+permutations, or the 49-cell grille.
+
+**Facts affected:** `F-CHAIN-019` gains a completed negative provenance audit;
+no new fact and no gap closure.
+
+**Artifacts:**
+`doc/GSMG_PHASE464_ROTATED_PRIME_PROVENANCE_AUDIT.md`;
+`tools/gsmg/phase464_rotated_prime_provenance_audit.py`;
+`tools/gsmg/phase464_rotated_prime_provenance_manifest.json`;
+`tools/gsmg/phase464_manual_review.json`;
+`tools/gsmg/phase464_result.json`;
+`tools/gsmg/test_phase464_rotated_prime_provenance_audit.py`.
+
+**Reopen condition:** genuinely new independent evidence meets one of the
+three frozen promotion gates, or a preregistered continuation predicts unseen
+material.
+<!-- audit_doc_override: GSMG_PHASE465_PHASE1_RUNNING_KEY_AUDIT.md -->
+## Phase 465 -- authenticated Phase-1 credential as a DBBI/FAED running key: cyclic-control gate negative (2026-09-01)
+
+**Question:** does `THEFLOWER` route the full authenticated Stage-1 credential,
+or its exact continuation, into DBBI/FAED through the inherited Phase-310/320
+modular running-key mechanisms?
+
+**Result:** offset zero never ranks first for FAED across the eight frozen
+key-scope/insertion/sign configurations (`50/53`, `23/53`, `9/53`, `7/53`,
+`30/44`, `27/44`, `44/44`, `21/44`). The structural gate blocks language
+decoding. DBBI provides no joint support.
+
+**Disposition:** rejected for this exact running-key family. `THEFLOWER`
+remains a recognition checkpoint. Zero password candidates and oracle calls.
+
+**Artifacts:** `doc/GSMG_PHASE465_PHASE1_RUNNING_KEY_AUDIT.md`; protocol and
+manifest; `tools/gsmg/phase465_phase1_running_key_audit.py`;
+`tools/gsmg/phase465_result.json`; test.
+<!-- audit_doc_override: GSMG_PHASE466_PHASE1_CREDENTIAL_CRIB_AUDIT.md -->
+## Phase 466 -- authenticated Phase-1 credential as an exact DBBI/FAED crib: negative (2026-09-01)
+
+**Question:** is the 53-letter Stage-1 credential, or its 44-letter
+post-`THEFLOWER` continuation, embedded as monoalphabetic checkerboard
+plaintext in DBBI/FAED?
+
+**Result:** six exact crib/target/pair families and all cyclic controls give
+zero matches. No partial mapping or downstream plaintext exists to promote.
+
+**Disposition:** exact-crib hypothesis rejected. Zero password candidates and
+oracle calls.
+
+**Artifacts:** `doc/GSMG_PHASE466_PHASE1_CREDENTIAL_CRIB_AUDIT.md`; protocol;
+`tools/gsmg/phase466_phase1_credential_crib_audit.py`;
+`tools/gsmg/phase466_result.json`; test.
+<!-- audit_doc_override: GSMG_PHASE467_CLOSED_SYSTEM_CONSTRAINT_CLOSURE.md -->
+## Phase 467 -- closed-system instruction/operand constraint closure: four-selector tie (2026-09-01)
+
+**Question:** do authenticated artifacts and prior negative audits uniquely
+bind a complete next transform?
+
+**Result:** 36 raw assignments were enumerated; 27 survive hard constraints,
+all 27 tie at 14/36 bound live-contract fields, and zero completes a live
+edge. The solved ENTER/SALPH reconstruction passes as a complete six-field
+positive control.
+
+**Frontier:** the surviving assignment variables are topology, FAED `GI/HE`
+escape pair, the three-way `thispassword` role, and Architect relation. The
+closest live edges are Architect, SHA, and `THEFLOWER`, each with three missing
+fields. The SHA exact/source-grounded lanes are already exhausted;
+`THEFLOWER` remains a recognition checksum. Architect mirror selection has the
+largest dependency leverage because it would also force asymmetric
+`DBBI -> FAED` and `HE`, but that implication does not authenticate it.
+
+**Disposition:** no transform licensed; next work is internal selector
+recovery, not cipher or password expansion. Zero candidate material,
+decryptions, oracle calls, or weighted scores.
+
+**Artifacts:** `doc/GSMG_PHASE467_CLOSED_SYSTEM_CONSTRAINT_CLOSURE.md`;
+protocol; manifest; `phase467_closed_system_constraint_closure.py`;
+`phase467_result.json`; test.
+<!-- audit_doc_override: GSMG_PHASE468_KNOWN_PARTS_CROSS_REFERENCE.md -->
+## Phase 468 -- known-parts structural cross-reference: two parameter_value slots, prime-31 arithmetic, calibrated FF67/ASCII conjunction, zero GGN-delta hits (2026-09-01)
+
+**Question:** with the creator confirming no further hints, does any
+already-established puzzle output structurally fill an open gate's unbound
+slot, and does the `FF67`/ASCII-escape coincidence touching `G-ESC-001`
+survive calibration against a matched null?
+
+**Frozen inputs:** `tools/gsmg/phase468_known_parts_catalog.py` (26
+established-output rows, evidence-class tagged — `31` itself, the DBBI
+selection's own length, is not a catalog row, a frozen-catalog omission
+recorded rather than patched; 9 in-scope open-gate rows, slot-kind
+tagged); `31` and `{7,13,91}` (cited read-only from
+`small_number_coincidence_calibration.py`'s frozen pool); the observed FF67
+source digit tuple `(5,7,4,0,6,1)`; 5 finalized Lane-B candidates
+(`prime_574061`, `prime_311027`, `prime_33414671`, `theflower`,
+`salph_103_digit_stream`); the pinned 10-address target set from
+`raw_key_chunk_audit.known_targets()`. Manifest and execution lock pinned
+in `tools/gsmg/phase468_manifest.json` / `tools/gsmg/phase468_execution_lock.json`.
+
+**Method:** slot-kind inventory crossing eligible established outputs
+against open-gate slot kinds (`operator`/`parameter_value`/
+`representation_or_serialization`/`consumer_interface`/`selector`) — this
+labels which slots are value-fillable (2 of the registry) but does not
+type-match individual outputs against either slot's real domain, since all
+18 eligible outputs are listed as candidates for both `parameter_value`
+slots identically; trial-
+division primality and exhaustive rectangular-factorization check on `31`
+plus a complete finite operation table over `{7,13,31,91}`; Lane A replayed
+`phase453_false_discovery_calibration.py`'s `multiply`/`orientations` over
+a 100,000-sample and the full 151,200-permutation null population, scoring
+a new event (`255` paired with an ASCII-escape companion) under exactly two
+frozen hypotheses (`{g,i}`; the union `{e,g,h,i}`), Holm-corrected across
+that 2-hypothesis axis separately per population, decision rule
+`Holm p < 0.005` strict, Phase 468's own frozen master seed; Lane B checked
+5 candidates under 3 separately-reported interpretations (direct-bytes-as-
+scalar, SHA-256-as-scalar, existing BIP32 seed-form/path enumeration) via
+`private_key_details()` and `bip32_authenticated_number_paths_audit.run()`,
+unmodified, against the pinned 10-target set. One decision-bearing run;
+outcome-dependent assertions live only in the external regression test.
+
+**Result:** exactly 2 `parameter_value` slots exist in the whole registry
+(`G-MSL-001` dimensions, `G-GGN-001` scalar `k`); every other gate's slots
+are `not_applicable` for value-filling -- both slots list the same full
+18-item eligible-outputs list as candidates (a slot-kind inventory, not a
+typed compatibility match; no per-output domain/type filtering was
+implemented). `31` is prime with zero nondegenerate rectangular
+factorizations; the `{7,13,31,91}` operation table produces nine flagged
+equalities against the set, none nontrivial beyond the `7x13=91`
+construction (six are the trivially-guaranteed `a mod b = a` identity for
+`a<b`, two more are `91/7=13`/`91/13=7` restated as division). Lane A:
+both hypotheses cross `Holm p < 0.005` under both populations (sampled:
+Holm p=0.000560 both; exhaustive: Holm p=0.000648 both) -- reported as a
+**post-observation conditional rarity calibration, not a confirmatory
+discovery result**, since the protocol itself records this numeric
+conjunction "turned up during that inventory" before the two hypotheses
+were frozen; Holm correction covers the frozen 2-hypothesis x
+2-population family but not the prior selection of this conjunction out
+of the broader inventory. Not a pair selection either way (`{h,e}` was
+never a tested hypothesis). Lane B: zero hits across 5 candidates x 3
+interpretations (34 BIP32 address checks per candidate). The SALPH-103
+chain's `103`-digit length is a separate 1-of-4 enumerated fact, reported
+unconverted into a joint p-value.
+
+**Disposition:** structural-only.
+
+**Facts affected:** none (no `GSMG_FACT_LEDGER` row established, tested, or
+revised; this phase inventories and calibrates, it does not promote a
+candidate).
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `doc/Brainstorms/2026-09-01 - Phase 468 Known-Parts Cross-Reference Protocol.md`;
+`doc/GSMG_PHASE468_KNOWN_PARTS_CROSS_REFERENCE.md`;
+`tools/gsmg/phase468_known_parts_catalog.py`;
+`tools/gsmg/phase468_known_parts_cross_reference.py`;
+`tools/gsmg/phase468_manifest.json`;
+`tools/gsmg/phase468_execution_lock.json`;
+`tools/gsmg/phase468_result.json`;
+`tools/gsmg/phase468_result_record.json`;
+`tools/gsmg/test_phase468_known_parts_cross_reference.py`.
+
+**Reopen condition:** a new authenticated primary source names an
+operation or consumer for `G-MSL-001`, `G-GGN-001`, or `G-ESC-001`; a new
+established output enters `ESTABLISHED_OUTPUTS` that wasn't in this frozen
+catalog (including `31` itself, the recorded omission above); a
+type-compatibility rule set is preregistered to upgrade Output 1 from a
+slot-kind inventory to a genuine typed match; or a genuinely new Lane-B
+interpretation is proposed and separately preregistered.
+<!-- audit_doc_override: GSMG_PHASE469_DBBI_MASK_WEIGHTED_SUM_AUDIT.md -->
+## Phase 469 -- DBBI 7x13 selected-mask weighted sums: omitted composition checked, zero direct leads (2026-09-02)
+
+**Question:** does summing selected or complementary cell values on the
+aligned 91-cell DBBI grid produce a direct `matrixsumlist` lead?
+
+**Frozen family:** exact Phase-48 positions over raw DBBI and aligned
+plaintext; row-major `7x13`/`13x7`; selected/complement/all partitions;
+zero- and one-based alphabet maps; row/column sums; separate selected `b`/`e`
+counts; direct A1Z26 only. No modular reduction, route expansion, reversal,
+cryptography, passwords, or oracle calls.
+
+**Result:** the selected raw cells reproduce 23 `b` + 8 `e`. Selected DBBI
+totals are 55 (`a0i8`) and 86 (`a1i9`); selected aligned-plaintext totals are
+279 (`a0z25`) and 310 (`a1z26`). Across all selected/complement vectors,
+zero direct renderings contain a frozen clue token and zero vectors equal
+`(23,16,7)`, `(7,13)`, or `(13,7)`. A regular-looking `13x7` selected-`b`
+row-count vector is retained as raw descriptive output only.
+
+The first attempt stopped before producing output because a historical
+transcript dependency was absent. Revision 1 was frozen before results and
+used Phase 48's already-pinned exact position tuple directly.
+
+**Disposition:** bounded negative. Closes this mask-weighted sum omission,
+not `G-MSL-001`; further variants require unsupported route or serialization
+choices.
+
+**Artifacts:** `doc/GSMG_PHASE469_DBBI_MASK_WEIGHTED_SUM_AUDIT.md` and the
+Phase-469 protocol, script, manifest, lock, result, result record, and test.
+
+**Reopen condition:** authenticated evidence selects another route, numeric
+map, serialization, or consumer for these vectors.
+<!-- audit_doc_override: GSMG_PHASE470_FRONTIER_ACTIONABILITY_AUDIT.md -->
+## Phase 470 -- frontier actionability: Architect retains conditional leverage, zero internal selector tests executable (2026-09-02)
+
+**Question:** which of Phase 467's four surviving selectors has a genuinely
+new, currently executable internal test, and is the registry's proposed
+Architect transfer distinct from Phase 456?
+
+**Method:** deterministic coverage map over DBBI/FAED topology, FAED `GI/HE`,
+the three `thispassword` roles, and the Architect relation. Conditional
+downstream leverage was separated from current executability. Existing tests,
+held-out-input availability, duplicate actions, and minimum reopening evidence
+were recorded for every selector. No transforms or scoring were run.
+
+**Result:** zero of four selectors has a current internal test. Architect
+still has the largest conditional leverage—if independently authenticated it
+would force `DBBI→FAED` and `HE` inside Phase 467's model—but its queued
+solved/checksum-boundary experiment duplicates Phase 456, which already found
+0/3 eligible boundaries. Existing proposals for topology and `thispassword`
+duplicate completed audits; reusing the same FF67 endpoint for pair selection
+would be selection-biased, not blind. No held unseen input satisfies the
+frozen eligibility gates.
+
+**Disposition:** `no_currently_executable_internal_selector_test`. Correct
+the stale `G-ARCH-001` next action; retain Architect as highest conditional
+leverage, revisiting only on a genuinely new eligible boundary or independent
+artifact. Zero password materials, hashes, decryptions, oracle calls, or
+rescans.
+
+**Artifacts:** `doc/GSMG_PHASE470_FRONTIER_ACTIONABILITY_AUDIT.md`; Phase-470
+protocol, script, manifest, execution lock, result, result record, and tests.
+
+**Reopen condition:** a new held input meets one selector's stated minimum
+evidence class without reusing the target or rule that generated it.
+<!-- audit_doc_override: GSMG_PHASE471_DBBI_ROUTE_STRUCTURE_DIAGNOSTIC_AUDIT.md -->
+## Phase 471 -- DBBI route canonicalization and structure diagnostics: 19,686 distinct readings, no 2D structure, degenerate bar-mets only (2026-09-02)
+
+**Question:** does the bounded diagnostic subset of the 2026-09-02 DBBI
+matrix-hypothesis catalog (route equivalence control, seven-segment,
+finite-field rank, calibrated 2D statistics, line-local packings) reveal
+designed structure in the 91-symbol DBBI grid?
+
+**Frozen family:** canonical DBBI only, `a0i8`, shapes `7x13`/`13x7`; 16
+rectangle reads per shape, all full-period toroidal walks, all affine
+`n -> an+b mod 91` maps, canonicalized and deduplicated; 11 binary masks;
+88 seven-segment decodes (exact 13/13 bar); GF(2)/GF(3)/GF(9) ranks and 12
+toroidal offset match rates calibrated against 10,000 count-preserving
+shuffles (seed 471, family-corrected two-sided alpha 0.001/17); 8 base-9
+and 24 `{b,e}`-bitmask line packings (all-printable bar). No passwords,
+decryptions, oracle calls, plaintext alignment, or FAED usage.
+
+**Result:** the closed route universe of 19,690 routes collapses to exactly
+19,686 distinct permutations and 19,686 distinct output strings (only
+identity and rot180 are multiply reachable) -- no accidental string
+equivalences, and the affine-mod-91 and toroidal families are disjoint
+(overlap 0), correcting the catalog's CRT-coincidence claim. The grid is
+full rank 7 over GF(2), GF(3), and GF(9) -- no parity/checksum/low-rank
+structure. No calibrated offset statistic approaches the bar (min two-sided
+p = 0.14). Base-9 packing: 0/8 printable. Seven-segment: 3/88 decodes pass
+13/13, all inverted sparse masks (`a`/`d`/`i`) yielding near-uniform `8`
+strings -- degenerate by construction. Bitmask ASCII: 2/24 printable, both
+inverted dominant-`b` density artifacts with no recognizable content. All
+five bar-mets are recorded as unconfirmed degenerate coincidences.
+
+**Disposition:** bounded negative. Catalog batch items 1 and 3-7 executed;
+items 2/8/9/10 explicitly deferred and unlicensed. `G-MSL-001` unchanged.
+
+**Artifacts:** `doc/GSMG_PHASE471_DBBI_ROUTE_STRUCTURE_DIAGNOSTIC_AUDIT.md`
+and the Phase-471 protocol, script, manifest, lock, result, result record,
+and test.
+
+**Reopen condition:** creator evidence selecting a route/mask/field
+structure, or a separately preregistered saturation-controlled follow-up
+for the degenerate exact-bar families.
+<!-- audit_doc_override: GSMG_PHASE472_DBBI_ROUTE_PLAINTEXT_ALIGNMENT_AUDIT.md -->
+## Phase 472 -- DBBI route-aware Phase-3.2.2 plaintext alignment: family-max null decisively negative (2026-09-02)
+
+**Question:** does any of Phase 471's 19,686 canonical DBBI readings align
+unusually well with the authenticated, equal-length 91-character Phase 3.2.2
+plaintext?
+
+**Frozen family:** all 19,686 globally deduplicated Phase-471 routes; four
+predeclared mod-9 conventions (`a0i8`/reversed DBBI against A0Z25/A1Z26);
+the single statistic is the maximum exact position-match count over all 78,744
+route/mapping combinations. Each target is calibrated against 2,000
+position-shuffled, multiset-preserving nulls that rerun the complete maximum.
+Four fixed 91-character corpus windows at offsets 0/273/546/819 receive the
+identical analysis. No derived text, passwords, hashes, decryptions, FAED, or
+oracle calls.
+
+**Result:** the real plaintext reaches 25/91 matches versus null mean 25.549
+(SD 1.072, range 23-30), upper-tail plus-one `p=0.8640679660`. A fixed control
+reaches 27/91 (`p=0.1239380310`). All promotion gates fail: the real p is not
+below 0.001, its maximum is not above every control, and its p is not below
+every control p. The winning real route is descriptively retained but has no
+status: approximately 86% of shuffled targets produce a family maximum at
+least as large.
+
+**Disposition:** bounded negative. Equal length supplies no positional
+relationship under the complete registered route family and frozen mappings.
+Catalog item 8 is closed at this scope; item 9 remains separate; oracle feeding
+remains unlicensed. `G-MSL-001` unchanged.
+
+**Artifacts:** `doc/GSMG_PHASE472_DBBI_ROUTE_PLAINTEXT_ALIGNMENT_AUDIT.md`
+and the frozen protocol, script, manifest, execution lock, result, result
+record, and four-test unittest module.
+
+**Reopen condition:** authenticated creator evidence selecting a new mapping,
+operator, or specific route before output inspection.
+<!-- audit_doc_override: GSMG_PHASE473_DBBI_M91_CYCLIC_CLASS_ASSOCIATION_AUDIT.md -->
+## Phase 473 -- DBBI/M91 cyclic class association: strong local parity cell fails the 1,092-cell global max null (2026-09-02)
+
+**Question:** after Phase 472's negative direct mod-9 route alignment, does
+DBBI have any categorical association with vowel status or A0Z25 residues
+modulo 2/3/7/9/13 in the equal-length Phase-3.2.2 plaintext under any cyclic
+offset?
+
+**Frozen family:** raw-nine and `{b,e}`-binary DBBI representations × six
+plaintext features × 91 offsets = 1,092 cells. Categorical mutual information
+was standardized per cell against 5,000 DBBI-multiset-preserving shuffles;
+each null reran the full family maximum. Four fixed 91-character controls were
+processed identically. No derived texts, arithmetic outputs, passwords, FAED,
+decryptions, or oracle calls.
+
+**Result:** the real winner is `{b,e}` versus plaintext A0Z25 parity at offset
+85 (`-6 mod 91`), MI 0.0705974 nats, z 8.30522. Its local plus-one p is
+0.00079984 (3 null exceedances), and it exceeds all four controls. But the
+decision-bearing 1,092-cell maximum has global `p=0.0591882` (295 null-max
+exceedances), far above the frozen 0.001 bar. Three diagnostic gates pass; the
+required global gate fails, so the conjunction is false.
+
+**Disposition:** bounded negative. Items 191-193/198 close at this scope. The
+offset-85 parity cell is the winner of a failed screen, not a selected clue.
+Phase-474 held-out validation is not licensed; targeting that observed cell
+would be post-hoc. Items 200-202 and `G-MSL-001` remain unchanged.
+
+**Artifacts:** `doc/GSMG_PHASE473_DBBI_M91_CYCLIC_CLASS_ASSOCIATION_AUDIT.md`
+and the frozen protocol, script, manifest, lock, result, result record, and
+four-test unittest module.
+
+**Reopen condition:** independently authenticated evidence selects a class and
+offset, or a genuinely new held-out object is frozen before DBBI inspection.
+<!-- audit_doc_override: GSMG_PHASE474_SELECTED31_EXACT_COVER_ANAGRAM_AUDIT.md -->
+## Phase 474 -- selected-31 exact-cover anagram inventory: clean tier arbitrary, noisy tier degenerate; calibration technically inconclusive (2026-09-02)
+
+**Question:** does `ncsyangcahiriasogaleafayanestve` admit an unusually
+compact exact full-word decomposition under a frozen independent lexicon, and
+what bounded bags appear under the broader puzzle/chat vocabulary?
+
+**Frozen scope:** exact use of all 31 letters, unordered bags of at most eight
+words, repetitions allowed; BIP-39 plus `a/i` as the independent tier;
+mechanically filtered `chat_mined_words.txt` as an explicitly contaminated
+discovery tier; 200 random 31-position subsets of the same 91-character
+plaintext as controls. No phrase ordering, passwords, FAED, decryption, or
+oracle calls.
+
+**Descriptive target result:** the independent tier has 475 fitting words and
+minimum cardinality six; one exact bag is `again / can / category / essay /
+leaf / vanish`. The contaminated tier has 3,357 fitting words and minimum
+cardinality four, but all 20 serialized minima exploit typos/fragments/joined
+tokens. All four historical manual phrases validate as exact covers, but the
+audit provides no selector among them.
+
+**Calibration:** not completed. Three locked implementations returned no
+decision output before technical interruption (1,084.75 s, 314.85 s, and
+4,032.20 s). The third completed the target tiers internally but was stopped
+while evaluating an exact five-to-eight-word fallback for a random control.
+No complete null family or p-value exists.
+
+**Disposition:** `technical_inconclusive`, with a negative descriptive
+inventory. This phase neither confirms nor statistically rejects anagram
+compressibility. It does show why the contaminated lexicon cannot select a
+meaningful phrase. The prior anagram dead-end assessment remains unchanged.
+
+**Artifacts:** `doc/GSMG_PHASE474_SELECTED31_EXACT_COVER_ANAGRAM_AUDIT.md`,
+the frozen protocol, solver, manifest, three locks/abort records, four-test
+unittest module, and `phase474_target_inventory.json`.
+<!-- audit_doc_override: GSMG_PHASE475_DBBI_P91_DEPENDENCY_AWARE_AUDIT.md -->
+## Phase 475 -- dependency-aware direct DBBI/P91 algebra closes negative (2026-09-03)
+
+**Question:** does `P91 = Phase386_decode(FAED)[7:98]` have an unusually
+English-like direct positional relationship to the equal-length DBBI string?
+
+**Frozen scope:** exactly six outputs: three position-wise mod-26 operations
+(`P91-DBBI`, `P91+DBBI`, `DBBI-P91`) and the analogous three component-wise
+mod-5 coordinate operations in Phase 386's DBBI-derived square. The sole
+decision statistic was the family-maximum frozen English quadgram score.
+No routes, shifts, reversals, alternate squares, M91, cross-splices, password
+materials, ciphertext oracles, or Bitcoin endpoints were eligible.
+
+**Dependency-aware null:** 100,000 deterministic exact-multiset FAED
+permutations; every trial reran the fixed 570-character full-block Bifid
+decode before extracting `[7:98]` and applying all six operations against
+fixed DBBI. This preserves DBBI's dual role as square source and operand,
+instead of incorrectly treating observed P91 as an independent letter bag.
+
+**Result:** the observed family maximum is `-610.5786026`, from coordinate
+`P91+DBBI`. A total of 7,887/100,000 controls equal or exceed it; add-one
+`p=0.0788792112`, versus the frozen `0.005` promotion gate. Coordinate
+addition itself wins 86,399/100,000 null families, exposing the construction's
+strong baseline asymmetry. All observed frozen-keyword lists are empty.
+
+**Disposition:** `closed_negative`. The equal 91-character lengths remain a
+real structural coincidence, but this controlled family supplies no evidence
+for deliberate direct DBBI/P91 modular or same-square coordinate arithmetic.
+The audit is conditional on the selected Phase-386 decoder/boundary and does
+not correct the historical discovery search for `BTCSEED`.
+
+**Artifacts:** `doc/GSMG_PHASE475_DBBI_P91_DEPENDENCY_AWARE_AUDIT.md`, frozen
+protocol, implementation, unittest module, and `phase475_result.json`.
+<!-- audit_doc_override: GSMG_PHASE476_P91_SECOND_BIFID_KEY_AUDIT.md -->
+## Phase 476 -- P91-derived second Bifid square over Q472 closes negative (2026-09-03)
+
+**Question:** does idea-bank item 83 produce unusual English structure under
+the natural ordered cascade: full-period DBBI-square decode of FAED, followed
+by a full-period P91-square decode of the resulting Q472?
+
+**Frozen construction:** reproduce Phase 386, take exact
+`P91=decoded[7:98]` and `Q472=decoded[98:]`, deduplicate all P91 in
+first-occurrence order through `build_grid(P91)`, and Bifid-decrypt Q472 as
+one 472-character block in the established row-column convention. No reverse
+order, M91, alternate periods, encrypt direction, routes, further passes,
+oracles, or Bitcoin endpoints. Sole decision statistic: complete-output
+English quadgram score, with primary add-one `p<=0.005` promotion gate.
+
+**Exact result:** P91 gives keyed alphabet
+`DEOMCKAHBSVXPRIQNGLUZFTWY`. The second-pass output has SHA-256
+`4aa436b32f4b01a27245b9ab1327967b1f5628f66887b8514b37b4345071e95b`,
+quadgram score `-3790.6207793`, and zero frozen-keyword hits.
+
+**Controls:** under 100,000 exact-multiset upstream FAED shuffles that
+regenerate coupled P91/Q472 and each dynamic second square, 78,038 equal or
+exceed the real score (`p=0.7803821962`). Under a secondary 100,000-trial
+fixed-observed-P91-square, Q472-multiset shuffle, 67,581 equal or exceed it
+(`p=0.6758132419`). The observed output is below typical controls under both.
+
+**Disposition:** `closed_negative`. This closes item 83 and the sole
+non-circular DBBI-then-P91 cascade. It does not execute item 84's undefined
+three-key DBBI/M91/P91 permutations, which lack operands, directions, periods,
+and an independent selector.
+
+**Artifacts:** `doc/GSMG_PHASE476_P91_SECOND_BIFID_KEY_AUDIT.md`, frozen
+protocol, implementation, unittest module, and `phase476_result.json`.
+<!-- audit_doc_override: GSMG_PHASE477A_TOKEN_COLUMNAR_TRANSPOSITION_AUDIT.md -->
+## Phase 477 -- Model A token columnar transposition of FAED `{g,i}`, exhaustive to width 11, bounded negative (p = 15/201) (2026-09-04)
+
+**Question:** is FAED, segmented under `{g,i}` into 436 checkerboard tokens,
+a ragged columnar transposition (width 2-40, unknown order) of English-like
+plaintext under one global 25-letter board (Phase 477A, Model A only)?
+
+**Frozen construction:** the 2026-09-03 draft protocol plus pre-lock
+amendments A1-A6. Untranspose direction: every one of the `w!` orders is
+enumerated for `w <= 11`, ranked by a substitution-invariant
+digraph/trigraph coincidence statistic, and the top 16 orders receive a
+30,000-proposal board anneal; widths 12-40 are `not_enumerable`. Transpose
+direction: board annealed on within-column quadgrams, order solved on
+junction gains (Held-Karp to width 16, or-opt above), polished under the
+full score. Statistic: family maximum of best quadgram score per token over
+the 49 retained cells. Power gate: score reach on holdout fixtures (10 hard
++ 5 broad per cell). Execution lock written before any FAED search;
+post-run lock consistency verified by the fail-closed
+`phase477a_verify_run.py` (every expected trial count, promotion bar,
+seed, length, and cell set is read from the locked manifest and the
+hash-checked locked script itself, not from any CLI argument, and its
+records include the real/null artifacts' own SHA-256 hashes). The
+protocol's informal "seeds `0x477A_NULL + k`" prose is a pre-lock
+protocol/implementation discrepancy: the locked script actually derives
+each null seed via a SplitMix64-style mixing function
+(`derive_seed(pair_seed(SEED_NULL), k[, 1])`), not integer addition; see
+the audit doc for the exact derivation and a worked example. This does not
+affect the null test, since the script -- not the prose -- was what was
+hashed into the lock and executed.
+
+**Power, stated precisely:** the gate demonstrates attainment of the known
+planted quadgram score, not recovery of the planted transposition or
+plaintext. All 49 cells are score-reach powered (489/490 hard fixtures) on
+fixtures whose top-7 letter share is 0.62-0.658; FAED's single-slot
+fraction is 302/436 = 0.693, so recovery power at FAED's exact
+concentration was not established. Untranspose recovery is exact in 87/100
+hard fixtures (median accuracy 1.0); transpose recovery is not (median
+character accuracy 0.076, median Kendall tau 0.056), because the order is
+not identifiable from the statistic. The draft's paired-shuffle separation
+quantity was not implemented or reported. The `trivially_powered` tag on
+widths 2-4 is programmatic, not a separate criterion.
+
+**Development facts that changed the protocol:** the (order, board) score
+landscape is flat beyond one column swap, so joint, nested, and alternating
+local searches fail at `w >= 16`; bigram-conditional board objectives are
+non-identifiable; the transpose-direction order is not identifiable (only
+`3(w-1)` of 433 windows depend on it), so the gate is score reach; the
+draft's 0.65 hard-profile pool was 20/25 index-page windows, replaced by
+prose-only sections at 0.62; no prose window reaches FAED's 0.693
+single-slot fraction (corpus maximum 0.658).
+
+**Exact result:** real family maximum `-5.2928` per token (`w = 38`
+transpose), best untranspose `-5.5299` (`w = 10`), all outputs gibberish.
+Under 200 token-preserving null trials on the identical family,
+`14` maxima equal or exceed it (`p = 15/201 = 0.0746`; null range
+`-5.4183` to `-5.2567`).
+
+**Secondary `{h,e}` width-7 diagnostic (never pooled):** 469 tokens, exact
+`7 x 67` grid, real maximum `-5.2443`, 2 of 200 own controls equal or
+exceed it (`p = 3/201 = 0.0149`, verified), gibberish output; below the
+0.005 bar, no confirmation run triggered.
+
+**Disposition:** Bounded negative for the 49 retained cells under the locked
+normalised-quadgram statistic and available synthetic score-reach
+calibration; not promoted. This does not exhaust arbitrary
+token-columnar English recovery: the unmatched 0.693 profile (missing
+experiment: a separately locked exact-histogram sensitivity test on
+planted sequences built from FAED's exact 25-token multiset), untranspose
+widths 12-40, double or disrupted transposition, non-columnar reorderings,
+non-English plaintext, and the raw-digit VIC order (Phase 477B) remain
+explicit limits.
+
+**Artifacts:** `doc/GSMG_PHASE477A_TOKEN_COLUMNAR_TRANSPOSITION_AUDIT.md`,
+amended protocol, implementation, 18-test unittest module, post-run verifier, manifest,
+execution lock, power/real/null/verification JSON records for both pairs.

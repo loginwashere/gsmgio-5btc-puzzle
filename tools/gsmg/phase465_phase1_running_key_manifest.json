@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "phase": 465,
+  "date": "2026-09-01",
+  "inputs": [
+    {"path": "tools/gsmg/data.py", "sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2"},
+    {"path": "tools/gsmg/first_hint_hash_audit.py", "sha256": "b2550aeb39c2e16bf971401e9bafdb3c623fa9ad18f023227aaa7c2d828fec0d"},
+    {"path": "tools/gsmg/dbbi_faed_nihilist_additive_audit.py", "sha256": "37955ee3d739bf8c3d7429ba3cb707847546cee5e5a303d5f384f29a9f12e2ce"},
+    {"path": "tools/gsmg/dbbi_faed_gronsfeld_progressive_audit.py", "sha256": "adf7e522068a7670e96a6e36433dcb6a470b4486008b4afc4bafb4fc2d1cfa3d"},
+    {"path": "tools/gsmg/phase464_result.json", "sha256": "7f07ab0908748324eeadb0dcb08b561e57b6218ad9a1df0c59536cb075342a00"}
+  ],
+  "credential": "theflowerblossomsthroughwhatseemstobeaconcretesurface",
+  "prefix": "theflower",
+  "key_scopes": ["full_credential", "continuation_after_theflower"],
+  "targets": {
+    "DBBI": {"escape_pairs": [["b", "e"], ["e", "b"]]},
+    "FAED": {"escape_pairs": [["g", "i"], ["i", "g"], ["h", "e"], ["e", "h"]]}
+  },
+  "topologies": ["top_first", "escapes_first"],
+  "insertions": ["raw_base9", "code_slot25"],
+  "signs": [1, -1],
+  "key_offsets": "all_cyclic_offsets",
+  "english_code_ic": 0.0667,
+  "tier2_control_count": 4,
+  "tier2_budget": {"iterations": 500, "restarts": 12, "seed_passes": [46501, 46502]},
+  "prohibitions": {
+    "oracle_calls": true,
+    "password_generation": true,
+    "key_mutation": true,
+    "ciphertext_offset_search": true,
+    "new_escape_pairs": true,
+    "reversal": true
+  }
+}

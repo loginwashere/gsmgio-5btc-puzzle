@@ -1,0 +1,43 @@
+{
+  "phase": 471,
+  "date": "2026-09-02",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-02 - Phase 471 DBBI Route Canonicalization and Structure Diagnostic Protocol.md",
+    "sha256": "fe4dfd36563923015bb60e96f9406aeabdb87aaaf1c391dc498c91a2c802adb7"
+  },
+  "audit_script": {
+    "path": "tools/gsmg/phase471_dbbi_route_structure_diagnostic_audit.py",
+    "sha256": "a1a6c1bdc1509342a441cfe4743e6f811dad1021a485e23abe559ff37c641d60"
+  },
+  "pinned_inputs": [
+    {
+      "path": "tools/gsmg/data.py",
+      "sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2"
+    }
+  ],
+  "frozen_shapes": [[7, 13], [13, 7]],
+  "frozen_value_map": "a0i8",
+  "frozen_masks": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "be", "odd"],
+  "frozen_offsets": [[0, 1], [1, 0], [1, 1], [1, -1], [2, 0], [0, 2]],
+  "calibration": {
+    "rng_seed": 471,
+    "n_shuffles": 10000,
+    "family_size": 17,
+    "two_sided_alpha_family": 0.001
+  },
+  "prohibitions": {
+    "no_route_output_token_scans": true,
+    "no_plaintext_alignment": true,
+    "no_faed_usage": true,
+    "no_password_generation": true,
+    "no_decryption": true,
+    "no_oracle_calls": true,
+    "no_output_driven_additions": true
+  },
+  "deferred_batch_items": [
+    "visual mask interpretation beyond descriptive renderings",
+    "route-aware alignment with the known 91-character plaintext",
+    "first-occurrence permutation schedules",
+    "oracle feeding of any output"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "phase": 471,
+  "status": "frozen_before_output_run",
+  "note": "Structural self-test only was run before this lock; no report was produced or inspected before freezing.",
+  "audit_script_sha256": "a1a6c1bdc1509342a441cfe4743e6f811dad1021a485e23abe559ff37c641d60",
+  "protocol_sha256": "fe4dfd36563923015bb60e96f9406aeabdb87aaaf1c391dc498c91a2c802adb7"
+}

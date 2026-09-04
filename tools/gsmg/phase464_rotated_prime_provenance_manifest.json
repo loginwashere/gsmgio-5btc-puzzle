@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "phase": 464,
+  "frozen_at": "2026-09-01",
+  "creator_id": "user9815232",
+  "solver_independence_cutoff_id_exclusive": 65935,
+  "solver_rotation_proposal_ids": [65935, 65938, 65939],
+  "exports": [
+    {
+      "label": "solvers_base",
+      "path": "/home/loginwashere/Downloads/Telegram Desktop/ChatExport_2026-07-26/result.json",
+      "sha256": "09fa513506ded392d56894424f6e019297781d8d669c27c3c0e9f62f3a31a084"
+    },
+    {
+      "label": "solvers_overlay_1",
+      "path": "/home/loginwashere/Downloads/Telegram Desktop/ChatExport_2026-08-09 (1)/result.json",
+      "sha256": "34454338ba74354c334826d700dfb467e7d4ff3894dab7a9a197a96d404c7c19"
+    },
+    {
+      "label": "solvers_overlay_2",
+      "path": "/home/loginwashere/Downloads/Telegram Desktop/ChatExport_2026-08-30/result.json",
+      "sha256": "4c46bf1ce541df455fe660ec4b48908975592f03cf63dca080dcbd7a19cb1aa5"
+    },
+    {
+      "label": "support",
+      "path": "/home/loginwashere/Downloads/Telegram Desktop/ChatExport_2026-07-29 (2)/result.json",
+      "sha256": "6e616bfe72d81c9d9134c0631781b594d9abf9bc7d2f6de3518f9e75b5dad9fd"
+    }
+  ],
+  "patterns": {
+    "S1_ROTATION": "(?i)\\b(?:rotat(?:e|ed|es|ing|ion|ions)|turn(?:ed|ing|s)?|clockwise|counter[ -]?clockwise|quarter[ -]?turn|90(?:°|\\s*degrees?)|grille|apertures?)\\b",
+    "S2_INVERSE": "(?i)\\b(?:inverse|invert(?:ed|ing|s)?|complement(?:ary|ed|ing|s)?|polarity|opposites?|dark|light|yellow|blue)\\b",
+    "S3_PRIME_PAIR": "(?i)(?<![0-9A-Fa-f])(?:311027|04BEF3)(?![0-9A-Fa-f])|\\b(?:second|two|both|pair(?:ed)?)\\s+(?:of\\s+)?primes?\\b|\\bprimes\\b",
+    "S4_MATRIX_LIST": "(?i)(?:2\\s*[x×]\\s*3|\\bmatrix(?:es)?\\b|\\brow\\s*sums?\\b|\\btotal\\s*(?:sum)?\\b|\\[\\s*total\\s*,\\s*row1\\s*,\\s*row2\\s*\\])",
+    "S5_FRAME": "(?i)\\b(?:outer\\s+frame|fram(?:e|ed|ing)|endpoints?|edges?|first\\s+and\\s+last|around|beginnings?|endings?)\\b",
+    "S6_PARITY": "(?i)\\b(?:odd|even|parity|alternat(?:e|ed|es|ing)|every\\s+second|reverse[ -]?even)\\b",
+    "S7_FLOWER_PREFIX": "(?i)(?:\\bthe\\s*flower\\b|\\bflowers?\\b|\\brose\\b|\\bprefix(?:ed|es|ing)?\\b|\\bin\\s+front\\b|\\bbefore\\b)",
+    "CONSUMER": "(?i)\\b(?:password|thispassword|keys?|enter|answers?|results?|next\\s+phase|yin[ -]?yang|ying[ -]?yang|consumer)\\b"
+  },
+  "exact_values": ["311027", "04BEF3"],
+  "promotion": {
+    "exact_reference": "independent creator-authored text/media contains an exact value in puzzle context",
+    "two_selector_witness": "creator selects S1_ROTATION plus at least one of S2-S7 on the first-piece chain",
+    "consumer_witness": "authenticated artifact explicitly consumes a derived output without a new conversion"
+  },
+  "prohibited": [
+    "cipher execution",
+    "password candidate generation",
+    "BLOSSOMS extension",
+    "49-aperture extension"
+  ]
+}

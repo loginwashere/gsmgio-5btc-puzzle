@@ -1,0 +1,11 @@
+{
+  "phase": 474,
+  "status": "aborted_before_result",
+  "runtime_seconds": 1084.75,
+  "exit_code": 130,
+  "result_file_created": false,
+  "manifest_sha256": "fac7ad966c3601dbcbc510754d453262646841e042247c35f34be69a4d1b981c",
+  "execution_lock_sha256": "b272526ca2dcf8bf52dfc4fbc5ca929837a7cfbe8bd48403b8c7e0dcde0d22bd",
+  "output_inspected": false,
+  "reason": "The first locked implementation redundantly searched all covers while minimizing cardinality and proved computationally impractical in the contaminated discovery tier. It was interrupted before build_report returned or serialized/printed any target or control result. The replacement uses exact iterative-deepening feasibility with early exit; experimental inputs, grammar, score, controls, and gates are unchanged."
+}

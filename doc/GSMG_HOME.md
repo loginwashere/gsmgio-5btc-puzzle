@@ -1,7 +1,7 @@
 ---
 type: index
 status: live
-date: 2026-08-30
+date: 2026-09-01
 ---
 
 # GSMG 5 BTC Puzzle — Home
@@ -36,6 +36,25 @@ Default working model (Phase 236,
 See also [[GSMG Frontier.canvas|the Frontier canvas]] for a visual map of
 this chain.
 
+Strongest new recognition branch (Phases 461/464; not a replacement for the
+verified model and not yet executable):
+
+```text
+24 colored apertures, quarter-turn pair
+  -> inverse primes 574061 / 311027
+  -> matrix/Architect frames BUTH / FLOW / TRUE
+  -> THEFLOWER                 (authenticated old-password prefix)
+  -> STOP                      (BLOSSOMS not derived; no consumer)
+```
+
+The orientation and closed-loop controls make this more than a loose word
+association, but its frame/parity/affix construction was formalized after the
+target was visible. Phase 464's preregistered provenance audit found no exact
+creator reference, qualifying two-operation selector, or downstream consumer. Under
+the closed-system program, Phases 465-466 then tested the selected old credential
+as a running key and exact DBBI/FAED crib; both controlled families are negative.
+The checkpoint remains useful as a router/checksum, not a demonstrated consumer.
+
 ## Open transition rows
 
 From the worksheet's master table — rows still live or parked, not closed:
@@ -43,6 +62,7 @@ From the worksheet's master table — rows still live or parked, not closed:
 | Row | Disposition |
 |---|---|
 | 31-char DBBI selection -> `matrixsumlist` | **Structural checkpoint; parked** (Phase 236) |
+| Rotated inverse-prime pair -> `THEFLOWER` | **Strong recognition checkpoint; parked** (Phases 461/464) |
 | Decimal matrix -> `[23,16,7]` -> Architect words -> BYE -> CIAO BELLA O | **Recognition checkpoint; parked** |
 | DBBI/FAED -> creator's `yinyang` state | **Live semantic boundary, not executable** |
 | Prime lists -> `401/400/73` | Structural checkpoint only |
@@ -53,12 +73,15 @@ From the worksheet's master table — rows still live or parked, not closed:
 Full table with G1–G5 gate detail:
 [GSMG_STRICT_TRANSITION_WORKSHEET](GSMG_STRICT_TRANSITION_WORKSHEET.md).
 
-## Highest-value missing evidence
+## Closed-system research program
 
-See [GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md) for the full,
-per-gap table. The remaining P0 gaps are locally exhausted — each depends
-entirely on new primary evidence, not further re-derivation from what is
-already on hand:
+The creator's answer to a request for another URL was: “No need. You have all
+the info.” Since no further hints are expected, the active strategy is now the
+[GSMG Closed-System Research Program](GSMG_CLOSED_SYSTEM_RESEARCH_PROGRAM.md):
+recover selectors and typed operations from already-authenticated artifacts,
+then apply only uniquely bound transforms. The earlier gap audits establish
+which local derivations are exhausted; they no longer imply an operational
+plan to wait for new evidence:
 
 - The physical *Cosmic Duality* book's pages 57–58 were photographed and
   transcribed 2026-08-13 (Phase 259), closing the last genuinely
@@ -99,8 +122,16 @@ and FINDINGS.md Phases 271-321). This does not change either gap's `parked`
 disposition; it further supports that the blocker is missing primary
 evidence, not an untried technique.
 
-The frontier is honestly exhausted pending new primary evidence, not stalled
-for lack of trying — see each gap's row for exactly what was checked.
+Broad transform searching remains exhausted. Phase 467 completed the global
+instruction/operand closure: 27 maximum assignments survive, none executable,
+and the tie is exactly topology, FAED escape pair, `thispassword` role, and
+Architect relation. The active next experiment is a non-circular internal
+calibration of the Architect relation, whose selection would also force the
+asymmetric `DBBI -> FAED` topology and `HE` pair. This is a dependency target,
+not evidence that the mirror is correct. Phases 465-466 close the first two
+`THEFLOWER`-selected reuse families. See the
+[Phase 467 report](GSMG_PHASE467_CLOSED_SYSTEM_CONSTRAINT_CLOSURE.md) and the
+closed-system program for exact boundaries.
 
 ## Recently completed phases
 
@@ -110,6 +141,13 @@ recent:
 
 | Phase | Subject | Result |
 |---|---|---|
+| 467 | Closed-system instruction/operand constraint closure | 27 maximum assignments; zero executable edges; tie isolated to topology, FAED pair, `thispassword` role, and Architect relation |
+| 466 | Phase-1 credential exact crib over DBBI/FAED | Full credential and post-`THEFLOWER` continuation: zero authentic or cyclic-control matches |
+| 465 | Phase-1 credential running key over DBBI/FAED | Authentic key start never ranks first for FAED; structural gate blocks decoding |
+| 464 | `311027 -> THEFLOWER` creator provenance | 5,901 creator messages and 88 media records audited; zero exact references; all 14 multi-selector contexts rejected; no consumer; branch remains parked |
+| 463 | `YOUWON` tail / SALPH 103-character alignment | Exact only for lexical `YOUWON \| X...` cut and unpadded A1Z26; grid-native cut gives 101 digits; `13224` retained as recognition only |
+| 462 | Periodic 49-aperture grille / `FEFEFE` | All full-grille values composite; FE toggle changes no prime; lone added-rail prime unconsumed; branch parked |
+| 461 | Rotated-prime orientation / `THEFLOWER` closed loop | Unique `THEFLOWER` orientation in frozen family; authenticated prefix but post hoc, direct consumers and `BLOSSOMS` continuation negative |
 | 460 | Boundary-safe dual-stream calibration | Small specialization advantage +0.00726 is common under both nulls (p=0.1375/0.3479); no calibrated specialization, two-role lane deferred |
 | 459 | Dual-stream escape-pair calibration | Protocol invalid: raw validation cut pair-dependent two-symbol tokens; superseded without inference by Phase 460 |
 | 458 | Telegram window creator sweep for five selected gaps | ids 67269-70186 (2,516 messages; 1,564 genuinely new past Phase 247's cutoff) swept for G-ARCH-001/G-YIN-001/G-ESC-001/G-MSL-001/G-PRIME-001's vocabularies (three newly assembled, two reused verbatim); zero creator-authored messages, zero creator media, zero licensed hits — these five gaps unchanged |
@@ -160,6 +198,7 @@ recent:
 
 ## Canonical documents
 
+- [GSMG_CLOSED_SYSTEM_RESEARCH_PROGRAM](GSMG_CLOSED_SYSTEM_RESEARCH_PROGRAM.md) — active strategy for combining already-known artifacts without waiting for new hints.
 - [GSMG_STRICT_TRANSITION_WORKSHEET](GSMG_STRICT_TRANSITION_WORKSHEET.md) — the 5-gate evidence-discipline worksheet; start here for any new candidate.
 - [GSMG_FACT_LEDGER](GSMG_FACT_LEDGER.md) — what claims are currently accepted, with exact scope.
 - [GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md) — what specific evidence would unblock progress, per gap.

@@ -1,0 +1,17 @@
+{
+  "phase": 468,
+  "note": "Immutable pre-run lock. Written once, never edited after freeze. The decision-bearing run (step 6) must observe an unchanged script digest below.",
+  "manifest_sha256": "0d52c76f989a326901aeb6a812b3cb0487f455178701030cdb5e2b9a587ec15b",
+  "audit_script": {
+    "path": "tools/gsmg/phase468_known_parts_cross_reference.py",
+    "sha256": "58f9d99b9b3d7830652192e077e494c0886133c02f2cf3bd175bba0b249e8ac5"
+  },
+  "catalog": {
+    "path": "tools/gsmg/phase468_known_parts_catalog.py",
+    "sha256": "203a5503bb6cdb8e20230afb127300496329d669f069012f7841bd4e5b8ca2c5"
+  },
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-01 - Phase 468 Known-Parts Cross-Reference Protocol.md",
+    "sha256": "4f0d3a9ce77f55896c3ccf8c9dd3660ca9b24f898a20497cb18f4a0fcbb3ae25"
+  }
+}

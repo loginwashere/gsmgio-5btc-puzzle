@@ -1,0 +1,3235 @@
+{
+  "pair": "he",
+  "length": 469,
+  "seed_base": 16428367067361188899,
+  "budget": {
+    "top_orders": 16,
+    "enum_board_restarts": 2,
+    "enum_board_iters": 30000,
+    "enum_board_t0": 20.0,
+    "enum_board_t1": 1.0,
+    "restarts": 16,
+    "top_k": 4,
+    "rounds": 3,
+    "board_init_iters": 10000,
+    "board_init_t0": 20.0,
+    "board_init_t1": 1.0,
+    "board_refine_iters": 4000,
+    "board_refine_t0": 5.0,
+    "board_refine_t1": 0.5,
+    "polish_moves": 3000
+  },
+  "cells_run": [
+    [
+      7,
+      "untranspose"
+    ],
+    [
+      7,
+      "transpose"
+    ]
+  ],
+  "wall_seconds": 212.16323157599982,
+  "trials": [
+    {
+      "trial": 0,
+      "family_max": -5.337851894165666,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.337851894165666
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.432927244640955
+        }
+      ]
+    },
+    {
+      "trial": 1,
+      "family_max": -5.221695924430773,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.221695924430773
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.387453710651981
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "family_max": -5.259460821583428,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.259460821583428
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4273790526432055
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "family_max": -5.441655185962115,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.4544982132692015
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.441655185962115
+        }
+      ]
+    },
+    {
+      "trial": 4,
+      "family_max": -5.368375050580186,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.368375050580186
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.397019412714282
+        }
+      ]
+    },
+    {
+      "trial": 5,
+      "family_max": -5.335994440237859,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.335994440237859
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.336268351209331
+        }
+      ]
+    },
+    {
+      "trial": 6,
+      "family_max": -5.2827239586713155,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.2827239586713155
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.363501322786877
+        }
+      ]
+    },
+    {
+      "trial": 7,
+      "family_max": -5.338266130586743,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.396651756732967
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.338266130586743
+        }
+      ]
+    },
+    {
+      "trial": 8,
+      "family_max": -5.347534662123618,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.354690837193217
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.347534662123618
+        }
+      ]
+    },
+    {
+      "trial": 9,
+      "family_max": -5.347500746532428,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.347500746532428
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.37087374986616
+        }
+      ]
+    },
+    {
+      "trial": 10,
+      "family_max": -5.389103713804771,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.433491644020221
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.389103713804771
+        }
+      ]
+    },
+    {
+      "trial": 11,
+      "family_max": -5.347080973025402,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.347080973025402
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.416723605158971
+        }
+      ]
+    },
+    {
+      "trial": 12,
+      "family_max": -5.330388467186176,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.330388467186176
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.418193507916853
+        }
+      ]
+    },
+    {
+      "trial": 13,
+      "family_max": -5.283655535461147,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.283655535461147
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3498977846808
+        }
+      ]
+    },
+    {
+      "trial": 14,
+      "family_max": -5.344262633478534,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.378696363259065
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.344262633478534
+        }
+      ]
+    },
+    {
+      "trial": 15,
+      "family_max": -5.338839320127581,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.338839320127581
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3428741294430795
+        }
+      ]
+    },
+    {
+      "trial": 16,
+      "family_max": -5.352893041523071,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.352893041523071
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.457750785050771
+        }
+      ]
+    },
+    {
+      "trial": 17,
+      "family_max": -5.35245408020594,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.35245408020594
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4378159810453255
+        }
+      ]
+    },
+    {
+      "trial": 18,
+      "family_max": -5.3423360453487465,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3423360453487465
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.414803685597598
+        }
+      ]
+    },
+    {
+      "trial": 19,
+      "family_max": -5.341723999492642,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.341723999492642
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.414587833035413
+        }
+      ]
+    },
+    {
+      "trial": 20,
+      "family_max": -5.345608380518244,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.416310385745411
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.345608380518244
+        }
+      ]
+    },
+    {
+      "trial": 21,
+      "family_max": -5.308290193530424,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.308290193530424
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4103792811815765
+        }
+      ]
+    },
+    {
+      "trial": 22,
+      "family_max": -5.310430584754644,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.310430584754644
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.401751580146291
+        }
+      ]
+    },
+    {
+      "trial": 23,
+      "family_max": -5.301493848565086,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.301493848565086
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4191766787405165
+        }
+      ]
+    },
+    {
+      "trial": 24,
+      "family_max": -5.3722376326643655,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.38877904541054
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3722376326643655
+        }
+      ]
+    },
+    {
+      "trial": 25,
+      "family_max": -5.31132493194777,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.391941996168178
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.31132493194777
+        }
+      ]
+    },
+    {
+      "trial": 26,
+      "family_max": -5.3382523101873,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3382523101873
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.419139628533624
+        }
+      ]
+    },
+    {
+      "trial": 27,
+      "family_max": -5.387391521767364,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.390957256872459
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.387391521767364
+        }
+      ]
+    },
+    {
+      "trial": 28,
+      "family_max": -5.304404087180599,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.304404087180599
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.374948859355648
+        }
+      ]
+    },
+    {
+      "trial": 29,
+      "family_max": -5.297428486255631,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.297428486255631
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3869393699635815
+        }
+      ]
+    },
+    {
+      "trial": 30,
+      "family_max": -5.334441251343311,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.334441251343311
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.385849372895298
+        }
+      ]
+    },
+    {
+      "trial": 31,
+      "family_max": -5.342725272507207,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.342725272507207
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.383633037547283
+        }
+      ]
+    },
+    {
+      "trial": 32,
+      "family_max": -5.347802316406016,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.347802316406016
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.380430167871272
+        }
+      ]
+    },
+    {
+      "trial": 33,
+      "family_max": -5.327876748497459,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.327876748497459
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3948276799552755
+        }
+      ]
+    },
+    {
+      "trial": 34,
+      "family_max": -5.3123397524546,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3123397524546
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.381207424814414
+        }
+      ]
+    },
+    {
+      "trial": 35,
+      "family_max": -5.321963528576465,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.4125217646459625
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.321963528576465
+        }
+      ]
+    },
+    {
+      "trial": 36,
+      "family_max": -5.339599995031411,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.339599995031411
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4257121374019235
+        }
+      ]
+    },
+    {
+      "trial": 37,
+      "family_max": -5.316876379367794,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.371832941117709
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.316876379367794
+        }
+      ]
+    },
+    {
+      "trial": 38,
+      "family_max": -5.290090305126199,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.290090305126199
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.380515457745588
+        }
+      ]
+    },
+    {
+      "trial": 39,
+      "family_max": -5.317665632772765,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.317665632772765
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4187311789145145
+        }
+      ]
+    },
+    {
+      "trial": 40,
+      "family_max": -5.361730667400237,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.361730667400237
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.380291457805763
+        }
+      ]
+    },
+    {
+      "trial": 41,
+      "family_max": -5.322216123681543,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.322216123681543
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.379545068615391
+        }
+      ]
+    },
+    {
+      "trial": 42,
+      "family_max": -5.327790102815269,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.327790102815269
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.360877976594821
+        }
+      ]
+    },
+    {
+      "trial": 43,
+      "family_max": -5.3057674699735005,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3057674699735005
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.392273394386338
+        }
+      ]
+    },
+    {
+      "trial": 44,
+      "family_max": -5.296289196444005,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.296289196444005
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3982902494427565
+        }
+      ]
+    },
+    {
+      "trial": 45,
+      "family_max": -5.3175317872865895,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3175317872865895
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.321603425768278
+        }
+      ]
+    },
+    {
+      "trial": 46,
+      "family_max": -5.381577175776009,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.409240773047248
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.381577175776009
+        }
+      ]
+    },
+    {
+      "trial": 47,
+      "family_max": -5.369179008532534,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.443831678172676
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.369179008532534
+        }
+      ]
+    },
+    {
+      "trial": 48,
+      "family_max": -5.25366013519972,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.25366013519972
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.335962048699138
+        }
+      ]
+    },
+    {
+      "trial": 49,
+      "family_max": -5.292061759984003,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.350285525926412
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.292061759984003
+        }
+      ]
+    },
+    {
+      "trial": 50,
+      "family_max": -5.350850500458622,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.350850500458622
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.41824161877734
+        }
+      ]
+    },
+    {
+      "trial": 51,
+      "family_max": -5.39144669167531,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.39144669167531
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.395461857679546
+        }
+      ]
+    },
+    {
+      "trial": 52,
+      "family_max": -5.349840619307424,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.349840619307424
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.399180855681575
+        }
+      ]
+    },
+    {
+      "trial": 53,
+      "family_max": -5.35120484640504,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.35120484640504
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.378420026893434
+        }
+      ]
+    },
+    {
+      "trial": 54,
+      "family_max": -5.343888730439428,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.432096940259696
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.343888730439428
+        }
+      ]
+    },
+    {
+      "trial": 55,
+      "family_max": -5.373306197832574,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.373306197832574
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.390324184876171
+        }
+      ]
+    },
+    {
+      "trial": 56,
+      "family_max": -5.312160227438234,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.312160227438234
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.363218903201979
+        }
+      ]
+    },
+    {
+      "trial": 57,
+      "family_max": -5.353911821625604,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.353911821625604
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.362577548142066
+        }
+      ]
+    },
+    {
+      "trial": 58,
+      "family_max": -5.3520811324933035,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3520811324933035
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.390732523632202
+        }
+      ]
+    },
+    {
+      "trial": 59,
+      "family_max": -5.320279345823514,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.373883020757942
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.320279345823514
+        }
+      ]
+    },
+    {
+      "trial": 60,
+      "family_max": -5.364472407797157,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.364472407797157
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.423056066068439
+        }
+      ]
+    },
+    {
+      "trial": 61,
+      "family_max": -5.316408316094516,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.316408316094516
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.408207566074552
+        }
+      ]
+    },
+    {
+      "trial": 62,
+      "family_max": -5.302345235325139,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.338572790422894
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.302345235325139
+        }
+      ]
+    },
+    {
+      "trial": 63,
+      "family_max": -5.375082062975826,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.375082062975826
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.381958143630261
+        }
+      ]
+    },
+    {
+      "trial": 64,
+      "family_max": -5.365245942078684,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.4043579661588055
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.365245942078684
+        }
+      ]
+    },
+    {
+      "trial": 65,
+      "family_max": -5.403254215323648,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.40643085592172
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.403254215323648
+        }
+      ]
+    },
+    {
+      "trial": 66,
+      "family_max": -5.418049046084718,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.418049046084718
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.422637164808571
+        }
+      ]
+    },
+    {
+      "trial": 67,
+      "family_max": -5.351194094664999,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.351194094664999
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.374657982545663
+        }
+      ]
+    },
+    {
+      "trial": 68,
+      "family_max": -5.3585294108359305,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.37349884367047
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3585294108359305
+        }
+      ]
+    },
+    {
+      "trial": 69,
+      "family_max": -5.309089315909568,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.309089315909568
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.451199010233375
+        }
+      ]
+    },
+    {
+      "trial": 70,
+      "family_max": -5.367219944214029,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.409459117589905
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.367219944214029
+        }
+      ]
+    },
+    {
+      "trial": 71,
+      "family_max": -5.347293683730539,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.347293683730539
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.375185780987286
+        }
+      ]
+    },
+    {
+      "trial": 72,
+      "family_max": -5.378046027354194,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.378046027354194
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.407534770295248
+        }
+      ]
+    },
+    {
+      "trial": 73,
+      "family_max": -5.344467261410882,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.344467261410882
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.399260606026064
+        }
+      ]
+    },
+    {
+      "trial": 74,
+      "family_max": -5.334008057595229,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.392725648684141
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.334008057595229
+        }
+      ]
+    },
+    {
+      "trial": 75,
+      "family_max": -5.354537465763501,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.392801126390349
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.354537465763501
+        }
+      ]
+    },
+    {
+      "trial": 76,
+      "family_max": -5.327457782519023,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.327637143237869
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.327457782519023
+        }
+      ]
+    },
+    {
+      "trial": 77,
+      "family_max": -5.300955064592614,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.300955064592614
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4433541759657995
+        }
+      ]
+    },
+    {
+      "trial": 78,
+      "family_max": -5.363623847180467,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.363623847180467
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.446507211738357
+        }
+      ]
+    },
+    {
+      "trial": 79,
+      "family_max": -5.3138210008493285,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.365838147887592
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3138210008493285
+        }
+      ]
+    },
+    {
+      "trial": 80,
+      "family_max": -5.318371705996542,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.318371705996542
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.370530550757837
+        }
+      ]
+    },
+    {
+      "trial": 81,
+      "family_max": -5.349164245218475,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.349164245218475
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.363260829781337
+        }
+      ]
+    },
+    {
+      "trial": 82,
+      "family_max": -5.325898690814943,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.325898690814943
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3501995136725355
+        }
+      ]
+    },
+    {
+      "trial": 83,
+      "family_max": -5.300222615418938,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.300222615418938
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.395976982538551
+        }
+      ]
+    },
+    {
+      "trial": 84,
+      "family_max": -5.346031718996845,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.382596299201924
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.346031718996845
+        }
+      ]
+    },
+    {
+      "trial": 85,
+      "family_max": -5.409428554937524,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.409428554937524
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.417577752458403
+        }
+      ]
+    },
+    {
+      "trial": 86,
+      "family_max": -5.295090252898518,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.295090252898518
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.417334955423163
+        }
+      ]
+    },
+    {
+      "trial": 87,
+      "family_max": -5.381614979519391,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.381614979519391
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.382116963253473
+        }
+      ]
+    },
+    {
+      "trial": 88,
+      "family_max": -5.307930625839687,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.365286203239827
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.307930625839687
+        }
+      ]
+    },
+    {
+      "trial": 89,
+      "family_max": -5.329785355572943,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.370397943121151
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.329785355572943
+        }
+      ]
+    },
+    {
+      "trial": 90,
+      "family_max": -5.32905187018518,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3744623861597
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.32905187018518
+        }
+      ]
+    },
+    {
+      "trial": 91,
+      "family_max": -5.378926511340579,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.378926511340579
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.408583418750829
+        }
+      ]
+    },
+    {
+      "trial": 92,
+      "family_max": -5.289742483059916,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.289742483059916
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.359994463999822
+        }
+      ]
+    },
+    {
+      "trial": 93,
+      "family_max": -5.3012356981402,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.422699399122228
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3012356981402
+        }
+      ]
+    },
+    {
+      "trial": 94,
+      "family_max": -5.3837071175514,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.389808490316538
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3837071175514
+        }
+      ]
+    },
+    {
+      "trial": 95,
+      "family_max": -5.360063903365203,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.360063903365203
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.380183086034321
+        }
+      ]
+    },
+    {
+      "trial": 96,
+      "family_max": -5.323375940033915,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.323375940033915
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.337485633045778
+        }
+      ]
+    },
+    {
+      "trial": 97,
+      "family_max": -5.369136509335194,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.369136509335194
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.393192522489148
+        }
+      ]
+    },
+    {
+      "trial": 98,
+      "family_max": -5.286256567542422,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.286256567542422
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.354234663338784
+        }
+      ]
+    },
+    {
+      "trial": 99,
+      "family_max": -5.3260543433570495,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3260543433570495
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.385684529117231
+        }
+      ]
+    },
+    {
+      "trial": 100,
+      "family_max": -5.326742844886264,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.326742844886264
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.412579088010262
+        }
+      ]
+    },
+    {
+      "trial": 101,
+      "family_max": -5.339944715071682,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.385166969857114
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.339944715071682
+        }
+      ]
+    },
+    {
+      "trial": 102,
+      "family_max": -5.334719308049429,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.334719308049429
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4278094592034005
+        }
+      ]
+    },
+    {
+      "trial": 103,
+      "family_max": -5.363591776887798,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.385961609783958
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.363591776887798
+        }
+      ]
+    },
+    {
+      "trial": 104,
+      "family_max": -5.385041738126356,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.385041738126356
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.432074598285795
+        }
+      ]
+    },
+    {
+      "trial": 105,
+      "family_max": -5.400747604408473,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.410494794209852
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.400747604408473
+        }
+      ]
+    },
+    {
+      "trial": 106,
+      "family_max": -5.381055287238608,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.381055287238608
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.392518042946407
+        }
+      ]
+    },
+    {
+      "trial": 107,
+      "family_max": -5.3686544670948715,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.386150813749849
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3686544670948715
+        }
+      ]
+    },
+    {
+      "trial": 108,
+      "family_max": -5.311088858407718,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.324713990511702
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.311088858407718
+        }
+      ]
+    },
+    {
+      "trial": 109,
+      "family_max": -5.352739308618446,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.352739308618446
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.431709864798624
+        }
+      ]
+    },
+    {
+      "trial": 110,
+      "family_max": -5.291109882795228,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.291109882795228
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3745874655485935
+        }
+      ]
+    },
+    {
+      "trial": 111,
+      "family_max": -5.351163702022238,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.351163702022238
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.374737925200327
+        }
+      ]
+    },
+    {
+      "trial": 112,
+      "family_max": -5.25503827215091,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.389736685154664
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.25503827215091
+        }
+      ]
+    },
+    {
+      "trial": 113,
+      "family_max": -5.354875791903307,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.354875791903307
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3770576471899
+        }
+      ]
+    },
+    {
+      "trial": 114,
+      "family_max": -5.315656583595399,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.369641653622024
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.315656583595399
+        }
+      ]
+    },
+    {
+      "trial": 115,
+      "family_max": -5.292733336562898,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.292733336562898
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.363647166876751
+        }
+      ]
+    },
+    {
+      "trial": 116,
+      "family_max": -5.292501349074086,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.292501349074086
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.445558689282881
+        }
+      ]
+    },
+    {
+      "trial": 117,
+      "family_max": -5.28987038719095,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.28987038719095
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.425004653885148
+        }
+      ]
+    },
+    {
+      "trial": 118,
+      "family_max": -5.295837641801652,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.295837641801652
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.379996195436715
+        }
+      ]
+    },
+    {
+      "trial": 119,
+      "family_max": -5.375721541542124,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.411749442330575
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.375721541542124
+        }
+      ]
+    },
+    {
+      "trial": 120,
+      "family_max": -5.275943612467498,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.275943612467498
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.417344790975778
+        }
+      ]
+    },
+    {
+      "trial": 121,
+      "family_max": -5.342042901059953,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.342042901059953
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.461801698104231
+        }
+      ]
+    },
+    {
+      "trial": 122,
+      "family_max": -5.289782725753622,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.289782725753622
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.36058687235696
+        }
+      ]
+    },
+    {
+      "trial": 123,
+      "family_max": -5.369933763921194,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.369933763921194
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.429761805854312
+        }
+      ]
+    },
+    {
+      "trial": 124,
+      "family_max": -5.331967767062487,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.331967767062487
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.400774752114879
+        }
+      ]
+    },
+    {
+      "trial": 125,
+      "family_max": -5.3195147483144645,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3195147483144645
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.391998654062655
+        }
+      ]
+    },
+    {
+      "trial": 126,
+      "family_max": -5.254429022297762,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.254429022297762
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3626096357507365
+        }
+      ]
+    },
+    {
+      "trial": 127,
+      "family_max": -5.3455197917277095,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3455197917277095
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4035826370377755
+        }
+      ]
+    },
+    {
+      "trial": 128,
+      "family_max": -5.26682260092149,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3191987757259485
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.26682260092149
+        }
+      ]
+    },
+    {
+      "trial": 129,
+      "family_max": -5.330006511829284,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.330006511829284
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.407221597949013
+        }
+      ]
+    },
+    {
+      "trial": 130,
+      "family_max": -5.351824333421605,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.351824333421605
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3557709456884295
+        }
+      ]
+    },
+    {
+      "trial": 131,
+      "family_max": -5.2991203945927925,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.2991203945927925
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.330081788736205
+        }
+      ]
+    },
+    {
+      "trial": 132,
+      "family_max": -5.359550837077127,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.359550837077127
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.381102246598485
+        }
+      ]
+    },
+    {
+      "trial": 133,
+      "family_max": -5.329694371981764,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.329694371981764
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.362156566504832
+        }
+      ]
+    },
+    {
+      "trial": 134,
+      "family_max": -5.309099726797084,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.309099726797084
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.399854138583347
+        }
+      ]
+    },
+    {
+      "trial": 135,
+      "family_max": -5.35541431238839,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.35541431238839
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.408071132465214
+        }
+      ]
+    },
+    {
+      "trial": 136,
+      "family_max": -5.313492880465985,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.335485100989205
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.313492880465985
+        }
+      ]
+    },
+    {
+      "trial": 137,
+      "family_max": -5.325651352318359,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.325651352318359
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.344617642556532
+        }
+      ]
+    },
+    {
+      "trial": 138,
+      "family_max": -5.300842674428457,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.300842674428457
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.315834894463104
+        }
+      ]
+    },
+    {
+      "trial": 139,
+      "family_max": -5.314052494469284,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.314052494469284
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.315170192450465
+        }
+      ]
+    },
+    {
+      "trial": 140,
+      "family_max": -5.4009206381136154,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.4009206381136154
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.435360349063846
+        }
+      ]
+    },
+    {
+      "trial": 141,
+      "family_max": -5.31214256388347,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.31214256388347
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3512566689982926
+        }
+      ]
+    },
+    {
+      "trial": 142,
+      "family_max": -5.279299442235731,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.279299442235731
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.379860434208787
+        }
+      ]
+    },
+    {
+      "trial": 143,
+      "family_max": -5.298341770084362,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3559572056659945
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.298341770084362
+        }
+      ]
+    },
+    {
+      "trial": 144,
+      "family_max": -5.39981077545938,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.442222128566402
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.39981077545938
+        }
+      ]
+    },
+    {
+      "trial": 145,
+      "family_max": -5.363779742519613,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.363779742519613
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.428894823057642
+        }
+      ]
+    },
+    {
+      "trial": 146,
+      "family_max": -5.386869845029246,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.389355080192923
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.386869845029246
+        }
+      ]
+    },
+    {
+      "trial": 147,
+      "family_max": -5.317130590006675,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.317130590006675
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.365913880372229
+        }
+      ]
+    },
+    {
+      "trial": 148,
+      "family_max": -5.347867104425952,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.347867104425952
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.449677492232133
+        }
+      ]
+    },
+    {
+      "trial": 149,
+      "family_max": -5.280688218735253,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.280688218735253
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.386538378276592
+        }
+      ]
+    },
+    {
+      "trial": 150,
+      "family_max": -5.3050206057388545,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3050206057388545
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.349777516856576
+        }
+      ]
+    },
+    {
+      "trial": 151,
+      "family_max": -5.308962505798189,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.308962505798189
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.370335750384845
+        }
+      ]
+    },
+    {
+      "trial": 152,
+      "family_max": -5.358135411025426,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3799092091336
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.358135411025426
+        }
+      ]
+    },
+    {
+      "trial": 153,
+      "family_max": -5.288124114248991,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.288124114248991
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.323704663652226
+        }
+      ]
+    },
+    {
+      "trial": 154,
+      "family_max": -5.320406816080428,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.320406816080428
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.371661139944035
+        }
+      ]
+    },
+    {
+      "trial": 155,
+      "family_max": -5.367765641004476,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.367765641004476
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.404759138859663
+        }
+      ]
+    },
+    {
+      "trial": 156,
+      "family_max": -5.3886261385655025,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3886261385655025
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.410409295894516
+        }
+      ]
+    },
+    {
+      "trial": 157,
+      "family_max": -5.333605901597342,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.333605901597342
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.405913225764637
+        }
+      ]
+    },
+    {
+      "trial": 158,
+      "family_max": -5.377251406715328,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.390883292432244
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.377251406715328
+        }
+      ]
+    },
+    {
+      "trial": 159,
+      "family_max": -5.35984507031182,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.373727040776568
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.35984507031182
+        }
+      ]
+    },
+    {
+      "trial": 160,
+      "family_max": -5.315553645482061,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.315553645482061
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.392175393431819
+        }
+      ]
+    },
+    {
+      "trial": 161,
+      "family_max": -5.235775305782498,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.235775305782498
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.344847302841971
+        }
+      ]
+    },
+    {
+      "trial": 162,
+      "family_max": -5.343986744095462,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.343986744095462
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.370681887334759
+        }
+      ]
+    },
+    {
+      "trial": 163,
+      "family_max": -5.302208202078851,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.338502710383467
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.302208202078851
+        }
+      ]
+    },
+    {
+      "trial": 164,
+      "family_max": -5.398622658594387,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.4082259620723585
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.398622658594387
+        }
+      ]
+    },
+    {
+      "trial": 165,
+      "family_max": -5.2738833947571635,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.2738833947571635
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.365113350808055
+        }
+      ]
+    },
+    {
+      "trial": 166,
+      "family_max": -5.3456839064123445,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3456839064123445
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.376795153963384
+        }
+      ]
+    },
+    {
+      "trial": 167,
+      "family_max": -5.322202280116485,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.322202280116485
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.374979416622227
+        }
+      ]
+    },
+    {
+      "trial": 168,
+      "family_max": -5.385643483750854,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.385643483750854
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.406922091166419
+        }
+      ]
+    },
+    {
+      "trial": 169,
+      "family_max": -5.36029794920853,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.36029794920853
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.395719797249821
+        }
+      ]
+    },
+    {
+      "trial": 170,
+      "family_max": -5.302463171766001,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.302463171766001
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.3496127230773
+        }
+      ]
+    },
+    {
+      "trial": 171,
+      "family_max": -5.278528815577841,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.278528815577841
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.364570419309157
+        }
+      ]
+    },
+    {
+      "trial": 172,
+      "family_max": -5.291123420015505,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.291123420015505
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.466161532900696
+        }
+      ]
+    },
+    {
+      "trial": 173,
+      "family_max": -5.314148887276856,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.314148887276856
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.409632041310487
+        }
+      ]
+    },
+    {
+      "trial": 174,
+      "family_max": -5.331992598943611,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.331992598943611
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.370722973760876
+        }
+      ]
+    },
+    {
+      "trial": 175,
+      "family_max": -5.324779507916957,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.324779507916957
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.4104503373477755
+        }
+      ]
+    },
+    {
+      "trial": 176,
+      "family_max": -5.321547028419908,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.362585646809484
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.321547028419908
+        }
+      ]
+    },
+    {
+      "trial": 177,
+      "family_max": -5.303275894938859,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.303275894938859
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.308903664717624
+        }
+      ]
+    },
+    {
+      "trial": 178,
+      "family_max": -5.322996674038026,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.322996674038026
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.373691648257978
+        }
+      ]
+    },
+    {
+      "trial": 179,
+      "family_max": -5.296716533962037,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.296716533962037
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.366286457524629
+        }
+      ]
+    },
+    {
+      "trial": 180,
+      "family_max": -5.358820508261265,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.358820508261265
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.371771328168251
+        }
+      ]
+    },
+    {
+      "trial": 181,
+      "family_max": -5.279570161817061,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.279570161817061
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.343691856187802
+        }
+      ]
+    },
+    {
+      "trial": 182,
+      "family_max": -5.394468467882381,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.394468467882381
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.422044910229587
+        }
+      ]
+    },
+    {
+      "trial": 183,
+      "family_max": -5.344417873511294,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.354305499776783
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.344417873511294
+        }
+      ]
+    },
+    {
+      "trial": 184,
+      "family_max": -5.287475597762932,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.287475597762932
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.348289877477105
+        }
+      ]
+    },
+    {
+      "trial": 185,
+      "family_max": -5.367552912928006,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.367552912928006
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.407109810821365
+        }
+      ]
+    },
+    {
+      "trial": 186,
+      "family_max": -5.354962291364456,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.354962291364456
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.361632765295871
+        }
+      ]
+    },
+    {
+      "trial": 187,
+      "family_max": -5.343532717557242,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.343532717557242
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.409192189948616
+        }
+      ]
+    },
+    {
+      "trial": 188,
+      "family_max": -5.292449942156097,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.292449942156097
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.448811178912622
+        }
+      ]
+    },
+    {
+      "trial": 189,
+      "family_max": -5.3169284914688335,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3169284914688335
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.380041346029053
+        }
+      ]
+    },
+    {
+      "trial": 190,
+      "family_max": -5.3628266790433585,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.3628266790433585
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.45780987432382
+        }
+      ]
+    },
+    {
+      "trial": 191,
+      "family_max": -5.333185313411018,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.333185313411018
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.34983070180321
+        }
+      ]
+    },
+    {
+      "trial": 192,
+      "family_max": -5.31278498678513,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.31278498678513
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.387971459135291
+        }
+      ]
+    },
+    {
+      "trial": 193,
+      "family_max": -5.311385636081577,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.311385636081577
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.461373102429199
+        }
+      ]
+    },
+    {
+      "trial": 194,
+      "family_max": -5.341064823206812,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.341064823206812
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.381234360896534
+        }
+      ]
+    },
+    {
+      "trial": 195,
+      "family_max": -5.35280390558923,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.35280390558923
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.407742374527706
+        }
+      ]
+    },
+    {
+      "trial": 196,
+      "family_max": -5.306761908986783,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.306761908986783
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.413396459577724
+        }
+      ]
+    },
+    {
+      "trial": 197,
+      "family_max": -5.332299038835076,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.332299038835076
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.42579474696475
+        }
+      ]
+    },
+    {
+      "trial": 198,
+      "family_max": -5.338306288546792,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.338306288546792
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.339778059288224
+        }
+      ]
+    },
+    {
+      "trial": 199,
+      "family_max": -5.299989309839964,
+      "cells": [
+        {
+          "width": 7,
+          "direction": "untranspose",
+          "normalised": -5.299989309839964
+        },
+        {
+          "width": 7,
+          "direction": "transpose",
+          "normalised": -5.34691728375556
+        }
+      ]
+    }
+  ]
+}

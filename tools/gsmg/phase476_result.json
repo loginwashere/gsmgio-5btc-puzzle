@@ -1,0 +1,60 @@
+{
+  "phase": 476,
+  "outcome": "closed_negative",
+  "ordered_schedule": "FAED--DBBI_square_period570_decrypt-->P91,Q472--P91_square_period472_decrypt-->candidate",
+  "first_square": "DBIFHCEGAKLMNOPQRSTUVWXYZ",
+  "observed": {
+    "first_pass_prefix": "BTCSEED",
+    "p91": "DEOEMCKEADHBSCHDKBDCSDKDVBXCPCOCHCRDICIBQEEBDDBCNDSBDCPDGCPDNCNCSESCGDDCLENBMCUDUCQCACDELDZ",
+    "q472_sha256": "6ceb3db79675b2cd31b92ad1970ae95993ff3d1d7128314a9f91a960520b35ad",
+    "p91_grid_keyword": "DEOMCKAHBSVXPRIQNGLUZFTWY",
+    "second_pass": "DSGGDZMNEBTBEMFBDAAWDCMXDETLDFHMKNZWDFLWKQFUKQAADKBWKNWNKULKEBDGDSEODKBKDDMPALPNDFRPKUUXKULCDFDXDAGIKQAFDSGSDAAFKQQGKUYPDKBFDEHSDERPDDQFDABWDZVXDFRLEBKBDYNKDFKDEWAWDFEEDYQBKUDHDDHMDFKMDYZIDYQLKUXUDSLHDKNBDYDTDSQRDKUGDZLBEWQWKUKZALQREBKWDKPTEBNSDDLFEBFSDDCCKNKHDFKODCGSKNBFEMAYDAKTEWPUKUAWEBALKULNKURFDAVUDDRCDYOIALDEDYDYDSLPKQKTDSDRKNVEKQRCEWMEDKDNDFRREWBWEWNXDSGGDCPTDSQRDDHADDTNDDTWDZBHDYXRDSQRDKLAKQTWDKKQDFQIDZULDFXNDDAGALIGDDGIDCBQDCOGDKVGDFUADZNPDDWPDZOEKQGHDYTSDFLL",
+    "second_pass_sha256": "4aa436b32f4b01a27245b9ab1327967b1f5628f66887b8514b37b4345071e95b",
+    "second_pass_quadgram": -3790.6207792858127,
+    "second_pass_prefix_96": "DSGGDZMNEBTBEMFBDAAWDCMXDETLDFHMKNZWDFLWKQFUKQAADKBWKNWNKULKEBDGDSEODKBKDDMPALPNDFRPKUUXKULCDFDX",
+    "keyword_hits": [],
+    "roundtrip_matches_q472": true,
+    "vectorized_matches_scalar": true
+  },
+  "primary_upstream_null": {
+    "trials": 100000,
+    "seed": 1142,
+    "tail_count": 78038,
+    "raw_tail_fraction": 0.78038,
+    "add_one_empirical_p": 0.7803821961780382,
+    "quadgram_quantiles": {
+      "min": -4772.766735056141,
+      "q25": -3770.5552035563105,
+      "median": -3635.1047180590717,
+      "q75": -3503.20199090066,
+      "q95": -3327.2319909761172,
+      "q99": -3218.9858446532126,
+      "max": -2978.596892832304
+    }
+  },
+  "secondary_fixed_p91_key_null": {
+    "trials": 100000,
+    "seed": 292353,
+    "tail_count": 67581,
+    "raw_tail_fraction": 0.67581,
+    "add_one_empirical_p": 0.6758132418675813,
+    "quadgram_quantiles": {
+      "min": -4046.2987496743726,
+      "q25": -3806.1276562630974,
+      "median": -3758.552141616051,
+      "q75": -3711.046446273414,
+      "q95": -3644.0884699342305,
+      "q99": -3595.241761652983,
+      "max": -3476.2659651205813
+    }
+  },
+  "promotion_threshold": 0.005,
+  "planted_positive": {
+    "grid_keyword": "PLANTEDSCOKYBFGHIMQRUVWXZ",
+    "roundtrip": true,
+    "contains_satoshi": true,
+    "quadgram_score": -2045.1862545016231
+  },
+  "oracle_calls": 0,
+  "bitcoin_endpoint_calls": 0
+}

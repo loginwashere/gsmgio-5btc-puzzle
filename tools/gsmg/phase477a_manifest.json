@@ -1,0 +1,375 @@
+{
+  "phase": "477A",
+  "date": "2026-09-04",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-03 - Phase 477A Token Columnar Transposition Protocol.md",
+    "sha256": "8dde7cec86445722f62f247fbce4c7be6d9913b72d18247d8113da2e311ba5f6"
+  },
+  "audit_script": {
+    "path": "tools/gsmg/phase477a_token_columnar_transposition_audit.py",
+    "sha256": "c95fa414e6f223da8824caf95f91b4d06346360dcdfff579de95efa501791c2f"
+  },
+  "test_script": {
+    "path": "tools/gsmg/test_phase477a_token_columnar_transposition_audit.py",
+    "sha256": "242c930b30f9158342913dded7a364c3134d596783c35d5bf75873604cc77d83"
+  },
+  "pinned_inputs": [
+    {
+      "path": "tools/gsmg/data.py",
+      "sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2"
+    },
+    {
+      "path": "tools/gsmg/data_files/english_quadgrams.txt",
+      "sha256": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55"
+    },
+    {
+      "path": "wordlists/gsmg/cosmic_duality_book_full_text.txt",
+      "sha256": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d"
+    },
+    {
+      "path": "tools/gsmg/checkerboard_code_ic_oracle.py",
+      "sha256": "e6973edbb971d5ec970c0f4ea740f403372425e76886a88c536ad7ddde37b574"
+    }
+  ],
+  "power_records": [
+    {
+      "path": "tools/gsmg/phase477a_dev_power.json",
+      "sha256": "9cb7df9b6f16e4f45ed563efdfcc73f49fc79dc169f18e2028f7a072210b1b44"
+    },
+    {
+      "path": "tools/gsmg/phase477a_holdout_power.json",
+      "sha256": "a434bdcb252f4da76e3c8b46e71557a7b9dd648b460880c51a8ae07c462580e2"
+    },
+    {
+      "path": "tools/gsmg/phase477a_he_dev_power.json",
+      "sha256": "2beddcd8660f6133f00e92c1dc1a2db390eeec2be8624e78731ce82cdcbdd2ec"
+    },
+    {
+      "path": "tools/gsmg/phase477a_he_holdout_power.json",
+      "sha256": "f968b929df5ed897a52efd0d7d7344045d33bc8511dcc6e68491c18b312695ad"
+    }
+  ],
+  "family": {
+    "primary_pair": "gi",
+    "length": 436,
+    "widths": "2-40",
+    "directions": [
+      "untranspose",
+      "transpose"
+    ],
+    "untranspose_enumerable_max_width": 11,
+    "retained_cells": 49,
+    "statistic": "best quadgram log10 score / length; family max over powered cells",
+    "budget": {
+      "top_orders": 16,
+      "enum_board_restarts": 2,
+      "enum_board_iters": 30000,
+      "enum_board_t0": 20.0,
+      "enum_board_t1": 1.0,
+      "restarts": 16,
+      "top_k": 4,
+      "rounds": 3,
+      "board_init_iters": 10000,
+      "board_init_t0": 20.0,
+      "board_init_t1": 1.0,
+      "board_refine_iters": 4000,
+      "board_refine_t0": 5.0,
+      "board_refine_t1": 0.5,
+      "polish_moves": 3000
+    },
+    "top_orders": 16,
+    "trigram_weight": 3.0
+  },
+  "secondary": {
+    "pair": "he",
+    "length": 469,
+    "widths": "7",
+    "directions": [
+      "untranspose",
+      "transpose"
+    ],
+    "never_pooled": true
+  },
+  "power_gate": {
+    "criterion": "score reach (found >= planted)",
+    "hard_fraction": 0.8,
+    "holdout_hard_n": 10,
+    "holdout_broad_n": 5,
+    "holdout_seed": "0x477a401d",
+    "dev_seed": "0x477a0de",
+    "hard_top7_threshold": 0.62,
+    "corpus": "prose sections only",
+    "holdout_cell_status": [
+      [
+        2,
+        "transpose",
+        "trivially_powered"
+      ],
+      [
+        2,
+        "untranspose",
+        "trivially_powered"
+      ],
+      [
+        3,
+        "transpose",
+        "trivially_powered"
+      ],
+      [
+        3,
+        "untranspose",
+        "trivially_powered"
+      ],
+      [
+        4,
+        "transpose",
+        "trivially_powered"
+      ],
+      [
+        4,
+        "untranspose",
+        "trivially_powered"
+      ],
+      [
+        5,
+        "transpose",
+        "powered"
+      ],
+      [
+        5,
+        "untranspose",
+        "powered"
+      ],
+      [
+        6,
+        "transpose",
+        "powered"
+      ],
+      [
+        6,
+        "untranspose",
+        "powered"
+      ],
+      [
+        7,
+        "transpose",
+        "powered"
+      ],
+      [
+        7,
+        "untranspose",
+        "powered"
+      ],
+      [
+        8,
+        "transpose",
+        "powered"
+      ],
+      [
+        8,
+        "untranspose",
+        "powered"
+      ],
+      [
+        9,
+        "transpose",
+        "powered"
+      ],
+      [
+        9,
+        "untranspose",
+        "powered"
+      ],
+      [
+        10,
+        "transpose",
+        "powered"
+      ],
+      [
+        10,
+        "untranspose",
+        "powered"
+      ],
+      [
+        11,
+        "transpose",
+        "powered"
+      ],
+      [
+        11,
+        "untranspose",
+        "powered"
+      ],
+      [
+        12,
+        "transpose",
+        "powered"
+      ],
+      [
+        13,
+        "transpose",
+        "powered"
+      ],
+      [
+        14,
+        "transpose",
+        "powered"
+      ],
+      [
+        15,
+        "transpose",
+        "powered"
+      ],
+      [
+        16,
+        "transpose",
+        "powered"
+      ],
+      [
+        17,
+        "transpose",
+        "powered"
+      ],
+      [
+        18,
+        "transpose",
+        "powered"
+      ],
+      [
+        19,
+        "transpose",
+        "powered"
+      ],
+      [
+        20,
+        "transpose",
+        "powered"
+      ],
+      [
+        21,
+        "transpose",
+        "powered"
+      ],
+      [
+        22,
+        "transpose",
+        "powered"
+      ],
+      [
+        23,
+        "transpose",
+        "powered"
+      ],
+      [
+        24,
+        "transpose",
+        "powered"
+      ],
+      [
+        25,
+        "transpose",
+        "powered"
+      ],
+      [
+        26,
+        "transpose",
+        "powered"
+      ],
+      [
+        27,
+        "transpose",
+        "powered"
+      ],
+      [
+        28,
+        "transpose",
+        "powered"
+      ],
+      [
+        29,
+        "transpose",
+        "powered"
+      ],
+      [
+        30,
+        "transpose",
+        "powered"
+      ],
+      [
+        31,
+        "transpose",
+        "powered"
+      ],
+      [
+        32,
+        "transpose",
+        "powered"
+      ],
+      [
+        33,
+        "transpose",
+        "powered"
+      ],
+      [
+        34,
+        "transpose",
+        "powered"
+      ],
+      [
+        35,
+        "transpose",
+        "powered"
+      ],
+      [
+        36,
+        "transpose",
+        "powered"
+      ],
+      [
+        37,
+        "transpose",
+        "powered"
+      ],
+      [
+        38,
+        "transpose",
+        "powered"
+      ],
+      [
+        39,
+        "transpose",
+        "powered"
+      ],
+      [
+        40,
+        "transpose",
+        "powered"
+      ]
+    ],
+    "secondary_holdout_cell_status": [
+      [
+        7,
+        "transpose",
+        "powered"
+      ],
+      [
+        7,
+        "untranspose",
+        "powered"
+      ]
+    ]
+  },
+  "controls": {
+    "null": "token-preserving shuffle of the real 436 (469) slots, identical family on all powered cells",
+    "trials": 200,
+    "seed_base": "0x477a0000",
+    "real_seed": "0x477a4ea1",
+    "decision": "p = (exceedances + 1) / 201; promote iff p <= 0.005"
+  },
+  "prohibitions": {
+    "no_password_generation": true,
+    "no_oracle_calls": true,
+    "no_address_derivation": true,
+    "no_bitcoin_endpoint": true
+  }
+}

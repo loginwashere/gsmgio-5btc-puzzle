@@ -1,0 +1,7 @@
+{
+  "phase": 472,
+  "status": "frozen_before_output_run",
+  "note": "Only structural self-tests and four unittests were run before this lock; no target alignment report or null distribution was produced or inspected before freezing.",
+  "audit_script_sha256": "3fe9ab038e04cc0dae745fa33afa98e7097e27dd4c80fb3399bccceb9d406e72",
+  "protocol_sha256": "f24807614609291b73474f88b1baffaa26d21fb66d85f0dab25c0c01ee437de5"
+}

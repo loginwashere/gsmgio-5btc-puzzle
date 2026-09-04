@@ -1,0 +1,9 @@
+{
+  "phase": 474,
+  "status": "frozen_before_output_run_v2",
+  "note": "The v1 execution was interrupted before any result returned. V2 changes only the exact minimum-cover implementation to iterative-deepening feasibility with early exit. Synthetic tests passed; no real/control output was inspected. Inputs, grammar, statistic, controls, and gates are unchanged.",
+  "audit_script_sha256": "e7f44bcb1841e2203e86c2ae693310e3ec6e3ba9d05b925c5cfab3ba66df48c5",
+  "protocol_sha256": "964769140520c156505ef2575af3f564ffb6662663eb3f24098e4baedff83dc9",
+  "v1_aborted_lock_path": "tools/gsmg/phase474_execution_lock_v1_aborted.json",
+  "v1_aborted_run_record_path": "tools/gsmg/phase474_aborted_run_record.json"
+}

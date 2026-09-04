@@ -1,0 +1,36 @@
+{
+  "phase": 469,
+  "date": "2026-09-02",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-02 - Phase 469 DBBI 7x13 Mask-Weighted Sum Protocol.md",
+    "sha256": "0b876e546ac74c12ce4b73dab3504c5790c9d6fe471a02aab9bada3604f0f33b"
+  },
+  "audit_script": {
+    "path": "tools/gsmg/phase469_dbbi_mask_weighted_sum_audit.py",
+    "sha256": "a7fee7a2c867f1f87446cfcd05efd9eec1807731b4e76a72b8f6a58a4d435d68"
+  },
+  "pinned_inputs": [
+    {
+      "path": "tools/gsmg/data.py",
+      "sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2"
+    },
+    {
+      "path": "tools/gsmg/denis_prime_extraction_audit.py",
+      "sha256": "4c1997fbeb1637c13cff95d7e82ec2d7bd90e16060faa4e0a3f7cd3670603e6c"
+    },
+    {
+      "path": "tools/gsmg/flo_prime_walk_provenance_audit.py",
+      "sha256": "1085d89de81c406b3e4a1f21aa960bc875cc1928c28640a6c1f2ff4de4b8b84e"
+    }
+  ],
+  "frozen_shapes": [[7, 13], [13, 7]],
+  "frozen_partitions": ["selected", "complement", "all"],
+  "frozen_maps": ["dbbi_a0i8", "dbbi_a1i9", "plain_a0z25", "plain_a1z26"],
+  "prohibitions": {
+    "no_modular_rendering": true,
+    "no_route_expansion": true,
+    "no_password_generation": true,
+    "no_decryption": true,
+    "no_oracle_calls": true
+  }
+}

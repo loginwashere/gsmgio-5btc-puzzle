@@ -1,0 +1,962 @@
+{
+  "decryptions_attempted": 0,
+  "oracle_calls": 0,
+  "password_materials_generated": 0,
+  "phase": 469,
+  "selected_dbbi_symbols": "bbbbbebbbbebebbbbbebbbebebbbebe",
+  "selected_position_count": 31,
+  "shapes": {
+    "13x7": {
+      "partitions": {
+        "all": {
+          "dbbi_a0i8": {
+            "columns": [
+              56,
+              45,
+              36,
+              46,
+              40,
+              61,
+              47
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              20,
+              23,
+              25,
+              36,
+              23,
+              37,
+              22,
+              21,
+              19,
+              30,
+              21,
+              36,
+              18
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 331
+          },
+          "dbbi_a1i9": {
+            "columns": [
+              69,
+              58,
+              49,
+              59,
+              53,
+              74,
+              60
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              27,
+              30,
+              32,
+              43,
+              30,
+              44,
+              29,
+              28,
+              26,
+              37,
+              28,
+              43,
+              25
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 422
+          },
+          "plain_a0z25": {
+            "columns": [
+              96,
+              192,
+              110,
+              92,
+              203,
+              115,
+              97
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              69,
+              65,
+              58,
+              88,
+              84,
+              65,
+              84,
+              33,
+              70,
+              58,
+              84,
+              52,
+              95
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 905
+          },
+          "plain_a1z26": {
+            "columns": [
+              109,
+              205,
+              123,
+              105,
+              216,
+              128,
+              110
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              76,
+              72,
+              65,
+              95,
+              91,
+              72,
+              91,
+              40,
+              77,
+              65,
+              91,
+              59,
+              102
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 996
+          }
+        },
+        "complement": {
+          "dbbi_a0i8": {
+            "columns": [
+              53,
+              32,
+              25,
+              35,
+              34,
+              58,
+              39
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              16,
+              17,
+              23,
+              31,
+              17,
+              36,
+              20,
+              16,
+              17,
+              25,
+              15,
+              35,
+              8
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 276
+          },
+          "dbbi_a1i9": {
+            "columns": [
+              63,
+              38,
+              33,
+              43,
+              44,
+              68,
+              47
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              19,
+              21,
+              28,
+              36,
+              21,
+              42,
+              25,
+              21,
+              22,
+              30,
+              19,
+              41,
+              11
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 336
+          },
+          "plain_a0z25": {
+            "columns": [
+              74,
+              102,
+              84,
+              68,
+              154,
+              94,
+              50
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              12,
+              46,
+              56,
+              73,
+              59,
+              47,
+              64,
+              22,
+              66,
+              53,
+              47,
+              48,
+              33
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 626
+          },
+          "plain_a1z26": {
+            "columns": [
+              84,
+              108,
+              92,
+              76,
+              164,
+              104,
+              58
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              15,
+              50,
+              61,
+              78,
+              63,
+              53,
+              69,
+              27,
+              71,
+              58,
+              51,
+              54,
+              36
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 686
+          }
+        },
+        "selected": {
+          "dbbi_a0i8": {
+            "columns": [
+              3,
+              13,
+              11,
+              11,
+              6,
+              3,
+              8
+            ],
+            "columns_a1z26_direct": "CMKKFCH",
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              4,
+              6,
+              2,
+              5,
+              6,
+              1,
+              2,
+              5,
+              2,
+              5,
+              6,
+              1,
+              10
+            ],
+            "rows_a1z26_direct": "DFBEFABEBEFAJ",
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 55
+          },
+          "dbbi_a1i9": {
+            "columns": [
+              6,
+              20,
+              16,
+              16,
+              9,
+              6,
+              13
+            ],
+            "columns_a1z26_direct": "FTPPIFM",
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              8,
+              9,
+              4,
+              7,
+              9,
+              2,
+              4,
+              7,
+              4,
+              7,
+              9,
+              2,
+              14
+            ],
+            "rows_a1z26_direct": "HIDGIBDGDGIBN",
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 86
+          },
+          "plain_a0z25": {
+            "columns": [
+              22,
+              90,
+              26,
+              24,
+              49,
+              21,
+              47
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              57,
+              19,
+              2,
+              15,
+              25,
+              18,
+              20,
+              11,
+              4,
+              5,
+              37,
+              4,
+              62
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 279
+          },
+          "plain_a1z26": {
+            "columns": [
+              25,
+              97,
+              31,
+              29,
+              52,
+              24,
+              52
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              61,
+              22,
+              4,
+              17,
+              28,
+              19,
+              22,
+              13,
+              6,
+              7,
+              40,
+              5,
+              66
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 310
+          }
+        }
+      },
+      "selected_escape_counts": {
+        "b": {
+          "columns": [
+            3,
+            5,
+            3,
+            3,
+            2,
+            3,
+            4
+          ],
+          "columns_a1z26_direct": "CECCBCD",
+          "columns_clue_hits": [],
+          "columns_known_list_matches": [],
+          "rows": [
+            4,
+            2,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2
+          ],
+          "rows_a1z26_direct": "DBBABABABABAB",
+          "rows_clue_hits": [],
+          "rows_known_list_matches": [],
+          "total": 23
+        },
+        "e": {
+          "columns": [
+            0,
+            2,
+            2,
+            2,
+            1,
+            0,
+            1
+          ],
+          "columns_a1z26_direct": null,
+          "columns_clue_hits": [],
+          "columns_known_list_matches": [],
+          "rows": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            2
+          ],
+          "rows_a1z26_direct": null,
+          "rows_clue_hits": [],
+          "rows_known_list_matches": [],
+          "total": 8
+        }
+      }
+    },
+    "7x13": {
+      "partitions": {
+        "all": {
+          "dbbi_a0i8": {
+            "columns": [
+              21,
+              31,
+              35,
+              30,
+              17,
+              26,
+              8,
+              27,
+              28,
+              32,
+              19,
+              26,
+              31
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              42,
+              52,
+              55,
+              47,
+              36,
+              50,
+              49
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 331
+          },
+          "dbbi_a1i9": {
+            "columns": [
+              28,
+              38,
+              42,
+              37,
+              24,
+              33,
+              15,
+              34,
+              35,
+              39,
+              26,
+              33,
+              38
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              55,
+              65,
+              68,
+              60,
+              49,
+              63,
+              62
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 422
+          },
+          "plain_a0z25": {
+            "columns": [
+              55,
+              54,
+              40,
+              80,
+              75,
+              68,
+              112,
+              58,
+              105,
+              78,
+              39,
+              81,
+              60
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              128,
+              126,
+              152,
+              123,
+              103,
+              130,
+              143
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 905
+          },
+          "plain_a1z26": {
+            "columns": [
+              62,
+              61,
+              47,
+              87,
+              82,
+              75,
+              119,
+              65,
+              112,
+              85,
+              46,
+              88,
+              67
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              141,
+              139,
+              165,
+              136,
+              116,
+              143,
+              156
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 996
+          }
+        },
+        "complement": {
+          "dbbi_a0i8": {
+            "columns": [
+              14,
+              30,
+              34,
+              30,
+              12,
+              22,
+              3,
+              18,
+              28,
+              32,
+              15,
+              12,
+              26
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              33,
+              44,
+              49,
+              39,
+              33,
+              40,
+              38
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 276
+          },
+          "dbbi_a1i9": {
+            "columns": [
+              17,
+              36,
+              40,
+              37,
+              14,
+              28,
+              5,
+              22,
+              35,
+              39,
+              18,
+              14,
+              31
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              40,
+              52,
+              59,
+              47,
+              43,
+              49,
+              46
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 336
+          },
+          "plain_a0z25": {
+            "columns": [
+              27,
+              41,
+              38,
+              80,
+              20,
+              60,
+              40,
+              39,
+              105,
+              78,
+              32,
+              15,
+              51
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              58,
+              103,
+              127,
+              74,
+              94,
+              93,
+              77
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 626
+          },
+          "plain_a1z26": {
+            "columns": [
+              30,
+              47,
+              44,
+              87,
+              22,
+              66,
+              42,
+              43,
+              112,
+              85,
+              35,
+              17,
+              56
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              65,
+              111,
+              137,
+              82,
+              104,
+              102,
+              85
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 686
+          }
+        },
+        "selected": {
+          "dbbi_a0i8": {
+            "columns": [
+              7,
+              1,
+              1,
+              0,
+              5,
+              4,
+              5,
+              9,
+              0,
+              0,
+              4,
+              14,
+              5
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              9,
+              8,
+              6,
+              8,
+              3,
+              10,
+              11
+            ],
+            "rows_a1z26_direct": "IHFHCJK",
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 55
+          },
+          "dbbi_a1i9": {
+            "columns": [
+              11,
+              2,
+              2,
+              0,
+              10,
+              5,
+              10,
+              12,
+              0,
+              0,
+              8,
+              19,
+              7
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              15,
+              13,
+              9,
+              13,
+              6,
+              14,
+              16
+            ],
+            "rows_a1z26_direct": "OMIMFNP",
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 86
+          },
+          "plain_a0z25": {
+            "columns": [
+              28,
+              13,
+              2,
+              0,
+              55,
+              8,
+              72,
+              19,
+              0,
+              0,
+              7,
+              66,
+              9
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              70,
+              23,
+              25,
+              49,
+              9,
+              37,
+              66
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 279
+          },
+          "plain_a1z26": {
+            "columns": [
+              32,
+              14,
+              3,
+              0,
+              60,
+              9,
+              77,
+              22,
+              0,
+              0,
+              11,
+              71,
+              11
+            ],
+            "columns_a1z26_direct": null,
+            "columns_clue_hits": [],
+            "columns_known_list_matches": [],
+            "rows": [
+              76,
+              28,
+              28,
+              54,
+              12,
+              41,
+              71
+            ],
+            "rows_a1z26_direct": null,
+            "rows_clue_hits": [],
+            "rows_known_list_matches": [],
+            "total": 310
+          }
+        }
+      },
+      "selected_escape_counts": {
+        "b": {
+          "columns": [
+            3,
+            1,
+            1,
+            0,
+            5,
+            0,
+            5,
+            1,
+            0,
+            0,
+            4,
+            2,
+            1
+          ],
+          "columns_a1z26_direct": null,
+          "columns_clue_hits": [],
+          "columns_known_list_matches": [],
+          "rows": [
+            5,
+            4,
+            2,
+            4,
+            3,
+            2,
+            3
+          ],
+          "rows_a1z26_direct": "EDBDCBC",
+          "rows_clue_hits": [],
+          "rows_known_list_matches": [],
+          "total": 23
+        },
+        "e": {
+          "columns": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0,
+            3,
+            1
+          ],
+          "columns_a1z26_direct": null,
+          "columns_clue_hits": [],
+          "columns_known_list_matches": [],
+          "rows": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            2,
+            2
+          ],
+          "rows_a1z26_direct": null,
+          "rows_clue_hits": [],
+          "rows_known_list_matches": [],
+          "total": 8
+        }
+      }
+    }
+  },
+  "source_lengths": {
+    "aligned_plaintext": 91,
+    "dbbi": 91
+  }
+}

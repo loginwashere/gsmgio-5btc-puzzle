@@ -1,0 +1,8 @@
+{
+  "phase": 470,
+  "audit_script_sha256": "9165ba2730b32df21f6f721b5e1dab636805cb106348d0a5e349eefcb693b7d7",
+  "manifest_sha256": "82093c1518a50759db7b9a60e3e0a4ac8128c0066349a2f96fbc6117b763631d",
+  "execution_lock_sha256": "1b09d7c10726c77ea762e1102a3b5814d4d3f1d19adf409c58a984d7d1b7113b",
+  "result_sha256": "b45159364756c6dec5dcb9f9d6b22bb2a30c27d9414fa3871e5e85d356a1507b",
+  "decision_bearing_run": true
+}

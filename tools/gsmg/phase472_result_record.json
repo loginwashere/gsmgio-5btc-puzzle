@@ -1,0 +1,9 @@
+{
+  "phase": 472,
+  "audit_script_sha256": "3fe9ab038e04cc0dae745fa33afa98e7097e27dd4c80fb3399bccceb9d406e72",
+  "manifest_sha256": "27788482eaed0b9c30d2d2aff265ede6fdd1f7271aee856c04804fda0cfb7d2d",
+  "execution_lock_sha256": "aebc13be1783676e63888e9268911fa85a7b8d598969ddb4db4d5c81435e9fdd",
+  "result_sha256": "179bf5d47fc9810323667fc9e6f4d315d61049522228b49816d129cda3525f90",
+  "decision_bearing_run": "single_run_after_lock",
+  "runtime_seconds": 38.09
+}

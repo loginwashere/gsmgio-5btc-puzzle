@@ -1,0 +1,7 @@
+{
+  "phase": 474,
+  "status": "frozen_before_output_run",
+  "note": "Only synthetic exact-cover tests, input-format checks, and historical-manual-phrase multiset validation were run before this lock. No real-target or random-control exact-cover result was produced or inspected.",
+  "audit_script_sha256": "d95523941237dd9417f93552a8571bf88b71b706e4c505b5c59e01710b1a30b8",
+  "protocol_sha256": "964769140520c156505ef2575af3f564ffb6662663eb3f24098e4baedff83dc9"
+}

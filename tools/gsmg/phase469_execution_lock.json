@@ -1,0 +1,7 @@
+{
+  "phase": 469,
+  "status": "revision_1_frozen_before_output_run",
+  "revision_note": "Initial run produced no report because an optional historical transcript dependency was absent; revised to use the already-frozen exact position constant directly.",
+  "audit_script_sha256": "a7fee7a2c867f1f87446cfcd05efd9eec1807731b4e76a72b8f6a58a4d435d68",
+  "protocol_sha256": "0b876e546ac74c12ce4b73dab3504c5790c9d6fe471a02aab9bada3604f0f33b"
+}

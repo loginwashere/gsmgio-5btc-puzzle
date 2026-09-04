@@ -1,0 +1,48 @@
+{
+  "phase": 473,
+  "date": "2026-09-02",
+  "protocol": {
+    "path": "doc/Brainstorms/2026-09-02 - Phase 473 DBBI M91 Cyclic Class Association Protocol.md",
+    "sha256": "37025ecae8bd1b3d65654f38295a866a5a46d7033291f89f365a5412f58dd700"
+  },
+  "audit_script": {
+    "path": "tools/gsmg/phase473_dbbi_m91_cyclic_class_association_audit.py",
+    "sha256": "cee8b5f73e64674fc8fe001a431ec15df049a727306dd4585ba271dffa3b4880"
+  },
+  "pinned_inputs": [
+    {
+      "path": "tools/gsmg/data.py",
+      "sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2"
+    },
+    {
+      "path": "tools/gsmg/phase472_dbbi_route_plaintext_alignment_audit.py",
+      "sha256": "3fe9ab038e04cc0dae745fa33afa98e7097e27dd4c80fb3399bccceb9d406e72"
+    },
+    {
+      "path": "tools/gsmg/phase421_invocation_ledger.json",
+      "sha256": "2ca8099040d72a528c84b28eacb8eaff069c916e96837afa834541e46c71d564"
+    }
+  ],
+  "family": {
+    "dbbi_representations": ["raw9", "be_binary"],
+    "plaintext_features": ["vowel", "mod2", "mod3", "mod7", "mod9", "mod13"],
+    "cyclic_offsets": 91,
+    "cells_per_target": 1092,
+    "score": "categorical mutual information standardized per cell; global max-z"
+  },
+  "calibration": {
+    "rng_seeds": [473, 474, 475, 476, 477],
+    "n_null_per_target": 5000,
+    "null": "DBBI multiset-preserving position permutation; full 1092-cell max rerun",
+    "global_upper_tail_alpha": 0.001
+  },
+  "prohibitions": {
+    "no_match_or_mismatch_text_serialization": true,
+    "no_arithmetic_output_streams": true,
+    "no_output_driven_features_offsets_or_scores": true,
+    "no_password_generation": true,
+    "no_faed_usage": true,
+    "no_decryption": true,
+    "no_oracle_calls": true
+  }
+}

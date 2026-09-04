@@ -1,0 +1,7 @@
+{
+  "phase": 468,
+  "execution_lock_sha256": "f328ce23f27d1b9b46d1e7b6746e7528815a82002c782a853ef93c610046dec2",
+  "result_sha256": "679fc1b05507c7da9ad36ebf377d02dc014bb6bfd0976e58718643571e981210",
+  "one_decision_bearing_run": true,
+  "later_reproductions": "regression tests and manual re-runs execute the same locked computation again and must reproduce this pinned result exactly; they are not new decision-bearing events"
+}

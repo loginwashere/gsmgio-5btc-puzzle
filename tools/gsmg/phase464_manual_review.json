@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "phase": 464,
+  "review_basis": "Manual reading of every automated two-selector context; fresh hash/OCR extraction of all 88 creator-media records (83 unique payloads); visual cross-check against Phase 248's complete labeled native-byte contact-sheet review.",
+  "text_candidate_reviews": [
+    {"key": "solver:60285:parent_of_creator_reply", "decision": "reject", "reason": "Community philosophy uses turning inward and Matrix metaphor; creator salute supplies no mechanical instruction."},
+    {"key": "solver:66540:creator_text", "decision": "reject", "reason": "Post-discovery joke about turning in a grave; not a puzzle operation or first-piece context."},
+    {"key": "support:637:creator_text", "decision": "reject", "reason": "Trading-bot advice about turning low orders off."},
+    {"key": "support:13669:creator_text", "decision": "reject", "reason": "Bittrex workaround; unrelated product support."},
+    {"key": "support:36236:creator_text", "decision": "reject", "reason": "Trading-strategy explanation; beginning/work are ordinary prose."},
+    {"key": "support:36833:creator_text", "decision": "reject", "reason": "Turning a trading bot off; even is incidental grammar."},
+    {"key": "support:37632:parent_of_creator_reply", "decision": "reject", "reason": "Community trading plan; creator reply does not select a puzzle operation."},
+    {"key": "support:40089:parent_of_creator_reply", "decision": "reject", "reason": "Trade-engine shutdown question; before is temporal prose."},
+    {"key": "support:46503:parent_of_creator_reply", "decision": "reject", "reason": "ETHUSDT engine setting; no puzzle context."},
+    {"key": "support:51980:creator_text", "decision": "reject", "reason": "Detailed inverted-market trading example; its outer limits, odd/even, and turn language are product mechanics, not puzzle selectors."},
+    {"key": "support:53151:creator_text", "decision": "reject", "reason": "Trading order pairs and trailing-sell parameters."},
+    {"key": "support:57207:creator_text", "decision": "reject", "reason": "Subscription and engine controls; odd is conversational."},
+    {"key": "support:63428:parent_of_creator_reply", "decision": "reject", "reason": "NFT-collaboration praise invokes Matrix thematically; creator offers a DM but no public operation, and unavailable private content is not evidence."},
+    {"key": "support:67741:creator_text", "decision": "reject", "reason": "Trading-service shutdown retrospective; dense common-word overlap is unrelated to the puzzle chain."}
+  ],
+  "media_hit_reviews": [
+    {"key": "solver:32561", "decision": "reject", "reason": "Merovingian action/reaction clip; Matrix is thematic and the complete Phase 248 visual review found no operational selector."},
+    {"key": "support:39276", "decision": "reject", "reason": "Product dashboard screenshot; OCR Total account value is ordinary interface text."}
+  ],
+  "post_discovery_creator_hits_reviewed": [66540, 66549, 66568, 66592, 66595, 66609, 66909, 66935, 66938, 66944, 66951],
+  "important_controls": [
+    "Support messages 26108 and 26113 establish an older Caesar/esrever rotation precedent only; they do not select a 90-degree turn of the first-piece apertures.",
+    "Solver creator messages 1710 and 4096 authenticate the rose/yellow/blue/first-piece clue but not rotation or the remaining chain selectors.",
+    "No authenticated downstream consumer accepts THEFLOWER, and no password oracle was called."
+  ],
+  "verdict": {
+    "status": "parked",
+    "promotion_gates": {
+      "exact_independent_311027_or_04BEF3": false,
+      "creator_selected_90_degree_turn_plus_second_operation": false,
+      "authenticated_downstream_consumer": false
+    },
+    "disposition": "Retain THEFLOWER as a strong recognition checksum only. Do not extend to BLOSSOMS, password permutations, or the 49-cell grille without new independent evidence."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "phase": 475,
+  "outcome": "closed_negative",
+  "grid_keyword": "DBIFHCEGAKLMNOPQRSTUVWXYZ",
+  "family_labels": [
+    "AS1_P91_minus_DBBI",
+    "AS2_P91_plus_DBBI",
+    "AS3_DBBI_minus_P91",
+    "CS1_coordsP91_minus_coordsDBBI",
+    "CS2_coordsP91_plus_coordsDBBI",
+    "CS3_coordsDBBI_minus_coordsP91"
+  ],
+  "observed": {
+    "decoded_prefix": "BTCSEED",
+    "p91": "DEOEMCKEADHBSCHDKBDCSDKDVBXCPCOCHCRDICIBQEEBDDBCNDSBDCPDGCPDNCNCSESCGDDCLENBMCUDUCQCACDELDZ",
+    "p91_matches_phase386_slice": true,
+    "family": {
+      "AS1_P91_minus_DBBI": {
+        "text": "ADNWLXJXYBGXMBZWKAZBOVDCRVRYJYNYGBLZBVEAJXZADCWZGCOWYAMCFXNBLWMXRAOWAZBBHBLTLXTYPWIWZYZALCV",
+        "quadgram_score": -777.5922946421977,
+        "keyword_hits": []
+      },
+      "AS2_P91_plus_DBBI": {
+        "text": "GFPMNHLLCFIFYDPKKCHDWLREZHDGVGPGIDXHPJMCXLJCDEGFUEWGIESEHHRFPIOHTIWIMHFDPHPJNHVIZIYIBGHILED",
+        "quadgram_score": -689.3537064454223,
+        "keyword_hits": []
+      },
+      "AS3_DBBI_minus_P91": {
+        "text": "AXNEPDRDCZUDOZBEQABZMFXYJFJCRCNCUZPBZFWARDBAXYEBUYMECAOYVDNZPEODJAMEABZZTZPHPDHCLESEBCBAPYF",
+        "quadgram_score": -683.6442336583954,
+        "keyword_hits": []
+      },
+      "CS1_coordsP91_minus_coordsDBBI": {
+        "text": "DCNKLGAGFVFVLKIBBDZKMFCHUZQHGHNHFKPZFEWDRGADXHFCOHMFIDPHEGKVGFMGRDMFDZVKKEGHLGTIRFTFGHZDGHT",
+        "quadgram_score": -749.5334086239666,
+        "keyword_hits": []
+      },
+      "CS2_coordsP91_plus_coordsDBBI": {
+        "text": "DGPANACCOCDGZEBHNIEEYIABBAHMRMPMDEYEBKAIUCKIABHCMBYHFLPBAAUCSNOATNYNPECERESFNAQFSNSNKMENTBD",
+        "quadgram_score": -610.5786025648257,
+        "keyword_hits": []
+      },
+      "CS3_coordsDBBI_minus_coordsP91": {
+        "text": "DVTWQYXYICICQWFHHDEWUIVBMELBYBTBIWREIZKDPYXDABIVSBUIFDRBZYWCYIUYPDUIDECWWZYBQYNFPINIYBEDYBN",
+        "quadgram_score": -721.2539086177813,
+        "keyword_hits": []
+      }
+    },
+    "winning_label": "CS2_coordsP91_plus_coordsDBBI",
+    "family_max_quadgram": -610.5786025648257,
+    "keyword_hits": {}
+  },
+  "null": {
+    "kind": "exact_FAED_multiset_permutation_then_full_block_Bifid_then_fixed_P91_slice",
+    "trials": 100000,
+    "seed": 1141,
+    "tail_count": 7887,
+    "raw_tail_fraction": 0.07887,
+    "add_one_empirical_p": 0.07887921120788792,
+    "family_max_quantiles": {
+      "min": -727.6561875699853,
+      "q25": -663.397095823429,
+      "median": -647.2286441647914,
+      "q75": -630.0899095198645,
+      "q95": -604.6395208920325,
+      "q99": -587.2897709799294,
+      "max": -540.7057881981247
+    },
+    "winning_operation_counts": {
+      "AS1_P91_minus_DBBI": 69,
+      "AS2_P91_plus_DBBI": 4670,
+      "AS3_DBBI_minus_P91": 4628,
+      "CS1_coordsP91_minus_coordsDBBI": 3976,
+      "CS2_coordsP91_plus_coordsDBBI": 86399,
+      "CS3_coordsDBBI_minus_coordsP91": 258
+    }
+  },
+  "promotion_threshold": 0.005,
+  "alphabet_subtraction_roundtrip": true,
+  "coordinate_subtraction_roundtrip": true,
+  "planted_positive": {
+    "operation": "AS1_P91_minus_DBBI",
+    "recovered": "THISISAPLANTEDSATOSHIENGLISHPOSITIVEXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "contains_satoshi": true,
+    "quadgram_score": -491.7367429769773
+  },
+  "oracle_calls": 0,
+  "bitcoin_endpoint_calls": 0
+}

@@ -1,0 +1,9 @@
+{
+  "phase": 474,
+  "status": "frozen_before_output_run_v3",
+  "note": "V1 and V2 were interrupted before any result returned. V3 changes only exact implementation: meet-in-the-middle for cardinalities 1-4 and exact DFS for 5-8, with at most 200 exact witnesses. Synthetic tests passed. Inputs, grammar, statistic, controls, and gates are unchanged.",
+  "audit_script_sha256": "8b5dd1a4fc3a8d1ea8496b9f99054219667d21dd2398fcb32fb2bb8662225c1f",
+  "protocol_sha256": "964769140520c156505ef2575af3f564ffb6662663eb3f24098e4baedff83dc9",
+  "prior_aborted_lock_paths": ["tools/gsmg/phase474_execution_lock_v1_aborted.json", "tools/gsmg/phase474_execution_lock_v2_aborted.json"],
+  "prior_aborted_run_records": ["tools/gsmg/phase474_aborted_run_record.json", "tools/gsmg/phase474_aborted_run_v2_record.json"]
+}

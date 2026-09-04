@@ -1,0 +1,11 @@
+{
+  "phase": 474,
+  "status": "aborted_before_result_v2",
+  "runtime_seconds": 314.85,
+  "exit_code": 130,
+  "result_file_created": false,
+  "manifest_sha256": "5fd7e31b016334354f1f726e898749e737ae7d44b78aadf2fbc7224718167400",
+  "execution_lock_sha256": "73530064a1c0485e5f6171e8af5f9b16bafbcf313a3a3d0b91f8eb4c8f1b79d9",
+  "output_inspected": false,
+  "reason": "The v2 locked implementation was interrupted before build_report returned or serialized/printed a result. Exact iterative-deepening remained impractical for 3357 target-fitting discovery words. V3 uses exact meet-in-the-middle for cardinalities one through four and retains exact DFS for five through eight; all experimental choices remain unchanged."
+}

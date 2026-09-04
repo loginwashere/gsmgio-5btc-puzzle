@@ -31,8 +31,9 @@ This does not replace [GSMG_TOPOLOGY_AUDIT](GSMG_TOPOLOGY_AUDIT.md), which
 already scores 9 topologies (T0-T8) for DBBI/FAED specifically on a
 7-column structural rubric. That audit is this registry's primary evidence
 source for T0-T2 below and is cited, not duplicated. This registry adds
-three theories the Topology Audit does not frame explicitly (T3-T5, all
-specific to the BTCSEED continuation and the solved-stage grammar) and
+four theories the Topology Audit does not frame explicitly (T3-T6,
+covering the BTCSEED continuation, solved-stage grammar, and rotated-prime
+closed-loop branch) and
 requires each entry to separate **facts used to construct** a theory from
 **facts that could confirm** it — a distinction the Topology Audit's own
 scoring columns do not enforce, and the distinction this registry exists to
@@ -138,7 +139,7 @@ through a 9-symbol alphabet), but that structure does not encode a
   IID model is best, while the first-order-memory contrast is slightly
   negative and not promoted at `p_family=0.00965990`, consistent with
   frequency skew without predictive sequential language).
-- **Complexity cost:** lowest of all six theories (zero free parameters).
+- **Complexity cost:** lowest of all seven theories (zero free parameters).
 - **Current status:** **favored.** No prediction has failed; twelve
   independent consumer families (Phases 397-407) and the period-robustness
   audit (Phase 408) all land exactly where T0 predicts they would.
@@ -313,7 +314,7 @@ anywhere in either document.
   p-value between 0.06 and 0.90); Phase 408 (period-robustness — only
   period 570 reproduces the `BTCSEED`/`Z@97`/alternation package;
   `period_robust = False`).
-- **Complexity cost:** highest of all six theories — a period choice plus
+- **Complexity cost:** highest of all seven theories — a period choice plus
   an unbounded family of consumer-construction parameters, the majority
   of which have now been tried and exhausted.
 - **Current status:** **stopped**, per the framework's own third stop
@@ -360,7 +361,7 @@ adjacent `matrixsumlist` instruction token.
   not literally `matrixsumlist`'s own operand, tested against the
   authenticated Stage-0 matrix: best candidate 107/196 cell agreement,
   47.06% of shuffles reach the same agreement, closed negative).
-- **Complexity cost:** highest possible among the six (7 fully free
+- **Complexity cost:** highest possible among the seven (7 fully free
   parameters, none sourced).
 - **Current status:** **blocked**, not stopped by a failed prediction —
   gap `G-MSL-001` is P0/`parked` in the Open Gap Registry precisely
@@ -454,6 +455,38 @@ profile (KDF, cipher, padding) that the three *solved* boundaries
   candidate on a newly-eligible boundary should be checked against first,
   per Phase 410's own ranked-oracle-guidance deliverable.
 
+## T6 — Rotated-prime closed-loop checkpoint
+
+The 24 authenticated first-piece color apertures are read at adjacent physical
+quarter-turns under the established spiral/inverse convention, producing two
+six-digit primes whose matrix/Architect outputs compose to an authenticated
+earlier credential prefix.
+
+- **Authenticated inputs:** the first-piece raster and 24 color endpoints;
+  spiral order; macro tokens; Architect source; and Phase-1 credential.
+- **Source-supported assumptions:** the base spiral/inverse reading and
+  six-digit matrix grammar are established. The quarter-turn originates in a
+  community grille observation, not a creator instruction.
+- **Free parameters:** physical direction/order plus the frame, parity,
+  reversal, join, and affix composition. Their bounded family is exhaustive,
+  but it was formalized after `FLOW`/`TRUE`/`THEFLOWER` were visible.
+- **Facts used to construct:** `574061`; rotated `311027`; the selected
+  Architect words; known flower/rose language; the already-known Phase-1
+  credential prefix.
+- **New predictions:** an independent selector for the quarter-turn and at
+  least one other load-bearing operation, or a downstream consumer accepting
+  the result. The obvious held-out continuation `BLOSSOMS` was tested and
+  failed under the bounded no-reuse grammar.
+- **Completed experiments:** Phase 461 orientation/closed-loop audit; complete
+  row-sum, frame-role, affix, direct-oracle, row-major, and `BLOSSOMS`
+  controls. Phase 462 separately closes the full 49-aperture/`FEFEFE` extension. Phase 464 completes the preregistered creator-provenance audit: zero exact references, all 14 multi-selector contexts rejected, and no consumer. Under the closed-system premise, Phases 465-466 additionally reject the full old credential as a modular running key or exact DBBI/FAED crib. Phase 467's global closure retains the branch but leaves its operation, direction/representation, and consumer unbound.
+- **Complexity cost:** moderate/high; fewer free inputs than T4, but multiple
+  post-output composition choices remain unselected.
+- **Current status:** **strong recognition checkpoint; parked**. It is the
+  best new internal branch, but not a calibrated discovery or executable
+  `yinyang` transition. Gap `G-FLOWER-001` records the missing selector and
+  consumer.
+
 ## Cross-theory summary
 
 | Theory | Free params | Status | Key discriminating result |
@@ -464,6 +497,7 @@ profile (KDF, cipher, padding) that the three *solved* boundaries
 | T3 — BTCSEED typed stream | period + consumer family | stopped | Phase 408: package survives only under the period used to discover it |
 | T4 — Matrix instruction pipeline | 7/7 unbound | blocked | Phase 259: last primary source reviewed, empty |
 | T5 — Solved-stage creator grammar | 0 (derived) | validated, no eligible target | Phase 341/410: leave-one-out calibration passes on all 3 solved boundaries |
+| T6 — Rotated-prime closed loop | moderate/high, post-output composition | recognition checkpoint; parked | Phases 461/464-467: unique `THEFLOWER` orientation, but provenance, old-credential running-key/crib consumers, held-out `BLOSSOMS`, and global executable-edge closure all fail |
 
 T0, T1, and T5 are jointly consistent and currently the best-supported
 reading of the frontier: the DBBI/FAED anomaly is real but does not
@@ -474,6 +508,8 @@ already been applied everywhere it currently can be. T2-T4 are not
 disproven in the sense of a certain negative — T2 and T3 fail their own
 predicted discriminators under the framework's stop rules, and T4 is
 blocked on missing primary evidence, not falsified.
+T6 is compatible with that baseline but remains a post-hoc recognition model;
+its failed `BLOSSOMS` continuation and Phases 464-466's negative provenance and internal-consumer gates prevent promotion.
 
 ## Reopen conditions (per theory)
 
@@ -490,6 +526,10 @@ blocked on missing primary evidence, not falsified.
 - **T4:** gap `G-MSL-001`'s closure condition — a new creator clue,
   recovered guide step, or pre-cutoff code artifact fixing the 7 unbound
   fields.
+- **T6:** gap `G-FLOWER-001`'s closure condition — independent evidence selects
+  the quarter-turn and another load-bearing operation, an authenticated
+  consumer accepts the result, or a preregistered continuation predicts unseen
+  material.
 - **T5:** a fourth genuinely solved AES boundary (would strengthen, not
   reopen — this theory is not currently weakened); or a newly-eligible
   unresolved boundary gaining all 5 required local grammar fields (would
@@ -516,7 +556,8 @@ consistent). Per its own preregistered rule, neither this nor Phase 412's
 outcome licenses plaintext generation, a new DBBI/FAED combinator, or a
 key search; the next useful evidence is external provenance or
 identification of the two independent consumers, not another transform
-on this branch.
+on this branch. Phase 464 subsequently completed Phase 461's licensed bounded provenance/consumer
+audit for T6 and found no promotion gate. No further arithmetic or password family is licensed.
 
 ## Related documents
 

@@ -1,0 +1,275 @@
+{
+  "closest_live_edges": {
+    "architect_relation": [
+      "operation",
+      "direction_representation",
+      "consumer"
+    ],
+    "sha_instruction": [
+      "operand_boundary",
+      "direction_representation",
+      "consumer"
+    ],
+    "theflower_router": [
+      "operation",
+      "direction_representation",
+      "consumer"
+    ]
+  },
+  "date": "2026-09-01",
+  "decryptions_attempted": 0,
+  "domain_product_count": 36,
+  "frozen_fact_checks": {
+    "architect_clause_count": 8,
+    "eligible_source_referents": 0,
+    "faed_pairs_admissible_but_selected": 0,
+    "phase1_consumer_families_promoted": 0,
+    "theflower_promotion_gates_passed": 0,
+    "thispassword_roles_surviving": 3
+  },
+  "full_assignment_count": 0,
+  "hard_constraint_survivor_count": 27,
+  "hashes_computed_on_candidates": 0,
+  "live_contract_field_count": 36,
+  "manifest_sha256": "ca62ee312849bc172602be0e35e11cebd5b2556068e049b4ce79bf921a959f5c",
+  "maximum_assignment_count": 27,
+  "maximum_assignments": [
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "GI",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_faed",
+      "topology": "independent_streams"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "GI",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "faed_answer_is_password",
+      "topology": "independent_streams"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "GI",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_salph_blob",
+      "topology": "independent_streams"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_faed",
+      "topology": "independent_streams"
+    },
+    {
+      "architect_relation": "conditional_edge_mirror",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_faed",
+      "topology": "independent_streams"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "faed_answer_is_password",
+      "topology": "independent_streams"
+    },
+    {
+      "architect_relation": "conditional_edge_mirror",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "faed_answer_is_password",
+      "topology": "independent_streams"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_salph_blob",
+      "topology": "independent_streams"
+    },
+    {
+      "architect_relation": "conditional_edge_mirror",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_salph_blob",
+      "topology": "independent_streams"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "GI",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_faed",
+      "topology": "symmetric_dbbi_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "GI",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "faed_answer_is_password",
+      "topology": "symmetric_dbbi_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "GI",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_salph_blob",
+      "topology": "symmetric_dbbi_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_faed",
+      "topology": "symmetric_dbbi_faed"
+    },
+    {
+      "architect_relation": "conditional_edge_mirror",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_faed",
+      "topology": "symmetric_dbbi_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "faed_answer_is_password",
+      "topology": "symmetric_dbbi_faed"
+    },
+    {
+      "architect_relation": "conditional_edge_mirror",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "faed_answer_is_password",
+      "topology": "symmetric_dbbi_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_salph_blob",
+      "topology": "symmetric_dbbi_faed"
+    },
+    {
+      "architect_relation": "conditional_edge_mirror",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_salph_blob",
+      "topology": "symmetric_dbbi_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "GI",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_faed",
+      "topology": "dbbi_guides_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "GI",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "faed_answer_is_password",
+      "topology": "dbbi_guides_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "GI",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_salph_blob",
+      "topology": "dbbi_guides_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_faed",
+      "topology": "dbbi_guides_faed"
+    },
+    {
+      "architect_relation": "conditional_edge_mirror",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_faed",
+      "topology": "dbbi_guides_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "faed_answer_is_password",
+      "topology": "dbbi_guides_faed"
+    },
+    {
+      "architect_relation": "conditional_edge_mirror",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "faed_answer_is_password",
+      "topology": "dbbi_guides_faed"
+    },
+    {
+      "architect_relation": "unbound",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_salph_blob",
+      "topology": "dbbi_guides_faed"
+    },
+    {
+      "architect_relation": "conditional_edge_mirror",
+      "faed_escape": "HE",
+      "theflower_role": "recognition_checksum",
+      "thispassword_role": "password_for_salph_blob",
+      "topology": "dbbi_guides_faed"
+    }
+  ],
+  "maximum_closure_count": 14,
+  "next_experiment": {
+    "kind": "internal_binding_recovery",
+    "rule": "recover a selector from authenticated artifact structure before executing any transform",
+    "targets": [
+      "topology",
+      "faed_escape",
+      "thispassword_role",
+      "architect_relation"
+    ]
+  },
+  "oracle_calls": 0,
+  "password_materials_generated": 0,
+  "phase": 467,
+  "shared_missing_bindings": [
+    "dbbi_matrixsumlist.operation",
+    "dbbi_matrixsumlist.direction_representation",
+    "dbbi_matrixsumlist.output_type",
+    "dbbi_matrixsumlist.consumer",
+    "faed_decode.operand_boundary",
+    "faed_decode.operation",
+    "faed_decode.direction_representation",
+    "faed_decode.output_type",
+    "faed_decode.consumer",
+    "architect_relation.operation",
+    "architect_relation.direction_representation",
+    "architect_relation.consumer",
+    "thispassword_attachment.operand_boundary",
+    "thispassword_attachment.operation",
+    "thispassword_attachment.direction_representation",
+    "thispassword_attachment.consumer",
+    "sha_instruction.operand_boundary",
+    "sha_instruction.direction_representation",
+    "sha_instruction.consumer",
+    "theflower_router.operation",
+    "theflower_router.direction_representation",
+    "theflower_router.consumer"
+  ],
+  "solved_control_complete": true,
+  "transform_licensed": false,
+  "variable_selectors_required_for_unique_assignment": [
+    "topology",
+    "faed_escape",
+    "thispassword_role",
+    "architect_relation"
+  ],
+  "verdict": "no_executable_assignment_constraint_tie",
+  "weighted_scores_computed": 0
+}

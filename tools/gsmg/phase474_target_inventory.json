@@ -1,0 +1,52 @@
+{
+  "phase": 474,
+  "status": "descriptive_target_only_not_decision_bearing",
+  "target": "ncsyangcahiriasogaleafayanestve",
+  "independent_bip39_plus_a_i": {
+    "candidate_word_count": 475,
+    "minimum_words": 6,
+    "exact_bags": [["again", "can", "category", "essay", "leaf", "vanish"]]
+  },
+  "discovery_chat_contaminated": {
+    "candidate_word_count": 3357,
+    "minimum_words": 4,
+    "exact_bags": [
+      ["aaa", "faceless", "versionchat", "yinagyang"],
+      ["aaaah", "averaging", "consistency", "safely"],
+      ["aaece", "agartha", "confess", "yinyangvalis"],
+      ["aaece", "salfasia", "versionchat", "yngyang"],
+      ["aaya", "afghanistan", "greyscale", "novices"],
+      ["aca", "afghanistan", "necessarily", "voyage"],
+      ["accaa", "afghanistan", "overlays", "seeying"],
+      ["afaics", "changes", "negatively", "sayonara"],
+      ["afghanistan", "alias", "neccesary", "voyage"],
+      ["afghanistan", "analysis", "ceacer", "voyage"],
+      ["aggresive", "annoyance", "salfasia", "yacht"],
+      ["analasysis", "antyhing", "caaef", "coverage"],
+      ["analasysis", "avatar", "feeny", "geocaching"],
+      ["analyse", "gayish", "interfaces", "voacanga"],
+      ["analyses", "canoe", "faaigg", "vanitysearch"],
+      ["analyses", "gayish", "interface", "voacanga"],
+      ["caaef", "salvation", "searches", "yinagyang"],
+      ["caveat", "reaches", "salfasion", "yinagyang"],
+      ["chance", "leavage", "satisfying", "sayonara"],
+      ["fantasies", "grayscale", "hiney", "voacanga"]
+    ]
+  },
+  "historical_manual_exact_covers": [
+    "reach a safe ying yang salvation case",
+    "a safe ying yang race salvation chase",
+    "yingyang salvation each caesar safe",
+    "a canonical saga say everything safe"
+  ],
+  "manual_checks": {
+    "all_exact_multisets": true,
+    "all_tokens_in_contaminated_discovery_lexicon": true
+  },
+  "calibration_completed": false,
+  "phrase_selected": false,
+  "password_materials_generated": 0,
+  "faed_uses": 0,
+  "decryptions_attempted": 0,
+  "oracle_calls": 0
+}

@@ -1,0 +1,211 @@
+{
+  "pair": "he",
+  "length": 469,
+  "seed": 303282045111246163,
+  "budget": {
+    "top_orders": 16,
+    "enum_board_restarts": 2,
+    "enum_board_iters": 30000,
+    "enum_board_t0": 20.0,
+    "enum_board_t1": 1.0,
+    "restarts": 16,
+    "top_k": 4,
+    "rounds": 3,
+    "board_init_iters": 10000,
+    "board_init_t0": 20.0,
+    "board_init_t1": 1.0,
+    "board_refine_iters": 4000,
+    "board_refine_t0": 5.0,
+    "board_refine_t1": 0.5,
+    "polish_moves": 3000
+  },
+  "cells_run": [
+    [
+      7,
+      "untranspose"
+    ],
+    [
+      7,
+      "transpose"
+    ]
+  ],
+  "wall_seconds": 6.153526108000733,
+  "family_max": -5.244269489769242,
+  "cells": [
+    {
+      "width": 7,
+      "direction": "untranspose",
+      "score": -2459.5623907017743,
+      "normalised": -5.244269489769242,
+      "perm": [
+        4,
+        5,
+        2,
+        6,
+        0,
+        3,
+        1
+      ],
+      "key": [
+        0,
+        8,
+        17,
+        13,
+        18,
+        4,
+        19,
+        6,
+        22,
+        23,
+        5,
+        1,
+        24,
+        7,
+        2,
+        3,
+        25,
+        9,
+        15,
+        20,
+        21,
+        10,
+        14,
+        11,
+        12,
+        16
+      ],
+      "text": "NRRESINNLTUATEERRSUSELZEREAKFIENEERSSTEVAINISENOVRUNASZTXIRRRREITERIEKATANNITSIALAIIESETIZESIETCETISSRESIGNITEEEBUTEREEAVESAVEEHAINECOTTSRESPERSSAIASSHUSRSAIENIELABAEATETRMSRSREANNENSEPIESLEAIIIRUEERMENSEIMITINEMAIEMARTTMASEARRTASTEDJSUARSUENEANCTIEESIESESTRDWITNATRALPDSNETENVAAADIOMPHTNREVENUTRSPHVALAETESLYCOSREANIANNCHOTUEARCETENTERNIEABETETSFGAFRITTWOETITEANYHTREDJWEITSECTENTBROTERTEMOREISSSXPGATTEOINGSAIATATHSSNTDNESESREYRTKIDTAEEENDEDSEATTITEITATEDNRSEEPRRIAKT",
+      "status": "enumerated",
+      "orders_enumerated": 5040,
+      "top_orders": [
+        {
+          "rank": 0,
+          "invariant": 1530.0,
+          "score": -2532.0509439627044
+        },
+        {
+          "rank": 1,
+          "invariant": 1492.0,
+          "score": -2499.730881451451
+        },
+        {
+          "rank": 2,
+          "invariant": 1485.0,
+          "score": -2459.5623907017743
+        },
+        {
+          "rank": 3,
+          "invariant": 1483.0,
+          "score": -2508.9782211652355
+        },
+        {
+          "rank": 4,
+          "invariant": 1482.0,
+          "score": -2555.9460246721187
+        },
+        {
+          "rank": 5,
+          "invariant": 1481.0,
+          "score": -2532.753363155898
+        },
+        {
+          "rank": 6,
+          "invariant": 1479.0,
+          "score": -2468.7692312627705
+        },
+        {
+          "rank": 7,
+          "invariant": 1477.0,
+          "score": -2537.486653505377
+        },
+        {
+          "rank": 8,
+          "invariant": 1472.0,
+          "score": -2527.620647456209
+        },
+        {
+          "rank": 9,
+          "invariant": 1472.0,
+          "score": -2540.076031098035
+        },
+        {
+          "rank": 10,
+          "invariant": 1471.0,
+          "score": -2520.2204104905177
+        },
+        {
+          "rank": 11,
+          "invariant": 1469.0,
+          "score": -2552.8893026841442
+        },
+        {
+          "rank": 12,
+          "invariant": 1468.0,
+          "score": -2548.5982970195964
+        },
+        {
+          "rank": 13,
+          "invariant": 1468.0,
+          "score": -2535.81643390537
+        },
+        {
+          "rank": 14,
+          "invariant": 1467.0,
+          "score": -2540.3127852492694
+        },
+        {
+          "rank": 15,
+          "invariant": 1465.0,
+          "score": -2490.4196153885214
+        }
+      ],
+      "seconds": 6.110973025999556
+    },
+    {
+      "width": 7,
+      "direction": "transpose",
+      "score": -2535.7257715396267,
+      "normalised": -5.406664758080227,
+      "perm": [
+        5,
+        4,
+        3,
+        6,
+        2,
+        0,
+        1
+      ],
+      "key": [
+        8,
+        19,
+        13,
+        17,
+        0,
+        18,
+        4,
+        22,
+        20,
+        23,
+        1,
+        21,
+        25,
+        6,
+        7,
+        14,
+        10,
+        9,
+        11,
+        3,
+        12,
+        15,
+        5,
+        24,
+        2,
+        16
+      ],
+      "text": "MTNSDLENPENSTTNAFFISIIINRDESRETNATIBLEYIISNIRGILSEATRMISSNEDICTHTWOSIRRIIISSTKAARAMIXESISNELINGNMETDRDENOSTVYSUZERSSEATACRVEYTRITAITIESRIAIAROAIFSINIRSFRNSEVIEFEARTSAYNENEORXWASSYNWTRYTREMSAANDAASENETORHATSSVCSASSICESRISESELJFSENSSSSROYSTEBASNIEFSOSINGCSLBASKEMEEYTEENDTNSSINITAIKSAIGSFTENTTCSSEESNTHREIHENRNTISHESSSNRACCORSATTTSIDNTNIAASDSSGWAIITMNARHJRPASNTSSSESSPSEINIZESASFASOSSSDNESTAEEETTTGSNSETRINSREESUSESTSSAINHANRAANTAAAAPESASSGUEERALSARRSEANSITRASINAAESOTERZ",
+      "status": "searched",
+      "seconds": 2.2132059289997414
+    }
+  ]
+}
