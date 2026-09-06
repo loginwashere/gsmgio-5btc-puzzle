@@ -1,0 +1,1327 @@
+{
+  "phase": 478,
+  "cutoff_commit": "64f8063939d1d4d89402b87f88aa22b8fb956a7b",
+  "protocol_path": "doc/Brainstorms/2026-09-05 - Phase 478 DBBI Substituted-Digest Matrixsumlist Match Protocol.md",
+  "protocol_sha256": "4721719c4e8e2a89ba92416090cfbe78abe47ed1079059ff26cfe0b6cbdba318",
+  "phase478_common_sha256": "8795e7743c471c2be5af94959b224a86619df65c0a4b00fe1cadd56e5838a22d",
+  "harvester_script": "tools/gsmg/phase478_matrixsumlist_candidate_harvester.py",
+  "harvester_script_sha256": "90aecd8df3accb7768c44cbef95015be9414bfa9de3bb2c99b2f3f10e2281431",
+  "driver_script": "tools/gsmg/phase478_harvest_driver.py",
+  "driver_script_sha256": "3ebd9b3b74f23c4a5652b28c1b83e6d3b6a2d66d3227b60a1c86c8f109081407",
+  "adapter_scripts": {
+    "phase478_adapter_cosmic_raw_digest.py": "8bcce334672a643ece854dabe8c8efe90bed392864ca3e1f995021993f9d6a2f"
+  },
+  "test_script_sha256": "89d319be396940949931c8bd7c2cc8afdb2d2ed6e9507d8e95c472a670e276f5",
+  "dbbi_pattern": "01234556728966286abc61c88b48de3086dd501d5557d6bab5605233df7bbb96",
+  "eligible_py_file_classification": [
+    {
+      "path": "tools/gsmg/adjacent_diff_sweep.py",
+      "blob_sha": "94dde7c5ea7180b84d3c3d3e5d48a8a585ab19f8",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 300,
+        "zero_candidate_policy": {
+          "allowed": true,
+          "reason_code": "historical_significance_gate_closed",
+          "reason": "deterministic shuffle-based significance gate (fixed seed, fixed trial budget) does not clear against real DBBI/FAED data under the exact locked recipe; verified by direct execution, real p-value recorded as this result's own gate_witness, well above the file's own 0.05 threshold"
+        }
+      }
+    },
+    {
+      "path": "tools/gsmg/alphabet_hypothesis_check.py",
+      "blob_sha": "437f850a0149470c11d7f27d8e83d2092041a8bc",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/anstoo_provenance_audit.py",
+      "blob_sha": "79e85f556f5fcf14cce8cd43a2962ebabdcf29bc",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/architect_mirror_selector_audit.py",
+      "blob_sha": "e46c1c36fb0d3edf6361b7d0923713502f2b0ca4",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/architect_monologue_wiseman_140_audit.py",
+      "blob_sha": "da39c1bddd5437fdd6c8137cee4309f5db1599ec",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/binary_hint_operand_audit.py",
+      "blob_sha": "97b7de74a9013e0449f94be127f7a055b484a97b",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/blossoms_boundary_audit.py",
+      "blob_sha": "e3bb5a08526969f118ffb4f6cc1b5cd2687cd661",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/build_medium_curated_candidates.py",
+      "blob_sha": "1267177aff5ad8083e62c9da36ded9fdc2cac511",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/cb_common.py",
+      "blob_sha": "018d4baf2036507e3bd8a0c9d0898dfe8d673691",
+      "category": "infrastructure",
+      "reason": "matches only via KEYCOL_DBBI = \"matrixsumlist\" constant and a comment; this file IS the oracle, not a candidate source"
+    },
+    {
+      "path": "tools/gsmg/command_provenance_recheck.py",
+      "blob_sha": "9d09d2429f0b74ab9920d15fc3f3522147120943",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/cosmic_raw_digest_checkpoint_audit.py",
+      "blob_sha": "2d0dbd4df84d5dfdfa2656df6c009393f6704150",
+      "category": "generator+oracle",
+      "recipe": {
+        "driver": "phase478_adapter_cosmic_raw_digest.py",
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/creator_operator_vocabulary_audit.py",
+      "blob_sha": "abb299f325e8514443bcdda52273472a818ff929",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/crib_drag.py",
+      "blob_sha": "e87713d3cde09f95753176e7ec6c68d792bafdf3",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/cross_target_coupling_sweep.py",
+      "blob_sha": "32056599183a47991b8cf22f0d88f4e918bf050d",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 90
+      }
+    },
+    {
+      "path": "tools/gsmg/curated_candidate_corpus_audit.py",
+      "blob_sha": "40e511b45969e29d7cc8bf42263de85b87fdee1e",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/curated_candidate_registry.py",
+      "blob_sha": "95466703ae2c497dca0ad7b9ffc4a8668aeb733a",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/dbbi_faed_boundary_selector_audit.py",
+      "blob_sha": "4a0466392be8bd7db417ebdc9164a48cfca75088",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/dbbi_faed_gronsfeld_progressive_audit.py",
+      "blob_sha": "3deabcc949e54d0ad3ebae874151172894d5d6b5",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/dbbi_faed_independent_consumer_audit.py",
+      "blob_sha": "984c43427fbb6bb8db44f7ed1847bfb79d29eb5b",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/dbbi_faed_joint_positional_matrix_audit.py",
+      "blob_sha": "ce7ec5d104dee903f02b0df377952c28b2560dc6",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [
+          "--run"
+        ],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/denis_full_corpus_audit.py",
+      "blob_sha": "b1359a2d16e54c24a46bdc1d23bc1c974dff170f",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/designing_the_future_source_audit.py",
+      "blob_sha": "a40c1eca291a498259a31a12b8ed9e1149cfda87",
+      "category": "structural/no-oracle",
+      "note": "MUST NEVER be given a recipe or executed: performs live urllib.request.urlopen() network calls"
+    },
+    {
+      "path": "tools/gsmg/digraphic_sweep.py",
+      "blob_sha": "9704b4af8f77aaf32894f7171d90853bf4ca1337",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 150,
+        "zero_candidate_policy": {
+          "allowed": true,
+          "reason_code": "historical_significance_gate_closed",
+          "reason": "deterministic shuffle-based significance gate (fixed seed, fixed trial budget) does not clear against real DBBI/FAED data under the exact locked recipe; verified by direct execution, real p-value recorded as this result's own gate_witness, well above the file's own 0.05 threshold"
+        }
+      }
+    },
+    {
+      "path": "tools/gsmg/door_prime_passport_probe.py",
+      "blob_sha": "286e6c4844cd0e4ab79208cd0cf426f203bc2a6b",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/dual_channel_consistency_audit.py",
+      "blob_sha": "8e601fcd2d0f526c745540b0cf22e1d17712454f",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/extended_cipher_recheck.py",
+      "blob_sha": "3789899e2343e9825289c48da78979f1c5a126d6",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/eyes_transition_chronology_audit.py",
+      "blob_sha": "84c9044877d41a5b6c41234596c2f3ec24fd611f",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/faed_monoalphabetic_sweep.py",
+      "blob_sha": "0e6b1ced0a43989a68c1271fe02ad41af332957a",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 60,
+        "zero_candidate_policy": {
+          "allowed": true,
+          "reason_code": "historical_escalation_never_executed_no_frozen_threshold",
+          "reason": "Phase 43 (tools/gsmg/findings/P00043.md, independently re-verified) established that this file's AES-escalation path never actually executed under any historical run and no --escalate-if-above threshold was ever frozen; its verdict instead rests on a separate complete 100-trial token-preserving null test (real=-2544.1, null median=-2539.0, p=0.63366). Deriving a threshold now would be a new Phase 478 candidate-generating experiment outside the closed historical harvest."
+        }
+      }
+    },
+    {
+      "path": "tools/gsmg/first_piece_batch_rebus_gate_audit.py",
+      "blob_sha": "7373cb94d665be96d7cfd592ab7f612f3f70e6aa",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/first_piece_even_odd_alphabet_gate_audit.py",
+      "blob_sha": "ef62cfa27ece70a8bea222fff79410fc9a8aa898",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/first_piece_matrix_product_audit.py",
+      "blob_sha": "40b06e428f5b9b74057b3631de52ec3e3032cc04",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/first_piece_prime_sum_reconstruction.py",
+      "blob_sha": "814a1abc0b2f446e30bd685dc3d0d18147b4585c",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/first_piece_second_matrixsumlist_audit.py",
+      "blob_sha": "447c74921ddad354ab856af5f4038147a8225340",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/first_piece_shadow_column_rail_audit.py",
+      "blob_sha": "54d740bdcd97f48cd3ddfcd91f4819f2e1de852d",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/flower_prefix_checkpoint_audit.py",
+      "blob_sha": "93014aeb3f1ddaa18e44e6287518a275d0aa30df",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [
+          "--oracle"
+        ],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/gameoflogic_source_audit.py",
+      "blob_sha": "0e9fad75353354e448ab521876ad6f30b62dfd1c",
+      "category": "structural/no-oracle",
+      "note": "MUST NEVER be given a recipe or executed: performs live urllib.request.urlopen() network calls"
+    },
+    {
+      "path": "tools/gsmg/hash_duality_sweep.py",
+      "blob_sha": "c32f1c0b4f112e4733d050422f160e27337b293b",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 300
+      }
+    },
+    {
+      "path": "tools/gsmg/hush_zero_sweep.py",
+      "blob_sha": "770a76f74611767acbc663cfee5624826a4accd3",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/macro_clue_acrostic_audit.py",
+      "blob_sha": "28664193c7f64b5dbfb33d2d6fa1f41a11e33d15",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [
+          "--oracle"
+        ],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/macro_clue_permutation_combinations.py",
+      "blob_sha": "2c792479a80364c594f8f37f4b475ff3e3ce084a",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/macro_model_disposition_audit.py",
+      "blob_sha": "9dd83527c7a38aa987d90c119ab9ab035ab5856c",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/matrix_dialogue_count_audit.py",
+      "blob_sha": "1b5eba7a75e716535d2e1f8213b72bdb0c7a2538",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/matrix_instruction_sweep.py",
+      "blob_sha": "9ce2284cc74958ec1eb88f4c6be4f3514262d9f9",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 150
+      }
+    },
+    {
+      "path": "tools/gsmg/matrixsum_cumulative_stride_audit.py",
+      "blob_sha": "3611d8779893bf7a6a1fe7b1dbf438ea8c8f5458",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/matrixsum_permutation_sweep.py",
+      "blob_sha": "4b5a1a6c76a0e13fd9c974239cdd24fe1830ddf4",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 90
+      }
+    },
+    {
+      "path": "tools/gsmg/matrixsumlist_31_feasibility_audit.py",
+      "blob_sha": "c82914d837d3f9882109264bcc594c4ffaffb9bd",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/matrixsumlist_color_prime_audit.py",
+      "blob_sha": "57d3b430998df6c09522052b8298febaea3df629",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/matrixsumlist_historical_code_audit.py",
+      "blob_sha": "06b0504826cea880b3c034ae9740ae13ac6350e1",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/matrixsumlist_page_scope_audit.py",
+      "blob_sha": "a25b5ce3a56dec5a1ac8e7c6643644b6b9dd6d28",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/matrixsumlist_provenance_refresh_audit.py",
+      "blob_sha": "c60613d9ad61f4d015e1fdc768dfbebc5e44ab93",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/matrixsumlist_self_fold_consumer_audit.py",
+      "blob_sha": "d01a04c76463fda70775a3ec08267585bc98bfda",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [
+          "--oracle"
+        ],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/matrixsumlist_title_and_iteration_audit.py",
+      "blob_sha": "0692a20f8f24350b3173a9fad967cbfd8e86de0a",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "call",
+        "entry_function": "main",
+        "argv": [
+          "--oracle"
+        ],
+        "attr_overrides": {
+          "ARCHITECT_PDF_PATH": "wordlists/matrix/the-matrix-reloaded-2003.pdf"
+        },
+        "timeout_s": 90
+      }
+    },
+    {
+      "path": "tools/gsmg/minimal_macro_chain_audit.py",
+      "blob_sha": "fc86715ab0e1c697a7de08071394c8c44740ab04",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/naddiseo_repository_full_audit.py",
+      "blob_sha": "641c0edab97de05bc3b570ee900d6f735b4fba4f",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/native_prime_zeroing_sweep.py",
+      "blob_sha": "b2a99c55519922890faeda7d85979066186177ce",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 60,
+        "zero_candidate_policy": {
+          "allowed": true,
+          "reason_code": "historical_significance_gate_closed",
+          "reason": "deterministic shuffle-based significance gate (fixed seed, fixed trial budget) does not clear against real DBBI/FAED data under the exact locked recipe; verified by direct execution, real p-value recorded as this result's own gate_witness, well above the file's own 0.05 threshold"
+        }
+      }
+    },
+    {
+      "path": "tools/gsmg/numeric_coincidence_triage.py",
+      "blob_sha": "58520f876bfa6d2f81b6f7d5d20cde1c4280bd9e",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/onchain_op_return_provenance_audit.py",
+      "blob_sha": "534c60342fa863b79b86a8f859335f0e3101d442",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/page_structure_audit.py",
+      "blob_sha": "f8282cf036ef829b946bfde8f15fa1d8c889651e",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/page_syntax_house_style_audit.py",
+      "blob_sha": "d19dc38c952a97ab20e906c22604ccb023b0d57b",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/phase422_execution_replay.py",
+      "blob_sha": "4e0ecde79ecf2cbd4c235865dca79ddb70d46a5d",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/phase425_btcseed_familywide_significance_audit.py",
+      "blob_sha": "d5f688907479e45dca42901facd7f03e50017d9e",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/phase448_bruteforce_eligibility_audit.py",
+      "blob_sha": "8d71fcab3ca0e734c93c4f7ae423d5abb1e190c3",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/phase452_g_arch_cross_gap_dependency_synthesis.py",
+      "blob_sha": "8ffd7d524df0347c5f10b354ce5a4a94d944409f",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/phase453_false_discovery_calibration.py",
+      "blob_sha": "802da76717618a2586928c2819092ce38388ec44",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/phase455_thispassword_typed_semantic_checksum.py",
+      "blob_sha": "2480ee5adde12c2da851885c2adccb7db5bb31ab",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/phase458_new_window_creator_sweep.py",
+      "blob_sha": "01dacd87c3630d5f5b27317edb5dcd4ddb6c53ab",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/phase467_closed_system_constraint_closure.py",
+      "blob_sha": "a40a6dace0811837c850f12b3f97ee224199cc6e",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/post_phase217_consistency_audit.py",
+      "blob_sha": "ca3d861b7320262e5f691abca7466032695932a1",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/post_yinyang_dataflow_audit.py",
+      "blob_sha": "ba439b93f98190d03599c02bf93a8b70aa7d7095",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/prefix_boundary_sweep.py",
+      "blob_sha": "4aac0bbaaa0f984545bd913334e5ba276a2fc22e",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "timeout_s": 60,
+        "zero_candidate_policy": {
+          "allowed": true,
+          "reason_code": "historical_significance_gate_closed",
+          "reason": "deterministic shuffle-based significance gate (fixed seed, fixed trial budget) does not clear against real DBBI/FAED data under the exact locked recipe; verified by direct execution, real p-value recorded as this result's own gate_witness, well above the file's own 0.05 threshold"
+        }
+      }
+    },
+    {
+      "path": "tools/gsmg/prime_matrixsum_reconstruction.py",
+      "blob_sha": "3d1adb4f6a7203f657840409573d68ba86f3d392",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/prime_walk_page_boundary_audit.py",
+      "blob_sha": "0c27035129c3a70e34f56760999ea19aee33a263",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/promised_standalone_audit.py",
+      "blob_sha": "ad0f720f1b067fbfec2abe5d1059d666421cd9bc",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [
+          "--oracle"
+        ],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/roman_rail_prime_sum_audit.py",
+      "blob_sha": "4b6f29ec036b63d869be7f4ad9e5e8ebf070660d",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/rose_prime_closed_cycle_audit.py",
+      "blob_sha": "923c7e5bb7883f2a0f9303e54ae2b02d09b6b826",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/salph_cosmic_phase341_eligibility_audit.py",
+      "blob_sha": "cff08cee97102745bf0f1caf9b712ab108c36733",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [],
+        "dependency_overrides": {
+          "page_structure_audit": {
+            "DEFAULT_HTML": "doc/html/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32.html"
+          }
+        },
+        "timeout_s": 90
+      }
+    },
+    {
+      "path": "tools/gsmg/salphaseion_401_span_audit.py",
+      "blob_sha": "50f0530543f4d3ad49df65123a367dffc8f6de79",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/salphaseion_operand_binding_audit.py",
+      "blob_sha": "acc09fdafe20d4256550611b8f796c744a7cb56f",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/salphaseion_title_rebus_audit.py",
+      "blob_sha": "3187abb0ed02e08fbc9d22860f27c40f3ce1fb61",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [
+          "--oracle"
+        ],
+        "dependency_overrides": {
+          "page_structure_audit": {
+            "DEFAULT_HTML": "doc/html/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32.html"
+          }
+        },
+        "timeout_s": 90
+      }
+    },
+    {
+      "path": "tools/gsmg/second_prime_matrixsumlist_audit.py",
+      "blob_sha": "c5a9ce31079534d1a1a5ccac1f96e17eaffdc4fe",
+      "category": "generator+oracle",
+      "recipe": {
+        "mode": "cli",
+        "argv": [
+          "--oracle"
+        ],
+        "timeout_s": 60
+      }
+    },
+    {
+      "path": "tools/gsmg/shadow_macro_faed_geometry_audit.py",
+      "blob_sha": "0842f24e9586aa096f531c11160830830742de19",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/small_number_coincidence_calibration.py",
+      "blob_sha": "59798bdd2bb81bde82f58f5b2791e71e737f5cd4",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/snapshot_dependency_closure_audit.py",
+      "blob_sha": "1f4f54b0b35199e06da1bbc62a519df5e02d6c8d",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/telegram_export_keyword_sweep.py",
+      "blob_sha": "e64b22aefa05d85fc9afe9477e4ab413f47d3ed0",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/telegram_matrix_sum_passage_audit.py",
+      "blob_sha": "2a2192666234681edd8bf57876a80b274b1f0cab",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/telegram_yellow_blue_fefe_sweep.py",
+      "blob_sha": "bd63a7dbedd6d46768e54d0f5560ccc26373e131",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/test_cb_common.py",
+      "blob_sha": "4ad0628d4ff61f3cbd28971ae1fdbedbed118a30",
+      "category": "infrastructure",
+      "reason": "uses the literal word \"matrixsumlist\" only as an arbitrary test keyword for keyed_columnar, unrelated to any candidate construction"
+    },
+    {
+      "path": "tools/gsmg/test_recent_audits.py",
+      "blob_sha": "333c4c47d41db4098c7f1ed73467439a52c50e06",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/test_second_prime_matrixsumlist_audit.py",
+      "blob_sha": "9c98903405b2ff52f31a190e0a3cf57e604cec79",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/thispassword_role_topology_discrimination_audit.py",
+      "blob_sha": "79b970ecec0f402eec3e54f3f5a27ca43a717f01",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/thread_convergence_audit.py",
+      "blob_sha": "6ebcef0331cfe6ed1694c51b501bd4ee2a82d34f",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/topology_identifiability_evidence_freeze.py",
+      "blob_sha": "346bdc65cf00c4b7ad7413635226138506c5acba",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/transition_evidence_recovery_audit.py",
+      "blob_sha": "fbc451b990f37dfa86cee395087821711099595c",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/triangular_matrixsumlist_audit.py",
+      "blob_sha": "9a95d5c84c774ccb8eb691f624e1125ad1d6f678",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/update_drawio_creator_evidence_panels.py",
+      "blob_sha": "e7d463e53cd1a306ae70d433bcce4bae9e240d42",
+      "category": "structural/no-oracle"
+    },
+    {
+      "path": "tools/gsmg/yinyang_artifact_inventory_audit.py",
+      "blob_sha": "15108b4ed5bdea225800a59bb3e320cc6ca063d4",
+      "category": "structural/no-oracle"
+    }
+  ],
+  "reference_doc_files": [
+    {
+      "path": "doc/Brainstorms/2026-08-12 - Cosmic Duality Gatefold Observation Worksheet.md",
+      "blob_sha": "cf0c9a436055e5abaa994822a7271354e14ee3a8"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-12 - Non-Wayback Archive Surface Search Pre-Registration.md",
+      "blob_sha": "54e9868b500bace696b3be54a9470ef3ae52533b"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-12 - Primary Evidence Acquisition.md",
+      "blob_sha": "abd3d4ede676d6cbbe301bc8c277fc5899ddfa4d"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-12 - What Evidence Could Define Matrixsumlist.md",
+      "blob_sha": "3372082defb264d0146775fc116d1d2d14e32287"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-12 - What Would Select the Architect Beginnings-Endings or B-H Mirror Operation.md",
+      "blob_sha": "19519c1a517536a5162a481100cfc14244c2cd6b"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-14 - DBBI FAED Post-Model Synthesis and Reopening Conditions.md",
+      "blob_sha": "42c916c2ec99a9ed9a6fa6fdf1d08f435c08d009"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-14 - Fresh DBBI FAED Decryption Models.md",
+      "blob_sha": "23835c50c36bc02c95c5c8ed25d3d036de6e7455"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-15 - DBBI FAED FEFE Fresh Divergence.md",
+      "blob_sha": "9d98483305477e05b4f8ce1b211aa506a04396b3"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-15 - Phase 3 Part 5-6 Riddle Close Read.md",
+      "blob_sha": "3131bc5218a5911e824823719c9c3f4c646f8f25"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-20 - Creative Brute-Force Coverage Expansion.md",
+      "blob_sha": "d81780bf9c29e512030f157c5408bee55e5ec5d0"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-26 - Phase 422 P32TRAILING Macro-Clue Augmentation Panel Pre-Registration.md",
+      "blob_sha": "e2a3ca4594c0c0314bea61a44542609c3c96222a"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-27 - Phase 423 P32TRAILING Macro-Clue Eligibility Correction Panel Pre-Registration.md",
+      "blob_sha": "d6328ee7eafab9302633b2d48da3727ea641c51b"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-27 - Phase 425 BTCSEED Family-Wide Significance Audit Pre-Registration.md",
+      "blob_sha": "1a70b4e58eb16bb2c09c8277000ade211eb719f7"
+    },
+    {
+      "path": "doc/Brainstorms/2026-08-29 - Phase 452 G-ARCH-001 Cross-Gap Dependency Synthesis Protocol.md",
+      "blob_sha": "4023df94d84a5af207fcbe0469cdafef89d97b2a"
+    },
+    {
+      "path": "doc/Brainstorms/2026-09-02 - Phase 469 DBBI 7x13 Mask-Weighted Sum Protocol.md",
+      "blob_sha": "a374b5e4c8603f07d3b3090a76550df0ef46d3bd"
+    },
+    {
+      "path": "doc/Brainstorms/2026-09-02 - Phase 472 DBBI Route-Aware Plaintext Alignment Protocol.md",
+      "blob_sha": "4de42f8c120ab47af851e6c0be615108a5dbb2a3"
+    },
+    {
+      "path": "doc/Brainstorms/README.md",
+      "blob_sha": "cb74f22073e10c52369e9565e8cf86686b38817f"
+    },
+    {
+      "path": "doc/GSMG_648_WORDLIST_PROVENANCE_REVIEW.md",
+      "blob_sha": "a9fa5687593dd6fd003c69cd45a8b202701d547d"
+    },
+    {
+      "path": "doc/GSMG_ARCHITECT_CHOICE_BOUNDARY_AUDIT.md",
+      "blob_sha": "390c408f1fb0ee45a5161706cdf8fb2dbd5d44f4"
+    },
+    {
+      "path": "doc/GSMG_ARCHITECT_MIRROR_SELECTOR_AUDIT.md",
+      "blob_sha": "f4d5214afadce1ad76d508606104f1c850dc92b3"
+    },
+    {
+      "path": "doc/GSMG_BIRD_VIEW_REASSESSMENT.md",
+      "blob_sha": "689e03447e1d5e7f2f4fb8c21dc5ef775630d7fb"
+    },
+    {
+      "path": "doc/GSMG_COSMIC_DUALITY_UNTAKEN_PATHS.md",
+      "blob_sha": "381ca06d8035d7398636d57d809fdb3bac9b4290"
+    },
+    {
+      "path": "doc/GSMG_COSMIC_RAW_DIGEST_CHECKPOINT_AUDIT.md",
+      "blob_sha": "3514fb1f83ea3a369010d330098e9e3e09bcdd76"
+    },
+    {
+      "path": "doc/GSMG_CREATOR_AUTHORED_CLUE_LEDGER.md",
+      "blob_sha": "b353366155b07e13a63e3e5248c35366b3a87b67"
+    },
+    {
+      "path": "doc/GSMG_CREATOR_CLUE_AND_CONFIRMATION_INDEX.md",
+      "blob_sha": "7a6e5b29c08da9fe12b6bf8a02ba98d5d1842170"
+    },
+    {
+      "path": "doc/GSMG_CREATOR_OPERATOR_VOCABULARY_AUDIT.md",
+      "blob_sha": "91a8243e8509f6fc2907faaff647c148975c9bfc"
+    },
+    {
+      "path": "doc/GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md",
+      "blob_sha": "bcca6e2c363a756454f7daab3a6bc168c70d400b"
+    },
+    {
+      "path": "doc/GSMG_DENIS_FULL_CORPUS_AUDIT.md",
+      "blob_sha": "1c0d44bcc0a66f752eafb9be7b597a74e0712f1c"
+    },
+    {
+      "path": "doc/GSMG_DESIGNING_THE_FUTURE_SOURCE_AUDIT.md",
+      "blob_sha": "7e499012d34c9686f1a944b4d39d4d2a6a7a414b"
+    },
+    {
+      "path": "doc/GSMG_EXTERNAL_ARCHIVE_AUDIT.md",
+      "blob_sha": "21123a1f6b441b6c2bd0d7b023f5c979c0437314"
+    },
+    {
+      "path": "doc/GSMG_EYES_TRANSITION_CHRONOLOGY_AUDIT.md",
+      "blob_sha": "3ddb58980aa43a2292a5a017bdafa2d86746a738"
+    },
+    {
+      "path": "doc/GSMG_FACT_LEDGER.md",
+      "blob_sha": "64d8927faf1ad5227f1040c4945c8883bf297b79"
+    },
+    {
+      "path": "doc/GSMG_FIRST_PIECE_BATCH_REBUS_GATE_AUDIT.md",
+      "blob_sha": "414a8b5f5a0f9396dc2d09acef72814bf0111a94"
+    },
+    {
+      "path": "doc/GSMG_FIRST_PIECE_CEFE_CHECKERBOARD_GATE_AUDIT.md",
+      "blob_sha": "d91923862e0fe4c659734a63b2c50d89143e575f"
+    },
+    {
+      "path": "doc/GSMG_FIRST_PIECE_COLOR_RECONSTRUCTION.md",
+      "blob_sha": "75482a98ade18e3d43cb10caf146b8227c84f41d"
+    },
+    {
+      "path": "doc/GSMG_FIRST_PIECE_MATRIX_PRODUCT_AUDIT.md",
+      "blob_sha": "6bcd570906bdb094f9eb41cdd3399a285d1d1346"
+    },
+    {
+      "path": "doc/GSMG_FIRST_PIECE_MISSED_POINTS_AUDIT.md",
+      "blob_sha": "045303f03aafa4906ba1b598f4a4bba7fe59310c"
+    },
+    {
+      "path": "doc/GSMG_FIRST_PIECE_PIXEL_BRAINSTORM.md",
+      "blob_sha": "5a793fb3f4544ff109a945dd3449ef24322efb39"
+    },
+    {
+      "path": "doc/GSMG_FIRST_PIECE_SECOND_MATRIXSUMLIST_AUDIT.md",
+      "blob_sha": "bc4b7b5baf4c14dd002d0caa21926cdf307aafd8"
+    },
+    {
+      "path": "doc/GSMG_FRESH_BRAINSTORM_2026-08-06.md",
+      "blob_sha": "ec6f74bd859f6666237cff805be0381760249383"
+    },
+    {
+      "path": "doc/GSMG_FRESH_BRAINSTORM_RESIDUAL_AUDIT.md",
+      "blob_sha": "df5621d7c03c9943f252c44e9e838ed41f699652"
+    },
+    {
+      "path": "doc/GSMG_FRONTIER_ASSUMPTION_LEDGER.md",
+      "blob_sha": "b8dbdc62c20af943744f97819864cf704f0a8baa"
+    },
+    {
+      "path": "doc/GSMG_HOME.md",
+      "blob_sha": "c987f9d3df1527d8df450fdb25f582fee4c2e759"
+    },
+    {
+      "path": "doc/GSMG_MACRO_MODEL_DISPOSITION_AUDIT.md",
+      "blob_sha": "94f45fd66c228908120747d1f8e4c19a163f1ca4"
+    },
+    {
+      "path": "doc/GSMG_MATRIXSUMLIST_CHECKPOINT.md",
+      "blob_sha": "0db59f3a017f2cdc3b7d56c6db8eedbcad3a0820"
+    },
+    {
+      "path": "doc/GSMG_MATRIXSUMLIST_HISTORICAL_CODE_AUDIT.md",
+      "blob_sha": "15fdceb883b85a087c6903d0efc5402de4e02ec9"
+    },
+    {
+      "path": "doc/GSMG_MATRIXSUMLIST_PROVENANCE_REFRESH.md",
+      "blob_sha": "0a822f4f0078818cef6344a9142ae6a5a331ab77"
+    },
+    {
+      "path": "doc/GSMG_MINIMAL_MACRO_CHAIN_AUDIT.md",
+      "blob_sha": "3e934f4cb0cdccf76a6556afb295c2befefbe3cf"
+    },
+    {
+      "path": "doc/GSMG_NADDISEO_REPOSITORY_FULL_AUDIT.md",
+      "blob_sha": "0a32d58a9f37b43dbaaa43c8ee624f90b9efcac8"
+    },
+    {
+      "path": "doc/GSMG_NADDISEO_SEMANTIC_CONCORDANCE.md",
+      "blob_sha": "6401bcbfaa30c1a74e0c0be32847b0e131725ac5"
+    },
+    {
+      "path": "doc/GSMG_OBJECT_DBBI.md",
+      "blob_sha": "120b6bfd09995b8bddaf1ea4919135c408c6afe9"
+    },
+    {
+      "path": "doc/GSMG_OBJECT_FAED.md",
+      "blob_sha": "53b622e821400f51dd603f1e26e8ad5ab844b9f2"
+    },
+    {
+      "path": "doc/GSMG_OPEN_GAP_REGISTRY.md",
+      "blob_sha": "4c0a6537cb1ffb02b0d6e430fb3ad498d6ff2a13"
+    },
+    {
+      "path": "doc/GSMG_P458_NEW_WINDOW_CREATOR_SWEEP.md",
+      "blob_sha": "9f696d26ab4b633a13898642d064c9ba36224c0a"
+    },
+    {
+      "path": "doc/GSMG_PAGE_SYNTAX_HOUSE_STYLE_AUDIT.md",
+      "blob_sha": "07195d74356fdec367dab5c0a6466d24de16163d"
+    },
+    {
+      "path": "doc/GSMG_PHASE425_BTCSEED_FAMILYWIDE_SIGNIFICANCE_AUDIT.md",
+      "blob_sha": "c66cf2ecb5bc91eb9d8463363d99a5d681cb8487"
+    },
+    {
+      "path": "doc/GSMG_PHASE_BOUNDARY_REAUDIT.md",
+      "blob_sha": "ae329b8c5fa09c2c6ec9f7369c384dfd99fa7582"
+    },
+    {
+      "path": "doc/GSMG_PHASE_CITATION_GRAPH.md",
+      "blob_sha": "852815671f20cb59d3f75372950a56fb86e86c25"
+    },
+    {
+      "path": "doc/GSMG_PHASE_INDEX.md",
+      "blob_sha": "f0f65f805233d72204fd923a84c8a5d2138af478"
+    },
+    {
+      "path": "doc/GSMG_POST_YINYANG_DATAFLOW_AUDIT.md",
+      "blob_sha": "5fee89fe685cde7608ce68f18fbff794091a3dfa"
+    },
+    {
+      "path": "doc/GSMG_PRAISED_SNAPSHOT_DEPENDENCY_CLOSURE_AUDIT.md",
+      "blob_sha": "10061b6bed47930819ef162c5e28a34ea431b49c"
+    },
+    {
+      "path": "doc/GSMG_PUZZLE.md",
+      "blob_sha": "839a0ebf58eaceb879c064d29391a1d149d30aef"
+    },
+    {
+      "path": "doc/GSMG_SALPHASEION_PRESENTATION_BINDING_AUDIT.md",
+      "blob_sha": "b09d7978e7d9f8d4e8b73aba36fd36f19e0010e6"
+    },
+    {
+      "path": "doc/GSMG_SCIENTIFIC_THEORY_REGISTRY.md",
+      "blob_sha": "37b0a846753e1fe6542881d6828edfc7b2f94279"
+    },
+    {
+      "path": "doc/GSMG_SECOND_PRIME_MATRIXSUMLIST_AUDIT.md",
+      "blob_sha": "e72b912979af19e30791f1d2028885a001a8d301"
+    },
+    {
+      "path": "doc/GSMG_SHADOW_MACRO_FAED_GEOMETRY_AUDIT.md",
+      "blob_sha": "6d79607733957369d28e98518ffb8d51d0058fca"
+    },
+    {
+      "path": "doc/GSMG_STAGE_INPUT_OUTPUT_SUMMARY.md",
+      "blob_sha": "fb802d25352a2c3fc04721e9eacad4390c2a3f3f"
+    },
+    {
+      "path": "doc/GSMG_STRICT_TRANSITION_WORKSHEET.md",
+      "blob_sha": "7249fed968ec27656c91e53efc186a764f7902f7"
+    },
+    {
+      "path": "doc/GSMG_TELEGRAM_CREATOR_MEDIA_COMPLETENESS_AUDIT.md",
+      "blob_sha": "b9666a92ecc352444056c7872b5b28513c4bfe97"
+    },
+    {
+      "path": "doc/GSMG_TELEGRAM_MEDIA_SHORTLIST.md",
+      "blob_sha": "85f51f3ccb4d1f9da30a5a24648cf515009a7c55"
+    },
+    {
+      "path": "doc/GSMG_TOPOLOGY_AUDIT.md",
+      "blob_sha": "b2165fe8c962193fcea5b5b729cd8c677e451f2b"
+    },
+    {
+      "path": "doc/GSMG_V2_CANDIDATE_REGISTRY.md",
+      "blob_sha": "a2bb02bc023d5ee252a8a4f229469f1b5dafc886"
+    },
+    {
+      "path": "doc/GSMG_YINYANG_ARTIFACT_IDENTIFICATION_PLAN.md",
+      "blob_sha": "d3ede3da48e859a985ea1b51fc913caae3f09c62"
+    },
+    {
+      "path": "doc/GSMG_YOUWON_SALPH_103_ALIGNMENT_AUDIT.md",
+      "blob_sha": "ee7448350e653ed2586e3de7326e396aeb10b142"
+    },
+    {
+      "path": "doc/MOC - Architect and Macro.md",
+      "blob_sha": "b123f0438e639fc5b1bb1166de2049be51a9190d"
+    },
+    {
+      "path": "doc/MOC - Image and Raster Forensics.md",
+      "blob_sha": "5c788df4e3d7d889deadaaa2b22be79a89334858"
+    }
+  ],
+  "reference_findings_files": [
+    {
+      "path": "tools/gsmg/findings/P00004.md",
+      "blob_sha": "b6b08c4e865e02841520cd608c0e7e4489c0dc2d"
+    },
+    {
+      "path": "tools/gsmg/findings/P00006.md",
+      "blob_sha": "3cc8def47c9aa68501b2422ad4f1d6b9fef28ed1"
+    },
+    {
+      "path": "tools/gsmg/findings/P00007.md",
+      "blob_sha": "4e5b3c41b4b47a76581877ce3c49835d90464feb"
+    },
+    {
+      "path": "tools/gsmg/findings/P00008-B.md",
+      "blob_sha": "4f64ff49d2e6416ef51cab0da23e43d462a78010"
+    },
+    {
+      "path": "tools/gsmg/findings/P00013.md",
+      "blob_sha": "8a524b8312c66c1678d400e2fb58f3b6097e388a"
+    },
+    {
+      "path": "tools/gsmg/findings/P00016.md",
+      "blob_sha": "ed1d9754c645df9ec56cef959e0ff8d180455669"
+    },
+    {
+      "path": "tools/gsmg/findings/P00019-A.md",
+      "blob_sha": "6f757f24661f84df4981f16868a189497695cd92"
+    },
+    {
+      "path": "tools/gsmg/findings/P00019-B.md",
+      "blob_sha": "abbcf1502a09c3b0a77ff693f07288fa0fd2d852"
+    },
+    {
+      "path": "tools/gsmg/findings/P00030.md",
+      "blob_sha": "eb0cf8a471383474ea174afddecb6b8a9c164cd6"
+    },
+    {
+      "path": "tools/gsmg/findings/P00031.md",
+      "blob_sha": "eae086a6b6ea9eb6138a1b93702596dcdfa4ce56"
+    },
+    {
+      "path": "tools/gsmg/findings/P00032.md",
+      "blob_sha": "7f832e3ea800897cd5e1ba0ccb41fc96082f35a1"
+    },
+    {
+      "path": "tools/gsmg/findings/P00038.md",
+      "blob_sha": "b84931e799dc2c4462f6886e37097bd7dae881f5"
+    },
+    {
+      "path": "tools/gsmg/findings/P00039.md",
+      "blob_sha": "892673255733f2a4b0a574da2cc0888377af8011"
+    },
+    {
+      "path": "tools/gsmg/findings/P00049.md",
+      "blob_sha": "562e6db447c1b59e2537c0f3fee31d4ed1e853db"
+    },
+    {
+      "path": "tools/gsmg/findings/P00050.md",
+      "blob_sha": "86f1041363597efec82b2e3b51bee37942ca05a0"
+    },
+    {
+      "path": "tools/gsmg/findings/P00051.md",
+      "blob_sha": "e6fb4f0698e9da7c38bbe0d168ca4db60c6cdfca"
+    },
+    {
+      "path": "tools/gsmg/findings/P00052.md",
+      "blob_sha": "885a56932a1635873de6ae951546b064b735ab2f"
+    },
+    {
+      "path": "tools/gsmg/findings/P00053.md",
+      "blob_sha": "851549f67ea9164fa162bc162167a363c30671cc"
+    },
+    {
+      "path": "tools/gsmg/findings/P00056.md",
+      "blob_sha": "c8f27a24f0ca882ee206416da9bf5ed782284c62"
+    },
+    {
+      "path": "tools/gsmg/findings/P00058.md",
+      "blob_sha": "6ce4de8099272c65e4e7edb47dcd73a366c195bc"
+    },
+    {
+      "path": "tools/gsmg/findings/P00059.md",
+      "blob_sha": "38db5a2056b2d6a41da6ea626197519710d70428"
+    },
+    {
+      "path": "tools/gsmg/findings/P00066.md",
+      "blob_sha": "5ddfbea9585ec6d619fc4103b47a8e8cbc7ac1f0"
+    },
+    {
+      "path": "tools/gsmg/findings/P00076.md",
+      "blob_sha": "4448d41328718a09b62166f70381ffdce19ddc39"
+    },
+    {
+      "path": "tools/gsmg/findings/P00079.md",
+      "blob_sha": "119622951a47eca7198f22b5ac1f30c98b2ca31e"
+    },
+    {
+      "path": "tools/gsmg/findings/P00097.md",
+      "blob_sha": "e7d31b50ced8cd265bd65c8f67e8c76c5c1bfbf6"
+    },
+    {
+      "path": "tools/gsmg/findings/P00101.md",
+      "blob_sha": "b2a74573e331e46b909da1b1512d330904ee558e"
+    },
+    {
+      "path": "tools/gsmg/findings/P00102.md",
+      "blob_sha": "f3532062cdea8a98a949c3ea5cab4fda1f8b3df6"
+    },
+    {
+      "path": "tools/gsmg/findings/P00121.md",
+      "blob_sha": "7a9bef48080272defc701e619c812592651d1bd8"
+    },
+    {
+      "path": "tools/gsmg/findings/P00138.md",
+      "blob_sha": "85c36cb5205dcde2d1a172675e765a8dde9349a0"
+    },
+    {
+      "path": "tools/gsmg/findings/P00139.md",
+      "blob_sha": "5b12dee61c6fbead2b32c0bba5e8b1cd70fa4943"
+    },
+    {
+      "path": "tools/gsmg/findings/P00142.md",
+      "blob_sha": "5e994dcb0a222063c8a520593327bf0894218d3d"
+    },
+    {
+      "path": "tools/gsmg/findings/P00143.md",
+      "blob_sha": "0b261b884f33e022dab3b45ed422eb8bd2d97e14"
+    },
+    {
+      "path": "tools/gsmg/findings/P00149.md",
+      "blob_sha": "4337def316169534dcbe4a444332dd6df690c6fc"
+    },
+    {
+      "path": "tools/gsmg/findings/P00150.md",
+      "blob_sha": "f61ac120d8fa97d6776fc85888fb2fcc9e9fc3c5"
+    },
+    {
+      "path": "tools/gsmg/findings/P00156.md",
+      "blob_sha": "6ecb5f56cfac39d5b3b7b1f8b630ce07286eac55"
+    },
+    {
+      "path": "tools/gsmg/findings/P00160.md",
+      "blob_sha": "e18f8b7e2387bd20d3ab36561ae2557dc1ba4375"
+    },
+    {
+      "path": "tools/gsmg/findings/P00166.md",
+      "blob_sha": "d4b819c0c236871a2f8a9c7ccbc9b39dd65bc16a"
+    },
+    {
+      "path": "tools/gsmg/findings/P00177.md",
+      "blob_sha": "30e9c20868ddf53b58faea60873f05d0fb3a5564"
+    },
+    {
+      "path": "tools/gsmg/findings/P00185.md",
+      "blob_sha": "4bf51e97e4057e03cee14ca84d5966328e5d134c"
+    },
+    {
+      "path": "tools/gsmg/findings/P00199.md",
+      "blob_sha": "66b74de79d3d8c8691342d235a68aa42e1120c4e"
+    },
+    {
+      "path": "tools/gsmg/findings/P00200.md",
+      "blob_sha": "4d730fb376c371d3996f725e69349eaf561b0cf7"
+    },
+    {
+      "path": "tools/gsmg/findings/P00206.md",
+      "blob_sha": "108d53d6748f873d0ac02bd1a7b6ed710d7552bf"
+    },
+    {
+      "path": "tools/gsmg/findings/P00210.md",
+      "blob_sha": "6472f6df8abf704b227e1d4e9ea5d1c8463b74f0"
+    },
+    {
+      "path": "tools/gsmg/findings/P00211.md",
+      "blob_sha": "c772d12aa78e8f073415c1288dc0d7c202220210"
+    },
+    {
+      "path": "tools/gsmg/findings/P00212.md",
+      "blob_sha": "3d2bcde7a54051b30e3745dabebe484e75df1a4b"
+    },
+    {
+      "path": "tools/gsmg/findings/P00213.md",
+      "blob_sha": "0e5b8ccaadc54cb73cdc3e7d672c3209bf9b82ee"
+    },
+    {
+      "path": "tools/gsmg/findings/P00214.md",
+      "blob_sha": "e467ae13403757194cd3e0bde012bcfb1dc9497a"
+    },
+    {
+      "path": "tools/gsmg/findings/P00215.md",
+      "blob_sha": "eda60ccc4022531de4113396fef3c924548503ac"
+    },
+    {
+      "path": "tools/gsmg/findings/P00217.md",
+      "blob_sha": "3792f592f5d0d5bc7fa64f296345f6b28dc71efb"
+    },
+    {
+      "path": "tools/gsmg/findings/P00218.md",
+      "blob_sha": "64a403b9ce6b5371f18bb0f409b1494dd83e4735"
+    },
+    {
+      "path": "tools/gsmg/findings/P00221.md",
+      "blob_sha": "3a5ac5c7e45fee79930a5d693f10699696677e6a"
+    },
+    {
+      "path": "tools/gsmg/findings/P00236.md",
+      "blob_sha": "4ed02b84bbc97a87e0054061542a0f31f447d995"
+    },
+    {
+      "path": "tools/gsmg/findings/P00238.md",
+      "blob_sha": "c6d27169a2921fa4ce60f1b6e9cd75d78acb0858"
+    },
+    {
+      "path": "tools/gsmg/findings/P00243.md",
+      "blob_sha": "3fdae63a62618a1049edbbd4982745459bfb581d"
+    },
+    {
+      "path": "tools/gsmg/findings/P00244.md",
+      "blob_sha": "6ad514f8117a712d96273fe80e770faca2d90051"
+    },
+    {
+      "path": "tools/gsmg/findings/P00246.md",
+      "blob_sha": "adbae1268c7b5b7a937c52d497c5c89aef4bef9f"
+    },
+    {
+      "path": "tools/gsmg/findings/P00247.md",
+      "blob_sha": "2a140dc37b2adde59ef0520a13d0a206ac8426f4"
+    },
+    {
+      "path": "tools/gsmg/findings/P00248.md",
+      "blob_sha": "dd4ea94f62d9518a1e3c62056c1f0e1faaddd148"
+    },
+    {
+      "path": "tools/gsmg/findings/P00249.md",
+      "blob_sha": "7f0a3e6f363c583233b5d089e9f72ac11ddcc370"
+    },
+    {
+      "path": "tools/gsmg/findings/P00250.md",
+      "blob_sha": "70f59aed36c8756739258fd03193a252c535559f"
+    },
+    {
+      "path": "tools/gsmg/findings/P00251.md",
+      "blob_sha": "2227530952be7da88f94879cee0b1baa1e942be0"
+    },
+    {
+      "path": "tools/gsmg/findings/P00256.md",
+      "blob_sha": "ad742c18bbd769544828efbadbd8d189322f879d"
+    },
+    {
+      "path": "tools/gsmg/findings/P00259.md",
+      "blob_sha": "1e784563a500faf43ad6ccce90c6aaacf89845b7"
+    },
+    {
+      "path": "tools/gsmg/findings/P00272.md",
+      "blob_sha": "c99cc02e7abcab4fd1e8d7d2031a8e625c4445de"
+    },
+    {
+      "path": "tools/gsmg/findings/P00275.md",
+      "blob_sha": "bfeec6c3b2935dacf4a564e25827ac8f30b1ef3e"
+    },
+    {
+      "path": "tools/gsmg/findings/P00293.md",
+      "blob_sha": "64098d8554868430814e502da9ca1e4da0052681"
+    },
+    {
+      "path": "tools/gsmg/findings/P00297.md",
+      "blob_sha": "8d97e8385774e18ae19061105e66808ef3dc6866"
+    },
+    {
+      "path": "tools/gsmg/findings/P00308.md",
+      "blob_sha": "9c0e1d4033d6f28cdf52d99fc6365fa29bc1282c"
+    },
+    {
+      "path": "tools/gsmg/findings/P00330.md",
+      "blob_sha": "aed99aa5e690c3dfc331922b04637dd51dd31843"
+    },
+    {
+      "path": "tools/gsmg/findings/P00344.md",
+      "blob_sha": "6f55c3ee6e6459d17e8f65d7c210bc1ed28e5bb7"
+    },
+    {
+      "path": "tools/gsmg/findings/P00367.md",
+      "blob_sha": "6a17e9f9a7434e9e3fbfc76dcdd5d079416fbb0d"
+    },
+    {
+      "path": "tools/gsmg/findings/P00369.md",
+      "blob_sha": "4f90f573b21752639d5f78987680a0a1a2598a5f"
+    },
+    {
+      "path": "tools/gsmg/findings/P00371.md",
+      "blob_sha": "1ac1ae3fcf5151bfd078426f474ff088395e1fd4"
+    },
+    {
+      "path": "tools/gsmg/findings/P00372.md",
+      "blob_sha": "1c7543c62a2cacb05b4d585cf98697ce0ba0becc"
+    },
+    {
+      "path": "tools/gsmg/findings/P00373.md",
+      "blob_sha": "22e076ba536b37debd870e710870fb240635a090"
+    },
+    {
+      "path": "tools/gsmg/findings/P00375.md",
+      "blob_sha": "9bf1f773f7bc8a003d4c83b95a163bd819944078"
+    },
+    {
+      "path": "tools/gsmg/findings/P00409.md",
+      "blob_sha": "9f67fd8da210efc7f8278865b1e513bc0f6270ea"
+    },
+    {
+      "path": "tools/gsmg/findings/P00411.md",
+      "blob_sha": "89d6651cff451cad02ef57ddb70c6b52aa965c0a"
+    },
+    {
+      "path": "tools/gsmg/findings/P00458.md",
+      "blob_sha": "9f54453c50e420268ca88fe7c7fdb391580e6389"
+    },
+    {
+      "path": "tools/gsmg/findings/P00461.md",
+      "blob_sha": "ed36715322aed7661cd983a4c88ffb5fa0fe857f"
+    },
+    {
+      "path": "tools/gsmg/findings/P00469.md",
+      "blob_sha": "b3b45c692400d2dfe320ba0e6ec112f1229bbb30"
+    }
+  ],
+  "runner_script": "tools/gsmg/phase478_run_harvest.py",
+  "runner_script_sha256": "95913c4961297ce1b1f487b05d9a886f0719bcd8a31aec693b9a456d340d4fc0",
+  "runner_test_script_sha256": "b83d7a004e859dfe009413ee29a6084718d70b78f304dd564f274b8d43b66039",
+  "motivation_inputs": {
+    "telegram_export_result_json": {
+      "path": "/home/loginwashere/Downloads/Telegram Desktop/ChatExport_2026-09-05/result.json",
+      "sha256": "7cd3f979ddcc620ce0940bb6328441d38bb56c751753003dda50e6e5a3d678d8"
+    },
+    "progress_md": {
+      "path": "/home/loginwashere/Downloads/Telegram Desktop/ChatExport_2026-09-05/files/PROGRESS.md",
+      "sha256": "e93f34e8b8f611190eb91f68f7ce1265fcc27b0744775028c29818005f8efa7a",
+      "message_id": 70983,
+      "message_date": "2026-09-04T22:13:05",
+      "message_from": "X",
+      "message_from_id": "user497668740"
+    }
+  },
+  "amendment_history": [
+    {
+      "supersedes_lock_sha256": "649c4f9710c8ddae2c26b2c92d22d51d878a59d0d4c7cbd1c058e050c50eb039",
+      "disclosure": "Implementation corrections were driven solely by capture completeness, dependency isolation, multiprocessing visibility, runtime, and historical gate behavior; no Phase 478 digest-match statistic was computed or inspected.",
+      "summary": "Added motivation-input hashes and message provenance; added the fail-closed runner (phase478_run_harvest.py) with lock/blob verification; added the dependency_overrides mechanism (fixes page_structure_audit.DEFAULT_HTML and ARCHITECT_PDF_PATH dependencies); fixed cross-process candidate capture for ProcessPoolExecutor-based files (file-based capture, not an in-memory list); moved capture-file lifecycle ownership to the harvester to stop a timeout-triggered leak; added per-recipe timeout_s plumbing; fixed dbbi_faed_joint_positional_matrix_audit.py's recipe (added --run); expanded zero_candidate_policy from 2 to 5 files under two frozen reason codes (historical_significance_gate_closed x4, historical_escalation_never_executed_no_frozen_threshold x1, citing Phase 43); switched the raw capture artifact from indented JSON to streaming JSONL."
+    }
+  ]
+}

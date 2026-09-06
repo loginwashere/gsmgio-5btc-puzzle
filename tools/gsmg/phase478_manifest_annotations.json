@@ -1,0 +1,268 @@
+{
+  "tools/gsmg/binary_hint_operand_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "SalPhaseIon page's formal-hint text (exact, collapsed-whitespace, and letters-only forms) and the macro-clue decoded text, each with LF/CRLF suffix variants, run through literal / SHA-256 / double-SHA (\"ans too\" convention) forms",
+        "transformation": "raw literal bytes, sha256-raw, sha256-hex-lower, sha256-hex-upper, sha256-of-sha256hex-raw, sha256-of-sha256hex-hex (double-hash follows the project's established 'hash the first command's lowercase hex output' convention)",
+        "applies_to_lines": [137, 140, 146, 147, 151],
+        "applies_to_function": "run_oracle",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/command_provenance_recheck.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "curated literal command-provenance guesses (e.g. concatenated-keyword + non-default-KDF guess, 'ZION' thematic guess, sha256(' ') demo) plus 'echo theflowerblossoms | sha256sum'-style literals with/without trailing newline, raw and SHA-256-hashed",
+        "transformation": "raw literal bytes as they would appear typed at a shell/echo command, plus sha256-hex-of-literal (with and without a trailing newline before hashing)",
+        "applies_to_lines": [124],
+        "applies_to_function": "sweep",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/cosmic_raw_digest_checkpoint_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "xor_sha256_digests() over the 7 fixed macro-clue TOKENS, in raw 32-byte and 64-char-lowercase-hex forms, each submitted under both md5 and sha256 EVP_BytesToKey digest_name variants (harvested via phase478_adapter_cosmic_raw_digest.py's _submit_default_forms, not the standard driver, since this file bypasses cb_common entirely)",
+        "transformation": "raw32 (XOR of 7 SHA-256 digests) and hex64 (that XOR's lowercase-hex rendering); each fed to the file's own local decrypt() as password material, no further hashing",
+        "applies_to_lines": [122],
+        "applies_to_function": "_submit_default_forms (phase478_adapter_cosmic_raw_digest.py)",
+        "eligible": true,
+        "eligible_reason": null
+      },
+      {
+        "construction_label": "published 210-member uniqueness family: xor_sha256_digests() over TOKENS[:4] fixed + every (P5_CANDIDATES x P6_CANDIDATES x P7_CANDIDATES) = 7x5x6 combination of the 5th/6th/7th token, always under md5 digest_name",
+        "transformation": "raw 32-byte XOR-of-7-SHA256-digests output, fed directly to decrypt() as password material, no further hashing",
+        "applies_to_lines": [255],
+        "applies_to_function": "published_uniqueness_family_report",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/cross_target_coupling_sweep.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "decoded-answer text (from a prior stage's checkerboard/keyword decode) run through answer_forms() x keystr_forms(), skipped when the decode is incomplete ('?' present)",
+        "transformation": "answer_forms()/keystr_forms() standard normalization family (already-established project convention: case/punctuation variants, newline suffixes) applied to a decoded plaintext answer",
+        "applies_to_lines": [182],
+        "applies_to_function": "check_text_answer",
+        "eligible": true,
+        "eligible_reason": null
+      },
+      {
+        "construction_label": "cross-target derived 9-symbol streams (base-9 digit-index renderings, base-9 big-endian integer packing, raw symbol bytes) over a padded 25-symbol core alphabet, in raw and SHA-256-hex forms",
+        "transformation": "raw symbol bytes / ASCII-digit strings (0-based and 1-based index renderings) / base-9 big-endian integer bytes (raw and hex), plus sha256-hex-of-each-of-those",
+        "applies_to_lines": [218],
+        "applies_to_function": "run_raw_coupling",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/dbbi_faed_joint_positional_matrix_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "row-sum / column-sum / main-and-anti-diagonal statistics (zero-padded 3-digit concatenations, and diagonal-value concatenations) of 9x9 DBBI/FAED joint positional matrices, one string per (matrix model, statistic) pair",
+        "transformation": "keystr_forms() of the literal decimal-digit statistic string (row_sums/col_sums zero-padded-3-digit concatenation, or diag_main+diag_anti concatenation) -- no hashing beyond keystr_forms()'s own standard variants",
+        "applies_to_lines": [118],
+        "applies_to_function": "run",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/door_prime_passport_probe.py": {
+    "phase": "4",
+    "constructions": [
+      {
+        "construction_label": "curated literal candidates combining the '1,4,21' door-prime hint and 'Neo's passport expiry 09/11/2001' hint (direct concatenations, punctuation variants, and the two hints combined), each in raw and SHA-256-hex form",
+        "transformation": "raw literal ASCII string, and sha256-hex-of-literal (both blobs tried for each)",
+        "applies_to_lines": [83],
+        "applies_to_function": "probe_direct_passphrases",
+        "eligible": true,
+        "eligible_reason": null
+      },
+      {
+        "construction_label": "checkerboard-decoded ALPHA_322 answer text with digits at prime-indexed, non-prime-indexed, or exactly positions {1,4,21} zeroed out in the underlying digit stream before decoding (escape pair {1,4} only, the validated alphabet), then run through answer_forms()",
+        "transformation": "answer_forms() of the zeroed-then-decoded text, plus sha256-hex-of-each-form",
+        "applies_to_lines": [128],
+        "applies_to_function": "probe_prime_zeroing",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/extended_cipher_recheck.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "every line of this project's curated wordlist corpus (CURATED_FILES) plus the core alphabet seeds and the known Phase-3.2.2 validation answer, each expanded through answer_forms() x keystr_forms(), tested under an extended KDF/cipher-variant set",
+        "transformation": "answer_forms()/keystr_forms() standard normalization family applied to each curated wordlist line/seed/validation-answer literal, no extra hashing beyond that standard family",
+        "applies_to_lines": [142],
+        "applies_to_function": "sweep",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/flower_prefix_checkpoint_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "answer_forms() of the three THEFLOWER-family derived candidates ('flower', 'theflower', 'the flower' -- the authenticated checkpoint prefix and its spaced/core variants)",
+        "transformation": "answer_forms() standard normalization family applied to the three literal candidate strings, materials deduplicated by exact bytes before submission",
+        "applies_to_lines": [204, 209, 212, 215],
+        "applies_to_function": "oracle_audit",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/hash_duality_sweep.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "pairwise combination (SHA-256 of concatenation both orders, XOR of prior-hash and SHA-256(answer), SHA-256-of-that-XOR, HMAC each direction, plain concatenation both orders) of each of the four verified prior SHA-256 command-state hex digests with each candidate decoded answer, in both binary and hex-text representations, with newline-suffix variants",
+        "transformation": "combinatorial hash/XOR/HMAC/concat outputs as described, each further rendered as raw bytes or lowercase-hex-of-those-bytes, optionally with a trailing LF/CRLF byte appended",
+        "applies_to_lines": [136],
+        "applies_to_function": "test_candidate",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/macro_clue_acrostic_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "acrostic (first-letter) and telestich (last-letter) strings read down the ordered macro-clue word list and the ordered macro-clue fragment list, in both compound (joined) and split (per-original-fragment) word tokenizations, expanded through answer_forms() x keystr_forms()",
+        "transformation": "answer_forms()/keystr_forms() standard normalization family applied to each of the six acrostic/telestich literal strings, tried under both default and EXTENDED_CIPHER_VARIANTS KDF sets",
+        "applies_to_lines": [166, 169, 172, 175],
+        "applies_to_function": "oracle_check",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/matrix_instruction_sweep.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "candidates from the bounded 'matrixsumlist -> lastwordsbeforearchichoice -> thispassword -> enter' instruction pipeline over the 91-symbol DBBI/Phase-3.2.2-plaintext cell-paired 7x13 and 13x7 matrices: literal matrix sums/rankings/selections, elementwise operations, composed matrix+phrase concatenations, and phrase-indexed selections into the matrix values, run through answer_forms() x keystr_forms()",
+        "transformation": "answer_forms()/keystr_forms() standard normalization family applied to each generated candidate's .value string",
+        "applies_to_lines": [393],
+        "applies_to_function": "_check_aes_chunk",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/matrixsum_permutation_sweep.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "checkerboard-decoded answer text obtained after applying a matrixsumlist row/column-sum-derived permutation key back onto the digit/index stream of one of the six clue-supported DBBI/{b,e}-DBBI/FAED matrix factorizations (7x13, 13x7, 7x9, 9x7, 15x38, 38x15), run through answer_forms()",
+        "transformation": "answer_forms() standard normalization family applied to the permutation-then-decode output text",
+        "applies_to_lines": [346],
+        "applies_to_function": "try_aes_text",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/matrixsumlist_self_fold_consumer_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "DBBI paired against itself (autocorrelation: DBBI reordered/selected by row/column sums derived from its own digit matrix) and DBBI paired against FAED folded down to 91 symbols (via cross_target_coupling_sweep.py's existing fold methods), using the same matrix-sum-select grammar as matrix_instruction_sweep.py; plus a literal-index probe reading positions 23/16/7 (0- and 1-based, forward and reverse) directly out of DBBI and the Phase-3.2.2 plaintext",
+        "transformation": "answer_forms()/keystr_forms() standard normalization family applied to each generated candidate value string",
+        "applies_to_lines": [170, 174, 178, 182],
+        "applies_to_function": "oracle_check",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/matrixsumlist_title_and_iteration_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "[23,16,7]-style indexing applied to the puzzle's own ordered phase/stage-title solve-chain list (doc/GSMG_PUZZLE.md, 8 items -- distinct from the macro-clue's 8 decoded fragments already tested in Phase 153), plus repeated (additive, N-round) single-letter Caesar/ROT shifts of +-23/+-16/+-7 applied to the BUT/HYE rail text, and an ARCHITECT_PDF_PATH-derived title/iteration construction from The Matrix Reloaded screenplay text (via the attr_overrides-remapped pinned wordlists/matrix/the-matrix-reloaded-2003.pdf copy)",
+        "transformation": "answer_forms()/keystr_forms() standard normalization family applied to each generated candidate value string",
+        "applies_to_lines": [203, 206, 209, 212],
+        "applies_to_function": "oracle_check",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/promised_standalone_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "the single macro-clue fragment 'promised' tested standalone (never previously tested outside the full concatenated macro-clue string), expanded through answer_forms() x keystr_forms()",
+        "transformation": "answer_forms()/keystr_forms() standard normalization family applied to the literal word 'promised'",
+        "applies_to_lines": [96, 99, 102, 105],
+        "applies_to_function": "oracle_check",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/salph_cosmic_phase341_eligibility_audit.py": {
+    "phase": "341",
+    "constructions": [
+      {
+        "construction_label": "byte-string password materials from lastcommand_probe.py's own Phase-0.1 candidate/treatment grammar (SalPhaseIon-hint literals, e.g. 'ourfirsthintisyourlastcommand'/'lastcommand'/prior-stage URLs, with newline and SHA-256 treatments), re-run here under widened ECB/stream/Key-Wrap oracle coverage (Phase 0.1 itself only ever tried the CBC family) -- classified as either exact duplicates of Phase 0.1's own candidate strings or genuinely new materials",
+        "transformation": "as built by lastcommand_probe.py itself: literal/newline-suffixed forms and their sha256-hex renderings",
+        "applies_to_lines": [278, 281, 284, 287],
+        "applies_to_function": "widen_oracle_coverage",
+        "eligible": true,
+        "eligible_reason": null
+      },
+      {
+        "construction_label": "lastcommand_probe.py's own Phase-0.1 candidate family (28 curated SalPhaseIon-hint literals: the hint text itself, prior-stage URLs/paths, generic terminal commands, and the Phase-3.2.2 answer), each in raw/newline-suffixed and SHA-256-hex forms -- re-submitted transitively when salph_cosmic_phase341_eligibility_audit.py imports and calls lastcommand_probe.probe() to build its own 'known-duplicate' comparison set; this is Phase 0.1's real historical oracle-submission code executing again, not new logic",
+        "transformation": "raw literal / literal+LF / literal+CRLF, and sha256-hex-of-each of those three forms",
+        "applies_to_lines": [67],
+        "applies_to_function": "probe (tools/gsmg/lastcommand_probe.py, invoked transitively)",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/salphaseion_title_rebus_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "fixed candidate family for the case-sensitive SalPhaseIon -> SalVATIon -> SALVATION rebus: the reconstructed middle segment, 'SalVATIon', the target word SALVATION, and two expanded phrase forms ('SALVATION OF ZION', 'THE SALVATION OF ZION'), expanded through answer_forms() x keystr_forms()",
+        "transformation": "answer_forms()/keystr_forms() standard normalization family applied to each of the five literal candidate strings",
+        "applies_to_lines": [576, 584, 588, 592],
+        "applies_to_function": "oracle_check",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  },
+  "tools/gsmg/second_prime_matrixsumlist_audit.py": {
+    "phase": "unknown",
+    "constructions": [
+      {
+        "construction_label": "rotation-derived second prime (311027) and its associated matrix/sum-list constructions (EXPECTED_MATRIX/EXPECTED_SUM_LIST/EXPECTED_COMBINED_MATRIX/EXPECTED_COMBINED_SUM_LIST literal digit-concatenation renderings) continued through the matrixsumlist grammar, expanded through answer_forms()-style forms",
+        "transformation": "literal decimal-digit-string renderings of the matrix/sum-list values, plus their standard answer-forms/hash variants",
+        "applies_to_lines": [293, 298, 301, 304],
+        "applies_to_function": "oracle_audit",
+        "eligible": true,
+        "eligible_reason": null
+      }
+    ]
+  }
+}

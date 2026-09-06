@@ -1,0 +1,12 @@
+{
+  "best_miss": {
+    "bytes_b64": "MzU0YjliNThiMmY0ZjI4ZmMwMDg5NzI5ZGVlNTcxNTY2M2NiOGQzMmRiYzMxZmRiNTMzMmE0ZDNhNWFmNjE5Mg==",
+    "matching_positions": 24,
+    "pattern": "01234556738439987aabc3de8044d89028f4f01da3b296604d6932478f954476",
+    "phase": "unknown",
+    "source_file": "tools/gsmg/hash_duality_sweep.py"
+  },
+  "eligible_scored": 1749878,
+  "match_found": false,
+  "target_pattern": "01234556728966286abc61c88b48de3086dd501d5557d6bab5605233df7bbb96"
+}

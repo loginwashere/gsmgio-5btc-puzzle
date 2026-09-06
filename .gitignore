@@ -4,6 +4,13 @@ __pycache__/
 # Runtime checkpoints: lock sentinels are transient; keep the JSONL data itself.
 tools/gsmg/*.jsonl.lock
 
+# Phase 478 generated candidate corpora. These are reproducible from the
+# committed locks/scripts but are far too large for ordinary Git hosting
+# (raw capture ~630 MiB; annotated manifest ~1.7 GiB). Their hashes remain
+# recorded in the Phase 478 audit/lock/checksum artifacts.
+tools/gsmg/phase478_raw_capture.jsonl
+tools/gsmg/phase478_manifest.jsonl
+
 # Obsidian: keep shared vault config, ignore personal workspace/UI state
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json

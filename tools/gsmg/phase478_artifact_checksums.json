@@ -1,0 +1,37 @@
+{
+  "artifacts": {
+    "tools/gsmg/phase478_discovery_lock.json": {
+      "git_tracked": true,
+      "sha256": "902e844787029e7b2737b07848a9dabc0f31d9ac1ccf4adc7b18c17c973b2b78",
+      "size_bytes": 46627
+    },
+    "tools/gsmg/phase478_manifest.jsonl": {
+      "git_tracked": false,
+      "sha256": "0952c327a310b8956fd128d6b6c82581bfdc217188a4d4043fbe19779b4c0145",
+      "size_bytes": 1750236942
+    },
+    "tools/gsmg/phase478_match_report.json": {
+      "git_tracked": true,
+      "sha256": "7e66c321d2c7ed6d3c86781a004dc253d94a01b9e66f3b145874b7564a44ab88",
+      "size_bytes": 466
+    },
+    "tools/gsmg/phase478_oracle_lock.json": {
+      "git_tracked": true,
+      "sha256": "2c9a9ab89d7e348a46df6c70877ed80f20e68091eb87ce374e13e39cce7449ea",
+      "size_bytes": 885
+    },
+    "tools/gsmg/phase478_raw_capture.jsonl": {
+      "git_tracked": false,
+      "sha256": "ec9e8ad4784a640b67ef84bcd9378f5cbf5f588c0d8799b49f9a051bee896df4",
+      "size_bytes": 659564011
+    },
+    "tools/gsmg/phase478_verification.json": {
+      "git_tracked": true,
+      "sha256": "a149a512ce460a57846e41bb6e93f48b16840901b304067bcc0bbf27d8b9a83c",
+      "size_bytes": 1155
+    }
+  },
+  "kind": "post_run_archival_checksums",
+  "note": "The raw capture and annotated manifest are reproducible generated artifacts kept outside ordinary Git because of their size. These checksums preserve the exact Phase 478 run inputs and outputs.",
+  "phase": 478
+}

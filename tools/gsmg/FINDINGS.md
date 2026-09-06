@@ -28944,3 +28944,75 @@ explicit limits.
 **Artifacts:** `doc/GSMG_PHASE477A_TOKEN_COLUMNAR_TRANSPOSITION_AUDIT.md`,
 amended protocol, implementation, 18-test unittest module, post-run verifier, manifest,
 execution lock, power/real/null/verification JSON records for both pairs.
+<!-- audit_doc_override: GSMG_PHASE478_DBBI_SUBSTITUTED_DIGEST_MATRIXSUMLIST_MATCH_AUDIT.md -->
+## Phase 478 -- DBBI `{b,g}` substituted-digest matrixsumlist match, closed negative over 1,749,878 candidates (2026-09-06)
+
+**Question:** is DBBI, segmented under escape pair `{b,g}` into a 64-token,
+16-type sequence, a monoalphabetically-substituted lowercase-hex SHA-256
+digest of some byte string this project has already constructed, in some
+prior phase, as a candidate serialization or output of `matrixsumlist`?
+Motivated by an unauthenticated, non-creator Telegram attachment
+(self-disclosed AI output); treated as motivation only, per this project's
+standing discipline -- every fact the protocol depends on was independently
+re-derived from this project's own pinned data before any test was designed.
+
+**Frozen construction:** substitution-invariant equality-pattern comparison
+(the same technique already used for the Phase 112 checkerboard code-IC
+oracle and the Phase 477A transposition family) between DBBI `{b,g}`'s
+64-position pattern and each candidate's `SHA256(bytes)` pattern -- no
+bijection is ever guessed. Two-lock design: a discovery lock (23
+`generator+oracle` files at cutoff commit `64f8063`; the initial lock fixed
+that source universe before candidate inspection, while the final
+superseding lock incorporated capture-completeness corrections after
+diagnostic candidate generation but before any digest scoring) and an oracle
+lock (manifest + DBBI pattern + matcher hashes, closed before any candidate
+digest was computed). Candidate
+universe is operationally defined as bytes actually submitted, historically,
+to a recognized `cb_common` oracle entrypoint in connection with
+`matrixsumlist` -- not everything a generator function could in principle
+emit.
+
+**Execution:** first discovery lock was superseded after real-harvest
+diagnostics (capture-completeness, dependency-isolation, and recipe-timing
+fixes -- no scoring performed during that work); the final lock's harvest
+ran all 23 files to `status: ok` (5 legitimately zero-candidate under a
+frozen `zero_candidate_policy`, verified by direct execution's own real
+p-values / gate history), yielding 1,749,878 candidates. All 18
+candidate-bearing source files were manually classified (construction,
+transformation, phase where discoverable) with zero documented retractions
+found; all 1,749,878 manifest entries are `eligible: true`. 96/96 self-tests
+pass across the harvester, harvest runner, manifest builder, matcher, and
+post-run verifier.
+
+**Exact result:** matcher run once against the locked manifest --
+`match_found: false`, `eligible_scored: 1,749,878`. Best (descriptive only)
+miss: `tools/gsmg/hash_duality_sweep.py`, 24/64 matching positions. This
+value is descriptive only; no family-maximum null calibration was
+preregistered, so no significance is assigned to it.
+
+**Disposition:** Bounded negative for DBBI `{b,g}` as a substituted-digest
+match against every already-constructed `matrixsumlist`-connected oracle
+candidate this project has on record as of the cutoff commit. Does not
+close: any `matrixsumlist` meaning never oracle-submitted historically,
+any candidate-generating source outside the frozen 96-file discovery
+superset, any normalization beyond what the source code itself already
+applied, the `{b,e}` pair or any other escape pair, or any non-digest
+reading of DBBI. No classified direct-crypto-bypass or recipe-less file
+remained excluded inside that superset; the COSMIC path was covered by its
+locked adapter.
+
+**Verification qualification:** the locked matcher did not itself enforce
+the oracle lock's pinned `phase478_common.py` hash before importing its
+equality-pattern function. The file independently matched the pinned hash,
+and a post-run verifier now checks every oracle-lock file hash before
+recomputing and requiring exact equality with the saved report. This is an
+enforcement omission, not a result change.
+
+**Artifacts:** `doc/GSMG_PHASE478_DBBI_SUBSTITUTED_DIGEST_MATRIXSUMLIST_MATCH_AUDIT.md`,
+frozen protocol, discovery lock, oracle lock, harvester + driver + two
+adapter mechanisms (one dedicated COSMIC adapter plus generic dependency
+remapping), raw capture (1,749,878 candidates), manifest annotations,
+manifest builder, manifest, matcher, match report, post-run verifier and
+verification record, artifact checksums, and five unittest modules (96/96). The two generated
+candidate corpora remain local and ignored because of their size; their
+hashes are preserved in the lock/checksum records.

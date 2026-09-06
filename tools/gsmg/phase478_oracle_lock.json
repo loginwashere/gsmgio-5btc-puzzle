@@ -1,0 +1,14 @@
+{
+  "dbbi_pattern": "01234556728966286abc61c88b48de3086dd501d5557d6bab5605233df7bbb96",
+  "lock_kind": "oracle_lock",
+  "manifest_annotations_path": "tools/gsmg/phase478_manifest_annotations.json",
+  "manifest_annotations_sha256": "e2e25579f2b99c7cdf8c7df95b8123d0a1943e0803b8bbcbac56f8137bf8c3e0",
+  "manifest_builder_script": "tools/gsmg/phase478_build_manifest.py",
+  "manifest_builder_script_sha256": "af6fd6367e6088eb0aaf2fcfea9fcad29c6b29fbc43557866c95c964c24eb925",
+  "manifest_path": "tools/gsmg/phase478_manifest.jsonl",
+  "manifest_sha256": "0952c327a310b8956fd128d6b6c82581bfdc217188a4d4043fbe19779b4c0145",
+  "matcher_script": "tools/gsmg/phase478_run_matcher.py",
+  "matcher_script_sha256": "6a8e426c9467a9773b3b26025a8c441af7455ed9c747aabe5e650d6bbb5664ed",
+  "phase": 478,
+  "phase478_common_sha256": "8795e7743c471c2be5af94959b224a86619df65c0a4b00fe1cadd56e5838a22d"
+}
