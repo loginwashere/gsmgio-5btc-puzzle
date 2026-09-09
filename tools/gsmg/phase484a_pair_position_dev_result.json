@@ -1,0 +1,21 @@
+{
+  "phase": "484A",
+  "status": "informal_pair_position_dev_scoping_not_frozen",
+  "faed_scored": false,
+  "fixture_split": "dev",
+  "board_mode": "broad_random",
+  "width": 6,
+  "fixture_index": 45,
+  "budgets": {
+    "joint_keep": 1536,
+    "board_restarts": 2,
+    "board_iters": 6000,
+    "board_t0": 20.0,
+    "board_t1": 1.0
+  },
+  "records": [
+    {"pair_index": 7, "pair": ["a", "i"], "planted_rank_one_based": 12, "joint_recovery": true, "board_accuracy": 0.92, "plaintext_char_accuracy": 1.0},
+    {"pair_index": 17, "pair": ["c", "f"], "planted_rank_one_based": 19, "joint_recovery": true, "board_accuracy": 0.92, "plaintext_char_accuracy": 1.0},
+    {"pair_index": 35, "pair": ["h", "i"], "planted_rank_one_based": 1, "joint_recovery": true, "board_accuracy": 0.88, "plaintext_char_accuracy": 1.0}
+  ]
+}

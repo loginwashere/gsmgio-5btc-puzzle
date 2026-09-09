@@ -1,0 +1,103 @@
+{
+  "chat_export_sha256": "645da52bce92e3de7fc29b77b21f0f946411c706f0fba805c6b84330f999cc8c",
+  "chat_message": {
+    "author": "Anton (@homeless_phd)",
+    "file_line": 67235,
+    "provenance_tier": "unauthenticated-community-motivation",
+    "timestamp": "2024-04-20 12:51 UTC"
+  },
+  "crypto_profile": "legacy-evp-bytes-to-key-sha256/aes-256-cbc/pkcs7",
+  "cryptography_version": "41.0.7",
+  "files_sha256": {
+    "audit_script": "b5d4ce1c96ab0145b8308380b13d9be89d3e0ec11f5f8c8542877ab9969ef45a",
+    "cb_common": "97e787a8be234b7ba5b7b8e0c1ba1abe0f8c61f480e5628da7883ef30db84de8",
+    "data": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "first_hint_hash_audit": "b2550aeb39c2e16bf971401e9bafdb3c623fa9ad18f023227aaa7c2d828fec0d",
+    "novelty_comparator": "359d57616f60a53649e0e515e814f39a3ea8e9f9cfb95dfefe38286d1550c3b5",
+    "novelty_result": "d084155c6bbd2afb46d33d49b6ea5906d8d036a648e4c9d42da88f03b08f29f5",
+    "protocol": "e908b82aeb0d659966729bd2164400ba1ecc5de9d30779894936d412e3be91e2",
+    "verifier": "2331d61e3077c94dcd0d76cb5b8de2c4049d034986b81b44db0ad61ad7365cf7"
+  },
+  "material_count": 8,
+  "material_manifest_sha256": "878d7050a17ac7f4a8e4f753252671818dab55c3f4fa075581071bf26de68d89",
+  "materials": [
+    {
+      "construction": "prize_then_halving",
+      "length": 64,
+      "level": "sha256_hex_password",
+      "material_b64": "YjcyMjU4OTQ2OGIzNjU3MTllMjg2NzgyMTYwY2RlOGNjOWFkYjYzODMwN2U5MDBkOGE0YzJjYjM1NjBmN2JmYw==",
+      "material_sha256": "b39bca3d90710a72f35d2dba5e8bf1a72c07d1e3a3b3a896c2d88667e5799a37",
+      "tier": "primary"
+    },
+    {
+      "construction": "prize_then_halving",
+      "length": 68,
+      "level": "preimage",
+      "material_b64": "MUdTTUcxSkM5d3RkU3dmd0FwZ2oyeGNtSlBBd3g3cHJCZTE3dWN5MUs5WlVBYW9ZNkpWdE05MzJXOWpVcDVMWGZ5SGE=",
+      "material_sha256": "b722589468b365719e286782160cde8cc9adb638307e900d8a4c2cb3560f7bfc",
+      "tier": "representation_control"
+    },
+    {
+      "construction": "halving_then_prize",
+      "length": 64,
+      "level": "sha256_hex_password",
+      "material_b64": "MGI2NDQyMWJmNjc5ZTVmYTNiM2I3ZDQwMDk1YmFjNWQyZTExMjIyODc5ZDg1NzVkZGE1MzE4MGY5OTk2YjdmNA==",
+      "material_sha256": "8a0ae57a54f75994e7010da06837bb5509cbec738c2d64faddd069c72397af80",
+      "tier": "primary"
+    },
+    {
+      "construction": "halving_then_prize",
+      "length": 68,
+      "level": "preimage",
+      "material_b64": "MTd1Y3kxSzlaVUFhb1k2SlZ0TTkzMlc5alVwNUxYZnlIYTFHU01HMUpDOXd0ZFN3ZndBcGdqMnhjbUpQQXd4N3ByQmU=",
+      "material_sha256": "0b64421bf679e5fa3b3b7d40095bac5d2e11222879d8575dda53180f9996b7f4",
+      "tier": "representation_control"
+    },
+    {
+      "construction": "banner_prize_halving",
+      "length": 64,
+      "level": "sha256_hex_password",
+      "material_b64": "YjJjZGM2MDdhOTYwMjU0OTAzNjU2MzNlZGY3Njk1OWU1NDM0NDVlNWIyYzAzYTAzMWJmZWMxNjZiMzBjZmEyZQ==",
+      "material_sha256": "1200bb7f1ee51f2d06f0e6fa31d4f6de044e96f2c00dd27c9eeaa020e2322de0",
+      "tier": "primary"
+    },
+    {
+      "construction": "banner_prize_halving",
+      "length": 93,
+      "level": "preimage",
+      "material_b64": "R1NNR0lPNUJUQ1BVWlpMRUNIQUxMRU5HRTFHU01HMUpDOXd0ZFN3ZndBcGdqMnhjbUpQQXd4N3ByQmUxN3VjeTFLOVpVQWFvWTZKVnRNOTMyVzlqVXA1TFhmeUhh",
+      "material_sha256": "b2cdc607a96025490365633edf76959e543445e5b2c03a031bfec166b30cfa2e",
+      "tier": "representation_control"
+    },
+    {
+      "construction": "banner_halving_prize",
+      "length": 64,
+      "level": "sha256_hex_password",
+      "material_b64": "NTA3N2E4NTViY2QyZTUxZjJlZTE3OTY4OTZkOWY3NzhmYTUwOWQ3Y2QxNWU1YWJkZDMwYWVlY2Y2NDk3MjI1ZA==",
+      "material_sha256": "d6bcc817b6e24688b4f6fbb6d2b13621e6e53e0c15c576abe5cd6ca10268c663",
+      "tier": "primary"
+    },
+    {
+      "construction": "banner_halving_prize",
+      "length": 93,
+      "level": "preimage",
+      "material_b64": "R1NNR0lPNUJUQ1BVWlpMRUNIQUxMRU5HRTE3dWN5MUs5WlVBYW9ZNkpWdE05MzJXOWpVcDVMWGZ5SGExR1NNRzFKQzl3dGRTd2Z3QXBnajJ4Y21KUEF3eDdwckJl",
+      "material_sha256": "5077a855bcd2e51f2ee1796896d9f778fa509d7cd15e5abdd30aeecf6497225d",
+      "tier": "representation_control"
+    }
+  ],
+  "p32_ciphertext_length": 80,
+  "p32_ciphertext_sha256": "cbbf945223b0c7a60e31b6ba7f5dfbc17f68f545bec059e937c11e7465d0117b",
+  "p32_salt_hex": "b45a5e3d827593ca",
+  "phase": 480,
+  "planned_decryptions": 8,
+  "primary_count": 4,
+  "representation_control_count": 4,
+  "status": "locked-before-real-run",
+  "target_blob": "P32TRAILING",
+  "validators": {
+    "padding_alone_promotes": false,
+    "strong_text_minimum_z": 8.0,
+    "structural_binary": "aes/block16/pad16/body64"
+  }
+}

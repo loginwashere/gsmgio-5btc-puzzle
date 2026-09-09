@@ -8,7 +8,7 @@
     "initial_compatibility_sha256": "f9c8754031656406edf74f2ac0e6c26c2c83dd51ca27154c6a11773251d6fda4",
     "round_trip": "byte-identical-before-generated-notice-and-phase-447"
   },
-  "phase_count": 473,
+  "phase_count": 480,
   "entries": [
     {
       "order": 1,
@@ -2847,6 +2847,54 @@
       "phase": "478",
       "stable_id": "P478",
       "file": "P00478.md"
+    },
+    {
+      "order": 474,
+      "phase": "479",
+      "stable_id": "P479",
+      "file": "P00479.md"
+    },
+    {
+      "order": 475,
+      "phase": "480",
+      "stable_id": "P480",
+      "file": "P00480.md"
+    },
+    {
+      "order": 476,
+      "phase": "481",
+      "stable_id": "P481",
+      "file": "P00481.md"
+    },
+    {
+      "order": 477,
+      "phase": "482",
+      "stable_id": "P482",
+      "file": "P00482.md"
+    },
+    {
+      "order": 478,
+      "phase": "483",
+      "stable_id": "P483",
+      "file": "P00483.md"
+    },
+    {
+      "order": 479,
+      "phase": "485",
+      "stable_id": "P485",
+      "file": "P00485.md"
+    },
+    {
+      "order": 480,
+      "phase": "484",
+      "stable_id": "P484",
+      "file": "P00484.md"
+    },
+    {
+      "order": 481,
+      "phase": "486",
+      "stable_id": "P486",
+      "file": "P00486.md"
     }
   ]
 }

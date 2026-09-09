@@ -1,0 +1,36 @@
+{
+  "phase": "484AG",
+  "status": "development_early_parent_reserved_bridge_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_index": 22,
+  "parent_depth": 6,
+  "parent_keep": 65536,
+  "parent_true_count_in_reserved_set": 1,
+  "children_per_parent": 16,
+  "depth7_keep": 1048576,
+  "depth6": {
+    "candidate_count": 524288,
+    "true_segments": 3,
+    "best_true_rank": 55156
+  },
+  "depth7": {
+    "before_reservation": {
+      "candidate_count": 3145728,
+      "true_segments": 2,
+      "best_true_rank": 668933
+    },
+    "after_reservation": {
+      "candidate_count": 993273,
+      "true_segments": 0,
+      "best_true_rank": null
+    },
+    "generated_unique_after_selection": 993273,
+    "after_selection": {
+      "candidate_count": 993273,
+      "true_segments": 0,
+      "best_true_rank": null
+    }
+  },
+  "wall_seconds": 13.499680509004975
+}

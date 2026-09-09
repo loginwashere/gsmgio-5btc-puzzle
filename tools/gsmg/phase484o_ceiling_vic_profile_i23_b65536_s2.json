@@ -1,0 +1,112 @@
+{
+  "phase": "484O",
+  "status": "development_planted_board_ceiling_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "board_mode": "vic_profile",
+  "fixture_index": 23,
+  "beam_width": 65536,
+  "board_swaps": 2,
+  "board_accuracy": 0.84,
+  "exact_top1_recovery": false,
+  "truth_full_rank": 2,
+  "depth_diagnostics": [
+    {
+      "depth": 4,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 16,
+      "best_true_segment_rank": 76
+    },
+    {
+      "depth": 5,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 10,
+      "best_true_segment_rank": 127
+    },
+    {
+      "depth": 6,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 7,
+      "best_true_segment_rank": 493
+    },
+    {
+      "depth": 7,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 6,
+      "best_true_segment_rank": 400
+    },
+    {
+      "depth": 8,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 2,
+      "best_true_segment_rank": 11718
+    },
+    {
+      "depth": 9,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 12
+    },
+    {
+      "depth": 10,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 4
+    },
+    {
+      "depth": 11,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 21
+    },
+    {
+      "depth": 12,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 44
+    },
+    {
+      "depth": 13,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 28
+    },
+    {
+      "depth": 14,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 51
+    },
+    {
+      "depth": 15,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 1
+    },
+    {
+      "depth": 16,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 2
+    },
+    {
+      "depth": 17,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 3,
+      "best_true_segment_rank": 6
+    },
+    {
+      "depth": 18,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 2,
+      "best_true_segment_rank": 8
+    },
+    {
+      "depth": 19,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 1,
+      "best_true_segment_rank": 2
+    }
+  ],
+  "wall_seconds": 54.80112288199598
+}

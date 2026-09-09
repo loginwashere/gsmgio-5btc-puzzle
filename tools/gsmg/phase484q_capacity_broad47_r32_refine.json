@@ -1,0 +1,62 @@
+{
+  "board_mode": "broad_random",
+  "fixture_index": 47,
+  "shortlist_size": 16384,
+  "true_segments_retained": 1,
+  "best_true_coarse_rank": 3389,
+  "best_true_refined_rank": 978,
+  "best_true_refined_board_accuracy": 0.44,
+  "shortlist_seconds": 8.697037636004097,
+  "gpu_screen_seconds": 2.690140603001055,
+  "gpu_refine_seconds": 34.854680914999335,
+  "refined_true_records": [
+    {
+      "rank": 978,
+      "coarse_rank": 3389,
+      "shortlist_index": 5272,
+      "is_true_segment": true,
+      "normalized_score": -4.653168338488184,
+      "board_accuracy": 0.44,
+      "best_restart": 13,
+      "path": [
+        8,
+        5,
+        14,
+        3,
+        9,
+        16,
+        15,
+        18
+      ],
+      "board": [
+        16,
+        12,
+        5,
+        3,
+        14,
+        11,
+        2,
+        8,
+        7,
+        0,
+        10,
+        13,
+        17,
+        18,
+        22,
+        15,
+        4,
+        24,
+        1,
+        9,
+        6,
+        23,
+        19,
+        20,
+        21
+      ],
+      "quadgram_windows": 41
+    }
+  ],
+  "wall_seconds": 46.490226789996086
+}

@@ -1,0 +1,280 @@
+{
+  "phase": "484A",
+  "status": "informal_joint_rank_dev_scoping_not_frozen",
+  "faed_scored": false,
+  "fixture_split": "dev",
+  "pair_index": 0,
+  "widths": [
+    6
+  ],
+  "board_modes": [
+    "vic_profile",
+    "broad_random"
+  ],
+  "fixtures_per_cell": 20,
+  "fixture_index_start": 25,
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "width": 6,
+      "fixture_count": 20,
+      "minimum_rank": 1,
+      "median_rank": 6.0,
+      "maximum_rank": 140,
+      "within_1536": 20,
+      "records": [
+        {
+          "fixture_index": 25,
+          "rank": 7,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 26,
+          "rank": 1,
+          "valid_hypotheses": 21636,
+          "invalid_segmentations": 4284
+        },
+        {
+          "fixture_index": 27,
+          "rank": 34,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 28,
+          "rank": 1,
+          "valid_hypotheses": 21312,
+          "invalid_segmentations": 4608
+        },
+        {
+          "fixture_index": 29,
+          "rank": 3,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 30,
+          "rank": 140,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 31,
+          "rank": 23,
+          "valid_hypotheses": 21312,
+          "invalid_segmentations": 4608
+        },
+        {
+          "fixture_index": 32,
+          "rank": 27,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 33,
+          "rank": 1,
+          "valid_hypotheses": 21312,
+          "invalid_segmentations": 4608
+        },
+        {
+          "fixture_index": 34,
+          "rank": 108,
+          "valid_hypotheses": 20880,
+          "invalid_segmentations": 5040
+        },
+        {
+          "fixture_index": 35,
+          "rank": 4,
+          "valid_hypotheses": 21420,
+          "invalid_segmentations": 4500
+        },
+        {
+          "fixture_index": 36,
+          "rank": 6,
+          "valid_hypotheses": 21312,
+          "invalid_segmentations": 4608
+        },
+        {
+          "fixture_index": 37,
+          "rank": 6,
+          "valid_hypotheses": 21636,
+          "invalid_segmentations": 4284
+        },
+        {
+          "fixture_index": 38,
+          "rank": 22,
+          "valid_hypotheses": 21312,
+          "invalid_segmentations": 4608
+        },
+        {
+          "fixture_index": 39,
+          "rank": 27,
+          "valid_hypotheses": 21312,
+          "invalid_segmentations": 4608
+        },
+        {
+          "fixture_index": 40,
+          "rank": 1,
+          "valid_hypotheses": 21312,
+          "invalid_segmentations": 4608
+        },
+        {
+          "fixture_index": 41,
+          "rank": 29,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 42,
+          "rank": 1,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 43,
+          "rank": 1,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 44,
+          "rank": 1,
+          "valid_hypotheses": 20880,
+          "invalid_segmentations": 5040
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 6,
+      "fixture_count": 20,
+      "minimum_rank": 1,
+      "median_rank": 17.0,
+      "maximum_rank": 175,
+      "within_1536": 20,
+      "records": [
+        {
+          "fixture_index": 25,
+          "rank": 4,
+          "valid_hypotheses": 20880,
+          "invalid_segmentations": 5040
+        },
+        {
+          "fixture_index": 26,
+          "rank": 1,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 27,
+          "rank": 11,
+          "valid_hypotheses": 20880,
+          "invalid_segmentations": 5040
+        },
+        {
+          "fixture_index": 28,
+          "rank": 175,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 29,
+          "rank": 20,
+          "valid_hypotheses": 21420,
+          "invalid_segmentations": 4500
+        },
+        {
+          "fixture_index": 30,
+          "rank": 88,
+          "valid_hypotheses": 21420,
+          "invalid_segmentations": 4500
+        },
+        {
+          "fixture_index": 31,
+          "rank": 8,
+          "valid_hypotheses": 21420,
+          "invalid_segmentations": 4500
+        },
+        {
+          "fixture_index": 32,
+          "rank": 1,
+          "valid_hypotheses": 20880,
+          "invalid_segmentations": 5040
+        },
+        {
+          "fixture_index": 33,
+          "rank": 1,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 34,
+          "rank": 34,
+          "valid_hypotheses": 21636,
+          "invalid_segmentations": 4284
+        },
+        {
+          "fixture_index": 35,
+          "rank": 32,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 36,
+          "rank": 2,
+          "valid_hypotheses": 21312,
+          "invalid_segmentations": 4608
+        },
+        {
+          "fixture_index": 37,
+          "rank": 61,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 38,
+          "rank": 10,
+          "valid_hypotheses": 21420,
+          "invalid_segmentations": 4500
+        },
+        {
+          "fixture_index": 39,
+          "rank": 36,
+          "valid_hypotheses": 22560,
+          "invalid_segmentations": 3360
+        },
+        {
+          "fixture_index": 40,
+          "rank": 1,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        },
+        {
+          "fixture_index": 41,
+          "rank": 14,
+          "valid_hypotheses": 21420,
+          "invalid_segmentations": 4500
+        },
+        {
+          "fixture_index": 42,
+          "rank": 52,
+          "valid_hypotheses": 21636,
+          "invalid_segmentations": 4284
+        },
+        {
+          "fixture_index": 43,
+          "rank": 75,
+          "valid_hypotheses": 21312,
+          "invalid_segmentations": 4608
+        },
+        {
+          "fixture_index": 44,
+          "rank": 23,
+          "valid_hypotheses": 21072,
+          "invalid_segmentations": 4848
+        }
+      ]
+    }
+  ]
+}

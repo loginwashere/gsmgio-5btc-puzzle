@@ -1,0 +1,49 @@
+{
+  "phase": "484A",
+  "status": "informal_joint_pair_dev_scoping_not_frozen",
+  "faed_scored": false,
+  "fixture_split": "dev",
+  "fixture_indices": [20, 21, 22, 23, 24],
+  "pair_index": 0,
+  "spectral_rank_survey": [
+    {"board_mode": "vic_profile", "width": 2, "ranks": [1, 1, 2, 2, 1]},
+    {"board_mode": "vic_profile", "width": 3, "ranks": [3, 2, 2, 4, 2]},
+    {"board_mode": "vic_profile", "width": 5, "ranks": [1, 2, 21, 2, 1]},
+    {"board_mode": "vic_profile", "width": 6, "ranks": [3, 1145, 1, 1, 16]},
+    {"board_mode": "broad_random", "width": 2, "ranks": [1, 1, 1, 1, 1]},
+    {"board_mode": "broad_random", "width": 3, "ranks": [1, 6, 1, 1, 6]},
+    {"board_mode": "broad_random", "width": 5, "ranks": [4, 58, 1, 4, 95]},
+    {"board_mode": "broad_random", "width": 6, "ranks": [105, 32, 37, 1003, 126]}
+  ],
+  "tail_board_tests": {
+    "joint_keep": 1536,
+    "board_restarts": 2,
+    "board_iters": 6000,
+    "board_t0": 20.0,
+    "board_t1": 1.0,
+    "records": [
+      {
+        "board_mode": "vic_profile",
+        "width": 6,
+        "fixture_index": 21,
+        "planted_joint_spectral_rank_one_based": 1145,
+        "joint_recovery": true,
+        "escape_pair_recovery": true,
+        "exact_order_recovery": true,
+        "board_accuracy": 1.0,
+        "plaintext_char_accuracy": 1.0
+      },
+      {
+        "board_mode": "broad_random",
+        "width": 6,
+        "fixture_index": 23,
+        "planted_joint_spectral_rank_one_based": 1003,
+        "joint_recovery": true,
+        "escape_pair_recovery": true,
+        "exact_order_recovery": true,
+        "board_accuracy": 1.0,
+        "plaintext_char_accuracy": 1.0
+      }
+    ]
+  }
+}

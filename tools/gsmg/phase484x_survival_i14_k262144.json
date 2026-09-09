@@ -1,0 +1,72 @@
+{
+  "phase": "484X",
+  "status": "development_exact_profile_shortlist_survival",
+  "fixture_index": 14,
+  "train_indices": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "keep": 262144,
+  "depth_diagnostics": [
+    {
+      "depth": 4,
+      "generated": 93024,
+      "true_candidates_generated": 16,
+      "best_true_raw_score_rank": 207,
+      "worst_true_raw_score_rank": 54847,
+      "beam_size": 93024,
+      "true_segments_retained": 16,
+      "best_true_post_selection_rank": 207
+    },
+    {
+      "depth": 5,
+      "generated": 1395360,
+      "true_candidates_generated": 15,
+      "best_true_raw_score_rank": 221,
+      "worst_true_raw_score_rank": 217277,
+      "beam_size": 262144,
+      "true_segments_retained": 15,
+      "best_true_post_selection_rank": 221
+    },
+    {
+      "depth": 6,
+      "generated": 5670529,
+      "true_candidates_generated": 14,
+      "best_true_raw_score_rank": 22527,
+      "worst_true_raw_score_rank": 1796815,
+      "beam_size": 262144,
+      "true_segments_retained": 8,
+      "best_true_post_selection_rank": 22527
+    },
+    {
+      "depth": 7,
+      "generated": 5880622,
+      "true_candidates_generated": 11,
+      "best_true_raw_score_rank": 210084,
+      "worst_true_raw_score_rank": 2695268,
+      "beam_size": 262144,
+      "true_segments_retained": 2,
+      "best_true_post_selection_rank": 210084
+    },
+    {
+      "depth": 8,
+      "generated": 5642936,
+      "true_candidates_generated": 4,
+      "best_true_raw_score_rank": 910973,
+      "worst_true_raw_score_rank": 4625309,
+      "beam_size": 262144,
+      "true_segments_retained": 0,
+      "best_true_post_selection_rank": null
+    }
+  ],
+  "truth_survived_depth8": false,
+  "wall_seconds": 94.50382537400583
+}

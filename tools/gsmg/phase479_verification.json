@@ -1,0 +1,10 @@
+{
+  "consistent": true,
+  "errors": [],
+  "exact_hit_count": 0,
+  "lock_sha256": "96ecc23e15d873541dba58f2afe7af7bb6e97050098bea37ae3f85871cfc05a8",
+  "phase": 479,
+  "recomputed": true,
+  "result_sha256": "7c9ed4fb95caa5c0160abcba8b8ff243be3fcae77788f953bafc72c9e957fd82",
+  "verdict": "bounded_negative"
+}

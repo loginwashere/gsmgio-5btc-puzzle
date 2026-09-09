@@ -1,0 +1,68 @@
+{
+  "phase": "484N",
+  "status": "development_cumulative_depth_beam_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "board_mode": "vic_profile",
+  "fixture_index": 23,
+  "beam_width": 65536,
+  "accumulation_decay": 0.1,
+  "survived_to_depth_18": false,
+  "depth_diagnostics": [
+    {
+      "depth": 4,
+      "true_segment_count_retained": 16,
+      "best_true_segment_rank": 76,
+      "beam_size": 65536
+    },
+    {
+      "depth": 5,
+      "true_segment_count_retained": 10,
+      "best_true_segment_rank": 118,
+      "beam_size": 65536
+    },
+    {
+      "depth": 6,
+      "true_segment_count_retained": 8,
+      "best_true_segment_rank": 393,
+      "beam_size": 65536
+    },
+    {
+      "depth": 7,
+      "true_segment_count_retained": 7,
+      "best_true_segment_rank": 360,
+      "beam_size": 65536
+    },
+    {
+      "depth": 8,
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 12727,
+      "beam_size": 65536
+    },
+    {
+      "depth": 9,
+      "true_segment_count_retained": 3,
+      "best_true_segment_rank": 12830,
+      "beam_size": 65536
+    },
+    {
+      "depth": 10,
+      "true_segment_count_retained": 1,
+      "best_true_segment_rank": 54622,
+      "beam_size": 65536
+    },
+    {
+      "depth": 11,
+      "true_segment_count_retained": 1,
+      "best_true_segment_rank": 58941,
+      "beam_size": 65536
+    },
+    {
+      "depth": 12,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "beam_size": 65536
+    }
+  ],
+  "wall_seconds": 43.790737675000855
+}

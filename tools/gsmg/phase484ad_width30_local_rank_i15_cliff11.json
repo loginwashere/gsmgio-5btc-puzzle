@@ -1,0 +1,42 @@
+{
+  "phase": "484AD",
+  "status": "development_width30_local_rank_cliff_diagnostic_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_index": 15,
+  "width": 30,
+  "cliff_depth": 11,
+  "pipeline_params": {
+    "keep": 262144,
+    "depth6_keep": 524288,
+    "depth7_keep": 1048576,
+    "depth8_keep": 1310720,
+    "restarts": 3,
+    "iterations": 2000,
+    "depth8_restarts": 3,
+    "depth8_iterations": 2000,
+    "refine_restarts": 4,
+    "refine_iterations": 10000,
+    "refine_keep": 262144,
+    "rolling_restarts": 3,
+    "rolling_iterations": 2000,
+    "rolling_keep": 262144,
+    "local_restarts": 3,
+    "local_iterations": 2000
+  },
+  "stage_sizes": {
+    "depth7_selected": 262144,
+    "depth8_selected": 1310720,
+    "depth8_refined": 262144,
+    "depth9_selected": 262144,
+    "depth10_selected": 262144
+  },
+  "local_rank_diagnostic": {
+    "depth10_population_size": 262144,
+    "depth10_true_parent_count": 0,
+    "records": []
+  },
+  "rebuild_seconds": 451.6230358370012,
+  "diagnostic_seconds": 0.07293942099931883,
+  "wall_seconds": 451.69598610899993
+}

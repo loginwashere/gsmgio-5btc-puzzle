@@ -1,0 +1,4 @@
+switch_stage {'after_invariant_selection': {'candidate_count': 1048576, 'true_segments': 7, 'best_true_rank': 31857}, 'board_objective_before_selection': {'candidate_count': 1048576, 'true_segments': 7, 'best_true_rank': 7}, 'after_board_selection': {'candidate_count': 262144, 'true_segments': 6, 'best_true_rank': 7}, 'board_screen_seconds': 6.458939563002787}
+next_stage {'depth': 7, 'generated_unique': 12292076, 'before_selection': {'candidate_count': 12582912, 'true_segments': 9, 'best_true_rank': 1}, 'after_selection': {'candidate_count': 1310720, 'true_segments': 9, 'best_true_rank': 1}, 'keep': 1310720, 'board_screen_seconds': 104.83246134899673}
+survived_switch_depth True survived_next_depth True
+wall 125.919 wrote /home/loginwashere/projects/gsmgio-5btc-puzzle/tools/gsmg/phase484ah_width30_early_switch_i22_sd6.json

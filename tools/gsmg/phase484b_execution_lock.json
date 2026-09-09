@@ -1,0 +1,41 @@
+{
+  "phase": "484B",
+  "status": "locked-before-real-run",
+  "locked_at": "2026-09-07",
+  "faed_ascii_sha256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+  "paths": {
+    "protocol": "doc/Brainstorms/2026-09-07 - Phase 484B Powered Small-Width Raw-Symbol VIC Real Protocol.md",
+    "solver": "tools/gsmg/phase484a_raw_symbol_vic_solver.py",
+    "runner": "tools/gsmg/phase484b_raw_symbol_vic_real_audit.py",
+    "verifier": "tools/gsmg/phase484b_verify_run.py",
+    "data": "tools/gsmg/data.py",
+    "corpus": "wordlists/gsmg/cosmic_duality_book_full_text.txt",
+    "quadgrams": "tools/gsmg/data_files/english_quadgrams.txt",
+    "phase484a_lock": "tools/gsmg/phase484a_execution_lock.json",
+    "phase484a_holdout": "tools/gsmg/phase484a_holdout_result.json"
+  },
+  "files_sha256": {
+    "protocol": "6fa69ef7fbff4489bdfaa2628dc06cbaefa12b88413072d77a46d28c58d4d3da",
+    "solver": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "runner": "cedf92141b08224129f7ac73df3fcdfb551da880f3003053f4454bc08d8ede00",
+    "verifier": "eb0e3a4d90234058109057ca5318cd695de0213e288fa2c6274c94dc5730fafb",
+    "data": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "corpus": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "quadgrams": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+    "phase484a_lock": "d104efe4d7ed00c7d72d2b136cbeec63009a52ba8702198232c883e8ab91b9a4",
+    "phase484a_holdout": "31b2e78c5ebf92cc894b8ad48c44cbf56b718221df9f7179d2d07d16ca87c393"
+  },
+  "configuration": {
+    "widths": [2, 3, 5, 6],
+    "joint_keep": 1536,
+    "board_restarts": 2,
+    "board_iters": 6000,
+    "board_t0": 20.0,
+    "board_t1": 1.0,
+    "top_per_width": 10,
+    "seed_real": 1212874753,
+    "holdout_score_floor": -4.571151156706407,
+    "workers": 4
+  },
+  "decision_scope": "score trigger and readable-output review only; no calibrated null negative"
+}

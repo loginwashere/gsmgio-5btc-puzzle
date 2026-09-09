@@ -1,0 +1,2562 @@
+{
+  "phase": "484A",
+  "status": "locked_synthetic_holdout_complete",
+  "faed_scored": false,
+  "fixture_split": "holdout",
+  "execution_lock_sha256": "d104efe4d7ed00c7d72d2b136cbeec63009a52ba8702198232c883e8ab91b9a4",
+  "gate_pass": true,
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "width": 2,
+      "fixture_count": 10,
+      "passed": 10,
+      "cell_gate_pass": true,
+      "records": [
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 0,
+          "pair_index": 0,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 58,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "b"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 394,
+          "true_length": 394,
+          "winner_normalized_score": -4.409656491942025,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 1,
+          "pair_index": 1,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 57,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "c"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 3,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 397,
+          "true_length": 397,
+          "winner_normalized_score": -4.324939103493068,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 2,
+          "pair_index": 5,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 57,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 0.9974937343358395,
+          "decoded_length": 399,
+          "true_length": 399,
+          "winner_normalized_score": -4.427170938928497,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 3,
+          "pair_index": 9,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 58,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "d"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 398,
+          "true_length": 398,
+          "winner_normalized_score": -4.330249082146977,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 4,
+          "pair_index": 14,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 58,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "i"
+          ],
+          "winner_order": [
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 412,
+          "true_length": 412,
+          "winner_normalized_score": -4.3020315997534935,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 5,
+          "pair_index": 18,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 57,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "c",
+            "g"
+          ],
+          "winner_order": [
+            1,
+            0
+          ],
+          "winner_rank": 5,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 391,
+          "true_length": 391,
+          "winner_normalized_score": -4.427826602272063,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 6,
+          "pair_index": 23,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 70,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "d",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 3,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.84,
+          "plaintext_char_accuracy": 0.9974489795918368,
+          "decoded_length": 392,
+          "true_length": 392,
+          "winner_normalized_score": -4.362090050975928,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 7,
+          "pair_index": 27,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 58,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "e",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 400,
+          "true_length": 400,
+          "winner_normalized_score": -4.382418498799894,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 8,
+          "pair_index": 32,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 71,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "f",
+            "i"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 4,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 405,
+          "true_length": 405,
+          "winner_normalized_score": -4.398183103414362,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 2,
+          "fixture_index": 9,
+          "pair_index": 35,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 70,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "h",
+            "i"
+          ],
+          "winner_order": [
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 418,
+          "true_length": 418,
+          "winner_normalized_score": -4.319897835219706,
+          "gate_pass": true
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 3,
+      "fixture_count": 10,
+      "passed": 10,
+      "cell_gate_pass": true,
+      "records": [
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 0,
+          "pair_index": 0,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "b"
+          ],
+          "winner_order": [
+            0,
+            1,
+            2
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 404,
+          "true_length": 404,
+          "winner_normalized_score": -4.235890240276305,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 1,
+          "pair_index": 1,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "c"
+          ],
+          "winner_order": [
+            0,
+            1,
+            2
+          ],
+          "winner_rank": 6,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 404,
+          "true_length": 404,
+          "winner_normalized_score": -4.317776189793217,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 2,
+          "pair_index": 5,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            2,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 400,
+          "true_length": 400,
+          "winner_normalized_score": -4.4000616934085235,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 3,
+          "pair_index": 9,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "d"
+          ],
+          "winner_order": [
+            2,
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 394,
+          "true_length": 394,
+          "winner_normalized_score": -4.273796130033101,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 4,
+          "pair_index": 14,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "i"
+          ],
+          "winner_order": [
+            2,
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 397,
+          "true_length": 397,
+          "winner_normalized_score": -4.298072384054684,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 5,
+          "pair_index": 18,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "c",
+            "g"
+          ],
+          "winner_order": [
+            1,
+            2,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 0.9975124378109452,
+          "decoded_length": 402,
+          "true_length": 402,
+          "winner_normalized_score": -4.453457075589706,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 6,
+          "pair_index": 23,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 182,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "d",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            1,
+            2
+          ],
+          "winner_rank": 6,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 398,
+          "true_length": 398,
+          "winner_normalized_score": -4.38435290102609,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 7,
+          "pair_index": 27,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "e",
+            "g"
+          ],
+          "winner_order": [
+            1,
+            0,
+            2
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 414,
+          "true_length": 414,
+          "winner_normalized_score": -4.163991511873484,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 8,
+          "pair_index": 32,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "f",
+            "i"
+          ],
+          "winner_order": [
+            0,
+            2,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 408,
+          "true_length": 408,
+          "winner_normalized_score": -4.2955729148431026,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 3,
+          "fixture_index": 9,
+          "pair_index": 35,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 184,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "h",
+            "i"
+          ],
+          "winner_order": [
+            1,
+            2,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 397,
+          "true_length": 397,
+          "winner_normalized_score": -4.390531904843558,
+          "gate_pass": true
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 5,
+      "fixture_count": 10,
+      "passed": 10,
+      "cell_gate_pass": true,
+      "records": [
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 0,
+          "pair_index": 0,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3600,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "b"
+          ],
+          "winner_order": [
+            1,
+            0,
+            4,
+            3,
+            2
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 413,
+          "true_length": 413,
+          "winner_normalized_score": -4.2663677960360875,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 1,
+          "pair_index": 1,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3528,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "c"
+          ],
+          "winner_order": [
+            0,
+            3,
+            1,
+            2,
+            4
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 404,
+          "true_length": 404,
+          "winner_normalized_score": -4.283226247632602,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 2,
+          "pair_index": 5,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3528,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            3,
+            2,
+            4,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 401,
+          "true_length": 401,
+          "winner_normalized_score": -4.306505413928271,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 3,
+          "pair_index": 9,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3528,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "d"
+          ],
+          "winner_order": [
+            4,
+            3,
+            1,
+            2,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 395,
+          "true_length": 395,
+          "winner_normalized_score": -4.311519173344731,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 4,
+          "pair_index": 14,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3612,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "i"
+          ],
+          "winner_order": [
+            0,
+            2,
+            3,
+            4,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 405,
+          "true_length": 405,
+          "winner_normalized_score": -4.423350816155456,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 5,
+          "pair_index": 18,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3600,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "c",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            1,
+            3,
+            2,
+            4
+          ],
+          "winner_rank": 1,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 396,
+          "true_length": 396,
+          "winner_normalized_score": -4.428566420478096,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 6,
+          "pair_index": 23,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3480,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "d",
+            "g"
+          ],
+          "winner_order": [
+            1,
+            0,
+            2,
+            4,
+            3
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 407,
+          "true_length": 407,
+          "winner_normalized_score": -4.299236092365897,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 7,
+          "pair_index": 27,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3528,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "e",
+            "g"
+          ],
+          "winner_order": [
+            4,
+            3,
+            2,
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 412,
+          "true_length": 412,
+          "winner_normalized_score": -4.28107672262091,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 8,
+          "pair_index": 32,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3612,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "f",
+            "i"
+          ],
+          "winner_order": [
+            2,
+            3,
+            1,
+            4,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 0.9975186104218362,
+          "decoded_length": 403,
+          "true_length": 403,
+          "winner_normalized_score": -4.483065332542835,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 5,
+          "fixture_index": 9,
+          "pair_index": 35,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3528,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "h",
+            "i"
+          ],
+          "winner_order": [
+            4,
+            0,
+            3,
+            2,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 391,
+          "true_length": 391,
+          "winner_normalized_score": -4.3556076810366,
+          "gate_pass": true
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 6,
+      "fixture_count": 10,
+      "passed": 10,
+      "cell_gate_pass": true,
+      "records": [
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 0,
+          "pair_index": 0,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 20880,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "b"
+          ],
+          "winner_order": [
+            1,
+            0,
+            4,
+            3,
+            5,
+            2
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 390,
+          "true_length": 390,
+          "winner_normalized_score": -4.297149688297472,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 1,
+          "pair_index": 1,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21312,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "c"
+          ],
+          "winner_order": [
+            4,
+            5,
+            3,
+            1,
+            2,
+            0
+          ],
+          "winner_rank": 29,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 397,
+          "true_length": 397,
+          "winner_normalized_score": -4.365032249293587,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 2,
+          "pair_index": 5,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 20880,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "g"
+          ],
+          "winner_order": [
+            5,
+            0,
+            4,
+            2,
+            1,
+            3
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 393,
+          "true_length": 393,
+          "winner_normalized_score": -4.3112062122790515,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 3,
+          "pair_index": 9,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 20880,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "d"
+          ],
+          "winner_order": [
+            2,
+            3,
+            4,
+            5,
+            0,
+            1
+          ],
+          "winner_rank": 21,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 400,
+          "true_length": 400,
+          "winner_normalized_score": -4.34565255417726,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 4,
+          "pair_index": 14,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21072,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "i"
+          ],
+          "winner_order": [
+            5,
+            4,
+            2,
+            3,
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 398,
+          "true_length": 398,
+          "winner_normalized_score": -4.316483123186424,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 5,
+          "pair_index": 18,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21072,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "c",
+            "g"
+          ],
+          "winner_order": [
+            3,
+            5,
+            0,
+            4,
+            1,
+            2
+          ],
+          "winner_rank": 15,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 402,
+          "true_length": 402,
+          "winner_normalized_score": -4.349500571741101,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 6,
+          "pair_index": 23,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21312,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "d",
+            "g"
+          ],
+          "winner_order": [
+            2,
+            5,
+            4,
+            3,
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 395,
+          "true_length": 395,
+          "winner_normalized_score": -4.297249841954858,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 7,
+          "pair_index": 27,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 20880,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "e",
+            "g"
+          ],
+          "winner_order": [
+            4,
+            0,
+            5,
+            1,
+            2,
+            3
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 407,
+          "true_length": 407,
+          "winner_normalized_score": -4.518361081616119,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 8,
+          "pair_index": 32,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21312,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "f",
+            "i"
+          ],
+          "winner_order": [
+            0,
+            2,
+            4,
+            3,
+            1,
+            5
+          ],
+          "winner_rank": 8,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 398,
+          "true_length": 398,
+          "winner_normalized_score": -4.391950101535834,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 6,
+          "fixture_index": 9,
+          "pair_index": 35,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21072,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "h",
+            "i"
+          ],
+          "winner_order": [
+            5,
+            2,
+            4,
+            3,
+            0,
+            1
+          ],
+          "winner_rank": 1,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 401,
+          "true_length": 401,
+          "winner_normalized_score": -4.319253988173626,
+          "gate_pass": true
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 2,
+      "fixture_count": 10,
+      "passed": 10,
+      "cell_gate_pass": true,
+      "records": [
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 0,
+          "pair_index": 0,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 57,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "b"
+          ],
+          "winner_order": [
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 333,
+          "true_length": 333,
+          "winner_normalized_score": -4.571151156706407,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 1,
+          "pair_index": 1,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 58,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "c"
+          ],
+          "winner_order": [
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 335,
+          "true_length": 335,
+          "winner_normalized_score": -4.377978361276083,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 2,
+          "pair_index": 5,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 57,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 339,
+          "true_length": 339,
+          "winner_normalized_score": -4.249714319648484,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 3,
+          "pair_index": 9,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 57,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "d"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 0.9937106918238994,
+          "decoded_length": 318,
+          "true_length": 318,
+          "winner_normalized_score": -4.320558106788848,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 4,
+          "pair_index": 14,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 58,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "i"
+          ],
+          "winner_order": [
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 322,
+          "true_length": 322,
+          "winner_normalized_score": -4.3443596149411325,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 5,
+          "pair_index": 18,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 70,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "c",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 321,
+          "true_length": 321,
+          "winner_normalized_score": -4.479441723400985,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 6,
+          "pair_index": 23,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 58,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "d",
+            "g"
+          ],
+          "winner_order": [
+            1,
+            0
+          ],
+          "winner_rank": 6,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 344,
+          "true_length": 344,
+          "winner_normalized_score": -4.27014080600955,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 7,
+          "pair_index": 27,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 57,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "e",
+            "g"
+          ],
+          "winner_order": [
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 328,
+          "true_length": 328,
+          "winner_normalized_score": -4.294587525627303,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 8,
+          "pair_index": 32,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 58,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "f",
+            "i"
+          ],
+          "winner_order": [
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 333,
+          "true_length": 333,
+          "winner_normalized_score": -4.317988436007184,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 2,
+          "fixture_index": 9,
+          "pair_index": 35,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 58,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "h",
+            "i"
+          ],
+          "winner_order": [
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 0.9969788519637462,
+          "decoded_length": 331,
+          "true_length": 331,
+          "winner_normalized_score": -4.437159559362989,
+          "gate_pass": true
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 3,
+      "fixture_count": 10,
+      "passed": 10,
+      "cell_gate_pass": true,
+      "records": [
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 0,
+          "pair_index": 0,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 184,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "b"
+          ],
+          "winner_order": [
+            0,
+            2,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 325,
+          "true_length": 325,
+          "winner_normalized_score": -4.324979497889288,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 1,
+          "pair_index": 1,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "c"
+          ],
+          "winner_order": [
+            0,
+            1,
+            2
+          ],
+          "winner_rank": 5,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 349,
+          "true_length": 349,
+          "winner_normalized_score": -4.329141098851895,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 2,
+          "pair_index": 5,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            1,
+            2
+          ],
+          "winner_rank": 1,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 318,
+          "true_length": 318,
+          "winner_normalized_score": -4.181811498902992,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 3,
+          "pair_index": 9,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 184,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "d"
+          ],
+          "winner_order": [
+            2,
+            1,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 322,
+          "true_length": 322,
+          "winner_normalized_score": -4.446069613824507,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 4,
+          "pair_index": 14,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 184,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "i"
+          ],
+          "winner_order": [
+            2,
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 314,
+          "true_length": 314,
+          "winner_normalized_score": -4.332575202718813,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 5,
+          "pair_index": 18,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 184,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "c",
+            "g"
+          ],
+          "winner_order": [
+            2,
+            1,
+            0
+          ],
+          "winner_rank": 1,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 328,
+          "true_length": 328,
+          "winner_normalized_score": -4.301168720635971,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 6,
+          "pair_index": 23,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "d",
+            "g"
+          ],
+          "winner_order": [
+            1,
+            2,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 344,
+          "true_length": 344,
+          "winner_normalized_score": -4.328838540078889,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 7,
+          "pair_index": 27,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "e",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            2,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 323,
+          "true_length": 323,
+          "winner_normalized_score": -4.395072760243134,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 8,
+          "pair_index": 32,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "f",
+            "i"
+          ],
+          "winner_order": [
+            1,
+            2,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 352,
+          "true_length": 352,
+          "winner_normalized_score": -4.325892073690367,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 3,
+          "fixture_index": 9,
+          "pair_index": 35,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 174,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "h",
+            "i"
+          ],
+          "winner_order": [
+            1,
+            2,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 346,
+          "true_length": 346,
+          "winner_normalized_score": -4.361020203556774,
+          "gate_pass": true
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 5,
+      "fixture_count": 10,
+      "passed": 10,
+      "cell_gate_pass": true,
+      "records": [
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 0,
+          "pair_index": 0,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3480,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "b"
+          ],
+          "winner_order": [
+            2,
+            4,
+            1,
+            0,
+            3
+          ],
+          "winner_rank": 2,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 321,
+          "true_length": 321,
+          "winner_normalized_score": -4.436702873811318,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 1,
+          "pair_index": 1,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3720,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "c"
+          ],
+          "winner_order": [
+            4,
+            2,
+            1,
+            3,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 326,
+          "true_length": 326,
+          "winner_normalized_score": -4.295226136834346,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 2,
+          "pair_index": 5,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3600,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "g"
+          ],
+          "winner_order": [
+            1,
+            4,
+            2,
+            3,
+            0
+          ],
+          "winner_rank": 6,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.84,
+          "plaintext_char_accuracy": 0.9966887417218543,
+          "decoded_length": 302,
+          "true_length": 302,
+          "winner_normalized_score": -4.143593627636397,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 3,
+          "pair_index": 9,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3528,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "d"
+          ],
+          "winner_order": [
+            1,
+            4,
+            0,
+            3,
+            2
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 0.9970760233918129,
+          "decoded_length": 342,
+          "true_length": 342,
+          "winner_normalized_score": -4.394896844327051,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 4,
+          "pair_index": 14,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3528,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "i"
+          ],
+          "winner_order": [
+            1,
+            2,
+            3,
+            0,
+            4
+          ],
+          "winner_rank": 3,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 333,
+          "true_length": 333,
+          "winner_normalized_score": -4.2714222636054755,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 5,
+          "pair_index": 18,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3528,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "c",
+            "g"
+          ],
+          "winner_order": [
+            3,
+            4,
+            1,
+            0,
+            2
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 321,
+          "true_length": 321,
+          "winner_normalized_score": -4.288207618407174,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 6,
+          "pair_index": 23,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3480,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "d",
+            "g"
+          ],
+          "winner_order": [
+            4,
+            1,
+            0,
+            2,
+            3
+          ],
+          "winner_rank": 46,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 327,
+          "true_length": 327,
+          "winner_normalized_score": -4.502860438174444,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 7,
+          "pair_index": 27,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3528,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "e",
+            "g"
+          ],
+          "winner_order": [
+            2,
+            4,
+            3,
+            0,
+            1
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 319,
+          "true_length": 319,
+          "winner_normalized_score": -4.430985806701625,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 8,
+          "pair_index": 32,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3600,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "f",
+            "i"
+          ],
+          "winner_order": [
+            1,
+            3,
+            4,
+            2,
+            0
+          ],
+          "winner_rank": 1,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 386,
+          "true_length": 386,
+          "winner_normalized_score": -4.227149018554406,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 5,
+          "fixture_index": 9,
+          "pair_index": 35,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 3612,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "h",
+            "i"
+          ],
+          "winner_order": [
+            2,
+            1,
+            4,
+            3,
+            0
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 332,
+          "true_length": 332,
+          "winner_normalized_score": -4.282216077596569,
+          "gate_pass": true
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 6,
+      "fixture_count": 10,
+      "passed": 10,
+      "cell_gate_pass": true,
+      "records": [
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 0,
+          "pair_index": 0,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21072,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "b"
+          ],
+          "winner_order": [
+            0,
+            1,
+            4,
+            2,
+            3,
+            5
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 0.9970238095238095,
+          "decoded_length": 336,
+          "true_length": 336,
+          "winner_normalized_score": -4.342968941549391,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 1,
+          "pair_index": 1,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21072,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "c"
+          ],
+          "winner_order": [
+            1,
+            5,
+            3,
+            0,
+            2,
+            4
+          ],
+          "winner_rank": 1,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 320,
+          "true_length": 320,
+          "winner_normalized_score": -4.307624363220603,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 2,
+          "pair_index": 5,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21312,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "a",
+            "g"
+          ],
+          "winner_order": [
+            5,
+            2,
+            1,
+            3,
+            0,
+            4
+          ],
+          "winner_rank": 66,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 326,
+          "true_length": 326,
+          "winner_normalized_score": -4.246212819524416,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 3,
+          "pair_index": 9,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21312,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "d"
+          ],
+          "winner_order": [
+            2,
+            0,
+            1,
+            4,
+            5,
+            3
+          ],
+          "winner_rank": 10,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 0.9908256880733946,
+          "decoded_length": 327,
+          "true_length": 327,
+          "winner_normalized_score": -4.298688124555972,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 4,
+          "pair_index": 14,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21072,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "b",
+            "i"
+          ],
+          "winner_order": [
+            3,
+            2,
+            5,
+            0,
+            4,
+            1
+          ],
+          "winner_rank": 17,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 334,
+          "true_length": 334,
+          "winner_normalized_score": -4.358599313475918,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 5,
+          "pair_index": 18,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21636,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "c",
+            "g"
+          ],
+          "winner_order": [
+            4,
+            0,
+            2,
+            5,
+            1,
+            3
+          ],
+          "winner_rank": 19,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 344,
+          "true_length": 344,
+          "winner_normalized_score": -4.3818604767455875,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 6,
+          "pair_index": 23,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21312,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "d",
+            "g"
+          ],
+          "winner_order": [
+            3,
+            1,
+            0,
+            4,
+            5,
+            2
+          ],
+          "winner_rank": 13,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 342,
+          "true_length": 342,
+          "winner_normalized_score": -4.390753430920054,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 7,
+          "pair_index": 27,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21420,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "e",
+            "g"
+          ],
+          "winner_order": [
+            0,
+            1,
+            4,
+            5,
+            3,
+            2
+          ],
+          "winner_rank": 64,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 315,
+          "true_length": 315,
+          "winner_normalized_score": -4.363730761561911,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 8,
+          "pair_index": 32,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21312,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "f",
+            "i"
+          ],
+          "winner_order": [
+            5,
+            4,
+            1,
+            0,
+            2,
+            3
+          ],
+          "winner_rank": 2,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 339,
+          "true_length": 339,
+          "winner_normalized_score": -4.320897326698036,
+          "gate_pass": true
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 6,
+          "fixture_index": 9,
+          "pair_index": 35,
+          "solved": true,
+          "joint_keep": 1536,
+          "valid_hypotheses": 21072,
+          "planted_in_shortlist": true,
+          "escape_pair_recovery": true,
+          "exact_order_recovery": true,
+          "joint_recovery": true,
+          "winner_pair": [
+            "h",
+            "i"
+          ],
+          "winner_order": [
+            2,
+            1,
+            4,
+            3,
+            0,
+            5
+          ],
+          "winner_rank": 0,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "plaintext_char_accuracy": 1.0,
+          "decoded_length": 334,
+          "true_length": 334,
+          "winner_normalized_score": -4.228117894782144,
+          "gate_pass": true
+        }
+      ]
+    }
+  ]
+}

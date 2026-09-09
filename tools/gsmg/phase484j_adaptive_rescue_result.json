@@ -1,0 +1,409 @@
+{
+  "phase": "484J",
+  "status": "informal_adaptive_early_beam_rescue_dev_not_frozen",
+  "faed_scored": false,
+  "fixture_split": "dev",
+  "source_result": "phase484j_constructive_prefix_beam_result.json",
+  "failed_cells_only": true,
+  "budgets": {
+    "start_depth": 4,
+    "early_beam_width": 16384,
+    "early_through_depth": 6,
+    "later_beam_width": 4096,
+    "negative_ratio": 2
+  },
+  "exact_recovery_count": 0,
+  "cell_count": 3,
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "width": 15,
+      "fixture_index": 22,
+      "exact_recovery": false,
+      "best_tau": -0.10476190476190476,
+      "best_score": 0.8732587869260076,
+      "best_sequence": [
+        13,
+        8,
+        1,
+        4,
+        3,
+        6,
+        10,
+        11,
+        0,
+        5,
+        9,
+        14,
+        7,
+        2,
+        12
+      ],
+      "best_order": [
+        8,
+        2,
+        13,
+        4,
+        3,
+        9,
+        5,
+        12,
+        1,
+        10,
+        6,
+        7,
+        14,
+        0,
+        11
+      ],
+      "truth_full_rank_if_retained": null,
+      "valid_terminal_count": 3444,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 16384,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 2142
+        },
+        {
+          "depth": 5,
+          "beam_size": 16384,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 6,
+          "beam_size": 16384,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 15,
+          "beam_size": 3444,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        }
+      ],
+      "wall_seconds": 150.92441282100117
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 15,
+      "fixture_index": 22,
+      "exact_recovery": false,
+      "best_tau": 0.2,
+      "best_score": 1.6822648765033505,
+      "best_sequence": [
+        5,
+        13,
+        4,
+        1,
+        9,
+        14,
+        6,
+        0,
+        11,
+        7,
+        12,
+        8,
+        2,
+        10,
+        3
+      ],
+      "best_order": [
+        7,
+        3,
+        12,
+        14,
+        2,
+        0,
+        6,
+        9,
+        11,
+        4,
+        13,
+        8,
+        10,
+        1,
+        5
+      ],
+      "truth_full_rank_if_retained": null,
+      "valid_terminal_count": 2346,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 16384,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 8803
+        },
+        {
+          "depth": 5,
+          "beam_size": 16384,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 15652
+        },
+        {
+          "depth": 6,
+          "beam_size": 16384,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 15,
+          "beam_size": 2346,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        }
+      ],
+      "wall_seconds": 138.2336229169996
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 19,
+      "fixture_index": 22,
+      "exact_recovery": false,
+      "best_tau": -0.27485380116959063,
+      "best_score": 3.687641098739296,
+      "best_sequence": [
+        17,
+        0,
+        6,
+        3,
+        18,
+        4,
+        13,
+        11,
+        9,
+        1,
+        15,
+        14,
+        2,
+        8,
+        7,
+        10,
+        16,
+        12,
+        5
+      ],
+      "best_order": [
+        1,
+        9,
+        12,
+        3,
+        5,
+        18,
+        2,
+        14,
+        13,
+        8,
+        15,
+        7,
+        17,
+        6,
+        11,
+        10,
+        16,
+        0,
+        4
+      ],
+      "truth_full_rank_if_retained": null,
+      "valid_terminal_count": 2984,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 16384,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 13491
+        },
+        {
+          "depth": 5,
+          "beam_size": 16384,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 6,
+          "beam_size": 16384,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 15,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 16,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 17,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 18,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 19,
+          "beam_size": 2984,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        }
+      ],
+      "wall_seconds": 196.94674148800186
+    }
+  ],
+  "wall_seconds": 489.11860920899926
+}

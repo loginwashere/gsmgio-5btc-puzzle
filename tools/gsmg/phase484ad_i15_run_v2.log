@@ -1,0 +1,15 @@
+stage sizes {'depth7_selected': 262144, 'depth8_selected': 1310720, 'depth8_refined': 262144, 'depth9_selected': 262144, 'depth10_selected': 262144}
+  depth7_invariant: true_segments=1 best_true_rank=656072
+  depth7_board_raw: true_segments=1 best_true_rank=508396
+  depth7_selected: true_segments=0 best_true_rank=None
+  depth8_board_raw: true_segments=0 best_true_rank=None
+  depth8_selected: true_segments=0 best_true_rank=None
+  depth8_refined_raw: true_segments=0 best_true_rank=None
+  depth8_refined_selected: true_segments=0 best_true_rank=None
+  depth9_raw: true_segments=0 best_true_rank=None
+  depth9_selected: true_segments=0 best_true_rank=None
+  depth10_raw: true_segments=0 best_true_rank=None
+  depth10_selected: true_segments=0 best_true_rank=None
+depth10 true parent count 0
+rebuild 469.1 diagnostic 0.1 wall 469.2
+wrote phase484ad_width30_local_rank_i15_cliff11_v2.json

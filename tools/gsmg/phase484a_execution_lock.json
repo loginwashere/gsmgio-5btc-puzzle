@@ -1,0 +1,47 @@
+{
+  "phase": "484A",
+  "status": "locked-before-holdout",
+  "locked_at": "2026-09-07",
+  "paths": {
+    "protocol": "doc/Brainstorms/2026-09-06 - Phase 484A Raw-Symbol VIC Order Solver Protocol.md",
+    "solver": "tools/gsmg/phase484a_raw_symbol_vic_solver.py",
+    "runner": "tools/gsmg/phase484a_holdout_gate.py",
+    "verifier": "tools/gsmg/phase484a_verify_run.py",
+    "corpus": "wordlists/gsmg/cosmic_duality_book_full_text.txt",
+    "quadgrams": "tools/gsmg/data_files/english_quadgrams.txt"
+  },
+  "files_sha256": {
+    "protocol": "182792d5e6a2099484a2ee940fdbc7f35f4952117affbb0463e4b2ddf80f66c9",
+    "solver": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "runner": "c26b58a9744c0b41af189415e76d3847f75adabc32d45a3f64ef47c9ec035814",
+    "verifier": "aa0da52b3b3ab28c3f0574a4512643009533e873cfc863ce8061e425f4e37ebe",
+    "corpus": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "quadgrams": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55"
+  },
+  "configuration": {
+    "widths": [2, 3, 5, 6],
+    "board_modes": ["vic_profile", "broad_random"],
+    "pair_indices": [0, 1, 5, 9, 14, 18, 23, 27, 32, 35],
+    "joint_keep": 1536,
+    "board_restarts": 2,
+    "board_iters": 6000,
+    "board_t0": 20.0,
+    "board_t1": 1.0,
+    "minimum_cell_passes": 8,
+    "minimum_plaintext_accuracy": 0.95,
+    "minimum_board_accuracy": 0.8,
+    "seed_holdout": 1212825629,
+    "workers": 8
+  },
+  "amendment_history": [
+    {
+      "superseded_lock_sha256": "ec41975360ff959264fa7b59d35cdc3e2294f8106f885f3f0df14451abb769f8",
+      "reason": "Pre-execution self-verification rejected a hand-transcribed decimal rendering of 0x484A401D; corrected 1212829725 to 1212825629. No holdout fixture or result had been generated."
+    }
+  ],
+  "prohibitions": {
+    "faed_scoring": true,
+    "widths_above_6": true,
+    "budget_tuning_after_holdout": true
+  }
+}

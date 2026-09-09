@@ -1,0 +1,165 @@
+{
+  "phase": "484N",
+  "status": "development_gpu_width19_beam_survival_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "board_mode": "vic_profile",
+  "fixture_split": "dev",
+  "fixture_index": 23,
+  "width": 19,
+  "beam_width": 16384,
+  "training_seconds": 1.8458842969994294,
+  "survived_to_depth_18": false,
+  "depth_diagnostics": [
+    {
+      "depth": 4,
+      "beam_size": 16384,
+      "generated_candidate_count": 93024,
+      "gpu_score_seconds": 0.35248734500055434,
+      "selection_seconds": 0.17671394599892665,
+      "true_segment_count_retained": 14,
+      "best_true_segment_rank": 76,
+      "next_generation_seconds": 0.35757833199750166
+    },
+    {
+      "depth": 5,
+      "beam_size": 16384,
+      "generated_candidate_count": 398899,
+      "gpu_score_seconds": 0.336594361004245,
+      "selection_seconds": 0.7704823860040051,
+      "true_segment_count_retained": 8,
+      "best_true_segment_rank": 127,
+      "next_generation_seconds": 0.4252611400006572
+    },
+    {
+      "depth": 6,
+      "beam_size": 16384,
+      "generated_candidate_count": 430130,
+      "gpu_score_seconds": 0.2986345169993001,
+      "selection_seconds": 0.8330136950025917,
+      "true_segment_count_retained": 4,
+      "best_true_segment_rank": 479,
+      "next_generation_seconds": 0.3987088659996516
+    },
+    {
+      "depth": 7,
+      "beam_size": 16384,
+      "generated_candidate_count": 411907,
+      "gpu_score_seconds": 0.2827450599943404,
+      "selection_seconds": 0.8322610870018252,
+      "true_segment_count_retained": 3,
+      "best_true_segment_rank": 368,
+      "next_generation_seconds": 0.3817854480003007
+    },
+    {
+      "depth": 8,
+      "beam_size": 16384,
+      "generated_candidate_count": 382814,
+      "gpu_score_seconds": 0.30476069699943764,
+      "selection_seconds": 0.8018839869982912,
+      "true_segment_count_retained": 1,
+      "best_true_segment_rank": 7636,
+      "next_generation_seconds": 0.35788742500153603
+    },
+    {
+      "depth": 9,
+      "beam_size": 16384,
+      "generated_candidate_count": 352034,
+      "gpu_score_seconds": 0.34481559300184017,
+      "selection_seconds": 0.7145102709982893,
+      "true_segment_count_retained": 1,
+      "best_true_segment_rank": 7059,
+      "next_generation_seconds": 0.33230130599986296
+    },
+    {
+      "depth": 10,
+      "beam_size": 16384,
+      "generated_candidate_count": 320573,
+      "gpu_score_seconds": 0.28032496399828233,
+      "selection_seconds": 0.6903485669972724,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "next_generation_seconds": 0.2901394159998745
+    },
+    {
+      "depth": 11,
+      "beam_size": 16384,
+      "generated_candidate_count": 289006,
+      "gpu_score_seconds": 0.3281420790008269,
+      "selection_seconds": 0.6682014460020582,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "next_generation_seconds": 0.2740556989956531
+    },
+    {
+      "depth": 12,
+      "beam_size": 16384,
+      "generated_candidate_count": 256566,
+      "gpu_score_seconds": 0.27831187400443014,
+      "selection_seconds": 0.5655483469963656,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "next_generation_seconds": 0.26489349799521733
+    },
+    {
+      "depth": 13,
+      "beam_size": 16384,
+      "generated_candidate_count": 224320,
+      "gpu_score_seconds": 0.3298535380017711,
+      "selection_seconds": 0.5083814530007658,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "next_generation_seconds": 0.20587286000227323
+    },
+    {
+      "depth": 14,
+      "beam_size": 16384,
+      "generated_candidate_count": 192174,
+      "gpu_score_seconds": 0.27356151999993017,
+      "selection_seconds": 0.42658990700147115,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "next_generation_seconds": 0.17289511099806987
+    },
+    {
+      "depth": 15,
+      "beam_size": 16384,
+      "generated_candidate_count": 158352,
+      "gpu_score_seconds": 0.31740925200574566,
+      "selection_seconds": 0.353478503995575,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "next_generation_seconds": 0.13065215999813518
+    },
+    {
+      "depth": 16,
+      "beam_size": 16384,
+      "generated_candidate_count": 126344,
+      "gpu_score_seconds": 0.2655874460033374,
+      "selection_seconds": 0.2918347540035029,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "next_generation_seconds": 0.09978969999792753
+    },
+    {
+      "depth": 17,
+      "beam_size": 16384,
+      "generated_candidate_count": 93188,
+      "gpu_score_seconds": 0.2592811719950987,
+      "selection_seconds": 0.21728184400126338,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "next_generation_seconds": 0.05906345599942142
+    },
+    {
+      "depth": 18,
+      "beam_size": 16384,
+      "generated_candidate_count": 60996,
+      "gpu_score_seconds": 0.30593795199820306,
+      "selection_seconds": 0.1426992490014527,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null
+    }
+  ],
+  "wall_seconds": 16.35655866700108
+}

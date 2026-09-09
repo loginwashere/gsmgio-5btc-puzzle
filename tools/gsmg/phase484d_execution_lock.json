@@ -1,0 +1,42 @@
+{
+  "phase": "484D",
+  "status": "locked-before-width7-real",
+  "locked_at": "2026-09-07",
+  "faed_ascii_sha256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+  "paths": {
+    "protocol": "doc/Brainstorms/2026-09-07 - Phase 484D Powered Width-7 Raw-Symbol VIC Real Protocol.md",
+    "runner": "tools/gsmg/phase484d_width7_real_audit.py",
+    "verifier": "tools/gsmg/phase484d_verify_run.py",
+    "width7_solver": "tools/gsmg/phase484c_width7_raw_symbol_vic_solver.py",
+    "width7_lock": "tools/gsmg/phase484c_execution_lock.json",
+    "width7_holdout": "tools/gsmg/phase484c_holdout_result.json",
+    "base_solver": "tools/gsmg/phase484a_raw_symbol_vic_solver.py",
+    "data": "tools/gsmg/data.py",
+    "corpus": "wordlists/gsmg/cosmic_duality_book_full_text.txt",
+    "quadgrams": "tools/gsmg/data_files/english_quadgrams.txt"
+  },
+  "files_sha256": {
+    "protocol": "24616c9329dc4a456a30182e439604c8d0e47fed01af6e77b6fdc515ce00bcc5",
+    "runner": "fdb48655017ae3a3574493f578738faf954662593a0e3123fc5905439f7aa64c",
+    "verifier": "d54e129459dd108c11709bce5d175f6f7b06dac2a409605b94f00edb97b10856",
+    "width7_solver": "d37287a5a350d1f10eddbe561cab01fff08a768f02c54d6d57dc31793410451e",
+    "width7_lock": "785e659037e1f7ec3a5b8234be936148d5ec2a1a747e90bba10d6713a88f98d2",
+    "width7_holdout": "bdcdbb93963697adcd479d4647b51f3dcabf8ca5a571392b57b11e5c3ae0d730",
+    "base_solver": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "data": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "corpus": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "quadgrams": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55"
+  },
+  "configuration": {
+    "width": 7,
+    "joint_keep": 1536,
+    "board_restarts": 2,
+    "board_iters": 6000,
+    "board_t0": 20.0,
+    "board_t1": 1.0,
+    "top_count": 10,
+    "seed_real": 1213005825,
+    "holdout_score_floor": -4.507065492983351
+  },
+  "decision_scope": "score trigger and readable-output review only; no calibrated null negative"
+}

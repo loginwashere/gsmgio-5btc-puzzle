@@ -1,0 +1,1798 @@
+{
+  "phase": "484A",
+  "status": "informal_dev_scoping_not_frozen",
+  "faed_scored": false,
+  "board_modes": [
+    "vic_profile",
+    "broad_random"
+  ],
+  "pair_index": 0,
+  "shortlist_mode": "exhaustive",
+  "budgets": {
+    "fixtures_per_width": 10,
+    "fixture_index_start": 10,
+    "shortlist_keep": null,
+    "board_restarts": 2,
+    "board_iters": 6000,
+    "board_t0": 20.0,
+    "board_t1": 1.0
+  },
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "width": 2,
+      "fixture_count": 10,
+      "fixture_index_start": 10,
+      "exact_order_recovery": 10,
+      "mean_kendall_tau": 1.0,
+      "mean_board_accuracy": 0.992,
+      "mean_plaintext_char_accuracy": 0.9997524752475246,
+      "records": [
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 388,
+          "true_length": 388,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1683.4662971740013,
+          "winner_normalized_score": -4.372639732919484
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 397,
+          "true_length": 397,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1802.2131015393727,
+          "winner_normalized_score": -4.574144927764905
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 397,
+          "true_length": 397,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 1,
+          "winner_quadgram_score": -1698.3033234624932,
+          "winner_normalized_score": -4.310414526554551
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 1,
+          "valid_candidates": 1,
+          "eligible_candidates": 1,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 399,
+          "true_length": 399,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1667.7067315181228,
+          "winner_normalized_score": -4.211380635146774
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 397,
+          "true_length": 397,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1808.1075559663004,
+          "winner_normalized_score": -4.589105471995686
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 404,
+          "true_length": 404,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.9975247524752475,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1790.6098392924848,
+          "winner_normalized_score": -4.465361195243104
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 1,
+          "valid_candidates": 1,
+          "eligible_candidates": 1,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 402,
+          "true_length": 402,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1735.0939414110305,
+          "winner_normalized_score": -4.348606369451204
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 404,
+          "true_length": 404,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1763.2405718313746,
+          "winner_normalized_score": -4.397108657933603
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 403,
+          "true_length": 403,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1720.2828452911494,
+          "winner_normalized_score": -4.300707113227873
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 397,
+          "true_length": 397,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 1,
+          "winner_quadgram_score": -1702.3805331342132,
+          "winner_normalized_score": -4.320762774452318
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 3,
+      "fixture_count": 10,
+      "fixture_index_start": 10,
+      "exact_order_recovery": 10,
+      "mean_kendall_tau": 1.0,
+      "mean_board_accuracy": 0.952,
+      "mean_plaintext_char_accuracy": 0.9990219815037333,
+      "records": [
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 400,
+          "true_length": 400,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 1,
+          "winner_quadgram_score": -1724.2202480208693,
+          "winner_normalized_score": -4.343124050430402
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 6,
+          "valid_candidates": 6,
+          "eligible_candidates": 6,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 400,
+          "true_length": 400,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1777.1620837782807,
+          "winner_normalized_score": -4.47647880044907
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 403,
+          "true_length": 403,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1770.2930201653842,
+          "winner_normalized_score": -4.425732550413461
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 6,
+          "valid_candidates": 6,
+          "eligible_candidates": 6,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 411,
+          "true_length": 411,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.9951338199513382,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1791.330769738752,
+          "winner_normalized_score": -4.390516592496941
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 410,
+          "true_length": 410,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1712.085499440449,
+          "winner_normalized_score": -4.206598278723462
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 394,
+          "true_length": 394,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1684.6538535637096,
+          "winner_normalized_score": -4.308577630597723
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 399,
+          "true_length": 399,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1707.388355666554,
+          "winner_normalized_score": -4.311586756733722
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 407,
+          "true_length": 407,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.995085995085995,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1794.5283173262744,
+          "winner_normalized_score": -4.441901775560085
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 390,
+          "true_length": 390,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 1,
+          "winner_quadgram_score": -1697.0617230880048,
+          "winner_normalized_score": -4.385172411080116
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 400,
+          "true_length": 400,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1735.700578214441,
+          "winner_normalized_score": -4.372041758726552
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 5,
+      "fixture_count": 10,
+      "fixture_index_start": 10,
+      "exact_order_recovery": 10,
+      "mean_kendall_tau": 1.0,
+      "mean_board_accuracy": 0.9359999999999999,
+      "mean_plaintext_char_accuracy": 0.9977830652314627,
+      "records": [
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 396,
+          "true_length": 396,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1782.3988606222356,
+          "winner_normalized_score": -4.535366057562941
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 96,
+          "valid_candidates": 96,
+          "eligible_candidates": 96,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 393,
+          "true_length": 393,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1636.538598602941,
+          "winner_normalized_score": -4.196252816930618
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 96,
+          "valid_candidates": 96,
+          "eligible_candidates": 96,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "decoded_length": 392,
+          "true_length": 392,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1661.5541654383007,
+          "winner_normalized_score": -4.271347468993061
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 96,
+          "valid_candidates": 96,
+          "eligible_candidates": 96,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 391,
+          "true_length": 391,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1718.067423247767,
+          "winner_normalized_score": -4.428008822803523
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 410,
+          "true_length": 410,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1712.085499440449,
+          "winner_normalized_score": -4.206598278723462
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 120,
+          "valid_candidates": 120,
+          "eligible_candidates": 120,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 409,
+          "true_length": 409,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 11,
+          "winner_quadgram_score": -1774.0722420090985,
+          "winner_normalized_score": -4.369636064061819
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 404,
+          "true_length": 404,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1714.9061889460759,
+          "winner_normalized_score": -4.27657403727201
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 96,
+          "valid_candidates": 96,
+          "eligible_candidates": 96,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "decoded_length": 404,
+          "true_length": 404,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.9826732673267327,
+          "winner_rank_in_shortlist": 4,
+          "winner_quadgram_score": -1807.3532739382658,
+          "winner_normalized_score": -4.507115396354777
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 72,
+          "valid_candidates": 72,
+          "eligible_candidates": 72,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 388,
+          "true_length": 388,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1667.357830516955,
+          "winner_normalized_score": -4.330799559784299
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 413,
+          "true_length": 413,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.9951573849878934,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1798.4122944153419,
+          "winner_normalized_score": -4.386371449793517
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 6,
+      "fixture_count": 10,
+      "fixture_index_start": 10,
+      "exact_order_recovery": 10,
+      "mean_kendall_tau": 1.0,
+      "mean_board_accuracy": 0.9640000000000001,
+      "mean_plaintext_char_accuracy": 0.99926393654038,
+      "records": [
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 528,
+          "valid_candidates": 528,
+          "eligible_candidates": 528,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 412,
+          "true_length": 412,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.9951456310679612,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1781.2487311454456,
+          "winner_normalized_score": -4.355131371993755
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 600,
+          "valid_candidates": 600,
+          "eligible_candidates": 600,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 398,
+          "true_length": 398,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1802.2840124001389,
+          "winner_normalized_score": -4.562744335190225
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 600,
+          "valid_candidates": 600,
+          "eligible_candidates": 600,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 402,
+          "true_length": 402,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 2,
+          "winner_quadgram_score": -1674.7949269082708,
+          "winner_normalized_score": -4.197481019820228
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 468,
+          "valid_candidates": 468,
+          "eligible_candidates": 468,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 406,
+          "true_length": 406,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1724.8456376818272,
+          "winner_normalized_score": -4.280013989284931
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 468,
+          "valid_candidates": 468,
+          "eligible_candidates": 468,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "decoded_length": 399,
+          "true_length": 399,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.9974937343358395,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1806.6752634316326,
+          "winner_normalized_score": -4.5623112712920015
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 528,
+          "valid_candidates": 528,
+          "eligible_candidates": 528,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 391,
+          "true_length": 391,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 1,
+          "winner_quadgram_score": -1692.406185929966,
+          "winner_normalized_score": -4.361871613221561
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 600,
+          "valid_candidates": 600,
+          "eligible_candidates": 600,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 394,
+          "true_length": 394,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 3,
+          "winner_quadgram_score": -1643.5832882623959,
+          "winner_normalized_score": -4.203537821642956
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 528,
+          "valid_candidates": 528,
+          "eligible_candidates": 528,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 407,
+          "true_length": 407,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1747.4795732269872,
+          "winner_normalized_score": -4.325444488185612
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 528,
+          "valid_candidates": 528,
+          "eligible_candidates": 528,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 398,
+          "true_length": 398,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 3,
+          "winner_quadgram_score": -1677.33995802678,
+          "winner_normalized_score": -4.246430273485519
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 468,
+          "valid_candidates": 468,
+          "eligible_candidates": 468,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 401,
+          "true_length": 401,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 1,
+          "winner_quadgram_score": -1712.0283678709588,
+          "winner_normalized_score": -4.3015788137461275
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 2,
+      "fixture_count": 10,
+      "fixture_index_start": 10,
+      "exact_order_recovery": 10,
+      "mean_kendall_tau": 1.0,
+      "mean_board_accuracy": 0.9359999999999999,
+      "mean_plaintext_char_accuracy": 0.999685534591195,
+      "records": [
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 1,
+          "valid_candidates": 1,
+          "eligible_candidates": 1,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 332,
+          "true_length": 332,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1434.770996448941,
+          "winner_normalized_score": -4.361006068233864
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 1,
+          "valid_candidates": 1,
+          "eligible_candidates": 1,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "decoded_length": 351,
+          "true_length": 351,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1514.0882041933144,
+          "winner_normalized_score": -4.350828172969294
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 1,
+          "valid_candidates": 1,
+          "eligible_candidates": 1,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 348,
+          "true_length": 348,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1480.2455889108646,
+          "winner_normalized_score": -4.290566924379318
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 1,
+          "valid_candidates": 1,
+          "eligible_candidates": 1,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "decoded_length": 318,
+          "true_length": 318,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.9968553459119497,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1383.0085855521759,
+          "winner_normalized_score": -4.390503446197384
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 343,
+          "true_length": 343,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1435.3411199996926,
+          "winner_normalized_score": -4.221591529410861
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 1,
+          "valid_candidates": 1,
+          "eligible_candidates": 1,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 345,
+          "true_length": 345,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1512.4876294139715,
+          "winner_normalized_score": -4.422478448578864
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 326,
+          "true_length": 326,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1452.8478874126347,
+          "winner_normalized_score": -4.497981075580912
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 1,
+          "valid_candidates": 1,
+          "eligible_candidates": 1,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 355,
+          "true_length": 355,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1524.1122798447545,
+          "winner_normalized_score": -4.3298644313771435
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 1,
+          "valid_candidates": 1,
+          "eligible_candidates": 1,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 343,
+          "true_length": 343,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1476.4708077196897,
+          "winner_normalized_score": -4.342561199175558
+        },
+        {
+          "width": 2,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 351,
+          "true_length": 351,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1521.279623086446,
+          "winner_normalized_score": -4.371493169788638
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 3,
+      "fixture_count": 10,
+      "fixture_index_start": 10,
+      "exact_order_recovery": 10,
+      "mean_kendall_tau": 1.0,
+      "mean_board_accuracy": 0.952,
+      "mean_plaintext_char_accuracy": 0.9997237569060774,
+      "records": [
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 6,
+          "valid_candidates": 6,
+          "eligible_candidates": 6,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 338,
+          "true_length": 338,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1425.8490210652985,
+          "winner_normalized_score": -4.2562657345232795
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 323,
+          "true_length": 323,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1425.6750233628861,
+          "winner_normalized_score": -4.455234448009019
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 346,
+          "true_length": 346,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1500.7300241885307,
+          "winner_normalized_score": -4.375306192969477
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 341,
+          "true_length": 341,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1538.2319861742687,
+          "winner_normalized_score": -4.55098220761618
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 362,
+          "true_length": 362,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.9972375690607734,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1583.4201011644482,
+          "winner_normalized_score": -4.410640950318797
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 346,
+          "true_length": 346,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1433.5662767685512,
+          "winner_normalized_score": -4.17949351827566
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 337,
+          "true_length": 337,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1423.5687504785114,
+          "winner_normalized_score": -4.262181887660214
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 314,
+          "true_length": 314,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1315.3809598248426,
+          "winner_normalized_score": -4.229520771140973
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 2,
+          "valid_candidates": 2,
+          "eligible_candidates": 2,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 313,
+          "true_length": 313,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1350.5339654923905,
+          "winner_normalized_score": -4.356561179007711
+        },
+        {
+          "width": 3,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 4,
+          "valid_candidates": 4,
+          "eligible_candidates": 4,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 328,
+          "true_length": 328,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1380.062422715082,
+          "winner_normalized_score": -4.2463459160464065
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 5,
+      "fixture_count": 10,
+      "fixture_index_start": 10,
+      "exact_order_recovery": 10,
+      "mean_kendall_tau": 1.0,
+      "mean_board_accuracy": 0.9560000000000001,
+      "mean_plaintext_char_accuracy": 0.9982248520710059,
+      "records": [
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 332,
+          "true_length": 332,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 1,
+          "winner_quadgram_score": -1375.3344369388528,
+          "winner_normalized_score": -4.18034783264089
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 72,
+          "valid_candidates": 72,
+          "eligible_candidates": 72,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 309,
+          "true_length": 309,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 5,
+          "winner_quadgram_score": -1286.5685187061813,
+          "winner_normalized_score": -4.2044722833535335
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 72,
+          "valid_candidates": 72,
+          "eligible_candidates": 72,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 374,
+          "true_length": 374,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1630.0072855638969,
+          "winner_normalized_score": -4.393550634943118
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.88,
+          "decoded_length": 338,
+          "true_length": 338,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 0.9822485207100592,
+          "winner_rank_in_shortlist": 18,
+          "winner_quadgram_score": -1503.9544070255279,
+          "winner_normalized_score": -4.48941614037471
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 332,
+          "true_length": 332,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 37,
+          "winner_quadgram_score": -1479.6761409106266,
+          "winner_normalized_score": -4.49749586902926
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 72,
+          "valid_candidates": 72,
+          "eligible_candidates": 72,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 332,
+          "true_length": 332,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1447.336319270009,
+          "winner_normalized_score": -4.399198538814617
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 322,
+          "true_length": 322,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 21,
+          "winner_quadgram_score": -1441.1331714275645,
+          "winner_normalized_score": -4.517658844600516
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 343,
+          "true_length": 343,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 4,
+          "winner_quadgram_score": -1444.1100575757375,
+          "winner_normalized_score": -4.247382522281581
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 84,
+          "valid_candidates": 84,
+          "eligible_candidates": 84,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 348,
+          "true_length": 348,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1467.4862605614887,
+          "winner_normalized_score": -4.253583363946344
+        },
+        {
+          "width": 5,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 72,
+          "valid_candidates": 72,
+          "eligible_candidates": 72,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 313,
+          "true_length": 313,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 11,
+          "winner_quadgram_score": -1293.261350378983,
+          "winner_normalized_score": -4.171810807674139
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 6,
+      "fixture_count": 10,
+      "fixture_index_start": 10,
+      "exact_order_recovery": 10,
+      "mean_kendall_tau": 1.0,
+      "mean_board_accuracy": 0.952,
+      "mean_plaintext_char_accuracy": 1.0,
+      "records": [
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 468,
+          "valid_candidates": 468,
+          "eligible_candidates": 468,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 331,
+          "true_length": 331,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 25,
+          "winner_quadgram_score": -1419.364388297787,
+          "winner_normalized_score": -4.327330452127399
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 528,
+          "valid_candidates": 528,
+          "eligible_candidates": 528,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 338,
+          "true_length": 338,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 0,
+          "winner_quadgram_score": -1430.7799425871635,
+          "winner_normalized_score": -4.270984903245265
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 528,
+          "valid_candidates": 528,
+          "eligible_candidates": 528,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 326,
+          "true_length": 326,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 8,
+          "winner_quadgram_score": -1386.5030511892658,
+          "winner_normalized_score": -4.29257910584912
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 468,
+          "valid_candidates": 468,
+          "eligible_candidates": 468,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 357,
+          "true_length": 357,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 14,
+          "winner_quadgram_score": -1557.4948212464608,
+          "winner_normalized_score": -4.399702884877008
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 468,
+          "valid_candidates": 468,
+          "eligible_candidates": 468,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 337,
+          "true_length": 337,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 17,
+          "winner_quadgram_score": -1480.8418036990183,
+          "winner_normalized_score": -4.433658094907241
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 360,
+          "valid_candidates": 360,
+          "eligible_candidates": 360,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 1.0,
+          "decoded_length": 306,
+          "true_length": 306,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 214,
+          "winner_quadgram_score": -1317.8309931532826,
+          "winner_normalized_score": -4.349277205126345
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 468,
+          "valid_candidates": 468,
+          "eligible_candidates": 468,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 334,
+          "true_length": 334,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 36,
+          "winner_quadgram_score": -1422.7647690475274,
+          "winner_normalized_score": -4.298382988058995
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 528,
+          "valid_candidates": 528,
+          "eligible_candidates": 528,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 350,
+          "true_length": 350,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 63,
+          "winner_quadgram_score": -1461.4740264205207,
+          "winner_normalized_score": -4.211740710145593
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 528,
+          "valid_candidates": 528,
+          "eligible_candidates": 528,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 318,
+          "true_length": 318,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 23,
+          "winner_quadgram_score": -1403.3347254451833,
+          "winner_normalized_score": -4.455030874429153
+        },
+        {
+          "width": 6,
+          "pair": [
+            "a",
+            "b"
+          ],
+          "shortlist_size": 468,
+          "valid_candidates": 468,
+          "eligible_candidates": 468,
+          "solved": true,
+          "exact_order_recovery": true,
+          "kendall_tau": 1.0,
+          "board_accuracy": 0.92,
+          "decoded_length": 378,
+          "true_length": 378,
+          "decoded_length_error": 0,
+          "plaintext_char_accuracy": 1.0,
+          "winner_rank_in_shortlist": 1,
+          "winner_quadgram_score": -1610.6120199163947,
+          "winner_normalized_score": -4.294965386443719
+        }
+      ]
+    }
+  ]
+}

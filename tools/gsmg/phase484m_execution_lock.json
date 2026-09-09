@@ -1,0 +1,194 @@
+{
+  "budgets": {
+    "beam_width": 4096,
+    "board_iters": 6000,
+    "board_restarts": 2,
+    "board_t0": 20.0,
+    "board_t1": 1.0,
+    "reserved_fraction": 0.5,
+    "score_floor": -4.571151156706407,
+    "seed_real": 75804928,
+    "start_depth": 4,
+    "top_results": 20,
+    "workers": 6
+  },
+  "faed_ascii_sha256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+  "faed_length": 570,
+  "files_sha256": {
+    "base_solver": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "bidirectional_solver": "63dc36f4dc600e05c10321a799889476a8ad6d4c41429d5c681695da838d9375",
+    "corpus": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "discriminator": "09491be49efc9173e3aa527a8f6df6d357b2f892b0683b89edf72373b03b5fa6",
+    "discriminator_result": "15b650b842d0c07fd89954cfb116d8e893ad9c1be39b41b8489e35990cf32d6f",
+    "holdout_lock": "7741b151ef68f3a40f8900e9de0841843f2ec9a9ca29c0479531465e98f98b52",
+    "holdout_result": "5e7db06f15539e7a43f99eb11a707e69c2e7702eaed7e435b051d26d765ac463",
+    "holdout_runner": "75d18a4bd59bd95be8f2a05584ccdf2de9f84e0127f265c2fb9b12b0aebab99f",
+    "holdout_verification": "031348457099d3796259a6f99de2caeca9f332f5c4ac871130e7eea47895e827",
+    "prefix_solver": "5d4677811b43737d41b406628d723b62d576d756051abe3c5e1922af36266354",
+    "protocol": "e501baf5b63f4067e4abc9f69dc0fc0d736c5c82a8ddc0f9b86aeb6136f87e7c",
+    "quadgrams": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+    "real_runner": "d446a907058746514c76995f6717da7f38b9d607c270a6cb7be4a35171c1496f",
+    "verifier": "09a3484d97919e3ae724f0b518cf3104db8bc15ae876bdf9f8fd7742450673c9"
+  },
+  "phase": "484M",
+  "prohibitions": {
+    "post_lock_tuning": true,
+    "ragged_widths": true,
+    "rerun": true,
+    "width_19": true
+  },
+  "scope": {
+    "cell_count": 72,
+    "pairs": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "a",
+        "c"
+      ],
+      [
+        "a",
+        "d"
+      ],
+      [
+        "a",
+        "e"
+      ],
+      [
+        "a",
+        "f"
+      ],
+      [
+        "a",
+        "g"
+      ],
+      [
+        "a",
+        "h"
+      ],
+      [
+        "a",
+        "i"
+      ],
+      [
+        "b",
+        "c"
+      ],
+      [
+        "b",
+        "d"
+      ],
+      [
+        "b",
+        "e"
+      ],
+      [
+        "b",
+        "f"
+      ],
+      [
+        "b",
+        "g"
+      ],
+      [
+        "b",
+        "h"
+      ],
+      [
+        "b",
+        "i"
+      ],
+      [
+        "c",
+        "d"
+      ],
+      [
+        "c",
+        "e"
+      ],
+      [
+        "c",
+        "f"
+      ],
+      [
+        "c",
+        "g"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "c",
+        "i"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "d",
+        "f"
+      ],
+      [
+        "d",
+        "g"
+      ],
+      [
+        "d",
+        "h"
+      ],
+      [
+        "d",
+        "i"
+      ],
+      [
+        "e",
+        "f"
+      ],
+      [
+        "e",
+        "g"
+      ],
+      [
+        "e",
+        "h"
+      ],
+      [
+        "e",
+        "i"
+      ],
+      [
+        "f",
+        "g"
+      ],
+      [
+        "f",
+        "h"
+      ],
+      [
+        "f",
+        "i"
+      ],
+      [
+        "g",
+        "h"
+      ],
+      [
+        "g",
+        "i"
+      ],
+      [
+        "h",
+        "i"
+      ]
+    ],
+    "widths": [
+      10,
+      15
+    ]
+  },
+  "status": "locked_before_real_run"
+}

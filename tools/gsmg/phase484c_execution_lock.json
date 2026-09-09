@@ -1,0 +1,47 @@
+{
+  "phase": "484C",
+  "status": "locked-before-width7-holdout",
+  "locked_at": "2026-09-07",
+  "paths": {
+    "protocol": "doc/Brainstorms/2026-09-07 - Phase 484C Width-7 Raw-Symbol VIC Solver Protocol.md",
+    "solver": "tools/gsmg/phase484c_width7_raw_symbol_vic_solver.py",
+    "runner": "tools/gsmg/phase484c_width7_holdout_gate.py",
+    "verifier": "tools/gsmg/phase484c_verify_run.py",
+    "base_solver": "tools/gsmg/phase484a_raw_symbol_vic_solver.py",
+    "corpus": "wordlists/gsmg/cosmic_duality_book_full_text.txt",
+    "quadgrams": "tools/gsmg/data_files/english_quadgrams.txt",
+    "rank_development": "tools/gsmg/phase484c_width7_rank_dev_result.json",
+    "tail_development": "tools/gsmg/phase484c_width7_tail_dev_result.json"
+  },
+  "files_sha256": {
+    "protocol": "b2534562ec430017ca6bfacf34949e31e96223cee192318b8a5de59346e0d517",
+    "solver": "d37287a5a350d1f10eddbe561cab01fff08a768f02c54d6d57dc31793410451e",
+    "runner": "72aa041a96fd1375f98dd728df76cc0c30b6c2d54df0d25790321ab027f131cc",
+    "verifier": "66abb11ee0198651b96d621b4db551226deac69a675cb2e6aba15468ad60ab73",
+    "base_solver": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "corpus": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "quadgrams": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+    "rank_development": "6e36c43e9511c83064513e8575d6f81e5672cd94f7de3e847aa867b4ebf0b98e",
+    "tail_development": "708a53098dbbf631537b44cc477bd21724632b67dc17a186011f69166f709547"
+  },
+  "configuration": {
+    "width": 7,
+    "board_modes": ["vic_profile", "broad_random"],
+    "pair_indices": [0, 1, 5, 9, 14, 18, 23, 27, 32, 35],
+    "joint_keep": 1536,
+    "board_restarts": 2,
+    "board_iters": 6000,
+    "board_t0": 20.0,
+    "board_t1": 1.0,
+    "minimum_cell_passes": 8,
+    "minimum_plaintext_accuracy": 0.95,
+    "minimum_board_accuracy": 0.8,
+    "seed_holdout": 1212956701,
+    "workers": 8
+  },
+  "prohibitions": {
+    "faed_scoring": true,
+    "budget_tuning_after_holdout": true,
+    "widths_other_than_7": true
+  }
+}

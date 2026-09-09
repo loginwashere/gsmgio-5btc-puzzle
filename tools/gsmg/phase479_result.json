@@ -1,0 +1,12 @@
+{
+  "alignments_per_decryption": 17,
+  "candidate_count": 648,
+  "decryptions": 14551,
+  "exact_hit_count": 0,
+  "exact_hits": [],
+  "keystring_count": 14551,
+  "lock_sha256": "96ecc23e15d873541dba58f2afe7af7bb6e97050098bea37ae3f85871cfc05a8",
+  "phase": 479,
+  "scalar_candidates_per_alignment": 17,
+  "verdict": "bounded_negative"
+}

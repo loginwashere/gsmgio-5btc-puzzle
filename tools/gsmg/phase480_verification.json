@@ -1,0 +1,12 @@
+{
+  "consistent": true,
+  "errors": [],
+  "lock_sha256": "9206e7fb84537aa880f2acde03ec85749a91e7cad01455aefa42ce3291767285",
+  "padding_valid_diagnostic_count": 0,
+  "phase": 480,
+  "primary_promoted_count": 0,
+  "recomputed": true,
+  "representation_control_promoted_count": 0,
+  "result_sha256": "1970e47c260e6fc1941166ed41b2de788a9326a1f5c14da2d04f87a70a80cd77",
+  "verdict": "bounded_negative"
+}

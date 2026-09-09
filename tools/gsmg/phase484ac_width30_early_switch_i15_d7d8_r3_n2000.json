@@ -1,0 +1,90 @@
+{
+  "phase": "484Z",
+  "status": "development_width30_early_board_switch_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_index": 15,
+  "width": 30,
+  "switch_depth": 7,
+  "invariant_keep": 262144,
+  "depth6_keep": 524288,
+  "depth7_keep": 1048576,
+  "depth8_keep": 1048576,
+  "board_restarts": 3,
+  "board_iterations": 2000,
+  "depth8_board_restarts": 3,
+  "depth8_board_iterations": 2000,
+  "continue_depth8": true,
+  "diagnose_true_parent": false,
+  "exact_profile_fixture": {
+    "fixture_index": 15,
+    "source_start": 6822,
+    "minimum_edit_count": 64,
+    "normalized_quadgram": -4.494317747332326,
+    "plaintext_sha256": "6d79f7dd99f897f12e3b46d701093d187466dca057b6c970fc70808e49ce6e9c",
+    "raw_sha256": "0de73fad290c49ae61c32783e972d556110437553d56c0bc92776af250940a3d",
+    "single_slots": 302,
+    "tokens": 436,
+    "raw_symbols": 570
+  },
+  "prefix_diagnostics": [
+    {
+      "depth": 4,
+      "generated_unique": 657720,
+      "retained": 262144
+    },
+    {
+      "depth": 5,
+      "generated_unique": 9443599,
+      "retained": 262144
+    },
+    {
+      "depth": 6,
+      "generated_unique": 11936775,
+      "retained": 524288
+    },
+    {
+      "depth": 7,
+      "generated_unique": 23811972,
+      "retained": 1048576
+    }
+  ],
+  "depth7": {
+    "generated_unique": 1048576,
+    "after_invariant_selection": {
+      "candidate_count": 1048576,
+      "true_segments": 1,
+      "best_true_rank": 656072
+    },
+    "planted_board_ceiling": null,
+    "board_objective_before_selection": {
+      "candidate_count": 1048576,
+      "true_segments": 1,
+      "best_true_rank": 180915
+    },
+    "after_board_selection": {
+      "candidate_count": 262144,
+      "true_segments": 1,
+      "best_true_rank": 180915
+    },
+    "true_parent_inherited_board_diagnostics": [],
+    "board_screen_seconds": 7.744248707000224
+  },
+  "depth8": {
+    "generated_unique": 11789285,
+    "planted_board_ceiling": null,
+    "board_objective_before_selection": {
+      "candidate_count": 12058624,
+      "true_segments": 2,
+      "best_true_rank": 1098233
+    },
+    "after_board_selection": {
+      "candidate_count": 1048576,
+      "true_segments": 0,
+      "best_true_rank": null
+    },
+    "board_screen_seconds": 104.8442841549986
+  },
+  "survived_depth8": false,
+  "wall_seconds": 140.26960359499935
+}

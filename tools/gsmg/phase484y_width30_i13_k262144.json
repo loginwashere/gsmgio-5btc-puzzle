@@ -1,0 +1,77 @@
+{
+  "phase": "484Y",
+  "status": "development_width30_shortlist_feasibility_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "width": 30,
+  "rows": 19,
+  "fixture_index": 13,
+  "beam_keep": 262144,
+  "exact_profile_fixture": {
+    "fixture_index": 13,
+    "source_start": 60,
+    "minimum_edit_count": 61,
+    "normalized_quadgram": -4.330389842280098,
+    "plaintext_sha256": "3d4d45a0c5547ec0ac1c982086a0b7c7c69347cf255217a5daedf7ac0b568acc",
+    "raw_sha256": "422b10d5d9fa1a3d3100f99b17101ed113b909d8e156c0e77d2e40cd992b0b5b",
+    "single_slots": 302,
+    "tokens": 436,
+    "raw_symbols": 570
+  },
+  "survived_depth8": false,
+  "depth_diagnostics": [
+    {
+      "depth": 4,
+      "generated": 657720,
+      "retained": 262144,
+      "true_segments_retained": 21,
+      "best_true_rank": 300,
+      "selection_seconds": 0.2312977450201288,
+      "expanded_with_duplicates": 13631488,
+      "expansion_seconds": 0.2981720069947187,
+      "gpu_score_seconds": 1.4596859510056674
+    },
+    {
+      "depth": 5,
+      "generated": 9555459,
+      "retained": 262144,
+      "true_segments_retained": 11,
+      "best_true_rank": 3924,
+      "selection_seconds": 2.4344929750077426,
+      "expanded_with_duplicates": 13107200,
+      "expansion_seconds": 0.30050660399137996,
+      "gpu_score_seconds": 1.5753588369989302
+    },
+    {
+      "depth": 6,
+      "generated": 12007309,
+      "retained": 262144,
+      "true_segments_retained": 3,
+      "best_true_rank": 25267,
+      "selection_seconds": 2.439215871010674,
+      "expanded_with_duplicates": 12582912,
+      "expansion_seconds": 0.3045822950080037,
+      "gpu_score_seconds": 1.5662737239908893
+    },
+    {
+      "depth": 7,
+      "generated": 12095404,
+      "retained": 262144,
+      "true_segments_retained": 2,
+      "best_true_rank": 70800,
+      "selection_seconds": 2.310339190007653,
+      "expanded_with_duplicates": 12058624,
+      "expansion_seconds": 0.31468873901758343,
+      "gpu_score_seconds": 1.5359960530186072
+    },
+    {
+      "depth": 8,
+      "generated": 11643322,
+      "retained": 262144,
+      "true_segments_retained": 0,
+      "best_true_rank": null,
+      "selection_seconds": 2.1455126799992286
+    }
+  ],
+  "wall_seconds": 19.111381247988902
+}

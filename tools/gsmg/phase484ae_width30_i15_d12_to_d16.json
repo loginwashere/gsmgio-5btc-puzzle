@@ -1,0 +1,224 @@
+{
+  "phase": "484AE",
+  "status": "development_checkpointed_rolling_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_index": 15,
+  "source": "_work/phase484ac/i15_replay/depth12_selected.npz",
+  "source_sha256": "216964fa92490d879c6012b690cb7f35c9c9228d1fbf4cd53a03b21af127d8d6",
+  "start_depth": 12,
+  "requested_max_depth": 16,
+  "keep": 262144,
+  "restarts": 3,
+  "iterations": 2000,
+  "checkpoint_dir": "_work/phase484ac/i15_replay",
+  "completed_depth": 16,
+  "truth_survived": true,
+  "depth_diagnostics": [
+    {
+      "depth": 13,
+      "generated_unique": 9001204,
+      "before_selection": {
+        "candidate_count": 9437184,
+        "true_segments": 1,
+        "best_true_rank": 198,
+        "best_true_path": [
+          7,
+          29,
+          2,
+          24,
+          16,
+          20,
+          10,
+          28,
+          4,
+          19,
+          23,
+          18,
+          12
+        ],
+        "best_true_score": -4.469038293279589
+      },
+      "after_selection": {
+        "candidate_count": 262144,
+        "true_segments": 1,
+        "best_true_rank": 198,
+        "best_true_path": [
+          7,
+          29,
+          2,
+          24,
+          16,
+          20,
+          10,
+          28,
+          4,
+          19,
+          23,
+          18,
+          12
+        ],
+        "best_true_score": -4.469038293279589,
+        "checkpoint": "_work/phase484ac/i15_replay/depth13_selected.npz"
+      },
+      "seconds": 189.01229267300369
+    },
+    {
+      "depth": 14,
+      "generated_unique": 8500293,
+      "before_selection": {
+        "candidate_count": 8912896,
+        "true_segments": 1,
+        "best_true_rank": 407,
+        "best_true_path": [
+          22,
+          7,
+          29,
+          2,
+          24,
+          16,
+          20,
+          10,
+          28,
+          4,
+          19,
+          23,
+          18,
+          12
+        ],
+        "best_true_score": -4.5055704164157655
+      },
+      "after_selection": {
+        "candidate_count": 262144,
+        "true_segments": 1,
+        "best_true_rank": 407,
+        "best_true_path": [
+          22,
+          7,
+          29,
+          2,
+          24,
+          16,
+          20,
+          10,
+          28,
+          4,
+          19,
+          23,
+          18,
+          12
+        ],
+        "best_true_score": -4.5055704164157655,
+        "checkpoint": "_work/phase484ac/i15_replay/depth14_selected.npz"
+      },
+      "seconds": 191.21609589400032
+    },
+    {
+      "depth": 15,
+      "generated_unique": 7995190,
+      "before_selection": {
+        "candidate_count": 8388608,
+        "true_segments": 1,
+        "best_true_rank": 1,
+        "best_true_path": [
+          27,
+          22,
+          7,
+          29,
+          2,
+          24,
+          16,
+          20,
+          10,
+          28,
+          4,
+          19,
+          23,
+          18,
+          12
+        ],
+        "best_true_score": -4.452875681488757
+      },
+      "after_selection": {
+        "candidate_count": 262144,
+        "true_segments": 1,
+        "best_true_rank": 1,
+        "best_true_path": [
+          27,
+          22,
+          7,
+          29,
+          2,
+          24,
+          16,
+          20,
+          10,
+          28,
+          4,
+          19,
+          23,
+          18,
+          12
+        ],
+        "best_true_score": -4.452875681488757,
+        "checkpoint": "_work/phase484ac/i15_replay/depth15_selected.npz"
+      },
+      "seconds": 192.50204872299946
+    },
+    {
+      "depth": 16,
+      "generated_unique": 7453441,
+      "before_selection": {
+        "candidate_count": 7864320,
+        "true_segments": 1,
+        "best_true_rank": 1,
+        "best_true_path": [
+          15,
+          27,
+          22,
+          7,
+          29,
+          2,
+          24,
+          16,
+          20,
+          10,
+          28,
+          4,
+          19,
+          23,
+          18,
+          12
+        ],
+        "best_true_score": -4.4592170204719945
+      },
+      "after_selection": {
+        "candidate_count": 262144,
+        "true_segments": 1,
+        "best_true_rank": 1,
+        "best_true_path": [
+          15,
+          27,
+          22,
+          7,
+          29,
+          2,
+          24,
+          16,
+          20,
+          10,
+          28,
+          4,
+          19,
+          23,
+          18,
+          12
+        ],
+        "best_true_score": -4.4592170204719945,
+        "checkpoint": "_work/phase484ac/i15_replay/depth16_selected.npz"
+      },
+      "seconds": 191.6188722299994
+    }
+  ],
+  "wall_seconds": 764.3493450070018
+}

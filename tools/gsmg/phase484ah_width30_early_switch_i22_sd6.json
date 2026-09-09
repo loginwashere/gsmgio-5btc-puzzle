@@ -1,0 +1,66 @@
+{
+  "phase": "484AH",
+  "status": "development_early_switch_depth_probe_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_index": 22,
+  "switch_depth": 6,
+  "keep_board": 262144,
+  "keep_next_coarse": 1310720,
+  "restarts": 3,
+  "iterations": 2000,
+  "prefix_diagnostics": [
+    {
+      "depth": 4,
+      "generated_unique": 657720,
+      "retained": 262144
+    },
+    {
+      "depth": 5,
+      "generated_unique": 9551475,
+      "retained": 524288
+    },
+    {
+      "depth": 6,
+      "generated_unique": 23359768,
+      "retained": 1048576
+    }
+  ],
+  "switch_stage": {
+    "after_invariant_selection": {
+      "candidate_count": 1048576,
+      "true_segments": 7,
+      "best_true_rank": 31857
+    },
+    "board_objective_before_selection": {
+      "candidate_count": 1048576,
+      "true_segments": 7,
+      "best_true_rank": 7
+    },
+    "after_board_selection": {
+      "candidate_count": 262144,
+      "true_segments": 6,
+      "best_true_rank": 7
+    },
+    "board_screen_seconds": 6.458939563002787
+  },
+  "next_stage": {
+    "depth": 7,
+    "generated_unique": 12292076,
+    "before_selection": {
+      "candidate_count": 12582912,
+      "true_segments": 9,
+      "best_true_rank": 1
+    },
+    "after_selection": {
+      "candidate_count": 1310720,
+      "true_segments": 9,
+      "best_true_rank": 1
+    },
+    "keep": 1310720,
+    "board_screen_seconds": 104.83246134899673
+  },
+  "survived_switch_depth": true,
+  "survived_next_depth": true,
+  "wall_seconds": 125.91943316600373
+}

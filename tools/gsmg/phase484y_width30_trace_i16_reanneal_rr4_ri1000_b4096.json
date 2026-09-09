@@ -1,0 +1,83 @@
+{
+  "phase": "484Y",
+  "status": "development_true_extension_trace_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_index": 16,
+  "source_artifact": "tools/gsmg/phase484y_width30_blind_dev_i16_k262144_f1048576.json",
+  "source_artifact_sha256": "b3d2a8b91b992fe80640a3390d5a3f911c832ab4ff3f7e70ea3b59b266d757f0",
+  "source_refined_rank": 1,
+  "source_path": [
+    29,
+    23,
+    10,
+    3,
+    4,
+    0,
+    12,
+    11
+  ],
+  "extension_backend": "reanneal",
+  "reanneal_restarts": 4,
+  "reanneal_iterations": 1000,
+  "extension_beam": 4096,
+  "survived_to_depth": 14,
+  "completed_depth30": false,
+  "depth_diagnostics": [
+    {
+      "depth": 9,
+      "generated_unique": 44,
+      "true_pre": 2,
+      "best_true_pre_rank": 1,
+      "retained": 44,
+      "true_post": 2,
+      "best_true_post_rank": 1
+    },
+    {
+      "depth": 10,
+      "generated_unique": 1386,
+      "true_pre": 4,
+      "best_true_pre_rank": 21,
+      "retained": 1386,
+      "true_post": 3,
+      "best_true_post_rank": 14
+    },
+    {
+      "depth": 11,
+      "generated_unique": 36960,
+      "true_pre": 6,
+      "best_true_pre_rank": 4525,
+      "retained": 4096,
+      "true_post": 1,
+      "best_true_post_rank": 2665
+    },
+    {
+      "depth": 12,
+      "generated_unique": 144103,
+      "true_pre": 2,
+      "best_true_pre_rank": 6,
+      "retained": 4096,
+      "true_post": 1,
+      "best_true_post_rank": 6
+    },
+    {
+      "depth": 13,
+      "generated_unique": 126050,
+      "true_pre": 2,
+      "best_true_pre_rank": 3955,
+      "retained": 4096,
+      "true_post": 1,
+      "best_true_post_rank": 3248
+    },
+    {
+      "depth": 14,
+      "generated_unique": 57833,
+      "true_pre": 28,
+      "best_true_pre_rank": 1,
+      "retained": 4096,
+      "true_post": 0,
+      "best_true_post_rank": null
+    }
+  ],
+  "wall_seconds": 12.555029209999987
+}

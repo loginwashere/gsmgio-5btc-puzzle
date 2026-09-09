@@ -1,0 +1,79 @@
+{
+  "phase": "484C",
+  "status": "informal_width7_joint_tail_dev_not_frozen",
+  "faed_scored": false,
+  "fixture_split": "dev",
+  "budgets": {
+    "joint_keep": 1536,
+    "board_restarts": 2,
+    "board_iters": 6000,
+    "board_t0": 20.0,
+    "board_t1": 1.0
+  },
+  "joint_recovery_count": 2,
+  "fixture_count": 2,
+  "records": [
+    {
+      "board_mode": "vic_profile",
+      "fixture_index": 57,
+      "width": 7,
+      "joint_keep": 1536,
+      "planted_in_shortlist": true,
+      "planted_rank": 248,
+      "winner_rank": 248,
+      "escape_pair_recovery": true,
+      "exact_order_recovery": true,
+      "joint_recovery": true,
+      "kendall_tau": 1.0,
+      "board_accuracy": 1.0,
+      "plaintext_char_accuracy": 1.0,
+      "decoded_length": 397,
+      "true_length": 397,
+      "winner_pair": [
+        "a",
+        "b"
+      ],
+      "winner_order": [
+        6,
+        0,
+        2,
+        4,
+        5,
+        3,
+        1
+      ],
+      "winner_normalized_score": -4.395038400621192
+    },
+    {
+      "board_mode": "broad_random",
+      "fixture_index": 56,
+      "width": 7,
+      "joint_keep": 1536,
+      "planted_in_shortlist": true,
+      "planted_rank": 842,
+      "winner_rank": 842,
+      "escape_pair_recovery": true,
+      "exact_order_recovery": true,
+      "joint_recovery": true,
+      "kendall_tau": 1.0,
+      "board_accuracy": 1.0,
+      "plaintext_char_accuracy": 1.0,
+      "decoded_length": 320,
+      "true_length": 320,
+      "winner_pair": [
+        "a",
+        "b"
+      ],
+      "winner_order": [
+        3,
+        4,
+        5,
+        0,
+        2,
+        6,
+        1
+      ],
+      "winner_normalized_score": -4.3738733695746195
+    }
+  ]
+}

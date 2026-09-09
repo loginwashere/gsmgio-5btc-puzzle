@@ -1,0 +1,34 @@
+{
+  "phase": "484N",
+  "status": "development_width19_search_scoping_complete_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_split": "dev",
+  "fixture_index": 23,
+  "width": 19,
+  "compute_result": {
+    "gpu_parity": true,
+    "gpu_speedup_range_over_native_single_thread_cpu": [24.912, 35.422],
+    "maximum_standalone_abs_error": 8.881784197001252e-16,
+    "python_adapter_maximum_abs_error": 2.7977620220553945e-14,
+    "decision": "retain_hybrid_gpu_scoring_infrastructure"
+  },
+  "endpoint_diverse_depth_specific_beam": [
+    {"board_mode": "vic_profile", "beam": 16384, "truth_lost_at_depth": 10, "wall_seconds": 16.357},
+    {"board_mode": "vic_profile", "beam": 65536, "truth_lost_at_depth": 12, "wall_seconds": 63.085},
+    {"board_mode": "vic_profile", "beam": 131072, "truth_lost_at_depth": 12, "wall_seconds": 94.963},
+    {"board_mode": "vic_profile", "beam": 262144, "truth_lost_at_depth": 12, "wall_seconds": 196.512},
+    {"board_mode": "broad_random", "beam": 16384, "truth_lost_at_depth": 9, "wall_seconds": 16.225},
+    {"board_mode": "broad_random", "beam": 65536, "truth_lost_at_depth": 12, "wall_seconds": 63.673}
+  ],
+  "alternative_selection_statistics": [
+    {"variant": "coverage_set_diversity", "board_mode": "vic_profile", "beam": 131072, "truth_lost_at_depth": 11},
+    {"variant": "overlapping_fixed_depth_sum", "local_depth": 6, "board_mode": "vic_profile", "beam": 65536, "truth_lost_at_depth": 9},
+    {"variant": "overlapping_fixed_depth_sum", "local_depth": 7, "board_mode": "vic_profile", "beam": 65536, "truth_lost_at_depth": 10},
+    {"variant": "overlapping_fixed_depth_sum", "local_depth": 8, "board_mode": "vic_profile", "beam": 65536, "truth_lost_at_depth": 10},
+    {"variant": "cumulative_depth_score", "decay": 0.5, "board_mode": "vic_profile", "beam": 65536, "truth_lost_at_depth": 10},
+    {"variant": "cumulative_depth_score", "decay": 0.1, "board_mode": "vic_profile", "beam": 65536, "truth_lost_at_depth": 12}
+  ],
+  "conclusion": "GPU scoring removes the feature-evaluation bottleneck, but the tested discriminator and beam-selection family does not preserve the planted width-19 order through depth 18. Increasing the endpoint-diverse beam from 65536 through 262144 does not move the collapse beyond depth 12. No design is eligible for a holdout gate or real FAED width-19 run.",
+  "next_reopen_condition": "A genuinely different order statistic or global assembly objective must demonstrate exact width-19 recovery on development fixtures before any further beam scaling."
+}

@@ -1,0 +1,8 @@
+{
+  "phase": "484B",
+  "consistent": true,
+  "errors": [],
+  "score_trigger": false,
+  "execution_lock_sha256": "9171522dc907e758d7fac1790d6509719529b35fc4b344ef54161be53da5c71c",
+  "result_sha256": "059bed33951da5c70c7334d98837152c3807afd4cef2dd5f52f6c78770d4d6e9"
+}

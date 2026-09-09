@@ -1,0 +1,145 @@
+{
+  "decision": "bounded_negative_no_exact_passage",
+  "diagnostics": [
+    {
+      "distinct_signature_count": 5,
+      "exact_match_count": 0,
+      "lane": "ji_merged",
+      "maximum_signature_multiplicity": 1,
+      "normalized_length": 440,
+      "repeated_signature_count": 0,
+      "source": "phase2_plaintext",
+      "tier": "puzzle_native",
+      "window_count": 5
+    },
+    {
+      "distinct_signature_count": 5,
+      "exact_match_count": 0,
+      "lane": "raw_az_25_present",
+      "maximum_signature_multiplicity": 1,
+      "normalized_length": 440,
+      "repeated_signature_count": 0,
+      "source": "phase2_plaintext",
+      "tier": "puzzle_native",
+      "window_count": 5
+    },
+    {
+      "distinct_signature_count": 2447,
+      "exact_match_count": 0,
+      "lane": "ji_merged",
+      "maximum_signature_multiplicity": 4,
+      "normalized_length": 3174,
+      "repeated_signature_count": 263,
+      "source": "phase3_plaintext",
+      "tier": "puzzle_native",
+      "window_count": 2739
+    },
+    {
+      "distinct_signature_count": 2432,
+      "exact_match_count": 0,
+      "lane": "raw_az_25_present",
+      "maximum_signature_multiplicity": 4,
+      "normalized_length": 3174,
+      "repeated_signature_count": 275,
+      "source": "phase3_plaintext",
+      "tier": "puzzle_native",
+      "window_count": 2739
+    },
+    {
+      "distinct_signature_count": 19,
+      "exact_match_count": 0,
+      "lane": "ji_merged",
+      "maximum_signature_multiplicity": 2,
+      "normalized_length": 455,
+      "repeated_signature_count": 1,
+      "source": "phase32_pre_p32_plaintext",
+      "tier": "puzzle_native",
+      "window_count": 20
+    },
+    {
+      "distinct_signature_count": 19,
+      "exact_match_count": 0,
+      "lane": "raw_az_25_present",
+      "maximum_signature_multiplicity": 2,
+      "normalized_length": 455,
+      "repeated_signature_count": 1,
+      "source": "phase32_pre_p32_plaintext",
+      "tier": "puzzle_native",
+      "window_count": 20
+    },
+    {
+      "distinct_signature_count": 1022,
+      "exact_match_count": 0,
+      "lane": "ji_merged",
+      "maximum_signature_multiplicity": 3,
+      "normalized_length": 1539,
+      "repeated_signature_count": 78,
+      "source": "phase321_architect_answer",
+      "tier": "puzzle_native",
+      "window_count": 1104
+    },
+    {
+      "distinct_signature_count": 1022,
+      "exact_match_count": 0,
+      "lane": "raw_az_25_present",
+      "maximum_signature_multiplicity": 3,
+      "normalized_length": 1539,
+      "repeated_signature_count": 78,
+      "source": "phase321_architect_answer",
+      "tier": "puzzle_native",
+      "window_count": 1104
+    },
+    {
+      "distinct_signature_count": 5014,
+      "exact_match_count": 0,
+      "lane": "ji_merged",
+      "maximum_signature_multiplicity": 10,
+      "normalized_length": 6053,
+      "repeated_signature_count": 507,
+      "source": "matrix_architect_scene",
+      "tier": "referenced_text",
+      "window_count": 5618
+    },
+    {
+      "distinct_signature_count": 5012,
+      "exact_match_count": 0,
+      "lane": "raw_az_25_present",
+      "maximum_signature_multiplicity": 10,
+      "normalized_length": 6053,
+      "repeated_signature_count": 508,
+      "source": "matrix_architect_scene",
+      "tier": "referenced_text",
+      "window_count": 5618
+    },
+    {
+      "distinct_signature_count": 50727,
+      "exact_match_count": 0,
+      "lane": "ji_merged",
+      "maximum_signature_multiplicity": 11,
+      "normalized_length": 56292,
+      "repeated_signature_count": 4469,
+      "source": "cosmic_duality_book_prose",
+      "tier": "book",
+      "window_count": 55857
+    },
+    {
+      "distinct_signature_count": 50744,
+      "exact_match_count": 0,
+      "lane": "raw_az_25_present",
+      "maximum_signature_multiplicity": 11,
+      "normalized_length": 56292,
+      "repeated_signature_count": 4449,
+      "source": "cosmic_duality_book_prose",
+      "tier": "book",
+      "window_count": 55857
+    }
+  ],
+  "lane_count": 2,
+  "lock_sha256": "0fc4d04c6d81e19f01bc2f5c477cb2813e24864f889fa59e978c91779b658417",
+  "match_location_count": 0,
+  "matches": [],
+  "phase": 482,
+  "source_count": 6,
+  "total_windows": 130686,
+  "unique_passage_count": 0
+}

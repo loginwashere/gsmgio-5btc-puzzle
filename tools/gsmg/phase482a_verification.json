@@ -1,0 +1,12 @@
+{
+  "consistent": true,
+  "decision": "bounded_negative_no_exact_passage",
+  "errors": [],
+  "lock_sha256": "0fc4d04c6d81e19f01bc2f5c477cb2813e24864f889fa59e978c91779b658417",
+  "match_location_count": 0,
+  "phase": 482,
+  "recomputed": true,
+  "result_sha256": "4297cde13ea3fb02bb9c8617c7d7b312ac6a6784729e68bf17f53183b27e6834",
+  "total_windows": 130686,
+  "unique_passage_count": 0
+}

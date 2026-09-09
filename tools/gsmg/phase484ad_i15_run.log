@@ -1,0 +1,4 @@
+stage sizes {'depth7_selected': 262144, 'depth8_selected': 1310720, 'depth8_refined': 262144, 'depth9_selected': 262144, 'depth10_selected': 262144}
+depth10 true parent count 0
+rebuild 451.6 diagnostic 0.1 wall 451.7
+wrote /home/loginwashere/projects/gsmgio-5btc-puzzle/tools/gsmg/phase484ad_width30_local_rank_i15_cliff11.json

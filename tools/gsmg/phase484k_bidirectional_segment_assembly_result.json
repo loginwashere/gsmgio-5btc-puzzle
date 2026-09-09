@@ -1,0 +1,403 @@
+{
+  "phase": "484K",
+  "status": "informal_bidirectional_segment_assembly_dev_not_frozen",
+  "faed_scored": false,
+  "fixture_split": "dev",
+  "source_failed_cells": "phase484j_constructive_prefix_beam_result.json",
+  "budgets": {
+    "start_depth": 4,
+    "beam_width": 4096,
+    "reserved_fraction": 0.5
+  },
+  "exact_recovery_count": 2,
+  "cell_count": 3,
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "width": 15,
+      "fixture_index": 22,
+      "exact_recovery": true,
+      "best_tau": 1.0,
+      "best_score": 1.3390197023488468,
+      "best_sequence": [
+        9,
+        5,
+        13,
+        8,
+        1,
+        4,
+        3,
+        6,
+        10,
+        11,
+        0,
+        7,
+        2,
+        12,
+        14
+      ],
+      "best_order": [
+        10,
+        4,
+        12,
+        6,
+        5,
+        1,
+        7,
+        11,
+        3,
+        0,
+        8,
+        9,
+        13,
+        2,
+        14
+      ],
+      "truth_rank_if_retained": 1,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 4096,
+          "true_segment_count_retained": 8,
+          "best_true_segment_rank": 37
+        },
+        {
+          "depth": 5,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 103
+        },
+        {
+          "depth": 6,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 17
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "true_segment_count_retained": 4,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "true_segment_count_retained": 3,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "true_segment_count_retained": 2,
+          "best_true_segment_rank": 4
+        },
+        {
+          "depth": 15,
+          "beam_size": 4096,
+          "true_segment_count_retained": 1,
+          "best_true_segment_rank": 1
+        }
+      ],
+      "wall_seconds": 140.26211884900113
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 15,
+      "fixture_index": 22,
+      "exact_recovery": true,
+      "best_tau": 1.0,
+      "best_score": 3.9911037470962736,
+      "best_sequence": [
+        6,
+        11,
+        2,
+        8,
+        5,
+        4,
+        10,
+        1,
+        14,
+        13,
+        9,
+        12,
+        7,
+        0,
+        3
+      ],
+      "best_order": [
+        13,
+        7,
+        2,
+        14,
+        5,
+        4,
+        0,
+        12,
+        3,
+        10,
+        6,
+        1,
+        11,
+        9,
+        8
+      ],
+      "truth_rank_if_retained": 1,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 4096,
+          "true_segment_count_retained": 11,
+          "best_true_segment_rank": 13
+        },
+        {
+          "depth": 5,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 9
+        },
+        {
+          "depth": 6,
+          "beam_size": 4096,
+          "true_segment_count_retained": 6,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "true_segment_count_retained": 6,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "true_segment_count_retained": 6,
+          "best_true_segment_rank": 9
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "true_segment_count_retained": 6,
+          "best_true_segment_rank": 4
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "true_segment_count_retained": 6,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 1
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "true_segment_count_retained": 4,
+          "best_true_segment_rank": 16
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "true_segment_count_retained": 3,
+          "best_true_segment_rank": 8
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "true_segment_count_retained": 2,
+          "best_true_segment_rank": 11
+        },
+        {
+          "depth": 15,
+          "beam_size": 4096,
+          "true_segment_count_retained": 1,
+          "best_true_segment_rank": 1
+        }
+      ],
+      "wall_seconds": 131.27594523099833
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 19,
+      "fixture_index": 22,
+      "exact_recovery": false,
+      "best_tau": -0.005847953216374269,
+      "best_score": 3.8378729922802792,
+      "best_sequence": [
+        7,
+        2,
+        6,
+        3,
+        17,
+        9,
+        13,
+        10,
+        1,
+        18,
+        11,
+        4,
+        0,
+        12,
+        14,
+        16,
+        15,
+        8,
+        5
+      ],
+      "best_order": [
+        12,
+        8,
+        1,
+        3,
+        11,
+        18,
+        2,
+        0,
+        17,
+        5,
+        7,
+        10,
+        13,
+        6,
+        14,
+        16,
+        15,
+        4,
+        9
+      ],
+      "truth_rank_if_retained": null,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 4096,
+          "true_segment_count_retained": 5,
+          "best_true_segment_rank": 89
+        },
+        {
+          "depth": 5,
+          "beam_size": 4096,
+          "true_segment_count_retained": 2,
+          "best_true_segment_rank": 65
+        },
+        {
+          "depth": 6,
+          "beam_size": 4096,
+          "true_segment_count_retained": 2,
+          "best_true_segment_rank": 146
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "true_segment_count_retained": 1,
+          "best_true_segment_rank": 1969
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 15,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 16,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 17,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 18,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        },
+        {
+          "depth": 19,
+          "beam_size": 4096,
+          "true_segment_count_retained": 0,
+          "best_true_segment_rank": null
+        }
+      ],
+      "wall_seconds": 216.75034369499917
+    }
+  ],
+  "wall_seconds": 491.3746920620033
+}

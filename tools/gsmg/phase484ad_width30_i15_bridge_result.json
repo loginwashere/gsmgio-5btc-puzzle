@@ -1,0 +1,102 @@
+{
+  "phase": "484AD",
+  "status": "development_parent_reserved_bridge_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_index": 15,
+  "source": "_work/phase484ac/i15_replay/depth10_selected.npz",
+  "source_sha256": "853b81dae5cb9bf7e602a599cfc37339f59033ef80a943706cc3848cbd25e021",
+  "parent_keep": 65536,
+  "children_per_parent": 8,
+  "restarts": 3,
+  "iterations": 2000,
+  "checkpoint_dir": "_work/phase484ac/i15_replay",
+  "depth11": {
+    "before_reservation": {
+      "candidate_count": 2621440,
+      "true_segments": 1,
+      "best_true_rank": 594470,
+      "best_true_path": [
+        2,
+        24,
+        16,
+        20,
+        10,
+        28,
+        4,
+        19,
+        23,
+        18,
+        12
+      ],
+      "best_true_score": -4.556263829120968
+    },
+    "after_reservation": {
+      "candidate_count": 495495,
+      "true_segments": 1,
+      "best_true_rank": 351881,
+      "best_true_path": [
+        2,
+        24,
+        16,
+        20,
+        10,
+        28,
+        4,
+        19,
+        23,
+        18,
+        12
+      ],
+      "best_true_score": -4.556263829120968,
+      "checkpoint": "_work/phase484ac/i15_replay/depth11_parent_reserved.npz"
+    },
+    "reserved_count": 495495
+  },
+  "depth12": {
+    "generated_unique": 18104659,
+    "before_selection": {
+      "candidate_count": 18828810,
+      "true_segments": 1,
+      "best_true_rank": 29973,
+      "best_true_path": [
+        29,
+        2,
+        24,
+        16,
+        20,
+        10,
+        28,
+        4,
+        19,
+        23,
+        18,
+        12
+      ],
+      "best_true_score": -4.504926925450323
+    },
+    "after_selection": {
+      "candidate_count": 262144,
+      "true_segments": 1,
+      "best_true_rank": 29973,
+      "best_true_path": [
+        29,
+        2,
+        24,
+        16,
+        20,
+        10,
+        28,
+        4,
+        19,
+        23,
+        18,
+        12
+      ],
+      "best_true_score": -4.504926925450323,
+      "checkpoint": "_work/phase484ac/i15_replay/depth12_selected.npz"
+    },
+    "keep": 262144
+  },
+  "wall_seconds": 310.6270491440009
+}

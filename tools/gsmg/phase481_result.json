@@ -1,0 +1,13 @@
+{
+  "attempted": 10000000,
+  "elapsed_seconds": 111.584,
+  "lock_sha256": "dcc8268fee3cf7c9cefe543cf31c4515511f3e4fc3cd8fa83a9e467c178bb738",
+  "padding_valid_count": 39460,
+  "phase": 481,
+  "promoted_count": 0,
+  "strong_text_promoted_count": 0,
+  "structural_binary_promoted_count": 0,
+  "target_blob": "P32TRAILING",
+  "verdict": "bounded_negative",
+  "weak_tier_count": 0
+}

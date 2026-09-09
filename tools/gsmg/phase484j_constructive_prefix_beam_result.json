@@ -1,0 +1,733 @@
+{
+  "phase": "484J",
+  "status": "informal_constructive_prefix_beam_dev_not_frozen",
+  "faed_scored": false,
+  "fixture_split": "dev",
+  "train_indices": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "eval_index": 22,
+  "budgets": {
+    "start_depth": 4,
+    "beam_width": 4096,
+    "negative_ratio": 2
+  },
+  "exact_recovery_count": 3,
+  "cell_count": 6,
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "width": 10,
+      "fixture_index": 22,
+      "training_seconds_for_width": 0.5613714300016,
+      "exact_recovery": true,
+      "best_tau": 1.0,
+      "best_score": 1.7827597618359576,
+      "best_sequence": [
+        2,
+        3,
+        7,
+        1,
+        5,
+        6,
+        9,
+        4,
+        8,
+        0
+      ],
+      "best_order": [
+        9,
+        3,
+        0,
+        1,
+        7,
+        4,
+        5,
+        2,
+        8,
+        6
+      ],
+      "truth_full_rank_if_retained": 1,
+      "valid_terminal_count": 3588,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 5,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 6,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 10,
+          "beam_size": 3588,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        }
+      ],
+      "wall_seconds": 29.93897408399789
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 10,
+      "fixture_index": 22,
+      "training_seconds_for_width": 0.5613714300016,
+      "exact_recovery": true,
+      "best_tau": 1.0,
+      "best_score": 4.149190105326806,
+      "best_sequence": [
+        1,
+        2,
+        6,
+        3,
+        8,
+        4,
+        7,
+        0,
+        9,
+        5
+      ],
+      "best_order": [
+        7,
+        0,
+        1,
+        3,
+        5,
+        9,
+        2,
+        6,
+        4,
+        8
+      ],
+      "truth_full_rank_if_retained": 1,
+      "valid_terminal_count": 2331,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 528
+        },
+        {
+          "depth": 5,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 872
+        },
+        {
+          "depth": 6,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 37
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 348
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 97
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 20
+        },
+        {
+          "depth": 10,
+          "beam_size": 2331,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        }
+      ],
+      "wall_seconds": 28.091533210001217
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 15,
+      "fixture_index": 22,
+      "training_seconds_for_width": 1.2041470240001217,
+      "exact_recovery": false,
+      "best_tau": -0.10476190476190476,
+      "best_score": 0.8732587869260076,
+      "best_sequence": [
+        13,
+        8,
+        1,
+        4,
+        3,
+        6,
+        10,
+        11,
+        0,
+        5,
+        9,
+        14,
+        7,
+        2,
+        12
+      ],
+      "best_order": [
+        8,
+        2,
+        13,
+        4,
+        3,
+        9,
+        5,
+        12,
+        1,
+        10,
+        6,
+        7,
+        14,
+        0,
+        11
+      ],
+      "truth_full_rank_if_retained": null,
+      "valid_terminal_count": 3452,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 2142
+        },
+        {
+          "depth": 5,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 6,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 15,
+          "beam_size": 3452,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        }
+      ],
+      "wall_seconds": 76.25566681900091
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 15,
+      "fixture_index": 22,
+      "training_seconds_for_width": 1.2041470240001217,
+      "exact_recovery": false,
+      "best_tau": 0.2,
+      "best_score": 1.6822648765033505,
+      "best_sequence": [
+        5,
+        13,
+        4,
+        1,
+        9,
+        14,
+        6,
+        0,
+        11,
+        7,
+        12,
+        8,
+        2,
+        10,
+        3
+      ],
+      "best_order": [
+        7,
+        3,
+        12,
+        14,
+        2,
+        0,
+        6,
+        9,
+        11,
+        4,
+        13,
+        8,
+        10,
+        1,
+        5
+      ],
+      "truth_full_rank_if_retained": null,
+      "valid_terminal_count": 2346,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 5,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 6,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 15,
+          "beam_size": 2346,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        }
+      ],
+      "wall_seconds": 69.70836289499857
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 19,
+      "fixture_index": 22,
+      "training_seconds_for_width": 1.816722106999805,
+      "exact_recovery": true,
+      "best_tau": 1.0,
+      "best_score": 1.7501115192222294,
+      "best_sequence": [
+        13,
+        8,
+        7,
+        14,
+        6,
+        12,
+        3,
+        15,
+        11,
+        4,
+        5,
+        16,
+        0,
+        2,
+        9,
+        17,
+        1,
+        18,
+        10
+      ],
+      "best_order": [
+        12,
+        16,
+        13,
+        6,
+        9,
+        10,
+        4,
+        2,
+        1,
+        14,
+        18,
+        8,
+        5,
+        0,
+        3,
+        7,
+        11,
+        15,
+        17
+      ],
+      "truth_full_rank_if_retained": 1,
+      "valid_terminal_count": 3402,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 5,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 55
+        },
+        {
+          "depth": 6,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 21
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 18
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 120
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 5
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 5
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 2
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 5
+        },
+        {
+          "depth": 15,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 16,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        },
+        {
+          "depth": 17,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 5
+        },
+        {
+          "depth": 18,
+          "beam_size": 4096,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 2
+        },
+        {
+          "depth": 19,
+          "beam_size": 3402,
+          "truth_prefix_retained": true,
+          "truth_prefix_rank": 1
+        }
+      ],
+      "wall_seconds": 128.74361757800216
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 19,
+      "fixture_index": 22,
+      "training_seconds_for_width": 1.816722106999805,
+      "exact_recovery": false,
+      "best_tau": -0.14619883040935672,
+      "best_score": 4.032831166930816,
+      "best_sequence": [
+        17,
+        10,
+        16,
+        13,
+        11,
+        7,
+        2,
+        9,
+        18,
+        14,
+        4,
+        6,
+        3,
+        0,
+        8,
+        1,
+        15,
+        12,
+        5
+      ],
+      "best_order": [
+        13,
+        15,
+        6,
+        12,
+        10,
+        18,
+        11,
+        5,
+        14,
+        7,
+        1,
+        4,
+        17,
+        3,
+        9,
+        16,
+        2,
+        0,
+        8
+      ],
+      "truth_full_rank_if_retained": null,
+      "valid_terminal_count": 3046,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 5,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 6,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 7,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 8,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 9,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 10,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 11,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 12,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 13,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 14,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 15,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 16,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 17,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 18,
+          "beam_size": 4096,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        },
+        {
+          "depth": 19,
+          "beam_size": 3046,
+          "truth_prefix_retained": false,
+          "truth_prefix_rank": null
+        }
+      ],
+      "wall_seconds": 116.66151897300006
+    }
+  ],
+  "wall_seconds": 453.03097967099893
+}

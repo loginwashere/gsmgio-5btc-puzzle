@@ -1,0 +1,58 @@
+{
+  "budgets": {
+    "corruptions_per_severity": 100,
+    "fixtures_per_cell": 10,
+    "random_orders_per_fixture": 10000,
+    "severities": [
+      1,
+      2,
+      4
+    ]
+  },
+  "directions": [
+    "untranspose",
+    "transpose"
+  ],
+  "faed_scored": false,
+  "files_sha256": {
+    "audit_script": "00d057ea6d4eb2b61679aa214cc7d9e607312cdeec226c85629e67b4a03ba214",
+    "corpus": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "protocol": "d669da91843bb7a5e75915ed5fd0117cc71026860604249277f6e10583a68623",
+    "verifier": "a5d8a37383fe6a6e5c80d18bc1029fb886b59a2cbda3229e6560cccd66f29d00"
+  },
+  "gate": {
+    "maximum_tie_inclusive_random_exceedances": 10,
+    "minimum_passed_fixtures": 8,
+    "requires_monotone_corruption_medians": true
+  },
+  "length": 436,
+  "pattern_lengths": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "phase": "483A",
+  "seeds": {
+    "dev": 75735262,
+    "holdout": 1211777053
+  },
+  "smoothing": 0.2,
+  "split_sha256": {
+    "dev": "0f9e8a53f1d6459697f7455dbc49105100adca3bcfa6b85a37105deb5aa90090",
+    "holdout": "bfd9c9964b0381a58259f12067e6f9047bc57e71ca3f56117d0d1bc87ce3eaca",
+    "train": "21aa2b232af0728867deede45abd1e05c420a7d964156eb280cff3a7004e104a"
+  },
+  "status": "locked-before-holdout",
+  "widths": [
+    7,
+    10,
+    12,
+    15,
+    19,
+    25,
+    30,
+    38,
+    40
+  ]
+}

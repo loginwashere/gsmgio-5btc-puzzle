@@ -1,0 +1,52 @@
+{
+  "phase": "484O",
+  "status": "development_planted_board_ceiling_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "board_mode": "vic_profile",
+  "fixture_index": 23,
+  "beam_width": 65536,
+  "board_swaps": 6,
+  "board_accuracy": 0.52,
+  "exact_top1_recovery": false,
+  "truth_full_rank": null,
+  "depth_diagnostics": [
+    {
+      "depth": 4,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 16,
+      "best_true_segment_rank": 76
+    },
+    {
+      "depth": 5,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 10,
+      "best_true_segment_rank": 127
+    },
+    {
+      "depth": 6,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 7,
+      "best_true_segment_rank": 493
+    },
+    {
+      "depth": 7,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 6,
+      "best_true_segment_rank": 400
+    },
+    {
+      "depth": 8,
+      "statistic": "board_invariant",
+      "true_segment_count_retained": 2,
+      "best_true_segment_rank": 11718
+    },
+    {
+      "depth": 9,
+      "statistic": "planted_board_quadgram",
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null
+    }
+  ],
+  "wall_seconds": 29.484639413996774
+}

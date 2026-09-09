@@ -1,0 +1,134 @@
+{
+  "phase": "484Q-revised",
+  "status": "development_batch_complete_not_frozen",
+  "batch": "already_open_tuning_cases",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "budgets": {
+    "shortlist": 262144,
+    "refine_keep": 8192,
+    "extension_seed_count": 64,
+    "extension_beam": 4096,
+    "terminals_per_seed": 8
+  },
+  "cases": [
+    {
+      "board_mode": "vic_profile",
+      "fixture_index": 41
+    },
+    {
+      "board_mode": "vic_profile",
+      "fixture_index": 48
+    },
+    {
+      "board_mode": "broad_random",
+      "fixture_index": 45
+    },
+    {
+      "board_mode": "broad_random",
+      "fixture_index": 49
+    }
+  ],
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "fixture_index": 41,
+      "shortlist_size": 262144,
+      "true_segments_retained": 4,
+      "best_true_coarse_rank": 1,
+      "best_true_board_accuracy": 0.68,
+      "best_true_refined_rank": 1,
+      "best_true_refined_board_accuracy": 0.8,
+      "exact_order_in_terminals": true,
+      "exact_order_extension_rank": 2,
+      "exact_order_final_rank": 1,
+      "top1_exact_order": true,
+      "top1_plaintext_accuracy": 1.0,
+      "terminals_total": 495,
+      "terminals_valid": 384,
+      "terminals_skipped_invalid_segmentation": 111,
+      "shortlist_seconds": 102.33186161699996,
+      "gpu_screen_seconds": 11.157084571001178,
+      "gpu_refine_seconds": 3.497186941000109,
+      "extension_seconds": 68.00593312099954,
+      "final_seconds": 9.076291323995974
+    },
+    {
+      "board_mode": "vic_profile",
+      "fixture_index": 48,
+      "shortlist_size": 262144,
+      "true_segments_retained": 4,
+      "best_true_coarse_rank": 7,
+      "best_true_board_accuracy": 0.6,
+      "best_true_refined_rank": 1,
+      "best_true_refined_board_accuracy": 0.72,
+      "exact_order_in_terminals": true,
+      "exact_order_extension_rank": 1,
+      "exact_order_final_rank": 1,
+      "top1_exact_order": true,
+      "top1_plaintext_accuracy": 1.0,
+      "terminals_total": 507,
+      "terminals_valid": 391,
+      "terminals_skipped_invalid_segmentation": 116,
+      "shortlist_seconds": 101.21654942900204,
+      "gpu_screen_seconds": 10.831032914000389,
+      "gpu_refine_seconds": 3.365440656998544,
+      "extension_seconds": 66.38023121399601,
+      "final_seconds": 9.069050236001203
+    },
+    {
+      "board_mode": "broad_random",
+      "fixture_index": 45,
+      "shortlist_size": 262144,
+      "true_segments_retained": 2,
+      "best_true_coarse_rank": 4466,
+      "best_true_board_accuracy": 0.08,
+      "best_true_refined_rank": 3089,
+      "best_true_refined_board_accuracy": 0.32,
+      "exact_order_in_terminals": false,
+      "exact_order_extension_rank": null,
+      "exact_order_final_rank": null,
+      "top1_exact_order": false,
+      "top1_plaintext_accuracy": 0.07219251336898395,
+      "terminals_total": 512,
+      "terminals_valid": 307,
+      "terminals_skipped_invalid_segmentation": 205,
+      "shortlist_seconds": 100.96578057900479,
+      "gpu_screen_seconds": 9.330613958998583,
+      "gpu_refine_seconds": 2.90310321799916,
+      "extension_seconds": 72.6164786579975,
+      "final_seconds": 8.110114221002732
+    },
+    {
+      "board_mode": "broad_random",
+      "fixture_index": 49,
+      "shortlist_size": 262144,
+      "true_segments_retained": 11,
+      "best_true_coarse_rank": 76,
+      "best_true_board_accuracy": 0.48,
+      "best_true_refined_rank": 4,
+      "best_true_refined_board_accuracy": 0.72,
+      "exact_order_in_terminals": true,
+      "exact_order_extension_rank": 1,
+      "exact_order_final_rank": 1,
+      "top1_exact_order": true,
+      "top1_plaintext_accuracy": 1.0,
+      "terminals_total": 508,
+      "terminals_valid": 310,
+      "terminals_skipped_invalid_segmentation": 198,
+      "shortlist_seconds": 98.26850618200115,
+      "gpu_screen_seconds": 9.196622258001298,
+      "gpu_refine_seconds": 2.8779073179975967,
+      "extension_seconds": 71.5085052459981,
+      "final_seconds": 8.409823452006094
+    }
+  ],
+  "summary": {
+    "fixtures": 4,
+    "shortlist_retained": 4,
+    "exact_order_in_terminals": 3,
+    "exact_order_top1": 3,
+    "exact_order_top1_rate": 0.75
+  },
+  "wall_seconds": 771.2286723159996
+}

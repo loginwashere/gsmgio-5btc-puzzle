@@ -1,0 +1,311 @@
+{
+  "phase": "484Y",
+  "status": "development_width30_shortlist_batch_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "indices": [
+    19,
+    20,
+    21,
+    22
+  ],
+  "beam_keep": 262144,
+  "depth8_keep": 1048576,
+  "exhaustive_start_depth": 4,
+  "survived_count": 1,
+  "fixture_count": 4,
+  "records": [
+    {
+      "phase": "484Y",
+      "status": "development_width30_shortlist_feasibility_not_frozen",
+      "faed_scored": false,
+      "holdout_consumed": false,
+      "width": 30,
+      "rows": 19,
+      "fixture_index": 19,
+      "beam_keep": 262144,
+      "depth8_keep": 1048576,
+      "exhaustive_start_depth": 4,
+      "exact_profile_fixture": {
+        "fixture_index": 19,
+        "source_start": 10306,
+        "minimum_edit_count": 70,
+        "normalized_quadgram": -4.266746895028686,
+        "plaintext_sha256": "02b73f2da02672925ae7218c97452b2d95cd671d8c9cee6f352ad041ffef53b1",
+        "raw_sha256": "bbfbf754335b5b6d382fb0180e1065d8ee2051e0b607a0d4cdb892d113a30b03",
+        "single_slots": 302,
+        "tokens": 436,
+        "raw_symbols": 570
+      },
+      "survived_depth8": false,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "generated": 657720,
+          "retained": 262144,
+          "generated_true_segments": 27,
+          "generated_best_true_rank": 2112,
+          "true_segments_retained": 22,
+          "best_true_rank": 2112,
+          "selection_seconds": 0.11537644399982128,
+          "expanded_with_duplicates": 13631488,
+          "expansion_seconds": 0.2819909039999402,
+          "gpu_score_seconds": 1.4392036869999174
+        },
+        {
+          "depth": 5,
+          "generated": 9532775,
+          "retained": 262144,
+          "generated_true_segments": 26,
+          "generated_best_true_rank": 22602,
+          "true_segments_retained": 3,
+          "best_true_rank": 22602,
+          "selection_seconds": 1.9400203309999142,
+          "expanded_with_duplicates": 13107200,
+          "expansion_seconds": 0.3037625320000643,
+          "gpu_score_seconds": 1.5696937960001378
+        },
+        {
+          "depth": 6,
+          "generated": 12059764,
+          "retained": 262144,
+          "generated_true_segments": 5,
+          "generated_best_true_rank": 371776,
+          "true_segments_retained": 0,
+          "best_true_rank": null,
+          "selection_seconds": 2.0182503720000113
+        }
+      ],
+      "wall_seconds": 23.350144981000085
+    },
+    {
+      "phase": "484Y",
+      "status": "development_width30_shortlist_feasibility_not_frozen",
+      "faed_scored": false,
+      "holdout_consumed": false,
+      "width": 30,
+      "rows": 19,
+      "fixture_index": 20,
+      "beam_keep": 262144,
+      "depth8_keep": 1048576,
+      "exhaustive_start_depth": 4,
+      "exact_profile_fixture": {
+        "fixture_index": 20,
+        "source_start": 3623,
+        "minimum_edit_count": 78,
+        "normalized_quadgram": -4.269418621590827,
+        "plaintext_sha256": "a39ca1d487265c6aa8223f6158bb82ddfb67dd3025035df663577fe7d892d328",
+        "raw_sha256": "d0c5d4737af65d61272966e7b00497323fde46e75cb82ff7d8b5b281d49254e1",
+        "single_slots": 302,
+        "tokens": 436,
+        "raw_symbols": 570
+      },
+      "survived_depth8": true,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "generated": 657720,
+          "retained": 262144,
+          "generated_true_segments": 27,
+          "generated_best_true_rank": 1467,
+          "true_segments_retained": 26,
+          "best_true_rank": 1467,
+          "selection_seconds": 0.10814398000002257,
+          "expanded_with_duplicates": 13631488,
+          "expansion_seconds": 0.29440040299982684,
+          "gpu_score_seconds": 1.4257422130001487
+        },
+        {
+          "depth": 5,
+          "generated": 9556144,
+          "retained": 262144,
+          "generated_true_segments": 26,
+          "generated_best_true_rank": 6153,
+          "true_segments_retained": 14,
+          "best_true_rank": 6153,
+          "selection_seconds": 1.9723481910000373,
+          "expanded_with_duplicates": 13107200,
+          "expansion_seconds": 0.29588871600003586,
+          "gpu_score_seconds": 1.5627677320001112
+        },
+        {
+          "depth": 6,
+          "generated": 12067941,
+          "retained": 262144,
+          "generated_true_segments": 18,
+          "generated_best_true_rank": 5090,
+          "true_segments_retained": 8,
+          "best_true_rank": 5090,
+          "selection_seconds": 2.014337109000053,
+          "expanded_with_duplicates": 12582912,
+          "expansion_seconds": 0.3067003820001446,
+          "gpu_score_seconds": 1.6141133789999458
+        },
+        {
+          "depth": 7,
+          "generated": 12068991,
+          "retained": 262144,
+          "generated_true_segments": 12,
+          "generated_best_true_rank": 67558,
+          "true_segments_retained": 3,
+          "best_true_rank": 67558,
+          "selection_seconds": 2.034850593000101,
+          "expanded_with_duplicates": 12058624,
+          "expansion_seconds": 0.3156893279999622,
+          "gpu_score_seconds": 1.5232415529999344
+        },
+        {
+          "depth": 8,
+          "generated": 11625949,
+          "retained": 1048576,
+          "generated_true_segments": 5,
+          "generated_best_true_rank": 63323,
+          "true_segments_retained": 1,
+          "best_true_rank": 63323,
+          "selection_seconds": 2.3464968240000417
+        }
+      ],
+      "wall_seconds": 47.31074630400008
+    },
+    {
+      "phase": "484Y",
+      "status": "development_width30_shortlist_feasibility_not_frozen",
+      "faed_scored": false,
+      "holdout_consumed": false,
+      "width": 30,
+      "rows": 19,
+      "fixture_index": 21,
+      "beam_keep": 262144,
+      "depth8_keep": 1048576,
+      "exhaustive_start_depth": 4,
+      "exact_profile_fixture": {
+        "fixture_index": 21,
+        "source_start": 6263,
+        "minimum_edit_count": 78,
+        "normalized_quadgram": -4.223098686607303,
+        "plaintext_sha256": "5dcfa784c7f09510b96fc742f676342c61fe6d94942548033b136804a0e7ad44",
+        "raw_sha256": "65c7cb785330abaa693f44b735cf133f6108060071f55d59262e2c453e156b04",
+        "single_slots": 302,
+        "tokens": 436,
+        "raw_symbols": 570
+      },
+      "survived_depth8": false,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "generated": 657720,
+          "retained": 262144,
+          "generated_true_segments": 27,
+          "generated_best_true_rank": 2951,
+          "true_segments_retained": 25,
+          "best_true_rank": 2951,
+          "selection_seconds": 0.11030515900006321,
+          "expanded_with_duplicates": 13631488,
+          "expansion_seconds": 0.298512546999973,
+          "gpu_score_seconds": 1.4488426269999763
+        },
+        {
+          "depth": 5,
+          "generated": 9542518,
+          "retained": 262144,
+          "generated_true_segments": 26,
+          "generated_best_true_rank": 19468,
+          "true_segments_retained": 4,
+          "best_true_rank": 19468,
+          "selection_seconds": 1.9377870640000765,
+          "expanded_with_duplicates": 13107200,
+          "expansion_seconds": 0.3016897779998544,
+          "gpu_score_seconds": 1.5730518860000302
+        },
+        {
+          "depth": 6,
+          "generated": 12068161,
+          "retained": 262144,
+          "generated_true_segments": 8,
+          "generated_best_true_rank": 272855,
+          "true_segments_retained": 0,
+          "best_true_rank": null,
+          "selection_seconds": 2.0135202310000295
+        }
+      ],
+      "wall_seconds": 23.296396853000033
+    },
+    {
+      "phase": "484Y",
+      "status": "development_width30_shortlist_feasibility_not_frozen",
+      "faed_scored": false,
+      "holdout_consumed": false,
+      "width": 30,
+      "rows": 19,
+      "fixture_index": 22,
+      "beam_keep": 262144,
+      "depth8_keep": 1048576,
+      "exhaustive_start_depth": 4,
+      "exact_profile_fixture": {
+        "fixture_index": 22,
+        "source_start": 9091,
+        "minimum_edit_count": 79,
+        "normalized_quadgram": -4.320759174243402,
+        "plaintext_sha256": "fc5c65d22dce31be028ac3e6a0697292b9beb5f068a111da87b43cca0ffef9e5",
+        "raw_sha256": "b8f4beb78384595bfb96317188ca0612d8ab8d6f280d245e0ecac360f2a056ff",
+        "single_slots": 302,
+        "tokens": 436,
+        "raw_symbols": 570
+      },
+      "survived_depth8": false,
+      "depth_diagnostics": [
+        {
+          "depth": 4,
+          "generated": 657720,
+          "retained": 262144,
+          "generated_true_segments": 27,
+          "generated_best_true_rank": 25,
+          "true_segments_retained": 21,
+          "best_true_rank": 25,
+          "selection_seconds": 0.10211731499998677,
+          "expanded_with_duplicates": 13631488,
+          "expansion_seconds": 0.2844245950000186,
+          "gpu_score_seconds": 1.4300221599999077
+        },
+        {
+          "depth": 5,
+          "generated": 9551475,
+          "retained": 262144,
+          "generated_true_segments": 24,
+          "generated_best_true_rank": 6032,
+          "true_segments_retained": 4,
+          "best_true_rank": 6032,
+          "selection_seconds": 1.9877788549999877,
+          "expanded_with_duplicates": 13107200,
+          "expansion_seconds": 0.30354942899998605,
+          "gpu_score_seconds": 1.570443381000132
+        },
+        {
+          "depth": 6,
+          "generated": 12038668,
+          "retained": 262144,
+          "generated_true_segments": 6,
+          "generated_best_true_rank": 55156,
+          "true_segments_retained": 1,
+          "best_true_rank": 55156,
+          "selection_seconds": 2.0245774320001146,
+          "expanded_with_duplicates": 12582912,
+          "expansion_seconds": 0.3090489329999855,
+          "gpu_score_seconds": 1.5699265100001867
+        },
+        {
+          "depth": 7,
+          "generated": 12101659,
+          "retained": 262144,
+          "generated_true_segments": 2,
+          "generated_best_true_rank": 1332984,
+          "true_segments_retained": 0,
+          "best_true_rank": null,
+          "selection_seconds": 2.019785779999893
+        }
+      ],
+      "wall_seconds": 35.24727365400008
+    }
+  ],
+  "wall_seconds_excluding_shared_training": 137.26846361999992
+}

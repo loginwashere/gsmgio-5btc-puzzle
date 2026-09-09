@@ -1,0 +1,173 @@
+{
+  "matched_target_count": 0,
+  "matches": [],
+  "novel_target_count": 8,
+  "oracle_calls": 0,
+  "purpose": "historical exact-byte novelty comparison only; no oracle",
+  "sources": {
+    "P265": {
+      "matched_materials": 0,
+      "unique_materials": 105
+    },
+    "P266": {
+      "matched_materials": 0,
+      "unique_materials": 119
+    },
+    "P267": {
+      "matched_materials": 0,
+      "unique_materials": 2196
+    },
+    "P268-P269": {
+      "matched_materials": 0,
+      "unique_materials": 1362
+    },
+    "P270": {
+      "matched_materials": 0,
+      "unique_materials": 50
+    },
+    "P314": {
+      "matched_materials": 0,
+      "unique_materials": 72
+    },
+    "P317": {
+      "matched_materials": 0,
+      "unique_materials": 10080
+    },
+    "P341_calibration_nonquery": {
+      "matched_materials": 0,
+      "unique_materials": 60
+    },
+    "P370_nonquery_manifest": {
+      "matched_materials": 0,
+      "unique_materials": 4
+    },
+    "P416_evaluated": {
+      "matched_materials": 0,
+      "unique_materials": 8
+    },
+    "P421_evaluated": {
+      "matched_materials": 0,
+      "unique_materials": 16
+    },
+    "P421_submitted_candidate_superset": {
+      "matched_materials": 0,
+      "unique_materials": 27
+    },
+    "P478_manifest": {
+      "candidate_records": 1749878,
+      "eligible_records": 1749878,
+      "matched_materials": 0
+    },
+    "V2_full_normalized": {
+      "matched_materials": 0,
+      "unique_materials": 14272
+    },
+    "historical_648_normalized": {
+      "matched_materials": 0,
+      "unique_materials": 14551
+    },
+    "historical_Tier1_normalized": {
+      "matched_materials": 0,
+      "unique_materials": 525436
+    }
+  },
+  "target_count": 8,
+  "targets": [
+    {
+      "historical_match": false,
+      "labels": [
+        {
+          "construction": "prize_then_halving",
+          "level": "preimage"
+        }
+      ],
+      "length": 68,
+      "material_b64": "MUdTTUcxSkM5d3RkU3dmd0FwZ2oyeGNtSlBBd3g3cHJCZTE3dWN5MUs5WlVBYW9ZNkpWdE05MzJXOWpVcDVMWGZ5SGE=",
+      "sha256": "b722589468b365719e286782160cde8cc9adb638307e900d8a4c2cb3560f7bfc"
+    },
+    {
+      "historical_match": false,
+      "labels": [
+        {
+          "construction": "prize_then_halving",
+          "level": "sha256_hex_password"
+        }
+      ],
+      "length": 64,
+      "material_b64": "YjcyMjU4OTQ2OGIzNjU3MTllMjg2NzgyMTYwY2RlOGNjOWFkYjYzODMwN2U5MDBkOGE0YzJjYjM1NjBmN2JmYw==",
+      "sha256": "b39bca3d90710a72f35d2dba5e8bf1a72c07d1e3a3b3a896c2d88667e5799a37"
+    },
+    {
+      "historical_match": false,
+      "labels": [
+        {
+          "construction": "halving_then_prize",
+          "level": "preimage"
+        }
+      ],
+      "length": 68,
+      "material_b64": "MTd1Y3kxSzlaVUFhb1k2SlZ0TTkzMlc5alVwNUxYZnlIYTFHU01HMUpDOXd0ZFN3ZndBcGdqMnhjbUpQQXd4N3ByQmU=",
+      "sha256": "0b64421bf679e5fa3b3b7d40095bac5d2e11222879d8575dda53180f9996b7f4"
+    },
+    {
+      "historical_match": false,
+      "labels": [
+        {
+          "construction": "halving_then_prize",
+          "level": "sha256_hex_password"
+        }
+      ],
+      "length": 64,
+      "material_b64": "MGI2NDQyMWJmNjc5ZTVmYTNiM2I3ZDQwMDk1YmFjNWQyZTExMjIyODc5ZDg1NzVkZGE1MzE4MGY5OTk2YjdmNA==",
+      "sha256": "8a0ae57a54f75994e7010da06837bb5509cbec738c2d64faddd069c72397af80"
+    },
+    {
+      "historical_match": false,
+      "labels": [
+        {
+          "construction": "banner_prize_halving",
+          "level": "preimage"
+        }
+      ],
+      "length": 93,
+      "material_b64": "R1NNR0lPNUJUQ1BVWlpMRUNIQUxMRU5HRTFHU01HMUpDOXd0ZFN3ZndBcGdqMnhjbUpQQXd4N3ByQmUxN3VjeTFLOVpVQWFvWTZKVnRNOTMyVzlqVXA1TFhmeUhh",
+      "sha256": "b2cdc607a96025490365633edf76959e543445e5b2c03a031bfec166b30cfa2e"
+    },
+    {
+      "historical_match": false,
+      "labels": [
+        {
+          "construction": "banner_prize_halving",
+          "level": "sha256_hex_password"
+        }
+      ],
+      "length": 64,
+      "material_b64": "YjJjZGM2MDdhOTYwMjU0OTAzNjU2MzNlZGY3Njk1OWU1NDM0NDVlNWIyYzAzYTAzMWJmZWMxNjZiMzBjZmEyZQ==",
+      "sha256": "1200bb7f1ee51f2d06f0e6fa31d4f6de044e96f2c00dd27c9eeaa020e2322de0"
+    },
+    {
+      "historical_match": false,
+      "labels": [
+        {
+          "construction": "banner_halving_prize",
+          "level": "preimage"
+        }
+      ],
+      "length": 93,
+      "material_b64": "R1NNR0lPNUJUQ1BVWlpMRUNIQUxMRU5HRTE3dWN5MUs5WlVBYW9ZNkpWdE05MzJXOWpVcDVMWGZ5SGExR1NNRzFKQzl3dGRTd2Z3QXBnajJ4Y21KUEF3eDdwckJl",
+      "sha256": "5077a855bcd2e51f2ee1796896d9f778fa509d7cd15e5abdd30aeecf6497225d"
+    },
+    {
+      "historical_match": false,
+      "labels": [
+        {
+          "construction": "banner_halving_prize",
+          "level": "sha256_hex_password"
+        }
+      ],
+      "length": 64,
+      "material_b64": "NTA3N2E4NTViY2QyZTUxZjJlZTE3OTY4OTZkOWY3NzhmYTUwOWQ3Y2QxNWU1YWJkZDMwYWVlY2Y2NDk3MjI1ZA==",
+      "sha256": "d6bcc817b6e24688b4f6fbb6d2b13621e6e53e0c15c576abe5cd6ca10268c663"
+    }
+  ]
+}

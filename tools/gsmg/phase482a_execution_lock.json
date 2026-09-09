@@ -1,0 +1,161 @@
+{
+  "escape_pair": [
+    "g",
+    "i"
+  ],
+  "files_sha256": {
+    "audit_script": "36ef1cefbc2af9b1b39e00a5bab0c361be48d0aba267e806dd5f49ff7510ae0a",
+    "book_transcription": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "cb_common": "97e787a8be234b7ba5b7b8e0c1ba1abe0f8c61f480e5628da7883ef30db84de8",
+    "data": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "matrix_scene": "c90e0dcef0ed5c0beee47240a0be4b6a4f991b9135a7e1f6a04d92036352eb38",
+    "p32_sibling": "9701a2ed8879182312cbb9519a8849b3e423dd160601a5ecc44ffbb710afefcf",
+    "phase410": "e857eebbb14e0a3646409bcadaa5ef148b11fb59f8e5fdd124aec939b5b0e9eb",
+    "protocol": "06d598a8b1da9cc1fc3a95a299a67504808c0474860dfe54bba020bfb6580bd2",
+    "readme": "442270a145641d6f75337bf0e12338889d22f029dc613d13f0a4d651875dae6a",
+    "segmenter": "e6973edbb971d5ec970c0f4ea740f403372425e76886a88c536ad7ddde37b574",
+    "verifier": "d2cb3ee1444158ed4cf8d1346bb3f0abc2e184dac7935d538b2783ae6bacdf62",
+    "wayback_phase23": "647744a2957219a4084ede994719124e7445bab1dfdeb68258fbeff2615a8d43"
+  },
+  "lanes": [
+    "ji_merged",
+    "raw_az_25_present"
+  ],
+  "match_rule": "exact equality of all sorted positive symbol counts",
+  "near_matches_promote": false,
+  "phase": 482,
+  "raw_length": 570,
+  "source_manifest": [
+    {
+      "extracted_sha256": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+      "lanes": {
+        "ji_merged": {
+          "length": 440,
+          "sha256": "903eb84f11b666caa962acb99f392b8f63e1c5780c3a2d1710840777148e7609",
+          "window_count": 5
+        },
+        "raw_az_25_present": {
+          "length": 440,
+          "sha256": "9e69110caa5fabee03aa3b3f28fac8a0696ecfd72745b88f0fdbfd1c4133038c",
+          "window_count": 5
+        }
+      },
+      "name": "phase2_plaintext",
+      "tier": "puzzle_native"
+    },
+    {
+      "extracted_sha256": "c4ad94559a44a927c1032cc0e024515f9510a0806a2d14458dbf4a360af9865f",
+      "lanes": {
+        "ji_merged": {
+          "length": 3174,
+          "sha256": "01b065ec76458f3f4e978245b617180c435371a86adccdfc6d12c1c70f62230f",
+          "window_count": 2739
+        },
+        "raw_az_25_present": {
+          "length": 3174,
+          "sha256": "4af9e4cbc487426f98da97b995c4af9d4a89f132dfedcc62cc0ff999c3c49966",
+          "window_count": 2739
+        }
+      },
+      "name": "phase3_plaintext",
+      "tier": "puzzle_native"
+    },
+    {
+      "extracted_sha256": "f239146fc498720cb2c776be6f72dcc6c2c4eebc6ff1dca5684d1715eeee972f",
+      "lanes": {
+        "ji_merged": {
+          "length": 455,
+          "sha256": "937212dad7f39a81962e65bc617afdc1f1022a9e41ce367cbb03d72bfadd0826",
+          "window_count": 20
+        },
+        "raw_az_25_present": {
+          "length": 455,
+          "sha256": "937212dad7f39a81962e65bc617afdc1f1022a9e41ce367cbb03d72bfadd0826",
+          "window_count": 20
+        }
+      },
+      "name": "phase32_pre_p32_plaintext",
+      "tier": "puzzle_native"
+    },
+    {
+      "extracted_sha256": "56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241",
+      "lanes": {
+        "ji_merged": {
+          "length": 1539,
+          "sha256": "5c3cafeb80cf0cb6500c340e530b40f8c8a97e10a1f2126d55f6048126d433af",
+          "window_count": 1104
+        },
+        "raw_az_25_present": {
+          "length": 1539,
+          "sha256": "56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241",
+          "window_count": 1104
+        }
+      },
+      "name": "phase321_architect_answer",
+      "tier": "puzzle_native"
+    },
+    {
+      "extracted_sha256": "167a7e20028f0eae6089e5e9731c4ac25d86e36f646a2097105e88d1eb75a6d2",
+      "lanes": {
+        "ji_merged": {
+          "length": 6053,
+          "sha256": "2c5b92c67e8f851fd4a6d6b02c0faeb6fa1c4d4805b71dccfaca6340950c47e4",
+          "window_count": 5618
+        },
+        "raw_az_25_present": {
+          "length": 6053,
+          "sha256": "c55bb1c4f5283d1d387ae64b7dbf445c6052ae255e89dd214c6ec8a219da8751",
+          "window_count": 5618
+        }
+      },
+      "name": "matrix_architect_scene",
+      "tier": "referenced_text"
+    },
+    {
+      "extracted_sha256": "3d658b3c8c41cf99f997fce7933180e9aac41b87a9bd48517e04fd7325a5c9f6",
+      "lanes": {
+        "ji_merged": {
+          "length": 56292,
+          "sha256": "926eaa4cdc62136b5dcbc0e70954a3b043b6ac1e0110dd98d621c3a568f16243",
+          "window_count": 55857
+        },
+        "raw_az_25_present": {
+          "length": 56292,
+          "sha256": "a3134e870343264eb3ee69bedbc6cd0ffece61733655873181dfda1a89dcbddd",
+          "window_count": 55857
+        }
+      },
+      "name": "cosmic_duality_book_prose",
+      "tier": "book"
+    }
+  ],
+  "status": "locked-before-real-scan",
+  "target_signature": [
+    54,
+    45,
+    45,
+    42,
+    40,
+    38,
+    38,
+    21,
+    11,
+    10,
+    10,
+    10,
+    9,
+    8,
+    8,
+    7,
+    6,
+    5,
+    5,
+    5,
+    5,
+    4,
+    4,
+    4,
+    2
+  ],
+  "window": 436
+}

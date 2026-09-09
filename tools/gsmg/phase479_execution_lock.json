@@ -1,0 +1,57 @@
+{
+  "alignments": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "authenticated_targets": {
+    "4bc468447fe1b048ad030a2f9a125478eabc4ed6": "HALVING_ADDRESS",
+    "a9553269572a317e39f0f518cb87c1a0ee1dbae4": "PRIZE_ADDRESS"
+  },
+  "candidate_count": 648,
+  "candidate_digest": "2d233645ef49a141",
+  "coincurve_version": "21.0.0",
+  "crypto_profile": "legacy-evp-bytes-to-key-sha256/aes-256-cbc/nopad",
+  "cryptography_version": "41.0.7",
+  "derived_targets": {
+    "286301cde59820851fe92a3a9be4f76f6c3ebff8": "2P / double / compressed",
+    "3de34fca1bd6b7607243b0316a8102b7598cc9dc": "P/2 / half / uncompressed",
+    "5043bb64b25d3fe6a7a6949ff98f98b26dcd2fa7": "P/2 / half / compressed",
+    "9570962eadf45c422a2e59ddb9a1d87040ca5907": "P-G / k-1 / compressed",
+    "9eb2e43005af77783e41ea702cf3ec3585fcd73d": "P+G / k+1 / compressed",
+    "a4ae210a25bb8e2c359a134fafc2e30c6709dbc0": "P-G / k-1 / uncompressed",
+    "c889dfbf698413209b6131895250b869f68560e0": "2P / double / uncompressed",
+    "f8fca692ffc90cba0c330dc56e02fa8da8d2d6e6": "P+G / k+1 / uncompressed"
+  },
+  "files_sha256": {
+    "audit_script": "bc91a5c24030dc76275fde5c58defebd1f71b737141969ff710743b8efd6c87c",
+    "binary_key_material_backfill": "2d930bea3a8dabbc6e390d56e8c019ed968dbe301502fbbb4928f075aa9a8b02",
+    "cb_common": "97e787a8be234b7ba5b7b8e0c1ba1abe0f8c61f480e5628da7883ef30db84de8",
+    "data": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "extended_cipher_recheck": "ffb5cd2a3706d1a0100eec358715028558302ab53682ca44ff8c1038e0c3642d",
+    "first_hint_hash_audit": "b2550aeb39c2e16bf971401e9bafdb3c623fa9ad18f023227aaa7c2d828fec0d",
+    "half_better_half_algebra_audit": "b89b4edf7ade17dfa3ae73e952f30990da6602824e392c137214a8ec417021fc",
+    "key_shape_classifier": "cb022fc37abb07eccc7602993df9d3b7c1e09053e3de06a34dab89e390868200",
+    "protocol": "48d11f9b605eb436661a78da4d7d8a4d66f6d64c01a00264d1b65bf9b107361e",
+    "raw_key_chunk_audit": "9f658ac2e32e052550c3175c9a333a1d5dd661093d6f324810dffdb85c0d64d6"
+  },
+  "keystring_count": 14551,
+  "p32_ciphertext_sha256": "cbbf945223b0c7a60e31b6ba7f5dfbc17f68f545bec059e937c11e7465d0117b",
+  "p32_salt_hex": "b45a5e3d827593ca",
+  "phase": 479,
+  "status": "locked-before-real-run"
+}

@@ -1,0 +1,4 @@
+switch_stage {'after_invariant_selection': {'candidate_count': 1048576, 'true_segments': 2, 'best_true_rank': 393204}, 'board_objective_before_selection': {'candidate_count': 1048576, 'true_segments': 2, 'best_true_rank': 499424}, 'after_board_selection': {'candidate_count': 262144, 'true_segments': 0, 'best_true_rank': None}, 'board_screen_seconds': 12.191498893000244}
+next_stage None
+survived_switch_depth False survived_next_depth False
+wall 31.779 wrote /home/loginwashere/projects/gsmgio-5btc-puzzle/tools/gsmg/phase484ah_width30_early_switch_i19_sd6.json

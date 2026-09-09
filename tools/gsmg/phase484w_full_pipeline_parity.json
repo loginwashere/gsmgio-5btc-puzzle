@@ -1,0 +1,77 @@
+{
+  "phase": "484W",
+  "status": "full_pipeline_parity_complete",
+  "reference": "tools/gsmg/phase484q_capacity_broad_random_i51_e256.json",
+  "reference_sha256": "506937a48e325a77486b1fe6023bc9495e8892d2c406555959276d5f1097438d",
+  "persistent_binary_sha256": "7eef86d9fd1e793f6ae1e4d85a9a40b67f91f2fb973295425b6d8a2a1c881d3e",
+  "comparison_self_test": true,
+  "fixture": {
+    "board_mode": "broad_random",
+    "index": 51
+  },
+  "capacity": {
+    "shortlist": 262144,
+    "refine_keep": 8192,
+    "extend_seeds": 256,
+    "extend_workers": 8
+  },
+  "persistent_timings": {
+    "shortlist_seconds": 94.4326478120056,
+    "gpu_screen_seconds": 9.33438235797803,
+    "gpu_refine_seconds": 2.9042356940044556,
+    "extension_seconds": 34.9375790769991,
+    "final_seconds": 8.433107634016778,
+    "wall_seconds": 150.61974651899072
+  },
+  "reference_extension_seconds": 273.95693017699523,
+  "extension_speedup_vs_serial_reference": 7.841325512944678,
+  "scalar_equal": {
+    "true_segments_retained": true,
+    "best_true_coarse_rank": true,
+    "best_true_board_accuracy": true,
+    "best_true_refined_rank": true,
+    "best_true_refined_board_accuracy": true,
+    "exact_order_in_terminals": true,
+    "exact_order_extension_rank": true,
+    "exact_order_final_rank": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": true,
+    "top1_final_normalized_score": true,
+    "terminals_total": true,
+    "terminals_valid": true,
+    "terminals_skipped_invalid_segmentation": true
+  },
+  "large_field_hashes": {
+    "true_records": {
+      "reference": "c9a7186f9aa1571f55e63799c701294cd546b1e726a76f20eb22a2380bfa8016",
+      "persistent": "c9a7186f9aa1571f55e63799c701294cd546b1e726a76f20eb22a2380bfa8016",
+      "equal": true
+    },
+    "refined_population": {
+      "reference": "65390ce01dddebc364436cea226e37e73173b18204f5bf78905a9ba2e172f165",
+      "persistent": "65390ce01dddebc364436cea226e37e73173b18204f5bf78905a9ba2e172f165",
+      "equal": true
+    },
+    "terminal_orders": {
+      "reference": "354dcf9a9b6da12f8c07be37a095db89207f8664e930a5c1358dac673408b05b",
+      "persistent": "354dcf9a9b6da12f8c07be37a095db89207f8664e930a5c1358dac673408b05b",
+      "equal": true
+    },
+    "final_candidates": {
+      "reference": "9c941f84c4223cb3b182413118d9dee04d66748d5677604c3d96e6918fffa070",
+      "persistent": "9c941f84c4223cb3b182413118d9dee04d66748d5677604c3d96e6918fffa070",
+      "equal": true
+    },
+    "skipped_terminals": {
+      "reference": "6ec876ed3a2fb43adc0fb8862ec73a727d193280bde699c3bcab9871a2f75fc3",
+      "persistent": "6ec876ed3a2fb43adc0fb8862ec73a727d193280bde699c3bcab9871a2f75fc3",
+      "equal": true
+    },
+    "extension_diagnostics": {
+      "reference": "5f0f0162d19caa844eda1a727e6f61cbfd456ab3b06f7d17460a5695004be243",
+      "persistent": "5f0f0162d19caa844eda1a727e6f61cbfd456ab3b06f7d17460a5695004be243",
+      "equal": true
+    }
+  },
+  "exact_parity": true
+}

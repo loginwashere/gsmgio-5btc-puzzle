@@ -1,0 +1,42 @@
+{
+  "phase": "484X",
+  "status": "development_fixed_budget_shortlist_ensemble_probe",
+  "fixture_index": 14,
+  "total_keep": 262144,
+  "model_count": 2,
+  "models": [
+    {
+      "train_indices": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "keep": 131072,
+      "beam_size": 131072,
+      "beam_path_set_sha256": "87dbfba90d2d091674df504b03bafd1fe281033a7421dc8339533a11169e9864",
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null
+    },
+    {
+      "train_indices": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "keep": 131072,
+      "beam_size": 131072,
+      "beam_path_set_sha256": "37b23babb92e4e1410ca1e955dcd21a7af74b1c6fb5ace858a3bffe0159b1a09",
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null
+    }
+  ],
+  "union_size": 198712,
+  "union_path_set_sha256": "10bba10116f6d4dd40be468734ebdcd3185037612b90bc46d2426df84d66cc85",
+  "union_true_segment_count_retained": 0,
+  "union_retains_truth": false,
+  "wall_seconds": 110.73239977800404
+}

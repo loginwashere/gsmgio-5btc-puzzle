@@ -1,0 +1,6449 @@
+{
+  "phase": "484AA",
+  "status": "development_width30_board_stability_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_index": 15,
+  "width": 30,
+  "depth": 8,
+  "pair": [
+    "g",
+    "i"
+  ],
+  "pool_sha256": "d1947420c036700d827e8a972039587ca325d3aad2c29bb981d696c00932df7d",
+  "pool_size": 423,
+  "true_count": 23,
+  "hard_negative_count": 400,
+  "pool_metadata": {
+    "shortlist_size": 1048576,
+    "true_paths_present_in_shortlist": 0,
+    "hard_count": 400,
+    "hard_selection_restarts": 1,
+    "hard_selection_iterations": 2000,
+    "hard_selection_seed": 1212850433,
+    "hard_selection_best_score": -4.174963884505033,
+    "hard_selection_worst_score": -4.340214075764747
+  },
+  "stability_restarts": 8,
+  "stability_iterations": 2000,
+  "stability_seed": 1212850689,
+  "seed_scheme": "CUDA path_seed_v1",
+  "raw_full_row_score": {
+    "true_scores": [
+      -4.684229196968112,
+      -4.306749587270158,
+      -4.488216347505213,
+      -4.677113976046226,
+      -4.725507517748073,
+      -4.511775728603198,
+      -4.675906337748132,
+      -4.564847384692495,
+      -4.825261741325559,
+      -4.7011426478510225,
+      -4.640729710473398,
+      -4.53073270530318,
+      -4.781971787175899,
+      -4.596388328355197,
+      -4.65870323584264,
+      -4.4957542773261565,
+      -4.656022338824619,
+      -4.695500580857176,
+      -4.572499963833605,
+      -4.445781365496027,
+      -4.444678954254153,
+      -4.474859905024159,
+      -4.5762853970587045
+    ],
+    "background_mean": -4.422176734748979,
+    "background_std_ddof0": 0.10174187484231027,
+    "background_max": -4.186698524211298,
+    "best_true_rank": 51,
+    "worst_true_rank": 423,
+    "mean_beaten_by_background": 343.0,
+    "median_beaten_by_background": 376.0,
+    "effect_true_mean_minus_background_mean_over_background_sd": -1.7181562666554457
+  },
+  "weighted_board_agreement": {
+    "true_scores": [
+      0.16770186335403728,
+      0.15037593984962405,
+      0.1457270408163265,
+      0.12698412698412698,
+      0.09924146649810366,
+      0.09584859584859586,
+      0.14097744360902256,
+      0.1760204081632653,
+      0.13456632653061223,
+      0.11925465838509318,
+      0.13850931677018635,
+      0.09375,
+      0.20195954487989884,
+      0.1231527093596059,
+      0.14254926108374383,
+      0.18250605326876515,
+      0.11172161172161174,
+      0.17564935064935064,
+      0.10310559006211181,
+      0.19068877551020408,
+      0.1201863354037267,
+      0.17002442002442,
+      0.11739130434782608
+    ],
+    "background_mean": 0.1561505220993396,
+    "background_std_ddof0": 0.057063753657890556,
+    "background_max": 0.418778801843318,
+    "best_true_rank": 68,
+    "worst_true_rank": 398,
+    "mean_beaten_by_background": 222.17391304347825,
+    "median_beaten_by_background": 214.0,
+    "effect_true_mean_minus_background_mean_over_background_sd": -0.2770127169815307
+  },
+  "per_candidate": [
+    {
+      "path": [
+        0,
+        5,
+        9,
+        15,
+        27,
+        22,
+        7,
+        29
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.684229196968112,
+      "weighted_board_agreement": 0.16770186335403728
+    },
+    {
+      "path": [
+        1,
+        3,
+        21,
+        14,
+        26,
+        0,
+        5,
+        9
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.306749587270158,
+      "weighted_board_agreement": 0.15037593984962405
+    },
+    {
+      "path": [
+        2,
+        24,
+        16,
+        20,
+        10,
+        28,
+        4,
+        19
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.488216347505213,
+      "weighted_board_agreement": 0.1457270408163265
+    },
+    {
+      "path": [
+        3,
+        21,
+        14,
+        26,
+        0,
+        5,
+        9,
+        15
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.677113976046226,
+      "weighted_board_agreement": 0.12698412698412698
+    },
+    {
+      "path": [
+        5,
+        9,
+        15,
+        27,
+        22,
+        7,
+        29,
+        2
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.725507517748073,
+      "weighted_board_agreement": 0.09924146649810366
+    },
+    {
+      "path": [
+        6,
+        13,
+        17,
+        11,
+        1,
+        3,
+        21,
+        14
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.511775728603198,
+      "weighted_board_agreement": 0.09584859584859586
+    },
+    {
+      "path": [
+        7,
+        29,
+        2,
+        24,
+        16,
+        20,
+        10,
+        28
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.675906337748132,
+      "weighted_board_agreement": 0.14097744360902256
+    },
+    {
+      "path": [
+        8,
+        6,
+        13,
+        17,
+        11,
+        1,
+        3,
+        21
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.564847384692495,
+      "weighted_board_agreement": 0.1760204081632653
+    },
+    {
+      "path": [
+        9,
+        15,
+        27,
+        22,
+        7,
+        29,
+        2,
+        24
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.825261741325559,
+      "weighted_board_agreement": 0.13456632653061223
+    },
+    {
+      "path": [
+        11,
+        1,
+        3,
+        21,
+        14,
+        26,
+        0,
+        5
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.7011426478510225,
+      "weighted_board_agreement": 0.11925465838509318
+    },
+    {
+      "path": [
+        13,
+        17,
+        11,
+        1,
+        3,
+        21,
+        14,
+        26
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.640729710473398,
+      "weighted_board_agreement": 0.13850931677018635
+    },
+    {
+      "path": [
+        14,
+        26,
+        0,
+        5,
+        9,
+        15,
+        27,
+        22
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.53073270530318,
+      "weighted_board_agreement": 0.09375
+    },
+    {
+      "path": [
+        15,
+        27,
+        22,
+        7,
+        29,
+        2,
+        24,
+        16
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.781971787175899,
+      "weighted_board_agreement": 0.20195954487989884
+    },
+    {
+      "path": [
+        16,
+        20,
+        10,
+        28,
+        4,
+        19,
+        23,
+        18
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.596388328355197,
+      "weighted_board_agreement": 0.1231527093596059
+    },
+    {
+      "path": [
+        17,
+        11,
+        1,
+        3,
+        21,
+        14,
+        26,
+        0
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.65870323584264,
+      "weighted_board_agreement": 0.14254926108374383
+    },
+    {
+      "path": [
+        20,
+        10,
+        28,
+        4,
+        19,
+        23,
+        18,
+        12
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.4957542773261565,
+      "weighted_board_agreement": 0.18250605326876515
+    },
+    {
+      "path": [
+        21,
+        14,
+        26,
+        0,
+        5,
+        9,
+        15,
+        27
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.656022338824619,
+      "weighted_board_agreement": 0.11172161172161174
+    },
+    {
+      "path": [
+        22,
+        7,
+        29,
+        2,
+        24,
+        16,
+        20,
+        10
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.695500580857176,
+      "weighted_board_agreement": 0.17564935064935064
+    },
+    {
+      "path": [
+        24,
+        16,
+        20,
+        10,
+        28,
+        4,
+        19,
+        23
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.572499963833605,
+      "weighted_board_agreement": 0.10310559006211181
+    },
+    {
+      "path": [
+        25,
+        8,
+        6,
+        13,
+        17,
+        11,
+        1,
+        3
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.445781365496027,
+      "weighted_board_agreement": 0.19068877551020408
+    },
+    {
+      "path": [
+        26,
+        0,
+        5,
+        9,
+        15,
+        27,
+        22,
+        7
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.444678954254153,
+      "weighted_board_agreement": 0.1201863354037267
+    },
+    {
+      "path": [
+        27,
+        22,
+        7,
+        29,
+        2,
+        24,
+        16,
+        20
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.474859905024159,
+      "weighted_board_agreement": 0.17002442002442
+    },
+    {
+      "path": [
+        29,
+        2,
+        24,
+        16,
+        20,
+        10,
+        28,
+        4
+      ],
+      "is_true": true,
+      "best_full_row_score": -4.5762853970587045,
+      "weighted_board_agreement": 0.11739130434782608
+    },
+    {
+      "path": [
+        10,
+        20,
+        21,
+        3,
+        12,
+        18,
+        14,
+        19
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.300668559862292,
+      "weighted_board_agreement": 0.14839901477832512
+    },
+    {
+      "path": [
+        9,
+        24,
+        27,
+        20,
+        10,
+        8,
+        12,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.612978790862185,
+      "weighted_board_agreement": 0.07701863354037265
+    },
+    {
+      "path": [
+        6,
+        23,
+        9,
+        21,
+        3,
+        22,
+        10,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4628609387229385,
+      "weighted_board_agreement": 0.11915024630541869
+    },
+    {
+      "path": [
+        17,
+        24,
+        28,
+        16,
+        20,
+        11,
+        9,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.198928766325688,
+      "weighted_board_agreement": 0.28043478260869564
+    },
+    {
+      "path": [
+        19,
+        5,
+        11,
+        9,
+        10,
+        27,
+        14,
+        0
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4961737049821835,
+      "weighted_board_agreement": 0.14348925410872315
+    },
+    {
+      "path": [
+        5,
+        28,
+        16,
+        12,
+        17,
+        24,
+        9,
+        22
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.343622557879104,
+      "weighted_board_agreement": 0.1084070796460177
+    },
+    {
+      "path": [
+        24,
+        16,
+        20,
+        3,
+        23,
+        14,
+        18,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.418067588417287,
+      "weighted_board_agreement": 0.1703069657615112
+    },
+    {
+      "path": [
+        23,
+        15,
+        0,
+        27,
+        14,
+        26,
+        16,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.270088613366804,
+      "weighted_board_agreement": 0.2653061224489796
+    },
+    {
+      "path": [
+        20,
+        21,
+        3,
+        12,
+        18,
+        14,
+        27,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4463041427196766,
+      "weighted_board_agreement": 0.2193452380952381
+    },
+    {
+      "path": [
+        3,
+        22,
+        13,
+        16,
+        24,
+        21,
+        23,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.498880463711569,
+      "weighted_board_agreement": 0.13847117794486216
+    },
+    {
+      "path": [
+        29,
+        23,
+        9,
+        21,
+        3,
+        22,
+        13,
+        14
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.223946516287508,
+      "weighted_board_agreement": 0.1529377880184332
+    },
+    {
+      "path": [
+        18,
+        24,
+        27,
+        21,
+        6,
+        28,
+        10,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5245696122525985,
+      "weighted_board_agreement": 0.10960591133004927
+    },
+    {
+      "path": [
+        16,
+        20,
+        24,
+        27,
+        21,
+        6,
+        28,
+        19
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.621793863830771,
+      "weighted_board_agreement": 0.12763975155279503
+    },
+    {
+      "path": [
+        9,
+        21,
+        24,
+        16,
+        13,
+        5,
+        0,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.526834070991129,
+      "weighted_board_agreement": 0.11883116883116883
+    },
+    {
+      "path": [
+        9,
+        21,
+        8,
+        24,
+        20,
+        27,
+        0,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.422897269753462,
+      "weighted_board_agreement": 0.2051282051282051
+    },
+    {
+      "path": [
+        15,
+        29,
+        3,
+        22,
+        13,
+        16,
+        24,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.257315218633089,
+      "weighted_board_agreement": 0.10310559006211181
+    },
+    {
+      "path": [
+        23,
+        3,
+        22,
+        13,
+        16,
+        24,
+        21,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.344212757656183,
+      "weighted_board_agreement": 0.2988721804511278
+    },
+    {
+      "path": [
+        11,
+        1,
+        8,
+        18,
+        6,
+        3,
+        0,
+        20
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.328510497456171,
+      "weighted_board_agreement": 0.2877976190476191
+    },
+    {
+      "path": [
+        0,
+        5,
+        11,
+        9,
+        2,
+        23,
+        15,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.351820910122195,
+      "weighted_board_agreement": 0.1605562579013906
+    },
+    {
+      "path": [
+        6,
+        23,
+        9,
+        11,
+        5,
+        21,
+        2,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.536190357393938,
+      "weighted_board_agreement": 0.11466165413533834
+    },
+    {
+      "path": [
+        23,
+        15,
+        0,
+        27,
+        1,
+        24,
+        9,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.455775235722649,
+      "weighted_board_agreement": 0.17980295566502466
+    },
+    {
+      "path": [
+        12,
+        7,
+        1,
+        0,
+        26,
+        20,
+        27,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.26028839827575,
+      "weighted_board_agreement": 0.15606242496998798
+    },
+    {
+      "path": [
+        6,
+        21,
+        27,
+        24,
+        14,
+        17,
+        8,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.356899879078855,
+      "weighted_board_agreement": 0.1798701298701299
+    },
+    {
+      "path": [
+        10,
+        20,
+        21,
+        3,
+        12,
+        18,
+        14,
+        13
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.384545452346014,
+      "weighted_board_agreement": 0.11652542372881355
+    },
+    {
+      "path": [
+        21,
+        9,
+        13,
+        14,
+        27,
+        24,
+        20,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.287130627170515,
+      "weighted_board_agreement": 0.12515262515262512
+    },
+    {
+      "path": [
+        29,
+        3,
+        22,
+        13,
+        16,
+        24,
+        27,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.262355045312824,
+      "weighted_board_agreement": 0.293040293040293
+    },
+    {
+      "path": [
+        11,
+        17,
+        8,
+        24,
+        20,
+        0,
+        3,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.349447230781534,
+      "weighted_board_agreement": 0.10406403940886699
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        22,
+        3,
+        14,
+        18
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.352851102249749,
+      "weighted_board_agreement": 0.16558441558441558
+    },
+    {
+      "path": [
+        27,
+        5,
+        25,
+        11,
+        18,
+        14,
+        20,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.327888080094529,
+      "weighted_board_agreement": 0.13905152224824355
+    },
+    {
+      "path": [
+        10,
+        9,
+        23,
+        15,
+        7,
+        5,
+        12,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.415998222966021,
+      "weighted_board_agreement": 0.115527950310559
+    },
+    {
+      "path": [
+        14,
+        29,
+        16,
+        24,
+        7,
+        9,
+        4,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3472222904119375,
+      "weighted_board_agreement": 0.13456632653061226
+    },
+    {
+      "path": [
+        10,
+        23,
+        28,
+        16,
+        20,
+        8,
+        21,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.528506902703564,
+      "weighted_board_agreement": 0.09962406015037595
+    },
+    {
+      "path": [
+        5,
+        22,
+        14,
+        20,
+        16,
+        0,
+        15,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.23475605323667,
+      "weighted_board_agreement": 0.10775862068965515
+    },
+    {
+      "path": [
+        0,
+        21,
+        10,
+        27,
+        20,
+        24,
+        16,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.291045366158542,
+      "weighted_board_agreement": 0.11957908163265306
+    },
+    {
+      "path": [
+        5,
+        12,
+        19,
+        21,
+        3,
+        14,
+        29,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.382333151241193,
+      "weighted_board_agreement": 0.17637844611528822
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        8,
+        27,
+        14,
+        13
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.37182073913141,
+      "weighted_board_agreement": 0.133352534562212
+    },
+    {
+      "path": [
+        7,
+        3,
+        23,
+        6,
+        21,
+        9,
+        16,
+        13
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.513102592576411,
+      "weighted_board_agreement": 0.15763546798029557
+    },
+    {
+      "path": [
+        3,
+        20,
+        0,
+        11,
+        5,
+        25,
+        12,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.372529695013748,
+      "weighted_board_agreement": 0.11278195488721802
+    },
+    {
+      "path": [
+        13,
+        5,
+        0,
+        25,
+        20,
+        16,
+        7,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3233476421919965,
+      "weighted_board_agreement": 0.19181034482758624
+    },
+    {
+      "path": [
+        9,
+        7,
+        1,
+        15,
+        13,
+        16,
+        21,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.343188437366913,
+      "weighted_board_agreement": 0.07577639751552796
+    },
+    {
+      "path": [
+        8,
+        22,
+        21,
+        3,
+        20,
+        16,
+        28,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.346251166183543,
+      "weighted_board_agreement": 0.13471177944862153
+    },
+    {
+      "path": [
+        27,
+        5,
+        0,
+        25,
+        20,
+        16,
+        24,
+        13
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.536290921665497,
+      "weighted_board_agreement": 0.11279761904761905
+    },
+    {
+      "path": [
+        29,
+        16,
+        19,
+        21,
+        28,
+        23,
+        15,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.616248381980777,
+      "weighted_board_agreement": 0.11691086691086691
+    },
+    {
+      "path": [
+        26,
+        20,
+        0,
+        11,
+        29,
+        12,
+        18,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.285580827871145,
+      "weighted_board_agreement": 0.2962529274004684
+    },
+    {
+      "path": [
+        0,
+        21,
+        27,
+        24,
+        7,
+        15,
+        9,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.467252983311656,
+      "weighted_board_agreement": 0.10746460746460747
+    },
+    {
+      "path": [
+        22,
+        17,
+        24,
+        20,
+        16,
+        0,
+        28,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.393668480745443,
+      "weighted_board_agreement": 0.11926020408163265
+    },
+    {
+      "path": [
+        3,
+        0,
+        20,
+        26,
+        12,
+        1,
+        15,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.424691368886796,
+      "weighted_board_agreement": 0.1797924297924298
+    },
+    {
+      "path": [
+        7,
+        24,
+        14,
+        21,
+        3,
+        22,
+        13,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.375079390067153,
+      "weighted_board_agreement": 0.1554993678887484
+    },
+    {
+      "path": [
+        22,
+        5,
+        23,
+        15,
+        20,
+        16,
+        28,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.275585079745771,
+      "weighted_board_agreement": 0.31785714285714295
+    },
+    {
+      "path": [
+        0,
+        5,
+        25,
+        11,
+        18,
+        14,
+        20,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.384017108036859,
+      "weighted_board_agreement": 0.15677966101694915
+    },
+    {
+      "path": [
+        7,
+        1,
+        0,
+        8,
+        24,
+        20,
+        16,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.513469106321276,
+      "weighted_board_agreement": 0.19285714285714284
+    },
+    {
+      "path": [
+        5,
+        6,
+        21,
+        28,
+        16,
+        24,
+        20,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.452998243935263,
+      "weighted_board_agreement": 0.1520227560050569
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        2,
+        27,
+        1,
+        26
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.448964394094751,
+      "weighted_board_agreement": 0.09951159951159952
+    },
+    {
+      "path": [
+        0,
+        26,
+        20,
+        16,
+        24,
+        21,
+        22,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.326066317321485,
+      "weighted_board_agreement": 0.11446886446886446
+    },
+    {
+      "path": [
+        29,
+        14,
+        28,
+        16,
+        20,
+        24,
+        8,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.263200402711938,
+      "weighted_board_agreement": 0.1491596638655462
+    },
+    {
+      "path": [
+        28,
+        23,
+        15,
+        0,
+        16,
+        26,
+        17,
+        12
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.312418306056464,
+      "weighted_board_agreement": 0.15909090909090912
+    },
+    {
+      "path": [
+        16,
+        13,
+        24,
+        27,
+        20,
+        10,
+        28,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.459602315441607,
+      "weighted_board_agreement": 0.11521739130434783
+    },
+    {
+      "path": [
+        24,
+        16,
+        13,
+        22,
+        3,
+        6,
+        12,
+        28
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.2826381794852795,
+      "weighted_board_agreement": 0.15456182472989194
+    },
+    {
+      "path": [
+        9,
+        0,
+        27,
+        1,
+        15,
+        26,
+        20,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.262199779768255,
+      "weighted_board_agreement": 0.24661330049261082
+    },
+    {
+      "path": [
+        21,
+        9,
+        11,
+        5,
+        2,
+        6,
+        3,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.356283390032294,
+      "weighted_board_agreement": 0.27085967130214916
+    },
+    {
+      "path": [
+        21,
+        9,
+        11,
+        5,
+        23,
+        4,
+        27,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.290444349526212,
+      "weighted_board_agreement": 0.34751552795031054
+    },
+    {
+      "path": [
+        29,
+        3,
+        22,
+        13,
+        16,
+        24,
+        0,
+        20
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.447074720628898,
+      "weighted_board_agreement": 0.12797619047619047
+    },
+    {
+      "path": [
+        8,
+        24,
+        20,
+        16,
+        28,
+        0,
+        18,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.273277424324823,
+      "weighted_board_agreement": 0.23214285714285715
+    },
+    {
+      "path": [
+        11,
+        1,
+        7,
+        16,
+        20,
+        26,
+        21,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.664973408770181,
+      "weighted_board_agreement": 0.09987357774968394
+    },
+    {
+      "path": [
+        21,
+        9,
+        11,
+        5,
+        23,
+        4,
+        27,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.281209865436046,
+      "weighted_board_agreement": 0.35899014778325133
+    },
+    {
+      "path": [
+        23,
+        9,
+        21,
+        3,
+        22,
+        13,
+        17,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3926847777851155,
+      "weighted_board_agreement": 0.16490683229813666
+    },
+    {
+      "path": [
+        2,
+        16,
+        21,
+        6,
+        27,
+        14,
+        23,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4991584056805385,
+      "weighted_board_agreement": 0.15178571428571427
+    },
+    {
+      "path": [
+        15,
+        21,
+        8,
+        24,
+        20,
+        16,
+        28,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.413158372939875,
+      "weighted_board_agreement": 0.12236024844720494
+    },
+    {
+      "path": [
+        5,
+        12,
+        21,
+        9,
+        11,
+        17,
+        3,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.414237278300087,
+      "weighted_board_agreement": 0.0701058201058201
+    },
+    {
+      "path": [
+        28,
+        23,
+        15,
+        0,
+        11,
+        26,
+        20,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.267706581465322,
+      "weighted_board_agreement": 0.418778801843318
+    },
+    {
+      "path": [
+        5,
+        7,
+        22,
+        27,
+        8,
+        24,
+        20,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.343013333539306,
+      "weighted_board_agreement": 0.09503105590062112
+    },
+    {
+      "path": [
+        1,
+        10,
+        20,
+        24,
+        8,
+        17,
+        12,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.520878276897154,
+      "weighted_board_agreement": 0.1550836550836551
+    },
+    {
+      "path": [
+        24,
+        27,
+        20,
+        10,
+        1,
+        2,
+        21,
+        14
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3855255180242825,
+      "weighted_board_agreement": 0.12148962148962147
+    },
+    {
+      "path": [
+        29,
+        14,
+        24,
+        27,
+        20,
+        10,
+        28,
+        19
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.400713501482255,
+      "weighted_board_agreement": 0.12711864406779663
+    },
+    {
+      "path": [
+        22,
+        5,
+        24,
+        20,
+        16,
+        6,
+        21,
+        12
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.444709392368744,
+      "weighted_board_agreement": 0.12362637362637363
+    },
+    {
+      "path": [
+        20,
+        16,
+        24,
+        17,
+        4,
+        14,
+        3,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.361782024344261,
+      "weighted_board_agreement": 0.1980229591836735
+    },
+    {
+      "path": [
+        9,
+        21,
+        23,
+        15,
+        20,
+        16,
+        26,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.33844592319059,
+      "weighted_board_agreement": 0.20299145299145296
+    },
+    {
+      "path": [
+        16,
+        9,
+        21,
+        3,
+        22,
+        13,
+        27,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.403140081090466,
+      "weighted_board_agreement": 0.2176434676434677
+    },
+    {
+      "path": [
+        7,
+        24,
+        16,
+        20,
+        0,
+        5,
+        22,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.442520779410318,
+      "weighted_board_agreement": 0.09367167919799499
+    },
+    {
+      "path": [
+        15,
+        23,
+        21,
+        9,
+        27,
+        24,
+        20,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.575421157722259,
+      "weighted_board_agreement": 0.1716686674669868
+    },
+    {
+      "path": [
+        25,
+        18,
+        23,
+        27,
+        4,
+        24,
+        14,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.531253123243529,
+      "weighted_board_agreement": 0.12057387057387056
+    },
+    {
+      "path": [
+        14,
+        18,
+        29,
+        16,
+        20,
+        24,
+        4,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5024002330127795,
+      "weighted_board_agreement": 0.18253968253968253
+    },
+    {
+      "path": [
+        2,
+        21,
+        8,
+        24,
+        20,
+        16,
+        6,
+        0
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.632741503399888,
+      "weighted_board_agreement": 0.12469211822660099
+    },
+    {
+      "path": [
+        3,
+        21,
+        14,
+        16,
+        29,
+        12,
+        17,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.524244058331915,
+      "weighted_board_agreement": 0.16194581280788176
+    },
+    {
+      "path": [
+        10,
+        9,
+        23,
+        15,
+        7,
+        12,
+        17,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.282467589279208,
+      "weighted_board_agreement": 0.15100250626566417
+    },
+    {
+      "path": [
+        21,
+        9,
+        11,
+        5,
+        23,
+        4,
+        27,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.251069949252266,
+      "weighted_board_agreement": 0.23640960809102401
+    },
+    {
+      "path": [
+        10,
+        12,
+        18,
+        14,
+        27,
+        24,
+        20,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.513384480831503,
+      "weighted_board_agreement": 0.12376847290640396
+    },
+    {
+      "path": [
+        24,
+        16,
+        28,
+        21,
+        3,
+        22,
+        9,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4477718382725335,
+      "weighted_board_agreement": 0.13885467980295568
+    },
+    {
+      "path": [
+        19,
+        28,
+        16,
+        14,
+        17,
+        12,
+        20,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.455999981235517,
+      "weighted_board_agreement": 0.12469733656174335
+    },
+    {
+      "path": [
+        27,
+        24,
+        20,
+        16,
+        26,
+        15,
+        1,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.269446234178554,
+      "weighted_board_agreement": 0.17167919799498746
+    },
+    {
+      "path": [
+        7,
+        24,
+        16,
+        20,
+        26,
+        12,
+        17,
+        29
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.353770507515956,
+      "weighted_board_agreement": 0.10962732919254659
+    },
+    {
+      "path": [
+        28,
+        16,
+        24,
+        26,
+        20,
+        27,
+        14,
+        29
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.358418172427982,
+      "weighted_board_agreement": 0.1641705069124424
+    },
+    {
+      "path": [
+        6,
+        23,
+        9,
+        21,
+        3,
+        22,
+        20,
+        26
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.287254361686977,
+      "weighted_board_agreement": 0.23432055749128922
+    },
+    {
+      "path": [
+        28,
+        29,
+        12,
+        17,
+        8,
+        16,
+        20,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.332602593174502,
+      "weighted_board_agreement": 0.11349878934624695
+    },
+    {
+      "path": [
+        16,
+        14,
+        21,
+        3,
+        22,
+        24,
+        9,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.571111847813231,
+      "weighted_board_agreement": 0.17032967032967034
+    },
+    {
+      "path": [
+        7,
+        24,
+        16,
+        20,
+        26,
+        0,
+        5,
+        14
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.262081200955,
+      "weighted_board_agreement": 0.1056166056166056
+    },
+    {
+      "path": [
+        28,
+        23,
+        9,
+        21,
+        3,
+        12,
+        29,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.389714422541952,
+      "weighted_board_agreement": 0.16085946573751456
+    },
+    {
+      "path": [
+        11,
+        0,
+        21,
+        24,
+        16,
+        20,
+        14,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.52189327165701,
+      "weighted_board_agreement": 0.10557644110275687
+    },
+    {
+      "path": [
+        3,
+        28,
+        16,
+        20,
+        24,
+        27,
+        14,
+        0
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.430271412153925,
+      "weighted_board_agreement": 0.13156288156288157
+    },
+    {
+      "path": [
+        20,
+        25,
+        28,
+        16,
+        13,
+        22,
+        3,
+        29
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.25714680056923,
+      "weighted_board_agreement": 0.31242969628796396
+    },
+    {
+      "path": [
+        1,
+        15,
+        12,
+        7,
+        20,
+        16,
+        13,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.513927563351345,
+      "weighted_board_agreement": 0.15259740259740262
+    },
+    {
+      "path": [
+        28,
+        16,
+        24,
+        21,
+        27,
+        14,
+        13,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.552566178117643,
+      "weighted_board_agreement": 0.08066502463054188
+    },
+    {
+      "path": [
+        16,
+        14,
+        21,
+        3,
+        22,
+        13,
+        11,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.293003605514296,
+      "weighted_board_agreement": 0.10437192118226603
+    },
+    {
+      "path": [
+        16,
+        13,
+        14,
+        21,
+        3,
+        22,
+        15,
+        12
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.370835673193078,
+      "weighted_board_agreement": 0.1588669950738916
+    },
+    {
+      "path": [
+        25,
+        28,
+        16,
+        20,
+        24,
+        27,
+        21,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.413088023495151,
+      "weighted_board_agreement": 0.14705882352941174
+    },
+    {
+      "path": [
+        10,
+        9,
+        15,
+        1,
+        27,
+        0,
+        16,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.412604042909128,
+      "weighted_board_agreement": 0.14415584415584415
+    },
+    {
+      "path": [
+        0,
+        11,
+        5,
+        25,
+        16,
+        28,
+        21,
+        27
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.58382287375292,
+      "weighted_board_agreement": 0.26587301587301587
+    },
+    {
+      "path": [
+        8,
+        12,
+        28,
+        16,
+        20,
+        11,
+        9,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.441841112316165,
+      "weighted_board_agreement": 0.14508928571428573
+    },
+    {
+      "path": [
+        0,
+        26,
+        20,
+        16,
+        28,
+        14,
+        29,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.568302525600716,
+      "weighted_board_agreement": 0.09016393442622951
+    },
+    {
+      "path": [
+        29,
+        3,
+        22,
+        13,
+        16,
+        24,
+        27,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.380818394204395,
+      "weighted_board_agreement": 0.08613445378151259
+    },
+    {
+      "path": [
+        26,
+        11,
+        0,
+        20,
+        7,
+        24,
+        14,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.512495744893214,
+      "weighted_board_agreement": 0.09462759462759462
+    },
+    {
+      "path": [
+        2,
+        21,
+        9,
+        11,
+        5,
+        23,
+        4,
+        27
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.289691505941677,
+      "weighted_board_agreement": 0.26530612244897955
+    },
+    {
+      "path": [
+        27,
+        8,
+        24,
+        20,
+        12,
+        26,
+        18,
+        29
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.557079774000908,
+      "weighted_board_agreement": 0.1691263282172373
+    },
+    {
+      "path": [
+        3,
+        22,
+        13,
+        16,
+        24,
+        21,
+        9,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.417622005758628,
+      "weighted_board_agreement": 0.1400375939849624
+    },
+    {
+      "path": [
+        18,
+        29,
+        16,
+        20,
+        24,
+        27,
+        7,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.43918406446606,
+      "weighted_board_agreement": 0.14194139194139194
+    },
+    {
+      "path": [
+        3,
+        21,
+        4,
+        0,
+        15,
+        23,
+        22,
+        13
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.323251126609943,
+      "weighted_board_agreement": 0.18601190476190474
+    },
+    {
+      "path": [
+        14,
+        20,
+        3,
+        25,
+        11,
+        9,
+        21,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.35746831991542,
+      "weighted_board_agreement": 0.16933497536945813
+    },
+    {
+      "path": [
+        27,
+        0,
+        21,
+        8,
+        24,
+        20,
+        16,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.357339792338915,
+      "weighted_board_agreement": 0.11853448275862069
+    },
+    {
+      "path": [
+        7,
+        24,
+        16,
+        20,
+        26,
+        0,
+        5,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.480998173481526,
+      "weighted_board_agreement": 0.10962732919254659
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        27,
+        14,
+        18,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.462308285982762,
+      "weighted_board_agreement": 0.1038961038961039
+    },
+    {
+      "path": [
+        4,
+        23,
+        9,
+        21,
+        3,
+        22,
+        13,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.418553765181468,
+      "weighted_board_agreement": 0.23416149068322983
+    },
+    {
+      "path": [
+        9,
+        21,
+        3,
+        22,
+        13,
+        16,
+        1,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.286136322674605,
+      "weighted_board_agreement": 0.11304347826086958
+    },
+    {
+      "path": [
+        11,
+        26,
+        4,
+        22,
+        3,
+        24,
+        8,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.378114424286562,
+      "weighted_board_agreement": 0.17633928571428575
+    },
+    {
+      "path": [
+        4,
+        14,
+        27,
+        24,
+        20,
+        16,
+        29,
+        28
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.32758932700247,
+      "weighted_board_agreement": 0.10684273709483794
+    },
+    {
+      "path": [
+        6,
+        23,
+        9,
+        21,
+        3,
+        22,
+        26,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.186698524211298,
+      "weighted_board_agreement": 0.2553571428571429
+    },
+    {
+      "path": [
+        16,
+        24,
+        17,
+        0,
+        9,
+        15,
+        21,
+        19
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5046988019643175,
+      "weighted_board_agreement": 0.11336828309305373
+    },
+    {
+      "path": [
+        5,
+        28,
+        16,
+        20,
+        24,
+        27,
+        14,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.285138966898115,
+      "weighted_board_agreement": 0.19766009852216745
+    },
+    {
+      "path": [
+        22,
+        5,
+        23,
+        15,
+        20,
+        16,
+        24,
+        14
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.285950778767852,
+      "weighted_board_agreement": 0.17648809523809522
+    },
+    {
+      "path": [
+        12,
+        25,
+        28,
+        16,
+        20,
+        24,
+        22,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.385720702944259,
+      "weighted_board_agreement": 0.1550671550671551
+    },
+    {
+      "path": [
+        1,
+        7,
+        24,
+        16,
+        20,
+        14,
+        3,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.47516376873533,
+      "weighted_board_agreement": 0.1561314791403287
+    },
+    {
+      "path": [
+        13,
+        24,
+        16,
+        18,
+        6,
+        12,
+        3,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.324065268034985,
+      "weighted_board_agreement": 0.12136536030341337
+    },
+    {
+      "path": [
+        14,
+        27,
+        0,
+        3,
+        20,
+        10,
+        28,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.405472033592264,
+      "weighted_board_agreement": 0.19400726392251813
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        27,
+        21,
+        22,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.367851899167546,
+      "weighted_board_agreement": 0.1275062656641604
+    },
+    {
+      "path": [
+        17,
+        11,
+        5,
+        0,
+        20,
+        16,
+        28,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.404053012086914,
+      "weighted_board_agreement": 0.14791403286978508
+    },
+    {
+      "path": [
+        2,
+        28,
+        16,
+        24,
+        20,
+        27,
+        6,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.428913581665689,
+      "weighted_board_agreement": 0.16933497536945813
+    },
+    {
+      "path": [
+        24,
+        14,
+        21,
+        9,
+        11,
+        5,
+        13,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.620060597350895,
+      "weighted_board_agreement": 0.13685208596713022
+    },
+    {
+      "path": [
+        4,
+        9,
+        21,
+        3,
+        22,
+        13,
+        16,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.494468700071089,
+      "weighted_board_agreement": 0.10621921182266007
+    },
+    {
+      "path": [
+        12,
+        20,
+        7,
+        15,
+        23,
+        28,
+        0,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.491011019186094,
+      "weighted_board_agreement": 0.10478158205430933
+    },
+    {
+      "path": [
+        9,
+        21,
+        3,
+        22,
+        13,
+        16,
+        1,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.406405635973145,
+      "weighted_board_agreement": 0.1462148962148962
+    },
+    {
+      "path": [
+        2,
+        21,
+        4,
+        27,
+        20,
+        24,
+        16,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.290799186390924,
+      "weighted_board_agreement": 0.12218045112781957
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        18,
+        11,
+        14,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.596159616851842,
+      "weighted_board_agreement": 0.18432203389830507
+    },
+    {
+      "path": [
+        28,
+        29,
+        16,
+        0,
+        24,
+        8,
+        21,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.347325300482279,
+      "weighted_board_agreement": 0.12323037323037324
+    },
+    {
+      "path": [
+        21,
+        28,
+        16,
+        24,
+        18,
+        7,
+        5,
+        22
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.609913672243811,
+      "weighted_board_agreement": 0.14440993788819875
+    },
+    {
+      "path": [
+        29,
+        23,
+        9,
+        21,
+        3,
+        22,
+        10,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.219245939859356,
+      "weighted_board_agreement": 0.1181077694235589
+    },
+    {
+      "path": [
+        3,
+        22,
+        13,
+        16,
+        24,
+        21,
+        9,
+        19
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.389274262233282,
+      "weighted_board_agreement": 0.17073934837092733
+    },
+    {
+      "path": [
+        26,
+        20,
+        16,
+        24,
+        13,
+        1,
+        15,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.480969148123258,
+      "weighted_board_agreement": 0.11730295566502465
+    },
+    {
+      "path": [
+        21,
+        9,
+        11,
+        5,
+        0,
+        6,
+        23,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.263628767569929,
+      "weighted_board_agreement": 0.1359039190897598
+    },
+    {
+      "path": [
+        20,
+        15,
+        23,
+        21,
+        6,
+        12,
+        7,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.335209551555955,
+      "weighted_board_agreement": 0.1867433414043583
+    },
+    {
+      "path": [
+        21,
+        9,
+        23,
+        15,
+        20,
+        16,
+        26,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.480604049464352,
+      "weighted_board_agreement": 0.2451159951159951
+    },
+    {
+      "path": [
+        23,
+        9,
+        24,
+        20,
+        16,
+        28,
+        21,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.572593380080937,
+      "weighted_board_agreement": 0.12261904761904761
+    },
+    {
+      "path": [
+        12,
+        17,
+        14,
+        9,
+        21,
+        6,
+        23,
+        22
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.642376524443568,
+      "weighted_board_agreement": 0.1156174334140436
+    },
+    {
+      "path": [
+        17,
+        12,
+        20,
+        24,
+        16,
+        21,
+        7,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.507130908582729,
+      "weighted_board_agreement": 0.11096938775510203
+    },
+    {
+      "path": [
+        9,
+        21,
+        5,
+        27,
+        20,
+        24,
+        16,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.490964204867252,
+      "weighted_board_agreement": 0.187888198757764
+    },
+    {
+      "path": [
+        26,
+        20,
+        0,
+        11,
+        29,
+        12,
+        18,
+        19
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.543557802095564,
+      "weighted_board_agreement": 0.1818452380952381
+    },
+    {
+      "path": [
+        24,
+        16,
+        28,
+        21,
+        3,
+        22,
+        13,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.297888339157076,
+      "weighted_board_agreement": 0.229064039408867
+    },
+    {
+      "path": [
+        22,
+        13,
+        16,
+        21,
+        19,
+        15,
+        1,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.509059497068878,
+      "weighted_board_agreement": 0.23433583959899748
+    },
+    {
+      "path": [
+        28,
+        16,
+        24,
+        26,
+        20,
+        27,
+        14,
+        22
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.348205496498642,
+      "weighted_board_agreement": 0.24033957845433254
+    },
+    {
+      "path": [
+        14,
+        21,
+        3,
+        22,
+        13,
+        16,
+        24,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.341816544415765,
+      "weighted_board_agreement": 0.11874236874236874
+    },
+    {
+      "path": [
+        3,
+        0,
+        20,
+        26,
+        12,
+        1,
+        15,
+        29
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.336841942857851,
+      "weighted_board_agreement": 0.08823529411764705
+    },
+    {
+      "path": [
+        6,
+        23,
+        9,
+        21,
+        3,
+        22,
+        0,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.32634462760062,
+      "weighted_board_agreement": 0.19733656174334138
+    },
+    {
+      "path": [
+        28,
+        29,
+        12,
+        17,
+        8,
+        16,
+        1,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.329248044207204,
+      "weighted_board_agreement": 0.25869565217391305
+    },
+    {
+      "path": [
+        11,
+        14,
+        27,
+        4,
+        24,
+        13,
+        16,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.431893283177223,
+      "weighted_board_agreement": 0.14412136536030343
+    },
+    {
+      "path": [
+        16,
+        29,
+        9,
+        21,
+        3,
+        22,
+        23,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.40216400268438,
+      "weighted_board_agreement": 0.1937888198757764
+    },
+    {
+      "path": [
+        1,
+        15,
+        26,
+        20,
+        16,
+        24,
+        7,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.520704712865804,
+      "weighted_board_agreement": 0.1243734335839599
+    },
+    {
+      "path": [
+        27,
+        14,
+        29,
+        16,
+        9,
+        21,
+        12,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4977640514028945,
+      "weighted_board_agreement": 0.09157509157509157
+    },
+    {
+      "path": [
+        21,
+        3,
+        22,
+        13,
+        16,
+        24,
+        19,
+        29
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3677850498536195,
+      "weighted_board_agreement": 0.12468671679197996
+    },
+    {
+      "path": [
+        10,
+        15,
+        9,
+        21,
+        3,
+        22,
+        13,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.47480361357446,
+      "weighted_board_agreement": 0.07490518331226295
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        18,
+        12,
+        29,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.547776320657138,
+      "weighted_board_agreement": 0.12295081967213116
+    },
+    {
+      "path": [
+        25,
+        18,
+        12,
+        17,
+        11,
+        9,
+        21,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.453494759836541,
+      "weighted_board_agreement": 0.11662452591656132
+    },
+    {
+      "path": [
+        18,
+        0,
+        28,
+        16,
+        20,
+        24,
+        8,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3498253291938065,
+      "weighted_board_agreement": 0.15936374549819926
+    },
+    {
+      "path": [
+        24,
+        14,
+        21,
+        3,
+        22,
+        5,
+        1,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.343015763138071,
+      "weighted_board_agreement": 0.25611325611325614
+    },
+    {
+      "path": [
+        22,
+        5,
+        18,
+        29,
+        14,
+        23,
+        21,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.465984914885889,
+      "weighted_board_agreement": 0.33884297520661155
+    },
+    {
+      "path": [
+        7,
+        5,
+        12,
+        14,
+        29,
+        3,
+        4,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.468387431091781,
+      "weighted_board_agreement": 0.11397515527950308
+    },
+    {
+      "path": [
+        5,
+        13,
+        23,
+        9,
+        7,
+        15,
+        21,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.341004761527946,
+      "weighted_board_agreement": 0.13659147869674185
+    },
+    {
+      "path": [
+        20,
+        25,
+        11,
+        9,
+        21,
+        3,
+        14,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3833519018701095,
+      "weighted_board_agreement": 0.27400468384074944
+    },
+    {
+      "path": [
+        23,
+        10,
+        8,
+        24,
+        20,
+        16,
+        28,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4903387095516,
+      "weighted_board_agreement": 0.152014652014652
+    },
+    {
+      "path": [
+        0,
+        20,
+        7,
+        15,
+        23,
+        9,
+        17,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.562324900107598,
+      "weighted_board_agreement": 0.15834386852085966
+    },
+    {
+      "path": [
+        29,
+        23,
+        9,
+        21,
+        3,
+        22,
+        13,
+        27
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.270734859954298,
+      "weighted_board_agreement": 0.256198347107438
+    },
+    {
+      "path": [
+        0,
+        9,
+        25,
+        11,
+        18,
+        14,
+        20,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.305822581583763,
+      "weighted_board_agreement": 0.14072039072039072
+    },
+    {
+      "path": [
+        2,
+        6,
+        23,
+        9,
+        21,
+        3,
+        22,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.351565059135656,
+      "weighted_board_agreement": 0.1404358353510896
+    },
+    {
+      "path": [
+        2,
+        21,
+        0,
+        3,
+        6,
+        7,
+        5,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.371731902254829,
+      "weighted_board_agreement": 0.13032581453634084
+    },
+    {
+      "path": [
+        9,
+        11,
+        5,
+        0,
+        25,
+        20,
+        16,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3095707509972145,
+      "weighted_board_agreement": 0.13125763125763126
+    },
+    {
+      "path": [
+        15,
+        1,
+        20,
+        16,
+        26,
+        21,
+        24,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.542840151954385,
+      "weighted_board_agreement": 0.14035087719298245
+    },
+    {
+      "path": [
+        15,
+        1,
+        8,
+        20,
+        16,
+        28,
+        3,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.2886807210084035,
+      "weighted_board_agreement": 0.10714285714285714
+    },
+    {
+      "path": [
+        3,
+        22,
+        24,
+        27,
+        8,
+        17,
+        23,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.508323213719073,
+      "weighted_board_agreement": 0.11006493506493506
+    },
+    {
+      "path": [
+        7,
+        24,
+        20,
+        16,
+        26,
+        15,
+        1,
+        23
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.354289339510632,
+      "weighted_board_agreement": 0.16300366300366306
+    },
+    {
+      "path": [
+        16,
+        21,
+        24,
+        27,
+        22,
+        5,
+        0,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.569756844162971,
+      "weighted_board_agreement": 0.07456140350877193
+    },
+    {
+      "path": [
+        24,
+        9,
+        23,
+        15,
+        7,
+        5,
+        0,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.325915862052001,
+      "weighted_board_agreement": 0.1555690072639225
+    },
+    {
+      "path": [
+        1,
+        15,
+        13,
+        20,
+        0,
+        21,
+        12,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.518667273905804,
+      "weighted_board_agreement": 0.07080200501253132
+    },
+    {
+      "path": [
+        6,
+        21,
+        28,
+        16,
+        24,
+        20,
+        0,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.367892892061266,
+      "weighted_board_agreement": 0.2670940170940171
+    },
+    {
+      "path": [
+        29,
+        12,
+        3,
+        6,
+        20,
+        16,
+        24,
+        18
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.318204460690838,
+      "weighted_board_agreement": 0.2157615112160567
+    },
+    {
+      "path": [
+        18,
+        29,
+        16,
+        20,
+        26,
+        27,
+        21,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.408657287594075,
+      "weighted_board_agreement": 0.20168067226890754
+    },
+    {
+      "path": [
+        8,
+        12,
+        5,
+        0,
+        25,
+        20,
+        26,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.6025825610091164,
+      "weighted_board_agreement": 0.21149068322981365
+    },
+    {
+      "path": [
+        15,
+        21,
+        8,
+        24,
+        20,
+        16,
+        28,
+        14
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.287978618434871,
+      "weighted_board_agreement": 0.13482142857142856
+    },
+    {
+      "path": [
+        0,
+        15,
+        13,
+        20,
+        16,
+        24,
+        17,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.403816635195134,
+      "weighted_board_agreement": 0.1555690072639225
+    },
+    {
+      "path": [
+        16,
+        29,
+        9,
+        21,
+        3,
+        22,
+        13,
+        27
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.458385310877146,
+      "weighted_board_agreement": 0.08444309927360776
+    },
+    {
+      "path": [
+        19,
+        28,
+        16,
+        20,
+        24,
+        27,
+        21,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3888835936082495,
+      "weighted_board_agreement": 0.1371173469387755
+    },
+    {
+      "path": [
+        21,
+        3,
+        22,
+        13,
+        16,
+        24,
+        17,
+        29
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5500424366865415,
+      "weighted_board_agreement": 0.10344827586206895
+    },
+    {
+      "path": [
+        16,
+        14,
+        21,
+        3,
+        22,
+        10,
+        20,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.41293924396465,
+      "weighted_board_agreement": 0.1343984962406015
+    },
+    {
+      "path": [
+        8,
+        21,
+        27,
+        4,
+        24,
+        7,
+        1,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.649747593958844,
+      "weighted_board_agreement": 0.13042091836734693
+    },
+    {
+      "path": [
+        29,
+        12,
+        3,
+        4,
+        24,
+        17,
+        8,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5154905789775945,
+      "weighted_board_agreement": 0.12077922077922079
+    },
+    {
+      "path": [
+        15,
+        29,
+        3,
+        22,
+        13,
+        16,
+        24,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.245767313130688,
+      "weighted_board_agreement": 0.19088669950738915
+    },
+    {
+      "path": [
+        7,
+        26,
+        28,
+        23,
+        15,
+        0,
+        27,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.417228019410289,
+      "weighted_board_agreement": 0.19105691056910573
+    },
+    {
+      "path": [
+        25,
+        5,
+        7,
+        12,
+        6,
+        3,
+        0,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.38427883487719,
+      "weighted_board_agreement": 0.10745341614906832
+    },
+    {
+      "path": [
+        27,
+        9,
+        15,
+        0,
+        8,
+        24,
+        21,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.48714697902325,
+      "weighted_board_agreement": 0.1975347661188369
+    },
+    {
+      "path": [
+        16,
+        0,
+        11,
+        1,
+        15,
+        26,
+        20,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.555052587836276,
+      "weighted_board_agreement": 0.09813664596273293
+    },
+    {
+      "path": [
+        5,
+        0,
+        21,
+        9,
+        11,
+        17,
+        10,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.486206215311134,
+      "weighted_board_agreement": 0.13743622448979595
+    },
+    {
+      "path": [
+        15,
+        23,
+        0,
+        3,
+        20,
+        10,
+        28,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.356535181170324,
+      "weighted_board_agreement": 0.18345543345543344
+    },
+    {
+      "path": [
+        6,
+        23,
+        9,
+        21,
+        3,
+        22,
+        10,
+        14
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.2509573245477394,
+      "weighted_board_agreement": 0.18303571428571433
+    },
+    {
+      "path": [
+        3,
+        6,
+        1,
+        11,
+        5,
+        12,
+        28,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.507903310469837,
+      "weighted_board_agreement": 0.11299261083743842
+    },
+    {
+      "path": [
+        26,
+        11,
+        1,
+        24,
+        16,
+        20,
+        10,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.557284464289823,
+      "weighted_board_agreement": 0.10869565217391307
+    },
+    {
+      "path": [
+        24,
+        27,
+        20,
+        10,
+        28,
+        7,
+        17,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.277510767404129,
+      "weighted_board_agreement": 0.19993622448979592
+    },
+    {
+      "path": [
+        16,
+        13,
+        22,
+        3,
+        21,
+        8,
+        1,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.363684914339699,
+      "weighted_board_agreement": 0.2406015037593985
+    },
+    {
+      "path": [
+        11,
+        26,
+        28,
+        23,
+        15,
+        0,
+        27,
+        25
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.350036018911089,
+      "weighted_board_agreement": 0.2230033745781777
+    },
+    {
+      "path": [
+        21,
+        3,
+        22,
+        13,
+        16,
+        24,
+        0,
+        29
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.326381601011064,
+      "weighted_board_agreement": 0.1617826617826618
+    },
+    {
+      "path": [
+        22,
+        3,
+        21,
+        9,
+        23,
+        6,
+        12,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.447890928730614,
+      "weighted_board_agreement": 0.156062424969988
+    },
+    {
+      "path": [
+        24,
+        14,
+        21,
+        3,
+        22,
+        13,
+        11,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.350835328260034,
+      "weighted_board_agreement": 0.19347826086956518
+    },
+    {
+      "path": [
+        21,
+        27,
+        24,
+        1,
+        15,
+        20,
+        16,
+        26
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.494978560177496,
+      "weighted_board_agreement": 0.14601769911504422
+    },
+    {
+      "path": [
+        11,
+        9,
+        21,
+        5,
+        0,
+        20,
+        26,
+        12
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.34470211103981,
+      "weighted_board_agreement": 0.14316239316239315
+    },
+    {
+      "path": [
+        16,
+        28,
+        21,
+        3,
+        22,
+        4,
+        10,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.476957878853168,
+      "weighted_board_agreement": 0.14661654135338348
+    },
+    {
+      "path": [
+        18,
+        14,
+        21,
+        3,
+        22,
+        10,
+        5,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.41404112282689,
+      "weighted_board_agreement": 0.1188369152970923
+    },
+    {
+      "path": [
+        3,
+        22,
+        13,
+        16,
+        24,
+        29,
+        5,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.44233239869862,
+      "weighted_board_agreement": 0.1264222503160556
+    },
+    {
+      "path": [
+        29,
+        24,
+        27,
+        21,
+        9,
+        15,
+        0,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.329223162361253,
+      "weighted_board_agreement": 0.12053571428571429
+    },
+    {
+      "path": [
+        0,
+        15,
+        22,
+        3,
+        13,
+        16,
+        17,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.59490950126274,
+      "weighted_board_agreement": 0.09472049689440994
+    },
+    {
+      "path": [
+        19,
+        15,
+        23,
+        9,
+        21,
+        3,
+        22,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5585391812512865,
+      "weighted_board_agreement": 0.0986682808716707
+    },
+    {
+      "path": [
+        24,
+        16,
+        28,
+        21,
+        3,
+        22,
+        13,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.264112811138653,
+      "weighted_board_agreement": 0.13035714285714287
+    },
+    {
+      "path": [
+        29,
+        12,
+        17,
+        5,
+        16,
+        13,
+        22,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.339776552277056,
+      "weighted_board_agreement": 0.13571428571428573
+    },
+    {
+      "path": [
+        14,
+        21,
+        3,
+        22,
+        13,
+        16,
+        29,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.497813204901781,
+      "weighted_board_agreement": 0.10042735042735042
+    },
+    {
+      "path": [
+        29,
+        3,
+        22,
+        13,
+        16,
+        24,
+        25,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.483900290624129,
+      "weighted_board_agreement": 0.2342980295566502
+    },
+    {
+      "path": [
+        5,
+        22,
+        14,
+        20,
+        16,
+        24,
+        18,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.37425490994717,
+      "weighted_board_agreement": 0.12984261501210653
+    },
+    {
+      "path": [
+        21,
+        6,
+        18,
+        23,
+        7,
+        5,
+        11,
+        12
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.617714271960137,
+      "weighted_board_agreement": 0.10837438423645321
+    },
+    {
+      "path": [
+        11,
+        25,
+        9,
+        24,
+        27,
+        21,
+        6,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4663361423576555,
+      "weighted_board_agreement": 0.17888198757763976
+    },
+    {
+      "path": [
+        4,
+        22,
+        3,
+        21,
+        14,
+        16,
+        24,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.444379912748941,
+      "weighted_board_agreement": 0.22927295918367352
+    },
+    {
+      "path": [
+        13,
+        5,
+        0,
+        25,
+        20,
+        16,
+        7,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.514941830838103,
+      "weighted_board_agreement": 0.10683760683760683
+    },
+    {
+      "path": [
+        21,
+        8,
+        24,
+        20,
+        16,
+        0,
+        15,
+        22
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.299146838064302,
+      "weighted_board_agreement": 0.12800252844500631
+    },
+    {
+      "path": [
+        11,
+        9,
+        21,
+        28,
+        16,
+        24,
+        8,
+        12
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.444858916742334,
+      "weighted_board_agreement": 0.07722832722832722
+    },
+    {
+      "path": [
+        28,
+        10,
+        20,
+        1,
+        15,
+        12,
+        5,
+        19
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.318358595517901,
+      "weighted_board_agreement": 0.17763975155279502
+    },
+    {
+      "path": [
+        1,
+        15,
+        26,
+        20,
+        16,
+        10,
+        27,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.497243302551027,
+      "weighted_board_agreement": 0.11691086691086693
+    },
+    {
+      "path": [
+        22,
+        5,
+        23,
+        15,
+        20,
+        16,
+        28,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.360209423310087,
+      "weighted_board_agreement": 0.22689075630252103
+    },
+    {
+      "path": [
+        1,
+        15,
+        14,
+        20,
+        16,
+        28,
+        10,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.444602855305441,
+      "weighted_board_agreement": 0.1101953601953602
+    },
+    {
+      "path": [
+        23,
+        6,
+        21,
+        28,
+        16,
+        24,
+        8,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.522586845796086,
+      "weighted_board_agreement": 0.10169491525423727
+    },
+    {
+      "path": [
+        29,
+        16,
+        20,
+        24,
+        8,
+        17,
+        0,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.546864234645623,
+      "weighted_board_agreement": 0.12623152709359606
+    },
+    {
+      "path": [
+        23,
+        9,
+        21,
+        3,
+        22,
+        13,
+        11,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.355310249190278,
+      "weighted_board_agreement": 0.09745762711864406
+    },
+    {
+      "path": [
+        20,
+        16,
+        14,
+        21,
+        3,
+        22,
+        27,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.268825773497438,
+      "weighted_board_agreement": 0.1836734693877551
+    },
+    {
+      "path": [
+        10,
+        16,
+        24,
+        20,
+        27,
+        14,
+        0,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.510527214956015,
+      "weighted_board_agreement": 0.12857142857142856
+    },
+    {
+      "path": [
+        8,
+        12,
+        18,
+        14,
+        27,
+        24,
+        20,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.423921474106077,
+      "weighted_board_agreement": 0.1406832298136646
+    },
+    {
+      "path": [
+        18,
+        6,
+        21,
+        8,
+        24,
+        20,
+        16,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.44924200503756,
+      "weighted_board_agreement": 0.1911945812807882
+    },
+    {
+      "path": [
+        19,
+        21,
+        3,
+        22,
+        29,
+        16,
+        2,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.506119686802736,
+      "weighted_board_agreement": 0.08786346396965865
+    },
+    {
+      "path": [
+        5,
+        17,
+        20,
+        16,
+        24,
+        0,
+        15,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.599665487589274,
+      "weighted_board_agreement": 0.13669950738916256
+    },
+    {
+      "path": [
+        17,
+        20,
+        26,
+        11,
+        0,
+        3,
+        4,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.375155219909336,
+      "weighted_board_agreement": 0.11813186813186813
+    },
+    {
+      "path": [
+        27,
+        14,
+        29,
+        16,
+        9,
+        21,
+        1,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.420989851915405,
+      "weighted_board_agreement": 0.19486215538847115
+    },
+    {
+      "path": [
+        17,
+        28,
+        3,
+        22,
+        13,
+        16,
+        24,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.485590863603706,
+      "weighted_board_agreement": 0.2289540816326531
+    },
+    {
+      "path": [
+        22,
+        9,
+        15,
+        0,
+        8,
+        24,
+        20,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.410037981504226,
+      "weighted_board_agreement": 0.11304347826086956
+    },
+    {
+      "path": [
+        22,
+        26,
+        18,
+        29,
+        24,
+        16,
+        21,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.417741506877223,
+      "weighted_board_agreement": 0.1139751552795031
+    },
+    {
+      "path": [
+        3,
+        6,
+        22,
+        27,
+        24,
+        21,
+        16,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.383023617182429,
+      "weighted_board_agreement": 0.11538461538461539
+    },
+    {
+      "path": [
+        15,
+        21,
+        9,
+        11,
+        5,
+        23,
+        20,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.374051610254503,
+      "weighted_board_agreement": 0.17056650246305421
+    },
+    {
+      "path": [
+        21,
+        3,
+        22,
+        24,
+        7,
+        1,
+        15,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5481021398954855,
+      "weighted_board_agreement": 0.10551948051948054
+    },
+    {
+      "path": [
+        23,
+        21,
+        3,
+        22,
+        13,
+        16,
+        24,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.364769305421351,
+      "weighted_board_agreement": 0.20451770451770449
+    },
+    {
+      "path": [
+        1,
+        15,
+        26,
+        20,
+        16,
+        24,
+        21,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.344286875556377,
+      "weighted_board_agreement": 0.14099378881987576
+    },
+    {
+      "path": [
+        23,
+        7,
+        1,
+        24,
+        8,
+        21,
+        3,
+        14
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.564416475880484,
+      "weighted_board_agreement": 0.11125158027812897
+    },
+    {
+      "path": [
+        24,
+        5,
+        22,
+        29,
+        16,
+        9,
+        21,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.325251139011768,
+      "weighted_board_agreement": 0.28665413533834583
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        8,
+        27,
+        14,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.309724153660565,
+      "weighted_board_agreement": 0.10804321728691477
+    },
+    {
+      "path": [
+        11,
+        14,
+        27,
+        4,
+        24,
+        16,
+        9,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3537439760223,
+      "weighted_board_agreement": 0.26106194690265483
+    },
+    {
+      "path": [
+        9,
+        4,
+        11,
+        0,
+        5,
+        13,
+        12,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.523714041842801,
+      "weighted_board_agreement": 0.13169642857142858
+    },
+    {
+      "path": [
+        15,
+        21,
+        8,
+        24,
+        20,
+        16,
+        28,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.337922001842666,
+      "weighted_board_agreement": 0.2527709359605911
+    },
+    {
+      "path": [
+        21,
+        9,
+        11,
+        5,
+        0,
+        6,
+        3,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3832108177290126,
+      "weighted_board_agreement": 0.17426108374384236
+    },
+    {
+      "path": [
+        14,
+        27,
+        20,
+        24,
+        16,
+        21,
+        11,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.6054298863211445,
+      "weighted_board_agreement": 0.1214923469387755
+    },
+    {
+      "path": [
+        18,
+        23,
+        9,
+        21,
+        27,
+        24,
+        20,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.418126969682705,
+      "weighted_board_agreement": 0.0825330132052821
+    },
+    {
+      "path": [
+        14,
+        23,
+        21,
+        8,
+        24,
+        20,
+        16,
+        28
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.354832120585002,
+      "weighted_board_agreement": 0.15447154471544716
+    },
+    {
+      "path": [
+        12,
+        15,
+        9,
+        0,
+        27,
+        24,
+        20,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.400558831201479,
+      "weighted_board_agreement": 0.11251580278128952
+    },
+    {
+      "path": [
+        7,
+        6,
+        23,
+        9,
+        20,
+        0,
+        11,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.414966222054642,
+      "weighted_board_agreement": 0.20958646616541352
+    },
+    {
+      "path": [
+        1,
+        25,
+        28,
+        16,
+        13,
+        22,
+        4,
+        0
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.347029131665024,
+      "weighted_board_agreement": 0.1891646489104116
+    },
+    {
+      "path": [
+        17,
+        14,
+        20,
+        16,
+        24,
+        0,
+        15,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.543671209075912,
+      "weighted_board_agreement": 0.11852085967130213
+    },
+    {
+      "path": [
+        9,
+        21,
+        27,
+        24,
+        20,
+        16,
+        2,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.374542607783006,
+      "weighted_board_agreement": 0.1741466498103666
+    },
+    {
+      "path": [
+        27,
+        14,
+        24,
+        0,
+        16,
+        29,
+        5,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.6561137018154515,
+      "weighted_board_agreement": 0.12111801242236023
+    },
+    {
+      "path": [
+        26,
+        22,
+        27,
+        24,
+        20,
+        16,
+        15,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.397375853077237,
+      "weighted_board_agreement": 0.152014652014652
+    },
+    {
+      "path": [
+        25,
+        28,
+        16,
+        24,
+        4,
+        27,
+        14,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.431756959153822,
+      "weighted_board_agreement": 0.16866746698679472
+    },
+    {
+      "path": [
+        0,
+        15,
+        20,
+        16,
+        24,
+        18,
+        6,
+        12
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.338746943507985,
+      "weighted_board_agreement": 0.11904761904761903
+    },
+    {
+      "path": [
+        16,
+        24,
+        26,
+        20,
+        27,
+        8,
+        21,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.354160044283935,
+      "weighted_board_agreement": 0.1262531328320802
+    },
+    {
+      "path": [
+        11,
+        10,
+        9,
+        23,
+        15,
+        20,
+        0,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.339319035563764,
+      "weighted_board_agreement": 0.21398046398046394
+    },
+    {
+      "path": [
+        25,
+        9,
+        15,
+        27,
+        22,
+        23,
+        8,
+        0
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4410459702583776,
+      "weighted_board_agreement": 0.16717980295566504
+    },
+    {
+      "path": [
+        5,
+        13,
+        23,
+        15,
+        0,
+        27,
+        20,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.466030224229137,
+      "weighted_board_agreement": 0.18067226890756302
+    },
+    {
+      "path": [
+        22,
+        27,
+        24,
+        20,
+        16,
+        28,
+        26,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3311795831579225,
+      "weighted_board_agreement": 0.1431598062953995
+    },
+    {
+      "path": [
+        0,
+        5,
+        1,
+        15,
+        26,
+        20,
+        16,
+        13
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.398005968864226,
+      "weighted_board_agreement": 0.15966386554621845
+    },
+    {
+      "path": [
+        5,
+        0,
+        11,
+        26,
+        20,
+        16,
+        17,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.422524463375922,
+      "weighted_board_agreement": 0.17319848293299622
+    },
+    {
+      "path": [
+        14,
+        18,
+        29,
+        16,
+        0,
+        24,
+        7,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.375473189894205,
+      "weighted_board_agreement": 0.11779448621553885
+    },
+    {
+      "path": [
+        8,
+        24,
+        20,
+        16,
+        29,
+        18,
+        14,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.363797427600103,
+      "weighted_board_agreement": 0.14735894357743098
+    },
+    {
+      "path": [
+        9,
+        21,
+        22,
+        27,
+        24,
+        20,
+        16,
+        13
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.405958912096796,
+      "weighted_board_agreement": 0.18607442977190877
+    },
+    {
+      "path": [
+        28,
+        8,
+        14,
+        18,
+        12,
+        6,
+        3,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.392022026915486,
+      "weighted_board_agreement": 0.12130541871921183
+    },
+    {
+      "path": [
+        7,
+        12,
+        29,
+        16,
+        20,
+        8,
+        23,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.444083571946649,
+      "weighted_board_agreement": 0.22431077694235588
+    },
+    {
+      "path": [
+        12,
+        18,
+        23,
+        15,
+        20,
+        16,
+        24,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.326235334293779,
+      "weighted_board_agreement": 0.3826530612244898
+    },
+    {
+      "path": [
+        28,
+        21,
+        5,
+        27,
+        20,
+        24,
+        16,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3305068108632,
+      "weighted_board_agreement": 0.21705665024630538
+    },
+    {
+      "path": [
+        0,
+        28,
+        16,
+        20,
+        24,
+        8,
+        17,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.398456516211317,
+      "weighted_board_agreement": 0.11284513805522209
+    },
+    {
+      "path": [
+        9,
+        16,
+        13,
+        5,
+        12,
+        3,
+        6,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.544520709589773,
+      "weighted_board_agreement": 0.07901390644753477
+    },
+    {
+      "path": [
+        8,
+        17,
+        9,
+        11,
+        5,
+        12,
+        6,
+        27
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.413867850686015,
+      "weighted_board_agreement": 0.16294642857142858
+    },
+    {
+      "path": [
+        20,
+        28,
+        0,
+        16,
+        9,
+        24,
+        21,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.533104893904771,
+      "weighted_board_agreement": 0.1947779111644658
+    },
+    {
+      "path": [
+        7,
+        24,
+        16,
+        20,
+        26,
+        11,
+        25,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.382374327301604,
+      "weighted_board_agreement": 0.13331280788177338
+    },
+    {
+      "path": [
+        27,
+        4,
+        0,
+        15,
+        23,
+        7,
+        1,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.391846803556708,
+      "weighted_board_agreement": 0.156015037593985
+    },
+    {
+      "path": [
+        17,
+        4,
+        24,
+        16,
+        29,
+        12,
+        3,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.623482356419469,
+      "weighted_board_agreement": 0.13204456094364353
+    },
+    {
+      "path": [
+        23,
+        9,
+        21,
+        3,
+        22,
+        13,
+        11,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.346460405414144,
+      "weighted_board_agreement": 0.10744810744810744
+    },
+    {
+      "path": [
+        17,
+        8,
+        24,
+        0,
+        16,
+        29,
+        5,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.541083008142211,
+      "weighted_board_agreement": 0.10522959183673468
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        8,
+        27,
+        14,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.462307693435555,
+      "weighted_board_agreement": 0.12529761904761905
+    },
+    {
+      "path": [
+        26,
+        20,
+        0,
+        15,
+        13,
+        5,
+        2,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.67727696138825,
+      "weighted_board_agreement": 0.16391941391941395
+    },
+    {
+      "path": [
+        28,
+        0,
+        16,
+        29,
+        22,
+        5,
+        18,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.412461055790251,
+      "weighted_board_agreement": 0.13546798029556653
+    },
+    {
+      "path": [
+        24,
+        20,
+        9,
+        11,
+        5,
+        0,
+        15,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.514330981499798,
+      "weighted_board_agreement": 0.20828065739570165
+    },
+    {
+      "path": [
+        4,
+        21,
+        3,
+        12,
+        24,
+        18,
+        29,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.464140538085765,
+      "weighted_board_agreement": 0.10775862068965517
+    },
+    {
+      "path": [
+        22,
+        27,
+        24,
+        20,
+        16,
+        14,
+        21,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.475452133238304,
+      "weighted_board_agreement": 0.21459096459096458
+    },
+    {
+      "path": [
+        21,
+        9,
+        11,
+        5,
+        12,
+        4,
+        24,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.377725331788839,
+      "weighted_board_agreement": 0.12244897959183675
+    },
+    {
+      "path": [
+        17,
+        26,
+        20,
+        16,
+        28,
+        21,
+        27,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.554112772995472,
+      "weighted_board_agreement": 0.1301242236024845
+    },
+    {
+      "path": [
+        10,
+        20,
+        24,
+        8,
+        17,
+        12,
+        15,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.570164412392354,
+      "weighted_board_agreement": 0.06479140328697851
+    },
+    {
+      "path": [
+        1,
+        15,
+        26,
+        20,
+        16,
+        28,
+        29,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.333485398474087,
+      "weighted_board_agreement": 0.11713075060532689
+    },
+    {
+      "path": [
+        26,
+        22,
+        18,
+        14,
+        27,
+        8,
+        24,
+        20
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.601664491481957,
+      "weighted_board_agreement": 0.1286295005807201
+    },
+    {
+      "path": [
+        29,
+        12,
+        3,
+        1,
+        2,
+        16,
+        28,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.514575277898935,
+      "weighted_board_agreement": 0.08944658944658944
+    },
+    {
+      "path": [
+        11,
+        26,
+        28,
+        16,
+        20,
+        24,
+        9,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3411698306501,
+      "weighted_board_agreement": 0.12606837606837606
+    },
+    {
+      "path": [
+        21,
+        9,
+        11,
+        5,
+        12,
+        6,
+        23,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.225972026357465,
+      "weighted_board_agreement": 0.1538220551378446
+    },
+    {
+      "path": [
+        18,
+        29,
+        16,
+        20,
+        3,
+        22,
+        15,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.372975781039865,
+      "weighted_board_agreement": 0.14765906362545017
+    },
+    {
+      "path": [
+        0,
+        6,
+        22,
+        27,
+        24,
+        20,
+        23,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4708256549590155,
+      "weighted_board_agreement": 0.09806295399515738
+    },
+    {
+      "path": [
+        17,
+        8,
+        24,
+        27,
+        20,
+        10,
+        28,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.467618422159414,
+      "weighted_board_agreement": 0.11645962732919256
+    },
+    {
+      "path": [
+        5,
+        12,
+        13,
+        20,
+        16,
+        24,
+        7,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.403172714787031,
+      "weighted_board_agreement": 0.09968944099378882
+    },
+    {
+      "path": [
+        29,
+        15,
+        0,
+        9,
+        8,
+        27,
+        20,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.551624620031885,
+      "weighted_board_agreement": 0.1398046398046398
+    },
+    {
+      "path": [
+        15,
+        29,
+        3,
+        22,
+        13,
+        16,
+        24,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.32706877385339,
+      "weighted_board_agreement": 0.22525062656641603
+    },
+    {
+      "path": [
+        27,
+        24,
+        14,
+        29,
+        11,
+        17,
+        10,
+        20
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5717859620984616,
+      "weighted_board_agreement": 0.15950363196125905
+    },
+    {
+      "path": [
+        13,
+        22,
+        3,
+        21,
+        24,
+        16,
+        20,
+        14
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.356643574860981,
+      "weighted_board_agreement": 0.22028811524609845
+    },
+    {
+      "path": [
+        15,
+        21,
+        28,
+        16,
+        24,
+        8,
+        17,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.538764604702304,
+      "weighted_board_agreement": 0.1425410872313527
+    },
+    {
+      "path": [
+        16,
+        20,
+        24,
+        27,
+        21,
+        6,
+        28,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.574557984366229,
+      "weighted_board_agreement": 0.15354090354090352
+    },
+    {
+      "path": [
+        16,
+        13,
+        22,
+        3,
+        21,
+        19,
+        29,
+        12
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.39988384019117,
+      "weighted_board_agreement": 0.2354721549636804
+    },
+    {
+      "path": [
+        27,
+        14,
+        29,
+        16,
+        9,
+        21,
+        24,
+        0
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.317785845868208,
+      "weighted_board_agreement": 0.22413793103448273
+    },
+    {
+      "path": [
+        6,
+        21,
+        9,
+        11,
+        25,
+        18,
+        14,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.582567119112048,
+      "weighted_board_agreement": 0.11254501800720289
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        27,
+        21,
+        12,
+        3
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.426589201981193,
+      "weighted_board_agreement": 0.17368742368742368
+    },
+    {
+      "path": [
+        27,
+        14,
+        29,
+        16,
+        9,
+        21,
+        22,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.368316560050276,
+      "weighted_board_agreement": 0.18411330049261082
+    },
+    {
+      "path": [
+        1,
+        7,
+        3,
+        0,
+        20,
+        26,
+        16,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5056136483389055,
+      "weighted_board_agreement": 0.11256377551020409
+    },
+    {
+      "path": [
+        19,
+        10,
+        6,
+        5,
+        11,
+        25,
+        18,
+        27
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4113124294992225,
+      "weighted_board_agreement": 0.19719169719169719
+    },
+    {
+      "path": [
+        18,
+        12,
+        14,
+        3,
+        0,
+        16,
+        24,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.610893146694571,
+      "weighted_board_agreement": 0.13053097345132744
+    },
+    {
+      "path": [
+        27,
+        24,
+        14,
+        21,
+        3,
+        22,
+        17,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.517727089742821,
+      "weighted_board_agreement": 0.14720496894409937
+    },
+    {
+      "path": [
+        27,
+        29,
+        21,
+        28,
+        16,
+        24,
+        20,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.366747532101167,
+      "weighted_board_agreement": 0.15750915750915753
+    },
+    {
+      "path": [
+        24,
+        14,
+        21,
+        3,
+        22,
+        10,
+        4,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.540368036740228,
+      "weighted_board_agreement": 0.10584415584415584
+    },
+    {
+      "path": [
+        8,
+        24,
+        21,
+        16,
+        13,
+        22,
+        3,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.479644441394063,
+      "weighted_board_agreement": 0.1527423469387755
+    },
+    {
+      "path": [
+        14,
+        16,
+        21,
+        8,
+        20,
+        12,
+        17,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.548813507667208,
+      "weighted_board_agreement": 0.10744810744810747
+    },
+    {
+      "path": [
+        16,
+        1,
+        7,
+        24,
+        4,
+        27,
+        0,
+        22
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.370217933509638,
+      "weighted_board_agreement": 0.13416149068322983
+    },
+    {
+      "path": [
+        0,
+        6,
+        23,
+        9,
+        21,
+        3,
+        22,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.571141829735498,
+      "weighted_board_agreement": 0.1443577430972389
+    },
+    {
+      "path": [
+        3,
+        2,
+        28,
+        16,
+        20,
+        26,
+        12,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.388745562296153,
+      "weighted_board_agreement": 0.1207201889020071
+    },
+    {
+      "path": [
+        13,
+        16,
+        24,
+        8,
+        21,
+        27,
+        9,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.605315695817237,
+      "weighted_board_agreement": 0.11743886743886743
+    },
+    {
+      "path": [
+        16,
+        29,
+        18,
+        14,
+        27,
+        24,
+        20,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.435076028541304,
+      "weighted_board_agreement": 0.10984393757503001
+    },
+    {
+      "path": [
+        23,
+        6,
+        11,
+        0,
+        20,
+        26,
+        12,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.401577276007914,
+      "weighted_board_agreement": 0.12589285714285717
+    },
+    {
+      "path": [
+        11,
+        26,
+        28,
+        16,
+        20,
+        24,
+        18,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.486966382035703,
+      "weighted_board_agreement": 0.10952380952380951
+    },
+    {
+      "path": [
+        8,
+        11,
+        5,
+        0,
+        25,
+        20,
+        16,
+        26
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.383985862753473,
+      "weighted_board_agreement": 0.16717980295566506
+    },
+    {
+      "path": [
+        6,
+        24,
+        20,
+        12,
+        18,
+        14,
+        27,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.330863625065653,
+      "weighted_board_agreement": 0.2869458128078818
+    },
+    {
+      "path": [
+        23,
+        6,
+        21,
+        16,
+        7,
+        1,
+        15,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.333508713014716,
+      "weighted_board_agreement": 0.08435960591133004
+    },
+    {
+      "path": [
+        7,
+        24,
+        16,
+        20,
+        26,
+        0,
+        5,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.614352831539482,
+      "weighted_board_agreement": 0.0877463054187192
+    },
+    {
+      "path": [
+        21,
+        0,
+        5,
+        1,
+        13,
+        17,
+        12,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.348201611685007,
+      "weighted_board_agreement": 0.28174603174603174
+    },
+    {
+      "path": [
+        23,
+        14,
+        28,
+        16,
+        20,
+        24,
+        27,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.314349522463068,
+      "weighted_board_agreement": 0.17473435655253838
+    },
+    {
+      "path": [
+        5,
+        7,
+        12,
+        6,
+        3,
+        0,
+        25,
+        18
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.62465602386702,
+      "weighted_board_agreement": 0.08928571428571429
+    },
+    {
+      "path": [
+        3,
+        22,
+        13,
+        16,
+        21,
+        15,
+        1,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.516582945507444,
+      "weighted_board_agreement": 0.23540372670807455
+    },
+    {
+      "path": [
+        25,
+        18,
+        23,
+        27,
+        4,
+        24,
+        14,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.376517940922891,
+      "weighted_board_agreement": 0.15293040293040291
+    },
+    {
+      "path": [
+        27,
+        9,
+        25,
+        11,
+        18,
+        14,
+        20,
+        16
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.347077572860183,
+      "weighted_board_agreement": 0.1494047619047619
+    },
+    {
+      "path": [
+        6,
+        23,
+        9,
+        21,
+        3,
+        12,
+        19,
+        24
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3991738526340125,
+      "weighted_board_agreement": 0.14316239316239315
+    },
+    {
+      "path": [
+        25,
+        11,
+        17,
+        8,
+        24,
+        20,
+        26,
+        12
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.353525691741672,
+      "weighted_board_agreement": 0.09303721488595437
+    },
+    {
+      "path": [
+        5,
+        11,
+        25,
+        9,
+        15,
+        27,
+        22,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5024156320409245,
+      "weighted_board_agreement": 0.1437807881773399
+    },
+    {
+      "path": [
+        0,
+        5,
+        25,
+        11,
+        18,
+        14,
+        20,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.36044727500696,
+      "weighted_board_agreement": 0.14804639804639802
+    },
+    {
+      "path": [
+        21,
+        3,
+        22,
+        13,
+        16,
+        24,
+        7,
+        19
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.411224242376834,
+      "weighted_board_agreement": 0.18411330049261082
+    },
+    {
+      "path": [
+        7,
+        11,
+        5,
+        0,
+        20,
+        15,
+        23,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.659293907888793,
+      "weighted_board_agreement": 0.1276864728192162
+    },
+    {
+      "path": [
+        3,
+        22,
+        13,
+        16,
+        21,
+        24,
+        12,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.288963154236106,
+      "weighted_board_agreement": 0.12719298245614033
+    },
+    {
+      "path": [
+        28,
+        16,
+        20,
+        24,
+        0,
+        29,
+        8,
+        23
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.500290843749138,
+      "weighted_board_agreement": 0.16555690072639231
+    },
+    {
+      "path": [
+        13,
+        1,
+        15,
+        26,
+        20,
+        16,
+        24,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.443294965750967,
+      "weighted_board_agreement": 0.15799031476997577
+    },
+    {
+      "path": [
+        11,
+        5,
+        0,
+        26,
+        20,
+        16,
+        28,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.419205184459508,
+      "weighted_board_agreement": 0.14645858343337334
+    },
+    {
+      "path": [
+        7,
+        24,
+        16,
+        20,
+        14,
+        27,
+        10,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.494337458380091,
+      "weighted_board_agreement": 0.12173913043478259
+    },
+    {
+      "path": [
+        3,
+        22,
+        13,
+        16,
+        24,
+        0,
+        4,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.431882475682048,
+      "weighted_board_agreement": 0.1237468671679198
+    },
+    {
+      "path": [
+        20,
+        25,
+        3,
+        22,
+        24,
+        8,
+        21,
+        17
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.531497217799229,
+      "weighted_board_agreement": 0.15664160401002508
+    },
+    {
+      "path": [
+        3,
+        21,
+        14,
+        16,
+        29,
+        12,
+        17,
+        9
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.437959075484967,
+      "weighted_board_agreement": 0.17701863354037267
+    },
+    {
+      "path": [
+        3,
+        22,
+        13,
+        16,
+        24,
+        21,
+        4,
+        0
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.494116363334096,
+      "weighted_board_agreement": 0.13721804511278196
+    },
+    {
+      "path": [
+        20,
+        10,
+        28,
+        2,
+        14,
+        9,
+        21,
+        11
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.677456843392127,
+      "weighted_board_agreement": 0.14618644067796613
+    },
+    {
+      "path": [
+        28,
+        0,
+        16,
+        24,
+        21,
+        27,
+        14,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.520510346244179,
+      "weighted_board_agreement": 0.16039540816326528
+    },
+    {
+      "path": [
+        15,
+        0,
+        11,
+        9,
+        20,
+        10,
+        27,
+        22
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.537886333818461,
+      "weighted_board_agreement": 0.11843711843711845
+    },
+    {
+      "path": [
+        0,
+        21,
+        8,
+        17,
+        12,
+        6,
+        23,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4698895796150575,
+      "weighted_board_agreement": 0.19596273291925467
+    },
+    {
+      "path": [
+        29,
+        16,
+        0,
+        24,
+        28,
+        23,
+        17,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.40066542637,
+      "weighted_board_agreement": 0.15225563909774434
+    },
+    {
+      "path": [
+        16,
+        13,
+        24,
+        27,
+        20,
+        10,
+        1,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.258558694648177,
+      "weighted_board_agreement": 0.1610331632653061
+    },
+    {
+      "path": [
+        7,
+        22,
+        0,
+        26,
+        20,
+        16,
+        28,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.370271328939567,
+      "weighted_board_agreement": 0.14161490683229813
+    },
+    {
+      "path": [
+        24,
+        20,
+        16,
+        14,
+        21,
+        3,
+        22,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.424628941211488,
+      "weighted_board_agreement": 0.1149749373433584
+    },
+    {
+      "path": [
+        26,
+        20,
+        0,
+        11,
+        5,
+        21,
+        2,
+        8
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.566458666475849,
+      "weighted_board_agreement": 0.09676434676434677
+    },
+    {
+      "path": [
+        6,
+        21,
+        8,
+        14,
+        20,
+        16,
+        28,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.249890088811525,
+      "weighted_board_agreement": 0.3547008547008547
+    },
+    {
+      "path": [
+        11,
+        17,
+        8,
+        24,
+        20,
+        0,
+        21,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4663822633767225,
+      "weighted_board_agreement": 0.07550125313283208
+    },
+    {
+      "path": [
+        24,
+        21,
+        16,
+        13,
+        22,
+        3,
+        29,
+        15
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4571723840459665,
+      "weighted_board_agreement": 0.11576354679802955
+    },
+    {
+      "path": [
+        3,
+        0,
+        24,
+        20,
+        16,
+        7,
+        28,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.5126582064143985,
+      "weighted_board_agreement": 0.17035398230088497
+    },
+    {
+      "path": [
+        2,
+        3,
+        12,
+        24,
+        18,
+        29,
+        16,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.506722980454422,
+      "weighted_board_agreement": 0.20299145299145296
+    },
+    {
+      "path": [
+        10,
+        21,
+        3,
+        22,
+        13,
+        16,
+        24,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.4266670078945465,
+      "weighted_board_agreement": 0.10744810744810743
+    },
+    {
+      "path": [
+        6,
+        12,
+        15,
+        0,
+        20,
+        10,
+        1,
+        25
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.533525852004351,
+      "weighted_board_agreement": 0.1173469387755102
+    },
+    {
+      "path": [
+        29,
+        3,
+        22,
+        13,
+        16,
+        24,
+        25,
+        2
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.329359972900162,
+      "weighted_board_agreement": 0.16737288135593217
+    },
+    {
+      "path": [
+        27,
+        24,
+        17,
+        0,
+        26,
+        20,
+        16,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.6215924379302775,
+      "weighted_board_agreement": 0.08497536945812809
+    },
+    {
+      "path": [
+        9,
+        21,
+        3,
+        22,
+        13,
+        16,
+        1,
+        25
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.295351876758194,
+      "weighted_board_agreement": 0.3943577430972388
+    },
+    {
+      "path": [
+        10,
+        22,
+        3,
+        25,
+        20,
+        9,
+        23,
+        21
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.389371643023077,
+      "weighted_board_agreement": 0.2183229813664596
+    },
+    {
+      "path": [
+        20,
+        13,
+        5,
+        21,
+        23,
+        15,
+        1,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.367738315093569,
+      "weighted_board_agreement": 0.17429792429792432
+    },
+    {
+      "path": [
+        25,
+        11,
+        18,
+        14,
+        20,
+        16,
+        28,
+        10
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.35647214019147,
+      "weighted_board_agreement": 0.15377804014167654
+    },
+    {
+      "path": [
+        20,
+        10,
+        22,
+        9,
+        24,
+        27,
+        0,
+        14
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.486397014013392,
+      "weighted_board_agreement": 0.1134453781512605
+    },
+    {
+      "path": [
+        29,
+        0,
+        28,
+        16,
+        20,
+        24,
+        18,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.363068670982703,
+      "weighted_board_agreement": 0.10437192118226599
+    },
+    {
+      "path": [
+        0,
+        17,
+        20,
+        12,
+        15,
+        6,
+        13,
+        5
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.378501177256251,
+      "weighted_board_agreement": 0.18170426065162906
+    },
+    {
+      "path": [
+        3,
+        25,
+        20,
+        26,
+        15,
+        1,
+        17,
+        4
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.361523987034726,
+      "weighted_board_agreement": 0.22598522167487683
+    },
+    {
+      "path": [
+        29,
+        3,
+        22,
+        13,
+        16,
+        21,
+        2,
+        1
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.349157103070608,
+      "weighted_board_agreement": 0.21640435835351088
+    },
+    {
+      "path": [
+        16,
+        21,
+        8,
+        20,
+        12,
+        26,
+        18,
+        6
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.543594407328551,
+      "weighted_board_agreement": 0.13044794188861986
+    },
+    {
+      "path": [
+        21,
+        3,
+        22,
+        13,
+        16,
+        24,
+        1,
+        18
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.431014986524581,
+      "weighted_board_agreement": 0.2960927960927961
+    },
+    {
+      "path": [
+        15,
+        1,
+        8,
+        20,
+        16,
+        28,
+        3,
+        7
+      ],
+      "is_true": false,
+      "best_full_row_score": -4.3518488997730405,
+      "weighted_board_agreement": 0.16996173469387754
+    }
+  ],
+  "wall_seconds": 23.019578562998504
+}

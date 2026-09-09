@@ -1,0 +1,2021 @@
+{
+  "phase": "484K",
+  "status": "informal_bidirectional_width10_15_dev_power_batch_not_frozen",
+  "faed_scored": false,
+  "fixture_split": "dev",
+  "fixture_indices": [
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "widths": [
+    10,
+    15
+  ],
+  "gate": {
+    "minimum_exact_recoveries_per_five_fixture_cell": 4,
+    "all_cells_must_pass": true
+  },
+  "all_cells_pass": true,
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "width": 10,
+      "fixture_count": 5,
+      "exact_recovery_count": 5,
+      "gate_pass": true,
+      "records": [
+        {
+          "board_mode": "vic_profile",
+          "width": 10,
+          "fixture_index": 23,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 2.0601174129062843,
+          "best_sequence": [
+            5,
+            0,
+            2,
+            8,
+            1,
+            9,
+            7,
+            6,
+            3,
+            4
+          ],
+          "best_order": [
+            1,
+            4,
+            2,
+            8,
+            9,
+            0,
+            7,
+            6,
+            3,
+            5
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 50.351240549003705
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 10,
+          "fixture_index": 24,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 2.8744544419786093,
+          "best_sequence": [
+            6,
+            4,
+            7,
+            8,
+            5,
+            2,
+            0,
+            3,
+            9,
+            1
+          ],
+          "best_order": [
+            6,
+            9,
+            5,
+            7,
+            1,
+            4,
+            0,
+            2,
+            3,
+            8
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 49.765528619995166
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 10,
+          "fixture_index": 25,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 0.18846264986051509,
+          "best_sequence": [
+            9,
+            2,
+            0,
+            5,
+            7,
+            3,
+            1,
+            8,
+            6,
+            4
+          ],
+          "best_order": [
+            2,
+            6,
+            1,
+            5,
+            9,
+            3,
+            8,
+            4,
+            7,
+            0
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 50.51429464099783
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 10,
+          "fixture_index": 26,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 1.9327406089482781,
+          "best_sequence": [
+            0,
+            9,
+            5,
+            3,
+            2,
+            1,
+            7,
+            6,
+            4,
+            8
+          ],
+          "best_order": [
+            0,
+            5,
+            4,
+            3,
+            8,
+            2,
+            7,
+            6,
+            9,
+            1
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 12
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 50.600756086998445
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 10,
+          "fixture_index": 27,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 4.444143381566901,
+          "best_sequence": [
+            0,
+            9,
+            6,
+            5,
+            2,
+            8,
+            1,
+            4,
+            7,
+            3
+          ],
+          "best_order": [
+            0,
+            6,
+            4,
+            9,
+            7,
+            3,
+            2,
+            8,
+            5,
+            1
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 50.36252536000393
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 15,
+      "fixture_count": 5,
+      "exact_recovery_count": 4,
+      "gate_pass": true,
+      "records": [
+        {
+          "board_mode": "vic_profile",
+          "width": 15,
+          "fixture_index": 23,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 1.623471566584801,
+          "best_sequence": [
+            5,
+            8,
+            4,
+            10,
+            2,
+            12,
+            0,
+            7,
+            1,
+            14,
+            9,
+            3,
+            11,
+            13,
+            6
+          ],
+          "best_order": [
+            6,
+            8,
+            4,
+            11,
+            2,
+            0,
+            14,
+            7,
+            1,
+            10,
+            3,
+            12,
+            5,
+            13,
+            9
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 11,
+              "best_true_segment_rank": 4
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 8,
+              "best_true_segment_rank": 4
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 8,
+              "best_true_segment_rank": 7
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 8,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 4
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 5
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 65
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 61
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 4
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 148.3879269980025
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 15,
+          "fixture_index": 24,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 1.5276705035411828,
+          "best_sequence": [
+            4,
+            2,
+            7,
+            9,
+            11,
+            1,
+            10,
+            8,
+            0,
+            3,
+            5,
+            14,
+            13,
+            12,
+            6
+          ],
+          "best_order": [
+            8,
+            5,
+            1,
+            9,
+            0,
+            10,
+            14,
+            2,
+            7,
+            3,
+            6,
+            4,
+            13,
+            12,
+            11
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 9,
+              "best_true_segment_rank": 243
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 24
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 76
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 8
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 46
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 147.40003869299835
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 15,
+          "fixture_index": 25,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 1.2409928595993842,
+          "best_sequence": [
+            7,
+            5,
+            1,
+            11,
+            2,
+            13,
+            0,
+            14,
+            4,
+            9,
+            3,
+            12,
+            6,
+            10,
+            8
+          ],
+          "best_order": [
+            6,
+            2,
+            4,
+            10,
+            8,
+            1,
+            12,
+            0,
+            14,
+            9,
+            13,
+            3,
+            11,
+            5,
+            7
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 11,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 8,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 7
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 10
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 148.99439627300308
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 15,
+          "fixture_index": 26,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 2.066267705313196,
+          "best_sequence": [
+            0,
+            2,
+            14,
+            6,
+            3,
+            13,
+            1,
+            9,
+            4,
+            12,
+            8,
+            10,
+            7,
+            11,
+            5
+          ],
+          "best_order": [
+            0,
+            6,
+            1,
+            4,
+            8,
+            14,
+            3,
+            12,
+            10,
+            7,
+            11,
+            13,
+            9,
+            5,
+            2
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 12,
+              "best_true_segment_rank": 62
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 8,
+              "best_true_segment_rank": 8
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 8,
+              "best_true_segment_rank": 17
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 42
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 59
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 34
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 468
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 27
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 10
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 151.26569234199997
+        },
+        {
+          "board_mode": "vic_profile",
+          "width": 15,
+          "fixture_index": 27,
+          "exact_recovery": false,
+          "best_tau": -0.23809523809523808,
+          "best_score": 0.28933900562519144,
+          "best_sequence": [
+            8,
+            14,
+            12,
+            7,
+            6,
+            5,
+            3,
+            11,
+            10,
+            2,
+            0,
+            1,
+            4,
+            9,
+            13
+          ],
+          "best_order": [
+            10,
+            11,
+            9,
+            6,
+            12,
+            5,
+            4,
+            3,
+            0,
+            13,
+            8,
+            7,
+            2,
+            14,
+            1
+          ],
+          "truth_rank_if_retained": null,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 9
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 145
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 979
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 199
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1042
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 3702
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1677
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1824
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 0,
+              "best_true_segment_rank": null
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 0,
+              "best_true_segment_rank": null
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 0,
+              "best_true_segment_rank": null
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 0,
+              "best_true_segment_rank": null
+            }
+          ],
+          "wall_seconds": 148.49823178799852
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 10,
+      "fixture_count": 5,
+      "exact_recovery_count": 5,
+      "gate_pass": true,
+      "records": [
+        {
+          "board_mode": "broad_random",
+          "width": 10,
+          "fixture_index": 23,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 4.675456400133112,
+          "best_sequence": [
+            7,
+            6,
+            9,
+            2,
+            5,
+            0,
+            8,
+            1,
+            4,
+            3
+          ],
+          "best_order": [
+            5,
+            7,
+            3,
+            9,
+            8,
+            4,
+            1,
+            0,
+            6,
+            2
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 4
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 48.903374380999594
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 10,
+          "fixture_index": 24,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 2.394803159618445,
+          "best_sequence": [
+            5,
+            0,
+            2,
+            7,
+            4,
+            3,
+            9,
+            6,
+            8,
+            1
+          ],
+          "best_order": [
+            1,
+            9,
+            2,
+            5,
+            4,
+            0,
+            7,
+            3,
+            8,
+            6
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 10
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 19
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 5
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 48.871950376000314
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 10,
+          "fixture_index": 25,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 2.1050934522321096,
+          "best_sequence": [
+            1,
+            9,
+            8,
+            4,
+            2,
+            6,
+            5,
+            0,
+            7,
+            3
+          ],
+          "best_order": [
+            7,
+            0,
+            4,
+            9,
+            3,
+            6,
+            5,
+            8,
+            2,
+            1
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 48.79730176400335
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 10,
+          "fixture_index": 26,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 5.594862849737648,
+          "best_sequence": [
+            0,
+            9,
+            2,
+            5,
+            4,
+            8,
+            3,
+            7,
+            6,
+            1
+          ],
+          "best_order": [
+            0,
+            9,
+            2,
+            6,
+            4,
+            3,
+            8,
+            7,
+            5,
+            1
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 32
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 6
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 13
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 48.14289386999735
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 10,
+          "fixture_index": 27,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 4.223439554279232,
+          "best_sequence": [
+            4,
+            3,
+            9,
+            8,
+            6,
+            1,
+            5,
+            0,
+            7,
+            2
+          ],
+          "best_order": [
+            7,
+            5,
+            9,
+            1,
+            0,
+            6,
+            4,
+            8,
+            3,
+            2
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 48.38783713999874
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 15,
+      "fixture_count": 5,
+      "exact_recovery_count": 5,
+      "gate_pass": true,
+      "records": [
+        {
+          "board_mode": "broad_random",
+          "width": 15,
+          "fixture_index": 23,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 2.4446947865474478,
+          "best_sequence": [
+            3,
+            4,
+            12,
+            8,
+            7,
+            5,
+            13,
+            0,
+            10,
+            9,
+            14,
+            1,
+            6,
+            11,
+            2
+          ],
+          "best_order": [
+            7,
+            11,
+            14,
+            0,
+            1,
+            5,
+            12,
+            4,
+            3,
+            9,
+            8,
+            13,
+            2,
+            6,
+            10
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 11,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 13
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 16
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 141.91367393700057
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 15,
+          "fixture_index": 24,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 3.452566569632264,
+          "best_sequence": [
+            10,
+            8,
+            2,
+            14,
+            12,
+            11,
+            7,
+            1,
+            5,
+            3,
+            6,
+            4,
+            9,
+            13,
+            0
+          ],
+          "best_order": [
+            14,
+            7,
+            2,
+            9,
+            11,
+            8,
+            10,
+            6,
+            1,
+            12,
+            0,
+            5,
+            4,
+            13,
+            3
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 12,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 10,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 10,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 9,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 8,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 140.96582675299578
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 15,
+          "fixture_index": 25,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 2.7016846503309457,
+          "best_sequence": [
+            3,
+            9,
+            12,
+            6,
+            14,
+            13,
+            10,
+            11,
+            0,
+            8,
+            5,
+            4,
+            2,
+            7,
+            1
+          ],
+          "best_order": [
+            8,
+            14,
+            12,
+            0,
+            11,
+            10,
+            3,
+            13,
+            9,
+            1,
+            6,
+            7,
+            2,
+            5,
+            4
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 11,
+              "best_true_segment_rank": 6
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 11,
+              "best_true_segment_rank": 24
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 10,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 9,
+              "best_true_segment_rank": 4
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 5
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 142.51265222200163
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 15,
+          "fixture_index": 26,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 3.581673414130731,
+          "best_sequence": [
+            7,
+            2,
+            13,
+            3,
+            11,
+            4,
+            10,
+            14,
+            0,
+            8,
+            9,
+            6,
+            12,
+            1,
+            5
+          ],
+          "best_order": [
+            8,
+            13,
+            1,
+            3,
+            5,
+            14,
+            11,
+            0,
+            9,
+            10,
+            6,
+            4,
+            12,
+            2,
+            7
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 11,
+              "best_true_segment_rank": 7
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 10,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 9,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 8,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 7,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 5
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 2
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 140.05439586399734
+        },
+        {
+          "board_mode": "broad_random",
+          "width": 15,
+          "fixture_index": 27,
+          "exact_recovery": true,
+          "best_tau": 1.0,
+          "best_score": 3.320763007911447,
+          "best_sequence": [
+            13,
+            14,
+            12,
+            3,
+            1,
+            8,
+            7,
+            4,
+            10,
+            6,
+            5,
+            2,
+            0,
+            9,
+            11
+          ],
+          "best_order": [
+            12,
+            4,
+            11,
+            3,
+            7,
+            10,
+            9,
+            6,
+            5,
+            13,
+            8,
+            14,
+            2,
+            0,
+            1
+          ],
+          "truth_rank_if_retained": 1,
+          "depth_diagnostics": [
+            {
+              "depth": 4,
+              "beam_size": 4096,
+              "true_segment_count_retained": 11,
+              "best_true_segment_rank": 4
+            },
+            {
+              "depth": 5,
+              "beam_size": 4096,
+              "true_segment_count_retained": 8,
+              "best_true_segment_rank": 5
+            },
+            {
+              "depth": 6,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 6
+            },
+            {
+              "depth": 7,
+              "beam_size": 4096,
+              "true_segment_count_retained": 6,
+              "best_true_segment_rank": 12
+            },
+            {
+              "depth": 8,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 7
+            },
+            {
+              "depth": 9,
+              "beam_size": 4096,
+              "true_segment_count_retained": 5,
+              "best_true_segment_rank": 1
+            },
+            {
+              "depth": 10,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 3
+            },
+            {
+              "depth": 11,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 15
+            },
+            {
+              "depth": 12,
+              "beam_size": 4096,
+              "true_segment_count_retained": 4,
+              "best_true_segment_rank": 44
+            },
+            {
+              "depth": 13,
+              "beam_size": 4096,
+              "true_segment_count_retained": 3,
+              "best_true_segment_rank": 58
+            },
+            {
+              "depth": 14,
+              "beam_size": 4096,
+              "true_segment_count_retained": 2,
+              "best_true_segment_rank": 51
+            },
+            {
+              "depth": 15,
+              "beam_size": 4096,
+              "true_segment_count_retained": 1,
+              "best_true_segment_rank": 1
+            }
+          ],
+          "wall_seconds": 141.555730510001
+        }
+      ]
+    }
+  ],
+  "wall_seconds": 346.416602366
+}

@@ -21,3 +21,8 @@ tools/gsmg/phase478_manifest.jsonl
 # ../key-seeker/db/addresses.hash160.bloom (BLMCACHE v1 format). Not
 # reproducible from anything else in this repo -- see binary_key_material_backfill.py.
 db/*.bloom
+
+# Scratch/build working directory: compiled CUDA binaries and rolling-search
+# checkpoint .npz files, all reproducible from the committed phase484* scripts
+# and their binary sources. Far too large and too transient for Git hosting.
+_work/

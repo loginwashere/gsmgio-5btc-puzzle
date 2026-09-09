@@ -1,0 +1,29 @@
+{
+  "crypto_profile": "legacy-evp-bytes-to-key-sha256/aes-256-cbc/pkcs7",
+  "cryptography_version": "41.0.7",
+  "files_sha256": {
+    "audit_script": "a8453cc86e7c94f82be811e28c91196ee80c7c57c84a6c309ccacc9dd0ee36f3",
+    "cb_common": "97e787a8be234b7ba5b7b8e0c1ba1abe0f8c61f480e5628da7883ef30db84de8",
+    "data": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "protocol": "d37949da83ee27711698069a6568c9d2deb6cb79b65c0eba6c96ad7121c0886f",
+    "verifier": "64d4ccf3eee65c51c85cb8b22a584fe5a62852fce4a70dcac1ebd2d9b0bcd05b"
+  },
+  "p32_ciphertext_length": 80,
+  "p32_ciphertext_sha256": "cbbf945223b0c7a60e31b6ba7f5dfbc17f68f545bec059e937c11e7465d0117b",
+  "p32_salt_hex": "b45a5e3d827593ca",
+  "phase": 481,
+  "planned_decryptions": 10000000,
+  "status": "locked-before-real-run",
+  "target_blob": "P32TRAILING",
+  "validators": {
+    "padding_alone_promotes": false,
+    "strong_text_minimum_z": 8.0,
+    "structural_binary": "aes/block16/pad16/body64",
+    "weak_text_minimum_z": 5.0
+  },
+  "wordlist_blank_lines": 0,
+  "wordlist_duplicate_lines": 0,
+  "wordlist_line_count": 10000000,
+  "wordlist_path": "/home/loginwashere/projects/key-seeker/wordlists/Pwdb_top-10000000.txt",
+  "wordlist_sha256": "18dc49ca32b62455a61e3398f4ab9f93eb700ff142fa0d4b9fd11a727f3b80e4"
+}

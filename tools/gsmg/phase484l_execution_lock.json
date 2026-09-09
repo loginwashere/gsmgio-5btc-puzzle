@@ -1,0 +1,59 @@
+{
+  "budgets": {
+    "beam_width": 4096,
+    "reserved_fraction": 0.5,
+    "start_depth": 4,
+    "workers": 6
+  },
+  "faed_scored": false,
+  "files_sha256": {
+    "base_solver": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "bidirectional_solver": "63dc36f4dc600e05c10321a799889476a8ad6d4c41429d5c681695da838d9375",
+    "corpus": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "dev_batch_result": "02724ae08dc9de5e41ba3c5b2c4ef79cb75c2a86638c72e7793cf4356501156d",
+    "discriminator": "09491be49efc9173e3aa527a8f6df6d357b2f892b0683b89edf72373b03b5fa6",
+    "discriminator_result": "15b650b842d0c07fd89954cfb116d8e893ad9c1be39b41b8489e35990cf32d6f",
+    "holdout_runner": "75d18a4bd59bd95be8f2a05584ccdf2de9f84e0127f265c2fb9b12b0aebab99f",
+    "prefix_solver": "5d4677811b43737d41b406628d723b62d576d756051abe3c5e1922af36266354",
+    "protocol": "96b8a154d91d708aaee3b01626560bb7e43ff921a089b61aaed11a92047748d8",
+    "verifier": "500ad9886abb791e223abfa762c8ac37ab402d4d69dd62f504ee2ffdee6503ea"
+  },
+  "gate": {
+    "all_cells_must_pass": true,
+    "fixtures_per_cell": 10,
+    "minimum_exact_recoveries_per_cell": 8
+  },
+  "phase": "484L",
+  "prohibitions": {
+    "faed_scoring": true,
+    "holdout_rerun": true,
+    "post_lock_tuning": true,
+    "width_19": true
+  },
+  "scope": {
+    "board_modes": [
+      "vic_profile",
+      "broad_random"
+    ],
+    "fixture_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "fixture_split": "holdout",
+    "holdout_seed": 1212825629,
+    "pair_index": 0,
+    "widths": [
+      10,
+      15
+    ]
+  },
+  "status": "locked_before_holdout"
+}

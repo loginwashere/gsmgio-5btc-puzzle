@@ -1,0 +1,595 @@
+{
+  "phase": "484S",
+  "status": "development_unknown_pair_screen_complete_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "board_mode": "vic_profile",
+  "fixture_index": 50,
+  "true_pair_index": 0,
+  "screen_budgets": {
+    "shortlist": 16384,
+    "refine_keep": 64,
+    "extension_seed_count": 0
+  },
+  "cells": [
+    {
+      "hypothesis_pair_index": 17,
+      "hypothesis_pair": [
+        "c",
+        "f"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.354986018531017,
+      "true_segments_retained": 4,
+      "best_true_coarse_rank": 234,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.16370951999852,
+      "gpu_screen_seconds": 3.2953642459979164,
+      "gpu_refine_seconds": 3.5383220610019634,
+      "pair_screen_rank": 1
+    },
+    {
+      "hypothesis_pair_index": 25,
+      "hypothesis_pair": [
+        "d",
+        "i"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.365164401579416,
+      "true_segments_retained": 1,
+      "best_true_coarse_rank": 815,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.625680482000462,
+      "gpu_screen_seconds": 3.29184887700103,
+      "gpu_refine_seconds": 3.5445205450014328,
+      "pair_screen_rank": 2
+    },
+    {
+      "hypothesis_pair_index": 22,
+      "hypothesis_pair": [
+        "d",
+        "f"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.366013907686019,
+      "true_segments_retained": 2,
+      "best_true_coarse_rank": 139,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.46631962399988,
+      "gpu_screen_seconds": 3.316423468000721,
+      "gpu_refine_seconds": 3.600024295003095,
+      "pair_screen_rank": 3
+    },
+    {
+      "hypothesis_pair_index": 5,
+      "hypothesis_pair": [
+        "a",
+        "g"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.371639509957844,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.108761353993032,
+      "gpu_screen_seconds": 3.1392966310013435,
+      "gpu_refine_seconds": 3.358371881993662,
+      "pair_screen_rank": 4
+    },
+    {
+      "hypothesis_pair_index": 32,
+      "hypothesis_pair": [
+        "f",
+        "i"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.37201454526803,
+      "true_segments_retained": 2,
+      "best_true_coarse_rank": 460,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.151918183000816,
+      "gpu_screen_seconds": 3.3415381039958447,
+      "gpu_refine_seconds": 3.5892325050008367,
+      "pair_screen_rank": 5
+    },
+    {
+      "hypothesis_pair_index": 34,
+      "hypothesis_pair": [
+        "g",
+        "i"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.385968121304955,
+      "true_segments_retained": 1,
+      "best_true_coarse_rank": 3223,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.778358126000967,
+      "gpu_screen_seconds": 3.350162138995074,
+      "gpu_refine_seconds": 3.5565835969973705,
+      "pair_screen_rank": 6
+    },
+    {
+      "hypothesis_pair_index": 4,
+      "hypothesis_pair": [
+        "a",
+        "f"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.395283262322752,
+      "true_segments_retained": 1,
+      "best_true_coarse_rank": 1428,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.673637796004186,
+      "gpu_screen_seconds": 3.104379339994921,
+      "gpu_refine_seconds": 3.2979482680020737,
+      "pair_screen_rank": 7
+    },
+    {
+      "hypothesis_pair_index": 33,
+      "hypothesis_pair": [
+        "g",
+        "h"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.397206456014653,
+      "true_segments_retained": 2,
+      "best_true_coarse_rank": 4193,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.06830814499699,
+      "gpu_screen_seconds": 3.31320734199835,
+      "gpu_refine_seconds": 3.5591461199946934,
+      "pair_screen_rank": 8
+    },
+    {
+      "hypothesis_pair_index": 15,
+      "hypothesis_pair": [
+        "c",
+        "d"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.400371535460109,
+      "true_segments_retained": 1,
+      "best_true_coarse_rank": 125,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.212437723996118,
+      "gpu_screen_seconds": 3.153544464003062,
+      "gpu_refine_seconds": 3.5783950530021684,
+      "pair_screen_rank": 9
+    },
+    {
+      "hypothesis_pair_index": 30,
+      "hypothesis_pair": [
+        "f",
+        "g"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.400474197756092,
+      "true_segments_retained": 3,
+      "best_true_coarse_rank": 332,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.333486436000385,
+      "gpu_screen_seconds": 3.235215493994474,
+      "gpu_refine_seconds": 3.617147068005579,
+      "pair_screen_rank": 10
+    },
+    {
+      "hypothesis_pair_index": 28,
+      "hypothesis_pair": [
+        "e",
+        "h"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.401254955812925,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.36333183300303,
+      "gpu_screen_seconds": 3.1680496249973658,
+      "gpu_refine_seconds": 3.340665782998258,
+      "pair_screen_rank": 11
+    },
+    {
+      "hypothesis_pair_index": 26,
+      "hypothesis_pair": [
+        "e",
+        "f"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.401651520909171,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.610995563998586,
+      "gpu_screen_seconds": 3.1292982130034943,
+      "gpu_refine_seconds": 3.466657965997001,
+      "pair_screen_rank": 12
+    },
+    {
+      "hypothesis_pair_index": 23,
+      "hypothesis_pair": [
+        "d",
+        "g"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.403242775496574,
+      "true_segments_retained": 1,
+      "best_true_coarse_rank": 1834,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.248235307997675,
+      "gpu_screen_seconds": 3.1920181269961176,
+      "gpu_refine_seconds": 3.517948468994291,
+      "pair_screen_rank": 13
+    },
+    {
+      "hypothesis_pair_index": 20,
+      "hypothesis_pair": [
+        "c",
+        "i"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.404147171274035,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.590989532000094,
+      "gpu_screen_seconds": 3.2991652249984327,
+      "gpu_refine_seconds": 3.503300207994471,
+      "pair_screen_rank": 14
+    },
+    {
+      "hypothesis_pair_index": 19,
+      "hypothesis_pair": [
+        "c",
+        "h"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.4049200633494845,
+      "true_segments_retained": 3,
+      "best_true_coarse_rank": 6389,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.369458811997902,
+      "gpu_screen_seconds": 3.239538479996554,
+      "gpu_refine_seconds": 3.5186896509985672,
+      "pair_screen_rank": 15
+    },
+    {
+      "hypothesis_pair_index": 31,
+      "hypothesis_pair": [
+        "f",
+        "h"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.4050356834348205,
+      "true_segments_retained": 2,
+      "best_true_coarse_rank": 1717,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.21193339000456,
+      "gpu_screen_seconds": 3.1969223539999803,
+      "gpu_refine_seconds": 3.4787777759993332,
+      "pair_screen_rank": 16
+    },
+    {
+      "hypothesis_pair_index": 24,
+      "hypothesis_pair": [
+        "d",
+        "h"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.4096212909385635,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.302385955998034,
+      "gpu_screen_seconds": 3.1896017250037403,
+      "gpu_refine_seconds": 3.472900129003392,
+      "pair_screen_rank": 17
+    },
+    {
+      "hypothesis_pair_index": 18,
+      "hypothesis_pair": [
+        "c",
+        "g"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.415088036167609,
+      "true_segments_retained": 2,
+      "best_true_coarse_rank": 3494,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.133883182003046,
+      "gpu_screen_seconds": 3.255376866996812,
+      "gpu_refine_seconds": 3.565382226006477,
+      "pair_screen_rank": 18
+    },
+    {
+      "hypothesis_pair_index": 11,
+      "hypothesis_pair": [
+        "b",
+        "f"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.415807086686686,
+      "true_segments_retained": 5,
+      "best_true_coarse_rank": 287,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.217949268000666,
+      "gpu_screen_seconds": 3.1359087680029916,
+      "gpu_refine_seconds": 3.381523500000185,
+      "pair_screen_rank": 19
+    },
+    {
+      "hypothesis_pair_index": 0,
+      "hypothesis_pair": [
+        "a",
+        "b"
+      ],
+      "hypothesis_is_true_pair": true,
+      "best_refined_normalized_score": -4.422475210501673,
+      "true_segments_retained": 10,
+      "best_true_coarse_rank": 1,
+      "best_true_refined_rank": 1,
+      "shortlist_seconds": 8.945436112997413,
+      "gpu_screen_seconds": 3.0940452750000986,
+      "gpu_refine_seconds": 2.9985679119999986,
+      "pair_screen_rank": 20
+    },
+    {
+      "hypothesis_pair_index": 35,
+      "hypothesis_pair": [
+        "h",
+        "i"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.422960901232176,
+      "true_segments_retained": 1,
+      "best_true_coarse_rank": 10189,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.394185543998901,
+      "gpu_screen_seconds": 3.067260542004078,
+      "gpu_refine_seconds": 3.4893511179980123,
+      "pair_screen_rank": 21
+    },
+    {
+      "hypothesis_pair_index": 27,
+      "hypothesis_pair": [
+        "e",
+        "g"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.431463066622754,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.748594434000552,
+      "gpu_screen_seconds": 3.292859548004344,
+      "gpu_refine_seconds": 3.4444830780048505,
+      "pair_screen_rank": 22
+    },
+    {
+      "hypothesis_pair_index": 12,
+      "hypothesis_pair": [
+        "b",
+        "g"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.441921733639686,
+      "true_segments_retained": 4,
+      "best_true_coarse_rank": 786,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.2037227969995,
+      "gpu_screen_seconds": 3.1946821980018285,
+      "gpu_refine_seconds": 3.3848264910047874,
+      "pair_screen_rank": 23
+    },
+    {
+      "hypothesis_pair_index": 8,
+      "hypothesis_pair": [
+        "b",
+        "c"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.446800432603466,
+      "true_segments_retained": 5,
+      "best_true_coarse_rank": 575,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.748764944000868,
+      "gpu_screen_seconds": 3.2275327440002,
+      "gpu_refine_seconds": 3.327175731996249,
+      "pair_screen_rank": 24
+    },
+    {
+      "hypothesis_pair_index": 21,
+      "hypothesis_pair": [
+        "d",
+        "e"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.4532896176198085,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.250622291001491,
+      "gpu_screen_seconds": 3.12342884499958,
+      "gpu_refine_seconds": 3.4866525670004194,
+      "pair_screen_rank": 25
+    },
+    {
+      "hypothesis_pair_index": 10,
+      "hypothesis_pair": [
+        "b",
+        "e"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.455000292120736,
+      "true_segments_retained": 4,
+      "best_true_coarse_rank": 160,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.266894004002097,
+      "gpu_screen_seconds": 3.060192573000677,
+      "gpu_refine_seconds": 3.0773647940004594,
+      "pair_screen_rank": 26
+    },
+    {
+      "hypothesis_pair_index": 29,
+      "hypothesis_pair": [
+        "e",
+        "i"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.456763029587203,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.239582867994613,
+      "gpu_screen_seconds": 3.2360447570026736,
+      "gpu_refine_seconds": 3.5289180479958304,
+      "pair_screen_rank": 27
+    },
+    {
+      "hypothesis_pair_index": 7,
+      "hypothesis_pair": [
+        "a",
+        "i"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.46513104260663,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.617358040995896,
+      "gpu_screen_seconds": 3.2474917880026624,
+      "gpu_refine_seconds": 3.407321516002412,
+      "pair_screen_rank": 28
+    },
+    {
+      "hypothesis_pair_index": 16,
+      "hypothesis_pair": [
+        "c",
+        "e"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.474129353519322,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.404386989997874,
+      "gpu_screen_seconds": 3.200492365001992,
+      "gpu_refine_seconds": 3.454709475998243,
+      "pair_screen_rank": 29
+    },
+    {
+      "hypothesis_pair_index": 1,
+      "hypothesis_pair": [
+        "a",
+        "c"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.4768369377311386,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.533935013998416,
+      "gpu_screen_seconds": 3.318336172000272,
+      "gpu_refine_seconds": 3.382619413001521,
+      "pair_screen_rank": 30
+    },
+    {
+      "hypothesis_pair_index": 2,
+      "hypothesis_pair": [
+        "a",
+        "d"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.4775468694441685,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.37645437100582,
+      "gpu_screen_seconds": 3.297161779999442,
+      "gpu_refine_seconds": 3.3586248799983878,
+      "pair_screen_rank": 31
+    },
+    {
+      "hypothesis_pair_index": 9,
+      "hypothesis_pair": [
+        "b",
+        "d"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.479791215817672,
+      "true_segments_retained": 4,
+      "best_true_coarse_rank": 82,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.435075381996285,
+      "gpu_screen_seconds": 3.21606122799858,
+      "gpu_refine_seconds": 3.3075516919998336,
+      "pair_screen_rank": 32
+    },
+    {
+      "hypothesis_pair_index": 14,
+      "hypothesis_pair": [
+        "b",
+        "i"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.486143200266104,
+      "true_segments_retained": 4,
+      "best_true_coarse_rank": 712,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.516931286998442,
+      "gpu_screen_seconds": 3.00964863000263,
+      "gpu_refine_seconds": 3.3384326660016086,
+      "pair_screen_rank": 33
+    },
+    {
+      "hypothesis_pair_index": 6,
+      "hypothesis_pair": [
+        "a",
+        "h"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.488097496831841,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 7.908357705004164,
+      "gpu_screen_seconds": 3.0694103759960853,
+      "gpu_refine_seconds": 3.2553919189958833,
+      "pair_screen_rank": 34
+    },
+    {
+      "hypothesis_pair_index": 13,
+      "hypothesis_pair": [
+        "b",
+        "h"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.504067710053716,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.65493633299775,
+      "gpu_screen_seconds": 3.163175964000402,
+      "gpu_refine_seconds": 3.2631927659967914,
+      "pair_screen_rank": 35
+    },
+    {
+      "hypothesis_pair_index": 3,
+      "hypothesis_pair": [
+        "a",
+        "e"
+      ],
+      "hypothesis_is_true_pair": false,
+      "best_refined_normalized_score": -4.571907741096846,
+      "true_segments_retained": 0,
+      "best_true_coarse_rank": null,
+      "best_true_refined_rank": null,
+      "shortlist_seconds": 8.337958980999247,
+      "gpu_screen_seconds": 3.158737388002919,
+      "gpu_refine_seconds": 3.2978100960026495,
+      "pair_screen_rank": 36
+    }
+  ],
+  "true_pair_rank": 20,
+  "true_pair_score": -4.422475210501673,
+  "wall_seconds": 549.109887038001
+}

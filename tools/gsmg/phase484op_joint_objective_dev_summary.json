@@ -1,0 +1,49 @@
+{
+  "phase": "484O/P",
+  "status": "development_joint_objective_feasibility_passed_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "width": 19,
+  "fixture_index": 23,
+  "planted_board_ceiling": [
+    {"board_mode": "vic_profile", "board_accuracy": 1.0, "exact_top1": true, "truth_full_rank": 1},
+    {"board_mode": "broad_random", "board_accuracy": 1.0, "exact_top1": true, "truth_full_rank": 1},
+    {"board_mode": "vic_profile", "board_accuracy": 0.84, "exact_top1": false, "truth_full_rank": 2},
+    {"board_mode": "vic_profile", "board_accuracy": 0.68, "exact_top1": false, "truth_full_rank": 2},
+    {"board_mode": "vic_profile", "board_accuracy": 0.52, "exact_top1": false, "truth_full_rank": null, "truth_lost_at_depth": 9}
+  ],
+  "partial_board_full_budget": {
+    "true_segments": 12,
+    "random_controls": 12,
+    "restarts": 4,
+    "iterations": 10000,
+    "true_boards_at_or_above_0_68": 8,
+    "true_max_board_accuracy": 1.0,
+    "true_max_normalized_score": -4.319746925365785,
+    "random_max_normalized_score": -4.568273907755399
+  },
+  "partial_board_coarse_screen": {
+    "true_segments": 12,
+    "random_controls": 200,
+    "restarts": 1,
+    "iterations": 2000,
+    "true_boards_at_or_above_0_68": 1,
+    "true_segments_scoring_above_every_random_control": 7,
+    "true_max_board_accuracy": 0.84,
+    "true_max_normalized_score": -4.488924870477886,
+    "random_max_normalized_score": -4.945642461605778,
+    "max_score_gap": 0.456717591127892
+  },
+  "decision": "implement_blind_gpu_coarse_board_population",
+  "next_design": {
+    "invariant_depth8_shortlist": 16384,
+    "coarse_board_budget_per_fragment": "1x2000 proposals",
+    "retain": "small diverse fragment-board population",
+    "then": [
+      "refine retained boards",
+      "board-aware anchored extension",
+      "global board re-solve on completed orders",
+      "exact synthetic development recovery gate"
+    ]
+  }
+}

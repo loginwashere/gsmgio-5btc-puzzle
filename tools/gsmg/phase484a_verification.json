@@ -1,0 +1,9 @@
+{
+  "phase": "484A",
+  "consistent": true,
+  "errors": [],
+  "gate_pass": true,
+  "execution_lock_sha256": "d104efe4d7ed00c7d72d2b136cbeec63009a52ba8702198232c883e8ab91b9a4",
+  "result_sha256": "31b2e78c5ebf92cc894b8ad48c44cbf56b718221df9f7179d2d07d16ca87c393",
+  "locked_status": "locked-before-holdout"
+}

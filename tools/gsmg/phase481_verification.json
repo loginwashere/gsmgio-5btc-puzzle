@@ -1,0 +1,13 @@
+{
+  "attempted": 10000000,
+  "consistent": true,
+  "errors": [],
+  "lock_sha256": "dcc8268fee3cf7c9cefe543cf31c4515511f3e4fc3cd8fa83a9e467c178bb738",
+  "padding_valid_count": 39460,
+  "phase": 481,
+  "promoted_count": 0,
+  "recomputed": true,
+  "result_sha256": "594749d958caa6528510ae1f857d88a65b484a1eef8f75fc772298033b8ae852",
+  "verdict": "bounded_negative",
+  "weak_tier_count": 0
+}

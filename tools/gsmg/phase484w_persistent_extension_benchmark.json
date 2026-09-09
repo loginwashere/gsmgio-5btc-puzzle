@@ -1,0 +1,17 @@
+{
+  "phase": "484W",
+  "status": "development_persistent_extension_parity_complete",
+  "faed_scored": false,
+  "reference_sha256": "506937a48e325a77486b1fe6023bc9495e8892d2c406555959276d5f1097438d",
+  "persistent_source_sha256": "c741b67c7ac81ab4329f5a2df48cfe7b61c831e1cbd40c9dfc3f71c08bbe15cd",
+  "persistent_cuda_sha256": "62768a6997325cab91a45e47759e0ea990e5f43448492e6ed85c42e088cd2927",
+  "persistent_binary_sha256": "7eef86d9fd1e793f6ae1e4d85a9a40b67f91f2fb973295425b6d8a2a1c881d3e",
+  "workers": 8,
+  "seeds": 256,
+  "terminals": 2048,
+  "exact_terminal_parity": true,
+  "exact_diagnostic_parity": true,
+  "reference_serial_seconds": 273.95693017699523,
+  "persistent_seconds": 35.820351635018596,
+  "speedup_over_serial": 7.64808042557489
+}

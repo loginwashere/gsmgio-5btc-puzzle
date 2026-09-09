@@ -1,0 +1,82 @@
+{
+  "phase": "484N",
+  "status": "development_fixed_window_overlap_beam_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "board_mode": "vic_profile",
+  "fixture_split": "dev",
+  "fixture_index": 23,
+  "width": 19,
+  "local_depth": 6,
+  "beam_width": 65536,
+  "training_seconds": 1.8485135040027671,
+  "truth_survived_full_depth": false,
+  "exact_top1_recovery": false,
+  "truth_full_rank": null,
+  "depth_diagnostics": [
+    {
+      "depth": 4,
+      "statistic": "depth_specific",
+      "generated_candidate_count": 93024,
+      "beam_size": 65536,
+      "gpu_score_seconds": 0.366696609002247,
+      "selection_seconds": 0.19370078400243074,
+      "true_segment_count_retained": 16,
+      "best_true_segment_rank": 76
+    },
+    {
+      "depth": 5,
+      "statistic": "depth_specific",
+      "generated_candidate_count": 1179944,
+      "beam_size": 65536,
+      "gpu_score_seconds": 0.5753406200019526,
+      "selection_seconds": 2.518932678998681,
+      "true_segment_count_retained": 10,
+      "best_true_segment_rank": 127
+    },
+    {
+      "depth": 6,
+      "statistic": "depth_specific",
+      "generated_candidate_count": 1617412,
+      "beam_size": 65536,
+      "gpu_score_seconds": 0.7319265129990526,
+      "selection_seconds": 3.6317434730008245,
+      "true_segment_count_retained": 7,
+      "best_true_segment_rank": 493
+    },
+    {
+      "depth": 7,
+      "statistic": "overlapping_depth6_sum",
+      "generated_candidate_count": 1617007,
+      "beam_size": 65536,
+      "gpu_score_seconds": 0.7461635480067343,
+      "selection_seconds": 3.671149545996741,
+      "true_segment_count_retained": 3,
+      "best_true_segment_rank": 329,
+      "generation_seconds": 2.1090849460015306
+    },
+    {
+      "depth": 8,
+      "statistic": "overlapping_depth6_sum",
+      "generated_candidate_count": 1427757,
+      "beam_size": 65536,
+      "gpu_score_seconds": 0.7544754670016118,
+      "selection_seconds": 3.4379264480012353,
+      "true_segment_count_retained": 1,
+      "best_true_segment_rank": 6891,
+      "generation_seconds": 1.9133422379964031
+    },
+    {
+      "depth": 9,
+      "statistic": "overlapping_depth6_sum",
+      "generated_candidate_count": 1288557,
+      "beam_size": 65536,
+      "gpu_score_seconds": 0.7916779279985349,
+      "selection_seconds": 3.047873765004624,
+      "true_segment_count_retained": 0,
+      "best_true_segment_rank": null,
+      "generation_seconds": 1.8101047260061023
+    }
+  ],
+  "wall_seconds": 30.03613576099451
+}

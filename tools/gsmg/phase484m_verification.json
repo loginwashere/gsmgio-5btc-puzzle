@@ -1,0 +1,8 @@
+{
+  "consistent": true,
+  "errors": [],
+  "execution_lock_sha256": "9ad4a9e9d78ed120bfa528f88ee704a54905d354b653d670a40d87f229a8af74",
+  "phase": "484M",
+  "result_sha256": "9ade48d0088c8361d4ac20c783e94d351f956aad5288ec72edf68d0dac86c2c7",
+  "score_trigger": false
+}

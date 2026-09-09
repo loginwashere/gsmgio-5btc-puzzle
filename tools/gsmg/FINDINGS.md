@@ -29016,3 +29016,260 @@ manifest builder, manifest, matcher, match report, post-run verifier and
 verification record, artifact checksums, and five unittest modules (96/96). The two generated
 candidate corpora remain local and ignored because of their size; their
 hashes are preserved in the lock/checksum records.
+<!-- audit_doc_override: GSMG_PHASE479_P32_64_IN_80_ALIGNMENT_AUDIT.md -->
+## Phase 479 -- P32TRAILING exhaustive 64-in-80 alignment audit, bounded negative (2026-09-06)
+
+**Question:** could the correct no-padding P32TRAILING decryption contain two
+contiguous 32-byte objects at a non-block-aligned offset missed by the existing
+window oracle? The old oracle checked individual offsets 0/16/32/48 but paired
+only 0/32; a 64-byte payload inside 80 bytes has exactly 17 possible starts.
+
+**Locked method:** 648 established curated candidates (digest
+`2d233645ef49a141`) expanded by the existing representation rules to 14,551
+deduplicated password byte strings; P32 only; the creator-calibrated legacy
+EVP/SHA-256 + AES-256-CBC profile; all 80 plaintext bytes retained. At each
+offset 0..16, checked A, B, and Phase 336's 15 frozen combinations against the
+two authenticated address targets and eight separately labelled EC-derived
+controls. Also searched for literal addresses and raw HASH160s. Bloom, vanity,
+printability, alternate crypto profiles, and adaptive validators were excluded.
+
+**Controls:** all planted keys recovered at every alignment; both target
+orders and a combination-only hit recovered; literal address/HASH160 recovery,
+wrong-body rejection, solved Phase 3.2 crypto-profile reproduction, exact
+corpus geometry, and lock-tamper detection all passed before the real run.
+
+**Result:** 14,551 decryptions, 247,367 alignment evaluations, and 4,205,239
+planned scalar interpretations. Zero authenticated hits, zero derived-control
+hits, zero two-distinct-address pair hits, and zero literal address/HASH160
+hits. No sensitive-hit artifact was created. A fail-closed verifier hashed all
+locked dependencies and reproduced the saved result through a full replay.
+
+**Disposition:** bounded negative for this password universe, calibrated
+crypto profile, complete contiguous 64-in-80 geometry, frozen operations, and
+target registry. Does not close unknown passwords, alternate crypto profiles,
+non-contiguous keys, unknown addresses, non-key plaintext, or Phase 163's
+Tier-1 `--whitespace-variants` residual. Full report:
+[doc/GSMG_PHASE479_P32_64_IN_80_ALIGNMENT_AUDIT.md](../../doc/GSMG_PHASE479_P32_64_IN_80_ALIGNMENT_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE480_CLOSED_SYSTEM_ADDRESS_PASSWORD_AUDIT.md -->
+## Phase 480 -- closed-system two-address P32 password construction, bounded negative (2026-09-06)
+
+**Question:** do the authenticated prize and halving-storage addresses,
+optionally preceded by the authenticated puzzle banner, construct the password
+for P32TRAILING? This was a finite closed-system experiment: no OCR, external
+vocabulary, separators, case variants, or transaction fields.
+
+**Evidence:** Phase 410 establishes the solved-boundary primary rule
+`SHA256(preimage).hexdigest()` plus legacy EVP/SHA-256 and AES-256-CBC/PKCS#7;
+the SalPhaseIon URL independently confirms `SHA256(banner + prize_address)` as
+a related construction. The two-address concatenation itself came from an
+unauthenticated community message by Anton (`@homeless_phd`, 2024-04-20), not
+from the creator. Phase 370 found zero local instruction bytes at P32TRAILING,
+so this remains a low-prior, unselected family.
+
+**Phase 480A:** froze exactly four separator-free preimages: `P||H`, `H||P`,
+`B||P||H`, and `B||H||P`. Their literal bytes and lowercase SHA-256-hex forms
+made eight exact password materials. An exact-byte comparator found all eight
+new relative to the named Phase 265–270/314/317/341/370/416/421/478,
+historical-648, V2-full and historical-Tier-1 corpora. It made zero oracle
+calls.
+
+**Phase 480B:** after controls passed, locked all eight materials, P32 input,
+the Phase-410 profile, and two established validators. Exactly eight P32
+decryptions were run. All eight failed strict PKCS#7 padding: zero padding-valid
+diagnostics, zero primary promotions, zero representation-control promotions,
+and no sensitive-hit file. The fail-closed verifier checked every locked hash
+and reproduced the complete result.
+
+**Disposition:** bounded negative for these four constructions, literal and
+SHA-256-hex representations, P32TRAILING and the creator-calibrated crypto
+profile. Does not close other closed-system constructions, address operations,
+transaction fields, transformations, crypto profiles or plaintext structures.
+Full report:
+[doc/GSMG_PHASE480_CLOSED_SYSTEM_ADDRESS_PASSWORD_AUDIT.md](../../doc/GSMG_PHASE480_CLOSED_SYSTEM_ADDRESS_PASSWORD_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE481_P32_PWDB_WORDLIST_PASSWORD_AUDIT.md -->
+## Phase 481 -- P32TRAILING Pwdb wordlist password audit, bounded negative over 10,000,000 candidates (2026-09-06)
+
+**Question:** does any entry in a large, externally sourced real-world
+password frequency list open P32TRAILING when tried literally under the
+Phase-410 solved-boundary crypto profile? This is the user-directed
+continuation of Phase 480: same target, same crypto profile, same frozen
+validators -- only the candidate universe changed, from Phase 480's four
+derived address constructions to a fixed, hash-pinned external wordlist
+file. A standard dictionary attack, not a structural hypothesis; no wordlist
+entry is claimed to carry puzzle provenance.
+
+**Evidence:** Phase 410 established the sole tested profile -- legacy
+`EVP_BytesToKey`/SHA-256 and AES-256-CBC/PKCS#7 -- and this audit scoped to
+that profile and P32TRAILING only, matching Phase 480's own scope statement.
+The wordlist (`Pwdb_top-10000000.txt`, external to this repository, SHA-256
+`18dc49ca32b62455a61e3398f4ab9f93eb700ff142fa0d4b9fd11a727f3b80e4`) was
+frozen by content hash at exactly 10,000,000 lines, zero blank lines, zero
+exact duplicates; each line was tried as the raw password bytes with only
+its trailing newline stripped.
+
+**Result:** the execution lock pinned the wordlist hash/line-count/blank/
+duplicate controls, the protocol, script, verifier, imported source files,
+P32TRAILING's salt/ciphertext digest, and the sole crypto profile and its
+two validators. Exactly 10,000,000 AES decryptions were run in 111.6s
+(~89,600/s). 39,460 attempts (≈1/253) produced valid PKCS#7 padding --
+consistent with the ~1/255 false-accept rate of a uniform-random null model,
+not a partial match. Zero candidates reached either promotion tier
+(printable z-score >= 8, or the exact 64-byte/full-pad binary shape); no
+sensitive-hit or weak-candidate file was created. The fail-closed verifier
+checked every locked hash and fully recomputed the aggregate result via an
+independent re-streaming pass, with zero discrepancies.
+
+**Disposition:** bounded negative for this exact wordlist (by content hash),
+this literal-byte representation, P32TRAILING, and the Phase-410
+cryptographic profile. Does not close other wordlists, other
+representations of these same strings (case, SHA-256-hex, newline-appended),
+other blobs, or other cipher/KDF profiles.
+Full report:
+[doc/GSMG_PHASE481_P32_PWDB_WORDLIST_PASSWORD_AUDIT.md](../../doc/GSMG_PHASE481_P32_PWDB_WORDLIST_PASSWORD_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE482A_FAED_FREQUENCY_SIGNATURE_AUDIT.md -->
+## Phase 482 -- FAED {g,i} closed-corpus plaintext frequency signature, bounded negative (2026-09-06)
+
+**Question:** is FAED's 436-token plaintext, under Phase 477A Model A, a
+verbatim passage already present in the project's closed local corpus?
+Monoalphabetic renaming and transposition both preserve the complete sorted
+symbol-count vector, so this can be tested without knowing the board or
+column order.
+
+**Locked method:** froze FAED's 25-count signature
+54,45,45,42,40,38,38,21,11,10,10,10,9,8,8,7,6,5,5,5,5,4,4,4,2.
+Scanned six separately bounded documents: three solved AES plaintexts, the
+decoded Phase-3.2.1 Architect answer, the local Matrix Architect scene, and
+the prose-only local Cosmic Duality transcription. Two lanes were used:
+uppercase letters with J→I, and raw A–Z requiring 25 naturally present
+classes. Only complete signature equality counted. Telegram, analysis docs,
+dictionaries, generic wordlists and new OCR were excluded.
+
+**Result:** 65,343 windows per lane, 130,686 source/lane windows total; zero
+exact locations and zero candidate passages. The independent verifier checked
+all source/code hashes and fully reproduced the scan. Five tests passed.
+Phase 482B was not triggered because there was no passage to reconstruct.
+
+**Disposition:** bounded negative for a verbatim 436-symbol passage from this
+frozen corpus under the two alphabet conventions. Newly composed text, other
+sources, encoded spaces/punctuation, other alphabet merges, spelling changes,
+non-English text and Model B remain open. Full report:
+[doc/GSMG_PHASE482A_FAED_FREQUENCY_SIGNATURE_AUDIT.md](../../doc/GSMG_PHASE482A_FAED_FREQUENCY_SIGNATURE_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE483A_INVARIANT_ORDER_STATISTIC_AUDIT.md -->
+## Phase 483 -- local equality patterns carry order signal in three untranspose cells (2026-09-06)
+
+**Question:** can a substitution-invariant statistic distinguish the true
+ragged-columnar order of a 436-letter English passage without knowing its
+checkerboard?
+
+**Locked method:** trained distributions of complete local equality partitions
+at lengths 5–8 on a frozen local-prose training split. For nine widths in both
+Phase-477A directions, ten untouched holdout fixtures were each compared with
+10,000 random orders and fixed local-corruption controls. FAED was not scored.
+
+**Result:** untranspose widths 15, 25 and 38 passed the preregistered 8/10
+holdout gate. No transpose width passed; only one of 90 transpose fixtures met
+the full fixture criterion. The verifier passed all lock, budget, cell-set and
+classification checks. Eight tests passed.
+
+**Disposition:** positive synthetic statistic-sensitivity result, permitting a
+separately locked population-search power test for only these three cells. It
+does not establish order/plaintext recovery and does not authorize a real FAED
+run. Exact-FAED-profile fixtures remain required. Full report:
+[doc/GSMG_PHASE483A_INVARIANT_ORDER_STATISTIC_AUDIT.md](../../doc/GSMG_PHASE483A_INVARIANT_ORDER_STATISTIC_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE485_RING_ENDPOINT_747474_AUDIT.md -->
+## Phase 485 -- six spiral-ring endings plus 747474 yield ASCII multiplication (2026-09-07)
+
+**Question:** does the solved 14x14 first-piece spiral provide a mechanical
+six-character source for the supplied `747474` bit selector, and does its
+output select an already-defined operation?
+
+**Method:** reused the authenticated top-left counter-clockwise spiral and
+MSB-first ASCII decoding. The seven nested rings have lengths
+`52,44,36,28,20,12,4`; the first six total exactly 192 text bits and end on the
+characters `ossaed`, while the central 2x2 ring is the four-bit tail `0000`.
+Applied literal `747474` as zero-based bit indices to `ossaed`. Frozen controls
+covered the opposite selector phase, one-based indexing, and reversed rings.
+
+**Result:** selected bits `101010` = decimal 42 = ASCII `*`. Opposite phase
+`474747` gives ASCII `4`; one-based `747474` gives `8`; reversed ring order is
+non-printable. The canonical existing Phase-199 operation is
+`[[5,7,4],[0,6,1]] @ [23,16,7] = [255,103] -> FF67`, so `*` is an exact
+conditional multiplication selector rather than newly invented arithmetic.
+
+**Disposition:** structural positive, provenance pending, consumer still
+open. Both the `archi`/arch-to-ring-endings interpretation and literal
+`747474` are user-supplied retrospective choices rather than pinned selector
+evidence; the operation selector is therefore not marked authenticated. Even
+if both are authenticated, no byte/password/salt/IV/key consumer is selected, so
+`G-MATPROD-001` remains open. No cryptographic oracle was run. Full report:
+[doc/GSMG_PHASE485_RING_ENDPOINT_747474_AUDIT.md](../../doc/GSMG_PHASE485_RING_ENDPOINT_747474_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE484B_POWERED_SMALL_WIDTH_RAW_SYMBOL_VIC_AUDIT.md -->
+## Phase 484 -- blind raw-symbol VIC solver powers perfectly at small widths, then finds no FAED solve (2026-09-07)
+
+**Question:** is FAED produced by the historical Model-B order: English
+plaintext through an unknown 25-slot checkerboard, followed by standard
+columnar transposition of the 570 raw `a`--`i` symbols?
+
+**Power:** the frozen blind synthetic holdout covered widths 2, 3, 5, and 6,
+both frequency-profile and uniformly random boards, and ten distributed
+escape-pair positions per cell. All eight cells passed 10/10: 80/80 exact
+pair/order recoveries, minimum plaintext accuracy 0.9908, minimum board
+accuracy 0.84. The verifier passed the exact locked 80-job set.
+
+**Real result:** a separately locked run searched all 36 escape pairs at each
+powered width, retaining 1,536 pair/order hypotheses and applying two
+6,000-proposal board anneals to each. The family maximum was `-5.209997` per
+quadgram window (width 5, `{a,b}`), below the frozen weakest-holdout trigger
+`-4.571151` by 0.638846. All 40 retained texts are gibberish. The real-result
+verifier passed.
+
+**Disposition:** `no_powered_family_solve_no_calibrated_null_claim`. This
+retires widths 2/3/5/6 as a practical solution path for this exact model, but
+no shuffle-null p-value was computed. Widths 7--40 and other transposition or
+checkerboard families remain open. Full report:
+[doc/GSMG_PHASE484B_POWERED_SMALL_WIDTH_RAW_SYMBOL_VIC_AUDIT.md](../../doc/GSMG_PHASE484B_POWERED_SMALL_WIDTH_RAW_SYMBOL_VIC_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE486_WIDTH30_DEPTH6_BOARD_SWITCH_AUDIT.md -->
+## Phase 486 -- width-30 depth-6 board-objective switch recovers 3 of 4 fresh dev fixtures to exact order (2026-09-09)
+
+**Question:** does moving the width-30 raw-symbol VIC solver's
+invariant-to-board-objective scoring switch one depth earlier (depth 6
+instead of depth 7), combined with a parent-reserved beam bridge at the
+depth-10->11->12 transition, rescue fresh dev fixtures that die at the first
+invariant-only selection cut?
+
+**Method:** Phase 484's collision-fixed width-30 pipeline fully recovers any
+fixture whose true depth-8 fragment survives the coarse shortlist, but that
+survival itself was the bottleneck (~3/10 fresh fixtures). This session
+traced the failure on three fresh fixtures (19, 21, 22) and found the true
+window's rank erodes steadily and multiplicatively under the pure invariant
+score across depths 4-7 (fixture 22: rank 25 -> 6,032 -> 55,156 ->
+1,652,569), not a single noisy step -- and that a generous parent-reservation
+variant applied at that same early depth still failed to rescue it.
+Switching to board-objective scoring one depth earlier instead (depth 6),
+then continuing through a parent-reserved bridge (already validated on
+fixture 15) and a checkpointed rolling extension to depth 30, was tested on
+fixtures 21 and 22.
+
+**Result:** for fixture 22, the depth-6 population that ranked 31,857 under
+the invariant score jumped to rank 7 under the board objective, then rank 1
+of 12,582,912 by depth 7; fixture 21 showed the same pattern (rank 284,271 ->
+2,079 -> 475). Running the full pipeline on both, the true window dominated
+(rank 1-6 of ~12.6M) through every depth from 8 to 12, and both reached
+exact_order_final_rank=1 with 100% plaintext accuracy -- full exact-order
+recovery, joining fixture 15's earlier solve via the same bridge. Fixture 19
+was a genuine counterexample: the earlier switch made its rank worse
+(393,204 -> 499,424), not better, and it still failed.
+
+**Disposition:** bounded positive, entirely synthetic and unpowered. 3 of 4
+tested fresh dev fixtures now fully solve end-to-end (up from ~3/10 surviving
+even a partial shortlist before this session); fixture 19's failure is
+unexplained. No FAED ciphertext was imported and no holdout fixture was
+consumed at any point (`faed_scored: false`, `holdout_consumed: false`
+throughout); none of this work ran under an execution-lock/verify_run gate,
+so no calibrated success rate or real-FAED test currently exists. A separate,
+unresolved reproducibility gap was found in the GPU board-annealing scorer
+(identical code/data/binary hash producing different single-run rank numbers
+across two ~30-minute-separated time windows); qualitative conclusions here
+were each independently reproduced within a single continuous run, but
+individual rank numbers should be read with that caveat. Full report:
+[doc/GSMG_PHASE486_WIDTH30_DEPTH6_BOARD_SWITCH_AUDIT.md](../../doc/GSMG_PHASE486_WIDTH30_DEPTH6_BOARD_SWITCH_AUDIT.md).

@@ -1,0 +1,150 @@
+{
+  "board_mode": "broad_random",
+  "fixture_index": 47,
+  "shortlist_size": 262144,
+  "true_segments_retained": 5,
+  "best_true_coarse_rank": 2055,
+  "best_true_board_accuracy": 0.36,
+  "best_true_refined_rank": 2847,
+  "best_true_refined_board_accuracy": 0.32,
+  "shortlist_seconds": 99.26673485500214,
+  "gpu_screen_seconds": 9.138040361001913,
+  "gpu_refine_seconds": 2.7303112739973585,
+  "true_records": [
+    {
+      "shortlist_index": 12308,
+      "coarse_rank": 13154,
+      "normalized_score": -4.80472640254544,
+      "board_accuracy": 0.28,
+      "best_restart": 2,
+      "path": [
+        8,
+        5,
+        14,
+        3,
+        9,
+        16,
+        15,
+        18
+      ]
+    },
+    {
+      "shortlist_index": 34233,
+      "coarse_rank": 76742,
+      "normalized_score": -4.94767789669986,
+      "board_accuracy": 0.28,
+      "best_restart": 7,
+      "path": [
+        3,
+        9,
+        16,
+        15,
+        18,
+        12,
+        1,
+        10
+      ]
+    },
+    {
+      "shortlist_index": 81657,
+      "coarse_rank": 2055,
+      "normalized_score": -4.705960269311877,
+      "board_accuracy": 0.36,
+      "best_restart": 4,
+      "path": [
+        12,
+        1,
+        10,
+        2,
+        4,
+        17,
+        13,
+        6
+      ]
+    },
+    {
+      "shortlist_index": 94964,
+      "coarse_rank": 29690,
+      "normalized_score": -4.860959349063207,
+      "board_accuracy": 0.12,
+      "best_restart": 2,
+      "path": [
+        0,
+        11,
+        7,
+        8,
+        5,
+        14,
+        3,
+        9
+      ]
+    },
+    {
+      "shortlist_index": 259505,
+      "coarse_rank": 25464,
+      "normalized_score": -4.849417656338184,
+      "board_accuracy": 0.04,
+      "best_restart": 5,
+      "path": [
+        9,
+        16,
+        15,
+        18,
+        12,
+        1,
+        10,
+        2
+      ]
+    }
+  ],
+  "refined_true_records": [
+    {
+      "rank": 2847,
+      "coarse_rank": 2055,
+      "shortlist_index": 81657,
+      "is_true_segment": true,
+      "normalized_score": -4.717427615935429,
+      "board_accuracy": 0.32,
+      "best_restart": 3,
+      "path": [
+        12,
+        1,
+        10,
+        2,
+        4,
+        17,
+        13,
+        6
+      ],
+      "board": [
+        16,
+        2,
+        12,
+        22,
+        19,
+        23,
+        18,
+        8,
+        7,
+        10,
+        0,
+        13,
+        21,
+        17,
+        3,
+        5,
+        4,
+        15,
+        6,
+        11,
+        1,
+        20,
+        14,
+        24,
+        9
+      ],
+      "quadgram_windows": 43
+    }
+  ],
+  "wall_seconds": 111.61771129399858
+}

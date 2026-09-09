@@ -1,0 +1,213 @@
+{
+  "phase": "484C",
+  "status": "informal_width7_joint_rank_dev_not_frozen",
+  "faed_scored": false,
+  "fixture_split": "dev",
+  "width": 7,
+  "pair_index": 0,
+  "fixture_index_start": 51,
+  "fixtures_per_pool": 10,
+  "hypotheses_total": 181440,
+  "workers": 8,
+  "wall_seconds": 135.07454678999966,
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "fixture_count": 10,
+      "minimum_rank": 1,
+      "median_rank": 4.5,
+      "maximum_rank": 248,
+      "records": [
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 51,
+          "rank": 3,
+          "score": -0.12608586504697325,
+          "valid_hypotheses": 146772,
+          "invalid_segmentations": 34668,
+          "wall_seconds": 46.27256875199964
+        },
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 52,
+          "rank": 1,
+          "score": -0.09634297412173529,
+          "valid_hypotheses": 150720,
+          "invalid_segmentations": 30720,
+          "wall_seconds": 46.662666383000214
+        },
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 53,
+          "rank": 2,
+          "score": -0.095387821307823,
+          "valid_hypotheses": 147720,
+          "invalid_segmentations": 33720,
+          "wall_seconds": 46.203229511000245
+        },
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 54,
+          "rank": 11,
+          "score": -0.1141462324600762,
+          "valid_hypotheses": 149808,
+          "invalid_segmentations": 31632,
+          "wall_seconds": 46.69658078399971
+        },
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 55,
+          "rank": 100,
+          "score": -0.18906151161809565,
+          "valid_hypotheses": 148356,
+          "invalid_segmentations": 33084,
+          "wall_seconds": 46.25772858500022
+        },
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 56,
+          "rank": 178,
+          "score": -0.20335491280426932,
+          "valid_hypotheses": 147888,
+          "invalid_segmentations": 33552,
+          "wall_seconds": 46.44702284199957
+        },
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 57,
+          "rank": 248,
+          "score": -0.2132290797737489,
+          "valid_hypotheses": 148524,
+          "invalid_segmentations": 32916,
+          "wall_seconds": 46.23156305300017
+        },
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 58,
+          "rank": 6,
+          "score": -0.15362109565481114,
+          "valid_hypotheses": 148776,
+          "invalid_segmentations": 32664,
+          "wall_seconds": 46.29302546600047
+        },
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 59,
+          "rank": 2,
+          "score": -0.12379323521616438,
+          "valid_hypotheses": 149568,
+          "invalid_segmentations": 31872,
+          "wall_seconds": 46.58346409100068
+        },
+        {
+          "board_mode": "vic_profile",
+          "fixture_index": 60,
+          "rank": 1,
+          "score": -0.11983695795522756,
+          "valid_hypotheses": 147576,
+          "invalid_segmentations": 33864,
+          "wall_seconds": 46.18108013500023
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "fixture_count": 10,
+      "minimum_rank": 1,
+      "median_rank": 60.0,
+      "maximum_rank": 842,
+      "records": [
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 51,
+          "rank": 10,
+          "score": -0.13354415949427173,
+          "valid_hypotheses": 149988,
+          "invalid_segmentations": 31452,
+          "wall_seconds": 46.572394531999635
+        },
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 52,
+          "rank": 25,
+          "score": -0.15145975604335782,
+          "valid_hypotheses": 149892,
+          "invalid_segmentations": 31548,
+          "wall_seconds": 46.172440280000046
+        },
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 53,
+          "rank": 7,
+          "score": -0.12821236153951146,
+          "valid_hypotheses": 147708,
+          "invalid_segmentations": 33732,
+          "wall_seconds": 46.14542076100042
+        },
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 54,
+          "rank": 17,
+          "score": -0.16490913023491233,
+          "valid_hypotheses": 147192,
+          "invalid_segmentations": 34248,
+          "wall_seconds": 46.30076654700042
+        },
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 55,
+          "rank": 95,
+          "score": -0.1513861318353061,
+          "valid_hypotheses": 149904,
+          "invalid_segmentations": 31536,
+          "wall_seconds": 46.44683795000037
+        },
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 56,
+          "rank": 842,
+          "score": -0.2097782689780561,
+          "valid_hypotheses": 151812,
+          "invalid_segmentations": 29628,
+          "wall_seconds": 46.07730802399965
+        },
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 57,
+          "rank": 1,
+          "score": -0.13402949540214384,
+          "valid_hypotheses": 148152,
+          "invalid_segmentations": 33288,
+          "wall_seconds": 42.054412516999946
+        },
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 58,
+          "rank": 685,
+          "score": -0.18952171740300783,
+          "valid_hypotheses": 148812,
+          "invalid_segmentations": 32628,
+          "wall_seconds": 42.17064787400068
+        },
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 59,
+          "rank": 137,
+          "score": -0.1770478470186939,
+          "valid_hypotheses": 150384,
+          "invalid_segmentations": 31056,
+          "wall_seconds": 42.56689625400031
+        },
+        {
+          "board_mode": "broad_random",
+          "fixture_index": 60,
+          "rank": 204,
+          "score": -0.1907963995416945,
+          "valid_hypotheses": 148920,
+          "invalid_segmentations": 32520,
+          "wall_seconds": 42.19278326099993
+        }
+      ]
+    }
+  ]
+}

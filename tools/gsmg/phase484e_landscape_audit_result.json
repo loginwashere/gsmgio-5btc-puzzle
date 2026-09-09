@@ -1,0 +1,2533 @@
+{
+  "phase": "484E",
+  "status": "informal_dev_scoping_not_frozen",
+  "faed_scored": false,
+  "pair_index": 0,
+  "pair": [
+    "a",
+    "b"
+  ],
+  "widths": [
+    10,
+    15,
+    19,
+    30,
+    38
+  ],
+  "board_modes": [
+    "vic_profile",
+    "broad_random"
+  ],
+  "cells": [
+    {
+      "board_mode": "vic_profile",
+      "width": 10,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 0,
+      "greedy_ascent_exact_recovery_count": 0,
+      "mean_improving_fraction": 0.07879827270071174,
+      "mean_final_kendall_tau": 0.6,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.1505657108782418,
+            "total_neighbors": 45,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 5,
+            "improving_fraction": 0.11363636363636363,
+            "best_neighbor_gain": 0.031453736689993184,
+            "mean_neighbor_gain": -0.04012277769452894
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.11911197418824862,
+            "planted_score": -0.1505657108782418,
+            "kendall_tau_to_truth": 0.5111111111111111,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1505657108782418,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.1884302029124142,
+                "median_score": -0.18221201504170684
+              },
+              "2": {
+                "samples": 18,
+                "mean_score": -0.26410695405662266,
+                "median_score": -0.26504503711106975
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.32114743856307354,
+                "median_score": -0.31149537788333903
+              },
+              "8": {
+                "samples": 14,
+                "mean_score": -0.31417297441691144,
+                "median_score": -0.3306902375244689
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.11101835317848742,
+            "total_neighbors": 45,
+            "invalid_neighbors": 6,
+            "improving_neighbors": 8,
+            "improving_fraction": 0.20512820512820512,
+            "best_neighbor_gain": 0.029779059325600266,
+            "mean_neighbor_gain": -0.038667941037029814
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.08123929385288715,
+            "planted_score": -0.11101835317848742,
+            "kendall_tau_to_truth": 0.8666666666666667,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.11101835317848742,
+            "curve": {
+              "1": {
+                "samples": 16,
+                "mean_score": -0.16634936980253676,
+                "median_score": -0.18498746050346265
+              },
+              "2": {
+                "samples": 16,
+                "mean_score": -0.20753651864963155,
+                "median_score": -0.22248030952985673
+              },
+              "4": {
+                "samples": 16,
+                "mean_score": -0.2691177822781896,
+                "median_score": -0.2794215024742226
+              },
+              "8": {
+                "samples": 14,
+                "mean_score": -0.2878654034987428,
+                "median_score": -0.28663642147357
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.1480544365034118,
+            "total_neighbors": 45,
+            "invalid_neighbors": 4,
+            "improving_neighbors": 1,
+            "improving_fraction": 0.024390243902439025,
+            "best_neighbor_gain": 0.004865837064523926,
+            "mean_neighbor_gain": -0.07441930577839541
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.14318859943888787,
+            "planted_score": -0.1480544365034118,
+            "kendall_tau_to_truth": 0.6,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1480544365034118,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.22904430914288582,
+                "median_score": -0.2327528817564958
+              },
+              "2": {
+                "samples": 17,
+                "mean_score": -0.2906581143210185,
+                "median_score": -0.3000369937715313
+              },
+              "4": {
+                "samples": 15,
+                "mean_score": -0.3371875597775041,
+                "median_score": -0.32217299327281174
+              },
+              "8": {
+                "samples": 17,
+                "mean_score": -0.34482891017878553,
+                "median_score": -0.3572137183882881
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.11685706054277721,
+            "total_neighbors": 45,
+            "invalid_neighbors": 8,
+            "improving_neighbors": 1,
+            "improving_fraction": 0.02702702702702703,
+            "best_neighbor_gain": 0.0045647410335234034,
+            "mean_neighbor_gain": -0.09201849439134757
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.11229231950925381,
+            "planted_score": -0.11685706054277721,
+            "kendall_tau_to_truth": 0.24444444444444444,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.11685706054277721,
+            "curve": {
+              "1": {
+                "samples": 17,
+                "mean_score": -0.24871596823472183,
+                "median_score": -0.22726333408423582
+              },
+              "2": {
+                "samples": 14,
+                "mean_score": -0.26440312114492875,
+                "median_score": -0.26325476794474756
+              },
+              "4": {
+                "samples": 13,
+                "mean_score": -0.29222145469677663,
+                "median_score": -0.26562055270434776
+              },
+              "8": {
+                "samples": 8,
+                "mean_score": -0.3369109371005855,
+                "median_score": -0.33265789850276606
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.1172067770346393,
+            "total_neighbors": 45,
+            "invalid_neighbors": 3,
+            "improving_neighbors": 1,
+            "improving_fraction": 0.023809523809523808,
+            "best_neighbor_gain": 0.001096194181716359,
+            "mean_neighbor_gain": -0.07018246779258182
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.11611058285292294,
+            "planted_score": -0.1172067770346393,
+            "kendall_tau_to_truth": 0.7777777777777778,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1172067770346393,
+            "curve": {
+              "1": {
+                "samples": 15,
+                "mean_score": -0.1886520726015154,
+                "median_score": -0.1893129077896243
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.24818858639238597,
+                "median_score": -0.26618239324508697
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.2627967206565953,
+                "median_score": -0.253815764419861
+              },
+              "8": {
+                "samples": 17,
+                "mean_score": -0.28195946227763047,
+                "median_score": -0.27542960170681785
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 15,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 0,
+      "greedy_ascent_exact_recovery_count": 0,
+      "mean_improving_fraction": 0.2454222756368037,
+      "mean_final_kendall_tau": 0.7257142857142858,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.18359133283452553,
+            "total_neighbors": 105,
+            "invalid_neighbors": 7,
+            "improving_neighbors": 50,
+            "improving_fraction": 0.5102040816326531,
+            "best_neighbor_gain": 0.07002507798015958,
+            "mean_neighbor_gain": 0.004829513981029905
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.08573559665653806,
+            "planted_score": -0.18359133283452553,
+            "kendall_tau_to_truth": 0.8857142857142857,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.18359133283452553,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.18483157151031296,
+                "median_score": -0.19008553694044736
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.20472947616483794,
+                "median_score": -0.19637622121277315
+              },
+              "4": {
+                "samples": 15,
+                "mean_score": -0.242702710892723,
+                "median_score": -0.24230112672333082
+              },
+              "8": {
+                "samples": 15,
+                "mean_score": -0.256774470753865,
+                "median_score": -0.23146364864213376
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.08538321150286962,
+            "total_neighbors": 105,
+            "invalid_neighbors": 4,
+            "improving_neighbors": 2,
+            "improving_fraction": 0.019801980198019802,
+            "best_neighbor_gain": 0.006164432283887716,
+            "mean_neighbor_gain": -0.052631251315000085
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.07719399603568862,
+            "planted_score": -0.08538321150286962,
+            "kendall_tau_to_truth": 0.5428571428571428,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.08538321150286962,
+            "curve": {
+              "1": {
+                "samples": 18,
+                "mean_score": -0.14074923969200195,
+                "median_score": -0.1390402744161353
+              },
+              "2": {
+                "samples": 18,
+                "mean_score": -0.19447841520867046,
+                "median_score": -0.19340760889736908
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.2826949375072766,
+                "median_score": -0.2718859487510168
+              },
+              "8": {
+                "samples": 17,
+                "mean_score": -0.34744173278588164,
+                "median_score": -0.34046292162383657
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.1183599374453276,
+            "total_neighbors": 105,
+            "invalid_neighbors": 5,
+            "improving_neighbors": 14,
+            "improving_fraction": 0.14,
+            "best_neighbor_gain": 0.017579135228801834,
+            "mean_neighbor_gain": -0.03369496599651469
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.09413385245444572,
+            "planted_score": -0.1183599374453276,
+            "kendall_tau_to_truth": 0.6571428571428571,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1183599374453276,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.15390534118966215,
+                "median_score": -0.1574269848067098
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.2038793879893439,
+                "median_score": -0.2043008434395399
+              },
+              "4": {
+                "samples": 18,
+                "mean_score": -0.23291607696143135,
+                "median_score": -0.23804957588073375
+              },
+              "8": {
+                "samples": 15,
+                "mean_score": -0.27781181687199114,
+                "median_score": -0.27207323345183515
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.16885845643988423,
+            "total_neighbors": 105,
+            "invalid_neighbors": 3,
+            "improving_neighbors": 40,
+            "improving_fraction": 0.39215686274509803,
+            "best_neighbor_gain": 0.07541510611677604,
+            "mean_neighbor_gain": -0.006350071720801454
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.09344335032310819,
+            "planted_score": -0.16885845643988423,
+            "kendall_tau_to_truth": 0.7142857142857143,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.16885845643988423,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.17419852060540847,
+                "median_score": -0.17088991800371267
+              },
+              "2": {
+                "samples": 17,
+                "mean_score": -0.20908970229865978,
+                "median_score": -0.20759193352317606
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.23628332143596587,
+                "median_score": -0.2525830712456434
+              },
+              "8": {
+                "samples": 18,
+                "mean_score": -0.2805784293690931,
+                "median_score": -0.28759016714235713
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.1895493048945946,
+            "total_neighbors": 105,
+            "invalid_neighbors": 8,
+            "improving_neighbors": 16,
+            "improving_fraction": 0.16494845360824742,
+            "best_neighbor_gain": 0.061062743249377216,
+            "mean_neighbor_gain": -0.0364379683874045
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.12848656164521738,
+            "planted_score": -0.1895493048945946,
+            "kendall_tau_to_truth": 0.8285714285714286,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1895493048945946,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.22076957544569553,
+                "median_score": -0.22347145857793885
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.25238533860984314,
+                "median_score": -0.26528773767410313
+              },
+              "4": {
+                "samples": 15,
+                "mean_score": -0.31037673148704437,
+                "median_score": -0.3025825083333312
+              },
+              "8": {
+                "samples": 16,
+                "mean_score": -0.3187827354170351,
+                "median_score": -0.31542229564394275
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 19,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 0,
+      "greedy_ascent_exact_recovery_count": 0,
+      "mean_improving_fraction": 0.2926454731362707,
+      "mean_final_kendall_tau": 0.8502923976608188,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.09571363882755426,
+            "total_neighbors": 171,
+            "invalid_neighbors": 6,
+            "improving_neighbors": 22,
+            "improving_fraction": 0.13333333333333333,
+            "best_neighbor_gain": 0.02513979645370118,
+            "mean_neighbor_gain": -0.030673657773567384
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.07057384237385309,
+            "planted_score": -0.09571363882755426,
+            "kendall_tau_to_truth": 0.9883040935672515,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.09571363882755426,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.13316864832482075,
+                "median_score": -0.12585553664961505
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.19025394303789564,
+                "median_score": -0.1938228457240861
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.2905646519062503,
+                "median_score": -0.2994647439999905
+              },
+              "8": {
+                "samples": 17,
+                "mean_score": -0.31288934163758186,
+                "median_score": -0.31020995136924534
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.19451500962254709,
+            "total_neighbors": 171,
+            "invalid_neighbors": 17,
+            "improving_neighbors": 77,
+            "improving_fraction": 0.5,
+            "best_neighbor_gain": 0.07715300820647787,
+            "mean_neighbor_gain": 0.0002604233171115155
+          },
+          "greedy_ascent": {
+            "steps_taken": 4,
+            "converged": true,
+            "final_score": -0.08961494534867165,
+            "planted_score": -0.19451500962254709,
+            "kendall_tau_to_truth": 0.543859649122807,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.19451500962254709,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.18620858508712027,
+                "median_score": -0.1872498181532162
+              },
+              "2": {
+                "samples": 17,
+                "mean_score": -0.21453291918565767,
+                "median_score": -0.21431384947063697
+              },
+              "4": {
+                "samples": 13,
+                "mean_score": -0.23087626021031474,
+                "median_score": -0.23622723270353999
+              },
+              "8": {
+                "samples": 14,
+                "mean_score": -0.2981366123989906,
+                "median_score": -0.28311892338638467
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": false
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.09254622672939654,
+            "total_neighbors": 171,
+            "invalid_neighbors": 8,
+            "improving_neighbors": 1,
+            "improving_fraction": 0.006134969325153374,
+            "best_neighbor_gain": 0.0035518430552391733,
+            "mean_neighbor_gain": -0.07460389584663131
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.08899438367415737,
+            "planted_score": -0.09254622672939654,
+            "kendall_tau_to_truth": 0.9883040935672515,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.09254622672939654,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.16606313976873285,
+                "median_score": -0.16790888244018565
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.24643544173667217,
+                "median_score": -0.2479153334147827
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.32408737422125095,
+                "median_score": -0.33538980761840076
+              },
+              "8": {
+                "samples": 18,
+                "mean_score": -0.36573232087578117,
+                "median_score": -0.3664946392483465
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.17832823272272888,
+            "total_neighbors": 171,
+            "invalid_neighbors": 8,
+            "improving_neighbors": 75,
+            "improving_fraction": 0.4601226993865031,
+            "best_neighbor_gain": 0.05019203291241425,
+            "mean_neighbor_gain": -0.004623881554361926
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.07310980111696545,
+            "planted_score": -0.17832823272272888,
+            "kendall_tau_to_truth": 0.8830409356725146,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.17832823272272888,
+            "curve": {
+              "1": {
+                "samples": 18,
+                "mean_score": -0.18526983948020948,
+                "median_score": -0.17948776819532716
+              },
+              "2": {
+                "samples": 17,
+                "mean_score": -0.20982809353673804,
+                "median_score": -0.18402964490351473
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.2546850169384023,
+                "median_score": -0.2416602014266362
+              },
+              "8": {
+                "samples": 16,
+                "mean_score": -0.2846368036322932,
+                "median_score": -0.2850888129065673
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.1727856613539962,
+            "total_neighbors": 171,
+            "invalid_neighbors": 17,
+            "improving_neighbors": 56,
+            "improving_fraction": 0.36363636363636365,
+            "best_neighbor_gain": 0.09129505014974885,
+            "mean_neighbor_gain": -0.012510834414005096
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.08149061120424735,
+            "planted_score": -0.1727856613539962,
+            "kendall_tau_to_truth": 0.847953216374269,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1727856613539962,
+            "curve": {
+              "1": {
+                "samples": 17,
+                "mean_score": -0.20230310513946584,
+                "median_score": -0.19809291991615138
+              },
+              "2": {
+                "samples": 16,
+                "mean_score": -0.22472299415773017,
+                "median_score": -0.2180496356283088
+              },
+              "4": {
+                "samples": 15,
+                "mean_score": -0.2394413545478775,
+                "median_score": -0.25935443369031086
+              },
+              "8": {
+                "samples": 15,
+                "mean_score": -0.27156464440468586,
+                "median_score": -0.26586604257964913
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 30,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 0,
+      "greedy_ascent_exact_recovery_count": 0,
+      "mean_improving_fraction": 0.4513982462824968,
+      "mean_final_kendall_tau": 0.7986206896551724,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.06778877010192179,
+            "total_neighbors": 435,
+            "invalid_neighbors": 10,
+            "improving_neighbors": 12,
+            "improving_fraction": 0.02823529411764706,
+            "best_neighbor_gain": 0.01270831081609606,
+            "mean_neighbor_gain": -0.029035334673563073
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.05367281175895149,
+            "planted_score": -0.06778877010192179,
+            "kendall_tau_to_truth": 0.9264367816091954,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.06778877010192179,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.10412912104582289,
+                "median_score": -0.10013183481899392
+              },
+              "2": {
+                "samples": 18,
+                "mean_score": -0.13890498160941597,
+                "median_score": -0.12902055878107002
+              },
+              "4": {
+                "samples": 18,
+                "mean_score": -0.2048534352646684,
+                "median_score": -0.19176220598586713
+              },
+              "8": {
+                "samples": 15,
+                "mean_score": -0.2847441463236707,
+                "median_score": -0.28486365162930105
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.18395534716328044,
+            "total_neighbors": 435,
+            "invalid_neighbors": 10,
+            "improving_neighbors": 415,
+            "improving_fraction": 0.9764705882352941,
+            "best_neighbor_gain": 0.09610211380607613,
+            "mean_neighbor_gain": 0.0391080897943384
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.05521138279704811,
+            "planted_score": -0.18395534716328044,
+            "kendall_tau_to_truth": 0.7701149425287356,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.18395534716328044,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.14465475979166068,
+                "median_score": -0.14225872666285244
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.13370273688032958,
+                "median_score": -0.13231434306687156
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.19410547426833807,
+                "median_score": -0.1849129653164927
+              },
+              "8": {
+                "samples": 20,
+                "mean_score": -0.2550780736888106,
+                "median_score": -0.25222656106161767
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": false
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.15666311935438904,
+            "total_neighbors": 435,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 300,
+            "improving_fraction": 0.6912442396313364,
+            "best_neighbor_gain": 0.0743417165528939,
+            "mean_neighbor_gain": 0.00986203614808009
+          },
+          "greedy_ascent": {
+            "steps_taken": 4,
+            "converged": true,
+            "final_score": -0.05130155922303967,
+            "planted_score": -0.15666311935438904,
+            "kendall_tau_to_truth": 0.6827586206896552,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.15666311935438904,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.14368683511505626,
+                "median_score": -0.13851649424041218
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.1382866071602978,
+                "median_score": -0.14361914278612062
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.2034364708199908,
+                "median_score": -0.2151051488120676
+              },
+              "8": {
+                "samples": 17,
+                "mean_score": -0.2840601495967713,
+                "median_score": -0.2919211662790809
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": false
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.13020849951786717,
+            "total_neighbors": 435,
+            "invalid_neighbors": 6,
+            "improving_neighbors": 128,
+            "improving_fraction": 0.29836829836829837,
+            "best_neighbor_gain": 0.046879990151710016,
+            "mean_neighbor_gain": -0.013488594500685803
+          },
+          "greedy_ascent": {
+            "steps_taken": 4,
+            "converged": true,
+            "final_score": -0.060139462786013585,
+            "planted_score": -0.13020849951786717,
+            "kendall_tau_to_truth": 0.6919540229885057,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.13020849951786717,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.14039123572555628,
+                "median_score": -0.14482304787022315
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.1649750170109344,
+                "median_score": -0.16389885113905575
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.20540805994953115,
+                "median_score": -0.2023915664249747
+              },
+              "8": {
+                "samples": 20,
+                "mean_score": -0.24141558054267276,
+                "median_score": -0.24139238157391057
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.09476104396122491,
+            "total_neighbors": 435,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 114,
+            "improving_fraction": 0.2626728110599078,
+            "best_neighbor_gain": 0.03284740615068176,
+            "mean_neighbor_gain": -0.01694251132753924
+          },
+          "greedy_ascent": {
+            "steps_taken": 4,
+            "converged": true,
+            "final_score": -0.04900360565364465,
+            "planted_score": -0.09476104396122491,
+            "kendall_tau_to_truth": 0.9218390804597701,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.09476104396122491,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.09886117160690817,
+                "median_score": -0.09940300705533162
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.14909604166534313,
+                "median_score": -0.1431767444490763
+              },
+              "4": {
+                "samples": 20,
+                "mean_score": -0.2060700078110597,
+                "median_score": -0.19833631995079576
+              },
+              "8": {
+                "samples": 20,
+                "mean_score": -0.2944021810130639,
+                "median_score": -0.30627370347411936
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        }
+      ]
+    },
+    {
+      "board_mode": "vic_profile",
+      "width": 38,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 0,
+      "greedy_ascent_exact_recovery_count": 0,
+      "mean_improving_fraction": 0.5029735913148476,
+      "mean_final_kendall_tau": 0.7064011379800854,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.17156273242296055,
+            "total_neighbors": 703,
+            "invalid_neighbors": 36,
+            "improving_neighbors": 322,
+            "improving_fraction": 0.4827586206896552,
+            "best_neighbor_gain": 0.08073444930691864,
+            "mean_neighbor_gain": -0.001150537878283965
+          },
+          "greedy_ascent": {
+            "steps_taken": 4,
+            "converged": true,
+            "final_score": -0.05964681550501898,
+            "planted_score": -0.17156273242296055,
+            "kendall_tau_to_truth": 0.689900426742532,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.17156273242296055,
+            "curve": {
+              "1": {
+                "samples": 18,
+                "mean_score": -0.17517061625289776,
+                "median_score": -0.17664963919222598
+              },
+              "2": {
+                "samples": 18,
+                "mean_score": -0.17242484748175357,
+                "median_score": -0.16730541684909161
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.18854878679491466,
+                "median_score": -0.18362563590128655
+              },
+              "8": {
+                "samples": 15,
+                "mean_score": -0.24224025283328982,
+                "median_score": -0.24046887763622132
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": false
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.16550008870454833,
+            "total_neighbors": 703,
+            "invalid_neighbors": 12,
+            "improving_neighbors": 495,
+            "improving_fraction": 0.7163531114327062,
+            "best_neighbor_gain": 0.0693194487055848,
+            "mean_neighbor_gain": 0.012914300551787411
+          },
+          "greedy_ascent": {
+            "steps_taken": 5,
+            "converged": true,
+            "final_score": -0.054088076926069394,
+            "planted_score": -0.16550008870454833,
+            "kendall_tau_to_truth": 0.7610241820768137,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.16550008870454833,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.14204361867444426,
+                "median_score": -0.13846332510745185
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.15545789179486705,
+                "median_score": -0.15095316990019253
+              },
+              "4": {
+                "samples": 20,
+                "mean_score": -0.18279658731211126,
+                "median_score": -0.18368758146664999
+              },
+              "8": {
+                "samples": 17,
+                "mean_score": -0.25512034069910117,
+                "median_score": -0.24263111166956589
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": false
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.19543538970910954,
+            "total_neighbors": 703,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 369,
+            "improving_fraction": 0.5256410256410257,
+            "best_neighbor_gain": 0.06919045964390869,
+            "mean_neighbor_gain": 0.00018753660199579623
+          },
+          "greedy_ascent": {
+            "steps_taken": 5,
+            "converged": true,
+            "final_score": -0.052290073335738936,
+            "planted_score": -0.19543538970910954,
+            "kendall_tau_to_truth": 0.6130867709815079,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.19543538970910954,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.1906824524564849,
+                "median_score": -0.19454909565606265
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.20542042781587364,
+                "median_score": -0.2076174788867742
+              },
+              "4": {
+                "samples": 20,
+                "mean_score": -0.22184748596295095,
+                "median_score": -0.22219738013693685
+              },
+              "8": {
+                "samples": 20,
+                "mean_score": -0.25763169504772315,
+                "median_score": -0.2604573509091448
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": false
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.14967457228355976,
+            "total_neighbors": 703,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 516,
+            "improving_fraction": 0.7350427350427351,
+            "best_neighbor_gain": 0.05467713518607878,
+            "mean_neighbor_gain": 0.011136672657976588
+          },
+          "greedy_ascent": {
+            "steps_taken": 8,
+            "converged": true,
+            "final_score": -0.03741381351392188,
+            "planted_score": -0.14967457228355976,
+            "kendall_tau_to_truth": 0.615931721194879,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.14967457228355976,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.1350788043414762,
+                "median_score": -0.13317560207888818
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.14168993147196912,
+                "median_score": -0.13473536587902532
+              },
+              "4": {
+                "samples": 20,
+                "mean_score": -0.1625159676011077,
+                "median_score": -0.1721861514536388
+              },
+              "8": {
+                "samples": 19,
+                "mean_score": -0.2507381003601738,
+                "median_score": -0.24780068337460198
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": false
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.07923141308239451,
+            "total_neighbors": 703,
+            "invalid_neighbors": 13,
+            "improving_neighbors": 38,
+            "improving_fraction": 0.05507246376811594,
+            "best_neighbor_gain": 0.020148058409826523,
+            "mean_neighbor_gain": -0.030024714422109636
+          },
+          "greedy_ascent": {
+            "steps_taken": 5,
+            "converged": true,
+            "final_score": -0.04298240095503561,
+            "planted_score": -0.07923141308239451,
+            "kendall_tau_to_truth": 0.8520625889046942,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.07923141308239451,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.10873374392414922,
+                "median_score": -0.10775810218168626
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.136248703040445,
+                "median_score": -0.13259478769052566
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.20614158593514487,
+                "median_score": -0.2006482016265697
+              },
+              "8": {
+                "samples": 19,
+                "mean_score": -0.2885716443370368,
+                "median_score": -0.2733207823305715
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 10,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 4,
+      "greedy_ascent_exact_recovery_count": 4,
+      "mean_improving_fraction": 0.004651162790697674,
+      "mean_final_kendall_tau": 0.6799999999999999,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.104660756539402,
+            "total_neighbors": 45,
+            "invalid_neighbors": 3,
+            "improving_neighbors": 0,
+            "improving_fraction": 0.0,
+            "best_neighbor_gain": -0.051421755248651876,
+            "mean_neighbor_gain": -0.14430111498865633
+          },
+          "greedy_ascent": {
+            "steps_taken": 1,
+            "converged": true,
+            "final_score": -0.104660756539402,
+            "planted_score": -0.104660756539402,
+            "kendall_tau_to_truth": 1.0,
+            "exact_order_recovery": true
+          },
+          "corruption": {
+            "planted_score": -0.104660756539402,
+            "curve": {
+              "1": {
+                "samples": 17,
+                "mean_score": -0.2457718504383284,
+                "median_score": -0.2507219204748048
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.2606393234817017,
+                "median_score": -0.24660529355887123
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.2630601779364084,
+                "median_score": -0.2697365751309275
+              },
+              "8": {
+                "samples": 14,
+                "mean_score": -0.2435705098101964,
+                "median_score": -0.23616284872161192
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": true
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.12992784403412524,
+            "total_neighbors": 45,
+            "invalid_neighbors": 6,
+            "improving_neighbors": 0,
+            "improving_fraction": 0.0,
+            "best_neighbor_gain": -0.053471364522410914,
+            "mean_neighbor_gain": -0.14415095504223058
+          },
+          "greedy_ascent": {
+            "steps_taken": 1,
+            "converged": true,
+            "final_score": -0.12992784403412524,
+            "planted_score": -0.12992784403412524,
+            "kendall_tau_to_truth": 1.0,
+            "exact_order_recovery": true
+          },
+          "corruption": {
+            "planted_score": -0.12992784403412524,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.2704167616102473,
+                "median_score": -0.2742704891097381
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.28863249422282283,
+                "median_score": -0.30941754287504275
+              },
+              "4": {
+                "samples": 13,
+                "mean_score": -0.28673306682734717,
+                "median_score": -0.28012792175357304
+              },
+              "8": {
+                "samples": 14,
+                "mean_score": -0.2629568557719528,
+                "median_score": -0.26373474117729123
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": true
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.19664393944536776,
+            "total_neighbors": 45,
+            "invalid_neighbors": 2,
+            "improving_neighbors": 1,
+            "improving_fraction": 0.023255813953488372,
+            "best_neighbor_gain": 0.0003802527517748344,
+            "mean_neighbor_gain": -0.16707914521103076
+          },
+          "greedy_ascent": {
+            "steps_taken": 5,
+            "converged": true,
+            "final_score": -0.11385478570184152,
+            "planted_score": -0.19664393944536776,
+            "kendall_tau_to_truth": -0.6,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.19664393944536776,
+            "curve": {
+              "1": {
+                "samples": 17,
+                "mean_score": -0.336271786748156,
+                "median_score": -0.343241921656428
+              },
+              "2": {
+                "samples": 18,
+                "mean_score": -0.37589956021758575,
+                "median_score": -0.3784413245545225
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.34564681138025005,
+                "median_score": -0.34368078165054516
+              },
+              "8": {
+                "samples": 15,
+                "mean_score": -0.3205604761494797,
+                "median_score": -0.2861080335301053
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.19309805823400886,
+            "total_neighbors": 45,
+            "invalid_neighbors": 5,
+            "improving_neighbors": 0,
+            "improving_fraction": 0.0,
+            "best_neighbor_gain": -0.06415248653546843,
+            "mean_neighbor_gain": -0.1659119510794036
+          },
+          "greedy_ascent": {
+            "steps_taken": 1,
+            "converged": true,
+            "final_score": -0.19309805823400886,
+            "planted_score": -0.19309805823400886,
+            "kendall_tau_to_truth": 1.0,
+            "exact_order_recovery": true
+          },
+          "corruption": {
+            "planted_score": -0.19309805823400886,
+            "curve": {
+              "1": {
+                "samples": 15,
+                "mean_score": -0.362088328715412,
+                "median_score": -0.3761749105515241
+              },
+              "2": {
+                "samples": 17,
+                "mean_score": -0.32720509913918316,
+                "median_score": -0.3298736217437925
+              },
+              "4": {
+                "samples": 15,
+                "mean_score": -0.2942467295231875,
+                "median_score": -0.28454196580807306
+              },
+              "8": {
+                "samples": 12,
+                "mean_score": -0.29241189643492305,
+                "median_score": -0.2760880881233186
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": true
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.11970865450831102,
+            "total_neighbors": 45,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 0,
+            "improving_fraction": 0.0,
+            "best_neighbor_gain": -0.0392996611400452,
+            "mean_neighbor_gain": -0.13564223631022873
+          },
+          "greedy_ascent": {
+            "steps_taken": 1,
+            "converged": true,
+            "final_score": -0.11970865450831102,
+            "planted_score": -0.11970865450831102,
+            "kendall_tau_to_truth": 1.0,
+            "exact_order_recovery": true
+          },
+          "corruption": {
+            "planted_score": -0.11970865450831102,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.2567696355138899,
+                "median_score": -0.26234764278569217
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.31276800433941027,
+                "median_score": -0.3145525608664974
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.339645981550644,
+                "median_score": -0.3493595977151087
+              },
+              "8": {
+                "samples": 14,
+                "mean_score": -0.37685359604744045,
+                "median_score": -0.378989976619042
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": true
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 15,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 4,
+      "greedy_ascent_exact_recovery_count": 4,
+      "mean_improving_fraction": 0.004347826086956522,
+      "mean_final_kendall_tau": 0.9352380952380953,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.13398336111159875,
+            "total_neighbors": 105,
+            "invalid_neighbors": 18,
+            "improving_neighbors": 0,
+            "improving_fraction": 0.0,
+            "best_neighbor_gain": -0.0016555560150225135,
+            "mean_neighbor_gain": -0.1023417759149147
+          },
+          "greedy_ascent": {
+            "steps_taken": 1,
+            "converged": true,
+            "final_score": -0.13398336111159875,
+            "planted_score": -0.13398336111159875,
+            "kendall_tau_to_truth": 1.0,
+            "exact_order_recovery": true
+          },
+          "corruption": {
+            "planted_score": -0.13398336111159875,
+            "curve": {
+              "1": {
+                "samples": 18,
+                "mean_score": -0.2375398588353526,
+                "median_score": -0.21973640974516728
+              },
+              "2": {
+                "samples": 13,
+                "mean_score": -0.33241848625979215,
+                "median_score": -0.32014869163436566
+              },
+              "4": {
+                "samples": 14,
+                "mean_score": -0.38572142596007414,
+                "median_score": -0.3657134498343132
+              },
+              "8": {
+                "samples": 11,
+                "mean_score": -0.2902457611057129,
+                "median_score": -0.2757078790460586
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": true
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.10072642807332599,
+            "total_neighbors": 105,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 0,
+            "improving_fraction": 0.0,
+            "best_neighbor_gain": -0.03430773577336804,
+            "mean_neighbor_gain": -0.11198439419246238
+          },
+          "greedy_ascent": {
+            "steps_taken": 1,
+            "converged": true,
+            "final_score": -0.10072642807332599,
+            "planted_score": -0.10072642807332599,
+            "kendall_tau_to_truth": 1.0,
+            "exact_order_recovery": true
+          },
+          "corruption": {
+            "planted_score": -0.10072642807332599,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.2108432394899335,
+                "median_score": -0.21264770067292382
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.2898970734084564,
+                "median_score": -0.28949750075674535
+              },
+              "4": {
+                "samples": 18,
+                "mean_score": -0.32208335747941147,
+                "median_score": -0.332936839208525
+              },
+              "8": {
+                "samples": 18,
+                "mean_score": -0.3010847979448817,
+                "median_score": -0.3102950300704
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": true
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.17383004251068174,
+            "total_neighbors": 105,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 0,
+            "improving_fraction": 0.0,
+            "best_neighbor_gain": -0.013271969648558035,
+            "mean_neighbor_gain": -0.13490963339978398
+          },
+          "greedy_ascent": {
+            "steps_taken": 1,
+            "converged": true,
+            "final_score": -0.17383004251068174,
+            "planted_score": -0.17383004251068174,
+            "kendall_tau_to_truth": 1.0,
+            "exact_order_recovery": true
+          },
+          "corruption": {
+            "planted_score": -0.17383004251068174,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.3181344062470356,
+                "median_score": -0.3126136356983064
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.358057841479566,
+                "median_score": -0.36498638956437335
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.3753263001362134,
+                "median_score": -0.34167495197103587
+              },
+              "8": {
+                "samples": 16,
+                "mean_score": -0.28232765829583656,
+                "median_score": -0.2787358095372183
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": true
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.0833365663582424,
+            "total_neighbors": 105,
+            "invalid_neighbors": 8,
+            "improving_neighbors": 0,
+            "improving_fraction": 0.0,
+            "best_neighbor_gain": -0.04256112474657302,
+            "mean_neighbor_gain": -0.18610664473166097
+          },
+          "greedy_ascent": {
+            "steps_taken": 1,
+            "converged": true,
+            "final_score": -0.0833365663582424,
+            "planted_score": -0.0833365663582424,
+            "kendall_tau_to_truth": 1.0,
+            "exact_order_recovery": true
+          },
+          "corruption": {
+            "planted_score": -0.0833365663582424,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.2704913250937036,
+                "median_score": -0.26411225693887863
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.3824937858692757,
+                "median_score": -0.38473038057333997
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.3614557572669689,
+                "median_score": -0.3442595625477407
+              },
+              "8": {
+                "samples": 13,
+                "mean_score": -0.32269401958004695,
+                "median_score": -0.3093980174883716
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": true
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.18079091281029785,
+            "total_neighbors": 105,
+            "invalid_neighbors": 13,
+            "improving_neighbors": 2,
+            "improving_fraction": 0.021739130434782608,
+            "best_neighbor_gain": 0.006397074883016773,
+            "mean_neighbor_gain": -0.08247974133663614
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.17439383792728108,
+            "planted_score": -0.18079091281029785,
+            "kendall_tau_to_truth": 0.6761904761904762,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.18079091281029785,
+            "curve": {
+              "1": {
+                "samples": 17,
+                "mean_score": -0.2543247762754966,
+                "median_score": -0.24949741738151224
+              },
+              "2": {
+                "samples": 15,
+                "mean_score": -0.2999036970669146,
+                "median_score": -0.3140229496360174
+              },
+              "4": {
+                "samples": 12,
+                "mean_score": -0.25408296084149956,
+                "median_score": -0.25784287757354835
+              },
+              "8": {
+                "samples": 11,
+                "mean_score": -0.24727144464310233,
+                "median_score": -0.247300475514243
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 19,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 1,
+      "greedy_ascent_exact_recovery_count": 1,
+      "mean_improving_fraction": 0.04859207714706436,
+      "mean_final_kendall_tau": 0.9111111111111111,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.14837338979830894,
+            "total_neighbors": 171,
+            "invalid_neighbors": 6,
+            "improving_neighbors": 20,
+            "improving_fraction": 0.12121212121212122,
+            "best_neighbor_gain": 0.052777155631150235,
+            "mean_neighbor_gain": -0.055497215072652074
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.0955962341671587,
+            "planted_score": -0.14837338979830894,
+            "kendall_tau_to_truth": 0.8713450292397661,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.14837338979830894,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.21010339768011943,
+                "median_score": -0.19353175824186983
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.2522331784180635,
+                "median_score": -0.23487761649308253
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.2777293580881584,
+                "median_score": -0.2815930774822646
+              },
+              "8": {
+                "samples": 18,
+                "mean_score": -0.2684758759176781,
+                "median_score": -0.26686514239556913
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.11286842987668812,
+            "total_neighbors": 171,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 8,
+            "improving_fraction": 0.047058823529411764,
+            "best_neighbor_gain": 0.025082410572477704,
+            "mean_neighbor_gain": -0.048928622896198225
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.08778601930421041,
+            "planted_score": -0.11286842987668812,
+            "kendall_tau_to_truth": 0.9415204678362573,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.11286842987668812,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.16600649419946942,
+                "median_score": -0.1541253418463899
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.20718331801072462,
+                "median_score": -0.197680006317978
+              },
+              "4": {
+                "samples": 17,
+                "mean_score": -0.21565357989081338,
+                "median_score": -0.21719652012422272
+              },
+              "8": {
+                "samples": 18,
+                "mean_score": -0.24802529034952803,
+                "median_score": -0.23811422205464672
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.13587667387688057,
+            "total_neighbors": 171,
+            "invalid_neighbors": 11,
+            "improving_neighbors": 4,
+            "improving_fraction": 0.025,
+            "best_neighbor_gain": 0.01188976075855834,
+            "mean_neighbor_gain": -0.054968136901746775
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.12398691311832223,
+            "planted_score": -0.13587667387688057,
+            "kendall_tau_to_truth": 0.8713450292397661,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.13587667387688057,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.18721812206280844,
+                "median_score": -0.19150613503400307
+              },
+              "2": {
+                "samples": 18,
+                "mean_score": -0.2362539232636371,
+                "median_score": -0.2431525915363888
+              },
+              "4": {
+                "samples": 16,
+                "mean_score": -0.3120958645038107,
+                "median_score": -0.3100922978603061
+              },
+              "8": {
+                "samples": 14,
+                "mean_score": -0.2874627966234577,
+                "median_score": -0.30389046041508394
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.12498449200528171,
+            "total_neighbors": 171,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 0,
+            "improving_fraction": 0.0,
+            "best_neighbor_gain": -0.01712382992060278,
+            "mean_neighbor_gain": -0.09853470248334861
+          },
+          "greedy_ascent": {
+            "steps_taken": 1,
+            "converged": true,
+            "final_score": -0.12498449200528171,
+            "planted_score": -0.12498449200528171,
+            "kendall_tau_to_truth": 1.0,
+            "exact_order_recovery": true
+          },
+          "corruption": {
+            "planted_score": -0.12498449200528171,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.2286685199052893,
+                "median_score": -0.22796040457521177
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.31896772352929936,
+                "median_score": -0.31381244366676714
+              },
+              "4": {
+                "samples": 20,
+                "mean_score": -0.39044410692263287,
+                "median_score": -0.37524478646536147
+              },
+              "8": {
+                "samples": 17,
+                "mean_score": -0.306603331936571,
+                "median_score": -0.28245141646017075
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": true
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.2351266272872368,
+            "total_neighbors": 171,
+            "invalid_neighbors": 10,
+            "improving_neighbors": 8,
+            "improving_fraction": 0.049689440993788817,
+            "best_neighbor_gain": 0.046325488071707444,
+            "mean_neighbor_gain": -0.07059984295367484
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.18880113921552935,
+            "planted_score": -0.2351266272872368,
+            "kendall_tau_to_truth": 0.8713450292397661,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.2351266272872368,
+            "curve": {
+              "1": {
+                "samples": 18,
+                "mean_score": -0.3104211423392041,
+                "median_score": -0.31642128288518817
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.3483206803755452,
+                "median_score": -0.34588487019500097
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.3843440378782281,
+                "median_score": -0.4051933455929499
+              },
+              "8": {
+                "samples": 16,
+                "mean_score": -0.3411444049025498,
+                "median_score": -0.3545539485748598
+              }
+            },
+            "monotone_non_increasing_medians": false,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 30,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 0,
+      "greedy_ascent_exact_recovery_count": 0,
+      "mean_improving_fraction": 0.22967513317811736,
+      "mean_final_kendall_tau": 0.8510344827586206,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.15100227092108906,
+            "total_neighbors": 435,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 158,
+            "improving_fraction": 0.3640552995391705,
+            "best_neighbor_gain": 0.05607109141207464,
+            "mean_neighbor_gain": -0.010122375363817333
+          },
+          "greedy_ascent": {
+            "steps_taken": 4,
+            "converged": true,
+            "final_score": -0.0842728633668129,
+            "planted_score": -0.15100227092108906,
+            "kendall_tau_to_truth": 0.7839080459770115,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.15100227092108906,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.16632866037865068,
+                "median_score": -0.16962144803920554
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.21076056077070215,
+                "median_score": -0.21357004810183397
+              },
+              "4": {
+                "samples": 20,
+                "mean_score": -0.24908373783181417,
+                "median_score": -0.25801103280951815
+              },
+              "8": {
+                "samples": 20,
+                "mean_score": -0.2959272265806007,
+                "median_score": -0.31557078993087356
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.09860957136884059,
+            "total_neighbors": 435,
+            "invalid_neighbors": 14,
+            "improving_neighbors": 38,
+            "improving_fraction": 0.09026128266033254,
+            "best_neighbor_gain": 0.02487417591655465,
+            "mean_neighbor_gain": -0.030250180904381942
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.07373539545228594,
+            "planted_score": -0.09860957136884059,
+            "kendall_tau_to_truth": 0.9402298850574713,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.09860957136884059,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.13191811100412676,
+                "median_score": -0.12658732662369535
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.16012443930076561,
+                "median_score": -0.15290937637503582
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.24790700557283027,
+                "median_score": -0.24520473504631857
+              },
+              "8": {
+                "samples": 13,
+                "mean_score": -0.2555906950849755,
+                "median_score": -0.25104101855039374
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.12406248827256847,
+            "total_neighbors": 435,
+            "invalid_neighbors": 18,
+            "improving_neighbors": 55,
+            "improving_fraction": 0.13189448441247004,
+            "best_neighbor_gain": 0.03945596420424986,
+            "mean_neighbor_gain": -0.02887589960334264
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.08237005636792612,
+            "planted_score": -0.12406248827256847,
+            "kendall_tau_to_truth": 0.8160919540229885,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.12406248827256847,
+            "curve": {
+              "1": {
+                "samples": 18,
+                "mean_score": -0.1453338387696788,
+                "median_score": -0.14630946620255578
+              },
+              "2": {
+                "samples": 19,
+                "mean_score": -0.20198623950143094,
+                "median_score": -0.19597158420857363
+              },
+              "4": {
+                "samples": 15,
+                "mean_score": -0.29225839867939474,
+                "median_score": -0.30454602623412314
+              },
+              "8": {
+                "samples": 15,
+                "mean_score": -0.3092861815433045,
+                "median_score": -0.3071746414654904
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.1636263675131132,
+            "total_neighbors": 435,
+            "invalid_neighbors": 3,
+            "improving_neighbors": 170,
+            "improving_fraction": 0.39351851851851855,
+            "best_neighbor_gain": 0.0581662462798532,
+            "mean_neighbor_gain": -0.00973080718038117
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.08806493018440163,
+            "planted_score": -0.1636263675131132,
+            "kendall_tau_to_truth": 0.9172413793103448,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1636263675131132,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.17210437504542536,
+                "median_score": -0.1631040766820704
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.22389498527240653,
+                "median_score": -0.2292851195767398
+              },
+              "4": {
+                "samples": 18,
+                "mean_score": -0.2502032907941283,
+                "median_score": -0.23904121039309362
+              },
+              "8": {
+                "samples": 17,
+                "mean_score": -0.2787078905533094,
+                "median_score": -0.2742829031896797
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": false
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.1407667451868224,
+            "total_neighbors": 435,
+            "invalid_neighbors": 14,
+            "improving_neighbors": 71,
+            "improving_fraction": 0.16864608076009502,
+            "best_neighbor_gain": 0.0401295339596211,
+            "mean_neighbor_gain": -0.021601517632748226
+          },
+          "greedy_ascent": {
+            "steps_taken": 5,
+            "converged": true,
+            "final_score": -0.08751104569407148,
+            "planted_score": -0.1407667451868224,
+            "kendall_tau_to_truth": 0.7977011494252874,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1407667451868224,
+            "curve": {
+              "1": {
+                "samples": 17,
+                "mean_score": -0.16713111249967927,
+                "median_score": -0.1728573923568011
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.19655965121536467,
+                "median_score": -0.1944855258009518
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.263491069098547,
+                "median_score": -0.27633085617542513
+              },
+              "8": {
+                "samples": 18,
+                "mean_score": -0.3478030176997193,
+                "median_score": -0.34848695752178904
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        }
+      ]
+    },
+    {
+      "board_mode": "broad_random",
+      "width": 38,
+      "fixture_count": 5,
+      "truth_is_local_optimum_count": 0,
+      "greedy_ascent_exact_recovery_count": 0,
+      "mean_improving_fraction": 0.13145691147586253,
+      "mean_final_kendall_tau": 0.8179231863442391,
+      "records": [
+        {
+          "fixture_index": 0,
+          "neighbor_survey": {
+            "planted_score": -0.09168856347838207,
+            "total_neighbors": 703,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 117,
+            "improving_fraction": 0.16666666666666666,
+            "best_neighbor_gain": 0.02461072831466571,
+            "mean_neighbor_gain": -0.019790548964864558
+          },
+          "greedy_ascent": {
+            "steps_taken": 6,
+            "converged": true,
+            "final_score": -0.057149053835660255,
+            "planted_score": -0.09168856347838207,
+            "kendall_tau_to_truth": 0.7354196301564723,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.09168856347838207,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.11017544860873107,
+                "median_score": -0.11110353516859023
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.13269641767921425,
+                "median_score": -0.13522545658017648
+              },
+              "4": {
+                "samples": 20,
+                "mean_score": -0.20767517387277928,
+                "median_score": -0.21134017650215997
+              },
+              "8": {
+                "samples": 19,
+                "mean_score": -0.29591236077489913,
+                "median_score": -0.30702032742207386
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 1,
+          "neighbor_survey": {
+            "planted_score": -0.09429927776113203,
+            "total_neighbors": 703,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 220,
+            "improving_fraction": 0.31339031339031337,
+            "best_neighbor_gain": 0.031119199013910123,
+            "mean_neighbor_gain": -0.009247389427913078
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.05450403466211835,
+            "planted_score": -0.09429927776113203,
+            "kendall_tau_to_truth": 0.8008534850640113,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.09429927776113203,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.10094909432844153,
+                "median_score": -0.10045258716433
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.12479053669998127,
+                "median_score": -0.11740835943034843
+              },
+              "4": {
+                "samples": 18,
+                "mean_score": -0.1808284907512242,
+                "median_score": -0.17345237718023787
+              },
+              "8": {
+                "samples": 20,
+                "mean_score": -0.22521887826890938,
+                "median_score": -0.22352263429323593
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 2,
+          "neighbor_survey": {
+            "planted_score": -0.1559942742061453,
+            "total_neighbors": 703,
+            "invalid_neighbors": 18,
+            "improving_neighbors": 53,
+            "improving_fraction": 0.07737226277372262,
+            "best_neighbor_gain": 0.047058575865453395,
+            "mean_neighbor_gain": -0.04604711520758322
+          },
+          "greedy_ascent": {
+            "steps_taken": 3,
+            "converged": true,
+            "final_score": -0.09566270007256761,
+            "planted_score": -0.1559942742061453,
+            "kendall_tau_to_truth": 0.9374110953058321,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1559942742061453,
+            "curve": {
+              "1": {
+                "samples": 19,
+                "mean_score": -0.198845710872083,
+                "median_score": -0.19571975125890828
+              },
+              "2": {
+                "samples": 18,
+                "mean_score": -0.28872726654437797,
+                "median_score": -0.2745535249601563
+              },
+              "4": {
+                "samples": 18,
+                "mean_score": -0.4733755067362361,
+                "median_score": -0.47611766275358447
+              },
+              "8": {
+                "samples": 19,
+                "mean_score": -0.5712575083627207,
+                "median_score": -0.6015282601473355
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 3,
+          "neighbor_survey": {
+            "planted_score": -0.0865493507323648,
+            "total_neighbors": 703,
+            "invalid_neighbors": 1,
+            "improving_neighbors": 1,
+            "improving_fraction": 0.0014245014245014246,
+            "best_neighbor_gain": 0.0036520362686386643,
+            "mean_neighbor_gain": -0.06394110461319219
+          },
+          "greedy_ascent": {
+            "steps_taken": 2,
+            "converged": true,
+            "final_score": -0.08289731446372614,
+            "planted_score": -0.0865493507323648,
+            "kendall_tau_to_truth": 0.7923186344238976,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.0865493507323648,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.14020432474088293,
+                "median_score": -0.14046772911593697
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.23754923608058282,
+                "median_score": -0.2345264912298663
+              },
+              "4": {
+                "samples": 19,
+                "mean_score": -0.36141992265961254,
+                "median_score": -0.3618694898856747
+              },
+              "8": {
+                "samples": 20,
+                "mean_score": -0.44468760995620604,
+                "median_score": -0.44273593534161015
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        },
+        {
+          "fixture_index": 4,
+          "neighbor_survey": {
+            "planted_score": -0.1290131301256038,
+            "total_neighbors": 703,
+            "invalid_neighbors": 2,
+            "improving_neighbors": 69,
+            "improving_fraction": 0.09843081312410841,
+            "best_neighbor_gain": 0.03625533251789495,
+            "mean_neighbor_gain": -0.04052236303924908
+          },
+          "greedy_ascent": {
+            "steps_taken": 5,
+            "converged": true,
+            "final_score": -0.05884499097428558,
+            "planted_score": -0.1290131301256038,
+            "kendall_tau_to_truth": 0.8236130867709816,
+            "exact_order_recovery": false
+          },
+          "corruption": {
+            "planted_score": -0.1290131301256038,
+            "curve": {
+              "1": {
+                "samples": 20,
+                "mean_score": -0.17524746577741648,
+                "median_score": -0.17151806631659072
+              },
+              "2": {
+                "samples": 20,
+                "mean_score": -0.23398717497921875,
+                "median_score": -0.22986602128149816
+              },
+              "4": {
+                "samples": 20,
+                "mean_score": -0.2848234747150101,
+                "median_score": -0.28033400127344144
+              },
+              "8": {
+                "samples": 20,
+                "mean_score": -0.31640552581139303,
+                "median_score": -0.31593606739055896
+              }
+            },
+            "monotone_non_increasing_medians": true,
+            "truth_beats_all_corruption_medians": true
+          },
+          "truth_is_local_optimum": false
+        }
+      ]
+    }
+  ]
+}

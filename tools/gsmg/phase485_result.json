@@ -1,0 +1,229 @@
+{
+  "phase": 485,
+  "status": "retrospective_structural_audit",
+  "source": {
+    "image": "/home/loginwashere/projects/gsmgio-5btc-puzzle/doc/img/gsmg_rabbit_hint.png",
+    "image_sha256": "5e8d84b88f8f829428df5d2a8bf36c7268346f169b799ac7570b6223990d204f",
+    "spiral": "top_left_counterclockwise_inward",
+    "ascii_bit_order": "MSB_first",
+    "decoded_text": "gsmg.io/theseedisplanted"
+  },
+  "rings": [
+    {
+      "ordinal": 1,
+      "size": 14,
+      "length": 52,
+      "start_spiral_0": 0,
+      "end_spiral_0": 51,
+      "end_row_1": 1,
+      "end_column_1": 2,
+      "end_bit_offset_0": 3,
+      "end_bit_value": 0,
+      "end_color": "white",
+      "text_bearing": true,
+      "landing_character": "o"
+    },
+    {
+      "ordinal": 2,
+      "size": 12,
+      "length": 44,
+      "start_spiral_0": 52,
+      "end_spiral_0": 95,
+      "end_row_1": 2,
+      "end_column_1": 3,
+      "end_bit_offset_0": 7,
+      "end_bit_value": 1,
+      "end_color": "blue",
+      "text_bearing": true,
+      "landing_character": "s"
+    },
+    {
+      "ordinal": 3,
+      "size": 10,
+      "length": 36,
+      "start_spiral_0": 96,
+      "end_spiral_0": 131,
+      "end_row_1": 3,
+      "end_column_1": 4,
+      "end_bit_offset_0": 3,
+      "end_bit_value": 1,
+      "end_color": "black",
+      "text_bearing": true,
+      "landing_character": "s"
+    },
+    {
+      "ordinal": 4,
+      "size": 8,
+      "length": 28,
+      "start_spiral_0": 132,
+      "end_spiral_0": 159,
+      "end_row_1": 4,
+      "end_column_1": 5,
+      "end_bit_offset_0": 7,
+      "end_bit_value": 1,
+      "end_color": "blue",
+      "text_bearing": true,
+      "landing_character": "a"
+    },
+    {
+      "ordinal": 5,
+      "size": 6,
+      "length": 20,
+      "start_spiral_0": 160,
+      "end_spiral_0": 179,
+      "end_row_1": 5,
+      "end_column_1": 6,
+      "end_bit_offset_0": 3,
+      "end_bit_value": 0,
+      "end_color": "white",
+      "text_bearing": true,
+      "landing_character": "e"
+    },
+    {
+      "ordinal": 6,
+      "size": 4,
+      "length": 12,
+      "start_spiral_0": 180,
+      "end_spiral_0": 191,
+      "end_row_1": 6,
+      "end_column_1": 7,
+      "end_bit_offset_0": 7,
+      "end_bit_value": 0,
+      "end_color": "yellow",
+      "text_bearing": true,
+      "landing_character": "d"
+    },
+    {
+      "ordinal": 7,
+      "size": 2,
+      "length": 4,
+      "start_spiral_0": 192,
+      "end_spiral_0": 195,
+      "end_row_1": 7,
+      "end_column_1": 8,
+      "end_bit_offset_0": 3,
+      "end_bit_value": 0,
+      "end_color": "white",
+      "text_bearing": false,
+      "landing_character": null
+    }
+  ],
+  "ring_count": 7,
+  "text_bearing_ring_count": 6,
+  "center_tail_bits": "0000",
+  "landing_characters": "ossaed",
+  "ring_endpoint_rule": {
+    "rule": "last character touched by each completed text-bearing ring",
+    "motivation": "user-proposed last/arch structural reading",
+    "status": "retrospective_semantic_choice",
+    "authenticated": false
+  },
+  "selector_provenance": {
+    "literal": "747474",
+    "status": "user_supplied_unpinned_in_repository",
+    "authenticated": false
+  },
+  "primary_extraction": {
+    "characters": "ossaed",
+    "selector": "747474",
+    "index_base": 0,
+    "byte_bits": [
+      "01101111",
+      "01110011",
+      "01110011",
+      "01100001",
+      "01100101",
+      "01100100"
+    ],
+    "selected_bits": "101010",
+    "value": 42,
+    "ascii_if_printable": "*"
+  },
+  "controls": {
+    "opposite_phase_474747": {
+      "characters": "ossaed",
+      "selector": "474747",
+      "index_base": 0,
+      "byte_bits": [
+        "01101111",
+        "01110011",
+        "01110011",
+        "01100001",
+        "01100101",
+        "01100100"
+      ],
+      "selected_bits": "110100",
+      "value": 52,
+      "ascii_if_printable": "4"
+    },
+    "one_based_747474": {
+      "characters": "ossaed",
+      "selector": "747474",
+      "index_base": 1,
+      "byte_bits": [
+        "01101111",
+        "01110011",
+        "01110011",
+        "01100001",
+        "01100101",
+        "01100100"
+      ],
+      "selected_bits": "111000",
+      "value": 56,
+      "ascii_if_printable": "8"
+    },
+    "reversed_ring_order_747474": {
+      "characters": "deasso",
+      "selector": "747474",
+      "index_base": 0,
+      "byte_bits": [
+        "01100100",
+        "01100101",
+        "01100001",
+        "01110011",
+        "01110011",
+        "01101111"
+      ],
+      "selected_bits": "001011",
+      "value": 11,
+      "ascii_if_printable": null
+    }
+  },
+  "operation_bridge": {
+    "selected_ascii": "*",
+    "is_multiplication_operator": true,
+    "canonical_matrix": [
+      [
+        5,
+        7,
+        4
+      ],
+      [
+        0,
+        6,
+        1
+      ]
+    ],
+    "canonical_sum_list": [
+      23,
+      16,
+      7
+    ],
+    "canonical_product": [
+      255,
+      103
+    ],
+    "canonical_serialized_hex_if_bytes": "FF67",
+    "multiplication_selected_if_selector_authenticated": true,
+    "byte_consumer_selected": false
+  },
+  "disposition": {
+    "structural_derivation_verified": true,
+    "conditional_operation_selector": true,
+    "ring_endpoint_rule_authenticated": false,
+    "operation_selector_authenticated": false,
+    "matrix_product_gap_closed": false,
+    "reason": "ring-endpoint reading and 747474 provenance are unpinned; no byte consumer is selected"
+  },
+  "oracle_run": false
+}

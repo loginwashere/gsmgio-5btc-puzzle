@@ -1,0 +1,38 @@
+{
+  "phase": "484AI",
+  "status": "development_early_switch_full_solve_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "fixture_index": 22,
+  "schedule": {
+    "switch_depth": 6,
+    "keep_board": 262144,
+    "depth7_coarse_keep": 1310720,
+    "coarse_restarts": 3,
+    "coarse_iterations": 2000,
+    "depth7_refine_keep": 262144,
+    "refine_restarts": 4,
+    "refine_iterations": 10000,
+    "depth8_10_keep": 262144,
+    "bridge_parent_keep": 65536,
+    "bridge_children_per_parent": 8,
+    "depth12_16_keep": 262144,
+    "depth17_30_keep": 4096,
+    "final_top": 8,
+    "final_restarts": 4,
+    "final_iterations": 10000
+  },
+  "truth_survival": {
+    "depth7_refined": 9,
+    "depth10": 9,
+    "depth11": 8,
+    "depth12": 8,
+    "depth16": 8,
+    "depth30": 1
+  },
+  "exact_order_final_rank": 1,
+  "top1_exact_order": true,
+  "top1_plaintext_accuracy": 1.0,
+  "wall_seconds": 3224.746559572006,
+  "work_dir": "../../_work/phase484ai/i22"
+}

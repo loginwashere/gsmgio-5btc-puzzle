@@ -1,0 +1,63 @@
+{
+  "phase": "484Y",
+  "status": "development_width30_shortlist_feasibility_not_frozen",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "width": 30,
+  "rows": 19,
+  "fixture_index": 14,
+  "beam_keep": 262144,
+  "depth8_keep": 1048576,
+  "exhaustive_start_depth": 5,
+  "exact_profile_fixture": {
+    "fixture_index": 14,
+    "source_start": 4067,
+    "minimum_edit_count": 61,
+    "normalized_quadgram": -4.3398507423246855,
+    "plaintext_sha256": "7a1e13e1f1f8ed5bf21505a53ad5e1e0399c5619b03201ee753d35aa9b78a465",
+    "raw_sha256": "380cfa4565f17a9ed5cf75a47c36cb4ee2e50212dee83d2806a49d15150e3d72",
+    "single_slots": 302,
+    "tokens": 436,
+    "raw_symbols": 570
+  },
+  "survived_depth8": false,
+  "depth_diagnostics": [
+    {
+      "depth": 5,
+      "generated": 17100720,
+      "retained": 262144,
+      "generated_true_segments": 26,
+      "generated_best_true_rank": 30738,
+      "true_segments_retained": 4,
+      "best_true_rank": 30738,
+      "selection_seconds": 1.2419639019935858,
+      "expanded_with_duplicates": 13107200,
+      "expansion_seconds": 0.2940913109923713,
+      "gpu_score_seconds": 1.5491986589913722
+    },
+    {
+      "depth": 6,
+      "generated": 12092783,
+      "retained": 262144,
+      "generated_true_segments": 8,
+      "generated_best_true_rank": 272494,
+      "true_segments_retained": 1,
+      "best_true_rank": 166732,
+      "selection_seconds": 2.130563406011788,
+      "expanded_with_duplicates": 12582912,
+      "expansion_seconds": 0.308185363013763,
+      "gpu_score_seconds": 1.5637235509930179
+    },
+    {
+      "depth": 7,
+      "generated": 12151976,
+      "retained": 262144,
+      "generated_true_segments": 2,
+      "generated_best_true_rank": 9390928,
+      "true_segments_retained": 0,
+      "best_true_rank": null,
+      "selection_seconds": 2.088080648012692
+    }
+  ],
+  "wall_seconds": 14.713624001014978
+}
