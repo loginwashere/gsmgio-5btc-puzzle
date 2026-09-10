@@ -17,6 +17,7 @@ metrics along the way.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import time
 from pathlib import Path
@@ -52,6 +53,14 @@ SCHEDULE = {
 }
 
 
+def schedule_sha256(schedule: dict = SCHEDULE) -> str:
+    """Canonical identity for the complete search schedule."""
+    encoded = json.dumps(
+        schedule, sort_keys=True, separators=(",", ":")
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
 def write_json(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, indent=2) + "\n")
 
@@ -62,10 +71,20 @@ def require_file(path: Path, label: str) -> Path:
     return path
 
 
-def initial_to_depth7(fixture_index, work_dir, models=None) -> dict:
+def initial_to_depth7(fixture_index, work_dir, models=None,
+                      schedule: dict | None = None) -> dict:
     """Depth 4 -> switch at depth 6 -> board-anneal through a refined depth-7
     checkpoint, mirroring 484Z's depth-7-switch schedule shifted one depth
     earlier."""
+    schedule = SCHEDULE if schedule is None else schedule
+    required = {
+        "switch_depth", "keep_board", "depth7_coarse_keep",
+        "coarse_restarts", "coarse_iterations", "depth7_refine_keep",
+        "refine_restarts", "refine_iterations",
+    }
+    missing = required - set(schedule)
+    if missing:
+        raise ValueError(f"initial schedule missing keys: {sorted(missing)}")
     fixture = width30.width30_fixture(fixture_index, "dev")
     if models is None:
         models = width30.train_models()
@@ -75,65 +94,62 @@ def initial_to_depth7(fixture_index, work_dir, models=None) -> dict:
 
     paths6, invariant6, prefix_diagnostics, blocks, pair = (
         switch6.invariant_to_switch_depth(
-            fixture, models, SCHEDULE["switch_depth"]))
+            fixture, models, schedule["switch_depth"]))
     invariant_selected = early.recovery_record(
-        paths6, invariant6, truth, SCHEDULE["switch_depth"])
+        paths6, invariant6, truth, schedule["switch_depth"])
 
     stage_began = time.monotonic()
     board6 = early.board_screen(
-        paths6, blocks, pair, quad, SCHEDULE["coarse_restarts"],
-        SCHEDULE["coarse_iterations"], constrained.GPU_BINARY)
+        paths6, blocks, pair, quad, schedule["coarse_restarts"],
+        schedule["coarse_iterations"], constrained.GPU_BINARY)
     board6_seconds = time.monotonic() - stage_began
-    board6_raw = early.recovery_record(paths6, board6, truth, SCHEDULE["switch_depth"])
+    board6_raw = early.recovery_record(paths6, board6, truth, schedule["switch_depth"])
     paths6, board6, unique6 = width30.select_diverse(
-        paths6, board6, SCHEDULE["keep_board"])
-    board6_selected = early.recovery_record(paths6, board6, truth, SCHEDULE["switch_depth"])
+        paths6, board6, schedule["keep_board"])
+    board6_selected = early.recovery_record(paths6, board6, truth, schedule["switch_depth"])
 
-    depth7 = None
-    depth7_refined_checkpoint = None
-    if board6_selected["true_segments"]:
-        stage_began = time.monotonic()
-        paths7 = width30.expand_bidirectional(paths6)
-        board7 = early.board_screen(
-            paths7, blocks, pair, quad, SCHEDULE["coarse_restarts"],
-            SCHEDULE["coarse_iterations"], constrained.GPU_BINARY)
-        raw7 = early.recovery_record(paths7, board7, truth, 7)
-        paths7, board7, unique7 = width30.select_diverse(
-            paths7, board7, SCHEDULE["depth7_coarse_keep"])
-        selected7 = early.recovery_record(paths7, board7, truth, 7)
-        depth7_seconds = time.monotonic() - stage_began
+    # Synthetic truth is diagnostic only. Do not skip search stages when it
+    # is absent: an unresolved ciphertext has no truth oracle for that choice.
+    stage_began = time.monotonic()
+    paths7 = width30.expand_bidirectional(paths6)
+    board7 = early.board_screen(
+        paths7, blocks, pair, quad, schedule["coarse_restarts"],
+        schedule["coarse_iterations"], constrained.GPU_BINARY)
+    raw7 = early.recovery_record(paths7, board7, truth, 7)
+    paths7, board7, unique7 = width30.select_diverse(
+        paths7, board7, schedule["depth7_coarse_keep"])
+    selected7 = early.recovery_record(paths7, board7, truth, 7)
+    depth7_seconds = time.monotonic() - stage_began
 
-        refine7 = None
-        if selected7["true_segments"]:
-            stage_began = time.monotonic()
-            refined7 = early.board_screen(
-                paths7, blocks, pair, quad, SCHEDULE["refine_restarts"],
-                SCHEDULE["refine_iterations"], constrained.GPU_BINARY)
-            raw_refined7 = early.recovery_record(paths7, refined7, truth, 7)
-            refined_paths7, refined_scores7, refine_unique = width30.select_diverse(
-                paths7, refined7, SCHEDULE["depth7_refine_keep"])
-            refined_selected7 = early.recovery_record(
-                refined_paths7, refined_scores7, truth, 7)
-            depth7_refined_checkpoint = early.save_checkpoint(
-                work_dir, "depth7_refined", refined_paths7, refined_scores7)
-            refine7 = {
-                "restarts": SCHEDULE["refine_restarts"],
-                "iterations": SCHEDULE["refine_iterations"],
-                "keep": SCHEDULE["depth7_refine_keep"],
-                "generated_unique": refine_unique,
-                "before_selection": raw_refined7,
-                "after_selection": refined_selected7,
-                "checkpoint": depth7_refined_checkpoint,
-                "seconds": time.monotonic() - stage_began,
-            }
-        depth7 = {
-            "generated_unique": unique7,
-            "before_selection": raw7,
-            "after_selection": selected7,
-            "keep": SCHEDULE["depth7_coarse_keep"],
-            "seconds": depth7_seconds,
-            "refine": refine7,
-        }
+    stage_began = time.monotonic()
+    refined7 = early.board_screen(
+        paths7, blocks, pair, quad, schedule["refine_restarts"],
+        schedule["refine_iterations"], constrained.GPU_BINARY)
+    raw_refined7 = early.recovery_record(paths7, refined7, truth, 7)
+    refined_paths7, refined_scores7, refine_unique = width30.select_diverse(
+        paths7, refined7, schedule["depth7_refine_keep"])
+    refined_selected7 = early.recovery_record(
+        refined_paths7, refined_scores7, truth, 7)
+    depth7_refined_checkpoint = early.save_checkpoint(
+        work_dir, "depth7_refined", refined_paths7, refined_scores7)
+    refine7 = {
+        "restarts": schedule["refine_restarts"],
+        "iterations": schedule["refine_iterations"],
+        "keep": schedule["depth7_refine_keep"],
+        "generated_unique": refine_unique,
+        "before_selection": raw_refined7,
+        "after_selection": refined_selected7,
+        "checkpoint": depth7_refined_checkpoint,
+        "seconds": time.monotonic() - stage_began,
+    }
+    depth7 = {
+        "generated_unique": unique7,
+        "before_selection": raw7,
+        "after_selection": selected7,
+        "keep": schedule["depth7_coarse_keep"],
+        "seconds": depth7_seconds,
+        "refine": refine7,
+    }
 
     return {
         "phase": "484AI",
@@ -141,9 +157,10 @@ def initial_to_depth7(fixture_index, work_dir, models=None) -> dict:
         "faed_scored": False,
         "holdout_consumed": False,
         "fixture_index": fixture_index,
+        "schedule_sha256": schedule_sha256(schedule),
         "prefix_diagnostics": prefix_diagnostics,
         "switch_stage": {
-            "depth": SCHEDULE["switch_depth"],
+            "depth": schedule["switch_depth"],
             "after_invariant_selection": invariant_selected,
             "board_objective_before_selection": board6_raw,
             "after_board_selection": board6_selected,
@@ -166,23 +183,6 @@ def run_fixture(fixture_index: int, work_dir: Path,
 
     initial = initial_to_depth7(fixture_index, work_dir)
     write_json(work_dir / "stage_initial_to_d7.json", initial)
-    if not initial["depth7_refined_checkpoint"]:
-        summary = {
-            "phase": "484AI",
-            "status": "development_early_switch_full_solve_not_frozen",
-            "faed_scored": False,
-            "holdout_consumed": False,
-            "fixture_index": fixture_index,
-            "schedule": SCHEDULE,
-            "stopped_at": "initial_to_depth7",
-            "exact_order_final_rank": None,
-            "top1_exact_order": False,
-            "top1_plaintext_accuracy": None,
-            "wall_seconds": time.monotonic() - began,
-            "work_dir": str(work_dir),
-        }
-        write_json(output, summary)
-        return summary
     depth7 = require_file(Path(initial["depth7_refined_checkpoint"]),
                           "initial stage")
 
@@ -234,6 +234,7 @@ def run_fixture(fixture_index: int, work_dir: Path,
         "holdout_consumed": False,
         "fixture_index": fixture_index,
         "schedule": SCHEDULE,
+        "schedule_sha256": schedule_sha256(),
         "truth_survival": {
             "depth7_refined": initial["depth7"]["refine"]["after_selection"]["true_segments"],
             "depth10": to_depth10["depth_diagnostics"][-1]["after_selection"]["true_segments"],

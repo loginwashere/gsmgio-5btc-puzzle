@@ -7,11 +7,11 @@ Date: 2026-09-09
 Dev-only, synthetic, unpowered result. Starting from Phase 484's width-30
 raw-symbol VIC order+board joint solver (a packed-key collision fix already
 let it fully recover any fixture whose true depth-8 fragment survives the
-coarse shortlist, but only ~3/10 fresh dev fixtures retained that survival),
+coarse shortlist, but only ~3/10 previously examined dev fixtures retained that survival),
 this session's work moved the invariant-to-board-objective scoring switch one
 depth earlier (depth 6 instead of depth 7) and combined it with a
 parent-reserved beam-reservation bridge at the depth-10->11->12 transition.
-Under the full pipeline, **3 of 4 tested fresh dev fixtures (15, 21, 22) now
+Under the full pipeline, **3 of 4 selected, previously exposed development fixtures (15, 21, 22) now
 recover the exact true order end-to-end with 100% plaintext accuracy**, up
 from roughly 3/10 surviving even to a partial shortlist before this session.
 Fixture 19 remains a genuine, unexplained counterexample. No FAED ciphertext
@@ -30,7 +30,7 @@ session fixed a packed-key collision bug in the selector that was silently
 merging distinct paths past depth 12; once fixed, the pipeline achieved exact
 recovery on fixtures 16 and 20 whenever their true depth-8 fragment survived
 to the refined population — but that survival itself was the bottleneck,
-happening for only about 3 of 10 fresh fixtures.
+happening for only about 3 of 10 previously examined fixtures.
 
 ## What this session found, in order
 
@@ -51,21 +51,16 @@ improving steadily through depth 10 (1,098,233 -\> 218,117 -\> 77,317 -\>
 cut by the top-262,144 selection — a single-step shock after being
 consistently strong, not a gradual decline.
 
-**3. A reproducibility gap (methodological caveat).** Attempting to replay
-this cliff to measure the true child's rank among only its own parent's local
-extensions failed: the identical script, arguments, input population, and
-binary (verified by SHA-256) reproducibly gave a *different* depth-7
-board-objective rank across two separate time windows roughly 30 minutes
-apart (180,915 vs. 508,396), while being perfectly self-consistent *within*
-each window across repeated process launches. The per-candidate GPU
-simulated-annealing seed was confirmed, by reading the CUDA kernel directly,
-to be a pure deterministic function of path content (not batch position or
-any hash-randomized value), so this is not a seeding-logic bug. No dependency
-file changed between the two windows. The root cause was not identified. Any
-single reported rank number anywhere in this investigative arc should be read
-with this caveat; the qualitative, repeatedly-reproduced conclusions below
-(steady erosion vs. single-step cliff; "rescued" vs. "not rescued") are more
-robust than any individual number.
+**3. A replay/reconstruction mismatch (methodological caveat).** A
+separate local-rank reconstruction produced depth-7 rank 508,396 instead of
+the official pipeline's 180,915. Subsequent controlled checks found that all
+six saved official artifacts and a fresh invocation of the official CLI
+reproduced 180,915. The 508,396 result therefore establishes a mismatch in
+the separately reconstructed replay path, not GPU nondeterminism. Its exact
+cause remains unresolved because the older artifacts retained summaries
+rather than full per-candidate arrays. Rank diagnostics should be captured
+inline or with complete population checkpoints instead of reconstructed
+later.
 
 **4. Parent-reserved bridge (positive; fixture 15 fully solved).** Instead of
 a single flat global top-K cut at the depth-10-\>11 step, the fix takes the
@@ -79,7 +74,7 @@ multi-restart resolution pass, fixture 15 reached **exact_order_final_rank =
 recovery.
 
 **5. Fixed-schedule generalization test (negative on 3/3).** The exact same
-schedule, unmodified, applied to three fresh untuned dev fixtures (19, 21,
+schedule, unmodified, applied to three previously exposed, non-training transfer fixtures (19, 21,
 22): all three failed completely (plaintext accuracy 0.08-0.26, no
 exact-order match). All three lost the true window at the very first
 invariant-only selection cut at depth 7 — well before the depth-10-\>11
@@ -144,13 +139,25 @@ of the near-miss drama fixture 15's original run needed at the bridge step.
 - Fixture 19's failure under the depth-6 switch is unexplained. Whether an
   even earlier switch (depth 5), a different early-selection score, or some
   fixture-specific property would rescue it is untested.
-- The reproducibility gap in the GPU board-annealing scorer described above
-  (item 3) was not root-caused. It did not visibly affect the depth-6-switch
-  and full-pipeline results (each of which is a single continuous process
-  run, internally consistent), but no cross-run bit-for-bit reproducibility
-  guarantee currently exists for this codebase's board-objective scoring.
+- The replay/reconstruction mismatch described above (item 3) was not
+  root-caused. Controlled replays of the official CLI were stable; the record
+  does not establish GPU nondeterminism. Future local-rank work must persist
+  the relevant arrays or measure ranks inline.
 - The row cross-validation approach (item 1) is closed as not outperforming
   plain full-row board fitting and is not part of what worked here.
+
+## Post-audit implementation correction
+
+The committed 484AI development driver originally used synthetic-truth
+survival to decide whether to execute the depth-7 expansion and refinement.
+That made its positive synthetic measurements valid but made the driver
+non-transferable to an unresolved ciphertext. The driver now always executes
+those stages; truth is used only for diagnostic recovery fields. It also
+writes a canonical SHA-256 of the complete schedule into its artifacts. A
+dedicated regression test forces zero reported true fragments and confirms
+that both depth-7 board passes and checkpoint creation still occur. This code
+correction does not add fixtures, rerun Phase 486, or change its dev-only
+scientific disposition.
 
 ## Reproduction
 

@@ -1,0 +1,62 @@
+{
+  "phase": "484AL",
+  "status": "exploratory_real_execution_lock",
+  "input": {
+    "faed_ascii_sha256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+    "raw_length": 570,
+    "token_length": 436,
+    "single_slots": 302,
+    "pair": [
+      "g",
+      "i"
+    ],
+    "width": 30,
+    "rows": 19
+  },
+  "schedule": {
+    "switch_depth": 6,
+    "keep_board": 262144,
+    "depth7_coarse_keep": 1310720,
+    "coarse_restarts": 3,
+    "coarse_iterations": 2000,
+    "depth7_refine_keep": 262144,
+    "refine_restarts": 4,
+    "refine_iterations": 10000,
+    "depth8_10_keep": 262144,
+    "bridge_parent_keep": 65536,
+    "bridge_children_per_parent": 8,
+    "depth12_16_keep": 262144,
+    "depth17_30_keep": 4096,
+    "final_top": 8,
+    "final_restarts": 4,
+    "final_iterations": 10000
+  },
+  "schedule_sha256": "ed1d840f6e3203e11c35f56383e2310dcffa1b4bc265d2cfb431343e36147e2d",
+  "sources_sha256": {
+    "tools/gsmg/phase484al_exploratory_faed_width30_gi.py": "05332166ec1b1cb9f665b6297c812653361157ef004a9af6d662a6995f5c0cd0",
+    "doc/Brainstorms/2026-09-10 - Phase 484AL Exploratory FAED Width30 GI Protocol.md": "92ed22eadd4c43cee8c2320083c27dc32883244c0f66723a0711411a2abab7da",
+    "tools/gsmg/phase484a_raw_symbol_vic_solver.py": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "tools/gsmg/phase484ai_width30_early_switch_full_solve.py": "71a6b299d9e119f5b086e3b277f75d02e08d9db872b7807f72b6deba198c48c7",
+    "tools/gsmg/phase484ad_width30_parent_reserved_bridge.py": "00d353ab84e834220b2f4ed0d6947e0df678bb2a195b443d2e0b548cbd30403b",
+    "tools/gsmg/phase484ae_width30_checkpointed_rolling.py": "93c95f08152d0f118c4975bcc2b1fe0f3ff42d35949b0b4968712274ba7c2d2a",
+    "tools/gsmg/phase484ac_width30_partition_constrained_board_probe.py": "5e20016195c92006fcfe36cb89413e095214e1298cc5ce55ea571c9396d11ea2",
+    "tools/gsmg/phase484ah_width30_early_switch_depth_probe.py": "c2ee4a4f55ed8fa87a46fcef9ce09cc6833052f695adb7b3851e0fe8fc97f7ec",
+    "tools/gsmg/phase484z_width30_early_board_switch_probe.py": "71ad91084a12f8229e33e85905f0615e8a6e739d3e99e7cb69b9e9ef9d9ab8cb",
+    "tools/gsmg/phase484y_width30_feasibility_probe.py": "02a3152a2a132d9499a3b474e4fc8e62480adb105d5665bb227885543fe01f86",
+    "tools/gsmg/phase484y_width30_blind_joint_solver.py": "33df959264282eeab27680b4d3e95df6c6a918abf4fc9785897860a34e454dd9",
+    "tools/gsmg/phase484x_exact_faed_profile_power_probe.py": "0c76785701e21c3761b8ab7322cf8fa45e6282fb5c444bb21244f29ad8dcb2f8"
+  },
+  "binaries_sha256": {
+    "_work/phase484y/prefix_server": "2c37975a1b78fd967dbac83bb9deeb386df91005439e61a03b642b8ea6c9098b",
+    "_work/phase484ac/constrained_board_server": "40312f58daf413278bd8f60e482594acbdad660de266e32a147b34e0ed508655"
+  },
+  "run_count": 1,
+  "negative_scope": "nonclosing_without_holdout_power",
+  "amendment_history": [
+    {
+      "superseded_lock_sha256": "d78e29353477481249331d838d8f2a29ba9d72dcea91e233befaf745a9aef43c",
+      "reason": "first launch failed before FAED scoring because the adapter also rejected fixed synthetic training-fixture requests; replacement passes those requests to the pinned original provider",
+      "faed_score_observed": false
+    }
+  ]
+}

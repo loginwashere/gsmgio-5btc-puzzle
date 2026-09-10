@@ -29229,18 +29229,18 @@ no shuffle-null p-value was computed. Widths 7--40 and other transposition or
 checkerboard families remain open. Full report:
 [doc/GSMG_PHASE484B_POWERED_SMALL_WIDTH_RAW_SYMBOL_VIC_AUDIT.md](../../doc/GSMG_PHASE484B_POWERED_SMALL_WIDTH_RAW_SYMBOL_VIC_AUDIT.md).
 <!-- audit_doc_override: GSMG_PHASE486_WIDTH30_DEPTH6_BOARD_SWITCH_AUDIT.md -->
-## Phase 486 -- width-30 depth-6 board-objective switch recovers 3 of 4 fresh dev fixtures to exact order (2026-09-09)
+## Phase 486 -- width-30 depth-6 board-objective switch recovers 3 of 4 selected dev fixtures to exact order (2026-09-09)
 
 **Question:** does moving the width-30 raw-symbol VIC solver's
 invariant-to-board-objective scoring switch one depth earlier (depth 6
 instead of depth 7), combined with a parent-reserved beam bridge at the
-depth-10->11->12 transition, rescue fresh dev fixtures that die at the first
+depth-10->11->12 transition, rescue selected development fixtures that die at the first
 invariant-only selection cut?
 
 **Method:** Phase 484's collision-fixed width-30 pipeline fully recovers any
 fixture whose true depth-8 fragment survives the coarse shortlist, but that
-survival itself was the bottleneck (~3/10 fresh fixtures). This session
-traced the failure on three fresh fixtures (19, 21, 22) and found the true
+survival itself was the bottleneck (~3/10 previously examined fixtures). This session
+traced the failure on three previously exposed transfer fixtures (19, 21, 22) and found the true
 window's rank erodes steadily and multiplicatively under the pure invariant
 score across depths 4-7 (fixture 22: rank 25 -> 6,032 -> 55,156 ->
 1,652,569), not a single noisy step -- and that a generous parent-reservation
@@ -29261,15 +29261,80 @@ was a genuine counterexample: the earlier switch made its rank worse
 (393,204 -> 499,424), not better, and it still failed.
 
 **Disposition:** bounded positive, entirely synthetic and unpowered. 3 of 4
-tested fresh dev fixtures now fully solve end-to-end (up from ~3/10 surviving
+tested, selected development fixtures now fully solve end-to-end (up from ~3/10 surviving
 even a partial shortlist before this session); fixture 19's failure is
 unexplained. No FAED ciphertext was imported and no holdout fixture was
 consumed at any point (`faed_scored: false`, `holdout_consumed: false`
 throughout); none of this work ran under an execution-lock/verify_run gate,
-so no calibrated success rate or real-FAED test currently exists. A separate,
-unresolved reproducibility gap was found in the GPU board-annealing scorer
-(identical code/data/binary hash producing different single-run rank numbers
-across two ~30-minute-separated time windows); qualitative conclusions here
-were each independently reproduced within a single continuous run, but
-individual rank numbers should be read with that caveat. Full report:
+so no calibrated success rate or real-FAED test currently exists. A separate local-rank reconstruction disagreed with the official
+pipeline, but six saved official artifacts and a fresh official-CLI replay
+all reproduced the original rank; this is an unresolved reconstruction
+mismatch, not evidence of GPU nondeterminism. The 484AI driver was subsequently
+made truth-blind in control flow and given a canonical schedule hash; this
+implementation correction did not rerun or strengthen the Phase 486 result. Full report:
 [doc/GSMG_PHASE486_WIDTH30_DEPTH6_BOARD_SWITCH_AUDIT.md](../../doc/GSMG_PHASE486_WIDTH30_DEPTH6_BOARD_SWITCH_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE487_WIDTH30_DUAL_LANE_ROOT_LINEAGE_AUDIT.md -->
+## Phase 487 -- root-lineage beam explains and fixes fixture 19; one truth-blind schedule now clears 4 of 4 tested dev fixtures (2026-09-10)
+
+**Question:** Phase 486 left fixture 19 as an unexplained counterexample to
+the depth-6 board-objective switch and parent-reserved bridge. Why does it
+fail, can a mechanism recover it without using synthetic truth to decide
+anything, and does a single fixed schedule combining that mechanism with
+Phase 486's bridge still work on fixtures the bridge alone already solved?
+
+**Method:** diagnostic tracing (`phase484am_width30_root_lineage_beam.py`)
+showed fixture 19's true depth-8 fragment survives strongly within its own
+ancestry but is globally weak -- the ordinary flat top-K beam discards it
+even though a lineage-local view would keep it. A root-lineage beam keeps a
+fixed number of descendants per original depth-7 root (score-ranked per
+root, via `np.maximum.at`/`argsort` -- never touching synthetic truth) and
+periodically prunes to fewer roots by each root's best descendant score, also
+score-only. `phase484an_width30_dual_lane_dev.py` then combines this with
+Phase 486's mechanism as one fixed, mechanically truth-blind schedule: lane A
+runs the existing wide parent-local depth-8 refinement and bridge to depth
+12; lane B runs the root-lineage beam (depth 7 -\> pruned to 262,144 roots at
+depth 9 -\> pruned to 65,536 roots at depth 10 -\> released into the ordinary
+rolling extension at depth 11) to depth 12; the two 262,144-candidate
+populations are merged by score to 262,144 at depth 12 and carried together
+through depth 30 and final resolution. Every selection step in both lanes
+and the merge was verified in source to rank by model score only; synthetic
+truth is computed *after* each selection purely for diagnostic reporting.
+This schedule (`SCHEDULE` dict, `schedule_sha256`) was run under
+`run_fixture()` fully fresh end-to-end -- no reused checkpoints, no
+fixture-specific branching -- on fixtures 13, 14, and 15. Fixture 19's
+completion instead reused its depth-7 and lane-A-through-depth-12 checkpoints
+from an earlier diagnostic run (same schedule constants, same code path) and
+ran lane B, the merge, and depths 13-30 fresh; a fully from-scratch
+`run_fixture(19, ...)` confirmation, with no reused checkpoints at all, is
+still queued (see Limits).
+
+**Result:** the root-lineage beam alone traced fixture 19's true root from
+global rank 220,778 of 655,360 (depth 9) to rank 2,636 of 262,144 (depth 10)
+to rank 129 of 65,536 (depth 11); released into the ordinary extension it
+reached rank 2 at depth 12 and rank 1 by depth 16, holding to
+exact_order_final_rank=1, plaintext_accuracy=1.0 at depth 30. Re-running lane
+B under the committed, mechanically truth-blind `phase484an` code (reusing
+the depth-7/lane-A checkpoints, as above) reproduced the depth-9 root rank
+bit-for-bit (220,778), and critically the merge step survived: lane A's
+competing 262,144-candidate population carried zero true segments through
+depth 12, yet lane B's rank-2 truth was not diluted out of the merged pool --
+final result exact_order_final_rank=1, plaintext_accuracy=1.0. Fixture 15,
+which the bridge alone already solved, passed under the fully fresh unified
+schedule (lane B actually *lost* fixture 15's truth by depth 8, confirming
+lane A does the real work there -- the two lanes are complementary, not one
+silently carrying both). Fixtures 13 and 14, also run fully fresh with no
+special-casing, reached exact top-1 (100% and 98.6% plaintext accuracy
+respectively). **4 of 4 tested dev fixtures now recover exact order
+end-to-end under one fixed, truth-blind schedule**, though fixture 19's
+result rests partly on reused checkpoints rather than a fully fresh run.
+
+**Disposition:** bounded positive, entirely synthetic and unpowered. No FAED
+ciphertext was imported and no holdout fixture was consumed at any point
+(`faed_scored: false`, `holdout_consumed: false` throughout). Only 4 of the
+ten fixtures 13-22 have been run under this exact schedule so far (13, 14,
+15 fully fresh; 19 via reused early checkpoints); the remaining six
+(16-18, 20-22) are queued, along with a fully-fresh fixture-19 rerun, to
+reach the plan's 9/10 dev-fixture gate before any frozen holdout split or
+FAED attempt.
+Full report:
+[doc/GSMG_PHASE487_WIDTH30_DUAL_LANE_ROOT_LINEAGE_AUDIT.md](../../doc/GSMG_PHASE487_WIDTH30_DUAL_LANE_ROOT_LINEAGE_AUDIT.md).
