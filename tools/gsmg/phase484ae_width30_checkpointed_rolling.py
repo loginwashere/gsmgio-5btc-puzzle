@@ -41,12 +41,12 @@ def load_checkpoint(path):
 
 
 def resolve_final(source, fixture_index=15, top=8, restarts=4,
-                  iterations=10000):
+                  iterations=10000, split="dev"):
     source = Path(source)
     paths, scores, source_sha256 = load_checkpoint(source)
     if paths.shape[1] != width30.WIDTH:
         raise ValueError("final resolution requires depth-30 paths")
-    fixture = width30.width30_fixture(fixture_index, "dev")
+    fixture = width30.width30_fixture(fixture_index, split)
     truth = prefix.order_to_sequence(fixture["order"])
     blocks = prefix.blocks_from_observed(fixture)
     pair = tuple(fixture["pair"])
@@ -72,8 +72,9 @@ def resolve_final(source, fixture_index=15, top=8, restarts=4,
         "phase": "484AE",
         "status": "development_final_resolve_not_frozen",
         "faed_scored": False,
-        "holdout_consumed": False,
+        "holdout_consumed": split == "holdout",
         "fixture_index": fixture_index,
+        "split": split,
         "source": str(source),
         "source_sha256": source_sha256,
         "top": len(terminals),
@@ -93,13 +94,13 @@ def resolve_final(source, fixture_index=15, top=8, restarts=4,
 def run(source=DEFAULT_SOURCE, fixture_index=15, max_depth=16,
         keep=KEEP, restarts=RESTARTS, iterations=ITERATIONS,
         binary=constrained.GPU_BINARY, checkpoint_dir=None,
-        stop_on_truth_loss=True):
+        stop_on_truth_loss=True, split="dev"):
     source = Path(source)
     paths, scores, source_sha256 = load_checkpoint(source)
     start_depth = paths.shape[1]
     if not start_depth < max_depth <= width30.WIDTH:
         raise ValueError("max_depth must exceed checkpoint depth and be <= 30")
-    fixture = width30.width30_fixture(fixture_index, "dev")
+    fixture = width30.width30_fixture(fixture_index, split)
     truth = prefix.order_to_sequence(fixture["order"])
     blocks = prefix.blocks_from_observed(fixture)
     pair = tuple(fixture["pair"])
@@ -132,8 +133,9 @@ def run(source=DEFAULT_SOURCE, fixture_index=15, max_depth=16,
         "phase": "484AE",
         "status": "development_checkpointed_rolling_not_frozen",
         "faed_scored": False,
-        "holdout_consumed": False,
+        "holdout_consumed": split == "holdout",
         "fixture_index": fixture_index,
+        "split": split,
         "source": str(source),
         "source_sha256": source_sha256,
         "start_depth": start_depth,

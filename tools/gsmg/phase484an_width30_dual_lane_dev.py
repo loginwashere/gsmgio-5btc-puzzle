@@ -142,14 +142,15 @@ def merge_populations(sources: list[Path], destination: Path,
     }
 
 
-def lane_a_depth8(source: Path, fixture_index: int, work_dir: Path) -> dict:
+def lane_a_depth8(source: Path, fixture_index: int, work_dir: Path,
+                  split: str = "dev") -> dict:
     """Fixture-15 mechanism: broad parent-local depth-8 refinement."""
     paths7, scores7, source_sha256 = rolling.load_checkpoint(source)
     if paths7.shape[1] != 7:
         raise ValueError("lane A requires a depth-7 population")
     ranked = width30.ranked_indices(paths7, scores7)
     parents = paths7[ranked[:SCHEDULE["lane_a_depth7_parent_keep"]]]
-    fixture = width30.width30_fixture(fixture_index, "dev")
+    fixture = width30.width30_fixture(fixture_index, split)
     truth = prefix.order_to_sequence(fixture["order"])
     blocks = prefix.blocks_from_observed(fixture)
     pair = tuple(fixture["pair"])
@@ -180,25 +181,29 @@ def lane_a_depth8(source: Path, fixture_index: int, work_dir: Path) -> dict:
     }
 
 
-def run_lane_a(source: Path, fixture_index: int, work_dir: Path) -> Path:
-    stage8 = lane_a_depth8(source, fixture_index, work_dir)
+def run_lane_a(source: Path, fixture_index: int, work_dir: Path,
+              split: str = "dev") -> Path:
+    stage8 = lane_a_depth8(source, fixture_index, work_dir, split=split)
     write_json(work_dir / "stage_depth8.json", stage8)
     to10 = rolling.run(
         Path(stage8["checkpoint"]), fixture_index, 10,
         SCHEDULE["lane_a_depth8_keep"], SCHEDULE["coarse_restarts"],
-        SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, work_dir, False)
+        SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, work_dir, False,
+        split=split)
     write_json(work_dir / "stage_d9_d10.json", to10)
     stage12 = bridge.run(
         work_dir / "depth10_selected.npz", fixture_index,
         SCHEDULE["lane_a_bridge_parent_keep"],
         SCHEDULE["lane_a_bridge_children_per_parent"],
         SCHEDULE["merge_depth12_keep"], SCHEDULE["coarse_restarts"],
-        SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, work_dir)
+        SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, work_dir,
+        split=split)
     write_json(work_dir / "stage_d11_d12.json", stage12)
     return work_dir / "depth12_selected.npz"
 
 
-def run_lane_b(source: Path, fixture_index: int, work_dir: Path) -> Path:
+def run_lane_b(source: Path, fixture_index: int, work_dir: Path,
+              split: str = "dev") -> Path:
     paths7, scores7, _ = rolling.load_checkpoint(source)
     if paths7.shape[1] != 7:
         raise ValueError("lane B requires a depth-7 population")
@@ -207,30 +212,33 @@ def run_lane_b(source: Path, fixture_index: int, work_dir: Path) -> Path:
         root_ids=np.arange(len(paths7), dtype=np.int64),
         original_root_ids=np.arange(len(paths7), dtype=np.int64))
     depth8 = lineage.run_depth(root7, fixture_index, 4, 16384,
-                               work_dir=work_dir)["checkpoint"]
+                               work_dir=work_dir, split=split)["checkpoint"]
     depth9 = lineage.run_depth(Path(depth8), fixture_index, 4, 16384,
-                               work_dir=work_dir)["checkpoint"]
+                               work_dir=work_dir, split=split)["checkpoint"]
     prune9 = prune_root_population(
         Path(depth9), work_dir / "depth9_pruned262144.npz",
         SCHEDULE["lane_b_depth9_root_keep"])
     write_json(work_dir / "stage_prune_depth9.json", prune9)
     depth10 = lineage.run_depth(Path(prune9["destination"]), fixture_index,
-                                4, 16384, work_dir=work_dir)["checkpoint"]
+                                4, 16384, work_dir=work_dir,
+                                split=split)["checkpoint"]
     prune10 = prune_root_population(
         Path(depth10), work_dir / "depth10_pruned65536.npz",
         SCHEDULE["lane_b_depth10_root_keep"])
     write_json(work_dir / "stage_prune_depth10.json", prune10)
     depth11 = lineage.run_depth(Path(prune10["destination"]), fixture_index,
-                                4, 16384, work_dir=work_dir)["checkpoint"]
+                                4, 16384, work_dir=work_dir,
+                                split=split)["checkpoint"]
     stage12 = rolling.run(
         Path(depth11), fixture_index, 12, SCHEDULE["merge_depth12_keep"],
         SCHEDULE["coarse_restarts"], SCHEDULE["coarse_iterations"],
-        constrained.GPU_BINARY, work_dir, False)
+        constrained.GPU_BINARY, work_dir, False, split=split)
     write_json(work_dir / "stage_release_depth12.json", stage12)
     return work_dir / "depth12_selected.npz"
 
 
-def run_fixture(fixture_index: int, work_dir: Path) -> dict:
+def run_fixture(fixture_index: int, work_dir: Path,
+                split: str = "dev") -> dict:
     work_dir = Path(work_dir)
     initial_dir, lane_a_dir = work_dir / "initial", work_dir / "lane_a"
     lane_b_dir, merged_dir = work_dir / "lane_b", work_dir / "merged"
@@ -238,11 +246,11 @@ def run_fixture(fixture_index: int, work_dir: Path) -> dict:
         directory.mkdir(parents=True, exist_ok=True)
     began = time.monotonic()
     initial = full.initial_to_depth7(
-        fixture_index, initial_dir, schedule=SCHEDULE)
+        fixture_index, initial_dir, schedule=SCHEDULE, split=split)
     write_json(initial_dir / "stage_initial_to_d7.json", initial)
     depth7 = Path(initial["depth7_refined_checkpoint"])
-    lane_a12 = run_lane_a(depth7, fixture_index, lane_a_dir)
-    lane_b12 = run_lane_b(depth7, fixture_index, lane_b_dir)
+    lane_a12 = run_lane_a(depth7, fixture_index, lane_a_dir, split=split)
+    lane_b12 = run_lane_b(depth7, fixture_index, lane_b_dir, split=split)
     merged12 = merged_dir / "depth12_merged.npz"
     merge = merge_populations([lane_a12, lane_b12], merged12,
                               SCHEDULE["merge_depth12_keep"])
@@ -250,23 +258,24 @@ def run_fixture(fixture_index: int, work_dir: Path) -> dict:
     middle = rolling.run(
         merged12, fixture_index, 16, SCHEDULE["depth13_16_keep"],
         SCHEDULE["coarse_restarts"], SCHEDULE["coarse_iterations"],
-        constrained.GPU_BINARY, merged_dir, False)
+        constrained.GPU_BINARY, merged_dir, False, split=split)
     write_json(merged_dir / "stage_d13_d16.json", middle)
     tail = rolling.run(
         merged_dir / "depth16_selected.npz", fixture_index, 30,
         SCHEDULE["depth17_30_keep"], SCHEDULE["coarse_restarts"],
-        SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, merged_dir, False)
+        SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, merged_dir,
+        False, split=split)
     write_json(merged_dir / "stage_d17_d30.json", tail)
     final = rolling.resolve_final(
         merged_dir / "depth30_selected.npz", fixture_index,
         SCHEDULE["final_top"], SCHEDULE["final_restarts"],
-        SCHEDULE["final_iterations"])
+        SCHEDULE["final_iterations"], split=split)
     write_json(merged_dir / "stage_final.json", final)
     result = {
         "phase": "484AN",
         "status": "development_dual_lane_complete_not_frozen",
-        "faed_scored": False, "holdout_consumed": False,
-        "fixture_index": fixture_index, "schedule": SCHEDULE,
+        "faed_scored": False, "holdout_consumed": split == "holdout",
+        "fixture_index": fixture_index, "split": split, "schedule": SCHEDULE,
         "schedule_sha256": schedule_sha256(),
         "initial_depth7_true_segments": initial["depth7"]["refine"]["after_selection"]["true_segments"],
         "middle_truth_survived": middle["truth_survived"],
@@ -285,10 +294,13 @@ def main() -> int:
     parser.add_argument("--run", action="store_true")
     parser.add_argument("--fixture-index", type=int)
     parser.add_argument("--work-dir", type=Path, default=DEFAULT_WORK_DIR)
+    parser.add_argument("--split", choices=("dev", "holdout"), default="dev")
     args = parser.parse_args()
     if not args.run or args.fixture_index is None:
         parser.error("--run and --fixture-index are required")
-    print(json.dumps(run_fixture(args.fixture_index, args.work_dir), indent=2))
+    print(json.dumps(
+        run_fixture(args.fixture_index, args.work_dir, split=args.split),
+        indent=2))
     return 0
 
 

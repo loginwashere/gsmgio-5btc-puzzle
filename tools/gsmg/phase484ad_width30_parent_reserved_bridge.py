@@ -97,13 +97,13 @@ def run(source=DEFAULT_SOURCE, fixture_index=15,
         parent_keep=PARENT_KEEP, children_per_parent=CHILDREN_PER_PARENT,
         depth12_keep=DEPTH12_KEEP, restarts=RESTARTS,
         iterations=ITERATIONS, binary=constrained.GPU_BINARY,
-        checkpoint_dir=None):
+        checkpoint_dir=None, split="dev"):
     source = Path(source)
     paths10, scores10, source_sha256 = load_population(source)
     ranked = width30.ranked_indices(paths10, scores10)
     ranked = ranked[:min(parent_keep, len(ranked))]
     parents = paths10[ranked]
-    fixture = width30.width30_fixture(fixture_index, "dev")
+    fixture = width30.width30_fixture(fixture_index, split)
     truth = prefix.order_to_sequence(fixture["order"])
     blocks = prefix.blocks_from_observed(fixture)
     pair = tuple(fixture["pair"])
@@ -139,8 +139,9 @@ def run(source=DEFAULT_SOURCE, fixture_index=15,
         "phase": "484AD",
         "status": "development_parent_reserved_bridge_not_frozen",
         "faed_scored": False,
-        "holdout_consumed": False,
+        "holdout_consumed": split == "holdout",
         "fixture_index": fixture_index,
+        "split": split,
         "source": str(source),
         "source_sha256": source_sha256,
         "parent_keep": len(parents),

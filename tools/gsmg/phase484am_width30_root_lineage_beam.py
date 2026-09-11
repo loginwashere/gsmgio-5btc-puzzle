@@ -113,7 +113,8 @@ def expand_root_chunk(paths, roots):
 def run_depth(source=DEFAULT_SOURCE, fixture_index=19,
               descendants_per_root=DESCENDANTS_PER_ROOT,
               root_chunk=ROOT_CHUNK, restarts=RESTARTS,
-              iterations=ITERATIONS, work_dir=DEFAULT_WORK_DIR):
+              iterations=ITERATIONS, work_dir=DEFAULT_WORK_DIR,
+              split="dev"):
     source, work_dir = Path(source), Path(work_dir)
     paths, _, roots, source_sha256 = load_state(source)
     start_depth = paths.shape[1]
@@ -121,7 +122,7 @@ def run_depth(source=DEFAULT_SOURCE, fixture_index=19,
     root_values = np.unique(roots)
     if not np.array_equal(root_values, np.arange(root_values[-1] + 1)):
         raise ValueError("root IDs must form a dense zero-based range")
-    fixture = width30.width30_fixture(fixture_index, "dev")
+    fixture = width30.width30_fixture(fixture_index, split)
     truth = prefix.order_to_sequence(fixture["order"])
     blocks = prefix.blocks_from_observed(fixture)
     pair = tuple(fixture["pair"])
@@ -163,8 +164,9 @@ def run_depth(source=DEFAULT_SOURCE, fixture_index=19,
         "phase": "484AM",
         "status": "development_streaming_root_lineage_depth_complete_not_frozen",
         "faed_scored": False,
-        "holdout_consumed": False,
+        "holdout_consumed": split == "holdout",
         "fixture_index": fixture_index,
+        "split": split,
         "source": str(source),
         "source_sha256": source_sha256,
         "start_depth": start_depth,
