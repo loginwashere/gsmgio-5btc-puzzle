@@ -72,7 +72,8 @@ def require_file(path: Path, label: str) -> Path:
 
 
 def initial_to_depth7(fixture_index, work_dir, models=None,
-                      schedule: dict | None = None, split: str = "dev") -> dict:
+                      schedule: dict | None = None, split: str = "dev",
+                      board_seed: int = early.joint.SEED) -> dict:
     """Depth 4 -> switch at depth 6 -> board-anneal through a refined depth-7
     checkpoint, mirroring 484Z's depth-7-switch schedule shifted one depth
     earlier."""
@@ -101,7 +102,8 @@ def initial_to_depth7(fixture_index, work_dir, models=None,
     stage_began = time.monotonic()
     board6 = early.board_screen(
         paths6, blocks, pair, quad, schedule["coarse_restarts"],
-        schedule["coarse_iterations"], constrained.GPU_BINARY)
+        schedule["coarse_iterations"], constrained.GPU_BINARY,
+        seed=board_seed)
     board6_seconds = time.monotonic() - stage_began
     board6_raw = early.recovery_record(paths6, board6, truth, schedule["switch_depth"])
     paths6, board6, unique6 = width30.select_diverse(
@@ -114,7 +116,8 @@ def initial_to_depth7(fixture_index, work_dir, models=None,
     paths7 = width30.expand_bidirectional(paths6)
     board7 = early.board_screen(
         paths7, blocks, pair, quad, schedule["coarse_restarts"],
-        schedule["coarse_iterations"], constrained.GPU_BINARY)
+        schedule["coarse_iterations"], constrained.GPU_BINARY,
+        seed=board_seed)
     raw7 = early.recovery_record(paths7, board7, truth, 7)
     paths7, board7, unique7 = width30.select_diverse(
         paths7, board7, schedule["depth7_coarse_keep"])
@@ -124,7 +127,8 @@ def initial_to_depth7(fixture_index, work_dir, models=None,
     stage_began = time.monotonic()
     refined7 = early.board_screen(
         paths7, blocks, pair, quad, schedule["refine_restarts"],
-        schedule["refine_iterations"], constrained.GPU_BINARY)
+        schedule["refine_iterations"], constrained.GPU_BINARY,
+        seed=board_seed)
     raw_refined7 = early.recovery_record(paths7, refined7, truth, 7)
     refined_paths7, refined_scores7, refine_unique = width30.select_diverse(
         paths7, refined7, schedule["depth7_refine_keep"])
@@ -158,6 +162,7 @@ def initial_to_depth7(fixture_index, work_dir, models=None,
         "holdout_consumed": split == "holdout",
         "fixture_index": fixture_index,
         "split": split,
+        "board_seed": board_seed,
         "schedule_sha256": schedule_sha256(schedule),
         "prefix_diagnostics": prefix_diagnostics,
         "switch_stage": {
@@ -174,7 +179,8 @@ def initial_to_depth7(fixture_index, work_dir, models=None,
 
 
 def run_fixture(fixture_index: int, work_dir: Path,
-                output: Path | None = None, split: str = "dev") -> dict:
+                output: Path | None = None, split: str = "dev",
+                board_seed: int = early.joint.SEED) -> dict:
     work_dir = Path(work_dir)
     work_dir.mkdir(parents=True, exist_ok=True)
     output = output or work_dir / "result.json"
@@ -182,7 +188,8 @@ def run_fixture(fixture_index: int, work_dir: Path,
         raise FileExistsError(f"refusing to overwrite existing result: {output}")
     began = time.monotonic()
 
-    initial = initial_to_depth7(fixture_index, work_dir, split=split)
+    initial = initial_to_depth7(fixture_index, work_dir, split=split,
+                                board_seed=board_seed)
     write_json(work_dir / "stage_initial_to_d7.json", initial)
     depth7 = require_file(Path(initial["depth7_refined_checkpoint"]),
                           "initial stage")
@@ -191,7 +198,8 @@ def run_fixture(fixture_index: int, work_dir: Path,
         source=depth7, fixture_index=fixture_index, max_depth=10,
         keep=SCHEDULE["depth8_10_keep"], restarts=SCHEDULE["coarse_restarts"],
         iterations=SCHEDULE["coarse_iterations"], binary=constrained.GPU_BINARY,
-        checkpoint_dir=work_dir, stop_on_truth_loss=False, split=split)
+        checkpoint_dir=work_dir, stop_on_truth_loss=False, split=split,
+        board_seed=board_seed)
     write_json(work_dir / "stage_d8_d10.json", to_depth10)
     depth10 = require_file(work_dir / "depth10_selected.npz", "depth8-10 stage")
 
@@ -202,7 +210,8 @@ def run_fixture(fixture_index: int, work_dir: Path,
         depth12_keep=SCHEDULE["depth12_16_keep"],
         restarts=SCHEDULE["coarse_restarts"],
         iterations=SCHEDULE["coarse_iterations"],
-        binary=constrained.GPU_BINARY, checkpoint_dir=work_dir, split=split)
+        binary=constrained.GPU_BINARY, checkpoint_dir=work_dir, split=split,
+        board_seed=board_seed)
     write_json(work_dir / "stage_bridge_d11_d12.json", bridged)
     depth12 = require_file(work_dir / "depth12_selected.npz", "bridge stage")
 
@@ -210,7 +219,8 @@ def run_fixture(fixture_index: int, work_dir: Path,
         source=depth12, fixture_index=fixture_index, max_depth=16,
         keep=SCHEDULE["depth12_16_keep"], restarts=SCHEDULE["coarse_restarts"],
         iterations=SCHEDULE["coarse_iterations"], binary=constrained.GPU_BINARY,
-        checkpoint_dir=work_dir, stop_on_truth_loss=False, split=split)
+        checkpoint_dir=work_dir, stop_on_truth_loss=False, split=split,
+        board_seed=board_seed)
     write_json(work_dir / "stage_d13_d16.json", middle)
     depth16 = require_file(work_dir / "depth16_selected.npz", "middle stage")
 
@@ -218,14 +228,16 @@ def run_fixture(fixture_index: int, work_dir: Path,
         source=depth16, fixture_index=fixture_index, max_depth=30,
         keep=SCHEDULE["depth17_30_keep"], restarts=SCHEDULE["coarse_restarts"],
         iterations=SCHEDULE["coarse_iterations"], binary=constrained.GPU_BINARY,
-        checkpoint_dir=work_dir, stop_on_truth_loss=False, split=split)
+        checkpoint_dir=work_dir, stop_on_truth_loss=False, split=split,
+        board_seed=board_seed)
     write_json(work_dir / "stage_d17_d30.json", tail)
     depth30 = require_file(work_dir / "depth30_selected.npz", "tail stage")
 
     final = rolling.resolve_final(
         depth30, fixture_index=fixture_index, top=SCHEDULE["final_top"],
         restarts=SCHEDULE["final_restarts"],
-        iterations=SCHEDULE["final_iterations"], split=split)
+        iterations=SCHEDULE["final_iterations"], split=split,
+        board_seed=board_seed)
     write_json(work_dir / "stage_final_resolve.json", final)
 
     summary = {
@@ -235,6 +247,7 @@ def run_fixture(fixture_index: int, work_dir: Path,
         "holdout_consumed": split == "holdout",
         "fixture_index": fixture_index,
         "split": split,
+        "board_seed": board_seed,
         "schedule": SCHEDULE,
         "schedule_sha256": schedule_sha256(),
         "truth_survival": {

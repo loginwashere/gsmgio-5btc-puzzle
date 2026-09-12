@@ -96,7 +96,8 @@ def invariant_to_depth7(fixture, models, keep=DEFAULT_KEEP,
 
 def board_screen(paths, blocks, pair, quad, restarts=DEFAULT_RESTARTS,
                  iterations=DEFAULT_ITERATIONS,
-                 binary=joint.COARSE_BINARY, chunk_size=BOARD_CHUNK):
+                 binary=joint.COARSE_BINARY, chunk_size=BOARD_CHUNK,
+                 seed=joint.SEED):
     """Return scores with CUDA-cap-sized, path-seed-invariant chunks."""
     paths = np.asarray(paths, dtype=np.uint8)
     if chunk_size < 1:
@@ -105,7 +106,7 @@ def board_screen(paths, blocks, pair, quad, restarts=DEFAULT_RESTARTS,
     for start in range(0, len(paths), chunk_size):
         chunk_scores, _, _, _ = joint.gpu_multistart_screen(
             binary, blocks, pair, quad, paths[start:start + chunk_size],
-            restarts=restarts, iterations=iterations)
+            restarts=restarts, iterations=iterations, seed=seed)
         scores.append(chunk_scores)
     return np.concatenate(scores) if scores else np.empty(0, dtype=np.float64)
 

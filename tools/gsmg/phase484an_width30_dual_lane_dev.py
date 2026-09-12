@@ -143,7 +143,7 @@ def merge_populations(sources: list[Path], destination: Path,
 
 
 def lane_a_depth8(source: Path, fixture_index: int, work_dir: Path,
-                  split: str = "dev") -> dict:
+                  split: str = "dev", board_seed: int = early.joint.SEED) -> dict:
     """Fixture-15 mechanism: broad parent-local depth-8 refinement."""
     paths7, scores7, source_sha256 = rolling.load_checkpoint(source)
     if paths7.shape[1] != 7:
@@ -159,13 +159,13 @@ def lane_a_depth8(source: Path, fixture_index: int, work_dir: Path,
     children, parent_ids = bridge.expand_with_parent_indices(parents)
     coarse = early.board_screen(
         children, blocks, pair, quad, SCHEDULE["coarse_restarts"],
-        SCHEDULE["coarse_iterations"], constrained.GPU_BINARY)
+        SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, seed=board_seed)
     reserved, reserved_scores = bridge.reserve_local_children(
         children, coarse, parent_ids,
         SCHEDULE["lane_a_depth8_children_per_parent"])
     refined = early.board_screen(
         reserved, blocks, pair, quad, SCHEDULE["refine_restarts"],
-        SCHEDULE["refine_iterations"], constrained.GPU_BINARY)
+        SCHEDULE["refine_iterations"], constrained.GPU_BINARY, seed=board_seed)
     selected, selected_scores, unique = width30.select_diverse(
         reserved, refined, SCHEDULE["lane_a_depth8_keep"])
     checkpoint = save_population(work_dir / "depth8_selected.npz",
@@ -182,14 +182,15 @@ def lane_a_depth8(source: Path, fixture_index: int, work_dir: Path,
 
 
 def run_lane_a(source: Path, fixture_index: int, work_dir: Path,
-              split: str = "dev") -> Path:
-    stage8 = lane_a_depth8(source, fixture_index, work_dir, split=split)
+              split: str = "dev", board_seed: int = early.joint.SEED) -> Path:
+    stage8 = lane_a_depth8(source, fixture_index, work_dir, split=split,
+                           board_seed=board_seed)
     write_json(work_dir / "stage_depth8.json", stage8)
     to10 = rolling.run(
         Path(stage8["checkpoint"]), fixture_index, 10,
         SCHEDULE["lane_a_depth8_keep"], SCHEDULE["coarse_restarts"],
         SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, work_dir, False,
-        split=split)
+        split=split, board_seed=board_seed)
     write_json(work_dir / "stage_d9_d10.json", to10)
     stage12 = bridge.run(
         work_dir / "depth10_selected.npz", fixture_index,
@@ -197,13 +198,13 @@ def run_lane_a(source: Path, fixture_index: int, work_dir: Path,
         SCHEDULE["lane_a_bridge_children_per_parent"],
         SCHEDULE["merge_depth12_keep"], SCHEDULE["coarse_restarts"],
         SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, work_dir,
-        split=split)
+        split=split, board_seed=board_seed)
     write_json(work_dir / "stage_d11_d12.json", stage12)
     return work_dir / "depth12_selected.npz"
 
 
 def run_lane_b(source: Path, fixture_index: int, work_dir: Path,
-              split: str = "dev") -> Path:
+              split: str = "dev", board_seed: int = early.joint.SEED) -> Path:
     paths7, scores7, _ = rolling.load_checkpoint(source)
     if paths7.shape[1] != 7:
         raise ValueError("lane B requires a depth-7 population")
@@ -212,33 +213,36 @@ def run_lane_b(source: Path, fixture_index: int, work_dir: Path,
         root_ids=np.arange(len(paths7), dtype=np.int64),
         original_root_ids=np.arange(len(paths7), dtype=np.int64))
     depth8 = lineage.run_depth(root7, fixture_index, 4, 16384,
-                               work_dir=work_dir, split=split)["checkpoint"]
+                               work_dir=work_dir, split=split,
+                               board_seed=board_seed)["checkpoint"]
     depth9 = lineage.run_depth(Path(depth8), fixture_index, 4, 16384,
-                               work_dir=work_dir, split=split)["checkpoint"]
+                               work_dir=work_dir, split=split,
+                               board_seed=board_seed)["checkpoint"]
     prune9 = prune_root_population(
         Path(depth9), work_dir / "depth9_pruned262144.npz",
         SCHEDULE["lane_b_depth9_root_keep"])
     write_json(work_dir / "stage_prune_depth9.json", prune9)
     depth10 = lineage.run_depth(Path(prune9["destination"]), fixture_index,
                                 4, 16384, work_dir=work_dir,
-                                split=split)["checkpoint"]
+                                split=split, board_seed=board_seed)["checkpoint"]
     prune10 = prune_root_population(
         Path(depth10), work_dir / "depth10_pruned65536.npz",
         SCHEDULE["lane_b_depth10_root_keep"])
     write_json(work_dir / "stage_prune_depth10.json", prune10)
     depth11 = lineage.run_depth(Path(prune10["destination"]), fixture_index,
                                 4, 16384, work_dir=work_dir,
-                                split=split)["checkpoint"]
+                                split=split, board_seed=board_seed)["checkpoint"]
     stage12 = rolling.run(
         Path(depth11), fixture_index, 12, SCHEDULE["merge_depth12_keep"],
         SCHEDULE["coarse_restarts"], SCHEDULE["coarse_iterations"],
-        constrained.GPU_BINARY, work_dir, False, split=split)
+        constrained.GPU_BINARY, work_dir, False, split=split,
+        board_seed=board_seed)
     write_json(work_dir / "stage_release_depth12.json", stage12)
     return work_dir / "depth12_selected.npz"
 
 
 def run_fixture(fixture_index: int, work_dir: Path,
-                split: str = "dev") -> dict:
+                split: str = "dev", board_seed: int = early.joint.SEED) -> dict:
     work_dir = Path(work_dir)
     initial_dir, lane_a_dir = work_dir / "initial", work_dir / "lane_a"
     lane_b_dir, merged_dir = work_dir / "lane_b", work_dir / "merged"
@@ -246,11 +250,14 @@ def run_fixture(fixture_index: int, work_dir: Path,
         directory.mkdir(parents=True, exist_ok=True)
     began = time.monotonic()
     initial = full.initial_to_depth7(
-        fixture_index, initial_dir, schedule=SCHEDULE, split=split)
+        fixture_index, initial_dir, schedule=SCHEDULE, split=split,
+        board_seed=board_seed)
     write_json(initial_dir / "stage_initial_to_d7.json", initial)
     depth7 = Path(initial["depth7_refined_checkpoint"])
-    lane_a12 = run_lane_a(depth7, fixture_index, lane_a_dir, split=split)
-    lane_b12 = run_lane_b(depth7, fixture_index, lane_b_dir, split=split)
+    lane_a12 = run_lane_a(depth7, fixture_index, lane_a_dir, split=split,
+                          board_seed=board_seed)
+    lane_b12 = run_lane_b(depth7, fixture_index, lane_b_dir, split=split,
+                          board_seed=board_seed)
     merged12 = merged_dir / "depth12_merged.npz"
     merge = merge_populations([lane_a12, lane_b12], merged12,
                               SCHEDULE["merge_depth12_keep"])
@@ -258,24 +265,26 @@ def run_fixture(fixture_index: int, work_dir: Path,
     middle = rolling.run(
         merged12, fixture_index, 16, SCHEDULE["depth13_16_keep"],
         SCHEDULE["coarse_restarts"], SCHEDULE["coarse_iterations"],
-        constrained.GPU_BINARY, merged_dir, False, split=split)
+        constrained.GPU_BINARY, merged_dir, False, split=split,
+        board_seed=board_seed)
     write_json(merged_dir / "stage_d13_d16.json", middle)
     tail = rolling.run(
         merged_dir / "depth16_selected.npz", fixture_index, 30,
         SCHEDULE["depth17_30_keep"], SCHEDULE["coarse_restarts"],
         SCHEDULE["coarse_iterations"], constrained.GPU_BINARY, merged_dir,
-        False, split=split)
+        False, split=split, board_seed=board_seed)
     write_json(merged_dir / "stage_d17_d30.json", tail)
     final = rolling.resolve_final(
         merged_dir / "depth30_selected.npz", fixture_index,
         SCHEDULE["final_top"], SCHEDULE["final_restarts"],
-        SCHEDULE["final_iterations"], split=split)
+        SCHEDULE["final_iterations"], split=split, board_seed=board_seed)
     write_json(merged_dir / "stage_final.json", final)
     result = {
         "phase": "484AN",
         "status": "development_dual_lane_complete_not_frozen",
         "faed_scored": False, "holdout_consumed": split == "holdout",
-        "fixture_index": fixture_index, "split": split, "schedule": SCHEDULE,
+        "fixture_index": fixture_index, "split": split,
+        "board_seed": board_seed, "schedule": SCHEDULE,
         "schedule_sha256": schedule_sha256(),
         "initial_depth7_true_segments": initial["depth7"]["refine"]["after_selection"]["true_segments"],
         "middle_truth_survived": middle["truth_survived"],
@@ -295,11 +304,13 @@ def main() -> int:
     parser.add_argument("--fixture-index", type=int)
     parser.add_argument("--work-dir", type=Path, default=DEFAULT_WORK_DIR)
     parser.add_argument("--split", choices=("dev", "holdout"), default="dev")
+    parser.add_argument("--board-seed", type=int, default=early.joint.SEED)
     args = parser.parse_args()
     if not args.run or args.fixture_index is None:
         parser.error("--run and --fixture-index are required")
     print(json.dumps(
-        run_fixture(args.fixture_index, args.work_dir, split=args.split),
+        run_fixture(args.fixture_index, args.work_dir, split=args.split,
+                   board_seed=args.board_seed),
         indent=2))
     return 0
 

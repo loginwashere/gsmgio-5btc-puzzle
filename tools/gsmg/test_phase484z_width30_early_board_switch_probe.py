@@ -48,7 +48,7 @@ class Phase484ZEarlyBoardSwitchTests(unittest.TestCase):
         old = subject.joint.gpu_multistart_screen
         calls = []
         try:
-            def fake(binary, blocks, pair, quad, paths, restarts, iterations):
+            def fake(binary, blocks, pair, quad, paths, restarts, iterations, seed=None):
                 calls.append(paths.copy())
                 scores = paths[:, 0].astype(float)
                 n = len(paths)

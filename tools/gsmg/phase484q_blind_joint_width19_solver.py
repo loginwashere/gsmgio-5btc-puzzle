@@ -69,10 +69,10 @@ def gpu_full_screen(binary,token_rows,quad,iterations,seed):
     if len(stdout)!=sb+len(token_rows)*25:raise RuntimeError("wrong full GPU response size")
     return np.frombuffer(stdout[:sb],dtype="<f8").copy(),np.frombuffer(stdout[sb:],dtype=np.uint8).copy().reshape(len(token_rows),25)
 
-def gpu_full_multistart(binary,token_rows,quad,restarts,iterations):
+def gpu_full_multistart(binary,token_rows,quad,restarts,iterations,seed=SEED):
     scores=np.full(len(token_rows),-np.inf);boards=None;which=np.zeros(len(token_rows),dtype=np.int64)
     for restart in range(restarts):
-        current,current_boards=gpu_full_screen(binary,token_rows,quad,iterations,base.derive_seed(SEED,restart));improved=current>scores
+        current,current_boards=gpu_full_screen(binary,token_rows,quad,iterations,base.derive_seed(seed,restart));improved=current>scores
         if boards is None:boards=current_boards.copy()
         scores[improved]=current[improved];boards[improved]=current_boards[improved];which[improved]=restart
     return scores,boards,which

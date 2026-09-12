@@ -97,7 +97,7 @@ def run(source=DEFAULT_SOURCE, fixture_index=15,
         parent_keep=PARENT_KEEP, children_per_parent=CHILDREN_PER_PARENT,
         depth12_keep=DEPTH12_KEEP, restarts=RESTARTS,
         iterations=ITERATIONS, binary=constrained.GPU_BINARY,
-        checkpoint_dir=None, split="dev"):
+        checkpoint_dir=None, split="dev", board_seed=early.joint.SEED):
     source = Path(source)
     paths10, scores10, source_sha256 = load_population(source)
     ranked = width30.ranked_indices(paths10, scores10)
@@ -112,7 +112,8 @@ def run(source=DEFAULT_SOURCE, fixture_index=15,
 
     children11, parent_indices = expand_with_parent_indices(parents)
     scores11 = early.board_screen(
-        children11, blocks, pair, quad, restarts, iterations, binary)
+        children11, blocks, pair, quad, restarts, iterations, binary,
+        seed=board_seed)
     before11 = early.recovery_record(
         children11, scores11, truth, 11, include_best=True)
     reserved11, reserved_scores11 = reserve_local_children(
@@ -125,7 +126,8 @@ def run(source=DEFAULT_SOURCE, fixture_index=15,
 
     children12 = width30.expand_bidirectional(reserved11)
     scores12 = early.board_screen(
-        children12, blocks, pair, quad, restarts, iterations, binary)
+        children12, blocks, pair, quad, restarts, iterations, binary,
+        seed=board_seed)
     before12 = early.recovery_record(
         children12, scores12, truth, 12, include_best=True)
     selected12, selected_scores12, unique12 = width30.select_diverse(
@@ -148,6 +150,7 @@ def run(source=DEFAULT_SOURCE, fixture_index=15,
         "children_per_parent": children_per_parent,
         "restarts": restarts,
         "iterations": iterations,
+        "board_seed": board_seed,
         "checkpoint_dir": str(checkpoint_dir) if checkpoint_dir else None,
         "depth11": {
             "before_reservation": before11,

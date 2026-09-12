@@ -1,0 +1,97 @@
+{
+  "phase": "484AO",
+  "status": "locked_before_real_run",
+  "supersedes": {
+    "phase": "484AL",
+    "lock_sha256_no_longer_applicable": true,
+    "reason": "484AL used the pre-holdout-gated 484AI schedule alone and closed as a documented gibberish miss; this run uses the Phase 487/488 dual-lane schedule that cleared a 10/10 dev gate and an 11/12 holdout gate"
+  },
+  "input": {
+    "faed_ascii_sha256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+    "raw_length": 570,
+    "token_length": 436,
+    "pair": [
+      "g",
+      "i"
+    ],
+    "width": 30,
+    "rows": 19
+  },
+  "schedule": {
+    "switch_depth": 6,
+    "keep_board": 524288,
+    "depth7_coarse_keep": 1310720,
+    "coarse_restarts": 3,
+    "coarse_iterations": 2000,
+    "depth7_refine_keep": 655360,
+    "refine_restarts": 4,
+    "refine_iterations": 10000,
+    "lane_a_depth7_parent_keep": 32768,
+    "lane_a_depth8_children_per_parent": 40,
+    "lane_a_depth8_keep": 262144,
+    "lane_a_bridge_parent_keep": 65536,
+    "lane_a_bridge_children_per_parent": 8,
+    "lane_b_descendants_per_root": 4,
+    "lane_b_depth9_root_keep": 262144,
+    "lane_b_depth10_root_keep": 65536,
+    "merge_depth12_keep": 262144,
+    "depth13_16_keep": 262144,
+    "depth17_30_keep": 4096,
+    "final_top": 8,
+    "final_restarts": 4,
+    "final_iterations": 10000
+  },
+  "schedule_sha256": "ca219a6b0dca02e142b80581a097098320869e621bc202296c253e290f028dc9",
+  "sources_sha256": {
+    "tools/gsmg/phase484ao_locked_faed_width30_gi_dual_lane.py": "ae8b0de884c43447688abb8653211be2cef77ac5d0c7fdfd21f2f37c36da974c",
+    "doc/Brainstorms/2026-09-12 - Phase 484AO Locked FAED Width30 GI Dual-Lane Protocol.md": "d78384e3ff8bc2bf496e0c96265728fdfbe4c6045b7c3c6b7588fa2208a05175",
+    "tools/gsmg/phase484a_raw_symbol_vic_solver.py": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "tools/gsmg/phase484j_constructive_prefix_beam_probe.py": "5d4677811b43737d41b406628d723b62d576d756051abe3c5e1922af36266354",
+    "tools/gsmg/phase484ai_width30_early_switch_full_solve.py": "ae69887543a2944dbe9a594991d15993354ceb979e8a00b035b6803c8b636b47",
+    "tools/gsmg/phase484ad_width30_parent_reserved_bridge.py": "da729a628a03f90c8b9223a173146a691c31d507c670f007a6c2161d72866cb4",
+    "tools/gsmg/phase484ae_width30_checkpointed_rolling.py": "e7a35d4707c1c96c41669a20bbe0c3295748594cc4fbac4ec8c207e3d1ea74b8",
+    "tools/gsmg/phase484am_width30_root_lineage_beam.py": "63b3e65c17bd766935f88eec9b8a0c88e2748d3337cc3d6868d46ea8c73249a3",
+    "tools/gsmg/phase484ac_width30_partition_constrained_board_probe.py": "5e20016195c92006fcfe36cb89413e095214e1298cc5ce55ea571c9396d11ea2",
+    "tools/gsmg/phase484z_width30_early_board_switch_probe.py": "b3d84c90e04311805ad37182d97ff0c2fcaf0990e45ee0425cd9726e27b7ab4e",
+    "tools/gsmg/phase484y_width30_feasibility_probe.py": "02a3152a2a132d9499a3b474e4fc8e62480adb105d5665bb227885543fe01f86",
+    "tools/gsmg/phase484y_width30_blind_joint_solver.py": "b96dfff2c9bd2da50f0d3d852e9140b07c325a2e047dc5362500d09d523adf4d",
+    "tools/gsmg/phase484q_blind_joint_width19_solver.py": "bc3cd482201f8cbf10f505b84421d38a48d4cc9dcce1666e9393ab77decc5868",
+    "tools/gsmg/phase484x_exact_faed_profile_power_probe.py": "0c76785701e21c3761b8ab7322cf8fa45e6282fb5c444bb21244f29ad8dcb2f8",
+    "tools/gsmg/phase484an_width30_dual_lane_dev.py": "24c75fb44e681f83685bdd5ceefc52a286365a5e11633fb9eb2a276565d329c5"
+  },
+  "binaries_sha256": {
+    "_work/phase484y/prefix_server": "2c37975a1b78fd967dbac83bb9deeb386df91005439e61a03b642b8ea6c9098b",
+    "_work/phase484ac/constrained_board_server": "40312f58daf413278bd8f60e482594acbdad660de266e32a147b34e0ed508655",
+    "_work/phase484q/full_board_server": "a0b7ad81cb8f6cee86237c1b3cbb19197aa67d26bf5e56916b75b6871eea2ce9"
+  },
+  "runs_per_arm": 5,
+  "run_count": 10,
+  "real_sentinel_base": 484100,
+  "control_sentinel_base": 484200,
+  "board_seed_base": 1212809216,
+  "token_shuffle_base": 1212811936,
+  "run_board_seeds": {
+    "real": [
+      375343231676687734,
+      11776058028781539111,
+      14467401749479755268,
+      7421372498618995797,
+      10112716193680253426
+    ],
+    "control": [
+      18338454964592670188,
+      6937740175029609389,
+      13983769433485537582,
+      2583054609838180175,
+      9629083876811628160
+    ]
+  },
+  "control_token_shuffle_seeds": [
+    7555088908735796625,
+    509059656652849992,
+    11909774489175290115,
+    4863745213499975498,
+    16264460037506043541
+  ],
+  "negative_scope": "nonclosing_without_readable_and_separated_result"
+}

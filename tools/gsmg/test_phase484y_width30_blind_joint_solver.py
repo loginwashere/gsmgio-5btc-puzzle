@@ -218,7 +218,7 @@ class Phase484YBlindJointTests(unittest.TestCase):
 
             subject.complete_token_slots = fake_complete
 
-            def fake_multistart(binary, token_rows, quad, restarts, iterations):
+            def fake_multistart(binary, token_rows, quad, restarts, iterations, seed=None):
                 n = len(token_rows)
                 return np.arange(n, dtype=float), np.tile(np.arange(25, dtype=np.uint8), (n, 1)), np.zeros(n, dtype=np.int64)
 

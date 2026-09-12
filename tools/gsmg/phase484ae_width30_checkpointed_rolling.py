@@ -41,7 +41,7 @@ def load_checkpoint(path):
 
 
 def resolve_final(source, fixture_index=15, top=8, restarts=4,
-                  iterations=10000, split="dev"):
+                  iterations=10000, split="dev", board_seed=joint.SEED):
     source = Path(source)
     paths, scores, source_sha256 = load_checkpoint(source)
     if paths.shape[1] != width30.WIDTH:
@@ -58,7 +58,7 @@ def resolve_final(source, fixture_index=15, top=8, restarts=4,
         "order": paths[index].tolist(),
     } for rank, index in enumerate(ranked, 1)]
     final, skipped = joint.resolve_terminals(
-        blocks, pair, quad, terminals, restarts, iterations)
+        blocks, pair, quad, terminals, restarts, iterations, seed=board_seed)
     truth_tuple = tuple(truth)
     truth_plaintext = fixture["plaintext"]
     for record in final:
@@ -80,6 +80,7 @@ def resolve_final(source, fixture_index=15, top=8, restarts=4,
         "top": len(terminals),
         "restarts": restarts,
         "iterations": iterations,
+        "board_seed": board_seed,
         "skipped": len(skipped),
         "exact_order_final_rank": exact["final_rank"] if exact else None,
         "exact_order_plaintext_accuracy": (
@@ -94,7 +95,7 @@ def resolve_final(source, fixture_index=15, top=8, restarts=4,
 def run(source=DEFAULT_SOURCE, fixture_index=15, max_depth=16,
         keep=KEEP, restarts=RESTARTS, iterations=ITERATIONS,
         binary=constrained.GPU_BINARY, checkpoint_dir=None,
-        stop_on_truth_loss=True, split="dev"):
+        stop_on_truth_loss=True, split="dev", board_seed=joint.SEED):
     source = Path(source)
     paths, scores, source_sha256 = load_checkpoint(source)
     start_depth = paths.shape[1]
@@ -111,7 +112,8 @@ def run(source=DEFAULT_SOURCE, fixture_index=15, max_depth=16,
         stage_began = time.monotonic()
         generated = width30.expand_bidirectional(paths)
         generated_scores = early.board_screen(
-            generated, blocks, pair, quad, restarts, iterations, binary)
+            generated, blocks, pair, quad, restarts, iterations, binary,
+            seed=board_seed)
         before = early.recovery_record(
             generated, generated_scores, truth, depth, include_best=True)
         paths, scores, unique = width30.select_diverse(
@@ -143,6 +145,7 @@ def run(source=DEFAULT_SOURCE, fixture_index=15, max_depth=16,
         "keep": keep,
         "restarts": restarts,
         "iterations": iterations,
+        "board_seed": board_seed,
         "checkpoint_dir": str(checkpoint_dir) if checkpoint_dir else None,
         "stop_on_truth_loss": stop_on_truth_loss,
         "completed_depth": diagnostics[-1]["depth"],

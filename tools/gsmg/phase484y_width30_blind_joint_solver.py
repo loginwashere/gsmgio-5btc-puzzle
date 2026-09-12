@@ -157,13 +157,13 @@ def gpu_coarse_screen(binary, blocks, pair, quad, paths, iterations=ITERATIONS, 
     return scores, windows, boards
 
 
-def gpu_multistart_screen(binary, blocks, pair, quad, paths, restarts=RESTARTS, iterations=ITERATIONS):
+def gpu_multistart_screen(binary, blocks, pair, quad, paths, restarts=RESTARTS, iterations=ITERATIONS, seed=SEED):
     best_scores = np.full(len(paths), -np.inf)
     best_windows = None
     best_boards = None
     best_restarts = np.zeros(len(paths), dtype=np.int64)
     for restart in range(restarts):
-        restart_seed = base.derive_seed(SEED, restart)
+        restart_seed = base.derive_seed(seed, restart)
         scores, windows, boards = gpu_coarse_screen(binary, blocks, pair, quad, paths, iterations, seed=restart_seed)
         if best_windows is None:
             best_windows = windows.copy()
@@ -225,7 +225,7 @@ def complete_token_slots(blocks, pair, order, strict=True):
 
 
 def resolve_terminals(blocks, pair, quad, terminals, restarts=FINAL_RESTARTS, iterations=FINAL_ITERATIONS,
-                      full_binary=FULL_BINARY):
+                      full_binary=FULL_BINARY, seed=SEED):
     valid, skipped = [], []
     for record in terminals:
         rows = complete_token_slots(blocks, pair, record["order"], strict=False)
@@ -237,7 +237,7 @@ def resolve_terminals(blocks, pair, quad, terminals, restarts=FINAL_RESTARTS, it
         return [], skipped
     terminals_valid = [r for r, _ in valid]
     token_rows_list = [rows for _, rows in valid]
-    scores, boards, best_restarts = gpu_full_multistart(full_binary, token_rows_list, quad, restarts, iterations)
+    scores, boards, best_restarts = gpu_full_multistart(full_binary, token_rows_list, quad, restarts, iterations, seed=seed)
     order = np.lexsort((np.arange(len(scores)), -scores))
     ranked = []
     for rank, i in enumerate(order, 1):

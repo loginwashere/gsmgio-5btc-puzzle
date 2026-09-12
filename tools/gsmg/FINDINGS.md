@@ -29338,3 +29338,102 @@ reach the plan's 9/10 dev-fixture gate before any frozen holdout split or
 FAED attempt.
 Full report:
 [doc/GSMG_PHASE487_WIDTH30_DUAL_LANE_ROOT_LINEAGE_AUDIT.md](../../doc/GSMG_PHASE487_WIDTH30_DUAL_LANE_ROOT_LINEAGE_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE488_WIDTH30_HOLDOUT_GATE_PASS.md -->
+## Phase 488 -- dev sweep reaches 10/10, frozen schedule clears 11/12 on a genuine, untouched holdout split (2026-09-12)
+
+**Question:** Phase 487 validated the unified dual-lane schedule on 4 of 10
+development fixtures. Does it hold across all ten (the plan's 9/10 gate),
+and -- more importantly -- does it hold on a fresh holdout split it has never
+seen, the last check before any FAED ciphertext may be touched?
+
+**Method:** before running holdout fixtures, a grep across every
+`width30_fixture(` call site in the dual-lane chain found every stage
+(`phase484ae`, `phase484am`, `phase484ad`, `phase484ai`, `phase484an`)
+hardcoded the literal split `"dev"`, with no `split` parameter anywhere in
+the chain despite `width30_fixture()` itself already supporting one. Left
+unfixed, pointing the sweep at holdout fixture indices would have silently
+pulled dev-corpus text back out and mislabeled every result
+`holdout_consumed: false`, invalidating the gate with no visible failure.
+Fixed by threading `split: str = "dev"` through all five files, verified via
+`py_compile`, full existing test-suite passes with zero regressions, and a
+smoke test confirming `width30_fixture(0, "dev")` vs
+`width30_fixture(0, "holdout")` produce genuinely different plaintext and
+that every dual-lane function now exposes `split` with a no-op default.
+With that fixed, the identical frozen schedule (`schedule_sha256` unchanged
+from Phase 487, since split is not part of `SCHEDULE`) was run fully fresh,
+end to end, first against the remaining development fixtures 13-22, then
+against 12 indices from the codebase's genuine holdout corpus pool
+(`FIXTURE_SPLITS = ("dev", "holdout")`), never touched by any tuning in this
+line of work.
+
+**Result:** the development sweep reached **10/10 exact top-1 recoveries**
+across fixtures 13-22 (plaintext accuracy 1.0 on nine, 0.986 on fixture 14),
+clearing the plan's 9/10 dev gate. The holdout sweep reached **11/12 exact
+top-1 recoveries** across holdout indices 0-11, clearing the plan's 10/12
+gate, with `holdout_consumed: true` and `faed_scored: false` on every
+artifact. The single failure, holdout index 3, lost its true segment at the
+very first depth-7 selection stage (`initial_depth7_true_segments: 0`) --
+before lane A and lane B even diverge -- a different failure shape from
+Phase 487's fixture-19 counterexample, which stayed locally strong and was
+rescued by lineage protection. No root-cause investigation of fixture 3
+beyond that single field has been done. Each fixture took roughly 70-85
+minutes; the full holdout sweep ran to completion across two session
+restarts (including a full PC power-off) and one deliberate immediate kill
+and full recomputation of fixture 3, without losing any completed-fixture
+progress via the resumable summary-file pattern.
+
+**Disposition:** bounded positive, still entirely synthetic and unpowered.
+No FAED ciphertext has been imported at any stage. The plan's own two-gate
+structure (dev >=9/10, holdout >=10/12) is now satisfied, which per the plan
+is the precondition for attempting a single locked FAED experiment on
+`{g,i}` width 30 with shuffled controls and multi-seed stability checks --
+not yet attempted. The consumed 12-fixture holdout draw cannot be reused as
+a fresh gate again; 12 further holdout indices (12-23) remain untouched if
+ever needed.
+Full report:
+[doc/GSMG_PHASE488_WIDTH30_HOLDOUT_GATE_PASS.md](../../doc/GSMG_PHASE488_WIDTH30_HOLDOUT_GATE_PASS.md).
+## Phase 489 -- locked FAED width-30 `{g,i}` closes as a single-run gibberish miss; multi-seed/control protocol reserved for a readable hit (2026-09-12)
+
+**Question:** Does the Phase 487/488 dual-lane schedule -- now cleared on a
+10/10 dev gate and an 11/12 holdout gate -- produce readable plaintext on
+FAED with escape pair `{g,i}` width 30? A locked protocol
+(`phase484ao_locked_faed_width30_gi_dual_lane.py`) was written and launched
+to answer this with 5 independent board-anneal seeds on the real ciphertext
+plus 5 token-shuffled controls sharing FAED's exact raw and token
+histograms, to check both seed stability and separation from a null.
+
+**Method:** the execution lock was written and verified before any FAED
+score was produced (`phase484ao_faed_width30_gi_dual_lane_lock.json`),
+pinning the schedule (`schedule_sha256` identical to Phase 488's
+holdout-validated schedule), all source files in the dual-lane call chain,
+and every board-anneal/token-shuffle seed in advance. The first run (real
+seed 1 of 5) executed to completion. After reviewing that result, the user
+judged that paying the full 10-run verification cost (~12-14 hours) on every
+attempt is wasteful when a first result is already an unambiguous miss, and
+directed that the experiment close on that single run rather than continue
+through all 5 seeds and 5 controls. The remaining 9 runs were not executed;
+the in-progress second run was killed cleanly (verified no orphaned GPU
+process) and its partial artifacts discarded.
+
+**Result:** the single completed run (`board_seed=375343231676687734`)
+produced `top1_normalized_score=-4.9765`, plaintext
+`IASAPIITSUADNEOFANEOVEWISLINDANANDANACTROPS...` -- not readable, coherent
+English. This closely matches Phase 484AL's earlier miss under the older,
+pre-holdout-gated schedule (`-4.9287`, similarly gibberish), despite this
+run using the strictly stronger dual-lane schedule. No shuffled-control
+baseline was established for this pair under this schedule, and no
+seed-agreement check was performed -- both were explicitly waived by the
+user's decision to stop after one run.
+
+**Disposition:** bounded, nonclosing negative, and by explicit user
+decision not verified to the standard the locked protocol originally called
+for. `{g,i}` width 30 under the Phase 487/488 dual-lane schedule does not
+produce readable plaintext on this one execution; it does not mean the pair
+is formally ruled out, only that this single check found nothing. Going
+forward, the standing policy for any further pair-broadening (the plan's
+step 7) is: one real run per pair as a cheap screen; escalate to the full
+multi-seed/shuffled-control protocol only for a pair whose single run comes
+back readable enough to need stability and separation confirmation before
+promotion. `faed_scored: true` on the one completed run;
+`holdout_consumed: false` throughout (no holdout fixture was touched by
+this experiment).

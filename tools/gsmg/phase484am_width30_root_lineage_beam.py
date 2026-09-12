@@ -114,7 +114,7 @@ def run_depth(source=DEFAULT_SOURCE, fixture_index=19,
               descendants_per_root=DESCENDANTS_PER_ROOT,
               root_chunk=ROOT_CHUNK, restarts=RESTARTS,
               iterations=ITERATIONS, work_dir=DEFAULT_WORK_DIR,
-              split="dev"):
+              split="dev", board_seed=early.joint.SEED):
     source, work_dir = Path(source), Path(work_dir)
     paths, _, roots, source_sha256 = load_state(source)
     start_depth = paths.shape[1]
@@ -138,7 +138,7 @@ def run_depth(source=DEFAULT_SOURCE, fixture_index=19,
         children, child_roots = expand_root_chunk(paths[left:right], roots[left:right])
         child_scores = early.board_screen(
             children, blocks, pair, quad, restarts, iterations,
-            constrained.GPU_BINARY)
+            constrained.GPU_BINARY, seed=board_seed)
         selected = select_per_root(
             children, child_scores, child_roots, descendants_per_root)
         output_paths.append(selected[0])
@@ -176,6 +176,7 @@ def run_depth(source=DEFAULT_SOURCE, fixture_index=19,
         "root_chunk": root_chunk,
         "restarts": restarts,
         "iterations": iterations,
+        "board_seed": board_seed,
         "retained_count": len(selected_paths),
         "true_parent_roots": true_parent_roots.tolist(),
         "true_roots_after": true_roots_after.tolist(),

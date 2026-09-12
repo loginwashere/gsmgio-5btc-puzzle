@@ -8,7 +8,7 @@
     "initial_compatibility_sha256": "f9c8754031656406edf74f2ac0e6c26c2c83dd51ca27154c6a11773251d6fda4",
     "round_trip": "byte-identical-before-generated-notice-and-phase-447"
   },
-  "phase_count": 482,
+  "phase_count": 484,
   "entries": [
     {
       "order": 1,
@@ -2901,6 +2901,18 @@
       "phase": "487",
       "stable_id": "P487",
       "file": "P00487.md"
+    },
+    {
+      "order": 483,
+      "phase": "488",
+      "stable_id": "P488",
+      "file": "P00488.md"
+    },
+    {
+      "order": 484,
+      "phase": "489",
+      "stable_id": "P489",
+      "file": "P00489.md"
     }
   ]
 }
