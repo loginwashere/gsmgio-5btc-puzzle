@@ -1,0 +1,36 @@
+{
+  "absent_fixture": {
+    "elapsed_seconds": 104.12054506699951,
+    "expected_cells": 18648,
+    "full_cells_completed": 18648,
+    "full_hit_count": 0,
+    "full_incomplete_count": 0,
+    "full_starts_completed": 518,
+    "full_status": "no_hit_in_complete_requested_family",
+    "small_cross_check_cells": 6,
+    "small_cross_check_match": true,
+    "workers": 16
+  },
+  "faed_imported_or_scored": false,
+  "phase": "512J",
+  "status": "rust_sweep_parity_and_absent_fixture_validation",
+  "sweep_parity": {
+    "cells_match": true,
+    "match": true,
+    "python_cell_count": 6,
+    "python_hit_cells": 1,
+    "python_status": "hit_at_earliest_completed_start",
+    "rust_cell_count": 6,
+    "rust_hit_cells": 1,
+    "rust_status": "hit_at_earliest_completed_start",
+    "swept_range": {
+      "pair_begin": 33,
+      "pair_count": 3,
+      "start_begin": 157,
+      "start_count": 3
+    },
+    "true_pair_index": 34,
+    "true_start": 158
+  },
+  "verdict": "pass"
+}

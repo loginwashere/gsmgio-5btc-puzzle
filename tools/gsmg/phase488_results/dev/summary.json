@@ -1,0 +1,92 @@
+{
+  "13": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4275.523261164002
+  },
+  "14": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 0.9862385321100917,
+    "wall_seconds": 4244.492411515996
+  },
+  "15": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4265.518596741001
+  },
+  "16": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4230.156068364
+  },
+  "17": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4277.988720571999
+  },
+  "18": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4228.1349995420005
+  },
+  "19": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4221.098357416999
+  },
+  "20": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4210.8627580859975
+  },
+  "21": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4228.844383390999
+  },
+  "22": {
+    "exact_order_final_rank": 1,
+    "middle_truth_survived": true,
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4185.883821627998
+  }
+}

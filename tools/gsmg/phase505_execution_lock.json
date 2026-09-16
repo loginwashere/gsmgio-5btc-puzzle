@@ -1,0 +1,29 @@
+{
+  "phase": "505A",
+  "status": "execution_lock",
+  "protocol_sha256": "7547155e01fb193899292b547836ce5f4d3c1d93dcf2baa348e9b15a74a29384",
+  "script_sha256": "3965125f7c1ddc3fd16ca5f5946156b5cccd5f1c64d4c860f2e8b7a121995a44",
+  "fixture_manifest_sha256": "e7c26de08f5a79d91b2d98b82ac7ee0badadb5d490f22e345937e500c80f522d",
+  "dependencies_sha256": {
+    "tools/gsmg/phase484a_raw_symbol_vic_solver.py": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "tools/gsmg/phase484q_blind_joint_width19_solver.py": "bc3cd482201f8cbf10f505b84421d38a48d4cc9dcce1666e9393ab77decc5868",
+    "tools/gsmg/phase491_raw_histogram_fixture.py": "c43dee3f226fb30758caaf9a8b9f282aa3463e9f1c204f7c33721705c492d2f6"
+  },
+  "full_board_binary_sha256": "a0b7ad81cb8f6cee86237c1b3cbb19197aa67d26bf5e56916b75b6871eea2ce9",
+  "pair_count": 36,
+  "fixture_indices": [
+    0,
+    1
+  ],
+  "split": "dev",
+  "budgets": {
+    "restarts": 8,
+    "iterations": 20000,
+    "seed": 84254723
+  },
+  "gate": {
+    "top1_required": 65,
+    "top3_required": 72,
+    "positive_median_gap_required": true
+  }
+}

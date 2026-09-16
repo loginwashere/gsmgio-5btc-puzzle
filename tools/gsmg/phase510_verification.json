@@ -1,0 +1,19 @@
+{
+  "consistent": true,
+  "coverage_gate_passed_all": false,
+  "coverages": {
+    "phase2_solved_plaintext": 0.038636363636363635,
+    "phase32_literal_plaintext": 0.013186813186813187,
+    "phase3_literal_plaintext": 0.04119850187265917
+  },
+  "execution_lock_sha256": "8a64869563286d4a7f82a1e8e6e75b37be7e1cf978d3dbd440eb5304cf96f133",
+  "focused_tests_passed": 8,
+  "manifest_sha256": "1f6cde61ca1b2adff89fa2ede1cef001b0f24a046b6d94572513d4cd8a68a5fb",
+  "null_stage_executed": false,
+  "null_trials": 0,
+  "phase": 510,
+  "result_sha256": "631573912e3bc058e3c367b1d5181c261ed9f5446c6acfe8a212411e28bc5550",
+  "status": "verification_passed",
+  "term_count": 108,
+  "verdict": "exact_vocabulary_objective_stops_before_checkerboard_integration"
+}

@@ -1,0 +1,1170 @@
+{
+  "exact_sequences": [
+    {
+      "id": "phase2_preimage",
+      "length": 9,
+      "role": "exact_sequence_control_not_word_segmented",
+      "sha256": "eb3efb5151e6255994711fe8f2264427ceeebf88109e1d7fad5b0a8b6d07e5bf"
+    },
+    {
+      "id": "phase322_answer_unspaced",
+      "length": 91,
+      "role": "exact_sequence_control_not_word_segmented",
+      "sha256": "878b7afacc9e35412e76b8506cc8297fa5aeba5381e108dc421b71a0ab8993d8"
+    },
+    {
+      "id": "phase32_preimage",
+      "length": 62,
+      "role": "exact_sequence_control_not_word_segmented",
+      "sha256": "250f37726d6862939f723edc4f993fde9d33c6004aab4f2203d9ee489d61ce4c"
+    },
+    {
+      "id": "phase3_preimage",
+      "length": 227,
+      "role": "exact_sequence_control_not_word_segmented",
+      "sha256": "1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5"
+    }
+  ],
+  "exclusions": [
+    "findings and brainstorm prose",
+    "solver-generated FAED plaintexts",
+    "community suggestions and recognition-only terms",
+    "dictionaries, password lists, synonyms, stemming, typo repair, OCR",
+    "inferred boundaries inside unspaced sequences",
+    "Base58 or hex syntax without a compatible representation rule"
+  ],
+  "faed_imported_or_scored": false,
+  "input_hashes": {
+    "data": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "phase410_runner": "e857eebbb14e0a3646409bcadaa5ef148b11fb59f8e5fdd124aec939b5b0e9eb",
+    "phase410_wayback_artifact": "647744a2957219a4084ede994719124e7445bab1dfdeb68258fbeff2615a8d43",
+    "phase468_catalog": "203a5503bb6cdb8e20230afb127300496329d669f069012f7841bd4e5b8ca2c5",
+    "protocol": "14429bb3ae7577d58391ed7f5dcefa8373fd0902b212436bed5ff5b8abcb3a33"
+  },
+  "minimum_term_length": 5,
+  "normalization": "maximal ASCII [A-Za-z]+ runs, lowercase",
+  "phase": "510A",
+  "proposed_weight": "(length - 4)^2; not authorized for scoring until Phase 510B",
+  "source_count": 4,
+  "source_diagnostics": {
+    "ciao_bella_o": {
+      "leave_one_document_out_coverage": 0.0,
+      "leave_one_document_out_covered_occurrences": 0,
+      "literal_region_length": 12,
+      "literal_region_sha256": "7f735131ce9398e2a248d2c3d0186d58ff0beec36e8afcb2f7f9aba6a4aab985",
+      "retained_token_occurrences": 1,
+      "unique_terms": 1
+    },
+    "phase2_solved_plaintext": {
+      "leave_one_document_out_coverage": 0.07692307692307693,
+      "leave_one_document_out_covered_occurrences": 3,
+      "literal_region_length": 648,
+      "literal_region_sha256": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+      "retained_token_occurrences": 39,
+      "unique_terms": 39
+    },
+    "phase32_literal_plaintext": {
+      "leave_one_document_out_coverage": 0.0,
+      "leave_one_document_out_covered_occurrences": 0,
+      "literal_region_length": 753,
+      "literal_region_sha256": "ebe9074428e07de07f712c6c3fbfc5fc6220874ec8cde18ec5bf887c409598e1",
+      "retained_token_occurrences": 34,
+      "unique_terms": 33
+    },
+    "phase3_literal_plaintext": {
+      "leave_one_document_out_coverage": 0.07317073170731707,
+      "leave_one_document_out_covered_occurrences": 3,
+      "literal_region_length": 725,
+      "literal_region_sha256": "5581f74069c2f8da681806372e172ece5502fe6f995991b749697ff4dd8f7c5d",
+      "retained_token_occurrences": 41,
+      "unique_terms": 38
+    }
+  },
+  "status": "closed_vocabulary_manifest_no_scoring",
+  "term_count": 108,
+  "terms": [
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "access"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "again"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "altered"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "although"
+    },
+    {
+      "document_frequency": 2,
+      "length": 6,
+      "occurrences": 2,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext",
+        "phase3_literal_plaintext"
+      ],
+      "term": "answer"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "answers"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "beautiful"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "behind"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "ciao_bella_o"
+      ],
+      "term": "bella"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "below"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "board"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "causality"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "certain"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "chances"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "cheshire"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "ciphered"
+    },
+    {
+      "document_frequency": 1,
+      "length": 12,
+      "occurrences": 1,
+      "proposed_length_weight": 64,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "concordantly"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 3,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "connected"
+    },
+    {
+      "document_frequency": 1,
+      "length": 13,
+      "occurrences": 1,
+      "proposed_length_weight": 81,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "consciousness"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "could"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "crypto"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "current"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "danger"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "daughters"
+    },
+    {
+      "document_frequency": 1,
+      "length": 10,
+      "occurrences": 1,
+      "proposed_length_weight": 36,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "definitely"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "designed"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "digital"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "error"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "extend"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "extra"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "fails"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "finally"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 2,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "first"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 2,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "forever"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "front"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "fubcd"
+    },
+    {
+      "document_frequency": 1,
+      "length": 11,
+      "occurrences": 1,
+      "proposed_length_weight": 49,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "fundamental"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "getting"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "giveit"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "grant"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "hackers"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "hiding"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "highway"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "human"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "humanity"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "instead"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "ironic"
+    },
+    {
+      "document_frequency": 1,
+      "length": 10,
+      "occurrences": 1,
+      "proposed_length_weight": 36,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "irrelevant"
+    },
+    {
+      "document_frequency": 1,
+      "length": 11,
+      "occurrences": 1,
+      "proposed_length_weight": 49,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "irrevocably"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "keyhole"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "keymaker"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "keymakers"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "keypads"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "latin"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "limit"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "magic"
+    },
+    {
+      "document_frequency": 1,
+      "length": 11,
+      "occurrences": 1,
+      "proposed_length_weight": 49,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "merovingian"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "might"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "nearly"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "nothing"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "oracle"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "pairs"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "passed"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "pertinent"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "phase"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "phillip"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "physical"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "plain"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "position"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "powers"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "precision"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "process"
+    },
+    {
+      "document_frequency": 1,
+      "length": 10,
+      "occurrences": 1,
+      "proposed_length_weight": 36,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "properties"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "protect"
+    },
+    {
+      "document_frequency": 2,
+      "length": 6,
+      "occurrences": 2,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext",
+        "phase3_literal_plaintext"
+      ],
+      "term": "puzzle"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "queen"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "question"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "questions"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "raising"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "realize"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "remain"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "runtime"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "security"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "severe"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "sight"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "something"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "stakes"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "still"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "strategic"
+    },
+    {
+      "document_frequency": 1,
+      "length": 9,
+      "occurrences": 1,
+      "proposed_length_weight": 25,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "swordless"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "taking"
+    },
+    {
+      "document_frequency": 1,
+      "length": 8,
+      "occurrences": 1,
+      "proposed_length_weight": 16,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "therefor"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "thingky"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "thinker"
+    },
+    {
+      "document_frequency": 1,
+      "length": 6,
+      "occurrences": 1,
+      "proposed_length_weight": 4,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "trying"
+    },
+    {
+      "document_frequency": 1,
+      "length": 10,
+      "occurrences": 1,
+      "proposed_length_weight": 36,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "understand"
+    },
+    {
+      "document_frequency": 1,
+      "length": 11,
+      "occurrences": 1,
+      "proposed_length_weight": 49,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "unprotected"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "valleys"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "waiting"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "where"
+    },
+    {
+      "document_frequency": 2,
+      "length": 5,
+      "occurrences": 2,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext",
+        "phase3_literal_plaintext"
+      ],
+      "term": "which"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "while"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "winning"
+    },
+    {
+      "document_frequency": 1,
+      "length": 7,
+      "occurrences": 1,
+      "proposed_length_weight": 9,
+      "source_ids": [
+        "phase32_literal_plaintext"
+      ],
+      "term": "without"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "works"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase2_solved_plaintext"
+      ],
+      "term": "worst"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "would"
+    },
+    {
+      "document_frequency": 1,
+      "length": 5,
+      "occurrences": 1,
+      "proposed_length_weight": 1,
+      "source_ids": [
+        "phase3_literal_plaintext"
+      ],
+      "term": "wrong"
+    }
+  ]
+}

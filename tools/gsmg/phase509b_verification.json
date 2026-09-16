@@ -1,0 +1,13 @@
+{
+  "candidate_count": 43,
+  "consistent": true,
+  "derived_address_count": 86,
+  "exact_comparison_count": 172,
+  "execution_lock_sha256": "8c4f8a98641a49cdbe23fe957b37cc2729c7fec8e484fa01dd8ad4412e5e6285",
+  "focused_phase509_tests_passed": 8,
+  "hit_count": 0,
+  "phase": "509B",
+  "result_sha256": "3c2874d9022afc3e3c1f93eb9502a272adf94ffbb860c67e8e9a252e67aed32c",
+  "scalar_invalid_count": 0,
+  "status": "verification_passed"
+}

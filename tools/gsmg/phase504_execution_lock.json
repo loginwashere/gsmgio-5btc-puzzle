@@ -1,0 +1,46 @@
+{
+  "phase": 504,
+  "status": "real_execution_lock",
+  "input": {
+    "faed_ascii_sha256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+    "raw_length": 570,
+    "observed_token_length": 436,
+    "observed_single_count": 302,
+    "raw_counts": {"a": 54, "b": 49, "c": 52, "d": 49, "e": 69, "f": 57, "g": 107, "h": 58, "i": 75},
+    "pair": ["g", "i"],
+    "width": 19,
+    "rows": 30,
+    "direction": "model_b_columnar_raw_digits"
+  },
+  "sentinel_fixture_index": 504019,
+  "phase503_lock_sha256": "28e1ba1395376469a9bf446a83cd5000f97da66551caac5636f1ab7f978fcf55",
+  "phase503_result_sha256": "0b132d531bcbf7b6684628a488672868d4bfca68f8a8bfcfa414bbf8a537ef32",
+  "sources_sha256": {
+    "tools/gsmg/phase504_locked_faed_width19_unrestricted.py": "9b612deacbfce6209c410ea2aad812ebe1e9c5a5850aec76654da61d88a147d6",
+    "doc/Brainstorms/2026-09-13 - Phase 504 Locked FAED Width19 Unrestricted Run.md": "8a5d413bb7cdc178d91a1487e156a8403d4e64ba1cdaefdc386d93ddb3e53786",
+    "tools/gsmg/data.py": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "wordlists/gsmg/cosmic_duality_book_full_text.txt": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "tools/gsmg/data_files/english_quadgrams.txt": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+    "tools/gsmg/phase484a_raw_symbol_vic_solver.py": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "tools/gsmg/phase484n_hybrid_prefix_scorer.py": "ec9cb7b055f2ffab8f77b2c692e3149ccccfbd982511e4f3d26c7d00cb3c5aa5",
+    "tools/gsmg/phase484q_blind_joint_width19_solver.py": "bc3cd482201f8cbf10f505b84421d38a48d4cc9dcce1666e9393ab77decc5868",
+    "tools/gsmg/phase484x_exact_faed_profile_power_probe.py": "0c76785701e21c3761b8ab7322cf8fa45e6282fb5c444bb21244f29ad8dcb2f8",
+    "tools/gsmg/phase490_width19_dual_lane_dev.py": "002224898c4a25fb86f93ca1bc722601e539943e458ab9af568b7872a999f8bf",
+    "tools/gsmg/phase490_width19_checkpointed_dual_lane.py": "4935c739a19f594d95e553cca4611430a93b7e8b861838abf9ae2546e0ac93c5",
+    "tools/gsmg/phase493_partial_unrestricted_board_diagnostic.py": "1440915febb886f43bc7d0ce0238e0cddab3d75fea3383b7c37afdea191aaf77",
+    "tools/gsmg/phase499_unrestricted_width19_holdout.py": "d976f1bcd0f963b4bb560afb9767a5f11acf61d95a271cda57bc7d1072d2ae8f",
+    "tools/gsmg/phase503_repaired_holdout_replacement.py": "5de9ea6e0d446456a921c5c05e7e00c56ff16b0eb5ef4a6b2a81d8b745d9d324"
+  },
+  "binaries_sha256": {
+    "_work/phase484n/prefix_server": "1bc93d4ce43a6552022cbc70b29c113e7abd3c57d8ed25e5c5df7fea0d3cc741",
+    "_work/phase484q/coarse_board_server": "6253860b17f24a3725fe25d84d73afc942f867b5bb85381ccfef60f4b6623139",
+    "_work/phase484q/full_board_server": "a0b7ad81cb8f6cee86237c1b3cbb19197aa67d26bf5e56916b75b6871eea2ce9"
+  },
+  "early_schedule_sha256": "3c15d07091c307530559acf6d8f60d026f2d3d8bac9273600d90623562bd7509",
+  "base_schedule_sha256": "b2105f7ae5910cfcc3a8fb908132a605f58ae09a6ee2f00d28abcf36a8e93bf8",
+  "bridge_schedule_sha256": "993ba7e487024d3c1a20412cb2b042123e35fdfd17ccea86982e2dd7988fd90a",
+  "board_seed": 1224839169,
+  "run_count": 1,
+  "checkpoint_policy": "atomic_npz_plus_json_per_stage",
+  "decision_rule": "manual_readability_review_of_every_valid_final_candidate"
+}

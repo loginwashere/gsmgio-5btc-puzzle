@@ -1,0 +1,119 @@
+{
+  "all_cells_match": true,
+  "cells": [
+    {
+      "crib_id": "phase1_credential",
+      "match": true,
+      "node_limit": 2000000,
+      "pair": [
+        "g",
+        "i"
+      ],
+      "raw_start": 158,
+      "width": 15
+    },
+    {
+      "crib_id": "phase1_credential",
+      "match": true,
+      "node_limit": 2000000,
+      "pair": [
+        "g",
+        "i"
+      ],
+      "raw_start": 159,
+      "width": 15
+    },
+    {
+      "crib_id": "phase1_credential",
+      "match": true,
+      "node_limit": 2000000,
+      "pair": [
+        "a",
+        "b"
+      ],
+      "raw_start": 158,
+      "width": 15
+    },
+    {
+      "crib_id": "phase1_credential",
+      "match": true,
+      "node_limit": 1,
+      "pair": [
+        "g",
+        "i"
+      ],
+      "raw_start": 158,
+      "width": 15
+    },
+    {
+      "crib_id": "phase1_credential",
+      "match": true,
+      "node_limit": 10,
+      "pair": [
+        "g",
+        "i"
+      ],
+      "raw_start": 158,
+      "width": 15
+    },
+    {
+      "crib_id": "phase1_credential",
+      "match": true,
+      "node_limit": 100,
+      "pair": [
+        "g",
+        "i"
+      ],
+      "raw_start": 158,
+      "width": 15
+    },
+    {
+      "crib_id": "phase1_credential",
+      "match": true,
+      "node_limit": 3871,
+      "pair": [
+        "g",
+        "i"
+      ],
+      "raw_start": 158,
+      "width": 15
+    },
+    {
+      "crib_id": "phase1_credential",
+      "match": true,
+      "node_limit": 3872,
+      "pair": [
+        "g",
+        "i"
+      ],
+      "raw_start": 158,
+      "width": 15
+    },
+    {
+      "crib_id": "phase1_credential",
+      "match": true,
+      "node_limit": 4000,
+      "pair": [
+        "g",
+        "i"
+      ],
+      "raw_start": 158,
+      "width": 15
+    },
+    {
+      "crib_id": "creator_macro_message",
+      "match": true,
+      "node_limit": 20000000,
+      "pair": [
+        "g",
+        "i"
+      ],
+      "raw_start": 102,
+      "width": 15
+    }
+  ],
+  "faed_imported_or_scored": false,
+  "mismatches": [],
+  "phase": "512I",
+  "status": "rust_single_cell_parity"
+}

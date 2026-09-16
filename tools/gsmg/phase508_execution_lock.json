@@ -1,0 +1,39 @@
+{
+  "dependencies_sha256": {
+    "tools/gsmg/phase484a_raw_symbol_vic_solver.py": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "tools/gsmg/phase493_partial_unrestricted_board_diagnostic.py": "1440915febb886f43bc7d0ce0238e0cddab3d75fea3383b7c37afdea191aaf77",
+    "tools/gsmg/phase505_escape_pair_identifiability.py": "3965125f7c1ddc3fd16ca5f5946156b5cccd5f1c64d4c860f2e8b7a121995a44",
+    "tools/gsmg/phase505b_blind_escape_pair_selector.py": "ae951979aa27d175234dfcaf8b29c6abde93132c4c2acbe41f06cc6af3187e97",
+    "tools/gsmg/phase505e_depth6_escape_pair_selector.py": "39fa1fedf8b868b5705134e95ecd1701ac7552962fe23582a6fde936698c8319",
+    "tools/gsmg/phase506a_faed_depth6_pair_rank.py": "b1571e2531b33cf6a9a52c945491ddb011907d74afe335af703937ac05258e9d"
+  },
+  "faed_already_observed": true,
+  "faed_ascii_sha256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+  "futility_stop": "stop immediately at first null maximum >= real maximum",
+  "interpretation": "diagnostic of shallow proxy, not a test of Model B",
+  "maximum_pair_cells": 7200,
+  "maximum_trials": 200,
+  "model_sha256": "321cf8523ef4529bba89b7d097ee2729a6f22ed8a4d7a7bcffe0e306d6a66866",
+  "null": "exact raw-symbol-multiset Fisher-Yates shuffle",
+  "null_seed": 5278225,
+  "pair_indices_per_trial": {
+    "start": 0,
+    "stop_exclusive": 36
+  },
+  "phase": 508,
+  "phase506a_lock_sha256": "790bac08d0ca001046c21c4dcbbabdd7c7a9cae85e89cf9553b9a3a6c805a19a",
+  "phase506a_result_sha256": "f69ccca71d33551438c5e7ddc01f825211883d39d7d05bb725b70b6b4420dae6",
+  "primary_statistic": "maximum Phase-505E depth-6 unrestricted-board score across all 36 pairs",
+  "protocol_sha256": "b40fbc3ccd8d0e644709fb70adde87083463bb8f248d3cd167fe056b534b8fef",
+  "real_family_maximum": -4.130477473427148,
+  "real_winning_pair_index": 29,
+  "rng": "PCG32",
+  "script_sha256": "367d43898f73de0e8496d318a6f127a1904e5bc5ac4003f49875b8ac81827830",
+  "status": "locked_before_null_execution",
+  "ties_are_exceedances": true,
+  "trial_indices": {
+    "start": 0,
+    "stop_exclusive": 200
+  },
+  "unrestricted_board_binary_sha256": "6253860b17f24a3725fe25d84d73afc942f867b5bb85381ccfef60f4b6623139"
+}

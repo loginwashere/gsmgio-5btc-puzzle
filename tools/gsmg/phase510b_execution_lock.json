@@ -1,0 +1,29 @@
+{
+  "evaluation_region_sha256": {
+    "phase2_solved_plaintext": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+    "phase32_literal_plaintext": "ebe9074428e07de07f712c6c3fbfc5fc6220874ec8cde18ec5bf887c409598e1",
+    "phase3_literal_plaintext": "5581f74069c2f8da681806372e172ece5502fe6f995991b749697ff4dd8f7c5d"
+  },
+  "evaluation_sources": [
+    "phase2_solved_plaintext",
+    "phase3_literal_plaintext",
+    "phase32_literal_plaintext"
+  ],
+  "faed_scored": false,
+  "files_sha256": {
+    "phase510a_builder": "f9f76a2bcc5d1e7ad3e1a6af3d7ab675b767727730ab56e1b63634ed3af56316",
+    "phase510a_manifest": "1f6cde61ca1b2adff89fa2ede1cef001b0f24a046b6d94572513d4cd8a68a5fb",
+    "protocol": "17330b659034ad4da0f86bd55e0c54cba5970b3d7fa585760d12ee955887199b",
+    "runner": "cb7e7ff614c49a74390d0cced2993b0233cc72003b5a498678281103b9dc93d0"
+  },
+  "gate": "all three fixtures coverage>=0.05 and 0/200 null exceedances",
+  "minimum_coverage": 0.05,
+  "null": "exact normalized-letter-multiset PCG32 Fisher-Yates shuffle",
+  "null_seed": 5311249,
+  "null_trials_if_coverage_passes": 200,
+  "phase": "510B",
+  "scorer": "maximum-weight non-overlapping exact terms; weight=(length-4)^2; normalize by letters",
+  "status": "locked_before_heldout_scoring",
+  "term_count": 108,
+  "ties_are_exceedances": true
+}

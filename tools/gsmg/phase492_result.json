@@ -1,0 +1,132 @@
+{
+  "attempts": [
+    {
+      "candidate_id": "width30_final_rank_1",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "15fc14ee7a693cc0e506b17bbd59854bc6034296a9f84617cc52aedd740dd9a8",
+      "plaintext_length": null,
+      "preimage_sha256": "d60d70ac15f62d03da51b42568bd7ed0b2ece3def2c598fdb5b3f91e70ec3e30",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    },
+    {
+      "candidate_id": "width30_final_rank_2",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "6e4ebe55d66e708fe0938babbd7cc7f10df695b38f14593b1a1671c37a6aa5c5",
+      "plaintext_length": null,
+      "preimage_sha256": "5e2407d7a82a091fb967b309c33fd44be339d7e814664813a2d040504f9f38b9",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    },
+    {
+      "candidate_id": "width30_final_rank_3",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "837e497fdb8349e1553630db2f148f74950a16d3fa0b3e6f2db39856d7e7133e",
+      "plaintext_length": null,
+      "preimage_sha256": "0d613b4fb444f4f3f14da7e9868ce415aadc2196c9873f54f722d759eae8152a",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    },
+    {
+      "candidate_id": "width30_final_rank_4",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "cb18939be063f191ad0e9ed3771c32b8da7740beade1c0258cc6d038ba69f9a1",
+      "plaintext_length": null,
+      "preimage_sha256": "a06491d1984b520c7f41dacf90ce1a1cfe29883f9adb5540681b0c3e29a64bde",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    },
+    {
+      "candidate_id": "width19_final_rank_1",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "b239347fa6046e1636b35c6524868d639d35e237d28c9c749ba95483e637fe94",
+      "plaintext_length": null,
+      "preimage_sha256": "b4f017d88d1adc17e884357844747e686d64be3e43ce736007c380b83c0dc535",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    },
+    {
+      "candidate_id": "width19_final_rank_2",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "ebdfb5eec3c129d319932fd4b200a8ff33be5a1eb5d8cf47662625d11f0c1e26",
+      "plaintext_length": null,
+      "preimage_sha256": "845970e9eed1172ec19928c06b943ad652a6664a9b0ecee0d40eff183fce7a0e",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    },
+    {
+      "candidate_id": "width19_final_rank_3",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "a60b5a5ec6cb189ec073b26642ec6662ac89f7294d7fe8860d1b4ab74b616046",
+      "plaintext_length": null,
+      "preimage_sha256": "50d2a193e3049d2f30a9a8f4b736cc673a33270ee6f185e9473676878de28da4",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    },
+    {
+      "candidate_id": "width19_final_rank_4",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "f467d7f7bc807cc69d35d6dc35397e37b9f689e6c38538d46c13f61736612dfa",
+      "plaintext_length": null,
+      "preimage_sha256": "974d1f9436e223a273d68298c12768fd2a57b9c9d3a90d36c2cf8c5a44deef9a",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    },
+    {
+      "candidate_id": "width19_final_rank_5",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "5f9d1646ee1ec6b0c3a6f8a97e7dae63a9d7927e4a121655d3a75b14f31127be",
+      "plaintext_length": null,
+      "preimage_sha256": "a029b8da8d1f445bcc86f7e06e01a84941a73093c7253e30131fb5e746c1afab",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    },
+    {
+      "candidate_id": "width19_final_rank_6",
+      "padding_length": null,
+      "padding_valid": false,
+      "password_sha256": "dd8913f9c7dd03414d2377c538da521fab5fe6b3b0154604b390461088436309",
+      "plaintext_length": null,
+      "preimage_sha256": "512a54bbbff17e13aab918954d2339cdb3bec66b600ed83e04a6b0a211fe2068",
+      "printable_z": null,
+      "promoted": false,
+      "strong_text": false,
+      "structural_binary_64": false
+    }
+  ],
+  "decryptions": 10,
+  "execution_lock_sha256": "a872b09cc07a83923139b4fd55f9d2b2ced18557be17bfe107bafff25f86906c",
+  "padding_valid_diagnostic_count": 0,
+  "phase": 492,
+  "promoted_count": 0,
+  "status": "locked_oracle_run_complete",
+  "target_blob": "P32TRAILING",
+  "verdict": "bounded_negative"
+}

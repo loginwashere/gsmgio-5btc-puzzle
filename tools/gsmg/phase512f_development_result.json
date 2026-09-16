@@ -1,0 +1,209 @@
+{
+  "elapsed_seconds": 9514.730289314,
+  "faed_imported_or_scored": false,
+  "fixtures": [
+    {
+      "checkpoint": "_work/phase512f/checkpoints/present_phase1_credential_w15_i1.json",
+      "crib_id": "phase1_credential",
+      "fixture_index": 1,
+      "hit_cells": [
+        {
+          "hits": [
+            {
+              "column_to_chunk": [
+                4,
+                13,
+                9,
+                11,
+                12,
+                6,
+                10,
+                2,
+                8,
+                0,
+                1,
+                7,
+                3,
+                14,
+                5
+              ],
+              "exact_truth": true,
+              "nodes_for_pattern": 16,
+              "pattern_index": 18628,
+              "single_letters": "AEGLRTU"
+            }
+          ],
+          "pair": [
+            "g",
+            "i"
+          ],
+          "pair_index": 34,
+          "raw_start": 163
+        }
+      ],
+      "incomplete_cells": [],
+      "kind": "present",
+      "observed_sha256": "8e2e4eb707524757e3c3a119c68fe0b9c0f54fb85a16f82a61f0531f9a6163f0",
+      "pair_start_cells_completed": 5904,
+      "passed": true,
+      "planted_raw_offset": 163,
+      "starts_completed": 164,
+      "status": "hit_at_earliest_completed_start",
+      "width": 15
+    },
+    {
+      "checkpoint": "_work/phase512f/checkpoints/present_phase1_credential_w19_i1.json",
+      "crib_id": "phase1_credential",
+      "fixture_index": 1,
+      "hit_cells": [
+        {
+          "hits": [
+            {
+              "column_to_chunk": [
+                17,
+                11,
+                8,
+                16,
+                10,
+                5,
+                7,
+                2,
+                12,
+                1,
+                0,
+                4,
+                18,
+                13,
+                6,
+                9,
+                15,
+                14,
+                3
+              ],
+              "exact_truth": true,
+              "nodes_for_pattern": 20,
+              "pattern_index": 792,
+              "single_letters": "BNRW"
+            }
+          ],
+          "pair": [
+            "g",
+            "i"
+          ],
+          "pair_index": 34,
+          "raw_start": 157
+        }
+      ],
+      "incomplete_cells": [],
+      "kind": "present",
+      "observed_sha256": "5d3b6dd2708225bbb8e60ece87cc39bb1b361a0dd6bc998a066da9c8777af1fd",
+      "pair_start_cells_completed": 5688,
+      "passed": true,
+      "planted_raw_offset": 157,
+      "starts_completed": 158,
+      "status": "hit_at_earliest_completed_start",
+      "width": 19
+    },
+    {
+      "checkpoint": "_work/phase512f/checkpoints/present_phase1_credential_w30_i1.json",
+      "crib_id": "phase1_credential",
+      "fixture_index": 1,
+      "hit_cells": [
+        {
+          "hits": [
+            {
+              "column_to_chunk": [
+                6,
+                28,
+                19,
+                22,
+                1,
+                3,
+                2,
+                26,
+                17,
+                9,
+                24,
+                14,
+                10,
+                8,
+                13,
+                15,
+                7,
+                21,
+                4,
+                0,
+                27,
+                20,
+                29,
+                25,
+                11,
+                5,
+                12,
+                16,
+                18,
+                23
+              ],
+              "exact_truth": true,
+              "nodes_for_pattern": 31,
+              "pattern_index": 1612,
+              "single_letters": "HLMR"
+            }
+          ],
+          "pair": [
+            "g",
+            "i"
+          ],
+          "pair_index": 34,
+          "raw_start": 158
+        }
+      ],
+      "incomplete_cells": [],
+      "kind": "present",
+      "observed_sha256": "c965b3b1d92ec1b3509f2ce3dc1ba0c8b2670b1cbf36afa052f670bac845b75b",
+      "pair_start_cells_completed": 5724,
+      "passed": true,
+      "planted_raw_offset": 158,
+      "starts_completed": 159,
+      "status": "hit_at_earliest_completed_start",
+      "width": 30
+    }
+  ],
+  "manifest": [
+    {
+      "crib_id": "phase1_credential",
+      "fixture_index": 1,
+      "kind": "present",
+      "width": 15
+    },
+    {
+      "crib_id": "phase1_credential",
+      "fixture_index": 1,
+      "kind": "present",
+      "width": 19
+    },
+    {
+      "crib_id": "phase1_credential",
+      "fixture_index": 1,
+      "kind": "present",
+      "width": 30
+    },
+    {
+      "crib_id": "phase1_credential",
+      "fixture_index": 1,
+      "kind": "present",
+      "width": 38
+    },
+    {
+      "crib_id": "phase1_credential",
+      "fixture_index": 0,
+      "kind": "absent",
+      "width": 15
+    }
+  ],
+  "manifest_sha256": "cef1538b205daa152a6f726a6d5b2665a073e2c09dc60d3da02574a823610b21",
+  "per_cell_node_limit": 2000000,
+  "schema": "phase512f-multifixture-development-v1",
+  "status": "in_progress",
+  "workers": 16
+}

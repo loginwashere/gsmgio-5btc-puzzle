@@ -1,0 +1,30 @@
+{
+  "phase": 503,
+  "status": "execution_lock",
+  "combined_fixtures": [3, 5],
+  "replacement_fixture": 5,
+  "pass_rule": "2_of_2_exact_top1",
+  "protocol_sha256": "6cef6db708226b513d28d41c8910faaf09d55ea8fb232bc7c95f30d69d06f395",
+  "script_sha256": "5de9ea6e0d446456a921c5c05e7e00c56ff16b0eb5ef4a6b2a81d8b745d9d324",
+  "phase502_lock_sha256": "54b73a722b1fd6e308a66d451fe863f4ec803ea9a169a76f1702dcc352f10b97",
+  "phase502_fixture3_result_sha256": "c8fa0ba363d9bdee920d8bb9f26c25fc2c35d06d2f4246e15234b3f37b94a2a8",
+  "fixture5_raw_sha256": "2dde54e3a574af5a37f2feb8a723adfa0917c1890d4e1707bb58837a04ae411d",
+  "fixture5_plaintext_sha256": "825a11648265dfec62082ed5b2b25bdf7590a985fb00e1ec820720899e8e7825",
+  "fixture5_edit_fraction": 0.16241299303944315,
+  "fixture5_normalized_quadgram": -4.561793171286309,
+  "dependencies_sha256": {
+    "tools/gsmg/phase484x_exact_faed_profile_power_probe.py": "0c76785701e21c3761b8ab7322cf8fa45e6282fb5c444bb21244f29ad8dcb2f8",
+    "tools/gsmg/phase490_width19_dual_lane_dev.py": "002224898c4a25fb86f93ca1bc722601e539943e458ab9af568b7872a999f8bf",
+    "tools/gsmg/phase490_width19_checkpointed_dual_lane.py": "4935c739a19f594d95e553cca4611430a93b7e8b861838abf9ae2546e0ac93c5",
+    "tools/gsmg/phase493_partial_unrestricted_board_diagnostic.py": "1440915febb886f43bc7d0ce0238e0cddab3d75fea3383b7c37afdea191aaf77",
+    "tools/gsmg/phase499_unrestricted_width19_holdout.py": "d976f1bcd0f963b4bb560afb9767a5f11acf61d95a271cda57bc7d1072d2ae8f",
+    "tools/gsmg/phase502_repaired_width19_holdout.py": "b76ffd1322941aec54c4feb250be0ce23820e78c90ff65460402116517dc3f85"
+  },
+  "binaries_sha256": {
+    "_work/phase484q/coarse_board_server": "6253860b17f24a3725fe25d84d73afc942f867b5bb85381ccfef60f4b6623139",
+    "_work/phase484n/prefix_server": "1bc93d4ce43a6552022cbc70b29c113e7abd3c57d8ed25e5c5df7fea0d3cc741"
+  },
+  "early_schedule_sha256": "3c15d07091c307530559acf6d8f60d026f2d3d8bac9273600d90623562bd7509",
+  "base_schedule_sha256": "b2105f7ae5910cfcc3a8fb908132a605f58ae09a6ee2f00d28abcf36a8e93bf8",
+  "bridge_schedule_sha256": "993ba7e487024d3c1a20412cb2b042123e35fdfd17ccea86982e2dd7988fd90a"
+}

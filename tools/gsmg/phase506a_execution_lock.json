@@ -1,0 +1,43 @@
+{
+  "phase": "506A",
+  "status": "real_execution_lock",
+  "protocol_sha256": "3b193d9a1e91d3c8418160e46b5adacc3e01fb6947dda310e1d29ab8297ccfc7",
+  "script_sha256": "b1571e2531b33cf6a9a52c945491ddb011907d74afe335af703937ac05258e9d",
+  "dependencies_sha256": {
+    "tools/gsmg/phase484a_raw_symbol_vic_solver.py": "f42cc5a5b3126ba59706d6bbcf51297f63143ec674a2910774e36c6f9f29fc27",
+    "tools/gsmg/phase493_partial_unrestricted_board_diagnostic.py": "1440915febb886f43bc7d0ce0238e0cddab3d75fea3383b7c37afdea191aaf77",
+    "tools/gsmg/phase505_escape_pair_identifiability.py": "3965125f7c1ddc3fd16ca5f5946156b5cccd5f1c64d4c860f2e8b7a121995a44",
+    "tools/gsmg/phase505b_blind_escape_pair_selector.py": "ae951979aa27d175234dfcaf8b29c6abde93132c4c2acbe41f06cc6af3187e97",
+    "tools/gsmg/phase505e_depth6_escape_pair_selector.py": "39fa1fedf8b868b5705134e95ecd1701ac7552962fe23582a6fde936698c8319"
+  },
+  "phase505e_pilot_lock_sha256": "ad502c7d52af1417bd4085702a6753cc22030005ca83e1d2b73d86e2b9906864",
+  "phase505e_pilot_result_sha256": "b9d6dd145dbf16243e5ece50dae5a40b5a59af87f6be75b415b7b115118b6ddf",
+  "unrestricted_board_binary_sha256": "6253860b17f24a3725fe25d84d73afc942f867b5bb85381ccfef60f4b6623139",
+  "faed": {
+    "ascii_sha256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+    "raw_length": 570,
+    "raw_counts": {
+      "a": 54,
+      "b": 49,
+      "c": 52,
+      "d": 49,
+      "e": 69,
+      "f": 57,
+      "g": 107,
+      "h": 58,
+      "i": 75
+    }
+  },
+  "width": 19,
+  "pair_indices": [
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+    12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+    24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35
+  ],
+  "primary_selector": "maximum depth-6 unrestricted-board normalized score",
+  "excluded_after_ranking": ["g", "i"],
+  "selection_count": 5,
+  "tie_break": "ascending pair index",
+  "checkpoint_policy": "one atomic JSON file per pair",
+  "faed_run_count": 1
+}

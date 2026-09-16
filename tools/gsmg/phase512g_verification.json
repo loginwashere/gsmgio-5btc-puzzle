@@ -1,0 +1,12 @@
+{
+  "cells_revalidated": 18648,
+  "checkpoint_sha256": "67c83208df4a64258f521eadfa0343251313c0cd41d480b86718bb8109b71adf",
+  "consistent": true,
+  "errors": [],
+  "execution_lock_sha256": "0ab31cceae4664a020cd96f781d19d9d0ce120adb4d30176276470234aa733c8",
+  "hits_recomputed": 0,
+  "incomplete_cells_recomputed": 0,
+  "phase": "512G-verification",
+  "result_sha256": "e93b04c3949d06dab4f9bb4c6ce9aeba4d1c22fb4f2425eb149c81c9d573b816",
+  "starts_revalidated": 518
+}

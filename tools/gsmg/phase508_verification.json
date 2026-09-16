@@ -1,0 +1,13 @@
+{
+  "cells_revalidated": 324,
+  "completed_trials": 9,
+  "consistent": true,
+  "execution_lock_sha256": "8cd192d46b73bea0f83c2b0f32217bf7301e394bfe4996c4513b83a25b965858",
+  "first_exceedance_trial": 8,
+  "focused_tests_passed": 6,
+  "null_maximum_at_stop": -4.1205108615565855,
+  "phase": 508,
+  "real_family_maximum": -4.130477473427148,
+  "result_sha256": "67b4e318166a10c5f48a2a4ab205995a54eb779e52fe30f2838f8b07553a94a0",
+  "status": "verification_passed"
+}

@@ -1,0 +1,34 @@
+{
+  "acceptance": "exact derived P2PKH address equality only",
+  "candidate_count": 43,
+  "derived_address_count": 86,
+  "exact_comparison_count": 172,
+  "files_sha256": {
+    "binary_key_material_backfill": "2d930bea3a8dabbc6e390d56e8c019ed968dbe301502fbbb4928f075aa9a8b02",
+    "phase507_manifest": "7129e3f1badabd21bb6cec474296fe80608e8380453d483e2fc8a4c961b5f01d",
+    "phase507_runner": "4ffdc6ba522bc0de0c0dd87d09a9b56f99fba554306cab3a7244c6da8b7bbe9e",
+    "protocol": "6ed77012649159e24bc4d4e8089bfde4a56f9492dd16fb2a252bc9c1f443e8e9",
+    "runner": "6cdee8e8eb21927ab80b8bf1fbf44b620049473f2bcb5876d0e3a0fe6bbd7adb"
+  },
+  "phase": "509B",
+  "prohibitions": [
+    "candidate mutation",
+    "alternate or double hash",
+    "substring",
+    "scalar algebra",
+    "derived-neighbor target",
+    "AES query",
+    "Bloom filter",
+    "network request"
+  ],
+  "public_key_encodings": [
+    "compressed",
+    "uncompressed"
+  ],
+  "status": "locked_before_address_derivation",
+  "targets": [
+    "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+    "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+  ],
+  "transformation": "SHA256(terminal).digest()"
+}

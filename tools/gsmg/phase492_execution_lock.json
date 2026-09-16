@@ -1,0 +1,28 @@
+{
+  "candidate_count": 10,
+  "ciphertext_length": 80,
+  "ciphertext_sha256": "cbbf945223b0c7a60e31b6ba7f5dfbc17f68f545bec059e937c11e7465d0117b",
+  "crypto_profile": "legacy-evp-bytes-to-key-sha256/aes-256-cbc/pkcs7",
+  "files_sha256": {
+    "cb_common": "97e787a8be234b7ba5b7b8e0c1ba1abe0f8c61f480e5628da7883ef30db84de8",
+    "data": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "manifest": "6c7283b1edaace8c302b83641c01ee8cc37bfa63f67d8696466e9d25bb5b3f21",
+    "phase480_oracle": "b5d4ce1c96ab0145b8308380b13d9be89d3e0ec11f5f8c8542877ab9969ef45a",
+    "protocol": "58b830b6a0adb04a51a5ad78b3ab6c6a0bd9f0697195ab106ef23bc53dc8bc3a",
+    "runner": "72fa9d4c4e80e998ef7395a9c9be3bc01d2aab4cfeb3813dea2183c40d46ff62"
+  },
+  "phase": 492,
+  "planned_decryptions": 10,
+  "salt_hex": "b45a5e3d827593ca",
+  "source_artifacts_sha256": {
+    "width19": "12b65fc6722b6626b12c859a880bf984c84af75f2f50d29ccac05d5c96c8da1c",
+    "width30": "e141036e2328630454a62e12375c3967c7bc474184fb7b995d2ee8819349c9c1"
+  },
+  "status": "locked_before_real_p32_oracle",
+  "target_blob": "P32TRAILING",
+  "validators": {
+    "padding_alone_promotes": false,
+    "strong_text_minimum_z": 8.0,
+    "structural_binary": "aes/block16/pad16/body64"
+  }
+}

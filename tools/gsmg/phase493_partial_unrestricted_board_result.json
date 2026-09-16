@@ -1,0 +1,1279 @@
+{
+  "phase": 493,
+  "status": "development_diagnostic_complete",
+  "faed_scored": false,
+  "holdout_consumed": false,
+  "budgets": {
+    "controls": 512,
+    "restarts": 3,
+    "iterations": 2000,
+    "seed": 76783617
+  },
+  "cell_count": 30,
+  "planted_rank1": 30,
+  "unrestricted_top5": 30,
+  "planted_gate_passed": true,
+  "unrestricted_gate_passed": true,
+  "records": [
+    {
+      "fixture_index": 0,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 430,
+      "edit_fraction": 0.11627906976744186,
+      "normalized_quadgram": -4.315538501377482,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.134022708415327,
+        "best_control_score": -5.2608101215882215,
+        "gap": 1.1267874131728943
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.272838250801118,
+        "best_control_score": -4.443543325074303,
+        "gap": 0.17070507427318482,
+        "max_true_board_accuracy": 0.56,
+        "best_score_true_board_accuracy": 0.32
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.366340164197381,
+        "best_control_score": -4.480571015531369,
+        "gap": 0.11423085133398825,
+        "max_true_board_accuracy": 0.6,
+        "best_score_true_board_accuracy": 0.6
+      }
+    },
+    {
+      "fixture_index": 0,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 430,
+      "edit_fraction": 0.11627906976744186,
+      "normalized_quadgram": -4.315538501377482,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.117807619733998,
+        "best_control_score": -5.204175870056262,
+        "gap": 1.0863682503222636
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.376417987438445,
+        "best_control_score": -4.7310602096454595,
+        "gap": 0.3546422222070147,
+        "max_true_board_accuracy": 0.6,
+        "best_score_true_board_accuracy": 0.52
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.149195838913946,
+        "best_control_score": -4.655649176835951,
+        "gap": 0.5064533379220046,
+        "max_true_board_accuracy": 0.72,
+        "best_score_true_board_accuracy": 0.68
+      }
+    },
+    {
+      "fixture_index": 0,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ],
+        [
+          "I",
+          "D"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 430,
+      "edit_fraction": 0.1325581395348837,
+      "normalized_quadgram": -4.433296614402425,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.165070469944771,
+        "best_control_score": -5.22468232478199,
+        "gap": 1.059611854837219
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.308096595025196,
+        "best_control_score": -4.492777288171188,
+        "gap": 0.18468069314599145,
+        "max_true_board_accuracy": 0.4,
+        "best_score_true_board_accuracy": 0.08
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.267265747825225,
+        "best_control_score": -4.424878512988073,
+        "gap": 0.15761276516284806,
+        "max_true_board_accuracy": 0.4,
+        "best_score_true_board_accuracy": 0.36
+      }
+    },
+    {
+      "fixture_index": 0,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ],
+        [
+          "I",
+          "D"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 430,
+      "edit_fraction": 0.1325581395348837,
+      "normalized_quadgram": -4.433296614402425,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.179279042483565,
+        "best_control_score": -5.3763732005699785,
+        "gap": 1.1970941580864132
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.4271376054485785,
+        "best_control_score": -4.68828099480292,
+        "gap": 0.26114338935434134,
+        "max_true_board_accuracy": 0.36,
+        "best_score_true_board_accuracy": 0.16
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.145038829430973,
+        "best_control_score": -4.683995134428736,
+        "gap": 0.5389563049977628,
+        "max_true_board_accuracy": 0.64,
+        "best_score_true_board_accuracy": 0.6
+      }
+    },
+    {
+      "fixture_index": 0,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ],
+        [
+          "I",
+          "D"
+        ],
+        [
+          "N",
+          "H"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 430,
+      "edit_fraction": 0.14418604651162792,
+      "normalized_quadgram": -4.51100519442598,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.279818145450603,
+        "best_control_score": -5.40524960838829,
+        "gap": 1.1254314629376871
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.350944770581777,
+        "best_control_score": -4.490401006631513,
+        "gap": 0.13945623604973623,
+        "max_true_board_accuracy": 0.2,
+        "best_score_true_board_accuracy": 0.12
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.353669205875114,
+        "best_control_score": -4.552163717123211,
+        "gap": 0.19849451124809647,
+        "max_true_board_accuracy": 0.36,
+        "best_score_true_board_accuracy": 0.08
+      }
+    },
+    {
+      "fixture_index": 0,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ],
+        [
+          "I",
+          "D"
+        ],
+        [
+          "N",
+          "H"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 430,
+      "edit_fraction": 0.14418604651162792,
+      "normalized_quadgram": -4.51100519442598,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.289228967562077,
+        "best_control_score": -5.455208515977323,
+        "gap": 1.1659795484152458
+      },
+      "constrained": {
+        "best_true_rank": 2,
+        "best_true_score": -4.637711826363301,
+        "best_control_score": -4.627419174474077,
+        "gap": -0.010292651889224125,
+        "max_true_board_accuracy": 0.32,
+        "best_score_true_board_accuracy": 0.08
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.412466279540672,
+        "best_control_score": -4.691179328445955,
+        "gap": 0.27871304890528315,
+        "max_true_board_accuracy": 0.48,
+        "best_score_true_board_accuracy": 0.44
+      }
+    },
+    {
+      "fixture_index": 1,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.10648148148148148,
+      "normalized_quadgram": -4.35818960297022,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.138230851769414,
+        "best_control_score": -5.012186381037045,
+        "gap": 0.8739555292676311
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.091938451186286,
+        "best_control_score": -4.444705646522183,
+        "gap": 0.35276719533589684,
+        "max_true_board_accuracy": 0.48,
+        "best_score_true_board_accuracy": 0.48
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -3.988083099151448,
+        "best_control_score": -4.4972019549114854,
+        "gap": 0.5091188557600375,
+        "max_true_board_accuracy": 0.6,
+        "best_score_true_board_accuracy": 0.6
+      }
+    },
+    {
+      "fixture_index": 1,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.10648148148148148,
+      "normalized_quadgram": -4.35818960297022,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.19781947510431,
+        "best_control_score": -5.56581120645753,
+        "gap": 1.3679917313532206
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.249512736369631,
+        "best_control_score": -4.694640356608249,
+        "gap": 0.44512762023861807,
+        "max_true_board_accuracy": 0.52,
+        "best_score_true_board_accuracy": 0.44
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.207495926790001,
+        "best_control_score": -4.749742700045641,
+        "gap": 0.5422467732556404,
+        "max_true_board_accuracy": 0.6,
+        "best_score_true_board_accuracy": 0.56
+      }
+    },
+    {
+      "fixture_index": 1,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ],
+        [
+          "T",
+          "H"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.12962962962962962,
+      "normalized_quadgram": -4.476233578735831,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.339889446777316,
+        "best_control_score": -5.493264084891873,
+        "gap": 1.153374638114557
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.413760522995366,
+        "best_control_score": -4.528397026543184,
+        "gap": 0.11463650354781763,
+        "max_true_board_accuracy": 0.44,
+        "best_score_true_board_accuracy": 0.28
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.315804211894593,
+        "best_control_score": -4.543829885913138,
+        "gap": 0.22802567401854468,
+        "max_true_board_accuracy": 0.52,
+        "best_score_true_board_accuracy": 0.52
+      }
+    },
+    {
+      "fixture_index": 1,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ],
+        [
+          "T",
+          "H"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.12962962962962962,
+      "normalized_quadgram": -4.476233578735831,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.41702965848513,
+        "best_control_score": -5.353977352172727,
+        "gap": 0.9369476936875971
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.549390410379565,
+        "best_control_score": -4.6810887270515105,
+        "gap": 0.13169831667194565,
+        "max_true_board_accuracy": 0.48,
+        "best_score_true_board_accuracy": 0.36
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.558703223930126,
+        "best_control_score": -4.6418800688246415,
+        "gap": 0.08317684489451516,
+        "max_true_board_accuracy": 0.68,
+        "best_score_true_board_accuracy": 0.4
+      }
+    },
+    {
+      "fixture_index": 1,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ],
+        [
+          "T",
+          "H"
+        ],
+        [
+          "A",
+          "L"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.1597222222222222,
+      "normalized_quadgram": -4.62684298630946,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.448087321975946,
+        "best_control_score": -5.635080484024785,
+        "gap": 1.1869931620488394
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.484428354660525,
+        "best_control_score": -4.529541851959255,
+        "gap": 0.04511349729872993,
+        "max_true_board_accuracy": 0.2,
+        "best_score_true_board_accuracy": 0.16
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.297267521930807,
+        "best_control_score": -4.5199512941160815,
+        "gap": 0.2226837721852748,
+        "max_true_board_accuracy": 0.44,
+        "best_score_true_board_accuracy": 0.36
+      }
+    },
+    {
+      "fixture_index": 1,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "S",
+          "R"
+        ],
+        [
+          "T",
+          "H"
+        ],
+        [
+          "A",
+          "L"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.1597222222222222,
+      "normalized_quadgram": -4.62684298630946,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.498404288627665,
+        "best_control_score": -5.730414620698817,
+        "gap": 1.2320103320711526
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.67091607712673,
+        "best_control_score": -4.71812519007757,
+        "gap": 0.04720911295084029,
+        "max_true_board_accuracy": 0.28,
+        "best_score_true_board_accuracy": 0.16
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.547038775748881,
+        "best_control_score": -4.712835264010184,
+        "gap": 0.16579648826130278,
+        "max_true_board_accuracy": 0.48,
+        "best_score_true_board_accuracy": 0.4
+      }
+    },
+    {
+      "fixture_index": 2,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "T",
+          "R"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 438,
+      "edit_fraction": 0.12557077625570776,
+      "normalized_quadgram": -4.294852891213143,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.082623239673903,
+        "best_control_score": -5.027781885556113,
+        "gap": 0.9451586458822101
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.260972343952629,
+        "best_control_score": -4.50703710928401,
+        "gap": 0.246064765331381,
+        "max_true_board_accuracy": 0.4,
+        "best_score_true_board_accuracy": 0.2
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.218847171681819,
+        "best_control_score": -4.504094794611033,
+        "gap": 0.285247622929214,
+        "max_true_board_accuracy": 0.68,
+        "best_score_true_board_accuracy": 0.52
+      }
+    },
+    {
+      "fixture_index": 2,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "T",
+          "R"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 438,
+      "edit_fraction": 0.12557077625570776,
+      "normalized_quadgram": -4.294852891213143,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.1668628450248795,
+        "best_control_score": -5.495737890262175,
+        "gap": 1.3288750452372957
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.41576146609895,
+        "best_control_score": -4.694947533438107,
+        "gap": 0.27918606733915663,
+        "max_true_board_accuracy": 0.64,
+        "best_score_true_board_accuracy": 0.48
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.2845074073671645,
+        "best_control_score": -4.741661099232216,
+        "gap": 0.4571536918650514,
+        "max_true_board_accuracy": 0.56,
+        "best_score_true_board_accuracy": 0.52
+      }
+    },
+    {
+      "fixture_index": 2,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "T",
+          "R"
+        ],
+        [
+          "I",
+          "L"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 438,
+      "edit_fraction": 0.14383561643835616,
+      "normalized_quadgram": -4.322969297704052,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.363506293877535,
+        "best_control_score": -5.417871156900522,
+        "gap": 1.054364863022987
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.403467750353039,
+        "best_control_score": -4.528554102781616,
+        "gap": 0.12508635242857657,
+        "max_true_board_accuracy": 0.2,
+        "best_score_true_board_accuracy": 0.2
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.305408178617339,
+        "best_control_score": -4.467765472247009,
+        "gap": 0.16235729362967,
+        "max_true_board_accuracy": 0.32,
+        "best_score_true_board_accuracy": 0.2
+      }
+    },
+    {
+      "fixture_index": 2,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "T",
+          "R"
+        ],
+        [
+          "I",
+          "L"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 438,
+      "edit_fraction": 0.14383561643835616,
+      "normalized_quadgram": -4.322969297704052,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.362044263796836,
+        "best_control_score": -5.435011853417606,
+        "gap": 1.0729675896207702
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.602218366000027,
+        "best_control_score": -4.7314332812731035,
+        "gap": 0.12921491527307616,
+        "max_true_board_accuracy": 0.28,
+        "best_score_true_board_accuracy": 0.16
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.406531309996176,
+        "best_control_score": -4.727774748673565,
+        "gap": 0.32124343867738947,
+        "max_true_board_accuracy": 0.48,
+        "best_score_true_board_accuracy": 0.4
+      }
+    },
+    {
+      "fixture_index": 2,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "T",
+          "R"
+        ],
+        [
+          "I",
+          "L"
+        ],
+        [
+          "N",
+          "H"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 438,
+      "edit_fraction": 0.17123287671232876,
+      "normalized_quadgram": -4.4286833451262755,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.348398047172822,
+        "best_control_score": -5.4341975655377475,
+        "gap": 1.0857995183649258
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.373647099408957,
+        "best_control_score": -4.457698272887792,
+        "gap": 0.0840511734788354,
+        "max_true_board_accuracy": 0.24,
+        "best_score_true_board_accuracy": 0.2
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.259354127141957,
+        "best_control_score": -4.3334217860821065,
+        "gap": 0.07406765894014988,
+        "max_true_board_accuracy": 0.32,
+        "best_score_true_board_accuracy": 0.24
+      }
+    },
+    {
+      "fixture_index": 2,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "T",
+          "R"
+        ],
+        [
+          "I",
+          "L"
+        ],
+        [
+          "N",
+          "H"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 438,
+      "edit_fraction": 0.17123287671232876,
+      "normalized_quadgram": -4.4286833451262755,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.394493161962659,
+        "best_control_score": -5.488456182016178,
+        "gap": 1.0939630200535193
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.5394452011998405,
+        "best_control_score": -4.700996448938088,
+        "gap": 0.16155124773824792,
+        "max_true_board_accuracy": 0.28,
+        "best_score_true_board_accuracy": 0.16
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.4256441466166025,
+        "best_control_score": -4.654740904074744,
+        "gap": 0.22909675745814173,
+        "max_true_board_accuracy": 0.24,
+        "best_score_true_board_accuracy": 0.16
+      }
+    },
+    {
+      "fixture_index": 3,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "O",
+          "H"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 428,
+      "edit_fraction": 0.1261682242990654,
+      "normalized_quadgram": -4.419552964962903,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.161019211763757,
+        "best_control_score": -5.298889742059111,
+        "gap": 1.1378705302953538
+      },
+      "constrained": {
+        "best_true_rank": 3,
+        "best_true_score": -4.4147706119937515,
+        "best_control_score": -4.371117691740955,
+        "gap": -0.043652920252796434,
+        "max_true_board_accuracy": 0.48,
+        "best_score_true_board_accuracy": 0.48
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.175034699306156,
+        "best_control_score": -4.390633999716514,
+        "gap": 0.21559930041035802,
+        "max_true_board_accuracy": 0.32,
+        "best_score_true_board_accuracy": 0.32
+      }
+    },
+    {
+      "fixture_index": 3,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "O",
+          "H"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 428,
+      "edit_fraction": 0.1261682242990654,
+      "normalized_quadgram": -4.419552964962903,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.225435059702984,
+        "best_control_score": -5.545403395048985,
+        "gap": 1.319968335346001
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.533521391544027,
+        "best_control_score": -4.617215069835175,
+        "gap": 0.08369367829114793,
+        "max_true_board_accuracy": 0.44,
+        "best_score_true_board_accuracy": 0.44
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.235962163837256,
+        "best_control_score": -4.772165709197235,
+        "gap": 0.5362035453599789,
+        "max_true_board_accuracy": 0.6,
+        "best_score_true_board_accuracy": 0.6
+      }
+    },
+    {
+      "fixture_index": 3,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "O",
+          "H"
+        ],
+        [
+          "I",
+          "L"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 428,
+      "edit_fraction": 0.1261682242990654,
+      "normalized_quadgram": -4.540557819415832,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.1751148588752605,
+        "best_control_score": -5.501759916138664,
+        "gap": 1.3266450572634039
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.430828293131706,
+        "best_control_score": -4.4829756504074965,
+        "gap": 0.052147357275790895,
+        "max_true_board_accuracy": 0.12,
+        "best_score_true_board_accuracy": 0.0
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.019257121613973,
+        "best_control_score": -4.480496839996482,
+        "gap": 0.461239718382509,
+        "max_true_board_accuracy": 0.64,
+        "best_score_true_board_accuracy": 0.64
+      }
+    },
+    {
+      "fixture_index": 3,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "O",
+          "H"
+        ],
+        [
+          "I",
+          "L"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 428,
+      "edit_fraction": 0.1261682242990654,
+      "normalized_quadgram": -4.540557819415832,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.262241437677466,
+        "best_control_score": -5.657128104948504,
+        "gap": 1.394886667271038
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.66456586064958,
+        "best_control_score": -4.723743095074607,
+        "gap": 0.05917723442502698,
+        "max_true_board_accuracy": 0.16,
+        "best_score_true_board_accuracy": 0.0
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.347606034355785,
+        "best_control_score": -4.717457569066959,
+        "gap": 0.3698515347111746,
+        "max_true_board_accuracy": 0.48,
+        "best_score_true_board_accuracy": 0.48
+      }
+    },
+    {
+      "fixture_index": 3,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "O",
+          "H"
+        ],
+        [
+          "I",
+          "L"
+        ],
+        [
+          "S",
+          "C"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 428,
+      "edit_fraction": 0.1588785046728972,
+      "normalized_quadgram": -4.6236189175065805,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.250408936516883,
+        "best_control_score": -5.591931907406983,
+        "gap": 1.3415229708901002
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.3831244683095125,
+        "best_control_score": -4.409314529594927,
+        "gap": 0.02619006128541468,
+        "max_true_board_accuracy": 0.16,
+        "best_score_true_board_accuracy": 0.0
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.079166269645749,
+        "best_control_score": -4.43894091836486,
+        "gap": 0.35977464871911113,
+        "max_true_board_accuracy": 0.52,
+        "best_score_true_board_accuracy": 0.4
+      }
+    },
+    {
+      "fixture_index": 3,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "O",
+          "H"
+        ],
+        [
+          "I",
+          "L"
+        ],
+        [
+          "S",
+          "C"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 428,
+      "edit_fraction": 0.1588785046728972,
+      "normalized_quadgram": -4.6236189175065805,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.401248686683884,
+        "best_control_score": -5.923301591433764,
+        "gap": 1.5220529047498799
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.639360602533027,
+        "best_control_score": -4.689308700203927,
+        "gap": 0.04994809767090036,
+        "max_true_board_accuracy": 0.16,
+        "best_score_true_board_accuracy": 0.04
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.3634859397336685,
+        "best_control_score": -4.707543893640327,
+        "gap": 0.34405795390665883,
+        "max_true_board_accuracy": 0.52,
+        "best_score_true_board_accuracy": 0.4
+      }
+    },
+    {
+      "fixture_index": 4,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "O",
+          "R"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.10416666666666667,
+      "normalized_quadgram": -4.3177131660488595,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.000905769308155,
+        "best_control_score": -5.231212021134173,
+        "gap": 1.2303062518260175
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.453859359347522,
+        "best_control_score": -4.503767285253564,
+        "gap": 0.04990792590604176,
+        "max_true_board_accuracy": 0.32,
+        "best_score_true_board_accuracy": 0.12
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.028900923908354,
+        "best_control_score": -4.5319035761111515,
+        "gap": 0.503002652202797,
+        "max_true_board_accuracy": 0.56,
+        "best_score_true_board_accuracy": 0.52
+      }
+    },
+    {
+      "fixture_index": 4,
+      "swap_count": 1,
+      "swaps": [
+        [
+          "O",
+          "R"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.10416666666666667,
+      "normalized_quadgram": -4.3177131660488595,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.185777861690241,
+        "best_control_score": -5.278718887040539,
+        "gap": 1.0929410253502985
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.5408837061176195,
+        "best_control_score": -4.700257496536736,
+        "gap": 0.15937379041911637,
+        "max_true_board_accuracy": 0.4,
+        "best_score_true_board_accuracy": 0.12
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.092352703469935,
+        "best_control_score": -4.700628936189489,
+        "gap": 0.6082762327195539,
+        "max_true_board_accuracy": 0.64,
+        "best_score_true_board_accuracy": 0.6
+      }
+    },
+    {
+      "fixture_index": 4,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "O",
+          "R"
+        ],
+        [
+          "S",
+          "H"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.12268518518518519,
+      "normalized_quadgram": -4.391575856441517,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.113063220233472,
+        "best_control_score": -5.464557230762054,
+        "gap": 1.3514940105285822
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.3590579277644235,
+        "best_control_score": -4.441648385082034,
+        "gap": 0.08259045731761017,
+        "max_true_board_accuracy": 0.24,
+        "best_score_true_board_accuracy": 0.08
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.25755376587057,
+        "best_control_score": -4.534843029730894,
+        "gap": 0.2772892638603235,
+        "max_true_board_accuracy": 0.48,
+        "best_score_true_board_accuracy": 0.44
+      }
+    },
+    {
+      "fixture_index": 4,
+      "swap_count": 2,
+      "swaps": [
+        [
+          "O",
+          "R"
+        ],
+        [
+          "S",
+          "H"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.12268518518518519,
+      "normalized_quadgram": -4.391575856441517,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.170820718626665,
+        "best_control_score": -5.523707778132066,
+        "gap": 1.3528870595054014
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.555774690849355,
+        "best_control_score": -4.606717200751923,
+        "gap": 0.05094250990256821,
+        "max_true_board_accuracy": 0.28,
+        "best_score_true_board_accuracy": 0.16
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.182063735142397,
+        "best_control_score": -4.66563805252938,
+        "gap": 0.4835743173869833,
+        "max_true_board_accuracy": 0.6,
+        "best_score_true_board_accuracy": 0.6
+      }
+    },
+    {
+      "fixture_index": 4,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "O",
+          "R"
+        ],
+        [
+          "S",
+          "H"
+        ],
+        [
+          "T",
+          "L"
+        ]
+      ],
+      "depth": 6,
+      "true_count": 14,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.16203703703703703,
+      "normalized_quadgram": -4.466494768155477,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.389155857284344,
+        "best_control_score": -5.672588505146963,
+        "gap": 1.283432647862619
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.413625127876717,
+        "best_control_score": -4.502690981204341,
+        "gap": 0.08906585332762429,
+        "max_true_board_accuracy": 0.24,
+        "best_score_true_board_accuracy": 0.0
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.397921096462721,
+        "best_control_score": -4.46157974869794,
+        "gap": 0.06365865223521894,
+        "max_true_board_accuracy": 0.44,
+        "best_score_true_board_accuracy": 0.24
+      }
+    },
+    {
+      "fixture_index": 4,
+      "swap_count": 3,
+      "swaps": [
+        [
+          "O",
+          "R"
+        ],
+        [
+          "S",
+          "H"
+        ],
+        [
+          "T",
+          "L"
+        ]
+      ],
+      "depth": 7,
+      "true_count": 13,
+      "control_count": 512,
+      "plaintext_length": 432,
+      "edit_fraction": 0.16203703703703703,
+      "normalized_quadgram": -4.466494768155477,
+      "planted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.452791501462938,
+        "best_control_score": -5.7658497446604615,
+        "gap": 1.3130582431975233
+      },
+      "constrained": {
+        "best_true_rank": 1,
+        "best_true_score": -4.580664187673517,
+        "best_control_score": -4.636418477532482,
+        "gap": 0.05575428985896469,
+        "max_true_board_accuracy": 0.2,
+        "best_score_true_board_accuracy": 0.08
+      },
+      "unrestricted": {
+        "best_true_rank": 1,
+        "best_true_score": -4.402405283995187,
+        "best_control_score": -4.7101568945829335,
+        "gap": 0.30775161058774625,
+        "max_true_board_accuracy": 0.44,
+        "best_score_true_board_accuracy": 0.44
+      }
+    }
+  ]
+}

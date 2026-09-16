@@ -1,0 +1,134 @@
+{
+  "0": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4269.084618203
+  },
+  "1": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4290.366588712997
+  },
+  "10": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4159.096893447
+  },
+  "11": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4185.877346998997
+  },
+  "2": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4250.783028689999
+  },
+  "3": {
+    "exact_order_final_rank": null,
+    "holdout_consumed": true,
+    "middle_truth_survived": false,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": false,
+    "top1_exact_order": false,
+    "top1_plaintext_accuracy": 0.11697247706422019,
+    "wall_seconds": 4173.169494558
+  },
+  "4": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4223.257540457
+  },
+  "5": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4190.138507273001
+  },
+  "6": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4194.857786223001
+  },
+  "7": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4386.209511385001
+  },
+  "8": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 5108.429314729001
+  },
+  "9": {
+    "exact_order_final_rank": 1,
+    "holdout_consumed": true,
+    "middle_truth_survived": true,
+    "split": "holdout",
+    "status": "ok",
+    "tail_truth_survived": true,
+    "top1_exact_order": true,
+    "top1_plaintext_accuracy": 1.0,
+    "wall_seconds": 4754.530612383001
+  }
+}

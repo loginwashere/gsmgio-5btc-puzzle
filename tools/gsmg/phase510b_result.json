@@ -1,0 +1,108 @@
+{
+  "coverage_gate_passed_all": false,
+  "execution_lock_sha256": "8a64869563286d4a7f82a1e8e6e75b37be7e1cf978d3dbd440eb5304cf96f133",
+  "faed_scored": false,
+  "fixtures": [
+    {
+      "coverage_gate_passed": false,
+      "heldout_term_count": 72,
+      "normalized_length": 440,
+      "null_exceedances": null,
+      "null_trials": [],
+      "real": {
+        "matched_character_coverage": 0.038636363636363635,
+        "matched_characters": 17,
+        "matches": [
+          {
+            "end": 70,
+            "start": 65,
+            "term": "which",
+            "weight": 1
+          },
+          {
+            "end": 360,
+            "start": 354,
+            "term": "answer",
+            "weight": 4
+          },
+          {
+            "end": 376,
+            "start": 370,
+            "term": "puzzle",
+            "weight": 4
+          }
+        ],
+        "normalized_weight": 0.020454545454545454,
+        "raw_weight": 9
+      },
+      "source_id": "phase2_solved_plaintext"
+    },
+    {
+      "coverage_gate_passed": false,
+      "heldout_term_count": 73,
+      "normalized_length": 534,
+      "null_exceedances": null,
+      "null_trials": [],
+      "real": {
+        "matched_character_coverage": 0.04119850187265917,
+        "matched_characters": 22,
+        "matches": [
+          {
+            "end": 163,
+            "start": 158,
+            "term": "human",
+            "weight": 1
+          },
+          {
+            "end": 276,
+            "start": 270,
+            "term": "puzzle",
+            "weight": 4
+          },
+          {
+            "end": 354,
+            "start": 348,
+            "term": "answer",
+            "weight": 4
+          },
+          {
+            "end": 435,
+            "start": 430,
+            "term": "which",
+            "weight": 1
+          }
+        ],
+        "normalized_weight": 0.018726591760299626,
+        "raw_weight": 10
+      },
+      "source_id": "phase3_literal_plaintext"
+    },
+    {
+      "coverage_gate_passed": false,
+      "heldout_term_count": 75,
+      "normalized_length": 455,
+      "null_exceedances": null,
+      "null_trials": [],
+      "real": {
+        "matched_character_coverage": 0.013186813186813187,
+        "matched_characters": 6,
+        "matches": [
+          {
+            "end": 131,
+            "start": 125,
+            "term": "answer",
+            "weight": 4
+          }
+        ],
+        "normalized_weight": 0.008791208791208791,
+        "raw_weight": 4
+      },
+      "source_id": "phase32_literal_plaintext"
+    }
+  ],
+  "gate_passed": false,
+  "null_stage_executed": false,
+  "phase": "510B",
+  "status": "heldout_signal_gate_complete",
+  "verdict": "exact_vocabulary_objective_stops_before_checkerboard_integration"
+}

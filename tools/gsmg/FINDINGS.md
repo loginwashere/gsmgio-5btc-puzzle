@@ -29390,6 +29390,10 @@ is the precondition for attempting a single locked FAED experiment on
 not yet attempted. The consumed 12-fixture holdout draw cannot be reused as
 a fresh gate again; 12 further holdout indices (12-23) remain untouched if
 ever needed.
+The compact per-fixture terminal records are preserved under
+`tools/gsmg/phase488_results/`; `phase488_489_verify_records.py`
+independently recomputes the 10/10 and 11/12 headline counts and checks every
+record's schedule and split provenance.
 Full report:
 [doc/GSMG_PHASE488_WIDTH30_HOLDOUT_GATE_PASS.md](../../doc/GSMG_PHASE488_WIDTH30_HOLDOUT_GATE_PASS.md).
 ## Phase 489 -- locked FAED width-30 `{g,i}` closes as a single-run gibberish miss; multi-seed/control protocol reserved for a readable hit (2026-09-12)
@@ -29437,3 +29441,319 @@ back readable enough to need stability and separation confirmation before
 promotion. `faed_scored: true` on the one completed run;
 `holdout_consumed: false` throughout (no holdout fixture was touched by
 this experiment).
+
+The exact four-candidate result is preserved as
+`tools/gsmg/phase489_faed_width30_gi_result.json`.
+`phase488_489_verify_records.py` checks its execution-lock link, recomputes
+every plaintext and quadgram score, and proves every order/board candidate
+round-trips to the authenticated FAED stream.
+<!-- audit_doc_override: GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md -->
+## Phase 499 -- first unrestricted width-19 holdout gate fails at depth 11 (2026-09-13)
+
+**Question:** does the unrestricted width-19 Model-B solver that recovered
+two development fixtures generalize to three predeclared holdout fixtures?
+
+**Method:** freeze `{g,i}`, width 19, raw-histogram-only three-swap holdout
+fixtures 0--2, the existing invariant front, unrestricted board scoring, and
+an exact-top-1 `3/3` stop rule. Stop on the first failure; FAED is unavailable.
+
+**Result:** fixture 0 failed. Two true depth-11 fragments existed before the
+bridge selection, best rank `674,463/1,179,648`, but neither survived. No
+exact terminal order remained and top-1 plaintext accuracy was `0.14554`.
+Fixtures 1 and 2 were not spent.
+
+**Disposition:** locked calibration gate failed. This does not reject the
+unrestricted objective; it prohibits the planned FAED transfer until the
+failure is diagnosed and a repair generalizes on new fixtures. Full report:
+[doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md](../../doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md).
+
+<!-- audit_doc_override: GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md -->
+## Phase 500 -- post-hoc diagnostics identify under-annealing at depths 9 and 11 (2026-09-13)
+
+**Question:** why did consumed Phase-499 holdout fixture 0 lose its true
+lineage?
+
+**Method:** without spending new holdout data, rescore its saved depth-8
+population at `3 x 10,000`, then compare its two true depth-11 children under
+the production `3 x 10,000`, diagnostic `8 x 20,000`, and planted-board
+objectives.
+
+**Result:** the depth-9 true fragment improved from original ranks
+`45,203/31,532` to rank 1 before and after selection. At depth 11, the two
+true children ranked 16th/11th locally with board accuracies `0.08/0.44`
+under production, but 2nd/1st with accuracies `0.88/0.88` under the higher
+budget; the planted board also ranked them 2nd/1st.
+
+**Disposition:** diagnostic positive for objective under-optimization, not a
+gate result. Phase 499 remains failed and no FAED run is authorized. Full
+report:
+[doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md](../../doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md).
+
+<!-- audit_doc_override: GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md -->
+## Phase 501 -- corrected-depth-9 gate fails; depth-11-only post-hoc repair succeeds (2026-09-13)
+
+**Question:** do either of the two diagnosed budget changes generalize or
+restore end-to-end recovery?
+
+**Method:** two distinct experiments retained working number 501. A locked
+gate moved `3 x 10,000` forward to depth 9 and began with fresh fixture 2.
+Separately, an engineering replay changed only consumed fixture 0's depth-11
+bridge to `8 x 20,000`.
+
+**Result:** the corrected-depth-9 gate failed: fixture 2 ranked `34,019` after
+depth 8, fell to `3,408,289` before depth-9 selection, and was discarded. A
+later host OOM could not change that logically terminal miss. Conversely, the
+depth-11-only replay recovered consumed fixture 0 at exact final rank 1 with
+plaintext accuracy `1.0`.
+
+**Disposition:** the depth-9 schedule is a failed locked gate; the depth-11
+result is post-hoc engineering evidence only and does not repair either gate.
+It licenses testing that one-field repair on new fixtures. Full report:
+[doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md](../../doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md).
+
+<!-- audit_doc_override: GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md -->
+## Phase 502 -- repaired holdout fixture 3 passes, but the frozen two-cell gate is infeasible (2026-09-13)
+
+**Question:** does increasing only the depth-11 bridge to `8 x 20,000`
+generalize to two new frozen holdout fixtures?
+
+**Method:** lock fixtures 3 and 4 under the otherwise unchanged width-19
+unrestricted schedule and require exact top-1 recovery on both.
+
+**Result:** fixture 3 recovered exact order at rank 1 with plaintext accuracy
+`1.0` and score `-4.6751413500`. Fixture 4 could not be constructed: edit
+fraction `0.1879350348` exceeded the frozen `0.18` ceiling before any marker,
+scoring, or GPU work.
+
+**Disposition:** Phase 502 is infeasible as written, not solver-negative. Its
+fixture-3 pass remains locked evidence, but the protocol's pre-lock fixture
+validation was incomplete and the literal `2/2` gate cannot be claimed. Full
+report:
+[doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md](../../doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md).
+
+<!-- audit_doc_override: GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md -->
+## Phase 503 -- mechanically selected replacement completes a 2/2 repaired holdout gate (2026-09-13)
+
+**Question:** does the unchanged depth-11 repair recover the first valid
+mechanical replacement for Phase 502's ineligible fixture 4?
+
+**Method:** preserve Phase 502 fixture 3's locked pass, select fixture 5 as
+the first subsequent index satisfying only the frozen construction gates, and
+run the identical schedule. Require exact top-1 on both fixtures 3 and 5.
+
+**Result:** fixture 5 recovered exact order at rank 1 with plaintext accuracy
+`1.0` and score `-4.5617931713`. Combined fixtures `[3,5]` passed `2/2`.
+
+**Disposition:** qualified operational-power gate passed and licenses one
+separately locked real `{g,i}`, width-19 run. It is a two-fixture capability
+check, not a population recovery estimate or evidence that the real pair and
+width are correct. Full report:
+[doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md](../../doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md).
+
+<!-- audit_doc_override: GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md -->
+## Phase 504 -- locked FAED `{g,i}` width-19 unrestricted run is a bounded miss (2026-09-14)
+
+**Question:** does the qualified unrestricted-checkerboard Model-B solver
+recover readable plaintext from real FAED at `{g,i}`, width 19?
+
+**Method:** lock FAED's 570 bytes, raw-digit columnar direction, width 19,
+unrestricted 25-slot board, the Phase-503-qualified schedule, one seed family,
+and inspection of every valid top-eight terminal decoding.
+
+**Result:** five of eight terminal orders segmented validly. Their decoded
+lengths were 437--440 and normalized scores ranged from `-5.1551914835` to
+`-5.2903119772`; every plaintext was gibberish. The best score was well below
+the two exact holdout winners (`-4.6751413500`, `-4.5617931713`). The earlier
+constrained false optimum reappeared as final rank 2.
+
+**Disposition:** bounded no-solve for one pair, width, direction, objective,
+schedule, and seed family. It does not reject Model B, other escape pairs or
+widths, non-English objectives, or other transposition constructions. The
+next bounded experiment is an all-pair synthetic identifiability gate before
+any real pair sweep. Full report:
+[doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md](../../doc/GSMG_PHASE499_504_WIDTH19_UNRESTRICTED_GATE_AND_REAL_AUDIT.md).
+## Phase 513 -- giant-decimal digit-string trick under the open `a0i8` convention: new cell closes negative, `a1i9` cell reproduces Phase 273 exactly (2026-09-16)
+
+**Question:** does Phase 273's "whole stream -> giant decimal integer ->
+hex -> ASCII" inversion of DBBI/FAED recover readable text under this
+project's other open escape-pair digit convention, `a0i8`, which Phase 273
+never tested?
+
+**Method:** `tools/gsmg/phase513_giant_decimal_escape_digit_audit.py`
+substitutes each of DBBI's 91 and FAED's 570 raw `a`-`i` symbols for a digit
+under both `a1i9` (`a=1 ... i=9`) and `a0i8` (`a=0 ... i=8`), reads the
+resulting digit string as one base-10 integer, converts that integer to
+hex, and decodes the hex as ASCII -- the identical mechanical steps Phase
+273 already used and already oracle-tested. Raw bytes and their SHA-256
+(raw and hex) forms for all four cells were run through the standard
+four-blob AES oracle family (CBC/stream/ECB/key-wrap).
+
+**Result:** because DBBI/FAED only ever use `a`-`i` (never Phase 273's
+transport alphabet's tenth symbol `o`), Phase 273's known `a=1...h=8,i=9,
+o=0` table and this project's `a1i9` escape-pair convention agree on every
+character these strings contain. The `a1i9` cell is therefore
+byte-for-byte identical to Phase 273's DBBI/FAED forward output --
+confirmed directly against Phase 273's own pinned SHA-256 hashes
+(`7270ed15...d8b80` for DBBI, `7f14db2d...02de9` for FAED) -- and is not
+new evidence, only a consistency check. The `a0i8` cell is new: distinct
+38-byte (DBBI) and 237-byte (FAED) bodies, hashes
+`38f51afc...138b920` and `4eb87c83...a4c6b`, absent from every other hash
+recorded anywhere in this project. Strict printable-byte ratios (0x20-0x7E
+only) for all four cells -- DBBI/`a1i9` 42.1%, DBBI/`a0i8` 39.5%, FAED/
+`a1i9` 32.9%, FAED/`a0i8` 29.5% -- sit far below the 100% Phase 273 gets
+decoding the page's own worked examples correctly, i.e. random-byte range.
+All 12 unique password-material forms (4 bodies x 3 treatments) returned
+**0 blob-oracle hits**; the Phase 3.2 positive control fired correctly.
+
+**Disposition:** closes the one genuinely untested cell of this idea
+(`a0i8` combined with the giant-decimal-integer trick) as a clean, narrow
+negative -- not a near-success. Restates, rather than newly confirms,
+Phase 273's `a1i9` result. Does not close: applying either digit
+convention to a smaller segment or substring, applying the trick after
+removing escape-pair structure first, any other digit convention, or
+applying it to a transposition-reordered stream rather than the raw
+observed string as printed. Also does not touch Phase 318's separate
+base-9-positional-bignum reading of the same `a0i8`/`a1i9` ambiguity, which
+tests different arithmetic and a different exact-match bar.
+
+**Artifacts:** `tools/gsmg/phase513_giant_decimal_escape_digit_audit.py`
+(6/6 self-test and unit assertions in
+`tools/gsmg/test_phase513_giant_decimal_escape_digit_audit.py`), cross-
+checked against `tools/gsmg/decimal_transport_inverse_audit.py` (Phase 273)
+and `tools/gsmg/dbbi_base9_bignum_audit.py` (Phase 318).
+## Phase 514 -- pre-decode keyed-columnar transposition of raw DBBI/FAED under `matrixsumlist`/`lastwordsbeforearchichoicethispassword`, combined with the validated checkerboard model: closed negative (2026-09-16)
+
+**Question:** does transposing the *raw* DBBI/FAED character streams via a
+keyed columnar transposition, using a key exactly sized to each target's
+own length factorization, then decoding through this project's already-
+validated `{b,e}`/`{g,i}`-family pad25 checkerboard model, recover
+readable text?
+
+**Background:** `cb_common.py` already implements `keyed_columnar()` with
+`KEYCOL_DBBI = "matrixsumlist"` (13 letters, DBBI = 91 = 7x13 exactly) and
+`KEYCOL_FAED = "lastwordsbeforearchichoicethispassword"` (38 letters, FAED
+= 570 = 15x38 exactly -- the literal concatenation of the page's own two
+decimal-transport control strings), with a docstring flagging the
+combination with the checkerboard model as untested. A full-repository
+grep confirmed `KEYCOL_DBBI`/`KEYCOL_FAED`/`KEYCOL_TRANSFORM_KINDS` had no
+call site anywhere except their own definition and a bare round-trip unit
+test. This is mechanically distinct from the already-closed Phase 321,
+which transposes the *post-checkerboard-decode* 0-24 code-slot sequence
+using 11 individual `CORE_ALPHABET_SEEDS` keywords (`lastwordsbeforearchichoice`
+and `thispassword` swept separately there, never concatenated, and never
+applied pre-decode).
+
+**Frozen construction:** 2 key spellings (forward, reversed) x 2
+`keyed_columnar` directions (encrypt, decrypt) = 4 pre-decode streams per
+target, 8 total -- all length-preserving over the target's own `a`-`i`
+alphabet, verified distinct. Each stream is decoded through exactly
+`matrixsum_permutation_sweep.py`'s existing escape pairs (`TARGET_ESCAPES`)
+and alphabet seeds (`CORE_ALPHABET_SEEDS`, 11 keywords), no new alphabets
+or escapes invented, plus its direct-byte path. Every checkerboard/direct-
+byte candidate is checked through the real AES oracle (all four tracked
+blobs). A shuffle gate (1,000 trials per target: shuffle the real target's
+symbol multiset, rerun the identical 4-variant/escape/seed pipeline,
+record its own best text-score) controls for the same multiple-comparisons
+risk Phase 321 needed for the sibling post-decode transposition family.
+
+**Result:** DBBI candidates = 88 (max possible, no dangling-escape drops),
+FAED candidates = 110 (of a 176 ceiling; the rest dropped for a dangling
+trailing escape, same skip rule `matrixsum_permutation_sweep.py` already
+uses). Top scores: DBBI `forward/decrypt`, escapes `eb`, seed
+`thispassword`, score 51.0; FAED `forward/decrypt`, escapes `eh`, seed
+`architect`, score 115.0 -- both decoded texts are gibberish on
+inspection. Shuffle gate: DBBI real_best=51.0 vs null_mean=41.0,
+null_max=149.0, 383/1,000 null trials matched or beat it (p=0.383); FAED
+real_best=115.0 vs null_mean=105.8, null_max=205.0, 474/1,000 matched or
+beat it (p=0.474). Both real-best scores sit well inside the null
+distribution, not in its tail. **0 AES-oracle hits** across the
+checkerboard path, the direct-byte path (`digits_as_bytes`, `whole_base9`),
+and their answer-form/keystring variants for both targets.
+
+**Disposition:** closes this exact closed candidate set (8 pre-decode
+keyed-columnar streams x the existing validated checkerboard/direct-byte
+paths) negative on both the shuffle-gate's own terms (no significant
+signal above chance-level multiple-comparisons noise) and this project's
+exact-match bar (zero blob-oracle hits). Does not close: any other
+transposition width or key, applying the transposition after `{b,e}`/`{g,i}`
+segmentation rather than to the raw stream, non-`top_first` topologies, or
+alphabet seeds outside the existing 11-keyword `CORE_ALPHABET_SEEDS` set.
+
+**Artifacts:**
+`tools/gsmg/phase514_predecode_keycol_checkerboard_audit.py` (self-test +
+4/4 unit assertions in
+`tools/gsmg/test_phase514_predecode_keycol_checkerboard_audit.py`), reusing
+`cb_common.keyed_columnar`/`KEYCOL_DBBI`/`KEYCOL_FAED` and
+`matrixsum_permutation_sweep.py`'s `TARGET_ESCAPES`/`CORE_ALPHABET_SEEDS`/
+`text_score`/`direct_byte_bodies` without modification.
+## Phase 515 -- Naddiseo issue #14's ternary digit-decomposition square matrix, extended with a giant-integer trick and grid-route reads: closed negative (2026-09-16)
+
+**Question:** [Naddiseo/gsmgio-5btc-puzzle#14](https://github.com/Naddiseo/gsmgio-5btc-puzzle/issues/14)
+(saama143, 2026-09-07, open, 0 comments) observes that under `a=1...i=9`,
+decomposing every symbol whose value exceeds 3 into a sum of 2s/3s written
+`b`(=2)/`c`(=3) (`d`->`bb`, `e`->`bc`, `f`->`cc`, `g`->`bbc`, `h`->`bcc`,
+`i`->`ccc`; `a`/`b`/`c` pass through unchanged for values 1/2/3) expands
+DBBI's 91 symbols and FAED's 570 symbols into exact perfect squares. Does
+this ternary `{a,b,c}` representation, combined with a giant-integer
+byte-decode and the natural grid-route reads a square shape supports,
+recover readable text?
+
+**Verification:** independently reproduced against this project's own
+pinned `DBBI`/`FAED` strings: expansion lengths 169 = 13^2 and 1225 = 35^2
+exactly. A full-repository grep found no prior mention of this
+decomposition, this issue, or its author -- genuinely untested here. Since
+`len(decompose(v)) == ceil(v/3)`, the expanded length is a pure function of
+the (already-known, non-uniform) letter histogram, independent of symbol
+order, so this project's usual shuffle-gate null model cannot test it (a
+shuffle never changes the total). An exact convolution against a
+uniform-digit null instead gives DBBI z=-1.67 (unremarkable) and FAED
+z=+4.36 (this largely restates FAED's already-documented letter-frequency
+skew, not new evidence about squareness specifically); joint probability
+of both landing on *some* perfect square, independence assumed, is
+~0.035%. Real but modest -- comparable to other numeric coincidences this
+project has bounded-tested rather than dismissed or promoted outright.
+Cheap structural checks (transpose symmetry, duplicate rows/columns,
+diagonals) on the row-major 13x13/35x35 grids found nothing.
+
+**Frozen construction:** 8 grid-route reads of each target's own square
+shape (`dual_ternary_sweep.py`'s existing, already-validated route family
+-- rows/columns/snake variants; "columns" is literally the matrix
+transpose, the one operation this square shape uniquely supports) x 2
+non-arbitrary digit conventions applied to the resulting `{a,b,c}` stream
+(true base-3 positional, `a=0,b=1,c=2`; and a decimal digit string using
+only 1-3, `a=1,b=2,c=3` -- the exact convention Phase 513's giant-decimal
+trick already uses, restricted to 3 of its 10 digits) = 32 closed cells.
+Odd-length hex is rejected rather than repaired with an invented leading
+zero, same policy as Phase 513. Every valid byte body's raw form, SHA-256
+raw, and SHA-256 hex were checked through the standard four-blob AES
+oracle.
+
+**Result:** 16 of 32 cells valid (the other 16 rejected for odd hex parity
+-- one full digit convention per target rejects across all 8 routes
+uniformly, since routing only reorders symbols and never changes the
+digit-string's length/parity). Strict printable-byte ratios topped out at
+40.7% (FAED, `base3_a0c2`, four different routes, four different SHA-256
+hashes) and 40.0% (DBBI, `columns_reverse`/`decimal_a1c3`) -- squarely in
+the 39-42% random-byte noise range Phase 513 already established, not the
+100% a correctly-decoded worked example gets. **0 blob-oracle hits** across
+all 48 unique password-material forms (16 bodies x 3 treatments); the
+Phase 3.2 positive control fired correctly.
+
+**Disposition:** closes this exact closed candidate set (8 routes x 2
+digit conventions x 2 targets) negative, on both the numeric-coincidence
+significance check (real but not extraordinary once FAED's known skew is
+accounted for) and this project's exact-match bar (zero blob-oracle hits,
+noise-range printable ratios). Does not close: any other digit convention
+for the ternary alphabet, treating the `b`/`c` decomposition as anything
+other than length (e.g. as an actual positional/checkerboard/Trifid-style
+code), diagonal or spiral routes beyond the 8 tested, or applying the
+expansion after `{b,e}`/`{g,i}`-family escape-pair segmentation rather
+than to the raw stream.
+
+**Artifacts:**
+`tools/gsmg/phase515_ternary_decomposition_square_matrix_audit.py`
+(self-test + 5/5 unit assertions in
+`tools/gsmg/test_phase515_ternary_decomposition_square_matrix_audit.py`),
+reusing `dual_ternary_sweep.py`'s `ROUTES`/`route_text` and
+`nibble_packing_audit.py`'s `analyze_body`/`evaluate_materials` without
+modification.

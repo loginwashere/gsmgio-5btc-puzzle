@@ -141,6 +141,12 @@ completed-fixture progress, via the resumable `summary.json` pattern.
 
 ## Reproduction
 
+The compact terminal records are preserved under
+`tools/gsmg/phase488_results/`; unlike the large ignored checkpoint trees,
+they are intended to be versioned. Recompute the headline counts and verify
+their schedule/provenance fields with
+`python3 tools/gsmg/phase488_489_verify_records.py`.
+
 ```bash
 cd tools/gsmg
 

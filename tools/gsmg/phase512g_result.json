@@ -1,0 +1,15 @@
+{
+  "checkpoint_sha256": "67c83208df4a64258f521eadfa0343251313c0cd41d480b86718bb8109b71adf",
+  "crib_ascii_sha256": "5dbea2b20cf2844c22de8d513558a54bfdaf29c5e83458112029ddc6991d569b",
+  "direction": "untranspose_geometry_decrypt",
+  "execution_lock_sha256": "0ab31cceae4664a020cd96f781d19d9d0ce120adb4d30176276470234aa733c8",
+  "faed_ascii_sha256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+  "hit_count": 0,
+  "incomplete_cell_count": 0,
+  "pair_start_cells_completed": 18648,
+  "phase": "512G",
+  "starts_completed": 518,
+  "status": "locked_faed_crib_search_complete",
+  "verdict": "bounded_negative",
+  "width": 15
+}

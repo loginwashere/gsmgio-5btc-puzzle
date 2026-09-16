@@ -1,0 +1,54 @@
+{
+  "candidate_count": 43,
+  "crypto_profile": "legacy-evp-bytes-to-key-sha256/aes-256-cbc/pkcs7",
+  "cryptography_version": "41.0.7",
+  "files_sha256": {
+    "cb_common": "97e787a8be234b7ba5b7b8e0c1ba1abe0f8c61f480e5628da7883ef30db84de8",
+    "data": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "manifest": "7129e3f1badabd21bb6cec474296fe80608e8380453d483e2fc8a4c961b5f01d",
+    "oracle": "b5d4ce1c96ab0145b8308380b13d9be89d3e0ec11f5f8c8542877ab9969ef45a",
+    "protocol": "5a17e0fd09ec4fc4ef524e6f5be4db4cd9bf2be336f44152917719b25553b1bf",
+    "runner": "4ffdc6ba522bc0de0c0dd87d09a9b56f99fba554306cab3a7244c6da8b7bbe9e"
+  },
+  "password_construction": "sha256(preimage).hexdigest().encode('ascii')",
+  "phase": 507,
+  "planned_decryptions": 129,
+  "prohibitions": {
+    "alternate_kdf_or_cipher": true,
+    "candidate_mutations": true,
+    "repeat_after_result_inspection": true,
+    "urlblob": true
+  },
+  "source_artifacts_sha256": {
+    "phase489_width30_gi": "e141036e2328630454a62e12375c3967c7bc474184fb7b995d2ee8819349c9c1",
+    "phase504_width19_gi_unrestricted": "c22336ff7def3c337e2700b7506fc0d0bb30173c6006d95b11c483a9b6b4b17f",
+    "phase506_rank1_ei": "417d63fcca83bd9f0736e7eb26d013ed374770a4c6319e1a5d4a0460b652aab8",
+    "phase506_rank2_ac": "b4a7e573125598d085fe4baafb85e55ebe7d09776e9ec8946e5479c79f445651",
+    "phase506_rank3_bi": "11eb26131c4c03807a3650a8e0192f450cb78531b30341b3c5cc807959c2131a",
+    "phase506_rank4_dh": "1adbae6a1d7283874cb60962410a82e3d80f8418862a63d8a69b602803d0a65e",
+    "phase506_rank5_fi": "48d832a4b6a98bae36818547197ad50eb94055be912868681eb889018dbe5e05"
+  },
+  "status": "locked_before_real_aes_oracle",
+  "targets": {
+    "COSMIC": {
+      "ciphertext_length": 1328,
+      "ciphertext_sha256": "43cb531c22272449eeec4b9bf761dbaae33e34edbf1122938fcd6f10ce0d1953",
+      "salt_hex": "2d3f6fe06dc950e6"
+    },
+    "P32TRAILING": {
+      "ciphertext_length": 80,
+      "ciphertext_sha256": "cbbf945223b0c7a60e31b6ba7f5dfbc17f68f545bec059e937c11e7465d0117b",
+      "salt_hex": "b45a5e3d827593ca"
+    },
+    "SALPH": {
+      "ciphertext_length": 80,
+      "ciphertext_sha256": "772a637792734babebbfd69f5c88b79ce48a6dee0f09b837b056812ec2bc357b",
+      "salt_hex": "3ab585348552415d"
+    }
+  },
+  "validators": {
+    "padding_alone_promotes": false,
+    "strong_text_minimum_z": 8.0,
+    "structural_binary": "aes/block16/pad16/body64"
+  }
+}

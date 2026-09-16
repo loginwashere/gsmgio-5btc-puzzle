@@ -1,0 +1,13 @@
+{
+  "consistent": true,
+  "execution_lock_sha256": "764e6d7282350ac70dd837df6c7d35a93abddb0719a40213fcc9e6fc72b7a328",
+  "faed_scored": false,
+  "fixture_count": 3,
+  "incremental_value_pass_count": 0,
+  "null_trials_recomputed": 600,
+  "phase": "511",
+  "protocol_sha256": "460c3c0c53e8d480cb4dbddb527e635c772236192904e3cb6f1db5e13e5e2024",
+  "result_sha256": "46c1c6ba16cec24ab5ec08f7e5edd11613d6011ee260e8897f749b3fc8373f22",
+  "runner_sha256": "13c619a7a5928aa8a5a553a48e1095e12654c22dece82df345ed8d4178938b3d",
+  "transfer_pass_count": 3
+}

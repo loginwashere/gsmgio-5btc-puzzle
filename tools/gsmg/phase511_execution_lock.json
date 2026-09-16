@@ -1,0 +1,37 @@
+{
+  "closed_corpus_source_count": 4,
+  "evaluation_region_sha256": {
+    "phase2_solved_plaintext": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+    "phase32_literal_plaintext": "ebe9074428e07de07f712c6c3fbfc5fc6220874ec8cde18ec5bf887c409598e1",
+    "phase3_literal_plaintext": "5581f74069c2f8da681806372e172ece5502fe6f995991b749697ff4dd8f7c5d"
+  },
+  "evaluation_sources": [
+    "phase2_solved_plaintext",
+    "phase3_literal_plaintext",
+    "phase32_literal_plaintext"
+  ],
+  "faed_scored": false,
+  "family_statistic": "max order-2/order-3 symmetric ensemble z-score",
+  "files_sha256": {
+    "generic_quadgrams": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+    "phase510a_builder": "f9f76a2bcc5d1e7ad3e1a6af3d7ab675b767727730ab56e1b63634ed3af56316",
+    "phase510a_manifest": "1f6cde61ca1b2adff89fa2ede1cef001b0f24a046b6d94572513d4cd8a68a5fb",
+    "phase510b_runner": "cb7e7ff614c49a74390d0cced2993b0233cc72003b5a498678281103b9dc93d0",
+    "protocol": "460c3c0c53e8d480cb4dbddb527e635c772236192904e3cb6f1db5e13e5e2024",
+    "runner": "13c619a7a5928aa8a5a553a48e1095e12654c22dece82df345ed8d4178938b3d"
+  },
+  "gate": "all fixtures: 0/200 family exceedances and real family z > real generic z",
+  "generic_comparator": "symmetric ensemble z-score of frozen English quadgram mean",
+  "model": "order-(n-1) Markov; add-one smoothing; 26 next letters; mean log10 probability",
+  "normalization": "lowercase ASCII letters, each source kept separate",
+  "null": "200 exact-letter-multiset PCG32 Fisher-Yates shuffles per fixture",
+  "null_seed": 85049566,
+  "null_trials": 200,
+  "orders": [
+    2,
+    3
+  ],
+  "phase": "511",
+  "status": "locked_before_heldout_character_scoring",
+  "ties_are_exceedances": true
+}
