@@ -202,6 +202,7 @@ recent:
 - [GSMG_STRICT_TRANSITION_WORKSHEET](GSMG_STRICT_TRANSITION_WORKSHEET.md) — the 5-gate evidence-discipline worksheet; start here for any new candidate.
 - [GSMG_FACT_LEDGER](GSMG_FACT_LEDGER.md) — what claims are currently accepted, with exact scope.
 - [GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md) — what specific evidence would unblock progress, per gap.
+- [GSMG_TECHNIQUE_TARGET_COVERAGE_MATRIX](GSMG_TECHNIQUE_TARGET_COVERAGE_MATRIX.md) — technique x target survey; where the closed-system search space is saturated vs. genuinely untried.
 - [GSMG_PHASE_INDEX](GSMG_PHASE_INDEX.md) — generated index of all FINDINGS.md phases.
 - [GSMG_PHASE_TEMPLATE](GSMG_PHASE_TEMPLATE.md) — standard fields for new phase entries.
 - [GSMG_OBJECT_DBBI](GSMG_OBJECT_DBBI.md), [GSMG_OBJECT_FAED](GSMG_OBJECT_FAED.md) — pilot per-artifact reference pages.
