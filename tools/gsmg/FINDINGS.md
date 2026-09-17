@@ -29910,3 +29910,65 @@ pre-publication).
 **Reopen condition:** any item only reopens on a new creator source,
 primary artifact, or authenticated selector specific to that item's own
 construction, not on re-running the same construction again.
+<!-- audit_doc_override: GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT.md -->
+## Phase 518 -- positional cross-stream correspondence gate, no calibrated correspondence (2026-09-17)
+
+**Question:** the Post-Phase-452 Portfolio's item 1 (asymmetric DBBI/FAED
+generator tournament) needs a prerequisite gate: is there any detectable
+positional correspondence between DBBI and FAED at all, beyond what each
+stream's own internal structure explains, before building five directional
+generator-relationship models on top of it?
+
+**Correction before real scoring:** the frozen protocol's original "K=91 AND
+K=13 both required" promotion rule was found underpowered during required
+pre-interpretation control validation (on synthetic fixtures, before DBBI/
+FAED were touched) -- a fixture with total by-construction correspondence at
+K=91 did not reliably clear p<=0.005 at K=13, since 13 aligned samples is
+too few for the mutual-information estimator to separate signal from a noisy
+null at that bar. Corrected same day: K=91 is the sole primary gate; K=13 is
+a diagnostic-only sensitivity check.
+
+**Method:** `tools/gsmg/phase518_positional_cross_stream_correspondence_gate.py`.
+Both streams partitioned into K proportional blocks (K=91, K=13, both exact
+divisors of 91); each block's feature is its mode raw symbol. Statistic is
+plug-in mutual information between the K aligned block-mode pairs, reusing
+the validated `mutual_information()` helper. Two matched nulls (20,000
+replicates each), reusing Phase 459/460's exact Euler-traversal and
+endpoint-fixed-shuffle surrogate generators, applied independently to each
+stream. All required controls (MI self-test, null invariants, determinism,
+independent-fixture negative control, planted-correspondence positive
+control, block-tiling determinism) passed before real scoring.
+
+**Result:** K=91 observed MI 0.595332 bits vs. null medians 0.560510/
+0.561145 (Euler/shuffle), `p=0.317034`/`p=0.318134` -- statistically
+unremarkable. K=13 observed 0.677134 bits sits *below* both null medians
+(`p=0.632618`/`p=0.549023`). Phase-level decision: `no_calibrated_correspondence`.
+
+**Disposition:** no detectable positional correspondence survives between
+DBBI and FAED at either granularity, under either null. This closes the
+tournament's prerequisite gate negative: none of the five non-independent
+branches (shared latent alphabet, DBBI-parameterizes-FAED, FAED-parameterizes-
+DBBI, alternating control/data channels, common source through two encoders)
+has a positional-alignment signal to build on; only "independent generators"
+remains uncontradicted. Corroborates, at a coarser positional level, Phase
+412's existing independent-profile finding and Phase 371's structural
+independent-consumer finding. Corroboration_only; does not reopen or close
+`G-YIN-001`/`G-ESC-001`, does not test a specific coupling operator (unlike
+Phases 271-321/451), and does not repeat or supersede Phase 412.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none against prior phases; corrects its own
+same-day protocol draft's promotion rule before any real score was computed.
+
+**Artifacts:** `doc/Brainstorms/2026-09-17 - Phase 518 Positional
+Cross-Stream Correspondence Gate Protocol.md`,
+`tools/gsmg/phase518_manifest.json`,
+`tools/gsmg/phase518_positional_cross_stream_correspondence_gate.py`,
+`tools/gsmg/test_phase518_positional_cross_stream_correspondence_gate.py`,
+`tools/gsmg/phase518_result.json`.
+
+**Reopen condition:** only on a new primary source, recovered creator
+artifact, or structurally forced reading that licenses a specific DBBI/FAED
+coupling operator or generator relationship -- not on re-running this or a
+similar undirected statistical dependency test again.

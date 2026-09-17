@@ -188,6 +188,23 @@ corroboration_only unless G-ESC-001's external closure condition is met.
 
 ## 1. Asymmetric DBBI/FAED generator tournament
 
+> [!info] Prerequisite gate executed as Phase 518 — no calibrated correspondence
+> Before building five directional generator models, Phase 518 tested
+> whether any undirected positional correspondence exists between DBBI and
+> FAED at all (a mutual-information gate at two DBBI-native block
+> granularities, matched against Euler-traversal and endpoint-shuffle
+> nulls). Result: `no_calibrated_correspondence` at both granularities. None
+> of this item's five non-independent branches (shared latent alphabet,
+> DBBI-parameterizes-FAED, FAED-parameterizes-DBBI, alternating
+> control/data channels, common source through two encoders) has a
+> positional-alignment signal to build a directional construction on. Full
+> result: [Phase 518 audit](../GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT.md).
+> Corroboration_only; does not select a generator model or close/reopen
+> `G-YIN-001`. The five directional branches remain unexecuted and are not
+> authorized by this result — they would need a genuinely new primary
+> source or structurally forced reading, which this closed-system
+> statistical gate cannot supply.
+
 Extend Phases 271–321 and 412/413 with a closed tournament:
 
 - independent generators;

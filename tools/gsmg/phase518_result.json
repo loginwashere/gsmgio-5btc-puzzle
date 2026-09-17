@@ -1,0 +1,96 @@
+{
+  "phase": 518,
+  "manifest_protocol_sha256": "464455dd6a68604ac6fac7ed1ff851c1e067ce04473e9e2ed9f8dd2ef019f2e3",
+  "source_lengths": {
+    "DBBI": 91,
+    "FAED": 570
+  },
+  "granularities": [
+    91,
+    13
+  ],
+  "controls": {
+    "independent_fixture": {
+      "by_k": {
+        "91": {
+          "observed_mi_bits": 0.4035761565080159,
+          "decision": "no_calibrated_correspondence"
+        },
+        "13": {
+          "observed_mi_bits": 0.25775606412851765,
+          "decision": "no_calibrated_correspondence"
+        }
+      },
+      "phase_level_decision": "no_calibrated_correspondence"
+    },
+    "planted_fixture": {
+      "by_k": {
+        "91": {
+          "observed_mi_bits": 3.1064344276655667,
+          "decision": "robust_correspondence"
+        },
+        "13": {
+          "observed_mi_bits": 2.345851989338261,
+          "decision": "null_sensitive"
+        }
+      },
+      "phase_level_decision": "robust_correspondence"
+    }
+  },
+  "by_k": {
+    "91": {
+      "k": 91,
+      "observed_mi_bits": 0.5953320226851232,
+      "primary_euler": {
+        "trials": 20000,
+        "extreme_count": 6340,
+        "empirical_p": 0.31703414829258536,
+        "minimum": 0.33262433008622433,
+        "median": 0.5605097931346378,
+        "q95": 0.6876134398507852,
+        "maximum": 0.8792377593358381
+      },
+      "sensitivity_endpoint_shuffle": {
+        "trials": 20000,
+        "extreme_count": 6362,
+        "empirical_p": 0.3181340932953352,
+        "minimum": 0.3315499774821723,
+        "median": 0.5611448447986298,
+        "q95": 0.6855125554220111,
+        "maximum": 0.9018510738477684
+      },
+      "decision": "no_calibrated_correspondence"
+    },
+    "13": {
+      "k": 13,
+      "observed_mi_bits": 0.6771344174636724,
+      "primary_euler": {
+        "trials": 20000,
+        "extreme_count": 12652,
+        "empirical_p": 0.6326183690815459,
+        "minimum": 0.05997383390180781,
+        "median": 0.7741440273744447,
+        "q95": 1.2548094177965137,
+        "maximum": 2.045841640885174
+      },
+      "sensitivity_endpoint_shuffle": {
+        "trials": 20000,
+        "extreme_count": 10980,
+        "empirical_p": 0.5490225488725564,
+        "minimum": 0.0006611406448453171,
+        "median": 0.7083937987380338,
+        "q95": 1.2153238345674904,
+        "maximum": 1.8542858719872461
+      },
+      "decision": "no_calibrated_correspondence"
+    }
+  },
+  "phase_level_decision": "no_calibrated_correspondence",
+  "maximum_inference": "corroboration_only_no_gap_closure_no_operator_selection",
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "network_touched": false,
+  "gpu_touched": false,
+  "docker_touched": false,
+  "external_agents_used": false
+}

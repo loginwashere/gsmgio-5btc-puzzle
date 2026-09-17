@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **495** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **496** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -513,3 +513,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 515 | P515 | 2026-09-16 | Naddiseo issue #14's ternary digit-decomposition square matrix, extended with a giant-integer trick and grid-route reads | closed negative | [source](../tools/gsmg/findings/P00515.md) | [link](../tools/gsmg/FINDINGS.md#phase-515----naddiseo-issue-14s-ternary-digit-decomposition-square-matrix-extended-with-a-giant-integer-trick-and-grid-route-reads-closed-negative-2026-09-16) | — |
 | 516 | P516 | 2026-09-17 | DBBI width-7 unrestricted-order transposition, exhaustive and calibrated negative | — | [source](../tools/gsmg/findings/P00516.md) | [link](../tools/gsmg/FINDINGS.md#phase-516----dbbi-width-7-unrestricted-order-transposition-exhaustive-and-calibrated-negative-2026-09-17) | [GSMG_PHASE516_DBBI_WIDTH7_UNRESTRICTED_AUDIT](GSMG_PHASE516_DBBI_WIDTH7_UNRESTRICTED_AUDIT.md) |
 | 517 | P517 | 2026-09-17 | closed-system untried theory batch (Tier 1 + Tier 2), nine items all closed negative | — | [source](../tools/gsmg/findings/P00517.md) | [link](../tools/gsmg/FINDINGS.md#phase-517----closed-system-untried-theory-batch-tier-1-tier-2-nine-items-all-closed-negative-2026-09-17) | [GSMG_PHASE517_CLOSED_SYSTEM_THEORY_BATCH_AUDIT](GSMG_PHASE517_CLOSED_SYSTEM_THEORY_BATCH_AUDIT.md) |
+| 518 | P518 | 2026-09-17 | positional cross-stream correspondence gate, no calibrated correspondence | — | [source](../tools/gsmg/findings/P00518.md) | [link](../tools/gsmg/FINDINGS.md#phase-518----positional-cross-stream-correspondence-gate-no-calibrated-correspondence-2026-09-17) | [GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT](GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT.md) |

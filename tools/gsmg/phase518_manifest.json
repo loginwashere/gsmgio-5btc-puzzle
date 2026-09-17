@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "phase": 518,
-  "status": "frozen_before_implementation_and_real_scoring",
+  "status": "frozen_before_implementation_and_real_scoring_corrected_same_day",
   "protocol": "doc/Brainstorms/2026-09-17 - Phase 518 Positional Cross-Stream Correspondence Gate Protocol.md",
-  "protocol_sha256": "fdd6b489cb4a81f609573e1665e1577ab12dcd10d06fb1d9dbb56d4adb95cdce",
+  "protocol_sha256": "464455dd6a68604ac6fac7ed1ff851c1e067ce04473e9e2ed9f8dd2ef019f2e3",
   "scope": "positional_cross_stream_correspondence_gate_only",
   "phase_level_disposition": "corroboration_only_no_gap_closure",
   "source_streams": {
@@ -32,7 +32,7 @@
   "primary_null": "independent_randomized_euler_traversals_preserving_exact_directed_bigram_multigraph_and_start_symbol",
   "sensitivity_null": "independent_endpoint_fixed_interior_shuffles_preserving_exact_unigrams",
   "promotion_threshold": 0.005,
-  "phase_level_promotion_rule": "robust_correspondence_at_both_K_values_required",
+  "phase_level_promotion_rule": "K91_is_sole_primary_gate_K13_diagnostic_only_corrected_same_day",
   "controls": [
     "mutual_information_self_test",
     "null_invariant_preservation",

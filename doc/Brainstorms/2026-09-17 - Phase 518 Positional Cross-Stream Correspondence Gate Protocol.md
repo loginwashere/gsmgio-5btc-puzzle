@@ -2,7 +2,7 @@
 type: hypothesis
 phase: 518
 date: 2026-09-17
-status: frozen-before-real-scoring
+status: frozen-before-real-scoring-corrected-same-day
 topics:
   - calibration
   - dual-stream
@@ -14,6 +14,21 @@ topics:
 ---
 
 # Phase 518 — Positional Cross-Stream Correspondence Gate Protocol
+
+> [!caution] Correction (2026-09-17, same day, before any real scoring)
+> The required pre-interpretation controls (below) are run on synthetic
+> fixtures before DBBI/FAED are ever touched. Running them found that the
+> original "`robust_correspondence` requires both `K=91` and `K=13` to
+> independently pass" rule is underpowered at `K=13`: a fixture built with
+> total, by-construction correspondence at `K=91` does not reliably clear
+> the `p<=0.005` bar at `K=13`, because `K=13` yields only 13 aligned data
+> points and the mutual-information estimator's own null distribution is too
+> noisy at that sample size to separate real signal from chance at this
+> threshold — regardless of how strong the true relationship is. No real
+> DBBI/FAED score was computed under the original rule. The corrected rule
+> (reflected in the sections below and in `phase518_manifest.json`) makes
+> `K=91` the sole primary promotion gate and reports `K=13` as a diagnostic
+> sensitivity check only, not a second required gate.
 
 ## Question
 
@@ -111,13 +126,11 @@ Phase 460's rule:
 - `null_sensitive` if exactly one null passes;
 - `no_calibrated_correspondence` otherwise.
 
-The phase-level decision is `robust_correspondence` only if **both** `K=91`
-and `K=13` independently reach `robust_correspondence`. Any lesser outcome
-at either `K` yields `no_calibrated_correspondence` (or `null_sensitive` if
-one `K` is null-sensitive and the other passes) as the phase-level result.
-`K=13` is a full second gate, not a diagnostic-only sensitivity check —
-matching the conservative "AND across granularities" bar already established
-by requiring both nulls to agree.
+The phase-level decision equals `K=91`'s own decision. `K=13` is computed,
+reported, and checked for directional consistency (same sign of departure
+from its null medians) but does not gate promotion — see the correction
+note above for why an "AND across granularities" rule was dropped before any
+real scoring.
 
 ## Required pre-interpretation controls
 
@@ -137,8 +150,9 @@ by requiring both nulls to agree.
    deterministically expanding each DBBI-fixture symbol into its
    proportional FAED-fixture block (so a real positional correspondence
    exists by construction) — the phase-level decision on this fixture must
-   reach `robust_correspondence` at both `K` values, demonstrating the test
-   has power to detect the exact class of relationship it is built to find.
+   reach `robust_correspondence` at `K=91`, demonstrating the test has power
+   to detect the exact class of relationship it is built to find. (`K=13`'s
+   behavior on this fixture is reported only, per the correction above.)
 6. Block-partition determinism: the `[floor(j*N/K), floor((j+1)*N/K))`
    boundaries tile each stream exactly with no gap or overlap, at both `K`
    values, for both stream lengths.

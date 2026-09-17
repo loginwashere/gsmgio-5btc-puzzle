@@ -103,6 +103,11 @@ rg -il '\bFAED\b' doc tools/gsmg/FINDINGS.md
 - Phase 330 — [GSMG_EXTERNAL_ARCHIVE_AUDIT](GSMG_EXTERNAL_ARCHIVE_AUDIT.md),
   independently verifies the whole-stream seven-key capacity exclusion and
   scopes the external frequency/mod-9 claims.
+- Phase 518 — [GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT](GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT.md),
+  positional mutual-information gate for the asymmetric generator
+  tournament (Post-Phase-452 Portfolio item 1): no correspondence between
+  DBBI and FAED survives matched Euler/shuffle nulls at either DBBI-native
+  block granularity (K=91, K=13). Corroboration-only; `G-YIN-001` unchanged.
 
 ## Related objects
 

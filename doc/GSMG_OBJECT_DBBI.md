@@ -98,6 +98,11 @@ rg -il '\bDBBI\b' doc tools/gsmg/FINDINGS.md
   pairs, calibrated against 3 shuffled-DBBI null trials — real result
   scored below all three nulls. Closed negative; width 13 remains open,
   gated on a non-brute-enumeration search architecture.
+- Phase 518 — [GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT](GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT.md),
+  positional mutual-information gate for the asymmetric generator
+  tournament (Post-Phase-452 Portfolio item 1): no correspondence between
+  DBBI and FAED survives matched Euler/shuffle nulls at either DBBI-native
+  block granularity (K=91, K=13). Corroboration-only; `G-YIN-001` unchanged.
 
 ## Related objects
 
