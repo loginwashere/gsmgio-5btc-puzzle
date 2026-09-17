@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "phase": 518,
+  "status": "frozen_before_implementation_and_real_scoring",
+  "protocol": "doc/Brainstorms/2026-09-17 - Phase 518 Positional Cross-Stream Correspondence Gate Protocol.md",
+  "protocol_sha256": "fdd6b489cb4a81f609573e1665e1577ab12dcd10d06fb1d9dbb56d4adb95cdce",
+  "scope": "positional_cross_stream_correspondence_gate_only",
+  "phase_level_disposition": "corroboration_only_no_gap_closure",
+  "source_streams": {
+    "DBBI": {
+      "length": 91,
+      "sha256_utf8": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca"
+    },
+    "FAED": {
+      "length": 570,
+      "sha256_utf8": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2"
+    }
+  },
+  "precedent_digests": {
+    "tools/gsmg/phase459_dual_stream_escape_pair_calibration.py": "202297f7363ac1c6b0ee5c245da4f571dd28ea832a7340e8623971007d194ca8",
+    "tools/gsmg/phase460_boundary_safe_dual_stream_calibration.py": "e6d5dee9f717b4bec57e85360b897eb1c6d0f26fc92bb107bb44920038a3bb5a",
+    "tools/gsmg/dbbi_faed_base81_token_audit.py": "17e9bc3ee015a0b8331d48ad547d0e3ae1a5273788238f72033ceacb5669b1f7",
+    "tools/gsmg/phase412_dbbi_faed_generative_model_comparison_audit.py": "39f10f575056101976c5c0b38f886c2f935c24e6e3d4da5e9e338380ea479ea7"
+  },
+  "alphabet": "abcdefghi",
+  "granularities": [91, 13],
+  "block_partition": "floor(j*N/K) .. floor((j+1)*N/K)",
+  "block_feature": "mode_symbol_alphabetical_tiebreak",
+  "statistic": "mutual_information_bits_over_K_aligned_block_mode_pairs",
+  "master_seed": 51820260917,
+  "trials_per_null": 20000,
+  "primary_null": "independent_randomized_euler_traversals_preserving_exact_directed_bigram_multigraph_and_start_symbol",
+  "sensitivity_null": "independent_endpoint_fixed_interior_shuffles_preserving_exact_unigrams",
+  "promotion_threshold": 0.005,
+  "phase_level_promotion_rule": "robust_correspondence_at_both_K_values_required",
+  "controls": [
+    "mutual_information_self_test",
+    "null_invariant_preservation",
+    "determinism",
+    "independent_fixture_negative_control",
+    "planted_correspondence_positive_control",
+    "block_partition_tiling_determinism"
+  ]
+}
