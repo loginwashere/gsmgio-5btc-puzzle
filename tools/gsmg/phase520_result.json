@@ -1,0 +1,94 @@
+{
+  "phase": 520,
+  "structural_check": {
+    "dbbi_length": 91,
+    "faed_length": 570,
+    "spliced_length": 661,
+    "is_prime": true,
+    "nontrivial_factor_pairs": [],
+    "conclusion": "no nontrivial rectangular transposition grid applies to the full spliced stream"
+  },
+  "code_ic_fit": {
+    "dbbi_alone": {
+      "loss": 7.62928827444942e-05,
+      "best_pairs": [
+        "be"
+      ]
+    },
+    "faed_alone": {
+      "loss": 0.007290836233259518,
+      "best_pairs": [
+        "gi"
+      ]
+    },
+    "spliced_dbbi_then_faed": {
+      "loss": 0.01008069529181535,
+      "best_pairs": [
+        "eg"
+      ]
+    },
+    "spliced_faed_then_dbbi": {
+      "loss": 0.012226323146084392,
+      "best_pairs": [
+        "gi"
+      ]
+    }
+  },
+  "nulls": {
+    "primary_euler": {
+      "trials": 20000,
+      "extreme_count": 8596,
+      "empirical_p": 0.4298285085745713,
+      "minimum": 0.006495534728139102,
+      "median": 0.010244886166647399,
+      "q05": 0.008750516392551519,
+      "maximum": 0.013960520594365228
+    },
+    "sensitivity_endpoint_shuffle": {
+      "trials": 20000,
+      "extreme_count": 19473,
+      "empirical_p": 0.9736513174341282,
+      "minimum": 0.00014706971420877513,
+      "median": 0.006947722085709054,
+      "q05": 0.004060903574054767,
+      "maximum": 0.012865952948585307
+    }
+  },
+  "promotion_threshold": 0.005,
+  "decision": "no_calibrated_joint_coherence",
+  "stage3_run": true,
+  "maximum_inference": "corroboration_only_no_gap_closure_no_matrixsumlist_reading_selected",
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "coherence_check": {
+    "dbbi_alone_at_own_best_pair": {
+      "pair": "be",
+      "token_count": 63,
+      "raw_quadgram_score": -285.25196091503176,
+      "normalized_quadgram_score": -4.754199348583863,
+      "decoded_preview": "NGTOFIIASHEPAATEASSURRYWEREELDONEALLINGLIIISOAUSCANITOOLSTSAMPA"
+    },
+    "faed_alone_at_own_best_pair": {
+      "pair": "gi",
+      "token_count": 436,
+      "raw_quadgram_score": -2412.8878960231123,
+      "normalized_quadgram_score": -5.57248936725892,
+      "decoded_preview": "OIERDEEROATRITSSDAIRAOERRNRLYPIERDZOIEAUDARICESISTISMAEWLOGOPWITWIPEGIALTEINDEEDIOTIANARTEWOIIOAFISVEEOUSADIEVETSSEGUAEP"
+    },
+    "spliced_dbbi_then_faed_at_joint_best_pair": {
+      "pair": "eg",
+      "token_count": 511,
+      "raw_quadgram_score": -2902.4816038332565,
+      "normalized_quadgram_score": -5.713546464238694,
+      "decoded_preview": "NSSESISTOOSYSETASXHTSYLLSXSLTTXTTISASINTSZIONSSIOOOPISURKSGOESISIIMPUBSZAGRUNIOSNASTTROANOIGNCNPMVAGREAIAKFRONAETDATSATE"
+    },
+    "spliced_faed_then_dbbi_at_joint_best_pair": {
+      "pair": "gi",
+      "token_count": 515,
+      "raw_quadgram_score": -2851.8038152721365,
+      "normalized_quadgram_score": -5.569929326703392,
+      "decoded_preview": "OIERDEEROATRITSSDAIRAOERRNRLYPIERDZOIEAUDARICESISTISMAEWLOFOPWITWIPEFIALTEINDEEDIOTIANARTEWOIIOAXISVEEOUSADIEVETSSEFUAEP"
+    }
+  },
+  "elapsed_seconds": 130.47097269500046
+}

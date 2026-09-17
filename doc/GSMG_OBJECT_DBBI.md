@@ -103,6 +103,13 @@ rg -il '\bDBBI\b' doc tools/gsmg/FINDINGS.md
   tournament (Post-Phase-452 Portfolio item 1): no correspondence between
   DBBI and FAED survives matched Euler/shuffle nulls at either DBBI-native
   block granularity (K=91, K=13). Corroboration-only; `G-YIN-001` unchanged.
+- Phase 520 — [GSMG_PHASE520_DBBI_FAED_JOINT_SPLICE_HYPOTHESIS_AUDIT](GSMG_PHASE520_DBBI_FAED_JOINT_SPLICE_HYPOTHESIS_AUDIT.md),
+  tests whether `DBBI+FAED` concatenated (treating `matrixsumlist` as a
+  pure splice marker, PEM-style) decodes as one coherent 661-symbol
+  checkerboard stream. `661` is prime (excludes a transposition-grid
+  reading structurally); the joint escape-pair fit and board-anneal
+  decode both close negative against matched nulls and each stream's own
+  separate best decode. Corroboration-only; `G-YIN-001`/`G-MSL-001` unchanged.
 
 ## Related objects
 
