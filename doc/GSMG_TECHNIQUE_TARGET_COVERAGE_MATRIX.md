@@ -55,7 +55,7 @@ the *Cosmic Duality* book text, and the Telegram/creator corpus itself —
 these track the [GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md)'s nine
 named gaps plus the raw streams they gate.
 
-## Headline finding: near-total saturation, with one clear asymmetry
+## Headline finding: near-total saturation; both flagged asymmetries now resolved
 
 Every `(technique, target)` cell involving classical/keyed ciphers, numeric
 combination, structural/route reading, and provenance sweeps is covered —
@@ -73,45 +73,38 @@ surfacing a general methodological finding (Phase 433) that quadgram-score
 chasing over a large enough relabeling space produces spurious high scorers
 independent of real plaintext.
 
-Two genuinely untried, well-motivated cells survived scrutiny (most
-candidates considered and rejected, e.g. "Roman numeral projection x
-secp256k1 scalar," are non-sequitur pairings, not real gaps — see the
-"Adding a gap" discipline in
-[GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md)):
+Two genuinely untried, well-motivated cells survived scrutiny at the time
+this survey was written (most candidates considered and rejected, e.g.
+"Roman numeral projection x secp256k1 scalar," are non-sequitur pairings,
+not real gaps — see the "Adding a gap" discipline in
+[GSMG_OPEN_GAP_REGISTRY](GSMG_OPEN_GAP_REGISTRY.md)). Both have since been
+resolved — one executed and closed negative, one discarded on deeper
+tracing before any real run:
 
-1. **The unrestricted-order transposition/CSP solver line has only ever been
-   pointed at `FAED`.** Grep-confirmed zero mentions of `DBBI` in
-   `tools/gsmg/findings/P00477.md`, `P00484.md`,
-   [GSMG_PHASE477A_TOKEN_COLUMNAR_TRANSPOSITION_AUDIT](GSMG_PHASE477A_TOKEN_COLUMNAR_TRANSPOSITION_AUDIT.md),
-   or
-   [GSMG_PHASE484B_POWERED_SMALL_WIDTH_RAW_SYMBOL_VIC_AUDIT](GSMG_PHASE484B_POWERED_SMALL_WIDTH_RAW_SYMBOL_VIC_AUDIT.md).
-   `DBBI`'s own transposition-shaped work stopped at Phase 319 (fixed
-   spiral/boustrophedon/row/col routes over `DBBI`'s established 7x13
-   factorization, closed negative, shuffle-gate clean) — a much smaller
-   hypothesis space than the genuinely unknown-order CSP/annealing search
-   `FAED` received starting Phase 477. `DBBI`'s independently-best escape
-   pair (`{b,e}`, established by the same code-IC methodology that selected
-   `FAED`'s `{g,i}` — see `G-YIN-001`'s registry text) has never been run
-   through the unrestricted solver. Motivated because `DBBI` and `FAED` are
-   the same cipher construction on the same page: if pre-decode transposition
-   is real for this scheme at all, it should be checked on both streams, not
-   only one. Would bear on `G-ESC-001` from the `DBBI` side.
-2. **`DBBI`'s own established 31-character `matrixsumlist` selection has
-   never been used as an exact crib against `FAED`**, transposition-aware or
-   not. `crib_drag.py`'s `CRIB_CANDIDATES_DBBI`/`CRIB_CANDIDATES_FAED` lists
-   are all guessed English phrases (e.g. `"yellowblueprimematrixsumlist"`),
-   never `DBBI`'s actual selected output string; Phase 512A's three frozen
-   exact-crib targets (the 3.2.2 validation answer, the Phase-1 credential,
-   the creator macro message) are all borrowed from unrelated puzzle stages,
-   not `DBBI` itself. This is a materially better-motivated test than those
-   three, because it is licensed directly by `G-YIN-001`'s own open
-   question — does `FAED` reference `DBBI`'s output — rather than by "which
-   string are we most certain is authentic."
-
-Both reuse tooling that already exists and is already validated
-(`crib_drag.py`, the Phase 512 CSP architecture, the unrestricted-board
-solver); neither requires new machinery, only pointing existing machinery at
-`DBBI` instead of exclusively at `FAED`.
+1. **CLOSED (Phase 516, 2026-09-17).** The unrestricted-order
+   transposition/CSP solver line had only ever been pointed at `FAED`;
+   `DBBI`'s own transposition work stopped at Phase 319's small fixed-route
+   family. [GSMG_PHASE516_DBBI_WIDTH7_UNRESTRICTED_AUDIT](GSMG_PHASE516_DBBI_WIDTH7_UNRESTRICTED_AUDIT.md)
+   ran a genuinely exhaustive order search (all `7! = 5,040` orders — the
+   only order-tractable width, since `91 = 7 x 13` — across all 36 escape
+   pairs) with a calibrated null comparison: the real winner scored below
+   all 3 shuffled-`DBBI` null trials. Closed negative. Width 13
+   (`13! ~= 6.2e9` orders) remains open, gated on a different search
+   architecture, not this survey's flagged asymmetry.
+2. **DISCARDED before execution.** `DBBI`'s own established 31-character
+   `matrixsumlist` selection (`ncsyangcahiriasogaleafayanestve`) was
+   initially proposed as a better-motivated exact-crib target than Phase
+   512's three borrowed strings, on the theory that it is licensed by
+   `G-YIN-001`'s own question (does `FAED` reference `DBBI`'s output).
+   Tracing its actual provenance (`denis_prime_extraction_audit.py`,
+   `flo_prime_walk_provenance_audit.py`) found this doesn't hold: the string
+   is not a substring of `DBBI` at all — it's extracted from `SOURCE`, a
+   *different*, already-solved 91-character earlier-stage plaintext, using
+   an index-selection pattern derived from `DBBI` that the project's own
+   44-rule sweep never reproduced and whose own reconstruction is explicitly
+   caveated as "not... a discovery p-value." That makes it closer in kind to
+   the three already-rejected borrowed-string cribs than to a genuine
+   `DBBI`-content test. No script was run against real `FAED` for this cell.
 
 ## Scope and limits
 
@@ -120,6 +113,10 @@ This survey classifies phases by their one-line disposition in
 not re-read the full `tools/gsmg/FINDINGS.md` prose for every phase, so a
 technique/target pairing that was tested only as an unrecorded aside inside a
 differently-titled phase could in principle be missed. Treat the two flagged
-cells as the current best candidates, not a formal proof that nothing else is
-open — and re-derive this matrix rather than trust it verbatim once enough
-new phases (particularly any that touch `DBBI` directly) have landed.
+cells as the best candidates found at the time, not a formal proof that
+nothing else is open — and re-derive this matrix rather than trust it
+verbatim once enough new phases have landed. The clearest remaining
+frontier this survey identified, `DBBI` at width 13 under a genuinely
+different (non-brute-enumeration) order-search architecture, is not itself
+a new empty cell so much as an engineering prerequisite Phase 516 left
+explicitly open.

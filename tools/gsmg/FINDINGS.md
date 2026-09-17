@@ -29757,3 +29757,83 @@ than to the raw stream.
 reusing `dual_ternary_sweep.py`'s `ROUTES`/`route_text` and
 `nibble_packing_audit.py`'s `analyze_body`/`evaluate_materials` without
 modification.
+<!-- audit_doc_override: GSMG_PHASE516_DBBI_WIDTH7_UNRESTRICTED_AUDIT.md -->
+## Phase 516 -- DBBI width-7 unrestricted-order transposition, exhaustive and calibrated negative (2026-09-17)
+
+**Question:** The unrestricted-order columnar-transposition/CSP solver line
+(Phase 477-515) was built and run exclusively against FAED, closing that
+line negative there. DBBI is the same checkerboard-escape-pair cipher
+construction on the same page and never received this treatment -- its own
+transposition work (Phase 319) tested only a handful of fixed named routes
+over DBBI's known 7x13 grid, not a search over unknown column order. Does
+an unknown column order exist under which DBBI's raw 91-symbol stream,
+untransposed and checkerboard-decoded, produces readable plaintext at
+DBBI's only nontrivial rectangular width (7 columns / 13 rows;
+`91 = 7 x 13`)?
+
+**Frozen inputs:** DBBI's raw stream (SHA-256 pinned in
+`phase516_execution_lock.json`), all 36 escape pairs (validity checked per
+candidate order via `segment_raw`, not pre-filtered), width 7
+(order-exhaustive: `7! = 5,040`), a two-stage search (cheap stage-1 score
+for every order, expensive stage-2 anneal refine of the top 100 stage-1
+candidates per pair), and 3 shuffled-DBBI-multiset null trials -- all
+frozen before the real run.
+
+**Method:** Reused this project's own validated
+`phase484a_raw_symbol_vic_solver` primitives (`Geometry`, `segment_raw`,
+`decode_raw`, `anneal_board`, the frozen English quadgram model). A naive
+single-stage design (anneal every order directly at FAED's tuned budget)
+was tried first and failed its own synthetic self-test: the true order's
+board scored below a wrong competitor's (-4.492 vs -4.283 normalized).
+Direct diagnosis ruled out a code bug (round-trip and true-board decode
+verified correct) and found this was under-annealing -- a heavier budget
+(40,000 iters x 20 restarts) made the true order win and the win saturated
+at higher budgets, mirroring this project's own FAED-line under-annealing
+finding (Phase 500) at a smaller scale. A two-stage architecture (cheap
+rank-all, expensive refine-top-100) was adopted after directly checking its
+premise: the true order ranked 5th of 3,840 valid candidates under the
+cheap pass in a diagnostic. Three synthetic self-test trials at final
+settings recovered the exact planted order 3/3 (character accuracy
+96.4% and lower on two trials -- single-letter board-substitution
+confusions typical of ~56-90-letter monoalphabetic recovery, not
+order-search failure). The real run checkpointed each escape pair's result
+to disk on completion, making it resumable across a machine shutdown that
+occurred mid-sweep.
+
+**Result:** Real DBBI's best candidate: pair `{b,g}`, order
+`[0,1,4,3,2,5,6]`, normalized score -4.2269, decoding to
+`ILVESORTEENGITANOBLEASSMONENBERCUSSTERNMERORIDERTHERESSTOBEENETSALENE`
+-- not English. DBBI's own established code-IC-best pair `{b,e}` ranked
+only 9th of 36. Three shuffled-DBBI-multiset null trials (identical search)
+scored -4.1307, -4.0956, and -4.1661 -- **all three beat the real result**.
+With only 3 null trials this is not a precise p-value, but it is an
+unambiguous qualitative negative: the real candidate falls below the
+observed null range, and its decode contains no recognizable English words.
+
+**Disposition:** Closed negative for width 7, exhaustively (all 5,040
+orders, all 36 pairs) and calibrated (3/3 nulls outscore the real winner).
+First application of the unrestricted-order transposition technique class
+to DBBI, closing the asymmetry
+[GSMG_TECHNIQUE_TARGET_COVERAGE_MATRIX](../doc/GSMG_TECHNIQUE_TARGET_COVERAGE_MATRIX.md)
+flagged. Does not resolve `G-YIN-001` or `G-MSL-001`; removes one specific
+technique-class gap only. Width 13 (`13! ~= 6.2e9` orders; ~100 CPU-days
+for the cheap stage alone at this search's measured rate) remains open,
+gated on a genuinely different (CSP-pruned or spectral-shortlist)
+architecture, not more compute at the current one.
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none.
+
+**Artifacts:** `tools/gsmg/phase516_dbbi_width7_exhaustive.py` (self-test,
+calibrate, run, verify-lock modes; per-pair checkpointing/resume),
+`tools/gsmg/test_phase516_dbbi_width7_exhaustive.py`,
+`tools/gsmg/phase516_execution_lock.json`,
+`tools/gsmg/phase516_width7_result.json`,
+`tools/gsmg/phase516_width7_null.json`,
+`tools/gsmg/phase516_width7_{real,null0,null1,null2}_checkpoint.json`.
+
+**Reopen condition:** A genuinely new order-search architecture
+(CSP-pruned or spectral-shortlist, not brute enumeration) reaches width 13
+with a comparable calibrated null comparison, or a creator source/primary
+artifact independently selects a DBBI escape pair or column order.

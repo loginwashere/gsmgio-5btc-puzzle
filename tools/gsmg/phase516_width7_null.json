@@ -1,0 +1,28 @@
+{
+  "trials": [
+    {
+      "trial": 0,
+      "shuffled_sha256": "bd421d724075405aed5f012f3b616a1c48cae979c06b19ae5d798f32387d8414",
+      "winner_pair": "ag",
+      "best_normalized_score": -4.130688980104088,
+      "winner_decoded": "SUSERATEDSPERATRESETTODETENESRATEMETREECHNANTOTEREREISEETEREALEASOFTHESTESTTOAH",
+      "elapsed_seconds": 0.21616578102111816
+    },
+    {
+      "trial": 1,
+      "shuffled_sha256": "45c56c164a3815bcbdd52b9ab3d02d6b20ecd3d4dab394838441571b226e141a",
+      "winner_pair": "bh",
+      "best_normalized_score": -4.095623737618496,
+      "winner_decoded": "VERSEPAREACHENORTHEIITAHICHTHESCANDETOTEMENTORELATINEARINGLERLOVERV",
+      "elapsed_seconds": 0.00016927719116210938
+    },
+    {
+      "trial": 2,
+      "shuffled_sha256": "fd7a4ad9cb3db05fd69834566d757e1b7f19db38e26287b11db508c039268351",
+      "winner_pair": "fi",
+      "best_normalized_score": -4.166127241837014,
+      "winner_decoded": "ISACLEARTEDETESISWERESTANTORETECHASSASPERIESSENSSARTSSIDESPAPARESERSITESUPTSS",
+      "elapsed_seconds": 5562.457250118256
+    }
+  ]
+}

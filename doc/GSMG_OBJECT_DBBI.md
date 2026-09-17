@@ -89,6 +89,15 @@ rg -il '\bDBBI\b' doc tools/gsmg/FINDINGS.md
 - Phase 330 — [GSMG_EXTERNAL_ARCHIVE_AUDIT](GSMG_EXTERNAL_ARCHIVE_AUDIT.md),
   independently verifies the direct-capacity/WIF bound and rejects broader
   list/zero/private-data inferences from the external compendium.
+- Phase 319 — fixed spiral/boustrophedon/row/column transposition routes
+  over the known 7×13 grid, closed negative.
+- Phase 516 — [GSMG_PHASE516_DBBI_WIDTH7_UNRESTRICTED_AUDIT](GSMG_PHASE516_DBBI_WIDTH7_UNRESTRICTED_AUDIT.md),
+  first unknown-column-order transposition search against DBBI (the
+  technique class already closed for FAED, Phase 477-515). Exhaustive at
+  width 7 (the only order-tractable factor of 91) across all 36 escape
+  pairs, calibrated against 3 shuffled-DBBI null trials — real result
+  scored below all three nulls. Closed negative; width 13 remains open,
+  gated on a non-brute-enumeration search architecture.
 
 ## Related objects
 

@@ -1,0 +1,761 @@
+{
+  "observed_sha256": "45c56c164a3815bcbdd52b9ab3d02d6b20ecd3d4dab394838441571b226e141a",
+  "per_pair": {
+    "bg": {
+      "pair": [
+        "b",
+        "g"
+      ],
+      "order": [
+        3,
+        0,
+        5,
+        2,
+        4,
+        6,
+        1
+      ],
+      "normalized_score": -4.160556190699589,
+      "quadgram_score": -262.1150400140741,
+      "token_count": 66,
+      "decoded": "MEFOREDBEQUEELOREIGHLYARETIVEASACTERTHEEMOUTHERTONESSFORTHEPOPONIN",
+      "stage1_rank": 0,
+      "stage1_candidates": 2880
+    },
+    "bf": {
+      "pair": [
+        "b",
+        "f"
+      ],
+      "order": [
+        5,
+        6,
+        1,
+        3,
+        0,
+        2,
+        4
+      ],
+      "normalized_score": -4.296717806303958,
+      "quadgram_score": -274.9899396034533,
+      "token_count": 67,
+      "decoded": "BEGAMEWAYANDOESTSEETERTHISMENEETHEROAREEMNUSEONLEOFATTHICOLLELEASAC",
+      "stage1_rank": 0,
+      "stage1_candidates": 3168
+    },
+    "be": {
+      "pair": [
+        "b",
+        "e"
+      ],
+      "order": [
+        5,
+        2,
+        0,
+        4,
+        3,
+        6,
+        1
+      ],
+      "normalized_score": -4.369112726412107,
+      "quadgram_score": -266.5158763111385,
+      "token_count": 64,
+      "decoded": "ABIGNITYTHECORIAPONHOUTAKENMUCHAHTREANDOILEREASTCELATIONISITTINO",
+      "stage1_rank": 42,
+      "stage1_candidates": 3168
+    },
+    "bi": {
+      "pair": [
+        "b",
+        "i"
+      ],
+      "order": [
+        5,
+        0,
+        4,
+        6,
+        2,
+        1,
+        3
+      ],
+      "normalized_score": -4.262215898800567,
+      "quadgram_score": -281.3062493208374,
+      "token_count": 69,
+      "decoded": "HECESAIDECIALGREESNESENSEPAREETHEPESMADSHERENCENTFOREACOSTCALCELLYAAN",
+      "stage1_rank": 35,
+      "stage1_candidates": 3456
+    },
+    "bc": {
+      "pair": [
+        "b",
+        "c"
+      ],
+      "order": [
+        5,
+        2,
+        4,
+        6,
+        1,
+        0,
+        3
+      ],
+      "normalized_score": -4.265216015877219,
+      "quadgram_score": -268.7086090002648,
+      "token_count": 66,
+      "decoded": "ENHERICEINGINSOMESREREDESTIMAYEARTOFTHERMSELSBODMINDOWNINNALSENIIS",
+      "stage1_rank": 21,
+      "stage1_candidates": 3456
+    },
+    "bd": {
+      "pair": [
+        "b",
+        "d"
+      ],
+      "order": [
+        1,
+        3,
+        2,
+        5,
+        0,
+        6,
+        4
+      ],
+      "normalized_score": -4.219487276740205,
+      "quadgram_score": -270.0471857113731,
+      "token_count": 67,
+      "decoded": "ORTHESERFORMEIDEOSTTEVERMATSHEISTRIGUESTICALDEFETIONTOINFLOVELEFORV",
+      "stage1_rank": 3,
+      "stage1_candidates": 3456
+    },
+    "bh": {
+      "pair": [
+        "b",
+        "h"
+      ],
+      "order": [
+        1,
+        4,
+        6,
+        0,
+        3,
+        5,
+        2
+      ],
+      "normalized_score": -4.095623737618496,
+      "quadgram_score": -262.11991920758373,
+      "token_count": 67,
+      "decoded": "VERSEPAREACHENORTHEIITAHICHTHESCANDETOTEMENTORELATINEARINGLERLOVERV",
+      "stage1_rank": 0,
+      "stage1_candidates": 3456
+    },
+    "ab": {
+      "pair": [
+        "a",
+        "b"
+      ],
+      "order": [
+        2,
+        1,
+        6,
+        3,
+        0,
+        4,
+        5
+      ],
+      "normalized_score": -4.306479582066097,
+      "quadgram_score": -284.2276524163624,
+      "token_count": 69,
+      "decoded": "IGDEREAAAMISDEINTHESERECTRUDEDTOMAMENTERSWELTNESHAINTERNIASTILLEDISCA",
+      "stage1_rank": 49,
+      "stage1_candidates": 3456
+    },
+    "ag": {
+      "pair": [
+        "a",
+        "g"
+      ],
+      "order": [
+        0,
+        5,
+        1,
+        2,
+        3,
+        6,
+        4
+      ],
+      "normalized_score": -4.2470094984267455,
+      "quadgram_score": -318.5257123820059,
+      "token_count": 78,
+      "decoded": "MENTYCONDTATESENTREETREDATEERTHEATTFIRSITETETARGESEENTONEARSNAMESENEENTENECTLE",
+      "stage1_rank": 4,
+      "stage1_candidates": 3840
+    },
+    "af": {
+      "pair": [
+        "a",
+        "f"
+      ],
+      "order": [
+        5,
+        0,
+        6,
+        1,
+        4,
+        2,
+        3
+      ],
+      "normalized_score": -4.269748665861471,
+      "quadgram_score": -324.5008986054718,
+      "token_count": 79,
+      "decoded": "CEEDATTHOTSSERSEIASSESEASIASETHESEISEWHENATIASBESERESSISARISTENTSSAYSSOFSUSTEST",
+      "stage1_rank": 0,
+      "stage1_candidates": 4320
+    },
+    "ae": {
+      "pair": [
+        "a",
+        "e"
+      ],
+      "order": [
+        2,
+        1,
+        5,
+        4,
+        3,
+        0,
+        6
+      ],
+      "normalized_score": -4.303568469313246,
+      "quadgram_score": -296.946224382614,
+      "token_count": 72,
+      "decoded": "CTSEAUTTHESSERONEAREAMETOLEDREBUTALINGEROVIENEENATESOENSATIESESSEERSERTT",
+      "stage1_rank": 28,
+      "stage1_candidates": 4320
+    },
+    "ah": {
+      "pair": [
+        "a",
+        "h"
+      ],
+      "order": [
+        6,
+        0,
+        5,
+        3,
+        2,
+        1,
+        4
+      ],
+      "normalized_score": -4.278552828841143,
+      "quadgram_score": -333.7271206496091,
+      "token_count": 81,
+      "decoded": "DRESNTISTRETERESHASBEESMEMAEITSSEEADISCHATOSEASERSEHEEAGERASTHENEARERRESERRESETTE",
+      "stage1_rank": 2,
+      "stage1_candidates": 5040
+    },
+    "ai": {
+      "pair": [
+        "a",
+        "i"
+      ],
+      "order": [
+        2,
+        3,
+        1,
+        6,
+        0,
+        5,
+        4
+      ],
+      "normalized_score": -4.29268518413418,
+      "quadgram_score": -343.41481473073446,
+      "token_count": 83,
+      "decoded": "TASURERESSTOSENREDREARAREEROSEEANEURNREANSOFORREANBEENTERIRSANDANTIESTETERTERSETSEE",
+      "stage1_rank": 0,
+      "stage1_candidates": 5040
+    },
+    "ac": {
+      "pair": [
+        "a",
+        "c"
+      ],
+      "order": [
+        6,
+        3,
+        1,
+        5,
+        4,
+        0,
+        2
+      ],
+      "normalized_score": -4.322482822099323,
+      "quadgram_score": -337.15366012374716,
+      "token_count": 81,
+      "decoded": "ENEDSTASITETTIMSSEESNENSSENASSEVELESSEEMANATURESSESSISOMERSITSCONTIISESISISTTIESS",
+      "stage1_rank": 4,
+      "stage1_candidates": 5040
+    },
+    "ad": {
+      "pair": [
+        "a",
+        "d"
+      ],
+      "order": [
+        2,
+        3,
+        1,
+        6,
+        0,
+        5,
+        4
+      ],
+      "normalized_score": -4.270481624135916,
+      "quadgram_score": -345.90901155500916,
+      "token_count": 84,
+      "decoded": "TASORERESSTHENREDTREARAREERHEEANEORNREANSURPREANBEENTERDERSANDTANTDEESTETERTERSETSEE",
+      "stage1_rank": 0,
+      "stage1_candidates": 5040
+    },
+    "cd": {
+      "pair": [
+        "c",
+        "d"
+      ],
+      "order": [
+        5,
+        3,
+        6,
+        1,
+        0,
+        4,
+        2
+      ],
+      "normalized_score": -4.280824511794374,
+      "quadgram_score": -325.3426628963724,
+      "token_count": 79,
+      "decoded": "NETITASTANAMEETRENTHETSETSTHESALECTTISOFACEDIETERENTHENDRATSAERENGETENNETEANEEA",
+      "stage1_rank": 24,
+      "stage1_candidates": 5040
+    },
+    "cg": {
+      "pair": [
+        "c",
+        "g"
+      ],
+      "order": [
+        3,
+        2,
+        5,
+        0,
+        4,
+        6,
+        1
+      ],
+      "normalized_score": -4.271470738083049,
+      "quadgram_score": -303.27442240389644,
+      "token_count": 74,
+      "decoded": "ERICTRCUREARNEREVERTRETEHEWATEDREIRANALDEFERRINESHERSFORNONSTHERESSESECERO",
+      "stage1_rank": 1,
+      "stage1_candidates": 3840
+    },
+    "ce": {
+      "pair": [
+        "c",
+        "e"
+      ],
+      "order": [
+        6,
+        1,
+        3,
+        4,
+        5,
+        0,
+        2
+      ],
+      "normalized_score": -4.253946822598012,
+      "quadgram_score": -289.2683839366648,
+      "token_count": 71,
+      "decoded": "OVERSISRESURENTEDAVEEVEEITSWHEEWINGASLATEDBEENEMATRESENECARREDERRERSSED",
+      "stage1_rank": 0,
+      "stage1_candidates": 4320
+    },
+    "dg": {
+      "pair": [
+        "d",
+        "g"
+      ],
+      "order": [
+        6,
+        3,
+        1,
+        5,
+        4,
+        0,
+        2
+      ],
+      "normalized_score": -4.206154803681565,
+      "quadgram_score": -328.08007468716204,
+      "token_count": 81,
+      "decoded": "STSOREVERMARINEESSETSTEESTHESIMOISEESSINGPOSITSEESEERENINSITERLIENTURESEREREARSEE",
+      "stage1_rank": 0,
+      "stage1_candidates": 3840
+    },
+    "cf": {
+      "pair": [
+        "c",
+        "f"
+      ],
+      "order": [
+        1,
+        3,
+        6,
+        5,
+        2,
+        4,
+        0
+      ],
+      "normalized_score": -4.2568643770473455,
+      "quadgram_score": -306.49423514740886,
+      "token_count": 75,
+      "decoded": "RNPRESURNONEIREEDTRESEESENRESATERREWINSOROVERSWERELDIEBESIDECIENTHEGENERGEN",
+      "stage1_rank": 0,
+      "stage1_candidates": 4320
+    },
+    "de": {
+      "pair": [
+        "d",
+        "e"
+      ],
+      "order": [
+        5,
+        3,
+        6,
+        0,
+        2,
+        4,
+        1
+      ],
+      "normalized_score": -4.276477134027825,
+      "quadgram_score": -290.8004451138921,
+      "token_count": 71,
+      "decoded": "ELDTRANTHEBEENCEFREISEFRAMSEYOURWASESIDEBEENCENSERVATERVENSELENNEEALEEA",
+      "stage1_rank": 90,
+      "stage1_candidates": 4320
+    },
+    "df": {
+      "pair": [
+        "d",
+        "f"
+      ],
+      "order": [
+        1,
+        4,
+        2,
+        0,
+        5,
+        6,
+        3
+      ],
+      "normalized_score": -4.1253160501322785,
+      "quadgram_score": -309.3987037599209,
+      "token_count": 78,
+      "decoded": "TOSEDFOOTBEVERITTHESESTTROUTESTEDRETEPRIMETTERSEDIRTTHEBERSTIONTISTTHETATTOOFT",
+      "stage1_rank": 1,
+      "stage1_candidates": 4320
+    },
+    "ef": {
+      "pair": [
+        "e",
+        "f"
+      ],
+      "order": [
+        5,
+        0,
+        3,
+        4,
+        1,
+        2,
+        6
+      ],
+      "normalized_score": -4.222663306760786,
+      "quadgram_score": -282.9184415529727,
+      "token_count": 70,
+      "decoded": "ULNETOBETTHEYWINEENEWECASTERGEDANDATINGRESHRISENEIFTSINESTHEMEELLETEET",
+      "stage1_rank": 0,
+      "stage1_candidates": 3840
+    },
+    "ch": {
+      "pair": [
+        "c",
+        "h"
+      ],
+      "order": [
+        1,
+        3,
+        2,
+        5,
+        6,
+        0,
+        4
+      ],
+      "normalized_score": -4.234637232086669,
+      "quadgram_score": -317.5977924065002,
+      "token_count": 78,
+      "decoded": "ETUESANTSTATEAERIESSELESSONSSPEEVERSETHINUSEDSEERASISITEDASSAYSTWASSESASSTATSE",
+      "stage1_rank": 0,
+      "stage1_candidates": 5040
+    },
+    "eg": {
+      "pair": [
+        "e",
+        "g"
+      ],
+      "order": [
+        3,
+        1,
+        5,
+        4,
+        2,
+        0,
+        6
+      ],
+      "normalized_score": -4.254036860666058,
+      "quadgram_score": -280.7664328039598,
+      "token_count": 69,
+      "decoded": "USATCOMESSEEDINETERTHEFIVEDERGICTWINGTREPLEINEENTEXPENTSBESESSEERSREM",
+      "stage1_rank": 12,
+      "stage1_candidates": 3456
+    },
+    "ci": {
+      "pair": [
+        "c",
+        "i"
+      ],
+      "order": [
+        6,
+        4,
+        1,
+        0,
+        5,
+        3,
+        2
+      ],
+      "normalized_score": -4.274382859847529,
+      "quadgram_score": -333.4018630681073,
+      "token_count": 81,
+      "decoded": "ENTTORSSERISTSTAREETENTENETHENETSEOFTETIATINSETUNTEDETRECTANESSLEGREETRERRESSERTE",
+      "stage1_rank": 12,
+      "stage1_candidates": 5040
+    },
+    "fg": {
+      "pair": [
+        "f",
+        "g"
+      ],
+      "order": [
+        1,
+        4,
+        2,
+        0,
+        5,
+        6,
+        3
+      ],
+      "normalized_score": -4.1874782201823715,
+      "quadgram_score": -309.8733882934955,
+      "token_count": 77,
+      "decoded": "TLEDBYTWENEEROTTHESESTTRATTESTEDRETENCONSETTERSEDORTTHEWERSTOURTOSTTHETITTYBT",
+      "stage1_rank": 4,
+      "stage1_candidates": 3456
+    },
+    "dh": {
+      "pair": [
+        "d",
+        "h"
+      ],
+      "order": [
+        6,
+        0,
+        5,
+        3,
+        2,
+        1,
+        4
+      ],
+      "normalized_score": -4.278068980767656,
+      "quadgram_score": -329.4113115191095,
+      "token_count": 80,
+      "decoded": "LSRESNTOTRETERESHASBEESMEMAEUSSEEALSOWHATISEASERSEHEEADERASTHENEARERRESERRESETTE",
+      "stage1_rank": 85,
+      "stage1_candidates": 5040
+    },
+    "di": {
+      "pair": [
+        "d",
+        "i"
+      ],
+      "order": [
+        2,
+        4,
+        1,
+        6,
+        3,
+        0,
+        5
+      ],
+      "normalized_score": -4.314798201741644,
+      "quadgram_score": -349.4986543410732,
+      "token_count": 84,
+      "decoded": "RAISOREFIRISISTREEYEAREAREAGREETRORERTERTIANDRERATERETESEPRIEATSETSALISESSEREEIERSIE",
+      "stage1_rank": 78,
+      "stage1_candidates": 5040
+    },
+    "ei": {
+      "pair": [
+        "e",
+        "i"
+      ],
+      "order": [
+        0,
+        4,
+        5,
+        1,
+        2,
+        6,
+        3
+      ],
+      "normalized_score": -4.278627704796941,
+      "quadgram_score": -286.66805622139503,
+      "token_count": 70,
+      "decoded": "STICALSYSTOFTREINTHATSENTOANTECLOAMENTPACERTITLITEADISATUTITINTITTLIST",
+      "stage1_rank": 10,
+      "stage1_candidates": 4320
+    },
+    "eh": {
+      "pair": [
+        "e",
+        "h"
+      ],
+      "order": [
+        4,
+        6,
+        2,
+        3,
+        0,
+        5,
+        1
+      ],
+      "normalized_score": -4.259218439619207,
+      "quadgram_score": -293.88607233372534,
+      "token_count": 72,
+      "decoded": "SMETOGETTITEANDSEEMERBEINTHENCEDMANITYPRECHEEANGENGTAKENTSEASRESSEXTEEES",
+      "stage1_rank": 38,
+      "stage1_candidates": 4320
+    },
+    "fh": {
+      "pair": [
+        "f",
+        "h"
+      ],
+      "order": [
+        1,
+        4,
+        2,
+        0,
+        6,
+        3,
+        5
+      ],
+      "normalized_score": -4.17190708177228,
+      "quadgram_score": -292.03349572405955,
+      "token_count": 73,
+      "decoded": "TOUREHOTCOMEENDITTEAUTNOCATETEREENTCONECIATERSEINTEDTHEISTOFTITADDEDTOTHE",
+      "stage1_rank": 0,
+      "stage1_candidates": 4320
+    },
+    "gi": {
+      "pair": [
+        "g",
+        "i"
+      ],
+      "order": [
+        6,
+        3,
+        1,
+        5,
+        4,
+        0,
+        2
+      ],
+      "normalized_score": -4.223668911081902,
+      "quadgram_score": -316.77516833114265,
+      "token_count": 78,
+      "decoded": "STSPREVERMARICESSETSTEESTHEESIMPISEESSINTHOSITSEESEEREQUITERFIELDRESEREREARSEE",
+      "stage1_rank": 15,
+      "stage1_candidates": 3840
+    },
+    "gh": {
+      "pair": [
+        "g",
+        "h"
+      ],
+      "order": [
+        1,
+        5,
+        0,
+        2,
+        3,
+        6,
+        4
+      ],
+      "normalized_score": -4.230916567499343,
+      "quadgram_score": -308.8569094274521,
+      "token_count": 76,
+      "decoded": "VESTITECTSLATTERESPEETYOFTEENTEEATTALMOTTEETANEAREESTTHEAMASWEREESESTESBETHE",
+      "stage1_rank": 14,
+      "stage1_candidates": 3840
+    },
+    "fi": {
+      "pair": [
+        "f",
+        "i"
+      ],
+      "order": [
+        1,
+        4,
+        2,
+        0,
+        5,
+        6,
+        3
+      ],
+      "normalized_score": -4.254365632894127,
+      "quadgram_score": -314.8230568341654,
+      "token_count": 77,
+      "decoded": "TOSEAFOOTBENEERMTHESESTTRONTTESTEARETENORDSETTERSEACTTHEBERSTLYTUTTHETITTOOFT",
+      "stage1_rank": 1,
+      "stage1_candidates": 4320
+    },
+    "hi": {
+      "pair": [
+        "h",
+        "i"
+      ],
+      "order": [
+        4,
+        1,
+        5,
+        2,
+        3,
+        6,
+        0
+      ],
+      "normalized_score": -4.293095931153214,
+      "quadgram_score": -321.98219483649103,
+      "token_count": 78,
+      "decoded": "AYSELFELLALSONASATEARSARSSTALOWASSAYABOUTATRASAYSENTSATISLANDITSASSEESELESASLS",
+      "stage1_rank": 0,
+      "stage1_candidates": 5040
+    }
+  }
+}
