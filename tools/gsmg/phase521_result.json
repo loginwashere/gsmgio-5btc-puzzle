@@ -1,0 +1,49 @@
+{
+  "phase": 521,
+  "real_cheap_budget": {
+    "pair_a": "be",
+    "pair_b": "gi",
+    "len_a": 63,
+    "len_b": 436,
+    "s_independent": -2755.215597522355,
+    "s_shared": -2807.3160427588623,
+    "cost_raw": 52.10044523650731,
+    "cost_normalized": 0.10568041630123187
+  },
+  "nulls_cheap_budget": {
+    "primary_euler": {
+      "trials": 500,
+      "extreme_count": 26,
+      "empirical_p": 0.05389221556886228,
+      "minimum": 0.047090139108195955,
+      "median": 0.1830289895952428,
+      "q95": 0.25383293512660593,
+      "maximum": 0.3617872077732536
+    },
+    "sensitivity_endpoint_shuffle": {
+      "trials": 500,
+      "extreme_count": 11,
+      "empirical_p": 0.023952095808383235,
+      "minimum": 0.03482990300838418,
+      "median": 0.19453159278082055,
+      "q95": 0.27848096339043055,
+      "maximum": 0.4096016696263109
+    }
+  },
+  "promotion_threshold": 0.005,
+  "decision": "no_calibrated_shared_board_consistency",
+  "maximum_inference": "corroboration_only_no_gap_closure_no_board_selected",
+  "password_materials_generated": 0,
+  "oracle_calls": 0,
+  "real_expensive_budget_diagnostic": {
+    "pair_a": "be",
+    "pair_b": "gi",
+    "len_a": 63,
+    "len_b": 436,
+    "s_independent": -2697.6835414767784,
+    "s_shared": -2791.234615567343,
+    "cost_raw": 93.55107409056473,
+    "cost_normalized": 0.1897587709747763
+  },
+  "elapsed_seconds": 283.4418618620002
+}

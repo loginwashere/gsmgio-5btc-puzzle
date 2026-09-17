@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **498** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **499** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -516,3 +516,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 518 | P518 | 2026-09-17 | positional cross-stream correspondence gate, no calibrated correspondence | — | [source](../tools/gsmg/findings/P00518.md) | [link](../tools/gsmg/FINDINGS.md#phase-518----positional-cross-stream-correspondence-gate-no-calibrated-correspondence-2026-09-17) | [GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT](GSMG_PHASE518_POSITIONAL_CROSS_STREAM_CORRESPONDENCE_GATE_AUDIT.md) |
 | 519 | P519 | 2026-09-17 | Phase 391's numeric/temporal material widened to all four blobs, closed negative | — | [source](../tools/gsmg/findings/P00519.md) | [link](../tools/gsmg/FINDINGS.md#phase-519----phase-391s-numerictemporal-material-widened-to-all-four-blobs-closed-negative-2026-09-17) | — |
 | 520 | P520 | 2026-09-17 | DBBI+FAED joint-splice hypothesis, closed negative | — | [source](../tools/gsmg/findings/P00520.md) | [link](../tools/gsmg/FINDINGS.md#phase-520----dbbifaed-joint-splice-hypothesis-closed-negative-2026-09-17) | [GSMG_PHASE520_DBBI_FAED_JOINT_SPLICE_HYPOTHESIS_AUDIT](GSMG_PHASE520_DBBI_FAED_JOINT_SPLICE_HYPOTHESIS_AUDIT.md) |
+| 521 | P521 | 2026-09-17 | DBBI+FAED shared-board hypothesis, no calibrated consistency | — | [source](../tools/gsmg/findings/P00521.md) | [link](../tools/gsmg/FINDINGS.md#phase-521----dbbifaed-shared-board-hypothesis-no-calibrated-consistency-2026-09-17) | [GSMG_PHASE521_DBBI_FAED_SHARED_BOARD_HYPOTHESIS_AUDIT](GSMG_PHASE521_DBBI_FAED_SHARED_BOARD_HYPOTHESIS_AUDIT.md) |

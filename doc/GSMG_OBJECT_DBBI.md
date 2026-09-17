@@ -110,6 +110,12 @@ rg -il '\bDBBI\b' doc tools/gsmg/FINDINGS.md
   reading structurally); the joint escape-pair fit and board-anneal
   decode both close negative against matched nulls and each stream's own
   separate best decode. Corroboration-only; `G-YIN-001`/`G-MSL-001` unchanged.
+- Phase 521 — [GSMG_PHASE521_DBBI_FAED_SHARED_BOARD_HYPOTHESIS_AUDIT](GSMG_PHASE521_DBBI_FAED_SHARED_BOARD_HYPOTHESIS_AUDIT.md),
+  tests whether DBBI/FAED could share one board key while each keeps its
+  own separately-best escape pair (`be`/`gi`). Real cost-of-sharing sits
+  below both matched nulls' medians but doesn't clear the pre-registered
+  bar, and gets markedly worse (not better) under 10x the search budget —
+  `no_calibrated_shared_board_consistency`. Corroboration-only.
 
 ## Related objects
 
