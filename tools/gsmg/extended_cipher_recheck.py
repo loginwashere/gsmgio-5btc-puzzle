@@ -39,8 +39,11 @@ from cb_common import (  # noqa: E402
     BLOBS,
     EXTENDED_CIPHER_VARIANTS,
     OPENSSL_MENU_GAP_CIPHER_VARIANTS,
+    OPENSSL_MENU_GAP_ROUND2_CBC_CIPHER_VARIANTS,
+    OPENSSL_MENU_GAP_ROUND2_RC4_VARIANTS,
     QUARANTINED_BLOBS,
     aes_try_open,
+    aes_try_open_rc4_bytes,
     answer_forms,
     keystr_forms,
 )
@@ -128,18 +131,24 @@ def candidate_list_digest(candidates):
 
 
 def sweep(candidates, newline_variants=True, blobs=None,
-          kdf_variants=EXTENDED_CIPHER_VARIANTS):
+          kdf_variants=EXTENDED_CIPHER_VARIANTS, oracle_fn=aes_try_open):
     """Every candidate line, through answer_forms() x keystr_forms() x
     `kdf_variants`, against `blobs` (aes_try_open's BLOBS default,
     unless the caller opts a quarantined target in -- see
-    cb_common.QUARANTINED_BLOBS). Returns (attempts, hits)."""
+    cb_common.QUARANTINED_BLOBS). Returns (attempts, hits).
+
+    `oracle_fn` defaults to `aes_try_open` (text wrapper around the CBC/ECB
+    oracle, which already generalizes over `cipher` via cb_common.CIPHER_
+    CLASSES). Pass `cb_common.aes_try_open_rc4_bytes` composed with `.encode()`
+    for the key-only RC4 path, which is not block/IV-based and therefore not
+    reachable through `aes_try_open`."""
     attempts = 0
     hits = []
     for candidate in candidates:
         for form in answer_forms(candidate):
             for keystr in keystr_forms(form, newline_variants=newline_variants):
                 attempts += 1
-                result = aes_try_open(keystr, kdf_variants=kdf_variants, blobs=blobs)
+                result = oracle_fn(keystr, kdf_variants=kdf_variants, blobs=blobs)
                 if result:
                     tag, body, kdf_label, key_len = result
                     hits.append({
@@ -152,6 +161,13 @@ def sweep(candidates, newline_variants=True, blobs=None,
                         "plaintext": body[:500],
                     })
     return attempts, hits
+
+
+def aes_try_open_rc4(keystr, kdf_variants=None, blobs=None):
+    """Text wrapper around aes_try_open_rc4_bytes, matching aes_try_open's
+    own (keystr, kdf_variants, blobs) shape so it can be passed to sweep()
+    as oracle_fn."""
+    return aes_try_open_rc4_bytes(keystr.encode(), kdf_variants, blobs)
 
 
 def self_test():
@@ -187,6 +203,13 @@ def main():
     ap.add_argument("--openssl-menu-gaps", action="store_true",
                     help="test only the bounded Blowfish-, Camellia-, and SEED-CBC "
                          "variant set, rather than the earlier AES/3DES extensions")
+    ap.add_argument("--openssl-menu-gaps-round2", action="store_true",
+                    help="test the bounded CAST5-CBC and RC4 (40/64/128-bit) "
+                         "variant sets against the same curated corpus -- IDEA "
+                         "and RC2 are excluded (see cb_common's menu-gap-round2 "
+                         "comment: IDEA is unsupported by this environment's "
+                         "OpenSSL backend, RC2 needs a dependency neither "
+                         "cryptography backend provides)")
     args = ap.parse_args()
 
     if args.self_test:
@@ -206,15 +229,33 @@ def main():
 
     blobs = {**BLOBS, **QUARANTINED_BLOBS} if args.include_quarantined else None
     active_blobs = blobs if blobs is not None else BLOBS
-    variants = (OPENSSL_MENU_GAP_CIPHER_VARIANTS
-                if args.openssl_menu_gaps else EXTENDED_CIPHER_VARIANTS)
 
-    attempts, hits = sweep(candidates, blobs=blobs, kdf_variants=variants)
-    print(f"[*] {attempts:,} attempts across {len(variants)} "
-          f"extended cipher/KDF variants x {len(active_blobs)} blobs "
-          f"({', '.join(active_blobs)})")
+    if args.openssl_menu_gaps_round2:
+        sweeps = [
+            ("cast5-cbc", OPENSSL_MENU_GAP_ROUND2_CBC_CIPHER_VARIANTS, aes_try_open),
+            ("rc4", OPENSSL_MENU_GAP_ROUND2_RC4_VARIANTS, aes_try_open_rc4),
+        ]
+        total_attempts = 0
+        hits = []
+        for label, variants, oracle_fn in sweeps:
+            attempts, sweep_hits = sweep(
+                candidates, blobs=blobs, kdf_variants=variants, oracle_fn=oracle_fn,
+            )
+            total_attempts += attempts
+            hits.extend(sweep_hits)
+            print(f"[*] {label}: {attempts:,} attempts across {len(variants)} "
+                  f"variants x {len(active_blobs)} blobs ({', '.join(active_blobs)})")
+        attempts = total_attempts
+    else:
+        variants = (OPENSSL_MENU_GAP_CIPHER_VARIANTS
+                    if args.openssl_menu_gaps else EXTENDED_CIPHER_VARIANTS)
+        attempts, hits = sweep(candidates, blobs=blobs, kdf_variants=variants)
+        print(f"[*] {attempts:,} attempts across {len(variants)} "
+              f"extended cipher/KDF variants x {len(active_blobs)} blobs "
+              f"({', '.join(active_blobs)})")
+
     if not hits:
-        print("[*] no candidate opened any blob under any extended cipher/KDF variant")
+        print("[*] no candidate opened any blob under any tested cipher/KDF variant")
         return
     for hit in hits:
         print(f"\n[+++ HIT] candidate={hit['candidate']!r} blob={hit['blob']} "

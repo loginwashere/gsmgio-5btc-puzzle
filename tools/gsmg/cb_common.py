@@ -474,6 +474,10 @@ CIPHER_CLASSES = {
     "blowfish": algorithms.Blowfish,
     "camellia": algorithms.Camellia,
     "seed": algorithms.SEED,
+    "cast5": algorithms.CAST5,
+    # "idea": algorithms.IDEA exists at the Python level but is NOT usable in
+    # this environment -- its actual OpenSSL 3.0.13 backend raises
+    # UnsupportedAlgorithm (verified 2026-09-18); would need pycryptodome.
 }
 CIPHER_BLOCK_SIZES = {
     "aes": 16,
@@ -481,6 +485,7 @@ CIPHER_BLOCK_SIZES = {
     "blowfish": 8,
     "camellia": 16,
     "seed": 16,
+    "cast5": 8,
 }
 
 # Broadened cipher/KDF coverage beyond this project's original AES+legacy-KDF-only
@@ -538,6 +543,76 @@ OPENSSL_MENU_GAP_CIPHER_VARIANTS = [
         ("seed", 16),
     )
 ]
+
+# OpenSSL-menu-gap round 2, added 2026-09-18 -- CAST5, IDEA, and RC2 were
+# also ordinary named `openssl enc` menu items in the same 1.1.x-era window
+# as round 1's Blowfish/Camellia/SEED. Fixed at OpenSSL's own single named
+# key size (`-cast5-cbc`/`-idea-cbc` are always 128-bit; IDEA has no other
+# key size at all) -- not an open-ended key-size search.
+#
+# IDEA and RC2 are NOT included in this variant list despite `cryptography`
+# exposing Python-level `algorithms.IDEA`/no RC2 class at all: verified
+# directly (2026-09-18) that this environment's actual OpenSSL 3.0.13
+# backend raises UnsupportedAlgorithm for IDEA specifically (removed from
+# this build entirely, unlike Blowfish/CAST5/SEED which remain reachable
+# through the legacy provider) -- exposing a class in the Python API is not
+# the same as the underlying operation working, a distinction the original
+# scoping note for this round did not check. Both IDEA and RC2 would need a
+# different backend (pycryptodome implements both) to test at all; deferred
+# as a separate, explicitly-scoped follow-up rather than silently run with a
+# broken cipher.
+OPENSSL_MENU_GAP_ROUND2_CBC_CIPHER_VARIANTS = [
+    ("legacy", digest, "cast5", 16)
+    for digest in ("sha256", "md5", "sha1")
+] + [
+    ("pbkdf2", ("sha256", 10000), "cast5", 16)
+]
+
+# RC4/ARC4 is a stream cipher, not a block cipher: OpenSSL's `-rc4` derives
+# only a key via the same Salted__/EVP_BytesToKey or PBKDF2 machinery (no IV,
+# no padding to validate), and its EVP_BytesToKey call passes iv_len=0. Key
+# length is bounded to OpenSSL's three actually-named RC4 menu variants --
+# `-rc4-40` (5 bytes), `-rc4-64` (8 bytes), and plain `-rc4`/`-rc4-128` (16
+# bytes) -- not an open-ended byte-length search.
+RC4_KEY_LENS = (5, 8, 16)
+
+OPENSSL_MENU_GAP_ROUND2_RC4_VARIANTS = [
+    ("legacy", digest, key_len)
+    for digest in ("sha256", "md5", "sha1")
+    for key_len in RC4_KEY_LENS
+] + [
+    ("pbkdf2", ("sha256", 10000), key_len)
+    for key_len in RC4_KEY_LENS
+]
+
+
+def aes_try_open_rc4_bytes(passwd: bytes, kdf_variants=None, blobs=None):
+    """RC4/ARC4: key-only derivation (no IV, no block, no PKCS7 pad to
+    validate first), so every candidate goes straight to `printable_z_score`
+    on the full decrypted body -- the same discipline `aes_try_open_stream_bytes`
+    uses for CFB/OFB/CTR, generalized to a cipher with no `mode` object at
+    all (`cryptography`'s `ARC4` takes `mode=None`)."""
+    selected_kdfs = OPENSSL_MENU_GAP_ROUND2_RC4_VARIANTS if kdf_variants is None else kdf_variants
+    selected_blobs = BLOBS if blobs is None else blobs
+    for kdf_kind, kdf_param, key_len in selected_kdfs:
+        for tag, (salt, ct) in selected_blobs.items():
+            if not ct:
+                continue
+            if kdf_kind == "legacy":
+                key, _ = evp_bytes_to_key(passwd, salt, kdf_param, key_len, 0)
+            else:
+                digest_name, iterations = kdf_param
+                key, _ = pbkdf2_bytes_to_key(passwd, salt, iterations, digest_name, key_len, 0)
+            decryptor = Cipher(algorithms.ARC4(key), mode=None).decryptor()
+            pt = decryptor.update(ct) + decryptor.finalize()
+            z = printable_z_score(pt)
+            kdf_label = _kdf_label(kdf_kind, kdf_param, "rc4")
+            if z >= PRINTABLE_Z_STRONG_THRESHOLD:
+                return tag, pt, kdf_label, key_len
+            if z >= PRINTABLE_Z_WEAK_THRESHOLD:
+                _log_candidate("weak", tag, passwd, pt, z, kdf_label, "rc4", key_len)
+    return None
+
 
 # Cipher *mode* coverage, added 2026-07-26 -- every sweep to this point
 # (KDF_VARIANTS, EXTENDED_CIPHER_VARIANTS, and the AES Key Wrap oracle) only
@@ -1240,6 +1315,66 @@ def _self_test_extended_ciphers():
         )
 
 
+def _self_test_menu_gap_round2():
+    """Known-positive synthetic vectors for OPENSSL_MENU_GAP_ROUND2_CBC_CIPHER_VARIANTS
+    (CAST5/IDEA, added 2026-09-18) and OPENSSL_MENU_GAP_ROUND2_RC4_VARIANTS (RC4/ARC4,
+    key-only, no block/IV) -- mirrors _self_test_extended_ciphers()'s round-trip
+    discipline for the new cipher family, plus a wrong-key negative control for RC4
+    since that path has no PKCS7 pad to catch a false accept."""
+    passwd = b"correct horse battery staple"
+    wrong_passwd = b"definitely the wrong passphrase"
+    plaintext = b"the quick brown fox jumps over the lazy dog several times today"
+    salt = b"01234567"
+
+    for kdf_kind, kdf_param, cipher, key_len in OPENSSL_MENU_GAP_ROUND2_CBC_CIPHER_VARIANTS:
+        variant = (kdf_kind, kdf_param, cipher, key_len)
+        block = CIPHER_BLOCK_SIZES[cipher]
+        if kdf_kind == "legacy":
+            key, iv = evp_bytes_to_key(passwd, salt, kdf_param, key_len, block)
+        else:
+            digest_name, iterations = kdf_param
+            key, iv = pbkdf2_bytes_to_key(passwd, salt, iterations, digest_name, key_len, block)
+        pad_len = block - (len(plaintext) % block)
+        padded = plaintext + bytes([pad_len]) * pad_len
+        encryptor = Cipher(CIPHER_CLASSES[cipher](key), modes.CBC(iv)).encryptor()
+        ct = encryptor.update(padded) + encryptor.finalize()
+        result = aes_try_open_bytes(passwd, kdf_variants=[variant], blobs={"SYNTH": (salt, ct)})
+        assert result is not None, (
+            f"cb_common self-test FAILED: menu-gap-round2 variant {variant} did "
+            f"not round-trip its own known-positive synthetic vector"
+        )
+        assert result[1] == plaintext, (
+            f"cb_common self-test FAILED: menu-gap-round2 variant {variant} "
+            f"decrypted to wrong content (got {result[1]!r})"
+        )
+
+    for kdf_kind, kdf_param, key_len in OPENSSL_MENU_GAP_ROUND2_RC4_VARIANTS:
+        variant = (kdf_kind, kdf_param, key_len)
+        if kdf_kind == "legacy":
+            key, _ = evp_bytes_to_key(passwd, salt, kdf_param, key_len, 0)
+        else:
+            digest_name, iterations = kdf_param
+            key, _ = pbkdf2_bytes_to_key(passwd, salt, iterations, digest_name, key_len, 0)
+        encryptor = Cipher(algorithms.ARC4(key), mode=None).encryptor()
+        ct = encryptor.update(plaintext) + encryptor.finalize()
+        result = aes_try_open_rc4_bytes(passwd, kdf_variants=[variant], blobs={"SYNTH": (salt, ct)})
+        assert result is not None, (
+            f"cb_common self-test FAILED: RC4 menu-gap-round2 variant {variant} did "
+            f"not round-trip its own known-positive synthetic vector"
+        )
+        assert result[1] == plaintext, (
+            f"cb_common self-test FAILED: RC4 menu-gap-round2 variant {variant} "
+            f"decrypted to wrong content (got {result[1]!r})"
+        )
+        wrong_result = aes_try_open_rc4_bytes(
+            wrong_passwd, kdf_variants=[variant], blobs={"SYNTH": (salt, ct)}
+        )
+        assert wrong_result is None, (
+            f"cb_common self-test FAILED: RC4 menu-gap-round2 variant {variant} "
+            f"accepted a WRONG passphrase as a hit"
+        )
+
+
 def _self_test_stream_ciphers():
     """Known-positive synthetic vectors for every STREAM_CIPHER_VARIANTS
     combo (CFB/OFB/CTR, added 2026-07-26), plus a negative control -- since
@@ -1468,6 +1603,7 @@ def _self_test_keywrap():
 
 _self_test()
 _self_test_extended_ciphers()
+_self_test_menu_gap_round2()
 _self_test_stream_ciphers()
 _self_test_binary_plaintext_oracles()
 _self_test_keywrap()

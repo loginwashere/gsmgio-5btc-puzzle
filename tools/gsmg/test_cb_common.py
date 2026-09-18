@@ -113,6 +113,53 @@ class AesOracleTests(unittest.TestCase):
         )
 
 
+class OpensslMenuGapRound2Tests(unittest.TestCase):
+    def test_cast5_round_trips_and_reports_key_len(self):
+        salt = b"01234567"
+        passwd = b"correct horse battery staple"
+        plaintext = b"the quick brown fox jumps over the lazy dog several times"
+        variant = ("legacy", "sha256", "cast5", 16)
+        key, iv = cb_common.evp_bytes_to_key(passwd, salt, "sha256", 16, 8)
+        pad_len = 8 - (len(plaintext) % 8)
+        padded = plaintext + bytes([pad_len]) * pad_len
+        from cryptography.hazmat.primitives.ciphers import Cipher, modes
+        encryptor = Cipher(cb_common.CIPHER_CLASSES["cast5"](key), modes.CBC(iv)).encryptor()
+        ct = encryptor.update(padded) + encryptor.finalize()
+        result = cb_common.aes_try_open_bytes(
+            passwd, kdf_variants=[variant], blobs={"SYNTH": (salt, ct)},
+        )
+        self.assertIsNotNone(result)
+        self.assertEqual(result[1], plaintext)
+        self.assertEqual(result[3], 16)
+
+    def test_rc4_round_trips_and_rejects_wrong_password(self):
+        salt = b"01234567"
+        passwd = b"correct horse battery staple"
+        wrong = b"definitely the wrong passphrase"
+        plaintext = b"the quick brown fox jumps over the lazy dog several times"
+        variant = ("legacy", "sha256", 16)
+        key, _ = cb_common.evp_bytes_to_key(passwd, salt, "sha256", 16, 0)
+        from cryptography.hazmat.primitives.ciphers import Cipher, algorithms
+        encryptor = Cipher(algorithms.ARC4(key), mode=None).encryptor()
+        ct = encryptor.update(plaintext) + encryptor.finalize()
+        result = cb_common.aes_try_open_rc4_bytes(
+            passwd, kdf_variants=[variant], blobs={"SYNTH": (salt, ct)},
+        )
+        self.assertIsNotNone(result)
+        self.assertEqual(result[1], plaintext)
+        wrong_result = cb_common.aes_try_open_rc4_bytes(
+            wrong, kdf_variants=[variant], blobs={"SYNTH": (salt, ct)},
+        )
+        self.assertIsNone(wrong_result)
+
+    def test_idea_deliberately_excluded(self):
+        self.assertNotIn("idea", cb_common.CIPHER_CLASSES)
+        self.assertTrue(
+            all(cipher == "cast5"
+                for _kind, _digest, cipher, _len in cb_common.OPENSSL_MENU_GAP_ROUND2_CBC_CIPHER_VARIANTS)
+        )
+
+
 class MultiprocessingTests(unittest.TestCase):
     def test_9ary_config_survives_spawn(self):
         config = cosmic_sweep_9ary.DEFAULT_CONFIG._replace(
