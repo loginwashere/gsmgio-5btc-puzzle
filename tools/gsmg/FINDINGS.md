@@ -30238,3 +30238,47 @@ conventions with no widening.
 
 **Reopen condition:** a prior SALPH-scoped passphrase sweep missing from
 `COVERAGE_SOURCES`; add it and rerun rather than editing the numbers.
+<!-- audit_doc_override: GSMG_PHASE524_SLOT_GRAMMAR_SWEEP.md -->
+## Phase 524 -- slot-grammar password sweep against all four blobs, closed negative (2026-09-18)
+
+**Question:** Phase 523 pre-registered the house-style slot-grammar product
+(62 authenticated checkpoint values over the macro slots, two join
+conventions, standard passphrase form expansion) and found it essentially
+untested against SALPH. Does any member open a tracked blob?
+
+**Frozen inputs:** Phase 523's not-all-covered base list (133,657 bases,
+SHA-256 `ff5e80e9...092a18`, verified before use); the pre-registered stop
+rule (zero hits closes the lane, no widening).
+
+**Method:** decoded the JSON-lines export (raw feeding would have tested
+every candidate with literal quote characters); dropped 110 bases that
+schedule no new material (133,547 kept, input SHA-256 `5193ff52...290bdc`);
+ran `tools/gpu_oracle` natively after its self-test, `--newline-variants`,
+default 60-variant table x 4 blobs (a superset of the pre-registered
+SALPH-only scope); re-derived every weak-tier body from its recorded row,
+matched the GPU z-score, and ran the key-shape classifier.
+
+**Result:** 6,245,712 of 6,245,712 forms (about 1.5B decrypts, 8,436 s).
+0 strong, 0 structural, 0 key-shape records. 285 weak hits (z 5.00-5.93;
+SALPH 40, COSMIC 55, P32TRAILING 43, URLBLOB 147), rate in line with Phases
+328/334; all 285 bodies re-derived exactly (0 z mismatches) and contain 0
+hex64/WIF/BIP39 matches. Limitation: the Bloom cache failed to load (the
+binary's default path is a Docker path), so the raw-key Bloom arms and the
+Phase 331 known-target detector were inactive; the pre-registered
+z-score and structural full-pad detectors were not affected.
+
+**Disposition:** rejected for this universe (62 values, two joins, fixed
+macro order, standard expansion, four blobs, Bloom arms inactive).
+
+**Facts affected:** none.
+
+**Supersedes/corrects:** none; notes that Phase 523's base export is
+JSON-lines.
+
+**Artifacts:** `tools/gsmg/phase524_slot_grammar_sweep_prep.py`,
+`tools/gsmg/test_phase524_slot_grammar_sweep_prep.py`,
+[doc/GSMG_PHASE524_SLOT_GRAMMAR_SWEEP.md](../../doc/GSMG_PHASE524_SLOT_GRAMMAR_SWEEP.md).
+
+**Reopen condition:** a new authenticated checkpoint value or selector for
+one. The same universe can be rerun with the Bloom cache loaded to close
+the raw-key gap (about 2.3 hours).
