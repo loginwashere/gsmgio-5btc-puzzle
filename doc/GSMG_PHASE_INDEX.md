@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **500** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **501** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -518,3 +518,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 520 | P520 | 2026-09-17 | DBBI+FAED joint-splice hypothesis, closed negative | — | [source](../tools/gsmg/findings/P00520.md) | [link](../tools/gsmg/FINDINGS.md#phase-520----dbbifaed-joint-splice-hypothesis-closed-negative-2026-09-17) | [GSMG_PHASE520_DBBI_FAED_JOINT_SPLICE_HYPOTHESIS_AUDIT](GSMG_PHASE520_DBBI_FAED_JOINT_SPLICE_HYPOTHESIS_AUDIT.md) |
 | 521 | P521 | 2026-09-17 | DBBI+FAED shared-board hypothesis, no calibrated consistency | — | [source](../tools/gsmg/findings/P00521.md) | [link](../tools/gsmg/FINDINGS.md#phase-521----dbbifaed-shared-board-hypothesis-no-calibrated-consistency-2026-09-17) | [GSMG_PHASE521_DBBI_FAED_SHARED_BOARD_HYPOTHESIS_AUDIT](GSMG_PHASE521_DBBI_FAED_SHARED_BOARD_HYPOTHESIS_AUDIT.md) |
 | 522 | P522 | 2026-09-18 | OpenSSL menu-gap round 2 (CAST5, RC4), closed negative | — | [source](../tools/gsmg/findings/P00522.md) | [link](../tools/gsmg/FINDINGS.md#phase-522----openssl-menu-gap-round-2-cast5-rc4-closed-negative-2026-09-18) | [GSMG_PHASE522_OPENSSL_MENU_GAP_ROUND2_AUDIT](GSMG_PHASE522_OPENSSL_MENU_GAP_ROUND2_AUDIT.md) |
+| 523 | P523 | 2026-09-18 | slot-grammar password product for SALPH | overlap audit, product essentially untested, execution pre-registered | [source](../tools/gsmg/findings/P00523.md) | [link](../tools/gsmg/FINDINGS.md#phase-523----slot-grammar-password-product-for-salph-overlap-audit-product-essentially-untested-execution-pre-registered-2026-09-18) | [GSMG_PHASE523_SLOT_GRAMMAR_OVERLAP_AUDIT](GSMG_PHASE523_SLOT_GRAMMAR_OVERLAP_AUDIT.md) |
