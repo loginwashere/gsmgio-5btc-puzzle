@@ -30267,14 +30267,16 @@ load (the binary's default path is a Docker path), so the raw-key Bloom arms
 were off; the pre-registered z-score and structural detectors were not
 affected. Rerun 2026-09-19 with the cache loaded (8,744 s): identical 0
 strong, 0 structural, identical weak set, 17 Bloom hits (14 unique
-addresses) all rejected by the live API check, 0 confirmed funded. Remaining
-gap: the Phase 331 known-target detector is absent from this native binary
-(built before it landed), so the eight EC-derived neighbors of the prize
-key were not checked in either run.
+addresses) all rejected by the live API check, 0 confirmed funded. The native binary
+lacked the Phase 331 known-target detector (built before it landed), so a
+third run used a fresh Docker image built from current source (self-test
+passed; log shows the cache loaded and 8 known EC-derived targets folded in;
+8,740 s): identical 0 strong, 0 structural, identical weak set, the same 17
+Bloom hits (14 unique addresses) all unfunded, 0 known-target matches.
 
 **Disposition:** rejected for this universe (62 values, two joins, fixed
-macro order, standard expansion, four blobs, raw-key Bloom arms active in
-the rerun, known-target detector absent).
+macro order, standard expansion, four blobs, raw-key Bloom arms and the
+Phase 331 known-target detector active in the final run).
 
 **Facts affected:** none.
 
@@ -30286,5 +30288,4 @@ JSON-lines.
 [doc/GSMG_PHASE524_SLOT_GRAMMAR_SWEEP.md](../../doc/GSMG_PHASE524_SLOT_GRAMMAR_SWEEP.md).
 
 **Reopen condition:** a new authenticated checkpoint value or selector for
-one. The known-target gap closes only with a binary rebuilt from current
-source (Docker build path), then a rerun of the same frozen wordlist.
+one. No detector gap remains open for this universe.

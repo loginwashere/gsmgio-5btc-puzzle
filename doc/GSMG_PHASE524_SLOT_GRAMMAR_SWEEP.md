@@ -105,23 +105,46 @@ as Phases 328 and 334 (3 and 5). The weak-tier set matches run 1 exactly,
 as expected, since the filter does not change the z-score gate. The API
 check sends derived addresses, not keys or passphrases, to Blockstream.
 
-**Remaining gap: the Phase 331 known-target detector.** The native binary
-predates it (built 2026-08-19; the code landed 2026-08-20; the binary
-contains no reference to it and the run log has no fold-in line). The eight
-EC-derived neighbors of the prize public key (`P+G`, `P-G`, `P/2`, `2P`,
-compressed and uncompressed) were therefore not checked in either run.
+**Known-target gap found.** The native binary predates the Phase 331
+known-target detector (built 2026-08-19; the code landed 2026-08-20; the
+binary contains no reference to it and the run log has no fold-in line).
+The older `gsmg-gpu-oracle:latest` image (built 2026-08-20 09:50) lacks it
+too. The eight EC-derived neighbors of the prize public key (`P+G`, `P-G`,
+`P/2`, `2P`, compressed and uncompressed) were therefore not checked in
+runs 1 and 2.
+
+## Addendum 2: known-target rerun (2026-09-19)
+
+A fresh image was built from current source through `Dockerfile.cuda`
+(`gsmg-gpu-oracle:phase524-kt`; the binary contains the detector). Its
+self-test passed, and the run log shows `Bloom cache loaded` and `folded in
+8 known EC-derived target address(es)`. The same frozen wordlist (SHA-256
+`5193ff52...290bdc`, 6,245,712 forms) was run with the container mapped to
+the invoking user, so outputs are not root-owned. It took 8,740 s.
+
+| Quantity | Run 1 (no Bloom) | Run 2 (Bloom) | Run 3 (Bloom + known targets) |
+|---|---:|---:|---:|
+| Forms tested | 6,245,712 | 6,245,712 | 6,245,712 |
+| Strong / structural hits | 0 / 0 | 0 / 0 | 0 / 0 |
+| Weak rows (unique triples) | 285 (178) | 285 (178) | 285 (178) |
+| Bloom hits (unique addresses) | n/a | 17 (14) | 17 (14) |
+| Confirmed funded | n/a | 0 | 0 |
+| Known-target matches | n/a | detector absent | 0 |
+
+Run 3's weak set equals run 1's, and its Bloom-hit address set equals run
+2's. A known-target match is an unconditional hit that would print a
+`CONFIRMED FUNDED` line and write a funded keyshape record; there were none.
 Whether the prize address itself is in the funded-address cache was not
-verified here. Closing this needs the binary rebuilt from the current
-source, which the Docker build path does and the native path here did not.
+verified.
 
 ## Disposition
 
 Rejected for this candidate universe: the 62 authenticated slot values, two
 join conventions, fixed macro order, standard form expansion, four blobs,
 AES-CBC/ECB/CFB/OFB/CTR under legacy MD5/SHA-1/SHA-256 and PBKDF2 at three
-key sizes, with the raw-key Bloom arms active in the rerun and the Phase 331
-known-target detector absent from both runs. No widening on a negative, per
-the pre-registered stop rule.
+key sizes, with the raw-key Bloom arms and the Phase 331 known-target
+detector both active in the final run. No widening on a negative, per the
+pre-registered stop rule.
 
 ## Facts affected
 
@@ -138,8 +161,8 @@ did not say; the execution phase decodes it.
   `--verify`, `--classify-weak`, `--self-test`)
 - `tools/gsmg/test_phase524_slot_grammar_sweep_prep.py` (6 tests)
 - Runtime outputs, gitignored:
-  `tools/gpu_oracle/output_local/phase524{,b}.{hits,keyshape,checkpoint}.jsonl`
-  (`b` is the Bloom rerun),
+  `tools/gpu_oracle/output_local/phase524{,b,c}.{hits,keyshape,checkpoint}.jsonl`
+  (`b` is the Bloom rerun, `c` the known-target rerun),
   `_work/phase524/{bases.txt,prepare_report.json}`. `output/` and
   `checkpoints/` are root-owned from earlier Docker runs; native runs use
   `output_local/`.
@@ -147,6 +170,5 @@ did not say; the execution phase decodes it.
 ## Reopen condition
 
 Reopens on a new authenticated checkpoint value (a new slot value or a
-selector for one), not on re-running these values. The only unclosed
-detector gap for this universe is the Phase 331 known-target check, which
-needs a binary rebuilt from current source.
+selector for one), not on re-running these values. No detector gap remains
+open for this universe.
