@@ -30259,16 +30259,22 @@ SALPH-only scope); re-derived every weak-tier body from its recorded row,
 matched the GPU z-score, and ran the key-shape classifier.
 
 **Result:** 6,245,712 of 6,245,712 forms (about 1.5B decrypts, 8,436 s).
-0 strong, 0 structural, 0 key-shape records. 285 weak hits (z 5.00-5.93;
-SALPH 40, COSMIC 55, P32TRAILING 43, URLBLOB 147), rate in line with Phases
-328/334; all 285 bodies re-derived exactly (0 z mismatches) and contain 0
-hex64/WIF/BIP39 matches. Limitation: the Bloom cache failed to load (the
-binary's default path is a Docker path), so the raw-key Bloom arms and the
-Phase 331 known-target detector were inactive; the pre-registered
-z-score and structural full-pad detectors were not affected.
+0 strong, 0 structural. 285 weak rows (178 unique triples; z 5.00-5.93;
+SALPH 40, COSMIC 55, P32TRAILING 43, URLBLOB 147 rows), rate in line with
+Phases 328/334; all 285 bodies re-derived exactly (0 z mismatches) and
+contain 0 hex64/WIF/BIP39 matches. The first run's Bloom cache failed to
+load (the binary's default path is a Docker path), so the raw-key Bloom arms
+were off; the pre-registered z-score and structural detectors were not
+affected. Rerun 2026-09-19 with the cache loaded (8,744 s): identical 0
+strong, 0 structural, identical weak set, 17 Bloom hits (14 unique
+addresses) all rejected by the live API check, 0 confirmed funded. Remaining
+gap: the Phase 331 known-target detector is absent from this native binary
+(built before it landed), so the eight EC-derived neighbors of the prize
+key were not checked in either run.
 
 **Disposition:** rejected for this universe (62 values, two joins, fixed
-macro order, standard expansion, four blobs, Bloom arms inactive).
+macro order, standard expansion, four blobs, raw-key Bloom arms active in
+the rerun, known-target detector absent).
 
 **Facts affected:** none.
 
@@ -30280,5 +30286,5 @@ JSON-lines.
 [doc/GSMG_PHASE524_SLOT_GRAMMAR_SWEEP.md](../../doc/GSMG_PHASE524_SLOT_GRAMMAR_SWEEP.md).
 
 **Reopen condition:** a new authenticated checkpoint value or selector for
-one. The same universe can be rerun with the Bloom cache loaded to close
-the raw-key gap (about 2.3 hours).
+one. The known-target gap closes only with a binary rebuilt from current
+source (Docker build path), then a rerun of the same frozen wordlist.

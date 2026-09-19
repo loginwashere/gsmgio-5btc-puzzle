@@ -78,35 +78,50 @@ forms) and Phase 334 (42 in 725,760): the known noise band at this volume.
 No SALPH decrypt produced a strong or structural result, including the
 exact 64-byte full-pad shape a two-key plaintext would give.
 
-## Limitation: the Bloom cache was not loaded
+## Addendum: Bloom-enabled rerun (2026-09-19)
 
-The run logged that the Bloom cache could not be loaded: the binary's
-compile-time default path points at a Docker location (`/repo/...`), and
-`tools/gpu_oracle/db/` is empty. Consequences, stated precisely:
+The first run logged that the Bloom cache could not be loaded (the binary's
+compile-time default path is a Docker location and `tools/gpu_oracle/db/` is
+empty), which left the raw-key Bloom arms inactive. The pre-registered
+detectors (printable z-score, strong at 8.0, and the exact structural
+full-pad check) do not depend on the filter and were unaffected. The same
+frozen wordlist (SHA-256 `5193ff52...290bdc`, 6,245,712 forms) was rerun
+with `--bloom-cache <repo>/db/addresses.hash160.bloom` passed explicitly;
+the log confirms the cache loaded. It took 8,744 s.
 
-- **Unaffected:** the pre-registered detector. The printable z-score gate
-  (strong at 8.0) and the exact structural full-pad check run on the GPU
-  independent of the Bloom filter, and structural hits are address-derived
-  and logged regardless.
-- **Not active:** the two secondary raw-key arms, the unconditional Bloom
-  check of the first two 32-byte chunks of non-printable, non-structural
-  CBC/ECB bodies and of every stream-mode body, and the Phase 331
-  known-target detector. Phases 328 and 334 ran with these arms on.
+| Quantity | Value |
+|---|---:|
+| Forms tested | 6,245,712 of 6,245,712 |
+| Strong hits | 0 |
+| Structural hits | 0 |
+| Weak-tier rows | 285 (178 unique candidate, variant, blob triples), identical to run 1 |
+| Bloom hits (raw-key arm, all stream-mode bodies) | 17 rows, 14 unique addresses |
+| Bloom hits confirmed funded by the live API check | 0 |
+| Bloom hits by blob | P32TRAILING 6, SALPH 5, URLBLOB 4, COSMIC 2 |
 
-The gap only matters if the true plaintext is raw binary, not 64 bytes, and
-not printable. That is possible but unlikely for an 80-byte SALPH
-ciphertext. Closing it means rerunning with
-`--bloom-cache <repo>/db/addresses.hash160.bloom`, about 2.3 hours. It is
-recorded as a reopen condition rather than done here because it is outside
-the Phase 523 pre-registration.
+All 17 Bloom hits were false positives: each derived address had no
+transaction history on the live Blockstream check. That is the same order
+as Phases 328 and 334 (3 and 5). The weak-tier set matches run 1 exactly,
+as expected, since the filter does not change the z-score gate. The API
+check sends derived addresses, not keys or passphrases, to Blockstream.
+
+**Remaining gap: the Phase 331 known-target detector.** The native binary
+predates it (built 2026-08-19; the code landed 2026-08-20; the binary
+contains no reference to it and the run log has no fold-in line). The eight
+EC-derived neighbors of the prize public key (`P+G`, `P-G`, `P/2`, `2P`,
+compressed and uncompressed) were therefore not checked in either run.
+Whether the prize address itself is in the funded-address cache was not
+verified here. Closing this needs the binary rebuilt from the current
+source, which the Docker build path does and the native path here did not.
 
 ## Disposition
 
 Rejected for this candidate universe: the 62 authenticated slot values, two
 join conventions, fixed macro order, standard form expansion, four blobs,
 AES-CBC/ECB/CFB/OFB/CTR under legacy MD5/SHA-1/SHA-256 and PBKDF2 at three
-key sizes, with the Bloom arms inactive. No widening on a negative, per the
-pre-registered stop rule.
+key sizes, with the raw-key Bloom arms active in the rerun and the Phase 331
+known-target detector absent from both runs. No widening on a negative, per
+the pre-registered stop rule.
 
 ## Facts affected
 
@@ -123,7 +138,8 @@ did not say; the execution phase decodes it.
   `--verify`, `--classify-weak`, `--self-test`)
 - `tools/gsmg/test_phase524_slot_grammar_sweep_prep.py` (6 tests)
 - Runtime outputs, gitignored:
-  `tools/gpu_oracle/output_local/phase524.{hits,keyshape,checkpoint}.jsonl`,
+  `tools/gpu_oracle/output_local/phase524{,b}.{hits,keyshape,checkpoint}.jsonl`
+  (`b` is the Bloom rerun),
   `_work/phase524/{bases.txt,prepare_report.json}`. `output/` and
   `checkpoints/` are root-owned from earlier Docker runs; native runs use
   `output_local/`.
@@ -131,5 +147,6 @@ did not say; the execution phase decodes it.
 ## Reopen condition
 
 Reopens on a new authenticated checkpoint value (a new slot value or a
-selector for one), not on re-running these values. Separately, the Bloom
-rerun above closes the raw-key gap for this same universe.
+selector for one), not on re-running these values. The only unclosed
+detector gap for this universe is the Phase 331 known-target check, which
+needs a binary rebuilt from current source.
