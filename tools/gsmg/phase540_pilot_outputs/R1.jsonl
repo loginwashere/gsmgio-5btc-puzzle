@@ -1,0 +1,80 @@
+{"candidate": "causality", "clue": "Phase 1 answer / Matrix theme", "reading": "From my recollection of the puzzle, the one-word Phase 1 solution 'causality' is the password carried into Phase 2; the Matrix's Architect/Merovingian speak of cause and effect."}
+{"candidate": "keymaker", "clue": "1... are you looking for the private keymaker?", "reading": "The page names the Keymaker directly and the passphrase is what you come with to it."}
+{"candidate": "the keymaker", "clue": "private keymaker", "reading": "Phase text names 'the private keymaker' as the thing sought."}
+{"candidate": "private keymaker", "clue": "1... are you looking for the private keymaker?", "reading": "Literal quoted phrase from the page."}
+{"candidate": "the private keymaker", "clue": "page text", "reading": "Literal quoted phrase including article."}
+{"candidate": "privatekeymaker", "clue": "page text", "reading": "Concatenated form as used in the long URL-style phrases."}
+{"candidate": "are you looking for the private keymaker", "clue": "page text", "reading": "Whole question as the passphrase."}
+{"candidate": "You come to me, without it", "clue": "page text", "reading": "The first riddle sentence taken literally as the phrase."}
+{"candidate": "without it", "clue": "You come to me, without it", "reading": "'It' is the password; the answer is what you need to bring."}
+{"candidate": "Come to me with it and you'll have the power to continue", "clue": "page text", "reading": "Full sentence as passphrase."}
+{"candidate": "the power to continue", "clue": "page text", "reading": "Fragment naming what the passphrase grants."}
+{"candidate": "power to continue", "clue": "page text", "reading": "Shortened fragment."}
+{"candidate": "It'll grant the first part", "clue": "page text", "reading": "Sentence naming the effect of the passphrase."}
+{"candidate": "the first part", "clue": "page text", "reading": "Fragment of the last sentence."}
+{"candidate": "first part", "clue": "page text", "reading": "Fragment naming first part of the key."}
+{"candidate": "choice is an illusion created between those with power and those without", "clue": "URL slug first half", "reading": "The Merovingian's line in the URL slug as passphrase."}
+{"candidate": "choiceisanillusioncreatedbetweenthosewithpowerandthosewithout", "clue": "URL slug", "reading": "The slug's first sentence concatenated."}
+{"candidate": "choice is an illusion", "clue": "URL slug", "reading": "Short form of the Matrix quote."}
+{"candidate": "choiceisanillusion", "clue": "URL slug", "reading": "Concatenated short form."}
+{"candidate": "a very special dessert i wrote it myself", "clue": "URL slug second half", "reading": "Second sentence of the slug (Matrix Reloaded cake scene)."}
+{"candidate": "averyspecialdessertiwroteitmyself", "clue": "URL slug", "reading": "Concatenated second half of the slug."}
+{"candidate": "a very special dessert", "clue": "URL slug", "reading": "Fragment of the slug."}
+{"candidate": "special dessert", "clue": "URL slug", "reading": "Shortest fragment of the dessert line."}
+{"candidate": "dessert", "clue": "URL slug", "reading": "Single word from the slug."}
+{"candidate": "i wrote it myself", "clue": "URL slug", "reading": "Merovingian's line in the cake scene."}
+{"candidate": "iwroteitmyself", "clue": "URL slug", "reading": "Concatenated form."}
+{"candidate": "choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself", "clue": "URL slug", "reading": "Entire slug as passphrase."}
+{"candidate": "choice is an illusion created between those with power and those without a very special dessert i wrote it myself", "clue": "URL slug", "reading": "Entire slug segmented into words."}
+{"candidate": "choice", "clue": "URL slug", "reading": "First word of slug, a Matrix theme."}
+{"candidate": "illusion", "clue": "URL slug", "reading": "Key word of the slug."}
+{"candidate": "power", "clue": "URL slug and page text", "reading": "'the power to continue' and 'those with power'."}
+{"candidate": "those with power and those without", "clue": "URL slug", "reading": "Middle fragment of the slug."}
+{"candidate": "Merovingian", "clue": "URL slug (dessert scene)", "reading": "The slug quotes the Merovingian; the phrase points at him."}
+{"candidate": "the merovingian", "clue": "URL slug", "reading": "Character who says the quotes."}
+{"candidate": "cause and effect", "clue": "Merovingian on causality", "reading": "Companion phrase to causality in Matrix Reloaded."}
+{"candidate": "causality is the reason", "clue": "Merovingian: 'Causality. There is no escape from it'", "reading": "Longer causality quote form."}
+{"candidate": "there is no escape from it", "clue": "Merovingian causality line", "reading": "'Without it' riddle answers 'it'; Merovingian says no escape from causality."}
+{"candidate": "aaa connected enf", "clue": "/(aaa, connected enf)", "reading": "The bracketed hint read literally as a phrase."}
+{"candidate": "aaa", "clue": "/(aaa, connected enf)", "reading": "First token of the hint."}
+{"candidate": "enf", "clue": "/(aaa, connected enf)", "reading": "Last token of the hint, perhaps an abbreviation."}
+{"candidate": "connected", "clue": "/(aaa, connected enf)", "reading": "Middle word of the hint."}
+{"candidate": "aaaconnectedenf", "clue": "/(aaa, connected enf)", "reading": "Concatenation of the hint tokens."}
+{"candidate": "aaa connected", "clue": "/(aaa, connected enf)", "reading": "Hint first two tokens."}
+{"candidate": "connected enf", "clue": "/(aaa, connected enf)", "reading": "Hint last two tokens."}
+{"candidate": "enforcement", "clue": "/(aaa, connected enf)", "reading": "'enf' expanded, with 'aaa' as authentication authorization accounting enforcement."}
+{"candidate": "authentication authorization accounting", "clue": "/(aaa, ...)", "reading": "AAA expanded as the networking term."}
+{"candidate": "aaa enf", "clue": "/(aaa, connected enf)", "reading": "Hint without the connective word."}
+{"candidate": "GSMG", "clue": "page header", "reading": "The site name at the top of the page."}
+{"candidate": "GSMG Puzzle", "clue": "page header", "reading": "Page header words."}
+{"candidate": "gsmg.io", "clue": "page header", "reading": "The domain as passphrase."}
+{"candidate": "phase 2", "clue": "page header", "reading": "The stage label."}
+{"candidate": "phase2", "clue": "page header", "reading": "Concatenated stage label."}
+{"candidate": "matrix", "clue": "Matrix theme (keymaker, Merovingian)", "reading": "The unifying theme word."}
+{"candidate": "the matrix", "clue": "Matrix theme", "reading": "Film title."}
+{"candidate": "neo", "clue": "Matrix theme", "reading": "Protagonist name."}
+{"candidate": "trinity", "clue": "Matrix theme", "reading": "Character who comes with Neo to the Keymaker."}
+{"candidate": "morpheus", "clue": "Matrix theme", "reading": "Character name commonly used as password."}
+{"candidate": "the architect", "clue": "Matrix theme", "reading": "Character who discusses choice with Neo."}
+{"candidate": "architect", "clue": "Matrix theme", "reading": "Single word; choice vs. causality are Architect themes."}
+{"candidate": "oracle", "clue": "Matrix theme", "reading": "Character discussing choice."}
+{"candidate": "persephone", "clue": "Dessert scene", "reading": "Merovingian's wife who is involved in the cake scene."}
+{"candidate": "the key maker", "clue": "page text", "reading": "Spaced spelling of Keymaker."}
+{"candidate": "key maker", "clue": "page text", "reading": "Two-word spelling."}
+{"candidate": "private key", "clue": "page text", "reading": "Words from the riddle: 'the private keymaker' plus the puzzle's goal."}
+{"candidate": "the private key", "clue": "page text", "reading": "The thing the puzzle seeks."}
+{"candidate": "you come to me without it", "clue": "page text", "reading": "Full sentence without punctuation sensitivity issues; body of riddle."}
+{"candidate": "salted", "clue": "Salted__ header", "reading": "Meta reading: the OpenSSL magic string."}
+{"candidate": "password", "clue": "'sha-256(password)' in page text", "reading": "Literal word in the instruction; a trivial baseline."}
+{"candidate": "sha-256(password)", "clue": "page text", "reading": "Literal instruction string."}
+{"candidate": "aes-256-cbc", "clue": "page text", "reading": "Cipher name in the instruction."}
+{"candidate": "base64", "clue": "page text", "reading": "Encoding named in the instruction."}
+{"candidate": "theseus", "clue": "Later-phase labyrinth theme", "reading": "Remembered as a later-phase password; possible cross-phase reuse."}
+{"candidate": "labyrinth", "clue": "Later-phase theme", "reading": "Later-phase theme word."}
+{"candidate": "minotaur", "clue": "Later-phase theme", "reading": "Labyrinth theme word."}
+{"candidate": "ariadne", "clue": "Later-phase theme", "reading": "Thread through the labyrinth; a key-giver."}
+{"candidate": "free will", "clue": "Choice theme", "reading": "Opposite of 'choice is an illusion'."}
+{"candidate": "determinism", "clue": "Choice illusion theme", "reading": "Philosophical term behind causality."}
+{"candidate": "fate", "clue": "Choice illusion theme", "reading": "One-word variant."}
+{"candidate": "destiny", "clue": "Choice illusion theme", "reading": "One-word variant."}
+{"candidate": "control", "clue": "Power theme", "reading": "Those with power control choice."}

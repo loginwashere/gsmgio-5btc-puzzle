@@ -1,0 +1,12 @@
+{
+  "phase": 540,
+  "sha256": {
+    "build_script": "aa1001bd62c736886aaf00b8740af0655109dcc67ea0ef15110140984c4dd13b",
+    "dossier_main": "97febab3ca4e661860f57e0d346ca1d1fe12fe0b45f2058fe82cf9d44ef650cb",
+    "dossier_r1": "a47c3c94f33e46f7a640d04927998e42515c0aa99576813c2883e607e5d7b31b",
+    "dossier_r2": "cbfb6e8f66ada77313d41e358629fa8883afb96d12e470b76d60b4a99df42fbb",
+    "eval_script": "28cc4ad7d367fb5b55675a7ce33759ab00fc00d6e45d08cff27f67bdcc54aaa3",
+    "prompts": "a2647e5de183007d46ad2b8b553e7fdf0a061d2eaaca5eeadd8fe05e42e44f89",
+    "protocol": "63975a8a5a9fafc70376e9d4dce4e5daa5a3994c9cc2d41815fbb198073a9cf4"
+  }
+}

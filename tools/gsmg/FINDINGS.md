@@ -30826,3 +30826,46 @@ bijections and to the payload, which no scalar test had used.
 **Reopen condition:** A creator-independent reason to expect the key written as an
 `a..i` number, or another existing artifact that predicts its digit order. Not other
 radices, packings, truncations, FAED or the host string.
+## Phase 540 — fresh-context agent insight pilot, closed negative (2026-09-20)
+
+**Question:** Can independent fresh-context agents, given only the puzzle's own
+artifacts, generate interpretation-type passphrase candidates that open any tracked
+blob? Two retro-controls ask whether they can recover a solved stage's answer from
+that stage's page alone.
+
+**Frozen inputs:** A history-free dossier (stage clues and answers, decrypted texts,
+final-page layout and on-page macro message); six lens-specific agents (literal,
+Matrix, creator-style, wordplay, semantic, minimalist) on sonnet, opus, fable and
+haiku; two retro-control agents on the Phase 2 page and the seed page. Protocol,
+prompts, dossiers and scripts hashed into a lock before the first agent ran.
+
+**Method:** One round, one prompt per agent, at most 250 candidates each. Collect,
+deduplicate and length-filter; run every unique candidate through the GPU oracle
+(60-variant table, all four tracked blobs, Bloom and known-target detectors). Exact
+bar: any strong, structural or known-target hit.
+
+**Result:** 1,297 lines written, 848 unique candidates (805 after case and spacing
+folding), 16,713 passphrase forms: 0 strong, 0 structural, 0 weak, 0 known-target.
+Of 1,296 candidate lines, 875 were not previously covered and 379 (29%) were fully
+covered by earlier sweeps. Thirteen candidates were proposed by all six agents, 121
+by three or more; each agent contributed many unique ones (A2 183, A6 115, A3 95,
+A5 83, A4 67, A1 39). Retro: R1 recovered `causality` at rank 1 but its own report
+says from memory of the puzzle; R2 did not recover the lyric line.
+
+**Disposition:** rejected for this dossier, these lenses and one round;
+interpretation-type generation, exact oracle. Deviations disclosed: A3's Fable run
+failed (spend limit) and was rerun once on Opus; one over-length candidate dropped.
+
+**Facts affected:** None.
+
+**Supersedes/corrects:** None. Adds an interpretation-type candidate set the mechanical
+sweeps did not contain.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE540_FRESH_CONTEXT_AGENT_INSIGHT_PILOT.md),
+`phase540_pilot_build.py`, `phase540_pilot_eval.py`, `phase540_pilot_prompts.json`,
+`phase540_pilot_lock.json`, `phase540_pilot_result.json`, `phase540_pilot_outputs/`,
+dated protocol.
+
+**Reopen condition:** A changed dossier (a new artifact or a specific new reading of a
+clue), or a new constraint on which readings to generate. Not more agents or wider
+lens lists on the same dossier.

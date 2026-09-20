@@ -1,0 +1,106 @@
+{
+  "phase": 540,
+  "lock": "tools/gsmg/phase540_pilot_lock.json (intact at evaluation)",
+  "deviations": [
+    "A3 first attempt on fable failed with no output (monthly spend limit, API 429); rerun once on opus with the identical locked prompt, output A3.jsonl is the opus run",
+    "one A1 candidate over 200 characters dropped by the pre-registered filter"
+  ],
+  "main_round": {
+    "lines_written": {
+      "A1": 203,
+      "A2": 245,
+      "A3": 246,
+      "A4": 202,
+      "A5": 223,
+      "A6": 178
+    },
+    "kept_after_length_filter": 1296,
+    "unique_exact_strings": 848,
+    "unique_after_case_space_folding": 805,
+    "candidates_sha256": "3f02170d7de296740ae21312a17bc0d0332724977eebcd4aa2b1c59d8a2403b7"
+  },
+  "cross_agent": {
+    "proposed_by_3_or_more_agents": 121,
+    "proposed_by_all_6": 13,
+    "unique_to_one_agent": {
+      "A1": 39,
+      "A2": 183,
+      "A3": 95,
+      "A4": 67,
+      "A5": 83,
+      "A6": 115
+    }
+  },
+  "novelty_vs_phase523_salph_coverage_fast_sources": {
+    "per_agent": {
+      "A1": {
+        "new": 113,
+        "alpha_only_covered": 7,
+        "literal_partially_covered": 9,
+        "all_covered": 73
+      },
+      "A2": {
+        "new": 197,
+        "alpha_only_covered": 0,
+        "literal_partially_covered": 1,
+        "all_covered": 47
+      },
+      "A3": {
+        "new": 164,
+        "alpha_only_covered": 0,
+        "literal_partially_covered": 6,
+        "all_covered": 76
+      },
+      "A4": {
+        "new": 133,
+        "alpha_only_covered": 0,
+        "literal_partially_covered": 4,
+        "all_covered": 65
+      },
+      "A5": {
+        "new": 133,
+        "alpha_only_covered": 4,
+        "literal_partially_covered": 10,
+        "all_covered": 76
+      },
+      "A6": {
+        "new": 135,
+        "alpha_only_covered": 0,
+        "literal_partially_covered": 1,
+        "all_covered": 42
+      }
+    },
+    "total": {
+      "new": 875,
+      "alpha_only_covered": 11,
+      "literal_partially_covered": 31,
+      "all_covered": 379
+    }
+  },
+  "oracle": {
+    "bases": 848,
+    "forms": 16713,
+    "strong": 0,
+    "structural": 0,
+    "weak": 0,
+    "known_target": 0,
+    "bloom_loaded": true,
+    "known_targets_folded": 8,
+    "selftest": "passed"
+  },
+  "retro_controls": {
+    "R1": {
+      "answer": "causality",
+      "found": true,
+      "rank": 1,
+      "caveat": "agent reported the answer came from its own memory of the puzzle, not from the dossier"
+    },
+    "R2": {
+      "answer": "theflowerblossomsthroughwhatseemstobeaconcretesurface",
+      "found": false,
+      "candidates": 150
+    }
+  },
+  "exact_hits": 0,
+  "oracle_calls_on_retro": 0
+}

@@ -1,0 +1,150 @@
+{"candidate": "can you dig it", "clue": "filename tails ca | n_you | dig_i | t", "reading": "The four icons blue_ca, red_n_you, blue_dig_i and red_t concatenate in alternating blue/red order to CA+NYOU+DIGI+T, the sentence CAN YOU DIG IT."}
+{"candidate": "canyoudigitlogic", "clue": "all eight tails, question first", "reading": "CA+NYOU+DIGI+T followed by the second blue/red pair LO+GIC gives the full assembled string can-you-dig-it-logic."}
+{"candidate": "logiccanyoudigit", "clue": "lock_lo + crypto_gic then ca/n_you/dig_i/t", "reading": "LO+GIC spells LOGIC and prefixes the question, reading logic can you dig it."}
+{"candidate": "cryptologic", "clue": "blue_lock_lo + red_crypto_gic", "reading": "The crypto picture plus LO+GIC spells CRYPTO LOGIC, the theme word of the pair of lock icons."}
+{"candidate": "cryptologiccanyoudigit", "clue": "crypto_gic + lock_lo with the four question icons", "reading": "Whole icon set read as crypto logic can you dig it."}
+{"candidate": "canyoudigitcryptologic", "clue": "reverse order of the two assembled phrases", "reading": "Question chunk first, crypto logic second, as the filenames sort blue before red."}
+{"candidate": "bankingwarcanyoudigit", "clue": "black_banking_war leads", "reading": "The single black icon names the topic and the rest asks the question."}
+{"candidate": "canyoudigitbankingwar", "clue": "black icon read last", "reading": "The unique black icon is the answer target appended to the question."}
+{"candidate": "openingcanyoudigit", "clue": "red_open_lock_n_ing = OPEN + N + ING", "reading": "The open-lock icon spells OPENING, which introduces the question."}
+{"candidate": "canyoudigitopening", "clue": "open_lock_n_ing as suffix", "reading": "OPENING read after the question chunk."}
+{"candidate": "logicopeningbankingwarcanyoudigit", "clue": "all four assembled chunks in colour order", "reading": "LOGIC, OPENING, BANKING WAR and the question joined as one string."}
+{"candidate": "bankingwaropeninglogiccanyoudigit", "clue": "black, red, blue-red pair, question", "reading": "Same four chunks with the black topic icon first, reading as a headline."}
+{"candidate": "canyoudigitlogicopeningbankingwar", "clue": "question-first ordering of all chunks", "reading": "Alphabetical-by-colour reading with the question leading."}
+{"candidate": "thebankingwarisopeningcanyoudigit", "clue": "banking_war + open_lock_n_ing + question", "reading": "Icons read as a sentence: the banking war is opening, can you dig it."}
+{"candidate": "openingthebankingwar", "clue": "open lock icon + black banking war icon", "reading": "The open padlock acts on the black banking war icon."}
+{"candidate": "logicopensthebankingwar", "clue": "lo+gic, open lock, banking war", "reading": "Logic is the agent that opens the banking war page."}
+{"candidate": "unlockingthebankingwar", "clue": "open padlock read as UNLOCK plus ING", "reading": "The open-lock icon means unlocking, applied to the black banking war icon."}
+{"candidate": "unlockingthebankingwarwithlogic", "clue": "all four chunks as an instrumental sentence", "reading": "Logic is the tool that unlocks the banking war."}
+{"candidate": "cryptologicunlocksthebankingwar", "clue": "crypto_gic + lock_lo + open lock + banking war", "reading": "Full sentence reading of the seven non-question icons."}
+{"candidate": "logic", "clue": "blue_lock_lo + red_crypto_gic", "reading": "Minimal reading: the only clean word the two remaining icons spell is LOGIC."}
+{"candidate": "opening", "clue": "red_open_lock_n_ing", "reading": "The single icon whose tail literally spells OPEN+ING, an apt word for a gate."}
+{"candidate": "unlocking", "clue": "open padlock picture with ING tail", "reading": "The open padlock plus ing is the act the gate performs."}
+{"candidate": "bankingwar", "clue": "black_banking_war alone", "reading": "The one black icon is unique and may carry the answer by itself."}
+{"candidate": "thebankingwar", "clue": "black_banking_war with article", "reading": "Definite-article form of the unique black icon name."}
+{"candidate": "digit", "clue": "dig_i + t", "reading": "blue_dig_i and red_t concatenate to DIGIT, a self-contained word."}
+{"candidate": "digital", "clue": "dig_i + t plus a trailing AL", "reading": "DIGI+T extends to DIGITAL, the obvious word the shovel and T icons hint at."}
+{"candidate": "logical", "clue": "lock_lo + crypto_gic + al", "reading": "LO+GIC extends naturally to LOGICAL."}
+{"candidate": "digitallogic", "clue": "dig_i/t and lock_lo/crypto_gic pairs", "reading": "Both blue/red syllable pairs combine into the technical term digital logic."}
+{"candidate": "logicaldigit", "clue": "same two pairs, reversed", "reading": "Reverse composition of the two syllable pairs."}
+{"candidate": "cryptological", "clue": "crypto + lo + gic + al", "reading": "Crypto picture plus the LOGIC syllables gives cryptological."}
+{"candidate": "cryptographic", "clue": "crypto_gic read as crypto-graphic", "reading": "The tail gic is the end of cryptographic, matching the crypto icon."}
+{"candidate": "cryptologist", "clue": "crypto + logic + ist", "reading": "Agent noun built from the crypto and logic icons."}
+{"candidate": "location", "clue": "lo + ca + t + i + o + n across icons", "reading": "lock_lo, blue_ca, red_t, dig_i, open (o) and n spell LOCATION using one letter group per icon."}
+{"candidate": "locating", "clue": "lo + ca + t + i + n + ing", "reading": "Same letter-group reading but consuming the ing tail of the open-lock icon."}
+{"candidate": "catalog", "clue": "ca + t + a + lo + g", "reading": "blue_ca, red_t and blue_lock_lo plus the g of gic spell CATALOG."}
+{"candidate": "cataloging", "clue": "catalog + ing tail", "reading": "Catalog reading extended by the ing fragment of the open-lock icon."}
+{"candidate": "logicalthinking", "clue": "lo+gic+al and banking as th-in-king", "reading": "banking_war supplies KING, giving the phrase logical thinking."}
+{"candidate": "digitalunlocking", "clue": "digit + al + unlocking", "reading": "Digital word from dig_i/t, unlocking from the open padlock."}
+{"candidate": "unlockthedigit", "clue": "open lock + dig_i + t", "reading": "Imperative form joining the padlock and the digit icons."}
+{"candidate": "lockandunlock", "clue": "blue_lock_lo vs red_open_lock_n_ing", "reading": "The two padlock icons are a closed/open pair."}
+{"candidate": "lockedandunlocked", "clue": "closed padlock and open padlock", "reading": "State pair suggested by the two lock icons."}
+{"candidate": "openlock", "clue": "red_open_lock_n_ing picture", "reading": "The literal picture named in the longest filename."}
+{"candidate": "yesicandigit", "clue": "icons ask CAN YOU DIG IT", "reading": "If the icons pose a question, the gate wants the affirmative answer."}
+{"candidate": "icandigit", "clue": "answer to the assembled question", "reading": "First-person reply to can you dig it."}
+{"candidate": "idigit", "clue": "short answer to the question", "reading": "Compact affirmative reply to the icon question."}
+{"candidate": "yes", "clue": "question posed by the icons", "reading": "Bare affirmative to a yes/no gate question."}
+{"candidate": "wecandigit", "clue": "plural answer to the question", "reading": "Collective reply matching the community framing of the puzzle."}
+{"candidate": "ofcourseicandigit", "clue": "emphatic answer", "reading": "Emphatic reply to the icon question."}
+{"candidate": "sureicandigit", "clue": "colloquial answer", "reading": "Colloquial reply form to can you dig it."}
+{"candidate": "youcandigit", "clue": "second-person restatement", "reading": "Encouragement form of the assembled sentence."}
+{"candidate": "candigit", "clue": "ca + n + dig + i + t without the you", "reading": "Shorter concatenation of the same tails omitting the you fragment."}
+{"candidate": "canyoudigthelogic", "clue": "question chunk plus the logic chunk", "reading": "The question applied to the object LOGIC formed by the other blue/red pair."}
+{"candidate": "digthelogic", "clue": "dig picture plus lo+gic", "reading": "Imperative joining the shovel icon and the logic syllables."}
+{"candidate": "digdeeper", "clue": "dig icon and the seed-planting stage name", "reading": "Instruction implied by a shovel icon on a page called the seed is planted."}
+{"candidate": "keepdigging", "clue": "dig icon with ing tail", "reading": "The dig picture plus the ing fragment as an instruction."}
+{"candidate": "digdeep", "clue": "dig icon", "reading": "Terse instruction form from the shovel icon."}
+{"candidate": "theseedisplanted", "clue": "current stage name", "reading": "Gates in this puzzle sometimes take the current page name as the passphrase."}
+{"candidate": "theseedhassprouted", "clue": "progression from the planted seed", "reading": "Natural next step of the seed metaphor as a next-page name."}
+{"candidate": "theseedisgrowing", "clue": "seed metaphor continued", "reading": "Present-continuous form matching the ing fragment in the icons."}
+{"candidate": "plantingtheseed", "clue": "stage name plus ing fragment", "reading": "The ing icon turns the stage name into the gerund form."}
+{"candidate": "harvesttime", "clue": "seed metaphor endpoint", "reading": "The harvest follows planting in the same metaphor."}
+{"candidate": "causality", "clue": "known GSMG chain vocabulary", "reading": "Causality is a documented page name in this puzzle chain and fits the ca tail."}
+{"candidate": "cosmicduality", "clue": "GSMG artwork theme with red/blue duality", "reading": "The red versus blue icon split evokes the cosmic duality motif of the puzzle art."}
+{"candidate": "salphaseion", "clue": "known GSMG stage word", "reading": "Another documented stage name in the same puzzle chain."}
+{"candidate": "matrixsumlist", "clue": "known GSMG stage word", "reading": "A later stage name from the same chain, tried as the gate string."}
+{"candidate": "thematrixhasyou", "clue": "red/blue pill iconography plus the you fragment", "reading": "The n_you tail plus the Matrix theme gives the classic line."}
+{"candidate": "followthewhiterabbit", "clue": "Matrix theme of the puzzle", "reading": "Canonical Matrix instruction used as a gate string."}
+{"candidate": "wakeupneo", "clue": "Matrix theme", "reading": "Opening line of the Matrix, fits a gate that wakes the solver to the next page."}
+{"candidate": "freeyourmind", "clue": "Matrix theme with the unlocking icon", "reading": "The open padlock read as mental liberation."}
+{"candidate": "thereisnospoon", "clue": "Matrix theme", "reading": "Canonical Matrix line used as a passphrase."}
+{"candidate": "redpill", "clue": "four red icons", "reading": "The red group points to the red pill choice."}
+{"candidate": "bluepill", "clue": "three blue icons", "reading": "The blue group points to the blue pill choice."}
+{"candidate": "redpillbluepill", "clue": "red and blue icon split", "reading": "Both colour groups named together as the choice."}
+{"candidate": "thechoiceisanillusion", "clue": "red/blue choice framing", "reading": "Merovingian line fitting a red versus blue gate."}
+{"candidate": "everythingthathasabeginninghasanend", "clue": "Matrix ending line", "reading": "Long canonical line used as a passphrase for a late gate."}
+{"candidate": "ignoranceisbliss", "clue": "Cypher line, banking war framing", "reading": "Matrix line about choosing not to see, matching the closed-lock icon."}
+{"candidate": "knockknock", "clue": "gate that must be opened", "reading": "Matrix line paired with the opening lock icon."}
+{"candidate": "whatisthematrix", "clue": "question framing of the icons", "reading": "The icon question form mapped onto the canonical Matrix question."}
+{"candidate": "systemfailure", "clue": "banking war theme plus Matrix ending", "reading": "The black banking-war icon read as the collapse of the system."}
+{"candidate": "bitcoin", "clue": "crypto icon and banking war icon", "reading": "The crypto versus banking framing names Bitcoin directly."}
+{"candidate": "satoshinakamoto", "clue": "banking war and crypto icons", "reading": "The author of the banking war against fiat."}
+{"candidate": "satoshi", "clue": "crypto icon", "reading": "Short form of the same attribution."}
+{"candidate": "chancelloronbrinkofsecondbailoutforbanks", "clue": "black banking war icon", "reading": "The genesis block headline is the canonical banking-war text in crypto."}
+{"candidate": "thetimes03jan2009chancelloronbrinkofsecondbailoutforbanks", "clue": "genesis block coinbase message", "reading": "Full genesis coinbase string, the definitive banking war artifact."}
+{"candidate": "endthefed", "clue": "banking war icon", "reading": "Slogan of the war on central banking."}
+{"candidate": "cypherpunk", "clue": "crypto icon plus lock icons", "reading": "Cypherpunk names the crypto-versus-banking stance of the icon set."}
+{"candidate": "cypherpunkswritecode", "clue": "crypto and logic icons", "reading": "Cypherpunk manifesto line combining crypto and logic."}
+{"candidate": "cryptoanarchy", "clue": "crypto icon versus black banking icon", "reading": "The ideological name for crypto against banking."}
+{"candidate": "occupywallstreet", "clue": "banking war icon", "reading": "Protest movement named by the black banking war icon."}
+{"candidate": "toobigtofail", "clue": "banking war icon", "reading": "Banking crisis phrase matching the black icon."}
+{"candidate": "secondbailout", "clue": "banking war icon", "reading": "Short form of the genesis headline."}
+{"candidate": "breakthebanks", "clue": "banking war plus open lock", "reading": "The open padlock applied to the banks."}
+{"candidate": "crushthebanks", "clue": "banking war icon as an imperative", "reading": "Aggressive imperative reading of the black war icon."}
+{"candidate": "thewaronbanking", "clue": "black_banking_war reordered", "reading": "Prepositional reading of the black icon name."}
+{"candidate": "bankingwarfare", "clue": "black icon name extended", "reading": "War extended to warfare in the black icon phrase."}
+{"candidate": "cryptowar", "clue": "crypto icon plus war fragment", "reading": "The red crypto icon combined with the black icon war fragment."}
+{"candidate": "thecryptowar", "clue": "crypto and war fragments with article", "reading": "Article form of the crypto-versus-banking conflict."}
+{"candidate": "cryptovsbanking", "clue": "red crypto icon against black banking icon", "reading": "The colour contrast read as an opposition."}
+{"candidate": "financialrevolution", "clue": "banking war icon", "reading": "Outcome of the banking war as a page name."}
+{"candidate": "monetaryrevolution", "clue": "banking war icon variant", "reading": "Monetary framing of the same outcome."}
+{"candidate": "bankrun", "clue": "banking war icon", "reading": "Concrete event of a banking war."}
+{"candidate": "theendoffiat", "clue": "banking war plus crypto icons", "reading": "The conclusion the icon pairing implies."}
+{"candidate": "privatekey", "clue": "lock icons plus crypto icon", "reading": "The thing that opens a crypto lock."}
+{"candidate": "publickey", "clue": "open lock plus crypto icon", "reading": "The counterpart key in the same pair."}
+{"candidate": "lockandkey", "clue": "two padlock icons", "reading": "Idiomatic pairing for the closed and open lock."}
+{"candidate": "masterkey", "clue": "open lock icon", "reading": "What unlocks the gate depicted by the open padlock."}
+{"candidate": "opensesame", "clue": "open lock icon with the opening reading", "reading": "Classic passphrase for opening a gate."}
+{"candidate": "thekeyislogic", "clue": "lock icons plus lo+gic", "reading": "Logic named as the key to the locks."}
+{"candidate": "logicisthekey", "clue": "same clue, statement order reversed", "reading": "Predicate-first form of the logic-as-key reading."}
+{"candidate": "cryptoisthekey", "clue": "crypto icon plus lock icons", "reading": "Crypto named as what opens the locks."}
+{"candidate": "unlockthefuture", "clue": "open padlock icon", "reading": "Forward-looking imperative from the opening icon."}
+{"candidate": "unlockthematrix", "clue": "open padlock plus Matrix theme", "reading": "Unlocking applied to the puzzle theme."}
+{"candidate": "keystothekingdom", "clue": "lock icons plus king in banking", "reading": "banking_war contains KING, giving the keys to the kingdom."}
+{"candidate": "redandblue", "clue": "icon colour split", "reading": "The two dominant colours named directly."}
+{"candidate": "blackbluered", "clue": "colour sequence of the sorted filenames", "reading": "Black, then blues, then reds, in listing order."}
+{"candidate": "fourredthreeblueoneblack", "clue": "colour counts", "reading": "The 4/3/1 colour tally spelled out as a string."}
+{"candidate": "blackandblue", "clue": "black and blue icons", "reading": "Idiom formed from two of the three colours, fitting the banking war beating."}
+{"candidate": "digitalcrypto", "clue": "dig_i/t plus crypto icon", "reading": "Digital joined to the crypto icon word."}
+{"candidate": "cryptodigit", "clue": "crypto icon plus digit chunk", "reading": "Reverse joining of the same two readings."}
+{"candidate": "thelogicofthebankingwar", "clue": "lo+gic plus black icon", "reading": "Genitive sentence joining the logic pair and the banking war icon."}
+{"candidate": "warriors", "clue": "can you dig it is the Warriors line", "reading": "The assembled question is Cyrus famous line from The Warriors."}
+{"candidate": "comeouttoplay", "clue": "The Warriors reference from can you dig it", "reading": "The other famous line from the same film."}
+{"candidate": "bankingwarlogic", "clue": "black icon plus logic pair", "reading": "Two chunks joined with the black topic first."}
+{"candidate": "logicbankingwar", "clue": "logic pair plus black icon", "reading": "Same two chunks in the opposite order."}
+{"candidate": "openinglogic", "clue": "open lock icon plus logic pair", "reading": "The opening act applied to logic."}
+{"candidate": "logicopening", "clue": "logic pair plus opening icon", "reading": "Noun-phrase order of the same two chunks."}
+{"candidate": "openingbankingwar", "clue": "open lock icon plus black icon", "reading": "Direct concatenation of the two non-question chunks."}
+{"candidate": "cadigilocklocryptogicnyouopenlockningt", "clue": "raw concatenation of all filename tails", "reading": "Every filename tail concatenated in listing order after the black icon."}
+{"candidate": "bankingwarcadigilogicnyouopeningt", "clue": "cleaned concatenation of all icon readings", "reading": "All eight icons in listing order with lo+gic and open+ing resolved."}
+{"candidate": "locklogiccanyoudigit", "clue": "lock icon plus logic plus question", "reading": "Lock word retained alongside its lo tail before the question."}
+{"candidate": "lockedlogic", "clue": "blue closed lock plus lo+gic", "reading": "The closed padlock qualifies the logic chunk."}
+{"candidate": "thelockisopen", "clue": "red open padlock icon", "reading": "Statement form of the open-lock picture."}
+{"candidate": "digitallockopening", "clue": "digit, lock and opening chunks", "reading": "Three chunks combined into a single technical phrase."}
+{"candidate": "unlockthebankingwarcanyoudigit", "clue": "open lock, black icon and question", "reading": "Imperative plus the icon question as one string."}
+{"candidate": "canyoudigitnow", "clue": "question chunk with the ing icon read as now", "reading": "Present-tense emphasis added to the assembled question."}
+{"candidate": "cantyoudigit", "clue": "ca + n + t with you, dig, i", "reading": "The red_t icon read as the contraction t in cant, giving cant you dig it."}
+{"candidate": "youdigit", "clue": "n_you plus dig_i plus t", "reading": "Statement form dropping the ca fragment."}
+{"candidate": "wedigit", "clue": "dig and t icons with a plural subject", "reading": "Collective statement form of the dig chunk."}
+{"candidate": "theopeninglogicofthebankingwar", "clue": "all non-question icons as one phrase", "reading": "Full sentence reading of the black, lock, crypto and open-lock icons."}
+{"candidate": "cryptoislogic", "clue": "crypto icon plus lo+gic", "reading": "Copular statement joining the crypto icon and the logic pair."}
+{"candidate": "logicunlocks", "clue": "logic pair plus open padlock", "reading": "Two-word statement of the mechanism the icons describe."}
+{"candidate": "unlockinglogic", "clue": "open padlock plus logic pair", "reading": "Gerund reading with logic as the object."}
+{"candidate": "thelogicalchoice", "clue": "lo+gic+al plus red/blue choice", "reading": "Logic word combined with the red versus blue choice framing."}
+{"candidate": "digitalwar", "clue": "dig_i/t plus war fragment", "reading": "Digital joined to the war fragment of the black icon."}
+{"candidate": "warondigitalcash", "clue": "black war icon plus digit chunk", "reading": "The banking war framed as a war on digital cash."}
+{"candidate": "canyoudigitmybrother", "clue": "Warriors quote full form", "reading": "Extended form of the quote the icons assemble."}
+{"candidate": "cryptologicbankingwar", "clue": "crypto/logic chunks plus black icon", "reading": "Topic-style concatenation of the three non-question chunks."}
+{"candidate": "openthelock", "clue": "open padlock icon as imperative", "reading": "Direct imperative form of the open-lock picture."}
+{"candidate": "logicallyspeaking", "clue": "lo+gic+al plus ing fragment", "reading": "Adverbial phrase using the logic pair and the ing tail."}
+{"candidate": "thedigitallogicofthebankingwar", "clue": "all chunks as a single title", "reading": "Title-style sentence consuming digit, logic and banking war readings."}

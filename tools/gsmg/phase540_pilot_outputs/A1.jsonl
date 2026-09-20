@@ -1,0 +1,203 @@
+{"candidate": "enter", "clue": "SALPH split marker", "reading": "The binary block sitting in the middle of the SALPH blob decodes to enter, and the hint says your last command, so it is the passphrase."}
+{"candidate": "shabefanstoo", "clue": "final page item 8", "reading": "The raw text at the end of the stream is the literal passphrase sitting in plain view."}
+{"candidate": "thispassword", "clue": "final page item 5", "reading": "The decimal block decodes to thispassword, offered as the password itself."}
+{"candidate": "matrixsumlist", "clue": "final page item 2", "reading": "The binary block decodes to matrixsumlist, the first named object on the page, and it is used directly."}
+{"candidate": "lastwordsbeforearchichoice", "clue": "final page item 4", "reading": "The decimal block decodes to this phrase, which also recurs in the reversed message, so it is the passphrase."}
+{"candidate": "yellowblueprimes", "clue": "reversed binary message word 1", "reading": "The first word of the reversed message names the yellow and blue cells of the rabbit, and it is the key."}
+{"candidate": "yinyang", "clue": "reversed binary message word 4", "reading": "Yinyang is the short word in the middle of the ordered phrase and matches the Cosmic Duality page."}
+{"candidate": "wewontgiveawaythepassword", "clue": "reversed message word 5", "reading": "The page says we will not give away the password, and this is the literal reading."}
+{"candidate": "itsinfrontofyoureyesbutyourenotseeingit", "clue": "reversed message word 6", "reading": "The message tells you it is in front of your eyes, so this exact sentence is the answer."}
+{"candidate": "verylaststepisatruegiveaway", "clue": "reversed message word 7", "reading": "The last step is called a true giveaway, so the sentence describing it is the passphrase."}
+{"candidate": "promised", "clue": "reversed message word 8", "reading": "The final word of the ordered phrase, promised, is the one word that closes it."}
+{"candidate": "yellowblueprimes matrixsumlist lastwordsbeforearchichoice yinyang wewontgiveawaythepassword itsinfrontofyoureyesbutyourenotseeingit verylaststepisatruegiveaway promised", "clue": "reversed message in full", "reading": "The whole ordered phrase is the entire message and so the entire passphrase."}
+{"candidate": "yellowblueprimesmatrixsumlist", "clue": "reversed message words 1-2", "reading": "The first two words of the ordered phrase concatenated form the first clue pair."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoice", "clue": "reversed message words 2-3", "reading": "The two page-decoded blocks (items 2 and 4) joined in stream order."}
+{"candidate": "lastwordsbeforearchichoiceyinyang", "clue": "reversed message words 3-4", "reading": "Words 3 and 4 concatenated: the last words then the duality."}
+{"candidate": "yinyangwewontgiveawaythepassword", "clue": "reversed message words 4-5", "reading": "Words 4 and 5 joined."}
+{"candidate": "verylaststepisatruegiveawaypromised", "clue": "reversed message words 7-8", "reading": "The last two words: the last step is a true giveaway, promised."}
+{"candidate": "yellowblueprimesmatrixsumlistlastwordsbeforearchichoice", "clue": "reversed message words 1-3", "reading": "The first three words, each of which is either a decoded block or a keyword."}
+{"candidate": "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyangwewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised", "clue": "reversed message full, no spaces", "reading": "The ordered phrase with spaces removed is the whole stream key."}
+{"candidate": "promised verylaststepisatruegiveaway itsinfrontofyoureyesbutyourenotseeingit", "clue": "reversed message read from the end", "reading": "The message is stored reversed, so reading the word list backwards may give the intended order."}
+{"candidate": "promisedverylaststepisatruegiveawayitsinfrontofyoureyesbutyourenotseeingitwewontgiveawaythepasswordyinyanglastwordsbeforearchichoicematrixsumlistyellowblueprimes", "clue": "reversed message word order reversed", "reading": "The word order fully reversed, no spaces."}
+{"candidate": "sha256 our first hint is your last command", "clue": "final page item 6", "reading": "The literal text in the stream is itself the passphrase, sha256 prefix included."}
+{"candidate": "our first hint is your last command", "clue": "final page item 6", "reading": "The sentence without the sha256 tag is what the tag is applied to."}
+{"candidate": "ourfirsthintisyourlastcommand", "clue": "final page item 6", "reading": "The sentence run together in the style of the other answers."}
+{"candidate": "yourlastcommand", "clue": "final page item 6", "reading": "Your last command is the noun phrase the hint points to."}
+{"candidate": "sha256", "clue": "final page item 6", "reading": "The first word, sha256, is the first hint given."}
+{"candidate": "sha256enter", "clue": "items 6 and 7", "reading": "The hint says sha256 and the last command is enter, so the two together."}
+{"candidate": "entersha256", "clue": "items 6 and 7", "reading": "Enter followed by the hash name."}
+{"candidate": "entershabefanstoo", "clue": "items 7 and 8", "reading": "The last command enter joined to the last raw text on the page."}
+{"candidate": "shabefanstooenter", "clue": "items 8 and 7", "reading": "The last raw text followed by the middle marker."}
+{"candidate": "thispasswordenter", "clue": "items 5 and 7", "reading": "thispassword followed by the enter command."}
+{"candidate": "enterthispassword", "clue": "items 7 and 5", "reading": "The instruction to enter this password."}
+{"candidate": "enter thispassword", "clue": "items 7 and 5 spaced", "reading": "The command then the object in normal spoken order."}
+{"candidate": "thispasswordshabefanstoo", "clue": "items 5 and 8", "reading": "The decoded block then the raw ending text."}
+{"candidate": "shabefanstoothispassword", "clue": "items 8 and 5", "reading": "Reverse order of the two page items."}
+{"candidate": "matrixsumlistthispassword", "clue": "items 2 and 5", "reading": "The two short decoded blocks joined."}
+{"candidate": "matrixsumlistenter", "clue": "items 2 and 7", "reading": "The matrix list plus the enter marker."}
+{"candidate": "matrixsumlistshabefanstoo", "clue": "items 2 and 8", "reading": "First decoded block and final raw text."}
+{"candidate": "lastwordsbeforearchichoicethispassword", "clue": "items 4 and 5", "reading": "The two decimal-decoded blocks joined in stream order."}
+{"candidate": "lastwordsbeforearchichoiceenter", "clue": "items 4 and 7", "reading": "The last words then the enter command."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoicethispasswordenter", "clue": "items 2, 4, 5, 7", "reading": "All decoded blocks in stream order, concatenated."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoicethispasswordentershabefanstoo", "clue": "items 2, 4, 5, 7, 8", "reading": "All decoded text items including the raw ending."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoicethispassword", "clue": "items 2, 4, 5", "reading": "The three decoded blocks other than enter."}
+{"candidate": "DBBIFAED", "clue": "items 1 and 3 labels", "reading": "The two upper-case labels on the page are the two visible names, joined."}
+{"candidate": "DBBI", "clue": "item 1 label", "reading": "The first upper-case word on the page."}
+{"candidate": "FAED", "clue": "item 3 label", "reading": "The second upper-case label on the page."}
+{"candidate": "SALPH", "clue": "item 7 label", "reading": "The blob is called SALPH, and the name is the key."}
+{"candidate": "SalPhaseIon", "clue": "final page title", "reading": "The page title is the literal name and contains SAL PH and ION."}
+{"candidate": "Cosmic Duality", "clue": "second final page title", "reading": "The second page title, which pairs with yinyang."}
+{"candidate": "SalPhaseIonCosmicDuality", "clue": "both final page titles", "reading": "Both page titles joined."}
+{"candidate": "dbbibfbhccbegbihabebeihbeggegebebbgehhebhhfbabfdhbeffcdbbfcccgbfbeeggecbedcibfbffgigbeeeabe", "clue": "final page item 1", "reading": "The 91-letter DBBI string as printed is the passphrase in front of the eyes."}
+{"candidate": "faedggeedfcbdabhhggcadcfeddgfdgbgigaaedggiafaecghggcdaihehahbahigceifgbfgefgaifabifagaegeacgbbeagfggeeggafbacgfcdbeiffaafcidahgdeefghhcggaegdebhhegeghcegadfbdiagefcicggifdcgaaggfbigaicfbhecaecbceiaicebgbgiecdeggfgegaedggfiiciiififhggcgfgdcdggefcbeeigefibgibggghhfbcgifdehedfdagicdbhicgaiedaehahghhcihdghfhbiicecbiichihiiigiddgehhdfdchcbafgfbhaheagegecafehgcfggggcagfhhghbaihidiehhfdeggdgcihggggghadahigigbgecgedfcdggaccdehiicigfbffhggaeidbbeibbeiifdgfdhieeeieeecifdgdahdiggfhegfiaffiggbcbcehceabfbedbiibfbfdedeehgigfaaiggagbeiichiedifbehgbccahhbiibibbibdcbahaidhfahiihic", "clue": "final page item 3", "reading": "The 570-letter FAED string as printed is the passphrase."}
+{"candidate": "dbbibfbhccbegbihabebeihbeggegebebbgehhebhhfbabfdhbeffcdbbfcccgbfbeeggecbedcibfbffgigbeeeabe matrixsumlist", "clue": "items 1 and 2", "reading": "The DBBI string followed by the decoded block that follows it on the page."}
+{"candidate": "primes", "clue": "reversed message word 1", "reading": "The last part of the first word, primes, is the operative noun."}
+{"candidate": "yellowblue", "clue": "reversed message word 1", "reading": "The two colours of the rabbit grid without primes."}
+{"candidate": "blueyellow", "clue": "Stage 0 colours", "reading": "The two coloured cell types of the first image, the blue count being larger."}
+{"candidate": "yellow blue primes", "clue": "reversed message word 1", "reading": "The compound split into its three words."}
+{"candidate": "matrix sum list", "clue": "reversed message word 2", "reading": "The compound split into its three words."}
+{"candidate": "last words before archi choice", "clue": "reversed message word 3", "reading": "Read as archi choice, the Architect's choice, spaced."}
+{"candidate": "lastwordsbeforearchi", "clue": "reversed message word 3", "reading": "Truncated at archi to spell the Architect's name-fragment."}
+{"candidate": "archichoice", "clue": "reversed message word 3", "reading": "The Architect's choice is the operative noun in the phrase."}
+{"candidate": "architect", "clue": "Stage 3.2 monologue", "reading": "The speaker of the monologue is the Architect, and archi hints at it."}
+{"candidate": "thearchitect", "clue": "Stage 3.2 monologue", "reading": "The Matrix character who talks about choice and equations."}
+{"candidate": "thematrixhasyou", "clue": "Stage 3.2.1 Beaufort key", "reading": "The key THEMATRIXHASYOU used earlier and matrix appears on the final page."}
+{"candidate": "THEMATRIXHASYOU", "clue": "Stage 3.2.1 Beaufort key", "reading": "The key recycled in upper case exactly as printed."}
+{"candidate": "FUBCDORA.LETHINGKYMVPS.JQZXW", "clue": "Stage 3.2.2 checkerboard alphabet", "reading": "The checkerboard alphabet is a keyed string presented on the pages."}
+{"candidate": "FUBCDORALETHINGKYMVPSJQZXW", "clue": "Stage 3.2.2 checkerboard alphabet", "reading": "The same alphabet with the dots removed."}
+{"candidate": "half and better half", "clue": "Stage 3.2.2 text", "reading": "The private keys belong to half and better half, so the owner name is the key."}
+{"candidate": "halfandbetterhalf", "clue": "Stage 3.2.2 text", "reading": "The same joined in the style of the URL answers."}
+{"candidate": "HalfAndBetterHalf", "clue": "Stage 3.2.2 text", "reading": "Camel case rendering of the owner names."}
+{"candidate": "betterhalf", "clue": "Stage 3.2.2 text", "reading": "The better half alone as the second owner."}
+{"candidate": "half", "clue": "Stage 3.2.2 text", "reading": "The one-word key, half, from the puzzle description."}
+{"candidate": "causality", "clue": "Stage 2 answer", "reading": "The Stage 2 riddle answer may be reused as the key at the end."}
+{"candidate": "Safenet", "clue": "Stage 3 answer", "reading": "One of the seven earlier answers reused."}
+{"candidate": "Luna", "clue": "Stage 3 answer", "reading": "One of the seven earlier answers reused."}
+{"candidate": "HSM", "clue": "Stage 3 answer", "reading": "One of the seven earlier answers reused."}
+{"candidate": "11110", "clue": "Stage 3 answer", "reading": "One of the seven earlier answers reused."}
+{"candidate": "causalitySafenetLunaHSM11110", "clue": "Stage 3 answer", "reading": "The first five of the seven-part password are on the page as concatenated."}
+{"candidate": "causalitySafenetLunaHSM11110B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1", "clue": "Stage 3 answer", "reading": "The known pieces of the seven part password with the FEN, minus the hex text."}
+{"candidate": "B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1", "clue": "Stage 3 FEN", "reading": "The chess position, which is a strategic position designed for you."}
+{"candidate": "B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2", "clue": "Stage 3 FEN", "reading": "The board field of the FEN alone."}
+{"candidate": "jacquefrescogiveitjustonesecondheisenbergsuncertaintyprinciple", "clue": "Stage 3.2 clues", "reading": "The three clue answers concatenated, as before, reused as the final key."}
+{"candidate": "jacquefresco", "clue": "Stage 3.2 clue 1", "reading": "The first clue answer alone."}
+{"candidate": "giveitjustonesecond", "clue": "Stage 3.2 clue 2", "reading": "The second clue answer alone."}
+{"candidate": "heisenbergsuncertaintyprinciple", "clue": "Stage 3.2 clue 3", "reading": "The third clue answer alone."}
+{"candidate": "theflowerblossomsthroughwhatseemstobeaconcretesurface", "clue": "Stage 1 passphrase", "reading": "The Stage 1 lyric line reused as the final key."}
+{"candidate": "theseedisplanted", "clue": "Stage 0 URL", "reading": "The seed is planted, and the final page harvests it."}
+{"candidate": "the seed is planted", "clue": "Stage 0 URL", "reading": "The spaced form of the URL phrase."}
+{"candidate": "theseedisplantedtheflowerblossomsthroughwhatseemstobeaconcretesurface", "clue": "Stage 0 and 1", "reading": "The seed then the flower from the first two pages."}
+{"candidate": "choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself", "clue": "Stage 2 URL", "reading": "The riddle URL sentence is the phrase in front of your eyes."}
+{"candidate": "choice is an illusion created between those with power and those without", "clue": "Stage 2 URL", "reading": "The Merovingian-style line about choice, tying to the archichoice item."}
+{"candidate": "choiceisanillusion", "clue": "Stage 2 URL", "reading": "The first four words of the URL, connecting to the Architect's choice."}
+{"candidate": "choice", "clue": "Stage 2 URL and item 4", "reading": "The repeated word between the URL and lastwordsbeforearchichoice."}
+{"candidate": "GSMGIO5BTCPUZZLECHALLENGE", "clue": "route to the final page", "reading": "The route string is the salt keyword for the final page and the key."}
+{"candidate": "gsmgio5btcpuzzlechallenge", "clue": "route to the final page", "reading": "Lower-case rendering of the same string."}
+{"candidate": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe", "clue": "bitcoin address", "reading": "The prize address is in front of your eyes on every page."}
+{"candidate": "GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe", "clue": "route to the final page", "reading": "The exact input to the SHA-256 that gave the final page URL."}
+{"candidate": "89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32", "clue": "final page URL", "reading": "The URL path of the final page is the passphrase."}
+{"candidate": "gsmg.io", "clue": "site name", "reading": "The domain visible in every URL."}
+{"candidate": "gsmg", "clue": "site name and monologue", "reading": "The monologue says us guys at GSMG."}
+{"candidate": "gsmgio", "clue": "site name", "reading": "The site name joined."}
+{"candidate": "5btc", "clue": "puzzle title", "reading": "The prize amount as in the title."}
+{"candidate": "5 BTC", "clue": "puzzle title", "reading": "The prize amount as a spaced word."}
+{"candidate": "yourlifeisthesumofaremainderofanunbalancedequation", "clue": "Stage 3.2.1 first sentence", "reading": "The first sentence of the monologue contains sum, like matrixsumlist."}
+{"candidate": "sumofaremainderofanunbalancedequation", "clue": "Stage 3.2.1", "reading": "The phrase with sum in it ties to matrixsumlist."}
+{"candidate": "anunbalancedequation", "clue": "Stage 3.2.1", "reading": "The unbalanced equation is the anomaly the Architect talks about."}
+{"candidate": "theone", "clue": "Stage 3.2.1 last line", "reading": "I really hope you're the one, the last line of the monologue."}
+{"candidate": "ciaobella", "clue": "Stage 3.2.1 last line", "reading": "The sign-off of the monologue."}
+{"candidate": "privatekeynote", "clue": "Stage 3.2.1", "reading": "The monologue writes private keynote where the word key is expected."}
+{"candidate": "keynote", "clue": "Stage 3.2.1", "reading": "The oddly placed keynote word."}
+{"candidate": "theprivatekeysbelongtohalfandbetterhalf", "clue": "Stage 3.2.2", "reading": "The sentence fragment naming whose the keys are."}
+{"candidate": "theyalsoneedfundstolive", "clue": "Stage 3.2.2", "reading": "The last clause of the checkerboard plaintext."}
+{"candidate": "INCASEYOUMANAGETOCRACKTHISTHEPRIVATEKEYSBELONGTOHALFANDBETTERHALFANDTHEYALSONEEDFUNDSTOLIVE", "clue": "Stage 3.2.2", "reading": "The full plaintext of the checkerboard stage as one word."}
+{"candidate": "IN CASE YOU MANAGE TO CRACK THIS THE PRIVATE KEYS BELONG TO HALF AND BETTER HALF AND THEY ALSO NEED FUNDS TO LIVE", "clue": "Stage 3.2.2", "reading": "The full plaintext verbatim."}
+{"candidate": "wiseman", "clue": "Stage 3.2.1", "reading": "The wiseman above who hinted, taken literally."}
+{"candidate": "awiseman", "clue": "Stage 3.2.1", "reading": "A wiseman as spelled in the text."}
+{"candidate": "awisemanabovehintedat", "clue": "Stage 3.2.1", "reading": "The text about the wiseman above, an instruction to look above."}
+{"candidate": "hundredfourty", "clue": "Stage 3.2.1", "reading": "The odd spelling hundred fourty is the number to type."}
+{"candidate": "140", "clue": "Stage 3.2.1", "reading": "Hundred fourty as a number."}
+{"candidate": "one for one, four for one", "clue": "Stage 3.2 text", "reading": "The chess-position hint sentence with punctuation."}
+{"candidate": "oneforonefourforone", "clue": "Stage 3.2 text", "reading": "The hint sentence run together."}
+{"candidate": "1for1,4for1", "clue": "Stage 3.2 text", "reading": "The numeric form of the hint."}
+{"candidate": "raisingthestakeswithoutextrachancesofwinning", "clue": "Stage 3.2 text", "reading": "The sentence describing the next blob is the key."}
+{"candidate": "beautifulstrategicposition", "clue": "Stage 3.2 text", "reading": "The two content words describing the chess FEN."}
+{"candidate": "strategicposition", "clue": "Stage 3.2 text", "reading": "The position is the FEN."}
+{"candidate": "wakeupyou", "clue": "Stage 3.2 text", "reading": "The wake up line echoing the Matrix."}
+{"candidate": "iveBeenWaitingForYou", "clue": "Stage 3.2 text", "reading": "The first sentence of the decrypted text."}
+{"candidate": "ivebeenwaitingforyou", "clue": "Stage 3.2 text", "reading": "First sentence lower-case joined."}
+{"candidate": "irrevocablyhuman", "clue": "Stage 3.2 text", "reading": "You remain irrevocably human is the striking phrase."}
+{"candidate": "ergo", "clue": "Stage 3.2 text", "reading": "The unusual connective word used by the Architect."}
+{"candidate": "concordantly", "clue": "Stage 3.2 text", "reading": "The Architect's other odd connective."}
+{"candidate": "ergoconcordantly", "clue": "Stage 3.2 text", "reading": "The two connectives joined."}
+{"candidate": "irrelevant", "clue": "Stage 3.2 text", "reading": "The first question is irrelevant, so the word irrelevant."}
+{"candidate": "thefirstquestion", "clue": "Stage 3.2 text", "reading": "Your first question may be the most pertinent."}
+{"candidate": "amihere", "clue": "Stage 3.2 text", "reading": "The truncated question ... am I here?"}
+{"candidate": "whyamihere", "clue": "Stage 3.2 text", "reading": "The natural completion of the truncated question."}
+{"candidate": "Why am I here?", "clue": "Stage 3.2 text", "reading": "The complete question with punctuation."}
+{"candidate": "iamthearchitect", "clue": "Stage 3.2 text", "reading": "The Architect speaking."}
+{"candidate": "theanomaly", "clue": "Stage 3.2.1", "reading": "You are the eventuality of an anomaly."}
+{"candidate": "anomaly", "clue": "Stage 3.2.1", "reading": "The word anomaly, Neo's role."}
+{"candidate": "remainder", "clue": "Stage 3.2.1", "reading": "Your life is the sum of a remainder."}
+{"candidate": "thesumofaremainder", "clue": "Stage 3.2.1", "reading": "The phrase that echoes matrixsumlist."}
+{"candidate": "sumlist", "clue": "final page item 2", "reading": "The second half of matrixsumlist."}
+{"candidate": "matrixsum", "clue": "final page item 2", "reading": "The first half of matrixsumlist."}
+{"candidate": "thematrix", "clue": "Stage 3.2.1 key and item 2", "reading": "Matrix appears both in the key and on the final page."}
+{"candidate": "primebasics", "clue": "Stage 3.2.1", "reading": "Reinserting the prime basics is an instruction from the monologue."}
+{"candidate": "reinsertingtheprimebasics", "clue": "Stage 3.2.1", "reading": "The phrase in the monologue read as an instruction."}
+{"candidate": "thesourcecodes", "clue": "Stage 3.2.1", "reading": "Return to the source codes."}
+{"candidate": "returntothesource", "clue": "Stage 3.2.1", "reading": "The function of the you is to return to the source."}
+{"candidate": "sourcecodes", "clue": "Stage 3.2.1", "reading": "The plural source codes."}
+{"candidate": "twentythreeciphers", "clue": "Stage 3.2.1", "reading": "The number of ciphers named in the monologue."}
+{"candidate": "sixteenencryptions", "clue": "Stage 3.2.1", "reading": "The number of encryptions named."}
+{"candidate": "sevenintertwinedpasswords", "clue": "Stage 3.2.1", "reading": "The seven intertwined passwords matched by the stage 3 seven-part password."}
+{"candidate": "sevenpasswords", "clue": "Stage 3.2.1", "reading": "The shorter form."}
+{"candidate": "intertwined", "clue": "Stage 3.2.1", "reading": "The unusual verb for how passwords relate."}
+{"candidate": "bruteforcing", "clue": "Stage 3.2.1", "reading": "Brute forcing might be required."}
+{"candidate": "cataclysmicsystemcrash", "clue": "Stage 3.2.1", "reading": "The strikingly worded failure phrase."}
+{"candidate": "bullshit", "clue": "Stage 3.2.1", "reading": "I expect you to say bullshit, a literal word in the monologue."}
+{"candidate": "denial", "clue": "Stage 3.2.1", "reading": "Denial is the most predictable of all human responses."}
+{"candidate": "worthlessprizesandthrophies", "clue": "Stage 3.2.1", "reading": "The misspelt trophies phrase."}
+{"candidate": "throphies", "clue": "Stage 3.2.1", "reading": "The typo THROPHIES is an odd word in the text."}
+{"candidate": "waisting", "clue": "Stage 3.2.1", "reading": "The typo WAISTING is an odd word in the text."}
+{"candidate": "wisemanabove", "clue": "Stage 3.2.1", "reading": "Wiseman above suggests looking above."}
+{"candidate": "youllneverfinishthelasttask", "clue": "Stage 3.2.1", "reading": "The Architect's taunt about the last task."}
+{"candidate": "thelasttask", "clue": "Stage 3.2.1", "reading": "The last task."}
+{"candidate": "lastpartofthepuzzle", "clue": "Stage 3.2.1", "reading": "Find a way to complete the last part of the puzzle."}
+{"candidate": "takeprivatekeyyouveearnedit", "clue": "Stage 3.2.1", "reading": "The Architect grants the private key."}
+{"candidate": "youveearnedit", "clue": "Stage 3.2.1", "reading": "The line that grants the prize."}
+{"candidate": "pleasejusthelpusbuildit", "clue": "Stage 3.2.1", "reading": "The Architect's request in the text."}
+{"candidate": "buildit", "clue": "Stage 3.2.1", "reading": "The two-word ask."}
+{"candidate": "salph", "clue": "final page item 7", "reading": "The name of the blob in lower case."}
+{"candidate": "salphase", "clue": "final page title", "reading": "The first part of the page title, SalPhase."}
+{"candidate": "salphaseion", "clue": "final page title", "reading": "The page title in lower case."}
+{"candidate": "sal ph ion", "clue": "final page title", "reading": "The title split into its three visible fragments."}
+{"candidate": "salt", "clue": "Salted__ header", "reading": "The blobs begin with Salted__ and the key might be the salt word."}
+{"candidate": "cosmicduality", "clue": "second final page title", "reading": "The second page title as one word."}
+{"candidate": "duality", "clue": "second final page title", "reading": "The key word of Cosmic Duality."}
+{"candidate": "yin yang", "clue": "reversed message word 4", "reading": "The spaced form of yinyang."}
+{"candidate": "yinandyang", "clue": "reversed message word 4", "reading": "The longer natural form."}
+{"candidate": "itsinfrontofyoureyes", "clue": "reversed message word 6", "reading": "The first half of the sentence, taken literally."}
+{"candidate": "butyourenotseeingit", "clue": "reversed message word 6", "reading": "The second half of the sentence."}
+{"candidate": "infrontofyoureyes", "clue": "reversed message word 6", "reading": "The core phrase in front of your eyes."}
+{"candidate": "in front of your eyes", "clue": "task lens", "reading": "The literal phrase is itself the passphrase."}
+{"candidate": "notseeingit", "clue": "reversed message word 6", "reading": "The ending of the sentence."}
+{"candidate": "truegiveaway", "clue": "reversed message word 7", "reading": "The compact noun phrase."}
+{"candidate": "verylaststep", "clue": "reversed message word 7", "reading": "The very last step."}
+{"candidate": "wewontgiveaway", "clue": "reversed message word 5", "reading": "The first half of the sentence."}
+{"candidate": "giveaway", "clue": "reversed message words 5 and 7", "reading": "The common word in two message parts."}
+{"candidate": "password", "clue": "reversed message word 5 and item 5", "reading": "The literal word password on the page."}
+{"candidate": "thepassword", "clue": "reversed message word 5", "reading": "The direct object of the sentence."}
+{"candidate": "this password", "clue": "final page item 5", "reading": "The spaced version of thispassword."}
+{"candidate": "lastwords", "clue": "reversed message word 3", "reading": "The first part of the phrase."}
+{"candidate": "before archi choice", "clue": "reversed message word 3", "reading": "The second part of the phrase."}
+{"candidate": "WARNING", "clue": "Stage 1", "reading": "The fragment word from the icon fragments."}
+{"candidate": "canyoudigit", "clue": "Stage 1", "reading": "The fragment phrase from the icons."}
+{"candidate": "TheWarning", "clue": "Stage 1", "reading": "The Logic song title from the same page."}
+{"candidate": "Logic", "clue": "Stage 1", "reading": "The artist of the lyric line."}
+{"candidate": "whiterabbit", "clue": "Stage 0 image and Stage 3.2 quote", "reading": "The rabbit of the image and the Alice quote."}
+{"candidate": "followthewhiterabbit", "clue": "Matrix reference", "reading": "The Matrix line that fits the white rabbit and Matrix theme."}
+{"candidate": "sometimesjustonesecond", "clue": "Stage 3.2 Alice quote", "reading": "White Rabbit's answer to how long is forever."}
+{"candidate": "howlongisforever", "clue": "Stage 3.2 Alice quote", "reading": "Alice's question."}
+{"candidate": "254254254", "clue": "Stage 0 image", "reading": "The off-white pixel value 254,254,254 is the only oddity on the first image."}
+{"candidate": "254,254,254", "clue": "Stage 0 image", "reading": "The pixel value with commas."}

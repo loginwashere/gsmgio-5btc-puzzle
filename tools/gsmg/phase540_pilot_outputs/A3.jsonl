@@ -1,0 +1,246 @@
+{"candidate": "matrixsumlist", "clue": "final page stream item 2 (binary block)", "reading": "The creator's habit is to make the decoded plaintext itself the answer, so the first decoded word on the final page is the simplest candidate passphrase."}
+{"candidate": "lastwordsbeforearchichoice", "clue": "final page stream item 4 (decimal block)", "reading": "Second decoded plaintext on the page, taken literally as the passphrase in the same way the lyric line was taken literally in Stage 1."}
+{"candidate": "thispassword", "clue": "final page stream item 5 (decimal block)", "reading": "The page literally decodes to the words this password, a self-referential joke the creator likes, so the string itself may be the password."}
+{"candidate": "enter", "clue": "binary block sitting between the two halves of the SALPH blob", "reading": "The word enter is placed exactly where a user would type the passphrase, suggesting it is the thing to enter."}
+{"candidate": "shabefanstoo", "clue": "final page stream item 8, raw trailing text", "reading": "Unexplained raw text at the very end of the stream, the classic position for the key to the blob above it."}
+{"candidate": "salphaseion", "clue": "title of the final page", "reading": "Page titles have been passphrase-bearing before (theseedisplanted, choiceisanillusion...), so the final page title is a natural key."}
+{"candidate": "cosmicduality", "clue": "title of the second final page", "reading": "The companion page title, paired with SalPhaseIon, follows the same title-as-passphrase pattern."}
+{"candidate": "salphaseioncosmicduality", "clue": "both final page titles", "reading": "The creator concatenates answers with no spaces, so the two final page names joined in order is the minimal two-answer concatenation."}
+{"candidate": "yellowblueprimes", "clue": "first token of the reversed binary ordered phrase", "reading": "sha256 our first hint is your last command points at the first hint in the ordered list, which is yellowblueprimes."}
+{"candidate": "yinyang", "clue": "fourth token of the ordered phrase, and the Cosmic Duality page", "reading": "Yin yang is the duality motif tying the two final pages together and is given as a standalone hint word."}
+{"candidate": "wewontgiveawaythepassword", "clue": "fifth token of the ordered phrase", "reading": "A hint phrase that doubles as a taunt; the creator's style is to hide the answer inside the taunt itself."}
+{"candidate": "itsinfrontofyoureyesbutyourenotseeingit", "clue": "sixth token of the ordered phrase", "reading": "The hint says the password is literally visible, which is best satisfied if the hint string is itself the password."}
+{"candidate": "verylaststepisatruegiveaway", "clue": "seventh token of the ordered phrase", "reading": "Declares the last step a giveaway, so the giveaway may be that this very sentence is the key."}
+{"candidate": "promised", "clue": "eighth and final token of the ordered phrase", "reading": "The single closing word of the hint list, standing alone the way causality stood alone in Stage 2."}
+{"candidate": "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyangwewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised", "clue": "full ordered phrase from the reversed binary message", "reading": "Stage 3 concatenated seven answers with no spaces before hashing; the ordered phrase is the final page's explicit answer list in order."}
+{"candidate": "promisedverylaststepisatruegiveawayitsinfrontofyoureyesbutyourenotseeingitwewontgiveawaythepasswordyinyanglastwordsbeforearchichoicematrixsumlistyellowblueprimes", "clue": "ordered phrase, token order reversed", "reading": "The phrase was carried by a reversed binary message, so the creator may intend the token order reversed as well."}
+{"candidate": "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyangwewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveaway", "clue": "ordered phrase minus the trailing word promised", "reading": "The Architect text demands seven intertwined passwords, and dropping promised leaves exactly seven tokens."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoiceyinyangwewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised", "clue": "ordered phrase minus the leading token", "reading": "If yellowblueprimes is an instruction rather than an answer, the remaining seven tokens are the seven intertwined passwords."}
+{"candidate": "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyang", "clue": "first four tokens of the ordered phrase", "reading": "The first four tokens are concrete nouns and names; the last four are commentary, so the answer half may be the first four."}
+{"candidate": "wewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised", "clue": "last four tokens of the ordered phrase", "reading": "The four sentence-like tokens form a continuous message and may be the passphrase as one run-on line."}
+{"candidate": "yellowblueprimesmatrixsumlistlastwordsbeforearchichoice", "clue": "first three tokens of the ordered phrase", "reading": "These three name actual artifacts on the page, matching the Stage 3.2 pattern of three concatenated clue answers."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoice", "clue": "the two decoded block names on the final page", "reading": "The two plaintexts that actually appear in the stream, concatenated in page order."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoicethispassword", "clue": "the three decoded plaintexts of the final page in stream order", "reading": "Exactly the Stage 3 recipe: take every decoded answer on the page, concatenate in order, no spaces."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoicethispasswordentershabefanstoo", "clue": "all five plaintext fragments of the final page in stream order", "reading": "Extends the concatenation to include the enter marker and the trailing raw text, the complete visible plaintext of the page."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoicethispasswordshabefanstoo", "clue": "final page plaintexts excluding the enter marker", "reading": "If enter is an instruction rather than an answer it is omitted, leaving four concatenated answers."}
+{"candidate": "dbbimatrixsumlistfaedlastwordsbeforearchichoicethispassword", "clue": "every labelled item of the final page stream in order", "reading": "Includes the two letter-block labels DBBI and FAED as answers alongside the decoded texts, in exact stream order."}
+{"candidate": "dbbifaed", "clue": "the two a-i letter block labels", "reading": "The only two named objects on the final page, concatenated, as the shortest label-based key."}
+{"candidate": "faeddbbi", "clue": "the two block labels in reverse order", "reading": "FAED is the larger payload and DBBI the shorter, so reading large-then-small gives the alternate concatenation."}
+{"candidate": "thispasswordenter", "clue": "items 5 and 7 of the stream read as an instruction", "reading": "The page literally tells the reader to type this password and press enter, so the two words joined may be the literal string."}
+{"candidate": "ourfirsthintisyourlastcommand", "clue": "literal text of stream item 6", "reading": "The instruction line itself, taken as a passphrase in the same way a lyric line was in Stage 1."}
+{"candidate": "sha256ourfirsthintisyourlastcommand", "clue": "full literal text of stream item 6 including sha256", "reading": "The whole printed line including the sha256 token, taken verbatim as the phrase."}
+{"candidate": "theseedisplanted", "clue": "our first hint, read as the puzzle's very first hint", "reading": "The first hint the creator ever gave was the URL hidden in the rabbit image, so the last command is sha256 of that."}
+{"candidate": "gsmgiotheseedisplanted", "clue": "the full first-hint URL without protocol", "reading": "The first hint as it actually reads off the pixel grid, domain included."}
+{"candidate": "canyoudigit", "clue": "first-page icon riddle answer", "reading": "One of the three resolved phrases of Stage 1 and arguably the first spoken hint of the puzzle."}
+{"candidate": "thewarning", "clue": "the Logic song identified in Stage 1", "reading": "The song title is the first cultural reference the creator planted and is short enough to be a final key."}
+{"candidate": "warningcanyoudigit", "clue": "the two Stage 1 icon phrases concatenated", "reading": "Follows the creator's concatenate-the-clue-answers rule applied to the opening page."}
+{"candidate": "theflowerblossomsthroughwhatseemstobeaconcretesurface", "clue": "Stage 1 passphrase, the Logic lyric", "reading": "Reuse of the only full-sentence passphrase in the chain, on the theory that the final page loops back to the first."}
+{"candidate": "causality", "clue": "Stage 2 riddle answer", "reading": "The one-word answer that the creator hashed once already; the final stage may hash it again as the prime basic."}
+{"candidate": "causalitySafenetLunaHSM11110", "clue": "the recognizable prefix of the Stage 3 seven-part password", "reading": "Reinserting the prime basics could mean re-supplying the earlier composite password as the final key."}
+{"candidate": "jacquefrescogiveitjustonesecondheisenbergsuncertaintyprinciple", "clue": "the three Stage 3.2 clue answers concatenated", "reading": "The immediately preceding passphrase, reused on the theory that the last stage reinserts the prime basics."}
+{"candidate": "jacquefresco", "clue": "Stage 3.2 clue one", "reading": "The wiseman above whose ideas are said to be worth a hundred forty times the investment, named as the single answer."}
+{"candidate": "giveitjustonesecond", "clue": "Stage 3.2 clue two, Alice and the White Rabbit", "reading": "The forever-is-one-second exchange, reused alone as a key for the final timing-themed step."}
+{"candidate": "heisenbergsuncertaintyprinciple", "clue": "Stage 3.2 clue three", "reading": "The uncertainty principle answer standing alone, matching the one-phrase-per-blob pattern of Stage 1."}
+{"candidate": "GSMGIO5BTCPUZZLECHALLENGE", "clue": "the literal string used to derive the final page URL", "reading": "The creator already used this exact string as hash input once, so it is a natural passphrase for the page it unlocked."}
+{"candidate": "GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe", "clue": "the full preimage of the final page path", "reading": "The complete concatenation whose sha256 is the page URL, reused as the page's own passphrase."}
+{"candidate": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe", "clue": "the prize address", "reading": "The address is the one constant across the whole puzzle and is the second half of the URL preimage."}
+{"candidate": "89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32", "clue": "the final page path itself", "reading": "Stage 2 used a hex digest directly as the passphrase, so the digest that names this page may be its own key."}
+{"candidate": "halfandbetterhalf", "clue": "Stage 3.2.2 straddling checkerboard plaintext", "reading": "The explicit statement that the private keys belong to half and better half names the final answer object."}
+{"candidate": "thekeysbelongtohalfandbetterhalf", "clue": "the checkerboard sentence, condensed", "reading": "The decoded declaration taken as a sentence-length passphrase in the Stage 1 style."}
+{"candidate": "betterhalf", "clue": "the second of the two key holders", "reading": "If one blob belongs to half and the other to better half, the second blob's key may simply be betterhalf."}
+{"candidate": "theyalsoneedfundstolive", "clue": "closing clause of the checkerboard plaintext", "reading": "The final unexplained clause of the last solved decryption, a candidate carried forward as the next key."}
+{"candidate": "incaseyoumanagetocrackthis", "clue": "opening clause of the checkerboard plaintext", "reading": "The opening words of the last message before the unsolved stage, read as its handover phrase."}
+{"candidate": "privatekeynote", "clue": "the Architect text phrase find the actual private KEYNOTE", "reading": "The odd word keynote is a deliberate creator coinage and the named object of the final task."}
+{"candidate": "theactualprivatekeynote", "clue": "the full noun phrase from the Architect text", "reading": "Taken as the complete phrase the reader is told to find."}
+{"candidate": "reinsertingtheprimebasics", "clue": "Architect text instruction", "reading": "The explicit instruction for the final stage, taken verbatim as the passphrase it describes."}
+{"candidate": "theprimebasics", "clue": "the object of the reinsert instruction", "reading": "A short noun phrase coined by the creator, of the same shape as earlier one-idea answers."}
+{"candidate": "returntothesource", "clue": "Architect text: return to the source codes", "reading": "The Matrix line the creator paraphrases, given as the action required at the last step."}
+{"candidate": "returntothesourcecodes", "clue": "the creator's altered wording of the Matrix line", "reading": "The creator changed source to source codes, and his deviations from a quote have marked answers before."}
+{"candidate": "sevenintertwinedpasswords", "clue": "Architect text: seven intertwined passwords", "reading": "Names the structure of the final key and may be the key itself, the way thispassword is self-referential."}
+{"candidate": "twentythreeciphers", "clue": "Architect text: over twenty-three ciphers", "reading": "One of the three counted quantities named for the last task, taken as a spelled-out phrase."}
+{"candidate": "sixteenencryptions", "clue": "Architect text: sixteen encryptions", "reading": "The second counted quantity of the final task, spelled out in the creator's own words."}
+{"candidate": "twentythreecipherssixteenencryptionssevenintertwinedpasswords", "clue": "the three counted quantities of the final task", "reading": "Concatenating the three named quantities follows the creator's concatenate-the-answers rule."}
+{"candidate": "23167", "clue": "the three numbers named in the final-task sentence", "reading": "Stage 3 included the bare digit string 11110 as one of its seven parts, so bare digit runs are in the creator's vocabulary."}
+{"candidate": "brutforcingmightberequired", "clue": "Architect text warning about brute forcing", "reading": "Kept as the creator typed the idea, since his misspellings elsewhere are load-bearing."}
+{"candidate": "bruteforcingmightberequired", "clue": "Architect text warning about brute forcing", "reading": "The literal warning sentence read as a phrase in its own right."}
+{"candidate": "ciaobella", "clue": "the last two words of the Architect monologue", "reading": "The sign-off of the last solved plaintext, the position where a handover key would sit."}
+{"candidate": "ihopeyouretheone", "clue": "Architect monologue closing line", "reading": "The creator's own closing sentence, a full phrase in the Stage 1 lyric style."}
+{"candidate": "goodlucknevertheless", "clue": "Architect monologue penultimate line", "reading": "The good-luck line immediately precedes the unsolved stage and reads like a send-off key."}
+{"candidate": "denialisthemostpredictableofallhumanresponses", "clue": "Matrix quote embedded in the monologue", "reading": "The single most quoted line reproduced verbatim in the puzzle text, a recognizable culture phrase of the kind the creator favors."}
+{"candidate": "yourlifeisthesumofaremainderofanunbalancedequation", "clue": "opening line of the decoded Architect text", "reading": "The first full sentence of the last decryption, the natural first-hint of that page."}
+{"candidate": "thematrixhasyou", "clue": "the Beaufort key used in Stage 3.2.1", "reading": "The creator already chose this phrase as a cipher key, so he may reuse it as an AES passphrase."}
+{"candidate": "followthewhiterabbit", "clue": "the rabbit of Stage 0 and the Matrix motif", "reading": "The pixel-art rabbit opens the puzzle and this is its canonical accompanying line."}
+{"candidate": "wakeupneo", "clue": "Matrix opening and the monologue line wake up you", "reading": "The monologue contains a mangled wake up you, pointing at the original wake up Neo."}
+{"candidate": "knockknockneo", "clue": "Matrix screen text following the rabbit", "reading": "The next line in the same on-screen sequence as follow the white rabbit."}
+{"candidate": "thereisnospoon", "clue": "Matrix quote", "reading": "The other universally recognizable Matrix line, matching the puzzle's it is in front of your eyes theme."}
+{"candidate": "hopeitisthequintessentialhumandelusion", "clue": "Architect scene closing line", "reading": "The Architect's last words in the scene the page alludes to with lastwordsbeforearchichoice."}
+{"candidate": "ifiwereyouiwouldhopethatwedontmeetagain", "clue": "Neo's last words in the Architect scene", "reading": "lastwordsbeforearchichoice most literally means the words spoken last before Neo makes the door choice."}
+{"candidate": "wewont", "clue": "the Architect's reply to Neo's last words", "reading": "The hint token wewontgiveawaythepassword echoes the Architect's two-word answer We won't."}
+{"candidate": "theproblemischoice", "clue": "Architect scene line, and the Stage 2 URL theme", "reading": "Choice is the puzzle's spine, and this is the scene's summary line."}
+{"candidate": "choiceisanillusion", "clue": "Stage 2 page URL opening", "reading": "The creator already used this sentence as a page name and may reuse its core clause as a key."}
+{"candidate": "choiceisanillusioncreatedbetweenthosewithpowerandthosewithout", "clue": "Stage 2 URL, full quote", "reading": "The complete Merovingian quote, the one long sentence the creator embedded as a URL."}
+{"candidate": "averyspecialdessertiwroteitmyself", "clue": "tail of the Stage 2 URL", "reading": "The second half of the Merovingian line, which the creator appended himself and never used as an answer."}
+{"candidate": "everythingthathasabeginninghasanend", "clue": "the Oracle's closing line of Reloaded", "reading": "The final-stage line of the film the puzzle tracks, fitting a last-page key."}
+{"candidate": "thearchitect", "clue": "the archi of lastwordsbeforearchichoice", "reading": "archichoice contracts Architect and choice, so the Architect himself is the named answer."}
+{"candidate": "architectchoice", "clue": "expansion of the token archichoice", "reading": "The compressed token written out, following the creator's habit of jamming words together."}
+{"candidate": "deusexmachina", "clue": "the machine intelligence of the Matrix endgame", "reading": "The final authority figure of the trilogy, matching a final-page key."}
+{"candidate": "theoracle", "clue": "the oracle-queen of the monologue chess line", "reading": "The monologue names an oracle-queen, and the Oracle is the counterpart to the Architect."}
+{"candidate": "theanomaly", "clue": "Architect text: you are the eventuality of an anomaly", "reading": "The word the creator uses for the solver, and the Architect's term for the One."}
+{"candidate": "systemicanomaly", "clue": "Matrix Reloaded term for the One", "reading": "The film's own compound for the anomaly the monologue describes."}
+{"candidate": "theeventualityofananomaly", "clue": "the monologue's exact phrase", "reading": "The creator's own wording rather than the film's, which has marked answers before."}
+{"candidate": "harmonyofmathematicalprecision", "clue": "Architect text phrase", "reading": "A distinctive phrase from the last decrypted message, of passphrase length."}
+{"candidate": "sedulouslyavoidit", "clue": "the rare word sedulously in the Architect text", "reading": "The single most unusual word in the plaintext, likely planted deliberately."}
+{"candidate": "cataclysmicsystemcrash", "clue": "Architect text threat", "reading": "The named consequence of failing the last task, a compact noun phrase."}
+{"candidate": "temporarydisseminationofthecode", "clue": "Architect text description of the final step", "reading": "Describes exactly what decrypting the last blob would be."}
+{"candidate": "thefunctionoftheyou", "clue": "the monologue's altered phrase the function of the You", "reading": "The creator changed the film's the One to the You, and his alterations mark answers."}
+{"candidate": "thefunctionoftheone", "clue": "the unaltered Matrix line behind that phrase", "reading": "The original quote that the puzzle text deliberately misstates."}
+{"candidate": "oneforonefourforone", "clue": "monologue line one for one, four for one", "reading": "The phrase that encodes 1141, the EBCDIC codepage, read as a spelled-out passphrase."}
+{"candidate": "1141", "clue": "the number hidden in one for one four for one", "reading": "The bare number the creator already used to pick a codepage, offered as a short key."}
+{"candidate": "ebcdic1141", "clue": "the codepage used in Stage 3.2.1", "reading": "Naming the cipher machinery as the key, in the style of the Safenet Luna HSM answers."}
+{"candidate": "ivedesignedyouabeautifulstrategicposition", "clue": "monologue chess taunt", "reading": "The sentence that introduces the chess material, taken whole."}
+{"candidate": "beautifulstrategicposition", "clue": "the noun phrase of the chess taunt", "reading": "The compact form of the same clue, naming the FEN position."}
+{"candidate": "B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2", "clue": "Stage 3 chess FEN, board field only", "reading": "A FEN was already one of the seven concatenated answers, so the position string is inside the creator's vocabulary."}
+{"candidate": "B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1", "clue": "Stage 3 chess FEN, complete", "reading": "The exact string the creator used before, reused unmodified as an AES passphrase."}
+{"candidate": "raisingthestakeswithoutextrachancesofwinning", "clue": "monologue line before the unsolved blob", "reading": "The sentence immediately preceding the unsolved base64 blob, the position a key would occupy."}
+{"candidate": "afubcdkingandoraclequeen", "clue": "monologue line about the second board", "reading": "The creator's coined chess-piece names, which also seeded the straddling checkerboard alphabet."}
+{"candidate": "fubcdoralethingkymvpsjqzxw", "clue": "the straddling checkerboard alphabet of Stage 3.2.2", "reading": "The creator built a custom alphabet; the alphabet string itself is a candidate key for the next blob."}
+{"candidate": "thingkymvps", "clue": "monologue phrase thingky mvps", "reading": "A pure creator coinage with no outside source, the kind of token he reuses as an answer."}
+{"candidate": "onasadboardbutaswideasthefirstoneseen", "clue": "monologue line about the board dimensions", "reading": "The clue that ties the second board back to the 14x14 first image."}
+{"candidate": "fourteenbyfourteen", "clue": "dimensions of the Stage 0 rabbit grid", "reading": "As wide as the first one seen points back to the 14x14 grid, spelled out."}
+{"candidate": "14x14", "clue": "grid size of the first image", "reading": "The numeric form of the same dimension clue."}
+{"candidate": "254254254", "clue": "the single off-white pixel of the rabbit image", "reading": "The one deliberate anomaly in the first artifact, never used in any solved stage."}
+{"candidate": "offwhitepixel", "clue": "the anomalous pixel in the rabbit image", "reading": "Naming the anomaly rather than its value, in the style of the puzzle's other named objects."}
+{"candidate": "fifteenbluenineyellow", "clue": "the coloured cell counts of the rabbit image", "reading": "yellowblueprimes points at the blue and yellow cells, whose counts are 15 and 9."}
+{"candidate": "159", "clue": "blue and yellow counts as digits", "reading": "The compact numeric form of the same blue/yellow reading."}
+{"candidate": "twentyfour", "clue": "total coloured cells in the rabbit image", "reading": "The 24 coloured cells sit on byte boundaries and are the grid's only extra information."}
+{"candidate": "yellowblue", "clue": "the colour pair named in the first hint token", "reading": "Stripping primes from yellowblueprimes leaves the bare colour pair."}
+{"candidate": "blueyellow", "clue": "the colour pair in reverse order", "reading": "Blue cells outnumber yellow, so blue-first is the count-ordered reading of the same pair."}
+{"candidate": "yellowblueprimesyinyang", "clue": "tokens 1 and 4 of the ordered phrase", "reading": "The two tokens that describe colour duality, joined as one two-answer key."}
+{"candidate": "primes", "clue": "the tail of the first hint token", "reading": "The prime basics of the Architect text and the primes of the first hint point at the same one-word answer."}
+{"candidate": "yinandyang", "clue": "Cosmic Duality page theme, spelled with the conjunction", "reading": "The natural English form of the duality name, distinct from the compressed token on the page."}
+{"candidate": "taijitu", "clue": "the proper name of the yin yang symbol", "reading": "The creator rewards knowing the real name of a thing, as with Safenet Luna HSM."}
+{"candidate": "duality", "clue": "the Cosmic Duality page title, core word", "reading": "The single concept word of the second final page, in the one-word style of causality."}
+{"candidate": "cosmicdualityyinyang", "clue": "the second page title with its theme word", "reading": "Two related answers concatenated in the creator's usual no-space style."}
+{"candidate": "alphanoises", "clue": "SalPhaseIon as an anagram", "reading": "SalPhaseIon is an exact anagram of ALPHA NOISES, and the creator builds names by rearranging letters."}
+{"candidate": "isalphaones", "clue": "SalPhaseIon as an anagram", "reading": "The same letters also spell IS ALPHA ONES, which fits the puzzle's One motif."}
+{"candidate": "salphaseionsalt", "clue": "SalPhaseIon read as Salt Phase Ion", "reading": "The blob begins with Salted__, so the page name may be flagging the OpenSSL salt."}
+{"candidate": "saltphaseion", "clue": "SalPhaseIon respelled as salt phase ion", "reading": "The likely intended pun on the OpenSSL salt, written out."}
+{"candidate": "bossofathena", "clue": "shabefanstoo as an anagram", "reading": "shabefanstoo is an exact anagram of BOSS OF ATHENA, and the creator hides words by letter rearrangement."}
+{"candidate": "ootsnafebahs", "clue": "shabefanstoo reversed", "reading": "The page carried a reversed binary message, so reversal is a declared creator operation."}
+{"candidate": "funorsnafgbb", "clue": "shabefanstoo under ROT13", "reading": "A cheap classical transform on the one unexplained raw string of the page."}
+{"candidate": "hszyvuzmhgll", "clue": "shabefanstoo under Atbash", "reading": "Atbash is the other standard letter-reversal cipher, matching the puzzle's reversal motif."}
+{"candidate": "shabefanstooenter", "clue": "the trailing text plus the enter marker", "reading": "Reads the page as instructing the reader to type shabefanstoo and press enter."}
+{"candidate": "entershabefanstoo", "clue": "the enter marker read as a verb", "reading": "enter may be an imperative, making the following raw text its object."}
+{"candidate": "sha256", "clue": "the literal hint line on the page", "reading": "The bare algorithm name, on the chance that the command itself is the key."}
+{"candidate": "openssl", "clue": "the tool that produced the Salted__ blob", "reading": "Naming the machinery as the answer, in the style of the Safenet and HSM answers of Stage 3."}
+{"candidate": "aes256cbc", "clue": "the cipher used for every earlier blob", "reading": "The creator has answered with product and algorithm names before."}
+{"candidate": "salted", "clue": "the Salted__ header of the blob", "reading": "The single visible plaintext word inside the encrypted blob itself."}
+{"candidate": "matrixsumlistthispassword", "clue": "the sum-list label joined to the this-password label", "reading": "Two of the page's decoded words read as one instruction: the matrix sum list is this password."}
+{"candidate": "lastwordsbeforearchichoicethispassword", "clue": "items 4 and 5 read as a sentence", "reading": "The page may be saying that the last words before the Architect choice are this password."}
+{"candidate": "yellowblueprimesthispassword", "clue": "the first hint joined to the this-password label", "reading": "Combines the declared first hint with the page's self-referential label."}
+{"candidate": "satoshinakamoto", "clue": "the Bitcoin prize context", "reading": "The puzzle's currency has one canonical name, the sort of general-culture answer the creator uses."}
+{"candidate": "thetimes03jan2009chancelloronbrinkofsecondbailoutforbanks", "clue": "the Bitcoin genesis block message", "reading": "The most famous string in Bitcoin, a natural key for a page guarding a Bitcoin private key."}
+{"candidate": "chancelloronbrinkofsecondbailoutforbanks", "clue": "the genesis block headline without the date", "reading": "The quotable half of the genesis message."}
+{"candidate": "genesisblock", "clue": "the origin of the Bitcoin chain", "reading": "Matches the puzzle's seed and beginning imagery."}
+{"candidate": "theseedisplantedcanyoudigit", "clue": "the first page URL joined to its icon riddle", "reading": "Joins the two earliest answers in the creator's concatenation style."}
+{"candidate": "howlongisforever", "clue": "Alice's question behind giveitjustonesecond", "reading": "The creator used the Rabbit's reply as an answer, so Alice's question is the unused half."}
+{"candidate": "sometimesjustonesecond", "clue": "the White Rabbit's reply, exact wording", "reading": "The literal film line rather than the creator's compressed version used in Stage 3.2."}
+{"candidate": "whiterabbit", "clue": "the subject of the Stage 0 image", "reading": "The puzzle's mascot, never itself used as an answer."}
+{"candidate": "downtherabbithole", "clue": "Alice and Matrix crossover phrase", "reading": "The standard phrase for the descent the solver has made through the stages."}
+{"candidate": "curiouserandcuriouser", "clue": "Alice in Wonderland quote", "reading": "The other universally recognized Alice line, matching the puzzle's Alice thread."}
+{"candidate": "theflowerblossoms", "clue": "compressed form of the Stage 1 lyric", "reading": "The memorable head of the only lyric passphrase, offered as a short reuse."}
+{"candidate": "logicthewarning", "clue": "artist and song title of Stage 1", "reading": "Naming the source rather than quoting it, a distinct reading of the same clue."}
+{"candidate": "thevenusproject", "clue": "Jacque Fresco's organization", "reading": "The creator points at Fresco and at building something instead of hunting prizes; the Venus Project is that something."}
+{"candidate": "resourcebasedeconomy", "clue": "Fresco's central concept", "reading": "The idea the monologue says is worth a hundred forty times the investment."}
+{"candidate": "zeitgeist", "clue": "the movement associated with Fresco", "reading": "The other name attached to the Fresco material the creator promotes."}
+{"candidate": "hundredfourty", "clue": "the monologue's misspelled quantity", "reading": "The creator's own spelling of the number he says the hint is worth, which his misspellings elsewhere make significant."}
+{"candidate": "140", "clue": "the number in the hundred fourty line", "reading": "The bare numeric form of the same quantity."}
+{"candidate": "pleasejusthelpusbuilditinstead", "clue": "the monologue's plea", "reading": "The creator's sincere aside, which reads like the real message of the puzzle."}
+{"candidate": "helpusbuildit", "clue": "the core of the monologue's plea", "reading": "The compact imperative form of the same request."}
+{"candidate": "worthlessprices", "clue": "the monologue's misspelling of prizes", "reading": "A deliberate-looking typo in a text whose other typos carried information."}
+{"candidate": "waistingyourlifetime", "clue": "another monologue misspelling", "reading": "The second conspicuous typo in the same sentence, taken as a planted token."}
+{"candidate": "throphies", "clue": "the monologue's misspelling of trophies", "reading": "The third typo of the cluster, which together may spell the intended key."}
+{"candidate": "worthlesspricesandthrophies", "clue": "the misspelled pair in the monologue", "reading": "The two typos joined as the creator typed them."}
+{"candidate": "getsomemoneygoing", "clue": "expansion of the initials GSMG", "reading": "The project name is an acronym, and expanding an acronym is exactly the Safenet Luna HSM style of answer."}
+{"candidate": "gsmgio", "clue": "the project domain", "reading": "The shortest constant of the puzzle, used as the bare key."}
+{"candidate": "fivebtc", "clue": "the prize amount", "reading": "The quantity named in the URL preimage, spelled out."}
+{"candidate": "theseedisplantedchoiceisanillusioncausality", "clue": "the page names of stages 1 and 2 with the stage 2 answer", "reading": "Chains the route so far as one concatenated key, the Stage 3 method applied to the whole puzzle."}
+{"candidate": "causalityjacquefrescogiveitjustonesecondheisenbergsuncertaintyprinciple", "clue": "the Stage 2 and Stage 3.2 answers concatenated", "reading": "Reinserting the prime basics read as re-concatenating every prior clue answer."}
+{"candidate": "theseedisplantedcausalityjacquefresco", "clue": "one answer from each solved stage", "reading": "A single representative answer per stage, concatenated in order, the most literal reading of reinsert the prime basics."}
+{"candidate": "matrixsumlistyellowblueprimes", "clue": "the page label joined to the first hint", "reading": "Pairs the sum-list instruction with the colour-prime instruction it appears to operate on."}
+{"candidate": "sumlist", "clue": "the operative half of matrixsumlist", "reading": "Strips matrix from the token to leave the operation named."}
+{"candidate": "matrixsum", "clue": "the other half of the same token", "reading": "The alternate split of the compound, naming the matrix sum rather than the list."}
+{"candidate": "thesumofaremainderofanunbalancedequation", "clue": "the Architect text phrase behind matrixsumlist", "reading": "matrixsumlist echoes the sum of a remainder line, so the full phrase may be the intended answer."}
+{"candidate": "unbalancedequation", "clue": "the key noun phrase of that line", "reading": "The compact form of the same idea, the puzzle's own description of its structure."}
+{"candidate": "aremainderofanunbalancedequation", "clue": "the mid-clause of the opening Architect sentence", "reading": "A third slice of the same sentence, distinct in scope from the other two."}
+{"candidate": "inherenttotheprogrammingofthispuzzle", "clue": "the creator's altered end of the opening line", "reading": "He changed the Matrix line from the Matrix to this puzzle, a deviation that marks answers."}
+{"candidate": "irrevocablyhuman", "clue": "Architect text phrase", "reading": "A distinctive two-word phrase reproduced verbatim from the film in the puzzle's first paragraph."}
+{"candidate": "concordantly", "clue": "the Architect's signature adverb", "reading": "A single unusual word carried into the puzzle text, in the one-word style of causality."}
+{"candidate": "ergo", "clue": "the Architect's other signature connective", "reading": "The shortest distinctive token of the monologue."}
+{"candidate": "vismaior", "clue": "the Architect's vis-a-vis of the film scene", "reading": "A Latin tag from the Architect scene vocabulary, matching the puzzle's Latinate style."}
+{"candidate": "whoami", "clue": "the monologue fragment am I here", "reading": "The mangled question who am I here reads as the shell command whoami, and the page speaks of your last command."}
+{"candidate": "amihere", "clue": "the truncated monologue question", "reading": "The text is deliberately cut to leave this fragment, which may be the intended token."}
+{"candidate": "wakeupyou", "clue": "the monologue's altered wake up line", "reading": "The creator wrote wake up, you rather than wake up, Neo, and his alterations mark answers."}
+{"candidate": "thelastpartofthepuzzle", "clue": "the monologue's name for the unsolved stage", "reading": "Names the exact object being unlocked, self-referentially."}
+{"candidate": "taketheprivatekeyyouveearnedit", "clue": "the monologue's invitation", "reading": "The sentence that grants the prize, read as the phrase that opens it."}
+{"candidate": "youllneverfinishthelasttask", "clue": "the monologue's challenge", "reading": "The taunt aimed precisely at this blob, in the style of the wewontgiveawaythepassword taunt."}
+{"candidate": "iexpectyoutosaybullshit", "clue": "the monologue's provocation", "reading": "The creator's most informal line, likely written for a reason."}
+{"candidate": "bullshit", "clue": "the one-word response the monologue predicts", "reading": "The puzzle asks the solver to say it, which reads like an instruction to type it."}
+{"candidate": "thisisnotthelasttime", "clue": "the monologue's rest assured line", "reading": "The assurance that more remains, a compact sentence key."}
+{"candidate": "ihavebecomeexceedinglyefficientatit", "clue": "the monologue's boast", "reading": "A full sentence unique to the creator's rewrite of the Architect speech."}
+{"candidate": "restlesssoul", "clue": "the monologue's phrase I have destroyed a restless soul", "reading": "A two-word coinage that does not appear in the film."}
+{"candidate": "extinctionoftheentirenessofyourself", "clue": "the monologue's closing threat", "reading": "The creator's own clumsy phrase, not a film quote, which makes it a planted token."}
+{"candidate": "killingyourwillpower", "clue": "the monologue's threat clause", "reading": "A distinctive phrase from the final warning paragraph."}
+{"candidate": "failuretocomply", "clue": "the monologue's conditional", "reading": "The compact form of the warning that gates the last step."}
+{"candidate": "thatwasquickerthantheothers", "clue": "the Oracle-style line in the monologue", "reading": "One of the interjected lines that breaks the Architect speech, marking it as inserted on purpose."}
+{"candidate": "youhaventansweredmyquestion", "clue": "an interjected line in the monologue", "reading": "The other inserted line of the same pair, phrased as a demand for an answer."}
+{"candidate": "mequiteright", "clue": "the garbled interjection in the monologue", "reading": "The strangest fragment of the decrypted text, likely carrying information."}
+{"candidate": "interesting", "clue": "the one-word interjection in the monologue", "reading": "A single word dropped into the speech, in the style of a one-word answer."}
+{"candidate": "awisemanabove", "clue": "the monologue's reference to a wiseman", "reading": "Points back to Jacque Fresco, and the phrase itself names the clue."}
+{"candidate": "faed", "clue": "the 570-letter a-i block label", "reading": "The largest unexplained object on the final page, named by its own first four letters."}
+{"candidate": "dbbi", "clue": "the 91-letter a-i block label", "reading": "The other unexplained block, named by its own first four letters."}
+{"candidate": "abcdefghi", "clue": "the a-i alphabet of both letter blocks", "reading": "The blocks use exactly nine letters, so the nine-letter alphabet itself is the naming answer."}
+{"candidate": "base9", "clue": "the nine-symbol alphabet of the blocks", "reading": "The letters a-i encode base nine, and Stage 3 already accepted a bare numeric part, so the numeral form is offered separately."}
+{"candidate": "basenine", "clue": "the nine-symbol alphabet of the blocks", "reading": "The plain spelling of the base the a-i blocks are written in."}
+{"candidate": "ninebynine", "clue": "a 9x9 reading of the a-i alphabet", "reading": "Nine symbols suggests a 9x9 grid, the shape matrixsumlist would sum."}
+{"candidate": "magicsquare", "clue": "matrixsumlist read as a magic-square instruction", "reading": "Summing rows of a letter matrix to a constant is the definition of a magic square."}
+{"candidate": "sudoku", "clue": "a nine-symbol nine-wide grid", "reading": "The a-i alphabet and the sum-list hint together describe a sudoku-like structure by name."}
+{"candidate": "latinsquare", "clue": "the formal name for such a grid", "reading": "The proper mathematical name, the kind of precise term the creator has used before."}
+{"candidate": "checkerboard", "clue": "the straddling checkerboard used in Stage 3.2.2", "reading": "The cipher family the creator already used, named as an answer."}
+{"candidate": "straddlingcheckerboard", "clue": "the full name of that cipher", "reading": "The complete technical name, matching the Safenet Luna HSM answer style."}
+{"candidate": "beaufort", "clue": "the cipher used in Stage 3.2.1", "reading": "The other named cipher of the chain, offered as a single-word key."}
+{"candidate": "beaufortthematrixhasyou", "clue": "cipher and key of Stage 3.2.1", "reading": "Concatenating the cipher name with its key follows the seven-part concatenation style."}
+{"candidate": "adamandeve", "clue": "half and better half read as the first couple", "reading": "The phrase better half names a spouse, and the puzzle's origin imagery is a planted seed."}
+{"candidate": "himandher", "clue": "half and better half read as a pair of key holders", "reading": "The plainest reading of the two key holders named in the last decryption."}
+{"candidate": "twohalvesmakeawhole", "clue": "half and better half plus the duality theme", "reading": "Joins the key-holder line to the Cosmic Duality page in one proverb."}
+{"candidate": "thewholeisgreaterthanthesumofitsparts", "clue": "matrixsumlist plus the two-halves theme", "reading": "The proverb about sums that matches both the sum-list label and the half/better-half split."}
+{"candidate": "itsinfrontofyoureyes", "clue": "the head of hint token six", "reading": "The short form of the visibility hint, distinct in scope from the full sentence."}
+{"candidate": "yourenotseeingit", "clue": "the tail of hint token six", "reading": "The second clause of the visibility hint, taken alone."}
+{"candidate": "atruegiveaway", "clue": "the core of hint token seven", "reading": "The noun phrase of the last-step hint, stripped of its subject."}
+{"candidate": "verylaststep", "clue": "the head of hint token seven", "reading": "Names the stage being unlocked, self-referentially."}
+{"candidate": "ipromise", "clue": "the token promised read as a spoken promise", "reading": "The past participle points at an underlying promise, given in the first person."}
+{"candidate": "aspromised", "clue": "the token promised in its idiomatic form", "reading": "The natural English phrase the bare participle abbreviates."}
+{"candidate": "thepromise", "clue": "the token promised as a noun", "reading": "The nominal reading of the final hint word."}
+{"candidate": "wewontgiveawaythepasswordbutitsinfrontofyoureyes", "clue": "hint tokens five and six read as one sentence", "reading": "The two taunts form a single coherent sentence when joined, which may be the intended line."}
+{"candidate": "itsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveaway", "clue": "hint tokens six and seven joined", "reading": "The two visibility hints as a continuous sentence, a natural passphrase-length line."}
+{"candidate": "verylaststepisatruegiveawaypromised", "clue": "hint tokens seven and eight joined", "reading": "The closing pair of the hint list, joined as the final declaration."}
+{"candidate": "enterthematrix", "clue": "the enter marker plus the Matrix theme", "reading": "enter sits between blob halves and completes the franchise phrase Enter the Matrix."}
+{"candidate": "entersalphaseion", "clue": "the enter marker plus the page name", "reading": "Reads the page as instructing the solver to enter SalPhaseIon."}
+{"candidate": "shabefanstoosalphaseion", "clue": "the trailing text joined to the page title", "reading": "Joins the page's last raw string to its name, the two items with no other explanation."}
+{"candidate": "thelastcommand", "clue": "the your last command half of the hint line", "reading": "Names the object the hint line points to, taken as the answer itself."}
+{"candidate": "ourfirsthint", "clue": "the first half of the hint line", "reading": "The other half of the same sentence, taken as a standalone noun phrase."}
+{"candidate": "matrixsumlistenter", "clue": "the first decoded word plus the enter marker", "reading": "If the first hint is matrixsumlist, the last command is to enter it."}
+{"candidate": "yellowblueprimesenter", "clue": "the first hint token plus the enter marker", "reading": "Combines the declared first hint with the command word placed at the blob."}
+{"candidate": "primebasicsreinserted", "clue": "the reinsert instruction, inverted", "reading": "Restates the Architect instruction as a completed state, a distinct phrasing of the same clue."}
+{"candidate": "theseedisplantedtheflowerblossoms", "clue": "the Stage 0 URL joined to the Stage 1 lyric theme", "reading": "Seed and flower are the puzzle's own opening metaphor pair, joined into one phrase."}
+{"candidate": "theflowerblossomsthroughwhatseemstobeaconcretesurfacecausality", "clue": "the Stage 1 and Stage 2 passphrases concatenated", "reading": "Chains the two actual passphrases used so far, following the concatenation rule."}
+{"candidate": "iwastheone", "clue": "the monologue's hope that you are the One", "reading": "The past-tense claim of the role the monologue assigns the solver."}
+{"candidate": "theone", "clue": "the Matrix designation running through the puzzle", "reading": "The two-word constant of the franchise and of the monologue's closing line."}
+{"candidate": "neo", "clue": "the name behind the One", "reading": "The shortest culturally recognizable answer available in the puzzle's frame."}
+{"candidate": "morpheus", "clue": "the character who offers the choice", "reading": "The puzzle's choice theme belongs to Morpheus as much as to the Architect."}
+{"candidate": "trinity", "clue": "the her of the Architect's two doors", "reading": "The door to the left leads back to her, and lastwordsbeforearchichoice invokes that scene."}
+{"candidate": "zion", "clue": "the salvation named at the Architect's right door", "reading": "The other destination of the Architect choice, and a near-anagram fragment of SalPhaseIon."}
+{"candidate": "merovingian", "clue": "the speaker of the Stage 2 URL quote", "reading": "The creator quoted him without naming him, leaving the name as an unused answer."}
+{"candidate": "causalitythereisnoescapefromit", "clue": "the Merovingian's causality speech", "reading": "The scene the Stage 2 answer came from, quoted more fully as a phrase."}
+{"candidate": "actionreaction", "clue": "the Merovingian's definition of causality", "reading": "The two words he uses to define the Stage 2 answer."}
+{"candidate": "whyiswhatseparatesusfromthem", "clue": "the Merovingian's other line", "reading": "The unused line from the same speech that supplied the Stage 2 riddle."}

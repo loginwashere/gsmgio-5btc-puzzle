@@ -1,0 +1,178 @@
+{"candidate": "matrixsumlist", "clue": "binary block 2", "reading": "Decoded from binary block on final page"}
+{"candidate": "lastwordsbeforearchichoice", "clue": "decimal block 4", "reading": "Decoded text on final page"}
+{"candidate": "thispassword", "clue": "decimal block 5", "reading": "Decoded text on final page"}
+{"candidate": "enter", "clue": "binary block before SALPH", "reading": "Decoded from binary block on final page"}
+{"candidate": "shabefanstoo", "clue": "literal text item 8", "reading": "Raw text on final page"}
+{"candidate": "yellowblueprimes", "clue": "reversed message start", "reading": "First element of reversed binary message"}
+{"candidate": "yinyang", "clue": "reversed message", "reading": "Element in reversed binary message, suggests duality"}
+{"candidate": "promised", "clue": "reversed message end", "reading": "Final element of reversed binary message"}
+{"candidate": "salphaseion", "clue": "page title", "reading": "Title of the final page"}
+{"candidate": "cosmicduality", "clue": "second page title", "reading": "Title of alternate final page"}
+{"candidate": "dbbi", "clue": "cipher block 1", "reading": "Name of first encrypted cipher on page"}
+{"candidate": "faed", "clue": "cipher block 3", "reading": "Name of second encrypted cipher on page"}
+{"candidate": "thematrixhasyou", "clue": "Stage 3.2 Beaufort key", "reading": "Cipher key from earlier stage, matrix reference"}
+{"candidate": "halfandbetterhalf", "clue": "Stage 3.2.2 output", "reading": "Phrase describing private keys structure"}
+{"candidate": "wewontgiveawaythepassword", "clue": "reversed message", "reading": "Meta-hint in reversed binary message"}
+{"candidate": "itsinfrontofyoureyesbutyourenotseeingit", "clue": "reversed message", "reading": "Hint that answer is visible/obvious"}
+{"candidate": "verylaststepisatruegiveaway", "clue": "reversed message", "reading": "Final step provides answer directly"}
+{"candidate": "sha256", "clue": "literal page text", "reading": "Hash function mentioned in item 6"}
+{"candidate": "ourfirsthintisyourlastcommand", "clue": "literal page text", "reading": "Phrase from item 6, instructions for derivation"}
+{"candidate": "matrix", "clue": "Stage 3.2 key", "reading": "Core concept from THEMATRIXHASYOU"}
+{"candidate": "sumlist", "clue": "binary block 2", "reading": "Partial element from matrixsumlist"}
+{"candidate": "lastwords", "clue": "decimal block 4", "reading": "Partial element from lastwordsbeforearchichoice"}
+{"candidate": "archichoice", "clue": "decimal block 4", "reading": "Partial element from lastwordsbeforearchichoice"}
+{"candidate": "archimedeus", "clue": "reference from archichoice", "reading": "Classical reference concealed in archichoice"}
+{"candidate": "oracle", "clue": "Stage 3.2 mention", "reading": "Oracle mentioned in puzzle text"}
+{"candidate": "coin", "clue": "puzzle theme", "reading": "Bitcoin puzzle context"}
+{"candidate": "btc", "clue": "puzzle theme", "reading": "Bitcoin abbreviation, puzzle currency"}
+{"candidate": "gsmg", "clue": "puzzle identity", "reading": "GSMG creator identity"}
+{"candidate": "crypto", "clue": "Stage 1 fragment", "reading": "From icon fragments cryptologic hint"}
+{"candidate": "warning", "clue": "Stage 1 solution", "reading": "Answer from Stage 1 icon decode"}
+{"candidate": "canyoudigit", "clue": "Stage 1 reference", "reading": "From CAN YOU DIG IT fragments"}
+{"candidate": "theflowerblossomsthroughwhatseemstobeaconcretesurface", "clue": "Stage 1 passphrase", "reading": "Lyric from The Warning by Logic used in Stage 1"}
+{"candidate": "causality", "clue": "Stage 2 riddle", "reading": "Answer to Stage 2 riddle from URL"}
+{"candidate": "safenet", "clue": "Stage 3 component", "reading": "Second answer in Stage 3 seven-part password"}
+{"candidate": "luna", "clue": "Stage 3 component", "reading": "Third answer in Stage 3 seven-part password"}
+{"candidate": "hsm", "clue": "Stage 3 component", "reading": "Fourth answer in Stage 3 seven-part password"}
+{"candidate": "jacquefresco", "clue": "Stage 3.2 clue", "reading": "First clue answer from Stage 3.2"}
+{"candidate": "giveitjustonesecond", "clue": "Stage 3.2 clue", "reading": "Second clue answer from Stage 3.2 Alice reference"}
+{"candidate": "heisenbergsuncertaintyprinciple", "clue": "Stage 3.2 clue", "reading": "Third clue answer from Stage 3.2"}
+{"candidate": "theseedisplanted", "clue": "Stage 1 URL", "reading": "URL from Stage 0/1 rabbit grid"}
+{"candidate": "choiceisanillusion", "clue": "Stage 2 URL start", "reading": "Opening phrase from Stage 2 riddle URL"}
+{"candidate": "rabbit", "clue": "Stage 0", "reading": "White rabbit from first pixel art grid"}
+{"candidate": "spiral", "clue": "Stage 0 read method", "reading": "Counter-clockwise spiral reading of Stage 0 grid"}
+{"candidate": "blue", "clue": "Stage 0 colors", "reading": "Blue pixel color in Stage 0 grid"}
+{"candidate": "yellow", "clue": "Stage 0 colors", "reading": "Yellow pixel color in Stage 0 grid"}
+{"candidate": "concrete", "clue": "Stage 1 lyric", "reading": "From flower blossoms through concrete surface"}
+{"candidate": "flower", "clue": "Stage 1 lyric", "reading": "From Stage 1 passphrase first word"}
+{"candidate": "blossoms", "clue": "Stage 1 lyric", "reading": "From Stage 1 passphrase"}
+{"candidate": "seed", "clue": "puzzle narrative", "reading": "The seed is planted from Stage 1 URL"}
+{"candidate": "duality", "clue": "second page theme", "reading": "From Cosmic Duality alternate page title"}
+{"candidate": "cosmic", "clue": "second page theme", "reading": "From Cosmic Duality alternate page title"}
+{"candidate": "half", "clue": "puzzle finale", "reading": "Half and better half private keys mentioned"}
+{"candidate": "better", "clue": "puzzle finale", "reading": "Better half of the private key pair"}
+{"candidate": "give", "clue": "Stage 3.2 clue", "reading": "From giveitjustonesecond phrase"}
+{"candidate": "second", "clue": "Stage 3.2 clue", "reading": "From giveitjustonesecond phrase"}
+{"candidate": "forever", "clue": "Alice reference", "reading": "How long is forever, White Rabbit responds"}
+{"candidate": "whitrabbit", "clue": "Stage 0 image", "reading": "Literal subject of pixel grid"}
+{"candidate": "choice", "clue": "Stage 2", "reading": "From choice is an illusion riddle"}
+{"candidate": "illusion", "clue": "Stage 2", "reading": "From choice is an illusion riddle"}
+{"candidate": "power", "clue": "Stage 2 riddle", "reading": "Those with power and those without"}
+{"candidate": "harmony", "clue": "Stage 3.2 text", "reading": "From THEMATRIX decrypted output"}
+{"candidate": "precision", "clue": "Stage 3.2 text", "reading": "Mathematical precision from decrypted output"}
+{"candidate": "anomaly", "clue": "Stage 3.2 text", "reading": "You are the eventuality of an anomaly"}
+{"candidate": "eventuality", "clue": "Stage 3.2 text", "reading": "Key concept from Agent Smith monologue"}
+{"candidate": "programming", "clue": "Stage 3.2 text", "reading": "Programming of this puzzle mentioned"}
+{"candidate": "equation", "clue": "Stage 3.2 text", "reading": "Sum of remainder of unbalanced equation"}
+{"candidate": "burden", "clue": "Stage 3.2 text", "reading": "Sedulously avoid burden reference"}
+{"candidate": "inexorably", "clue": "Stage 3.2 text", "reading": "Led you inexorably here"}
+{"candidate": "wiseman", "clue": "Stage 3.2 text", "reading": "What a wiseman above hinted"}
+{"candidate": "denial", "clue": "Stage 3.2 text", "reading": "Denial is most predictable response"}
+{"candidate": "predictable", "clue": "Stage 3.2 text", "reading": "Most predictable of human responses"}
+{"candidate": "efficient", "clue": "Stage 3.2 text", "reading": "Exceedingly efficient at destroying"}
+{"candidate": "keynote", "clue": "Stage 3.2 text", "reading": "KEYNOTE mentioned for private key"}
+{"candidate": "brute", "clue": "Stage 3.2 text", "reading": "Brute forcing might be required"}
+{"candidate": "forcing", "clue": "Stage 3.2 text", "reading": "Brute forcing technique"}
+{"candidate": "compliance", "clue": "Stage 3.2 text", "reading": "Failure to comply with process"}
+{"candidate": "cataclysmic", "clue": "Stage 3.2 text", "reading": "Cataclysmic system crash reference"}
+{"candidate": "willpower", "clue": "Stage 3.2 text", "reading": "Killing willpower consequence"}
+{"candidate": "extinction", "clue": "Stage 3.2 text", "reading": "Extinction of entireness of yourself"}
+{"candidate": "ciaobella", "clue": "Stage 3.2 text ending", "reading": "Italian farewell from Agent text"}
+{"candidate": "funds", "clue": "Stage 3.2.2 output", "reading": "Private keys need funds to live"}
+{"candidate": "live", "clue": "Stage 3.2.2 output", "reading": "Keys belong to those who live"}
+{"candidate": "case", "clue": "Stage 3 rules", "reading": "Preserved case in concatenation"}
+{"candidate": "string", "clue": "puzzle form", "reading": "Final stream string format"}
+{"candidate": "stream", "clue": "final page layout", "reading": "Stream layout describes final page order"}
+{"candidate": "cipher", "clue": "encryption type", "reading": "Multiple ciphers on final page"}
+{"candidate": "block", "clue": "page structure", "reading": "Multiple blocks decode to phrases"}
+{"candidate": "decode", "clue": "required action", "reading": "Decoding blocks reveals hints"}
+{"candidate": "binary", "clue": "block type", "reading": "Binary blocks decode to text"}
+{"candidate": "decimal", "clue": "block type", "reading": "Decimal blocks decode to text"}
+{"candidate": "base64", "clue": "SALPH format", "reading": "Base64 OpenSSL blob structure"}
+{"candidate": "salted", "clue": "blob prefix", "reading": "Salted__ prefix in OpenSSL blob"}
+{"candidate": "aes", "clue": "encryption algorithm", "reading": "AES-256-CBC encryption used"}
+{"candidate": "256", "clue": "cipher strength", "reading": "256-bit AES encryption"}
+{"candidate": "cbc", "clue": "encryption mode", "reading": "CBC mode for AES"}
+{"candidate": "openssl", "clue": "crypto tool", "reading": "OpenSSL format for encrypted data"}
+{"candidate": "ebcdic", "clue": "Stage 3.2.1 input", "reading": "EBCDIC 1141 ciphertext decoded"}
+{"candidate": "beaufort", "clue": "Stage 3.2.1 cipher", "reading": "Beaufort cipher with THEMATRIXHASYOU key"}
+{"candidate": "checkerboard", "clue": "Stage 3.2.2 cipher", "reading": "Straddling checkerboard cipher used"}
+{"candidate": "alphabet", "clue": "checkerboard component", "reading": "Alphabet FUBCDORA.LETHINGKYMVPS.JQZXW"}
+{"candidate": "escape", "clue": "checkerboard feature", "reading": "Escape digits 1 and 4 in checkerboard"}
+{"candidate": "fubcdora", "clue": "cipher alphabet", "reading": "Partial alphabet from checkerboard"}
+{"candidate": "lethingkymvps", "clue": "cipher alphabet", "reading": "Partial alphabet from checkerboard"}
+{"candidate": "jqzxw", "clue": "cipher alphabet", "reading": "Partial alphabet from checkerboard"}
+{"candidate": "yellow", "clue": "message hint", "reading": "yellowblueprimes first word in reversed message"}
+{"candidate": "blue", "clue": "message hint", "reading": "yellowblueprimes second word in reversed message"}
+{"candidate": "primes", "clue": "message hint", "reading": "yellowblueprimes mathematical reference"}
+{"candidate": "wontgive", "clue": "reversed message", "reading": "From wewontgiveawaythepassword"}
+{"candidate": "password", "clue": "self-reference", "reading": "The password reference itself"}
+{"candidate": "front", "clue": "reversed message", "reading": "From itsinfrontofyoureyesbutyourenotseeingit"}
+{"candidate": "eyes", "clue": "reversed message", "reading": "From in front of your eyes hint"}
+{"candidate": "seeing", "clue": "reversed message", "reading": "But you're not seeing it hint"}
+{"candidate": "last", "clue": "reversed message", "reading": "From very last step gives away"}
+{"candidate": "step", "clue": "reversed message", "reading": "Last step reference"}
+{"candidate": "giveaway", "clue": "reversed message", "reading": "True giveaway mentioned"}
+{"candidate": "hint", "clue": "item 6 text", "reading": "Our first hint is your last command"}
+{"candidate": "command", "clue": "item 6 text", "reading": "Last command in hint phrase"}
+{"candidate": "first", "clue": "sequence indicator", "reading": "First hint in reversed message"}
+{"candidate": "fubcd", "clue": "cipher name variant", "reading": "Cryptographic element reference"}
+{"candidate": "oracle", "clue": "Stage 3.2 oracle element", "reading": "Oracle-queen from puzzle text"}
+{"candidate": "queen", "clue": "Stage 3.2 oracle element", "reading": "Oracle-queen in puzzle text"}
+{"candidate": "king", "clue": "Stage 3.2 oracle element", "reading": "Fubcd-king reference"}
+{"candidate": "board", "clue": "chess reference", "reading": "Sad board but as wide as first one"}
+{"candidate": "wide", "clue": "chess reference", "reading": "Board as wide as first one"}
+{"candidate": "fen", "clue": "chess notation", "reading": "FEN notation used for chess position"}
+{"candidate": "move", "clue": "chess element", "reading": "Post-move chess position in Stage 3"}
+{"candidate": "piece", "clue": "chess element", "reading": "Chess pieces in Stage 3 position"}
+{"candidate": "white", "clue": "color theme", "reading": "White pixels in Stage 0 grid"}
+{"candidate": "black", "clue": "color theme", "reading": "Black pixels in Stage 0 grid"}
+{"candidate": "address", "clue": "bitcoin element", "reading": "Bitcoin address in puzzle header"}
+{"candidate": "1gsmg1jc9wtdswfwapgj2xcmjpawx7prbe", "clue": "bitcoin address", "reading": "The actual prize address"}
+{"candidate": "key", "clue": "puzzle goal", "reading": "Private key is the final answer"}
+{"candidate": "private", "clue": "key type", "reading": "Private key needed for BTC access"}
+{"candidate": "public", "clue": "key counterpart", "reading": "Public key derived from private"}
+{"candidate": "btcpuzzlechallenge", "clue": "route derivation", "reading": "Hash input for final page URL route"}
+{"candidate": "89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32", "clue": "route hash", "reading": "SHA-256 hash of puzzle challenge string"}
+{"candidate": "puzzle", "clue": "puzzle identity", "reading": "GSMG.IO 5 BTC puzzle"}
+{"candidate": "stage", "clue": "progress marker", "reading": "Multiple stages through puzzle"}
+{"candidate": "page", "clue": "web element", "reading": "Web pages at each stage"}
+{"candidate": "gsmgio", "clue": "domain", "reading": "GSMG.IO domain of puzzle"}
+{"candidate": "io", "clue": "domain suffix", "reading": ".IO domain extension"}
+{"candidate": "url", "clue": "web address", "reading": "URLs as stage identifiers"}
+{"candidate": "path", "clue": "routing", "reading": "URL path determines progression"}
+{"candidate": "fragment", "clue": "Stage 1 element", "reading": "Icon fragments that spell answers"}
+{"candidate": "icon", "clue": "Stage 1 visual", "reading": "Coloured icon fragments"}
+{"candidate": "logic", "clue": "Stage 1 artist", "reading": "The Warning song by Logic"}
+{"candidate": "warning", "clue": "song title", "reading": "The Warning by Logic in Stage 1"}
+{"candidate": "lyric", "clue": "Stage 1 passphrase source", "reading": "Song lyric used as passphrase"}
+{"candidate": "riddl", "clue": "Stage 2 puzzle", "reading": "Riddle in Stage 2 URL"}
+{"candidate": "digest", "clue": "Stage 2 hash", "reading": "SHA-256 hex digest of riddle answer"}
+{"candidate": "hex", "clue": "encoding format", "reading": "Hexadecimal representation of hash"}
+{"candidate": "text", "clue": "decoded output", "reading": "Text decoding from binary/decimal"}
+{"candidate": "input", "clue": "data element", "reading": "Input to cryptographic functions"}
+{"candidate": "output", "clue": "data result", "reading": "Output from decryption/decoding"}
+{"candidate": "seed", "clue": "puzzle beginning", "reading": "The seed is planted reference"}
+{"candidate": "planted", "clue": "Stage 1 URL", "reading": "The seed is planted metaphor"}
+{"candidate": "final", "clue": "puzzle stage", "reading": "The final page is last stage"}
+{"candidate": "goal", "clue": "puzzle objective", "reading": "Obtaining the private key goal"}
+{"candidate": "solve", "clue": "puzzle action", "reading": "Solving the puzzle for BTC"}
+{"candidate": "answer", "clue": "puzzle element", "reading": "Answer to each puzzle stage"}
+{"candidate": "passphrase", "clue": "puzzle structure", "reading": "Passphrases unlock each stage"}
+{"candidate": "unlock", "clue": "puzzle action", "reading": "Unlocking next page with passphrase"}
+{"candidate": "decrypt", "clue": "puzzle action", "reading": "Decrypting encrypted blocks"}
+{"candidate": "encrypt", "clue": "puzzle protection", "reading": "Encryption protects puzzle stages"}
+{"candidate": "sha", "clue": "hash algorithm", "reading": "SHA-256 hashing algorithm"}
+{"candidate": "hash", "clue": "crypto function", "reading": "Hashing function used throughout"}
+{"candidate": "concatenate", "clue": "Stage 3 method", "reading": "Concatenating answers together"}
+{"candidate": "concatenated", "clue": "Stage 3 method", "reading": "Seven answers concatenated"}
+{"candidate": "preserved", "clue": "Stage 3 rules", "reading": "Case and formatting preserved"}
+{"candidate": "spacing", "clue": "Stage 3 rules", "reading": "No spaces in concatenation"}
+{"candidate": "check", "clue": "verification", "reading": "Automatic checker validates candidates"}
+{"candidate": "checker", "clue": "validation tool", "reading": "Checker tries candidates against blobs"}
+{"candidate": "blob", "clue": "encrypted data", "reading": "Encrypted blobs throughout puzzle"}
+{"candidate": "form", "clue": "passphrase variant", "reading": "Checker tries multiple forms"}
+{"candidate": "lowercase", "clue": "form variant", "reading": "Lowercase version of passphrase"}
+{"candidate": "newline", "clue": "form variant", "reading": "With and without trailing newline"}
+{"candidate": "recognizable", "clue": "passphrase property", "reading": "Passphrases recognizable from clues"}
+{"candidate": "culture", "clue": "passphrase source", "reading": "General culture references used"}

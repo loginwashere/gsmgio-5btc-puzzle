@@ -1,0 +1,223 @@
+{"candidate": "thispassword", "clue": "stream item 5", "reading": "The page literally names the password as 'thispassword', so the passphrase is that word."}
+{"candidate": "yinyang", "clue": "ordered phrase item 4", "reading": "The phrase names yinyang as a step, and a solver types it verbatim."}
+{"candidate": "yellowblueprimes", "clue": "ordered phrase item 1", "reading": "First promised item of the ordered phrase, typed as one word."}
+{"candidate": "matrixsumlist", "clue": "stream item 2 / ordered phrase item 2", "reading": "The binary block decodes to this and the phrase repeats it, so it may be the key itself."}
+{"candidate": "lastwordsbeforearchichoice", "clue": "stream item 4 / phrase item 3", "reading": "The decimal block string is named in the phrase as a passphrase-like step."}
+{"candidate": "wewontgiveawaythepassword", "clue": "phrase item 5", "reading": "A phrase-typed sentence that is itself the deliberately non-giving 'password'."}
+{"candidate": "itsinfrontofyoureyesbutyourenotseeingit", "clue": "phrase item 6", "reading": "The phrase says the answer is in front of you; typing the sentence tests it as the key."}
+{"candidate": "verylaststepisatruegiveaway", "clue": "phrase item 7", "reading": "The last-step sentence may itself be the final passphrase."}
+{"candidate": "promised", "clue": "phrase last word", "reading": "The final word of the ordered phrase, promising the answer."}
+{"candidate": "enter", "clue": "stream item 7 between the SALPH halves", "reading": "The word decoded between the two blob halves is the last command and the key."}
+{"candidate": "shabefanstoo", "clue": "stream item 8", "reading": "The raw text at the end of the page is the passphrase left for the SALPH blob."}
+{"candidate": "sha256 our first hint is your last command", "clue": "stream item 6", "reading": "The literal instruction line typed as the passphrase."}
+{"candidate": "ourfirsthintisyourlastcommand", "clue": "stream item 6", "reading": "The instruction without the sha256 prefix, since sha256 is applied by the checker."}
+{"candidate": "sha256ourfirsthintisyourlastcommand", "clue": "stream item 6", "reading": "The whole instruction concatenated with the algorithm name attached."}
+{"candidate": "sha256enter", "clue": "stream items 6 and 7", "reading": "The command is sha256 and the last command is enter, joined."}
+{"candidate": "yourlastcommand", "clue": "stream item 6", "reading": "The noun phrase 'your last command' as the intended key."}
+{"candidate": "ourfirsthint", "clue": "stream item 6", "reading": "Our first hint is the key; typed as the words."}
+{"candidate": "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyangwewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised", "clue": "ordered phrase whole", "reading": "The entire ordered phrase concatenated as one passphrase."}
+{"candidate": "yellowblueprimes matrixsumlist lastwordsbeforearchichoice yinyang wewontgiveawaythepassword itsinfrontofyoureyesbutyourenotseeingit verylaststepisatruegiveaway promised", "clue": "ordered phrase whole with spaces", "reading": "The entire ordered phrase as literally decoded, spaces kept."}
+{"candidate": "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyang", "clue": "ordered phrase items 1-4", "reading": "The four name-like items before the sentences, concatenated."}
+{"candidate": "yellowblueprimesmatrixsumlist", "clue": "phrase items 1-2", "reading": "First two items joined as a two-part key."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoice", "clue": "phrase items 2-3", "reading": "Adjacent items 2 and 3 joined."}
+{"candidate": "lastwordsbeforearchichoiceyinyang", "clue": "phrase items 3-4", "reading": "Adjacent items 3 and 4 joined."}
+{"candidate": "yinyangthispassword", "clue": "yinyang and stream item 5", "reading": "The two conceptual words joined in phrase order: yinyang then thispassword."}
+{"candidate": "thispasswordyinyang", "clue": "stream item 5 and phrase item 4", "reading": "Reverse order of the two joined words."}
+{"candidate": "thispasswordenter", "clue": "stream items 5 and 7", "reading": "thispassword followed by enter as the last command."}
+{"candidate": "enterthispassword", "clue": "stream items 5 and 7", "reading": "Imperative reading: enter this password."}
+{"candidate": "yinyangenter", "clue": "phrase item 4 and stream item 7", "reading": "yinyang then the command enter."}
+{"candidate": "yinyangshabefanstoo", "clue": "phrase item 4 and stream item 8", "reading": "yinyang joined with the closing raw text."}
+{"candidate": "thispasswordshabefanstoo", "clue": "stream items 5 and 8", "reading": "thispassword joined with the trailing raw text."}
+{"candidate": "lastwordsbeforearchichoicethispassword", "clue": "stream items 4 and 5", "reading": "Adjacent decimal-block decodes joined in stream order."}
+{"candidate": "enterthispasswordyinyang", "clue": "stream 5, 7 and phrase 4", "reading": "A command, object and concept read as one sentence."}
+{"candidate": "74c1d7592daf4f89b0a7ba5e368bb59cc9e19c6a4ebb7f33cd8ccf8f3edacac0", "clue": "stream item 6: sha256 of thispassword", "reading": "The hex digest of thispassword, so a double hash is tried when the checker hashes it again."}
+{"candidate": "9f9d79ece6f5c956063beff2130631da40a37d050cb3813190b58abb17fec3db", "clue": "stream item 6: sha256 of yinyang", "reading": "The hex digest of yinyang as the passphrase or its double hash."}
+{"candidate": "e08d706b3e4ce964b632746cf568913cb93f1ed36476fbb0494b80ed17c5975c", "clue": "stream item 6: sha256 of enter", "reading": "The digest of the last command 'enter'."}
+{"candidate": "e7546e3076294907ed2a0ecaa9c33062f6e602b7c74c5aa5cc865df0ff345507", "clue": "stream item 6: sha256 of matrixsumlist", "reading": "The digest of matrixsumlist."}
+{"candidate": "77094e7a1591fb81379f1582cf88db5aa6ab8e77176a4d8428a1ff5decfd102d", "clue": "stream item 6: sha256 of lastwordsbeforearchichoice", "reading": "The digest of the archichoice string."}
+{"candidate": "536a24c822256bf4f1b1e30f2f975d70a7e86d9b336e761f67e14b7746f16ee7", "clue": "stream item 6: sha256 of yellowblueprimes", "reading": "The digest of yellowblueprimes."}
+{"candidate": "e6190c95f277454dd5953a49d0b34dd176685cba336fa4b54277c8e4edc067cb", "clue": "stream item 6: sha256 of shabefanstoo", "reading": "The digest of the raw closing text."}
+{"candidate": "6e3f5a7baf924d8546f5f7af94a43b8424e3c810983f9795eb8451ad4243d860", "clue": "sha256 of first hint theseedisplanted", "reading": "Our first hint hashed, per the sha256 instruction."}
+{"candidate": "theseedisplanted", "clue": "stage 0 first hint", "reading": "The very first hint of the puzzle, typed as the key."}
+{"candidate": "theflowerblossomsthroughwhatseemstobeaconcretesurface", "clue": "stage 1 first passphrase", "reading": "The first stage passphrase reused as the last one (first hint is the last command)."}
+{"candidate": "theflowerblossomsthroughwhatseemstobeaconcretesurfaceenter", "clue": "stage 1 lyric plus enter", "reading": "First hint followed by the last command enter."}
+{"candidate": "halfandbetterhalf", "clue": "stage 3.2.2 text", "reading": "The named owners of the private keys as one phrase."}
+{"candidate": "half and better half", "clue": "stage 3.2.2 text", "reading": "The same phrase with spaces as spoken."}
+{"candidate": "betterhalf", "clue": "stage 3.2.2 text", "reading": "Only the better half is the key holder."}
+{"candidate": "half", "clue": "stage 3.2.2 text", "reading": "The single word half as the minimal reading."}
+{"candidate": "otherhalf", "clue": "yinyang duality", "reading": "Yin and yang are each other half; the English idiom for a partner."}
+{"candidate": "yinandyang", "clue": "yinyang", "reading": "The English spelled form of the concept."}
+{"candidate": "yangyin", "clue": "yinyang reversed", "reading": "Better half might be yang first."}
+{"candidate": "yin", "clue": "yinyang first half", "reading": "Yin is one half, the half and better half split of the word."}
+{"candidate": "yang", "clue": "yinyang second half", "reading": "Yang is the other half of the word."}
+{"candidate": "yingyang", "clue": "yinyang common misspelling", "reading": "A common misspelling used by non-native puzzle authors."}
+{"candidate": "taijitu", "clue": "yinyang", "reading": "The name of the yin-yang symbol."}
+{"candidate": "taiji", "clue": "yinyang", "reading": "The supreme ultimate that yin and yang derive from."}
+{"candidate": "tao", "clue": "yinyang", "reading": "The Tao is the whole containing yin and yang."}
+{"candidate": "taoism", "clue": "yinyang", "reading": "The philosophy of yin and yang."}
+{"candidate": "duality", "clue": "Cosmic Duality page", "reading": "The sister page is named Cosmic Duality; yin and yang are a duality."}
+{"candidate": "cosmicduality", "clue": "Cosmic Duality page title", "reading": "The second page's title as a key."}
+{"candidate": "cosmic duality", "clue": "Cosmic Duality page title", "reading": "The second page's title with the space."}
+{"candidate": "SalPhaseIon", "clue": "final page title", "reading": "It is in front of your eyes: the page title itself."}
+{"candidate": "salph", "clue": "SALPH blob name", "reading": "The blob's own name is the key."}
+{"candidate": "sal phase ion", "clue": "final page title split", "reading": "Title with the three components separated."}
+{"candidate": "salt", "clue": "Salted__ header and Sal", "reading": "Sal is Latin for salt and the blob is Salted__."}
+{"candidate": "salted", "clue": "Salted__ header", "reading": "The header magic word reused."}
+{"candidate": "sodiumchloride", "clue": "Sal", "reading": "Sal as salt, chemically."}
+{"candidate": "NaCl", "clue": "Sal", "reading": "Sal as salt as formula."}
+{"candidate": "phase", "clue": "SalPhaseIon", "reading": "The middle word of the page title."}
+{"candidate": "ion", "clue": "SalPhaseIon", "reading": "The last word of the page title."}
+{"candidate": "alpha", "clue": "SalPhaseIon hides ALPHA", "reading": "The title contains the letters ALPHA, the first, matching alpha and omega as halves."}
+{"candidate": "alphaandomega", "clue": "SalPhaseIon hides ALPHA", "reading": "Half and better half as beginning and end."}
+{"candidate": "alphaomega", "clue": "SalPhaseIon hides ALPHA", "reading": "The joined pair."}
+{"candidate": "alphasion", "clue": "SalPhaseIon parse SAL-PHASE-ION", "reading": "An unusual parse S+ALPHA+SEION gives alphaseion."}
+{"candidate": "89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32", "clue": "final page URL path", "reading": "The path in front of your eyes is the passphrase."}
+{"candidate": "GSMGIO5BTCPUZZLECHALLENGE", "clue": "route to final page", "reading": "The site constant that produced the page."}
+{"candidate": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe", "clue": "prize address", "reading": "The address itself, the true giveaway."}
+{"candidate": "GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe", "clue": "route to final page", "reading": "The string whose hash is the page name, reused as key."}
+{"candidate": "gsmgio", "clue": "site name", "reading": "The site name in front of your eyes."}
+{"candidate": "gsmg.io", "clue": "site name", "reading": "The domain as a key."}
+{"candidate": "GSMG", "clue": "address prefix", "reading": "The four letters of the vanity address."}
+{"candidate": "DBBI", "clue": "stream item 1", "reading": "The first stream item's label."}
+{"candidate": "FAED", "clue": "stream item 3", "reading": "The third stream item's label."}
+{"candidate": "dbbifaed", "clue": "stream items 1 and 3", "reading": "The two letter-labels joined."}
+{"candidate": "hiddeninplainsight", "clue": "phrase item 6", "reading": "The concept of in front of your eyes but not seeing it."}
+{"candidate": "hidden in plain sight", "clue": "phrase item 6", "reading": "The English idiom of the phrase."}
+{"candidate": "plainsight", "clue": "phrase item 6", "reading": "A shortened form of the idiom."}
+{"candidate": "truegiveaway", "clue": "phrase item 7", "reading": "The 'true giveaway' shortened to its noun."}
+{"candidate": "atruegiveaway", "clue": "phrase item 7", "reading": "With article as in the phrase."}
+{"candidate": "giveaway", "clue": "phrase item 5 and 7", "reading": "Both statements use giveaway."}
+{"candidate": "verylaststep", "clue": "phrase item 7", "reading": "The very last step as the key."}
+{"candidate": "thepassword", "clue": "phrase item 5", "reading": "We won't give away the password: the object 'the password' is the phrase."}
+{"candidate": "password", "clue": "thispassword", "reading": "The literal word password as the plainest solution."}
+{"candidate": "this password", "clue": "stream item 5", "reading": "Spoken with the space."}
+{"candidate": "thisisthepassword", "clue": "stream item 5", "reading": "The demonstrative sentence read as a statement."}
+{"candidate": "thispasswordisthepassword", "clue": "stream item 5", "reading": "Tautology as self-referential answer."}
+{"candidate": "wewontgiveaway", "clue": "phrase item 5", "reading": "Truncated without the object."}
+{"candidate": "thispasswordwewontgiveaway", "clue": "stream item 5 and phrase 5", "reading": "Pair of password statements."}
+{"candidate": "yinyangwewontgiveawaythepassword", "clue": "phrase items 4-5", "reading": "Adjacent items 4 and 5 joined."}
+{"candidate": "wewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingit", "clue": "phrase items 5-6", "reading": "Two adjacent sentences joined as a single riddle statement."}
+{"candidate": "itsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveaway", "clue": "phrase items 6-7", "reading": "Adjacent items 6 and 7 joined."}
+{"candidate": "verylaststepisatruegiveawaypromised", "clue": "phrase items 7-8", "reading": "Adjacent last two items joined."}
+{"candidate": "yinyangwewontgiveawaythepassworditsinfrontofyoureyesbutyourenotseeingitverylaststepisatruegiveawaypromised", "clue": "phrase items 4-8", "reading": "Everything after the named blobs as one message."}
+{"candidate": "matrixsumlistlastwordsbeforearchichoiceyinyang", "clue": "phrase items 2-4", "reading": "Items 2-4 joined."}
+{"candidate": "thematrix", "clue": "matrixsumlist", "reading": "The obvious matrix reference behind the Architect monologue."}
+{"candidate": "thematrixhasyou", "clue": "Beaufort key", "reading": "The stage 3.2.1 key reused."}
+{"candidate": "matrix", "clue": "matrixsumlist", "reading": "The first word."}
+{"candidate": "sumlist", "clue": "matrixsumlist", "reading": "The tail word pair."}
+{"candidate": "matrixsum", "clue": "matrixsumlist", "reading": "Matrix sum without list."}
+{"candidate": "sum", "clue": "Your life is the sum of a remainder", "reading": "The Architect's key noun."}
+{"candidate": "thesumofaremainderofanunbalancedequation", "clue": "stage 3.2.1 text", "reading": "The Architect line as a passphrase."}
+{"candidate": "unbalancedequation", "clue": "stage 3.2.1 text", "reading": "The equation the anomaly is part of; yin yang balances it."}
+{"candidate": "anomaly", "clue": "stage 3.2.1 text", "reading": "The Architect's word for the solver."}
+{"candidate": "theanomaly", "clue": "stage 3.2.1 text", "reading": "With article."}
+{"candidate": "eventuality", "clue": "stage 3.2.1 text", "reading": "You are the eventuality of an anomaly."}
+{"candidate": "harmonyofmathematicalprecision", "clue": "stage 3.2.1 text", "reading": "The balanced alternative to the unbalanced equation."}
+{"candidate": "thearchitect", "clue": "lastwordsbeforearchichoice", "reading": "Archi means the Architect."}
+{"candidate": "architect", "clue": "lastwordsbeforearchichoice", "reading": "Bare word."}
+{"candidate": "archichoice", "clue": "lastwordsbeforearchichoice", "reading": "The tail of the string."}
+{"candidate": "thechoice", "clue": "lastwordsbeforearchichoice", "reading": "The Architect's choice between two doors."}
+{"candidate": "choice", "clue": "lastwordsbeforearchichoice", "reading": "Bare word."}
+{"candidate": "choiceisanillusion", "clue": "stage 2 URL", "reading": "The same puzzle's stage 2 quote, the choice concept."}
+{"candidate": "choiceisanillusioncreatedbetweenthosewithpowerandthosewithout", "clue": "stage 2 URL", "reading": "The full Merovingian quote."}
+{"candidate": "causality", "clue": "stage 2 answer", "reading": "The earlier answer reused."}
+{"candidate": "hope", "clue": "Architect's speech", "reading": "The Architect: hope is the quintessential human delusion, the last word before the choice."}
+{"candidate": "thequintessentialhumandelusion", "clue": "Architect's speech", "reading": "The rest of the hope quote."}
+{"candidate": "hopeisthequintessentialhumandelusion", "clue": "Architect's speech", "reading": "The full sentence."}
+{"candidate": "theleftdoor", "clue": "Architect's doors", "reading": "The door choice, a plausible last-words phrase."}
+{"candidate": "theone", "clue": "Matrix lore", "reading": "The One as key to the anomaly."}
+{"candidate": "neo", "clue": "Matrix lore", "reading": "The protagonist."}
+{"candidate": "trinity", "clue": "Matrix lore", "reading": "The protagonist's better half."}
+{"candidate": "neoandtrinity", "clue": "half and better half in the Matrix", "reading": "The Matrix couple as half and better half."}
+{"candidate": "trinityandneo", "clue": "half and better half in the Matrix", "reading": "Order reversed."}
+{"candidate": "neotrinity", "clue": "half and better half in the Matrix", "reading": "Joined names."}
+{"candidate": "itisdone", "clue": "Matrix Revolutions", "reading": "The last words of the Matrix trilogy's hero."}
+{"candidate": "everythingthathasabeginninghasanend", "clue": "Matrix Revolutions", "reading": "A famous last-words line before the final choice."}
+{"candidate": "thesource", "clue": "stage 3.2.1 text", "reading": "Return to the source is the required function."}
+{"candidate": "thesourcecode", "clue": "stage 3.2.1 text", "reading": "Source codes phrase."}
+{"candidate": "wakeupneo", "clue": "stage 3.2 text: Wake up, you", "reading": "The Matrix opening line echoed."}
+{"candidate": "wakeup", "clue": "stage 3.2 text", "reading": "Wake up, you."}
+{"candidate": "followthewhiterabbit", "clue": "stage 0", "reading": "The rabbit image and Matrix line."}
+{"candidate": "whiterabbit", "clue": "stage 0 and 3.2", "reading": "The rabbit."}
+{"candidate": "redpill", "clue": "yellowblue colours", "reading": "Colours and Matrix pills suggest pill choice."}
+{"candidate": "bluepill", "clue": "yellowblue colours", "reading": "Blue pill."}
+{"candidate": "redpillbluepill", "clue": "yellowblue colours", "reading": "Two pills as the choice."}
+{"candidate": "green", "clue": "yellowblueprimes", "reading": "Yellow plus blue makes green, the promised colour."}
+{"candidate": "yellowblue", "clue": "yellowblueprimes", "reading": "The colours without primes."}
+{"candidate": "blueyellow", "clue": "yellowblueprimes", "reading": "Reversed colour order."}
+{"candidate": "primes", "clue": "yellowblueprimes", "reading": "The last word of the first item."}
+{"candidate": "yellowprimes", "clue": "yellowblueprimes", "reading": "One colour and primes."}
+{"candidate": "blueprimes", "clue": "yellowblueprimes", "reading": "The other colour and primes."}
+{"candidate": "greenprimes", "clue": "yellowblueprimes", "reading": "Yellow and blue mixed then primes."}
+{"candidate": "yellow9blue15", "clue": "stage 0 counts", "reading": "The rabbit has 9 yellow and 15 blue cells."}
+{"candidate": "blue15yellow9", "clue": "stage 0 counts", "reading": "Reverse."}
+{"candidate": "24", "clue": "stage 0 counts", "reading": "The number of coloured cells."}
+{"candidate": "2357", "clue": "primes", "reading": "The first four primes."}
+{"candidate": "primenumbers", "clue": "primes", "reading": "English form."}
+{"candidate": "theprimes", "clue": "primes", "reading": "With article."}
+{"candidate": "prime", "clue": "stage 3.2.1 text: prime basics", "reading": "Reinserting the prime basics."}
+{"candidate": "reinsertingtheprimebasics", "clue": "stage 3.2.1 text", "reading": "The required step named by the Architect."}
+{"candidate": "primebasics", "clue": "stage 3.2.1 text", "reading": "The tail of that phrase."}
+{"candidate": "thepromisedland", "clue": "promised", "reading": "The English idiom for promised."}
+{"candidate": "promisedland", "clue": "promised", "reading": "No article."}
+{"candidate": "promise", "clue": "promised", "reading": "Stem."}
+{"candidate": "thepromise", "clue": "promised", "reading": "With article."}
+{"candidate": "ipromise", "clue": "promised", "reading": "First person."}
+{"candidate": "privatekey", "clue": "stage 3.2.1 and 3.2.2 text", "reading": "The stated object."}
+{"candidate": "theprivatekey", "clue": "stage 3.2.1 text", "reading": "The private key you earned."}
+{"candidate": "privatekeynote", "clue": "stage 3.2.1 text", "reading": "Keynote phrase read as private key note."}
+{"candidate": "keynote", "clue": "stage 3.2.1 text", "reading": "The odd final word."}
+{"candidate": "theactualprivatekey", "clue": "stage 3.2.1 text", "reading": "Actual private key."}
+{"candidate": "youveearnedit", "clue": "stage 3.2.1 text", "reading": "Take the private key, you've earned it."}
+{"candidate": "hundredfourty", "clue": "stage 3.2.1 text", "reading": "Wiseman hinted at is worth hundred fourty."}
+{"candidate": "140", "clue": "stage 3.2.1 text", "reading": "The numeric form."}
+{"candidate": "wiseman", "clue": "stage 3.2.1 text", "reading": "A wiseman above hinted."}
+{"candidate": "awiseman", "clue": "stage 3.2.1 text", "reading": "With article."}
+{"candidate": "wisemanabove", "clue": "stage 3.2.1 text", "reading": "The wiseman above."}
+{"candidate": "1141", "clue": "EBCDIC 1141", "reading": "The code page number and one for one, four for one."}
+{"candidate": "oneforonefourforone", "clue": "stage 3.2 text", "reading": "One for one, four for one."}
+{"candidate": "onefourforone", "clue": "stage 3.2 text", "reading": "Shorter."}
+{"candidate": "fubcdora", "clue": "checkerboard", "reading": "The keyword of the straddling checkerboard."}
+{"candidate": "fubcdoralethingkymvpsjqzxw", "clue": "checkerboard", "reading": "The full alphabet."}
+{"candidate": "fubcdking", "clue": "stage 3.2 text", "reading": "The king mentioned."}
+{"candidate": "oraclequeen", "clue": "stage 3.2 text", "reading": "The queen mentioned."}
+{"candidate": "fubcdkingoraclequeen", "clue": "stage 3.2 text", "reading": "Both pieces joined."}
+{"candidate": "thingkymvps", "clue": "stage 3.2 text", "reading": "Thingky mvps."}
+{"candidate": "sadboard", "clue": "stage 3.2 text", "reading": "A sad board."}
+{"candidate": "jacquefresco", "clue": "stage 3.2", "reading": "First stage 3.2 clue reused."}
+{"candidate": "giveitjustonesecond", "clue": "stage 3.2", "reading": "Second clue reused."}
+{"candidate": "heisenbergsuncertaintyprinciple", "clue": "stage 3.2", "reading": "Third clue reused."}
+{"candidate": "jacquefrescogiveitjustonesecondheisenbergsuncertaintyprinciple", "clue": "stage 3.2", "reading": "All three joined as in stage 3.2."}
+{"candidate": "causalitySafenetLunaHSM11110", "clue": "stage 3", "reading": "The known part of the seven-part password."}
+{"candidate": "Safenet", "clue": "stage 3", "reading": "Cryptographic vendor."}
+{"candidate": "Luna", "clue": "stage 3", "reading": "The HSM product."}
+{"candidate": "HSM", "clue": "stage 3", "reading": "Hardware security module."}
+{"candidate": "11110", "clue": "stage 3", "reading": "Binary number in the password."}
+{"candidate": "canyoudigit", "clue": "stage 1", "reading": "Dig it is the last command."}
+{"candidate": "dig", "clue": "stage 1 and Unix commands", "reading": "Dig is a command and the hint said dig it."}
+{"candidate": "thewarning", "clue": "stage 1", "reading": "The song."}
+{"candidate": "warning", "clue": "stage 1", "reading": "The word."}
+{"candidate": "logic", "clue": "stage 1", "reading": "The artist."}
+{"candidate": "satoshinakamoto", "clue": "half and better half", "reading": "The creator behind Bitcoin."}
+{"candidate": "halfinney", "clue": "half and better half", "reading": "Hal Finney; half read as Hal Finney and his better half Fran."}
+{"candidate": "halfinneyandfran", "clue": "half and better half", "reading": "Hal Finney and his wife."}
+{"candidate": "fran", "clue": "half and better half", "reading": "Fran Finney, Hal's wife, as better half."}
+{"candidate": "adamandeve", "clue": "half and better half", "reading": "The original couple."}
+{"candidate": "wife", "clue": "better half idiom", "reading": "Better half means wife."}
+{"candidate": "husbandandwife", "clue": "half and better half", "reading": "The couple as text."}
+{"candidate": "soulmate", "clue": "better half idiom", "reading": "Synonym."}
+{"candidate": "twinflame", "clue": "better half idiom", "reading": "Synonym."}
+{"candidate": "partner", "clue": "better half idiom", "reading": "Synonym."}
+{"candidate": "theyneedfundstolive", "clue": "stage 3.2.2 text", "reading": "They also need funds to live."}
+{"candidate": "fundstolive", "clue": "stage 3.2.2 text", "reading": "Shortened."}
+{"candidate": "incaseyoumanagetocrackthis", "clue": "stage 3.2.2 text", "reading": "Opening of the message."}
+{"candidate": "theprivatekeysbelongtohalfandbetterhalf", "clue": "stage 3.2.2 text", "reading": "The full clause."}
+{"candidate": "0.5", "clue": "half", "reading": "Half as a number."}
+{"candidate": "onehalf", "clue": "half", "reading": "Half as words."}
+{"candidate": "51", "clue": "better half greater than 50", "reading": "Half and better than half."}
+{"candidate": "blackandwhite", "clue": "yinyang", "reading": "The colours of the symbol."}
+{"candidate": "yinyangbalance", "clue": "yinyang and unbalanced equation", "reading": "Balance resolves the unbalanced equation."}
+{"candidate": "balance", "clue": "yinyang and unbalanced equation", "reading": "Balance."}
+{"candidate": "equilibrium", "clue": "yinyang", "reading": "Synonym."}
+{"candidate": "harmony", "clue": "stage 3.2.1 text", "reading": "A harmony of mathematical precision."}
+{"candidate": "ciaobella", "clue": "stage 3.2.1 text", "reading": "The closing phrase of the Architect's text."}
