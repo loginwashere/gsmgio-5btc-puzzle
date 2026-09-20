@@ -1,0 +1,19 @@
+{
+  "base_count": 8,
+  "disposition": "bounded_negative_dual_source_prime_weave",
+  "expected_trial_count": 96,
+  "hit_count": 0,
+  "hits": [],
+  "lock_sha256": "aafeae265d7ee01ad945e23753890d7013c0c6ffd017ab7864c220efad2cc4b5",
+  "material_count": 16,
+  "material_digest": "b232e69f0896c5f30c0fd197dbe752782a97c6910b173ec8713a70b0e8693f9d",
+  "overlap_labels": {
+    "phase270": [],
+    "phase442": [],
+    "phase443": [],
+    "phase444": []
+  },
+  "phase": 533,
+  "scope": "eight frozen bases; raw and sha256-hex; six Phase-270 KDF specs; P32 only",
+  "trial_count": 96
+}

@@ -1,0 +1,30 @@
+{
+  "phase": 530,
+  "issued_utc": "2026-09-19T21:08:08.516511+00:00",
+  "scope": "five Phase-528 payload bases; fixed Phase-527 four-blob 60-variant oracle",
+  "container_image": "gsmg-gpu-oracle:phase524-kt",
+  "container_image_id": "sha256:cf2432d168e5dcb5018b57cc54a2a4d19df2f918e89388d1b78f7479850ab60a",
+  "gpu_uuid": "GPU-422f614f-fda3-a9fa-751f-f36612c276c0",
+  "protocol_sha256": "a7942b4c170387e9e117c8bb6d407158bd226918f231b153c40a96bcccd56c94",
+  "runner_sha256": "8f94e4a7c382856ba2c32af7422c744103c1cff90028348165f2b670b52e74c1",
+  "phase529_result_sha256": "2490cc9363d9af892066ff2eba2d41bca8282d76b2a2f3b306e1745faaeb6527",
+  "base_list_sha256": "2ac0d46de28a77d30cd670b8f35d7c67b2e22032830018d2c5fd3e820c919c3d",
+  "bloom_cache_sha256": "376375ce1c63e5484cf941c422467d1d41b0b889c4b74fd4309e8cdb83882250",
+  "base_count": 5,
+  "expected_gpu_form_count": 90,
+  "options": [
+    "--newline-variants"
+  ],
+  "required_startup_markers": [
+    "GPU kernel output matches the CPU reference oracle",
+    "Bloom cache loaded",
+    "folded in 8 known EC-derived target address(es)"
+  ],
+  "detectors": [
+    "strong",
+    "structural",
+    "raw-key Bloom/API",
+    "Phase-331 known-target"
+  ],
+  "stop_rule": "one resumable run; zero decisive hits closes only the frozen five-base/90-form universe"
+}

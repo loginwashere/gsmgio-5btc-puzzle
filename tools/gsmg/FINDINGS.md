@@ -30289,3 +30289,324 @@ JSON-lines.
 
 **Reopen condition:** a new authenticated checkpoint value or selector for
 one. No detector gap remains open for this universe.
+<!-- audit_doc_override: GSMG_PHASE525A_DBBI_SELECTION_A_RECONSTRUCTION_AUDIT.md -->
+## Phase 525 -- DBBI 84-token Selection-A reconstruction: mechanically valid, coordinate family newly inventoried (2026-09-19)
+
+**Question:** does the community Atlas's DBBI Selection A reproduce from the
+project's canonical DBBI stream and Stage-0 image, and does it yield exact
+serializations absent from the named machine-readable historical corpora?
+
+**Method:** froze an oracle-free protocol; exhaustively parsed DBBI under the
+prime-position `b|be` host grammar; reconstructed the 24 ordinary colored
+endpoints plus FEFE directly from the canonical 14x14 image; compared every
+complete parse with all 300 order-preserving 23-of-25 event selections; tested
+the one-source-byte-per-retained-event criterion; serialized the selected
+object under a fixed 25-record sum/list/coordinate menu; and checked exact-byte
+membership against Phase 478's 1,749,878 submitted materials and Phase 523's
+133,657 bases. No encrypted blob or FAED was accessed.
+
+**Result:** DBBI has exactly two complete parses: length 83 with 15 `b` / 8
+`be`, and length 84 with 16 `b` / 7 `be`. The 84-token host colors match
+exactly two event selections, omitting `{22,25}` or `{23,25}`. Only the first
+(Selection A) represents source bytes 1-23 exactly once, with FEFE standing for
+byte 21. It projects to `gsmg.io/theseedisplante`; its zero-/one-based spiral
+positions sum to `2181`/`2204`, its one-based rows/columns to `172`/`171`.
+All 25 exact representations are absent from both named comparators. This is
+exact-format novelty only: URL/color and trivial ordinal forms are not promoted.
+The 16 Selection-A-specific coordinate records are the clearest new bounded
+family. Seven focused tests pass; deterministic rerun is byte-identical (result
+SHA-256 `82a46dc6...e9253`).
+
+**Disposition:** positive mechanical reconstruction, structural-only. The
+one-representative-per-byte criterion remains conditional community reasoning,
+not a creator-authenticated instruction. No password claim or oracle escalation
+is made.
+
+**Facts affected:** adds the two-parse/two-selection inventory and Selection A
+as a reproducible conditional object; no solved-chain fact changes.
+
+**Artifacts:**
+`tools/gsmg/phase525_dbbi_selection_a_reconstruction.py`,
+`tools/gsmg/test_phase525_dbbi_selection_a_reconstruction.py`,
+`tools/gsmg/phase525_selection_a_result.json`,
+[audit](../../doc/GSMG_PHASE525A_DBBI_SELECTION_A_RECONSTRUCTION_AUDIT.md),
+and the frozen Brainstorms protocol.
+
+**Reopen/next condition:** a separately frozen Phase 525B may select only the
+16 coordinate-derived bases, diff their fully expanded materials against prior
+oracle submissions, name one consumer, and issue an execution lock. No
+reversal/permutation/encoding or separator widening follows from this phase.
+<!-- audit_doc_override: GSMG_PHASE526A_SELECTION_A_SLOT_OVERLAP_AUDIT.md -->
+## Phase 526 -- Selection-A coordinate slot extension: 2,384,208 fresh materials, execution pending (2026-09-19)
+
+**Question:** if Phase 525's 16 Selection-A-specific coordinate values are
+inserted only into the existing `matrixsumlist` slot, how much of the frozen
+house-style macro-password grammar is genuinely new?
+
+**Method:** reused Phase 523's exact slot order, subset cells, join rules, other
+slot values, and standard newline-enabled form expansion. Compared expanded
+materials against Phase 523's 18 historical SALPH coverage sources, all Phase
+524 executed bases, and all 1,749,878 Phase 478 submitted bytes. No oracle or
+encrypted artifact was accessed.
+
+**Result:** 16 values produce 112,624 unique bases and 5,136,688 audit-expanded
+forms (2,401,721 unique material keys). Against 7,212,949 prior-union keys,
+2,384,208 are fresh. Every base retains fresh material, so all 112,624 bases
+remain in the covering list (SHA-256 `800e7a18...7ea36`). The GPU tool is
+expected to emit 5,137,056 forms after its known 368 digit-only empty-alpha
+forms. Six focused tests pass; zero oracle calls.
+
+**Disposition:** positive novelty inventory, structural-only. A separately
+locked SALPH-primary execution is justified but has not run. No new coordinate
+encoding is licensed by a future miss.
+
+**Facts affected:** Phase 525's coordinate family is mostly new under the full
+expanded-material comparison; no solved-chain fact changes.
+
+**Artifacts:** `tools/gsmg/phase526_selection_a_slot_overlap.py`, its test,
+the frozen Phase-526A protocol, `_work/phase526/{bases.txt,report.json}`, and
+[audit](../../doc/GSMG_PHASE526A_SELECTION_A_SLOT_OVERLAP_AUDIT.md).
+
+**Reopen/next condition:** Phase 527 may run only after a current-source CUDA
+self-test, GPU visibility, Bloom/known-target load confirmation, and an
+execution lock pinning the complete universe and detector configuration.
+<!-- audit_doc_override: GSMG_PHASE527_SELECTION_A_COORDINATE_ORACLE_AUDIT.md -->
+## Phase 527 -- Selection-A coordinate slot-extension oracle sweep, bounded negative (2026-09-19)
+
+**Question:** does any of Phase 525's 16 Selection-A coordinate values, alone
+or in Phase 523's frozen `matrixsumlist` slot grammar, open a tracked blob or
+produce an exact key/address result?
+
+**Frozen scope:** 112,624 bases (SHA-256 `800e7a18...7ea36`), standard
+newline-enabled expansion to 5,137,056 forms, fixed macro order and joins,
+current-source CUDA image, four-blob 60-variant superset, Bloom cache and eight
+Phase-331 known targets. Execution-lock SHA-256 `179022a1...14864`.
+
+**Result:** all 5,137,056 forms completed in 8,734 s. Zero strong hits, zero
+structural hits, zero known-target matches, and zero confirmed-funded addresses.
+The 159 weak rows (SALPH 39, COSMIC 47, P32TRAILING 31, URLBLOB 42) all
+re-derived exactly and contained zero hex64/WIF/BIP39 shapes. Seventeen Bloom
+rows represented 16 unique addresses; every one was rejected by the live API.
+The fail-closed verifier confirms a contiguous 5,137,056-entry checkpoint and
+all required startup/completion markers; 3/3 verifier tests pass.
+
+**Disposition:** bounded negative for the 16 values under the frozen Phase-523
+grammar and Phase-524 oracle. No reversal, permutation, encoding, separator, or
+base widening follows from this miss.
+
+**Facts affected:** Selection A remains a mechanically valid conditional
+object, but its direct house-style password use is rejected in this universe.
+
+**Artifacts:** execution lock, lock/verifier scripts and tests,
+`phase527_verification.json`, the frozen protocol, and
+[audit](../../doc/GSMG_PHASE527_SELECTION_A_COORDINATE_ORACLE_AUDIT.md).
+
+**Reopen condition:** a new authenticated representation rule or consumer for
+Selection A; not another password formatting hedge.
+<!-- audit_doc_override: GSMG_PHASE528_DBBI_84_TOKEN_CONSEQUENCE_AUDIT.md -->
+## Phase 528 -- DBBI 84-token consequence audit: one corrected negative, fresh payload rails isolated (2026-09-19)
+
+**Question:** which historical results actually change under the independently
+reconstructed 84-token DBBI prime-host parse, and what exact source objects had
+not previously been submitted?
+
+**Method:** reconstructed both complete parses from `data.DBBI`; decomposed
+each into 23 prime-hosted groups plus an unhosted tail; compared group payloads,
+host colors, residues, native A1I9 sums, and direct `b`/`be` rails; inventoried
+prior consumers; reran only Phase 177's invalidated merge/split statistic under
+its original 105 positions, two orientations, seed, and 2,000-shuffle null;
+and checked six exact text objects against Phase 478 submitted bytes and Phase
+523 bases. No AES, FAED, password expansion, or language scoring occurred.
+
+**Result:** the two parses have identical 23 payloads and identical 60-symbol
+hosted residue. The 84 parse changes only host 23 from `be` to `b` and leaves a
+terminal unhosted `e`, yielding the 61-symbol residue
+`difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeeae`.
+Its direct host-classified rails are a 35-symbol/16-group blue rail
+`difgihaebgehhehhfaffcdbfcccgdcifeea` (sum 183) and a 25-symbol/7-group yellow
+rail `hcceihggegefdhfeggecffgig` (sum 153). All six bounded objects are absent
+from both named corpora.
+
+The endpoint-color consumers in Phases 61, 270, 442–444 already used exactly
+this 16/7 profile, and Phases 171/172 already included the split-84 branch; their
+negatives stand. Phase 177 alone had invalidated class labels: seven merged
+versus three split literal `be` pairs replace eight/two. Its corrected
+familywise result is null: 1050/2000 controls at or above, `p=0.525237`.
+
+**Disposition:** structural correction complete. The 84 parse does not reopen
+the old endpoint projections or rescue the triangular `matrixsumlist` cell. It
+does isolate a bounded, previously unsubmitted payload family suitable for a
+separately diffed experiment; exact absence is not intendedness evidence.
+
+**Artifacts:**
+`tools/gsmg/phase528_dbbi_84_token_consequence_audit.py`,
+`tools/gsmg/test_phase528_dbbi_84_token_consequence_audit.py`,
+`tools/gsmg/phase528_dbbi_84_token_consequence_result.json`, the
+[audit](../../doc/GSMG_PHASE528_DBBI_84_TOKEN_CONSEQUENCE_AUDIT.md), and the
+bounded Brainstorms protocol.
+
+**Next/reopen condition:** expand only the 61-symbol residue and 35/25 rails
+under already-established solved-boundary forms, including the two deterministic
+rail orders, and diff all resulting bytes before naming any encrypted consumer.
+No new reversal, separator, XOR, base, or transform axis is licensed.
+<!-- audit_doc_override: GSMG_PHASE529_DBBI_PAYLOAD_MATERIAL_OVERLAP_AUDIT.md -->
+## Phase 529 -- DBBI 84-parse payload material overlap: 90/90 standard forms fresh (2026-09-20)
+
+**Question:** are Phase 528's exact 61-symbol residue, 35/25 host rails, and
+two direct rail orders already covered after applying the established
+solved-boundary password-form registry?
+
+**Method:** froze exactly those five lowercase pure-letter bases; expanded each
+with Phase 523's unchanged standard case/raw/SHA/double-SHA and newline forms;
+and compared exact material membership against Phase 523's 18 historical
+sources, every base actually executed in Phases 524 and 527, and Phase 478's
+submitted-byte manifest. No reversal, separator, interleaving, numeric form,
+AES, FAED, or oracle was allowed.
+
+**Result:** 18 forms per base, 90 unique materials total, zero coverage. The
+comparators comprised 2,456,427 historical material keys, 6,245,429 Phase-524
+expansions, 5,136,688 Phase-527 expansions, and 1,749,878 exact submitted
+bytes. All five bases retain fresh material. Runtime was 18.622 seconds; five
+focused tests and the self-test pass; result SHA-256 is
+`2490cc9363...eb6527`.
+
+**Disposition:** genuinely fresh but untested bounded family. A separately
+locked Phase 530 may submit exactly these 90 forms to Phase 527's unchanged
+four-blob/60-variant oracle. Freshness is not intendedness evidence and does
+not license any new transform axis.
+
+**Artifacts:**
+`tools/gsmg/phase529_dbbi_payload_material_overlap.py`,
+`tools/gsmg/test_phase529_dbbi_payload_material_overlap.py`,
+`tools/gsmg/phase529_dbbi_payload_material_overlap_result.json`,
+[audit](../../doc/GSMG_PHASE529_DBBI_PAYLOAD_MATERIAL_OVERLAP_AUDIT.md), and
+the frozen Brainstorms protocol.
+<!-- audit_doc_override: GSMG_PHASE530_DBBI_PAYLOAD_ORACLE_AUDIT.md -->
+## Phase 530 -- DBBI 84-parse residue/rail password family: bounded negative (2026-09-20)
+
+**Question:** do Phase 529's 90 genuinely fresh materials, derived from the
+61-symbol DBBI residue, 35/25 host rails, and their two direct orders, open a
+tracked encrypted container or produce a decisive key/address result?
+
+**Method:** issued an execution lock pinning the five bases, expected 90 forms,
+Phase-529 result, unchanged Phase-527 CUDA image, RTX 5070 UUID, and Bloom
+cache. Ran once through the same four-blob, 60-AES-variant oracle with mandatory
+GPU/CPU parity, structural, Bloom/API, and eight known-target checks.
+
+**Result:** all 90 forms completed (`0..89` contiguous checkpoint; 21,600
+candidate/variant/blob configurations). Zero weak, strong, structural,
+keyshape, funded, or known-target rows. Container exit 0. The verifier passes
+three focused tests and records verification SHA-256 `a6cb124c...a2cfa0`.
+
+**Disposition:** bounded negative for exactly the five bases, 90 standard
+forms, four tracked blobs, and fixed 60-variant oracle. This closes their
+direct password use; it does not invalidate the 84-token structural parse or
+license reversals, separators, interleavings, tail hedges, numeric forms, or
+additional cipher families.
+
+**Artifacts:**
+`tools/gsmg/phase530_execution_lock.json`,
+`tools/gsmg/phase530_dbbi_payload_oracle_lock.py`,
+`tools/gsmg/phase530_verify_run.py`,
+`tools/gsmg/phase530_verification.json`,
+[audit](../../doc/GSMG_PHASE530_DBBI_PAYLOAD_ORACLE_AUDIT.md), and the
+frozen protocol.
+<!-- audit_doc_override: GSMG_PHASE531_FAED_CLOSED_SYSTEM_OPERATOR_ELIGIBILITY_AUDIT.md -->
+## Phase 531 -- FAED closed-system operator eligibility refresh: 0/10 executable rows (2026-09-20)
+
+**Question:** after the transposition campaign and DBBI 84-token work, does
+the closed project contain a fully specified, puzzle-selected FAED operation
+that remains unexecuted?
+
+**Method:** refreshed Phases 101/218–220/371/424 using six frozen gates:
+authenticated source, FAED operand binding, selected operation, fixed
+parameters, fixed consumer, and objective validator. Audited ten families:
+adjacent instruction words, checkerboard, checkerboard+transposition,
+DBBI-keyed Bifid, `matrixsumlist`, prime/color selection, hash/KDF consumption,
+84-token DBBI rails, exact cribs, and terminal structural validators. A row
+also had to be uncovered. Ten cited findings were hash-recorded and their
+load-bearing disposition text checked mechanically.
+
+**Result:** zero of ten rows is eligible and uncovered. Eight fail first at
+FAED operand binding. The two direct checkerboard rows reach FAED but lack a
+puzzle-selected operation and fixed board/width/direction/consumer. Later work
+does not change Phase 219's conclusion: transposition tests add bounded misses,
+the 84-token parse adds DBBI structure but no DBBI→FAED edge, and Phase 530
+closes the new rails only as direct passwords. Five focused tests pass; result
+SHA-256 `15469ca7...11d00`; zero candidates, decodes, oracle calls, or GPU work.
+
+**Disposition:** no decoder run authorized. The live FAED gap is semantic
+binding, not compute coverage. Reopening requires a closed-system artifact
+selecting an operation and its load-bearing parameters, or an exact terminal
+consumer that does not depend on generic fluency. This does not assert FAED is
+random or unsolvable.
+
+**Artifacts:**
+`tools/gsmg/phase531_faed_closed_system_operator_eligibility.py`,
+`tools/gsmg/test_phase531_faed_closed_system_operator_eligibility.py`,
+`tools/gsmg/phase531_faed_operator_eligibility_result.json`,
+[audit](../../doc/GSMG_PHASE531_FAED_CLOSED_SYSTEM_OPERATOR_ELIGIBILITY_AUDIT.md),
+and the frozen protocol.
+<!-- audit_doc_override: GSMG_PHASE532_CONSUMER_FIRST_FRONTIER_MATRIX_AUDIT.md -->
+## Phase 532 -- consumer-first frontier matrix: zero evidence-complete runs, one coverage debt (2026-09-20)
+
+**Question:** after Phase 531 found no eligible FAED decoder, does P32,
+SALPH, COSMIC, a known address, or another structured output define a complete
+closed-system experiment?
+
+**Method:** audited eight rows against six frozen gates: authenticated target,
+fixed output schema, exact terminal validator, independently selected input,
+fixed serialization/transform, and finite uncovered scope. Operational
+runnability was recorded separately so a finite corpus could not masquerade
+as puzzle evidence.
+
+**Result:** 0/8 rows pass all gates. P32's two-private-key role and the two
+known P2PKH addresses provide the strongest exact validators, but neither
+selects a fresh input source/boundary. SALPH/COSMIC lack an independently fixed
+plaintext schema. The DBBI 84-token rails are the positive-control shape—five
+of six gates—but their direct terminal use is already covered negative.
+
+One exception is operational, not evidential: Phase 163's approximately
+700,000-keystring Tier-1 no-padding whitespace backfill is finite and unrun.
+It remains coverage debt, explicitly not a clue-selected construction.
+
+**Disposition:** no evidence-selected consumer run is authorized. Future work
+needs an existing closed-system object that selects a P32/address preimage
+source and boundary; expanding password or crypto menus does not supply that
+missing information. Six focused tests pass; zero candidates, oracle calls,
+decryptions, GPU, or network use.
+
+**Artifacts:**
+`tools/gsmg/phase532_consumer_first_frontier_matrix.py`,
+`tools/gsmg/test_phase532_consumer_first_frontier_matrix.py`,
+`tools/gsmg/phase532_consumer_first_frontier_result.json`, the frozen protocol,
+and [audit](../../doc/GSMG_PHASE532_CONSUMER_FIRST_FRONTIER_MATRIX_AUDIT.md).
+<!-- audit_doc_override: GSMG_PHASE533_P32_DUAL_SOURCE_PRIME_WEAVE_AUDIT.md -->
+## Phase 533 -- P32 dual source-code prime weave: bounded negative (2026-09-20)
+
+**Question:** assuming the Architect monologue and “half and better half”
+answer jointly concern P32, does their most literal combined instruction open
+the two-key payload?
+
+**Method:** treated the CP1141/Beaufort ciphertext and 149-digit checkerboard
+ciphertext as plural `SOURCE CODES`; applied the unchanged split-final-`BE`
+23-event sequential-prime rule; retained its exact 16-blue/7-yellow
+partition; and froze eight bases covering the digit rails, two source orders,
+and two event-preserving weaves. Each supplied raw and SHA-256-hex material.
+All 16 materials were fresh against Phases 270 and 442–444. A pre-query lock
+pinned the candidate digest and expected 96 P32-only trials.
+
+**Result:** 96/96 trials completed under the six Phase-270 KDF/AES-CBC specs.
+Zero exact full-padding/two-key hits. Lock SHA-256 `aafeae26...cc4b5`;
+result SHA-256 `dc271922...55c00`. Five tests passed before lock issuance;
+post-lock, four pass and the destructive lock-tamper test safely skips.
+
+**Disposition:** bounded negative for this eight-base dual-source
+prime/intertwine construction. It does not reject the broader P32 sibling-text
+role and does not license reversals, alternate prime rules, decoded-source
+substitutions, or KDF widening.
+
+**Artifacts:** frozen protocol; `phase533_p32_dual_source_prime_weave.py`;
+`test_phase533_p32_dual_source_prime_weave.py`;
+`phase533_execution_lock.json`; `phase533_p32_dual_source_prime_weave_result.json`;
+and [audit](../../doc/GSMG_PHASE533_P32_DUAL_SOURCE_PRIME_WEAVE_AUDIT.md).

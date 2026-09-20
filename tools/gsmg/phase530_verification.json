@@ -1,0 +1,29 @@
+{
+  "artifacts": {
+    "checkpoint_sha256": "a5fae93ee1d77e726cca7b5f08977f783e0b1325cfbd41a1d9f5259a1076fa7c",
+    "hits_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "keyshape_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "run_log_sha256": "3acedf4c8caac0843651b4cb2fa4022b836ee0a73b9786455c6e3192bb02fca7"
+  },
+  "checkpoint_header": {
+    "blob_digest": "038f84fae5000dcc",
+    "candidate_count": 90,
+    "candidate_digest": "f9f7c2d4a678a803",
+    "driver_sha256": "751bf6c35307fdbe",
+    "header": true,
+    "kernel_sha256": "unavailable",
+    "variant_digest": "ce7c7e2705486aa5",
+    "version": 1
+  },
+  "completed_forms": 90,
+  "confirmed_funded": 0,
+  "consistent": true,
+  "disposition": "bounded negative for five Phase-528 payload bases, 90 standard forms, and the unchanged Phase-527 four-blob 60-variant oracle",
+  "execution_lock_sha256": "5e4bca0760f5ba62dc93d54e5b5351bd7742a7aaf0b40405263296ad5ec8709d",
+  "keyshape_rows": 0,
+  "known_target_matches": 0,
+  "phase": 530,
+  "strong_hits": 0,
+  "structural_hits": 0,
+  "weak_rows": 0
+}

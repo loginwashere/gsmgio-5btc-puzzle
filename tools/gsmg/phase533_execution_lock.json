@@ -1,0 +1,18 @@
+{
+  "base_count": 8,
+  "colors": "BBBBYBBBYYBBBBYBBYYBBYB",
+  "evidence_sha256": {
+    "P00270.md": "cdb5e0c766dfcb555fb839ad0cea5284f3ef8423b1ea8688f04fb70d5b63b4de",
+    "P00442.md": "ad6f6907e6f03022a3d75759c3d011d5727bb4ea3f3465eb57b68d23199acec6",
+    "P00443.md": "11ae75e982b7a493efc85c8137e7e53a2dc69cb0964957431bf19ad333c007fd",
+    "P00444.md": "4317ec0ae6a4ebcf8e59d3bef9b063ea90e327bff2aa20ec96e0b386c8d04cc3"
+  },
+  "expected_trial_count": 96,
+  "fresh_material_count": 16,
+  "fresh_material_digest": "b232e69f0896c5f30c0fd197dbe752782a97c6910b173ec8713a70b0e8693f9d",
+  "kdf_spec_count": 6,
+  "p32_envelope_sha256": "291dfd6f3e759ec2e272b35a00c24907da70c3e7a9291b4c13605c7b0b4f3de9",
+  "phase": 533,
+  "protocol_sha256": "3914232620a0ec48e2307f870897c7cf51d19c2344b678490110b34cfde66a6e",
+  "script_sha256": "dbde3082c342ba4e8ff68a84171ad133cebecd734bb17ac1f8e2a75fc8399669"
+}

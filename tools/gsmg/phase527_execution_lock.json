@@ -1,0 +1,30 @@
+{
+  "phase": 527,
+  "issued_utc": "2026-09-19T15:18:45.201127+00:00",
+  "scope": "Selection-A 16-value matrixsumlist extension; SALPH primary, fixed four-blob GPU superset",
+  "container_image": "gsmg-gpu-oracle:phase524-kt",
+  "container_image_id": "sha256:cf2432d168e5dcb5018b57cc54a2a4d19df2f918e89388d1b78f7479850ab60a",
+  "gpu_uuid": "GPU-422f614f-fda3-a9fa-751f-f36612c276c0",
+  "protocol_sha256": "721dbd86779526cf5cf5f6f47341ee6bc2fb8f87e05ad42df6bae57f3b8f6ae4",
+  "prep_script_sha256": "3048d55c5f0e36ea5d2c2be84c03b45c5ef1a46ad3d595a8700252937e2cb9cc",
+  "phase525_result_sha256": "82a46dc6c4077ee5626d0578d465ebaf64e141d6627e94848ef34483d02e9253",
+  "overlap_report_sha256": "e05f22a887326af7cc76f123b86d03bd5ab19fd1df2402f81e184041ba6bf7b6",
+  "base_list_sha256": "800e7a181a015416725d399059e8369c556a4f9e4e2fffe9e71f18f9fcd7ea36",
+  "bloom_cache_sha256": "376375ce1c63e5484cf941c422467d1d41b0b889c4b74fd4309e8cdb83882250",
+  "base_count": 112624,
+  "expected_gpu_form_count": 5137056,
+  "options": [
+    "--newline-variants"
+  ],
+  "required_startup_markers": [
+    "Bloom cache loaded",
+    "folded in 8 known EC-derived target address(es)"
+  ],
+  "detectors": [
+    "strong",
+    "structural",
+    "raw-key Bloom/API",
+    "Phase-331 known-target"
+  ],
+  "stop_rule": "one resumable run; zero exact/strong/structural/funded/known-target hits closes only this frozen universe"
+}

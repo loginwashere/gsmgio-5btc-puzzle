@@ -1,0 +1,53 @@
+{
+  "phase": 527,
+  "consistent": true,
+  "lock_sha256": "179022a1e9c7319bdd2bbbc4435ba48bbbd29fc50fcb9fda6c56c20a5cb14864",
+  "completed_forms": 5137056,
+  "checkpoint_header": {
+    "blob_digest": "038f84fae5000dcc",
+    "candidate_count": 5137056,
+    "candidate_digest": "c07c9e346148952a",
+    "driver_sha256": "751bf6c35307fdbe",
+    "header": true,
+    "kernel_sha256": "unavailable",
+    "variant_digest": "ce7c7e2705486aa5",
+    "version": 1
+  },
+  "weak_rows": 159,
+  "unique_weak_candidate_kdf_blob": 145,
+  "weak_by_blob": {
+    "URLBLOB": 42,
+    "COSMIC": 47,
+    "P32TRAILING": 31,
+    "SALPH": 39
+  },
+  "weak_z_min": 5.003289699554443,
+  "weak_z_max": 6.075926780700684,
+  "weak_review": {
+    "weak_rows": 159,
+    "reconstructed": 159,
+    "padding_reconstruct_failures": 0,
+    "z_mismatches": 0,
+    "key_shaped_matches": 0,
+    "key_shaped": [],
+    "reconstructed_by_blob": {
+      "URLBLOB": 42,
+      "COSMIC": 47,
+      "P32TRAILING": 31,
+      "SALPH": 39
+    }
+  },
+  "keyshape_rows": 17,
+  "unique_keyshape_addresses": 16,
+  "confirmed_funded": 0,
+  "known_target_matches": 0,
+  "strong_hits": 0,
+  "structural_hits": 0,
+  "artifacts": {
+    "checkpoint_sha256": "31980ced9647ca2de1c6d29e13789bdf3e656fb05ae34d2cd64cc4d008b7a7f0",
+    "hits_sha256": "54a261e3f8324cadc80a3f71213dbfb35e8f4849ac0429b4a47b512383dafaff",
+    "keyshape_sha256": "2c955421989811300528df77943bb38d7c3744737da15ef30acac62563f51570",
+    "run_log_sha256": "9aa2ab8fdb36556bd4ff7b96536e5c65b4f48eb9258ecf7c1772b448f28bd5ba"
+  },
+  "disposition": "bounded negative for the locked Selection-A 16-value matrixsumlist slot extension under the Phase-523 grammar and Phase-524 oracle"
+}
