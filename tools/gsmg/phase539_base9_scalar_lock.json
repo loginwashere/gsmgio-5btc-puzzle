@@ -1,0 +1,91 @@
+{
+  "candidate_scalars": 4354560,
+  "controls": {
+    "control1_validator": {
+      "eleven_distinct_targets": true,
+      "generator_hashes": true,
+      "neighbors_match_phase331_constants": true,
+      "prize_pubkey_matches_address": true
+    },
+    "control2_planted_recovery": {
+      "DBBI/forward/D0": true,
+      "DBBI/forward/D1": true,
+      "DBBI/reversed/D0": true,
+      "DBBI/reversed/D1": true,
+      "P83/forward/D0": true,
+      "P83/forward/D1": true,
+      "P83/reversed/D0": true,
+      "P83/reversed/D1": true,
+      "P84/forward/D0": true,
+      "P84/forward/D1": true,
+      "P84/reversed/D0": true,
+      "P84/reversed/D1": true
+    },
+    "control3_digit_arithmetic": true
+  },
+  "data_py_sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+  "known_targets_rs_sha256": "eec270418be32c726867b4dfe7daae36595b220e863bc5b40bde1bfc1d99da5d",
+  "phase": 539,
+  "phase318_script_sha256": "74a9f3917d20ac43698d04a888d8e1f04442bf460c512f98b915b8d2f25a6ee9",
+  "phase537_parser_sha256": "fd3f61137ea6a338efbfb93879435bed2655c0cc987888e5897b5b3815d543c2",
+  "phase538_masks_sha256": "e69ee3c853201d12040298422367b42808fa56a0607a13269b3d3da8d678b227",
+  "protocol_sha256": "e45952877f9151590d1e771d3708bd8515a21e48f2dddfa0a0449e142383efba",
+  "script_sha256": "e28b1862e0f5a3113e4b8ba20dea9de3821e965ef9b494beab2cfbe2e7de22d1",
+  "target_hash160": [
+    [
+      "06bbdc66fda09110435c79a86656a604c2d5c69b",
+      "prize/compressed"
+    ],
+    [
+      "286301cde59820851fe92a3a9be4f76f6c3ebff8",
+      "2P/compressed"
+    ],
+    [
+      "3de34fca1bd6b7607243b0316a8102b7598cc9dc",
+      "P/2/uncompressed"
+    ],
+    [
+      "4bc468447fe1b048ad030a2f9a125478eabc4ed6",
+      "halving"
+    ],
+    [
+      "5043bb64b25d3fe6a7a6949ff98f98b26dcd2fa7",
+      "P/2/compressed"
+    ],
+    [
+      "9570962eadf45c422a2e59ddb9a1d87040ca5907",
+      "P-G/compressed"
+    ],
+    [
+      "9eb2e43005af77783e41ea702cf3ec3585fcd73d",
+      "P+G/compressed"
+    ],
+    [
+      "a4ae210a25bb8e2c359a134fafc2e30c6709dbc0",
+      "P-G/uncompressed"
+    ],
+    [
+      "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+      "prize/uncompressed"
+    ],
+    [
+      "c889dfbf698413209b6131895250b869f68560e0",
+      "2P/uncompressed"
+    ],
+    [
+      "f8fca692ffc90cba0c330dc56e02fa8da8d2d6e6",
+      "P+G/uncompressed"
+    ]
+  ],
+  "target_string_lengths": {
+    "DBBI": 91,
+    "P83": 60,
+    "P84": 61
+  },
+  "target_string_sha256": {
+    "DBBI": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca",
+    "P83": "21cbfa185f92492652ec5c40ba29b2f29f65804f8bd285c0de7685a2aad53109",
+    "P84": "56e78fb61ca4ec0f23fcc7d374050b3e32821a540b87ecda9364267b76c32161"
+  },
+  "test_sha256": "28f2dfa95fd847cc4b80001b43c494aa7ae32c5f25921ecffbc2da64beccdff0"
+}

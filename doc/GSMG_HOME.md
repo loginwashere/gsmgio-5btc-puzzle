@@ -7,7 +7,7 @@ date: 2026-09-01
 # GSMG 5 BTC Puzzle — Home
 
 **2026-09-20 update:** The historical overview below is not a complete summary
-of Phases 468–538. The latest
+of Phases 468–539. The latest
 [closed-system reassessment](GSMG_CLOSED_SYSTEM_REASSESSMENT_2026_09_20.md)
 qualifies DBBI's checkerboard evidence with prime-scaffold controls (Phase 534)
 and executes the previously omitted Selection-A-to-matrix composition (Phase
@@ -21,7 +21,9 @@ then tests whether the payload is an arithmetic function of its own position
 (59 distinct cells per parse, planted controls passed): no exact match and no
 calibrated lead. [Phase 538](GSMG_PHASE538_FAED_LANE_HOST_MASK_EXTRACTION.md)
 reads FAED's six 91-symbol lanes through DBBI's host masks (controls passed,
-64 oracle bases, two gate statistics): zero hits and no lead. See the phase
+64 oracle bases, two gate statistics): zero hits and no lead. [Phase 539](GSMG_PHASE539_BASE9_SCALAR_ALL_BIJECTIONS.md)
+reads DBBI and its payload as base-9 scalars under every digit bijection
+(4,354,560 scalars, exact address bar): zero hits. See the phase
 index for intervening work.
 
 Entry point for this vault. [README.md](../README.md) is the historical

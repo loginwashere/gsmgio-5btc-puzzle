@@ -1,0 +1,57 @@
+{
+  "phase": 539,
+  "lock_sha256": "a665610dac643386901a7702cf909b507e9c951b6d9ea4141145bbec4724b7d0",
+  "cells": {
+    "P83/forward/D0": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "P83/forward/D1": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "P83/reversed/D0": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "P83/reversed/D1": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "P84/forward/D0": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "P84/forward/D1": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "P84/reversed/D0": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "P84/reversed/D1": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "DBBI/forward/D0": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "DBBI/forward/D1": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "DBBI/reversed/D0": {
+      "checked": 362880,
+      "matches": 0
+    },
+    "DBBI/reversed/D1": {
+      "checked": 362880,
+      "matches": 0
+    }
+  },
+  "scalars_checked": 4354560,
+  "exact_hits": 0,
+  "oracle_calls": 0
+}

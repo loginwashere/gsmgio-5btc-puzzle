@@ -30792,3 +30792,37 @@ selection `...iriasogaleafay...`.
 **Reopen condition:** A creator-independent reason to read FAED through a specific
 mask, or a validator that ties an FAED-derived string to another existing artifact.
 Not other masks, partitions, reversal or symbol mappings.
+## Phase 539 — DBBI and its payload as base-9 scalars under every digit bijection, closed negative (2026-09-20)
+
+**Question:** Does any of the 9! digit bijections, applied to DBBI or to its 60- or
+61-symbol non-host payload as a base-9 number, give a secp256k1 scalar matching a
+known target? Extends Phase 318's two fixed digit maps on whole DBBI.
+
+**Frozen inputs:** Three strings (`P83`, `P84`, whole DBBI); both directions; digit
+conventions `0..8` and `1..9`; all 362,880 bijections; 4,354,560 scalars. Exact bar:
+compressed or uncompressed hash160 in eleven targets (prize x2 encodings, halving
+address, eight EC neighbors of the prize public key). Execution lock pins protocol,
+script, test, parsers, the Phase 331 constants file, and the target hashes.
+
+**Method:** Pure exact match; no statistical arm. Controls before any real scan:
+validator (generator, prize address, Phase 331 constants), Phase 318 digit
+arithmetic, and 12/12 planted full-scan recoveries.
+
+**Result:** 0 exact hits in 4,354,560 scalars (8,709,120 hash160 comparisons); no
+match file written. One pre-scan lock-format defect fixed and the lock regenerated
+before any real target was scanned.
+
+**Disposition:** rejected for this finite family; exact validator. Stop rule reached.
+
+**Facts affected:** None.
+
+**Supersedes/corrects:** None. Extends Phase 318 (whole DBBI, two fixed maps) to all
+bijections and to the payload, which no scalar test had used.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE539_BASE9_SCALAR_ALL_BIJECTIONS.md),
+`phase539_base9_scalar_all_bijections.py`, `test_phase539_base9_scalar_all_bijections.py`,
+`phase539_base9_scalar_lock.json`, `phase539_base9_scalar_result.json`, dated protocol.
+
+**Reopen condition:** A creator-independent reason to expect the key written as an
+`a..i` number, or another existing artifact that predicts its digit order. Not other
+radices, packings, truncations, FAED or the host string.

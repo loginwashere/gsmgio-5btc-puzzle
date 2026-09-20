@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **516** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **517** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -534,3 +534,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 536 | P536 | 2026-09-20 | prime scaffold around substituted numeric text | exact family negative | [source](../tools/gsmg/findings/P00536.md) | [link](../tools/gsmg/FINDINGS.md#phase-536-prime-scaffold-around-substituted-numeric-text-exact-family-negative-2026-09-20) | [GSMG_PHASE536_PRIME_SCAFFOLD_NUMERIC_TEXT](GSMG_PHASE536_PRIME_SCAFFOLD_NUMERIC_TEXT.md) |
 | 537 | P537 | 2026-09-20 | DBBI non-host payload as an arithmetic function of its own position | — | [source](../tools/gsmg/findings/P00537.md) | [link](../tools/gsmg/FINDINGS.md#phase-537-dbbi-non-host-payload-as-an-arithmetic-function-of-its-own-position-2026-09-20) | [GSMG_PHASE537_PAYLOAD_POSITION_FUNCTION](GSMG_PHASE537_PAYLOAD_POSITION_FUNCTION.md) |
 | 538 | P538 | 2026-09-20 | FAED lanes read through DBBI's host masks, closed negative | — | [source](../tools/gsmg/findings/P00538.md) | [link](../tools/gsmg/FINDINGS.md#phase-538-faed-lanes-read-through-dbbis-host-masks-closed-negative-2026-09-20) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
+| 539 | P539 | 2026-09-20 | DBBI and its payload as base-9 scalars under every digit bijection, closed negative | — | [source](../tools/gsmg/findings/P00539.md) | [link](../tools/gsmg/FINDINGS.md#phase-539-dbbi-and-its-payload-as-base-9-scalars-under-every-digit-bijection-closed-negative-2026-09-20) | [GSMG_PHASE529_DBBI_PAYLOAD_MATERIAL_OVERLAP_AUDIT](GSMG_PHASE529_DBBI_PAYLOAD_MATERIAL_OVERLAP_AUDIT.md) |
