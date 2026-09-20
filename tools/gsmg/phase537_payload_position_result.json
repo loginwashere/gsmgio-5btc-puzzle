@@ -1,0 +1,319 @@
+{
+ "phase": 537,
+ "protocol_sha256": "cbb5f5cfc33afe6299e1e171d916a6ecaf1b9c32cf09a4c44769d35a6f1d7fc8",
+ "script_sha256": "fd3f61137ea6a338efbfb93879435bed2655c0cc987888e5897b5b3815d543c2",
+ "dbbi_sha256": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca",
+ "self_test": {
+  "ok": true,
+  "checks": {
+   "pi_83_is_23": true,
+   "number_theory": true,
+   "two_parses": true,
+   "payload_lengths": true,
+   "all_nine_symbols": true,
+   "coords_consistent_83": true,
+   "raw_offsets_index_dbbi_83": true,
+   "coords_consistent_84": true,
+   "raw_offsets_index_dbbi_84": true,
+   "matches_phase525_parser": true,
+   "planted_exact_synthetic": true,
+   "eight_planting_cells": true,
+   "no_oracle_imported": true
+  }
+ },
+ "planted_controls": {
+  "exact_recovery": [
+   {
+    "logical_length": 83,
+    "cell": "n:divisor_sum:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 83,
+    "cell": "r:divisor_count:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 83,
+    "cell": "k:divisor_sum:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 83,
+    "cell": "n:identity:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 83,
+    "cell": "r:divisor_sum:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 83,
+    "cell": "k:identity:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 83,
+    "cell": "n:pi:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 83,
+    "cell": "r:geom_div7:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 84,
+    "cell": "n:divisor_sum:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 84,
+    "cell": "r:divisor_count:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 84,
+    "cell": "k:divisor_sum:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 84,
+    "cell": "n:identity:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 84,
+    "cell": "r:divisor_sum:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 84,
+    "cell": "k:identity:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 84,
+    "cell": "n:pi:mod9",
+    "recovered": 20,
+    "trials": 20
+   },
+   {
+    "logical_length": 84,
+    "cell": "r:geom_div7:mod9",
+    "recovered": 20,
+    "trials": 20
+   }
+  ],
+  "power": [
+   {
+    "cell": "n:divisor_sum:mod9",
+    "noise": 0.1,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "n:divisor_sum:mod9",
+    "noise": 0.25,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "r:divisor_count:mod9",
+    "noise": 0.1,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "r:divisor_count:mod9",
+    "noise": 0.25,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "k:divisor_sum:mod9",
+    "noise": 0.1,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "k:divisor_sum:mod9",
+    "noise": 0.25,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "n:identity:mod9",
+    "noise": 0.1,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "n:identity:mod9",
+    "noise": 0.25,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "r:divisor_sum:mod9",
+    "noise": 0.1,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "r:divisor_sum:mod9",
+    "noise": 0.25,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "k:identity:mod9",
+    "noise": 0.1,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "k:identity:mod9",
+    "noise": 0.25,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "n:pi:mod9",
+    "noise": 0.1,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "n:pi:mod9",
+    "noise": 0.25,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "r:geom_div7:mod9",
+    "noise": 0.1,
+    "detected": 20,
+    "trials": 20
+   },
+   {
+    "cell": "r:geom_div7:mod9",
+    "noise": 0.25,
+    "detected": 20,
+    "trials": 20
+   }
+  ],
+  "gate_passed": true
+ },
+ "oracle_calls": 0,
+ "real_payload_scored": true,
+ "targets": [
+  {
+   "logical_length": 83,
+   "payload": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeea",
+   "cells": 59,
+   "collapsed_duplicates": 29,
+   "exact_cells": [],
+   "family_max_z": 2.531670922420903,
+   "family_tail_add_one": 0.4505098980203959,
+   "top_cells": [
+    {
+     "label": "r:geom_div7:mod9",
+     "z": 2.531670922420903,
+     "purity": 0.4166666567325592
+    },
+    {
+     "label": "k:pi:mod9",
+     "z": 2.5161669131275826,
+     "purity": 0.4166666567325592
+    },
+    {
+     "label": "n:prime_span:raw",
+     "z": 2.498025052219844,
+     "purity": 0.30000001192092896
+    },
+    {
+     "label": "n:divisor_count:mod9",
+     "z": 1.4924033144493585,
+     "purity": 0.3499999940395355
+    },
+    {
+     "label": "n:bigomega:raw",
+     "z": 1.418107984884594,
+     "purity": 0.3166666626930237
+    }
+   ],
+   "shuffled_payloads_exact_in_some_cell": 0,
+   "lead": false
+  },
+  {
+   "logical_length": 84,
+   "payload": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeeae",
+   "cells": 59,
+   "collapsed_duplicates": 29,
+   "exact_cells": [],
+   "family_max_z": 2.8683016019354994,
+   "family_tail_add_one": 0.2521495700859828,
+   "top_cells": [
+    {
+     "label": "r:geom_div7:mod9",
+     "z": 2.8683016019354994,
+     "purity": 0.4262295067310333
+    },
+    {
+     "label": "k:pi:mod9",
+     "z": 2.365164796474538,
+     "purity": 0.4098360538482666
+    },
+    {
+     "label": "n:prime_span:raw",
+     "z": 2.2713316662483205,
+     "purity": 0.2950819730758667
+    },
+    {
+     "label": "r:geom_mod7:raw",
+     "z": 1.6387397928270935,
+     "purity": 0.3606557250022888
+    },
+    {
+     "label": "n:divisor_count:mod9",
+     "z": 1.3053437286684142,
+     "purity": 0.3442623019218445
+    }
+   ],
+   "shuffled_payloads_exact_in_some_cell": 0,
+   "held_out_final_e": {
+    "r:geom_div7:mod9": [
+     "e",
+     "e"
+    ],
+    "k:pi:mod9": [
+     "h",
+     "e"
+    ],
+    "n:prime_span:raw": [
+     "g",
+     "e"
+    ]
+   },
+   "lead": false
+  }
+ ],
+ "any_exact": false,
+ "any_lead": false
+}

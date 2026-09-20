@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **514** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **515** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -532,3 +532,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 534 | P534 | 2026-09-20 | DBBI checkerboard preference conditioned on its prime scaffold | — | [source](../tools/gsmg/findings/P00534.md) | [link](../tools/gsmg/FINDINGS.md#phase-534-dbbi-checkerboard-preference-conditioned-on-its-prime-scaffold-2026-09-20) | [GSMG_PHASE534_DBBI_PRIME_SCAFFOLD_DIAGNOSTIC](GSMG_PHASE534_DBBI_PRIME_SCAFFOLD_DIAGNOSTIC.md) |
 | 535 | P535 | 2026-09-20 | Selection A repairs matrix collisions but supplies no instruction | — | [source](../tools/gsmg/findings/P00535.md) | [link](../tools/gsmg/FINDINGS.md#phase-535-selection-a-repairs-matrix-collisions-but-supplies-no-instruction-2026-09-20) | [GSMG_PHASE535_SELECTION_A_MATRIX_COMPOSITION](GSMG_PHASE535_SELECTION_A_MATRIX_COMPOSITION.md) |
 | 536 | P536 | 2026-09-20 | prime scaffold around substituted numeric text | exact family negative | [source](../tools/gsmg/findings/P00536.md) | [link](../tools/gsmg/FINDINGS.md#phase-536-prime-scaffold-around-substituted-numeric-text-exact-family-negative-2026-09-20) | [GSMG_PHASE536_PRIME_SCAFFOLD_NUMERIC_TEXT](GSMG_PHASE536_PRIME_SCAFFOLD_NUMERIC_TEXT.md) |
+| 537 | P537 | 2026-09-20 | DBBI non-host payload as an arithmetic function of its own position | — | [source](../tools/gsmg/findings/P00537.md) | [link](../tools/gsmg/FINDINGS.md#phase-537-dbbi-non-host-payload-as-an-arithmetic-function-of-its-own-position-2026-09-20) | [GSMG_PHASE537_PAYLOAD_POSITION_FUNCTION](GSMG_PHASE537_PAYLOAD_POSITION_FUNCTION.md) |

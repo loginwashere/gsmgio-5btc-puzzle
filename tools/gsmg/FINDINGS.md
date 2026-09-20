@@ -30718,3 +30718,39 @@ execution lock and result JSON.
 
 **Reopen condition:** Independently motivated new source or encoding with a
 separate closed protocol; no automatic expansion after this negative.
+## Phase 537 — DBBI non-host payload as an arithmetic function of its own position (2026-09-20)
+
+**Question:** Are DBBI's 60 (83-token parse) or 61 (84-token parse) non-host
+symbols a function of their logical index, raw offset or payload ordinal?
+
+**Frozen inputs:** Exact DBBI; both complete prime-host parses from an
+independent solver (cross-checked against Phase 525's); 19 arithmetic functions
+plus four 7 x 13 geometry functions on three coordinates, `g` and `g mod 9`
+variants, free bijective relabeling; 59 distinct cells per parse, 15 nine-class.
+
+**Method:** Exact equality-pattern match, plus a calibrated purity gate
+(per-cell shuffle standardization, family maximum vs shuffles). Planted-recovery
+controls ran before the real payload. Protocol written before any result; one
+pre-run amendment, one picker fix disclosed in the audit doc.
+
+**Result:** Controls passed: exact recovery 20/20 on all 16 cell-parse entries;
+gate flagged 20/20 planted payloads at 10% and 25% noise for all eight cells
+(at the smallest attainable tail). Real payload: 0 exact cells in either parse;
+family-max z 2.53 and 2.87, add-one tails 0.451 and 0.252 (5,000 shuffles); no
+lead. 0 of 2,000 shuffled payloads per parse were exact in any cell.
+
+**Disposition:** rejected for this finite family; structural-only. No
+generator promoted; stop rule reached.
+
+**Facts affected:** None.
+
+**Supersedes/corrects:** None. Extends Phases 529-530 and 536 with a
+position-function family none of them tested.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE537_PAYLOAD_POSITION_FUNCTION.md),
+`phase537_payload_position_function.py`, `test_phase537_payload_position_function.py`,
+`phase537_payload_position_result.json`, dated protocol.
+
+**Reopen condition:** A creator-independent reason to expect a specific position
+rule, or a payload model that predicts a symbol in another existing artifact.
+Not a wider function list or different modulus.
