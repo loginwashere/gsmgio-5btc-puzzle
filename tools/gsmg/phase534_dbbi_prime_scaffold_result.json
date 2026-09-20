@@ -1,0 +1,116 @@
+{
+  "diagnostic": "exploratory_conditional_not_discovery_p_value",
+  "dbbi_sha256": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca",
+  "protocol_sha256": "88a28e6f2ef169b7e416903c13d17bbc343c5518f38cd8d9d2c82caeeec1b221",
+  "script_sha256": "3f05065da2f7031d78c9a0cfedfc4b04b175c99509629dd8baa6f2536483e2c1",
+  "raw_counts": {
+    "a": 3,
+    "b": 25,
+    "c": 8,
+    "d": 4,
+    "e": 18,
+    "f": 10,
+    "g": 10,
+    "h": 8,
+    "i": 5
+  },
+  "real": {
+    "be": {
+      "ic": 0.0670762928827445,
+      "distance": 7.62928827444942e-05,
+      "tokens": 63,
+      "types": 19
+    },
+    "best_distance": 7.62928827444942e-05,
+    "winners": [
+      "be"
+    ],
+    "be_unique_first": true
+  },
+  "scaffold_nulls": [
+    {
+      "logical_length": 83,
+      "seed": 534083,
+      "host_counts": {
+        "b": 23,
+        "e": 8
+      },
+      "residue": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeea",
+      "residue_counts": {
+        "a": 3,
+        "b": 2,
+        "c": 8,
+        "d": 4,
+        "e": 10,
+        "f": 10,
+        "g": 10,
+        "h": 8,
+        "i": 5
+      },
+      "trials": 10000,
+      "counts": {
+        "be_unique_first": 1795,
+        "family_distance_at_least_as_close": 548,
+        "be_valid": 8380,
+        "be_distance_at_least_as_close": 65
+      },
+      "be_mean_ic_when_valid": 0.06809334970771996,
+      "be_unique_first_rate": 0.1795,
+      "be_distance_conditional_tail_add_one": 0.0065993400659934,
+      "family_distance_conditional_tail_add_one": 0.054894510548945105
+    },
+    {
+      "logical_length": 84,
+      "seed": 534084,
+      "host_counts": {
+        "b": 23,
+        "e": 7
+      },
+      "residue": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeeae",
+      "residue_counts": {
+        "a": 3,
+        "b": 2,
+        "c": 8,
+        "d": 4,
+        "e": 11,
+        "f": 10,
+        "g": 10,
+        "h": 8,
+        "i": 5
+      },
+      "trials": 10000,
+      "counts": {
+        "be_unique_first": 1824,
+        "family_distance_at_least_as_close": 653,
+        "be_valid": 9663,
+        "be_distance_at_least_as_close": 69
+      },
+      "be_mean_ic_when_valid": 0.06481644843775906,
+      "be_unique_first_rate": 0.1824,
+      "be_distance_conditional_tail_add_one": 0.006999300069993001,
+      "family_distance_conditional_tail_add_one": 0.0653934606539346
+    }
+  ],
+  "raw_histogram_null": {
+    "trials": 10000,
+    "counts": {
+      "be_unique_first": 2561,
+      "family_distance_at_least_as_close": 176,
+      "be_valid": 6773,
+      "be_distance_at_least_as_close": 42
+    },
+    "be_mean_ic_when_valid": 0.05633577699640644,
+    "be_unique_first_rate": 0.2561,
+    "be_distance_conditional_tail_add_one": 0.004299570042995701,
+    "family_distance_conditional_tail_add_one": 0.017698230176982303,
+    "seed": 534091
+  },
+  "self_test": {
+    "status": "passed",
+    "parse_lengths": [
+      83,
+      84
+    ]
+  },
+  "oracle_calls": 0
+}

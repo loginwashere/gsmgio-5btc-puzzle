@@ -42,7 +42,13 @@ string (see `tools/gsmg/data.py`'s header comment).
 - Best-fit checkerboard escape pair by code-level Index of Coincidence:
   `{b,e}`, rank 1 of 36 — an admissibility signature unique among all 36
   pairs (`tools/gsmg/checkerboard_code_ic_oracle.py`).
-- Independent confirmation from raw letter frequency alone: DBBI's a-i
+  **Interpretation qualified by Phase 534:** 23 of the 25 `b`s already belong
+  to the prime-host scaffold. With that scaffold fixed and non-host symbols
+  shuffled, `{b,e}` ranks uniquely first in about 18% of controls; best-of-36
+  IC-closeness tails are 0.055–0.065. The rank is real but is not strong
+  independent evidence that DBBI is a checkerboard. See
+  [the conditional diagnostic](GSMG_PHASE534_DBBI_PRIME_SCAFFOLD_DIAGNOSTIC.md).
+- A second measurement, from raw letter frequency alone: DBBI's a-i
   counts (`a:3, b:25, c:8, d:4, e:18, f:10, g:10, h:8, i:5`) reject
   uniformity by chi-square (df=8) at p ≈ 2.89×10⁻⁶ (~1 in 346,000), and `b`
   and `e` together account for ~70% of that deviation

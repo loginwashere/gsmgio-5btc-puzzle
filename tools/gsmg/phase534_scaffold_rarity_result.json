@@ -1,0 +1,10 @@
+{
+  "trials": 300000,
+  "seed": 20260920,
+  "hits": 0,
+  "zero_hit_95pct_upper_bound": 9.985724387502287e-06,
+  "scope": "fixed observed grammar, fixed histogram; discovery search not corrected",
+  "review_seed_replay_not_new_independent_replication": true,
+  "dbbi_sha256": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca",
+  "script_sha256": "5fe3d78cfcbaec2a0fee24c1174651634fc14b4ffb7992bab98beee9d16cc69d"
+}

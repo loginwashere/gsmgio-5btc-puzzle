@@ -6,6 +6,19 @@ date: 2026-09-01
 
 # GSMG 5 BTC Puzzle — Home
 
+**2026-09-20 update:** The historical overview below is not a complete summary
+of Phases 468–536. The latest
+[closed-system reassessment](GSMG_CLOSED_SYSTEM_REASSESSMENT_2026_09_20.md)
+qualifies DBBI's checkerboard evidence with prime-scaffold controls (Phase 534)
+and executes the previously omitted Selection-A-to-matrix composition (Phase
+535). Selection A removes collisions but produces no decoded instruction;
+neither result solves the frontier. The reviewed follow-up
+[Phase 536](GSMG_PHASE536_PRIME_SCAFFOLD_NUMERIC_TEXT.md) tests three exact
+numeric-text generators inside the prime scaffold: seven planted cells
+recovered, 407,532 corpus windows checked, zero exact matches. This closes that
+bounded family without promoting another generator. See the phase index for
+intervening work.
+
 Entry point for this vault. [README.md](../README.md) is the historical
 community-solution walkthrough (Phases 1–3, all publicly solved); this note
 is the current, actively-maintained research state. See

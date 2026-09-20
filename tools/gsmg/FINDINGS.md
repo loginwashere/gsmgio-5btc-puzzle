@@ -30610,3 +30610,111 @@ substitutions, or KDF widening.
 `test_phase533_p32_dual_source_prime_weave.py`;
 `phase533_execution_lock.json`; `phase533_p32_dual_source_prime_weave_result.json`;
 and [audit](../../doc/GSMG_PHASE533_P32_DUAL_SOURCE_PRIME_WEAVE_AUDIT.md).
+## Phase 534 — DBBI checkerboard preference conditioned on its prime scaffold (2026-09-20)
+
+**Question:** Does `{b,e}` supply independent checkerboard evidence beyond the
+known prime-host structure?
+
+**Frozen inputs:** Exact DBBI; both Phase-525 parses; historical code IC distance
+to 0.067; all 36 pairs; three 10,000-control families with fixed seeds.
+
+**Method:** Preserve every prime host and permute only the exact non-host
+multiset. Compare both parses and an unrestricted raw-histogram baseline. The
+protocol predates the run. Invalid segmentations remain in the denominator.
+
+**Result:** 23 of 25 `b`s are hosts. `{b,e}` ranks uniquely first in 17.95% and
+18.24% of scaffold controls. Best-of-36 closeness tails are 549/10001 and
+654/10001. The fitted pair is not strong independent evidence under this
+conditional comparison. Fixed-pair tails and full counts are retained in the
+report; no cipher rejection or unconditional discovery p-value is claimed.
+
+**Disposition:** structural-only.
+
+**Facts affected:** No exact rank/count fact changes; interpretation of DBBI
+escape-pair evidence is qualified.
+
+**Supersedes/corrects:** Adds a missing conditional baseline to Phases 106/113
+and the DBBI object summary. No prior decoder result is overturned.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE534_DBBI_PRIME_SCAFFOLD_DIAGNOSTIC.md),
+`phase534_dbbi_prime_scaffold_diagnostic.py`, corresponding result JSON and
+dated protocol. Self-test cross-checks all pairs against the old implementation.
+
+**Reopen condition:** Independently validated plaintext or a decoder-specific
+prediction beyond the already-explained host/histogram structure.
+
+**Review addendum:** The separate Architect `BUT/HYE` observation survives;
+requiring a FAED mirror is not established, rather than refuted here. Fixed-
+grammar rarity was independently reproduced during review: 0/300,000 exact-
+histogram shuffles admit a full parse (seed 20260920). Its separately saved
+replay is verification, not another independent replicate or a correction for
+the historical grammar-discovery search. Dedicated unittest coverage was added
+without changing the original script or result hashes.
+## Phase 535 — Selection A repairs matrix collisions but supplies no instruction (2026-09-20)
+
+**Question:** What happens when Phase 525's new endpoint assignments are fed
+through Phase 53's existing matrix operation?
+
+**Frozen inputs:** Both grammatical parses, all five compatible selections,
+historical 14x14 backward placement, token values and row-sum rendering; all
+three old collision policies retained. Exploratory composition, no language
+search or significance claim.
+
+**Method:** Reconstruct and retain all 15 matrices; expose unplaced tails. Then
+check the literal Selection-A row-sums-to-backward-word-indices consumer against
+the two already-frozen Architect sources.
+
+**Result:** Selection A places 83 hosted tokens without collisions under every
+policy, produces `IZLKESKGGIPPEN`, and leaves final `e` unplaced. One 83-token
+alternative also has no collisions. Neither source's backward-indexed words or
+edges supplies a clear instruction. Historical baseline reproduced exactly.
+A separately specified same-coordinate host/payload zeroing follow-up also
+supplies no clear instruction under the unchanged rendering and word consumers;
+payload-only rendering is `HVJIDTJDCGQNDJ`.
+
+**Disposition:** structural-only.
+
+**Facts affected:** No creator-intended decoder or password established.
+
+**Supersedes/corrects:** Phase 528's consequence inventory omitted the changed
+endpoint-to-matrix composition. Phase 53's collision objection is specific to
+its 25-event model and does not apply to Selection A. Old negatives keep their
+original exact scope.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE535_SELECTION_A_MATRIX_COMPOSITION.md),
+`phase535_selection_a_matrix_composition.py` and its full result JSON.
+
+**Reopen condition:** A complete tail/value/consumer rule making a testable
+prediction, or a bounded separately specified competing construction.
+## Phase 536 — prime scaffold around substituted numeric text: exact family negative (2026-09-20)
+
+**Question:** Is the complete 60/61-symbol non-host residue a fixed digit
+substitution of a numeric encoding of an already-available text window?
+
+**Frozen inputs:** Both complete DBBI parses; nine local documents; uppercase
+and lowercase ASCII-letter lanes; forward R9 whole-integer, D10 whole-integer,
+and B9 fixed-three-digit-per-byte encoders; windows 16–40 letters, pruned by
+sound numeric length bounds to 24/25/20 respectively.
+
+**Method:** Exact repetition-pattern matching covers every injective digit
+map. Seven eligible planted cells recover exact text/map/raw construction;
+five impossible cells are declared before execution. A hash lock pins the
+corpus, code, controls and counts before the real residue matcher is run.
+
+**Result:** 407,532 encoded windows, 213,288 with nine distinct digits, zero
+complete matches, zero unresolved-blob oracle calls. All 12 dedicated tests
+for Phases 534–536 pass.
+
+**Disposition:** rejected for this exact generator/corpus/normalization family.
+
+**Facts affected:** No new intended decoder, password, or key established.
+
+**Supersedes/corrects:** None. Different input/generator composition from
+Phase 318's whole-stream numbers and Phase 530's residue-as-password family.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE536_PRIME_SCAFFOLD_NUMERIC_TEXT.md),
+dated protocol, `phase536_prime_scaffold_numeric_text.py`, unittest module,
+execution lock and result JSON.
+
+**Reopen condition:** Independently motivated new source or encoding with a
+separate closed protocol; no automatic expansion after this negative.

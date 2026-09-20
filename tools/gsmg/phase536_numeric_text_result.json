@@ -1,0 +1,16 @@
+{
+  "counts": {
+    "windows_encoded": 407532,
+    "R9": 135826,
+    "exact_digit_length": 407532,
+    "nine_distinct_digits": 213288,
+    "D10": 135810,
+    "B9": 135896
+  },
+  "matches": [],
+  "match_count": 0,
+  "phase": 536,
+  "lock_sha256": "7cadc7400c2fbd5d2f2ce9c5cf5e76a31a4df21f6e1ef63b143cf587bb2a5b1d",
+  "unresolved_oracle_calls": 0,
+  "disposition": "bounded_negative_exact_numeric_text_generators"
+}

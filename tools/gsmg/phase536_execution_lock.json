@@ -1,0 +1,461 @@
+{
+  "phase": 536,
+  "files_sha256": {
+    "tools/gsmg/phase536_prime_scaffold_numeric_text.py": "8ac5b494461611e62a8b8586da45e058ae5b5d567ef62a85725b90682e106a94",
+    "doc/Brainstorms/2026-09-20 - Phase 536 Prime Scaffold Numeric Text Generator Protocol.md": "d280f3253a017098e93b19176a33c5801e4b10434a9500ef50cc3c16cea37508",
+    "tools/gsmg/data.py": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "tools/gsmg/phase525_dbbi_selection_a_reconstruction.py": "d701f68c54b63bf3f5eb2b510fd6641f25e0a807844e50fb3d43c973ec55c842",
+    "tools/gsmg/phase482a_faed_frequency_signature_audit.py": "36ef1cefbc2af9b1b39e00a5bab0c361be48d0aba267e806dd5f49ff7510ae0a",
+    "tools/gsmg/phase410_solved_vector_toolchain_provenance_audit.py": "e857eebbb14e0a3646409bcadaa5ef148b11fb59f8e5fdd124aec939b5b0e9eb",
+    "tools/gsmg/p32_sibling_password_audit.py": "9701a2ed8879182312cbb9519a8849b3e423dd160601a5ecc44ffbb710afefcf",
+    "tools/gsmg/cb_common.py": "6620243bdb4a745c54aa56479b6aa3e45bf715dd9313fbb75636071372b4998b",
+    "README.md": "442270a145641d6f75337bf0e12338889d22f029dc613d13f0a4d651875dae6a",
+    "wordlists/gsmg/matrix_architect_scene_through_choice_words.txt": "c90e0dcef0ed5c0beee47240a0be4b6a4f991b9135a7e1f6a04d92036352eb38",
+    "wordlists/gsmg/cosmic_duality_book_full_text.txt": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+    "doc/html/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself.html": "647744a2957219a4084ede994719124e7445bab1dfdeb68258fbeff2615a8d43",
+    "tools/gsmg/test_phase536_prime_scaffold_numeric_text.py": "27c41e33e02741d9794a54ee9204d6ed1a8a0fdd3768b5c5162d18505a2d4fb5"
+  },
+  "targets": [
+    {
+      "logical_length": 83,
+      "tokens": [
+        "d",
+        "b",
+        "b",
+        "i",
+        "b",
+        "f",
+        "b",
+        "h",
+        "c",
+        "c",
+        "be",
+        "g",
+        "b",
+        "i",
+        "h",
+        "a",
+        "b",
+        "e",
+        "b",
+        "e",
+        "i",
+        "h",
+        "be",
+        "g",
+        "g",
+        "e",
+        "g",
+        "e",
+        "be",
+        "b",
+        "b",
+        "g",
+        "e",
+        "h",
+        "h",
+        "e",
+        "b",
+        "h",
+        "h",
+        "f",
+        "b",
+        "a",
+        "b",
+        "f",
+        "d",
+        "h",
+        "be",
+        "f",
+        "f",
+        "c",
+        "d",
+        "b",
+        "b",
+        "f",
+        "c",
+        "c",
+        "c",
+        "g",
+        "b",
+        "f",
+        "be",
+        "e",
+        "g",
+        "g",
+        "e",
+        "c",
+        "be",
+        "d",
+        "c",
+        "i",
+        "b",
+        "f",
+        "b",
+        "f",
+        "f",
+        "g",
+        "i",
+        "g",
+        "be",
+        "e",
+        "e",
+        "a",
+        "be"
+      ],
+      "residue": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeea",
+      "residue_sha256": "21cbfa185f92492652ec5c40ba29b2f29f65804f8bd285c0de7685a2aad53109"
+    },
+    {
+      "logical_length": 84,
+      "tokens": [
+        "d",
+        "b",
+        "b",
+        "i",
+        "b",
+        "f",
+        "b",
+        "h",
+        "c",
+        "c",
+        "be",
+        "g",
+        "b",
+        "i",
+        "h",
+        "a",
+        "b",
+        "e",
+        "b",
+        "e",
+        "i",
+        "h",
+        "be",
+        "g",
+        "g",
+        "e",
+        "g",
+        "e",
+        "be",
+        "b",
+        "b",
+        "g",
+        "e",
+        "h",
+        "h",
+        "e",
+        "b",
+        "h",
+        "h",
+        "f",
+        "b",
+        "a",
+        "b",
+        "f",
+        "d",
+        "h",
+        "be",
+        "f",
+        "f",
+        "c",
+        "d",
+        "b",
+        "b",
+        "f",
+        "c",
+        "c",
+        "c",
+        "g",
+        "b",
+        "f",
+        "be",
+        "e",
+        "g",
+        "g",
+        "e",
+        "c",
+        "be",
+        "d",
+        "c",
+        "i",
+        "b",
+        "f",
+        "b",
+        "f",
+        "f",
+        "g",
+        "i",
+        "g",
+        "be",
+        "e",
+        "e",
+        "a",
+        "b",
+        "e"
+      ],
+      "residue": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeeae",
+      "residue_sha256": "56e78fb61ca4ec0f23fcc7d374050b3e32821a540b87ecda9364267b76c32161"
+    }
+  ],
+  "corpus": [
+    {
+      "source": "phase2_plaintext",
+      "tier": "puzzle_native",
+      "case": "upper",
+      "sha256": "9e69110caa5fabee03aa3b3f28fac8a0696ecfd72745b88f0fdbfd1c4133038c",
+      "length": 440
+    },
+    {
+      "source": "phase2_plaintext",
+      "tier": "puzzle_native",
+      "case": "lower",
+      "sha256": "5dec1b495cbe64bc7925c409ff94dc87920dd7edf03f8a7f16a783825cbdc37f",
+      "length": 440
+    },
+    {
+      "source": "phase3_plaintext",
+      "tier": "puzzle_native",
+      "case": "upper",
+      "sha256": "4af9e4cbc487426f98da97b995c4af9d4a89f132dfedcc62cc0ff999c3c49966",
+      "length": 3174
+    },
+    {
+      "source": "phase3_plaintext",
+      "tier": "puzzle_native",
+      "case": "lower",
+      "sha256": "ddef6da0c97a2ab2d1ae7ddd87e94baf51cdab5309a69773bd2a69bdcbaf959f",
+      "length": 3174
+    },
+    {
+      "source": "phase32_pre_p32_plaintext",
+      "tier": "puzzle_native",
+      "case": "upper",
+      "sha256": "937212dad7f39a81962e65bc617afdc1f1022a9e41ce367cbb03d72bfadd0826",
+      "length": 455
+    },
+    {
+      "source": "phase32_pre_p32_plaintext",
+      "tier": "puzzle_native",
+      "case": "lower",
+      "sha256": "6ce018fef2254668a760e62bb2fec13501f1847463b784a9c55a67911e019280",
+      "length": 455
+    },
+    {
+      "source": "phase321_architect_answer",
+      "tier": "puzzle_native",
+      "case": "upper",
+      "sha256": "56c43a300e28b86bb43b8dcbae74c43c76bde90b3e1190620fb656f2c94b2241",
+      "length": 1539
+    },
+    {
+      "source": "phase321_architect_answer",
+      "tier": "puzzle_native",
+      "case": "lower",
+      "sha256": "90829b510c3697569da47d2817f545f1e2a1cddd78e45f821dafcdab3dc0c281",
+      "length": 1539
+    },
+    {
+      "source": "matrix_architect_scene",
+      "tier": "referenced_text",
+      "case": "upper",
+      "sha256": "c55bb1c4f5283d1d387ae64b7dbf445c6052ae255e89dd214c6ec8a219da8751",
+      "length": 6053
+    },
+    {
+      "source": "matrix_architect_scene",
+      "tier": "referenced_text",
+      "case": "lower",
+      "sha256": "b4106dbd6d33da55a9f5c413881b9039d15358a85ea30d08ef732672332bd6c5",
+      "length": 6053
+    },
+    {
+      "source": "cosmic_duality_book_prose",
+      "tier": "book",
+      "case": "upper",
+      "sha256": "a3134e870343264eb3ee69bedbc6cd0ffece61733655873181dfda1a89dcbddd",
+      "length": 56292
+    },
+    {
+      "source": "cosmic_duality_book_prose",
+      "tier": "book",
+      "case": "lower",
+      "sha256": "5ca36b0235a31728def8d6a72ad29be79b5de23e3615f392ccc5f637dec24ab4",
+      "length": 56292
+    },
+    {
+      "source": "phase322_answer",
+      "tier": "puzzle_native",
+      "case": "upper",
+      "sha256": "878b7afacc9e35412e76b8506cc8297fa5aeba5381e108dc421b71a0ab8993d8",
+      "length": 91
+    },
+    {
+      "source": "phase322_answer",
+      "tier": "puzzle_native",
+      "case": "lower",
+      "sha256": "2fbfbef7442558f17ecc866a0b89ed491c41abc042df4d41452835adff09e9d3",
+      "length": 91
+    },
+    {
+      "source": "stage0_decoded_url",
+      "tier": "puzzle_native",
+      "case": "upper",
+      "sha256": "072a6de061ce30c6a6203302d30695602cb71a34b21f733cf00e8612243e0012",
+      "length": 22
+    },
+    {
+      "source": "stage0_decoded_url",
+      "tier": "puzzle_native",
+      "case": "lower",
+      "sha256": "f91620db2796b16c24e33b77c00ebcbfebde4549dd116cfe41f6ab9ba501aa54",
+      "length": 22
+    },
+    {
+      "source": "stage1_credential",
+      "tier": "puzzle_native",
+      "case": "upper",
+      "sha256": "5dbea2b20cf2844c22de8d513558a54bfdaf29c5e83458112029ddc6991d569b",
+      "length": 53
+    },
+    {
+      "source": "stage1_credential",
+      "tier": "puzzle_native",
+      "case": "lower",
+      "sha256": "5ac407837447fba24ba2802e4d1e9aecb4580aa29fef1088cc387c180b746f75",
+      "length": 53
+    }
+  ],
+  "windows_to_encode": {
+    "R9": 135826,
+    "D10": 135810,
+    "B9": 135896
+  },
+  "planted_gate": [
+    {
+      "model": "R9",
+      "case": "upper",
+      "digit_length": 60,
+      "eligible_lengths": [
+        24
+      ],
+      "status": "exactly_recovered",
+      "attempts": 2,
+      "plaintext_sha256": "8cb553e713076de3764659931a8d0b9279c46b30edd380665b1f9180a27d0330"
+    },
+    {
+      "model": "R9",
+      "case": "upper",
+      "digit_length": 61,
+      "eligible_lengths": [
+        24
+      ],
+      "status": "exactly_recovered",
+      "attempts": 2,
+      "plaintext_sha256": "0474f04026d720def629bada38bfd65895a3a8fbdc3eb0b00347d6cc7d0fc130"
+    },
+    {
+      "model": "R9",
+      "case": "lower",
+      "digit_length": 60,
+      "eligible_lengths": [],
+      "status": "structurally_ineligible"
+    },
+    {
+      "model": "R9",
+      "case": "lower",
+      "digit_length": 61,
+      "eligible_lengths": [
+        24
+      ],
+      "status": "exactly_recovered",
+      "attempts": 1,
+      "plaintext_sha256": "542b510538f066d13a101529312804348f6ea37040d57a758cae1f99b74b218a"
+    },
+    {
+      "model": "D10",
+      "case": "upper",
+      "digit_length": 60,
+      "eligible_lengths": [
+        25
+      ],
+      "status": "exactly_recovered",
+      "attempts": 65,
+      "plaintext_sha256": "a0615cbfc68b9281143f227b5b73b50e9a8545b44b0ba12d7272d8bdd4388e5f"
+    },
+    {
+      "model": "D10",
+      "case": "upper",
+      "digit_length": 61,
+      "eligible_lengths": [],
+      "status": "structurally_ineligible"
+    },
+    {
+      "model": "D10",
+      "case": "lower",
+      "digit_length": 60,
+      "eligible_lengths": [
+        25
+      ],
+      "status": "exactly_recovered",
+      "attempts": 50,
+      "plaintext_sha256": "a77a7be83c85a327c08903de76fea950a13989fe4deb316c5e9fc8db994bf4a9"
+    },
+    {
+      "model": "D10",
+      "case": "lower",
+      "digit_length": 61,
+      "eligible_lengths": [],
+      "status": "structurally_ineligible"
+    },
+    {
+      "model": "B9",
+      "case": "upper",
+      "digit_length": 60,
+      "eligible_lengths": [
+        20
+      ],
+      "status": "exactly_recovered",
+      "attempts": 3,
+      "plaintext_sha256": "7b12ed1fea64245ca4f2f527732159088604a8f5d4d7d446a40d4afd6e778b83"
+    },
+    {
+      "model": "B9",
+      "case": "upper",
+      "digit_length": 61,
+      "eligible_lengths": [],
+      "status": "structurally_ineligible"
+    },
+    {
+      "model": "B9",
+      "case": "lower",
+      "digit_length": 60,
+      "eligible_lengths": [
+        20
+      ],
+      "status": "exactly_recovered",
+      "attempts": 2,
+      "plaintext_sha256": "9d44b96a003f147cc6edb94099d66738e42f7b9909700c031fefbddee42ba971"
+    },
+    {
+      "model": "B9",
+      "case": "lower",
+      "digit_length": 61,
+      "eligible_lengths": [],
+      "status": "structurally_ineligible"
+    }
+  ],
+  "models": [
+    "R9",
+    "D10",
+    "B9"
+  ],
+  "cases": [
+    "upper",
+    "lower"
+  ],
+  "window_bounds": [
+    16,
+    40
+  ]
+}
