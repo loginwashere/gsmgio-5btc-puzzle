@@ -7,7 +7,7 @@ date: 2026-09-01
 # GSMG 5 BTC Puzzle — Home
 
 **2026-09-20 update:** The historical overview below is not a complete summary
-of Phases 468–537. The latest
+of Phases 468–538. The latest
 [closed-system reassessment](GSMG_CLOSED_SYSTEM_REASSESSMENT_2026_09_20.md)
 qualifies DBBI's checkerboard evidence with prime-scaffold controls (Phase 534)
 and executes the previously omitted Selection-A-to-matrix composition (Phase
@@ -19,7 +19,10 @@ recovered, 407,532 corpus windows checked, zero exact matches. This closes that
 bounded family without promoting another generator. [Phase 537](GSMG_PHASE537_PAYLOAD_POSITION_FUNCTION.md)
 then tests whether the payload is an arithmetic function of its own position
 (59 distinct cells per parse, planted controls passed): no exact match and no
-calibrated lead. See the phase index for intervening work.
+calibrated lead. [Phase 538](GSMG_PHASE538_FAED_LANE_HOST_MASK_EXTRACTION.md)
+reads FAED's six 91-symbol lanes through DBBI's host masks (controls passed,
+64 oracle bases, two gate statistics): zero hits and no lead. See the phase
+index for intervening work.
 
 Entry point for this vault. [README.md](../README.md) is the historical
 community-solution walkthrough (Phases 1–3, all publicly solved); this note

@@ -30754,3 +30754,41 @@ position-function family none of them tested.
 **Reopen condition:** A creator-independent reason to expect a specific position
 rule, or a payload model that predicts a symbol in another existing artifact.
 Not a wider function list or different modulus.
+## Phase 538 — FAED lanes read through DBBI's host masks, closed negative (2026-09-20)
+
+**Question:** Does DBBI's 91-position prime-host mask (Phase 48's 31 positions,
+or Selection A's 30) select anything meaningful from FAED's six 91-symbol lanes?
+
+**Frozen inputs:** Exact FAED and DBBI; both masks from the independent Phase 537
+parser (the 31-position mask equals Phase 48's recorded one); 64 unique base
+strings (host, complement, single-`b` and `be` rails, six lanes, two pooling
+orders); two symbol-agnostic gate statistics; execution lock pinning protocol,
+script, test, data and parser hashes, masks, and candidate digest.
+
+**Method:** Arm 1: GPU oracle on the 64 bases (1,152 forms, 60-variant table,
+all blobs, Bloom and known-target detectors). Arm 2: top-2 concentration (28
+cells) and cross-lane column agreement (4 cells) against random position subsets,
+family maximum, add-one tail at most 0.0005. Controls before any real lane:
+Phase 48 precedent reproduction, extraction exactness, planted recovery.
+
+**Result:** Controls passed (precedent exact; 64 reads exact; planted plants
+detected 20/20 at 0%, 25%, 50% noise). Arm 1: 0 strong, 0 structural, 0 weak,
+0 known-target. Arm 2: S1 family-max z 2.54, tail 0.210; S2 max z 0.10, tail
+0.995; no lead.
+
+**Disposition:** rejected for this finite family; structural-only. Stop rule reached.
+
+**Facts affected:** None.
+
+**Supersedes/corrects:** None. One pre-lock protocol correction (control replicates
+raised to 2,000 so the 0.0005 threshold is attainable) and a note that the
+Cosmic untaken-paths string `...irivasoalbefay...` is a misprint of the Phase 48
+selection `...iriasogaleafay...`.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE538_FAED_LANE_HOST_MASK_EXTRACTION.md),
+`phase538_faed_lane_extraction.py`, `test_phase538_faed_lane_extraction.py`,
+`phase538_faed_lane_lock.json`, `phase538_faed_lane_gate_result.json`, dated protocol.
+
+**Reopen condition:** A creator-independent reason to read FAED through a specific
+mask, or a validator that ties an FAED-derived string to another existing artifact.
+Not other masks, partitions, reversal or symbol mappings.
