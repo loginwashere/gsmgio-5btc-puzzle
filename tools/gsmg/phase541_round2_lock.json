@@ -1,0 +1,26 @@
+{
+  "controls": {
+    "data_integrity": true,
+    "keyshape_exactness": true,
+    "plumbing": true,
+    "sandbox": true,
+    "static_check": true
+  },
+  "phase": 541,
+  "sha256": {
+    "binary_key_material_backfill": "2d930bea3a8dabbc6e390d56e8c019ed968dbe301502fbbb4928f075aa9a8b02",
+    "build_script": "8a1e860de37a49ae8c80bc11add21207b6f496567998be998534d5ecd5d5eac0",
+    "data_json": "e5fbe75186677b939b54f5dce9464abd887adf56d2e95a0ad20bc494c352d009",
+    "dossier_v2": "6bfc1498892db51e27cddb89f4480114e121792ce246aea6f56dc61f7a324819",
+    "exec_script": "32c8514e3ec6536d1135792858c14f38e351b8bdca5b5fcb96fbc4be88a8d03a",
+    "key_shape_classifier": "cb022fc37abb07eccc7602993df9d3b7c1e09053e3de06a34dab89e390868200",
+    "phase525_result": "82a46dc6c4077ee5626d0578d465ebaf64e141d6627e94848ef34483d02e9253",
+    "phase535_result": "ba0dc984436b086a7ca0a6e986a7a4a8e8d16717a38606e1be5ee0f69dd16aa9",
+    "phase539_script": "e28b1862e0f5a3113e4b8ba20dea9de3821e965ef9b494beab2cfbe2e7de22d1",
+    "phase540_prompts": "a2647e5de183007d46ad2b8b553e7fdf0a061d2eaaca5eeadd8fe05e42e44f89",
+    "prompts": "28168bfc8ec3657b01833a367aa5eddbda31414f5c59a021fd9297fa8b153d7c",
+    "protocol": "c0e99244c3f4a098ab82237ffefb01ca41610ff9f96ce421f3cc0f573763a3bd",
+    "round1_candidates": "3f02170d7de296740ae21312a17bc0d0332724977eebcd4aa2b1c59d8a2403b7",
+    "test_script": "11c76383a3c5522bfe18dfd30873a154cfdcb2a91fa021cf87cb21bbd7030228"
+  }
+}

@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **518** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **519** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -536,3 +536,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 538 | P538 | 2026-09-20 | FAED lanes read through DBBI's host masks, closed negative | — | [source](../tools/gsmg/findings/P00538.md) | [link](../tools/gsmg/FINDINGS.md#phase-538-faed-lanes-read-through-dbbis-host-masks-closed-negative-2026-09-20) | [GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT](GSMG_DBBI_FAED_BOUNDARY_SELECTOR_AUDIT.md) |
 | 539 | P539 | 2026-09-20 | DBBI and its payload as base-9 scalars under every digit bijection, closed negative | — | [source](../tools/gsmg/findings/P00539.md) | [link](../tools/gsmg/FINDINGS.md#phase-539-dbbi-and-its-payload-as-base-9-scalars-under-every-digit-bijection-closed-negative-2026-09-20) | [GSMG_PHASE529_DBBI_PAYLOAD_MATERIAL_OVERLAP_AUDIT](GSMG_PHASE529_DBBI_PAYLOAD_MATERIAL_OVERLAP_AUDIT.md) |
 | 540 | P540 | 2026-09-20 | fresh-context agent insight pilot, closed negative | — | [source](../tools/gsmg/findings/P00540.md) | [link](../tools/gsmg/FINDINGS.md#phase-540-fresh-context-agent-insight-pilot-closed-negative-2026-09-20) | [GSMG_PHASE540_FRESH_CONTEXT_AGENT_INSIGHT_PILOT](GSMG_PHASE540_FRESH_CONTEXT_AGENT_INSIGHT_PILOT.md) |
+| 541 | P541 | 2026-09-20 | fresh-context agents round 2 | derived facts and operation proposals, closed negative | [source](../tools/gsmg/findings/P00541.md) | [link](../tools/gsmg/FINDINGS.md#phase-541-fresh-context-agents-round-2-derived-facts-and-operation-proposals-closed-negative-2026-09-20) | [GSMG_PHASE540_FRESH_CONTEXT_AGENT_INSIGHT_PILOT](GSMG_PHASE540_FRESH_CONTEXT_AGENT_INSIGHT_PILOT.md) |

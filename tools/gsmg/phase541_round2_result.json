@@ -1,0 +1,83 @@
+{
+  "phase": 541,
+  "lock": "tools/gsmg/phase541_round2_lock.json (verified before collection)",
+  "deviations": [
+    "none in agents or prompts",
+    "the GPU tool trims lines and skips lines starting with '#': 40 of 12,633 bases (ASCII-decoding noise strings) were not run; 21 with leading whitespace were trimmed"
+  ],
+  "agents": {
+    "lines": {
+      "B1": {
+        "ops": 10,
+        "cands": 141
+      },
+      "B2": {
+        "ops": 10,
+        "cands": 148
+      },
+      "B3": {
+        "ops": 10,
+        "cands": 115
+      },
+      "B4": {
+        "ops": 10,
+        "cands": 145
+      },
+      "B5": {
+        "ops": 10,
+        "cands": 147
+      },
+      "B6": {
+        "ops": 10,
+        "cands": 126
+      }
+    },
+    "models": {
+      "B1": "opus",
+      "B2": "sonnet",
+      "B3": "sonnet",
+      "B4": "opus",
+      "B5": "opus",
+      "B6": "sonnet"
+    }
+  },
+  "execution": {
+    "proposals": 60,
+    "static_rejected": 0,
+    "run_failed": 0,
+    "outputs_returned": 14222,
+    "tried_from_ops": 12386,
+    "candidate_lines_tried": 822,
+    "unique_bases": 12633,
+    "bases_not_in_round1": 12191,
+    "bases_sha256": "a46b6e4928643f6335aaef350ac6508303b63b9613c168233c49028594853b91"
+  },
+  "novelty_vs_phase523_salph_coverage_fast_sources": {
+    "new": 12284,
+    "alpha_only_covered": 66,
+    "literal_partially_covered": 147,
+    "all_covered": 136
+  },
+  "keyshape": {
+    "key_shaped_strings": 6979,
+    "exact_hits_against_11_targets": 0,
+    "bloom_context_hits": 0
+  },
+  "oracle": {
+    "bases_read_by_tool": 12593,
+    "forms": 386685,
+    "strong": 0,
+    "structural": 0,
+    "weak": 23,
+    "weak_reconstructed": 23,
+    "weak_key_shaped": 0,
+    "keyshape_records": 1,
+    "keyshape_record_note": "stream-mode Bloom hit on COSMIC, false positive after Blockstream API check (derived address, no history); file is mode 0600 and gitignored",
+    "known_target_matches": 0,
+    "bloom_loaded": true,
+    "known_targets_folded": 8,
+    "selftest": "passed",
+    "wall_seconds": 602
+  },
+  "exact_hits": 0
+}

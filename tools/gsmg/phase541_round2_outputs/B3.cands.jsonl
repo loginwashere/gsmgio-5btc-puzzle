@@ -1,0 +1,115 @@
+{"candidate": "574061", "clue": "D2: yellow=1 over the 24 coloured cells is prime 574061", "reading": "The prime read off the first image is itself the phrase."}
+{"candidate": "8c26d", "clue": "574061 in hex", "reading": "The same number in hex, whose first byte 8C is 140."}
+{"candidate": "140", "clue": "'worth hundred fourty of the investment' in the Architect text", "reading": "The stated number as a bare passphrase."}
+{"candidate": "hundred fourty", "clue": "Architect text spelling 'HUNDRED FOURTY'", "reading": "The creator's own spelling of the amount."}
+{"candidate": "one hundred and forty", "clue": "140 spelled out in full", "reading": "Standard spelling of the number the text points at."}
+{"candidate": "hundred fourty of the investment", "clue": "Architect text", "reading": "The whole clause as the phrase."}
+{"candidate": "twenty-three sixteen seven", "clue": "Architect text 23 ciphers, 16 encryptions, 7 passwords", "reading": "The three counts spelled in text order."}
+{"candidate": "twenty-three ciphers sixteen encryptions seven intertwined passwords", "clue": "Architect text", "reading": "The counted objects as one phrase."}
+{"candidate": "twenty-three individuals sixteen female seven male", "clue": "Matrix Reloaded Architect quote that the text parodies", "reading": "The original quote's numbers and nouns."}
+{"candidate": "select from the matrix 23 individuals 16 female 7 male", "clue": "Matrix Reloaded Architect quote", "reading": "The original sentence the puzzle rewrote."}
+{"candidate": "23 individuals 16 female 7 male", "clue": "Matrix quote in numerals", "reading": "Numeral form of the original quote."}
+{"candidate": "23 16 7", "clue": "counts in the Architect text", "reading": "Counts as digits."}
+{"candidate": "231607", "clue": "23, 16, 07 concatenated", "reading": "Counts with the last padded to two digits."}
+{"candidate": "2576", "clue": "23*16*7", "reading": "Product of the three counts."}
+{"candidate": "46", "clue": "23+16+7", "reading": "Sum of the three counts."}
+{"candidate": "175383", "clue": "7th, 16th and 23rd primes (17, 53, 83)", "reading": "The counts used as indices into the primes, in reverse order."}
+{"candidate": "835317", "clue": "23rd, 16th and 7th primes (83, 53, 17)", "reading": "The counts used as indices into the primes, in text order."}
+{"candidate": "83", "clue": "23rd prime and the 83-token DBBI parse length", "reading": "The prime that both counts the hosts and the tokens."}
+{"candidate": "874", "clue": "sum of the first 23 primes", "reading": "Prime-scaffold host count 23 as a prime sum."}
+{"candidate": "963", "clue": "sum of the first 24 primes (primes up to 89)", "reading": "24 coloured cells with the 24 primes up to 91."}
+{"candidate": "235711131719232931374143475359616771737983", "clue": "first 23 primes concatenated", "reading": "The 23 prime hosts as the first 23 primes."}
+{"candidate": "23571113171923293137414347535961677173798389", "clue": "first 24 primes concatenated", "reading": "The 24-cell count as the first 24 primes."}
+{"candidate": "2357111317192329", "clue": "first ten primes concatenated", "reading": "The prime basics as digits."}
+{"candidate": "2 3 5 7 11 13 17 19 23", "clue": "the prime basics", "reading": "The first primes written out."}
+{"candidate": "195", "clue": "DBBI plus the matrixsumlist block is 195 bits", "reading": "The size of the joint stream."}
+{"candidate": "91", "clue": "DBBI length 7x13 = 1+..+13", "reading": "The triangular size of DBBI."}
+{"candidate": "570", "clue": "FAED length", "reading": "The size of the long stream."}
+{"candidate": "285", "clue": "FAED length halved, also 570/2", "reading": "Half of FAED as the number."}
+{"candidate": "196", "clue": "14x14 matrix size", "reading": "Cells of the matrix."}
+{"candidate": "fourteen by fourteen", "clue": "the first image is 14x14", "reading": "Grid size spelled out."}
+{"candidate": "14x14", "clue": "the first image and matrix grid", "reading": "Grid size as text."}
+{"candidate": "1141", "clue": "'One for one, four for one' and EBCDIC 1141", "reading": "The 1-4-1 hint read as the code page number."}
+{"candidate": "one for one four for one", "clue": "Stage 3.2 text", "reading": "The hint sentence itself."}
+{"candidate": "four for one", "clue": "Stage 3.2 text", "reading": "The second half of the hint."}
+{"candidate": "bageebf", "clue": "574061 in base 9 with a=0..i=8", "reading": "The prime rendered in the a-i alphabet of DBBI and FAED."}
+{"candidate": "base nine", "clue": "DBBI and FAED are nine-symbol streams", "reading": "Naming the base."}
+{"candidate": "nonary", "clue": "base 9", "reading": "The word for base 9."}
+{"candidate": "giehfacbd", "clue": "FAED letter frequency order", "reading": "FAED's symbols ranked by count as a key."}
+{"candidate": "befgchida", "clue": "DBBI letter frequency order", "reading": "DBBI's symbols ranked by count as a key."}
+{"candidate": "1+2+3+4+5+6+7+8+9+10+11+12+13", "clue": "DBBI length 91 is the 13th triangular number", "reading": "The sum written out."}
+{"candidate": "gauss", "clue": "Gauss's sum of 1..n; 91 = 1+..+13", "reading": "The famous name for the triangular sum."}
+{"candidate": "the sum of the first thirteen integers", "clue": "91", "reading": "The triangular size in words."}
+{"candidate": "triangular number", "clue": "91 is triangular", "reading": "The property named."}
+{"candidate": "thirteen", "clue": "91 = 7x13", "reading": "One factor of DBBI's length."}
+{"candidate": "seven", "clue": "password count 7", "reading": "The password count as a word."}
+{"candidate": "sixteen", "clue": "encryption count 16", "reading": "The encryption count as a word."}
+{"candidate": "twenty-three", "clue": "cipher count 23", "reading": "The cipher count as a word."}
+{"candidate": "twenty-four", "clue": "24 coloured cells and the 24 bytes of the URL", "reading": "The count of coloured cells."}
+{"candidate": "the prime basics", "clue": "Architect text 'reinserting the prime basics'", "reading": "The phrase from the text."}
+{"candidate": "reinserting the prime basics", "clue": "Architect text", "reading": "The instruction as the phrase."}
+{"candidate": "prime program", "clue": "the Matrix quote 'reinserting the prime program'", "reading": "The original words behind 'prime basics'."}
+{"candidate": "reinserting the prime program", "clue": "Matrix Reloaded quote", "reading": "The original sentence fragment."}
+{"candidate": "return to the source", "clue": "Architect text and Matrix quote", "reading": "The function of the one."}
+{"candidate": "the source codes", "clue": "Architect text", "reading": "The phrase as written."}
+{"candidate": "source code", "clue": "Architect text", "reading": "Singular form."}
+{"candidate": "rebuild zion", "clue": "Matrix quote the text rewrote", "reading": "What the selection of 23 is for."}
+{"candidate": "zion", "clue": "Matrix Reloaded", "reading": "The place rebuilt by the 23."}
+{"candidate": "the sixth version", "clue": "Matrix Reloaded Architect", "reading": "The version count in the same speech."}
+{"candidate": "sixth", "clue": "the Architect's count of versions", "reading": "The ordinal in the speech."}
+{"candidate": "integral anomaly", "clue": "the Architect's phrase", "reading": "The counting unit of the speech."}
+{"candidate": "the eventuality of an anomaly", "clue": "Architect text", "reading": "Phrase as written."}
+{"candidate": "unbalanced equation", "clue": "Architect text", "reading": "The equation as the phrase."}
+{"candidate": "the sum of a remainder of an unbalanced equation", "clue": "Architect text", "reading": "The full clause."}
+{"candidate": "harmony of mathematical precision", "clue": "Architect text", "reading": "Numbers-themed clause."}
+{"candidate": "mathematical precision", "clue": "Architect text", "reading": "Shorter clause."}
+{"candidate": "the anomaly", "clue": "Architect text", "reading": "The unknown factor."}
+{"candidate": "the one", "clue": "Architect text 'I really hope youre the one'", "reading": "The addressee."}
+{"candidate": "hope", "clue": "Architect speech: hope is the quintessential human delusion", "reading": "The theme word."}
+{"candidate": "private keynote", "clue": "Architect text 'the actual private keynote'", "reading": "The odd word as the answer."}
+{"candidate": "keynote", "clue": "Architect text", "reading": "Single word."}
+{"candidate": "brute forcing", "clue": "Architect text 'brute forcing might be required'", "reading": "The stated method."}
+{"candidate": "cataclysmic system crash", "clue": "Architect text", "reading": "The threatened result."}
+{"candidate": "half and better half", "clue": "Stage 3.2.2 text", "reading": "The named key holders."}
+{"candidate": "better half", "clue": "Stage 3.2.2 text", "reading": "The second holder."}
+{"candidate": "the better half", "clue": "Stage 3.2.2 text", "reading": "With article."}
+{"candidate": "one half", "clue": "half as a number", "reading": "Half spelled as a fraction."}
+{"candidate": "0.5", "clue": "half as a decimal", "reading": "Half as a decimal."}
+{"candidate": "primes", "clue": "macro phrase yellowblueprimes", "reading": "The last word of the macro phrase."}
+{"candidate": "prime numbers", "clue": "primes", "reading": "Plain name."}
+{"candidate": "twin primes", "clue": "primes", "reading": "A family name."}
+{"candidate": "eratosthenes", "clue": "the sieve for primes", "reading": "The sieve's author."}
+{"candidate": "sieve of eratosthenes", "clue": "prime scaffold", "reading": "The way to enumerate the prime positions."}
+{"candidate": "euclid", "clue": "infinitely many primes", "reading": "The prime proof's author."}
+{"candidate": "goldbach", "clue": "prime conjecture", "reading": "A prime conjecture."}
+{"candidate": "riemann hypothesis", "clue": "prime distribution", "reading": "The prime distribution problem."}
+{"candidate": "mersenne", "clue": "prime family", "reading": "A prime family."}
+{"candidate": "fibonacci", "clue": "number sequence", "reading": "A number sequence."}
+{"candidate": "euler", "clue": "number theory", "reading": "A number theorist."}
+{"candidate": "ramanujan", "clue": "number theory", "reading": "A number theorist."}
+{"candidate": "the prime hosts", "clue": "D1: 23 prime-position hosts", "reading": "The scaffold's own name."}
+{"candidate": "prime scaffold", "clue": "D1", "reading": "The scaffold as a phrase."}
+{"candidate": "23 primes", "clue": "D1: 23 prime hosts", "reading": "The count of hosts."}
+{"candidate": "23 hosts", "clue": "D1", "reading": "The count of hosts."}
+{"candidate": "15 b 8 be", "clue": "83-token parse host kinds", "reading": "The host composition of one parse."}
+{"candidate": "16 b 7 be", "clue": "84-token parse host kinds", "reading": "The host composition of the other parse."}
+{"candidate": "sixteen b seven be", "clue": "84-token parse host kinds and the text's 16 and 7", "reading": "The composition in words."}
+{"candidate": "yellow", "clue": "D2 yellow cells", "reading": "The colour read as 1."}
+{"candidate": "blue", "clue": "D2 blue cells", "reading": "The colour read as 0."}
+{"candidate": "blueyellow", "clue": "D2 colours", "reading": "Both colours."}
+{"candidate": "yellowandblue", "clue": "D2 colours", "reading": "Both colours joined."}
+{"candidate": "off white", "clue": "D2 the single FEFEFE pixel", "reading": "The odd pixel."}
+{"candidate": "fefefe", "clue": "D2 the off-white pixel colour", "reading": "The pixel's hex colour."}
+{"candidate": "254", "clue": "D2 off-white pixel value", "reading": "The pixel's channel value."}
+{"candidate": "254 254 254", "clue": "D2 off-white pixel", "reading": "The pixel as RGB."}
+{"candidate": "theseedisplanted", "clue": "Stage 0 URL", "reading": "The first passphrase-like URL path."}
+{"candidate": "543", "clue": "sum of the placed matrix values (the row sums total)", "reading": "The total of D4 row sums."}
+{"candidate": "3451373630446258323441155613", "clue": "D4 row sums concatenated", "reading": "The matrix row sums as digits."}
+{"candidate": "IZLKESKGGIPPEN", "clue": "D4 row sums mod 26", "reading": "The given letter rendering as passphrase."}
+{"candidate": "BECCBZBDECZCBE", "clue": "D4 hosts-only row sums", "reading": "The given host rendering as passphrase."}
+{"candidate": "HVJIDTJDCGQNDJ", "clue": "D4 payload-only row sums", "reading": "The given payload rendering as passphrase."}
+{"candidate": "six times ninety one plus twenty four", "clue": "FAED = 6x91 + 24", "reading": "The size identity in words."}
+{"candidate": "6x91+24", "clue": "FAED = 6x91 + 24", "reading": "The size identity."}
+{"candidate": "104", "clue": "matrixsumlist block size 13x8", "reading": "Bits in the block."}
+{"candidate": "thirteen times eight", "clue": "13x8 bits", "reading": "The block shape in words."}
+{"candidate": "574061 is prime", "clue": "D2", "reading": "The number with its property."}

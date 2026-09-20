@@ -1,0 +1,126 @@
+{"candidate": "yinyang", "clue": "page macro phrase yinyang; hosts spell yang", "reading": "The macro phrase itself typed as the password."}
+{"candidate": "yin and yang", "clue": "hosts contain yang, payload is the complement", "reading": "Spelled-out pair rather than the fused macro word."}
+{"candidate": "cosmicduality", "clue": "second page title Cosmic Duality", "reading": "Duality of yin and yang is the second page's name."}
+{"candidate": "Cosmic Duality", "clue": "second page title", "reading": "Title with its capitals and space as displayed."}
+{"candidate": "SalPhaseIon", "clue": "final page title", "reading": "The title typed exactly as shown."}
+{"candidate": "salphaseion", "clue": "final page title, lowercase joined", "reading": "Title read as one word after SALPH blob name."}
+{"candidate": "salvation", "clue": "Sal-Phase-Ion reads as salvation with phase for vat", "reading": "Sal...ion suggests the word salvation."}
+{"candidate": "the salvation of Zion", "clue": "Architect: the door to your right leads to the Source, and the salvation of Zion", "reading": "The Architect's phrase before the choice."}
+{"candidate": "salvation of Zion", "clue": "Architect scene", "reading": "Shorter form of the same phrase."}
+{"candidate": "the source", "clue": "Architect: right door leads to the Source", "reading": "The Source as the right-door destination."}
+{"candidate": "Zion", "clue": "Architect scene, 23 chosen to rebuild Zion", "reading": "Zion is what the 23 are for."}
+{"candidate": "the Source and the salvation of Zion", "clue": "Architect scene", "reading": "Full clause of the right door."}
+{"candidate": "the door to your right leads to the Source", "clue": "Architect scene last words before choice", "reading": "Reading of lastwordsbeforearchichoice."}
+{"candidate": "the problem is choice", "clue": "Architect: as you adequately put, the problem is choice", "reading": "Last sentence before the doors are chosen."}
+{"candidate": "as you adequately put the problem is choice", "clue": "Architect scene", "reading": "Longer form of the same sentence."}
+{"candidate": "there is nothing that you can do to stop it", "clue": "Architect: last words before Neo chooses", "reading": "Final words of the Architect's speech."}
+{"candidate": "she is going to die", "clue": "Architect scene", "reading": "The obvious truth the Architect names."}
+{"candidate": "hope", "clue": "Architect: hope is the quintessential human delusion", "reading": "One-word summary of his last argument."}
+{"candidate": "hope it is the quintessential human delusion", "clue": "Architect scene", "reading": "Opening sentence of the last speech."}
+{"candidate": "the moment of truth", "clue": "Architect: which brings us at last to the moment of truth", "reading": "Phrase introducing the choice."}
+{"candidate": "both beginning and end", "clue": "Architect: the anomaly revealed as both beginning and end", "reading": "Anomaly line echoing Stage 3.2.1."}
+{"candidate": "the anomaly", "clue": "Stage 3.2.1: you are the eventuality of an anomaly", "reading": "Anomaly as the puzzle's own key word."}
+{"candidate": "the fundamental flaw", "clue": "Architect scene", "reading": "Flaw in the harmony of mathematical precision."}
+{"candidate": "there are two doors", "clue": "Architect scene", "reading": "Line immediately before the door description."}
+{"candidate": "choice", "clue": "Stage 2 URL starts choiceisanillusion; Architect problem is choice", "reading": "Single word tying stage 2 to the last page."}
+{"candidate": "balance", "clue": "yin yang; unbalanced equation in Stage 3.2.1", "reading": "Yin yang means balance; the Architect's equation is unbalanced."}
+{"candidate": "harmony", "clue": "Stage 3.2.1: a harmony of mathematical precision", "reading": "Word for what yin and yang form."}
+{"candidate": "unbalanced equation", "clue": "Stage 3.2.1 text", "reading": "The equation whose remainder is you."}
+{"candidate": "remainder", "clue": "Stage 3.2.1: the sum of a remainder; payload is what remains after hosts", "reading": "Payload is literally the remainder."}
+{"candidate": "the sum of a remainder", "clue": "Stage 3.2.1 and matrixsumlist", "reading": "Sum and remainder meet in the page's macro word."}
+{"candidate": "follow the white rabbit", "clue": "first image is a white rabbit; sha256 our first hint is your last command", "reading": "First hint is the rabbit and it is a command."}
+{"candidate": "Follow the white rabbit", "clue": "same clue", "reading": "Sentence-cased form as typed in the film subtitles."}
+{"candidate": "knock knock neo", "clue": "Matrix message sequence after follow the white rabbit", "reading": "The last command of the Matrix message sequence."}
+{"candidate": "wake up neo", "clue": "Stage 3.2 text says wake up", "reading": "First line of the Matrix message sequence."}
+{"candidate": "the matrix has you", "clue": "Beaufort key THEMATRIXHASYOU", "reading": "The key phrase itself as passphrase, natural spacing."}
+{"candidate": "enter", "clue": "decoded word inside the SALPH blob and last command", "reading": "Last command a user types."}
+{"candidate": "the seed is planted", "clue": "first URL theseedisplanted", "reading": "Spaced reading of the first hint."}
+{"candidate": "seed", "clue": "BTCSEED prefix; the seed is planted", "reading": "One-word seed."}
+{"candidate": "planted", "clue": "theseedisplanted", "reading": "One-word planted."}
+{"candidate": "Bitcoin seed", "clue": "BTCSEED prefix in the Bifid decode", "reading": "BIP32 HMAC key string typed as text."}
+{"candidate": "btcseed", "clue": "Bifid reading of FAED begins BTCSEED", "reading": "The prefix itself."}
+{"candidate": "btc seed", "clue": "BTCSEED prefix", "reading": "Spaced reading of the prefix."}
+{"candidate": "BTC seed phrase", "clue": "BTCSEED prefix", "reading": "Seed phrase as the solver-facing term."}
+{"candidate": "seed phrase", "clue": "BTCSEED prefix", "reading": "Generic term."}
+{"candidate": "the flower blossoms", "clue": "stage 1 lyric line theflowerblossoms...", "reading": "Seed grows into the flower of the lyric."}
+{"candidate": "flower", "clue": "stage 1 lyric", "reading": "Product of a planted seed."}
+{"candidate": "theflowerblossomsthroughwhatseemstobeaconcretesurface", "clue": "Stage 1 passphrase", "reading": "Stage 1 line reused for the last box (a loop back to the seed)."}
+{"candidate": "the flower blossoms through what seems to be a concrete surface", "clue": "Stage 1 lyric with spaces", "reading": "Spaced form of the same line."}
+{"candidate": "the warning", "clue": "song by Logic, Stage 1", "reading": "Song title."}
+{"candidate": "can you dig it", "clue": "Stage 1 fragments", "reading": "Digging up the planted seed."}
+{"candidate": "dig it", "clue": "Stage 1 dig i fragment", "reading": "Shortened."}
+{"candidate": "half and better half", "clue": "Stage 3.2.2 plaintext", "reading": "Names of the key owners."}
+{"candidate": "halfandbetterhalf", "clue": "Stage 3.2.2 plaintext", "reading": "Joined form is commonly typed as password; distinct from spaced by no-space rule only, kept once as brainwallet style."}
+{"candidate": "better half", "clue": "Stage 3.2.2", "reading": "The second owner."}
+{"candidate": "betterhalf", "clue": "Stage 3.2.2", "reading": "Joined."}
+{"candidate": "half", "clue": "Stage 3.2.2", "reading": "The first owner."}
+{"candidate": "trinity", "clue": "the door to her: better half of Neo", "reading": "The better half in the Matrix story."}
+{"candidate": "neo", "clue": "the one", "reading": "Half of the pair."}
+{"candidate": "neo and trinity", "clue": "Matrix pair", "reading": "Half and better half as characters."}
+{"candidate": "the one", "clue": "Architect scene", "reading": "The One as the anomaly."}
+{"candidate": "architect", "clue": "The Architect", "reading": "Speaker of Stage 3.2.1."}
+{"candidate": "the architect", "clue": "Stage 3.2.1 author", "reading": "Same with article."}
+{"candidate": "keymaker", "clue": "Matrix Reloaded, key theme", "reading": "Keymaker as source of keys."}
+{"candidate": "the keymaker", "clue": "Matrix Reloaded", "reading": "Same with article."}
+{"candidate": "the oracle", "clue": "Stage 3.2 oracle-queen", "reading": "Oracle as counterpart of the Architect."}
+{"candidate": "the private keys belong to half and better half", "clue": "Stage 3.2.2 plaintext", "reading": "Central sentence fragment."}
+{"candidate": "they also need funds to live", "clue": "Stage 3.2.2 plaintext", "reading": "End of the plaintext."}
+{"candidate": "funds to live", "clue": "Stage 3.2.2 plaintext", "reading": "Shorter."}
+{"candidate": "in case you manage to crack this", "clue": "Stage 3.2.2 plaintext", "reading": "Opening of plaintext."}
+{"candidate": "in case you manage to crack this the private keys belong to half and better half and they also need funds to live", "clue": "Stage 3.2.2 whole plaintext with spaces", "reading": "Whole answer as passphrase with natural spacing."}
+{"candidate": "hundredfourty", "clue": "Stage 3.2.1: worth hundred fourty of the investment", "reading": "Spelling in the puzzle."}
+{"candidate": "hundred fourty", "clue": "same", "reading": "Spaced."}
+{"candidate": "140", "clue": "hundred fourty", "reading": "Numeral."}
+{"candidate": "one for one, four for one", "clue": "Stage 3.2 text: one for one, four for one", "reading": "The odds line about the beautiful strategic position."}
+{"candidate": "a beautiful strategic position", "clue": "Stage 3.2 text", "reading": "Chess position line."}
+{"candidate": "twentythree", "clue": "23 ciphers, hosts 23", "reading": "Number of hosts spelled out."}
+{"candidate": "twenty-three ciphers sixteen encryptions seven intertwined passwords", "clue": "Stage 3.2.1", "reading": "The list of what to select."}
+{"candidate": "seven intertwined passwords", "clue": "Stage 3.2.1", "reading": "The passwords are intertwined."}
+{"candidate": "intertwined passwords", "clue": "Stage 3.2.1", "reading": "Shortened."}
+{"candidate": "the actual private keynote", "clue": "Stage 3.2.1 says private KEYNOTE", "reading": "Puzzle's own word for the final key."}
+{"candidate": "private keynote", "clue": "Stage 3.2.1", "reading": "Shortened."}
+{"candidate": "brute forcing might be required", "clue": "Stage 3.2.1", "reading": "Hint about brute force."}
+{"candidate": "i really hope youre the one", "clue": "Stage 3.2.1 last line", "reading": "Closing wish of the Architect text."}
+{"candidate": "ciao bella", "clue": "Stage 3.2.1 sign-off", "reading": "Sign-off."}
+{"candidate": "cataclysmic system crash", "clue": "Stage 3.2.1", "reading": "Consequence line."}
+{"candidate": "you'll never finish the last task", "clue": "Stage 3.2.1", "reading": "Taunt before the reveal."}
+{"candidate": "wewontgiveawaythepassword", "clue": "final page macro phrase", "reading": "Page says the password is not given away."}
+{"candidate": "itsinfrontofyoureyesbutyourenotseeingit", "clue": "final page macro phrase", "reading": "Literal phrase."}
+{"candidate": "its in front of your eyes but youre not seeing it", "clue": "final page macro phrase spaced", "reading": "Spaced natural reading."}
+{"candidate": "verylaststepisatruegiveaway", "clue": "final page macro phrase", "reading": "Literal phrase."}
+{"candidate": "promised", "clue": "final page macro phrase last word", "reading": "One word."}
+{"candidate": "true giveaway", "clue": "page macro phrase", "reading": "Shortened."}
+{"candidate": "our first hint is your last command", "clue": "final page line 6", "reading": "The line without the sha256 word."}
+{"candidate": "sha256 our first hint is your last command", "clue": "final page line 6 as typed", "reading": "Whole line."}
+{"candidate": "your last command", "clue": "final page line 6", "reading": "Shortened."}
+{"candidate": "our first hint", "clue": "final page line 6", "reading": "Shortened."}
+{"candidate": "shabefanstoo", "clue": "final page line 8", "reading": "Raw text after the blob."}
+{"candidate": "sha be fans too", "clue": "final page line 8 respaced", "reading": "Respaced reading of the raw text."}
+{"candidate": "shabe", "clue": "shabefanstoo", "reading": "First part."}
+{"candidate": "fans too", "clue": "shabefanstoo", "reading": "Second part."}
+{"candidate": "yellowblueprimes", "clue": "final page macro phrase", "reading": "Literal phrase."}
+{"candidate": "yellow blue primes", "clue": "final page macro phrase", "reading": "Spaced."}
+{"candidate": "matrixsumlist", "clue": "binary block decodes to it", "reading": "Literal decoded string."}
+{"candidate": "matrix sum list", "clue": "same", "reading": "Spaced."}
+{"candidate": "lastwordsbeforearchichoice", "clue": "decimal block", "reading": "Literal decoded string."}
+{"candidate": "thispassword", "clue": "decimal block", "reading": "Literal decoded string."}
+{"candidate": "this password", "clue": "decimal block", "reading": "Spaced."}
+{"candidate": "last words before archichoice", "clue": "decimal block", "reading": "Spaced."}
+{"candidate": "archichoice", "clue": "decimal block", "reading": "Portion."}
+{"candidate": "arch choice", "clue": "archichoice", "reading": "Read as Architect's choice."}
+{"candidate": "the architects choice", "clue": "archichoice", "reading": "Possessive reading."}
+{"candidate": "theanomalyisthearchitectschoice", "clue": "Architect scene", "reading": "Synthesised phrase."}
+{"candidate": "thecausalityofchoice", "clue": "causality answer and choice URL", "reading": "Joins Stage 2 answer with choice theme."}
+{"candidate": "choiceisanillusion", "clue": "Stage 2 URL", "reading": "Opening of the Stage 2 URL sentence."}
+{"candidate": "choice is an illusion created between those with power and those without", "clue": "Stage 2 riddle", "reading": "Riddle sentence."}
+{"candidate": "very special dessert", "clue": "Stage 2 URL: a very special dessert I wrote myself", "reading": "Dessert as code word."}
+{"candidate": "causality", "clue": "Stage 2 answer", "reading": "The word whose hash opened the earlier stage."}
+{"candidate": "jacquefresco", "clue": "Stage 3.2 clue", "reading": "Earlier clue answer alone."}
+{"candidate": "giveitjustonesecond", "clue": "Stage 3.2 clue", "reading": "Earlier clue answer alone."}
+{"candidate": "heisenbergsuncertaintyprinciple", "clue": "Stage 3.2 clue", "reading": "Earlier clue answer alone."}
+{"candidate": "just one second", "clue": "white rabbit answer to how long is forever", "reading": "Short form of the clue."}
+{"candidate": "how long is forever", "clue": "Alice quote", "reading": "Question of the clue."}
+{"candidate": "whiterabbit", "clue": "first image", "reading": "The rabbit."}
+{"candidate": "gsmg.io/theseedisplanted", "clue": "stage 0 URL", "reading": "Full URL string as decoded."}
+{"candidate": "theseedisplanted", "clue": "stage 0 URL", "reading": "URL path."}
+{"candidate": "GSMGIO5BTCPUZZLECHALLENGE", "clue": "route seed", "reading": "Seed of the route hash."}

@@ -1,0 +1,1032 @@
+[
+  {
+    "agent": "B1",
+    "name": "faed_running_key_mod9_then_creator_checkerboard",
+    "inputs": [
+      "FAED",
+      "DBBI",
+      "P83 payload (hardcoded from the dossier)"
+    ],
+    "check": "Any output that is readable English is an immediate hit; otherwise the strings are tried as passphrases for the SALPH blob and scanned for key shapes.",
+    "retro": "Stage 3.2.1 used Beaufort with key THEMATRIXHASYOU; Stage 3.2.2 used this exact straddling checkerboard.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 54,
+    "unique_outputs": 54,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B1",
+    "name": "faed_autokey_mod9_primed_by_dbbi",
+    "inputs": [
+      "FAED",
+      "DBBI",
+      "P83 payload"
+    ],
+    "check": "Readable English in the output; otherwise the strings are tried as passphrases and key-shape scanned.",
+    "retro": "Stage 3.2.1 Beaufort (same tableau family, fixed key); Stage 3.2.2 checkerboard for the second layer.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 72,
+    "unique_outputs": 72,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B1",
+    "name": "trifid_of_faed_on_dbbi_keyed_cube",
+    "inputs": [
+      "FAED",
+      "DBBI"
+    ],
+    "check": "English plaintext in an output line; strings are also tried as passphrases and key-shape scanned.",
+    "retro": "Stage 3.2.1/D5 used the Polybius-square family (Bifid); trifid is the three-dimensional member never applied here.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 60,
+    "unique_outputs": 60,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B1",
+    "name": "playfair_decrypt_on_dbbi_keyed_square",
+    "inputs": [
+      "FAED",
+      "DBBI",
+      "ANSWER_322"
+    ],
+    "check": "Readable digraph plaintext; outputs also tried as passphrases and scanned for key shapes.",
+    "retro": "D5's Bifid square and the Stage 3.2.2 checkerboard are the same square-keying idea.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 60,
+    "unique_outputs": 32,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B1",
+    "name": "dbbi_keyed_columnar_transposition_then_bifid",
+    "inputs": [
+      "FAED",
+      "DBBI"
+    ],
+    "check": "English after the Bifid step; all outputs are tried as passphrases and key-shape scanned.",
+    "retro": "D5's whole-block Bifid; Stage 0's spiral read is itself a route transposition.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 64,
+    "unique_outputs": 64,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B1",
+    "name": "dbbi_host_mask_as_grille_over_architect_text",
+    "inputs": [
+      "ARCH_321",
+      "MASK31",
+      "MASK30"
+    ],
+    "check": "A readable phrase in one of the rails; every rail is also tried as a passphrase.",
+    "retro": "D3, where the same host positions were applied to the Stage 3.2.2 answer; Stage 0's spiral selection of coloured cells.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 22,
+    "unique_outputs": 22,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B1",
+    "name": "faed_base9_scalars_under_dbbi_keyed_decimation",
+    "inputs": [
+      "FAED",
+      "DBBI",
+      "MASK31"
+    ],
+    "check": "Direct check of each 64-hex string against the prize address and the halving address.",
+    "retro": "None directly; it is the FAED counterpart of the tested DBBI base-9 scalar reading.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 136,
+    "unique_outputs": 136,
+    "key_shaped": 408
+  },
+  {
+    "agent": "B1",
+    "name": "nihilist_decrypt_of_faed_keyed_by_dbbi_coordinates",
+    "inputs": [
+      "FAED",
+      "DBBI"
+    ],
+    "check": "English plaintext among the 285-letter outputs; all outputs are tried as passphrases.",
+    "retro": "The Stage 3.2.2 checkerboard and the D5 Bifid square supply the same coordinate system.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 24,
+    "unique_outputs": 24,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B1",
+    "name": "second_fractionation_of_the_bifid_tail_as_digraphs",
+    "inputs": [
+      "BTCSEED_DECODE",
+      "DBBI"
+    ],
+    "check": "English plaintext, especially in the first line; outputs are also tried as passphrases.",
+    "retro": "Stage 3.2.2's coordinate decode of a fractionated stream; the D5 Bifid square supplies the board.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 48,
+    "unique_outputs": 32,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B1",
+    "name": "gronsfeld_shifts_of_the_page_strings_keyed_by_dbbi",
+    "inputs": [
+      "PAGE_STRINGS",
+      "DBBI"
+    ],
+    "check": "Each short output is directly tried as a passphrase against the SALPH blob.",
+    "retro": "Stage 1's passphrase was a plain visible lyric line; Stage 3.2.1 used a Vigenere-family shift over visible text.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 450,
+    "unique_outputs": 450,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B2",
+    "name": "arch_event_line_word_address",
+    "inputs": [
+      "ARCH_321"
+    ],
+    "check": "Any output that is a readable phrase accepted by the SALPH decrypt (OpenSSL Salted__ AES) or other blobs as passphrase, raw/lower/nospace/sha256.",
+    "retro": "Stage 0 (the grid coordinates decode by spiral); Stage 3.2.1 (Architect text as carrier)",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 269,
+    "unique_outputs": 269,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B2",
+    "name": "answer_relayout_7x13_spiral_triangle",
+    "inputs": [
+      "ANSWER_322"
+    ],
+    "check": "Output is English text or a phrase that decrypts SALPH (passphrase forms).",
+    "retro": "Stage 0 (spiral read of a grid) and Stage 3.2.1 (transposition of text)",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 60,
+    "unique_outputs": 60,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B2",
+    "name": "arch_fold91_host_mask_words",
+    "inputs": [
+      "ARCH_321",
+      "MASK31",
+      "MASK30"
+    ],
+    "check": "Selected word runs or letter strings that decrypt SALPH as passphrase.",
+    "retro": "D3 host-mask selection on the answer; Stage 3.2.2 (positional selection)",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 173,
+    "unique_outputs": 173,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B2",
+    "name": "arch_prime_number_words_scaffold",
+    "inputs": [
+      "ARCH_321"
+    ],
+    "check": "A readable prime-selected phrase accepted as passphrase for SALPH.",
+    "retro": "D1 prime-position scaffold; Stage 3.2.2 (position-driven selection)",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 440,
+    "unique_outputs": 440,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B2",
+    "name": "answer_shift_by_dbbi_and_faed_lanes",
+    "inputs": [
+      "ANSWER_322",
+      "DBBI",
+      "FAED"
+    ],
+    "check": "Readable output as passphrase or as key text for SALPH.",
+    "retro": "Stage 3.2.1 (Beaufort with a keyword)",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 76,
+    "unique_outputs": 76,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B2",
+    "name": "faed_square_pyramid_sum_lists",
+    "inputs": [
+      "FAED",
+      "ARCH_321"
+    ],
+    "check": "Readable sum-list phrase accepted as passphrase.",
+    "retro": "D4 (row sums of a placed matrix rendered mod 26) and the matrixsumlist block",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 584,
+    "unique_outputs": 584,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B2",
+    "name": "event_coordinate_and_reading_order_strings",
+    "inputs": [
+      "EVENTS"
+    ],
+    "check": "Any string that unlocks SALPH as passphrase, or a 64-hex/WIF shape hitting the address check.",
+    "retro": "Stage 0 (spiral reading of the grid)",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 93,
+    "unique_outputs": 93,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B2",
+    "name": "rabbit_bitgrid_digram_lookup",
+    "inputs": [
+      "FAED",
+      "DBBI"
+    ],
+    "check": "64-hex output matched against prize/halving address, or text as passphrase.",
+    "retro": "Stage 0 (bits of the URL from grid cells) and Stage 3.2.2 (digits addressing a board)",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 206,
+    "unique_outputs": 206,
+    "key_shaped": 168
+  },
+  {
+    "agent": "B2",
+    "name": "stream195_spiral_sum_lists",
+    "inputs": [
+      "DBBI",
+      "ARCH_321"
+    ],
+    "check": "Readable sum-list phrase accepted as passphrase.",
+    "retro": "D4 (matrix placement and row sums) and Stage 0 spiral",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 377,
+    "unique_outputs": 377,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B2",
+    "name": "dbbi_pointer_chase_and_cumulative_word_numbers",
+    "inputs": [
+      "DBBI",
+      "FAED",
+      "ANSWER_322",
+      "ARCH_321"
+    ],
+    "check": "Readable chain text accepted as passphrase.",
+    "retro": "Stage 3.2.2 (digit-driven walk on a board)",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 775,
+    "unique_outputs": 775,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B3",
+    "name": "base9_triples_to_base27_text",
+    "inputs": [
+      "DBBI",
+      "FAED"
+    ],
+    "check": "Passphrase check on the text chunks and their words against the SALPH blob and other Salted__ blobs.",
+    "retro": "Stage 3.2.2 (a keyed 28-symbol straddling alphabet) and the page's own decimal/binary blocks that decode to text.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 160,
+    "unique_outputs": 160,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B3",
+    "name": "derived_numbers_spelled_out",
+    "inputs": [],
+    "check": "Passphrase check against the Salted__ blobs (raw, lowercase, spaces removed, sha256).",
+    "retro": "Stage 3 seven-part password (answers such as 11110 and a hex string decoding to text).",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 288,
+    "unique_outputs": 288,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B3",
+    "name": "prime_position_arithmetic_on_streams",
+    "inputs": [
+      "DBBI",
+      "FAED"
+    ],
+    "check": "Passphrase check on the strings and 200-char chunks; 64-char letter strings are also scanned for key shapes.",
+    "retro": "DBBI scaffold parse itself (prime logical positions host b/be).",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 144,
+    "unique_outputs": 144,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B3",
+    "name": "a_i_digits_as_decimal_ascii_codes",
+    "inputs": [
+      "DBBI",
+      "FAED"
+    ],
+    "check": "Passphrase check on decoded text chunks against the blobs.",
+    "retro": "Stage 4 page: the decimal block that decodes to thispassword and lastwordsbeforearchichoice.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 85,
+    "unique_outputs": 85,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B3",
+    "name": "architect_text_prime_and_indexed_selection",
+    "inputs": [
+      "ARCH_321"
+    ],
+    "check": "Passphrase check on the phrases against the Salted__ blobs.",
+    "retro": "Stage 3.2.1 (Beaufort keyed by a phrase from the puzzle text).",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 183,
+    "unique_outputs": 183,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B3",
+    "name": "count_profiles_and_frequency_orders",
+    "inputs": [
+      "DBBI",
+      "FAED",
+      "ARCH_321"
+    ],
+    "check": "Passphrase check on the strings against the Salted__ blobs.",
+    "retro": "Stage 3.2.2 keyed alphabet FUBCDORA.LETHINGKYMVPS.JQZXW (a keyword-style ordering used as key).",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 71,
+    "unique_outputs": 71,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B3",
+    "name": "whole_stream_bigint_key_and_modular_residues",
+    "inputs": [
+      "DBBI",
+      "FAED"
+    ],
+    "check": "Private-key-shape scan and prize/halving address check on the 64-hex strings; passphrase check on the residues.",
+    "retro": "Stage 3.2 (a 149-digit decimal string inside the decrypted text) and the decimal blocks.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 295,
+    "unique_outputs": 295,
+    "key_shaped": 261
+  },
+  {
+    "agent": "B3",
+    "name": "half_and_better_half_hash_splice",
+    "inputs": [],
+    "check": "Private-key-shape scan and prize/halving address (and EC neighbours) check.",
+    "retro": "Stage 3/3.2 (sha256 of a phrase used as a key), and the address route sha256(GSMGIO5BTCPUZZLECHALLENGE+address).",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 2380,
+    "unique_outputs": 2380,
+    "key_shaped": 2688
+  },
+  {
+    "agent": "B3",
+    "name": "matrix_column_and_diagonal_sum_lists",
+    "inputs": [
+      "DBBI"
+    ],
+    "check": "Passphrase check on the rendered lists against the Salted__ blobs.",
+    "retro": "Stage 3.2.2 (keyed alphabet) and the row-sum letters IZLKESKGGIPPEN.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 132,
+    "unique_outputs": 132,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B3",
+    "name": "event_bits_and_number_base_renderings",
+    "inputs": [],
+    "check": "Passphrase check against the Salted__ blobs; address check if a 64-hex form appears.",
+    "retro": "Stage 0 (colour cells to binary to text), Stage 3 hex string decoding to text.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 1086,
+    "unique_outputs": 1086,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B4",
+    "name": "prime-host positions as word indices into the texts",
+    "inputs": [
+      "DBBI",
+      "MASK31",
+      "MASK30",
+      "ARCH_321",
+      "PAGE_STRINGS"
+    ],
+    "check": "Each returned string is tried as a passphrase against the SALPH 'Salted__' blob and the other final-page blobs; a successful OpenSSL AES decrypt to readable text confirms it.",
+    "retro": "Stage 0: positions in the spiral walk select which cells carry meaning (the 24 coloured cells sit on byte boundaries), i.e. position-driven selection over a fixed stream.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 40,
+    "unique_outputs": 40,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B4",
+    "name": "payload digits as letter-index inside successive words",
+    "inputs": [
+      "DBBI",
+      "FAED",
+      "MASK31",
+      "ARCH_321",
+      "ANSWER_322",
+      "PAGE_STRINGS"
+    ],
+    "check": "Passphrase trial against the SALPH blob and the other encrypted final-page material; also scanned for private-key shapes against the prize and halving addresses.",
+    "retro": "Stage 3: the sixth component was a hex string that had to be decoded into text, i.e. numeric symbols standing for characters to be read off.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 52,
+    "unique_outputs": 52,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B4",
+    "name": "digits as cumulative skips along words and letters",
+    "inputs": [
+      "DBBI",
+      "FAED",
+      "MASK31",
+      "ARCH_321",
+      "ANSWER_322",
+      "PAGE_STRINGS"
+    ],
+    "check": "Passphrase trial against the final-page 'Salted__' blobs; confirmation is a clean AES-256-CBC decrypt.",
+    "retro": "Stage 0: the spiral walk advances a fixed number of cells per byte, harvesting the cell landed on.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 42,
+    "unique_outputs": 42,
+    "key_shaped": 2
+  },
+  {
+    "agent": "B4",
+    "name": "last and first words around named anchors and equal segments",
+    "inputs": [
+      "ARCH_321",
+      "PAGE_STRINGS",
+      "ANSWER_322"
+    ],
+    "check": "Passphrase trial against SALPH and the Stage 3.2 leftover 'Salted__' blob; a readable decrypt confirms.",
+    "retro": "Stage 2: the answer 'causality' was obtained by reading the URL sentence as a sentence and naming the thing it describes, i.e. word-level reading rather than symbol transformation.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 123,
+    "unique_outputs": 123,
+    "key_shaped": 2
+  },
+  {
+    "agent": "B4",
+    "name": "FAED as a nine-lane mask over the Architect letter stream",
+    "inputs": [
+      "FAED",
+      "ARCH_321",
+      "PAGE_STRINGS"
+    ],
+    "check": "Passphrase trial against the final-page blobs; also key-shape scan against the prize address.",
+    "retro": "Stage 0: blue/yellow classes act as a mask selecting which spiral cells are meaningful.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 70,
+    "unique_outputs": 70,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B4",
+    "name": "image spiral geometry as text coordinates",
+    "inputs": [
+      "EVENTS",
+      "ARCH_321",
+      "ANSWER_322",
+      "PAGE_STRINGS"
+    ],
+    "check": "Passphrase trial against SALPH; a readable AES decrypt, or a returned 64-hex/WIF matching the prize address.",
+    "retro": "Stage 0: the same spiral coordinates were the mechanism that produced the first URL.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 116,
+    "unique_outputs": 116,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B4",
+    "name": "one-for-one four-for-one take-and-skip extraction",
+    "inputs": [
+      "ARCH_321",
+      "ANSWER_322",
+      "PAGE_STRINGS"
+    ],
+    "check": "Passphrase trial against the final-page 'Salted__' blobs.",
+    "retro": "Stage 3.2.2: digits 1 and 4 were the working escape digits of the straddling checkerboard, so the puzzle already used that pair as a selector.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 132,
+    "unique_outputs": 132,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B4",
+    "name": "the 91-mask applied to the macro phrase chain",
+    "inputs": [
+      "PAGE_STRINGS",
+      "MASK31",
+      "MASK30",
+      "ANSWER_322"
+    ],
+    "check": "Passphrase trial against SALPH and the other encrypted blobs.",
+    "retro": "Stage 3: seven separate answers were concatenated in a fixed order into one string before hashing.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 24,
+    "unique_outputs": 24,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B4",
+    "name": "Bifid BTCSEED output as book-cipher coordinates",
+    "inputs": [
+      "BTCSEED_DECODE",
+      "ARCH_321",
+      "ANSWER_322",
+      "PAGE_STRINGS"
+    ],
+    "check": "Passphrase trial against the final-page blobs; the leading BTCSEED plus a readable extraction would be visible confirmation.",
+    "retro": "Stage 3.2.1: Bifid/coordinate pair reading of a two-digit-per-letter square was already the mechanism that produced this string.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 19,
+    "unique_outputs": 19,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B4",
+    "name": "run lengths and equal-chunk acrostics",
+    "inputs": [
+      "DBBI",
+      "FAED",
+      "ARCH_321",
+      "ANSWER_322",
+      "PAGE_STRINGS"
+    ],
+    "check": "Passphrase trial against the SALPH blob and companions.",
+    "retro": "Stage 1: the answer was a single line lifted whole out of a longer text once the clues said which line, i.e. block-level selection.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 72,
+    "unique_outputs": 72,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B5",
+    "name": "brainwallet_of_the_first_hint",
+    "inputs": [
+      "PAGE_STRINGS"
+    ],
+    "check": "64-hex private-key scan against the prize address 1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe and the halving address; the digests are also tried as passphrases for SALPH.",
+    "retro": "Stage 2: the SHA-256 hex digest of the one-word answer 'causality' was itself the AES passphrase, so the puzzle already uses 'hash a hint, use the digest raw'.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 220,
+    "unique_outputs": 220,
+    "key_shaped": 660
+  },
+  {
+    "agent": "B5",
+    "name": "last_words_before_the_choice",
+    "inputs": [
+      "ARCH_321"
+    ],
+    "check": "OpenSSL AES decrypt of the SALPH blob with the phrase (raw, lowercase, spaceless and their SHA-256 digests) producing a readable plaintext.",
+    "retro": "Stages 1 and 3.2: a passphrase that is a literal run of words lifted out of the clue text (the Logic lyric line, 'giveitjustonesecond').",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 408,
+    "unique_outputs": 408,
+    "key_shaped": 2
+  },
+  {
+    "agent": "B5",
+    "name": "acrostic_in_front_of_your_eyes",
+    "inputs": [
+      "ARCH_321",
+      "PAGE_STRINGS"
+    ],
+    "check": "AES decrypt of SALPH with the acrostic string as passphrase; long acrostics are also scanned for 64-hex or mnemonic shapes.",
+    "retro": "Stage 0: the answer was hidden in plain sight in the image, one bit per pixel, read in a fixed order.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 75,
+    "unique_outputs": 75,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B5",
+    "name": "matrix_sum_list_over_faed",
+    "inputs": [
+      "FAED",
+      "DBBI",
+      "ANSWER_322"
+    ],
+    "check": "AES decrypt of SALPH with the rendered string; digit renderings are also scanned as decimal scalars and hex key shapes.",
+    "retro": "Stage 3/D4: the 14x14 placement row-sum list rendered as letters ('IZLKESKGGIPPEN') is the same operation at one fixed width.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 744,
+    "unique_outputs": 744,
+    "key_shaped": 6
+  },
+  {
+    "agent": "B5",
+    "name": "yellow_blue_colour_mask",
+    "inputs": [
+      "EVENTS",
+      "FAED",
+      "DBBI",
+      "ANSWER_322",
+      "ARCH_321"
+    ],
+    "check": "The selected letter runs are tried as SALPH passphrases; long selections are scanned for key shapes.",
+    "retro": "Stage 0: blue/yellow versus black/white was already the bit classification that produced the seed URL; D3 reuses a positional mask over the 3.2.2 answer.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 56,
+    "unique_outputs": 56,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B5",
+    "name": "prime_position_pickup",
+    "inputs": [
+      "FAED",
+      "DBBI",
+      "ANSWER_322",
+      "ARCH_321"
+    ],
+    "check": "Each pickup string is tried as a SALPH passphrase; the longer ones are scanned for 64-hex and mnemonic shapes.",
+    "retro": "D1/Stage 3.2: the DBBI scaffold is defined by prime logical positions, so position-class selection is already the puzzle's idiom.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 40,
+    "unique_outputs": 40,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B5",
+    "name": "one_for_one_four_for_one",
+    "inputs": [
+      "FAED",
+      "DBBI"
+    ],
+    "check": "The 64-hex windows are scanned as private keys against the prize and halving addresses; the letter renderings are tried as SALPH passphrases.",
+    "retro": "Stage 3.2.1: the EBCDIC block was a fixed-ratio symbol-to-byte encoding of the same kind; D5 already groups FAED letters in pairs for Bifid.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 487,
+    "unique_outputs": 487,
+    "key_shaped": 950
+  },
+  {
+    "agent": "B5",
+    "name": "yin_yang_self_fold",
+    "inputs": [
+      "FAED",
+      "DBBI",
+      "ANSWER_322"
+    ],
+    "check": "Folded letter strings are tried as SALPH passphrases; byte renderings are scanned for 64-hex key shapes.",
+    "retro": "Stage 3.2.2 declared the two halves ('half and better half'); D2 already pairs the image's 24 cells with the 84-token host kinds one to one.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 132,
+    "unique_outputs": 132,
+    "key_shaped": 108
+  },
+  {
+    "agent": "B5",
+    "name": "faed_as_skip_into_the_monologue",
+    "inputs": [
+      "FAED",
+      "ARCH_321",
+      "ANSWER_322",
+      "PAGE_STRINGS"
+    ],
+    "check": "The picked letter strings are tried as SALPH passphrases and scanned for key shapes.",
+    "retro": "Stage 3.2.1: the Beaufort/keyed reading already walks one stream against another; D4 walks host chunks backwards along the spiral.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 28,
+    "unique_outputs": 28,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B5",
+    "name": "dbbi_checkerboard_keyed_by_the_page",
+    "inputs": [
+      "DBBI",
+      "PAGE_STRINGS"
+    ],
+    "check": "Each decode is tried as a SALPH passphrase; decodes that come out as readable English confirm the board.",
+    "retro": "Stage 3.2.2: a keyed straddling checkerboard with two escape digits was exactly the cipher that produced the 'half and better half' message.",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 120,
+    "unique_outputs": 120,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B6",
+    "name": "yang_as_delimiter_and_yin_yang_halves",
+    "inputs": [
+      "ANSWER_322"
+    ],
+    "check": "passphrase check on SALPH and the other Salted__ blobs (raw, lower, no-space, sha256 forms)",
+    "retro": "Stage 3.2.1 read the Architect text through a keyed reduction; nothing exactly like this (none)",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 40,
+    "unique_outputs": 40,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B6",
+    "name": "yin_yang_running_key",
+    "inputs": [
+      "ANSWER_322"
+    ],
+    "check": "passphrase check: readable output would show up as a hit on a blob, otherwise none",
+    "retro": "Stage 3.2.1 Beaufort with key THEMATRIXHASYOU",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 102,
+    "unique_outputs": 102,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B6",
+    "name": "first_hint_last_command_chain",
+    "inputs": [],
+    "check": "passphrase check on SALPH (raw hex strings are also scanned as private-key shapes)",
+    "retro": "Stage 2 and 3 used sha256 of an answer as the AES passphrase",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 564,
+    "unique_outputs": 564,
+    "key_shaped": 618
+  },
+  {
+    "agent": "B6",
+    "name": "half_and_better_half_two_half_keys",
+    "inputs": [
+      "ANSWER_322",
+      "DBBI",
+      "FAED"
+    ],
+    "check": "private-key shape scan against prize address, halving address and EC neighbors",
+    "retro": "Stage 3 and 3.2 concatenated pieces then sha256",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 105,
+    "unique_outputs": 105,
+    "key_shaped": 195
+  },
+  {
+    "agent": "B6",
+    "name": "brainwallet_of_puzzle_phrases",
+    "inputs": [
+      "PAGE_STRINGS"
+    ],
+    "check": "private-key shape scan against prize address, halving address and EC neighbors",
+    "retro": "Stage 2 sha256 of a riddle answer",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 162,
+    "unique_outputs": 162,
+    "key_shaped": 486
+  },
+  {
+    "agent": "B6",
+    "name": "intertwined_passwords_weave",
+    "inputs": [],
+    "check": "passphrase check on SALPH and other blobs",
+    "retro": "Stage 3 concatenated the seven answers in order; this interleaves instead",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 846,
+    "unique_outputs": 846,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B6",
+    "name": "numbers_as_word_and_letter_indices",
+    "inputs": [
+      "ARCH_321"
+    ],
+    "check": "passphrase check",
+    "retro": "Stage 3.2.2 indexed a keyed board by letters; the matrix row-sum index into the scene was tested but not these numbers",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 84,
+    "unique_outputs": 84,
+    "key_shaped": 0
+  },
+  {
+    "agent": "B6",
+    "name": "bitcoin_seed_bip32_from_btcseed",
+    "inputs": [
+      "DBBI",
+      "FAED"
+    ],
+    "check": "private-key shape scan against prize address, halving address and EC neighbors",
+    "retro": "none",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 40,
+    "unique_outputs": 40,
+    "key_shaped": 120
+  },
+  {
+    "agent": "B6",
+    "name": "in_front_of_your_eyes_url",
+    "inputs": [],
+    "check": "passphrase check plus the 64-hex private-key shape scan",
+    "retro": "Route to final page was itself sha256 of seed plus address",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 173,
+    "unique_outputs": 173,
+    "key_shaped": 300
+  },
+  {
+    "agent": "B6",
+    "name": "architect_last_words_windows",
+    "inputs": [],
+    "check": "passphrase check on SALPH and the other blobs",
+    "retro": "Stage 1 used a lyric line; Stage 2 a riddle answer taken from a scene",
+    "static_ok": true,
+    "static_reason": "",
+    "run_ok": true,
+    "error": null,
+    "returned": 239,
+    "unique_outputs": 239,
+    "key_shaped": 2
+  }
+]
