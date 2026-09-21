@@ -30,7 +30,7 @@ def wrap(function):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--start', type=int, default=525)
-    parser.add_argument('--end', type=int, default=544)
+    parser.add_argument('--end', type=int, default=545)
     args = parser.parse_args()
     suite = unittest.TestSuite()
     for path in sorted(Path(__file__).parent.glob('test_phase*.py')):

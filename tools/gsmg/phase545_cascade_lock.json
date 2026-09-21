@@ -1,0 +1,87 @@
+{
+  "bar_p": 0.01,
+  "controls": {
+    "cascade_logic": {
+      "depth": true,
+      "deterministic": true,
+      "first_step_uses_d0_prefix": true,
+      "keyword_j_maps_to_i": true
+    },
+    "construction": {
+      "base_square_is_dbifh": true,
+      "d0_sha256_matches_phase425": true,
+      "phase476_p91_square_reproduced": true,
+      "rule7_keyword_is_btcseed": true,
+      "rule_full_square_is_25_distinct": true
+    },
+    "planted": {
+      "ok": true,
+      "rows": {
+        "n570/right_square": {
+          "argmax": true,
+          "corrected_p": 9.999000099990002e-05,
+          "found": true,
+          "offset": 200,
+          "s1": 36.11,
+          "s2": 36.11,
+          "word": "AARDVARK"
+        },
+        "n570/wrong_square": {
+          "argmax": false,
+          "corrected_p": 1.0,
+          "found": false,
+          "offset": 200,
+          "s1": 0.0,
+          "s2": 0.0,
+          "word": "AARDVARK"
+        },
+        "n91/right_square": {
+          "argmax": true,
+          "corrected_p": 9.999000099990002e-05,
+          "found": true,
+          "offset": 40,
+          "s1": 45.93,
+          "s2": 45.93,
+          "word": "ABANDONING"
+        },
+        "n91/wrong_square": {
+          "argmax": false,
+          "corrected_p": 1.0,
+          "found": false,
+          "offset": 40,
+          "s1": 0.0,
+          "s2": 0.0,
+          "word": "ABANDONING"
+        }
+      }
+    },
+    "roundtrip_and_model": {
+      "model_equals_phase544_on_faed": true,
+      "odd_length_model_within_0.02": true,
+      "roundtrip_570_91_90": true,
+      "type_tables_sum_to_one": true
+    }
+  },
+  "data_py_sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+  "depth": 3,
+  "dictionary_file_sha256": "9f513f1ceadb6a01c5485b7dbdfd5118dc66cd70b59cae2851292112d4066a32",
+  "lexicon_list_sha256": "717b863cdfc6663ca9e6fb0d090459a7f1c58aaab80478778a36585275b9d8e2",
+  "n_trials": 10000,
+  "null_seed": 545000,
+  "objects": {
+    "DBBI": 91,
+    "FAED": 570,
+    "VALIDATION_ANSWER": 91
+  },
+  "phase": 545,
+  "phase386_script_sha256": "906f73eb40d61db595c5f2617fd1a2a69fc85f044ae32ac4439b8c3361276f52",
+  "phase544_script_sha256": "8974e5dd53a8b39e7faaa830c274a7ab031477bdbe72b0727659f089b75df9f3",
+  "protocol_sha256": "fe7c0e00017cbe10fc96414cb8f63beab49ac68104e26ebd17a7cada5f8eabc3",
+  "rules": [
+    "7",
+    "13",
+    "full"
+  ],
+  "script_sha256": "b7fb947be3c4c8003263c5ba473069ff8ebaca76af509b58456736946fd231bc",
+  "test_sha256": "695459f48c0edd622fbc7d9e8169b2518e613e21d6098447432e83ac0a363069"
+}

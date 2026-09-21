@@ -1,0 +1,449 @@
+{
+  "phase": 545,
+  "lock_sha256": "813be6de4f31c62af3a21541e97b179af2311602ce7ed59747cfdd47f7dfb244",
+  "cells": 27,
+  "statistic_columns": 54,
+  "distinct_new_squares": 9,
+  "chains": {
+    "7": {
+      "squares": [
+        "BTCSEDAFGHIKLMNOPQRUVWXYZ",
+        "AKFDBZCEGHILMNOPQRSTUVWXY",
+        "AIFCMBDEGHKLNOPQRSTUVWXYZ"
+      ],
+      "fixed_point": false
+    },
+    "13": {
+      "squares": [
+        "BTCSEDOMAFGHIKLNPQRUVWXYZ",
+        "OYMQBZHSGECADFIKLNPRTUVWX",
+        "DLEHXSRABCFGIKMNOPQTUVWYZ"
+      ],
+      "fixed_point": false
+    },
+    "full": {
+      "squares": [
+        "BTCSEDOMKAHVXPRIQNGLUZFWY",
+        "ZRKUBYOQLICTMWPHDVSNXGEFA",
+        "ANGMSOIQFCPYDWZUXVRLTBEHK"
+      ],
+      "fixed_point": false
+    }
+  },
+  "null": {
+    "trials": 10000,
+    "columns": 54,
+    "col0_median": 0.0,
+    "pool_sha256": "72861f2fb57e4e1f8d42164312a66a4fe2f2896333bdbce47c872cdfa7e56460"
+  },
+  "family_min_p": 0.0005999400059994001,
+  "family_corrected_p": 0.025197480251974803,
+  "bar_p": 0.01,
+  "outcome": "null_like",
+  "cell_detail": [
+    {
+      "cell": [
+        "faed",
+        "7",
+        1
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "faed",
+        "7",
+        2
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "faed",
+        "7",
+        3
+      ],
+      "s1": 20.225,
+      "s2": 20.225,
+      "occurrences": 1,
+      "top": [
+        {
+          "offset": 234,
+          "word": "ALICIA",
+          "bits": 20.225
+        }
+      ],
+      "s1_p": 0.0613938606139386,
+      "s2_p": 0.15278472152784722
+    },
+    {
+      "cell": [
+        "faed",
+        "13",
+        1
+      ],
+      "s1": 18.633,
+      "s2": 18.633,
+      "occurrences": 1,
+      "top": [
+        {
+          "offset": 412,
+          "word": "BIDET",
+          "bits": 18.633
+        }
+      ],
+      "s1_p": 0.19018098190180982,
+      "s2_p": 0.22257774222577742
+    },
+    {
+      "cell": [
+        "faed",
+        "13",
+        2
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "faed",
+        "13",
+        3
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "faed",
+        "full",
+        1
+      ],
+      "s1": 23.004,
+      "s2": 85.258,
+      "occurrences": 6,
+      "top": [
+        {
+          "offset": 242,
+          "word": "BRICKS",
+          "bits": 23.004
+        },
+        {
+          "offset": 102,
+          "word": "TRACK",
+          "bits": 22.408
+        },
+        {
+          "offset": 382,
+          "word": "SPECS",
+          "bits": 20.342
+        }
+      ],
+      "s1_p": 0.051394860513948606,
+      "s2_p": 0.0005999400059994001
+    },
+    {
+      "cell": [
+        "faed",
+        "full",
+        2
+      ],
+      "s1": 21.399,
+      "s2": 21.399,
+      "occurrences": 1,
+      "top": [
+        {
+          "offset": 433,
+          "word": "PHIAL",
+          "bits": 21.399
+        }
+      ],
+      "s1_p": 0.1040895910408959,
+      "s2_p": 0.14588541145885411
+    },
+    {
+      "cell": [
+        "faed",
+        "full",
+        3
+      ],
+      "s1": 19.853,
+      "s2": 19.853,
+      "occurrences": 1,
+      "top": [
+        {
+          "offset": 164,
+          "word": "CRAGS",
+          "bits": 19.853
+        }
+      ],
+      "s1_p": 0.1760823917608239,
+      "s2_p": 0.1967803219678032
+    },
+    {
+      "cell": [
+        "dbbi",
+        "AIFCMBDEGHKLNOPQRSTUVWXYZ",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "dbbi",
+        "AKFDBZCEGHILMNOPQRSTUVWXY",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "dbbi",
+        "ANGMSOIQFCPYDWZUXVRLTBEHK",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "dbbi",
+        "BTCSEDAFGHIKLMNOPQRUVWXYZ",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "dbbi",
+        "BTCSEDOMAFGHIKLNPQRUVWXYZ",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "dbbi",
+        "BTCSEDOMKAHVXPRIQNGLUZFWY",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "dbbi",
+        "DLEHXSRABCFGIKMNOPQTUVWYZ",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "dbbi",
+        "OYMQBZHSGECADFIKLNPRTUVWX",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "dbbi",
+        "ZRKUBYOQLICTMWPHDVSNXGEFA",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "valans",
+        "AIFCMBDEGHKLNOPQRSTUVWXYZ",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "valans",
+        "AKFDBZCEGHILMNOPQRSTUVWXY",
+        0
+      ],
+      "s1": 22.74,
+      "s2": 22.74,
+      "occurrences": 1,
+      "top": [
+        {
+          "offset": 38,
+          "word": "FAZED",
+          "bits": 22.74
+        }
+      ],
+      "s1_p": 0.0173982601739826,
+      "s2_p": 0.0183981601839816
+    },
+    {
+      "cell": [
+        "valans",
+        "ANGMSOIQFCPYDWZUXVRLTBEHK",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "valans",
+        "BTCSEDAFGHIKLMNOPQRUVWXYZ",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "valans",
+        "BTCSEDOMAFGHIKLNPQRUVWXYZ",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "valans",
+        "BTCSEDOMKAHVXPRIQNGLUZFWY",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "valans",
+        "DLEHXSRABCFGIKMNOPQTUVWYZ",
+        0
+      ],
+      "s1": 22.034,
+      "s2": 22.034,
+      "occurrences": 1,
+      "top": [
+        {
+          "offset": 34,
+          "word": "AURAS",
+          "bits": 22.034
+        }
+      ],
+      "s1_p": 0.033996600339966,
+      "s2_p": 0.03569643035696431
+    },
+    {
+      "cell": [
+        "valans",
+        "OYMQBZHSGECADFIKLNPRTUVWX",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    },
+    {
+      "cell": [
+        "valans",
+        "ZRKUBYOQLICTMWPHDVSNXGEFA",
+        0
+      ],
+      "s1": 0.0,
+      "s2": 0.0,
+      "occurrences": 0,
+      "top": [],
+      "s1_p": 1.0,
+      "s2_p": 1.0
+    }
+  ],
+  "oracle_calls": 0
+}

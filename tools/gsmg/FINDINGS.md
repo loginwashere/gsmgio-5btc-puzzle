@@ -31006,3 +31006,33 @@ null; does not change Phases 425-428.
 
 **Reopen condition:** a held-out design that selects a lexicon or a rail read independently of
 this result.
+## Phase 545 — keyword cascade and tail-derived squares over FAED, DBBI and VALIDATION_ANSWER, closed null-like (2026-09-21)
+
+**Question:** If output-derived keywords (prefix 7, prefix 13, whole decode) are fed back as the next
+Bifid square's key starting from `DBBI[:13]` (three iterations), do the resulting FAED decodes, or the
+decodes of `DBBI` and `VALIDATION_ANSWER` under the new squares, show anything unusual?
+
+**Frozen inputs:** 3 rules x 3 steps, 9 distinct new squares, 27 cells; Phase 544's rail-aware lexicon
+statistics (S1, S2) generalised to any square and block length; 10,000 exact-multiset shuffles (FAED cascade
+regenerated per shuffle); one rank-max family correction over 27 cells x 2 statistics; bar corrected p <= 0.01.
+Execution lock pins protocol, script, test, imports, dictionary and lexicon hashes, rules, seed and controls.
+
+**Method:** Controls before the lock: construction (Phase 425 hash, Phase 476 square, `BTCSEED` keyword),
+round trips, model equality, cascade logic, planted recovery at block lengths 570 and 91.
+
+**Result:** No chain cycles within depth 3. Most cells have no 5+-letter dictionary occurrence; the strongest
+(FAED, rule `full`, step 1) has six scattered occurrences (S2 85.3 bits, nominal p 0.001). Family-min p 0.0006,
+family-corrected p 0.025. Outcome `null_like`.
+
+**Disposition:** rejected for this universe; not a lead. Stop rule reached.
+
+**Facts affected:** None.
+
+**Supersedes/corrects:** None. Fills the output-derived-keyword gap noted in Phase 425 and complements Phases
+419 and 476.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE545_KEYWORD_CASCADE_TAIL_SQUARE.md),
+`phase545_keyword_cascade_tail_square.py`, `test_phase545_keyword_cascade_tail_square.py`,
+`phase545_cascade_lock.json`, `phase545_cascade_result.json`, dated protocol.
+
+**Reopen condition:** a held-out design that fixes a keyword rule or object independently of this result.
