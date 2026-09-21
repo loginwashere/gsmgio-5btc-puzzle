@@ -1,0 +1,125 @@
+{
+  "phase": 546,
+  "lock_sha256": "2172e9296c4f0c5351f11e63747070017d497fa3658b787583ae81126f322a2e",
+  "real_ordering_prefix": "BTCSEED",
+  "arm_a": {
+    "squares": 362880,
+    "distinct_prefixes": 73097,
+    "rates": {
+      "E1": {
+        "count": 8,
+        "rate": 2.2045855379188714e-05,
+        "wilson95": [
+          1.1171089855473768e-05,
+          4.3506461816477014e-05
+        ]
+      },
+      "E2": {
+        "count": 2,
+        "rate": 5.5114638447971785e-06,
+        "wilson95": [
+          1.511411843567749e-06,
+          2.0097706835912193e-05
+        ]
+      },
+      "E3": {
+        "count": 4948,
+        "rate": 0.013635361552028219,
+        "wilson95": [
+          0.013263142627311852,
+          0.014017878088161085
+        ]
+      }
+    },
+    "top_E3_prefixes": [
+      {
+        "prefix": "FAAIEEE",
+        "orderings": 1440
+      },
+      {
+        "prefix": "ALAIEEE",
+        "orderings": 216
+      },
+      {
+        "prefix": "AVAIEEE",
+        "orderings": 216
+      },
+      {
+        "prefix": "ARAIEEE",
+        "orderings": 192
+      },
+      {
+        "prefix": "ERAIEEE",
+        "orderings": 192
+      },
+      {
+        "prefix": "AMAIEEE",
+        "orderings": 192
+      },
+      {
+        "prefix": "ADAIEEE",
+        "orderings": 120
+      },
+      {
+        "prefix": "BRAIEEE",
+        "orderings": 108
+      },
+      {
+        "prefix": "IRAIEEE",
+        "orderings": 96
+      },
+      {
+        "prefix": "IVAIEEE",
+        "orderings": 96
+      }
+    ],
+    "at_least_one_E3_in_T": {
+      "12": 0.151894,
+      "1248": 1.0,
+      "10000": 1.0,
+      "1000000": 1.0
+    }
+  },
+  "arm_b": {
+    "squares": 20000000,
+    "rates": {
+      "E1": {
+        "count": 2,
+        "rate": 1e-07,
+        "wilson95": [
+          2.7423033310548888e-08,
+          3.646568913787392e-07
+        ]
+      },
+      "E2": {
+        "count": 33,
+        "rate": 1.65e-06,
+        "wilson95": [
+          1.1749398192639807e-06,
+          2.3171395099774225e-06
+        ]
+      },
+      "E3": {
+        "count": 112028,
+        "rate": 0.0056014,
+        "wilson95": [
+          0.005568785652184616,
+          0.00563420427594508
+        ]
+      }
+    },
+    "at_least_one_E3_in_T": {
+      "12": 0.065184,
+      "1248": 0.999097,
+      "10000": 1.0,
+      "1000000": 1.0
+    }
+  },
+  "t_max": 10000,
+  "thresholds": {
+    "cherry_min_count": 37,
+    "selective_max_count": 3
+  },
+  "outcome": "cherry_pickable",
+  "oracle_calls": 0
+}

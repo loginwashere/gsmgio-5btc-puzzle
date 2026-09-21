@@ -41,6 +41,8 @@ zero strong or structural hits.
 tail by surprisal under the exact rail model (even rail only B/C/D/E): null-like, corrected p 0.050 against a 0.01 bar.
 [Phase 545](GSMG_PHASE545_KEYWORD_CASCADE_TAIL_SQUARE.md) feeds output-derived keywords back as Bifid squares
 (three iterations, three rules) and decodes FAED, DBBI and VALIDATION_ANSWER under them: 27 cells, null-like, corrected p 0.025.
+[Phase 546](GSMG_PHASE546_PREFIX_SELECTIVITY_CURVE.md) calibrates the `BTCSEED` prefix over 362,880 keyed squares and 20 million
+random ones: a prefix splittable into two words is common (1.4%), the exact string is rare; the prefix should not be the reason to continue.
 See the phase index for intervening work.
 
 Entry point for this vault. [README.md](../README.md) is the historical

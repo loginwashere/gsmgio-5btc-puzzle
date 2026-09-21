@@ -1,0 +1,57 @@
+{
+  "batch": 250000,
+  "cherry_min_count": 37,
+  "class_digests": {
+    "E1": "0a1bc519741d2569425d99a4955e8fa7cbc30ff513c94e0dcca07026a06ad4ac",
+    "E2": "3d220743dfa520d2659cad2567498f2d74a49478642f3f6300bccc9ef6eac04a",
+    "E3": "356969e6106d4933554a69b2daef4b0afcda431a8e98fb579235853459758705"
+  },
+  "class_sizes": {
+    "E1": 1,
+    "E2": 11534,
+    "E3": 6126148
+  },
+  "controls": {
+    "class_machinery": {
+      "btcseed_in_E1_E3_not_E2": true,
+      "class_sizes": {
+        "E1": 1,
+        "E2": 11534,
+        "E3": 6126148
+      }
+    },
+    "counting": {
+      "arm_a_size": 362880,
+      "batch_equals_plain_count": true,
+      "batch_hits_nonvacuous": true,
+      "mc_within_4_sigma_of_exact": true,
+      "toy_exact_count_nonvacuous": true
+    },
+    "fast_vs_slow": {
+      "arm_a_squares_match_full_decode": true,
+      "random_squares_match_full_decode": true
+    },
+    "real_square": {
+      "real_decode_hash_matches": true,
+      "real_ordering_prefix_is_BTCSEED": true,
+      "real_square_is_dbifh": true
+    }
+  },
+  "data_py_sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+  "dictionary_file_sha256": "9f513f1ceadb6a01c5485b7dbdfd5118dc66cd70b59cae2851292112d4066a32",
+  "faed_sha256": "585ee5d801486348f3396b3301bc87f14420204ed3242e67bc53d60cfed14664",
+  "n_b": 20000000,
+  "phase": 546,
+  "phase386_script_sha256": "906f73eb40d61db595c5f2617fd1a2a69fc85f044ae32ac4439b8c3361276f52",
+  "protocol_sha256": "4e21f9fb6f002a67ef85966ed6c3be1fe82e4bccc04475d5d1f7f7cca8d50a45",
+  "script_sha256": "e8df4754f962e4f7bcd5729235dd6e427d011bfe0a2e909c2f06c308e8830281",
+  "seed": 546,
+  "selective_max_count": 3,
+  "t_max": 10000,
+  "test_sha256": "1dab879b2674e21b0ae06da9748fdce3986d625f1771fa01091fa18b5dd16680",
+  "word_counts": {
+    "3": 1007,
+    "4": 3085,
+    "7": 11534
+  }
+}
