@@ -28,10 +28,11 @@ reads DBBI and its payload as base-9 scalars under every digit bijection
 agents generated 848 interpretation-type candidates from a history-free dossier, none opened a blob.
 [Phase 541](GSMG_PHASE541_FRESH_CONTEXT_AGENT_ROUND2.md) repeats it with derived facts added and
 operation proposals as sandboxed code: 60 proposals ran, 12,633 bases and 6,979 key-shaped strings, no hit.
-[Phase 542](GSMG_PHASE542_TERMINAL_E_COMPLETION_AUDIT.md) uniquely places the
-84-token parse's terminal `e` at the missing source-byte-24 endpoint, completing
-Selection A without collisions; the resulting `IZLKEXKGGIPPEN` still supplies
-no instruction or cross-source-stable Architect reading.
+[Phase 542](GSMG_PHASE542_TERMINAL_E_COMPLETION_AUDIT.md) conditionally places
+the 84-token parse's terminal `e` at the missing source-byte-24 endpoint under
+Selection A's community-derived invariant, completing it without collisions;
+the resulting `IZLKEXKGGIPPEN` supplies no instruction and does not supersede
+the historical `IZLKESEEDQPPEN` construction.
 See the phase index for intervening work.
 
 Entry point for this vault. [README.md](../README.md) is the historical

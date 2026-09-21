@@ -30872,7 +30872,7 @@ lens lists on the same dossier.
 
 ## Phase 542 — terminal `e` completes Selection A uniquely, but yields no instruction (2026-09-21)
 
-Selection A retains 23 picture events representing source bytes 1–23 exactly
+Conditional on Selection A, its 23 retained picture events represent source bytes 1–23 exactly
 once. Of its two omissions, event 22 duplicates byte 21 (already represented
 by FEFE), while event 25 is byte 24's endpoint. Placing the 84-token parse's
 terminal `e=5` at event 25 is therefore the unique omitted-event completion of
@@ -30881,8 +30881,10 @@ the same source-byte invariant. It is collision-free and fills 84 cells.
 The completed row sums are
 `34,51,37,36,30,49,62,58,32,34,41,15,56,13`, rendering
 `IZLKEXKGGIPPEN`. Phase 535's unchanged Architect consumer remains unreadable
-and differs between film and screenplay. The tail-placement gap is closed;
-the completed matrix still lacks a selected consumer. No oracle was called.
+and differs between film and screenplay. The tail-placement gap is closed only
+inside Selection A's community-derived invariant; this does not promote it
+over the historical `IZLKESEEDQPPEN` construction. The completed matrix still
+lacks a selected consumer. No oracle was called.
 
 **Artifacts:** [audit](../../doc/GSMG_PHASE542_TERMINAL_E_COMPLETION_AUDIT.md),
 `phase542_terminal_e_completion_audit.py`, result JSON.
