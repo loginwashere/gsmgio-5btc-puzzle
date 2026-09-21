@@ -30973,3 +30973,36 @@ in `tools/gpu_oracle`.
 
 **Reopen condition:** an authenticated consumer, or restored CUDA access only
 for the disclosed raw-stream target-detector remainder.
+## Phase 544 — rail-feasible lexicon scan of the BTCSEED decode, closed null-like (2026-09-21)
+
+**Question:** Does the community Bifid decode of FAED contain dictionary words rarer than the
+exact mechanical null? Output letters 2k, 2k+1 depend only on FAED[k] and FAED[285+k], and the
+even output rail can only be B/C/D/E.
+
+**Frozen inputs:** the real decode only (SHA-256 `0c5d984f...7745e`); 67,696 ASCII dictionary
+words of 5-20 letters; occurrences at offset 7 or later; surprisal under the exact rail model;
+S1 (rarest occurrence) and S2 (best non-overlapping cover); 10,000 exact-multiset shuffles;
+inclusive rank-max family correction; bar corrected p <= 0.01. Execution lock pins protocol,
+script, test, imports, dictionary and lexicon hashes, null seed and null pool digest.
+
+**Method:** Controls before the lock: decode reproduction and rail feasibility, probability
+model, toy scan and cover, planted-word recovery (gate at length 8 in both alignments).
+
+**Result:** three occurrences (`MEDEA`, `ENDUE`, `MELDS`); S1 17.6 bits (p 0.174), S2 48.7 bits
+(p 0.028), family-corrected p 0.050. Puzzle-word arm: no `YOUWON`, `KMODEST`, `MODEST`,
+`SATOSHI`, `SEED`, `KEY` or `WALLET` past the prefix. Outcome `null_like`.
+
+**Disposition:** rejected for this instrument, decode and lexicon; not a lead. Stop rule reached.
+
+**Facts affected:** None.
+
+**Supersedes/corrects:** None. Sharpens the Phase 386 addendum's word scan with a rail-aware
+null; does not change Phases 425-428.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE544_RAIL_FEASIBLE_LEXICON_SCAN.md),
+`phase544_rail_feasible_lexicon_scan.py`, `test_phase544_rail_feasible_lexicon_scan.py`,
+`phase544_rail_lexicon_lock.json`, `phase544_rail_lexicon_result.json`, dated protocol and
+[options brainstorm](../../doc/Brainstorms/2026-09-21%20-%20BTCSEED%20Tail%20Decoding%20Options%20Brainstorm.md).
+
+**Reopen condition:** a held-out design that selects a lexicon or a rail read independently of
+this result.

@@ -7,7 +7,7 @@ generator: tools/gsmg/generate_phase_index.py
 
 # GSMG Phase Index
 
-Generated from **521** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
+Generated from **522** canonical per-phase files under [tools/gsmg/findings](../tools/gsmg/findings/README.md). [FINDINGS.md](../tools/gsmg/FINDINGS.md) is the generated compatibility view. This table is derived, not hand-maintained — re-run `python3 tools/gsmg/generate_phase_index.py` after adding a phase rather than editing this file directly.
 
 Audit-doc links are a best-effort keyword match on the phase heading and are not guaranteed correct for every row; the FINDINGS.md link is authoritative.
 
@@ -539,3 +539,4 @@ A phase whose original heading was later corrected without editing the heading i
 | 541 | P541 | 2026-09-20 | fresh-context agents round 2 | derived facts and operation proposals, closed negative | [source](../tools/gsmg/findings/P00541.md) | [link](../tools/gsmg/FINDINGS.md#phase-541-fresh-context-agents-round-2-derived-facts-and-operation-proposals-closed-negative-2026-09-20) | [GSMG_PHASE540_FRESH_CONTEXT_AGENT_INSIGHT_PILOT](GSMG_PHASE540_FRESH_CONTEXT_AGENT_INSIGHT_PILOT.md) |
 | 542 | P542 | 2026-09-21 | terminal `e` completes Selection A uniquely, but yields no instruction | — | [source](../tools/gsmg/findings/P00542.md) | [link](../tools/gsmg/FINDINGS.md#phase-542-terminal-e-completes-selection-a-uniquely-but-yields-no-instruction-2026-09-21) | [GSMG_PHASE525A_DBBI_SELECTION_A_RECONSTRUCTION_AUDIT](GSMG_PHASE525A_DBBI_SELECTION_A_RECONSTRUCTION_AUDIT.md) |
 | 543 | P543 | 2026-09-21 | Selection A historical-parity gaps, closed negative | — | [source](../tools/gsmg/findings/P00543.md) | [link](../tools/gsmg/FINDINGS.md#phase-543-selection-a-historical-parity-gaps-closed-negative-2026-09-21) | [GSMG_PHASE543_SELECTION_A_PARITY_AUDIT](GSMG_PHASE543_SELECTION_A_PARITY_AUDIT.md) |
+| 544 | P544 | 2026-09-21 | rail-feasible lexicon scan of the BTCSEED decode, closed null-like | — | [source](../tools/gsmg/findings/P00544.md) | [link](../tools/gsmg/FINDINGS.md#phase-544-rail-feasible-lexicon-scan-of-the-btcseed-decode-closed-null-like-2026-09-21) | [GSMG_PHASE544_RAIL_FEASIBLE_LEXICON_SCAN](GSMG_PHASE544_RAIL_FEASIBLE_LEXICON_SCAN.md) |

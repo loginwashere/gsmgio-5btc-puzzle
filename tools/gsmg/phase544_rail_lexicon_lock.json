@@ -1,0 +1,124 @@
+{
+  "bar_p": 0.01,
+  "controls": {
+    "control_decode": {
+      "even_rail_only_BCDE_200_shuffles": true,
+      "even_rail_only_BCDE_real": true,
+      "length_570": true,
+      "prefix_is_BTCSEED": true,
+      "sha256_matches_phase425": true
+    },
+    "control_model": {
+      "even_marginal_max_dev_under_0.01": true,
+      "odd_marginal_max_dev_under_0.01": true,
+      "p_even_sums_to_one": true,
+      "p_odd_sums_to_one": true,
+      "surprisal_prefix_matches_direct": true
+    },
+    "control_planted": {
+      "ok": true,
+      "rows": {
+        "even/6": {
+          "argmax_is_plant": true,
+          "family_p": 0.0045995400459954,
+          "found": true,
+          "offset": 200,
+          "s1_bits": 19.8,
+          "s1_p": 0.025997400259974,
+          "s2_bits": 68.459,
+          "s2_p": 0.0023997600239976003,
+          "word": "BABIED"
+        },
+        "even/8": {
+          "argmax_is_plant": true,
+          "family_p": 0.00029997000299970003,
+          "found": true,
+          "offset": 200,
+          "s1_bits": 26.209,
+          "s1_p": 0.00019998000199980003,
+          "s2_bits": 74.867,
+          "s2_p": 0.0016998300169983002,
+          "word": "BADGERED"
+        },
+        "odd/10": {
+          "argmax_is_plant": true,
+          "family_p": 9.999000099990002e-05,
+          "found": true,
+          "offset": 301,
+          "s1_bits": 32.022,
+          "s1_p": 9.999000099990002e-05,
+          "s2_bits": 80.681,
+          "s2_p": 0.0011998800119988001,
+          "word": "REFERENCED"
+        },
+        "odd/6": {
+          "argmax_is_plant": true,
+          "family_p": 0.0046995300469953,
+          "found": true,
+          "offset": 301,
+          "s1_bits": 19.26,
+          "s1_p": 0.046295370462953706,
+          "s2_bits": 67.919,
+          "s2_p": 0.0024997500249975004,
+          "word": "ABIDED"
+        },
+        "odd/8": {
+          "argmax_is_plant": true,
+          "family_p": 9.999000099990002e-05,
+          "found": true,
+          "offset": 301,
+          "s1_bits": 28.052,
+          "s1_p": 9.999000099990002e-05,
+          "s2_bits": 76.711,
+          "s2_p": 0.0015998400159984002,
+          "word": "DEADHEAD"
+        }
+      }
+    },
+    "control_scan_and_cover": {
+      "cover_picks_higher_surprisal": true,
+      "cover_total_equals_chosen_sum": true,
+      "finds_expected_words": true,
+      "prefix_excluded": true
+    },
+    "null": {
+      "l2_mean": 0.0608,
+      "pool_sha256": "6c4b617bc2b4d13376bf325e36f52918c3df8b26f753b30de6b611559033ecfc",
+      "s1_quantiles": {
+        "q50": 14.492,
+        "q90": 18.464,
+        "q99": 20.686
+      },
+      "s2_quantiles": {
+        "q50": 14.525,
+        "q90": 33.387,
+        "q99": 53.72
+      },
+      "trials": 10000
+    }
+  },
+  "data_py_sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+  "dictionary_file_sha256": "9f513f1ceadb6a01c5485b7dbdfd5118dc66cd70b59cae2851292112d4066a32",
+  "dictionary_path": "/usr/share/dict/american-english",
+  "faed_sha256": "585ee5d801486348f3396b3301bc87f14420204ed3242e67bc53d60cfed14664",
+  "l2_words": [
+    "YOUWON",
+    "KMODEST",
+    "MODEST",
+    "SATOSHI",
+    "SEED",
+    "KEY",
+    "WALLET"
+  ],
+  "lexicon_list_sha256": "717b863cdfc6663ca9e6fb0d090459a7f1c58aaab80478778a36585275b9d8e2",
+  "lexicon_words": 67696,
+  "n_trials": 10000,
+  "null_seed": 544000,
+  "phase": 544,
+  "phase386_script_sha256": "906f73eb40d61db595c5f2617fd1a2a69fc85f044ae32ac4439b8c3361276f52",
+  "phase396_script_sha256": "173a0cf15fb253c8748d27450df2f12c0d087dfce05fa5b5ce129016d47de97d",
+  "protocol_sha256": "084f1c0219ec73fa4057c380eca5e48d42463e74c3cb71f6878ac7c210b7ed87",
+  "script_sha256": "8974e5dd53a8b39e7faaa830c274a7ab031477bdbe72b0727659f089b75df9f3",
+  "square": "DBIFHCEGAKLMNOPQRSTUVWXYZ",
+  "test_sha256": "fb5c61026c1923fccdfd1ffb7452daa018cb7981fa83ed9b4cbbdd0e0a406a1e"
+}

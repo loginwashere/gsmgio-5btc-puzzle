@@ -1,0 +1,53 @@
+{
+  "phase": 544,
+  "lock_sha256": "b1a2754824b608dc2e6ee5e4f342633bbb3a090a1c86e8c7390de4008d8fbdfe",
+  "occurrences_len_ge_5": 3,
+  "s1_bits": 17.606,
+  "s2_bits": 48.659,
+  "s1_p": 0.1740825917408259,
+  "s2_p": 0.027597240275972403,
+  "family_min_p": 0.027597240275972403,
+  "family_corrected_p": 0.04999500049995,
+  "bar_p": 0.01,
+  "outcome": "null_like",
+  "top_occurrences": [
+    {
+      "offset": 129,
+      "word": "MEDEA",
+      "bits": 17.606
+    },
+    {
+      "offset": 351,
+      "word": "MELDS",
+      "bits": 16.071
+    },
+    {
+      "offset": 218,
+      "word": "ENDUE",
+      "bits": 14.982
+    }
+  ],
+  "best_cover": [
+    {
+      "offset": 129,
+      "word": "MEDEA",
+      "bits": 17.606
+    },
+    {
+      "offset": 218,
+      "word": "ENDUE",
+      "bits": 14.982
+    },
+    {
+      "offset": 351,
+      "word": "MELDS",
+      "bits": 16.071
+    }
+  ],
+  "l2_arm": {
+    "count": 0,
+    "words_present": [],
+    "p": 1.0
+  },
+  "oracle_calls": 0
+}

@@ -37,6 +37,8 @@ then closes the main historical-coverage differences for both Selection A row
 outputs: direction and Caesar statistics are ordinary, exact direct-cipher
 coverage is negative, and a targeted 91,601,280-decryption four-slot delta has
 zero strong or structural hits.
+[Phase 544](GSMG_PHASE544_RAIL_FEASIBLE_LEXICON_SCAN.md) scores dictionary words embedded in the BTCSEED
+tail by surprisal under the exact rail model (even rail only B/C/D/E): null-like, corrected p 0.050 against a 0.01 bar.
 See the phase index for intervening work.
 
 Entry point for this vault. [README.md](../README.md) is the historical
