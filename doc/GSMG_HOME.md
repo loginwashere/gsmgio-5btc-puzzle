@@ -6,8 +6,8 @@ date: 2026-09-01
 
 # GSMG 5 BTC Puzzle — Home
 
-**2026-09-20 update:** The historical overview below is not a complete summary
-of Phases 468–541. The latest
+**2026-09-21 update:** The historical overview below is not a complete summary
+of Phases 468–542. The latest
 [closed-system reassessment](GSMG_CLOSED_SYSTEM_REASSESSMENT_2026_09_20.md)
 qualifies DBBI's checkerboard evidence with prime-scaffold controls (Phase 534)
 and executes the previously omitted Selection-A-to-matrix composition (Phase
@@ -28,6 +28,10 @@ reads DBBI and its payload as base-9 scalars under every digit bijection
 agents generated 848 interpretation-type candidates from a history-free dossier, none opened a blob.
 [Phase 541](GSMG_PHASE541_FRESH_CONTEXT_AGENT_ROUND2.md) repeats it with derived facts added and
 operation proposals as sandboxed code: 60 proposals ran, 12,633 bases and 6,979 key-shaped strings, no hit.
+[Phase 542](GSMG_PHASE542_TERMINAL_E_COMPLETION_AUDIT.md) uniquely places the
+84-token parse's terminal `e` at the missing source-byte-24 endpoint, completing
+Selection A without collisions; the resulting `IZLKEXKGGIPPEN` still supplies
+no instruction or cross-source-stable Architect reading.
 See the phase index for intervening work.
 
 Entry point for this vault. [README.md](../README.md) is the historical

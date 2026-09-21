@@ -52,8 +52,11 @@ would be flagged. No detector gap remains.
 - **Phase 525 full provenance audit.** It needs the `~/Downloads` Telegram export
   and Atlas PDF. Both were present on 2026-09-20 with matching hashes, and a full
   rerun reproduced the committed result exactly.
-- **Terminal `e` in the 84-token parse.** Its role and placement are unexplained;
-  Phase 535 left it unplaced rather than inventing a rule.
+- **Terminal `e` in the 84-token parse (resolved by Phase 542).** Selection A's
+  source-byte conservation fixes it at the omitted byte-24 endpoint, completing
+  84 cells without collision. The row output `IZLKEXKGGIPPEN` and fixed
+  Architect consumer remain unreadable, so this closes placement but does not
+  supply the missing consumer.
 - **Documentation error.** The Cosmic untaken-paths note gives the Phase 3.2.2
   selection as `ncsyangcahirivasoalbefayanestve`. Phase 48's exact mask gives
   `ncsyangcahiriasogaleafayanestve`. The old note was not edited.
