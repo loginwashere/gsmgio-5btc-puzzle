@@ -18,10 +18,12 @@ mod secp256k1_gpu;
 mod selftest;
 
 use clap::Parser;
+use rayon::prelude::*;
 use std::io::BufRead;
 #[cfg(feature = "cuda")]
 use std::io::Write;
 use std::path::PathBuf;
+use std::sync::atomic::{AtomicUsize, Ordering};
 #[cfg(feature = "cuda")]
 use std::sync::Arc;
 
@@ -108,6 +110,17 @@ struct Cli {
     /// blobs::seed_variant_table().
     #[arg(long, default_value_t = false)]
     seed_cbc: bool,
+
+    /// Run the default 60-variant AES table on CPU, globally deduplicating
+    /// expanded passphrase materials and caching each KDF derivation across
+    /// key sizes and modes. Intended as a bounded fallback when CUDA is not
+    /// available; records the same weak/strong/structural text gates.
+    #[arg(long, default_value_t = false)]
+    cpu_sweep: bool,
+
+    /// Optional expanded-material limit for CPU performance checks.
+    #[arg(long)]
+    cpu_limit: Option<usize>,
 }
 
 fn main() {
@@ -120,6 +133,9 @@ fn main() {
 #[cfg(not(feature = "cuda"))]
 fn run() -> Result<(), Box<dyn std::error::Error>> {
     let cli = Cli::parse();
+    if cli.cpu_sweep {
+        return run_cpu_sweep(&cli);
+    }
     if cli.stream_half_check {
         return run_stream_half_check(&cli);
     }
@@ -132,6 +148,10 @@ fn run() -> Result<(), Box<dyn std::error::Error>> {
 #[cfg(feature = "cuda")]
 fn run() -> Result<(), Box<dyn std::error::Error>> {
     let cli = Cli::parse();
+
+    if cli.cpu_sweep {
+        return run_cpu_sweep(&cli);
+    }
 
     let gpu = gpu::GpuOracle::new()?;
     println!("[main] GPU device: {}", gpu.device_name()?);
@@ -152,6 +172,87 @@ fn run() -> Result<(), Box<dyn std::error::Error>> {
         run_stream_half_check(&cli)?;
     }
 
+    Ok(())
+}
+
+fn run_cpu_sweep(cli: &Cli) -> Result<(), Box<dyn std::error::Error>> {
+    use std::collections::HashSet;
+    use std::sync::Arc;
+
+    let (expanded, expanded_sources) = expand_wordlist_candidates(cli)?;
+    let mut seen = HashSet::new();
+    let mut candidates = Vec::new();
+    let mut sources = Vec::new();
+    for (candidate, source) in expanded.into_iter().zip(expanded_sources) {
+        if seen.insert(candidate.clone()) {
+            candidates.push(candidate);
+            sources.push(source);
+        }
+    }
+    if let Some(limit) = cli.cpu_limit {
+        candidates.truncate(limit);
+        sources.truncate(limit);
+    }
+    println!("[cpu] {} globally unique passphrase materials", candidates.len());
+    if let Some(dir) = cli.output.parent() {
+        if !dir.as_os_str().is_empty() {
+            std::fs::create_dir_all(dir)?;
+        }
+    }
+    let writer = Arc::new(output::OutputWriter::new(cli.output.to_str().ok_or("bad output path")?)?);
+    let blobs = blobs::load_blobs();
+    let done = AtomicUsize::new(0);
+    let hit_count = AtomicUsize::new(0);
+    candidates.par_iter().zip(sources.par_iter()).for_each(|(candidate, source)| {
+        for blob in &blobs {
+            for &kdf in &[
+                blobs::KDF_LEGACY_MD5,
+                blobs::KDF_LEGACY_SHA1,
+                blobs::KDF_LEGACY_SHA256,
+                blobs::KDF_PBKDF2_SHA256,
+            ] {
+                let material = cpu_oracle::derive_max_aes_material(kdf, candidate.as_bytes(), &blob.salt);
+                for &key_len in &[16usize, 24, 32] {
+                    for &mode in &[
+                        blobs::CIPHER_CBC,
+                        blobs::CIPHER_ECB,
+                        blobs::CIPHER_CFB,
+                        blobs::CIPHER_OFB,
+                        blobs::CIPHER_CTR,
+                    ] {
+                        let (kind, body) = cpu_oracle::try_open_derived(&material, key_len, mode, &blob.ciphertext);
+                        let (hit_kind, z_score) = match kind {
+                            cpu_oracle::HitKind::None => continue,
+                            cpu_oracle::HitKind::Weak(z) => ("weak", z),
+                            cpu_oracle::HitKind::Strong(z) => ("strong", z),
+                            cpu_oracle::HitKind::Structural => ("structural", 0.0),
+                        };
+                        hit_count.fetch_add(1, Ordering::Relaxed);
+                        let preview = body.unwrap_or_default();
+                        writer.write_hit(&output::Hit {
+                            candidate: candidate.clone(),
+                            candidate_source: source.clone(),
+                            keystring_form: candidate.clone(),
+                            kdf: blobs::variant_label(kdf, key_len as i32, mode),
+                            key_bits: (key_len * 8) as u32,
+                            blob_tag: blob.tag.to_string(),
+                            hit_kind: hit_kind.to_string(),
+                            z_score,
+                            body_preview: String::from_utf8_lossy(&preview[..preview.len().min(64)]).to_string(),
+                        });
+                    }
+                }
+            }
+        }
+        let n = done.fetch_add(1, Ordering::Relaxed) + 1;
+        if n % 10_000 == 0 {
+            eprintln!("[cpu] {n}/{} materials complete", candidates.len());
+        }
+    });
+    println!(
+        "[cpu] complete: {} materials x 60 variants x {} blobs; {} weak/strong/structural rows",
+        candidates.len(), blobs.len(), hit_count.load(Ordering::Relaxed)
+    );
     Ok(())
 }
 

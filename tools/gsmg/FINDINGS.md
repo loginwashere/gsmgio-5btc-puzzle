@@ -30869,25 +30869,6 @@ dated protocol.
 **Reopen condition:** A changed dossier (a new artifact or a specific new reading of a
 clue), or a new constraint on which readings to generate. Not more agents or wider
 lens lists on the same dossier.
-
-## Phase 542 — terminal `e` completes Selection A uniquely, but yields no instruction (2026-09-21)
-
-Conditional on Selection A, its 23 retained picture events represent source bytes 1–23 exactly
-once. Of its two omissions, event 22 duplicates byte 21 (already represented
-by FEFE), while event 25 is byte 24's endpoint. Placing the 84-token parse's
-terminal `e=5` at event 25 is therefore the unique omitted-event completion of
-the same source-byte invariant. It is collision-free and fills 84 cells.
-
-The completed row sums are
-`34,51,37,36,30,49,62,58,32,34,41,15,56,13`, rendering
-`IZLKEXKGGIPPEN`. Phase 535's unchanged Architect consumer remains unreadable
-and differs between film and screenplay. The tail-placement gap is closed only
-inside Selection A's community-derived invariant; this does not promote it
-over the historical `IZLKESEEDQPPEN` construction. The completed matrix still
-lacks a selected consumer. No oracle was called.
-
-**Artifacts:** [audit](../../doc/GSMG_PHASE542_TERMINAL_E_COMPLETION_AUDIT.md),
-`phase542_terminal_e_completion_audit.py`, result JSON.
 ## Phase 541 — fresh-context agents round 2: derived facts and operation proposals, closed negative (2026-09-20)
 
 **Question:** With the project's reconstructed closed-system objects added to the
@@ -30929,3 +30910,66 @@ coverage); mechanism novelty was not audited.
 
 **Reopen condition:** A changed dossier (a new artifact) or a new constraint on the
 operation type chosen in advance. Not more agents or wider lenses on this dossier.
+## Phase 542 — terminal `e` completes Selection A uniquely, but yields no instruction (2026-09-21)
+
+**Question:** Can the 84-token parse's unhosted terminal `e` be placed without
+choosing a location from output readability?
+
+**Method:** Selection A already retains 23 picture events representing source
+bytes 1–23 exactly once. Its omitted event 22 duplicates source byte 21, whose
+FEFE event is retained; omitted event 25 is source byte 24's endpoint. Place
+the 24th DBBI object, terminal `e=5`, only at event 25 and rerun Phase 535's
+unchanged matrix, row-sum rendering, and Architect consumer. No alternatives,
+language search, cipher, or oracle were used.
+
+**Result:** The placement is empty and collision-free, represents source bytes
+1–24 exactly once, and produces 84 occupied cells. Row sums are
+`34,51,37,36,30,49,62,58,32,34,41,15,56,13`, rendering
+`IZLKEXKGGIPPEN`. The fixed backward-word consumer yields
+`lttyarmttlttfa` for the film and `tawttbwistdhet` for the screenplay: no
+recognition and no cross-source agreement.
+
+**Disposition:** conditional structural completion only. If Selection A's
+community-derived source-byte invariant is accepted, the terminal placement
+is fixed; this does not establish Selection A over the historical
+`IZLKESEEDQPPEN` construction. The completed matrix still has no authenticated
+consumer.
+
+**Artifacts:**
+[audit](../../doc/GSMG_PHASE542_TERMINAL_E_COMPLETION_AUDIT.md),
+`phase542_terminal_e_completion_audit.py`,
+`phase542_terminal_e_completion_result.json`.
+
+**Reopen condition:** an authenticated consumer for the completed matrix or
+its sum list, not alternate tail placements or value conventions.
+## Phase 543 — Selection A historical-parity gaps, closed negative (2026-09-21)
+
+**Question:** Do the matrix-direction, Caesar, direct-cipher and four-slot
+grammar checks previously given to historical `IZLKESEEDQPPEN` produce a lead
+from `IZLKESKGGIPPEN` or completed `IZLKEXKGGIPPEN`?
+
+**Method:** Rebuilt both matrices; scored four row/column directions and all
+Caesar shifts under 20,000 collision-free Selection-A group permutations per
+matrix. Expanded both exact outputs to 36 passphrase materials and tested the
+historical AES/3DES, ECB, stream, Key Wrap, Blowfish, Camellia and SEED-CBC
+families against four blobs. Substituted each output only into Phase 524's
+`matrixsumlist` slot, producing 14,078 bases and 381,672 unique materials, then
+ran the default 60-variant AES table by an independently regression-checked,
+KDF-cached CPU path.
+
+**Result:** Direction-family p-values are 0.17134 and 0.40958; Caesar-family
+p-values are 0.60312 and 0.74236. Exact direct cipher parity: 20,160 effective
+operations, zero hits. Slot delta: 91,601,280 decryptions, 32 weak rows, zero
+strong and zero structural; all weak rows rederived with matching scores and
+zero key shapes. The CPU slot run does not claim the GPU-only unconditional
+raw-stream Bloom/known-target detector.
+
+**Disposition:** rejected for these declared families. Neither Selection A
+output earns priority or supplies a consumer.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE543_SELECTION_A_PARITY_AUDIT.md),
+`phase543_selection_a_parity_audit.py`, result JSON, test, and the CPU fallback
+in `tools/gpu_oracle`.
+
+**Reopen condition:** an authenticated consumer, or restored CUDA access only
+for the disclosed raw-stream target-detector remainder.

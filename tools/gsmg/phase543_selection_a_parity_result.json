@@ -1,0 +1,215 @@
+{
+  "phase": 543,
+  "candidates": [
+    "IZLKESKGGIPPEN",
+    "IZLKEXKGGIPPEN"
+  ],
+  "structural": {
+    "seed": 20260921,
+    "trials_per_matrix": 20000,
+    "permutation_draws": 27229,
+    "conditioning": "shuffle 23 fixed DBBI groups over Selection A endpoints; accept collision-free; completed arm also requires the fixed event-25 cell empty before placing e",
+    "matrices": {
+      "incomplete": {
+        "occupied_cells": 83,
+        "row_sums": [
+          34,
+          51,
+          37,
+          36,
+          30,
+          44,
+          62,
+          58,
+          32,
+          34,
+          41,
+          15,
+          56,
+          13
+        ],
+        "column_sums": [
+          6,
+          27,
+          28,
+          23,
+          24,
+          32,
+          26,
+          48,
+          12,
+          98,
+          59,
+          57,
+          56,
+          47
+        ],
+        "diagonal_sums": [
+          35,
+          60
+        ],
+        "outputs": {
+          "rows_forward": "IZLKESKGGIPPEN",
+          "rows_reverse": "NEPPIGGKSEKLZI",
+          "columns_forward": "GBCXYGAWMUHFEV",
+          "columns_reverse": "VEFHUMWAGYXCBG"
+        },
+        "diagonals": {
+          "main_then_anti": "JI",
+          "anti_then_main": "IJ"
+        },
+        "best_direction": "rows_forward",
+        "best_direction_score": -6.868388844004253,
+        "best_caesar_member": "rows_reverse_caesar_22",
+        "best_caesar_output": "JALLECCGOAGHVE",
+        "best_caesar_score": -6.190040197211266,
+        "direction_at_least_as_good": 3426,
+        "direction_empirical_p": 0.17134143292835358,
+        "caesar_at_least_as_good": 12062,
+        "caesar_empirical_p": 0.6031198440077996
+      },
+      "complete": {
+        "occupied_cells": 84,
+        "row_sums": [
+          34,
+          51,
+          37,
+          36,
+          30,
+          49,
+          62,
+          58,
+          32,
+          34,
+          41,
+          15,
+          56,
+          13
+        ],
+        "column_sums": [
+          6,
+          27,
+          28,
+          23,
+          24,
+          32,
+          31,
+          48,
+          12,
+          98,
+          59,
+          57,
+          56,
+          47
+        ],
+        "diagonal_sums": [
+          35,
+          60
+        ],
+        "outputs": {
+          "rows_forward": "IZLKEXKGGIPPEN",
+          "rows_reverse": "NEPPIGGKXEKLZI",
+          "columns_forward": "GBCXYGFWMUHFEV",
+          "columns_reverse": "VEFHUMWFGYXCBG"
+        },
+        "diagonals": {
+          "main_then_anti": "JI",
+          "anti_then_main": "IJ"
+        },
+        "best_direction": "rows_forward",
+        "best_direction_score": -7.419984204986119,
+        "best_caesar_member": "rows_reverse_caesar_22",
+        "best_caesar_output": "JALLECCGTAGHVE",
+        "best_caesar_score": -6.313840699044962,
+        "direction_at_least_as_good": 8191,
+        "direction_empirical_p": 0.4095795210239488,
+        "caesar_at_least_as_good": 14847,
+        "caesar_empirical_p": 0.7423628818559072
+      }
+    }
+  },
+  "direct_cipher": {
+    "candidates": [
+      "IZLKESKGGIPPEN",
+      "IZLKEXKGGIPPEN"
+    ],
+    "unique_passphrase_materials": 36,
+    "blobs": [
+      "SALPH",
+      "COSMIC",
+      "P32TRAILING",
+      "URLBLOB"
+    ],
+    "variants": {
+      "older_cbc": 24,
+      "ecb": 12,
+      "stream": 36,
+      "keywrap_kdf": 12,
+      "menu_gap_cbc": 20
+    },
+    "effective_operations": 20160,
+    "hits": {
+      "older_cbc": [],
+      "ecb": [],
+      "stream": [],
+      "keywrap": [],
+      "menu_gap_cbc": []
+    },
+    "total_hits": 0
+  },
+  "slot_delta": {
+    "slot_order": [
+      "yellowblueprimes",
+      "matrixsumlist",
+      "lastwordsbeforearchichoice",
+      "yinyang"
+    ],
+    "substituted_slot": "matrixsumlist",
+    "candidates": [
+      "IZLKESKGGIPPEN",
+      "IZLKEXKGGIPPEN"
+    ],
+    "bases_per_candidate": {
+      "IZLKESKGGIPPEN": 7039,
+      "IZLKEXKGGIPPEN": 7039
+    },
+    "unique_bases": 14078,
+    "base_list_sha256": "8b76b4c4659617fd41794121fdf55607d8cdb1912dfbac5e526bc76369b51f3f",
+    "unique_standard_materials": 381672,
+    "expected_gpu_forms": 741348,
+    "wordlist": "_work/phase543/slot_bases.txt",
+    "oracle_status": "complete-cpu-deduplicated-materials",
+    "variant_table": "4 KDFs x 3 AES key sizes x CBC/ECB/CFB/OFB/CTR",
+    "blobs": [
+      "SALPH",
+      "COSMIC",
+      "P32TRAILING",
+      "URLBLOB"
+    ],
+    "materials_tested": 381672,
+    "effective_decryptions": 91601280,
+    "hit_file_sha256": "fe9e9106022ec54d0074a4040f77a2d14fe363a7f3159c47ff818916888a1794",
+    "hit_rows": 32,
+    "hit_kinds": {
+      "weak": 32,
+      "strong": 0,
+      "structural": 0
+    },
+    "max_weak_z": 6.351673219786248,
+    "weak_review": {
+      "weak_rows": 32,
+      "reconstructed": 32,
+      "padding_reconstruct_failures": 0,
+      "z_mismatches": 0,
+      "key_shaped_matches": 0,
+      "key_shaped": [],
+      "reconstructed_by_blob": {
+        "URLBLOB": 12,
+        "COSMIC": 2,
+        "P32TRAILING": 10,
+        "SALPH": 8
+      }
+    }
+  },
+  "script_sha256": "3e87871f17f4099d83f44a978e879597c44d60ebf063887f50a763703619ba77"
+}

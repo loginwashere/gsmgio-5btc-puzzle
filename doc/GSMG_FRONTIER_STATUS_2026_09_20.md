@@ -41,6 +41,7 @@ would be flagged. No detector gap remains.
 | OpenSSL menu and numeric/temporal material | 519, 522 | CAST5 and RC4 closed; numeric and temporal widening closed | a new cipher clue |
 | FAED operator eligibility; consumer-first matrix | 531, 532 | 0 of 10 eligible; zero evidence-complete runs | a newly bound operator or consumer |
 | Fresh-context agent pilots (interpretation-type candidates; derived facts and operation proposals) | 540, 541 | 848 candidates, then 60 executed proposals and 12,633 bases; 0 oracle or key-shape hits; recall of `causality` was memory, not insight | a changed dossier (new artifact) or a pre-chosen operation type, not more agents |
+| Selection A historical-parity checks | 543 | both matrices ordinary under direction/Caesar nulls; exact direct ciphers and 91,601,280-decryption targeted slot delta negative | an authenticated consumer; CUDA only for the disclosed raw-stream target-detector remainder |
 
 ## Still open, none a clue
 
@@ -58,6 +59,11 @@ would be flagged. No detector gap remains.
   collision. The row output `IZLKEXKGGIPPEN` and fixed Architect consumer
   remain unreadable. This closes placement only within Selection A and does
   not supersede the historical `IZLKESEEDQPPEN` construction.
+- **Selection A parity checks (resolved by Phase 543).** The old construction's
+  direction, Caesar, direct-cipher and four-slot password treatment has now
+  been repeated in bounded form for `IZLKESKGGIPPEN` and `IZLKEXKGGIPPEN`.
+  All are negative. Only the GPU-only unconditional raw-stream address detector
+  remains unclaimed for the new slot substitutions.
 - **Documentation error.** The Cosmic untaken-paths note gives the Phase 3.2.2
   selection as `ncsyangcahirivasoalbefayanestve`. Phase 48's exact mask gives
   `ncsyangcahiriasogaleafayanestve`. The old note was not edited.

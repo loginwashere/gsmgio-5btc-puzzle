@@ -93,6 +93,19 @@ pub fn derive_key_iv(kdf: i32, passwd: &[u8], salt: &[u8; 8], key_len: usize, mo
     (material[..key_len].to_vec(), material[key_len..].to_vec())
 }
 
+/// Derive the longest AES-CBC material once. KDF output is prefix-stable, so
+/// this one 48-byte value supplies every 128/192/256-bit key and its
+/// key-length-dependent 16-byte IV, as well as every ECB key prefix. This is
+/// used by the CPU batch sweep to avoid repeating PBKDF2 for all 15
+/// key-size/mode combinations.
+pub fn derive_max_aes_material(kdf: i32, passwd: &[u8], salt: &[u8; 8]) -> Vec<u8> {
+    if kdf == KDF_PBKDF2_SHA256 {
+        pbkdf2_material(passwd, salt, 48)
+    } else {
+        evp_bytes_to_key(kdf, passwd, salt, 48)
+    }
+}
+
 fn aes_cbc_decrypt(key: &[u8], iv: &[u8], ct: &[u8]) -> Option<Vec<u8>> {
     // Decrypt block-by-block into a mutable copy, no unpadding here -- we
     // need the raw padded plaintext to run cb_common.py's own PKCS7 check.
@@ -328,6 +341,64 @@ pub fn try_open(candidate: &[u8], kdf: i32, key_len: usize, mode: i32, salt: &[u
     }
 }
 
+/// The default AES oracle using already-derived 48-byte material. See
+/// `derive_max_aes_material`; this deliberately excludes the opt-in SEED
+/// family, whose key schedule is separate.
+pub fn try_open_derived(material: &[u8], key_len: usize, mode: i32, ct: &[u8]) -> (HitKind, Option<Vec<u8>>) {
+    if material.len() < key_len + 16 || ct.is_empty() {
+        return (HitKind::None, None);
+    }
+    let key = &material[..key_len];
+    let iv = &material[key_len..key_len + 16];
+    match mode {
+        CIPHER_CBC | CIPHER_ECB => {
+            if ct.len() % 16 != 0 {
+                return (HitKind::None, None);
+            }
+            let pt = if mode == CIPHER_CBC {
+                aes_cbc_decrypt(key, iv, ct)
+            } else {
+                aes_ecb_decrypt(key, ct)
+            };
+            let Some(pt) = pt else { return (HitKind::None, None) };
+            let Some(body_len) = pkcs7_check(&pt) else { return (HitKind::None, None) };
+            let pad = pt.len() - body_len;
+            let body = &pt[..body_len];
+            if pad == 16 {
+                return (HitKind::Structural, Some(body.to_vec()));
+            }
+            let z = printable_z_score(body);
+            if z >= PRINTABLE_Z_STRONG {
+                (HitKind::Strong(z), Some(body.to_vec()))
+            } else if z >= PRINTABLE_Z_WEAK {
+                (HitKind::Weak(z), Some(body.to_vec()))
+            } else {
+                (HitKind::None, None)
+            }
+        }
+        CIPHER_CFB | CIPHER_OFB | CIPHER_CTR => {
+            let body = match mode {
+                CIPHER_CFB => aes_cfb_decrypt(key, iv, ct),
+                CIPHER_OFB => aes_ofb_decrypt(key, iv, ct),
+                _ => aes_ctr_decrypt(key, iv, ct),
+            };
+            let Some(body) = body else { return (HitKind::None, None) };
+            if body.is_empty() {
+                return (HitKind::None, None);
+            }
+            let z = printable_z_score(&body);
+            if z >= PRINTABLE_Z_STRONG {
+                (HitKind::Strong(z), Some(body))
+            } else if z >= PRINTABLE_Z_WEAK {
+                (HitKind::Weak(z), Some(body))
+            } else {
+                (HitKind::None, None)
+            }
+        }
+        _ => (HitKind::None, None),
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -359,6 +430,27 @@ mod tests {
         let ct = &raw[16..];
         let (kind, _) = try_open(b"definitely_not_the_password", KDF_LEGACY_SHA256, 32, CIPHER_CBC, &salt, ct);
         assert_eq!(kind, HitKind::None);
+    }
+
+    #[test]
+    fn cached_material_matches_individual_default_aes_derivations() {
+        let blob = &blobs::load_blobs()[0];
+        let candidate = b"phase543-cached-material-regression";
+        for &kdf in &[
+            KDF_LEGACY_MD5,
+            KDF_LEGACY_SHA1,
+            KDF_LEGACY_SHA256,
+            KDF_PBKDF2_SHA256,
+        ] {
+            let material = derive_max_aes_material(kdf, candidate, &blob.salt);
+            for &key_len in &[16usize, 24, 32] {
+                for &mode in &[CIPHER_CBC, CIPHER_ECB, CIPHER_CFB, CIPHER_OFB, CIPHER_CTR] {
+                    let ordinary = try_open(candidate, kdf, key_len, mode, &blob.salt, &blob.ciphertext);
+                    let cached = try_open_derived(&material, key_len, mode, &blob.ciphertext);
+                    assert_eq!(ordinary, cached, "kdf={kdf} key_len={key_len} mode={mode}");
+                }
+            }
+        }
     }
 
     #[test]

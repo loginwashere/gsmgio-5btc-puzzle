@@ -32,7 +32,11 @@ operation proposals as sandboxed code: 60 proposals ran, 12,633 bases and 6,979 
 the 84-token parse's terminal `e` at the missing source-byte-24 endpoint under
 Selection A's community-derived invariant, completing it without collisions;
 the resulting `IZLKEXKGGIPPEN` supplies no instruction and does not supersede
-the historical `IZLKESEEDQPPEN` construction.
+the historical `IZLKESEEDQPPEN` construction. [Phase 543](GSMG_PHASE543_SELECTION_A_PARITY_AUDIT.md)
+then closes the main historical-coverage differences for both Selection A row
+outputs: direction and Caesar statistics are ordinary, exact direct-cipher
+coverage is negative, and a targeted 91,601,280-decryption four-slot delta has
+zero strong or structural hits.
 See the phase index for intervening work.
 
 Entry point for this vault. [README.md](../README.md) is the historical
