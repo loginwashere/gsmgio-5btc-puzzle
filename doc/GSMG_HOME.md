@@ -43,6 +43,8 @@ tail by surprisal under the exact rail model (even rail only B/C/D/E): null-like
 (three iterations, three rules) and decodes FAED, DBBI and VALIDATION_ANSWER under them: 27 cells, null-like, corrected p 0.025.
 [Phase 546](GSMG_PHASE546_PREFIX_SELECTIVITY_CURVE.md) calibrates the `BTCSEED` prefix over 362,880 keyed squares and 20 million
 random ones: a prefix splittable into two words is common (1.4%), the exact string is rare; the prefix should not be the reason to continue.
+[Phase 547](GSMG_PHASE547_NINE_SYMBOL_ORIGIN_CENSUS.md) tests keyed Trifid coordinates, phone multi-tap, Morbit and Pollux
+as the origin of the nine-symbol `a..i` alphabet: all gated cells null-like, 0 valid Morse maps.
 See the phase index for intervening work.
 
 Entry point for this vault. [README.md](../README.md) is the historical

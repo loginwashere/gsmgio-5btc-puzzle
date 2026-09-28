@@ -45,6 +45,7 @@ would be flagged. No detector gap remains.
 | BTCSEED tail: rail-feasible lexicon scan | 544 | 3 dictionary occurrences; corrected p 0.050 vs 0.01 bar; puzzle words absent | a held-out design that picks a lexicon or rail read independently |
 | BTCSEED tail: keyword cascade and tail-derived squares | 545 | 27 cells; corrected p 0.025 vs 0.01 bar; scattered noise words | a held-out design that fixes a keyword rule or object independently |
 | BTCSEED prefix selectivity (calibration gate) | 546 | two-word prefixes occur in 1.4% of keyed squares (cherry-pickable); exact string 2.2e-5 | a pre-declared class or population defined independently |
+| Nine-symbol origin census (Trifid coordinates, multi-tap, Morbit, Pollux) | 547 | Trifid IoC 0.0444 vs planted 0.064; Holm p 0.196 / 0.856 / 0.036 vs 0.01 bar; 0 valid Morse maps | a new nine-symbol producer with an independent source |
 
 ## Still open, none a clue
 

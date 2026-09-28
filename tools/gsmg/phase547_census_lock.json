@@ -1,0 +1,94 @@
+{
+  "protocol_sha256": "86278a8aee4b8daa0341a08df0a48c0382ec1a728f016ae216d5202ac82df0f6",
+  "script_sha256": "3621238897a26397122c7d5263aacf1b12e5d7a6426aae6618159494069ad4b8",
+  "test_sha256": "d3a3bbf73aff6522d8c68963845d44828a2db93dda076b1e4b2467c514e04b1c",
+  "data_py_sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+  "quadgram_sha256": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+  "text_source_sha256": "b4495d922058e72e00f8f629a5ac149c3dc230a282e47007f69b22dff288cc62",
+  "m1": {
+    "seed": 547,
+    "nulls": 1000
+  },
+  "m2": {
+    "seed": 5471,
+    "nulls": 500
+  },
+  "bar_holm": 0.01,
+  "controls": {
+    "machinery": {
+      "m1_vectorized_equals_direct": true,
+      "m2_vectorized_equals_direct": true,
+      "m2_checked": 306
+    },
+    "morse_planted": {
+      "morbit_valid": 2,
+      "morbit_true_key_found": true,
+      "pollux_valid": 5
+    },
+    "m1_planted": [
+      {
+        "start": 0,
+        "true_ioc": 0.0637272601027635,
+        "family_max": 0.0637272601027635,
+        "null_p99": 0.04569278664265472,
+        "true_reaches_max": true,
+        "exceeds_p99": true
+      },
+      {
+        "start": 100,
+        "true_ioc": 0.06375503402305235,
+        "family_max": 0.06375503402305235,
+        "null_p99": 0.04281693680110567,
+        "true_reaches_max": true,
+        "exceeds_p99": true
+      },
+      {
+        "start": 200,
+        "true_ioc": 0.06621302596861547,
+        "family_max": 0.06621302596861547,
+        "null_p99": 0.04905161761042889,
+        "true_reaches_max": true,
+        "exceeds_p99": true
+      },
+      {
+        "start": 300,
+        "true_ioc": 0.06564366060269407,
+        "family_max": 0.06564366060269407,
+        "null_p99": 0.04379997487121498,
+        "true_reaches_max": true,
+        "exceeds_p99": true
+      },
+      {
+        "start": 400,
+        "true_ioc": 0.0649770865157617,
+        "family_max": 0.0649770865157617,
+        "null_p99": 0.044048526475967104,
+        "true_reaches_max": true,
+        "exceeds_p99": true
+      }
+    ],
+    "m2_planted": [
+      {
+        "convention": "C1",
+        "true_valid": true,
+        "true_score": -4.199822902679443,
+        "c1_structure_ok": true,
+        "family_max": -4.199822902679443,
+        "null_max": -6.9701690673828125,
+        "true_reaches_max": true,
+        "exceeds_all_nulls": true
+      },
+      {
+        "convention": "C2",
+        "true_valid": true,
+        "true_score": -4.183038711547852,
+        "c1_structure_ok": false,
+        "family_max": -4.183038711547852,
+        "null_max": -6.993821620941162,
+        "true_reaches_max": true,
+        "exceeds_all_nulls": true
+      }
+    ],
+    "all_passed": true
+  }
+}

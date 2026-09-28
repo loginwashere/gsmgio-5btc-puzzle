@@ -1,0 +1,119 @@
+{
+  "lock_sha256": "88b026e9a345d1e6df8e8235adcc4566e2f347d84becb9a98eec9ca3d6a94a2e",
+  "m1": {
+    "FAED": {
+      "max_ioc": 0.04441049854186919,
+      "map": [
+        0,
+        5,
+        1,
+        2,
+        7,
+        6,
+        8,
+        3,
+        4
+      ],
+      "offset": 0,
+      "null_median": 0.04327735198447599,
+      "null_p99": 0.04538261367285114,
+      "p": 0.0979020979020979,
+      "gated": true
+    },
+    "DBBI": {
+      "max_ioc": 0.07853107344632769,
+      "map": [
+        0,
+        4,
+        1,
+        2,
+        7,
+        8,
+        5,
+        3,
+        6
+      ],
+      "offset": 1,
+      "null_median": 0.07740112994350283,
+      "null_p99": 0.09549717514124292,
+      "p": 0.44655344655344653,
+      "gated": false
+    }
+  },
+  "m2": {
+    "FAED": {
+      "stat": -7.7547712326049805,
+      "C1_max": -Infinity,
+      "C2_max": -7.7547712326049805,
+      "C2_x": "g",
+      "C2_decode": "TGMWNWTPJWGJEPGWPTMXTWJAHMWAGTGMPDPWGADMDGDJGDAPMATJTMTGATGJATGGMMGPKMGTNGTJGPTPWJMAUHTPAWGDWNTEPGMWMJEMMDPMGWTJWAGMTPAP",
+      "null_median": -7.588053226470947,
+      "null_valid_fraction": 0.99,
+      "p": 0.8562874251497006
+    },
+    "DBBI": {
+      "stat": -6.097701072692871,
+      "C1_max": -Infinity,
+      "C2_max": -6.097701072692871,
+      "C2_x": "e",
+      "C2_decode": "PBJAMATHADAJTWAAJTAEDABDUAUMAWAMPTANGPBMIDAMAEGAPGJAMANDJDAWA",
+      "null_median": -6.621567249298096,
+      "null_valid_fraction": 1.0,
+      "p": 0.011976047904191617
+    }
+  },
+  "m3_morbit": {
+    "FAED_fwd": {
+      "valid": 0,
+      "examples": []
+    },
+    "FAED_rev": {
+      "valid": 0,
+      "examples": []
+    },
+    "DBBI_fwd": {
+      "valid": 0,
+      "examples": []
+    },
+    "DBBI_rev": {
+      "valid": 0,
+      "examples": []
+    }
+  },
+  "m4_pollux": {
+    "FAED_fwd": {
+      "valid": 0,
+      "examples": []
+    },
+    "FAED_rev": {
+      "valid": 0,
+      "examples": []
+    },
+    "DBBI_fwd": {
+      "valid": 0,
+      "examples": []
+    },
+    "DBBI_rev": {
+      "valid": 0,
+      "examples": []
+    }
+  },
+  "gate": {
+    "M1-FAED": {
+      "p": 0.0979020979020979,
+      "holm": 0.1958041958041958,
+      "outcome": "null_like"
+    },
+    "M2-FAED": {
+      "p": 0.8562874251497006,
+      "holm": 0.8562874251497006,
+      "outcome": "null_like"
+    },
+    "M2-DBBI": {
+      "p": 0.011976047904191617,
+      "holm": 0.035928143712574856,
+      "outcome": "null_like"
+    }
+  },
+  "census_verdict": "no_untested_native_nine_producer_in_census"
+}
