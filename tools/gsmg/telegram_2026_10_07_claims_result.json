@@ -1,0 +1,86 @@
+{
+  "map_sha256": "53326674db16f4cdb5005dbe7590ce827438f629e3b5543043d462f4a6b9fd6f",
+  "items": {
+    "draikoon_74075": [
+      {
+        "base": "zion0101",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "Z1ON0101",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "unknow_74539": [
+      {
+        "base": "ZION",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "mohamad_74863": [
+      {
+        "base": "leavethematrix",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "yourlastcommand",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "hereismysecret",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "isolveditwithanabacus",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "secondanswer",
+        "materials": 15,
+        "hits": []
+      }
+    ]
+  },
+  "totals": {
+    "materials": 120,
+    "cbc": 0,
+    "stream": 0,
+    "ecb": 0,
+    "wrap": 0,
+    "raw_key": 0,
+    "address": 0
+  },
+  "boulayo_74719_replay": {
+    "hex+suffix/md5": {
+      "last_bytes": "ad01e2fc044e1870",
+      "valid_pad": false,
+      "pad_len": 0,
+      "printable_ratio": 0.375
+    },
+    "hex+suffix/sha256": {
+      "last_bytes": "ce14b90505050505",
+      "valid_pad": true,
+      "pad_len": 5,
+      "printable_ratio": 0.386
+    },
+    "HEX+suffix/md5": {
+      "last_bytes": "ae194e3e719f5fc6",
+      "valid_pad": false,
+      "pad_len": 0,
+      "printable_ratio": 0.355
+    },
+    "HEX+suffix/sha256": {
+      "last_bytes": "6b7c51cbabb03b94",
+      "valid_pad": false,
+      "pad_len": 0,
+      "printable_ratio": 0.371
+    }
+  }
+}

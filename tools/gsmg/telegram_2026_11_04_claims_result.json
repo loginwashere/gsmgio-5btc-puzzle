@@ -1,0 +1,185 @@
+{
+  "map_sha256": "53326674db16f4cdb5005dbe7590ce827438f629e3b5543043d462f4a6b9fd6f",
+  "items": {
+    "cs_76101": [
+      {
+        "base": "THEPRIVATEKEYSBELONGSTOHALFINNEYE",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "theprivatekeysbelongstohalfinneye",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "ekodama_75884": [
+      {
+        "base": "yellowblueprimesmatrixsumlistyinyangzlastwordsbeforearchichoicezthispasswordz",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "yellowblueprimesmatrixsumlistyinyanglastwordsbeforearchichoicethispassword",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "tommy_76100": [
+      {
+        "base": "yellowblueprimesmatrixsumlistlastwordsbeforearchichoiceyinyang",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "b58_alex_78613": [
+      {
+        "base": "giveityinyang",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "giveityingyang",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "Giveityingyang",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "draikoon_78422": [
+      {
+        "base": "yangyangjin",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "YangYangJin",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "chandlerguolovesyangyangjin",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "Chandler Guo loves YangYang Jin",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "andrey_78513": [
+      {
+        "base": "cryptoio",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "crypto.io",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "draikoon_78517": [
+      {
+        "base": "protect ironic magic me, sight. which still 4 due",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "protectironicmagicmesightwhichstill4due",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "draikoon_77850_derived": [
+      {
+        "base": "secondanswerenterthispassword",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "secondanswerthispassword",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "alex_75911": [
+      {
+        "base": "obellaciao",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "abcdefghio",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "mohamad_76188": [
+      {
+        "base": "MSG",
+        "materials": 15,
+        "hits": []
+      }
+    ]
+  },
+  "totals": {
+    "materials": 315,
+    "cbc": 0,
+    "stream": 0,
+    "ecb": 0,
+    "wrap": 0,
+    "raw_key": 0,
+    "address": 0
+  },
+  "key_checks": {
+    "tommy_77069": {
+      "valid_wif": false
+    },
+    "tommy_77071": {
+      "valid_wif": true,
+      "addresses": {
+        "compressed": "15ERKFBEWmMQBhAWeFoBBJpssECX6X34WX",
+        "uncompressed": "1BBp2cxRfjhGqYUaMUYpt4w613zyost5h2"
+      },
+      "target_hit": false
+    },
+    "tommy_77646": {
+      "valid_wif": false
+    },
+    "tommy_77253": {
+      "valid_wif": true,
+      "addresses": {
+        "compressed": "1BPMLzH9PWGWUrUfpqCX9CdGWrqQcgBytp",
+        "uncompressed": "1HUy7Ue8zJnXtYqijp8gAnuiivcvAvfjgw"
+      },
+      "target_hit": false
+    },
+    "christo_76360": {
+      "valid_wif": true,
+      "addresses": {
+        "compressed": "14zJ3RHPxiRJAmYHUNTvPoCTxhFB6gACgf",
+        "uncompressed": "1GKJzHQkgTBwwEGeXetsTMDoUzvwzs9yb4"
+      },
+      "target_hit": false
+    },
+    "tommy_77617": {
+      "bytes": 25,
+      "version": 160,
+      "checksum_valid": false,
+      "as_base58": "27f4itAsiPzibkJo54yaAAhaG6jtd3CixBd",
+      "target_hit": false
+    },
+    "tommy_77618": {
+      "bytes": 25,
+      "version": 186,
+      "checksum_valid": false,
+      "as_base58": "2J4qhokatwS8Vaad2LcLmeV1h7jciGwc9ng",
+      "target_hit": false
+    }
+  }
+}

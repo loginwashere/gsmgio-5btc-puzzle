@@ -1,0 +1,2312 @@
+{
+  "export": {
+    "name": "GSMG Puzzle Solvers",
+    "id": 1166734859,
+    "type": "private_supergroup"
+  },
+  "export_sha256": "dd6c35c51298711af04c8b37f101d006495bd383fb3f6a9bd808e2dcf8ec2f8f",
+  "previous_export_sha256": "eaf63cfe31a48bb243b2f85683408b84686a91c56f8f6de952215b1a0bb6a0b3",
+  "coverage": {
+    "total": 3523,
+    "new": 3507,
+    "new_types": {
+      "message": 3453,
+      "service": 54
+    },
+    "first": "2026-11-04T00:36:52",
+    "last": "2026-11-17T09:41:29",
+    "first_new_id": 78806,
+    "last_new_id": 82533,
+    "overlap": 16,
+    "overlap_text_changes": [],
+    "overlap_field_changes": [
+      {
+        "id": 78795,
+        "fields": [
+          "actor"
+        ]
+      },
+      {
+        "id": 78800,
+        "fields": [
+          "edited",
+          "edited_unixtime",
+          "photo",
+          "reactions"
+        ]
+      },
+      {
+        "id": 78801,
+        "fields": [
+          "edited",
+          "edited_unixtime",
+          "reactions"
+        ]
+      },
+      {
+        "id": 78802,
+        "fields": [
+          "file",
+          "thumbnail"
+        ]
+      },
+      {
+        "id": 78804,
+        "fields": [
+          "photo"
+        ]
+      },
+      {
+        "id": 78805,
+        "fields": [
+          "photo"
+        ]
+      }
+    ],
+    "new_photos": 69,
+    "new_file_types": {
+      "sticker": 27,
+      "document": 13,
+      "animation": 44,
+      "audio_file": 1,
+      "video_file": 5
+    }
+  },
+  "creator": [
+    {
+      "id": 80667,
+      "type": "message",
+      "date": "2026-11-10T22:40:39",
+      "date_unixtime": "1794343239",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "Or AI is missing something.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Or AI is missing something."
+        }
+      ]
+    },
+    {
+      "id": 80673,
+      "type": "message",
+      "date": "2026-11-10T22:43:03",
+      "date_unixtime": "1794343383",
+      "edited": "2026-11-10T23:09:51",
+      "edited_unixtime": "1794344991",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "Hello everyone. Are we still having phun?",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Hello everyone. Are we still having phun?"
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 3,
+          "emoji": "🤝",
+          "recent": [
+            {
+              "from": "owl",
+              "from_id": "user1130188265",
+              "date": "2026-11-12T09:02:26"
+            },
+            {
+              "from": "Andy | DBBI & FAED • Research",
+              "from_id": "user334366283",
+              "date": "2026-11-11T19:41:05"
+            }
+          ]
+        },
+        {
+          "type": "custom_emoji",
+          "count": 3,
+          "document_id": "stickers/AnimatedSticker (13).tgs",
+          "recent": [
+            {
+              "from": "Worldmaker",
+              "from_id": "user1827890213",
+              "date": "2026-11-11T05:07:07"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 80682,
+      "type": "message",
+      "date": "2026-11-10T22:45:19",
+      "date_unixtime": "1794343519",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "reply_to_message_id": 80680,
+      "text": "Well well well",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Well well well"
+        }
+      ]
+    },
+    {
+      "id": 80698,
+      "type": "message",
+      "date": "2026-11-10T22:48:32",
+      "date_unixtime": "1794343712",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "reply_to_message_id": 80695,
+      "text": "Yes",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Yes"
+        }
+      ]
+    },
+    {
+      "id": 80701,
+      "type": "message",
+      "date": "2026-11-10T22:48:48",
+      "date_unixtime": "1794343728",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "Everything is on zeh interweps",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Everything is on zeh interweps"
+        }
+      ]
+    },
+    {
+      "id": 80710,
+      "type": "message",
+      "date": "2026-11-10T22:49:35",
+      "date_unixtime": "1794343775",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "🫡",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "🫡"
+        }
+      ]
+    },
+    {
+      "id": 80738,
+      "type": "message",
+      "date": "2026-11-10T22:55:49",
+      "date_unixtime": "1794344149",
+      "edited": "2026-11-10T22:56:00",
+      "edited_unixtime": "1794344160",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "Good health, happy family, endured some quiet violence of the mind against itself. But all passed and solved. Hope you all are doing well too.\n\n (Kuch... Even the DM'ers asking me to pay for health related matters for all their dying family members.) 😅",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Good health, happy family, endured some quiet violence of the mind against itself. But all passed and solved. Hope you all are doing well too.\n\n (Kuch... Even the DM'ers asking me to pay for health related matters for all their dying family members.) 😅"
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 5,
+          "emoji": "❤",
+          "recent": [
+            {
+              "from": "christo vittorio kiliaan 👁️ @OilVoyageBot",
+              "from_id": "user282149642",
+              "date": "2026-11-14T10:06:55"
+            },
+            {
+              "from": "f c",
+              "from_id": "user8862763875",
+              "date": "2026-11-12T19:42:16"
+            }
+          ]
+        },
+        {
+          "type": "emoji",
+          "count": 3,
+          "emoji": "🤝"
+        },
+        {
+          "type": "emoji",
+          "count": 2,
+          "emoji": "🤣",
+          "recent": [
+            {
+              "from": "Amin SM",
+              "from_id": "user198112358",
+              "date": "2026-11-15T22:25:44"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 80740,
+      "type": "message",
+      "date": "2026-11-10T22:56:29",
+      "date_unixtime": "1794344189",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "It is",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "It is"
+        }
+      ]
+    },
+    {
+      "id": 80741,
+      "type": "message",
+      "date": "2026-11-10T22:56:31",
+      "date_unixtime": "1794344191",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "Well",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Well"
+        }
+      ]
+    },
+    {
+      "id": 80743,
+      "type": "message",
+      "date": "2026-11-10T22:56:52",
+      "date_unixtime": "1794344212",
+      "edited": "2026-11-10T22:57:06",
+      "edited_unixtime": "1794344226",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "For those spamming me to send them money that is ;-)",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "For those spamming me to send them money that is ;-)"
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 2,
+          "emoji": "❤",
+          "recent": [
+            {
+              "from": "Good Job Oleg👍",
+              "from_id": "user8651474596",
+              "date": "2026-11-10T22:57:48"
+            },
+            {
+              "from": "Avenium",
+              "from_id": "user7259897074",
+              "date": "2026-11-10T22:57:06"
+            }
+          ]
+        },
+        {
+          "type": "emoji",
+          "count": 1,
+          "emoji": "😎",
+          "recent": [
+            {
+              "from": "F1f7h",
+              "from_id": "user8917892372",
+              "date": "2026-11-17T03:05:38"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 80761,
+      "type": "message",
+      "date": "2026-11-10T23:00:46",
+      "date_unixtime": "1794344446",
+      "edited": "2026-11-10T23:01:37",
+      "edited_unixtime": "1794344497",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "reply_to_message_id": 80758,
+      "text": "Hello 😉",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Hello 😉"
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 5,
+          "emoji": "😁",
+          "recent": [
+            {
+              "from": "Barend",
+              "from_id": "user12919314",
+              "date": "2026-11-11T19:35:10"
+            },
+            {
+              "from": "christo vittorio kiliaan 👁️ @OilVoyageBot",
+              "from_id": "user282149642",
+              "date": "2026-11-11T04:31:00"
+            },
+            {
+              "from": "Sparky",
+              "from_id": "user7184569562",
+              "date": "2026-11-11T02:52:24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 80785,
+      "type": "message",
+      "date": "2026-11-10T23:15:11",
+      "date_unixtime": "1794345311",
+      "edited": "2026-11-10T23:15:46",
+      "edited_unixtime": "1794345346",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "reply_to_message_id": 80771,
+      "text": "It might not help with the puzzle, but it could help in life.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "It might not help with the puzzle, but it could help in life."
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 4,
+          "emoji": "👍",
+          "recent": [
+            {
+              "from": "Sparky",
+              "from_id": "user7184569562",
+              "date": "2026-11-11T02:56:16"
+            },
+            {
+              "from": "Zed Heres",
+              "from_id": "user5661053313",
+              "date": "2026-11-10T23:48:58"
+            },
+            {
+              "from": "FunctionOfYou",
+              "from_id": "user1077040807",
+              "date": "2026-11-10T23:16:12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 81658,
+      "type": "message",
+      "date": "2026-11-13T16:15:07",
+      "date_unixtime": "1794579307",
+      "edited": "2026-11-14T01:18:01",
+      "edited_unixtime": "1794611881",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "reply_to_message_id": 80966,
+      "text": "We don't even run the server anymore. Someone else took that burden 😉. Ask K1ng.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "We don't even run the server anymore. Someone else took that burden 😉. Ask K1ng."
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 2,
+          "emoji": "😁",
+          "recent": [
+            {
+              "from": "F1f7h",
+              "from_id": "user8917892372",
+              "date": "2026-11-17T03:10:28"
+            },
+            {
+              "from": "3.14159265358979323846264338327950288419716939937510 0b1one|58209749445923078164062862089986280348253421170679",
+              "from_id": "user7895551210",
+              "date": "2026-11-14T01:18:01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 81664,
+      "type": "message",
+      "date": "2026-11-13T16:16:27",
+      "date_unixtime": "1794579387",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "Goooooooooood afternoon",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Goooooooooood afternoon"
+        }
+      ]
+    },
+    {
+      "id": 81669,
+      "type": "message",
+      "date": "2026-11-13T16:17:01",
+      "date_unixtime": "1794579421",
+      "edited": "2026-11-13T16:18:57",
+      "edited_unixtime": "1794579537",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "For many the puzzle is not solvable.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "For many the puzzle is not solvable."
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 4,
+          "emoji": "👍"
+        },
+        {
+          "type": "emoji",
+          "count": 3,
+          "emoji": "😁",
+          "recent": [
+            {
+              "from": "nieods",
+              "from_id": "user809473266",
+              "date": "2026-11-16T17:48:47"
+            },
+            {
+              "from": "Worldmaker",
+              "from_id": "user1827890213",
+              "date": "2026-11-15T06:18:36"
+            }
+          ]
+        },
+        {
+          "type": "emoji",
+          "count": 1,
+          "emoji": "👏"
+        },
+        {
+          "type": "emoji",
+          "count": 1,
+          "emoji": "🫡",
+          "recent": [
+            {
+              "from": "Zed Heres",
+              "from_id": "user5661053313",
+              "date": "2026-11-14T19:59:33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 81766,
+      "type": "message",
+      "date": "2026-11-13T17:51:24",
+      "date_unixtime": "1794585084",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "Noh, the puzzle itself is still there. The community archived it ❤️",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Noh, the puzzle itself is still there. The community archived it ❤️"
+        }
+      ]
+    },
+    {
+      "id": 81813,
+      "type": "message",
+      "date": "2026-11-13T20:59:22",
+      "date_unixtime": "1794596362",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "reply_to_message_id": 81796,
+      "text": "Im not dislexjsic at all.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Im not dislexjsic at all."
+        }
+      ]
+    },
+    {
+      "id": 81819,
+      "type": "message",
+      "date": "2026-11-13T21:06:23",
+      "date_unixtime": "1794596783",
+      "edited": "2026-11-13T21:09:43",
+      "edited_unixtime": "1794596983",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "text": "I'm just enjoying the fact that AI can't see this tiny nudge it needs to progress 😂.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "I'm just enjoying the fact that AI can't see this tiny nudge it needs to progress 😂."
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 3,
+          "emoji": "👏",
+          "recent": [
+            {
+              "from": "F1f7h",
+              "from_id": "user8917892372",
+              "date": "2026-11-17T03:12:55"
+            },
+            {
+              "from": "Worldmaker",
+              "from_id": "user1827890213",
+              "date": "2026-11-15T10:47:39"
+            }
+          ]
+        },
+        {
+          "type": "emoji",
+          "count": 2,
+          "emoji": "🤯"
+        },
+        {
+          "type": "emoji",
+          "count": 1,
+          "emoji": "👍",
+          "recent": [
+            {
+              "from": "nieods",
+              "from_id": "user809473266",
+              "date": "2026-11-16T17:50:38"
+            }
+          ]
+        },
+        {
+          "type": "emoji",
+          "count": 1,
+          "emoji": "🤝"
+        }
+      ]
+    },
+    {
+      "id": 81838,
+      "type": "message",
+      "date": "2026-11-13T22:13:40",
+      "date_unixtime": "1794600820",
+      "edited": "2026-11-13T22:49:43",
+      "edited_unixtime": "1794602983",
+      "from": "Jrk Bgrt",
+      "from_id": "user9815232",
+      "reply_to_message_id": 81836,
+      "text": "42",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "42"
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 4,
+          "emoji": "🔥",
+          "recent": [
+            {
+              "from": "Sparky",
+              "from_id": "user7184569562",
+              "date": "2026-11-15T16:17:08"
+            },
+            {
+              "from": "christo vittorio kiliaan 👁️ @OilVoyageBot",
+              "from_id": "user282149642",
+              "date": "2026-11-14T01:26:15"
+            }
+          ]
+        },
+        {
+          "type": "emoji",
+          "count": 1,
+          "emoji": "🥰"
+        },
+        {
+          "type": "emoji",
+          "count": 1,
+          "emoji": "💩"
+        },
+        {
+          "type": "emoji",
+          "count": 1,
+          "emoji": "🙏",
+          "recent": [
+            {
+              "from": "Zed Heres",
+              "from_id": "user5661053313",
+              "date": "2026-11-14T20:05:46"
+            }
+          ]
+        },
+        {
+          "type": "custom_emoji",
+          "count": 1,
+          "document_id": "stickers/AnimatedSticker (23).tgs"
+        }
+      ]
+    }
+  ],
+  "creator_forward_labels": [
+    {
+      "id": 78931,
+      "type": "message",
+      "date": "2026-11-05T15:47:58",
+      "date_unixtime": "1793886478",
+      "from": "...",
+      "from_id": "user8486172795",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "I think I'm fine - gladly I don't feel that weird anxiety anymore. However, I do expect that in about 18 years my government might have to notify me that I've been 'under investigation' for a while. But don't worry about me; me, family and friends are doing great!",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "I think I'm fine - gladly I don't feel that weird anxiety anymore. However, I do expect that in about 18 years my government might have to notify me that I've been 'under investigation' for a while. But don't worry about me; me, family and friends are doing great!"
+        }
+      ]
+    },
+    {
+      "id": 78933,
+      "type": "message",
+      "date": "2026-11-05T15:51:53",
+      "date_unixtime": "1793886713",
+      "from": "...",
+      "from_id": "user8486172795",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "Let's see what bitcoin is worth the next halving and who knows what you'll find after opening the 2nd door. The price is in half, but what does it mean 🤔.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Let's see what bitcoin is worth the next halving and who knows what you'll find after opening the 2nd door. The price is in half, but what does it mean 🤔."
+        }
+      ]
+    },
+    {
+      "id": 79255,
+      "type": "message",
+      "date": "2026-11-07T10:29:53",
+      "date_unixtime": "1794040193",
+      "edited": "2026-11-07T22:30:41",
+      "edited_unixtime": "1794083441",
+      "from": "Harshad Panchal",
+      "from_id": "user5688951766",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "Imagine a piggy bank that only opens with a super-secret password. Right now, most piggy banks show a little part of the lock on the outside, and a future quantum computer could steal that part and crack it.\nBIP 360 is a new kind of piggy bank: it hides the whole lock inside. You only see a 32-byte hash, no key visible at all. When you want to open it, you prove you know a secret path inside that hash. Safer against future quantum hackers.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Imagine a piggy bank that only opens with a super-secret password. Right now, most piggy banks show a little part of the lock on the outside, and a future quantum computer could steal that part and crack it.\nBIP 360 is a new kind of piggy bank: it hides the whole lock inside. You only see a 32-byte hash, no key visible at all. When you want to open it, you prove you know a secret path inside that hash. Safer against future quantum hackers."
+        }
+      ],
+      "reactions": [
+        {
+          "type": "emoji",
+          "count": 1,
+          "emoji": "❤",
+          "recent": [
+            {
+              "from": "gnosis",
+              "from_id": "user6126138962",
+              "date": "2026-11-07T22:30:41"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 79520,
+      "type": "message",
+      "date": "2026-11-07T18:44:09",
+      "date_unixtime": "1794069849",
+      "from": "Harshad Panchal",
+      "from_id": "user5688951766",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "Imagine a piggy bank that only opens with a super-secret password. Right now, most piggy banks show a little part of the lock on the outside, and a future quantum computer could steal that part and crack it.\nBIP 360 is a new kind of piggy bank: it hides the whole lock inside. You only see a 32-byte hash, no key visible at all. When you want to open it, you prove you know a secret path inside that hash. Safer against future quantum hackers.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Imagine a piggy bank that only opens with a super-secret password. Right now, most piggy banks show a little part of the lock on the outside, and a future quantum computer could steal that part and crack it.\nBIP 360 is a new kind of piggy bank: it hides the whole lock inside. You only see a 32-byte hash, no key visible at all. When you want to open it, you prove you know a secret path inside that hash. Safer against future quantum hackers."
+        }
+      ]
+    },
+    {
+      "id": 80414,
+      "type": "message",
+      "date": "2026-11-09T17:52:11",
+      "date_unixtime": "1794239531",
+      "from": "Harshad Panchal",
+      "from_id": "user5688951766",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "Roses are White but often Red.\nYellow has a number and so does Blue.\nGo back to the first puzzle piece without further ado.\n\nIt might have shown you only one door, beware that the rabbits nest may contain a whole lot more.\n\nHush hush.",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Roses are White but often Red.\nYellow has a number and so does Blue.\nGo back to the first puzzle piece without further ado.\n\nIt might have shown you only one door, beware that the rabbits nest may contain a whole lot more.\n\nHush hush."
+        }
+      ]
+    },
+    {
+      "id": 80702,
+      "type": "message",
+      "date": "2026-11-10T22:48:59",
+      "date_unixtime": "1794343739",
+      "from": "X",
+      "from_id": "user497668740",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "There's a question multiple people have asked me. \"Given the available knowledge, is internet still required to solve it?\"\n\nNope",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "There's a question multiple people have asked me. \"Given the available knowledge, is internet still required to solve it?\"\n\nNope"
+        }
+      ]
+    },
+    {
+      "id": 80730,
+      "type": "message",
+      "date": "2026-11-10T22:53:51",
+      "date_unixtime": "1794344031",
+      "from": "X",
+      "from_id": "user497668740",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "To answer your question 'fully', from here on, high likely no hints anymore. But if somehow you all can't solve it from here in the next few years (which I deem unlikely given the state of the solving process), then I might feel the need to give an additional hint, as I couldn't happily live with the idea that some would think that this was a scam. Note, that I hope not to have to give another hint as it would probably be a give away. Good luck to you all!",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "To answer your question 'fully', from here on, high likely no hints anymore. But if somehow you all can't solve it from here in the next few years (which I deem unlikely given the state of the solving process), then I might feel the need to give an additional hint, as I couldn't happily live with the idea that some would think that this was a scam. Note, that I hope not to have to give another hint as it would probably be a give away. Good luck to you all!"
+        }
+      ]
+    },
+    {
+      "id": 80922,
+      "type": "message",
+      "date": "2026-11-11T15:28:55",
+      "date_unixtime": "1794403735",
+      "edited": "2026-11-11T15:49:02",
+      "edited_unixtime": "1794404942",
+      "from": "Bx",
+      "from_id": "user1883816082",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "Good health, happy family, endured some quiet violence of the mind against itself. But all passed and solved. Hope you all are doing well too.\n\n (Kuch... Even the DM'ers asking me to pay for health related matters for all their dying family members.) 😅",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Good health, happy family, endured some quiet violence of the mind against itself. But all passed and solved. Hope you all are doing well too.\n\n (Kuch... Even the DM'ers asking me to pay for health related matters for all their dying family members.) 😅"
+        }
+      ]
+    },
+    {
+      "id": 80947,
+      "type": "message",
+      "date": "2026-11-11T19:34:26",
+      "date_unixtime": "1794418466",
+      "from": "Harshad Panchal",
+      "from_id": "user5688951766",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "Well well well",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Well well well"
+        }
+      ]
+    },
+    {
+      "id": 80948,
+      "type": "message",
+      "date": "2026-11-11T19:34:27",
+      "date_unixtime": "1794418467",
+      "from": "Harshad Panchal",
+      "from_id": "user5688951766",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "Good health, happy family, endured some quiet violence of the mind against itself. But all passed and solved. Hope you all are doing well too.\n\n (Kuch... Even the DM'ers asking me to pay for health related matters for all their dying family members.) 😅",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Good health, happy family, endured some quiet violence of the mind against itself. But all passed and solved. Hope you all are doing well too.\n\n (Kuch... Even the DM'ers asking me to pay for health related matters for all their dying family members.) 😅"
+        }
+      ]
+    },
+    {
+      "id": 80949,
+      "type": "message",
+      "date": "2026-11-11T19:34:28",
+      "date_unixtime": "1794418468",
+      "from": "Harshad Panchal",
+      "from_id": "user5688951766",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "It is",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "It is"
+        }
+      ]
+    },
+    {
+      "id": 80950,
+      "type": "message",
+      "date": "2026-11-11T19:34:29",
+      "date_unixtime": "1794418469",
+      "from": "Harshad Panchal",
+      "from_id": "user5688951766",
+      "forwarded_from": "Jrk Bgrt",
+      "text": "Well",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Well"
+        }
+      ]
+    }
+  ],
+  "j_followup_account": "user5677911315",
+  "j_followup_messages": [],
+  "attachments": [
+    {
+      "id": 78800,
+      "kind": "photo",
+      "path": "photos/photo_1@04-11-2026_05-30-58.jpg",
+      "exists": true,
+      "bytes": 20686,
+      "sha256": "027981e422e6478980e94d62c2e43fba8534fa8843e2ac0dd3a8ef14b589bac9"
+    },
+    {
+      "id": 78802,
+      "kind": "file",
+      "path": "video_files/sticker.webm",
+      "exists": true,
+      "bytes": 59668,
+      "sha256": "97f7457c74a979535ff4f0b6712dd601eb128085cc50bdfe3ab2f065b3cb0064"
+    },
+    {
+      "id": 78804,
+      "kind": "photo",
+      "path": "photos/photo_2@04-11-2026_10-58-32.jpg",
+      "exists": true,
+      "bytes": 26943,
+      "sha256": "657db2834e37de7950577d75a4c7905a54395a1905a41e18e4216dd0d90d4f30"
+    },
+    {
+      "id": 78805,
+      "kind": "photo",
+      "path": "photos/photo_3@04-11-2026_10-58-33.jpg",
+      "exists": true,
+      "bytes": 78346,
+      "sha256": "74f8bdb165094414cbd43ebd9cfb231485f185ea2f3156c2ce5c4209b0422a2a"
+    },
+    {
+      "id": 78819,
+      "kind": "photo",
+      "path": "photos/photo_4@04-11-2026_15-00-59.jpg",
+      "exists": true,
+      "bytes": 73953,
+      "sha256": "50bba193032b99492d8a34b41773201ccdefb40092e8da745a11f2d33483b303"
+    },
+    {
+      "id": 78826,
+      "kind": "photo",
+      "path": "photos/photo_5@04-11-2026_16-10-31.jpg",
+      "exists": true,
+      "bytes": 118721,
+      "sha256": "e0981ad71f52fe63b1b19d61899c84bf1b2878e99a8bbdb75b8d5644140a2d00"
+    },
+    {
+      "id": 78828,
+      "kind": "file",
+      "path": "stickers/sticker.webp",
+      "exists": true,
+      "bytes": 58038,
+      "sha256": "7c943fcf8535b82c2f490f33079d1b9a057de131fa9960ad970f0ca9b612930b"
+    },
+    {
+      "id": 78829,
+      "kind": "file",
+      "path": "stickers/sticker (1).webp",
+      "exists": true,
+      "bytes": 69200,
+      "sha256": "8c9424fb920162ca7156998b7a39b0dacc24afb66005071bec01bd4959ded475"
+    },
+    {
+      "id": 78830,
+      "kind": "file",
+      "path": "stickers/sticker (2).webp",
+      "exists": true,
+      "bytes": 58824,
+      "sha256": "d3ef8018663850374341bcb62a3edf7b142aaf12bd8890d49ec40dad2f9acd4d"
+    },
+    {
+      "id": 78832,
+      "kind": "file",
+      "path": "files/faed_as_piano.wav",
+      "exists": true,
+      "bytes": 8043884,
+      "sha256": "d02b4a8bf48510bd88daaf6984c1d073b57d7fcb6403737af7e5dcde5868ab0b"
+    },
+    {
+      "id": 78846,
+      "kind": "file",
+      "path": "video_files/remember-fifth-of-november-guy-fawkes-day.mp4",
+      "exists": true,
+      "bytes": 249238,
+      "sha256": "9dd78506348f2041e715cd175fb2e763f36519c487f5016279bc8787687343c6"
+    },
+    {
+      "id": 78934,
+      "kind": "photo",
+      "path": "photos/photo_6@05-11-2026_16-05-42.jpg",
+      "exists": true,
+      "bytes": 37306,
+      "sha256": "56dc1bca2d2c70ff47655cdd881b5004df74a955daa629a472b592cb2c8e4618"
+    },
+    {
+      "id": 78937,
+      "kind": "photo",
+      "path": "photos/photo_7@05-11-2026_18-35-37.jpg",
+      "exists": true,
+      "bytes": 63818,
+      "sha256": "272f473f1e93201a1e8204089d4c7a6e1ed2e5cd2eb58f72183b02d70ce95ebd"
+    },
+    {
+      "id": 78999,
+      "kind": "photo",
+      "path": "photos/photo_8@06-11-2026_04-43-53.jpg",
+      "exists": true,
+      "bytes": 25938,
+      "sha256": "501edef85044279429312a2fb9130b1c3b224e6c355898192cf94a553d841ddb"
+    },
+    {
+      "id": 79105,
+      "kind": "file",
+      "path": "video_files/linux-bsod.mp4",
+      "exists": true,
+      "bytes": 127649,
+      "sha256": "15e373621910918c6797ce3a1ae4b5de902c6c4271f3af927ab8779b57c4b730"
+    },
+    {
+      "id": 79122,
+      "kind": "file",
+      "path": "video_files/sticker (1).webm",
+      "exists": true,
+      "bytes": 33730,
+      "sha256": "30d381595b2e086986275bd1503b327ce8d85596dd2fc2ffd6d6a6755b7ce219"
+    },
+    {
+      "id": 79124,
+      "kind": "file",
+      "path": "video_files/sticker (2).webm",
+      "exists": true,
+      "bytes": 65386,
+      "sha256": "330b9aafd9b08261eb397681bcca514b3ba04fcf2bc05de92eaab2ba7f11d549"
+    },
+    {
+      "id": 79137,
+      "kind": "file",
+      "path": "files/Tonbuchstaben.mp3",
+      "exists": true,
+      "bytes": 452493,
+      "sha256": "3b4087eef8f1035d56dec969ef2b8b6e21dc696cddf258e73883a6f40901a5a7"
+    },
+    {
+      "id": 79168,
+      "kind": "file",
+      "path": "video_files/video.mp4",
+      "exists": true,
+      "bytes": 253791,
+      "sha256": "81aed8a209deeb4a1436a6699b440c236e5d47c57ac909b1048cce54154d01cb"
+    },
+    {
+      "id": 79252,
+      "kind": "photo",
+      "path": "photos/photo_9@07-11-2026_07-53-26.jpg",
+      "exists": true,
+      "bytes": 95904,
+      "sha256": "c5f90cc897c01a558e617da60c66b4255bb3ebde31ba35361c1d67e521b3db1c"
+    },
+    {
+      "id": 79284,
+      "kind": "file",
+      "path": "files/BLUEPRINT-DEEP-2026-11-07.md",
+      "exists": true,
+      "bytes": 11049,
+      "sha256": "47b163576b894599f418a77100b481c10eca86fbf7887919d2e29677eb625596"
+    },
+    {
+      "id": 79416,
+      "kind": "file",
+      "path": "video_files/morpheus-the-matrix.mp4",
+      "exists": true,
+      "bytes": 15707,
+      "sha256": "b2998db94303ddc567f6c4c91b1db9f40929ee156108a2bfdd045c19c12faf91"
+    },
+    {
+      "id": 79427,
+      "kind": "file",
+      "path": "video_files/imagination-kidkazoo.mp4",
+      "exists": true,
+      "bytes": 359568,
+      "sha256": "60bce719b0c3a2db494e58d60d40ca5898e7860b79f6beb362db2fe7db79e637"
+    },
+    {
+      "id": 79444,
+      "kind": "file",
+      "path": "video_files/wow-ted.mp4",
+      "exists": true,
+      "bytes": 21372,
+      "sha256": "aeb545584febbd8985fe5be9512723a18fd77256d51028cdf589bbd74027a5d4"
+    },
+    {
+      "id": 79488,
+      "kind": "photo",
+      "path": "photos/photo_10@07-11-2026_17-03-29.jpg",
+      "exists": true,
+      "bytes": 53202,
+      "sha256": "eba580420b6881e0cd23da240f36df70d11814c4a8b5ded96595f6800a9b26ea"
+    },
+    {
+      "id": 79495,
+      "kind": "photo",
+      "path": "photos/photo_11@07-11-2026_17-24-52.jpg",
+      "exists": true,
+      "bytes": 33357,
+      "sha256": "1c9340cb34bf6014b64e72b6885f611f948d699099b88c388329b44b75d256aa"
+    },
+    {
+      "id": 79512,
+      "kind": "photo",
+      "path": "photos/photo_12@07-11-2026_18-15-05.jpg",
+      "exists": true,
+      "bytes": 29964,
+      "sha256": "651df15c8ec3e8fa1b7c76e84b845afca0bf1c626c5789313338891608667be2"
+    },
+    {
+      "id": 79514,
+      "kind": "file",
+      "path": "video_files/sticker (3).webm",
+      "exists": true,
+      "bytes": 60387,
+      "sha256": "5607ff5e920a68119181c36406e3cb1b0fbf188932e1144682f88631bd2ca604"
+    },
+    {
+      "id": 79541,
+      "kind": "file",
+      "path": "files/salt_audit.py",
+      "exists": true,
+      "bytes": 2864,
+      "sha256": "b0b5db524f9a3527c2a23e44785aba35ccc22667b4559a9ae5fe4d16b27966a9"
+    },
+    {
+      "id": 79553,
+      "kind": "file",
+      "path": "video_files/praying-rajamanikyam.mp4",
+      "exists": true,
+      "bytes": 35445,
+      "sha256": "924d2f95c1f846c07a84b1c979d24161531ae8ea8f31efa3ddfde1f4f11696ed"
+    },
+    {
+      "id": 79569,
+      "kind": "photo",
+      "path": "photos/photo_13@07-11-2026_23-01-29.jpg",
+      "exists": true,
+      "bytes": 34770,
+      "sha256": "241be9dd2b25f470be352adab0b93c0ed0e6cc22e3e63393cd008dc17c707bd7"
+    },
+    {
+      "id": 79590,
+      "kind": "file",
+      "path": "video_files/cardano-ada.mp4",
+      "exists": true,
+      "bytes": 427050,
+      "sha256": "41a5d327b4c9a20998a48baf007d63c22f84e68b4f3d29c09a95d304f0ad89b8"
+    },
+    {
+      "id": 79597,
+      "kind": "file",
+      "path": "files/bitconeeeeect.webm",
+      "exists": true,
+      "bytes": 93063,
+      "sha256": "f0915c0bd500a9920136898ec57e4f9f74729e28f164a89089c31e192e439e30"
+    },
+    {
+      "id": 79599,
+      "kind": "file",
+      "path": "video_files/Untitled.mp4",
+      "exists": true,
+      "bytes": 147363,
+      "sha256": "802b487c131147e90d6248db42c09f474570ab4f570802b17474784212366d01"
+    },
+    {
+      "id": 79671,
+      "kind": "file",
+      "path": "video_files/kekw-kek.mp4",
+      "exists": true,
+      "bytes": 71067,
+      "sha256": "0aa82ec98167c3ecf3f4571155e14d1cb1df026edc39859a97460f43e05739b5"
+    },
+    {
+      "id": 79672,
+      "kind": "file",
+      "path": "video_files/cooking-delvin-adams.mp4",
+      "exists": true,
+      "bytes": 161492,
+      "sha256": "5e1dafaf88c549df7ed9076d5bee69e4fdb50f3faefa3b03a79f9802d3f3e189"
+    },
+    {
+      "id": 79673,
+      "kind": "photo",
+      "path": "photos/photo_14@08-11-2026_05-56-32.jpg",
+      "exists": true,
+      "bytes": 36781,
+      "sha256": "3fc87fe6020207f1a78e6e07511154a5f351c03e109242233722e302e98966d8"
+    },
+    {
+      "id": 79699,
+      "kind": "photo",
+      "path": "photos/photo_15@08-11-2026_08-55-17.jpg",
+      "exists": true,
+      "bytes": 6989,
+      "sha256": "3b20d6203d7eb2e65d7d69b3c394cee9695c027830ba6103f5d8a09e0c9ba105"
+    },
+    {
+      "id": 79701,
+      "kind": "photo",
+      "path": "photos/photo_16@08-11-2026_08-59-11.jpg",
+      "exists": true,
+      "bytes": 5077,
+      "sha256": "0fd785eca6bdb037761d7af6e0a366589b8d32fd012456d8e8742cf08986218b"
+    },
+    {
+      "id": 79831,
+      "kind": "photo",
+      "path": "photos/photo_17@08-11-2026_17-21-17.jpg",
+      "exists": true,
+      "bytes": 109915,
+      "sha256": "6f3442f9e63e29e2d27f00c9bbbc824aa23872293f73b063bad64f7a43058ba7"
+    },
+    {
+      "id": 79854,
+      "kind": "photo",
+      "path": "photos/photo_18@08-11-2026_23-41-42.jpg",
+      "exists": true,
+      "bytes": 40911,
+      "sha256": "0ccb09344c407ad71689b1e4aeea41d069761f75a38d06565f86de5af0c960f1"
+    },
+    {
+      "id": 79881,
+      "kind": "photo",
+      "path": "photos/photo_19@09-11-2026_01-18-06.jpg",
+      "exists": true,
+      "bytes": 35622,
+      "sha256": "50ac3c436e5d5e58504cdfabd77678db438609803d4df2e35c31b44f2a72effe"
+    },
+    {
+      "id": 79889,
+      "kind": "photo",
+      "path": "photos/photo_20@09-11-2026_01-20-39.jpg",
+      "exists": true,
+      "bytes": 67135,
+      "sha256": "e2ab7b5c717d711739a2f87153694b10cf59b42611aeb7bff1d797aa906e43db"
+    },
+    {
+      "id": 79924,
+      "kind": "photo",
+      "path": "photos/photo_21@09-11-2026_01-35-43.jpg",
+      "exists": true,
+      "bytes": 101961,
+      "sha256": "3b2c50a688c86ff190234b9ebf21c7f1af4691ff5eecc7a928afddd0a53513f6"
+    },
+    {
+      "id": 79934,
+      "kind": "photo",
+      "path": "photos/photo_22@09-11-2026_01-36-50.jpg",
+      "exists": true,
+      "bytes": 27355,
+      "sha256": "ce8efc16187473a4cd1b1c70bb620a5ffc10364abbf804164b971e0a2e9f8b69"
+    },
+    {
+      "id": 79951,
+      "kind": "photo",
+      "path": "photos/photo_23@09-11-2026_01-43-09.jpg",
+      "exists": true,
+      "bytes": 21092,
+      "sha256": "81f43be666ce7003055574c45bd828e73d341e2fb4d70c7b098f525280975c1b"
+    },
+    {
+      "id": 79974,
+      "kind": "photo",
+      "path": "photos/photo_24@09-11-2026_01-53-25.jpg",
+      "exists": true,
+      "bytes": 45447,
+      "sha256": "0c320b1d721a2d80dbd9b97476c3f7f96d18f1548d17706d351e281cecc4ad92"
+    },
+    {
+      "id": 80002,
+      "kind": "photo",
+      "path": "photos/photo_25@09-11-2026_02-38-30.jpg",
+      "exists": true,
+      "bytes": 51085,
+      "sha256": "4d8815ff9fbd25994ef01de877de35915ddaf3349e21ebcac179a2e0b5add090"
+    },
+    {
+      "id": 80056,
+      "kind": "file",
+      "path": "video_files/peppe.mp4",
+      "exists": true,
+      "bytes": 11464,
+      "sha256": "5b7feec6a5a8df5c151dcf73729ddb227c025f4effe094019535f2688508fd47"
+    },
+    {
+      "id": 80094,
+      "kind": "photo",
+      "path": "photos/photo_26@09-11-2026_02-51-31.jpg",
+      "exists": true,
+      "bytes": 6025,
+      "sha256": "a759d02902eb639f9cb23803b5d9165c6934e2247472410a04d6b7a37847478d"
+    },
+    {
+      "id": 80097,
+      "kind": "photo",
+      "path": "photos/photo_27@09-11-2026_02-52-04.jpg",
+      "exists": true,
+      "bytes": 12572,
+      "sha256": "f15331c243299c09d23e88fe0d6d0e5d1512c566203068eed6f4b51d9f38d6cc"
+    },
+    {
+      "id": 80099,
+      "kind": "photo",
+      "path": "photos/photo_28@09-11-2026_02-52-10.jpg",
+      "exists": true,
+      "bytes": 85129,
+      "sha256": "9f87e5bbd3684920a0a062b18f67bf0a0ff5ddaf173242327d68d6ca824b8023"
+    },
+    {
+      "id": 80103,
+      "kind": "photo",
+      "path": "photos/photo_29@09-11-2026_02-52-42.jpg",
+      "exists": true,
+      "bytes": 7470,
+      "sha256": "5a7bf0101cef83c022a55c36b499884b7a58c08f9ebf97a9cce1a4b38d0fb36c"
+    },
+    {
+      "id": 80132,
+      "kind": "photo",
+      "path": "photos/photo_30@09-11-2026_02-56-54.jpg",
+      "exists": true,
+      "bytes": 24358,
+      "sha256": "d94d5b7b621e7cf130175f46f4ed428e294bbbfe97562c51020c6958f475fbf5"
+    },
+    {
+      "id": 80142,
+      "kind": "photo",
+      "path": "photos/photo_31@09-11-2026_03-01-41.jpg",
+      "exists": true,
+      "bytes": 151052,
+      "sha256": "ff511ba26f0c5617acdce5f601a806bf1ac5a26f2c9691ada6b5387ee9d0e39f"
+    },
+    {
+      "id": 80147,
+      "kind": "photo",
+      "path": "photos/photo_32@09-11-2026_03-02-14.jpg",
+      "exists": true,
+      "bytes": 9841,
+      "sha256": "17671e68ce298ff68d5a4031b13bf924315719af172375771ffd033ff78a909b"
+    },
+    {
+      "id": 80148,
+      "kind": "photo",
+      "path": "photos/photo_33@09-11-2026_03-02-59.jpg",
+      "exists": true,
+      "bytes": 56179,
+      "sha256": "dfe046ec61096433ed86f51cdeb0ab0637e4ba11efa34780d8542e8e8997f31d"
+    },
+    {
+      "id": 80163,
+      "kind": "photo",
+      "path": "photos/photo_34@09-11-2026_03-05-57.jpg",
+      "exists": true,
+      "bytes": 61644,
+      "sha256": "797aac0e72bd56f02b417bad2c0830e0c58cf1e649d9148af86e7196ad59e274"
+    },
+    {
+      "id": 80190,
+      "kind": "photo",
+      "path": "photos/photo_35@09-11-2026_03-10-23.jpg",
+      "exists": true,
+      "bytes": 15742,
+      "sha256": "88f70af20e8cb5e1a431e5ef9651c1761d7d9beec7d275e7f029510f30fc998d"
+    },
+    {
+      "id": 80191,
+      "kind": "photo",
+      "path": "photos/photo_36@09-11-2026_03-10-43.jpg",
+      "exists": true,
+      "bytes": 30822,
+      "sha256": "05c1328876adccea3ae5c137b0e24c520807761a7c6a2127cde168dcb4415def"
+    },
+    {
+      "id": 80206,
+      "kind": "file",
+      "path": "video_files/peppe.mp4",
+      "exists": true,
+      "bytes": 11464,
+      "sha256": "5b7feec6a5a8df5c151dcf73729ddb227c025f4effe094019535f2688508fd47"
+    },
+    {
+      "id": 80214,
+      "kind": "file",
+      "path": "stickers/AnimatedSticker (7).tgs",
+      "exists": true,
+      "bytes": 5272,
+      "sha256": "a34d668493927d74a2b2032a496f7e31f77d47c2e6f3a4e568933950d293e206"
+    },
+    {
+      "id": 80229,
+      "kind": "file",
+      "path": "stickers/AnimatedSticker (7).tgs",
+      "exists": true,
+      "bytes": 5272,
+      "sha256": "a34d668493927d74a2b2032a496f7e31f77d47c2e6f3a4e568933950d293e206"
+    },
+    {
+      "id": 80230,
+      "kind": "file",
+      "path": "stickers/AnimatedSticker (7).tgs",
+      "exists": true,
+      "bytes": 5272,
+      "sha256": "a34d668493927d74a2b2032a496f7e31f77d47c2e6f3a4e568933950d293e206"
+    },
+    {
+      "id": 80234,
+      "kind": "file",
+      "path": "stickers/AnimatedSticker (8).tgs",
+      "exists": true,
+      "bytes": 10999,
+      "sha256": "652fab8c75ba631f777b4397418f6c582e1be63f3d447cd3168437ef363ea76e"
+    },
+    {
+      "id": 80240,
+      "kind": "photo",
+      "path": "photos/photo_37@09-11-2026_03-26-54.jpg",
+      "exists": true,
+      "bytes": 64926,
+      "sha256": "248bc4ac09fbd64221267a71143210a972a6e4a0fdc054005a4cdeda97003983"
+    },
+    {
+      "id": 80293,
+      "kind": "file",
+      "path": "video_files/sticker (4).webm",
+      "exists": true,
+      "bytes": 62350,
+      "sha256": "9da10e90978331c652ee02013caa20ae8851d012c0ec97b2fd97ea49238e4d4b"
+    },
+    {
+      "id": 80305,
+      "kind": "file",
+      "path": "stickers/AnimatedSticker (9).tgs",
+      "exists": true,
+      "bytes": 28102,
+      "sha256": "975593892c70c6251e2e28727d298b6c803307614ca5fa8529f68b1d33d37809"
+    },
+    {
+      "id": 80341,
+      "kind": "file",
+      "path": "video_files/клоун.mp4",
+      "exists": true,
+      "bytes": 48872,
+      "sha256": "0742b8ed275470b33087d5c5e2456a66c31b4f997547c0d2402a222ef735a8cd"
+    },
+    {
+      "id": 80353,
+      "kind": "file",
+      "path": "stickers/AnimatedSticker (10).tgs",
+      "exists": true,
+      "bytes": 61729,
+      "sha256": "65510163b44dab74526d13f8f4f995db98e99ae20ce8314d1ba44aef7edf6e71"
+    },
+    {
+      "id": 80389,
+      "kind": "file",
+      "path": "video_files/love-you-excited.mp4",
+      "exists": true,
+      "bytes": 91100,
+      "sha256": "18fcdd13466fca10473a9243be723b8fdcc13f3b26e88c5410ceff51d1a5ddf1"
+    },
+    {
+      "id": 80390,
+      "kind": "file",
+      "path": "video_files/atg-capa.mp4",
+      "exists": true,
+      "bytes": 75243,
+      "sha256": "79db576ad2108312a74f47481c486dc7e8fe3e5c0d7aee7b799378d36e8fcc4c"
+    },
+    {
+      "id": 80412,
+      "kind": "photo",
+      "path": "photos/photo_38@09-11-2026_14-59-54.jpg",
+      "exists": true,
+      "bytes": 58173,
+      "sha256": "be6093757437fe0622715cc0ad8b124b3accc75a052eecb241247d43e4b91bc1"
+    },
+    {
+      "id": 80543,
+      "kind": "photo",
+      "path": "photos/photo_39@10-11-2026_20-10-16.jpg",
+      "exists": true,
+      "bytes": 12469,
+      "sha256": "57691ecb30d150fac9d0bd02ec09b68d7f291f7e8db9bd3d991a43db3381e713"
+    },
+    {
+      "id": 80670,
+      "kind": "photo",
+      "path": "photos/photo_40@10-11-2026_22-42-31.jpg",
+      "exists": true,
+      "bytes": 18183,
+      "sha256": "63ced8d09653c80f239b8f3de6f7e8ac2f9cba04b9517d0d62e618c6677ba73c"
+    },
+    {
+      "id": 80861,
+      "kind": "photo",
+      "path": "photos/photo_41@11-11-2026_05-36-33.jpg",
+      "exists": true,
+      "bytes": 86277,
+      "sha256": "c44526789a3a88ab05542eacce29a0e4c026c71a12bd8355bf0988b7bc2cc0ca"
+    },
+    {
+      "id": 80887,
+      "kind": "file",
+      "path": "video_files/sticker (2).webm",
+      "exists": true,
+      "bytes": 65386,
+      "sha256": "330b9aafd9b08261eb397681bcca514b3ba04fcf2bc05de92eaab2ba7f11d549"
+    },
+    {
+      "id": 80895,
+      "kind": "file",
+      "path": "video_files/sticker (2).webm",
+      "exists": true,
+      "bytes": 65386,
+      "sha256": "330b9aafd9b08261eb397681bcca514b3ba04fcf2bc05de92eaab2ba7f11d549"
+    },
+    {
+      "id": 80945,
+      "kind": "photo",
+      "path": "photos/photo_42@11-11-2026_19-20-42.jpg",
+      "exists": true,
+      "bytes": 88806,
+      "sha256": "d8e80c35585cde191ecb7261315b7616303048210ca59e1d25dd15be2d8459ae"
+    },
+    {
+      "id": 80988,
+      "kind": "file",
+      "path": "video_files/apu-apustaja-apu.mp4",
+      "exists": true,
+      "bytes": 9675,
+      "sha256": "9311aaaff5b1da385e324135cb71c5fa355f4aad15103668e148f8a76d29fdbd"
+    },
+    {
+      "id": 81017,
+      "kind": "file",
+      "path": "video_files/ai.mp4",
+      "exists": true,
+      "bytes": 34103,
+      "sha256": "61656a82dbab4cb94dc9db663ee19480c5cb3abeaa35bfcbfca382d7bfcdd8bf"
+    },
+    {
+      "id": 81035,
+      "kind": "photo",
+      "path": "photos/photo_43@12-11-2026_01-18-31.jpg",
+      "exists": true,
+      "bytes": 22169,
+      "sha256": "35d2d803147c9be3bf6a66732bcd54230ef45eb9e826c3a28c715999f4f201e6"
+    },
+    {
+      "id": 81036,
+      "kind": "file",
+      "path": "video_files/video_1@12-11-2026_01-19-06.mp4",
+      "exists": true,
+      "bytes": 178871,
+      "sha256": "33f46dd463e17ee810d39a5997499b6e448d9a193c0788859b37d47c6ade400a"
+    },
+    {
+      "id": 81041,
+      "kind": "file",
+      "path": "video_files/funny-animals-lol.mp4",
+      "exists": true,
+      "bytes": 601971,
+      "sha256": "0ac2666cf27e0bcce28c7f3b3837e5e0f00e3b201e5c1425c51342c5ba00ce9d"
+    },
+    {
+      "id": 81043,
+      "kind": "photo",
+      "path": "photos/photo_44@12-11-2026_01-25-37.jpg",
+      "exists": true,
+      "bytes": 9352,
+      "sha256": "d8b3b54f5029d563d127b3da56f9cebe6eebb1f923bd66412d7a84e362bef8b4"
+    },
+    {
+      "id": 81049,
+      "kind": "file",
+      "path": "video_files/kekw-dow.mp4",
+      "exists": true,
+      "bytes": 1454895,
+      "sha256": "b07c42911c7a5e71ed994033cefcdc791068e2e7180fbbf96c1155ba862e1082"
+    },
+    {
+      "id": 81050,
+      "kind": "photo",
+      "path": "photos/photo_45@12-11-2026_01-31-50.jpg",
+      "exists": true,
+      "bytes": 27821,
+      "sha256": "adaff5b08c64e8047a4f3ded82e14fe908b881b2c2c0b86c540e40160f31a0f7"
+    },
+    {
+      "id": 81101,
+      "kind": "photo",
+      "path": "photos/photo_46@12-11-2026_04-01-52.jpg",
+      "exists": true,
+      "bytes": 21721,
+      "sha256": "b1d04db8953b57a8545f72886811e32d2475729461e65cb2ad751ddb9b79ea61"
+    },
+    {
+      "id": 81107,
+      "kind": "photo",
+      "path": "photos/photo_47@12-11-2026_04-16-29.jpg",
+      "exists": true,
+      "bytes": 127611,
+      "sha256": "89d88e4f5a03db58b10aad33d15e69e9616cb21ee54fea392d5a9f37ace06915"
+    },
+    {
+      "id": 81108,
+      "kind": "photo",
+      "path": "photos/photo_48@12-11-2026_04-20-49.jpg",
+      "exists": true,
+      "bytes": 64676,
+      "sha256": "899fb013cc4b841c2192807d81ffcd865f857d6b60b51760fd43e580173c56f4"
+    },
+    {
+      "id": 81113,
+      "kind": "file",
+      "path": "video_files/apu-apustaja-apu.mp4",
+      "exists": true,
+      "bytes": 9675,
+      "sha256": "9311aaaff5b1da385e324135cb71c5fa355f4aad15103668e148f8a76d29fdbd"
+    },
+    {
+      "id": 81131,
+      "kind": "photo",
+      "path": "photos/photo_49@12-11-2026_04-47-18.jpg",
+      "exists": true,
+      "bytes": 58190,
+      "sha256": "fab28dc209e61273d37f69d36fb8f2e6972bdbaeff34bf1261f53f26d7639afb"
+    },
+    {
+      "id": 81136,
+      "kind": "file",
+      "path": "files/matrix_formula.py",
+      "exists": true,
+      "bytes": 8643,
+      "sha256": "90535e58b65cf63466825b856f6e86592dd196aafd392d22361001a82660ce60"
+    },
+    {
+      "id": 81139,
+      "kind": "file",
+      "path": "files/cosmic_plain.bin",
+      "exists": true,
+      "bytes": 1327,
+      "sha256": "4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081"
+    },
+    {
+      "id": 81151,
+      "kind": "photo",
+      "path": "photos/photo_50@12-11-2026_06-58-19.jpg",
+      "exists": true,
+      "bytes": 112754,
+      "sha256": "0c499fd553293fc970894d271fa8fdc151a4c283b992406572df39663e9e28d8"
+    },
+    {
+      "id": 81173,
+      "kind": "file",
+      "path": "video_files/video_1@12-11-2026_01-19-06.mp4",
+      "exists": true,
+      "bytes": 178871,
+      "sha256": "33f46dd463e17ee810d39a5997499b6e448d9a193c0788859b37d47c6ade400a"
+    },
+    {
+      "id": 81176,
+      "kind": "file",
+      "path": "video_files/apu-apustaja-apu.mp4",
+      "exists": true,
+      "bytes": 9675,
+      "sha256": "9311aaaff5b1da385e324135cb71c5fa355f4aad15103668e148f8a76d29fdbd"
+    },
+    {
+      "id": 81182,
+      "kind": "file",
+      "path": "video_files/kekw-dow.mp4",
+      "exists": true,
+      "bytes": 1454895,
+      "sha256": "b07c42911c7a5e71ed994033cefcdc791068e2e7180fbbf96c1155ba862e1082"
+    },
+    {
+      "id": 81210,
+      "kind": "file",
+      "path": "video_files/strawberry-buttercream.mp4",
+      "exists": true,
+      "bytes": 143878,
+      "sha256": "bb31d350ef959ed3315f09e1f6d691c4fa69dbe56a1135bf6e7d96585627d57d"
+    },
+    {
+      "id": 81278,
+      "kind": "photo",
+      "path": "photos/photo_51@12-11-2026_07-40-28.jpg",
+      "exists": true,
+      "bytes": 4643,
+      "sha256": "71cf0c14975c2a79f393b05954670c767f2de4e46b28cf4a398d07532ea967ed"
+    },
+    {
+      "id": 81330,
+      "kind": "file",
+      "path": "video_files/video_3@12-11-2026_08-25-17.mp4",
+      "exists": true,
+      "bytes": 18935442,
+      "sha256": "36c3623ed699b4041e7016a02a9782423288c0faa344668fd42770841db1c0c7"
+    },
+    {
+      "id": 81364,
+      "kind": "photo",
+      "path": "photos/photo_52@12-11-2026_08-50-25.jpg",
+      "exists": true,
+      "bytes": 114363,
+      "sha256": "f08ab2cb7b3d452c91fc1925808a0878cd4b847ebb5e260e2287ad895722fdb4"
+    },
+    {
+      "id": 81386,
+      "kind": "photo",
+      "path": "photos/photo_53@12-11-2026_08-55-49.jpg",
+      "exists": true,
+      "bytes": 6781,
+      "sha256": "4920152bcf41ee14571182f5d02d57b11be06193bd4fc87edc5674f840dfe06d"
+    },
+    {
+      "id": 81388,
+      "kind": "photo",
+      "path": "photos/photo_54@12-11-2026_08-56-30.jpg",
+      "exists": true,
+      "bytes": 15616,
+      "sha256": "4468ae943c133379fcd18cbf5165127e4923715656a10e59dd274dc2943d1842"
+    },
+    {
+      "id": 81402,
+      "kind": "file",
+      "path": "stickers/AnimatedSticker (21).tgs",
+      "exists": true,
+      "bytes": 37991,
+      "sha256": "00614a453f579e32fa2612be5618e3ce5c456ef81e42bac2eba16b6a1a2e6d68"
+    },
+    {
+      "id": 81414,
+      "kind": "photo",
+      "path": "photos/photo_55@12-11-2026_10-52-13.jpg",
+      "exists": true,
+      "bytes": 56025,
+      "sha256": "be7db4509bf3a970c30e873485079b010f8d09319893c9b43722a1efcaa9980a"
+    },
+    {
+      "id": 81424,
+      "kind": "file",
+      "path": "video_files/ssstwitter.com_1794473614376.mp4",
+      "exists": true,
+      "bytes": 9149864,
+      "sha256": "a85ac05c15c7f38da4105de7bcf8088433a6cc38253bb6dc8cd27973b56f5b3e"
+    },
+    {
+      "id": 81466,
+      "kind": "file",
+      "path": "video_files/imagination-spongebob.mp4",
+      "exists": true,
+      "bytes": 166917,
+      "sha256": "bc342966a825467c15e6bc584a672f6b7a476baad19c05ffe297ab6107befbe1"
+    },
+    {
+      "id": 81483,
+      "kind": "file",
+      "path": "video_files/kekw-dow.mp4",
+      "exists": true,
+      "bytes": 1454895,
+      "sha256": "b07c42911c7a5e71ed994033cefcdc791068e2e7180fbbf96c1155ba862e1082"
+    },
+    {
+      "id": 81500,
+      "kind": "photo",
+      "path": "photos/photo_56@13-11-2026_00-14-07.jpg",
+      "exists": true,
+      "bytes": 25258,
+      "sha256": "37cebbbc642d8a3d4e91d6bb01ce86942c360b87fbe459ebbaac4d7830894d7e"
+    },
+    {
+      "id": 81536,
+      "kind": "photo",
+      "path": "photos/photo_57@13-11-2026_02-29-30.jpg",
+      "exists": true,
+      "bytes": 19835,
+      "sha256": "1cdc373efb8fc74e12baaf4a3b3829a105ce74459c154da19a3bab76b2b1ca2c"
+    },
+    {
+      "id": 81537,
+      "kind": "photo",
+      "path": "photos/photo_58@13-11-2026_02-31-24.jpg",
+      "exists": true,
+      "bytes": 6024,
+      "sha256": "598ae646de04b0317ef931978998a5d3b8b83dd4c00fecd6db6e26adb3b448cc"
+    },
+    {
+      "id": 81541,
+      "kind": "photo",
+      "path": "photos/photo_59@13-11-2026_03-28-06.jpg",
+      "exists": true,
+      "bytes": 35020,
+      "sha256": "6fb5410f24e27661ba1e81b99287330c708e661085f36d062158d74c98ca693a"
+    },
+    {
+      "id": 81546,
+      "kind": "file",
+      "path": "video_files/get-it-thoughts.mp4",
+      "exists": true,
+      "bytes": 71738,
+      "sha256": "93226d3c8109d26f3d4246dddec8ce19400d2b7cba8340fc6a1c30f5fa13542e"
+    },
+    {
+      "id": 81564,
+      "kind": "photo",
+      "path": "photos/photo_60@13-11-2026_05-53-35.jpg",
+      "exists": true,
+      "bytes": 55185,
+      "sha256": "db59ffa245d9863dfbb80ecefe9a909fd9db5b5abc5040ee6baae74a76c9ad20"
+    },
+    {
+      "id": 81572,
+      "kind": "photo",
+      "path": "photos/photo_61@13-11-2026_07-26-06.jpg",
+      "exists": true,
+      "bytes": 8228,
+      "sha256": "73ec39bdcbdb838d30a702829c03d2f2b97fbba52cf8198c56eefd55e98bea8e"
+    },
+    {
+      "id": 81581,
+      "kind": "file",
+      "path": "video_files/sticker (2).webm",
+      "exists": true,
+      "bytes": 65386,
+      "sha256": "330b9aafd9b08261eb397681bcca514b3ba04fcf2bc05de92eaab2ba7f11d549"
+    },
+    {
+      "id": 81589,
+      "kind": "file",
+      "path": "video_files/sticker (2).webm",
+      "exists": true,
+      "bytes": 65386,
+      "sha256": "330b9aafd9b08261eb397681bcca514b3ba04fcf2bc05de92eaab2ba7f11d549"
+    },
+    {
+      "id": 81616,
+      "kind": "file",
+      "path": "video_files/video_4@13-11-2026_13-08-54.mp4",
+      "exists": true,
+      "bytes": 169206,
+      "sha256": "97fe49f457aed928a66b472c6c7791ef12c18346979c585a1a31f51c3ac21a2f"
+    },
+    {
+      "id": 81621,
+      "kind": "file",
+      "path": "stickers/sticker (2).webp",
+      "exists": true,
+      "bytes": 58824,
+      "sha256": "d3ef8018663850374341bcb62a3edf7b142aaf12bd8890d49ec40dad2f9acd4d"
+    },
+    {
+      "id": 81683,
+      "kind": "file",
+      "path": "stickers/sticker (7).webp",
+      "exists": true,
+      "bytes": 31510,
+      "sha256": "39939daa4625650842691e1c3da9703604aefed9a6067ab916b879a98af442d3"
+    },
+    {
+      "id": 81703,
+      "kind": "photo",
+      "path": "photos/photo_62@13-11-2026_16-54-48.jpg",
+      "exists": true,
+      "bytes": 6702,
+      "sha256": "ecd09e49f572ff847250d97f83b01ce8ab1cc0de39efb908e43b96c481f14b79"
+    },
+    {
+      "id": 81726,
+      "kind": "photo",
+      "path": "photos/photo_63@13-11-2026_17-27-37.jpg",
+      "exists": true,
+      "bytes": 49060,
+      "sha256": "7d36385ffa49bfaf3509a2a0d6e9028396bacbccf8ddc270988a60130f95337b"
+    },
+    {
+      "id": 81753,
+      "kind": "file",
+      "path": "video_files/charlie-day-its-always-sunny-in-philadelphia.mp4",
+      "exists": true,
+      "bytes": 545554,
+      "sha256": "44b4b180c22512fbbbb62ee5a34028e41fbacf41fc5f8f3c5a4cc6efdf749501"
+    },
+    {
+      "id": 81788,
+      "kind": "file",
+      "path": "video_files/GSMG-homepage-xx6K1oxdCoU.mp4",
+      "exists": true,
+      "bytes": 6808729,
+      "sha256": "d0ef5c498420a20245d45ef6836d4eb1c2372bff0a2a907392efbd60c2ce96e4"
+    },
+    {
+      "id": 81807,
+      "kind": "photo",
+      "path": "photos/photo_64@13-11-2026_20-09-19.jpg",
+      "exists": true,
+      "bytes": 106036,
+      "sha256": "5f4ac70144d84f6b4338db751f19428b70ac0117f27cb6f70e1e5efc42ca3c32"
+    },
+    {
+      "id": 81915,
+      "kind": "file",
+      "path": "files/image_2026-11-14_00-50-45.png",
+      "exists": true,
+      "bytes": 6470,
+      "sha256": "82911b511fb632f5c1f9cdc1f77e932093c743cc0f18a16572cc6a85060a8ebc"
+    },
+    {
+      "id": 81943,
+      "kind": "photo",
+      "path": "photos/photo_65@14-11-2026_04-01-46.jpg",
+      "exists": true,
+      "bytes": 107466,
+      "sha256": "8f2121a9c1e3f94c7d34160c18585cbd3f3a9197fca252a1e25fd451867a6bc2"
+    },
+    {
+      "id": 81944,
+      "kind": "photo",
+      "path": "photos/photo_66@14-11-2026_04-01-47.jpg",
+      "exists": true,
+      "bytes": 119030,
+      "sha256": "a1424f425e7756791ea3d3f821ac480b67e704800b6e2c0b37d1cf1f19fd8949"
+    },
+    {
+      "id": 81947,
+      "kind": "file",
+      "path": "stickers/-2147483648_-210266.webp",
+      "exists": true,
+      "bytes": 21180,
+      "sha256": "de6867ea5f08af6f80c8dda6b146d65dd1364a34eddc4ddaca83c3504b06c046"
+    },
+    {
+      "id": 81981,
+      "kind": "photo",
+      "path": "photos/photo_67@14-11-2026_15-13-11.jpg",
+      "exists": true,
+      "bytes": 73554,
+      "sha256": "f9b5e17cf2f9c6336ce0f31c3c205681e71f69188edafeaba5daa3915bf0afa6"
+    },
+    {
+      "id": 82001,
+      "kind": "file",
+      "path": "files/dust_analysis.py",
+      "exists": true,
+      "bytes": 16479,
+      "sha256": "458352c4200daf11499721e19d02fae134310afc204bb38cb282c15bdf3db1a0"
+    },
+    {
+      "id": 82009,
+      "kind": "file",
+      "path": "files/dust_analysis_20261114.json",
+      "exists": true,
+      "bytes": 85665,
+      "sha256": "78206b79a52e36482b2dc6adc162b7ea4a69d67e7c1f71aba94031e57c0d6009"
+    },
+    {
+      "id": 82091,
+      "kind": "file",
+      "path": "video_files/tortured-and.mp4",
+      "exists": true,
+      "bytes": 264802,
+      "sha256": "8a399953d88df9387e2388f21dfc824f4521f7256bda67aceccaa923d081837e"
+    },
+    {
+      "id": 82094,
+      "kind": "file",
+      "path": "video_files/coffee-cobbee.mp4",
+      "exists": true,
+      "bytes": 524052,
+      "sha256": "e8fdf9fdbf657c6f82b46693479f28b8474337d71c81e7692d06b9a2146e1eb6"
+    },
+    {
+      "id": 82098,
+      "kind": "file",
+      "path": "video_files/jcXLp6ekmjHLd_VS.mp4",
+      "exists": true,
+      "bytes": 163564,
+      "sha256": "dee26b02e4729ab77507b3234bdbdbfb9e30349870f6009d6589c6397541eaaf"
+    },
+    {
+      "id": 82148,
+      "kind": "photo",
+      "path": "photos/photo_68@15-11-2026_06-26-22.jpg",
+      "exists": true,
+      "bytes": 37240,
+      "sha256": "46112ee2d9c7f01292a6c1d52e504d5794a35daa44df97db1e0ea15bb3afeb95"
+    },
+    {
+      "id": 82149,
+      "kind": "file",
+      "path": "video_files/sticker (2).webm",
+      "exists": true,
+      "bytes": 65386,
+      "sha256": "330b9aafd9b08261eb397681bcca514b3ba04fcf2bc05de92eaab2ba7f11d549"
+    },
+    {
+      "id": 82152,
+      "kind": "file",
+      "path": "video_files/VID-20171115-WA0064.mp4",
+      "exists": true,
+      "bytes": 100945,
+      "sha256": "f05d3f44f5fe4ce16bb6576d6c53cc7267b6dcfd8723d7286556ce00ad94f245"
+    },
+    {
+      "id": 82180,
+      "kind": "file",
+      "path": "video_files/kekw-dow.mp4",
+      "exists": true,
+      "bytes": 1454895,
+      "sha256": "b07c42911c7a5e71ed994033cefcdc791068e2e7180fbbf96c1155ba862e1082"
+    },
+    {
+      "id": 82183,
+      "kind": "file",
+      "path": "video_files/sticker (2).webm",
+      "exists": true,
+      "bytes": 65386,
+      "sha256": "330b9aafd9b08261eb397681bcca514b3ba04fcf2bc05de92eaab2ba7f11d549"
+    },
+    {
+      "id": 82227,
+      "kind": "file",
+      "path": "video_files/hmm.mp4",
+      "exists": true,
+      "bytes": 7522127,
+      "sha256": "4846c7785fa09437633210325082e3390546759c301431a8acc220444e7b14c0"
+    },
+    {
+      "id": 82238,
+      "kind": "file",
+      "path": "video_files/the-mentalist-patrick-jane.mp4",
+      "exists": true,
+      "bytes": 31635,
+      "sha256": "4bf80380d33e2741b9b912d83b6f5686e4d22918b320944eacc9250e12717072"
+    },
+    {
+      "id": 82310,
+      "kind": "file",
+      "path": "video_files/matrix-merovingian.mp4",
+      "exists": true,
+      "bytes": 286201,
+      "sha256": "961d503b1e13122e706e9ec25cb89e431d3dc091fc8f303d72d9754a9e03b295"
+    },
+    {
+      "id": 82311,
+      "kind": "file",
+      "path": "video_files/animation.gif.mp4",
+      "exists": true,
+      "bytes": 119062,
+      "sha256": "c42c522c63a90a4bfa31298dc2daab0d9f20909cbab722b03d9d6df297d2b1a2"
+    },
+    {
+      "id": 82312,
+      "kind": "file",
+      "path": "video_files/beavyell-beaver.mp4",
+      "exists": true,
+      "bytes": 535188,
+      "sha256": "a0f43c38ad80a7b4b540d63ee25767c0d851980fc4d15c76ad14e4a7ac3e52c3"
+    },
+    {
+      "id": 82339,
+      "kind": "file",
+      "path": "video_files/metal-cat-headbang.mp4",
+      "exists": true,
+      "bytes": 58466,
+      "sha256": "836b5626ccc94075ab8dfc96b1eab75919e0d3ace3ada6e42baa458e52f2def3"
+    },
+    {
+      "id": 82362,
+      "kind": "file",
+      "path": "stickers/AnimatedSticker (29).tgs",
+      "exists": true,
+      "bytes": 15164,
+      "sha256": "04f537dceb622864c722c60042960db2956437af8d024847b74252fabde7dba0"
+    },
+    {
+      "id": 82364,
+      "kind": "file",
+      "path": "stickers/AnimatedSticker (30).tgs",
+      "exists": true,
+      "bytes": 37489,
+      "sha256": "cbd46f3a0429ad33cb31a42e3af8a315fe857ed4b08c49b2166b4f444adefc50"
+    },
+    {
+      "id": 82372,
+      "kind": "photo",
+      "path": "photos/photo_69@16-11-2026_07-59-52.jpg",
+      "exists": true,
+      "bytes": 72104,
+      "sha256": "866effdc5ad798c9640c7baf7a7ce429f9e5d227e85c456bc7fd7710a27cb18d"
+    },
+    {
+      "id": 82392,
+      "kind": "file",
+      "path": "video_files/giphy.mp4",
+      "exists": true,
+      "bytes": 1010096,
+      "sha256": "12a4c43aa44c4aba0cd3eab0e5ea5cee230484288e6672948a7a39cb1c729381"
+    },
+    {
+      "id": 82439,
+      "kind": "file",
+      "path": "files/architect_letters_1539.txt",
+      "exists": true,
+      "bytes": 1540,
+      "sha256": "1750bfac6e69270516593b40f28c004e4334622c5b8bd2ab9239fb3d8d18942b"
+    },
+    {
+      "id": 82447,
+      "kind": "file",
+      "path": "stickers/sticker (8).webp",
+      "exists": true,
+      "bytes": 14154,
+      "sha256": "ec5ff052167d47b88a93fb2604b41a676d6086955973143d4628cf7446ce7b10"
+    },
+    {
+      "id": 82468,
+      "kind": "photo",
+      "path": "photos/photo_70@17-11-2026_00-05-07.jpg",
+      "exists": true,
+      "bytes": 105400,
+      "sha256": "bbf75ee37029338b69c4634cb0bef26f09d70cae5f332d50959b91fb757f1057"
+    },
+    {
+      "id": 82469,
+      "kind": "photo",
+      "path": "photos/photo_71@17-11-2026_00-23-42.jpg",
+      "exists": true,
+      "bytes": 51585,
+      "sha256": "c8c1b7ebadbdcb6f64afd8f8d3208a9e83cb1035a942ba2562cb448f1ef9c0e0"
+    },
+    {
+      "id": 82473,
+      "kind": "file",
+      "path": "video_files/Ux7RJok.gif.mp4",
+      "exists": true,
+      "bytes": 27729,
+      "sha256": "527b657f6702593032b3cd522b8463c367b0c181d7ce2b18019a9414c9946a9a"
+    },
+    {
+      "id": 82474,
+      "kind": "file",
+      "path": "video_files/cyberpunk-insert-disk.mp4",
+      "exists": true,
+      "bytes": 163304,
+      "sha256": "7d675185a0550f9ea33bb0269181b6364e43c8b24ae3eaede8fa947ebb079f71"
+    },
+    {
+      "id": 82478,
+      "kind": "photo",
+      "path": "photos/photo_72@17-11-2026_04-58-40.jpg",
+      "exists": true,
+      "bytes": 2104,
+      "sha256": "68aa7f06a3f87f737d599af375888b9f40513e6f8c6e05116df13b6608733722"
+    },
+    {
+      "id": 82488,
+      "kind": "file",
+      "path": "files/architect-monologue.txt",
+      "exists": true,
+      "bytes": 1872,
+      "sha256": "c432587765c599decf54d3dbf1bde38450220ddeb2b55ad78dc1cb4e0f7718ba"
+    },
+    {
+      "id": 82519,
+      "kind": "file",
+      "path": "stickers/-2147483648_-210286.webp",
+      "exists": true,
+      "bytes": 19252,
+      "sha256": "3d71e2b240b0cb218b5a4e5a83c5fdce460f8dc42b45d67bcc7169509ef54d74"
+    },
+    {
+      "id": 82521,
+      "kind": "file",
+      "path": "video_files/VID_20180704_193141.mp4",
+      "exists": true,
+      "bytes": 333999,
+      "sha256": "5b568b8b2f5450fc6f208f72870d2ac6015ef9ddc2b3f6123396b4af242eca2c"
+    },
+    {
+      "id": 82532,
+      "kind": "file",
+      "path": "files/phase32_2020_blob.txt",
+      "exists": true,
+      "bytes": 3264,
+      "sha256": "ea43156b6c294bb06cdc48b7df5077d57630e6cecddfb4179a450014999b56ff"
+    },
+    {
+      "id": 82533,
+      "kind": "file",
+      "path": "files/matrix_plates_scan.py",
+      "exists": true,
+      "bytes": 10307,
+      "sha256": "d898dfb8a109e37c3c902782d6900e976af1fa9170a74a4189b6012d769a87aa"
+    }
+  ],
+  "byte_checks": {
+    "speech": {
+      "architect_letters_1539.txt": {
+        "bytes": 1540,
+        "sha256": "1750bfac6e69270516593b40f28c004e4334622c5b8bd2ab9239fb3d8d18942b",
+        "letters": 1539,
+        "native_equal": true
+      },
+      "architect-monologue.txt": {
+        "bytes": 1872,
+        "sha256": "c432587765c599decf54d3dbf1bde38450220ddeb2b55ad78dc1cb4e0f7718ba",
+        "letters": 1539,
+        "native_equal": true
+      }
+    },
+    "phase32_attachment_matches_canonical": true,
+    "cosmic_plain": {
+      "bytes": 1327,
+      "sha256": "4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081",
+      "matches_previous_arbitrary_plaintext": true,
+      "printable_fraction": 0.40165787490580257,
+      "entropy_bits_per_byte": 7.870209988556002
+    },
+    "matrix_formula_attachment": {
+      "bytes": 8643,
+      "sha256": "90535e58b65cf63466825b856f6e86592dd196aafd392d22361001a82660ce60",
+      "nul_bytes": 33
+    }
+  },
+  "oleg_partial": {
+    "input": "BGVUDIFGQEVPFI",
+    "square": "NEVRFAILBCDGHKMOPQSTUWXYZ",
+    "period": 8,
+    "decoded": "LOGINMXESGNCEG",
+    "matches_posted": true,
+    "pex_bits": "110100001000101101100010011100110001111010000101010100100110110000110011000101001101000",
+    "bit_count": 87,
+    "flag": "1",
+    "next_three_7bit_chars": "PEX",
+    "tail_bits": 65,
+    "limitations": "Does not reconstruct source image -> ciphertext or FAED -> 87 bits; those rules are missing."
+  },
+  "prime_counts": {
+    "91": 24,
+    "570": 104
+  },
+  "finite_password_check": {
+    "seeds": [
+      "NEVERFAIL",
+      "LOGIN",
+      "LOGINMXESGNCEG",
+      "USE PEX",
+      "USEPEX",
+      "PEX",
+      "HASHTHETEXT-2019-COSMIC-DUALITY"
+    ],
+    "forms": [
+      "raw",
+      "sha256_hex"
+    ],
+    "evp_digests": [
+      "md5",
+      "sha256"
+    ],
+    "targets": [
+      "P32_TRAILING_BLOB_B64",
+      "SALPHASEION_BLOB_B64",
+      "COSMIC_BLOB_B64"
+    ],
+    "attempts": 84,
+    "padding_matches": [
+      {
+        "seed": "PEX",
+        "form": "sha256_hex",
+        "evp_digest": "sha256",
+        "target": "COSMIC_BLOB_B64",
+        "bytes": 1327,
+        "sha256": "8393e4601878876ec9090c9c3fad7bc552deababd1f2c661a8b551525b39938e",
+        "printable_fraction": 0.3948756593820648
+      }
+    ],
+    "scope": "No newline/case/typo variants, other ciphers, or other KDFs tested. Padding alone is not authentication."
+  },
+  "dust_attachment_claims_not_independently_fetched": {
+    "fetched_at": "2026-11-14T16:43:51.932268+00:00",
+    "half": {
+      "address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+      "summary": {
+        "address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+        "hash160": "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+        "n_tx": 129,
+        "n_unredeemed": 123,
+        "total_received": 876003172,
+        "total_sent": 750353498,
+        "final_balance": 125649674
+      },
+      "dust_count": 103,
+      "dust_from_target_count": 0
+    },
+    "better_half": {
+      "address": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+      "summary": {
+        "address": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+        "n_tx": 45,
+        "final_balance": 375055856,
+        "total_received": 375055856,
+        "total_sent": 0
+      },
+      "dust_count": 32,
+      "dust_from_target_count": 0
+    }
+  }
+}

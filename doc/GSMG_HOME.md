@@ -6,6 +6,29 @@ date: 2026-09-01
 
 # GSMG 5 BTC Puzzle — Home
 
+**2026-11-04:** [Independent Telegram verification](GSMG_TELEGRAM_INDEPENDENT_VERIFICATION_2026_11_04.md)
+reproduces the earlier checker and adds 165 negative password forms, attachment
+checks, and a homepage comparison. No new creator post or verified opening.
+J's undisclosed prime-length result remains unverified; its length was never given.
+
+**2026-11-04:** [Naddiseo fork update review](GSMG_NADDISEO_UPDATE_REVIEW_2026_11_04.md)
+checks all issues/PRs and accessible comments, plus the seven-commit tree delta.
+Notebooks and payloads are unchanged. October's short-chain bytes reproduce
+without independent validation; no new endgame opening or creator hint.
+
+**2026-10-07:** [Telegram new-path review](GSMG_TELEGRAM_NEW_PATHS_2026_10_07.md)
+reads 1,481 new export rows and inspects 42 photo records: no new creator
+post or verified endgame opening. DBBI mirrors reproduce, but comparable
+pairs occur in about 7% of prime-scaffold controls. A five-byte Cosmic
+padding claim reproduces without readable plaintext; its suffix provenance
+is unresolved. Rabbit/CryptoJS remains an untested compatibility hypothesis.
+
+**2026-09-29:** [Phase 548](GSMG_PHASE548_FAED_DISTRIBUTION_BOUNDARY.md)
+tests 42 fixed FAED distribution partitions against 1,999 family-wide shuffle
+controls: p=.027 exceeds the .01 bar; no selected cut. Planted controls passed.
+The companion source check reproduces `ANTIYBCORETNT` but establishes no
+continuation. Next direction: audit unconsumed native source ranges.
+
 **2026-09-21 update:** The historical overview below is not a complete summary
 of Phases 468–542. The latest
 [closed-system reassessment](GSMG_CLOSED_SYSTEM_REASSESSMENT_2026_09_20.md)

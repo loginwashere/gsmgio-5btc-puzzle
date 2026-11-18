@@ -1,0 +1,63 @@
+{
+  "adaptive_followup": true,
+  "followup_protocol_sha256": "6e189a40e466b7e2851618cf479314e7e888259e204fa86d568920050040af21",
+  "index_conventions": {
+    "0": {
+      "actual_marker_is_prime": true,
+      "model_survivors": {
+        "consume_byte_once": [
+          {
+            "bit_1": 4,
+            "is_actual_marker": true,
+            "parse_lengths": [
+              84
+            ],
+            "source_byte_1": 21,
+            "spiral_0": 163
+          }
+        ],
+        "reference": [
+          {
+            "bit_1": 6,
+            "is_actual_marker": false,
+            "parse_lengths": [
+              83
+            ],
+            "source_byte_1": 20,
+            "spiral_0": 157
+          },
+          {
+            "bit_1": 4,
+            "is_actual_marker": true,
+            "parse_lengths": [
+              83
+            ],
+            "source_byte_1": 21,
+            "spiral_0": 163
+          }
+        ]
+      },
+      "prime_internal_zero_location_count": 10
+    },
+    "1": {
+      "actual_marker_is_prime": false,
+      "model_survivors": {
+        "consume_byte_once": [],
+        "reference": [
+          {
+            "bit_1": 5,
+            "is_actual_marker": false,
+            "parse_lengths": [
+              83
+            ],
+            "source_byte_1": 20,
+            "spiral_0": 156
+          }
+        ]
+      },
+      "prime_internal_zero_location_count": 23
+    }
+  },
+  "oracle_calls": 0,
+  "source_result_sha256": "3a8281bcfb0d6e4ae3cd27bb878c6c38a08bc4b72cc9a0a4ce7d1a88756dd2ad"
+}

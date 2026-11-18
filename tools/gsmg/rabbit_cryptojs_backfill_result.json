@@ -1,0 +1,17 @@
+{
+  "candidates": 66436,
+  "corpus_digest": "52b6c35ec9a00eb7b3d49401d964d0c8a37f0d05415cc569d6577c3b78b83600",
+  "materials": 1397054,
+  "trials": 44705728,
+  "hit_threshold": 64,
+  "weak_threshold": 56,
+  "planted_recovered": [
+    "PLANTED0_Rabbit",
+    "PLANTED1_RabbitLegacy",
+    "PLANTED2_Rabbit",
+    "PLANTED3_RabbitLegacy"
+  ],
+  "planted_expected": 4,
+  "real_hits": [],
+  "real_weak": []
+}

@@ -31097,3 +31097,38 @@ nine-symbol alphabet.
 `phase547_census_lock.json`, `phase547_census_result.json`, dated protocol.
 
 **Reopen condition:** a new nine-symbol producer with an independent source, not added maps or conventions.
+<!-- audit_doc_override: GSMG_PHASE548_FAED_DISTRIBUTION_BOUNDARY.md -->
+## Phase 548 — FAED distribution boundary pilot, bounded negative (2026-09-29)
+
+**Question:** Does a fixed cut or exact rectangular layout expose a change
+in FAED's native nine-symbol distribution?
+
+**Method:** Frozen factor/complement cuts plus 91/479, all exact nontrivial
+rectangular row/column partitions, deduplicated to 42. Standardized Pearson
+homogeneity statistics; maximum over the entire family calibrated by 1,999
+exact-multiset shuffles. Direct implementation and relabeling controls passed.
+Balanced two-regime plants recovered 1/10, 7/10, 10/10, 10/10 at total-variation
+differences .05/.10/.15/.20 respectively, satisfying the frozen power gate.
+Protocol/script/data hashes locked before real scoring; one run.
+
+**Result:** Best descriptive partition cut 540, score 4.00824; 53 null family
+maxima >= real; p=(1+53)/2000=.027 against .01 bar. No selected boundary.
+Closes only these marginal-distribution tests, not all internal structure.
+
+**Companion source audit:** Freshly reproduced Architect answer is 1,539
+unspaced letters, contains SELECT once and CHOICE zero times. README letters
+agree exactly. `ANTIYBCORETNT` reproduces under README word segmentation and
+the proposed SELECT boundary; its continuation remains unspecified.
+
+**Disposition:** bounded negative; no arbitrary cuts to rescue BTCSEED.
+Next direction: unconsumed native source ranges and their demonstrated
+consumers. Repeating solved AES fingerprints overlaps Phase 410.
+
+**Artifacts:** [audit](../../doc/GSMG_PHASE548_FAED_DISTRIBUTION_BOUNDARY.md),
+`phase548_faed_distribution_boundary.py`, `phase548_boundary_lock.json`,
+`phase548_boundary_result.json`, dated protocol.
+
+**Facts affected:** No solution or password fact changed.
+
+**Reopen condition:** An independently selected boundary/statistic or new
+artifact, not post-result expansion of this family.

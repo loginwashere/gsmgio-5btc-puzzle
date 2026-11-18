@@ -1,0 +1,6095 @@
+{
+  "export": "/home/loginwashere/Downloads/Telegram Desktop/ChatExport_2026-11-04/result.json",
+  "source_sha256": "eaf63cfe31a48bb243b2f85683408b84686a91c56f8f6de952215b1a0bb6a0b3",
+  "previous_export_sha256": "cde17d9b67e88e174a9472331bb46cb159e5d8618bb6d08a6e0aeea7c51ea58f",
+  "protocol_sha256": "acc784c6130c80197646346cc38a2573bc447eee3537317f58fa26f6e7a318cf",
+  "coverage": {
+    "total_rows": 2828,
+    "new_rows": 2777,
+    "new_types": {
+      "message": 2641,
+      "service": 136
+    },
+    "new_photos": 112,
+    "new_file_types": {
+      "sticker": 52,
+      "animation": 67,
+      "document": 19,
+      "audio_file": 5,
+      "video_file": 7
+    },
+    "overlap_rows": 51,
+    "overlap_object_changes": [
+      {
+        "id": 75611,
+        "fields": [
+          "reactions"
+        ]
+      },
+      {
+        "id": 75614,
+        "fields": [
+          "from"
+        ]
+      },
+      {
+        "id": 75627,
+        "fields": [
+          "file",
+          "thumbnail"
+        ]
+      },
+      {
+        "id": 75646,
+        "fields": [
+          "edited",
+          "edited_unixtime",
+          "reactions"
+        ]
+      },
+      {
+        "id": 75648,
+        "fields": [
+          "reactions"
+        ]
+      }
+    ],
+    "overlap_text_changes": [],
+    "creator_messages": [],
+    "first_new": {
+      "id": 75651,
+      "date": "2026-10-07T13:17:56",
+      "date_unixtime": "1791368276"
+    },
+    "last_new": {
+      "id": 78805,
+      "date": "2026-11-04T10:58:33",
+      "date_unixtime": "1793782713"
+    }
+  },
+  "structural": {
+    "dbbi_parses": [
+      {
+        "tokens": 83,
+        "prime_bits": "11110111001111011001100",
+        "payload": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeea",
+        "b_positions": [
+          19,
+          36
+        ],
+        "b_split_lengths": [
+          19,
+          16,
+          23
+        ]
+      },
+      {
+        "tokens": 84,
+        "prime_bits": "11110111001111011001101",
+        "payload": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeeae",
+        "b_positions": [
+          19,
+          36
+        ],
+        "b_split_lengths": [
+          19,
+          16,
+          24
+        ]
+      }
+    ],
+    "keyword_counterexample": {
+      "keyword": "THEMATRIXHASYOU",
+      "zero_based_rows": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 2,
+        "E": 0,
+        "F": 3,
+        "G": 3,
+        "H": 0,
+        "I": 1
+      }
+    },
+    "knight_injection_impossibility": [
+      {
+        "board": "dbbi7x13",
+        "skip": 0,
+        "move_symbols": 9,
+        "eight_move_injection_possible": false
+      },
+      {
+        "board": "dbbi7x13",
+        "skip": 1,
+        "move_symbols": 9,
+        "eight_move_injection_possible": false
+      },
+      {
+        "board": "dbbi7x13",
+        "skip": 5,
+        "move_symbols": 9,
+        "eight_move_injection_possible": false
+      },
+      {
+        "board": "dbbi14x14",
+        "skip": 0,
+        "move_symbols": 9,
+        "eight_move_injection_possible": false
+      },
+      {
+        "board": "dbbi14x14",
+        "skip": 1,
+        "move_symbols": 9,
+        "eight_move_injection_possible": false
+      },
+      {
+        "board": "dbbi14x14",
+        "skip": 5,
+        "move_symbols": 9,
+        "eight_move_injection_possible": false
+      },
+      {
+        "board": "faed15x38",
+        "skip": 0,
+        "move_symbols": 9,
+        "eight_move_injection_possible": false
+      },
+      {
+        "board": "faed15x38",
+        "skip": 4,
+        "move_symbols": 9,
+        "eight_move_injection_possible": false
+      }
+    ],
+    "qr_finders_identical": true,
+    "finder_crop_shape": [
+      49,
+      48,
+      3
+    ],
+    "j_78605_discloses_79_bytes": false,
+    "possible_prime_plaintext_lengths_if_80_byte_aes_cbc": {
+      "67": {
+        "padding_bytes": 13
+      },
+      "71": {
+        "padding_bytes": 9
+      },
+      "73": {
+        "padding_bytes": 7
+      },
+      "79": {
+        "padding_bytes": 1
+      }
+    },
+    "mnemonic_bip39_checksum_valid": false
+  },
+  "attachments": {
+    "manifest": [
+      {
+        "id": 75683,
+        "kind": "file",
+        "path": "video_files/sticker.webm",
+        "exists": true,
+        "bytes": 239695,
+        "sha256": "234a8f027410a5b6277e1b41369cf5e12889653f81c90bcd49b8e683abd919c3"
+      },
+      {
+        "id": 75784,
+        "kind": "file",
+        "path": "video_files/video.mp4",
+        "exists": true,
+        "bytes": 128000,
+        "sha256": "ba1ad5fe9161a68f04b2b69d95aab5caca4a9b3fe44e74de793d452c9aae1cb8"
+      },
+      {
+        "id": 75837,
+        "kind": "photo",
+        "path": "photos/photo_2495@08-10-2026_08-11-29.jpg",
+        "exists": true,
+        "bytes": 128822,
+        "sha256": "8b6eca007d82b271365c8e3de69da78bc2dfc6227d145a1b769433ff8058497b"
+      },
+      {
+        "id": 75840,
+        "kind": "file",
+        "path": "files/live_salphaseion.txt",
+        "exists": true,
+        "bytes": 2149,
+        "sha256": "d39d10b1e1902d2620eb19ebcad4215e23c048de639466cca9a26bdc9303330c"
+      },
+      {
+        "id": 75858,
+        "kind": "photo",
+        "path": "photos/photo_2496@08-10-2026_09-17-06.jpg",
+        "exists": true,
+        "bytes": 103778,
+        "sha256": "aa590ac7d3dce9b266c030eb6f7f9d3e7ed2c4265abd424681fb404c7ccc7b80"
+      },
+      {
+        "id": 75872,
+        "kind": "photo",
+        "path": "photos/photo_2497@08-10-2026_10-18-28.jpg",
+        "exists": true,
+        "bytes": 25770,
+        "sha256": "8a92d1ac8d1450580617f64f5e631cf86fc11b972ca4c49567efb3bbeae23129"
+      },
+      {
+        "id": 75925,
+        "kind": "file",
+        "path": "stickers/-2147483648_-210156.webp",
+        "exists": true,
+        "bytes": 16636,
+        "sha256": "dc4a90eadfb96d78abc43ca3776deca67473de1aa2cccd6343af6c000b3311d8"
+      },
+      {
+        "id": 75929,
+        "kind": "file",
+        "path": "files/faed_mid.mp3",
+        "exists": true,
+        "bytes": 1371785,
+        "sha256": "f6cfd9c2c92ff33772c6fd37e9f2a9d096cd81f049f0c21b1de7eb786f02fcfd"
+      },
+      {
+        "id": 75930,
+        "kind": "file",
+        "path": "files/dbbi_mid.mp3",
+        "exists": true,
+        "bytes": 222606,
+        "sha256": "518305a0c6dc24e48c76436551438420976a3185443eccd62bbeeb414f8fcd2e"
+      },
+      {
+        "id": 75931,
+        "kind": "file",
+        "path": "files/dbbi_rev_mid.mp3",
+        "exists": true,
+        "bytes": 222606,
+        "sha256": "26df8b9bc856bb9b445d1b635d9a4de8154f8a1b1c8b933c235e81c43f040431"
+      },
+      {
+        "id": 75932,
+        "kind": "file",
+        "path": "files/faed_rev_mid.mp3",
+        "exists": true,
+        "bytes": 1371785,
+        "sha256": "771b4f4828a7c896bf89f7395bffe171280535bc56cdf117583f0646ab05bc4e"
+      },
+      {
+        "id": 75978,
+        "kind": "file",
+        "path": "stickers/AnimatedSticker (3).tgs",
+        "exists": true,
+        "bytes": 38641,
+        "sha256": "980f904e73c3a4d9a7ed9ee2a479165a75f44527f278d2c6f97a3e84d8599948"
+      },
+      {
+        "id": 75979,
+        "kind": "file",
+        "path": "video_files/video_50@08-10-2026_15-39-57.mp4",
+        "exists": true,
+        "bytes": 9354337,
+        "sha256": "38d0f2106fa21ee3bd60befc5cefb9353aafa18e0465578eeffdfa4169e4a0e0"
+      },
+      {
+        "id": 75983,
+        "kind": "photo",
+        "path": "photos/photo_2498@08-10-2026_15-49-00.jpg",
+        "exists": true,
+        "bytes": 74032,
+        "sha256": "0d93792e1df50ce12ea219460a83edd719f964e4351d975b0c49a7e115e345e6"
+      },
+      {
+        "id": 75984,
+        "kind": "photo",
+        "path": "photos/photo_2499@08-10-2026_15-49-00.jpg",
+        "exists": true,
+        "bytes": 20849,
+        "sha256": "2ab280cf574c634f2e94ef1003cbcacb31182b2e913659599a0e517112c30319"
+      },
+      {
+        "id": 75985,
+        "kind": "photo",
+        "path": "photos/photo_2500@08-10-2026_15-49-00.jpg",
+        "exists": true,
+        "bytes": 69985,
+        "sha256": "c453febfc06ee1d7de3740b84763ed3d7c0542e702f067769ffa17e436c1dc49"
+      },
+      {
+        "id": 75992,
+        "kind": "photo",
+        "path": "photos/photo_2501@08-10-2026_16-08-41.jpg",
+        "exists": true,
+        "bytes": 21157,
+        "sha256": "f22d8e01da7ef4050d9750d03886e511b51cf5d257db6e3c063919d952a741b6"
+      },
+      {
+        "id": 75996,
+        "kind": "photo",
+        "path": "photos/photo_2502@08-10-2026_16-20-33.jpg",
+        "exists": true,
+        "bytes": 90990,
+        "sha256": "9b5f910b4052a81e36d06168e0ef34df0b4a17d67645654b4a0ed7a73c6b3407"
+      },
+      {
+        "id": 75997,
+        "kind": "photo",
+        "path": "photos/photo_2503@08-10-2026_16-36-07.jpg",
+        "exists": true,
+        "bytes": 93751,
+        "sha256": "b1fc11501f9db953c509ae0fefbe7176adb2b07f6951b537d1ee13b290cfd258"
+      },
+      {
+        "id": 76001,
+        "kind": "photo",
+        "path": "photos/photo_2504@08-10-2026_16-46-41.jpg",
+        "exists": true,
+        "bytes": 6948,
+        "sha256": "12b5ddbe420da63df94bf18f250dd6e05a56ba9b66d2f85aff7660a30a1cee9e"
+      },
+      {
+        "id": 76003,
+        "kind": "photo",
+        "path": "photos/photo_2505@08-10-2026_16-51-04.jpg",
+        "exists": true,
+        "bytes": 118641,
+        "sha256": "e7d0673925f5d120794012bc379d7d60f694e4758d389261eee0abae255b38e0"
+      },
+      {
+        "id": 76005,
+        "kind": "file",
+        "path": "video_files/video (1).mp4",
+        "exists": true,
+        "bytes": 193590,
+        "sha256": "659758484f814061ae7f1878b013991c783e9e71eec3513b891c7e2686c4b01d"
+      },
+      {
+        "id": 76038,
+        "kind": "photo",
+        "path": "photos/photo_2506@09-10-2026_02-14-39.jpg",
+        "exists": true,
+        "bytes": 238206,
+        "sha256": "1c3263acdab527142a5bf4c20c5ae8d6a27aafa0c4e9915fcbbd42f3020c2412"
+      },
+      {
+        "id": 76048,
+        "kind": "photo",
+        "path": "photos/photo_2507@09-10-2026_11-05-24.jpg",
+        "exists": true,
+        "bytes": 75538,
+        "sha256": "cbe2bcf2657b4fff138b0d9aec3312c33bdb96fb6046566d31d07441b3a877f2"
+      },
+      {
+        "id": 76144,
+        "kind": "file",
+        "path": "files/dbbib-faed-analysis-2026-10-10.md",
+        "exists": true,
+        "bytes": 5407,
+        "sha256": "d65a6285bf4ac2a83e69930b55d34ccb91ebcf36a1bb1843a1bba2e35ea10656"
+      },
+      {
+        "id": 76148,
+        "kind": "photo",
+        "path": "photos/photo_2508@10-10-2026_14-00-48.jpg",
+        "exists": true,
+        "bytes": 44072,
+        "sha256": "d6b508c27a652623659ae436953209dc64b8eb3abe3aefa71030310dd4b84474"
+      },
+      {
+        "id": 76166,
+        "kind": "file",
+        "path": "files/knight_walk.py",
+        "exists": true,
+        "bytes": 14635,
+        "sha256": "ad707978154054750100bc591a78873e41697f6cc9a42cba06b4ca22942efbe8"
+      },
+      {
+        "id": 76170,
+        "kind": "file",
+        "path": "files/knight_walkV2.docx",
+        "exists": true,
+        "bytes": 14786,
+        "sha256": "c4a2371265fd94e5c52b22c66e6420337f66de44e22b20bc7a999fd772cf3859"
+      },
+      {
+        "id": 76190,
+        "kind": "photo",
+        "path": "photos/photo_2509@10-10-2026_17-39-12.jpg",
+        "exists": true,
+        "bytes": 45810,
+        "sha256": "4d58e87789e24ed61a1916cdb78837f44031ec4908ef4b3e79972e4f4d681381"
+      },
+      {
+        "id": 76191,
+        "kind": "photo",
+        "path": "photos/photo_2510@10-10-2026_17-48-45.jpg",
+        "exists": true,
+        "bytes": 27331,
+        "sha256": "40fd06a5b731fffd2d1b5ebd56e0adb85dd09bde5480a63e3fad2520c8f8de4a"
+      },
+      {
+        "id": 76194,
+        "kind": "file",
+        "path": "stickers/sticker (1).webp",
+        "exists": true,
+        "bytes": 16690,
+        "sha256": "8de28200df9abcc9954a8806a57a12de4c549b39c3d04881951e11394ed8939a"
+      },
+      {
+        "id": 76266,
+        "kind": "file",
+        "path": "video_files/IMG_1570.MP4",
+        "exists": true,
+        "bytes": 3018911,
+        "sha256": "f0903b44d7b9a43f855cce0a81a258766b41d85fbb769ca536a4692fbd17708e"
+      },
+      {
+        "id": 76287,
+        "kind": "photo",
+        "path": "photos/photo_2511@11-10-2026_15-13-11.jpg",
+        "exists": true,
+        "bytes": 144728,
+        "sha256": "9ae6ffb07f499a3ef18aacec9db518388c5b550f074f7050c44c49881e26e25e"
+      },
+      {
+        "id": 76292,
+        "kind": "file",
+        "path": "video_files/video_51@11-10-2026_18-53-47.mp4",
+        "exists": true,
+        "bytes": 9951151,
+        "sha256": "d98dd8b0b667da378ac000ebb50f224d62f77e55e00765d676c677066d881c15"
+      },
+      {
+        "id": 76341,
+        "kind": "file",
+        "path": "files/puzzleislife.gif",
+        "exists": true,
+        "bytes": 74049546,
+        "sha256": "b0c15d1da100649b60691ecf5da21cc1ea04fff9148addc3004212d75d2a69f5"
+      },
+      {
+        "id": 76342,
+        "kind": "photo",
+        "path": "photos/photo_2512@12-10-2026_02-52-22.jpg",
+        "exists": true,
+        "bytes": 224523,
+        "sha256": "de9a91b6071797eaaf60deccc17066f67666bd729d940cf54471389772ee0880"
+      },
+      {
+        "id": 76361,
+        "kind": "file",
+        "path": "stickers/sticker (2).webp",
+        "exists": true,
+        "bytes": 35248,
+        "sha256": "ac02504d97ecea1b8a064417d82c8db77ffa56a31b925f291c7236afd324c72b"
+      },
+      {
+        "id": 76401,
+        "kind": "file",
+        "path": "stickers/sticker (3).webp",
+        "exists": true,
+        "bytes": 32936,
+        "sha256": "5e493d1527d324cfe40848a14241dc66f6c14a4067e028098bb126b220620c1f"
+      },
+      {
+        "id": 76418,
+        "kind": "file",
+        "path": "files/12-addresses.txt",
+        "exists": true,
+        "bytes": 1931,
+        "sha256": "3263a485c3692a57f2ba588391cfc50dd6a0529452b932d54e7f2621e6714552"
+      },
+      {
+        "id": 76420,
+        "kind": "file",
+        "path": "files/cosmic_decrypted_verified.bin",
+        "exists": true,
+        "bytes": 1327,
+        "sha256": "4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081"
+      },
+      {
+        "id": 76424,
+        "kind": "file",
+        "path": "stickers/sticker (4).webp",
+        "exists": true,
+        "bytes": 61436,
+        "sha256": "4768ed72f9053e0a6c84b532162f1b32ecf82a8f81a7c9bc248c0826b91882d7"
+      },
+      {
+        "id": 76443,
+        "kind": "file",
+        "path": "files/cosmic_correct_12addrs.txt",
+        "exists": true,
+        "bytes": 1326,
+        "sha256": "3a620af8af9151997726fff81a8c615117de4d5ad12e781c266cabdb8d261aed"
+      },
+      {
+        "id": 76446,
+        "kind": "photo",
+        "path": "photos/photo_2513@12-10-2026_21-18-04.jpg",
+        "exists": true,
+        "bytes": 49347,
+        "sha256": "8368b357d9bc1ec9fd7c79ed9a34fb0662a1719befb3408cc08980961522224b"
+      },
+      {
+        "id": 76457,
+        "kind": "file",
+        "path": "files/from_issue110_addresses.py",
+        "exists": true,
+        "bytes": 6983,
+        "sha256": "983fa3be5a560fbbbda929559abf1f1209b2cf4173dfa5c35d7dcc450e87d40d"
+      },
+      {
+        "id": 76458,
+        "kind": "file",
+        "path": "files/CosmicDuality.txt",
+        "exists": true,
+        "bytes": 1820,
+        "sha256": "9a8172dd327273459f602517539ea30bbfa318d9d4338820f16d6c033260edf7"
+      },
+      {
+        "id": 76488,
+        "kind": "file",
+        "path": "stickers/sticker (1).webp",
+        "exists": true,
+        "bytes": 16690,
+        "sha256": "8de28200df9abcc9954a8806a57a12de4c549b39c3d04881951e11394ed8939a"
+      },
+      {
+        "id": 76545,
+        "kind": "photo",
+        "path": "photos/photo_2514@13-10-2026_12-17-26.jpg",
+        "exists": true,
+        "bytes": 92477,
+        "sha256": "72fe8f71a73605d95f90bf431e6fd0a53a8b3236fd563c6acdc8f16c43585bac"
+      },
+      {
+        "id": 76548,
+        "kind": "file",
+        "path": "stickers/AnimatedSticker (8).tgs",
+        "exists": true,
+        "bytes": 15164,
+        "sha256": "04f537dceb622864c722c60042960db2956437af8d024847b74252fabde7dba0"
+      },
+      {
+        "id": 76554,
+        "kind": "file",
+        "path": "video_files/1421.gif.mp4",
+        "exists": true,
+        "bytes": 381049,
+        "sha256": "ffe914460cf372ce509af3fa02c46779f8f4829970d9670d84b55f12943ea72c"
+      },
+      {
+        "id": 76556,
+        "kind": "file",
+        "path": "video_files/sticker.webm",
+        "exists": true,
+        "bytes": 239695,
+        "sha256": "234a8f027410a5b6277e1b41369cf5e12889653f81c90bcd49b8e683abd919c3"
+      },
+      {
+        "id": 76560,
+        "kind": "photo",
+        "path": "photos/photo_2515@13-10-2026_19-57-01.jpg",
+        "exists": true,
+        "bytes": 95548,
+        "sha256": "972063085e2b75dc69fcf52978aa1cd679851febf8a8b86dab750835b9d800cc"
+      },
+      {
+        "id": 76563,
+        "kind": "file",
+        "path": "stickers/sticker (5).webp",
+        "exists": true,
+        "bytes": 23710,
+        "sha256": "79514eecd4446b88809dd15ed8591a27ca758f02e75ed757e534a7a60f7cea2c"
+      },
+      {
+        "id": 76570,
+        "kind": "file",
+        "path": "stickers/sticker (6).webp",
+        "exists": true,
+        "bytes": 24542,
+        "sha256": "25f54cf4edea93834f9ef156349dee01fd3654b27df7b2cb08c1f3bf07709a6d"
+      },
+      {
+        "id": 76574,
+        "kind": "file",
+        "path": "stickers/sticker (7).webp",
+        "exists": true,
+        "bytes": 35610,
+        "sha256": "3d460960d8e239950d90a4588572b2a808de6663439cf5efa07a19bb6a00d25c"
+      },
+      {
+        "id": 76576,
+        "kind": "file",
+        "path": "video_files/animation.gif.mp4",
+        "exists": true,
+        "bytes": 151554,
+        "sha256": "5d22e4ed7c2cbffafca0fa404659244396124b3e4c7b45fbb60b5a07b2513faa"
+      },
+      {
+        "id": 76578,
+        "kind": "photo",
+        "path": "photos/photo_2516@13-10-2026_20-56-49.jpg",
+        "exists": true,
+        "bytes": 293040,
+        "sha256": "7b6701314ae6163adb676ef7f5b6af5ae680202a51e2b6b6ec9d670416aa26a0"
+      },
+      {
+        "id": 76602,
+        "kind": "photo",
+        "path": "photos/photo_2517@13-10-2026_21-27-32.jpg",
+        "exists": true,
+        "bytes": 58059,
+        "sha256": "9b76ec89c0c8dddddb0360f6586212553558f412e68c829749151f1df9ae7c8f"
+      },
+      {
+        "id": 76615,
+        "kind": "photo",
+        "path": "photos/photo_2518@14-10-2026_00-39-16.jpg",
+        "exists": true,
+        "bytes": 40904,
+        "sha256": "fc38b2783d723b7181b8b1f9c8d235262ce79261b6c1c82c97708805428fdb08"
+      },
+      {
+        "id": 76631,
+        "kind": "photo",
+        "path": "photos/photo_2519@14-10-2026_03-23-52.jpg",
+        "exists": true,
+        "bytes": 156820,
+        "sha256": "50f2f04df08b23c522e666340d7e57976c54b143dc497c0d4e9ecab3b97c2a2b"
+      },
+      {
+        "id": 76634,
+        "kind": "photo",
+        "path": "photos/photo_2520@14-10-2026_03-42-31.jpg",
+        "exists": true,
+        "bytes": 239672,
+        "sha256": "e337a09a362dbd680453004094cbb2a45cba867f072e169a0eeb07c4a19b357e"
+      },
+      {
+        "id": 76636,
+        "kind": "photo",
+        "path": "photos/photo_2521@14-10-2026_03-44-46.jpg",
+        "exists": true,
+        "bytes": 109717,
+        "sha256": "01179bfb3062737642ff57fdd98f93cb932bd2f6ef6d973a438151c9796cc4e4"
+      },
+      {
+        "id": 76637,
+        "kind": "file",
+        "path": "stickers/sticker (8).webp",
+        "exists": true,
+        "bytes": 20204,
+        "sha256": "308ac33e4fbcee7a5d58a6e1eb1534489e97c728c5ead213fbc0442f1ffd26a2"
+      },
+      {
+        "id": 76638,
+        "kind": "photo",
+        "path": "photos/photo_2522@14-10-2026_03-49-28.jpg",
+        "exists": true,
+        "bytes": 11842,
+        "sha256": "48f82db64da3eb29755cc0e1217a63eceec61d7ca1aef29642f39b7935ada915"
+      },
+      {
+        "id": 76647,
+        "kind": "photo",
+        "path": "photos/photo_2523@14-10-2026_05-37-01.jpg",
+        "exists": true,
+        "bytes": 8915,
+        "sha256": "3f447f1e41f602f5b119c66cf65e1b7fcec0d671e4b42ef4d7d7437a1e73dddf"
+      },
+      {
+        "id": 76648,
+        "kind": "file",
+        "path": "stickers/sticker (9).webp",
+        "exists": true,
+        "bytes": 27650,
+        "sha256": "6d58d104cd63d7559ddeb7ab8e61496856e2fc13dfd36b947dc8cdd696033177"
+      },
+      {
+        "id": 76656,
+        "kind": "file",
+        "path": "video_files/matrix-transpose.mp4",
+        "exists": true,
+        "bytes": 109844,
+        "sha256": "6bd9e2563b2a2855257359e6d5f75a23c53a06ad75b1f7ba0a2fd029e0d175d0"
+      },
+      {
+        "id": 76683,
+        "kind": "photo",
+        "path": "photos/photo_2524@14-10-2026_17-12-17.jpg",
+        "exists": true,
+        "bytes": 108473,
+        "sha256": "b7f5c0f5f5fc0cf1a412547d8e1a9aa57f8a9d4c2215070270c02073f1c43773"
+      },
+      {
+        "id": 76688,
+        "kind": "photo",
+        "path": "photos/photo_2525@14-10-2026_17-53-42.jpg",
+        "exists": true,
+        "bytes": 134568,
+        "sha256": "a9a6159c57ed6f5aae9d6d4d5428a8039939d7b982151b13beecc950c0170c69"
+      },
+      {
+        "id": 76690,
+        "kind": "file",
+        "path": "video_files/archi.mp4",
+        "exists": true,
+        "bytes": 24347512,
+        "sha256": "cda509fb5c364c088bbc4055e848f457221d4a7659e93449bc766f767b7932c8"
+      },
+      {
+        "id": 76696,
+        "kind": "file",
+        "path": "video_files/the-matrix-has-you-the-matrix.mp4",
+        "exists": true,
+        "bytes": 186830,
+        "sha256": "1fd49cc77998ab597668c8ff3b5931e05f4073d27ac0f74d2b76f8b8c4f79bf4"
+      },
+      {
+        "id": 76700,
+        "kind": "photo",
+        "path": "photos/photo_2526@14-10-2026_22-43-31.jpg",
+        "exists": true,
+        "bytes": 4298,
+        "sha256": "11ad012bf63b90d358878b459e50a3b2c8d5a256accab454ac86951ca8911924"
+      },
+      {
+        "id": 76708,
+        "kind": "photo",
+        "path": "photos/photo_2527@14-10-2026_23-40-28.jpg",
+        "exists": true,
+        "bytes": 170319,
+        "sha256": "ffa381e8af7ac3a259c989652133d371026d4cc40629dab20b40f5a36452a0cf"
+      },
+      {
+        "id": 76709,
+        "kind": "file",
+        "path": "files/cosmic-duality_compress.pdf",
+        "exists": true,
+        "bytes": 19542842,
+        "sha256": "38e28dbd72976ef17c5d4ffdafe4475689f47300da5e2c98e0cb77b578547b04"
+      },
+      {
+        "id": 76726,
+        "kind": "file",
+        "path": "video_files/animation (1).gif.mp4",
+        "exists": true,
+        "bytes": 141124,
+        "sha256": "a5323545ccf0461f432d7e38746745b76c738999a4b0ea3b7008aae1c6d649cf"
+      },
+      {
+        "id": 76799,
+        "kind": "file",
+        "path": "video_files/oblivion-pakistan.mp4",
+        "exists": true,
+        "bytes": 36511,
+        "sha256": "1431220eaf53a1c34ecb243703921c5113375b52e9584e6f4da813dddf9d454f"
+      },
+      {
+        "id": 76800,
+        "kind": "file",
+        "path": "video_files/facetime-facetime-cat.mp4",
+        "exists": true,
+        "bytes": 51231,
+        "sha256": "bc7557a11ed355dfceea8d7bfe8d19f23eee480465bbbc66d0fb4c9c6b9ca5ac"
+      },
+      {
+        "id": 76805,
+        "kind": "file",
+        "path": "video_files/animation (2).gif.mp4",
+        "exists": true,
+        "bytes": 209058,
+        "sha256": "0387d9dacf037573e6ec6a0518c0c1c1c44377473f34b432ca719c3c4188f3e2"
+      },
+      {
+        "id": 76807,
+        "kind": "file",
+        "path": "video_files/rat-cool.mp4",
+        "exists": true,
+        "bytes": 81093,
+        "sha256": "ed99cb954498eaa30f94c0d1545cce939e4b10a8672e991c1178a33cd0e89c1d"
+      },
+      {
+        "id": 76810,
+        "kind": "photo",
+        "path": "photos/photo_2528@15-10-2026_18-34-52.jpg",
+        "exists": true,
+        "bytes": 77505,
+        "sha256": "f3264249c074d984988856788ecef93fb4db19c052979b45d3e4d6eda40800f1"
+      },
+      {
+        "id": 76811,
+        "kind": "photo",
+        "path": "photos/photo_2529@15-10-2026_19-01-40.jpg",
+        "exists": true,
+        "bytes": 317820,
+        "sha256": "36ad811ab340324a35f1e1cc170cad7224db6cef966c4077a5088bc3ca54f47d"
+      },
+      {
+        "id": 76813,
+        "kind": "file",
+        "path": "files/gsmgio_json.pdf",
+        "exists": true,
+        "bytes": 40972125,
+        "sha256": "618c80094260a910ac8026c1d11c7ad177c8e31e6f5b18a0a3da4f8fa3e485f3"
+      },
+      {
+        "id": 76820,
+        "kind": "file",
+        "path": "stickers/sticker (10).webp",
+        "exists": true,
+        "bytes": 54838,
+        "sha256": "3d13b0b69aa7471a5e69e07ebc037e03da3e198382ac6954d40a0fbe6ea5b15a"
+      },
+      {
+        "id": 76827,
+        "kind": "file",
+        "path": "video_files/wait-a-minute-cordell-walker.mp4",
+        "exists": true,
+        "bytes": 46333,
+        "sha256": "9cacd4d2a96ac0fb968e3a1395251a00053883b1c87f1e63f320f9353374ffaa"
+      },
+      {
+        "id": 76840,
+        "kind": "file",
+        "path": "video_files/NODAYBREAK.mp4",
+        "exists": true,
+        "bytes": 22223722,
+        "sha256": "654298790176573354ad2c2c2c8b6d9a2b72f23ab69d77c08a66fb4786577e98"
+      },
+      {
+        "id": 76845,
+        "kind": "photo",
+        "path": "photos/photo_2530@16-10-2026_07-33-06.jpg",
+        "exists": true,
+        "bytes": 30597,
+        "sha256": "e030a185d573c4a7fd5f4ac7d06ee5c2322c55436220aa834f40a6f026edbd15"
+      },
+      {
+        "id": 76847,
+        "kind": "file",
+        "path": "stickers/sticker (12).webp",
+        "exists": true,
+        "bytes": 64054,
+        "sha256": "a43045e4f0bd9bd58bd1035c488746c53efbc42af2a9f31bdaad473c8a1b1658"
+      },
+      {
+        "id": 76853,
+        "kind": "file",
+        "path": "video_files/dreamina_2026_10_16_9275_killerbit_es_un_antiheroe,_lleva_consigo.mp4",
+        "exists": true,
+        "bytes": 8531297,
+        "sha256": "a7294956f048216fac3452d93e999992e36b9cbdfd5065ba15402f4cf2d450f5"
+      },
+      {
+        "id": 76866,
+        "kind": "photo",
+        "path": "photos/photo_2531@16-10-2026_17-26-41.jpg",
+        "exists": true,
+        "bytes": 78310,
+        "sha256": "0c996aa2ecf22c812346d524330581533491ea85d1a742abc09580db7427a2e3"
+      },
+      {
+        "id": 76867,
+        "kind": "photo",
+        "path": "photos/photo_2532@16-10-2026_17-49-33.jpg",
+        "exists": true,
+        "bytes": 15765,
+        "sha256": "378406fa7fb125657039b6404318b2ac259441afa1f2f37f6cdc3cada4a0ebae"
+      },
+      {
+        "id": 76869,
+        "kind": "file",
+        "path": "stickers/sticker (13).webp",
+        "exists": true,
+        "bytes": 25286,
+        "sha256": "2a55a28a30e924b1878d6dabe9b8206972c059595a95adada729e3b63ecf3225"
+      },
+      {
+        "id": 76870,
+        "kind": "photo",
+        "path": "photos/photo_2533@16-10-2026_17-55-45.jpg",
+        "exists": true,
+        "bytes": 141342,
+        "sha256": "33b7b326ac37accbd2faa765400537e7d9f22b2f1ac5780ea616bf2d091a570c"
+      },
+      {
+        "id": 76872,
+        "kind": "photo",
+        "path": "photos/photo_2534@16-10-2026_18-25-39.jpg",
+        "exists": true,
+        "bytes": 191539,
+        "sha256": "a58828da994f51f1bf1a6bb7113ad80841441f292893ed26d4c162b467ee273b"
+      },
+      {
+        "id": 76876,
+        "kind": "file",
+        "path": "video_files/animation (2).gif.mp4",
+        "exists": true,
+        "bytes": 209058,
+        "sha256": "0387d9dacf037573e6ec6a0518c0c1c1c44377473f34b432ca719c3c4188f3e2"
+      },
+      {
+        "id": 76881,
+        "kind": "photo",
+        "path": "photos/photo_2535@16-10-2026_22-08-51.jpg",
+        "exists": true,
+        "bytes": 201146,
+        "sha256": "1b02f524babe866b37bfbd4a05080eb6d70c6c13453c45346d1683bcdd04c4d9"
+      },
+      {
+        "id": 76885,
+        "kind": "photo",
+        "path": "photos/photo_2536@16-10-2026_23-45-31.jpg",
+        "exists": true,
+        "bytes": 60258,
+        "sha256": "29c496fdb1b5a95d91a309c8dcf13b55109ffefc2c0149e1f0b39f10fd8055fd"
+      },
+      {
+        "id": 76888,
+        "kind": "file",
+        "path": "video_files/bob-bart.mp4",
+        "exists": true,
+        "bytes": 364108,
+        "sha256": "bc3f9c3d54d8398126cee4e1574a480d7738dbbdf130c7d5a414acc6a5e74d5d"
+      },
+      {
+        "id": 76900,
+        "kind": "file",
+        "path": "video_files/what-stone-cold-steve-austin.mp4",
+        "exists": true,
+        "bytes": 98394,
+        "sha256": "542d5e5de2031b849635356936e282cbeeade2fd7f101d8cc0329cf96eb9aa44"
+      },
+      {
+        "id": 76906,
+        "kind": "file",
+        "path": "video_files/animation (3).gif.mp4",
+        "exists": true,
+        "bytes": 44416,
+        "sha256": "5e1d4dd1c7ad8ffc237e806fbc01f5db635d433ed79959f44146c1bb35f789bc"
+      },
+      {
+        "id": 76907,
+        "kind": "file",
+        "path": "video_files/john-cena-damn-right.mp4",
+        "exists": true,
+        "bytes": 204557,
+        "sha256": "f8684ea1acbe81f6d5db5367afeb4e6ba194e08ab9760dbb153b54f2baa957b5"
+      },
+      {
+        "id": 76914,
+        "kind": "file",
+        "path": "video_files/imtired-im.mp4",
+        "exists": true,
+        "bytes": 71473,
+        "sha256": "dddf8d1bfd53b867d13ad7a1ba8fbeada4dd2d7ca9a654330c04e2a96f79ebaf"
+      },
+      {
+        "id": 76915,
+        "kind": "file",
+        "path": "video_files/giphy.mp4",
+        "exists": true,
+        "bytes": 468226,
+        "sha256": "00261effa923c253bf174ba6b8fff64832c55cc82d6ff5a48ae5ccf9f3238073"
+      },
+      {
+        "id": 76920,
+        "kind": "file",
+        "path": "files/phase3.2-monologue-corrected.txt",
+        "exists": true,
+        "bytes": 1872,
+        "sha256": "c432587765c599decf54d3dbf1bde38450220ddeb2b55ad78dc1cb4e0f7718ba"
+      },
+      {
+        "id": 76923,
+        "kind": "photo",
+        "path": "photos/photo_2537@17-10-2026_11-41-38.jpg",
+        "exists": true,
+        "bytes": 42646,
+        "sha256": "a2eed7eef0bf8da426848ef02dd089e38e8313a42bce6f44f603abf18614c1e8"
+      },
+      {
+        "id": 76929,
+        "kind": "photo",
+        "path": "photos/photo_2538@17-10-2026_11-49-33.jpg",
+        "exists": true,
+        "bytes": 69611,
+        "sha256": "c9fe5da6b5b0ee42f7ac3b5a9a14ab449b39c79e50c583605d995cea9cba0c15"
+      },
+      {
+        "id": 76955,
+        "kind": "file",
+        "path": "video_files/sticker (3).webm",
+        "exists": true,
+        "bytes": 207933,
+        "sha256": "e8a2e692fe203c1f6a9444363ebffe47ee65ab1c79f77990c44613bb95d4883c"
+      },
+      {
+        "id": 76979,
+        "kind": "file",
+        "path": "stickers/sticker (10).webp",
+        "exists": true,
+        "bytes": 54838,
+        "sha256": "3d13b0b69aa7471a5e69e07ebc037e03da3e198382ac6954d40a0fbe6ea5b15a"
+      },
+      {
+        "id": 77009,
+        "kind": "photo",
+        "path": "photos/photo_2539@17-10-2026_21-16-55.jpg",
+        "exists": true,
+        "bytes": 7125,
+        "sha256": "9d9c20afeb9335eb0dcf090eb9617c13284e40d966bc8c8e6536375dbd21cf1c"
+      },
+      {
+        "id": 77011,
+        "kind": "photo",
+        "path": "photos/photo_2540@17-10-2026_21-37-54.jpg",
+        "exists": true,
+        "bytes": 8605,
+        "sha256": "ec2b56d9c75021c582cc847b4d6aa910c4cdd964f42abfba4b6a0fe83451afaf"
+      },
+      {
+        "id": 77044,
+        "kind": "file",
+        "path": "video_files/video_52@17-10-2026_23-17-04.mp4",
+        "exists": true,
+        "bytes": 15406098,
+        "sha256": "6460aad902aa0385aadf09a94175821b892687c0a29cfa328699e55c14c475d8"
+      },
+      {
+        "id": 77046,
+        "kind": "photo",
+        "path": "photos/photo_2541@18-10-2026_02-01-13.jpg",
+        "exists": true,
+        "bytes": 206707,
+        "sha256": "8b439054c23cd71e1d3de20243e96e9bd91317b2b7f88f7e1886e89430ec48dd"
+      },
+      {
+        "id": 77052,
+        "kind": "file",
+        "path": "files/UTXO.docx",
+        "exists": true,
+        "bytes": 31842,
+        "sha256": "1d3676e36c2af96e7f971a0426dacb9e50680f2c231e237793fdbb7a46d8df1d"
+      },
+      {
+        "id": 77053,
+        "kind": "photo",
+        "path": "photos/photo_2542@18-10-2026_05-21-11.jpg",
+        "exists": true,
+        "bytes": 208541,
+        "sha256": "8ff50f16f6c97c4fe890d0255a46d889f4e9a81ba5a843fc0f8f641bf23c9d90"
+      },
+      {
+        "id": 77054,
+        "kind": "photo",
+        "path": "photos/photo_2543@18-10-2026_06-45-01.jpg",
+        "exists": true,
+        "bytes": 74046,
+        "sha256": "e14aff52b2f7a2fb9b473d809cbca1b5d5d258a5324acb6c15f1a33d59a5675b"
+      },
+      {
+        "id": 77058,
+        "kind": "photo",
+        "path": "photos/photo_2544@18-10-2026_07-30-41.jpg",
+        "exists": true,
+        "bytes": 190710,
+        "sha256": "aa70313d5c81776d2c95a8197e7e2e0426b13157170c055382f608bb2c2ce45e"
+      },
+      {
+        "id": 77072,
+        "kind": "photo",
+        "path": "photos/photo_2545@18-10-2026_09-41-33.jpg",
+        "exists": true,
+        "bytes": 83525,
+        "sha256": "c5d03eef32a19b0c98a31f649489fb9f1e6d0917f6ebac6f1445fcfa2d21d90b"
+      },
+      {
+        "id": 77073,
+        "kind": "photo",
+        "path": "photos/photo_2546@18-10-2026_09-42-34.jpg",
+        "exists": true,
+        "bytes": 50539,
+        "sha256": "2b7e43db22f69ff8c10f907b47605428729f1c55c1387920c506f9b5c1655c87"
+      },
+      {
+        "id": 77100,
+        "kind": "file",
+        "path": "stickers/sticker (14).webp",
+        "exists": true,
+        "bytes": 55634,
+        "sha256": "b0ada46ebb52d9a47e63b97a3fbe9f1d156789e196127dcc5d6e23e4c810478a"
+      },
+      {
+        "id": 77101,
+        "kind": "file",
+        "path": "video_files/5_6320874906774929577.mp4",
+        "exists": true,
+        "bytes": 131499,
+        "sha256": "8c16b0def8994c5349ff4e844a9e5aff4dcb66952ea7a580b404260745cf2545"
+      },
+      {
+        "id": 77102,
+        "kind": "file",
+        "path": "video_files/animation (4).gif.mp4",
+        "exists": true,
+        "bytes": 37257,
+        "sha256": "7430dcdda28083288ba9ae60805c70c1ca3baf1c28551f2d4c8ccca96f0f4250"
+      },
+      {
+        "id": 77103,
+        "kind": "file",
+        "path": "video_files/game-over.mp4",
+        "exists": true,
+        "bytes": 155645,
+        "sha256": "3070a8f9a9711866f598c557e90f5fb6e74ed54f3e84ee4e14ff9e75c1c796ff"
+      },
+      {
+        "id": 77105,
+        "kind": "photo",
+        "path": "photos/photo_2547@18-10-2026_14-21-36.jpg",
+        "exists": true,
+        "bytes": 188453,
+        "sha256": "882e43b3af8f3cd06c9a097547889985b521973fe10e0541fcf7c329e16c0b5c"
+      },
+      {
+        "id": 77124,
+        "kind": "file",
+        "path": "video_files/video_53@18-10-2026_17-20-36.mp4",
+        "exists": true,
+        "bytes": 842895,
+        "sha256": "4f90395fa9a700371d9ba56ce677d20b8da1034fbe91324f5f53eaf7bc6926ae"
+      },
+      {
+        "id": 77132,
+        "kind": "file",
+        "path": "video_files/animation (5).gif.mp4",
+        "exists": true,
+        "bytes": 23692,
+        "sha256": "d9d9126cd78bd56ec60138b8db276d5b9293c5034d13b37bc8d86fcfe1d53751"
+      },
+      {
+        "id": 77156,
+        "kind": "file",
+        "path": "files/qr_1.png",
+        "exists": true,
+        "bytes": 266,
+        "sha256": "073b99d3436a56a930f48ff32e00508aea66c3b827da7a6db833a0cafb142f80"
+      },
+      {
+        "id": 77157,
+        "kind": "file",
+        "path": "files/qr_7.png",
+        "exists": true,
+        "bytes": 624,
+        "sha256": "32c0ca121bec0d81d07bc3c75bdbfb277d00dfb95ae64f4c61e27cacd6f53605"
+      },
+      {
+        "id": 77158,
+        "kind": "file",
+        "path": "files/qr_10.png",
+        "exists": true,
+        "bytes": 713,
+        "sha256": "2d8f8e488a09d97c6048a50ce50acf38b1773049e9b1f35a678195eb82aa0b79"
+      },
+      {
+        "id": 77164,
+        "kind": "photo",
+        "path": "photos/photo_2548@18-10-2026_20-16-47.jpg",
+        "exists": true,
+        "bytes": 7115,
+        "sha256": "f945c888ead9a8f1d064ef69efdb8df6806edf45f22355afdd7336dabce2356e"
+      },
+      {
+        "id": 77168,
+        "kind": "photo",
+        "path": "photos/photo_2549@18-10-2026_20-18-14.jpg",
+        "exists": true,
+        "bytes": 2817,
+        "sha256": "9ec9520a851ecc70b19c9b8752aa858a4552b7542e76ace330092ee6b01a6acf"
+      },
+      {
+        "id": 77169,
+        "kind": "photo",
+        "path": "photos/photo_2550@18-10-2026_20-18-27.jpg",
+        "exists": true,
+        "bytes": 28187,
+        "sha256": "63169cc5708d76c6e0ba5c2c4a57b5cc22830b3005a489c301fcad2159ff4571"
+      },
+      {
+        "id": 77181,
+        "kind": "photo",
+        "path": "photos/photo_2551@18-10-2026_20-33-21.jpg",
+        "exists": true,
+        "bytes": 21713,
+        "sha256": "260e1f6c245bd6a41c3fb7eba06fc15848fd4f01e2e34093b271b64d24446ff1"
+      },
+      {
+        "id": 77183,
+        "kind": "photo",
+        "path": "photos/photo_2552@18-10-2026_20-36-00.jpg",
+        "exists": true,
+        "bytes": 22951,
+        "sha256": "234bd016e7c330ae590ccc21d37c57a61b134b517e93e0471e12e08ed06a4c1a"
+      },
+      {
+        "id": 77191,
+        "kind": "file",
+        "path": "video_files/the-office-kelly-kapoor.mp4",
+        "exists": true,
+        "bytes": 48172,
+        "sha256": "7dfe95566524073f6bad488409f787dc13149174173431b070f0adc8d24df21f"
+      },
+      {
+        "id": 77193,
+        "kind": "photo",
+        "path": "photos/photo_2553@18-10-2026_21-05-18.jpg",
+        "exists": true,
+        "bytes": 5968,
+        "sha256": "e314f8331b51e9de8710bced94cd0cce08cde3029db2ea83d941fe9cc0d04367"
+      },
+      {
+        "id": 77194,
+        "kind": "photo",
+        "path": "photos/photo_2554@18-10-2026_21-05-39.jpg",
+        "exists": true,
+        "bytes": 25240,
+        "sha256": "11fbaefd7858f72574468838e54c95c824b4e6473399b8cfc4c1295a25606733"
+      },
+      {
+        "id": 77206,
+        "kind": "photo",
+        "path": "photos/photo_2555@18-10-2026_22-08-34.jpg",
+        "exists": true,
+        "bytes": 194436,
+        "sha256": "7ecebcec170a3d96ec88fcedcfe1da85ffff7531b63c2380b54d8cee97a1bb4c"
+      },
+      {
+        "id": 77214,
+        "kind": "file",
+        "path": "video_files/video (2).mp4",
+        "exists": true,
+        "bytes": 213873,
+        "sha256": "838c767b3de6ce00f271a33ceb73af563dcebf79d0b76a261ff2214b40fde7ad"
+      },
+      {
+        "id": 77222,
+        "kind": "file",
+        "path": "video_files/animation (6).gif.mp4",
+        "exists": true,
+        "bytes": 34500,
+        "sha256": "4c251a2ca8f92727df100209b98021739c027f87e0d55c999f831162740e5f43"
+      },
+      {
+        "id": 77226,
+        "kind": "photo",
+        "path": "photos/photo_2556@19-10-2026_08-25-32.jpg",
+        "exists": true,
+        "bytes": 28073,
+        "sha256": "5ed126f4ccfc1f3007958319453267b827b27cddfaeacc9d44aa225f5a271a92"
+      },
+      {
+        "id": 77227,
+        "kind": "photo",
+        "path": "photos/photo_2557@19-10-2026_08-51-56.jpg",
+        "exists": true,
+        "bytes": 128104,
+        "sha256": "e17e1f1121fc78292e226d533fa07a2b8af92814ad9a28daf94757baeb041626"
+      },
+      {
+        "id": 77238,
+        "kind": "photo",
+        "path": "photos/photo_2558@19-10-2026_10-53-40.jpg",
+        "exists": true,
+        "bytes": 168462,
+        "sha256": "b6c809b1573bd16aaaed4a402fa3121ed30119db54d8db3b6d62a3369b7448ea"
+      },
+      {
+        "id": 77239,
+        "kind": "file",
+        "path": "video_files/you-give-a-man-a-fish-give-man-fish.mp4",
+        "exists": true,
+        "bytes": 104347,
+        "sha256": "45de5433a79d763caf0f40a3186f5830327b2b98de59a2a0f9acb6002e61c372"
+      },
+      {
+        "id": 77248,
+        "kind": "photo",
+        "path": "photos/photo_2559@19-10-2026_15-21-40.jpg",
+        "exists": true,
+        "bytes": 26957,
+        "sha256": "571f6110e7c56ee6cc74056940e742c5c72804e906e0e5cb6c3ec6b10e1953d1"
+      },
+      {
+        "id": 77256,
+        "kind": "photo",
+        "path": "photos/photo_2560@19-10-2026_17-43-16.jpg",
+        "exists": true,
+        "bytes": 164911,
+        "sha256": "8998c5b5891e74a66bb31907241c5951809a1528ce16cba753a169505f051317"
+      },
+      {
+        "id": 77269,
+        "kind": "photo",
+        "path": "photos/photo_2561@19-10-2026_19-56-10.jpg",
+        "exists": true,
+        "bytes": 49081,
+        "sha256": "3be916ec18fa77b07855be29ce5ffe4d8ad769c6ec5aab18b4addd08c28831c4"
+      },
+      {
+        "id": 77276,
+        "kind": "photo",
+        "path": "photos/photo_2562@19-10-2026_22-26-00.jpg",
+        "exists": true,
+        "bytes": 7220,
+        "sha256": "73c0130ba5aeeb41b9afc3e5ccc5521a135a903506995e59d358f983a0f55670"
+      },
+      {
+        "id": 77278,
+        "kind": "photo",
+        "path": "photos/photo_2563@19-10-2026_22-26-24.jpg",
+        "exists": true,
+        "bytes": 27203,
+        "sha256": "7dd4b780bc453ba34274ffe9b3d8a7cec933d7ff50d414b5e79ea1895400f05c"
+      },
+      {
+        "id": 77280,
+        "kind": "photo",
+        "path": "photos/photo_2564@19-10-2026_22-27-33.jpg",
+        "exists": true,
+        "bytes": 249288,
+        "sha256": "1297f2b8264d06eb19b45839bfcbbb2d37cd546367e8a2ca1939414d0d127492"
+      },
+      {
+        "id": 77316,
+        "kind": "file",
+        "path": "stickers/sticker (15).webp",
+        "exists": true,
+        "bytes": 32332,
+        "sha256": "52d425e544bc020fa933070301b230bc94af2c232ee041fcd7f31da13d96efc8"
+      },
+      {
+        "id": 77319,
+        "kind": "file",
+        "path": "stickers/sticker (15).webp",
+        "exists": true,
+        "bytes": 32332,
+        "sha256": "52d425e544bc020fa933070301b230bc94af2c232ee041fcd7f31da13d96efc8"
+      },
+      {
+        "id": 77341,
+        "kind": "photo",
+        "path": "photos/photo_2565@20-10-2026_03-19-10.jpg",
+        "exists": true,
+        "bytes": 146713,
+        "sha256": "4249a67066c783414c60d303e92b889007cd0526a1a83f9b57d910768fae0c1f"
+      },
+      {
+        "id": 77348,
+        "kind": "photo",
+        "path": "photos/photo_2566@20-10-2026_03-29-08.jpg",
+        "exists": true,
+        "bytes": 39853,
+        "sha256": "eb781973226e92b01e7d2fe94983617c02181410d33c6e1ea19e939ad7991df7"
+      },
+      {
+        "id": 77352,
+        "kind": "file",
+        "path": "stickers/sticker (16).webp",
+        "exists": true,
+        "bytes": 27170,
+        "sha256": "313143d7ade1740b01b3ff01c4ed5eba0fd4b70454de3eeb38e8facca5c3aeea"
+      },
+      {
+        "id": 77353,
+        "kind": "file",
+        "path": "stickers/sticker (16).webp",
+        "exists": true,
+        "bytes": 27170,
+        "sha256": "313143d7ade1740b01b3ff01c4ed5eba0fd4b70454de3eeb38e8facca5c3aeea"
+      },
+      {
+        "id": 77354,
+        "kind": "file",
+        "path": "video_files/wait-a-minute-cordell-walker.mp4",
+        "exists": true,
+        "bytes": 46333,
+        "sha256": "9cacd4d2a96ac0fb968e3a1395251a00053883b1c87f1e63f320f9353374ffaa"
+      },
+      {
+        "id": 77364,
+        "kind": "photo",
+        "path": "photos/photo_2567@20-10-2026_10-48-13.jpg",
+        "exists": true,
+        "bytes": 138338,
+        "sha256": "46922f98f5e4a90b16fb167498179b3085a50c8f17c4e845d6281825996312b2"
+      },
+      {
+        "id": 77374,
+        "kind": "file",
+        "path": "video_files/442. kimmy.mp4",
+        "exists": true,
+        "bytes": 215601,
+        "sha256": "cef4418bad9d5fc81da71e3abd26b65a4d9e190c098650172b35873e993bc125"
+      },
+      {
+        "id": 77379,
+        "kind": "file",
+        "path": "stickers/AnimatedSticker (11).tgs",
+        "exists": true,
+        "bytes": 57728,
+        "sha256": "f7bcfe72315397ce50ee12cee66e9f841554be2d43abf522adf556b74b43f123"
+      },
+      {
+        "id": 77384,
+        "kind": "photo",
+        "path": "photos/photo_2568@20-10-2026_15-56-40.jpg",
+        "exists": true,
+        "bytes": 85728,
+        "sha256": "09ca369d849fbaa3bf942a55eb8432312887a9f074dc06d286a96190e988fac4"
+      },
+      {
+        "id": 77385,
+        "kind": "file",
+        "path": "video_files/VID-20171115-WA0064.mp4",
+        "exists": true,
+        "bytes": 100945,
+        "sha256": "f05d3f44f5fe4ce16bb6576d6c53cc7267b6dcfd8723d7286556ce00ad94f245"
+      },
+      {
+        "id": 77395,
+        "kind": "file",
+        "path": "stickers/sticker (16).webp",
+        "exists": true,
+        "bytes": 27170,
+        "sha256": "313143d7ade1740b01b3ff01c4ed5eba0fd4b70454de3eeb38e8facca5c3aeea"
+      },
+      {
+        "id": 77415,
+        "kind": "photo",
+        "path": "photos/photo_2569@20-10-2026_16-14-18.jpg",
+        "exists": true,
+        "bytes": 37509,
+        "sha256": "d5d2353828f3fd02e75f3944843f7497855dee9286cec4148665ac68d84a4e83"
+      },
+      {
+        "id": 77450,
+        "kind": "photo",
+        "path": "photos/photo_2570@20-10-2026_17-00-55.jpg",
+        "exists": true,
+        "bytes": 157871,
+        "sha256": "2742d758299cc39f344859df761ff7f6f64cf76939ddb9428fec1198bec9753d"
+      },
+      {
+        "id": 77454,
+        "kind": "file",
+        "path": "stickers/sticker (17).webp",
+        "exists": true,
+        "bytes": 24180,
+        "sha256": "db5276fc4d199812c063768821bf966ee0d73e84609373f3be5680e7d33ceb5c"
+      },
+      {
+        "id": 77456,
+        "kind": "photo",
+        "path": "photos/photo_2571@20-10-2026_17-52-44.jpg",
+        "exists": true,
+        "bytes": 179071,
+        "sha256": "1232609cd0e4ff730557b3120daa92490ca62db6d8eec78c7ff562d15172eefa"
+      },
+      {
+        "id": 77457,
+        "kind": "file",
+        "path": "stickers/sticker (18).webp",
+        "exists": true,
+        "bytes": 34222,
+        "sha256": "57711c5228b873123abaef74afa8f8971672558c658701e1efa974d4ae1fbe4b"
+      },
+      {
+        "id": 77461,
+        "kind": "photo",
+        "path": "photos/photo_2572@20-10-2026_18-01-53.jpg",
+        "exists": true,
+        "bytes": 166751,
+        "sha256": "9db1db0ab59cce1dbda7c4eaaa69f7358217e558be5b5dbc7bac6da0e116905e"
+      },
+      {
+        "id": 77462,
+        "kind": "photo",
+        "path": "photos/photo_2573@20-10-2026_18-20-40.jpg",
+        "exists": true,
+        "bytes": 134136,
+        "sha256": "3c62652245de3f541b7d19331d0a504178c35b5a35944f5015d096c9a4c72173"
+      },
+      {
+        "id": 77477,
+        "kind": "photo",
+        "path": "photos/photo_2574@20-10-2026_18-58-20.jpg",
+        "exists": true,
+        "bytes": 55342,
+        "sha256": "6b0c8a5869032e419980a656202a1bd211a1c5b850c514a522d5736a067b5468"
+      },
+      {
+        "id": 77494,
+        "kind": "file",
+        "path": "stickers/sticker (16).webp",
+        "exists": true,
+        "bytes": 27170,
+        "sha256": "313143d7ade1740b01b3ff01c4ed5eba0fd4b70454de3eeb38e8facca5c3aeea"
+      },
+      {
+        "id": 77501,
+        "kind": "photo",
+        "path": "photos/photo_2575@20-10-2026_19-48-06.jpg",
+        "exists": true,
+        "bytes": 175745,
+        "sha256": "fe4b1a3d2dc03049613373d998f58f36c1a85208b3cd4b66dbc0f2f03f406f5d"
+      },
+      {
+        "id": 77503,
+        "kind": "file",
+        "path": "stickers/sticker (19).webp",
+        "exists": true,
+        "bytes": 44192,
+        "sha256": "51f8d6bf22b21cebdf9c86c3435aec729381d9c84bb1fb3f543f5e93bc7e140e"
+      },
+      {
+        "id": 77505,
+        "kind": "file",
+        "path": "stickers/sticker (10).webp",
+        "exists": true,
+        "bytes": 54838,
+        "sha256": "3d13b0b69aa7471a5e69e07ebc037e03da3e198382ac6954d40a0fbe6ea5b15a"
+      },
+      {
+        "id": 77507,
+        "kind": "file",
+        "path": "video_files/what-ricky-berwick.mp4",
+        "exists": true,
+        "bytes": 759326,
+        "sha256": "6a24e808d5c2783a6483b843fc79d412db576c268cceedf27efc55c9ea6c538c"
+      },
+      {
+        "id": 77508,
+        "kind": "file",
+        "path": "video_files/shocked-meme-viral-chi-wow.mp4",
+        "exists": true,
+        "bytes": 273189,
+        "sha256": "6f3a25cc1e31f46395ca2cdb90a7e13bdf550421253e7331fad6b4855727a901"
+      },
+      {
+        "id": 77509,
+        "kind": "file",
+        "path": "stickers/sticker (20).webp",
+        "exists": true,
+        "bytes": 52652,
+        "sha256": "d56f5b550496590c039dd1af023d48495c79a85f6ddeab9f2b3529d6ec922a2c"
+      },
+      {
+        "id": 77517,
+        "kind": "file",
+        "path": "stickers/sticker (16).webp",
+        "exists": true,
+        "bytes": 27170,
+        "sha256": "313143d7ade1740b01b3ff01c4ed5eba0fd4b70454de3eeb38e8facca5c3aeea"
+      },
+      {
+        "id": 77522,
+        "kind": "file",
+        "path": "stickers/sticker (21).webp",
+        "exists": true,
+        "bytes": 24250,
+        "sha256": "1ab0c0f95683e0ed4c32e7c97da7b52197af0ea1fc410df55f339f6d8606b94b"
+      },
+      {
+        "id": 77530,
+        "kind": "file",
+        "path": "stickers/sticker (21).webp",
+        "exists": true,
+        "bytes": 24250,
+        "sha256": "1ab0c0f95683e0ed4c32e7c97da7b52197af0ea1fc410df55f339f6d8606b94b"
+      },
+      {
+        "id": 77548,
+        "kind": "file",
+        "path": "stickers/sticker (22).webp",
+        "exists": true,
+        "bytes": 19550,
+        "sha256": "6c16b172a88ca554adf60bb0804d1bc24daa61176cd7eaec5fbce7a2f9b8ac44"
+      },
+      {
+        "id": 77549,
+        "kind": "file",
+        "path": "stickers/sticker (21).webp",
+        "exists": true,
+        "bytes": 24250,
+        "sha256": "1ab0c0f95683e0ed4c32e7c97da7b52197af0ea1fc410df55f339f6d8606b94b"
+      },
+      {
+        "id": 77550,
+        "kind": "file",
+        "path": "stickers/sticker (16).webp",
+        "exists": true,
+        "bytes": 27170,
+        "sha256": "313143d7ade1740b01b3ff01c4ed5eba0fd4b70454de3eeb38e8facca5c3aeea"
+      },
+      {
+        "id": 77556,
+        "kind": "file",
+        "path": "video_files/grandma-grandma-sad.mp4",
+        "exists": true,
+        "bytes": 337570,
+        "sha256": "29fcac0ddec3e305943b0cf81775e50db8bb0e8571d33d42aae5aee3cd16e980"
+      },
+      {
+        "id": 77568,
+        "kind": "file",
+        "path": "video_files/why-are-you-why-are-you-gay.mp4",
+        "exists": true,
+        "bytes": 43677,
+        "sha256": "5e075e3f4e039a214a62be44464885cd6b5e590ac584213ddaf69957da18691c"
+      },
+      {
+        "id": 77572,
+        "kind": "file",
+        "path": "video_files/pet-hug.mp4",
+        "exists": true,
+        "bytes": 128344,
+        "sha256": "f0a374e5e0c936d75deb906f857d29d968b2488e5d82fd6d47d8a95e639148c9"
+      },
+      {
+        "id": 77580,
+        "kind": "file",
+        "path": "video_files/camgundy-gigpig-cam-gundy.mp4",
+        "exists": true,
+        "bytes": 46601,
+        "sha256": "77c6bfbcab08bdc4fbd1d62df9b3cf5a425f8bbd15f5b3ce7c28731a457e9604"
+      },
+      {
+        "id": 77582,
+        "kind": "file",
+        "path": "video_files/failure.mp4",
+        "exists": true,
+        "bytes": 59398,
+        "sha256": "15e6d252a0b0abac79527511ff77f24961ad94e27bff079b492d4593d95826b8"
+      },
+      {
+        "id": 77583,
+        "kind": "file",
+        "path": "video_files/i-show-speed-speed.mp4",
+        "exists": true,
+        "bytes": 156538,
+        "sha256": "f0bc074ff3cf66ff0ebd9df6e59ec40a05a1715651a453910c35965edc755f10"
+      },
+      {
+        "id": 77587,
+        "kind": "file",
+        "path": "video_files/джокер_говорит_в_камеру_и_смеётся_the_joker_speaks_into_the_camera.mp4",
+        "exists": true,
+        "bytes": 988379,
+        "sha256": "aece13bde102a268ee1999a4fc291c054e485ac0cf5e830017972992a4a93b7f"
+      },
+      {
+        "id": 77595,
+        "kind": "file",
+        "path": "video_files/real-deadpool-deadpool.mp4",
+        "exists": true,
+        "bytes": 117158,
+        "sha256": "3368a7c6a5f027a180ad81efd9986f33cfa5bc451f35594894882c9b1835ef3f"
+      },
+      {
+        "id": 77600,
+        "kind": "file",
+        "path": "video_files/dogpool-deadpool-and-wolverine.mp4",
+        "exists": true,
+        "bytes": 418422,
+        "sha256": "ff9ab5cf8838a95e878bb13274d240932f792106e46be43244dd7f68eba10b00"
+      },
+      {
+        "id": 77601,
+        "kind": "file",
+        "path": "video_files/grandma-grandma-sad.mp4",
+        "exists": true,
+        "bytes": 337570,
+        "sha256": "29fcac0ddec3e305943b0cf81775e50db8bb0e8571d33d42aae5aee3cd16e980"
+      },
+      {
+        "id": 77602,
+        "kind": "file",
+        "path": "video_files/the-matrix-hugo-weaving.mp4",
+        "exists": true,
+        "bytes": 112494,
+        "sha256": "e6af1714ff447fe4a24b2dc417807bb6fbc04a273c264f8cd89fecc9ec37dfe9"
+      },
+      {
+        "id": 77603,
+        "kind": "file",
+        "path": "video_files/punching-cordell-walker.mp4",
+        "exists": true,
+        "bytes": 206143,
+        "sha256": "65bd5dbd1a76fb3655bac3b5ae28f911564c47eaddb8360bccf1489a19cb2b22"
+      },
+      {
+        "id": 77604,
+        "kind": "file",
+        "path": "video_files/see-you-tomorrow-jimmy-valmer.mp4",
+        "exists": true,
+        "bytes": 147964,
+        "sha256": "d132c7ae28823fc27c1c6316560d27f6b627393323d08b56a19467f670e7c13c"
+      },
+      {
+        "id": 77605,
+        "kind": "file",
+        "path": "video_files/girl-i-see-you-talking-smack-kandy-muse.mp4",
+        "exists": true,
+        "bytes": 85922,
+        "sha256": "71babdd6443a536c8fd8b9626557d6e55d2910fcafd82de5ad51864c557ba75d"
+      },
+      {
+        "id": 77606,
+        "kind": "file",
+        "path": "video_files/i-am-coming-pennywise.mp4",
+        "exists": true,
+        "bytes": 129014,
+        "sha256": "9c2ad40eed3245104a92ec0e801a5960d5306718626a29102e37b409ac727cc6"
+      },
+      {
+        "id": 77607,
+        "kind": "file",
+        "path": "video_files/ugly-love-me.mp4",
+        "exists": true,
+        "bytes": 118022,
+        "sha256": "6691593fc812df25126c19067f5f81f433b41ee94edaa09057750c2415b0b316"
+      },
+      {
+        "id": 77608,
+        "kind": "file",
+        "path": "video_files/we-all-float-down-here-it.mp4",
+        "exists": true,
+        "bytes": 170711,
+        "sha256": "349c4220bc5d5f375ac64c4489527205035319b668228716de654c39787c6287"
+      },
+      {
+        "id": 77609,
+        "kind": "file",
+        "path": "video_files/sloth.mp4",
+        "exists": true,
+        "bytes": 210136,
+        "sha256": "929a44f8fa70536fe9cb44e7504e572670434690002f47c21c5affc687fcc0e3"
+      },
+      {
+        "id": 77610,
+        "kind": "file",
+        "path": "video_files/animation (7).gif.mp4",
+        "exists": true,
+        "bytes": 61939,
+        "sha256": "ccd4e3e7ca63fe6376a55bd4b04eecf59a5bf8e5a3d71724cd81229cdca3e094"
+      },
+      {
+        "id": 77611,
+        "kind": "file",
+        "path": "video_files/youre-not-gonna-make-it-amos-burton.mp4",
+        "exists": true,
+        "bytes": 47322,
+        "sha256": "370fbee11b5acb7cd94f60b91051d5d68369bd96f995f11e313430c1e2646a4a"
+      },
+      {
+        "id": 77612,
+        "kind": "file",
+        "path": "video_files/conradical-turbo.mp4",
+        "exists": true,
+        "bytes": 132013,
+        "sha256": "18d95fe96cfe26fe54e099d7c56f6518723d2228012b43a17404be43bc13ea6f"
+      },
+      {
+        "id": 77613,
+        "kind": "file",
+        "path": "video_files/animation (8).gif.mp4",
+        "exists": true,
+        "bytes": 66392,
+        "sha256": "d2d9da8301ebb98557bea8282467d3674bd24a8982a9671d15b507cc4574ff1c"
+      },
+      {
+        "id": 77629,
+        "kind": "photo",
+        "path": "photos/photo_2576@21-10-2026_02-52-35.jpg",
+        "exists": true,
+        "bytes": 171077,
+        "sha256": "2001d16e02ba6bdd1fb57663fada69ab93082c4ad973ffc1db0fd3d2bd867bea"
+      },
+      {
+        "id": 77630,
+        "kind": "photo",
+        "path": "photos/photo_2577@21-10-2026_03-22-45.jpg",
+        "exists": true,
+        "bytes": 139800,
+        "sha256": "0f02034e27cc715233a49ff4f78327f729bc1bd707e2a0ea99e004567fe99d6f"
+      },
+      {
+        "id": 77639,
+        "kind": "file",
+        "path": "stickers/sticker (1).webp",
+        "exists": true,
+        "bytes": 16690,
+        "sha256": "8de28200df9abcc9954a8806a57a12de4c549b39c3d04881951e11394ed8939a"
+      },
+      {
+        "id": 77642,
+        "kind": "file",
+        "path": "video_files/white-rabbit-matrix.mp4",
+        "exists": true,
+        "bytes": 181067,
+        "sha256": "5a0ad399733b188387a3c31bb55da65304e2cf99c4570cb85e710fce732b55d6"
+      },
+      {
+        "id": 77653,
+        "kind": "file",
+        "path": "stickers/sticker (23).webp",
+        "exists": true,
+        "bytes": 9000,
+        "sha256": "1c4df79feccc2a5f737853b3f6fb512169c6f4eb7701dda88821c0ec6bfa19c8"
+      },
+      {
+        "id": 77657,
+        "kind": "photo",
+        "path": "photos/photo_2578@21-10-2026_15-36-22.jpg",
+        "exists": true,
+        "bytes": 13454,
+        "sha256": "6cda4c0864091318a8286c54b8854686d407383dc00d501f996b07cb2fdbaa3e"
+      },
+      {
+        "id": 77659,
+        "kind": "photo",
+        "path": "photos/photo_2579@21-10-2026_16-10-31.jpg",
+        "exists": true,
+        "bytes": 61203,
+        "sha256": "726ddaedb330ae3048f5ac7adb1c8ced110e19cccb072f473e3b255314210b19"
+      },
+      {
+        "id": 77670,
+        "kind": "photo",
+        "path": "photos/photo_2580@21-10-2026_16-59-12.jpg",
+        "exists": true,
+        "bytes": 44251,
+        "sha256": "3d03baae039d9959c1b7015b08ef9e46b2f6ec7ec2d2861a4aecb74743e665d8"
+      },
+      {
+        "id": 77732,
+        "kind": "photo",
+        "path": "photos/photo_2581@22-10-2026_02-16-11.jpg",
+        "exists": true,
+        "bytes": 78129,
+        "sha256": "320de8e352117fbd96c63a8adad62f7cdf39bbca9532b32e59ec67b15c9a1315"
+      },
+      {
+        "id": 77736,
+        "kind": "file",
+        "path": "video_files/sticker (4).webm",
+        "exists": true,
+        "bytes": 113747,
+        "sha256": "64030de4974d654c03c438887bdba9f05882a4ad7aa0d9e3481a5c06b3bbf6ea"
+      },
+      {
+        "id": 77881,
+        "kind": "photo",
+        "path": "photos/photo_2582@22-10-2026_13-58-27.jpg",
+        "exists": true,
+        "bytes": 9140,
+        "sha256": "13331adfdfb73b087c7bc22a28cdc2419a61460c2f8657b63eecc5875cde025b"
+      },
+      {
+        "id": 77892,
+        "kind": "file",
+        "path": "stickers/sticker (21).webp",
+        "exists": true,
+        "bytes": 24250,
+        "sha256": "1ab0c0f95683e0ed4c32e7c97da7b52197af0ea1fc410df55f339f6d8606b94b"
+      },
+      {
+        "id": 77979,
+        "kind": "file",
+        "path": "video_files/terraria.mp4",
+        "exists": true,
+        "bytes": 25882,
+        "sha256": "510ed40ea322ddeb29f196472d8f6dfc07c4b1426e6c3c485b596b89c6032464"
+      },
+      {
+        "id": 78046,
+        "kind": "file",
+        "path": "video_files/game-over.mp4",
+        "exists": true,
+        "bytes": 155645,
+        "sha256": "3070a8f9a9711866f598c557e90f5fb6e74ed54f3e84ee4e14ff9e75c1c796ff"
+      },
+      {
+        "id": 78047,
+        "kind": "file",
+        "path": "video_files/клоун.mp4",
+        "exists": true,
+        "bytes": 116750,
+        "sha256": "acf755ffc2addb020587ac92c4ebe26ccb5cc8579f7647feb80362082e29c1d4"
+      },
+      {
+        "id": 78048,
+        "kind": "file",
+        "path": "video_files/game-over-insert-coins.mp4",
+        "exists": true,
+        "bytes": 32739,
+        "sha256": "d423c31a1c05bc812395d1bf54e1cb789f41043b4d0d7009e8477135ea3a2eb2"
+      },
+      {
+        "id": 78049,
+        "kind": "file",
+        "path": "video_files/2_5303460500825178890.mp4",
+        "exists": true,
+        "bytes": 1208137,
+        "sha256": "59c67c6bd39fff0a18bfc99edba78d12ec54d3ecf019fff326c35131157bb11a"
+      },
+      {
+        "id": 78055,
+        "kind": "file",
+        "path": "video_files/animation (9).gif.mp4",
+        "exists": true,
+        "bytes": 269715,
+        "sha256": "e444447d4686acd0538b565544e663f1c7c27573a70a1c5e181497e05e4fc4d0"
+      },
+      {
+        "id": 78060,
+        "kind": "file",
+        "path": "stickers/sticker (2).webp",
+        "exists": true,
+        "bytes": 35248,
+        "sha256": "ac02504d97ecea1b8a064417d82c8db77ffa56a31b925f291c7236afd324c72b"
+      },
+      {
+        "id": 78061,
+        "kind": "file",
+        "path": "video_files/video_54@24-10-2026_11-42-18.mp4",
+        "exists": true,
+        "bytes": 334673,
+        "sha256": "a30bea174cd1c1551a9bbce8120bf42e58fcb44144381f0de8cf862c5da4cf49"
+      },
+      {
+        "id": 78062,
+        "kind": "photo",
+        "path": "photos/photo_2583@24-10-2026_11-55-18.jpg",
+        "exists": true,
+        "bytes": 28708,
+        "sha256": "e3fc30af4472c829eaf97280970fb033382d720b56e4ce4768fdb56d2b8f6b22"
+      },
+      {
+        "id": 78069,
+        "kind": "photo",
+        "path": "photos/photo_2584@24-10-2026_12-18-23.jpg",
+        "exists": true,
+        "bytes": 28588,
+        "sha256": "0f8e5cb68cfaca7d72bc882a1dcfb1cf7bc31e520ea1f93d8d410872b5bbcea1"
+      },
+      {
+        "id": 78099,
+        "kind": "file",
+        "path": "files/jesus.png",
+        "exists": true,
+        "bytes": 1123010,
+        "sha256": "c87fb30b6114a9118fb10df522cced36ec1792cfb1bf8aa8949bae61e1f2f337"
+      },
+      {
+        "id": 78140,
+        "kind": "file",
+        "path": "stickers/sticker (26).webp",
+        "exists": true,
+        "bytes": 22426,
+        "sha256": "b679d79bb9b337c1698c5ac015d1bce8fb105c28eaeb4f08930ffd6ff7d67ce1"
+      },
+      {
+        "id": 78193,
+        "kind": "file",
+        "path": "files/puzzlepiece.mp3",
+        "exists": true,
+        "bytes": 212031,
+        "sha256": "ef17a96dce37b4dd7cbf79f210c5cbaf37fcae60e5faf8004de4e0832bd0dfee"
+      },
+      {
+        "id": 78207,
+        "kind": "photo",
+        "path": "photos/photo_2585@27-10-2026_04-24-31.jpg",
+        "exists": true,
+        "bytes": 55551,
+        "sha256": "4608a0b4464d78c69a3f7c756f6cef37369d800294f5d73cec85314e5111ba6a"
+      },
+      {
+        "id": 78208,
+        "kind": "photo",
+        "path": "photos/photo_2586@27-10-2026_04-24-32.jpg",
+        "exists": true,
+        "bytes": 139058,
+        "sha256": "51eb1b9569bc83c467fa0336eae6ce3067829d708dca0af0d7086b1669b88c7c"
+      },
+      {
+        "id": 78209,
+        "kind": "photo",
+        "path": "photos/photo_2587@27-10-2026_04-24-32.jpg",
+        "exists": true,
+        "bytes": 113748,
+        "sha256": "97edb6c584b4e3a508c26db2814dd67dba154903782aa6937527ec03357eff27"
+      },
+      {
+        "id": 78217,
+        "kind": "photo",
+        "path": "photos/photo_2588@27-10-2026_10-11-57.jpg",
+        "exists": true,
+        "bytes": 8027,
+        "sha256": "8e6f8d7043f8e82378ba2b0e3a38ae10b9eb5b8daaceffae36c901b0bf2f5b48"
+      },
+      {
+        "id": 78222,
+        "kind": "photo",
+        "path": "photos/photo_2589@27-10-2026_10-18-59.jpg",
+        "exists": true,
+        "bytes": 6429,
+        "sha256": "aa4a48fdbe35d738e677f9dbc50cfe29f4a1e059fbe9e3fa332876621aeec314"
+      },
+      {
+        "id": 78226,
+        "kind": "photo",
+        "path": "photos/photo_2590@27-10-2026_10-27-03.jpg",
+        "exists": true,
+        "bytes": 15309,
+        "sha256": "2e1f2ff6440820abf780872d54809d3d75c14c70931905704890c4c152e393d7"
+      },
+      {
+        "id": 78227,
+        "kind": "photo",
+        "path": "photos/photo_2591@27-10-2026_10-27-16.jpg",
+        "exists": true,
+        "bytes": 11858,
+        "sha256": "f9441b0b145cf5636bb5baf81e0379e06ec6b8364dbe87d1a58040538fdd4c9a"
+      },
+      {
+        "id": 78233,
+        "kind": "photo",
+        "path": "photos/photo_2592@27-10-2026_11-53-40.jpg",
+        "exists": true,
+        "bytes": 11064,
+        "sha256": "9744fc60c3cfe58d3ebcc3d4e66595e7810888adccd539d2d7f84313266e72ae"
+      },
+      {
+        "id": 78240,
+        "kind": "file",
+        "path": "video_files/salute-vellimoonga.mp4",
+        "exists": true,
+        "bytes": 32771,
+        "sha256": "eaa674fa4f03053f1e66349fc55b11d175c9aa6ec087b3d83038165deaef7e1c"
+      },
+      {
+        "id": 78266,
+        "kind": "photo",
+        "path": "photos/photo_2593@28-10-2026_15-45-36.jpg",
+        "exists": true,
+        "bytes": 222441,
+        "sha256": "0e5dafad7fa68f1d200922ab17d7b263a80f76241fc925fe1fdf1e8040e0f3c6"
+      },
+      {
+        "id": 78294,
+        "kind": "file",
+        "path": "stickers/-2147483648_-210166.webp",
+        "exists": true,
+        "bytes": 26284,
+        "sha256": "c5dbe0d32c4b70e1e15175e01206324bb39b832bca0ff5dbc72558ab480a27c6"
+      },
+      {
+        "id": 78324,
+        "kind": "photo",
+        "path": "photos/photo_2594@30-10-2026_01-37-25.jpg",
+        "exists": true,
+        "bytes": 81736,
+        "sha256": "d075d240a16a74fb2c2a194d873577eb5d2f90ba67e702cdf02c0996100d7d86"
+      },
+      {
+        "id": 78327,
+        "kind": "photo",
+        "path": "photos/photo_2595@30-10-2026_01-57-29.jpg",
+        "exists": true,
+        "bytes": 41053,
+        "sha256": "77d7fda41416e3e6ba8472ea7cadca4ef63996565a4522d341af682bd3309740"
+      },
+      {
+        "id": 78436,
+        "kind": "file",
+        "path": "video_files/kuku-crazy.mp4",
+        "exists": true,
+        "bytes": 103642,
+        "sha256": "8b8e189835a4d1cbbe3d8fc03455e3b95905c9216e5404358ffcb94cb2c7aca9"
+      },
+      {
+        "id": 78486,
+        "kind": "file",
+        "path": "video_files/good-luck.mp4",
+        "exists": true,
+        "bytes": 33528,
+        "sha256": "16069d52569a5dc07c34010b66359b32d8cb7a21e639afd85303d753e4d8ac6b"
+      },
+      {
+        "id": 78522,
+        "kind": "photo",
+        "path": "photos/photo_2596@02-11-2026_04-17-37.jpg",
+        "exists": true,
+        "bytes": 66608,
+        "sha256": "52975589dd3a4a45d7c1a3e86a134ba80c734cea4b86d451fa786cfd7a6f4312"
+      },
+      {
+        "id": 78527,
+        "kind": "photo",
+        "path": "photos/photo_2597@02-11-2026_10-26-01.jpg",
+        "exists": true,
+        "bytes": 168086,
+        "sha256": "2dd558d10b36bfbb589bb510bc1c847c43f57562c5667862e6a7f583adc09985"
+      },
+      {
+        "id": 78528,
+        "kind": "photo",
+        "path": "photos/photo_2598@02-11-2026_10-26-02.jpg",
+        "exists": true,
+        "bytes": 126362,
+        "sha256": "4e2370d6fce7e78032b90349b424616ba65026aac3ca19b4cfc6982c28c2409e"
+      },
+      {
+        "id": 78529,
+        "kind": "photo",
+        "path": "photos/photo_2599@02-11-2026_10-26-03.jpg",
+        "exists": true,
+        "bytes": 144411,
+        "sha256": "b3dc8ee312202819a882c285a880e8a3b4e7bbae8b18630d2d227cfc276efa27"
+      },
+      {
+        "id": 78530,
+        "kind": "photo",
+        "path": "photos/photo_2600@02-11-2026_10-26-04.jpg",
+        "exists": true,
+        "bytes": 145317,
+        "sha256": "f8cf03c989fa9118646a5abc6ec39db775d2cd5275af0b0cf4a6d2e1d368a23a"
+      },
+      {
+        "id": 78531,
+        "kind": "photo",
+        "path": "photos/photo_2601@02-11-2026_10-27-15.jpg",
+        "exists": true,
+        "bytes": 6167,
+        "sha256": "e7734d28cafc4b0e5db127874d3b22eb310e3e4745cf7e7a41cdf1b1c8832060"
+      },
+      {
+        "id": 78538,
+        "kind": "file",
+        "path": "video_files/4_5908912600204182615.MP4",
+        "exists": true,
+        "bytes": 189485,
+        "sha256": "efef7ba76eedf41abfbe2fdea27ac79d061febb0773d622e056bf70b03fdaf12"
+      },
+      {
+        "id": 78546,
+        "kind": "file",
+        "path": "stickers/sticker (31).webp",
+        "exists": true,
+        "bytes": 33268,
+        "sha256": "1b7d0fdcff7213ef7e34e29d08692fe310c214c4a23e90e9cef54660b37c05c2"
+      },
+      {
+        "id": 78547,
+        "kind": "photo",
+        "path": "photos/photo_2602@02-11-2026_11-06-01.jpg",
+        "exists": true,
+        "bytes": 10612,
+        "sha256": "e07561af64ae34d0fde2dabc9f06beb119d865f812e59a36d5abb2dee4a3be70"
+      },
+      {
+        "id": 78548,
+        "kind": "file",
+        "path": "stickers/sticker (32).webp",
+        "exists": true,
+        "bytes": 13914,
+        "sha256": "85812c08e93223d0b84660212ba6768ba143bb4e49aaba5481bdebcf3365788b"
+      },
+      {
+        "id": 78569,
+        "kind": "file",
+        "path": "files/decentraland-audio.bin",
+        "exists": true,
+        "bytes": 212,
+        "sha256": "2e01963da66714569f442b3a1f781b85642c212659b21cb32c58e0afdc803313"
+      },
+      {
+        "id": 78572,
+        "kind": "file",
+        "path": "video_files/sticker (6).webm",
+        "exists": true,
+        "bytes": 37725,
+        "sha256": "0cbc24be8fdae1a84d744c3cd75e93b649c362025c72dfdb01485f01e889ca0a"
+      },
+      {
+        "id": 78576,
+        "kind": "photo",
+        "path": "photos/photo_2603@02-11-2026_14-40-05.jpg",
+        "exists": true,
+        "bytes": 253827,
+        "sha256": "7ceb3aaf9a1c4fa6018d2f30c0bef28364108ccba080943c7fa2a59db6824d70"
+      },
+      {
+        "id": 78592,
+        "kind": "file",
+        "path": "video_files/sticker (7).webm",
+        "exists": true,
+        "bytes": 115620,
+        "sha256": "7a3ceaa1164ede6a9c6af8215a982977c717c551bc3caf4247761f761aa02a18"
+      },
+      {
+        "id": 78727,
+        "kind": "file",
+        "path": "video_files/sticker (8).webm",
+        "exists": true,
+        "bytes": 65386,
+        "sha256": "330b9aafd9b08261eb397681bcca514b3ba04fcf2bc05de92eaab2ba7f11d549"
+      },
+      {
+        "id": 78800,
+        "kind": "photo",
+        "path": "photos/photo_2604@04-11-2026_05-30-58.jpg",
+        "exists": true,
+        "bytes": 20686,
+        "sha256": "027981e422e6478980e94d62c2e43fba8534fa8843e2ac0dd3a8ef14b589bac9"
+      },
+      {
+        "id": 78802,
+        "kind": "file",
+        "path": "video_files/sticker (9).webm",
+        "exists": true,
+        "bytes": 59668,
+        "sha256": "97f7457c74a979535ff4f0b6712dd601eb128085cc50bdfe3ab2f065b3cb0064"
+      },
+      {
+        "id": 78804,
+        "kind": "photo",
+        "path": "photos/photo_2605@04-11-2026_10-58-32.jpg",
+        "exists": true,
+        "bytes": 26943,
+        "sha256": "657db2834e37de7950577d75a4c7905a54395a1905a41e18e4216dd0d90d4f30"
+      },
+      {
+        "id": 78805,
+        "kind": "photo",
+        "path": "photos/photo_2606@04-11-2026_10-58-33.jpg",
+        "exists": true,
+        "bytes": 78346,
+        "sha256": "74f8bdb165094414cbd43ebd9cfb231485f185ea2f3156c2ce5c4209b0422a2a"
+      }
+    ],
+    "checks": {
+      "cosmic_envelope_identical": true,
+      "cosmic_claimed_plaintext_sha256": "4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081",
+      "cosmic_claimed_plaintext_stats": {
+        "valid_pkcs7": true,
+        "last_byte": 1,
+        "body_length": 1327,
+        "body_sha256": "4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081",
+        "ascii_printable_with_whitespace": 0.40165787490580257,
+        "empirical_entropy_bits_per_byte": 7.870209988556002
+      },
+      "corrected_monologue_normalized_length": 1539,
+      "corrected_monologue_matches_native": true,
+      "corrected_monologue_normalized_sha256": "90829b510c3697569da47d2817f545f1e2a1cddd78e45f821dafcdab3dc0c281",
+      "salphaseion_soup_matches": true,
+      "decentraland_mp3_byte_identical": true,
+      "book_identical_to_october7_pdf": true,
+      "address_list_name_says_12_but_content_count": 39,
+      "address_list_exactly_rebuilt": true,
+      "address_list_contains_tracked_target": false,
+      "utxo_docx_contains_html_mock_transaction": true
+    }
+  },
+  "previous_result_reproduced_exactly": true,
+  "supplemental": {
+    "map_sha256": "53326674db16f4cdb5005dbe7590ce827438f629e3b5543043d462f4a6b9fd6f",
+    "items": {
+      "76367_quoted_ascii": [
+        {
+          "base": "2iyGJ!4@?uebzY",
+          "materials": 15,
+          "hits": []
+        }
+      ],
+      "77024_complete_post": [
+        {
+          "base": "PNIXEMORWENETQMHPSWLSZAWMHOLIALTJDIOAPJAIKSVHMSDNSEWWJDAMJKLAOOSDSAILVEINPHISTXGEPODBCWALLFIHBHECTBTMTWL",
+          "materials": 15,
+          "hits": []
+        }
+      ],
+      "77045_complete_post": [
+        {
+          "base": "Jpzlt9TDnh7hpbl5prTLhzlDpLzLzhNnTpbLl5dlppzL9dpTr9nLrRzpnpTr9nZ9Ld9TZdlzLlJT97zzhDpFLnh7hpbl5Ld97p75dhndlnpxl9FxlFxThpT9",
+          "materials": 15,
+          "hits": []
+        }
+      ],
+      "77049_literal": [
+        {
+          "base": "Wh 173 R4b B17",
+          "materials": 15,
+          "hits": []
+        },
+        {
+          "base": "Wh173R4bB17",
+          "materials": 15,
+          "hits": []
+        }
+      ],
+      "76333_mnemonic_literal": [
+        {
+          "base": "zoo zoo zoo zoo zoo zoo zoo zoo zoo winner zoo zoo",
+          "materials": 15,
+          "hits": []
+        }
+      ],
+      "tommy_77069_as_password": [
+        {
+          "base": "5J79uwWzUdSz1AY6rYZNZSJFbK9j7iYMpFRYqhM8Wv4A8ak4wU",
+          "materials": 15,
+          "hits": []
+        }
+      ],
+      "tommy_77071_as_password": [
+        {
+          "base": "5J79uwWzUdSz1AY6rYZNZSJFbK9j7iYMpFRYqhM8Wv4A8ak4wUz",
+          "materials": 15,
+          "hits": []
+        }
+      ],
+      "tommy_77646_as_password": [
+        {
+          "base": "5J79uWwZdSz1AY6rYZNZSJFbK9j7iYmpFRYqhM8Wv4A8ak4wU",
+          "materials": 15,
+          "hits": []
+        }
+      ],
+      "tommy_77253_as_password": [
+        {
+          "base": "Ky1xCg4yS4PCToPsxPQpC662W9mJhcoyibX1rmb1iTzrQro3mb2M",
+          "materials": 15,
+          "hits": []
+        }
+      ],
+      "christo_76360_as_password": [
+        {
+          "base": "5K2byJMssxFKuTgnk9YQjpBz5FhkwwF2LaZoAyTus8HjGEpz8AT",
+          "materials": 15,
+          "hits": []
+        }
+      ]
+    },
+    "totals": {
+      "materials": 165,
+      "cbc": 0,
+      "stream": 0,
+      "ecb": 0,
+      "wrap": 0,
+      "raw_key": 0,
+      "address": 0
+    },
+    "scope_note": "315 old materials reproduced; this is a separate 11-string/165-form fixed set. Counts are registered forms, not deduplicated passwords."
+  },
+  "rabbit_supplemental": {
+    "unique_materials": 165,
+    "trials": 2640,
+    "hits": [],
+    "weak": [],
+    "screen": "same finite set; at least 64/80 printable for a hit, 56/80 for weak; binary formats not excluded"
+  },
+  "decoded_wif_raw_key_checks": {
+    "tommy_77071": {
+      "raw_key_hits": 0,
+      "addresses": {
+        "compressed": "15ERKFBEWmMQBhAWeFoBBJpssECX6X34WX",
+        "uncompressed": "1BBp2cxRfjhGqYUaMUYpt4w613zyost5h2"
+      }
+    },
+    "tommy_77253": {
+      "raw_key_hits": 0,
+      "addresses": {
+        "compressed": "1BPMLzH9PWGWUrUfpqCX9CdGWrqQcgBytp",
+        "uncompressed": "1HUy7Ue8zJnXtYqijp8gAnuiivcvAvfjgw"
+      }
+    },
+    "christo_76360": {
+      "raw_key_hits": 0,
+      "addresses": {
+        "compressed": "14zJ3RHPxiRJAmYHUNTvPoCTxhFB6gACgf",
+        "uncompressed": "1GKJzHQkgTBwwEGeXetsTMDoUzvwzs9yb4"
+      }
+    }
+  },
+  "solved_stage_html_sha256": "647744a2957219a4084ede994719124e7445bab1dfdeb68258fbeff2615a8d43",
+  "solved_stage_positive_controls": {
+    "phase2": true,
+    "phase3": true,
+    "phase32": true
+  },
+  "claimed_level3_passwords_on_solved_stages": {
+    "tommy_77069": [],
+    "tommy_77071": [],
+    "tommy_77253": [],
+    "tommy_77646": []
+  },
+  "pdf_index": {
+    "named_entries": 238,
+    "pages": 25442,
+    "index_sha256": "05808c2d72bf4d22556de8d9274e33985fdc5ab581fd65778b43e0a1f9e1cc61",
+    "entries": [
+      {
+        "index": 1,
+        "name": "architect_479_and_or_audit.json",
+        "characters": 605,
+        "page_1based": 1,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "schema",
+          "mask",
+          "encryptions",
+          "passwords",
+          "materials",
+          "unique_scalars",
+          "matches",
+          "status"
+        ]
+      },
+      {
+        "index": 2,
+        "name": "architect_479_bounded_search.json",
+        "characters": 385301,
+        "page_1based": 2,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 14305 column 128 (char 372798)"
+      },
+      {
+        "index": 3,
+        "name": "architect_479_continuation_ops_audit.json",
+        "characters": 580,
+        "page_1based": 172,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 18 column 119 (char 531)"
+      },
+      {
+        "index": 4,
+        "name": "architect_479_continuation_ops_preregistered.json",
+        "characters": 1981,
+        "page_1based": 173,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 128 (char 130)"
+      },
+      {
+        "index": 5,
+        "name": "architect_479_semantic_pipeline.json",
+        "characters": 5994,
+        "page_1based": 174,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 12 column 128 (char 558)"
+      },
+      {
+        "index": 6,
+        "name": "architect_anchor_windows_audit.json",
+        "characters": 829,
+        "page_1based": 177,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 16 column 123 (char 418)"
+      },
+      {
+        "index": 7,
+        "name": "architect_anchor_windows_preregistered.json",
+        "characters": 1662,
+        "page_1based": 178,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 37 column 123 (char 924)"
+      },
+      {
+        "index": 8,
+        "name": "architect_beginning_end_audit.json",
+        "characters": 7148,
+        "page_1based": 179,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "schema",
+          "mask",
+          "encryptions",
+          "passwords",
+          "encryption_edge_forms",
+          "password_edge_forms",
+          "exact_32_ascii_keys",
+          "materials",
+          "unique_scalars",
+          "matches",
+          "status"
+        ]
+      },
+      {
+        "index": 9,
+        "name": "architect_lastwords_yinyang_audit.json",
+        "characters": 2233,
+        "page_1based": 182,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "schema",
+          "derivation",
+          "candidate_count",
+          "aes_padding_hits",
+          "prize_matches",
+          "status"
+        ]
+      },
+      {
+        "index": 10,
+        "name": "architect_post479_suffix_ops_audit.json",
+        "characters": 594,
+        "page_1based": 183,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 18 column 125 (char 535)"
+      },
+      {
+        "index": 11,
+        "name": "architect_post479_suffix_ops_preregistered.json",
+        "characters": 2363,
+        "page_1based": 184,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 128 (char 130)"
+      },
+      {
+        "index": 12,
+        "name": "architect_source_prime_reinsertion_audit.json",
+        "characters": 1046,
+        "page_1based": 185,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 29 column 122 (char 975)"
+      },
+      {
+        "index": 13,
+        "name": "architect_source_prime_reinsertion_preregistered.json",
+        "characters": 3081,
+        "page_1based": 186,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 4 column 124 (char 179)"
+      },
+      {
+        "index": 14,
+        "name": "architect_substitution_audit.json",
+        "characters": 24240,
+        "page_1based": 187,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 2098 column 126 (char 23852)"
+      },
+      {
+        "index": 15,
+        "name": "architect_yinyang_cosmic_exact_test.json",
+        "characters": 242,
+        "page_1based": 212,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 4 column 127 (char 178)"
+      },
+      {
+        "index": 16,
+        "name": "artifacts.json",
+        "characters": 1910173,
+        "page_1based": 213,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 2307 column 127 (char 80708)"
+      },
+      {
+        "index": 17,
+        "name": "better_half_regate_audit.json",
+        "characters": 2063,
+        "page_1based": 632,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 54 column 125 (char 1628)"
+      },
+      {
+        "index": 18,
+        "name": "blockchain_nonce_audit.json",
+        "characters": 466727,
+        "page_1based": 633,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 1707 column 127 (char 82680)"
+      },
+      {
+        "index": 19,
+        "name": "book_anchor_audit.json",
+        "characters": 688,
+        "page_1based": 717,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "aes_attempts",
+          "schema",
+          "scope_note",
+          "semantic_accepts",
+          "source",
+          "status",
+          "strict_padding_hits",
+          "target_scalar_matches",
+          "unique_preimages"
+        ]
+      },
+      {
+        "index": 20,
+        "name": "chain1_pbkdf2_legibility_audit.json",
+        "characters": 556,
+        "page_1based": 718,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 15 column 127 (char 397)"
+      },
+      {
+        "index": 21,
+        "name": "chain1_pbkdf2_legibility_preregistered.json",
+        "characters": 2197,
+        "page_1based": 719,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 126 (char 128)"
+      },
+      {
+        "index": 22,
+        "name": "chain1_phrase_digest_legibility_audit.json",
+        "characters": 671,
+        "page_1based": 720,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 18 column 123 (char 510)"
+      },
+      {
+        "index": 23,
+        "name": "chain1_phrase_digest_legibility_preregistered.json",
+        "characters": 3886,
+        "page_1based": 721,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 126 (char 128)"
+      },
+      {
+        "index": 24,
+        "name": "chain1_raw_key_material_audit.json",
+        "characters": 805,
+        "page_1based": 722,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 27 column 122 (char 681)"
+      },
+      {
+        "index": 25,
+        "name": "chain1_raw_key_material_extended_audit.json",
+        "characters": 1043,
+        "page_1based": 723,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 27 column 120 (char 689)"
+      },
+      {
+        "index": 26,
+        "name": "chain1_raw_key_material_extended_preregistered.json",
+        "characters": 2374,
+        "page_1based": 724,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 23 column 126 (char 761)"
+      },
+      {
+        "index": 27,
+        "name": "chain1_raw_key_material_preregistered.json",
+        "characters": 1600,
+        "page_1based": 725,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 29 column 127 (char 761)"
+      },
+      {
+        "index": 28,
+        "name": "chain1_structural_operand_legibility_audit.json",
+        "characters": 667,
+        "page_1based": 726,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 18 column 127 (char 520)"
+      },
+      {
+        "index": 29,
+        "name": "chain1_structural_operand_legibility_preregistered.json",
+        "characters": 2690,
+        "page_1based": 727,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 125 (char 127)"
+      },
+      {
+        "index": 30,
+        "name": "chain4_aes_integer_audit.json",
+        "characters": 7157,
+        "page_1based": 728,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 193 column 126 (char 7083)"
+      },
+      {
+        "index": 31,
+        "name": "chain4_combinatorial_audit.json",
+        "characters": 14168,
+        "page_1based": 731,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 9 column 127 (char 425)"
+      },
+      {
+        "index": 32,
+        "name": "chain4_completed_triangle.json",
+        "characters": 4459,
+        "page_1based": 739,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "status",
+          "chain4_sha256",
+          "trail1_hex",
+          "completion_count",
+          "attempted_layouts",
+          "recurrence",
+          "serialized_row_orders",
+          "independent_row_reversals",
+          "completions",
+          "minimum_nonzero_residuals",
+          "closest_layout_count",
+          "closest_layout_examples",
+          "exact_layouts",
+          "target_words",
+          "scope_note"
+        ]
+      },
+      {
+        "index": 33,
+        "name": "chain4_intertwined_preregistered.json",
+        "characters": 198027,
+        "page_1based": 742,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "acceptance",
+          "cipher_modes",
+          "models",
+          "schema",
+          "source",
+          "status"
+        ]
+      },
+      {
+        "index": 34,
+        "name": "chain4_intertwined_results.json",
+        "characters": 84346,
+        "page_1based": 778,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "accepted_natural_order_semantic_results",
+          "best_maximum_padding_matching",
+          "best_natural_order_padding_count",
+          "decryptions",
+          "manifest_sha256",
+          "model_mode_records",
+          "schema",
+          "status",
+          "target_matches"
+        ]
+      },
+      {
+        "index": 35,
+        "name": "chain4_mitm_audit.json",
+        "characters": 10057,
+        "page_1based": 813,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 381 column 122 (char 9971)"
+      },
+      {
+        "index": 36,
+        "name": "chain4_operand_completion_audit.json",
+        "characters": 5065,
+        "page_1based": 818,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 125 column 124 (char 4902)"
+      },
+      {
+        "index": 37,
+        "name": "chain4_plusminus_grammar_audit.json",
+        "characters": 7751,
+        "page_1based": 820,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 208 column 124 (char 7639)"
+      },
+      {
+        "index": 38,
+        "name": "chain4_prefix_completion_audit.json",
+        "characters": 1198,
+        "page_1based": 823,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 26 column 124 (char 1054)"
+      },
+      {
+        "index": 39,
+        "name": "chain4_product_subset_audit.json",
+        "characters": 52704,
+        "page_1based": 824,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "status",
+          "chain4_sha256",
+          "input_sha256",
+          "block_count",
+          "operand_hex",
+          "inverse_operand_hex",
+          "engine",
+          "families",
+          "total_combinations",
+          "total_candidate_scalars",
+          "accepted_matches",
+          "scope_note"
+        ]
+      },
+      {
+        "index": 40,
+        "name": "chain4_seven_stream_audit.json",
+        "characters": 2853,
+        "page_1based": 847,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "accepted",
+          "chain4_sha256",
+          "key_rule",
+          "layouts",
+          "records",
+          "schema",
+          "status"
+        ]
+      },
+      {
+        "index": 41,
+        "name": "chain4_signed_mitm_audit.json",
+        "characters": 5683,
+        "page_1based": 849,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 157 column 124 (char 5597)"
+      },
+      {
+        "index": 42,
+        "name": "chain4_split_audit.json",
+        "characters": 999,
+        "page_1based": 851,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 19 column 127 (char 925)"
+      },
+      {
+        "index": 43,
+        "name": "chain4_xcoordinate_audit.json",
+        "characters": 8563,
+        "page_1based": 852,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 195 column 124 (char 8329)"
+      },
+      {
+        "index": 44,
+        "name": "chain4_xor_subset_audit.json",
+        "characters": 50426,
+        "page_1based": 855,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 1831 column 125 (char 50335)"
+      },
+      {
+        "index": 45,
+        "name": "ciao_bella_479_audit.json",
+        "characters": 18765,
+        "page_1based": 877,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 5 column 121 (char 243)"
+      },
+      {
+        "index": 46,
+        "name": "cipher_catalogue_23_16_7_audit.json",
+        "characters": 1431,
+        "page_1based": 883,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 24 column 120 (char 855)"
+      },
+      {
+        "index": 47,
+        "name": "cipher_catalogue_23_16_7_preregistered.json",
+        "characters": 5458,
+        "page_1based": 884,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 16 column 127 (char 746)"
+      },
+      {
+        "index": 48,
+        "name": "color_stream_password_audit.json",
+        "characters": 697,
+        "page_1based": 886,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "aes_attempts",
+          "representations",
+          "routes",
+          "schema",
+          "scope_note",
+          "semantic_accepts",
+          "status",
+          "strict_padding_hits",
+          "target_scalar_matches",
+          "unique_preimages"
+        ]
+      },
+      {
+        "index": 49,
+        "name": "creator_frontier_giveaway_audit.json",
+        "characters": 2801,
+        "page_1based": 887,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 13 column 127 (char 786)"
+      },
+      {
+        "index": 50,
+        "name": "creator_pipeline_poster_architect_audit.json",
+        "characters": 4595,
+        "page_1based": 888,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 4 column 127 (char 181)"
+      },
+      {
+        "index": 51,
+        "name": "creator_pipeline_poster_architect_preregistered.json",
+        "characters": 1599,
+        "page_1based": 891,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 5 column 122 (char 223)"
+      },
+      {
+        "index": 52,
+        "name": "decentraland_audio_audit.json",
+        "characters": 4117,
+        "page_1based": 892,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 109 column 123 (char 4053)"
+      },
+      {
+        "index": 53,
+        "name": "door2_formula_audit.json",
+        "characters": 5193,
+        "page_1based": 894,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 102 column 124 (char 5136)"
+      },
+      {
+        "index": 54,
+        "name": "efragment_scalar_audit.json",
+        "characters": 2658,
+        "page_1based": 896,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 71 column 120 (char 2577)"
+      },
+      {
+        "index": 55,
+        "name": "endgame_23_16_7_salphaseion_audit.json",
+        "characters": 2155,
+        "page_1based": 897,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 43 column 125 (char 1543)"
+      },
+      {
+        "index": 56,
+        "name": "endgame_23_16_7_salphaseion_preregistered.json",
+        "characters": 7019,
+        "page_1based": 898,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 4 column 123 (char 143)"
+      },
+      {
+        "index": 57,
+        "name": "fae_9x63_audit.json",
+        "characters": 6810,
+        "page_1based": 901,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 322 column 127 (char 4419)"
+      },
+      {
+        "index": 58,
+        "name": "fae_9x63_preregistered.json",
+        "characters": 1996,
+        "page_1based": 906,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 21 column 122 (char 773)"
+      },
+      {
+        "index": 59,
+        "name": "fae_paired_list_audit.json",
+        "characters": 3845,
+        "page_1based": 907,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 19 column 127 (char 786)"
+      },
+      {
+        "index": 60,
+        "name": "fae_paired_list_preregistered.json",
+        "characters": 3566,
+        "page_1based": 908,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 14 column 127 (char 574)"
+      },
+      {
+        "index": 61,
+        "name": "first_grid_secondary_audit.json",
+        "characters": 1747,
+        "page_1based": 910,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 52 column 123 (char 1217)"
+      },
+      {
+        "index": 62,
+        "name": "fromn0e_opreturn_trace.json",
+        "characters": 7504,
+        "page_1based": 911,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 101 column 131 (char 4303)"
+      },
+      {
+        "index": 63,
+        "name": "frontier_experiment.json",
+        "characters": 2240,
+        "page_1based": 914,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "status",
+          "chain4_sha256",
+          "half_sha256",
+          "better_half_sha256",
+          "trail1_hex",
+          "window_count",
+          "constant_count",
+          "generated_candidates",
+          "unique_nonzero_scalars",
+          "operations",
+          "constants",
+          "target",
+          "matches",
+          "scope_note"
+        ]
+      },
+      {
+        "index": 64,
+        "name": "half_better_combination_audit.json",
+        "characters": 4125,
+        "page_1based": 915,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "candidate_count",
+          "matches",
+          "records",
+          "schema",
+          "scope",
+          "source",
+          "status"
+        ]
+      },
+      {
+        "index": 65,
+        "name": "halving_relation_audit.json",
+        "characters": 4282,
+        "page_1based": 917,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 119 column 126 (char 4258)"
+      },
+      {
+        "index": 66,
+        "name": "intertwined_password_coherence_audit.json",
+        "characters": 2404,
+        "page_1based": 919,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 7 column 126 (char 384)"
+      },
+      {
+        "index": 67,
+        "name": "l4_beaufort_audit.json",
+        "characters": 1367,
+        "page_1based": 920,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 41 column 125 (char 1287)"
+      },
+      {
+        "index": 68,
+        "name": "l4_crib_audit.json",
+        "characters": 704,
+        "page_1based": 921,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 20 column 131 (char 649)"
+      },
+      {
+        "index": 69,
+        "name": "matrixsumlist_audit.json",
+        "characters": 3378,
+        "page_1based": 922,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 61 column 128 (char 987)"
+      },
+      {
+        "index": 70,
+        "name": "matrixsumlist_instruction_audit.json",
+        "characters": 8992,
+        "page_1based": 924,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 31 column 127 (char 1083)"
+      },
+      {
+        "index": 71,
+        "name": "matrixsumlist_instruction_preregistered.json",
+        "characters": 3720,
+        "page_1based": 929,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 14 column 127 (char 583)"
+      },
+      {
+        "index": 72,
+        "name": "nonroundrobin_weave_audit.json",
+        "characters": 3875,
+        "page_1based": 931,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 18 column 127 (char 503)"
+      },
+      {
+        "index": 73,
+        "name": "nonroundrobin_weave_preregistered.json",
+        "characters": 2837,
+        "page_1based": 932,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 124 (char 126)"
+      },
+      {
+        "index": 74,
+        "name": "notes_hint_legibility_audit.json",
+        "characters": 540,
+        "page_1based": 933,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 16 column 122 (char 427)"
+      },
+      {
+        "index": 75,
+        "name": "notes_hint_legibility_preregistered.json",
+        "characters": 2059,
+        "page_1based": 934,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 127 (char 129)"
+      },
+      {
+        "index": 76,
+        "name": "openssl_cipher_catalogue_audit.json",
+        "characters": 3516,
+        "page_1based": 935,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 155 column 127 (char 3287)"
+      },
+      {
+        "index": 77,
+        "name": "openssl_cipher_catalogue_preregistered.json",
+        "characters": 6656,
+        "page_1based": 937,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 124 (char 126)"
+      },
+      {
+        "index": 78,
+        "name": "passport_even_chain4_audit.json",
+        "characters": 753,
+        "page_1based": 941,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "schema",
+          "status",
+          "source",
+          "candidate_count",
+          "candidate_stream_sha256",
+          "accepted_matches",
+          "scope"
+        ]
+      },
+      {
+        "index": 79,
+        "name": "passport_intertwined_chain4_audit.json",
+        "characters": 2209,
+        "page_1based": 942,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 92 column 122 (char 2158)"
+      },
+      {
+        "index": 80,
+        "name": "passport_prime_playfair_audit.json",
+        "characters": 252689,
+        "page_1based": 944,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 11942 column 123 (char 252539)"
+      },
+      {
+        "index": 81,
+        "name": "phase32_classical.json",
+        "characters": 2070,
+        "page_1based": 1083,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 123 (char 973)"
+      },
+      {
+        "index": 82,
+        "name": "phase32_symbol_recovery.json",
+        "characters": 6922,
+        "page_1based": 1084,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 34 column 127 (char 1299)"
+      },
+      {
+        "index": 83,
+        "name": "pipeline_operand_split_envelope_audit.json",
+        "characters": 3248,
+        "page_1based": 1086,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 47 column 124 (char 3024)"
+      },
+      {
+        "index": 84,
+        "name": "pipeline_operand_split_envelope_preregistered.json",
+        "characters": 2608,
+        "page_1based": 1087,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 125 (char 127)"
+      },
+      {
+        "index": 85,
+        "name": "poster_resistor_split_envelope_preregistered.json",
+        "characters": 3499,
+        "page_1based": 1088,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 126 (char 128)"
+      },
+      {
+        "index": 86,
+        "name": "poster_resistor_split_envelope_results.json",
+        "characters": 308776,
+        "page_1based": 1090,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "schema",
+          "status",
+          "manifest_sha256",
+          "preregistration_sha256",
+          "summary",
+          "accepted_records",
+          "all_valid_padding",
+          "details"
+        ]
+      },
+      {
+        "index": 87,
+        "name": "preregistration_integrity_audit.json",
+        "characters": 46234,
+        "page_1based": 1203,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 1299 column 124 (char 46130)"
+      },
+      {
+        "index": 88,
+        "name": "prime_basics_source_reinsert_audit.json",
+        "characters": 1493,
+        "page_1based": 1219,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 38 column 129 (char 1299)"
+      },
+      {
+        "index": 89,
+        "name": "prime_basics_source_reinsert_preregistered.json",
+        "characters": 5456,
+        "page_1based": 1220,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 14 column 127 (char 546)"
+      },
+      {
+        "index": 90,
+        "name": "prime_reinsertion_audit.json",
+        "characters": 6249,
+        "page_1based": 1223,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 147 column 127 (char 3420)"
+      },
+      {
+        "index": 91,
+        "name": "s570_fold_architect_selector_audit.json",
+        "characters": 14952,
+        "page_1based": 1226,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 952 column 124 (char 12836)"
+      },
+      {
+        "index": 92,
+        "name": "s570_seven_matrix_fold_audit.json",
+        "characters": 2129,
+        "page_1based": 1238,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 48 column 123 (char 1085)"
+      },
+      {
+        "index": 93,
+        "name": "salphaseion_79_anchor_hunt.json",
+        "characters": 22337,
+        "page_1based": 1240,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 13 column 125 (char 379)"
+      },
+      {
+        "index": 94,
+        "name": "salphaseion_blind_results.json",
+        "characters": 6498,
+        "page_1based": 1246,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 95,
+        "name": "salphaseion_blind_results_v10.json",
+        "characters": 37491,
+        "page_1based": 1249,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 255)"
+      },
+      {
+        "index": 96,
+        "name": "salphaseion_blind_results_v11.json",
+        "characters": 16870,
+        "page_1based": 1263,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 97,
+        "name": "salphaseion_blind_results_v12.json",
+        "characters": 521,
+        "page_1based": 1269,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 98,
+        "name": "salphaseion_blind_results_v13.json",
+        "characters": 2578,
+        "page_1based": 1270,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 99,
+        "name": "salphaseion_blind_results_v14.json",
+        "characters": 3197,
+        "page_1based": 1271,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 100,
+        "name": "salphaseion_blind_results_v15.json",
+        "characters": 6056,
+        "page_1based": 1273,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 101,
+        "name": "salphaseion_blind_results_v16.json",
+        "characters": 1863,
+        "page_1based": 1276,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 102,
+        "name": "salphaseion_blind_results_v17.json",
+        "characters": 1869,
+        "page_1based": 1277,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 103,
+        "name": "salphaseion_blind_results_v18.json",
+        "characters": 8554,
+        "page_1based": 1278,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 104,
+        "name": "salphaseion_blind_results_v19.json",
+        "characters": 3847,
+        "page_1based": 1282,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 105,
+        "name": "salphaseion_blind_results_v2.json",
+        "characters": 5967,
+        "page_1based": 1284,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 106,
+        "name": "salphaseion_blind_results_v20.json",
+        "characters": 3155,
+        "page_1based": 1287,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 107,
+        "name": "salphaseion_blind_results_v21.json",
+        "characters": 3075,
+        "page_1based": 1289,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 108,
+        "name": "salphaseion_blind_results_v22.json",
+        "characters": 2704,
+        "page_1based": 1291,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 109,
+        "name": "salphaseion_blind_results_v23.json",
+        "characters": 5836,
+        "page_1based": 1292,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 110,
+        "name": "salphaseion_blind_results_v24.json",
+        "characters": 37416,
+        "page_1based": 1294,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 255)"
+      },
+      {
+        "index": 111,
+        "name": "salphaseion_blind_results_v25.json",
+        "characters": 25407,
+        "page_1based": 1309,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 255)"
+      },
+      {
+        "index": 112,
+        "name": "salphaseion_blind_results_v26.json",
+        "characters": 6029,
+        "page_1based": 1319,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 113,
+        "name": "salphaseion_blind_results_v27.json",
+        "characters": 48872,
+        "page_1based": 1322,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 255)"
+      },
+      {
+        "index": 114,
+        "name": "salphaseion_blind_results_v28.json",
+        "characters": 984,
+        "page_1based": 1340,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 24 column 120 (char 726)"
+      },
+      {
+        "index": 115,
+        "name": "salphaseion_blind_results_v29.json",
+        "characters": 129215,
+        "page_1based": 1341,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 10 column 120 (char 310)"
+      },
+      {
+        "index": 116,
+        "name": "salphaseion_blind_results_v3.json",
+        "characters": 5877,
+        "page_1based": 1390,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 117,
+        "name": "salphaseion_blind_results_v30.json",
+        "characters": 76778,
+        "page_1based": 1392,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 255)"
+      },
+      {
+        "index": 118,
+        "name": "salphaseion_blind_results_v31.json",
+        "characters": 14487,
+        "page_1based": 1419,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 119,
+        "name": "salphaseion_blind_results_v32.json",
+        "characters": 18487,
+        "page_1based": 1425,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 120,
+        "name": "salphaseion_blind_results_v33.json",
+        "characters": 5064,
+        "page_1based": 1433,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 121,
+        "name": "salphaseion_blind_results_v34.json",
+        "characters": 1182,
+        "page_1based": 1435,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 122,
+        "name": "salphaseion_blind_results_v35.json",
+        "characters": 146269,
+        "page_1based": 1436,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 66 column 127 (char 2696)"
+      },
+      {
+        "index": 123,
+        "name": "salphaseion_blind_results_v36.json",
+        "characters": 232840,
+        "page_1based": 1474,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 255)"
+      },
+      {
+        "index": 124,
+        "name": "salphaseion_blind_results_v37.json",
+        "characters": 4517,
+        "page_1based": 1546,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 125,
+        "name": "salphaseion_blind_results_v38.json",
+        "characters": 8074790,
+        "page_1based": 1548,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 257)"
+      },
+      {
+        "index": 126,
+        "name": "salphaseion_blind_results_v39.json",
+        "characters": 5804719,
+        "page_1based": 4174,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 257)"
+      },
+      {
+        "index": 127,
+        "name": "salphaseion_blind_results_v4.json",
+        "characters": 7138,
+        "page_1based": 6051,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 128,
+        "name": "salphaseion_blind_results_v5.json",
+        "characters": 3882,
+        "page_1based": 6054,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 129,
+        "name": "salphaseion_blind_results_v6.json",
+        "characters": 3935,
+        "page_1based": 6056,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 130,
+        "name": "salphaseion_blind_results_v7.json",
+        "characters": 3364,
+        "page_1based": 6058,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 253)"
+      },
+      {
+        "index": 131,
+        "name": "salphaseion_blind_results_v8.json",
+        "characters": 8555,
+        "page_1based": 6060,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 254)"
+      },
+      {
+        "index": 132,
+        "name": "salphaseion_blind_results_v9.json",
+        "characters": 36600,
+        "page_1based": 6064,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 8 column 120 (char 255)"
+      },
+      {
+        "index": 133,
+        "name": "salphaseion_cross_stage_preregistered.json",
+        "characters": 7883,
+        "page_1based": 6077,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 169 column 124 (char 7059)"
+      },
+      {
+        "index": 134,
+        "name": "salphaseion_cross_stage_preregistered_v2.json",
+        "characters": 2728,
+        "page_1based": 6080,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "blobs",
+          "declared_acceptance",
+          "inputs",
+          "schema",
+          "stage_one",
+          "stage_two",
+          "status",
+          "total_candidate_records"
+        ]
+      },
+      {
+        "index": 135,
+        "name": "salphaseion_cross_stage_preregistered_v3.json",
+        "characters": 1933,
+        "page_1based": 6081,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "blobs",
+          "declared_acceptance",
+          "inputs",
+          "schema",
+          "stage_one",
+          "stage_two",
+          "status",
+          "total_candidate_records"
+        ]
+      },
+      {
+        "index": 136,
+        "name": "salphaseion_cross_stage_results.json",
+        "characters": 10115,
+        "page_1based": 6082,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "accepted",
+          "accepted_count",
+          "rule_manifest_sha256",
+          "schema",
+          "stage_one_attempts",
+          "stage_one_padding_hits",
+          "stage_two_attempts",
+          "stage_two_padding_hits",
+          "stage_two_padding_without_acceptance",
+          "status"
+        ]
+      },
+      {
+        "index": 137,
+        "name": "salphaseion_cross_stage_results_v2.json",
+        "characters": 3326,
+        "page_1based": 6086,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "accepted",
+          "accepted_count",
+          "rule_manifest_sha256",
+          "schema",
+          "stage_one_attempts",
+          "stage_one_padding_hits",
+          "stage_two_attempts",
+          "stage_two_padding_hits",
+          "stage_two_padding_without_acceptance",
+          "status"
+        ]
+      },
+      {
+        "index": 138,
+        "name": "salphaseion_cross_stage_results_v3.json",
+        "characters": 3501,
+        "page_1based": 6087,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "accepted",
+          "accepted_count",
+          "rule_manifest_sha256",
+          "schema",
+          "stage_one_attempts",
+          "stage_one_padding_hits",
+          "stage_two_attempts",
+          "stage_two_padding_hits",
+          "stage_two_padding_without_acceptance",
+          "status"
+        ]
+      },
+      {
+        "index": 139,
+        "name": "salphaseion_instruction_audit.json",
+        "characters": 63417,
+        "page_1based": 6089,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 4 column 122 (char 165)"
+      },
+      {
+        "index": 140,
+        "name": "salphaseion_preregistered_candidates.json",
+        "characters": 336977,
+        "page_1based": 6106,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 29 column 127 (char 1090)"
+      },
+      {
+        "index": 141,
+        "name": "salphaseion_preregistered_candidates_v10.json",
+        "characters": 1705023,
+        "page_1based": 6173,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1553)"
+      },
+      {
+        "index": 142,
+        "name": "salphaseion_preregistered_candidates_v11.json",
+        "characters": 982467,
+        "page_1based": 6550,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1639)"
+      },
+      {
+        "index": 143,
+        "name": "salphaseion_preregistered_candidates_v12.json",
+        "characters": 19914,
+        "page_1based": 6745,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1628)"
+      },
+      {
+        "index": 144,
+        "name": "salphaseion_preregistered_candidates_v13.json",
+        "characters": 141985,
+        "page_1based": 6750,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1658)"
+      },
+      {
+        "index": 145,
+        "name": "salphaseion_preregistered_candidates_v14.json",
+        "characters": 79396,
+        "page_1based": 6782,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1647)"
+      },
+      {
+        "index": 146,
+        "name": "salphaseion_preregistered_candidates_v15.json",
+        "characters": 112163,
+        "page_1based": 6801,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1532)"
+      },
+      {
+        "index": 147,
+        "name": "salphaseion_preregistered_candidates_v16.json",
+        "characters": 77871,
+        "page_1based": 6828,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1620)"
+      },
+      {
+        "index": 148,
+        "name": "salphaseion_preregistered_candidates_v17.json",
+        "characters": 65438,
+        "page_1based": 6848,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1504)"
+      },
+      {
+        "index": 149,
+        "name": "salphaseion_preregistered_candidates_v18.json",
+        "characters": 347861,
+        "page_1based": 6866,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1707)"
+      },
+      {
+        "index": 150,
+        "name": "salphaseion_preregistered_candidates_v19.json",
+        "characters": 79253,
+        "page_1based": 6939,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1588)"
+      },
+      {
+        "index": 151,
+        "name": "salphaseion_preregistered_candidates_v2.json",
+        "characters": 310001,
+        "page_1based": 6959,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1547)"
+      },
+      {
+        "index": 152,
+        "name": "salphaseion_preregistered_candidates_v20.json",
+        "characters": 84018,
+        "page_1based": 7030,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 29 column 127 (char 1091)"
+      },
+      {
+        "index": 153,
+        "name": "salphaseion_preregistered_candidates_v21.json",
+        "characters": 77268,
+        "page_1based": 7055,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1515)"
+      },
+      {
+        "index": 154,
+        "name": "salphaseion_preregistered_candidates_v22.json",
+        "characters": 189416,
+        "page_1based": 7076,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1733)"
+      },
+      {
+        "index": 155,
+        "name": "salphaseion_preregistered_candidates_v23.json",
+        "characters": 217641,
+        "page_1based": 7114,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1531)"
+      },
+      {
+        "index": 156,
+        "name": "salphaseion_preregistered_candidates_v24.json",
+        "characters": 2242610,
+        "page_1based": 7171,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1529)"
+      },
+      {
+        "index": 157,
+        "name": "salphaseion_preregistered_candidates_v25.json",
+        "characters": 1144455,
+        "page_1based": 7602,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 41 column 127 (char 1722)"
+      },
+      {
+        "index": 158,
+        "name": "salphaseion_preregistered_candidates_v26.json",
+        "characters": 289153,
+        "page_1based": 7867,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1550)"
+      },
+      {
+        "index": 159,
+        "name": "salphaseion_preregistered_candidates_v27.json",
+        "characters": 1882181,
+        "page_1based": 7930,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1687)"
+      },
+      {
+        "index": 160,
+        "name": "salphaseion_preregistered_candidates_v28.json",
+        "characters": 49682,
+        "page_1based": 8302,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1560)"
+      },
+      {
+        "index": 161,
+        "name": "salphaseion_preregistered_candidates_v29.json",
+        "characters": 9337087,
+        "page_1based": 8314,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 29 column 127 (char 1096)"
+      },
+      {
+        "index": 162,
+        "name": "salphaseion_preregistered_candidates_v3.json",
+        "characters": 245861,
+        "page_1based": 10026,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 203 column 127 (char 8765)"
+      },
+      {
+        "index": 163,
+        "name": "salphaseion_preregistered_candidates_v30.json",
+        "characters": 4093231,
+        "page_1based": 10083,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1565)"
+      },
+      {
+        "index": 164,
+        "name": "salphaseion_preregistered_candidates_v31.json",
+        "characters": 752368,
+        "page_1based": 10916,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 29 column 127 (char 1094)"
+      },
+      {
+        "index": 165,
+        "name": "salphaseion_preregistered_candidates_v32.json",
+        "characters": 1372198,
+        "page_1based": 11078,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 29 column 127 (char 1094)"
+      },
+      {
+        "index": 166,
+        "name": "salphaseion_preregistered_candidates_v33.json",
+        "characters": 73343,
+        "page_1based": 11330,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1632)"
+      },
+      {
+        "index": 167,
+        "name": "salphaseion_preregistered_candidates_v34.json",
+        "characters": 111242,
+        "page_1based": 11349,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1696)"
+      },
+      {
+        "index": 168,
+        "name": "salphaseion_preregistered_candidates_v35.json",
+        "characters": 2180167,
+        "page_1based": 11375,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 29 column 127 (char 1095)"
+      },
+      {
+        "index": 169,
+        "name": "salphaseion_preregistered_candidates_v36.json",
+        "characters": 21181292,
+        "page_1based": 11743,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 29 column 127 (char 1095)"
+      },
+      {
+        "index": 170,
+        "name": "salphaseion_preregistered_candidates_v37.json",
+        "characters": 120353,
+        "page_1based": 15387,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1531)"
+      },
+      {
+        "index": 171,
+        "name": "salphaseion_preregistered_candidates_v4.json",
+        "characters": 270604,
+        "page_1based": 15418,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1485)"
+      },
+      {
+        "index": 172,
+        "name": "salphaseion_preregistered_candidates_v5.json",
+        "characters": 436328,
+        "page_1based": 15485,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1528)"
+      },
+      {
+        "index": 173,
+        "name": "salphaseion_preregistered_candidates_v6.json",
+        "characters": 203578,
+        "page_1based": 15574,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1709)"
+      },
+      {
+        "index": 174,
+        "name": "salphaseion_preregistered_candidates_v7.json",
+        "characters": 59282,
+        "page_1based": 15617,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 40 column 127 (char 1550)"
+      },
+      {
+        "index": 175,
+        "name": "salphaseion_preregistered_candidates_v8.json",
+        "characters": 346487,
+        "page_1based": 15633,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1500)"
+      },
+      {
+        "index": 176,
+        "name": "salphaseion_preregistered_candidates_v9.json",
+        "characters": 1833839,
+        "page_1based": 15717,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 39 column 127 (char 1559)"
+      },
+      {
+        "index": 177,
+        "name": "salphaseion_selector_frontier_audit.json",
+        "characters": 32730,
+        "page_1based": 16081,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 515 column 125 (char 19576)"
+      },
+      {
+        "index": 178,
+        "name": "salphaseion_split_envelope_preregistered.json",
+        "characters": 38594,
+        "page_1based": 16092,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 7 column 127 (char 336)"
+      },
+      {
+        "index": 179,
+        "name": "salphaseion_split_envelope_preregistered_v2.json",
+        "characters": 38594,
+        "page_1based": 16106,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 7 column 127 (char 336)"
+      },
+      {
+        "index": 180,
+        "name": "salphaseion_split_envelope_results.json",
+        "characters": 3594,
+        "page_1based": 16120,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 87 column 122 (char 2781)"
+      },
+      {
+        "index": 181,
+        "name": "salphaseion_split_envelope_results_v2.json",
+        "characters": 3594,
+        "page_1based": 16122,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 87 column 122 (char 2781)"
+      },
+      {
+        "index": 182,
+        "name": "salphaseion_t23_16_7_audit.json",
+        "characters": 805,
+        "page_1based": 16124,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "schema",
+          "control",
+          "canonical",
+          "materials",
+          "unique_scalars",
+          "matches",
+          "status"
+        ]
+      },
+      {
+        "index": 183,
+        "name": "salvation_coherence_audit.json",
+        "characters": 5437,
+        "page_1based": 16125,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 27 column 127 (char 1286)"
+      },
+      {
+        "index": 184,
+        "name": "second_door_chess_poster_audit.json",
+        "characters": 655,
+        "page_1based": 16127,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 19 column 126 (char 559)"
+      },
+      {
+        "index": 185,
+        "name": "second_door_chess_poster_preregistered.json",
+        "characters": 2112,
+        "page_1based": 16128,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 28 column 127 (char 836)"
+      },
+      {
+        "index": 186,
+        "name": "second_door_composition_audit.json",
+        "characters": 610,
+        "page_1based": 16129,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 19 column 121 (char 559)"
+      },
+      {
+        "index": 187,
+        "name": "second_door_composition_preregistered.json",
+        "characters": 1933,
+        "page_1based": 16130,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 128 (char 130)"
+      },
+      {
+        "index": 188,
+        "name": "second_door_eye_spiral_audit.json",
+        "characters": 538,
+        "page_1based": 16131,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 17 column 121 (char 449)"
+      },
+      {
+        "index": 189,
+        "name": "second_door_eye_spiral_preregistered.json",
+        "characters": 1607,
+        "page_1based": 16132,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 23 column 127 (char 680)"
+      },
+      {
+        "index": 190,
+        "name": "second_door_frontier_derivations.json",
+        "characters": 99628,
+        "page_1based": 16133,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 2262 column 127 (char 74347)"
+      },
+      {
+        "index": 191,
+        "name": "second_door_yellowblueprimes_audit.json",
+        "characters": 1842,
+        "page_1based": 16167,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 26 column 122 (char 1145)"
+      },
+      {
+        "index": 192,
+        "name": "seven_stage_passwords_intertwine_audit.json",
+        "characters": 656,
+        "page_1based": 16168,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 9 column 127 (char 318)"
+      },
+      {
+        "index": 193,
+        "name": "sfield_base9_substitution_preregistered.json",
+        "characters": 5296,
+        "page_1based": 16169,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "declared_acceptance",
+          "mapping_family",
+          "representations",
+          "schema",
+          "source",
+          "status"
+        ]
+      },
+      {
+        "index": 194,
+        "name": "sfield_base9_substitution_results.json",
+        "characters": 48698,
+        "page_1based": 16171,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 685 column 127 (char 22010)"
+      },
+      {
+        "index": 195,
+        "name": "sfield_cipher_preregistered.json",
+        "characters": 11393835,
+        "page_1based": 16189,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 760334 column 124 (char 11380549)"
+      },
+      {
+        "index": 196,
+        "name": "sfield_cipher_results.json",
+        "characters": 141137,
+        "page_1based": 25032,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 107 column 127 (char 3481)"
+      },
+      {
+        "index": 197,
+        "name": "sfield_matrix_sum_inverse.json",
+        "characters": 2327,
+        "page_1based": 25081,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "status",
+          "source",
+          "model",
+          "layouts_preregistered",
+          "records",
+          "accepted"
+        ]
+      },
+      {
+        "index": 198,
+        "name": "sfield_reduction_audit.json",
+        "characters": 2468,
+        "page_1based": 25083,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 12 column 127 (char 635)"
+      },
+      {
+        "index": 199,
+        "name": "sfield_t9_audit.json",
+        "characters": 13885,
+        "page_1based": 25084,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 35 column 128 (char 1175)"
+      },
+      {
+        "index": 200,
+        "name": "split_envelope_cross_pair_audit.json",
+        "characters": 545,
+        "page_1based": 25089,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 18 column 121 (char 482)"
+      },
+      {
+        "index": 201,
+        "name": "split_envelope_cross_pair_preregistered.json",
+        "characters": 2813,
+        "page_1based": 25090,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 91 column 121 (char 2374)"
+      },
+      {
+        "index": 202,
+        "name": "trail1_permutation_experiment.json",
+        "characters": 8903,
+        "page_1based": 25092,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 98 column 127 (char 8873)"
+      },
+      {
+        "index": 203,
+        "name": "trail1_splice_experiment.json",
+        "characters": 1916,
+        "page_1based": 25094,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "status",
+          "chain4_sha256",
+          "trail1_hex",
+          "word_count",
+          "block_count",
+          "generated_candidates",
+          "unique_nonzero_scalars",
+          "words",
+          "operations",
+          "target",
+          "matches",
+          "scope_note"
+        ]
+      },
+      {
+        "index": 204,
+        "name": "tx_message_scan.json",
+        "characters": 149731,
+        "page_1based": 25095,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 202 column 128 (char 9388)"
+      },
+      {
+        "index": 205,
+        "name": "unity_of_opposites_audit.json",
+        "characters": 361823,
+        "page_1based": 25135,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 46 column 127 (char 1594)"
+      },
+      {
+        "index": 206,
+        "name": "universal_regate.json",
+        "characters": 23257,
+        "page_1based": 25231,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 10 column 127 (char 535)"
+      },
+      {
+        "index": 207,
+        "name": "url_prime_reinsertion_preregistered.json",
+        "characters": 7931,
+        "page_1based": 25242,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 44 column 127 (char 1359)"
+      },
+      {
+        "index": 208,
+        "name": "url_prime_reinsertion_results.json",
+        "characters": 294,
+        "page_1based": 25244,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "accepted",
+          "attempts",
+          "manifest_sha256",
+          "padding_hits",
+          "schema",
+          "status",
+          "target_matches"
+        ]
+      },
+      {
+        "index": 209,
+        "name": "v43_479_bounded_bruteforce.json",
+        "characters": 4602,
+        "page_1based": 25245,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 139 column 124 (char 4402)"
+      },
+      {
+        "index": 210,
+        "name": "v51_hashthetext_format_audit.json",
+        "characters": 3486,
+        "page_1based": 25247,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "id",
+          "seal_ref",
+          "aes_trials",
+          "padding_hits",
+          "legible_hits",
+          "scalar_tests",
+          "scalar_matches",
+          "status",
+          "controls"
+        ]
+      },
+      {
+        "index": 211,
+        "name": "v51_hashthetext_format_preregistered.json",
+        "characters": 4782,
+        "page_1based": 25249,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 5 column 128 (char 227)"
+      },
+      {
+        "index": 212,
+        "name": "v52_close_friends_personal_audit.json",
+        "characters": 5008,
+        "page_1based": 25250,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "id",
+          "seal_ref",
+          "aes_trials",
+          "padding_hits",
+          "legible_hits",
+          "scalar_tests",
+          "prize_matches",
+          "status",
+          "controls"
+        ]
+      },
+      {
+        "index": 213,
+        "name": "v52_close_friends_personal_preregistered.json",
+        "characters": 2556,
+        "page_1based": 25253,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 5 column 127 (char 224)"
+      },
+      {
+        "index": 214,
+        "name": "v53_red_resistor_audit.json",
+        "characters": 230,
+        "page_1based": 25255,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "id",
+          "seal_ref",
+          "prize_matches",
+          "status",
+          "controls"
+        ]
+      },
+      {
+        "index": 215,
+        "name": "v53_red_resistor_preregistered.json",
+        "characters": 1456,
+        "page_1based": 25256,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 5 column 124 (char 223)"
+      },
+      {
+        "index": 216,
+        "name": "v54_fae_sonata_audit.json",
+        "characters": 2766,
+        "page_1based": 25257,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 12 column 128 (char 507)"
+      },
+      {
+        "index": 217,
+        "name": "v54_fae_sonata_preregistered.json",
+        "characters": 1231,
+        "page_1based": 25258,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 6 column 122 (char 308)"
+      },
+      {
+        "index": 218,
+        "name": "wayback_early_asset_audit.json",
+        "characters": 728610,
+        "page_1based": 25259,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 1565 column 127 (char 56851)"
+      },
+      {
+        "index": 219,
+        "name": "wayback_source_audit.json",
+        "characters": 82137,
+        "page_1based": 25378,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 7 column 127 (char 339)"
+      },
+      {
+        "index": 220,
+        "name": "witteveen_chain4_two_oracle_audit.json",
+        "characters": 24722,
+        "page_1based": 25403,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "decryptions_point_gated",
+          "matches",
+          "model_count",
+          "model_digests",
+          "prize_addresses",
+          "schema",
+          "scope",
+          "source",
+          "status"
+        ]
+      },
+      {
+        "index": 221,
+        "name": "xor_triangle_audit.json",
+        "characters": 723,
+        "page_1based": 25413,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "status",
+          "chain4_sha256",
+          "attempted_layouts",
+          "recurrence",
+          "serialized_row_orders",
+          "insertion_positions",
+          "independent_row_reversals",
+          "exact_triangle_survivors",
+          "scope_note"
+        ]
+      },
+      {
+        "index": 222,
+        "name": "xor_triangle_trail_audit.json",
+        "characters": 4928,
+        "page_1based": 25414,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 127 (char 129)"
+      },
+      {
+        "index": 223,
+        "name": "yinyang_479_continuation_audit.json",
+        "characters": 10979,
+        "page_1based": 25417,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 18 column 127 (char 691)"
+      },
+      {
+        "index": 224,
+        "name": "yinyang_479_index_selector_audit.json",
+        "characters": 707,
+        "page_1based": 25421,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 18 column 120 (char 530)"
+      },
+      {
+        "index": 225,
+        "name": "yinyang_479_index_selector_preregistered.json",
+        "characters": 2284,
+        "page_1based": 25422,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 129 (char 131)"
+      },
+      {
+        "index": 226,
+        "name": "yinyang_composition_extended_audit.json",
+        "characters": 513,
+        "page_1based": 25423,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 16 column 126 (char 423)"
+      },
+      {
+        "index": 227,
+        "name": "yinyang_composition_extended_preregistered.json",
+        "characters": 1917,
+        "page_1based": 25424,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 128 (char 130)"
+      },
+      {
+        "index": 228,
+        "name": "yinyang_interleave_49_audit.json",
+        "characters": 480,
+        "page_1based": 25425,
+        "json_valid": true,
+        "root_type": "dict",
+        "keys": [
+          "controls",
+          "counts",
+          "legible_records",
+          "prize_matches",
+          "schema",
+          "scope_note",
+          "status"
+        ]
+      },
+      {
+        "index": 229,
+        "name": "yinyang_interleave_49_preregistered.json",
+        "characters": 1135,
+        "page_1based": 25426,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 35 column 127 (char 1120)"
+      },
+      {
+        "index": 230,
+        "name": "yinyang_prime_dual_audit.json",
+        "characters": 3861,
+        "page_1based": 25427,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 273 column 127 (char 3144)"
+      },
+      {
+        "index": 231,
+        "name": "yinyang_prime_dual_preregistered.json",
+        "characters": 5066,
+        "page_1based": 25431,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 14 column 127 (char 546)"
+      },
+      {
+        "index": 232,
+        "name": "yinyang_rot180_partition_audit.json",
+        "characters": 2956,
+        "page_1based": 25433,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 35 column 127 (char 1886)"
+      },
+      {
+        "index": 233,
+        "name": "yinyang_rot180_partition_preregistered.json",
+        "characters": 4330,
+        "page_1based": 25434,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 14 column 127 (char 574)"
+      },
+      {
+        "index": 234,
+        "name": "yinyang_seven_operand_composition_audit.json",
+        "characters": 1349,
+        "page_1based": 25436,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 16 column 120 (char 422)"
+      },
+      {
+        "index": 235,
+        "name": "yinyang_seven_operand_composition_preregistered.json",
+        "characters": 1877,
+        "page_1based": 25437,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 3 column 128 (char 130)"
+      },
+      {
+        "index": 236,
+        "name": "youwon_index21_audit.json",
+        "characters": 4635,
+        "page_1based": 25438,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 69 column 128 (char 2689)"
+      },
+      {
+        "index": 237,
+        "name": "youwon_middle_block_audit.json",
+        "characters": 2822,
+        "page_1based": 25440,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 65 column 128 (char 2613)"
+      },
+      {
+        "index": 238,
+        "name": "youwon_middle_block_preregistered.json",
+        "characters": 3409,
+        "page_1based": 25441,
+        "json_valid": false,
+        "parse_error": "Invalid control character at: line 14 column 127 (char 541)"
+      }
+    ],
+    "scope": "All entries indexed; selected summaries inspected. Computations not independently rerun. JSON line wraps not silently repaired."
+  },
+  "homepage_comparison": {
+    "bytes": 35785,
+    "sha256": "2f896807a859e2f71a2f6e1e8277986af73b80dc0dd79a685a67c7f7f8c3303b",
+    "identical_to_pr15_august19_capture_copy": true,
+    "markers": [
+      "finalGrid",
+      "carrier anomaly",
+      "burst-flash",
+      "#fefefe"
+    ],
+    "historical_copy_source": "https://raw.githubusercontent.com/Naddiseo/gsmgio-5btc-puzzle/1e913fdbd42b8d5bd7d0a0cf3406d6abdd33142a/neo/materials/wayback/pages/root_2026-08-19_finale.html"
+  },
+  "chain_status": {
+    "retrieved_at_utc": "2026-11-04T09:19:08.534908+00:00",
+    "sources": {
+      "mempool.space": {
+        "url": "https://mempool.space/api/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+        "response": {
+          "address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+          "chain_stats": {
+            "funded_txo_count": 129,
+            "funded_txo_sum": 876003172,
+            "spent_txo_count": 6,
+            "spent_txo_sum": 750353498,
+            "tx_count": 129
+          },
+          "mempool_stats": {
+            "funded_txo_count": 0,
+            "funded_txo_sum": 0,
+            "spent_txo_count": 0,
+            "spent_txo_sum": 0,
+            "tx_count": 0
+          }
+        },
+        "confirmed_balance_sats": 125649674
+      },
+      "blockstream.info": {
+        "url": "https://blockstream.info/api/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+        "response": {
+          "address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+          "chain_stats": {
+            "funded_txo_count": 129,
+            "funded_txo_sum": 876003172,
+            "spent_txo_count": 6,
+            "spent_txo_sum": 750353498,
+            "tx_count": 129
+          },
+          "mempool_stats": {
+            "funded_txo_count": 0,
+            "funded_txo_sum": 0,
+            "spent_txo_count": 0,
+            "spent_txo_sum": 0,
+            "tx_count": 0
+          }
+        },
+        "confirmed_balance_sats": 125649674
+      }
+    },
+    "utxos": [
+      {
+        "txid": "cf9d667cd870fb2a55f389a6f85409ddb0830f5e20b14dad12a803ab37770cb0",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "432edcc89387c31557f24737dea8e245cc88a62c1b083c763768f8ebc52cf19b",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "1e4a57c1db53e501d7dfb28739a393dd46f78bb86eebc3bef3415c234fb7a802",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "34da8a915741d806e659f53aa7f31d84c7bb74d51244e698f150df00e7211517",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 910078,
+          "block_hash": "0000000000000000000177ae06789a0ace83372f328206f6237e57f64aad13c9",
+          "block_time": 1755214395
+        },
+        "value": 546
+      },
+      {
+        "txid": "beb195487a7b457aa528d9f2fcbd38588c61e95ff3855b0cda7a1fb2c7742568",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 893539,
+          "block_hash": "0000000000000000000081d6c3fc92be8532cd862150e8f49e49a29b47d4e989",
+          "block_time": 1745345041
+        },
+        "value": 666
+      },
+      {
+        "txid": "7b8ea45c32d5242c56569a0f75fcf061615e8147b805d5e8b445ed9cd89f7497",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "bd9df00780fb53894a3e7be022e7118fa556827ad58dabbcda6124f7e9795e30",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 933494,
+          "block_hash": "000000000000000000004c69ac417053ad76501f4a3fc10da4dc8c5b64c07e2c",
+          "block_time": 1769154596
+        },
+        "value": 2526
+      },
+      {
+        "txid": "b9d1b0e9f5a6c9c67d79370971a39d13d15bd6a4354a06c7ee3b48655e301bef",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 904971,
+          "block_hash": "000000000000000000020c056d6e6310085fee8d591eb61dbd09d14f52637590",
+          "block_time": 1752180284
+        },
+        "value": 546
+      },
+      {
+        "txid": "5c3f41356ba32eb0554dd4ddf4b299bf478fbbebfe43c09a1be1c1d8a1a3d247",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "99c5a71130ca23d7f1a5d411708c7fba2c54c6a779547463999801d4f2601a48",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 914119,
+          "block_hash": "000000000000000000005d99f9966169bb81073001c765a7eea5ff8fa0859ec8",
+          "block_time": 1757536197
+        },
+        "value": 2380
+      },
+      {
+        "txid": "60769301921777e216afc31140ebe0a37889308aea6b7c26fb3977000461190d",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 901467,
+          "block_hash": "00000000000000000001cb325c91a79a413eeb8d467e8199b17c378d953b18e7",
+          "block_time": 1750054607
+        },
+        "value": 546
+      },
+      {
+        "txid": "7fff061565c59aee9ff08566b97bce176aa70a0b09e645ec50b1f27e6aeb66f6",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "f5007cd87022770ecccd58b77c958b54d7d2ad97caac77db53a8b671071c28d0",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "aac29c0d7d64fa5c49ac758384a81aa521acdd419bb399514b9b0fc5ae8c4d9f",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "fa19912bfc789cd61b151713efadea835fdf07cb1dd83951b0c7614e9715fd6c",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "b5b20fcd04ed85def9010c8e45f1436786bc6013d198909f45f2895c1a589ca7",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 933228,
+          "block_hash": "00000000000000000000af6e25a3dac4832999b68983a631c901fdb2e9524cc4",
+          "block_time": 1769007135
+        },
+        "value": 546
+      },
+      {
+        "txid": "4cdc9c77e3c56e3d66111ab158449b7cfba86f0254b01ca59a2eac4a30c8203c",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 944775,
+          "block_hash": "000000000000000000018cdb9f877ae295620bc14ce25a5a15df66c0e4eacaed",
+          "block_time": 1776020744
+        },
+        "value": 70000
+      },
+      {
+        "txid": "4e82ab79ddcc4f26891bcc2ee39936630490b7ec451b63c646b8d07b62cbf872",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 887660,
+          "block_hash": "0000000000000000000205f37aad601f8a2d9049745d31922d077ed439ee6c70",
+          "block_time": 1741894961
+        },
+        "value": 600
+      },
+      {
+        "txid": "c7e2cf4ce65af5b29ae2e0aadef1fe4a624a2aef1f591393c8ca7b87b3c1d145",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 911824,
+          "block_hash": "00000000000000000001c2ed9d473abbb206895a7c245b2c5c1506b57c1bc949",
+          "block_time": 1756238133
+        },
+        "value": 546
+      },
+      {
+        "txid": "fbbe89587ff643ab93f138f13d029806af273e475233ee52ea4eee476b64c927",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "d2173770e0670ea3683cdfc8cdeaae46e8a30c494cf5bd88a5eb4db6ab250816",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "71ad53f1c2cae28e3239e43f38eebf2859d63099ad52ad7ea2a037a01a58e80f",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "2f8fbad62d6415c9c931066ebf8da09b929fea3605efbe3ce1b92bb5a2b78890",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 937719,
+          "block_hash": "0000000000000000000111f00682e7c77281346a73c01cedd576ca1eca800068",
+          "block_time": 1771714154
+        },
+        "value": 546
+      },
+      {
+        "txid": "f85058dbfe7f8a5c71bd6676a799d9742d4438536ae380c834523e419ebbfaab",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "6694dfb1442cca1da21169740f77decb636429e660cbfc67b8076c9532ed9f50",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 933494,
+          "block_hash": "000000000000000000004c69ac417053ad76501f4a3fc10da4dc8c5b64c07e2c",
+          "block_time": 1769154596
+        },
+        "value": 2526
+      },
+      {
+        "txid": "f2510bd7f8d910e85265eea462ab3b8b9b2ecc0f25b42cb9742a3eadd2646626",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "948c5a7c20db6788caa6c0b34f20ec624b9483429ac321e2ea19b9d2a84f2f22",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 886239,
+          "block_hash": "0000000000000000000154b096ce5ab54cbcc1e7eba987cd2448be6aca0bd2bd",
+          "block_time": 1741065738
+        },
+        "value": 1000
+      },
+      {
+        "txid": "96030fd458fde9de8c8cc3cdc8f2fa1616c2f8c4fde1808fd05a1f970fc6cd4c",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "9ad120abe20a5f63660ab0dc6631955ea4f42fac399f586e4080759ccc1ee9d9",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 905274,
+          "block_hash": "0000000000000000000039fd1b0e8cfe9bef406225f3362ac0dff7fdde8d6c46",
+          "block_time": 1752354634
+        },
+        "value": 600
+      },
+      {
+        "txid": "fabe37c9058b9e2bcc606cb512efe3bdd145ad429663dd24ab14e770f5abf107",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "c2d07560fd5d14ebe49f4221b8a1f443ae840a7734a030829debba2acb2e22c5",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 905192,
+          "block_hash": "0000000000000000000215320f1c76113ee2d6e0e29242b11cff94f48ec9fa23",
+          "block_time": 1752300363
+        },
+        "value": 700
+      },
+      {
+        "txid": "e83dc597436161d756496165f421d12006e45326807983a79a0d055af0e7def5",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "8890ec6059be7c05b90dfee097d432e2cdfe71300c7c811a80caaef26f0ca8e1",
+        "vout": 2,
+        "status": {
+          "confirmed": true,
+          "block_height": 897169,
+          "block_hash": "000000000000000000004068a73a2774eff73c711e5c1c217288f314b415d1de",
+          "block_time": 1747524069
+        },
+        "value": 1000
+      },
+      {
+        "txid": "c38cabb17d7d762c57d48219b6b3e8fbdd4de447d2125d040af0a6f0886a29cd",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "c52c212656a184c8603cb1c0c58424976b760b49a2caf59ad4bdda11f258acfa",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 904332,
+          "block_hash": "0000000000000000000096f1ac2884d893608f5594e72cac2fa83a95c4ed5e1b",
+          "block_time": 1751827831
+        },
+        "value": 1000
+      },
+      {
+        "txid": "a69453857ffab8b3a449a7bf2070094ebf8f72616ffcf55ebbf76859bb49c39d",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "9160a9e4d3e33d856b9fc7a1e00517c37115b00b5389a9a5fa545a7130a285c5",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 937434,
+          "block_hash": "000000000000000000011c1c7ed123adbf363a65b9cb340bbba6bb42328df321",
+          "block_time": 1771524558
+        },
+        "value": 783
+      },
+      {
+        "txid": "225c18a4f526772773dbf8b7891e22635848158b88cf560e27497d438b894a45",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 905263,
+          "block_hash": "000000000000000000008ad27cea1023c5a7fd8b4159eb8b69d5d5bced03923e",
+          "block_time": 1752351015
+        },
+        "value": 600
+      },
+      {
+        "txid": "91b0f7e46c68a5f912eaf4e558f1e3fc1475a20a5c7c64918f30b8163636b5b9",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 971314,
+          "block_hash": "00000000000000000001622a3a47df3d509321eeca146e25254fdac43513b821",
+          "block_time": 1791931097
+        },
+        "value": 11370
+      },
+      {
+        "txid": "7b012ef79590f99522c6481f53072ae443853a57e90d781a3e1550e7b7b5dcb7",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "15e9f80585f05f60feeb933e1bb2ad3ed34553c87521f57c70bead1d0513df6d",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 930318,
+          "block_hash": "0000000000000000000179546cd3ba249f0fbf7890b9e5cb3e6a37889f0b93c6",
+          "block_time": 1767211788
+        },
+        "value": 2026
+      },
+      {
+        "txid": "33f183c8d31e32b493dd405bc9b6d04b9b5a937537de285023a04b78e635d387",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "cf2ad88cf7fa4e8767eed2252bf85add5992d68ef5036a7b8cdce37f799b8005",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 912530,
+          "block_hash": "00000000000000000000bdee0f657642387ff5d8ec97caedcc3ead5aef0af70b",
+          "block_time": 1756630046
+        },
+        "value": 800
+      },
+      {
+        "txid": "4a6ff26884b7137d0dfa79622036ea47d3589b46ae7be61b85ceb19a40779e63",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 902839,
+          "block_hash": "000000000000000000015ee9f044b8ebaca8bebf7d17323a4656067565308d63",
+          "block_time": 1750956057
+        },
+        "value": 546
+      },
+      {
+        "txid": "4cf92d1cd32ad23ee0a442fe60aa046261d4dec2b90d81aa768573fe48abe2ad",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "4e689d921d7f280ce4c32a031fc4c8cb737be0925bb4586345c5075b9a5b17f5",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 926699,
+          "block_hash": "00000000000000000001c6f1fd1f40af287fd565882d0729b8a501c3cd9439ea",
+          "block_time": 1765038784
+        },
+        "value": 2680
+      },
+      {
+        "txid": "301c06a9bc352e28bae20ab56c5532705eb80dae10075f7bb0eaed24907851ed",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 908554,
+          "block_hash": "000000000000000000007aaeb7106b0bda561e9726007de1d293d02f3e2c3856",
+          "block_time": 1754308064
+        },
+        "value": 800
+      },
+      {
+        "txid": "01d66f66dc12a2c7a7b892848a1ee95bae3de4bb00e3a8e4bba17963a89d1246",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "3ceb3135a8d4f4277cbac8ba3d0f06c448b1479ed692e016b765a2f1fc4adbd5",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "dcc606e01f0f79dcd52f229f6634d508950eafa2ef37102e6d4e3bfd99b5d407",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 914281,
+          "block_hash": "00000000000000000000f40d95165f1e56554a1a7c25dc329e090a256a29726d",
+          "block_time": 1757625218
+        },
+        "value": 1000
+      },
+      {
+        "txid": "88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 840725,
+          "block_hash": "000000000000000000001855d504c55303dc129746a82b7b688c68d22e78d386",
+          "block_time": 1713995247
+        },
+        "value": 125324300
+      },
+      {
+        "txid": "436d1bbddee8f6e61fb4481e3ad243f6f708ffb831f0448869503414839913c2",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 933713,
+          "block_hash": "0000000000000000000186662890370e31f57a301d51de72b2b236c6b0979272",
+          "block_time": 1769329442
+        },
+        "value": 1126
+      },
+      {
+        "txid": "35fbd774c19ea5dc4974d82b908b1126e29fab5513f86596ab775b4db6c7426c",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "4fcfeefd53e31da8a8c66140dd91c7d6b39ffd720e51ac0f2f60bf48522f3edd",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 945642,
+          "block_hash": "000000000000000000002c78c2fc14a8a71a7d68a31e049cae61b1d4156f62aa",
+          "block_time": 1776532349
+        },
+        "value": 2000
+      },
+      {
+        "txid": "a1aaf63f1bfd365dec08c05014a71456e3ff2fcef7fb700eb6442f404e1cb8fc",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 887092,
+          "block_hash": "00000000000000000000d29a023c2fe0a6457320ae91400c2787718e565a0ecd",
+          "block_time": 1741565145
+        },
+        "value": 1000
+      },
+      {
+        "txid": "222c492b0083bec0aefaa39bed624f2e89da40f415c8e03c36d2a35c0c8792b0",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "2ba7b1463745c637c76bf054b4833779a783b4b6e3676d0db49f0c30811a3900",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "b9dbb788e68cd91c03f218dc6514775323d30a22a8ec300f62471ac7aac0107a",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 937720,
+          "block_hash": "00000000000000000000bae81f94cd978d6765e77b2d5e98d8b38c72d3cea39f",
+          "block_time": 1771714917
+        },
+        "value": 1400
+      },
+      {
+        "txid": "2ebab50d62061acd68eb162e287723546862c78fb4a88b7392807bcc9675c28e",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "82bba6ca15a1c556ccce384467b4a2911f36bcde6ec335216cebf8315e314c7f",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 946416,
+          "block_hash": "000000000000000000020a6dd2560429189a816e21d54c9221f4a3a029d322a7",
+          "block_time": 1777018985
+        },
+        "value": 2500
+      },
+      {
+        "txid": "3775e974b0ace913e4f5e4c5849f6d2bf29278bd2b3d14bbf8b8b1ea021869ac",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 913830,
+          "block_hash": "0000000000000000000152e934a9035d31717841b022f421023afd58fd9c8971",
+          "block_time": 1757380261
+        },
+        "value": 1070
+      },
+      {
+        "txid": "0bd3f5a9064ba45e2560e65a3a1d5a6b050be530dc5c86ce5649beb0b3a7e70c",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "3488aa173887cceb064906e9ef5348973100478977acf10885e5ad823dde5e15",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "083f3688a219738453afa9bfad06871179531314f678ccc4c745d50d7b9182ae",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "de304f0426c932b998816f9a60542e492f65123464fc7c725141bc397067c737",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 937719,
+          "block_hash": "0000000000000000000111f00682e7c77281346a73c01cedd576ca1eca800068",
+          "block_time": 1771714154
+        },
+        "value": 546
+      },
+      {
+        "txid": "7cea5a5db4fabdb268891a342c3688edc1dcc4db5e6ff4c550b30648c845175b",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "070444ab8976975dd21d6b0e2f29d4434d35c0afe87b90ea99dff1f6ad3ba30a",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "e30099b1eb38c2690e501bd6a0269aec7f048b3f09ff0b56058fd67162762ed1",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "669880a08e13ccf8d5b78c40a69262626149895a57bedb3a2ebd21a6dc0f1eab",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "d1f774f1e5aa0b62ae0a3fc0aef72c39df7b8d3622d982eef379b9c77dfb91f1",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 944774,
+          "block_hash": "0000000000000000000099c63375b3c18454d610f48086d5e25869f18c418b06",
+          "block_time": 1776020457
+        },
+        "value": 70000
+      },
+      {
+        "txid": "aa73c1d825f75694b54ff4269c5ecb96f8919e91eca5c88b7870d67657112280",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "02abbfc2563672d99a4e6ad3e7af01df43a7db5773a42b11e3ab8227bf99381c",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "2a6ded8422adfb1ab5673f2a442550cf3ee70c65ddb739aeb90a09c2681c2642",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 907055,
+          "block_hash": "000000000000000000013188749d5af9f211ab1368a21f3e73dac829851b2869",
+          "block_time": 1753414573
+        },
+        "value": 546
+      },
+      {
+        "txid": "a93a85413cf095482a93dfc471a274fa9b3f95dee8c2447a06462327cc108c27",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "ca6391d7dfe5e47dd146ebc5b7af53e28bbcec05d1c06ce5804f63fbf28b8a85",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 913169,
+          "block_hash": "000000000000000000016458679c242a84953bbf07bfbef79b388e25c49d3e7f",
+          "block_time": 1756996938
+        },
+        "value": 10000
+      },
+      {
+        "txid": "af92d653a42a2163629c98193e8bbf885841abc57ee22d748edc03d0e2dce7e0",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 938175,
+          "block_hash": "00000000000000000000771fe2272c9d312d65e56f035b71fcbae989e634a45b",
+          "block_time": 1771965337
+        },
+        "value": 1110
+      },
+      {
+        "txid": "96d702ef646396d3f4b7249e209d3821025687c49cd23b7da7d15ea17efae7ee",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 851210,
+          "block_hash": "000000000000000000034d477f296823f8f535174ec232fdc4a5f55ec27b7ad5",
+          "block_time": 1720417167
+        },
+        "value": 4410
+      },
+      {
+        "txid": "2e67fc77bb767f67d0927da94f6591cda46460849ba52a0abbcf6b209591bd3c",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 887657,
+          "block_hash": "00000000000000000000b6c95eff2036a72123e5959fb19d4de8bd0d563b9d9b",
+          "block_time": 1741893097
+        },
+        "value": 600
+      },
+      {
+        "txid": "e849fbb0f78fa84545612c25f4ae82a7117c48cb0bc9a92519ecb43c6bd876bc",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "546dcac2cfabece6f023fa613858da29543a4f5fa2fbb256f765780eae16e3ad",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 946416,
+          "block_hash": "000000000000000000020a6dd2560429189a816e21d54c9221f4a3a029d322a7",
+          "block_time": 1777018985
+        },
+        "value": 2500
+      },
+      {
+        "txid": "079f5b476b8ef2762eb2c39a9848a2ee9f416d8e8198db16e94a63d5060e3d15",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 919375,
+          "block_hash": "00000000000000000001d371f40b1a31609dbc0dd983ae939217a24d4e175bb7",
+          "block_time": 1760643236
+        },
+        "value": 1203
+      },
+      {
+        "txid": "5e2c65a21fc5e745c82dfa311c51ed3b1c09b8a1409b03fc70c2984bc9174939",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 937720,
+          "block_hash": "00000000000000000000bae81f94cd978d6765e77b2d5e98d8b38c72d3cea39f",
+          "block_time": 1771714917
+        },
+        "value": 1400
+      },
+      {
+        "txid": "0d24713088710fef730dd416876ef9639b62dd54a2e83debb76c108f668341df",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 948764,
+          "block_hash": "00000000000000000000d48864d6e3deb6eb761173e3020c29a33b1a1dad3df8",
+          "block_time": 1778410746
+        },
+        "value": 666
+      },
+      {
+        "txid": "6c1c632ecf1e580f7c0e7474395e2f532fd230ac60d11f26a3c0e58d1af0a4dc",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 909525,
+          "block_hash": "00000000000000000001bf7c62ab7b0f2b7dcf118f7914841a31b515d3aeffea",
+          "block_time": 1754895372
+        },
+        "value": 700
+      },
+      {
+        "txid": "f74ee485896ebe328f8306c67eb859caca526a1a27295df8c268368901ff4fb6",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "b73bd4015827e45cb8cbcf66b41e7e8d0f4126926f142d41a2bd79a3fd5c642a",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "db9331cfd886a5f3e9b71ac3ceb860af29cc130e7d9eec9b3683e496504e2af1",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "052a37c98c88b425347fe9ab624f24fa84048c5bc6ef1330df0d72d5c6fa6813",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 905263,
+          "block_hash": "000000000000000000008ad27cea1023c5a7fd8b4159eb8b69d5d5bced03923e",
+          "block_time": 1752351015
+        },
+        "value": 600
+      },
+      {
+        "txid": "ae83dd60dcf5d3b81ae129069f87364c708e0c0dcc351d1ffa4bc6a5874abb00",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "0a756d0b9aeef1a4743ee108123db6ca76be961835964c6eaa61d9b5fe4b1526",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "c8d0886f977fc80af63ca49341a71d772b70c2d0bb7ca6a850881c9f052552bb",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "1698785ff7ab0c678bbbe5f0be4f1c5f53bac8fd92c5ad9d0bdc1b17ae4ce697",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "a589629df479a801137db3ada8e60f64020848ae73851490e7e2aeae49f88351",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 944086,
+          "block_hash": "0000000000000000000034842fda1a420fc950f67350e445613e65539624b3da",
+          "block_time": 1775589517
+        },
+        "value": 546
+      },
+      {
+        "txid": "42c31f54760d9d7f72d4a1650c580d8080788c80e470c008b9a27f92bb4cdf0a",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 929175,
+          "block_hash": "00000000000000000000bd788e360de11296f825fd3025615887675599aeebde",
+          "block_time": 1766527171
+        },
+        "value": 666
+      },
+      {
+        "txid": "c184469d7e6fefa43a220944d6ea8adc33991aaa50808fc3ddb41c276ee6def1",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "4237e268bbe2cafd0b352f442fd53840ba1d60773ca112b57dc03b539fec046f",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 890345,
+          "block_hash": "00000000000000000000db7d728483eeebc913a1799c8cbc27369beb5da7f9ae",
+          "block_time": 1743478051
+        },
+        "value": 1000
+      },
+      {
+        "txid": "cfafec470abe58138565b5308f20280d50222f5d9a72fab9d76d925ad7c01a19",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "96a808a83473dab3479337e99bd5131b2748e973b4daa31a51600d775463979d",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 937506,
+          "block_hash": "00000000000000000000acf4baf6370a4d94c93b5fb067e945d32b3cc6fbcbdf",
+          "block_time": 1771571497
+        },
+        "value": 1000
+      },
+      {
+        "txid": "41103ef1cda062c07bfb24fafd4be1b587ffd0ddf0ad2125d6fd0c5cc7e6b23b",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "fdcd6e3c630ef8588c3b32ee3b1885a09d3097417f576eb74fa7feb7e198a75f",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "1911356b148d98c8ee53e65553f546c2712de2d5bdf0b99355bc0541a6521ade",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      },
+      {
+        "txid": "e1ebff57a21c01582c005c3b9e921979a864aa9951abe1ba5eaa8c1a1a3d06c7",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "a751791bf7125e2ba94fd451900391a1cd3a50f01e09ec461450ac0de1d1945e",
+        "vout": 3,
+        "status": {
+          "confirmed": true,
+          "block_height": 964501,
+          "block_hash": "00000000000000000000999970ad6ff158ea8a327cc54f4d200c35b53bd48048",
+          "block_time": 1787964013
+        },
+        "value": 864
+      },
+      {
+        "txid": "a10cf987f53116dd997dc6a328fa74b0a19553092c0c2abc56e3a3ed3eccad06",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "91f9b800d6902be337f1eb6b24c58b93459eed0eb548a53b04ce4cda4ad123e8",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 901639,
+          "block_hash": "000000000000000000017a40ce77a6e6a3e8bcc60c391919917874a3a2f3cecf",
+          "block_time": 1750171769
+        },
+        "value": 666
+      },
+      {
+        "txid": "e1f73b490b70748d9865e01aefb1593d71798ba488b998300fe4f600ce66e982",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "4aa521e3c096ef1ecd899ad9008a2fefbdd507a8de2027613988ff863b0a4e07",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 944777,
+          "block_hash": "0000000000000000000025adf3dc8b27b7c1a5bbe7ccde32f96c9bf28e325b1f",
+          "block_time": 1776022090
+        },
+        "value": 70000
+      },
+      {
+        "txid": "3357a80b26343fa711d4be67bbcfee71b5f708068f7a0e7fca94c0d2d1da5904",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "856185687ee9f2ca19b1fcd9477541f09c653da886360257c55061e4e3d05796",
+        "vout": 1,
+        "status": {
+          "confirmed": true,
+          "block_height": 932406,
+          "block_hash": "000000000000000000018c67ba6e04e5e3306e4a9e9f3fd5088c66a173202785",
+          "block_time": 1768498731
+        },
+        "value": 546
+      },
+      {
+        "txid": "6119c9969b803d02a804202666f97455c33eedbb9dde75987528daa804e8f619",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "e6f3fd557eb633d111c8ac076ce25ed893db18acf3aa30bb4346d01c1a85f740",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "2891a19577c9becc8d93e2207ac6af446a49c80a6a7f4bf39dea74090b7e69b5",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "da062cd8135128e0301724e96f7a1ac544deb026a6604fe68e449b6ca1329d6a",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 968572,
+          "block_hash": "000000000000000000009d3148ebc1566e982e201e2abfd4f66a6b8a2fe43b6d",
+          "block_time": 1790359482
+        },
+        "value": 1593
+      },
+      {
+        "txid": "3168021b8f161aee624f1c6b14032b20b46c33c730361a9ddba66a6856f68cd1",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 933132,
+          "block_hash": "00000000000000000001e33e0b0fe0091b210a3d9afd14bb98a8c93e64fb4fc6",
+          "block_time": 1768941622
+        },
+        "value": 546
+      },
+      {
+        "txid": "ad7237973633da3562ae666179265bbf77318e47768cd9d7e2cabc5d6808506b",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "973646bb3204b9e67e0fcb58efabe951aaf3714020c277f77092ae59bc1a1bd6",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 949664,
+          "block_hash": "000000000000000000000a18bdfd4c348cbf8ad97fcf69b3dd1ff4332e153cbf",
+          "block_time": 1778937193
+        },
+        "value": 546
+      },
+      {
+        "txid": "25c037ecc5f9b59ada0f3a51618c7208dd370eda0ddccf9984004ffd96f6e6a2",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "965b73547f639a41dc000db4f62c35fc4a373bd31abab67d0f9ec46a26af740d",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 933726,
+          "block_hash": "00000000000000000000fac630c9eb1a066248e361ea1ad3ca610fdd271d31eb",
+          "block_time": 1769342418
+        },
+        "value": 546
+      },
+      {
+        "txid": "a2a702abbd3ae2edf0d67224d9a4a1c29c2bd53621437e6feb253677de2ec00a",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 944086,
+          "block_hash": "0000000000000000000034842fda1a420fc950f67350e445613e65539624b3da",
+          "block_time": 1775589517
+        },
+        "value": 546
+      },
+      {
+        "txid": "66eefd6ad925bc38a10210161cb91dfa48dfcedf1eef7c15a23c5c3a3340f9ee",
+        "vout": 6,
+        "status": {
+          "confirmed": true,
+          "block_height": 930160,
+          "block_hash": "000000000000000000010c72ef79d9fb286f9b0d759213f33b9744234bc08bd8",
+          "block_time": 1767108386
+        },
+        "value": 864
+      },
+      {
+        "txid": "be5c8947a6f245c029a155c1d6fe2ea16d683482f87cadddc5e25c69ab14be9e",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 971256,
+          "block_hash": "00000000000000000000ade0cd0e5550ad953521dd0e6cb1b4a99eefacbb63ed",
+          "block_time": 1791901745
+        },
+        "value": 1337
+      },
+      {
+        "txid": "a63527f312dcce0d38973f3ee95e9994e9848d0bfa0695b2e5452ef9b2748a77",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938164,
+          "block_hash": "000000000000000000009c4238e3ef03d51423d4c1b249548c25adb2e8f004a6",
+          "block_time": 1771959174
+        },
+        "value": 546
+      },
+      {
+        "txid": "a53663a639500553b6e5d12cd31be0bea64286a404e87a3c1e097e9ee7eb9920",
+        "vout": 0,
+        "status": {
+          "confirmed": true,
+          "block_height": 938165,
+          "block_hash": "000000000000000000002c7076b935098ea9451b888ff912d7c2f00729888118",
+          "block_time": 1771960136
+        },
+        "value": 546
+      }
+    ]
+  },
+  "execution": {
+    "reused_completed_oracles": true,
+    "runner_sha256": "2854213082a3f2e27e976ac864fb1ac499354b71d3ed6a9b88d34412588cb9a5",
+    "downloaded_code_executed": false
+  }
+}

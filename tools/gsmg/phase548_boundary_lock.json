@@ -1,0 +1,126 @@
+{
+  "fields": {
+    "protocol_sha256": "4c7fce1fe8cdee054a8810ae491f352bb00709acf43bcc3623ab2b0196f4ff3d",
+    "script_sha256": "d56529471d768e791baa74c3fdba30e1f84fb8e090c4029e9602fdfd73a2bcc0",
+    "data_sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+    "real_nulls": 1999,
+    "real_seed": 54801,
+    "bar": 0.01,
+    "partitions": [
+      "cut_30",
+      "cut_38",
+      "cut_57",
+      "cut_91",
+      "cut_95",
+      "cut_114",
+      "cut_190",
+      "cut_285",
+      "cut_380",
+      "cut_456",
+      "cut_475",
+      "cut_479",
+      "cut_513",
+      "cut_532",
+      "cut_540",
+      "layout_2x285_columns",
+      "layout_3x190_rows",
+      "layout_3x190_columns",
+      "layout_5x114_rows",
+      "layout_5x114_columns",
+      "layout_6x95_rows",
+      "layout_6x95_columns",
+      "layout_10x57_rows",
+      "layout_10x57_columns",
+      "layout_15x38_rows",
+      "layout_15x38_columns",
+      "layout_19x30_rows",
+      "layout_19x30_columns",
+      "layout_30x19_rows",
+      "layout_30x19_columns",
+      "layout_38x15_rows",
+      "layout_38x15_columns",
+      "layout_57x10_rows",
+      "layout_57x10_columns",
+      "layout_95x6_rows",
+      "layout_95x6_columns",
+      "layout_114x5_rows",
+      "layout_114x5_columns",
+      "layout_190x3_rows",
+      "layout_190x3_columns",
+      "layout_285x2_rows",
+      "layout_285x2_columns"
+    ]
+  },
+  "controls": {
+    "direct_equals_optimized": true,
+    "symbol_relabeling_invariant": true,
+    "power": [
+      {
+        "total_variation": 0.05,
+        "p_values": [
+          0.93,
+          0.01,
+          0.61,
+          0.78,
+          0.92,
+          0.015,
+          0.195,
+          0.575,
+          0.865,
+          0.3
+        ],
+        "detections": 1
+      },
+      {
+        "total_variation": 0.1,
+        "p_values": [
+          0.005,
+          0.01,
+          0.035,
+          0.015,
+          0.005,
+          0.005,
+          0.02,
+          0.005,
+          0.005,
+          0.005
+        ],
+        "detections": 7
+      },
+      {
+        "total_variation": 0.15,
+        "p_values": [
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005
+        ],
+        "detections": 10
+      },
+      {
+        "total_variation": 0.2,
+        "p_values": [
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005,
+          0.005
+        ],
+        "detections": 10
+      }
+    ],
+    "passed": true,
+    "smallest_tested_effect_at_9_of_10": 0.15
+  }
+}

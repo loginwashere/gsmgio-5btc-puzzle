@@ -1,0 +1,132 @@
+{
+  "protocol_sha256": "da891490567f1de350fc151528d19f8f27c6d534174ea4594322854527b1ca68",
+  "script_sha256": "ae594bbbe22df19c682d77aafcee374bd371954e264694131d81086615e1d30c",
+  "test_sha256": "aa2ae83b4dd4c5b8e8737ec1bf277e3fe6d665ba2a39c7f9e72cc9b62bcbab65",
+  "data_py_sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+  "corpus_sha256": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+  "seed": 548,
+  "m": 2000,
+  "bar_holm": 0.01,
+  "control_seed": 5480,
+  "n_plant": 200,
+  "controls": {
+    "label": {
+      "label_invariant": true
+    },
+    "size_power": {
+      "power_matrix": {
+        "CB-ENG": {
+          "CB-ENG": 0.005,
+          "CB-ENG-VIC": 0.975,
+          "CB-HEX": 0.04,
+          "CB-RAND": 1.0,
+          "CB-ENG-CHAIN": 1.0,
+          "B9-ENG": 1.0,
+          "B9-BYTES": 1.0,
+          "UNIF": 1.0,
+          "IID-FIT": 1.0
+        },
+        "CB-ENG-VIC": {
+          "CB-ENG": 0.655,
+          "CB-ENG-VIC": 0.015,
+          "CB-HEX": 0.88,
+          "CB-RAND": 1.0,
+          "CB-ENG-CHAIN": 1.0,
+          "B9-ENG": 1.0,
+          "B9-BYTES": 1.0,
+          "UNIF": 1.0,
+          "IID-FIT": 1.0
+        },
+        "CB-HEX": {
+          "CB-ENG": 0.01,
+          "CB-ENG-VIC": 1.0,
+          "CB-HEX": 0.0,
+          "CB-RAND": 1.0,
+          "CB-ENG-CHAIN": 1.0,
+          "B9-ENG": 1.0,
+          "B9-BYTES": 1.0,
+          "UNIF": 1.0,
+          "IID-FIT": 1.0
+        },
+        "CB-RAND": {
+          "CB-ENG": 0.2,
+          "CB-ENG-VIC": 0.99,
+          "CB-HEX": 0.83,
+          "CB-RAND": 0.005,
+          "CB-ENG-CHAIN": 1.0,
+          "B9-ENG": 1.0,
+          "B9-BYTES": 1.0,
+          "UNIF": 1.0,
+          "IID-FIT": 0.985
+        },
+        "CB-ENG-CHAIN": {
+          "CB-ENG": 1.0,
+          "CB-ENG-VIC": 1.0,
+          "CB-HEX": 1.0,
+          "CB-RAND": 1.0,
+          "CB-ENG-CHAIN": 0.005,
+          "B9-ENG": 1.0,
+          "B9-BYTES": 1.0,
+          "UNIF": 0.015,
+          "IID-FIT": 0.0
+        },
+        "B9-ENG": {
+          "CB-ENG": 1.0,
+          "CB-ENG-VIC": 1.0,
+          "CB-HEX": 1.0,
+          "CB-RAND": 1.0,
+          "CB-ENG-CHAIN": 1.0,
+          "B9-ENG": 0.01,
+          "B9-BYTES": 1.0,
+          "UNIF": 1.0,
+          "IID-FIT": 1.0
+        },
+        "B9-BYTES": {
+          "CB-ENG": 1.0,
+          "CB-ENG-VIC": 1.0,
+          "CB-HEX": 1.0,
+          "CB-RAND": 1.0,
+          "CB-ENG-CHAIN": 1.0,
+          "B9-ENG": 1.0,
+          "B9-BYTES": 0.02,
+          "UNIF": 1.0,
+          "IID-FIT": 1.0
+        },
+        "UNIF": {
+          "CB-ENG": 1.0,
+          "CB-ENG-VIC": 1.0,
+          "CB-HEX": 1.0,
+          "CB-RAND": 1.0,
+          "CB-ENG-CHAIN": 0.01,
+          "B9-ENG": 1.0,
+          "B9-BYTES": 1.0,
+          "UNIF": 0.01,
+          "IID-FIT": 0.005
+        },
+        "IID-FIT": {
+          "CB-ENG": 1.0,
+          "CB-ENG-VIC": 0.71,
+          "CB-HEX": 1.0,
+          "CB-RAND": 1.0,
+          "CB-ENG-CHAIN": 0.925,
+          "B9-ENG": 1.0,
+          "B9-BYTES": 1.0,
+          "UNIF": 0.945,
+          "IID-FIT": 0.005
+        }
+      },
+      "size": {
+        "CB-ENG": 0.005,
+        "CB-ENG-VIC": 0.015,
+        "CB-HEX": 0.0,
+        "CB-RAND": 0.005,
+        "CB-ENG-CHAIN": 0.005,
+        "B9-ENG": 0.01,
+        "B9-BYTES": 0.02,
+        "UNIF": 0.01
+      },
+      "size_ok": true
+    },
+    "all_passed": true
+  }
+}

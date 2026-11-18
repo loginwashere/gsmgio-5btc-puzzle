@@ -1,0 +1,213 @@
+{
+  "snapshot_sha256": "c8b5b47168439e4af2a55e5bd52a3652e02b18bea7579c5d982be4b768419db2",
+  "coverage": {
+    "head": "9e61693404ef74e8e681598116d371924f399ffa",
+    "baseline_files": 85,
+    "current_files": 89,
+    "unchanged_blobs": 83,
+    "modified": [
+      "README.md",
+      "unverified/README.md"
+    ],
+    "added": [
+      "index.html",
+      "unverified/11110.md",
+      "unverified/phase0_fefefe_parity.md",
+      "unverified/phase0_yellow_blue_counts.md"
+    ],
+    "deleted": [],
+    "commits_since_baseline": 7,
+    "open_ordinary_issues": [
+      17,
+      14,
+      13,
+      3,
+      11
+    ],
+    "ordinary_issues": 10,
+    "accessible_conversation_comments": 36,
+    "comment_count_mismatches": [
+      {
+        "issue": 2,
+        "advertised": 2,
+        "returned": 1
+      }
+    ],
+    "closed_prs": 7,
+    "merged_prs": [
+      16,
+      12,
+      10,
+      1
+    ]
+  },
+  "controls": {
+    "phase32_exact_plaintext": {
+      "valid_pkcs7": true,
+      "last_byte": 10,
+      "body_length": 2422,
+      "body_sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+      "ascii_printable_with_whitespace": 0.5978530140379852,
+      "empirical_entropy_bits_per_byte": 5.777502092861558
+    },
+    "secp256k1_scalar_1": "pass"
+  },
+  "issue17": {
+    "chain1": {
+      "valid_pkcs7": true,
+      "last_byte": 1,
+      "body_length": 79,
+      "body_sha256": "1449a2178eea7c0e3fabac8c1ad2afa294be4fc1800c594a025a056e88c626bf",
+      "ascii_printable_with_whitespace": 0.3924050632911392,
+      "empirical_entropy_bits_per_byte": 6.126565558303685
+    },
+    "chain2": {
+      "valid_pkcs7": true,
+      "last_byte": 1,
+      "body_length": 79,
+      "body_sha256": "b40fce72ef5638e4f79b3233e653f8a5dbdb0d4ae2009d2d3da2c98b70f4d004",
+      "ascii_printable_with_whitespace": 0.45569620253164556,
+      "empirical_entropy_bits_per_byte": 6.091693564605413
+    },
+    "chain1_first_key_wif": "5K2byJMssxFKuTgnk9YQjpBz5FhkwwF2LaZoAyTus8HjGEpz8AT",
+    "address_checks": {
+      "C1": {
+        "compressed": "14zJ3RHPxiRJAmYHUNTvPoCTxhFB6gACgf",
+        "uncompressed": "1GKJzHQkgTBwwEGeXetsTMDoUzvwzs9yb4"
+      },
+      "C2": {
+        "compressed": "12ZdDsYJBFJY5jCNmvRm5LeQuDmdXMGTon",
+        "uncompressed": "135Cf6ASyU2PDHuxA1Edc3mHYtxEsZNPCa"
+      },
+      "S1": {
+        "compressed": "1L2jeZuu2zLrW2CLb2HAty3vowJUbYrANo",
+        "uncompressed": "1MixpoELBvfkFSRUQtDCGXbdG53cjqknZT"
+      },
+      "S2": {
+        "compressed": "1E6XUWFmXYpGGrU2AUPzv9mME2XzpQR8fG",
+        "uncompressed": "176ysPe7FdevdQjZWaFCK2nnVbzX9Tgydy"
+      }
+    },
+    "cosmic_wif_md5_continuations": [
+      {
+        "key": "C2",
+        "compressed": false,
+        "wif": "5HyaKEytxN9PhhQvPYfsyNwzzK6Hfsx6DxyUBa3CfcHWizdj8LD",
+        "valid_pkcs7": false,
+        "last_byte": 153,
+        "body_length": 1328,
+        "body_sha256": "c3449a4eec1f581c10494e5e75734bc76def755fd529480c365f8696a6c52e84",
+        "ascii_printable_with_whitespace": 0.3870481927710843,
+        "empirical_entropy_bits_per_byte": 7.873268750447116
+      },
+      {
+        "key": "C2",
+        "compressed": true,
+        "wif": "Kwvi3Wi8KNL3CdNaeWnbyqskwxrLabtA4E4EyepiVQjtCL89DuTT",
+        "valid_pkcs7": false,
+        "last_byte": 36,
+        "body_length": 1328,
+        "body_sha256": "7b7a853241921ec04863163feeb3c4121638fda81d31aa965ec8fc4b0021b82e",
+        "ascii_printable_with_whitespace": 0.39006024096385544,
+        "empirical_entropy_bits_per_byte": 7.86345397702675
+      },
+      {
+        "key": "S1",
+        "compressed": false,
+        "wif": "5K9zQVotw2zgW4FpnfwyFLSe4Zk3FGrqypC4JFvE4oN62PnTxB6",
+        "valid_pkcs7": false,
+        "last_byte": 151,
+        "body_length": 1328,
+        "body_sha256": "95d06f45a9e50bfd91720589015e125eedc82a7376870ff8a81843f6643d8abc",
+        "ascii_printable_with_whitespace": 0.39081325301204817,
+        "empirical_entropy_bits_per_byte": 7.868649596595699
+      },
+      {
+        "key": "S1",
+        "compressed": true,
+        "wif": "L38gNi9zDVobMFNRvaudGGpAajWxv111BmHoZAqvfme5B5K5WFcF",
+        "valid_pkcs7": false,
+        "last_byte": 20,
+        "body_length": 1328,
+        "body_sha256": "f03bce4b454df6433fbb1284ff50dd6f8a20f27e307a33336622d55661f9ca87",
+        "ascii_printable_with_whitespace": 0.3689759036144578,
+        "empirical_entropy_bits_per_byte": 7.848876485315481
+      },
+      {
+        "key": "S2",
+        "compressed": false,
+        "wif": "5KAHiT77VJYuHRQF7PuApvxnfkyrNVcd5v4BHKTabvuZf7Y9BPv",
+        "valid_pkcs7": false,
+        "last_byte": 124,
+        "body_length": 1328,
+        "body_sha256": "3d6e9a1aca2cf5483bb1f92fdbba2715e9a0fbbaf054661073c0c558f884b5ca",
+        "ascii_printable_with_whitespace": 0.3878012048192771,
+        "empirical_entropy_bits_per_byte": 7.873894211187431
+      },
+      {
+        "key": "S2",
+        "compressed": true,
+        "wif": "L39zmxDydvTomUhbHE5GNZBEa57vusJEGhB2P2UKKAw197hejJWv",
+        "valid_pkcs7": false,
+        "last_byte": 225,
+        "body_length": 1328,
+        "body_sha256": "75cc0bffe7da89ff46e3082600357b98f5b2a72847fbf4f5e17339b025d3a8c7",
+        "ascii_printable_with_whitespace": 0.3832831325301205,
+        "empirical_entropy_bits_per_byte": 7.832342617930034
+      }
+    ],
+    "disposition": "Public bytes reproduce; neither 79-byte body has independent structure or a target-address match. Repeated derived hashes are not independent authentication."
+  },
+  "issue6_exact_key_iv": {
+    "valid_pkcs7": true,
+    "last_byte": 1,
+    "body_length": 1327,
+    "body_sha256": "4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081",
+    "ascii_printable_with_whitespace": 0.40165787490580257,
+    "empirical_entropy_bits_per_byte": 7.870209988556002
+  },
+  "issue13": {
+    "alphabet": "DBIFHCEGAKLMNOPQRSTUVWXYZ",
+    "length": 570,
+    "output_sha256": "0c5d984f90e9baefc09f1d3888e62acbd101f9b0194887e2ae88fc6c9967745e",
+    "z_zero_based": 97,
+    "odd_one_based_output_symbols": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "prefix_permutations": 362880,
+    "btcseed_matching_keys": [
+      "DBIFGCEHA",
+      "DBIFHCEGA",
+      "DCGAHBEIF",
+      "DCHAGBEIF",
+      "EBIFGCDHA",
+      "EBIFHCDGA",
+      "ECGAHBDIF",
+      "ECHAGBDIF"
+    ],
+    "distinct_prefixes": 73097,
+    "disposition": "Reproduces existing Phase 386/546 results; no new tail decode supplied in thread."
+  },
+  "issue14_expanded_sizes": {
+    "DBBI": 169,
+    "FAED": 1225
+  },
+  "pr16": {
+    "colour_bits": "111101110011110110010010",
+    "11110_zero_based_offsets": [
+      0,
+      10
+    ],
+    "fe_low_five_bits": "11110",
+    "fe_rotate_left_three": "11110111",
+    "disposition": "Arithmetic holds for a left rotation; no tap polynomial is specified for a feedback shift. EO11110 is already discussed in local README; no new endgame operand follows."
+  },
+  "limitations": [
+    "Only the six stated WIF/EVP-MD5 Cosmic continuations were replayed, not issue17's unspecified wider sweep.",
+    "PR15's campaign totals and broad closure claims were reviewed as claims, not independently rerun.",
+    "A short arbitrary binary payload is not disproved by low printability alone; these outputs lack independent confirmation."
+  ]
+}

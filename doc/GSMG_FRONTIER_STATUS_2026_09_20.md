@@ -1,5 +1,11 @@
 # Frontier status — 2026-09-20
 
+**2026-09-29 update:** [Phase 548](GSMG_PHASE548_FAED_DISTRIBUTION_BOUNDARY.md)
+closes the declared FAED marginal-distribution boundary pilot (42 partitions,
+family p=.027 vs .01 bar; planted controls passed). `ANTIYBCORETNT` remains a
+reproducible hypothesis without a defined continuation; its source audit is
+included there. No new password or solution was found.
+
 A handoff summary of Phases 518 to 541. It contains no new results. It says which
 families are closed, what would reopen each, and what is still open, so that no one
 re-runs them. Every closure is bounded to its declared family: "found nothing under

@@ -1,0 +1,89 @@
+{
+  "map_sha256": "f9e9d4a8792c6f2f024e74e5b0a0eab3d6e7b082a7a224e96e9880ac60ce2ab2",
+  "items": {
+    "U1": [
+      {
+        "base": "We won't",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "We won't.",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "we won't",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "wewont",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "WEWONT",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "we wont",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "U2": [
+      {
+        "base": "If I were you, I would hope that we don't meet again",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "ifiwereyouiwouldhopethatwedontmeetagain",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "U3": [
+      {
+        "base": "ifiwereyouiwouldhopethatwedontmeetagainwewont",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "U4": [
+      {
+        "base": "Choice. The problem is choice.",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "choicetheproblemischoice",
+        "materials": 15,
+        "hits": []
+      }
+    ],
+    "U5": [
+      {
+        "base": "as long as they were given a",
+        "materials": 15,
+        "hits": []
+      },
+      {
+        "base": "aslongastheyweregivena",
+        "materials": 15,
+        "hits": []
+      }
+    ]
+  },
+  "totals": {
+    "materials": 195,
+    "cbc": 0,
+    "stream": 0,
+    "ecb": 0,
+    "wrap": 0,
+    "raw_key": 0,
+    "address": 0
+  }
+}

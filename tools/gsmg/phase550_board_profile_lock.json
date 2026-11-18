@@ -1,0 +1,77 @@
+{
+  "protocol_sha256": "20cdc5e0898026711d34d33127a6b487584087b86a990e438f811bf13497e732",
+  "script_sha256": "deabd0b26e04fc75032375679674125942222d1fd386a47d9cbc1c74137b959b",
+  "test_sha256": "1f31162d65b45dfb331b77f2f5f77e43a124a6c057f1a5c85c572c4f53e0e518",
+  "data_py_sha256": "591016b8364bedca014849228d987bcb6989d3a0f046dcdd4a0335ec717d70a2",
+  "book_sha256": "69e8021309957a204628c3c0045108b8f69f50b0a1da7a76abfe6783b36d4c3d",
+  "screen_sha256": "c2c2fe24174574900551e62b2aeb3b1dc110674da0fe97dc958021cc3178b54d",
+  "seed": 550,
+  "S": 200,
+  "search": [
+    6,
+    4000,
+    5.0,
+    0.01
+  ],
+  "bar_holm": 0.01,
+  "controls": {
+    "K1_book": {
+      "letters": 69832,
+      "adequacy": {
+        "not_worse_than_truth": 100,
+        "of": 100,
+        "pass": true
+      },
+      "size_power": {
+        "size_rate": 0.01,
+        "size_pass": true,
+        "power_at_holm_first_step": {
+          "uniform9": 1.0,
+          "merged_decimal": 0.06,
+          "cb_hex": 0.19
+        },
+        "null_median": 0.010331926659754902,
+        "null_p99": 0.26911583429199865
+      }
+    },
+    "K2_screenplay": {
+      "letters": 894232,
+      "adequacy": {
+        "not_worse_than_truth": 100,
+        "of": 100,
+        "pass": true
+      },
+      "size_power": {
+        "size_rate": 0.0,
+        "size_pass": true,
+        "power_at_holm_first_step": {
+          "uniform9": 0.85,
+          "merged_decimal": 0.0,
+          "cb_hex": 0.02
+        },
+        "null_median": 0.011267879697365908,
+        "null_p99": 1.7995296655804667
+      }
+    },
+    "K3_puzzle": {
+      "letters": 2085,
+      "adequacy": {
+        "not_worse_than_truth": 100,
+        "of": 100,
+        "pass": true
+      },
+      "size_power": {
+        "size_rate": 0.025,
+        "size_pass": true,
+        "power_at_holm_first_step": {
+          "uniform9": 1.0,
+          "merged_decimal": 0.18,
+          "cb_hex": 0.25
+        },
+        "null_median": 0.010393209429582892,
+        "null_p99": 0.03332997927065298
+      }
+    },
+    "all_passed": true
+  }
+}
